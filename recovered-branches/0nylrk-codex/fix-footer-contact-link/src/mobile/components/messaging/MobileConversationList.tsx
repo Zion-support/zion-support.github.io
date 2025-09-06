@@ -1,29 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Card } from "@/components/ui/card",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
-import { Search } from "lucide-react",
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
-interface Conversation {
 
-  id: string
-  name: string
-  avatar?: string;
-  lastMessage: string
-  timestamp: string
-  unreadCount: number
 
-  isTyping?: boolean
-}
-interface MobileConversationListProps {
 
-  conversations: Conversation[]
 
-=======
 import React from "react";
 import {Card} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
@@ -43,11 +22,22 @@ interface Conversation {;
 
 interface MobileConversationListProps {;
   conversations: Conversation[],;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   activeConversation?: string;
   onSelectConversation: (id: string) => void;
 }
-<<<<<<< HEAD
+
+interface Conversation {
+  id: string,
+  name: string,
+  avatar?: string,
+  lastMessage: string,
+  timestamp: string,
+  unreadCount: number,
+  isTyping?: boolean
+
+
+
 export function MobileConversationList({
 =======
 
@@ -58,29 +48,7 @@ export function MobileConversationList(): any ({;
   onSelectConversation;
 }: MobileConversationListProps) {;
   return (
-<<<<<<< HEAD
 
-    <div className="space-y-4">
-      <div className="px-4 mb-2">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          <Input
-            placeholder="Search messages..."
-            className="pl-9"
-          />
-        </div>
-      </div>
-      <div className="px-4 pb-4 space-y-2">
-        <div className="flex space-x-2">
-          <Badge variant="secondary" className="rounded-full px-3">All</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Unread</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Interviews</Badge>
-          <Badge variant="outline" className="rounded-full px-3">Projects</Badge>
-        </div>
-      </div>
-      <div className="space-y-2 pb-24">
-        {conversations.map((conversation) => (
-=======
     <div className="space-y-4">;
       <div className="px-4 mb-2">;
         <div className="relative">;
@@ -103,12 +71,14 @@ export function MobileConversationList(): any ({;
 
       <div className="space-y-2 pb-24">;
         {conversations && conversations.map((conversation) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <div
             key={conversation && conversation.id}
             className={cn(
-<<<<<<< HEAD
-              "px-4";
+
+
+              "px-4",
+
 
               activeConversation === conversation.id && "bg-primary/5"
             )}
@@ -130,7 +100,11 @@ export function MobileConversationList(): any ({;
                 </div>
                 <div className="flex justify-between items-center">
                   <p className="text-sm text-muted-foreground truncate">
-                    {conversation.isTyping
+
+
+                    {conversation.isTyping 
+
+
                       ? <em>Typing...</em>
                       : conversation.lastMessage}
                   </p>
@@ -179,17 +153,12 @@ export function MobileConversationList(): any ({;
             <div className="border-t border-border ml-12"></div>;
           </div>;
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-  )
-}
-=======
+
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Card } from '@/components / ui / card';

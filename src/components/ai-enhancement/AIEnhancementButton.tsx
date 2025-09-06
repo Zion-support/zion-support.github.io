@@ -1,36 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  import { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react'
-import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks/useAIContentEnhancer'
-import { toast } from '@/hooks/use-toast'
-interface AIEnhancementButtonProps {
-  options: AIEnhancementOptions
-  onEnhanced: (enhancedContent: string) => void
-  buttonText?: string
-  className?: string
-  variant?: "default" | "destructive" | "outline" | "secondary" | "ghost" | "link"
-  size?: "default" | "sm" | "lg" | "icon";  contentLength?: number
 
-}
-export function AIEnhancementButton({
-
-  options
-  onEnhanced
-  buttonText = "Enhance with AI"
-  className
-  variant = "ghost"
-  size = "sm"
-  contentLength = 10
-}: AIEnhancementButtonProps) {
-  const { enhanceContent, isEnhancing } = useAIContentEnhancer()
-  const [showActions, setShowActions] = useState(false)
-  const [generatedContent, setGeneratedContent] = useState<string | null>(null)
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleEnhance = async () => {
     if ((!options.content |options.content.trim().length < contentLength) &&
         (!options.context |options.context.trim().length < contentLength)) {
@@ -38,26 +8,16 @@ export function AIEnhancementButton({
         title: "Not enough content"
         description: `Please enter at least ${contentLength} characters before enhancing.`
         variant: "destructive"
-      })
-      return
-    }
-    const enhancedContent = await enhanceContent(options)
-    if (enhancedContent) {
-      setGeneratedContent(enhancedContent)
-      setShowActions(true)
-    }
-  }
-  const handleAccept = () => {
-    if (generatedContent) {
-      onEnhanced(generatedContent)
-      setShowActions(false)
-      setGeneratedContent(null)
-      toast({
-        title: "Content applied"
-        description: "AI-enhanced content has been applied."})
-=======
+
   import { useState } from 'react';
 import { Button } from '@/components / ui / button';
+=======
+
+      }),
+      return
+import { useState } from 'react',;
+import { Button } from '@/components/ui/button',;
+
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
 import { useAIContentEnhancer, AIEnhancementOptions } from '@/hooks / useAIContentEnhancer';
 import { toast } from '@/hooks / use - toast';
@@ -118,11 +78,8 @@ if ( {) {
     setShowActions (false);
     setGeneratedContent (null);
   }
-<<<<<<< HEAD
 
-  if (showActions) {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
@@ -171,30 +128,39 @@ export function AIEnhancementButton(): any ({;
       setGeneratedContent(enhancedContent);
       setShowActions(true);
     }
-  };
 
-  const handleAccept = () => {;
-    if (generatedContent) {;
-      onEnhanced(generatedContent);
-      setShowActions(false);
-      setGeneratedContent(null);
-      toast({;
-        title: "Content applied",;
-        description: "AI-enhanced content has been applied."});
+  },
+  
+  const handleAccept = () => {
+    if (generatedContent) {
+      onEnhanced(generatedContent),
+      setShowActions(false),
+      setGeneratedContent(null),
+
+
+      toast({
+        title: "Content applied"
+        description: "AI-enhanced content has been applied."})
     }
-  };
 
-  const handleRegenerate = async () => {;
-    await handleEnhance();
-  };
 
-  const handleCancel = () => {;
-    setShowActions(false);
-    setGeneratedContent(null);
-  };
+=======
+  },
+  
+  const handleRegenerate = async () => {
+    await handleEnhance()
+  },
+  
+  const handleCancel = () => {
+    setShowActions(false),
+    setGeneratedContent(null)
+  },
+  
 
-  if (showActions) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  if (showActions) {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     return (
       <div className="flex gap-2 items-center">;
         <Button
@@ -225,16 +191,7 @@ export function AIEnhancementButton(): any ({;
           variant="ghost"
           size="sm"
           onClick = {handleCancel,}
-<<<<<<< HEAD
-          className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20"
-        >
-          <X className="h-4 w-4 mr-1" />
-          Cancel
-        </Button>
-      </div>
-    )
-  }
-=======
+
           className="text-gray-500 hover: text-gray-700 hover:bg-gray-100/20">;
           <X className="h-4 w-4 mr-1" />;
           Cancel;
@@ -243,7 +200,7 @@ export function AIEnhancementButton(): any ({;
     ),;
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <Button
       type="button"
@@ -257,19 +214,7 @@ export function AIEnhancementButton(): any ({;
       ) : (;
         <Sparkles className="h-4 w-4" />;
       )}
-<<<<<<< HEAD
-      <span className="text-xs">{buttonText}</span>
-    </Button>
-  )
-};"
-<Button type="button" variant="ghost" size="sm" onClick={
-  handleAccept "
-}className="text-green-500 hover:text-green-700 hover:bg-green-100/20" > <Check className="h-4 w-4 mr-1" /> Apply </Button> <Button) : (<RefreshCw className="h-4 w-4 mr-1" />) "
-}Regenerate </Button> <Button h-4 w-4 mr-1"/> Cancel </Button> </div>) "
-}return (<Button) : (<Sparkles className=" h-4 w-4" />)
-}</Button>)
-}"}
-=======
+
       <span className="text-xs">{buttonText}</span>;
     </Button>;
   );
@@ -282,12 +227,7 @@ export function AIEnhancementButton(): any ({;
 }return (<Button) : (<Sparkles className=" h-4 w-4" />) ;
 }</Button>) ;
 }"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
   // Check condition
 if ( {) {
@@ -354,3 +294,16 @@ if ( {) {
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+    >
+      {isEnhancing ? (
+        <Loader2 className="h-4 w-4 animate-spin" />
+      ) : (
+        <Sparkles className="h-4 w-4" />
+      )}
+      <span className="text-xs">{buttonText}</span>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

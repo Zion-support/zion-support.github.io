@@ -1,27 +1,55 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Star } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
+
+
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+=======
+import {Star} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+=======
+import { Star } from "lucide-react",
+import { Progress } from "@/components/ui/progress",
+
+
 interface ReviewStatsProps {
-
-  averageRating: number
-  totalReviews: number
-
-  ratingDistribution?: Record<number, number>
+  averageRating: number,
+  totalReviews: number,
+  ratingDistribution?: Record<number number>
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 export function ReviewStats({ averageRating, totalReviews, ratingDistribution }: ReviewStatsProps) {
+
   // Format the average rating to one decimal place
 
-  const formattedRating = averageRating.toFixed(1);
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Calculate percentages for distribution if available
   const getPercentage = (count: number) => {
     if (totalReviews === 0) return 0
     return (count / totalReviews) * 100
-  }
-=======
+
 import {Star} from "lucide-react";
 import {Progress} from "@/components/ui/progress";
+=======
+
+  },
+  
+
+  return (
+    <div className="bg-card border rounded-lg p-4">
+      <div className="flex items-center justify-between mb-4">
+        <div>
+          <h3 className="text-xl font-bold">{formattedRating}</h3>
+          <div className="flex items-center">
+            <div className="flex mr-2">
+              {[1, 2, 3, 4, 5].map((i) => (
+                <Star
+                  key={i}
+                  className={`h-4 w-4 ${
+                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+
+import { Star } from "lucide-react",;
+import { Progress } from "@/components/ui/progress",;
+
 interface ReviewStatsProps {;
   averageRating: number,;
   totalReviews: number,;
@@ -49,34 +77,19 @@ export function ReviewStats(): any ({ averageRating, totalReviews, ratingDistrib
               {[1, 2, 3, 4, 5].map((i) => (;
                 <Star
                   key={i}
-                  className={`h-4 w-4 ${
-                    i <= Math && Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300"
+
+                  className={`h-4 w-4 ${;
+                    i <= Math.round(averageRating) ? "fill-yellow-400 text-yellow-400" : "text-gray-300";
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   }`}
                 />;
               ))}
             </div>;
             <span className="text-sm text-muted-foreground">;
               {totalReviews} {totalReviews === 1 ? "review" : "reviews"}
-<<<<<<< HEAD
-            </span>
-          </div>
-        </div>
-      </div>
-      {ratingDistribution && (
-        <div className="space-y-2">
-          {[5, 4, 3, 2, 1].map((rating) => (
-            <div key={rating} className="flex items-center gap-2">
-              <div className="w-6 text-sm text-right">{rating}</div>
-              <Star className="h-3 w-3 text-yellow-400" />
-              <Progress
-                value={getPercentage(ratingDistribution[rating] |0)}
-                className="h-2"
-              />
-              <div className="w-8 text-xs text-muted-foreground">
-                {ratingDistribution[rating] |0}
-              </div>
-            </div>
-=======
+
 =======
 import { Star } from './lucide-react';
 import { Progress } from '@/components / ui / progress';
@@ -118,41 +131,26 @@ if (return 0, ) {
             </div>;
             <span className="text - sm text - muted - foreground">;
               {total_reviews} {total_reviews === 1 ? "review" : "reviews"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             </span>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
-      {ratingDistribution && (;
-        <div className="space-y-2">;
-          {[5, 4, 3, 2, 1].map((rating) => (;
-            <div key={rating} className="flex items-center gap-2">;
-              <div className="w-6 text-sm text-right">{rating}</div>;
-              <Star className="h-3 w-3 text-yellow-400" />;
-              <Progress
-                value={getPercentage(ratingDistribution[rating] || 0)} 
-                className="h-2" 
-              />;
-              <div className="w-8 text-xs text-muted-foreground">;
+
                 {ratingDistribution[rating] || 0}
               </div>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
+
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
       {rating_distribution && (
         <div className="space - y-2">;
           {[5, 4, 3, 2, 1].map ((rating) => (
@@ -170,4 +168,8 @@ if (return 0, ) {
         </div>)}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

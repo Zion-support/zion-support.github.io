@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import OpenAI from 'openai';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -29,22 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-          { role: 'system', content: system }
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }]
-        temperature: 0.2})
-      const translated = completion.choices?.[0]?.message?.content?.trim() |''
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-          { role: 'system', content: system },
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
-        ],
-        temperature: 0.2
-      });
-      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -53,13 +31,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: 'Translation failed' })
   }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
 import OpenAI from 'openai',
@@ -104,3 +79,7 @@ if (|| targets.length === 0) {) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

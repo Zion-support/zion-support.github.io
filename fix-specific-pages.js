@@ -1,10 +1,17 @@
-<<<<<<< HEAD
 
-')
+
+'),
+
 
       if (parts.length > 1) {
         // Take the content after the conflict resolution
         backupContent = parts[1].split('>>>>>>>')[0]
+
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     }
     // Clean up the content
@@ -15,6 +22,11 @@
     if (!backupContent.includes('export default')) {
       return { restored: false, reason: 'Backup content is also corrupted' }
     }
+
+
+    
+
+
     // Create a backup of the current corrupted file
 
     const timestamp = Date.now()
@@ -50,18 +62,25 @@ if ( {) {
     const corruptedBackupPath = `${page_path}.corrupted.${timestamp}`,
     fs.writeFileSync (corruptedBackupPath, current_content),
     // Restore the page;
-    fs.writeFileSync (page_path, backup_content),
-    return {
-      restored: true,
-      backup_used: backup_path,
-      corrupted_backup: corruptedBackupPath;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+    fs.writeFileSync(pagePath, backupContent),;
+    return {;
+      restored: true,;
+      backupUsed: backupPath,;
+      corruptedBackup: corruptedBackupPath;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
   } catch (error) {
     return { restored: false, reason: `Error: ${error.message}` }
   }
 }
-<<<<<<< HEAD
+
+
+
+
 // Function to fix specific corrupted pages
 function fixSpecificPages() {
   const results = {
@@ -70,9 +89,11 @@ function fixSpecificPages() {
     restored: 0
     failed: 0
     details: []
-  }
-  console.log('🚀 Starting targeted page restoration...')
-  console.log(`📋 Targeting ${corruptedPages.length} specific corrupted pages`)
+
+
+  },
+
+
   for (const pagePath of corruptedPages) {
     if (!fs.existsSync(pagePath)) {
       console.log(`⚠️  Page not found: ${pagePath}`)
@@ -86,50 +107,36 @@ function fixSpecificPages() {
       })
       continue
     }
-    console.log(`\n🔍 Checking: ${pagePath}`)
-    const result = restorePage(pagePath)
+
+
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+    
+    console.log(`\n🔍 Checking: ${pagePath}`),
+=======
+    // // // console.log(`\n🔍 Checking: ${pagePath}`),
+
+
+    const result = restorePage(pagePath),
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (result.restored) {
       results.restored++
       console.log(`✅ Restored: ${pagePath}`)
       console.log(`   Used backup: ${result.backupUsed}`)
       console.log(`   Corrupted backup: ${result.corruptedBackup}`)
     } else {
-      results.failed++
-      console.log(`❌ Failed: ${pagePath}`)
 
-      console.log(`   Reason: ${result.reason}`)
-    }
-    results.details.push({
-      file: pagePath
-      ...result
-    })
-  }
-  // Generate summary
 
-  console.log('\n📊 Restoration Summary: ')
-  console.log(`   Total pages: ${results.total}`)
-  console.log(`   Restored: ${results.restored}`)
-  console.log(`   Failed: ${results.failed}`)
-  console.log(`   Success rate: ${((results.restored / results.total) * 100).toFixed(1)}%`)
-  // Save detailed report
-  const reportPath = path.join(process.cwd(), 'targeted-page-restoration-report.json')
-  fs.writeFileSync(reportPath, JSON.stringify(results, null, 2))
-  console.log(`\n📄 Detailed report saved to: ${reportPath}`)
+      results.failed++,
 
-  return results
+
 }
 // Run the restoration if this script is executed directly
 if ({
   fixSpecificPages()
 }
-module.exports = {
 
-  restorePage
-  fixSpecificPages
-  findBestBackup
-}
-
-=======
 // Function to fix specific corrupted pages;
 /**
  * fixSpecificPages - Function description
@@ -195,10 +202,29 @@ if ( {) {
 }
   fixSpecificPages ();
 }
+=======
+
+;
+module.exports = {;
+  restorePage,;
+  fixSpecificPages,;
+  findBestBackup;
+};
+=======
+
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 module.exports = {
   restore_page,
   fixSpecificPages,
   findBestBackup;
-},
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+};
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

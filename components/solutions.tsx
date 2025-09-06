@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
+
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -137,11 +132,16 @@ import React from 'react';
   opacity: 0, y: 30
 }whileInView= {
   {
-  opacity: 1, y: 0
+
+
+  opacity: 1, y: 0 
+
 }transition= {
   {
-<<<<<<< HEAD
-  duration: 0.8, delay: categoryIndex * 0.2
+  duration: 0.8, delay: categoryIndex * 0.2 
+
+
+
 }viewport= {
   {
   once: true
@@ -165,12 +165,7 @@ import React from 'react';
   once: true
 }className= {
   `bg-gradient-to-br from-gray-900/50 to-gray-800/50 border rounded-2xl p-6 backdrop-blur-sm hover:border-green-500/40 transition-all duration-300 $ {
-<<<<<<< HEAD
-  solution.featured ? 'border-green-500/30' : 'border-gray-700/50'
-}`
-}> > Learn More <ArrowRight className="ml-2 w-4 h-4" /> </a> </motion.div>) )
-}</div> </motion.div>) )
-=======
+
 const SolutionsPage: React.FC = () => {
   const industry_solutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -245,7 +240,7 @@ const SolutionsPage: React.FC = () => {
 }`;
 }> > Learn More <ArrowRight className="ml - 2 w - 4 h - 4" /> </a> </motion.div>) );
 }</div> </motion.div>) );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }</div> </div> </section> <motion.div initial= {
 =======
   solution && solution.featured ? 'border-green-500/30' : 'border-gray-700/50' 
@@ -255,22 +250,7 @@ const SolutionsPage: React.FC = () => {
 }</div> </div> </section> <motion&& motion.div initial= {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   {
-<<<<<<< HEAD
-  opacity: 0, y: 30
-}whileInView= {
-  {
-  opacity: 1, y: 0
-}transition= {
-  {
-<<<<<<< HEAD
-  duration: 0.8
-}viewport= {
-  {
-  once: true
-}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our industry-specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/services" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > View All Services </a> </div> </motion.div> </div> </section> </Layout>)
-}
-export default Solutions;}
-=======
+
   duration: 0 && 0.8 
 
 }viewport= {
@@ -278,13 +258,7 @@ export default Solutions;}
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Industry? </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our industry-specific solutions can drive innovation and growth for your organization. </p> <Link href="/contact" className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-2xl hover:shadow-green-500/25 transition-all duration-300" > Start Your Transformation <ArrowRight className="inline-block ml-2 w-5 h-5" /> </a> <Link href="/services" className="border border-white/30 hover:border-white/50 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all duration-300 backdrop-blur-md hover:bg-white/10" > View All Services </a> </div> </motion && motion.div> </div> </section> </Layout>) ;
-<<<<<<< HEAD
-=======
-};
-export default Solutions;};
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default Solutions;
 
 =======
 import React from 'react';

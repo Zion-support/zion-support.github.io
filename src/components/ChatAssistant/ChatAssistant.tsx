@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const isGuest = !auth?.isAuthenticated
-  const handleSendMessage = async (messageContent: string) => {
-    if (!messageContent.trim()) return
-import React, {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   useState
   useEffect
@@ -165,35 +159,12 @@ if ( {) {
         setDisplayGuestMessages (storedGuestMessages);
       }
     }
-<<<<<<< HEAD
-  }, [
-    isGuest
-    initialMessages
-    storedGuestMessages
-    setStoredGuestMessages
-    recipient.id])
-  // Effect for logged-in user messages
-  useEffect((,) => {
-    if (!isGuest) {
-      // Update state if initialMessages prop changes (e.g. new conversation loaded)
-      setLoggedInMessages(initialMessages)
-    }
-  }, [isGuest, initialMessages, recipient.id])
-  // Determine currentMessages and setCurrentMessages based on isGuest
-  const currentMessages = isGuest ? displayGuestMessages : loggedInMessages
-  const setCurrentMessages = (
-    valueOrFn: Message[] | ((val: Message[],) => Message[])
-  ) => {
-    if (isGuest) {
-      const newMessages =
-        valueOrFn instanceof Function
-          ? valueOrFn(displayGuestMessages)
-          : valueOrFn
-      setDisplayGuestMessages(newMessages)
-      setStoredGuestMessages(newMessages), // Always update localStorage for guests
-    } else {
-      const newMessages =
-        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn
+
+
+      const newMessages = null;
+        valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
+
+
       setLoggedInMessages(newMessages)
     }
   }
@@ -475,8 +446,12 @@ export function ChatAssistant(): any ({;
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
-            onClick = {onClose,}
-<<<<<<< HEAD
+
+
+            onClick={onClose}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -498,19 +473,25 @@ export function ChatAssistant(): any ({;
         {/* Messages */}
         <div
           className="flex-1 overflow-y-auto p-4 space-y-4"
-          aria-live="polite">;
-          {currentMessages && currentMessages.length === 0 ? (;
-            <div className="text-center text-zion-slate py-8 space-y-4">;
-              <p>Start a conversation with {recipient && recipient.name}</p>;
-              {starterQuestions && starterQuestions.length > 0 && (;
-                <div className="flex flex-wrap justify-center gap-2">;
-                  {starterQuestions && starterQuestions.map((q, idx,) => (;
+
+          aria-live="polite"
+        >
+          {currentMessages.length === 0 ? (
+            <div className="text-center text-zion-slate py-8 space-y-4">
+              <p>Start a conversation with {recipient.name}</p>
+              {starterQuestions.length > 0 && (
+                <div className="flex flex-wrap justify-center gap-2">
+
+                  {starterQuestions.map((q, idx) => (
                     <Button
-                      key = {idx,}
+                      key={idx}
                       variant="outline"
                       className="text-xs"
-                      onClick = {(,) => handleSendMessage(q),}
+                      onClick={() => handleSendMessage(q)}
                     >;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       {q}
                     </Button>;
                   ))}
@@ -522,16 +503,7 @@ export function ChatAssistant(): any ({;
               <ChatMessage key={msg && msg.id} role={msg && msg.role} message={msg && msg.message} />;
             ));
           )}
-<<<<<<< HEAD
-          <div ref={messagesEndRef} />
-        </div>
-        {/* Input */}
-        <div className="p-3 border-t border-zion-purple/20 bg-zion-blue-dark/30">
-          <ChatInput onSend={handleSendMessage} />
-        </div>
-      </div>
-      {showGuestModal && guestMessage && (
-=======
+
           <div ref={messagesEndRef} />;
         </div>;
 
@@ -542,7 +514,7 @@ export function ChatAssistant(): any ({;
       </div>;
 
       {showGuestModal && guestMessage && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <div
           className="fixed inset-0 bg-black/60 z-[100] flex items-center justify-center p-4"
           role="dialog"
@@ -560,14 +532,7 @@ export function ChatAssistant(): any ({;
             <div className="flex justify-end space-x-3">;
               <Button
                 variant="outline"
-                onClick = {handleModalCancel,}
-                className="text-white border-zion-purple hover:bg-zion-purple/10">;
-                Cancel;
-              </Button>;
-              <Button
-                onClick = {handleModalSendConfirm,}
-                className="bg-zion-purple hover:bg-zion-purple-dark text-white">;
-=======
+
   }, [;
     is_guest,
     initial_messages,
@@ -782,23 +747,40 @@ if (return null, ) {
                 on_click = {handleModalSendConfirm, }
                 className="bg - zion - purple hover:bg - zion - purple - dark text - white";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 Send;
               </Button>;
             </div>;
           </div>;
-<<<<<<< HEAD
-        </div>;
+
+
+                onClick={handleModalCancel}
+
+
+                className="text-white border-zion-purple hover:bg-zion-purple/10"
+              >
+                Cancel
+              </Button>
+              <Button
+
+                onClick={handleModalSendConfirm}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                className="bg-zion-purple hover:bg-zion-purple-dark text-white"
+              >
+                Send
+              </Button>
+            </div>
+          </div>
+        </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
     </div>;
   );
-}
-}
-<<<<<<< HEAD
-=======
+
 =======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
         </div>)}
     </div>);
@@ -806,3 +788,9 @@ if (return null, ) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

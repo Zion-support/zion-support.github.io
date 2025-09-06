@@ -1,17 +1,9 @@
-<<<<<<< HEAD:scripts/automation/temp-error-fixer.js
-<<<<<<< HEAD
-<<<<<<< HEAD
-const originalLog = console.log;
+
+
 =======
-<<<<<<< HEAD
-=======
-const originalLog = console.log;
-        const originalLog = console.log;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-        const originalLog = console.log;
-=======
-const originalLog = console.log;
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 const originalLog = console && console.log;
@@ -29,14 +21,8 @@ const originalLog = console && console.log;
               fixCount = parseInt(match[1]);
             }
           }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
           originalLog(...args);
         };
         try {
@@ -48,10 +34,8 @@ const originalLog = console && console.log;
           console && console.error('Script error:', error && error.message);
           process && process.exit(1);
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -59,24 +43,10 @@ const originalLog = console && console.log;
         try {
           // // require('/workspace/scripts/automation/console-error-fixer && fixer.cjs');
           setTimeout(() => {
-<<<<<<< HEAD:scripts/automation/temp-error-fixer.js
-            process.exit(0)}, 5000)} catch (error) {
-          console.error('Script "error": ', error.message);
-          process.exit(1)}
-<<<<<<< HEAD
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
-=======
-const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
+
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
 const originalLog = console.log; let fixCount = 0; console.log = (...args) => { const message = args.join(' '); if (message.includes('✅ Fixed') || message.includes('fixes applied')) { const match = message.match(/(d+)/); if (match) { fixCount = parseInt(match[1])} } originalLog(...args)}; try { setTimeout(() => { process.exit(0)},5000)} catch (error) { console.error('Script error:',error.message); process.exit(1)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 =======
             process && process.exit(0)}, 5000)} catch (error) {
           console && console.error('Script "error": ', error && error.message);

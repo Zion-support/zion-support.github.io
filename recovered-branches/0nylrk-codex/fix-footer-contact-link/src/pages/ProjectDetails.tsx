@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+
+
+
 
 import {useState, useEffect} from "react";
 import {useParams, useNavigate, Link} from "react-router-dom";
@@ -21,15 +23,7 @@ import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {ProjectReviewSection} from "@/components/projects/reviews/ProjectReviewSection";
 import {AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle} from "lucide-react";
-<<<<<<< HEAD
-function ProjectDetailsContent() {
-  // useParams may be untyped in this environment, so avoid passing a
-  // type argument and cast the result instead to prevent TS2347 errors.
-  const { projectId } = useParams() as { projectId?: string }
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
-=======
+
 
 function ProjectDetailsContent() {;
   // useParams may be untyped in this environment, so avoid passing a;
@@ -39,22 +33,99 @@ function ProjectDetailsContent() {;
   const navigate = useNavigate();
   const { getProjectById, updateProjectStatus } = useProjects();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const [project, setProject] = useState<Project | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [notes, setNotes] = useState<any[]>([]);
   const [newNote, setNewNote] = useState("");
   const [isSubmittingNote, setIsSubmittingNote] = useState(false);
   const [activeTab, setActiveTab] = useState("details");
-<<<<<<< HEAD
+
+
+
+=======
+import { useState, useEffect } from "react",
+import { useParams, useNavigate, Link } from "react-router-dom",
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button",
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle} from "@/components/ui/card",
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+import {
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle} from "lucide-react",
+
+
+
+
+function ProjectDetailsContent() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { projectId } = useParams() as { projectId?: string },
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
+  
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
+  
   // Load project data
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
+      if (!projectId) return,
+      
+      setIsLoading(true),
+      const projectData = await getProjectById(projectId),
+      
       if (projectData) {
-        setProject(projectData);
+        setProject(projectData),
+        
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         // Now fetch notes
         fetchProjectNotes(projectId)
       } else {
@@ -63,13 +134,7 @@ function ProjectDetailsContent() {;
           description: "The requested project could not be found."
           variant: "destructive"})
         navigate("/dashboard")
-      }
-      setIsLoading(false)
-    }
-    loadProject()
-  }, [projectId]);
-  const fetchProjectNotes = async (projectId: string) => {
-=======
+
 import { useState, useEffect } from './react';
 import { use_params, use_navigate, Link } from './react-router-dom';
 import { format } from './date - fns';
@@ -97,6 +162,61 @@ import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSq
  */
 function ProjectDetailsContent() {
   // use_params may be untyped in this environment, so avoid passing a;
+=======
+
+import { useState, useEffect } from "react",;
+import { useParams, useNavigate, Link } from "react-router-dom",;
+import { format } from "date-fns",;
+import { useAuth } from "@/hooks/useAuth",;
+import { useProjects } from "@/hooks/useProjects",;
+import { AppHeader } from "@/layout/AppHeader",;
+import { Footer } from "@/components/Footer",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { Project, ProjectStatus } from "@/types/projects",;
+import { Button } from "@/components/ui/button",;
+import {;
+  Card,;
+  CardContent,;
+  CardDescription,;
+  CardFooter,;
+  CardHeader,;
+  CardTitle} from "@/components/ui/card",;
+import {;
+  Tabs,;
+  TabsContent,;
+  TabsList,;
+  TabsTrigger} from "@/components/ui/tabs",;
+import {;
+  AlertDialog,;
+  AlertDialogAction,;
+  AlertDialogCancel,;
+  AlertDialogContent,;
+  AlertDialogDescription,;
+  AlertDialogFooter,;
+  AlertDialogHeader,;
+  AlertDialogTitle,;
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",;
+import { Avatar } from "@/components/ui/avatar",;
+import { Badge } from "@/components/ui/badge",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",;
+import {;
+  AlertCircle,;
+  Calendar,;
+  CheckCircle2,;
+  Clock,;
+  FileText,;
+  Layers,;
+  MessageSquare,;
+  Video,;
+  User,;
+  XCircle} from "lucide-react",;
+function ProjectDetailsContent() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+
   // type argument and cast the result instead to prevent TS2347 errors.;
   const { project_id } = use_params () as { project_id?: string }
   const { user } = use_auth ();
@@ -150,14 +270,7 @@ if ( {) {
         .from ("project_notes");
         .select (`;
           *;
-<<<<<<< HEAD
-          created_by_profile:profiles!user_id(display_name, avatar_url)
-        `)
-        .eq("project_id", projectId)
-        .order("created_at", { ascending: false })
-      if (error) throw error;
-      setNotes(data |[])
-=======
+
           created_by_profile:profiles ! user_id (display_name, avatar_url);
         `);
         .eq ("project_id", project_id);
@@ -167,37 +280,12 @@ if (throw error) {
   $2
 }
       set_notes (data || []);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } catch (err) {
       console.error ("Error fetching project notes:", err);
     }
   }
-<<<<<<< HEAD
-  const handleSubmitNote = async () => {
-    if (!newNote.trim() |!project |!user) return;
-    setIsSubmittingNote(true);
-    try {
-      const { data, error } = await supabase
-        .from("project_notes")
-        .insert({
-          project_id: project.id
-          user_id: user.id
-          content: newNote})
-        .select();
-      if (error) throw error;
-      // Refresh notes
-      fetchProjectNotes(project.id);
-      setNewNote("");
-      toast({
-        title: "Note added"
-        description: "Your note has been added to the project."})
-    } catch (err: any) {
-      console.error("Error adding note:", err);
-      toast({
-        title: "Failed to add note"
-        description: err.message |"An error occurred while adding your note."
-        variant: "destructive"})
-=======
+
 ;
   const handleSubmitNote = async () => {
     if (|| !project || !user) return) {
@@ -231,29 +319,12 @@ if (throw error) {
         title: "Failed to add note",
         description: err.message || "An error occurred while adding your note.",
         variant: "destructive"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
       setIsSubmittingNote (false);
     }
   }
-<<<<<<< HEAD
-  const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return
-    const success = await updateProjectStatus(project.id, newStatus);
-    if (success) {
-      setProject({
-        ...project;
-        status: newStatus})
-      // If offer was accepted, show a special toast
-      if (newStatus === "offer_accepted") {
-        toast({
-          title: "Offer Accepted! 🎉"
-          description: "The project is now in progress. Congratulations!"})
-      }
-    }
-  }
-  const getStatusBadge = (status: ProjectStatus) => {
-=======
+
 ;
   const handleStatusChange = async (new_status: ProjectStatus) => {
     // Check condition
@@ -282,7 +353,7 @@ if ( {) {
   }
 ;
   const getStatusBadge = (status: ProjectStatus) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     switch (status) {
 =======
 
@@ -305,106 +376,124 @@ if ( {) {
           description: "The requested project could not be found.",;
           variant: "destructive"}),;
         navigate("/dashboard");
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
 
       setIsLoading(false);
     }
 
-    loadProject();
-  }, [projectId]);
 
-  const fetchProjectNotes = async (projectId: string) => {;
-    try {;
-      const { data, error } = await supabase;
-        .from("project_notes");
-        .select(`;
-          *;
-          created_by_profile:profiles!user_id(display_name, avatar_url);
-        `);
-        .eq("project_id", projectId);
-        .order("created_at", { ascending: false }),;
+    
+    loadProject()
+  }, [projectId]),
+  
 
-      if (error) throw error;
+  const fetchProjectNotes = async (projectId: string) => {
+    try {
+      const { data, error } = await supabase
+        .from("project_notes")
+        .select(`
+          *,
+          created_by_profile:profiles!user_id(display_name, avatar_url)
+        `)
+        .eq("project_id", projectId)
 
-      setNotes(data || []);
-    } catch (err) {;
-      console && console.error("Error fetching project notes:", err);
+        .order("created_at", { ascending: false }),
+      
+      if (error) throw error,
+      
+      setNotes(data || [])
+    } catch (err) {
+      console.error("Error fetching project notes:", err)
     }
-  };
+  },
+  
+  const handleSubmitNote = async () => {
+    if (!newNote.trim() || !project || !user) return,
+    
+    setIsSubmittingNote(true),
+    
 
-  const handleSubmitNote = async () => {;
-    if (!newNote && newNote.trim() || !project || !user) return;
+    try {
+      const { data, error } = await supabase
+        .from("project_notes")
+        .insert({
+          project_id: project.id
+          user_id: user.id
+          content: newNote})
 
-    setIsSubmittingNote(true);
+        .select(),
+      
+      if (error) throw error,
+      
+      // Refresh notes
+      fetchProjectNotes(project.id),
+      setNewNote(""),
+      
 
-    try {;
-      const { data, error } = await supabase;
-        .from("project_notes");
-        .insert({;
-          project_id: project && project.id,;
-          user_id: user && user.id,;
-          content: newNote});
-        .select();
-
-      if (error) throw error;
-
-      // Refresh notes;
-      fetchProjectNotes(project && project.id);
-      setNewNote("");
-
-      toast({;
-        title: "Note added",;
-        description: "Your note has been added to the project."});
-    } catch (err: any) {;
-      console && console.error("Error adding note:", err);
-      toast({;
-        title: "Failed to add note",;
-        description: err && err.message || "An error occurred while adding your note.",;
-        variant: "destructive"});
-    } finally {;
-      setIsSubmittingNote(false);
+      toast({
+        title: "Note added"
+        description: "Your note has been added to the project."})
+    } catch (err: any) {
+      console.error("Error adding note:", err),
+      toast({
+        title: "Failed to add note"
+        description: err.message |"An error occurred while adding your note."
+        variant: "destructive"})
+    } finally {
+      setIsSubmittingNote(false)
     }
-  };
 
-  const handleStatusChange = async (newStatus: ProjectStatus) => {;
-    if (!project) return,;
+  },
+  
+  const handleStatusChange = async (newStatus: ProjectStatus) => {
+    if (!project) return,
+    
+    const success = await updateProjectStatus(project.id, newStatus),
+    
+    if (success) {
+      setProject({
+        ...project,
+        status: newStatus}),
+      
 
-    const success = await updateProjectStatus(project && project.id, newStatus);
-
-    if (success) {;
-      setProject({;
-        ...project;
-        status: newStatus}),;
-
-      // If offer was accepted, show a special toast;
-      if (newStatus === "offer_accepted") {;
-        toast({;
-          title: "Offer Accepted! 🎉",;
-          description: "The project is now in progress. Congratulations!"});
+      // If offer was accepted, show a special toast
+      if (newStatus === "offer_accepted") {
+        toast({
+          title: "Offer Accepted! 🎉"
+          description: "The project is now in progress. Congratulations!"})
       }
     }
-  };
 
-  const getStatusBadge = (status: ProjectStatus) => {;
-    switch (status) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>;
-      case "offer_accepted":;
-<<<<<<< HEAD
-        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
-      case "changes_requested":;
-        return <Badge variant="secondary">Changes Requested</Badge>;
-      case "in_progress":;
-        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>;
-      case "completed":;
-        return <Badge variant="default">Completed</Badge>;
-<<<<<<< HEAD
+  },
+  
+
+  const getStatusBadge = (status: ProjectStatus) => {
+    switch (status) {
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
+      case "offer_accepted":
+        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,
+      case "changes_requested":
+        return <Badge variant="secondary">Changes Requested</Badge>,
+      case "in_progress":
+        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,
+      case "completed":
+        return <Badge variant="default">Completed</Badge>,
+
       case "canceled":
         return <Badge variant="destructive">Canceled</Badge>
       default:
         return <Badge variant="outline">{status}</Badge>
     }
-  }
+
+
+  },
+  
+
+
   if (isLoading) {
 =======
       case "canceled":;
@@ -427,12 +516,10 @@ if ( {) {
       </div>;
     );
   }
-<<<<<<< HEAD
-  if (!project) {
-=======
+
 
   if (!project) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
       <div className="container mx-auto py-8">;
         <Card>;
@@ -491,14 +578,32 @@ if ( {) {
             </Button>;
           </CardContent>;
         </Card>;
-<<<<<<< HEAD
-      </div>;
-    );
+
+  if (!project) {
+    return (
+      <div className="container mx-auto py-8">
+        <Card>
+          <CardContent className="flex flex-col items-center justify-center py-10">
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>
+            <p className="text-muted-foreground mb-4">
+              The project you're looking for doesn't exist or you don't have access to it.
+            </p>
+            <Button onClick={() => navigate("/dashboard")}>
+              Return to Dashboard
+            </Button>
+          </CardContent>
+        </Card>
+      </div>
+    )
   }
-<<<<<<< HEAD
   // Check if user is either the client or the talent
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
+  
+
+
   if (!isClient && !isTalent) {
 =======
 
@@ -511,10 +616,14 @@ if ( {) {
     navigate("/unauthorized");
     return null;
   }
-<<<<<<< HEAD
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+
+
+  
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
+  
+
 
   return (
     <>
@@ -977,8 +1086,7 @@ if ( {) {
                               <div className="flex items - center gap - 2 mb - 2">;
                                 <Avatar className="h - 6 w - 6">;
                                   {note.created_by_profile?.avatar_url ? (
-<<<<<<< HEAD
-=======
+
 
   const isOfferPending = project && project.status === "offer_sent";
   const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project && project.status);
@@ -1226,7 +1334,7 @@ if ( {) {
                               <div className="flex items-center gap-2 mb-2">;
                                 <Avatar className="h-6 w-6">;
                                   {note && note.created_by_profile?.avatar_url ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                                     <img
                                       src={note && note.created_by_profile.avatar_url}
                                       alt={note && note.created_by_profile.display_name}
@@ -1234,30 +1342,7 @@ if ( {) {
                                   ) : (;
                                     <User className="h-4 w-4" />;
                                   )}
-<<<<<<< HEAD
-                                </Avatar>
-                                <span className="font-medium text-sm">
-                                  {note.created_by_profile?.display_name |"User"}
-                                </span>
-                                <span className="text-xs text-muted-foreground">
-                                  {format(new Date(note.created_at), "PPp")}
-                                </span>
-                              </div>
-                              <p className="text-sm whitespace-pre-wrap">{note.content}</p>
-                            </div>
-                          ))
-                        ) : (
-                          <div className="text-center py-8">
-                            <MessageSquare className="h-8 w-8 text-muted-foreground mx-auto mb-2" />
-                            <p className="text-muted-foreground">
-                              No notes yet. Add the first note to this project.
-                            </p>
-                          </div>
-                        )}
-                      </div>
-                      {isOfferAccepted && (
-                        <div>
-=======
+
                                 </Avatar>;
                                 <span className="font-medium text-sm">;
                                   {note && note.created_by_profile?.display_name || "User"}
@@ -1281,7 +1366,7 @@ if ( {) {
 
                       {isOfferAccepted && (;
                         <div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                           <Textarea
                             placeholder="Add a note or update to the project..."
                             value={newNote}
@@ -1290,41 +1375,278 @@ if ( {) {
                           />;
                           <Button
                             onClick={handleSubmitNote}
-<<<<<<< HEAD
-                            disabled={!newNote.trim() |isSubmittingNote}
-                          >
-=======
+
                             disabled={!newNote && newNote.trim() || isSubmittingNote}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                             {isSubmittingNote ? "Posting..." : "Post Note"}
                           </Button>;
                         </div>;
                       )}
-<<<<<<< HEAD
-                    </div>
-                  </CardContent>
-                </Card>
-              </TabsContent>
-              <TabsContent value="reviews">
-                <ProjectReviewSection project={project} />
-              </TabsContent>
-            </Tabs>
-          </div>
-          <div className="order-1 lg:order-2 lg:col-span-1">
-            <Card>
-              <CardHeader>
-                <CardTitle>Project Participants</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <div className="space-y-6">
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {project.talent_profile?.profile_picture_url ? (
-=======
+
                     </div>;
                   </CardContent>;
                 </Card>;
               </TabsContent>;
+=======
+                        <img
+                          src={project.talent_profile.profile_picture_url}
+                          alt={project.talent_profile.full_name}
+                        />
+                      ) : (
+                        <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
+                      <h3 className="font-semibold">
+                        {project.talent_profile?.full_name |"Talent"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        {project.talent_profile?.professional_title |"Professional"}
+                      </p>
+                      {isClient && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?talentId=${project.talent_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                        </Button>
+                      )}
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4">
+                    <Avatar className="h-10 w-10">
+                      {project.client_profile?.avatar_url ? (
+                        <img
+                          src={project.client_profile.avatar_url}
+                          alt={project.client_profile.display_name}
+                        />
+                      ) : (
+                        <User className="h-6 w-6" />
+                      )}
+                    </Avatar>
+                    <div>
+                      <h3 className="font-semibold">
+                        {project.client_profile?.display_name |"Client"}
+                      </h3>
+                      <p className="text-sm text-muted-foreground">Project Owner</p>
+                      {isTalent && (
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="mt-2"
+                          onClick={() => navigate(`/messages?clientId=${project.client_id}`)}
+                        >
+                          <MessageSquare className="mr-1 h-3 w-3" /> Message
+                        </Button>
+
+;
+    loadProject();
+  }, [projectId]),;
+  const fetchProjectNotes = async (projectId: string) => {;
+    try {;
+      const { data, error } = await supabase;
+        .from("project_notes");
+        .select(`;
+          *,;
+          created_by_profile:profiles!user_id(display_name, avatar_url);
+        `);
+        .eq("project_id", projectId);
+        .order("created_at", { ascending: false }),;
+      if (error) throw error,;
+      setNotes(data || []);
+    } catch (err) {;
+      console.error("Error fetching project notes:", err);
+    }
+  },;
+  const handleSubmitNote = async () => {;
+    if (!newNote.trim() || !project || !user) return,;
+    setIsSubmittingNote(true),;
+    try {;
+      const { data, error } = await supabase;
+        .from("project_notes");
+        .insert({;
+          project_id: project.id,;
+          user_id: user.id,;
+          content: newNote});
+        .select(),;
+      if (error) throw error,;
+      // Refresh notes;
+      fetchProjectNotes(project.id),;
+      setNewNote(""),;
+      toast({;
+        title: "Note added",;
+        description: "Your note has been added to the project."});
+    } catch (err: any) {;
+      console.error("Error adding note:", err),;
+      toast({;
+        title: "Failed to add note",;
+        description: err.message || "An error occurred while adding your note.",;
+        variant: "destructive"});
+    } finally {;
+      setIsSubmittingNote(false);
+    }
+  },;
+  const handleStatusChange = async (newStatus: ProjectStatus) => {;
+    if (!project) return,;
+    const success = await updateProjectStatus(project.id, newStatus),;
+    if (success) {;
+      setProject({;
+        ...project,;
+        status: newStatus}),;
+      // If offer was accepted, show a special toast;
+      if (newStatus === "offer_accepted") {;
+        toast({;
+          title: "Offer Accepted! 🎉",;
+          description: "The project is now in progress. Congratulations!"});
+      }
+    }
+  },;
+  const getStatusBadge = (status: ProjectStatus) => {;
+    switch (status) {;
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,;
+      case "offer_accepted":;
+        return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>,;
+      case "changes_requested":;
+        return <Badge variant="secondary">Changes Requested</Badge>,;
+      case "in_progress":;
+        return <Badge className="bg-blue-100 text-blue-800">In Progress</Badge>,;
+      case "completed":;
+        return <Badge variant="default">Completed</Badge>,;
+      case "canceled":;
+        return <Badge variant="destructive">Canceled</Badge>,;
+      default:;
+        return <Badge variant="outline">{status}</Badge>;
+    }
+  },;
+  if (isLoading) {;
+    return (;
+      <div className="container mx-auto py-8">;
+        <div className="flex justify-center items-center h-64">;
+          <div className="text-center">;
+            <div className="animate-spin h-8 w-8 border-4 border-primary border-t-transparent rounded-full mx-auto mb-4"></div>;
+            <p>Loading project details...</p>;
+          </div>;
+        </div>;
+      </div>;
+    );
+  }
+;
+  if (!project) {;
+    return (;
+      <div className="container mx-auto py-8">;
+        <Card>;
+          <CardContent className="flex flex-col items-center justify-center py-10">;
+            <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" />;
+            <h2 className="text-xl font-bold mb-2">Project Not Found</h2>;
+            <p className="text-muted-foreground mb-4">;
+              The project you're looking for doesn't exist or you don't have access to it.;
+            </p>;
+            <Button onClick={() => navigate("/dashboard")}>;
+              Return to Dashboard;
+            </Button>;
+          </CardContent>;
+        </Card>;
+      </div>;
+    );
+  }
+;
+  // Check if user is either the client or the talent;
+  const isClient = user?.id === project.client_id,;
+  const isTalent = user?.id === project.talent_id,;
+  if (!isClient && !isTalent) {;
+    navigate("/unauthorized"),;
+    return null;
+  }
+;
+  const isOfferPending = project.status === "offer_sent",;
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),;
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  return (;
+    <>;
+      <SEO;
+        title={`Project: ${project.job?.title || 'Project Details'} | Zion AI Marketplace`} ;
+        description="View and manage your project details and collaboration.";
+      />;
+      <AppHeader />;
+      <main className="container mx-auto px-4 py-8">;
+        <div className="mb-6">;
+          <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2">;
+            <div>;
+              <h1 className="text-3xl font-bold">{project.job?.title || "Project"}</h1>;
+              <div className="flex items-center gap-2 mt-1">;
+                {getStatusBadge(project.status)}
+                <span className="text-muted-foreground">
+                  Started on {format(new Date(project.start_date), "PPP")}
+                </span>;
+              </div>;
+            </div>;
+            {/* Action Buttons Based on Role and Status */}
+            <div className="space-x-2">;
+              {isTalent && isOfferPending && (;
+                <>;
+                  <AlertDialog>;
+                    <AlertDialogTrigger asChild>;
+                      <Button variant="default">;
+                        <CheckCircle2 className="mr-2 h-4 w-4" /> Accept Offer;
+                      </Button>;
+                    </AlertDialogTrigger>;
+                    <AlertDialogContent>;
+                      <AlertDialogHeader>;
+                        <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle>;
+                        <AlertDialogDescription>;
+                          By accepting this offer, you agree to the project terms and timeline.;
+                          This will initiate the contract and start the project.;
+                        </AlertDialogDescription>;
+                      </AlertDialogHeader>;
+                      <AlertDialogFooter>;
+                        <AlertDialogCancel>Cancel</AlertDialogCancel>;
+                        <AlertDialogAction onClick={() => handleStatusChange("offer_accepted")}>;
+                          Accept Offer;
+                        </AlertDialogAction>;
+                      </AlertDialogFooter>;
+                    </AlertDialogContent>;
+                  </AlertDialog>;
+                  <Button variant="outline" onClick={() => handleStatusChange("changes_requested")}>;
+                    <MessageSquare className="mr-2 h-4 w-4" /> Request Changes;
+                  </Button>;
+                </>;
+              )}
+;
+              {(isClient || isTalent) && project.status === "in_progress" && (;
+                <AlertDialog>;
+                  <AlertDialogTrigger asChild>;
+                    <Button variant="default">;
+                      <CheckCircle2 className="mr-2 h-4 w-4" /> Mark as Completed;
+                    </Button>;
+                  </AlertDialogTrigger>;
+                  <AlertDialogContent>;
+                    <AlertDialogHeader>;
+                      <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle>;
+                      <AlertDialogDescription>;
+                        This will finalize the project and mark it as complete.;
+                        Make sure all deliverables have been provided and approved.;
+                      </AlertDialogDescription>;
+                    </AlertDialogHeader>;
+                    <AlertDialogFooter>;
+                      <AlertDialogCancel>Cancel</AlertDialogCancel>;
+                      <AlertDialogAction onClick={() => handleStatusChange("completed")}>;
+                        Mark as Completed;
+                      </AlertDialogAction>;
+                    </AlertDialogFooter>;
+                  </AlertDialogContent>;
+                </AlertDialog>;
+              )}
+;
+              {isActiveProject && (;
+                <Button variant="default" asChild>;
+                  <Link to={`/project/${project.id}/milestones`}>;
+                    <Layers className="mr-2 h-4 w-4" /> Milestones;
+                  </Link>;
+                </Button>;
+              )}
+
 
               <TabsContent value="reviews">;
                 <ProjectReviewSection project={project} />;
@@ -1350,17 +1672,7 @@ if ( {) {
                       ) : (;
                         <User className="h-6 w-6" />;
                       )}
-<<<<<<< HEAD
-                    </Avatar>
-                    <div>
-                      <h3 className="font-semibold">
-                        {project.talent_profile?.full_name |"Talent"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">
-                        {project.talent_profile?.professional_title |"Professional"}
-                      </p>
-                      {isClient && (
-=======
+
                     </Avatar>;
                     <div>;
                       <h3 className="font-semibold">;
@@ -1370,7 +1682,7 @@ if ( {) {
                         {project && project.talent_profile?.professional_title || "Professional"}
                       </p>;
                       {isClient && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                         <Button
                           variant="outline"
                           size="sm"
@@ -1380,59 +1692,10 @@ if ( {) {
                           <MessageSquare className="mr-1 h-3 w-3" /> Message;
                         </Button>;
                       )}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-4">
-                    <Avatar className="h-10 w-10">
-                      {project.client_profile?.avatar_url ? (
-=======
+
                     </div>;
                   </div>;
 
-                  <div className="flex items-start gap-4">;
-                    <Avatar className="h-10 w-10">;
-                      {project && project.client_profile?.avatar_url ? (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                        <img
-                          src={project && project.client_profile.avatar_url}
-                          alt={project && project.client_profile.display_name}
-                        />;
-                      ) : (;
-                        <User className="h-6 w-6" />;
-                      )}
-<<<<<<< HEAD
-                    </Avatar>
-                    <div>
-                      <h3 className="font-semibold">
-                        {project.client_profile?.display_name |"Client"}
-                      </h3>
-                      <p className="text-sm text-muted-foreground">Project Owner</p>
-                      {isTalent && (
-=======
-                    </Avatar>;
-                    <div>;
-                      <h3 className="font-semibold">;
-                        {project && project.client_profile?.display_name || "Client"}
-                      </h3>;
-                      <p className="text-sm text-muted-foreground">Project Owner</p>;
-                      {isTalent && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                        <Button
-                          variant="outline"
-                          size="sm"
-                          className="mt-2"
-                          onClick={() => navigate(`/messages?clientId=${project && project.client_id}`)}
-                        >;
-                          <MessageSquare className="mr-1 h-3 w-3" /> Message;
-                        </Button>;
-                      )}
-<<<<<<< HEAD
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
             {/* Project Status Card */}
             <Card className="mt-6">
               <CardHeader>
@@ -1515,28 +1778,7 @@ if ( {) {
                   </Button>;
                 </CardFooter>;
               )}
-<<<<<<< HEAD
-              {project.status === "offer_sent" && isClient && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-muted-foreground">
-                    Waiting for the talent to accept your offer.
-                  </p>
-                </CardFooter>
-              )}
-              {project.status === "completed" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-green-600 flex items-center gap-1">
-                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.
-                  </p>
-                </CardFooter>
-              )}
-              {project.status === "canceled" && (
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">
-                  <p className="text-sm text-red-600 flex items-center gap-1">
-                    <XCircle className="h-4 w-4" /> This project has been canceled.
-                  </p>
-                </CardFooter>
-=======
+
 
               {project && project.status === "offer_sent" && isClient && (;
                 <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
@@ -1546,205 +1788,18 @@ if ( {) {
                 </CardFooter>;
               )}
 
-              {project && project.status === "completed" && (;
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
-                  <p className="text-sm text-green-600 flex items-center gap-1">;
-                    <CheckCircle2 className="h-4 w-4" /> This project has been completed.;
-                  </p>;
-                </CardFooter>;
-              )}
 
-              {project && project.status === "canceled" && (;
-                <CardFooter className="flex-col items-start gap-2 border-t pt-6">;
-                  <p className="text-sm text-red-600 flex items-center gap-1">;
-                    <XCircle className="h-4 w-4" /> This project has been canceled.;
-                  </p>;
-                </CardFooter>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              )}
 =======
-                                    <img;
-                                      src={note.created_by_profile.avatar_url}
-                                      alt={note.created_by_profile.display_name}
-                                    />) : (
-                                    <User className="h - 4 w - 4" />)}
-                                </Avatar>;
-                                <span className="font - medium text - sm">;
-                                  {note.created_by_profile?.display_name || "User"}
-                                </span>;
-                                <span className="text - xs text - muted - foreground">;
-                                  {format (new Date (note.created_at), "PPp")}
-                                </span>;
-                              </div>;
-                              <p className="text - sm whitespace - pre - wrap">{note.content}</p>;
-                            </div>))) : (
-                          <div className="text - center py - 8">;
-                            <MessageSquare className="h - 8 w - 8 text - muted - foreground mx - auto mb - 2" />;
-                            <p className="text - muted - foreground">;
-                              No notes yet. Add the first note to this project.;
-                            </p>;
-                          </div>)}
-                      </div>;
-                      {isOfferAccepted && (
-                        <div>;
-                          <Textarea;
-                            placeholder="Add a note or update to the project...";
-                            value={new_note}
-                            on_change={(e) => setNewNote (e.target.value)}
-                            className="min - h-[100px] mb - 2";
-                          />;
-                          <Button;
-                            on_click={handleSubmitNote}
-                            disabled={!new_note.trim () || isSubmittingNote}
-                          >;
-                            {isSubmittingNote ? "Posting..." : "Post Note"}
-                          </Button>;
-                        </div>)}
-                    </div>;
-                  </CardContent>;
-                </Card>;
-              </TabsContent>;
-              <TabsContent value="reviews">;
-                <ProjectReviewSection project={project} />;
-              </TabsContent>;
-            </Tabs>;
-          </div>;
-          <div className="order - 1 lg:order - 2 lg:col - span - 1">;
-            <Card>;
-              <CardHeader>;
-                <CardTitle > Project Participants</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className="space - y-6">;
-                  <div className="flex items - start gap - 4">;
-                    <Avatar className="h - 10 w - 10">;
-                      {project.talent_profile?.profile_picture_url ? (
-                        <img;
-                          src={project.talent_profile.profile_picture_url}
-                          alt={project.talent_profile.full_name}
-                        />) : (
-                        <User className="h - 6 w - 6" />)}
-                    </Avatar>;
-                    <div>;
-                      <h3 className="font - semibold">;
-                        {project.talent_profile?.full_name || "Talent"}
-                      </h3>;
-                      <p className="text - sm text - muted - foreground">;
-                        {project.talent_profile?.professional_title || "Professional"}
-                      </p>;
-                      {is_client && (
-                        <Button;
-                          variant="outline";
-                          size="sm";
-                          className="mt - 2";
-                          on_click={() => navigate (`/messages?talent_id=${project.talent_id}`)}
-                        >;
-                          <MessageSquare className="mr - 1 h - 3 w - 3" /> Message;
-                        </Button>)}
-                    </div>;
-                  </div>;
-                  <div className="flex items - start gap - 4">;
-                    <Avatar className="h - 10 w - 10">;
-                      {project.client_profile?.avatar_url ? (
-                        <img;
-                          src={project.client_profile.avatar_url}
-                          alt={project.client_profile.display_name}
-                        />) : (
-                        <User className="h - 6 w - 6" />)}
-                    </Avatar>;
-                    <div>;
-                      <h3 className="font - semibold">;
-                        {project.client_profile?.display_name || "Client"}
-                      </h3>;
-                      <p className="text - sm text - muted - foreground">Project Owner</p>;
-                      {is_talent && (
-                        <Button;
-                          variant="outline";
-                          size="sm";
-                          className="mt - 2";
-                          on_click={() => navigate (`/messages?client_id=${project.client_id}`)}
-                        >;
-                          <MessageSquare className="mr - 1 h - 3 w - 3" /> Message;
-                        </Button>)}
-                    </div>;
-                  </div>;
-                </div>;
-              </CardContent>;
-            </Card>;
-            {/* Project Status Card */}
-            <Card className="mt - 6">;
-              <CardHeader>;
-                <CardTitle > Project Status</CardTitle>;
-              </CardHeader>;
-              <CardContent>;
-                <div className="space - y-2">;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - sm font - medium">Current Status:</span>;
-                    <div>{getStatusBadge (project.status)}</div>;
-                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - sm font - medium">Creation Date:</span>;
-                    <span className="text - sm">;
-                      {format (new Date (project.created_at), "PPP")}
-                    </span>;
-                  </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - sm font - medium">Start Date:</span>;
-                    <span className="text - sm">;
-                      {format (new Date (project.start_date), "PPP")}
-                    </span>;
-                  </div>;
-                </div>;
-              </CardContent>;
-              {/* Conditional Footer Based on Status */}
-              {project.status === "changes_requested" && is_client && (
-                <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
-                  <p className="text - sm text - amber - 600 flex items - center gap - 1">;
-                    <AlertCircle className="h - 4 w - 4" /> The talent has requested changes to this offer.;
-                  </p>;
-                  <Button;
-                    variant="outline";
-                    on_click={() => navigate (`/messages?talent_id=${project.talent_id}`)}
-                    className="w - full";
-                  >;
-                    <MessageSquare className="mr - 2 h - 4 w - 4" /> Discuss Changes;
-                  </Button>;
-                </CardFooter>)}
-              {project.status === "offer_sent" && is_client && (
-                <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
-                  <p className="text - sm text - muted - foreground">;
-                    Waiting for the talent to accept your offer.;
-                  </p>;
-                </CardFooter>)}
-              {project.status === "completed" && (
-                <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
-                  <p className="text - sm text - green - 600 flex items - center gap - 1">;
-                    <CheckCircle2 className="h - 4 w - 4" /> This project has been completed.;
-                  </p>;
-                </CardFooter>)}
-              {project.status === "canceled" && (
-                <CardFooter className="flex - col items - start gap - 2 border - t pt - 6">;
-                  <p className="text - sm text - red - 600 flex items - center gap - 1">;
-                    <XCircle className="h - 4 w - 4" /> This project has been canceled.;
-                  </p>;
-                </CardFooter>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </Card>;
           </div>;
         </div>;
       </main>;
       <Footer />;
-<<<<<<< HEAD
+
     </>;
   );
-}
-<<<<<<< HEAD
-export default function ProjectDetails() {
-  return (
-    <ProtectedRoute>
-      <ProjectDetailsContent />
-    </ProtectedRoute>
-  )
+
 }
 =======
 
@@ -1755,8 +1810,7 @@ export default function ProjectDetails() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </>);
 }
 export default /**
@@ -1768,4 +1822,9 @@ function ProjectDetails() {
       <ProjectDetailsContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

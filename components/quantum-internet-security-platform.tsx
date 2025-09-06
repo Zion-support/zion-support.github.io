@@ -1,16 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
 
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Shield
-  Star;
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,26 +23,34 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
+
 =======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
-  ArrowRight,;
+
+import React from 'react';
+
+import Head from 'next/head';
+
+import {
+
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
   Shield,;
   Star,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function QuantumInternetSecurityPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-internet-security-platform')
@@ -157,8 +153,7 @@ export default function QuantumInternetSecurityPage() {;
         </div>;
       </div>;
     </UltraAdvancedFuturisticBackground>;
-<<<<<<< HEAD
-=======
+
   );
 }
 =======
@@ -212,11 +207,9 @@ export default function QuantumInternetSecurityPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 import Head from 'next / head';
 import {
   Phone,
@@ -338,4 +331,13 @@ if (return null) {
       </div>;
     </UltraAdvancedFuturisticBackground>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

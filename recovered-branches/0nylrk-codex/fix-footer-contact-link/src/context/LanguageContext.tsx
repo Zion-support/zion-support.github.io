@@ -1,17 +1,13 @@
-<<<<<<< HEAD
-import React, { createContext, useState, useContext, useEffect, ReactNode } from 'react';
 
-import {useTranslation} from 'react-i18next';
-import {supabase} from '../integrations/supabase/client';
-import {toast} from '../components/ui/use-toast';
-export type SupportedLanguage = 'en' | 'es' | 'pt' | 'ar';
-<<<<<<< HEAD
-export type LanguageContextType = {
-  currentLanguage: SupportedLanguage
-  changeLanguage: (lang: SupportedLanguage) => Promise<void>
-  isRTL: boolean
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]
-}
+
+  currentLanguage: SupportedLanguage,
+  changeLanguage: (lang: SupportedLanguage) => Promise<void>,
+  isRTL: boolean,
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[];
+};
+
+
+
 const supportedLanguages = [
   { code: 'en' as SupportedLanguage, name: 'English', flag: '🇺🇸' }
   { code: 'es' as SupportedLanguage, name: 'Español', flag: '🇪🇸' }
@@ -50,18 +46,15 @@ const defaultLanguageContext: LanguageContextType = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const LanguageContext = createContext(defaultLanguageContext);
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext);
-<<<<<<< HEAD
-interface LanguageProviderProps {
-  children: ReactNode
-  authState?: {
-    isAuthenticated: boolean
-    user: { id?: string } | null
-  }
-}
-export const LanguageProvider: React.FC<LanguageProviderProps> = ({
-  children
-  authState = { isAuthenticated: false, user: null }
-}) => {
+
+
+
+export const LanguageProvider: React.FC<LanguageProviderProps> = ({ 
+  children, 
+  authState = { isAuthenticated: false, user: null } 
+}) => {;
+
+
   const { i18n, t } = useTranslation();
   const { isAuthenticated, user } = authState;
   const [currentLanguage, setCurrentLanguage] = useState<SupportedLanguage>(
@@ -160,30 +153,19 @@ if (=== 'rtl') {) {
     } else {
       document.document_element.class_list.remove ('rtl');
     }
-<<<<<<< HEAD
-  }, [currentLanguage, i18n]);
-  // Sync language preference with user profile when authenticated
-  useEffect(() => {
-=======
+
   }, [current_language, i18n]);
 ;
   // Sync language preference with user profile when authenticated;
   useEffect (() => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     const syncLanguageWithProfile = async () => {
       // Check condition
 if ( {) {
   $2
 }
         try {
-<<<<<<< HEAD
-          const { error } = await supabase
-            .from('profiles')
-            .update({ preferred_language: currentLanguage })
-            .eq('id', user.id);
-          if (error) {
-            console.error('Error updating language preference:', error)
-=======
+
 
 interface LanguageProviderProps {;
   children: ReactNode,;
@@ -238,15 +220,19 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
             .eq('id', user && user.id);
 
           if (error) {;
-            console && console.error('Error updating language preference:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           }
         } catch (err) {;
           console && console.error('Error syncing language with profile:', err);
         }
       }
-<<<<<<< HEAD
-    }
+
+
+    };
+    
+
+
     syncLanguageWithProfile()
   }, [currentLanguage, isAuthenticated, user]);
   const changeLanguage = async (lang: SupportedLanguage) => {
@@ -296,15 +282,23 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
           .eq('id', user && user.id);
 
         if (error) {;
-          console && console.error('Error updating language preference:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+          console.error('Error updating language preference:', error);
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }
       }
     } catch (err) {;
       console && console.error('Error changing language:', err);
     }
-<<<<<<< HEAD
-  }
+
+
+  };
+  
+
+
   return (
     <LanguageContext.Provider
       value={{
@@ -322,18 +316,11 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ ;
         isRTL
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         supportedLanguages
-      }}>;
-      {children}
-<<<<<<< HEAD
-    </LanguageContext.Provider>
-  )
-}
 
-=======
     </LanguageContext && LanguageContext.Provider>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
           const { error } = await supabase;
             .from ('profiles');
@@ -407,3 +394,30 @@ if ( {) {
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+=======
+  },;
+  return (;
+    <LanguageContext.Provider;
+      value={{;
+        currentLanguage,;
+        changeLanguage,;
+        isRTL;
+        supportedLanguages;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+      }}
+    >
+      {children}
+
+};
+
+=======
+    </LanguageContext.Provider>;
+  );
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

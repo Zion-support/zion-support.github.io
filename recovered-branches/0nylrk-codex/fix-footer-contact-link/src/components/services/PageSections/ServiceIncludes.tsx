@@ -1,7 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Check } from "lucide-react";
+
+import { Check } from "lucide-react",
+
+
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -84,9 +85,7 @@ export function ServiceIncludes() {
         </div>
       </div>
     </div>
-  );
-}
-=======
+
 import {Check} from "lucide-react";
 export function ServiceIncludes() {;
   return (
@@ -236,17 +235,23 @@ function ServiceIncludes() {
               <p className="text - zion - slate - light">;
                 Detailed report of work performed and recommendations.;
               </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+  )
+=======
+  )
+
+}
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

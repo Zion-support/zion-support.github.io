@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,42 +22,23 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import React from "react";
 import Layout from "../components/Layout";
-<<<<<<< HEAD
-=======
-import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+import React from 'react';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function AIServices() {
   return (
     <Layout
       title="AI Services - Zion Tech Group"
       description="Comprehensive AI services including machine learning, computer vision, natural language processing, and more."
     >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Transform your business with cutting-edge AI solutions and
-              services.
-            </p>
-          </div>
-          <div className="text-center">
-            <p className="text-gray-600">
-              AI Services page is under construction.
-            </p>
+
 =======
+
+
             <h1 className="text-4xl font-bold text-gray-900 mb-4">AI Services</h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Transform your business with cutting-edge AI solutions and services.
@@ -68,7 +46,174 @@ export default function AIServices() {
           </div>
           <div className="text-center">
             <p className="text-gray-600">AI Services page is under construction.</p>
->>>>>>> origin/automation-improvements-final
+
+
+=======
+      <div className="min-h-screen bg-gray-50">
+        {/* Hero Section */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
+          <div className="container mx-auto px-6 text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              animate={{ opacity: 1, y: 0 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              transition={{ duration: 0.8 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+            >
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+                AI Services
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-3xl mx-auto">
+                Transform your business with cutting-edge artificial intelligence solutions
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <motion.button
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
+                >
+                  Get Started
+                AI Services That Transform Businesses
+              </h1>
+              <p className="text-xl md:text-2xl mb-8 text-blue-100">
+                Harness the power of artificial intelligence to drive innovation and growth
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <motion.button
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                >
+                  Get AI Consultation
+                </motion.button>
+                <motion.button
+                  whileHover={{ scale: 1.05 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  whileTap={{ scale: 0.95 }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+                  className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors"
+                >
+                  View AI Portfolio
+                </motion.button>
+              </div>
+            </motion.div>
+
           </div>
         </div>
       </div>
@@ -124,14 +269,24 @@ function AIServices() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-<<<<<<< HEAD
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-<<<<<<< HEAD
-=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+}
+
 =======
 import { motion } from 'framer-motion';
 import Head from 'next/head';
@@ -225,7 +380,13 @@ export default function AIServices() {
       </div>
     </Layout>
   );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+
+}
+
+=======
+
 >>>>>>> origin/automation-improvements-final
 =======
 }

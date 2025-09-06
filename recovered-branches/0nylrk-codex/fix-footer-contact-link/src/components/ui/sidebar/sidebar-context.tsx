@@ -1,14 +1,14 @@
-<<<<<<< HEAD
-import React from 'react';
-import * as React from "react";
-import type { CSSProperties } from "react";
-import {TooltipProvider} from "@/components/ui/tooltip";
-import {useIsMobile} from "@/hooks/use-mobile";
-import {cn} from "@/lib/utils";
-import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar ;
 
-<<<<<<< HEAD
-;
+import * as React from "react"
+import type { CSSProperties } from "react"
+
+import { TooltipProvider } from "@/components/ui/tooltip"
+import { useIsMobile } from "@/hooks/use-mobile"
+import { cn } from "@/lib/utils"
+import type { SidebarContext as SidebarContextType, SidebarState } from "../sidebar.types"
+
+
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state"
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7
 const SIDEBAR_KEYBOARD_SHORTCUT = "b"
@@ -18,8 +18,7 @@ export function useSidebar(): SidebarContextType {
   if (!context) {
     throw new Error("useSidebar must be used within a SidebarProvider.")
   }
-  return context as SidebarContextType
-=======
+
 import * as React from './react';
 import type { CSSProperties } from './react';
 import { TooltipProvider } from '@/components / ui / tooltip';
@@ -40,16 +39,22 @@ if ( {) {
     throw new Error ("use_sidebar must be used within a SidebarProvider.");
   }
   return context as SidebarContextType;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
+=======
+
+
+  return context as SidebarContextType
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   default_open?: boolean;
   open?: boolean;
   onOpenChange?: (open: boolean) => void;
 }
-<<<<<<< HEAD
-export const SidebarProvider = React.forwardRef<
-=======
+
 const SIDEBAR_COOKIE_NAME = "sidebar:state";
 const SIDEBAR_COOKIE_MAX_AGE = 60 * 60 * 24 * 7;
 const SIDEBAR_KEYBOARD_SHORTCUT = "b";
@@ -72,21 +77,32 @@ export interface SidebarProviderProps extends React && React.ComponentProps<"div
 }
 
 export const SidebarProvider = React && React.forwardRef<;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   HTMLDivElement;
   SidebarProviderProps;
 >(;
   (;
     {;
       defaultOpen = true;
-<<<<<<< HEAD
-      open: openProp
-      onOpenChange: setOpenProp
-      className;
-      style;
-      children;
+
+
+
+
+  SidebarProviderProps
+>(
+  (
+    {
+
+      defaultOpen = true,
+      open: openProp,
+      onOpenChange: setOpenProp,
+      className,
+      style,
+      children,
       ...props
-    }
+    },
+
+
     ref
   ) => {
     const isMobile = useIsMobile()
@@ -130,7 +146,11 @@ if ( {) {
         } else {
           _setOpen (open_state);
         }
-<<<<<<< HEAD
+
+
+
+
+
         // This sets the cookie to keep the sidebar state.
         document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`
       }
@@ -151,8 +171,39 @@ if ( {) {
         ) {
           event.preventDefault()
           toggleSidebar()
+
+
+
+=======
+;
+        // This sets the cookie to keep the sidebar state.;
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
+      },;
+      [setOpenProp, open];
+    );
+    // Helper to toggle the sidebar.;
+    const toggleSidebar = React.useCallback(() => {;
+      return isMobile;
+        ? setOpenMobile((open) => !open);
+        : setOpen((open) => !open);
+    }, [isMobile, setOpen, setOpenMobile]);
+    // Adds a keyboard shortcut to toggle the sidebar.;
+    React.useEffect(() => {;
+      const handleKeyDown = (event: KeyboardEvent) => {;
+        if (;
+          event.key === SIDEBAR_KEYBOARD_SHORTCUT &&;
+          (event.metaKey || event.ctrlKey);
+        ) {;
+          event.preventDefault();
+          toggleSidebar();
+
+
+
         }
       }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       window.addEventListener("keydown", handleKeyDown)
       return () => window.removeEventListener("keydown", handleKeyDown)
     }, [toggleSidebar])
@@ -260,16 +311,11 @@ if (
         is_mobile;
         open_mobile;
         setOpenMobile;
-<<<<<<< HEAD
-        toggleSidebar});
-<<<<<<< HEAD
-      [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar]
-    )
-=======
+
       [state, open, setOpen, isMobile, openMobile, setOpenMobile, toggleSidebar];
     );
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
       <SidebarContext && SidebarContext.Provider value={contextValue}>;
         <TooltipProvider delayDuration={0}>;
@@ -281,12 +327,14 @@ if (
                 ...style} as CSSProperties
               }
             className={cn(
-<<<<<<< HEAD
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
+
+
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
 
 =======
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className
             )}
             ref={ref}
@@ -297,16 +345,12 @@ if (
       </SidebarContext && SidebarContext.Provider>;
     );
   }
-<<<<<<< HEAD
-)
-SidebarProvider.displayName = "SidebarProvider"
-export { SidebarContext }
-=======
+
 );
 SidebarProvider && SidebarProvider.displayName = "SidebarProvider";
 
 export { SidebarContext }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
         toggle_sidebar});
       [state, open, set_open, is_mobile, open_mobile, setOpenMobile, toggle_sidebar]);
@@ -335,3 +379,9 @@ export { SidebarContext }
 SidebarProvider.display_name = "SidebarProvider";
 export { SidebarContext }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

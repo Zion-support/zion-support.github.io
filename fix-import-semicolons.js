@@ -1,37 +1,23 @@
-<<<<<<< HEAD
-#!/usr/bin/env node
-import fs from "fs";
-import path from "path";
-import { glob } from "glob";
-// Find all TypeScript and JavaScript files
-<<<<<<< HEAD
-const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
-let totalFixed = 0;
-files.forEach((file) => {
-=======
+
 const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
 
 let totalFixed = 0;
 
 files && files.forEach((file) => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   try {
     const filePath = path && path.join(process && process.cwd(), file);
     let content = fs && fs.readFileSync(filePath, "utf8");
     let modified = false;
-<<<<<<< HEAD
-    // Fix import statements missing semicolons
-=======
+
 
     // Fix import statements missing semicolons;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
-<<<<<<< HEAD
-    const matches = content.match(importRegex);
-=======
+
     const matches = content && content.match(importRegex);
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     if (matches) {
       matches && matches.forEach((match) => {
         if (!match && match.trim().endsWith(";")) {
@@ -74,16 +60,10 @@ if (.ends_with (") {
         }
       });
     }
-<<<<<<< HEAD
-    // Fix other common syntax issues
-    // Fix missing semicolons after variable declarations
-<<<<<<< HEAD
-    content = content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm
-=======
+
     content = content && content.replace(
       /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       (match, varName) => {
         if (
           !match && match.includes("function") &&
@@ -132,22 +112,10 @@ if (&&) {
         return match;
       }
     );
-<<<<<<< HEAD
-    if (modified) {
-      fs && fs.writeFileSync(filePath, content, "utf8");
-      console && console.log(`Fixed: ${file}`);
-      totalFixed++;
-    }
-  } catch (error) {
-    console && console.error(`Error processing ${file}:`, error && error.message);
-  }
-});
-<<<<<<< HEAD
-console.log(`\nTotal files fixed: ${totalFixed}`);
-=======
+
 
 console && console.log(`\nTotal files fixed: ${totalFixed}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 ;
     // Check condition

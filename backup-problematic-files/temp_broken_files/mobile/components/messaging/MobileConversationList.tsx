@@ -124,13 +124,10 @@ onSelectConversation ;
   conversation.name.charAt (0) .toUpperCase () ;
 }</AvatarFallback> </Avatar> ? <em>Typing...</em> : conversation.lastMessage ;
 }</p> {;
-<<<<<<< HEAD:temp_broken_files/mobile/components/messaging/MobileConversationList.tsx
-  conversation.unreadCount ;"}</Badge>) ";"}</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
-}</div> </div>) ;"}"
-=======
+
   conversation.unreadCount ;
 }</Badge>) ";
 }</div> </div> </div> <div className=" border-t border-border ml-12" ></div> </div>) ) ;
 }</div> </div>) ;
 }"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/mobile/components/messaging/MobileConversationList.tsx
+

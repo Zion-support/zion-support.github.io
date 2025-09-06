@@ -1,12 +1,9 @@
-<<<<<<< HEAD:scripts/bundle-analyzer.js
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleAnalyzer = (nextConfig = {}) => { return { .nextConfig,webpack: (config,{ dev,isServer }) => { if (process.env.ANALYZE === "true") { config.plugins.push( new BundleAnalyzerPlugin({ analyzerMode: "static",openAnalyzer: "false",reportFilename: isServer ? "server-bundle.html" : "client-bundle.html"}) )} if (nextConfig.webpack) { return nextConfig.webpack(config,{ dev,isServer })} return config}} } module.exports = withBundleAnalyzer;'"'"
 =======
 
@@ -37,11 +34,9 @@ const { BundleAnalyzerPlugin } from "webpack-bundle-analyzer"; const withBundleA
 import React from 'react';
 interface BundleanalyzerProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function Bundleanalyzer({ }: BundleanalyzerProps) {
   return (
     <div>
@@ -49,12 +44,9 @@ export default function Bundleanalyzer({ }: BundleanalyzerProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 

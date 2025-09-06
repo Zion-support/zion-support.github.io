@@ -4,26 +4,23 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
-<<<<<<< HEAD
-  connections: []
-  logs: []
-  overrides: []
+
+
+};
+
+export function getState(): IntegrationState {;
+  return { ...state };
 }
-export function getState(): IntegrationState {
-  return { ...state }
-}
-export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
+
+export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
+
+
   updater(state);
   return { ...state }
 }
 export function resetState(): void {
   state = {
-    connections: []
-    logs: []
-    overrides: []
-  }
-}
-=======
+
   connections: [],
   logs: [],
   overrides: [];
@@ -43,4 +40,13 @@ export function reset_state (): void {
     overrides: [];
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+    connections: [],
+    logs: [],
+    overrides: [];
+  };
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

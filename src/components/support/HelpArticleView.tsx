@@ -1,25 +1,14 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
-import { ThumbsUp, ThumbsDown } from 'lucide-react'import { toast } from "@/components/ui/use-toast";
-=======
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card } from "@/components/ui/card",
-import { ThumbsUp, ThumbsDown } from 'lucide-react'
-import { toast } from "@/components/ui/use-toast",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { HELP_CATEGORIES } from "./help-content";
-interface HelpArticleViewProps {;
-  articleId: string;
+
+interface HelpArticleViewProps {
+  articleId: string
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
-<<<<<<< HEAD
-export function HelpArticleView({ articleId }: HelpArticleViewProps) {
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null)
+
+
   // Find the article in all categories
   let article = null;
   for (const category of HELP_CATEGORIES) {
@@ -36,13 +25,41 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
   const handleFeedback = (type: "helpful" | "not-helpful") => {
     setFeedbackGiven(type)
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric"
-    month: "long"
-    day: "numeric", })
-=======
+
 
 export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
   const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
+
+=======
+
+    year: "numeric",;
+    month: "long",;
+    day: "numeric", });
+};
+}
+
+=======
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),
+  
+  // Find the article in all categories
+  let article,
+  for (const category of HELP_CATEGORIES) {
+    const found = category.articles.find(a => a.id === articleId),
+    if (found) {
+      article = found,
+      break
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card } from "@/components/ui/card",;
+import { ThumbsUp, ThumbsDown } from 'lucide-react';
+import { toast } from "@/components/ui/use-toast",;
+import { HELP_CATEGORIES } from "./help-content",;
+interface HelpArticleViewProps {;
+  articleId: string;
+}
+;
+export function HelpArticleView({ articleId }: HelpArticleViewProps) {;
+  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null),;
 
   // Find the article in all categories;
   let article;
@@ -67,11 +84,10 @@ export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
     day: "numeric", });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
+
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
@@ -111,5 +127,9 @@ if ( {) {
     month: "long",
     day: "numeric", });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

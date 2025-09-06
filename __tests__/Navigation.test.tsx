@@ -1,33 +1,38 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
 import React from 'react';
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import Navigation from '../components/Navigation';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+
+
 describe('Navigation', () => {
   test('renders without crashing', () => {
     render(<Navigation />);
     expect(screen.getByRole('main')).toBeInTheDocument();
   });
+=======
 
-<<<<<<< HEAD
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 
   test('displays correct content', () => {
     expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
-<<<<<<< HEAD
-  });
+
+
+
+=======
+
+
+  test('displays correct content', () => {
+    expect(screen.getByText(/Zion Tech Group/i)).toBeInTheDocument();
 });
+>>>>>>> origin/main
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import React from 'react'
 import { render, screen } from '@testing-library/react'

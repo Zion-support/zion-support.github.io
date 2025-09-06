@@ -24,27 +24,27 @@ class ErrorBoundary extends React.Component {
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import {
-  X
-  Building2
-  Code
-  Smartphone
-  Cloud
-  Shield
-  Zap
-  ShoppingCart
-  Heart
-  GraduationCap
-  Factory
-  Truck
-  CreditCard
-  Phone
-  Mail
 
-  ExternalLink
+import { 
+  X, 
+  Building2, 
+  Code, 
+  Smartphone, 
+  Cloud, 
+  Shield, 
+  Zap,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+  Phone,
+  Mail,
+  ExternalLink;
+
+
 } from 'lucide-react';
 interface SidebarProps {
   isOpen: boolean, onClose: () => void
@@ -89,38 +89,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
         : [...prev, title];
     );
 
-<<<<<<< HEAD
-  }
-  const navigation = {
-    'Services': [
-      { name: 'Web Development', href: '/services/web-development', icon: Code }
-      { name: 'Mobile Development', href: '/services/mobile-development', icon: Smartphone }
-      { name: 'Cloud Solutions', href: '/services/cloud-solutions', icon: Cloud }
-      { name: 'Cybersecurity', href: '/services/cybersecurity', icon: Shield }
-      { name: 'Performance Optimization', href: '/services/performance', icon: Zap }
-    ]
-    'Solutions': [
-      { name: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building2 }
-      { name: 'E-commerce Platforms', href: '/solutions/ecommerce', icon: ShoppingCart }
-      { name: 'Healthcare Technology', href: '/solutions/healthcare', icon: Heart }
-      { name: 'Educational Platforms', href: '/solutions/education', icon: GraduationCap }
-    ]
-    'Industries': [
-      { name: 'Manufacturing', href: '/industries/manufacturing', icon: Factory }
-      { name: 'Logistics', href: '/industries/logistics', icon: Truck }
-      { name: 'Finance', href: '/industries/finance', icon: CreditCard }
-      { name: 'Healthcare', href: '/industries/healthcare', icon: Heart }
-      { name: 'Education', href: '/industries/education', icon: GraduationCap }
-    ];
-  }
-  const quickLinks = [
-    { name: 'About Us', href: '/about' }
-    { name: 'Our Team', href: '/team' }
-    { name: 'Case Studies', href: '/case-studies' }
-    { name: 'Blog', href: '/blog' }
-    { name: 'Careers', href: '/careers' }
-    { name: 'Contact', href: '/contact' }
-=======
+
   const navigation = {;
     'Services': [;
       { name: 'Web Development', href: '/services/web-development', icon: Code },;
@@ -152,7 +121,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
     { name: 'Careers', href: '/careers' },;
     { name: 'Contact', href: '/contact' },;
   ];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
   ];
   return (
@@ -166,25 +135,20 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
             exit={{ opacity: 0 }}
             className="fixed inset-0 bg-black bg-opacity-50 z-40"
             onClick={onClose}
-<<<<<<< HEAD
-          />
-          <motion.div
-=======
+
           />;
 
           <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             initial={{ x: -300 }}
             animate={{ x: 0 }}
             exit={{ x: -300 }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
             className="fixed left-0 top-0 h-full w-80 bg-white shadow-xl z-50"
-<<<<<<< HEAD
-            <div className="p-6">
-=======
+
 
             <div className="p-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Header */}
               <div className="flex items-center justify-between mb-8">;
                 <div className="flex items-center space-x-2">;
@@ -196,36 +160,26 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                 <button
                   onClick={onClose}
                   className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-<<<<<<< HEAD
-                  <X className="w-6 h-6" />
-                </button>
-              </div>
-=======
+
                   <X className="w-6 h-6" />;
                 </button>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Navigation */}
               <nav className="space-y-4">;
                 {Object && Object.entries(navigation).map(([title, links]) => (;
                   <div key={title}>;
                     <button
                       onClick={() => handleDropdownToggle(title)}
-<<<<<<< HEAD
-                      className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors"
-              <div className="mt-8 pt-8 border-t border-gray-200">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
-                <div className="space-y-2">
-                  {quickLinks.map((link) => (
-=======
+
                       className="flex items-center justify-between w-full text-left text-lg font-semibold text-gray-900 py-2 hover: text-blue-600 transition-colors";
 
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>;
                 <div className="space-y-2">;
                   {quickLinks && quickLinks.map((link) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                     <Link
                       key={link && link.name}
                       href={link && link.href}
@@ -234,14 +188,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
                       {link && link.name}
                     </Link>;
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
+
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Contact Info */}
               <div className="mt-8 pt-8 border-t border-gray-200">;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Contact Us</h3>;
@@ -270,9 +221,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
       )}
     </AnimatePresence>;
   );
-}
-export default Sidebar;
-=======
+
 import {
   X,
   Building2,
@@ -422,4 +371,11 @@ const Sidebar: React.FC < SidebarProps> = ({ is_open, on_close }) => {
 ;
 export default Sidebar;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+};
+
+export default Sidebar;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

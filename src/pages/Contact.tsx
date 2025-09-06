@@ -1,21 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import Header from '../components/Header';
-import { SEO } from '../components/SEO';
-import { GradientHeading } from '../components/GradientHeading';
-import { Button } from '../components/ui/button';
-import { Input } from '../components/ui/input';
-import { Textarea } from '../components/ui/textarea';
-import { Card } from '../components/ui/card';
-import { useToast } from '../components/ui/use-toast';
-import { logInfo, logWarn, logErrorToProduction } from '../utils/productionLogger';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '../components/ui/tooltip';
-import z from 'zod';
-import { ChatAssistant } from '../components/ChatAssistant';
-import { Mail, MessageSquare, MapPin, Phone } from 'lucide-react';
-import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
+
+
+import React, { useState } from 'react';
+
 
 const contactSchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
@@ -35,91 +21,21 @@ export default function Contact() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState({});
 
-  const handleInputChange = (e) => {
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+
     const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
-    // Clear error when user starts typing
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: ''
-      }));
-    }
+
+
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setIsSubmitting(true);
-    
-    try {
-      // Validate form data
-      const validatedData = contactSchema.parse(formData);
-      
-      // Log form submission
-      logInfo('Contact form submission started', { email: validatedData.email });
-      
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      // Show success message
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you within 24 hours.",
-      });
-      
-      // Reset form
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
-      
-      logInfo('Contact form submission completed successfully');
-      
-    } catch (error) {
-      if (error instanceof z.ZodError) {
-        const fieldErrors = {};
-        error.errors.forEach((err) => {
-          fieldErrors[err.path[0]] = err.message;
-        });
-        setErrors(fieldErrors);
-        logWarn('Contact form validation failed', { errors: fieldErrors });
-      } else {
-        logErrorToProduction('Contact form submission failed', error);
-        toast({
-          title: "Error",
-          description: "Something went wrong. Please try again.",
-          variant: "destructive",
-        });
-      }
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
 
-  return (
-<<<<<<< HEAD
-    <div className="min-h-screen bg-gray-50">
-      <SEO 
-        title="Contact Us - Zion Tech Group"
-        description="Get in touch with Zion Tech Group for AI, micro SaaS, and IT services. We reply within one business day."
-        keywords="contact, AI services, micro SaaS, IT services, Zion Tech Group"
-      />
-      <Header />
-      
-      <div className="container mx-auto px-4 py-12">
-        <div className="max-w-6xl mx-auto">
-          <GradientHeading 
-            title="Contact Us"
-            subtitle="We'd love to hear from you. Send us a message and we'll respond as soon as possible."
-            className="text-center mb-12"
-          />
-          
-=======
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-blue-50">
       {/* Hero Section */}
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -132,7 +48,7 @@ export default function Contact() {
       </div>
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
@@ -216,11 +132,7 @@ export default function Contact() {
                       className={errors.email ? 'border-red-500' : ''}
                       required
                     />
-<<<<<<< HEAD
-                    {errors.email && (
-                      <p className="text-red-500 text-sm mt-1">{errors.email}</p>
-                    )}
-=======
+
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -258,7 +170,7 @@ export default function Contact() {
                       <option value="analytics">Data Analytics</option>
                       <option value="consulting">Consulting</option>
                     </select>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   </div>
                 </div>
                 <div>
@@ -278,31 +190,9 @@ export default function Contact() {
                     <p className="text-red-500 text-sm mt-1">{errors.subject}</p>
                   )}
                 </div>
-<<<<<<< HEAD
-                
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Message
-                  </label>
-                  <Textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    value={formData.message}
-                    onChange={handleInputChange}
-                    className={errors.message ? 'border-red-500' : ''}
-                    placeholder="Tell us about your project or requirements..."
-                    required
-                  />
-                  {errors.message && (
-                    <p className="text-red-500 text-sm mt-1">{errors.message}</p>
-                  )}
-                </div>
-                
-                <Button
-=======
+
                 <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   type="submit"
                   disabled={isSubmitting}
                   className="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
@@ -310,9 +200,7 @@ export default function Contact() {
                   {isSubmitting ? 'Sending...' : 'Send Message'}
                 </Button>
               </form>
-<<<<<<< HEAD
-            </Card>
-=======
+
             </div>
             {/* Contact Information */}
             <div className="space-y-8">
@@ -395,7 +283,91 @@ export default function Contact() {
                 </div>
               </div>
             </div>
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
+  return (
+
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
+        <div className="max-w-2xl mx-auto">
+          <div className="bg-white p-8 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
+            <form onSubmit={handleSubmit} className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-2">
+                  Name
+
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  placeholder="Your full name"
+                />
+              </div>
+              <div>
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  Email Address
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+              <div>
+                <label htmlFor="company" className="block text-sm font-medium mb-2">
+                  Company
+                </label>
+                <input
+                  type="text"
+                  id="company"
+                  name="company"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  placeholder="Your company name"
+                />
+              </div>
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={5}
+                  className="w-full px-4 py-3 bg-slate-800 border border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-white"
+                  placeholder="Tell us about your project or requirements..."
+                />
+              </div>
+              <button 
+                type="submit" 
+                className="w-full bg-blue-600 text-white py-3 px-4 rounded-lg hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors"
+              >
+                Send Message
+              </button>
+            </form>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>
         </div>
       </div>
@@ -443,8 +415,6 @@ const Contact: React.FC = () => {;
 }
 =======
 
-<<<<<<< HEAD
-export default Contact;
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

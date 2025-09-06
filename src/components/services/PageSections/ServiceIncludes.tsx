@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Check } from 'lucide-react'
-export function ServiceIncludes() {
-  return (
-    <div className='bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20'>
-      <h2 className='text-2xl font-bold text-white text-center mb-8'>
-        What's Included in Every Service
-      </h2>
-<div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
-        <div className='space-y-4'>
-          <div className='flex items-start'>
-            <div className='mt-1 mr-4'>
-              <Check className='h-5 w-5 text-zion-cyan' />
+
+
             </div>
             <div>
               <h3 className='text-white font-medium'>Transportation to Site</h3>
@@ -24,9 +9,15 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-          <div className='flex items-start'>
-            <div className='mt-1 mr-4'>
-              <Check className='h-5 w-5 text-zion-cyan' />
+
+
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>First Hour of Service</h3>
@@ -35,9 +26,15 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-          <div className='flex items-start'>
-            <div className='mt-1 mr-4'>
-              <Check className='h-5 w-5 text-zion-cyan' />
+
+
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>Technical Assessment</h3>
@@ -47,10 +44,16 @@ export function ServiceIncludes() {
             </div>
           </div>
         </div>
-        <div className='space-y-4'>
-          <div className='flex items-start'>
-            <div className='mt-1 mr-4'>
-              <Check className='h-5 w-5 text-zion-cyan' />
+
+
+        
+        <div className="space-y-4">
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>
@@ -61,9 +64,15 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-          <div className='flex items-start'>
-            <div className='mt-1 mr-4'>
-              <Check className='h-5 w-5 text-zion-cyan' />
+
+
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
             <div>
               <h3 className='text-white font-medium'>Network Connectivity</h3>
@@ -72,22 +81,11 @@ export function ServiceIncludes() {
               </p>
             </div>
           </div>
-          <div className='flex items-start'>
-            <div className='mt-1 mr-4'>
-              <Check className='h-5 w-5 text-zion-cyan' />
-            </div>
-            <div>
-              <h3 className='text-white font-medium'>Service Documentation</h3>
-              <p className='text-zion-slate-light'>
-                Detailed report of work performed and recommendations.
-              </p>            </div>
-              <h3 className="text-white font-medium">Service Documentation</h3>
-              <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
-=======
+
 
 import { Check } from 'lucide-react'
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -146,18 +144,29 @@ export function ServiceIncludes() {
               <Check className="h-5 w-5 text-zion-cyan" />
             </div>
             <div>
+=======
+
+          
+          <div className="flex items-start">
+            <div className="mt-1 mr-4">
+              <Check className="h-5 w-5 text-zion-cyan" />
+            </div>
+            <div>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
             </div>
           </div>
         </div>
       </div>
+
+
+
     </div>
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (
@@ -463,16 +472,14 @@ function ServiceIncludes() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
+
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

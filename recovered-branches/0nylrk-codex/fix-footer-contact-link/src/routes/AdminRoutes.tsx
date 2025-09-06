@@ -1,9 +1,12 @@
-<<<<<<< HEAD
 
-import {Fragment} from "react";
-import {Route, Routes} from "react-router-dom";
-import {ProtectedRoute} from "@/components/ProtectedRoute";
-<<<<<<< HEAD
+
+
+import { Fragment } from "react",
+import { Route, Routes } from "react-router-dom",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Admin Pages
 import QuoteManager from "@/pages/admin/QuoteManager",
 import ReviewsModeration from "@/pages/admin/ReviewsModeration",
@@ -12,8 +15,11 @@ import PartnerManager from "@/pages/admin/PartnerManager",
 import AppMetadataManager from "@/pages/admin/AppMetadataManager",
 import SupportRequests from "@/pages/admin/SupportRequests",
 import FraudDetection from "@/pages/admin/FraudDetection",
-import TokenManager from "@/pages/admin/TokenManager";
-import IntegrationsPage from "@/pages/admin/IntegrationsPage";
+
+
+import TokenManager from "@/pages/admin/TokenManager",
+import IntegrationsPage from "@/pages/admin/IntegrationsPage",
+
 
 const AdminRoutes = () => {
 =======
@@ -38,12 +44,10 @@ const AdminRoutes = () => {;
             <QuoteManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/reviews"
         element={
@@ -51,12 +55,10 @@ const AdminRoutes = () => {;
             <ReviewsModeration />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/whitelabel"
         element={
@@ -64,12 +66,10 @@ const AdminRoutes = () => {;
             <WhitelabelManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/partners"
         element={
@@ -77,12 +77,10 @@ const AdminRoutes = () => {;
             <PartnerManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/app-metadata"
         element={
@@ -90,12 +88,10 @@ const AdminRoutes = () => {;
             <AppMetadataManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/support-requests"
         element={
@@ -103,12 +99,10 @@ const AdminRoutes = () => {;
             <SupportRequests />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/fraud-detection"
         element={
@@ -116,12 +110,10 @@ const AdminRoutes = () => {;
             <FraudDetection />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/tokens"
         element={
@@ -129,37 +121,35 @@ const AdminRoutes = () => {;
             <TokenManager />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-      />
-=======
+
       />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Route
         path="/admin/integrations"
         element={
-          <ProtectedRoute adminOnly={true}>;
-            <IntegrationsPage />;
-          </ProtectedRoute>;
-        }
-<<<<<<< HEAD
-      />
-    </Routes>
-  )
-}
-=======
+
       />;
     </Routes>;
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 export default AdminRoutes;
 
 =======
 import { Fragment } from './react';
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '@/components / ProtectedRoute';
+=======
+          <ProtectedRoute adminOnly={true}>
+            <IntegrationsPage />
+          </ProtectedRoute>
+
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Admin Pages;
 import QuoteManager from "@/pages / admin / QuoteManager";
 import ReviewsModeration from "@/pages / admin / ReviewsModeration";
@@ -245,9 +235,12 @@ const AdminRoutes = () =>: any {
           </ProtectedRoute>;
         }
       />;
-    </Routes>);
-}
-;
+
+    </Routes>;
+  );
+},;
+
+
 export default AdminRoutes;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

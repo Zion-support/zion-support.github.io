@@ -1,61 +1,19 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-import {
-  ArrowRight
-  Phone
-  Mail
-  MapPin
-  Linkedin
-  Twitter
-  Github
-  Award
-  Users
-  Globe
-  Code
-  Shield
-} from "lucide-react";
-import Layout from "../components/Layout";
-const teamMembers = [
-=======
+
 import React from './react';
 import Head from './next / head';
 import Link from './next / link';
 import { motion  } from './framer-motion';
 import {
+=======
+import {
+
+
   ArrowRight,
   Phone,
   Mail,
@@ -67,28 +25,18 @@ import {
   Users,
   Globe,
   Code,
-  Shield,
-} from './lucide-react';
-import Layout from "../components / Layout";
-;
-const team_members = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
     department: "Leadership",
     bio: "Visionary leader with 15+ years in technology and business transformation. Passionate about leveraging AI and cloud technologies to solve complex business challenges.",
-<<<<<<< HEAD
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/klebersantos",
-    twitter: "https://twitter.com/klebersantos",
-    github: "https://github.com/klebersantos",
+
+
+
+
 =======
     id: 1
     name: "Kleber Santos"
@@ -227,28 +175,18 @@ const team_members = [;
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   {
-<<<<<<< HEAD
-    id: 6,
-    name: "Lisa Wang",
-    position: "Head of Product Development",
-    department: "Product",
-    bio: "Product strategist with experience building scalable SaaS platforms and mobile applications. Focuses on user experience and market fit.",
-<<<<<<< HEAD
-    image: "/api/placeholder/300/300",
-    linkedin: "https://linkedin.com/in/lisawang",
-    twitter: "https://twitter.com/lisawang",
-    github: "https://github.com/lisawang",
-<<<<<<< HEAD
-    expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
-=======
+
     image: "/api / placeholder / 300 / 300",
     linkedin: "https://linkedin.com / in / lisawang",
     twitter: "https://twitter.com / lisawang",
     github: "https://github.com / lisawang",
     expertise: ["Product Strategy", "SaaS Development", "UX / UI", "Mobile Apps"],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   },
 =======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
 =======
     name: 'Dr. Sarah Johnson',
@@ -277,7 +215,7 @@ const team_members = [;
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
   }
 >>>>>>> origin/automation-improvements-final
 =======
@@ -291,15 +229,45 @@ const team_members = [;
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
+
+
+=======
+    name: 'Dr. Sarah Johnson',
+    role: 'Chief Technology Officer',
+    expertise: 'AI & Machine Learning',
+    icon: Brain,
+    description: 'Leading our AI initiatives with 15+ years of experience in machine learning and data science.'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Cloud Solutions Architect',
+    expertise: 'Cloud Infrastructure',
+    icon: Cloud,
+    description: 'Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications.'
+  },
+  {
+    name: 'Emily Rodriguez',
+    role: 'Security Specialist',
+    expertise: 'Cybersecurity',
+    icon: Shield,
+    description: 'Ensuring enterprise-grade security with expertise in threat detection and prevention.'
+  },
+  {
+    name: 'David Thompson',
+    role: 'Team Lead',
+    expertise: 'Project Management',
+    icon: Users,
+    description: 'Leading our development teams with agile methodologies and client-focused delivery.'
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
-<<<<<<< HEAD
-const departments = [
-=======
+
 ;
 const departments = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     name: "Leadership"
     description: "Strategic vision and company direction"
@@ -455,73 +423,9 @@ const teamMembers = [;
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],;
   },;
 ];
-<<<<<<< HEAD
 
-const departments = [;
-  {;
-    name: "Leadership",;
-    description: "Strategic vision and company direction",;
-    icon: "👑",;
-    count: 1,;
-  },;
-  {;
-    name: "Technology",;
-    description: "Engineering and technical innovation",;
-    icon: "💻",;
-    count: 15,;
-  },;
-  {;
-    name: "AI & Machine Learning",;
-    description: "Artificial intelligence and data science",;
-    icon: "🤖",;
-    count: 12,;
-  },;
-  {;
-    name: "Cybersecurity",;
-    description: "Security and compliance solutions",;
-    icon: "🛡️",;
-    count: 8,;
-  },;
-  {;
-    name: "Data & Analytics",;
-    description: "Business intelligence and analytics",;
-    icon: "📊",;
-    count: 10,;
-  },;
-  {;
-    name: "Product",;
-    description: "Product development and design",;
-    icon: "🎨",;
-    count: 6,;
-  },;
-  {;
-    name: "Sales & Marketing",;
-    description: "Business development and growth",;
-    icon: "📈",;
-    count: 8,;
-  },;
-  {;
-    name: "Operations",;
-    description: "Project management and delivery",;
-    icon: "⚙️",;
-    count: 5,;
-  },;
-];
 
-const stats = [;
-  { number: "65+", label: "Team Members" },;
-  { number: "15+", label: "Years Experience" },;
-  { number: "25+", label: "Countries Represented" },;
-  { number: "95%", label: "Employee Satisfaction" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-];
-
-export default function TeamPage() {;
-  return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -543,17 +447,7 @@ export default function TeamPage() {;
               className="text-xl mb-8 text-purple-100"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              Our diverse team of technology professionals brings together
-              decades of experience in AI, cloud computing, cybersecurity, and
-              business transformation.
-            </motion.p>
-          </div>
-        </div>
-      </section>
-=======
+
               transition={{ duration: 0 && 0.8, delay: 0 && 0.2 }}>;
               Our diverse team of technology professionals brings together;
               decades of experience in AI, cloud computing, cybersecurity, and;
@@ -563,7 +457,7 @@ export default function TeamPage() {;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Stats Section */}
       <section className="py-16 bg-gray-50">;
         <div className="container mx-auto px-4">;
@@ -581,26 +475,7 @@ export default function TeamPage() {;
                 <div className="text-gray-600">{stat && stat.label}</div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Leadership Team */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Leadership Team
-            </h2>
-            <p className="text-xl text-gray-600">
-              Visionary leaders driving innovation and growth
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.slice(0, 3).map((member, index) => (
-              <motion.div
-                key={member.id}
-=======
+
           </div>;
         </div>;
       </section>;
@@ -621,7 +496,7 @@ export default function TeamPage() {;
             {teamMembers && teamMembers.slice(0, 3).map((member, index) => (;
               <motion&& motion.div
                 key={member && member.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -668,26 +543,7 @@ export default function TeamPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* All Team Members */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Expert Team
-            </h2>
-            <p className="text-xl text-gray-600">
-              Dedicated professionals across all departments
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <motion.div
-                key={member.id}
-=======
+
           </div>;
         </div>;
       </section>;
@@ -708,7 +564,7 @@ export default function TeamPage() {;
             {teamMembers && teamMembers.map((member, index) => (;
               <motion&& motion.div
                 key={member && member.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -756,26 +612,7 @@ export default function TeamPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-      {/* Departments */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900 mb-4">
-              Our Departments
-            </h2>
-            <p className="text-xl text-gray-600">
-              Specialized teams working together to deliver excellence
-            </p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {departments.map((dept, index) => (
-              <motion.div
-                key={dept.name}
-=======
+
           </div>;
         </div>;
       </section>;
@@ -796,7 +633,7 @@ export default function TeamPage() {;
             {departments && departments.map((dept, index) => (;
               <motion&& motion.div
                 key={dept && dept.name}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -809,16 +646,12 @@ export default function TeamPage() {;
                 </div>;
               </motion && motion.div>;
             ))}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </section>
-=======
+
           </div>;
         </div>;
       </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Join Our Team CTA */}
       <section className="py-16 bg-purple-600 text-white">;
         <div className="container mx-auto px-4 text-center">;
@@ -835,15 +668,7 @@ export default function TeamPage() {;
             </Link>;
             <Link
               href="/contact"
-<<<<<<< HEAD
-              className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors"
-            >
-              Get in Touch
-            </Link>
-          </div>
-        </div>
-      </section>
-=======
+
               className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-purple-600 px-8 py-4 rounded-lg font-semibold transition-colors">;
 =======
 ;
@@ -1094,53 +919,15 @@ function TeamPage() {
               href="/contact";
               className="bg - transparent border - 2 border - white text - white hover:bg - white hover:text - purple - 600 px - 8 py - 4 rounded - lg font - semibold transition - colors";
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               Get in Touch;
             </Link>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* Contact CTA Section */}
-      <section className="py-20 bg-gray-50">;
-        <div className="container mx-auto px-4 text-center">;
-          <h2 className="text-4xl font-bold mb-6">;
-            Ready to Work with Our Expert Team?;
-          </h2>;
-          <p className="text-xl mb-8 text-gray-600 max-w-3xl mx-auto">;
-            Let's discuss how our experienced team can help transform your;
-            business with cutting-edge technology solutions.;
-          </p>;
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-8">;
-            <Link
-              href="/contact"
-<<<<<<< HEAD
-              className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg"
-            >
-              Get Free Consultation
-            </Link>
-          </div>
-          {/* Contact Information */}
-          <div className="grid md:grid-cols-3 gap-8 mt-12">
-            <div className="flex items-center justify-center">
-              <Phone className="w-6 h-6 mr-2" />
-              <span>+1 302 464 0950</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <Mail className="w-6 h-6 mr-2" />
-              <span>kleber@ziontechgroup.com</span>
-            </div>
-            <div className="flex items-center justify-center">
-              <MapPin className="w-6 h-6 mr-2" />
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>
-            </div>
-          </div>
-        </div>
-      </section>
-    </Layout>
-<<<<<<< HEAD
+
+
 =======
 =======
     <>
@@ -1156,7 +943,7 @@ function TeamPage() {
         </p>
       </div>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
 >>>>>>> origin/automation-improvements-final
 =======
               className="bg-purple-600 text-white hover:bg-purple-700 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">;
@@ -1214,51 +1001,7 @@ function TeamPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-}
-import Head from "next/head";
-import { motion } from "framer-motion";
-import { Brain, Cloud, Shield, Users } from "lucide-react";
-<<<<<<< HEAD
-const teamMembers = [
-  {
-    name: "Dr. Sarah Johnson"
-    role: "Chief Technology Officer"
-    expertise: "AI & Machine Learning"
-    icon: Brain
-    description:
-      "Leading our AI initiatives with 15+ years of experience in machine learning and data science."
-  }
-  {
-    name: "Michael Chen"
-    role: "Cloud Solutions Architect"
-    expertise: "Cloud Infrastructure"
-    icon: Cloud
-    description:
-      "Expert in cloud migration and scalable infrastructure design with AWS and Azure certifications."
-  }
-  {
-    name: "Emily Rodriguez"
-    role: "Security Specialist"
-    expertise: "Cybersecurity"
-    icon: Shield
-    description:
-      "Ensuring enterprise-grade security with expertise in threat detection and prevention."
-  }
-  {
-    name: "David Thompson"
-    role: "Team Lead"
-    expertise: "Project Management"
-    icon: Users
-    description:
-      "Leading our development teams with agile methodologies and client-focused delivery."
-  }
-];
-export default function TeamPage() {
-=======
+
 
 const teamMembers = [;
   {;
@@ -1296,39 +1039,53 @@ const teamMembers = [;
 ];
 
 export default function TeamPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
-    <>;
-      <SEO
-        title="Our Team | Zion Tech Group"
-        description="Meet the leadership team at Zion Tech Group."
-        canonical="/team"
-      />;
-      <div className="container mx-auto px-4 py-16">;
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>;
-        <p className="text-gray-300 mb-8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>;
-  );
-  return (
-    <>;
-      <SEO
-        title="Our Team | Zion Tech Group"
-        description="Meet the leadership team at Zion Tech Group."
-        canonical="/team"
-      />;
-      <div className="container mx-auto px-4 py-16">;
-        <h1 className="text-4xl font-bold mb-4">Our Team</h1>;
-        <p className="text-gray-300 mb-8">;
-          Profiles coming soon. For inquiries, contact us.;
-        </p>;
-      </div>;
-    </>;
-  );
-<<<<<<< HEAD
+
+
 =======
+
+=======
+
+    <>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+      <SEO
+        title="Our Team | Zion Tech Group"
+        description="Meet the leadership team at Zion Tech Group."
+        canonical="/team"
+
+      />
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold mb-4">Our Team</h1>
+        <p className="text-gray-300 mb-8">
+          Profiles coming soon. For inquiries, contact us.
+        </p>
+      </div>
+
+
+
+=======
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    </>;
+  );
+  return (
+    <>;
+      <SEO
+        title="Our Team | Zion Tech Group"
+        description="Meet the leadership team at Zion Tech Group."
+        canonical="/team"
+      />;
+      <div className="container mx-auto px-4 py-16">;
+        <h1 className="text-4xl font-bold mb-4">Our Team</h1>;
+        <p className="text-gray-300 mb-8">;
+          Profiles coming soon. For inquiries, contact us.;
+        </p>;
+      </div>;
+    </>;
+  );
+
 }
 =======
 import React from 'react';
@@ -1343,7 +1100,7 @@ export default function TeamPage() {
 			</div>
 		</>
 	)
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -1423,3 +1180,12 @@ function TeamPage() {
 ;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+}
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

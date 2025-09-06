@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer";
-import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function RequestQuote() {
   return (
     <>
@@ -14,11 +13,18 @@ export default function RequestQuote() {
       <Footer />
     </>
   )
-}
-=======
+
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
 import {QuoteRequestForm} from "@/components/QuoteRequestForm";
+=======
+
+
+=======
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { QuoteRequestForm } from "@/components/QuoteRequestForm";
+
 export default function RequestQuote() {;
   return (
     <>;
@@ -30,8 +36,7 @@ export default function RequestQuote() {;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 import { Header } from '@/components / Header';
 import { Footer } from '@/components / Footer';
 import { QuoteRequestForm } from '@/components / QuoteRequestForm';
@@ -48,4 +53,9 @@ function RequestQuote() {
       <Footer />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

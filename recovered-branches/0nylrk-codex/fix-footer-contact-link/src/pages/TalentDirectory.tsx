@@ -1,23 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { useNavigate } from "react-router-dom",
-import { AppLayout } from "@/layout/AppLayout",
-import { TalentGrid } from "@/components/talent/TalentGrid",
-import { FilterSidebar } from "@/components/talent/FilterSidebar",
-import { TalentResults } from "@/components/talent/TalentResults",
-import { useTalentDirectory } from "@/hooks/useTalentDirectory",
-import { SORT_OPTIONS } from "@/data/sortOptions",
-import { X } from "lucide-react",
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
-export default function TalentDirectory() {
-
-  const navigate = useNavigate();
-  // Use our custom hook to manage state
-  const {
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -57,7 +38,7 @@ export default function TalentDirectory() {;
 
   // Use our custom hook to manage state;
   const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     filteredTalents;
     isLoading;
     searchTerm;
@@ -101,25 +82,58 @@ function TalentDirectory() {
     setIsHireModalOpen;
     selected_talent;
     setSelectedTalent;
-<<<<<<< HEAD
-    expandedSections;
-    isAuthenticated;
-    savedTalents;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
-    handleToggleSave} = useTalentDirectory();
-<<<<<<< HEAD
+
+
+
+
+
+  const navigate = useNavigate();
+  // Use our custom hook to manage state
+  const {
+
+    filteredTalents,
+    isLoading,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    isAuthenticated,
+    savedTalents,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave} = useTalentDirectory(),
+  
+
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent)
     setIsHireModalOpen(true)
-  }
+
+  },
+  
   const viewProfile = (id: string) => {
     // Navigate to the talent profile page
     navigate(`/talent/${id}`)
-  }
+  },
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -130,7 +144,58 @@ function TalentDirectory() {
               Connect with expert AI developers, data scientists, ML engineers, and tech professionals for your projects.
             </p>
           </div>
+
+
 =======
+          {/* Main content */}
+          <div className="flex flex-col lg:flex-row gap-6">
+            {/* Sidebar - Desktop */}
+            <div className="w-full lg:w-64 shrink-0 hidden lg:block">
+              <FilterSidebar
+
+import React, { useState } from "react",;
+import { useNavigate } from "react-router-dom",;
+import { AppLayout } from "@/layout/AppLayout",;
+import { TalentGrid } from "@/components/talent/TalentGrid",;
+import { FilterSidebar } from "@/components/talent/FilterSidebar",;
+import { TalentResults } from "@/components/talent/TalentResults",;
+import { useTalentDirectory } from "@/hooks/useTalentDirectory",;
+import { SORT_OPTIONS } from "@/data/sortOptions",;
+import { X } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { TalentProfile } from "@/types/talent",;
+export default function TalentDirectory() {;
+  const navigate = useNavigate(),;
+  // Use our custom hook to manage state;
+  const {;
+    filteredTalents,;
+    isLoading,;
+    searchTerm,;
+    setSearchTerm,;
+    selectedSkills,;
+    selectedAvailability,;
+    selectedRegions,;
+    priceRange,;
+    setPriceRange,;
+    experienceRange,;
+    setExperienceRange,;
+    sortOption,;
+    setSortOption,;
+    isMobileFilterOpen,;
+    setIsMobileFilterOpen,;
+    isHireModalOpen,;
+    setIsHireModalOpen,;
+    selectedTalent,;
+    setSelectedTalent,;
+    expandedSections,;
+    isAuthenticated,;
+    savedTalents,;
+    toggleSkill,;
+    toggleAvailability,;
+    toggleRegion,;
+    clearFilters,;
+    toggleSection,;
+    handleToggleSave} = useTalentDirectory(),;
 
   const handleRequestHire = (talent: TalentProfile) => {;
     setSelectedTalent(talent),;
@@ -153,14 +218,7 @@ function TalentDirectory() {
             </p>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          {/* Main content */}
-          <div className="flex flex-col lg:flex-row gap-6">;
-            {/* Sidebar - Desktop */}
-            <div className="w-full lg:w-64 shrink-0 hidden lg:block">;
-              <FilterSidebar
-                searchTerm={searchTerm}
-=======
+
     expanded_sections;
     is_authenticated;
     saved_talents;
@@ -197,7 +255,7 @@ function TalentDirectory() {
             <div className="w - full lg:w - 64 shrink - 0 hidden lg:block">;
               <FilterSidebar;
                 search_term={search_term}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 setSearchTerm={setSearchTerm}
                 selected_skills={selected_skills}
                 toggle_skill={toggle_skill}
@@ -213,28 +271,19 @@ function TalentDirectory() {
                 toggle_section={toggle_section}
                 sort_option={sort_option}
                 setSortOption={setSortOption}
-<<<<<<< HEAD
-                clearFilters={clearFilters}
-<<<<<<< HEAD
-              />
-            </div>
-=======
+
               />;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Mobile filter button */}
             <div className="lg:hidden mb-4">;
               <Button
                 onClick={() => setIsMobileFilterOpen(true)}
-<<<<<<< HEAD
-                variant="outline"
-                className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
-              >
-                Filter & Sort
-              </Button>
-            </div>
-=======
+
                 variant="outline";
                 className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light";
 =======
@@ -247,16 +296,19 @@ function TalentDirectory() {
                 on_click={() => setIsMobileFilterOpen (true)}
                 variant="outline";
                 className="w - full border - zion - blue - light text - zion - purple hover:bg - zion - blue - light";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               >;
                 Filter & Sort;
               </Button>;
             </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+            
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Results */}
             <TalentResults;
               filtered_talents={filtered_talents}
@@ -265,18 +317,7 @@ function TalentDirectory() {
               handleRequestHire={handleRequestHire}
               saved_talents={saved_talents}
               handleToggleSave={handleToggleSave}
-              is_authenticated={is_authenticated}
-              activeFiltersProps={{
-<<<<<<< HEAD
-<<<<<<< HEAD
-                selectedSkills;
-                toggleSkill;
-                selectedAvailability;
-                toggleAvailability;
-                selectedRegions;
-                toggleRegion;
-                priceRange;
-=======
+
                 selected_skills;
                 toggle_skill;
                 selected_availability;
@@ -284,15 +325,27 @@ function TalentDirectory() {
                 selected_regions;
                 toggle_region;
                 price_range;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 setPriceRange;
                 experience_range;
-                setExperienceRange;
-<<<<<<< HEAD
-
-                clearFilters}}
-            />
 =======
+              isAuthenticated={isAuthenticated}
+
+              activeFiltersProps={{;
+                selectedSkills,;
+                toggleSkill,;
+                selectedAvailability,;
+                toggleAvailability,;
+                selectedRegions,;
+                toggleRegion,;
+                priceRange,;
+                setPriceRange,;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                experienceRange;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+                setExperienceRange;
+
                 selectedSkills
                 toggleSkill
                 selectedAvailability
@@ -306,7 +359,7 @@ function TalentDirectory() {
                 clearFilters}}
             />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Mobile filter sidebar */}
             {isMobileFilterOpen && (;
               <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">;
@@ -366,29 +419,15 @@ function TalentDirectory() {
                     isMobileFilterOpen={isMobileFilterOpen}
                   />;
                 </div>;
-<<<<<<< HEAD
-              </div>;
-            )}
-<<<<<<< HEAD
-          </div>
-        </div>
-      </div>
-    </AppLayout>
-  )
-}
-=======
-          </div>;
-        </div>;
-      </div>;
-    </AppLayout>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
               </div>)}
           </div>;
         </div>;
       </div>;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 
-import { useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import type { UserProfile } from "@/types/auth";
 
-import {cleanupAuthState} from "@/utils/authUtils";
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const useEmailAuth = (
   setUser: (user: UserProfile | null) => void
   setIsLoading: (loading: boolean) => void
 ) => {
   const login = async ({ email, password }: { email: string, password: string }) => {
-    try {
-      setIsLoading(true);
-      // Clean up any stale auth state before login
-      cleanupAuthState();
-<<<<<<< HEAD
-      const { data, error } = await supabase.auth.signInWithPassword({
-=======
+
       
       const { data, error } = await supabase && supabase.auth.signInWithPassword({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         email;
         password});
       if (error) {
@@ -51,41 +42,71 @@ if ( {) {
         toast ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
           title: "Login failed";
-<<<<<<< HEAD
-          description: error.message
-=======
+
           description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           variant: "destructive"});
+=======
+
+    try {
+      setIsLoading(true),
+
+      // Clean up any stale auth state before login
+
+      cleanupAuthState(),
+      
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email,
+        password}),
+
+      if (error) {
+        toast({
+          title: "Login failed",
+          description: error.message,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return { error }
       }
       return { data }
     } catch (error: any) {
-<<<<<<< HEAD
-      console && console.error("Login error:", error);
-      toast({
-=======
+
       console.error ("Login error:", error);
       toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         title: "Login failed";
-<<<<<<< HEAD
-        description: error.message |"An unexpected error occurred"
-=======
+
         description: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         variant: "destructive"});
+=======
+      console.error("Login error:", error),
+      toast({
+
+        title: "Login failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return { error }
     } finally {
       setIsLoading (false);
     }
-  }
-<<<<<<< HEAD
+
+
+  },
+
+
+
   const signup = async (email: string, password: string, userData?: any) => {
     try {
       setIsLoading(true);
       // Clean up any stale auth state before signup
-      cleanupAuthState();
+
+
+      cleanupAuthState(),
+      
+
+
       // Attempt to sign out any existing session first to prevent conflicts
       try {
         await supabase && supabase.auth.signOut({ scope: 'global' })
@@ -118,29 +139,35 @@ if ( {) {
         options: {
           // Only store a simple display name in the profile data;
           data: {
-            display_name: user_data?.display_name ?? user_data?.name ?? "";
-          }}});
-<<<<<<< HEAD
-      if (error) {
-        toast({
-=======
+
 ;
       // Check condition
 if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           title: "Signup failed";
-<<<<<<< HEAD
-          description: error.message
-=======
+
           description: error && error.message,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           variant: "destructive"});
         return { error }
       }
-<<<<<<< HEAD
+
+            display_name: userData?.displayName ?? userData?.name ?? ""
+
+          }}}),
+
+      if (error) {
+        toast({
+          title: "Signup failed",
+          description: error.message,
+
+          variant: "destructive"});
+        return { error };
+      }
+
       toast({
         title: "Signup successful"
         description: "Check your email for verification instructions."});
@@ -148,7 +175,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Signup error:", error);
       toast({
-=======
+
       toast ({
         title: "Signup successful",
         description: "Check your email for verification instructions."});
@@ -156,31 +183,33 @@ if ( {) {
     } catch (error: any) {
       console.error ("Signup error:", error);
       toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         title: "Signup failed";
-<<<<<<< HEAD
-        description: error.message |"An unexpected error occurred"
-=======
+
         description: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
+
+
+        title: "Signup failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"});
+
+    } finally {
+      setIsLoading(false)
+    }
+  },
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const resetPassword = async (email: string) => {
     try {
-<<<<<<< HEAD
-      setIsLoading(true)
-      const { error } = await supabase.auth.resetPasswordForEmail(email, {
-        redirectTo: `${window.location.origin}/update-password`});
-      if (error) {
-        toast({
-          title: "Password reset failed";
-          description: error.message
-=======
+
       setIsLoading(true),
       const { error } = await supabase && supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window && window.location.origin}/update-password`});
@@ -200,14 +229,26 @@ if ( {) {
   $2
 }
         toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           title: "Password reset failed";
           description: error && error.message,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           variant: "destructive"});
         return { error }
       }
-<<<<<<< HEAD
+
+
+        redirectTo: `${window.location.origin}/update-password`}),
+
+      if (error) {
+        toast({
+          title: "Password reset failed",
+          description: error.message,
+
+          variant: "destructive"});
+        return { error };
+      }
+
       toast({
         title: "Password reset email sent"
         description: "Check your email for password reset instructions."});
@@ -215,7 +256,7 @@ if ( {) {
     } catch (error: any) {
       console && console.error("Password reset error:", error);
       toast({
-=======
+
       toast ({
         title: "Password reset email sent",
         description: "Check your email for password reset instructions."});
@@ -223,26 +264,36 @@ if ( {) {
     } catch (error: any) {
       console.error ("Password reset error:", error);
       toast ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         title: "Password reset failed";
-<<<<<<< HEAD
-        description: error.message |"An unexpected error occurred"
-=======
+
         description: error && error.message || "An unexpected error occurred",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         variant: "destructive"});
       return { error }
     } finally {
       setIsLoading (false);
     }
   }
-<<<<<<< HEAD
-  return { login, signup, resetPassword }
-}
 
-=======
 ;
   return { login, signup, reset_password }
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+        title: "Password reset failed",
+        description: error.message || "An unexpected error occurred",
+        variant: "destructive"});
+
+    } finally {
+      setIsLoading(false)
+    }
+  };
+
+
+  return { login, signup, resetPassword }
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

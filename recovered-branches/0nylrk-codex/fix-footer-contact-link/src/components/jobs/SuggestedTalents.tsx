@@ -1,21 +1,7 @@
-<<<<<<< HEAD
 
-import { useEffect, useState } from "react",
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast",
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
-import { EmptyMatchesCard } from "./EmptyMatchesCard";
-import { JobMatchCard } from "./JobMatchCard";
-interface SuggestedTalentsProps {;
-  jobId: string;
-  jobTitle?: string
-}
-<<<<<<< HEAD
-export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
-=======
 
 export function SuggestedTalents(): any ({ jobId, jobTitle }: SuggestedTalentsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const [talents, setTalents] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -69,32 +55,16 @@ function SuggestedTalents() {
             key_projects;
             skills;
             location;
-<<<<<<< HEAD
-<<<<<<< HEAD
-            category
-            company_name
-          )
-        `
-        )
-=======
+
             category,;
             company_name;
           );
         `,;
         );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         .eq("job_id", jobId);
       if (error) throw error;
-<<<<<<< HEAD
-      setTalents(data |[]);
-    } catch (error) {
-      console.error("Error fetching suggested talents:", error);
-      toast({
-        title: "Error"
-        description:
-          "Failed to load suggested talents. Please try again later."
-        variant: "destructive"
-=======
+
       setTalents(data || []);
     } catch (error) {;
       console && console.error("Error fetching suggested talents:", error);
@@ -103,31 +73,85 @@ function SuggestedTalents() {
         description:;
           "Failed to load suggested talents. Please try again later.",;
         variant: "destructive",;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       });
     } finally {;
       setIsLoading(false);
     }
-<<<<<<< HEAD
-  }
+
+
+
+interface SuggestedTalentsProps {
+  jobId: string,
+
+  jobTitle?: string
+}
+
+
+
+
+  const fetchSuggestedTalents = async () => {
+    setIsLoading(true),
+    try {
+      const { data, error } = await supabase
+        .from("suggested_talents")
+
+        .select(`
+          *,
+          talent_profile:talent_id(
+            id,
+            user_id,
+            full_name,
+            professional_title,
+            profile_picture_url,
+            hourly_rate,
+            bio,
+            years_experience,
+            key_projects,
+            skills,
+            location,
+            category,
+            company_name
+          )
+        `)
+        .eq("job_id", jobId),
+
+      if (error) throw error,
+      setTalents(data || [])
+
+    } catch (error) {
+      console.error("Error fetching suggested talents:", error),
+      toast({
+
+        title: "Error",
+        description: "Failed to load suggested talents. Please try again later.",
+        variant: "destructive"})
+
+    } finally {
+      setIsLoading(false)
+    }
+
+  },
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile
     console.log("View talent profile:", talentId);
     toast({
-      title: "View Profile"
-      description: `Navigating to talent profile: ${talentId}`
-    });
-  }
+
+
+      title: "View Profile",
+      description: `Navigating to talent profile: ${talentId}`})
+  },
+
+
+
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent
     console.log("Invite talent:", talentId);
     toast({
-      title: "Invite Talent"
-      description: `Inviting talent: ${talentId}`
-    });
-  }
-  const handleRefresh = () => {
-=======
+
   };
 
   const handleViewProfile = (talentId: string) => {;
@@ -149,32 +173,12 @@ function SuggestedTalents() {
   };
 
   const handleRefresh = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     setIsProcessing(true);
     fetchSuggestedTalents().finally(() => {;
       setIsProcessing(false);
     });
-<<<<<<< HEAD
-  }
-  useEffect(() => {
-    if (jobId) {
-      fetchSuggestedTalents();
-    }
-  }, [jobId]);
-  // Transform data to match JobMatchCard component props
-  const transformedTalents = talents.map((talent) => {
-    return {
-      id: talent.talent_profile?.id |""
-      name: talent.talent_profile?.full_name |"Talent"
-      title: talent.talent_profile?.professional_title |"Talent"
-      company: talent.talent_profile?.company_name |""
-      avatar: talent.talent_profile?.profile_picture_url |""
-      location: talent.talent_profile?.location |"Remote"
-      category: talent.talent_profile?.category |"Technology"
-      matchPercent: talent.match_score |85
-      skills: talent.talent_profile?.skills |[]
-    }
-=======
+
   };
 
   useEffect(() => {;
@@ -196,7 +200,7 @@ function SuggestedTalents() {
       matchPercent: talent && talent.match_score || 85,;
       skills: talent && talent.talent_profile?.skills || [],;
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
             category,
             company_name);
@@ -272,15 +276,33 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   });
 ;
+=======
+
+      title: "Invite Talent",
+      description: `Inviting talent: ${talentId}`})
+  },
+
+
+  const handleRefresh = () => {
+    setIsProcessing(true),
+    fetchSuggestedTalents().finally(() => {
+
+      setIsProcessing(false)
+    })
+  },
+
+  useEffect(() => {
+    if (jobId) {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
-    <Card className="border-zion-blue-light bg-zion-blue">;
-      <CardHeader>;
-        <CardTitle>;
-          {jobTitle ? `Talents for ${jobTitle}` : "Suggested Talents"}
-<<<<<<< HEAD
-        </CardTitle>
-      </CardHeader>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <CardContent className="pt-6">
         {isLoading ? (
           <div>Loading suggested talents...</div>
@@ -351,12 +373,20 @@ if ( {) {
                 category={talent.category}
                 match_percent={talent.match_percent}
                 skills={talent.skills}
-                on_apply={() => handleViewProfile (talent.id)}
-                onViewDetails={() => handleViewProfile (talent.id)}
-                on_invite={() => handle_invite (talent.id)}
-              />))}
-          </div>)}
+
+                onApply={() => handleViewProfile(talent.id)}
+                onViewDetails={() => handleViewProfile(talent.id)}
+                onInvite={() => handleInvite(talent.id)}
+              />
+            ))}
+          </div>
+        )}
+
       </CardContent>;
-    </Card>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+    </Card>;
+  );
 }
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,19 +1,17 @@
-<<<<<<< HEAD
+
+
+  if (loading) return <div>Loading episodes…</div>;
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 useEffect ( () => {
   const load = async () => {
   try {
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
- useEffect ( () => {;
-  const load = async () => {;
-  try {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (loading) return <div>Loading episodes…</div>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <div className='flex items-center justify-between'>;
@@ -99,8 +97,7 @@ useEffect ( () => {
               <Link href={`/media/podcast/${ep && ep.id}`} className="text-blue-600 underline">View Transcript</Link>;
             </div>;
           </li>;
-<<<<<<< HEAD
-=======
+
 =======
 import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
@@ -176,17 +173,15 @@ export default function PodcastIndexPage() {
               <Link href={`/media/podcast/${ep.id}`} className="text-blue-600 underline">View Transcript</Link>
             </div>
           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
       </ul>;
     </div>;
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
   // Check condition
 if (return <div > Loading episodes…</div>) {
@@ -281,3 +276,8 @@ if (return <div > Loading episodes…</div>) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

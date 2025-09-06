@@ -1,68 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
 
-interface OptimizedImageProps {
-  src: string;
-  alt: string;
-  width?: number;
-  height?: number;
-  priority?: boolean;
-  lazy?: boolean;
-  placeholder?: 'blur' | 'empty';
-  blurDataURL?: string;
-  fallbackSrc?: string;
-  onLoad?: () => void;
-  onError?: () => void;
-  className?: string;
-  [key: string]: any;
-}
 
-export function OptimizedImage({
-  src,
-  alt,
-  width,
-  height,
-  priority = false,
-  lazy = true,
-  placeholder = 'blur',
-  blurDataURL,
-  fallbackSrc,
-  onLoad,
-  onError,
-  className,
-  ...props
-}: OptimizedImageProps) {
-  const [isLoading, setIsLoading] = useState(true);
-  const [hasError, setHasError] = useState(false);
-  const [isInView, setIsInView] = useState(!lazy || priority);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React from 'react';
- const observer = new IntersectionObserver ( ([entry]) => {;
-  if (entry && entry.isIntersecting) {;
-  return () => observer && observer.disconnect () ;
-}, [lazy, priority, isInView]);
-//Generate WebP-compatible src const getOptimizedSrc = (originalSrc: string) => {;
-  //If it's already optimized or external,  return as-is if (originalSrc && originalSrc.startsWith ('http') || originalSrc && originalSrc.includes ('/ next/image') ) {;
-  //For internal images, Next && Next.js will handle optimization return originalSrc;
-};';
-<defs> <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%"> <stop offset="0%" style="stop-color:#f3f4f6, stop-opacity:1" /> <stop offset="100%" style="stop-color:#e5e7eb, stop-opacity:1" /> 100%"height=" 100%"fill=" url (#grad) "/> </svg>`) .toString ('base64') ;
-}` ;
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   const imgRef = useRef<HTMLDivElement>(null);
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 
-<<<<<<< HEAD
+
+
+
+
  const observer = new IntersectionObserver ( ([entry]) => {
   if (entry && entry.isIntersecting) {
   return () => observer.disconnect ()
@@ -77,7 +23,11 @@ import React from 'react';
   const imgRef = useRef<HTMLDivElement>(null)
   // Intersection Observer for lazy loading
   useEffect(() => {
-    if (!lazy |priority |isInView) return
+
+
+    if (!lazy || priority || isInView) return;
+
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry && entry.isIntersecting) {
@@ -102,47 +52,7 @@ if ( {) {
 }
   const img_ref = useRef < HTMLDivElement>(null);
   // Intersection Observer for lazy loading;
-  useEffect (() => {
-    // Check condition
-if (return) {
-  $2
-}
-    const observer = new IntersectionObserver (
-      ([entry], ) => {
-        // Check condition
-if ( {) {
-  $2
-}
-          setIsInView (true);
-          observer.disconnect ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-        }
-      }
-      {
-        root_margin: '50px', // Start loading 50px before the image enters viewport;
-      }
-    );
-    // Check condition
-if ( {) {
-  $2
-}
-      observer.observe (img_ref.current);
-    }
-<<<<<<< HEAD
-    return () => observer.disconnect()
-  }, [lazy, priority, isInView])
-  // Generate WebP-compatible src
-  const getOptimizedSrc = (originalSrc: string) => {
-    // If it's already optimized or external, return as-is
-    if (
-      originalSrc.startsWith('http') |
-      originalSrc.includes('/_next/image')
-    ) {
-      return originalSrc
-    }
-    // For internal images, Next.js will handle optimization
-    return originalSrc
-=======
+
     return () => observer.disconnect ();
   }, [lazy, priority, isInView]);
   // Generate WebP - compatible src;
@@ -157,7 +67,7 @@ if (||) {
     }
     // For internal images, Next.js will handle optimization;
     return original_src;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
   const handle_load = () =>: any {
     setIsLoading (false);
@@ -168,13 +78,26 @@ if (||) {
     setIsLoading (false);
     on_error?.();
   }
-<<<<<<< HEAD
-  // Generate blur placeholder
-  const generateBlurDataURL = () => {
-    if (blurDataURL) return blurDataURL
+
+  useEffect(() => {;
+    if (!lazy || priority || isInView) return,;
+    const observer = new IntersectionObserver(;
+      ([entry]) => {;
+        if (entry && entry.isIntersecting) {;
+          setIsInView(true),;
+          observer.disconnect();
+
+
+
+        }
+      }
+
+
     // Generate a simple gray blur placeholder
-    return `data:image/svg+xml;base64,${Buffer.from(
-      `<svg width="${width |400}" height="${height |300}" xmlns="http://www.w3.org/2000/svg">
+    return `data: image/svg+xml,base64,${Buffer.from(
+      `<svg width="${width || 400}" height="${height || 300}" xmlns="http: //www.w3.org/2000/svg">
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
@@ -183,9 +106,11 @@ if (||) {
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
       </svg>`
-<<<<<<< HEAD
-    ).toString('base64')}`;
-  };
+
+    ).toString('base64')}`
+
+  },
+
 
   return (
     <div
@@ -267,8 +192,11 @@ if (||) {
 
     >;
       {isInView && !hasError && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        <Image
+
+        <Image;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           src={getOptimizedSrc(src)}
 =======
   // Generate blur placeholder;
@@ -301,23 +229,32 @@ if (return blurDataURL) {
           blurDataURL={
             placeholder === 'blur' ? generateBlurDataURL () : undefined;
           }
-<<<<<<< HEAD
-          onLoad={handleLoad}
-          onError={handleError}
-<<<<<<< HEAD
-          className={cn(
-            'transition-opacity duration-300',
-=======
+
           className={cn(            'transition-opacity duration-300'
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
+=======
+
+          className={cn(            'transition-opacity duration-300',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             isLoading ? 'opacity-0' : 'opacity-100'
           )}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {...props}
         />;
       )}
       {/* Loading placeholder */}
-      {isLoading && isInView && (;
-        <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />;
+
+
+      {(isLoading && isInView) && (
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
       {/* Error fallback */}
       {hasError && (;
@@ -326,17 +263,11 @@ if (return blurDataURL) {
             <img
               src={fallbackSrc}
               alt={alt}
-              className='max-w-full max-h-full object-contain'
-<<<<<<< HEAD
-              onLoad={handleLoad}
-            />
-          ) : (
-            <div className='text-gray-400 text-center'>
-=======
+
               onLoad={handleLoad}            />;
           ) : (;
             <div className='text-gray-400 text-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <svg
                 className='w-8 h-8 mx-auto mb-2'
                 fill='currentColor'
@@ -349,39 +280,54 @@ if (return blurDataURL) {
               </svg>;
               <span className='text-xs'>Image not available</span>;
             </div>;
+=======
+
+              className="max-w-full max-h-full object-contain"
+              onLoad={handleLoad}
+            />
+          ) : (
+            <div className="text-gray-400 text-center">
+              <svg
+                className="w-8 h-8 mx-auto mb-2"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span className="text-xs">Image not available</span>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            </div>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           )}
         </div>;
       )}
       {/* Lazy loading placeholder */}
-      {!isInView && lazy && !priority && (;
-        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />;
-      )}
-<<<<<<< HEAD
-    </div>
-<<<<<<< HEAD
-=======
+
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
 }
 
-<<<<<<< HEAD
-=======
+
   )
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 // Higher-order component for easy migration from regular img tags
 export function withImageOptimization<P extends { src: string; alt: string }>(
   Component: React.ComponentType<P>
 ) {
   return function OptimizedComponent(props: P) {
-<<<<<<< HEAD
-=======
+
 // Higher-order component for easy migration from regular img tags;
 export function withImageOptimization<Pextends { src: string alt: string }>(;
   Component: React && React.ComponentType<P>;
 ) {;
   return function OptimizedComponent(): any (props: P) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     const { src, alt, ...otherProps } = props;
 
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
@@ -398,8 +344,7 @@ export function preloadImage(): any (src: string): Promise<void> {;
   });
 }
 
-<<<<<<< HEAD
-=======
+
     const { src, alt, ...otherProps } = props
     return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />
   }
@@ -411,7 +356,7 @@ export function preloadImage(src: string): Promise<void> {
     img.onerror = reject
     img.src = src
   })
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 // Utility to get image dimensions
 export function getImageDimensions(
   src: string
@@ -419,13 +364,7 @@ export function getImageDimensions(
   return new Promise((resolve, reject) => {
     const img = new window.Image()
     img.onload = () =>
-<<<<<<< HEAD
-      resolve({ width: img.naturalWidth, height: img.naturalHeight });
-    img.onerror = reject;
-    img.src = src;
-  });
-}
-=======
+
       resolve({ width: img.naturalWidth, height: img.naturalHeight })
     img.onerror = reject
     img.src = src
@@ -437,8 +376,46 @@ export function getImageDimensions(
   })
 }
 
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 =======
+=======
+      {!isInView && lazy && !priority && (
+
+
+=======
+        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
+      )}
+    </div>;
+  );
+}
+;
+// Higher-order component for easy migration from regular img tags;
+export function withImageOptimization<P extends { src: string, alt: string }>(;
+  Component: React.ComponentType<P>;
+) {;
+  return function OptimizedComponent(props: P) {;
+    const { src, alt, ...otherProps } = props,;
+    return (;
+      <OptimizedImage;
+        src={src}
+        alt={alt}
+        {...(otherProps as any)}
+      />;
+    );
+  }
+}
+;
+// Utility to preload critical images;
+export function preloadImage(src: string): Promise<void> {;
+  return new Promise((resolve, reject) => {;
+    const img = new window.Image(),;
+    img.onload = () => resolve(),;
+    img.onerror = reject,;
+    img.src = src;
+  });
+}
+;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // Utility to get image dimensions;
 export function getImageDimensions(): any (;
   src: string;
@@ -456,9 +433,8 @@ export function getImageDimensions(): any (;
     img && img.src = src;
   });
 } ;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -536,3 +512,8 @@ export function getImageDimensions (
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

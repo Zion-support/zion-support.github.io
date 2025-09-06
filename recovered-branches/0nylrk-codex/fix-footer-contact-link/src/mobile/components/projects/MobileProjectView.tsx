@@ -1,26 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Card, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Badge } from "@/components/ui/badge",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react",
-import { Progress } from "@/components/ui/progress",
-import { SeverityIndicator } from "../common/SeverityIndicator",
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-interface Milestone {
-
-  id: string
-  title: string
-  dueDate: string
-  status: "completed" | "in_progress" | "pending"
-  paymentStatus: "paid" | "pending" | "overdue"
-
-  amount: string
-=======
 import React from './react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -38,7 +16,7 @@ interface Milestone {
   status: "completed" | "in_progress" | "pending",
   payment_status: "paid" | "pending" | "overdue",
   amount: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 interface ProjectViewProps {
   project: {
@@ -46,36 +24,44 @@ interface ProjectViewProps {
     id: string
     title: string
     client: {
-<<<<<<< HEAD
-      name: string
-      avatar?: string
-    }
-    startDate: string
-    endDate?: string;
-    status: string
-    totalAmount: string
-    progress: number
 
-    description: string
-  }
-  milestones: Milestone[]
-}
-export function MobileProjectView({ project, milestones }: ProjectViewProps) {
+
+
+interface Milestone {
+  id: string,
+  title: string,
+  dueDate: string,
+  status: "completed" | "in_progress" | "pending",
+  paymentStatus: "paid" | "pending" | "overdue",
+  amount: string
+
+export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
+
 
   const navigate = useNavigate();
   const startProjectCall = () => {
     const roomId = `project-${project.id}`;
     toast.success("Starting project call", {
       description: "Initializing video connection..."
-    });
+
+
+    }),
+    
     navigate(`/call/${roomId}`)
-  }
+  },
+  
+
+
   const messageClient = () => {
     toast.info("Opening message thread with client", {
       description: `Messaging ${project.client.name}...`
     });
     // Navigate to messaging with this client
-  }
+
+
+  },
+  
+
 
   return (
     <div className="space-y-6 px-4 pb-24">
@@ -164,8 +150,12 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   </div>
                   <Badge
                     variant={
-                      milestone.paymentStatus === "paid" ? "default" :
+
+
+                      milestone.paymentStatus === "paid" ? "default" : 
                       milestone.paymentStatus === "overdue" ? "destructive" : "outline"
+
+
                     }
                   >
                     {milestone.paymentStatus}
@@ -194,6 +184,36 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 </div>
               </CardContent>
             </Card>
+
+
+                  </Badge>;
+                </div>;
+                <div className="pl-7">;
+                  <div className="flex justify-between text-sm">;
+                    <span className="text-muted-foreground">Due Date:</span>;
+                    <span>{milestone.dueDate}</span>;
+                  </div>;
+                  <div className="flex justify-between text-sm">;
+                    <span className="text-muted-foreground">Amount:</span>;
+                    <span>{milestone.amount}</span>;
+                  </div>;
+                  <div className="flex justify-between text-sm">;
+                    <span className="text-muted-foreground">Status:</span>;
+                    <span className="capitalize">{milestone.status.replace('_ ')}</span>;
+                  </div>;
+                  <Button;
+                    size="sm";
+                    variant="outline";
+                    className="w-full mt-3 gap-1";
+                  >;
+                    View Details <ChevronRight className="h-4 w-4" />;
+                  </Button>;
+                </div>;
+              </CardContent>;
+            </Card>;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>
       </section>

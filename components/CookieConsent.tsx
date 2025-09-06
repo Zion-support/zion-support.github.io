@@ -1,57 +1,4 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState, useEffect } from "react";
-import { X, Cookie, Settings } from "lucide-react";
-<<<<<<< HEAD
-export default function CookieConsent() {
-=======
-
-export default function CookieConsent() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  const [isVisible, setIsVisible] = useState(false);
-  const [showSettings, setShowSettings] = useState(false);
-  const [preferences, setPreferences] = useState({
-    necessary: true
-    analytics: false
-    marketing: false
-    functional: false
-  });
-  useEffect(() => {
-    const consent = localStorage.getItem("cookie-consent");
-    if (!consent) {
-      setIsVisible(true);
-    }
-  }, []);
-  const acceptAll = () => {
-    const allAccepted = {
-      necessary: true
-      analytics: true
-      marketing: true
-      functional: true
-    }
-=======
 
 export default function CookieConsent() {;
   const [isVisible, setIsVisible] = useState(false);
@@ -77,34 +24,11 @@ export default function CookieConsent() {;
       marketing: true,;
       functional: true,;
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     setPreferences(allAccepted);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted));
     setIsVisible(false);
-<<<<<<< HEAD
-    // Initialize analytics if accepted
-    if (allAccepted.analytics) {
-      // Add your analytics initialization code here
-      console.log("Analytics initialized");
-    }
-  }
-  const acceptSelected = () => {
-    localStorage.setItem("cookie-consent", JSON.stringify(preferences));
-    setIsVisible(false);
-    // Initialize analytics if accepted
-    if (preferences.analytics) {
-      // Add your analytics initialization code here
-      console.log("Analytics initialized");
-    }
-  }
-  const rejectAll = () => {
-    const onlyNecessary = {
-      necessary: true
-      analytics: false
-      marketing: false
-      functional: false
-    }
-=======
+
 
     // Initialize analytics if accepted;
     if (allAccepted && allAccepted.analytics) {;
@@ -131,41 +55,19 @@ export default function CookieConsent() {;
       marketing: false,;
       functional: false,;
     };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     setPreferences(onlyNecessary);
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary));
     setIsVisible(false);
-<<<<<<< HEAD
-  }
-  if (!isVisible) {
-=======
+
   };
 
   if (!isVisible) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return null;
   }
   return (
-<<<<<<< HEAD
-    <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">
-      <div className="max-w-7xl mx-auto p-4">
-        {!showSettings ? (
-          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="flex items-start gap-3">
-              <Cookie className="w-6 h-6 text-blue-600 mt-1 flex-shrink-0" />
-              <div>
-                <h3 className="font-semibold text-gray-900 mb-1">
-                  We use cookies to enhance your experience
-                </h3>
-                <p className="text-sm text-gray-600">
-                  We use cookies to improve your browsing experience, serve
-                  personalized content, and analyze our traffic. By clicking
-                  "Accept All", you consent to our use of cookies.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">
-=======
+
     <div className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200 shadow-lg">;
       <div className="max-w-7xl mx-auto p-4">;
         {!showSettings ? (;
@@ -269,61 +171,14 @@ if ( {) {
                   We use cookies to enhance your experience;
                 </h3>;
                 <p className="text - sm text - gray - 600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   We use cookies to improve your browsing experience, serve;
                   personalized content, and analyze our traffic. By clicking;
                   "Accept All", you consent to our use of cookies.;
                 </p>;
               </div>;
             </div>;
-<<<<<<< HEAD
 
-            <div className="flex flex-col sm:flex-row gap-2 w-full md:w-auto">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              <button
-                onClick={() => setShowSettings(true)}
-                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors flex items-center gap-2";
-              >;
-                <Settings className="w-4 h-4" />;
-                Cookie Settings;
-              </button>;
-              <button
-                onClick={rejectAll}
-                className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;
-                Reject All;
-              </button>;
-              <button
-                onClick={acceptAll}
-                className="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium">;
-                Accept All;
-              </button>;
-            </div>;
-          </div>;
-        ) : (;
-          <div>;
-            <div className="flex items-center justify-between mb-4">;
-              <h3 className="text-lg font-semibold text-gray-900">;
-                Cookie Preferences;
-              </h3>;
-              <button
-                onClick={() => setShowSettings(false)}
-<<<<<<< HEAD
-                className="text-gray-400 hover:text-gray-600 transition-colors"
-              >
-                <X className="w-5 h-5" />
-              </button>
-            </div>
-            <div className="space-y-4 mb-6">
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Necessary Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Required for the website to function properly
-                  </p>
-                </div>
-=======
                 className="text-gray-400 hover:text-gray-600 transition-colors";
               >;
                 <X className="w-5 h-5" />;
@@ -340,82 +195,13 @@ if ( {) {
                     Required for the website to function properly;
                   </p>;
                 </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 <input
                   type="checkbox"
                   checked={preferences && preferences.necessary}
                   disabled
                   className="w-4 h-4 text-blue-600 rounded"
-<<<<<<< HEAD
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Analytics Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Help us understand how visitors interact with our website
-                  </p>
-                </div>
-                <input
-                  type="checkbox"
-                  checked={preferences.analytics}
-                  onChange={(e) =>
-                    setPreferences((prev) => ({
-                      ...prev
-                      analytics: e.target.checked
-                    }))
-                  }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Marketing Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Used to track visitors across websites for advertising
-                    purposes
-                  </p>
-                </div>
-                <input
-                  type="checkbox"
-                  checked={preferences.marketing}
-                  onChange={(e) =>
-                    setPreferences((prev) => ({
-                      ...prev
-                      marketing: e.target.checked
-                    }))
-                  }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
-                <div>
-                  <h4 className="font-medium text-gray-900">
-                    Functional Cookies
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Enable enhanced functionality and personalization
-                  </p>
-                </div>
-                <input
-                  type="checkbox"
-                  checked={preferences.functional}
-                  onChange={(e) =>
-                    setPreferences((prev) => ({
-                      ...prev
-                      functional: e.target.checked
-                    }))
-                  }
-                  className="w-4 h-4 text-blue-600 rounded"
-                />
-              </div>
-            </div>
-            <div className="flex flex-col sm:flex-row gap-2 justify-end">
-=======
+
                 />;
               </div>;
 
@@ -488,7 +274,7 @@ if ( {) {
             </div>;
 
             <div className="flex flex-col sm:flex-row gap-2 justify-end">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <button
                 onClick={rejectAll}
                 className="px-4 py-2 text-sm text-gray-600 hover:text-gray-800 transition-colors">;

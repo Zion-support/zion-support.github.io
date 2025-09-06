@@ -1,15 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head';
 
-import {
-  Phone
-  Mail
-  MapPin
-  Check
-  ArrowRight
-  Smartphone;
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -34,25 +23,33 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
+
 =======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Check,;
+
+import React from 'react';
+
+import Head from 'next/head';
+
+import {
+
+  Phone,
+  Mail,
+  MapPin,
+  Check,
   ArrowRight,;
   Smartphone,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function MDMPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/mdm-mobile-device-management')
@@ -262,16 +259,10 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>;
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Phone, Mail, MapPin, Check, ArrowRight, Smartphone } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -323,12 +314,15 @@ export default function MDMPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

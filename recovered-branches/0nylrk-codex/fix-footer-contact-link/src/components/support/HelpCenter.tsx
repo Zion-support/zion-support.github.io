@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { HelpCategoryList } from "./HelpCategoryList";
-import { HelpArticleList } from "./HelpArticleList";
-import { HelpArticleView } from "./HelpArticleView";
-import { HELP_CATEGORIES } from "./help-content";
-import { AppLayout } from "@/layout/AppLayout";
-import { Search } from "lucide-react";
-export default function HelpCenter() {
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -47,26 +34,38 @@ import {HELP_CATEGORIES} from "./help-content";
 import {AppLayout} from "@/layout/AppLayout";
 import {Search} from "lucide-react";
 export default function HelpCenter() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
 
-<<<<<<< HEAD
-  const handleCategorySelect = (categoryId: string) => {
-    (setSelectedCategory(categoryId), setSelectedArticle(null));
-  }
-  const handleArticleSelect = (articleId: string) => {
-    setSelectedArticle(articleId);
-  }
-  const handleBackToCategories = () => {
-    setSelectedCategory(null);
-    setSelectedArticle(null);
-  }
-  const handleBackToArticles = () => {
-    setSelectedArticle(null);
-  }
 
+
+
+=======
+
+
+  
+  const handleCategorySelect = (categoryId: string) => {
+    setSelectedCategory(categoryId),
+    setSelectedArticle(null)
+  },
+  
+  const handleArticleSelect = (articleId: string) => {
+    setSelectedArticle(articleId)
+  },
+  
+  const handleBackToCategories = () => {
+    setSelectedCategory(null),
+    setSelectedArticle(null)
+  },
+  
+  const handleBackToArticles = () => {
+    setSelectedArticle(null)
+  },
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <AppLayout>
       <div className="container mx-auto px-4 py-8">
@@ -95,8 +94,7 @@ export default function HelpCenter() {;
             </TabsList>
             <TabsContent value="articles">
               {!selectedCategory && !selectedArticle && (
-                <HelpCategoryList
-=======
+
 import React, { useState } from './react';
 import { Input  } from '@/components / ui / input';
 import { Button  } from '@/components / ui / button';
@@ -161,7 +159,7 @@ function HelpCenter() {
             <TabsContent value="articles">;
               {!selected_category && !selected_article && (
                 <HelpCategoryList;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   categories={HELP_CATEGORIES}
 =======
   const handleCategorySelect = (categoryId: string) => {;
@@ -215,12 +213,18 @@ function HelpCenter() {
                 <HelpCategoryList
                   categories={HELP_CATEGORIES} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+                <HelpCategoryList 
+                  categories={HELP_CATEGORIES} 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   onCategorySelect={handleCategorySelect}
-<<<<<<< HEAD
-                  searchQuery={searchQuery}
-                />;
-              )}
-<<<<<<< HEAD
+
+
+              
+
+
               {selectedCategory && !selectedArticle && (
                 <>
                   <Button
@@ -230,7 +234,7 @@ function HelpCenter() {
                   >
                     ← All Categories
                   </Button>
-=======
+
 
               {selectedCategory && !selectedArticle && (;
                 <>;
@@ -240,15 +244,24 @@ function HelpCenter() {
                     className="mb-4">;
                     ← All Categories;
                   </Button>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <HelpArticleList
+=======
+
+                  <HelpArticleList 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     categoryId={selectedCategory}
                     onArticleSelect={handleArticleSelect}
                     searchQuery={searchQuery}
                   />;
                 </>;
               )}
-<<<<<<< HEAD
+
+
+              
+
+
               {selectedArticle && (
                 <>
 =======
@@ -265,13 +278,11 @@ function HelpCenter() {
                   <HelpArticleView articleId={selectedArticle} />;
                 </>;
               )}
-<<<<<<< HEAD
-            </TabsContent>
-            <TabsContent value="faq">
-              <div className="bg-zion-blue-light/20 rounded-lg p-6">
-                <h2 className="text-xl font-semibold mb-4">
-                  Frequently Asked Questions
-                </h2>
+
+
+                <h2 className="text-xl font-semibold mb-4">Frequently Asked Questions</h2>
+
+
                 <div className="space-y-6">
                   <div>
                     <h3 className="font-medium text-zion-cyan mb-2">
@@ -403,9 +414,7 @@ function HelpCenter() {
         </div>
       </div>
     </AppLayout>
-  );
-}
-=======
+
             </TabsContent>;
 
             <TabsContent value="faq">;
@@ -517,76 +526,13 @@ function HelpCenter() {
                       the bottom right of any page, by emailing;
                       support@ziontechgroup.com, or by scheduling a call with;
                       our team through the Contact tab.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                     </p>;
                   </div>;
                 </div>;
               </div>;
             </TabsContent>;
-<<<<<<< HEAD
 
-            <TabsContent value="contact">;
-              <div className="grid grid-cols-1 md: grid-cols-2 gap-8">;
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">;
-                  <h2 className="text-xl font-semibold mb-4">Contact Support</h2>;
-                  <p className="text-zion-slate-light mb-4">;
-                    Our support team is available 24/7 to assist you with any questions or issues.;
-                  </p>;
-
-                  <div className="space-y-4">;
-                    <div className="flex items-center">;
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">;
-                        <svg xmlns="http://www && www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">;
-                          <path d="M2 && M2.003 5 && 5.884L10 9 && 9.882l7.997-3 && 3.998A2 2 0 0016 4H4a2 2 0 00-1 && 1.997 1 && 1.884z" />;
-                          <path d="M18 8 && 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8 && 2V8.118z" />;
-                        </svg>;
-                      </div>;
-                      <a href="mailto:support@ziontechgroup && ziontechgroup.com" className="text-zion-cyan hover:underline">;
-                        support@ziontechgroup && ziontechgroup.com;
-                      </a>;
-                    </div>;
-
-                    <div className="flex items-center">;
-                      <div className="bg-zion-purple/10 p-2 rounded-full mr-3">;
-                        <svg xmlns="http://www && www.w3.org/2000/svg" className="h-5 w-5 text-zion-purple" viewBox="0 0 20 20" fill="currentColor">;
-                          <path d="M2 3a1 1 0 011-1h2 && 1h2.153a1 1 0 01 && 01.986.836l && 836l.74 4 && 4.435a1 1 0 01-.54 1 && 1.06l-1 && 1.548.773a11 && 773a11.037 11 && 11.037 0 006 && 006.105 6 && 6.105l.774-1 && 1.548a1 1 0 011 && 011.059-.54l4 && 54l4.435.74a1 1 0 01 && 01.836.986V17a1 1 0 01-1 1h-2C7 && 2C7.82 18 2 12 && 12.18 2 5V3z" />;
-                        </svg>;
-                      </div>;
-                      <span className="text-zion-slate-light">+1 302 464 0950</span>;
-                    </div>;
-                  </div>;
-
-                  <Button className="w-full mt-6 bg-zion-purple hover:bg-zion-purple-light">;
-                    Open Live Chat;
-                  </Button>;
-                </div>;
-
-                <div className="bg-zion-blue-light/20 rounded-lg p-6">;
-                  <h2 className="text-xl font-semibold mb-4">Feedback & Suggestions</h2>;
-                  <p className="text-zion-slate-light mb-4">;
-                    We value your input and are constantly looking to improve our platform.;
-                  </p>;
-
-                  <form className="space-y-4">;
-                    <div>;
-                      <Input
-                        placeholder="Your email"
-                      />;
-                    </div>;
-                    <div>;
-                      <Input
-                        placeholder="Subject"
-                      />;
-                    </div>;
-                    <div>;
-                      <textarea
-                        className="w-full min-h-[120px] px-3 py-2 rounded-md border border-zion-blue-light bg-zion-blue/20 text-white"
-                        placeholder="Your feedback or suggestion"
-                      />;
-                    </div>;
-
-                    <Button className="w-full bg-zion-cyan hover:bg-zion-cyan/80">;
-=======
             <TabsContent value="contact">;
               <div className="grid grid - cols - 1 md: grid - cols - 2 gap - 8">;
                 <div className="bg - zion - blue - light / 20 rounded - lg p - 6">;
@@ -659,7 +605,7 @@ function HelpCenter() {
                       />;
                     </div>;
                     <Button className="w - full bg - zion - cyan hover:bg - zion - cyan / 80">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                       Submit Feedback;
                     </Button>;
                   </form>;
@@ -669,9 +615,11 @@ function HelpCenter() {
           </Tabs>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </AppLayout>;
-  );
+
+
+  )
+
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

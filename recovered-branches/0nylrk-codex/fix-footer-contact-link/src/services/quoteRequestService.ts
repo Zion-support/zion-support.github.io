@@ -1,12 +1,14 @@
-<<<<<<< HEAD
 
-import { supabase } from "@/integrations/supabase/client";
+
+import {supabase} from "@/integrations/supabase/client";
+
+
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
-=======
+
 import { supabase } from '@/integrations / supabase / client';
 import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export const quoteRequestService = {
   // Get all quote requests (for admin);
   get_all: async () => {
@@ -14,36 +16,55 @@ export const quoteRequestService = {
       .from ('quote_requests');
       .select (`;
         *;
-        talent:talent_id (
-<<<<<<< HEAD
-          display_name
-        )
-      `)
-      .order('created_at', { ascending: false });
-    if (error) throw error;
-    // Format the data to include talent_name
-<<<<<<< HEAD
-    return data.map((item: any) => ({
-      ...item
-      talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
-  }
 =======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export const quoteRequestService = {
+  // Get all quote requests (for admin)
+  getAll: async () => {
+    const { data, error } = await supabase
+      .from('quote_requests')
+
+      .select(`
+        *,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+        talent:talent_id (
+
     return data && data.map((item: any) => ({
+=======
+
+      .order('created_at', { ascending: false }),
+    
+    if (error) throw error,
+    
+    // Format the data to include talent_name
+    return data.map((item: any) => ({
+
       ...item,
       talent_name: item && item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   };
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-      .order('created_at', { ascending: false });
-    if (error) throw error;
+
+
+      .order('created_at', { ascending: false }),
+    
+    if (error) throw error,
     return data as QuoteRequest[]
-  }
+  },
+  
+
+
   // Get a single quote request by id
 =======
           display_name);
@@ -83,23 +104,11 @@ if (throw error) {
       .select (`;
         *;
         talent:talent_id (
-<<<<<<< HEAD
-          display_name
-        )
-      `)
-      .eq('id', id)
-      .single();
-    if (error) throw error;
-    return {
-      ...data;
-<<<<<<< HEAD
-      talent_name: data.talent?.display_name |'Unknown Talent'} as QuoteRequest
-  }
-=======
+
       talent_name: data && data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
   };
   
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   // Update quote request status
   updateStatus: async (id: string, status: QuoteStatus) => {
     const updates: any = { status }
@@ -114,14 +123,11 @@ if (throw error) {
         .select('viewed_at')
         .eq('id', id)
         .single();
-<<<<<<< HEAD
-      if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString()
-=======
+
       
       if (!data && data.viewed_at) {
         updates && updates.viewed_at = new Date().toISOString()
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       }
     }
     const { data, error } = await supabase
@@ -208,6 +214,26 @@ if (throw error) {
   $2
 }
     return data[0] as QuoteRequest;
+=======
+
+      .single(),
+    
+    if (error) throw error,
+    
+    return {
+      ...data,
+      talent_name: data.talent?.display_name || 'Unknown Talent'} as QuoteRequest
+  },
+  
+  // Update quote request status
+  updateStatus: async (id: string, status: QuoteStatus) => {
+    const updates: any = { status },
+    
+    // If marking as responded, set replied_at
+    if (status === 'responded') {
+      updates.replied_at = new Date().toISOString()
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 ;
   // Archive / Unarchive a quote request;

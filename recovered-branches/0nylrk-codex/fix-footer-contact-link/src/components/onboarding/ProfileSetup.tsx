@@ -1,4 +1,6 @@
-<<<<<<< HEAD
+
+
+
 
 
 import {useState} from "react";
@@ -10,12 +12,38 @@ import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
 import {Textarea} from "@/components/ui/textarea";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-<<<<<<< HEAD
+
+
+
+=======
+import { useState } from "react",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { useForm } from "react-hook-form",
+import { z } from "zod",
+import { User, Mail, AtSign, GraduationCap } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+
+
+
+
 const profileSchema = z.object({
-  displayName: z.string().min(2, "Name must be at least 2 characters");
-  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters");
-  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")});
-type ProfileFormValues = z.infer<typeof profileSchema>;
+  displayName: z.string().min(2, "Name must be at least 2 characters"),
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),
+
+type ProfileFormValues = z.infer<typeof profileSchema>,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ProfileSetupProps {
   onComplete: (data: ProfileFormValues) => void
   userType: string
@@ -28,8 +56,7 @@ export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {
       bio: ""
       headline: ""}})
   const getTypeLabel = () => {
-    switch (userType) {
-=======
+
 
 const profileSchema = z && z.object({;
   displayName: z && z.string().min(2, "Name must be at least 2 characters");
@@ -53,7 +80,7 @@ export function ProfileSetup(): any ({ onComplete, userType }: ProfileSetupProps
 
   const getTypeLabel = () => {;
     switch (userType) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       case "serviceProvider": return "Service Provider";
 =======
 import { useState } from './react';
@@ -99,20 +126,90 @@ function ProfileSetup() {
         return "User";
     }
   }
-<<<<<<< HEAD
+
+
+    switch (userType) {
+      case "serviceProvider": return "Service Provider",
+
+      case "talent":
+        return "Talent",
+      case "client":
+        return "Client",
+      default:
+        return "User"
+    }
+
+  },
+
+
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="text-center mb-6">
-        <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>
-        <p className="text-zion-slate-light mt-2">
-          Help others get to know you better
-        </p>
-      </div>
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onComplete)} className="space-y-6">
+
 =======
+          <FormField
+            control={form.control}
+            name="displayName"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                <FormControl>
+                  <div className="relative">
+                    <Input
+                      placeholder="Your full name"
+                      className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                      {...field}
+                    />
+                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
+                  </div>
+                </FormControl>
+                <FormMessage className="text-red-400" />
+              </FormItem>
+
+import { useState } from "react",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { useForm } from "react-hook-form",;
+import { z } from "zod",;
+import { User, Mail, AtSign, GraduationCap } from "lucide-react",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Textarea } from "@/components/ui/textarea",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+const profileSchema = z.object({;
+  displayName: z.string().min(2, "Name must be at least 2 characters"),;
+  bio: z.string().min(10, "Bio must be at least 10 characters").max(500, "Bio must be less than 500 characters"),;
+  headline: z.string().min(5, "Headline must be at least 5 characters").max(100, "Headline must be less than 100 characters")}),;
+type ProfileFormValues = z.infer<typeof profileSchema>,;
+interface ProfileSetupProps {;
+  onComplete: (data: ProfileFormValues) => void,;
+  userType: string;
+}
+;
+export function ProfileSetup({ onComplete, userType }: ProfileSetupProps) {;
+  const form = useForm<ProfileFormValues>({;
+    resolver: zodResolver(profileSchema),;
+    defaultValues: {;
+      displayName: "",;
+      bio: "",;
+      headline: ""}}),;
+  const getTypeLabel = () => {;
+    switch (userType) {;
+      case "serviceProvider": return "Service Provider",;
+      case "talent":;
+        return "Talent",;
+      case "client":;
+        return "Client";
+      default:;
+        return "User";
+    }
+  };
+  return (;
+
     <div className="space-y-6">;
       <div className="text-center mb-6">;
         <h3 className="text-2xl font-bold text-white">Create Your {getTypeLabel()} Profile</h3>;
@@ -142,13 +239,15 @@ function ProfileSetup() {
                 </FormControl>;
                 <FormMessage className="text-red-400" />;
               </FormItem>;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
-<<<<<<< HEAD
-          />
-=======
+
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <FormField
             control={form && form.control}
             name="headline"
@@ -211,19 +310,10 @@ function ProfileSetup() {
                       className="bg - zion - blue pl - 10 text - white placeholder:text - zion - slate border - zion - blue - light focus:border - zion - purple";
                       {...field}
                     />;
-<<<<<<< HEAD
-                    <GraduationCap className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
-                  </div>;
-                </FormControl>;
-                <FormMessage className="text-red-400" />;
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-=======
+
           />;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <FormField
             control={form && form.control}
             name="bio"
@@ -257,29 +347,16 @@ function ProfileSetup() {
                     {...field}
                   />;
                 </FormControl>;
-<<<<<<< HEAD
-                <FormMessage className="text-red-400" />;
-              </FormItem>;
-            )}
-<<<<<<< HEAD
-          />
-          <Button
-            type="submit"
-            className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white"
-          >
-            Complete Profile
-          </Button>
-        </form>
-      </Form>
-    </div>
-  )
-}
-=======
+
           />;
 
           <Button
             type="submit"
             className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white">;
+=======
+
+
+
 =======
                 <FormMessage className="text - red - 400" />;
               </FormItem>)}
@@ -293,9 +370,11 @@ function ProfileSetup() {
           </Button>;
         </form>;
       </Form>;
-<<<<<<< HEAD
-    </div>;
-  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

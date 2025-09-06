@@ -1,35 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-}
-import React, { useState, useEffect } from './react';
-import { safe_storage  } from '@/utils / safe_storage';
-import { X } from 'lucide-react'import { useIsMobile  } from '@/hooks / use - mobile';
-export const AppStoreBanner: React.FC = () => {
-  const [is_visible, setIsVisible] = useState (false);
-  const is_mobile = useIsMobile ();
-  useEffect ((, ) => {
-    // Only show banner on mobile devices and if it hasn't been dismissed before;
-    if () {) {
-  $2
-}
-      // Delay showing the banner by 2 seconds;
-      const timer = set_timeout ((, ) => {
-        setIsVisible (true);
-      }, 2000);
-      return () => clear_timeout (timer);
-    }
-    return undefined;
-  }, [is_mobile]);
-  const dismiss_banner = () =>: any {
-    setIsVisible (false);
-    safe_storage.set_item ("appBannerDismissed", "true");
-  }
-<<<<<<< HEAD
-  // Only render on mobile devices
-  if (!isMobile |!isVisible) return null
+
   return (
     <div className="fixed bottom-16 left-0 right-0 bg-zion-blue-dark border-t border-zion-purple/30 p-3 z-40">
       <div className="flex items-center">
@@ -55,13 +25,8 @@ export const AppStoreBanner: React.FC = () => {
         </div>
       </div>
     </div>
-  )
-}
-'"}
-}
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 };
 import React, { useState, useEffect } from "react";
 import { safeStorage } from "@/utils/safeStorage";
@@ -119,9 +84,8 @@ export const AppStoreBanner: React.FC = () => {;
 '"},;
 
 };
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -161,3 +125,8 @@ if (return null) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  )
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

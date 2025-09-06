@@ -1,17 +1,21 @@
-<<<<<<< HEAD
 
-import React from "react";
-<<<<<<< HEAD
-import {
-  Dialog
-  DialogContent
-  DialogHeader
-  DialogTitle
-} from "@/components/ui/dialog";
-import { HireRequestForm } from "./HireRequestForm";
 
-import { TalentProfile } from "@/types/talent";
-import { UserProfile } from "@/types/auth";
+
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
+import {HireRequestForm} from "./HireRequestForm";
+import {TalentProfile} from "@/types/talent";
+import {UserProfile} from "@/types/auth";
+
+=======
+import React from "react",
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { HireRequestForm } from "./HireRequestForm",
+import { TalentProfile } from "@/types/talent",
+import { UserProfile } from "@/types/auth",
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface HireRequestModalProps {
   talent: TalentProfile | null;
   isOpen: boolean;
@@ -26,9 +30,18 @@ export function HireRequestModal({
   userDetails
 }: HireRequestModalProps) {
   const handleClose = () => {
-    onClose();
-  }
-  if (!talent) return null;
+
+
+  };
+
+=======
+    onClose()
+  },
+
+
+  if (!talent) return null,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 =======
 import React from './react';
@@ -61,19 +74,23 @@ if (return null) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return (
-    <Dialog open={is_open} onOpenChange={handle_close}>;
-      <DialogContent className="bg - zion - blue - dark border - zion - blue - light max - w-4xl w-[95vw] max - h-[90vh] overflow - y-auto">;
-        <DialogHeader>;
-          <DialogTitle className="text - xl font - bold text - white">;
-            Hire {talent.full_name}
-<<<<<<< HEAD
-          </DialogTitle>
-        </DialogHeader>
-=======
+
 import {Dialog, DialogContent, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {HireRequestForm} from "./HireRequestForm";
 import {TalentProfile} from "@/types/talent";
 import {UserProfile} from "@/types/auth";
+=======
+    <Dialog open={isOpen} onOpenChange={handleClose}>
+      <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">
+        <DialogHeader>
+          <DialogTitle className="text-xl font-bold text-white">
+
+import React from "react",;
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",;
+import { HireRequestForm } from "./HireRequestForm",;
+import { TalentProfile } from "@/types/talent",;
+import { UserProfile } from "@/types/auth",;
+
 interface HireRequestModalProps {;
   talent: TalentProfile | null,;
   isOpen: boolean,;
@@ -93,28 +110,24 @@ export function HireRequestModal(): any ({ talent, isOpen, onClose, userDetails 
       <DialogContent className="bg-zion-blue-dark border-zion-blue-light max-w-4xl w-[95vw] max-h-[90vh] overflow-y-auto">;
         <DialogHeader>;
           <DialogTitle className="text-xl font-bold text-white">;
-            Hire {talent && talent.full_name}
-          </DialogTitle>;
-        </DialogHeader>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        <HireRequestForm
+
+            Hire {talent.full_name}
+          </DialogTitle>
+        </DialogHeader>
+        <HireRequestForm 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           talent={talent}
           onClose={handleClose}
           userDetails={userDetails}
-<<<<<<< HEAD
-        />
-      </DialogContent>
-    </Dialog>
-  );
-}
-=======
+
         />;
       </DialogContent>;
     </Dialog>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
           </DialogTitle>;
         </DialogHeader>;

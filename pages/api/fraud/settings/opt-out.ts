@@ -1,38 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getFraudStore } from "../../../../utils/fraud/store";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
-  try {
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getFraudStore } from '../../../../utils/fraud/store';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   const store = getFraudStore();
-<<<<<<< HEAD
-  if (req.method === "GET") {
-    const userId = (req.query.userId as string) |"";
-    if (!userId) return res.status(400).json({ error: "Missing userId" });
-    const settings = await store.getPrivacySettings(userId);
-<<<<<<< HEAD
-    return res.status(200).json(settings);
-  }
-  if (req.method === "POST") {
-    const { userId, optOut } = req.body |{}
-    if (!userId |typeof optOut !== "boolean")
-      return res.status(400).json({ error: "Missing userId or optOut" });
-    const updated = await store.setPrivacySettings(userId, optOut);
-    return res.status(200).json(updated);
 
-=======
     return res.status(200).json(settings)
   }
 
@@ -41,12 +10,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!userId || typeof optOut !== 'boolean') return res.status(400).json({ error: 'Missing userId or optOut' });
     const updated = await store.setPrivacySettings(userId, optOut);
     return res.status(200).json(updated)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   }
   res.status(405).json({ error: "Method not allowed" });
 }
-<<<<<<< HEAD
-=======
+
 
   if (req && req.method === "GET") {
     const userId = (req && req.query.userId as string) || "";
@@ -65,7 +33,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   res && res.status(405).json({ error: "Method not allowed" });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -104,3 +72,58 @@ if ( {) {
   res.status (405).json ({ error: "Method not allowed" });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+import type { NextApiRequest, NextApiResponse } from "next";
+import { getFraudStore } from "../../../../utils/fraud/store";
+export default async function handler(
+
+  req: NextApiRequest,
+  res: NextApiResponse,
+) {;
+
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  res.status(200).json({ message: 'API endpoint' });
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getFraudStore } from '../../../../utils/fraud/store';
+export default async function handler(req, res) {
+  try {
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  const store = getFraudStore();
+  if (req.method === 'GET') {
+    const userId = (req.query.userId as string) || '';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  if (req.method === 'GET') {
+    const { userId, optOut } = req.body || {};
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const updated = await store.setPrivacySettings(userId, optOut);
+    return res.status(200).json(updated);
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

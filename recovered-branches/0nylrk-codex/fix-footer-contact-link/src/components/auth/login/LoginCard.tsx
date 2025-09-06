@@ -1,9 +1,9 @@
-<<<<<<< HEAD
 
-import { Link } from "react-router-dom",
-import { LoginForm } from "./LoginForm";
-import { SocialLogin } from "./SocialLogin";
-export function LoginCard() {;
+
+
+
+export function LoginCard() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="mx-auto w-full max-w-sm lg:w-96">;
       <div className="text-center mb-10">;
@@ -14,19 +14,7 @@ export function LoginCard() {;
           Don't have an account?{" "}
           <Link
             to="/signup"
-<<<<<<< HEAD
-            className="font-medium text-zion-cyan hover: text-zion-cyan-light"
-          >
-            Sign up
-          </Link>
-        </p>
-      </div>
-      <div className="bg-zion-blue-dark rounded-lg p-6">
-        <LoginForm />
-        <SocialLogin />
-      </div>
-    </div>
-=======
+
             className="font-medium text-zion-cyan hover: text-zion-cyan-light">;
 =======
 import { Link  } from './react-router-dom';
@@ -48,17 +36,16 @@ function LoginCard() {
             to="/signup";
             className="font - medium text - zion - cyan hover: text - zion - cyan - light";
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             Sign up;
           </Link>;
         </p>;
       </div>;
-<<<<<<< HEAD
 
-      <div className="bg-zion-blue-dark rounded-lg p-6">;
-        <LoginForm />;
-        <SocialLogin />;
-      </div>;
+
+    </div>
+
+
     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );

@@ -1,8 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import Link from 'next/link';
+
+
+import React from 'react'
+import Link from 'next/link'
+
+
 import { MessageSquare } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
@@ -71,8 +72,7 @@ interface EmptyStateProps {
   subtitle: string;
   cta: string;
   href: string;
-<<<<<<< HEAD
-=======
+
 import React from 'react';
 import Link from 'next/link';
 import { MessageSquare } from 'lucide-react'
@@ -84,25 +84,17 @@ interface EmptyStateProps {
   subtitle: string,
   cta: string,
   href: string,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   hasSession: boolean
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-const EmptyState: React.FC<EmptyStateProps> = ({
-  title
-  subtitle
-  cta
-  href
-  hasSession
-=======
+
 const EmptyState: React.FC<EmptyStateProps> = ({;
   title,;
   subtitle,;
   cta,;
   href,;
   hasSession,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }) => {  return (
     <div className='text-center py-16'>;
       <div className='bg-zion-blue/30 p-6 rounded-full mb-6 inline-flex'>;
@@ -120,11 +112,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({;
               </Button>;
             ) : (;
               <Button disabled>{cta}</Button>;
-<<<<<<< HEAD
-            )}
-          </TooltipTrigger>;
-          {!hasSession && <TooltipContent>Login required</TooltipContent>}
-=======
+
 =======
 const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, hasSession }) => {
   return (
@@ -133,6 +121,7 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
         <MessageSquare className="h-10 w-10 text-zion-purple" />
       </div>
       <h2 className="text-xl font-medium mb-2">{title}</h2>
+
       <p className="text-muted-foreground mb-6">{subtitle}</p>
       <TooltipProvider>
         <Tooltip>
@@ -147,27 +136,20 @@ const EmptyState: React.FC<EmptyStateProps> = ({ title, subtitle, cta, href, has
             )}
           </TooltipTrigger>;
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
-<<<<<<< HEAD
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-  )
-<<<<<<< HEAD
-}
-export default EmptyState
+
 
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </Tooltip>;
       </TooltipProvider>;
     </div>;
   );
-};
-<<<<<<< HEAD
+
 export default EmptyState;
-=======
-export default EmptyState;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 };
 
@@ -208,3 +190,10 @@ const EmptyState: React.FC < EmptyStateProps> = ({
 export default EmptyState;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+},;
+export default EmptyState;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

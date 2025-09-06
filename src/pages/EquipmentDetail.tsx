@@ -1,206 +1,15 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
-import { NextSeo } from '@/components/NextSeo'
-import { Badge } from '@/components/ui/badge'
-import { Button } from '@/components/ui/button'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-import {
-  ShoppingCart
-  Star
-  Truck
-  Shield
-  RotateCcw
-  Clock
-  AlertTriangle
-  ArrowLeft
-} from 'lucide-react'
-import { toast } from '@/hooks/use-toast'
-import { useAuth } from '@/hooks/useAuth'
-import { getStripe } from '@/utils/getStripe'; import { useRouter } from 'next/router'
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { AspectRatio } from "@/components/ui/aspect-ratio"
 
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
-import { toast } from "@/hooks/use-toast",
-import { useAuth } from "@/hooks/useAuth",
-import { getStripe } from "@/utils/getStripe";
-import { useCart  } from '@/context/CartContext';
-import { ImageWithRetry  } from '@/components/ui/ImageWithRetry';
-import { equipmentListings  } from '@/data/equipmentData';
-import { ProductListing  } from '@/types/listings';
-import { motion  } from 'framer-motion';
-import { useCurrency  } from '@/hooks/useCurrency';
-import {logErrorToProduction} from '@/utils/productionLogger';
-interface EquipmentSpecification {
-
-  name: string
-value: string
-}interface EquipmentDetails {
-  id: string
-name: string
-description: string
-brand: string
-category: string
-subcategory?: string
-images: string[]
-price: number
-currency: string
-rating?: number
-reviewCount?: number
-inStock: boolean
-expectedShipping?: string
-specifications: EquipmentSpecification[]
-features: string[]
-warranty?: string
-returnPolicy?: string
-}return {
-  id: item.id, name: item.title, description: item.description, brand: item.brand |'Unknown', category: item.category, subcategory: item.subcategory, images: item.images |['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'], price: item.price |0, currency: item.currency |'$', rating: item.rating, reviewCount: item.reviewCount, inStock: item.availability === 'In Stock' |!item.availability, expectedShipping: item.availability |'In Stock',  specifications: (item.specifications |[]) .map ( (spec) => ({'
-  name: spec, value: ''
-}) )
-features: item.tags |[];'
-warranty: '1 Year Manufacturer Warranty';'
-returnPolicy: '30-day return policy'
-
-// Convert ProductListing to EquipmentDetails format
-function convertProductListingToEquipmentDetails(
-  item: ProductListing
-): EquipmentDetails {
-  return {
-
-    id: item.id
-    name: item.title
-    description: item.description
-    brand: item.brand |'Unknown'
-    category: item.category
-    subcategory: item.subcategory
-    images: item.images |[
-      'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-    ]
-    price: item.price |0
-    currency: item.currency |'$'
-    rating: item.rating
-    reviewCount: item.reviewCount
-    inStock: item.availability === 'In Stock' |!item.availability
-    expectedShipping: item.availability |'In Stock'
-    specifications: (item.specifications |[]).map(spec => ({
-      name: spec
-      value: '',    }))
-    features: item.tags |[]
-    warranty: '1 Year Manufacturer Warranty'
-    returnPolicy: '30-day return policy'
-=======
-import { useState, useEffect } from 'react';
-import { use_router } from 'next / router';
-import { NextSeo } from '@/components / NextSeo';
-import { Badge } from '@/components / ui / badge';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { AspectRatio } from '@/components / ui / aspect - ratio';
-import {
-  ShoppingCart,
-  Star,
-  Truck,
-  Shield,
-  RotateCcw,
-  Clock,
-  AlertTriangle,
-  ArrowLeft,
-} from 'lucide-react';
-import { toast } from '@/hooks / use - toast';
-import { use_auth } from '@/hooks / use_auth';
-import { get_stripe } from '@/utils / get_stripe'; import { use_router } from 'next / router';
-import { Badge  } from '@/components / ui / badge';
-import { Button  } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger  } from '@/components / ui / tabs';
-import { AspectRatio  } from '@/components / ui / aspect - ratio';
-import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
-import { toast  } from '@/hooks / use - toast';
-import { use_auth  } from '@/hooks / use_auth';
-import { get_stripe  } from '@/utils / get_stripe';
-import { use_cart } from '@/context / CartContext';
-import { ImageWithRetry } from '@/components / ui / ImageWithRetry';
-import { equipment_listings } from '@/data / equipment_data';
-import { ProductListing } from '@/types / listings';
-import { motion } from 'framer-motion';
-import { use_currency } from '@/hooks / use_currency';
-import { logErrorToProduction } from '@/utils / production_logger';
-interface EquipmentSpecification {
-  name: string;
-value: string;
-}interface EquipmentDetails {
-  id: string;
-name: string;
-description: string;
-brand: string;
-category: string;
-subcategory?: string;
-images: string[];
-price: number;
-currency: string;
-rating?: number;
-review_count?: number;
-in_stock: boolean;
-expected_shipping?: string;
-specifications: EquipmentSpecification[];
-features: string[];
-warranty?: string;
-return_policy?: string;
-}return {
-  id: item.id, name: item.title, description: item.description, brand: item.brand || 'Unknown', category: item.category, subcategory: item.subcategory, images: item.images || ['https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500'], price: item.price || 0, currency: item.currency || '$', rating: item.rating, review_count: item.review_count, in_stock: item.availability === 'In Stock' || !item.availability, expected_shipping: item.availability || 'In Stock',  specifications: (item.specifications || []) .map ( (spec) => ({';
-  name: spec, value: '';
-}) );
-features: item.tags || [];';
-warranty: '1 Year Manufacturer Warranty';';
-return_policy: '30 - day return policy';
-// Convert ProductListing to EquipmentDetails format;
-function convertProductListingToEquipmentDetails (
-  item: ProductListing): EquipmentDetails {
-  return {
-    id: item.id,
-    name: item.title,
-    description: item.description,
-    brand: item.brand || 'Unknown',
-    category: item.category,
-    subcategory: item.subcategory,
-    images: item.images || [;
-      'https://images.unsplash.com / photo - 1558494949 - ef010cbdcc31?auto = format & fit = crop & w=800 & h=500',
-    ],
-    price: item.price || 0,
-    currency: item.currency || '$',
-    rating: item.rating,
-    review_count: item.review_count,
-    in_stock: item.availability === 'In Stock' || !item.availability,
-    expected_shipping: item.availability || 'In Stock',
-    specifications: (item.specifications || []).map (spec => ({
-      name: spec,
-      value: '',    })),
-    features: item.tags || [],
-    warranty: '1 Year Manufacturer Warranty',
-    return_policy: '30 - day return policy',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 // Build sample data from the shared equipment listings;
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
   equipment_listings.reduce (
     (acc, item) => {
-<<<<<<< HEAD
-      acc[item.id] = convertProductListingToEquipmentDetails(item)
-      return acc
-    }
-=======
+
       acc[item.id] = convertProductListingToEquipmentDetails (item);
       return acc;
     },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     {} as { [key: string]: EquipmentDetails }
   );
 export default /**
@@ -244,16 +53,13 @@ if ( {) {
           set_loading (false);
           return;
         }
-<<<<<<< HEAD
-        // Try to get from sessionStorage (for dynamically generated equipment)
-        if (typeof window !== 'undefined') {
-=======
+
         // Try to get from session_storage (for dynamically generated equipment);
         // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
           try {
             const stored = session_storage.get_item (`equipment:${id}`);
             // Check condition
@@ -270,13 +76,8 @@ if ( {) {
                 // Already in EquipmentDetails format;
                 equipment_data = stored_data;
               } else {
-<<<<<<< HEAD
-                // It's a ProductListing, convert it
-                equipmentData = convertProductListingToEquipmentDetails(
-                  storedData as ProductListing
-                )
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
@@ -436,17 +237,7 @@ export default function EquipmentDetail() {;
               setLoading(false)
               return
             }
-<<<<<<< HEAD
-          } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', {
-              data: storageError
-            })
-          }
-        }
-        // If not found anywhere, set error
-        setError('Equipment not found')
-        setLoading(false)
-=======
+
                 // It's a ProductListing, convert it;
                 equipment_data = convertProductListingToEquipmentDetails (
                   stored_data as ProductListing);
@@ -464,47 +255,210 @@ export default function EquipmentDetail() {;
         // If not found anywhere, set error;
         set_error ('Equipment not found');
         set_loading (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       } catch (error) {
         logErrorToProduction ('Error loading equipment:', { data: error });
         set_error ('Failed to load equipment details');
         set_loading (false);
       }
     }
-<<<<<<< HEAD
+
+
+
+=======
+import { useState, useEffect } from "react",
+import { useRouter } from 'next/router',
+import { NextSeo } from '@/components/NextSeo',
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react'
+import { toast } from "@/hooks/use-toast",
+import { useAuth } from "@/hooks/useAuth",
+import { getStripe } from "@/utils/getStripe",
+import { useCart } from '@/context/CartContext',
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',
+import { equipmentListings } from '@/data/equipmentData',
+import { ProductListing } from '@/types/listings',
+import { motion } from 'framer-motion',
+import { useCurrency } from '@/hooks/useCurrency',
+import {logErrorToProduction} from '@/utils/productionLogger',
+interface EquipmentSpecification {
+  name: string,
+  value: string
+import { useState, useEffect } from "react",;
+import { useRouter } from 'next/router',;
+import { NextSeo } from '@/components/NextSeo',;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { AspectRatio } from "@/components/ui/aspect-ratio",;
+import { ShoppingCart, Star, Truck, Shield, RotateCcw, Clock, AlertTriangle, ArrowLeft } from 'lucide-react';
+import { toast } from "@/hooks/use-toast",;
+import { useAuth } from "@/hooks/useAuth",;
+import { getStripe } from "@/utils/getStripe",;
+import { useCart } from '@/context/CartContext',;
+import { ImageWithRetry } from '@/components/ui/ImageWithRetry',;
+import { equipmentListings } from '@/data/equipmentData',;
+import { ProductListing } from '@/types/listings',;
+import { motion } from 'framer-motion',;
+import { useCurrency } from '@/hooks/useCurrency',;
+import {logErrorToProduction} from '@/utils/productionLogger',;
+interface EquipmentSpecification {;
+  name: string,;
+  value: string;
+}
+;
+interface EquipmentDetails {;
+  id: string,;
+  name: string,;
+  description: string,;
+  brand: string,;
+  category: string,;
+  subcategory?: string,;
+  images: string[],;
+  price: number,;
+  currency: string,;
+  rating?: number,;
+  reviewCount?: number,;
+  inStock: boolean,;
+  expectedShipping?: string,;
+  specifications: EquipmentSpecification[],;
+  features: string[],;
+  warranty?: string,;
+  returnPolicy?: string;
+}
+;
+// Convert ProductListing to EquipmentDetails format;
+function convertProductListingToEquipmentDetails(item: ProductListing): EquipmentDetails {;
+  return {;
+    id: item.id,;
+    name: item.title,;
+    description: item.description,;
+    brand: item.brand || 'Unknown',;
+    category: item.category,;
+    subcategory: item.subcategory,;
+    images: item.images || ['https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'],;
+    price: item.price || 0,;
+    currency: item.currency || '$',;
+    rating: item.rating,;
+    reviewCount: item.reviewCount,;
+    inStock: item.availability === 'In Stock' || !item.availability,;
+    expectedShipping: item.availability || 'In Stock',;
+    specifications: (item.specifications || []).map((spec) => ({;
+      name: spec,;
+      value: '';
+    })),;
+    features: item.tags || [],;
+    warranty: '1 Year Manufacturer Warranty',;
+    returnPolicy: '30-day return policy';
+  }
+}
+;
+// Build sample data from the shared equipment listings;
+export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =;
+  equipmentListings.reduce((acc, item) => {;
+    acc[item.id] = convertProductListingToEquipmentDetails(item),;
+    return acc;
+  }, {} as { [key: string]: EquipmentDetails }),;
+export default function EquipmentDetail() {;
+  const router = useRouter(),;
+  const { id } = router.query as { id?: string },;
+  const { isAuthenticated, user } = useAuth(),;
+  const { items, dispatch } = useCart(),;
+  const { formatPrice } = useCurrency(),;
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0),;
+  const [quantity, setQuantity] = useState(1),;
+  const [isAdding, setIsAdding] = useState(false),;
+  const [loading, setLoading] = useState(true),;
+  const [error, setError] = useState<string | null>(null),;
+  const [equipment, setEquipment] = useState<EquipmentDetails | undefined>(),;
+  useEffect(() => {;
+    async function loadEquipment() {;
+      if (!id) {;
+        setLoading(false),;
+        setError('No equipment ID provided'),;
+        return;
+      }
+;
+      try {;
+        setLoading(true),;
+        setError(null),;
+        // Try to find in static data first;
+        const equipmentFromSample = SAMPLE_EQUIPMENT[id],;
+        if (equipmentFromSample) {;
+          setEquipment(equipmentFromSample),;
+          setLoading(false),;
+          return;
+        }
+;
+        // Try to get from sessionStorage (for dynamically generated equipment);
+        if (typeof window !== 'undefined') {;
+          try {;
+            const stored = sessionStorage.getItem(`equipment:${id}`),;
+            if (stored) {;
+              const storedData = JSON.parse(stored),;
+              // Check if it's already in EquipmentDetails format or needs conversion;
+              let equipmentData: EquipmentDetails,;
+              if (storedData.name) {;
+                // Already in EquipmentDetails format;
+                equipmentData = storedData;
+              } else {;
+                // It's a ProductListing, convert it;
+                equipmentData = convertProductListingToEquipmentDetails(storedData as ProductListing);
+              }
+;
+              setEquipment(equipmentData),;
+              setLoading(false),;
+              return;
+            }
+          } catch (storageError) {;
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+          }
+        }
+;
+        // If not found anywhere, set error;
+        setError('Equipment not found'),;
+        setLoading(false);
+      } catch (error) {;
+        logErrorToProduction('Error loading equipment:', { data: error }),;
+        setError('Failed to load equipment details'),;
+        setLoading(false);
+      }
+    }
+
     loadEquipment()
-  }, [id])
+  }, [id]),
+
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleAddToCart = async () => {
     if (!equipment |!isAuthenticated) {
       toast({
-        title: 'Authentication Required'
-        description: 'Please log in to add items to cart'
-        variant: 'destructive'
+
+        title: 'Authentication Required',
+        description: 'Please log in to add items to cart',
+        variant: 'destructive',
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       })
       return
     }
-    setIsAdding(true)
+
+
+    setIsAdding(true),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     try {
       dispatch({
         type: 'ADD_ITEM'
         payload: {
-          id: equipment.id
-          name: equipment.name
-          price: equipment.price
-          quantity
-        }
-      })
-      toast({
-        title: 'Added to Cart'
-        description: `${equipment.name} has been added to your cart.`
-      })
-    } catch (error) {
-      toast({
-        title: 'Error'
-        description: 'Failed to add item to cart. Please try again.'
-        variant: 'destructive'
-      })
-=======
+
     load_equipment ();
   }, [id]);
   const handleAddToCart = async () => {
@@ -540,10 +494,32 @@ if ( {) {
         description: 'Failed to add item to cart. Please try again.',
         variant: 'destructive',
       });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
       setIsAdding (false);
     }
+=======
+
+          id: equipment.id,
+          name: equipment.name,
+          price: equipment.price,
+
+  // Loading state
+  if (loading) {
+    return (
+      <>
+        <NextSeo title="Loading Equipment..." />
+        <div className="min-h-screen bg-zion-blue py-12 px-4">
+          <div className="container mx-auto">
+            <div className="text-center py-20">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>
+              <p className="text-zion-slate-light">Loading equipment details...</p>
+            </div>
+          </div>
+        </div>
+      </>
+    )
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   const in_cart = items.some (item => item.id === equipment?.id);
   // Loading state;
@@ -566,10 +542,7 @@ if ( {) {
         </div>;
       </>);
   }
-<<<<<<< HEAD
-  // Error state
-  if (error |!equipment) {
-=======
+
           } catch (storageError) {;
             logErrorToProduction('Error reading from sessionStorage:', {;
               data: storageError,;
@@ -650,7 +623,7 @@ if ( {) {
 
   // Error state;
   if (error || !equipment) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return (
       <>;
         <NextSeo
@@ -662,25 +635,13 @@ if ( {) {
             <motion&& motion.div
               className='text-center py-20'
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}>;
-              <AlertTriangle className='mx-auto h-16 w-16 text-red-500 mb-6' />;
-              <h1 className='text-3xl font-bold text-white mb-4'>;
-                {error === 'Equipment not found';
-                  ? 'Equipment Not Found';
-                  : 'Something went wrong'}
-<<<<<<< HEAD
-              </h1>
-              <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>
-                {error === 'Equipment not found'
-                  ? "The equipment you're looking for doesn't exist or has been removed."
-                  : error |
-=======
+
               </h1>;
               <p className='text-zion-slate-light mb-8 max-w-md mx-auto'>;
                 {error === 'Equipment not found';
                   ? "The equipment you're looking for doesn't exist or has been removed.";
                   : error ||;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                     "We couldn't load the equipment details. Please try again."}
               </p>;
               <div className='space-x-4'>;
@@ -692,9 +653,16 @@ if ( {) {
                   Go Back;
                 </Button>;
                 <Button
-<<<<<<< HEAD
-                  onClick={() => router.push('/equipment')}
-                  className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >
+
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />
+              <h1 className="text-3xl font-bold text-white mb-4">
+                {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
+              </h1>
+
+
+
                   Browse Equipment
                 </Button>
               </div>
@@ -703,7 +671,7 @@ if ( {) {
         </div>
       </>
     )
-=======
+
                   onClick={() => router && router.push('/equipment')}
                   className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'                >;
                   Browse Equipment;
@@ -714,7 +682,7 @@ if ( {) {
         </div>;
       </>;
     );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   }
   return (
     <>;
@@ -722,42 +690,156 @@ if ( {) {
         title={`${equipment && equipment.name} - Zion Marketplace`}
         description = {equipment && equipment.description,}
         openGraph={{
-<<<<<<< HEAD
-          title: `${equipment.name} - Zion Marketplace`
-          description: equipment.description
-          images:
-            equipment.images.length > 0 && equipment.images[0]
-              ? [{ url: equipment.images[0] }]
-              : undefined
 
-=======
           title: `${equipment && equipment.name} - Zion Marketplace`,
           description: equipment && equipment.description,
           images:
             equipment && equipment.images.length> 0 && equipment && equipment.images[0];
               ? [{ url: equipment && equipment.images[0] }];
               : undefined,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+              : undefined,
+
+=======
+;
+    loadEquipment();
+  }, [id]),;
+  const handleAddToCart = async () => {;
+    if (!equipment || !isAuthenticated) {;
+      toast({;
+        title: "Authentication Required",;
+        description: "Please log in to add items to cart",;
+        variant: "destructive"}),;
+      return;
+    }
+;
+    setIsAdding(true),;
+    try {;
+      dispatch({;
+        type: 'ADD_ITEM',;
+        payload: {;
+          id: equipment.id,;
+          name: equipment.name,;
+          price: equipment.price,;
+          quantity}}),;
+      toast({;
+        title: "Added to Cart",;
+        description: `${equipment.name} has been added to your cart.`});
+    } catch (error) {;
+      toast({;
+        title: "Error",;
+        description: "Failed to add item to cart. Please try again.",;
+        variant: "destructive"});
+    } finally {;
+      setIsAdding(false);
+    }
+  },;
+  const inCart = items.some(item => item.id === equipment?.id),;
+  // Loading state;
+  if (loading) {;
+    return (;
+      <>;
+        <NextSeo title="Loading Equipment..." />;
+        <div className="min-h-screen bg-zion-blue py-12 px-4">;
+          <div className="container mx-auto">;
+            <div className="text-center py-20">;
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4"></div>;
+              <p className="text-zion-slate-light">Loading equipment details...</p>;
+            </div>;
+          </div>;
+        </div>;
+      </>;
+    );
+  }
+;
+  // Error state;
+  if (error || !equipment) {;
+    return (;
+      <>;
+        <NextSeo;
+          title="Equipment Not Found";
+          description="The equipment you're looking for doesn't exist or has been removed.";
+        />;
+        <div className="min-h-screen bg-zion-blue py-12 px-4">;
+          <div className="container mx-auto">;
+            <motion.div;
+              className="text-center py-20";
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+            >;
+              <AlertTriangle className="mx-auto h-16 w-16 text-red-500 mb-6" />;
+              <h1 className="text-3xl font-bold text-white mb-4">;
+                {error === 'Equipment not found' ? 'Equipment Not Found' : 'Something went wrong'}
+              </h1>;
+              <p className="text-zion-slate-light mb-8 max-w-md mx-auto">;
+                {error === 'Equipment not found';
+                  ? "The equipment you're looking for doesn't exist or has been removed.";
+                  : error || "We couldn't load the equipment details. Please try again.";
+                }
+              </p>;
+              <div className="space-x-4">;
+                <Button;
+                  onClick={() => router.back()} ;
+                  variant="outline";
+                  className="border-zion-cyan text-zion-cyan hover:bg-zion-cyan hover:text-zion-blue";
+                >;
+                  <ArrowLeft className="h-4 w-4 mr-2" />;
+                  Go Back;
+                </Button>;
+                <Button;
+                  onClick={() => router.push('/equipment')}
+                  className="bg-zion-cyan hover: bg-zion-cyan/90 text-zion-blue";
+                >;
+                  Browse Equipment;
+                </Button>;
+              </div>;
+            </motion.div>;
+          </div>;
+        </div>;
+      </>;
+    );
+  }
+;
+  return (;
+    <>;
+      <NextSeo;
+        title={`${equipment.name} - Zion Marketplace`}
+        description={equipment.description}
+        openGraph={{;
+          title: `${equipment.name} - Zion Marketplace`;
+          description: equipment.description;
+          images: equipment.images.length > 0 && equipment.images[0] ? [{ url: equipment.images[0] }] : undefined;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         }}
       />;
       <div className='min-h-screen bg-zion-blue py-8 px-4'>;
         <div className='container mx-auto'>;
           {/* Breadcrumb */}
-          <motion&& motion.nav
-            className='flex mb-8'
+
+
+          <motion.nav 
+            className="flex mb-8"
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}>;
-            <button
-<<<<<<< HEAD
+            animate={{ opacity: 1, y: 0 }}
+          >;
+            <button;
               onClick={() => router.push('/equipment')}
-              className='text-zion-cyan hover:text-white transition-colors'            >
+              className="text-zion-cyan hover:text-white transition-colors"
+            >
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Equipment
             </button>
             <span className='mx-2 text-zion-slate-light'>/</span>
             <span className='text-zion-slate-light'>{equipment.name}</span>
           </motion.nav>
-          <div className='grid lg:grid-cols-2 gap-12'>
-=======
+
               onClick={() => router && router.push('/equipment')}
               className='text-zion-cyan hover:text-white transition-colors'            >;
               Equipment;
@@ -767,7 +849,14 @@ if ( {) {
           </motion && motion.nav>;
 
           <div className='grid lg:grid-cols-2 gap-12'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+          <div className="grid lg:grid-cols-2 gap-12">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Images */}
             <motion&& motion.div
               className='space-y-4'
@@ -778,19 +867,7 @@ if ( {) {
                 ratio={1}
                 className='bg-zion-blue-light rounded-lg overflow-hidden'>;
                 <ImageWithRetry
-                  src={
-<<<<<<< HEAD
-                    equipment.images[selectedImageIndex] |
-                    equipment.images[0] |
-                    'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
-                  }
-                  alt={equipment.name}
-                  className='object-cover'                />
-              </AspectRatio>
-              {equipment.images.length > 1 && (
-                <div className='grid grid-cols-4 gap-2'>
-                  {equipment.images.map((image, index) => (                    <button
-=======
+
                     equipment && equipment.images[selectedImageIndex] ||
                     equipment && equipment.images[0] ||
                     'https://images && images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
@@ -802,59 +879,60 @@ if ( {) {
               {equipment && equipment.images.length > 1 && (;
                 <div className='grid grid-cols-4 gap-2'>;
                   {equipment && equipment.images.map((image, index) => (                    <button
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                       key = {index,}
                       onClick = {(,) => setSelectedImageIndex(index),}
+=======
+
+                  src={equipment.images[selectedImageIndex] || equipment.images[0] || 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'}
+                  alt={equipment.name}
+                  className="object-cover"
+                />
+              </AspectRatio>
+              
+              {equipment.images.length > 1 && (
+                <div className="grid grid-cols-4 gap-2">
+                  {equipment.images.map((image, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setSelectedImageIndex(index)}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className={`aspect-square rounded-md overflow-hidden border-2 transition-all ${;
                         selectedImageIndex === index;
                           ? 'border-zion-cyan';
                           : 'border-transparent hover:border-zion-slate-light';
                       }`}
                     >;
-                      <ImageWithRetry
-                        src = {image,}
-                        alt={`${equipment && equipment.name} view ${index + 1}`}
-                        className='object-cover'
-                      />;
-                    </button>;
+
+                      <ImageWithRetry;
+                        src={image}
+                        alt={`${equipment.name} view ${index + 1}`}
+                        className="object-cover"
+
+
+                      />
+                    </button>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               )}
-<<<<<<< HEAD
-            </motion.div>
-=======
+
             </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Product Details */}
-            <motion&& motion.div
-              className='space-y-6'
+
+
+            <motion.div 
+              className="space-y-6"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0 && 0.4 }}>;
               {/* Header */}
-              <div className='space-y-2'>;
-                <div className='flex items-center gap-2 mb-2'>;
-                  <Badge
-                    variant='secondary'
-                    className='bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20'>;
-                    {equipment && equipment.category}
-                  </Badge>;
-                  <Badge
-                    variant='outline'
-<<<<<<< HEAD
-                    className='border-zion-slate-light text-zion-slate-light'
-                  >
-                    {equipment.brand}
-                  </Badge>
-                </div>
-                <h1 className='text-3xl font-bold text-white'>
-                  {equipment.name}
-                </h1>
-                {equipment.rating && (
-                  <div className='flex items-center gap-2'>
-                    <div className='flex items-center'>
-=======
+
                     className='border-zion-slate-light text-zion-slate-light'>;
                     {equipment && equipment.brand}
                   </Badge>;
@@ -867,13 +945,43 @@ if ( {) {
                 {equipment && equipment.rating && (;
                   <div className='flex items-center gap-2'>;
                     <div className='flex items-center'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                       {[...Array(5)].map((_, i) => (                        <Star
                           key = {i,}
                           className={`h-4 w-4 ${
                             i < Math && Math.floor(equipment && equipment.rating!)
                               ? 'text-yellow-400 fill-current'
                               : 'text-zion-slate-light'
+=======
+
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 mb-2">
+                  <Badge variant="secondary" className="bg-zion-cyan/10 text-zion-cyan border-zion-cyan/20">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                    {equipment.category}
+                  </Badge>
+                  <Badge variant="outline" className="border-zion-slate-light text-zion-slate-light">
+                    {equipment.brand}
+                  </Badge>
+                </div>
+
+                
+                <h1 className="text-3xl font-bold text-white">{equipment.name}</h1>
+                
+                {equipment.rating && (
+                  <div className="flex items-center gap-2">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className={`h-4 w-4 ${;
+                            i < Math.floor(equipment.rating!);
+                              ? 'text-yellow-400 fill-current';
+                              : 'text-zion-slate-light';
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           }`}
                         />;
                       ))}
@@ -884,12 +992,10 @@ if ( {) {
                     </span>;
                   </div>;
                 )}
-<<<<<<< HEAD
-              </div>
-=======
+
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Price */}
               <div className='bg-zion-blue-light rounded-lg p-4'>;
                 <div className='text-3xl font-bold text-zion-cyan mb-2'>;
@@ -899,10 +1005,20 @@ if ( {) {
                   <Clock className='h-4 w-4 text-zion-cyan' />;
                   <span
                     className={
-<<<<<<< HEAD
-                      equipment.inStock ? 'text-green-400' : 'text-yellow-400'
-                    }
-                  >
+
+              </div>
+              {/* Price */}
+
+              <div className="bg-zion-blue-light rounded-lg p-4">
+                <div className="text-3xl font-bold text-zion-cyan mb-2">
+                  {formatPrice(equipment.price)}
+                </div>
+                <div className="flex items-center gap-2 text-sm">
+                  <Clock className="h-4 w-4 text-zion-cyan" />
+                  <span className={equipment.inStock ? 'text-green-400' : 'text-yellow-400'}>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {equipment.expectedShipping}
                   </span>
                 </div>
@@ -1089,14 +1205,14 @@ if ( {) {
               </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               {/* Description */}
-              <div className='space - y-4'>;
-                <h3 className='text - lg font - semibold text - white'>;
-                  Description;
-                </h3>;
-                <p className='text - zion - slate - light leading - relaxed'>;
-                  {equipment.description}
-<<<<<<< HEAD
-                </p>
+
+
+              <div className="space-y-4">
+                <h3 className="text-lg font-semibold text-white">Description</h3>
+                <p className="text-zion-slate-light leading-relaxed">{equipment.description}</p>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
 =======
                       equipment && equipment.inStock ? 'text-green-400' : 'text-yellow-400'
@@ -1118,25 +1234,7 @@ if ( {) {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Specifications */}
-              {equipment && equipment.specifications.length > 0 && (;
-                <div className='space-y-4'>;
-                  <h3 className='text-lg font-semibold text-white'>;
-                    Specifications;
-                  </h3>;
-                  <div className='grid gap-2'>;
-                    {equipment && equipment.specifications.map((spec, index) => (;
-                      <div
-                        key={index}
-<<<<<<< HEAD
-                        className='flex justify-between py-2 border-b border-zion-blue-light'
-                      >
-                        <span className='text-zion-slate-light'>
-                          {spec.name}
-                        </span>
-                        <span className='text-white'>
-                          {spec.value |'Enterprise Grade'}
-                        </span>                      </div>
-=======
+
                         className='flex justify-between py-2 border-b border-zion-blue-light'>;
                         <span className='text-zion-slate-light'>;
                           {spec && spec.name}
@@ -1144,40 +1242,58 @@ if ( {) {
                         <span className='text-white'>;
                           {spec && spec.value || 'Enterprise Grade'}
                         </span>                      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+              {equipment.specifications.length > 0 && (
+
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-white">Specifications</h3>
+                  <div className="grid gap-2">
+                    {equipment.specifications.map((spec, index) => (
+                      <div key={index} className="flex justify-between py-2 border-b border-zion-blue-light">
+                        <span className="text-zion-slate-light">{spec.name}</span>
+                        <span className="text-white">{spec.value || 'Enterprise Grade'}</span>
+                      </div>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </div>;
                 </div>;
               )}
               {/* Add to Cart */}
-              <div className='space-y-4 pt-6 border-t border-zion-blue-light'>;
-                <div className='flex items-center gap-4'>;
-                  <label className='text-white font-medium'>Quantity:</label>;
-                  <div className='flex items-center gap-2'>;
+
+
+              <div className="space-y-4 pt-6 border-t border-zion-blue-light">
+                <div className="flex items-center gap-4">
+                  <label className="text-white font-medium">Quantity:</label>
+                  <div className="flex items-center gap-2">
                     <Button
-                      variant='outline'
-                      size='sm'
-                      onClick={() => setQuantity(Math && Math.max(1, quantity - 1))}
-                      className='h-8 w-8 p-0'                    >;
-                      -;
-                    </Button>;
-                    <span className='text-white w-8 text-center'>;
-                      {quantity}
-                    </span>;
+                      variant="outline"
+                      size="sm"
+                      onClick={() => setQuantity(Math.max(1, quantity - 1))}
+                      className="h-8 w-8 p-0"
+                    >
+
+
+                      -
+                    </Button>
+                    <span className="text-white w-8 text-center">{quantity}</span>
                     <Button
-                      variant='outline'
-                      size='sm'
+
+                      variant="outline"
+                      size="sm"
                       onClick={() => setQuantity(quantity + 1)}
-<<<<<<< HEAD
-                      className='h-8 w-8 p-0'                    >
+                      className="h-8 w-8 p-0"
+                    >
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       +
                     </Button>
                   </div>
                 </div>
-                <Button
-                  onClick={handleAddToCart}
-                  disabled={isAdding |!equipment.inStock}
-=======
+
                       className='h-8 w-8 p-0'                    >;
 =======
                 </p>;
@@ -1222,47 +1338,31 @@ if ( {) {
                       size='sm';
                       on_click={() => set_quantity (quantity + 1)}
                       className='h - 8 w - 8 p - 0'                    >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                       +;
                     </Button>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
 
-                <Button
-                  onClick={handleAddToCart}
-                  disabled={isAdding || !equipment && equipment.inStock}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+                  disabled={isAdding || !equipment.inStock}
+
+
                   size='lg'
                   variant='outline'
                   className='w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10'
                   data-testid='add-to-cart-button'>;
                   <ShoppingCart className='h-4 w-4 mr-2' />;
                   {isAdding ? 'Adding...' : inCart ? 'In Cart' : 'Add to Cart'}
-<<<<<<< HEAD
-                </Button>
-              </div>
-=======
+
                 </Button>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Additional Info */}
               <div className='space-y-4 border-t border-zion-blue-light pt-4'>;
                 {/* Shipping */}
-<<<<<<< HEAD
-                <div className='flex gap-3 text-zion-slate-light'>
-                  <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />
-                  <div>
-                    <p className='text-white text-sm font-medium'>
-                      Free Shipping
-                    </p>
-                    <p className='text-xs'>
-                      For orders over $100 within the US
-                    </p>
-                  </div>
-                </div>
-=======
+
                 <div className='flex gap-3 text-zion-slate-light'>;
                   <Truck className='h-5 w-5 text-zion-cyan flex-shrink-0' />;
                   <div>;
@@ -1283,21 +1383,22 @@ if ( {) {
                 </Button>;
               </div>;
               {/* Additional Info */}
-              <div className='space - y-4 border - t border - zion - blue - light pt - 4'>;
-                {/* Shipping */}
-                <div className='flex gap - 3 text - zion - slate - light'>;
-                  <Truck className='h - 5 w - 5 text - zion - cyan flex - shrink - 0' />;
-                  <div>;
-                    <p className='text - white text - sm font - medium'>;
-                      Free Shipping;
-                    </p>;
-                    <p className='text - xs'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                      For orders over $100 within the US;
-                    </p>;
-                  </div>;
-                </div>;
-<<<<<<< HEAD
+
+                {/* Warranty */}
+                {equipment.warranty && (
+                  <div className="flex gap-3 text-zion-slate-light">
+                    <Shield className="h-5 w-5 text-zion-cyan flex-shrink-0" />
+                    <div>
+                      <p className="text-white text-sm font-medium">Warranty</p>
+                      <p className="text-xs">{equipment.warranty}</p>
+                    </div>
+                  </div>
+                )}
+
+;
+
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 {/* Warranty */}
@@ -1320,63 +1421,15 @@ if ( {) {
                     </div>;
                   </div>;
                 )}
-<<<<<<< HEAD
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </div>
-    </>
-  )
-}finally {
-  setIsAdding (false)
-}
-const inCart = items.some (item => item.id === equipment?.id)
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error |!equipment) {'"
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
-}return (<> <NextSeo title= {
-  `$ {
-  equipment.name
-}- Zion Marketplace`
-}description= {
-  equipment.description
-}openGraph= {
-  {
-  title: `$ {
-  equipment.name
-}- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {
-  url: equipment.images[0]
-}] : undefined
-}/> key= {
-  index
-}onClick={
-  () => setSelectedImageIndex (index)
-}className= {
-  `aspect-square rounded-md overflow-hidden border-2 transition-all $ {'
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light'
-}`
-}> <ImageWithRetry /> </button>) )
-}</div>)
-}</motion.div> {
-  /* Product Details */
-}<motion.div <Star key= {
-  i
-}className= {
-  `h-4 w-4 $ {'
-  i < Math.floor (equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light'
-}`
-}/>) )
-}</div> </span> </div>)
-}</div> </span> </div> </div> </div>) )
-}</div> </div>) "
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {
-  equipment.warranty
-}</p> </div> </div>) "
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {
-  equipment.returnPolicy
-}</p> </div> </div>)
-}</div> </motion.div> </div> </div> </div> </>)
-}'"}
+
+
+  equipment.returnPolicy 
+}</p> </div> </div>) 
+}</div> </motion.div> </div> </div> </div> </>) 
+}'"};
+;
+
+
 =======
               </div>;
             </motion && motion.div>;
@@ -1386,60 +1439,7 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
     </>;
   );
 
-}finally {;
-  setIsAdding (false) ;
 
-};
-const inCart = items && items.some (item => item && item.id === equipment?.id);
-return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
-  return (<> <NextSeo title="Equipment Not Found" description="The equipment you're looking for doesn't exist or has been removed." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <motion && motion.div </p> <div className="space-x-4" > <Button > <ArrowLeft className="h-4 w-4 mr-2" /> Go Back </Button> <Button
-}return (<> <NextSeotitle= {
-  `$ {
-  equipment && equipment.name 
-}- Zion Marketplace` 
-}description= {
-  equipment && equipment.description 
-}openGraph= {
-  {
-  title: `$ {
-  equipment && equipment.name 
-}- Zion Marketplace`, description: equipment && equipment.description, images: equipment && equipment.images.length> 0 && equipment && equipment.images[0] ? [ {;
-  url: equipment && equipment.images[0] ;
-}] : undefined ;
-
-}/> key= {;
-  index ;
-}onClick={;
-  () => setSelectedImageIndex (index) ;
-}className= {;
-  `aspect-square rounded-md overflow-hidden border-2 transition-all $ {';
-  selectedImageIndex === index ? 'border-zion-cyan' : 'border-transparent hover:border-zion-slate-light' ;
-}` ;
-}> <ImageWithRetry /> </button>) ) ;
-}</div>) ;
-}</motion && motion.div> {;
-  /* Product Details */ ;
-}<motion&& motion.div <Star key= {
-  i 
-}className= {
-  `h-4 w-4 $ {'
-  i < Math && Math.floor (equipment && equipment.rating!) ? 'text-yellow-400 fill-current' : 'text-zion-slate-light' 
-}` 
-}/>) ) ;
-}</div> </span> </div>) ;
-}</div> </span> </div> </div> </div>) ) ;
-}</div> </div>) ";
-}> + </Button> </div> </div> <Button <div> <p className="text-white text-sm font-medium" >Free Shipping</p> <p className="text-xs" >For orders over $100 within the US</p> </div> </div> <div> <p className="text-white text-sm font-medium" >Warranty</p> <p className="text-xs" > {;
-  equipment && equipment.warranty ;
-}</p> </div> </div>) ";
-}<div> <p className="text-white text-sm font-medium" >Returns</p> <p className="text-xs" > {;
-  equipment && equipment.returnPolicy ;
-}</p> </div> </div>) ;
-}</div> </motion && motion.div> </div> </div> </div> </>) ;
-}'"}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1523,3 +1523,10 @@ if ( {'") {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+}
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

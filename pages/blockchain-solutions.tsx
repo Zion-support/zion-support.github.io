@@ -1,30 +1,12 @@
-import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-const BlockchainSolutions: NextPage = () => {
-  return (
-    <div>
-      <Head>
-        <title>BlockchainSolutions - Zion Tech Solutions</title>
-        <meta name="description" content="BlockchainSolutions page" />
-      </Head>
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       <main>
         <h1>BlockchainSolutions</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
-  )
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
       <main>;
         <h1>BlockchainSolutions</h1>;
         <p>This page is under construction.</p>;
@@ -35,10 +17,8 @@ const BlockchainSolutions: NextPage = () => {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default BlockchainSolutions;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import Head from 'next / head';
       <main>;
@@ -51,3 +31,8 @@ import Head from 'next / head';
 export default BlockchainSolutions;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,9 +1,11 @@
-<<<<<<< HEAD
 
-import { useState  } from 'react';
-import { TALENT_PROFILES  } from '@/data/talentData';
-import { TalentProfile } from '@/types/talent';
-export function useTalentData() {
+
+import {useState} from 'react';
+import {TALENT_PROFILES} from '@/data/talentData';
+import {TalentProfile} from '@/types/talent';
+export function useTalentData() {;
+
+
   const [isLoading, setIsLoading] = useState(false);
 
   const [talents] = useState<TalentProfile[]>(TALENT_PROFILES);
@@ -26,6 +28,11 @@ function useTalentData() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   return {
     talents;
-    is_loading;
+
+    isLoading;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }

@@ -1,22 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 >>>>>>> origin/automation-improvements-final
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 // Security middleware
 import { NextResponse } from 'next/server';
 import { getSecurityHeaders } from '../utils/security-headers';
-export function securityMiddleware(request) {
-<<<<<<< HEAD
+
+
+
+export function securityMiddleware(request) {;
+
+
   const response = NextResponse.next();
 =======
   const response = NextResponse && NextResponse.next();
@@ -28,57 +27,60 @@ export function securityMiddleware(request) {
     response && response.headers.set(key, value);
   });
   // Add HSTS header for HTTPS
-<<<<<<< HEAD
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security'
-=======
+
   if (request && request.nextUrl.protocol === 'https:') {
     response && response.headers.set(
       'Strict-Transport-Security',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       'max-age=31536000; includeSubDomains; preload'
     );
   }
-  return response;// Security headers middleware
-<<<<<<< HEAD
-=======
+
 =======
 
 // Security headers middleware
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export function securityHeaders(req, res, next) {
-<<<<<<< HEAD
-  Object.entries({
-    'X-Content-Type-Options': 'nosniff'
-    'X-Frame-Options': 'DENY'
-    'X-XSS-Protection': '1; mode=block'
-    'Referrer-Policy': 'strict-origin-when-cross-origin'
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-=======
+
   Object && Object.entries({
+=======
+
+=======
+
+
+
+
+
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+  return response;// Security headers middleware
+export function securityHeaders(req, res, next) {
+  Object.entries({
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'X-Content-Type-Options': 'nosniff',
     'X-Frame-Options': 'DENY',
     'X-XSS-Protection': '1; mode=block',
     'Referrer-Policy': 'strict-origin-when-cross-origin',
     'Permissions-Policy': 'camera=(), microphone=(), geolocation=()',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
     'Strict-Transport-Security': 'max-age=31536000; includeSubDomains'
   }).forEach(([key, value]) => {
     res && res.setHeader(key, value);
   });
   next();
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 =======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5

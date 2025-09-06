@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useEffect } from 'react';
-=======
-export const getStaticProps: GetStaticProps < PageProps> = async () => {
+
+
   return {
     props: {
       docs: content as DocsContent,
@@ -28,18 +21,12 @@ type DocsContent = {
 }
 ;
 type PageProps = {
-<<<<<<< HEAD
-  docs: DocsContent
-};
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-export const getStaticProps: GetStaticProps<PageProps> = async () => {
-=======
   docs: DocsContent;
 }
 ;
 export const getStaticProps: GetStaticProps < PageProps> = async () => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return {
     props: {
       docs: content as DocsContent
@@ -64,8 +51,11 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+
+
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -145,8 +135,7 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
-<<<<<<< HEAD
-=======
+
 =======
 };
 
@@ -155,7 +144,7 @@ export default function PrintDocs({ docs }: PageProps) {
     const id = setTimeout(() => window.print(), 500);
     return () => clearTimeout(id)
   }, []);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
@@ -169,28 +158,15 @@ export default function PrintDocs({ docs }: PageProps) {
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
-<<<<<<< HEAD
-          </section>;
-=======
-<<<<<<< HEAD
-          </section>;
-=======
-          </section>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
         ))}
-<<<<<<< HEAD
-      </div>
-    </div>
-<<<<<<< HEAD
-);
-}
-=======
+
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   );
 }
@@ -237,3 +213,13 @@ function PrintDocs() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

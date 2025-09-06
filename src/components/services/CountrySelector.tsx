@@ -1,28 +1,6 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react'
-import { Globe } from 'lucide-react'
 
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-  CountryPricing
-  onsiteServicePricing
-} from '@/data/onsiteServicePricing'
-interface CountrySelectorProps {
-  onCountryChange: (country: CountryPricing | null) => void
-  selectedCountry: CountryPricing | null
-export function CountrySelector({
-  onCountryChange
-  selectedCountry
-}: CountrySelectorProps) {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [topCountries, setTopCountries] = useState<CountryPricing[]>([]);interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null,) => void
 
@@ -30,6 +8,9 @@ export function CountrySelector({
 }
   // Set top/popular countries
   useEffect(() => {
+
+
+
 
     const popular = [
       'United States'
@@ -43,17 +24,22 @@ export function CountrySelector({
     const top = onsiteServicePricing
       .filter(item => popular.includes(item.country))
       .sort((a, b) => a.country.localeCompare(b.country))
+
+=======
+    const popular = ["United States", "United Kingdom", "Canada", "Germany", "Australia", "Japan", "Singapore"],
+    const top = onsiteServicePricing.filter(item => 
+      popular.includes(item.country)
+    ).sort((a, b) => a.country.localeCompare(b.country)),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setTopCountries(top)
   }, [])
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-    const country =
-      onsiteServicePricing.find(item => item.country === countryName) |null
-    onCountryChange(country)
-  }
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {;
@@ -108,19 +94,10 @@ export function CountrySelector(): any ({;
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
-<<<<<<< HEAD
-    <div className='mb-6'>;
-      <h3 className='text-xl font-semibold text-white mb-4 flex items-center'>;
-        <Globe className='mr-2 h-5 w-5 text-zion-cyan' />;
-        {selectedCountry;
-          ? `IT Onsite Service in ${selectedCountry && selectedCountry.country}`;
-          : 'Select Country for IT Onsite Service'}
-<<<<<<< HEAD
-      </h3>
-=======
+
       </h3>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       <Select
         onValueChange={handleCountryChange}
         value={selectedCountry?.country}>;
@@ -165,27 +142,21 @@ export function CountrySelector(): any ({;
                 {item && item.country} - ${item && item.pricePerIncident.toFixed(2)}
               </SelectItem>;
             ))}
-<<<<<<< HEAD
-        </SelectContent>
-      </Select>
-    </div>
-  )
-}
-=======
+
         </SelectContent>;
       </Select>;
     </div>;
-<<<<<<< HEAD
-=======
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
+  return (
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     <div className="mb-6">
       <h3 className="text-xl font-semibold text-white mb-4 flex items-center">
         <Globe className="mr-2 h-5 w-5 text-zion-cyan" />
         {selectedCountry ? `IT Onsite Service in ${selectedCountry.country}` : "Select Country for IT Onsite Service"}
       </h3>
+
+
+
       
       <Select 
         onValueChange={handleCountryChange} 
@@ -208,19 +179,15 @@ export function CountrySelector(): any ({;
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
               .map((item) => (
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-          </div>
-        </SelectContent>
-      </Select>
-    </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 import { useState, useEffect } from 'react';
 import { Globe } from 'lucide-react';
 import {
@@ -320,4 +287,20 @@ function CountrySelector() {
       </Select>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+;
+
+=======
+          </div>;
+        </SelectContent>;
+      </Select>;
+    </div>;
+  );
+}
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

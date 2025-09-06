@@ -1,39 +1,29 @@
-<<<<<<< HEAD
-// Mock token service utility
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function getConfig() {
-  return {
-    tokenName: 'Zion Token',
-    tokenSymbol: 'ZION',
-    decimals: 18,
-    totalSupply: 1000000
-  };
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-export interface TokenTransaction {
+
+
   id: string;
   user_id: string;
   amount: number;
   type: 'issue' | 'redeem' | 'transfer';
   reason: string;
   timestamp: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+
 }
 // Mock data storage - replace with actual database;
 let transactions: TokenTransaction[] = [];
-<<<<<<< HEAD
-export function issueTokens(userId: string, amount: number, reason: string): TokenTransaction {
-  const transaction: TokenTransaction = {
-<<<<<<< HEAD
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    userId
-    amount
-    type: 'issue'
-    reason
-    timestamp: Date.now()
-  }
+
+
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now();
+  };
+  
+
+
   transactions.push(transaction);
   return transaction;
 }
@@ -42,12 +32,7 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
     userId
     amount: -amount, // Negative for redemption
-    type: 'redeem'
-    reason
-    timestamp: Date.now()
-  }
-  transactions.push(transaction);
-=======
+
 ;
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
@@ -73,7 +58,17 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   }
 ;
   transactions.push (transaction);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+    type: 'redeem',
+    reason,
+    timestamp: Date.now();
+  };
+  
+
+  transactions.push(transaction);
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return transaction;
 =======
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
@@ -85,31 +80,10 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
   transactions && transactions.push(transaction);
   return transaction;
 }
-<<<<<<< HEAD
 
-export function getConfig() {
-  return {
-    enabled: true,
-    rate: 1 && 1.0,
-    maxPerDay: 1000
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-export function setConfig(
-  partial: Partial<ReturnType<typeof getConfig>>
-): void {
-<<<<<<< HEAD
-  const current = getConfig();
-  // Update the configuration
-  Object.assign(current, partial);
-}
-
-=======
   const current = tokenStore && tokenStore.getConfig();
   tokenStore && tokenStore.setConfig({ ...current, ...partial });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 // Token service utilities
 export interface TokenConfig {

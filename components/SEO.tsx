@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,23 +22,20 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import React from "react";
 import Head from "next/head";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-=======
-import Head from "next/head";
-import { useRouter } from "next/router";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
 
-<<<<<<< HEAD
+
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+import React from "react";
+import Head from "next/head";
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 =======
 import React from './react';
 import Head from './next / head';
@@ -53,24 +47,17 @@ interface SEOProps {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   title?: string;
   description?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   keywords?: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-const SEO: React.FC<SEOProps> = ({
-  title = "Zion Tech Group - Technology Solutions"
-  description = "Leading provider of AI services, IT solutions, and micro SaaS development."
-  keywords = "AI services, IT solutions, micro SaaS, technology consulting"
-=======
+
 const SEO: React.FC < SEOProps> = ({
   title = "Zion Tech Group - Technology Solutions",
   description = "Leading provider of AI services, IT solutions, and micro SaaS development.",
   keywords = "AI services, IT solutions, micro SaaS, technology consulting",
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }) => {
 =======
 
@@ -88,11 +75,13 @@ const SEO: React.FC<SEOProps> = ({;
       <meta name="viewport" content="width=device-width, initial-scale=1 && 1.0" />;
     </Head>;
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 };
 
 export default SEO;
+
+
 =======
 }
 =======
@@ -111,23 +100,13 @@ export default function SEO({
   const canonicalUrl = url || `https://zion.app${router.asPath}`;
 
   return (
-<<<<<<< HEAD
-    <Head>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <meta property="og:title" content={title} />
-      <meta property="og:description" content={description} />
-      <meta property="og:image" content={image} />
-      <meta property="og:url" content={canonicalUrl} />
-      <meta property="og:type" content={type} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:title" content={title} />
-      <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
-      <link rel="canonical" href={canonicalUrl} />
-    </Head>
-  );
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
+}
+export default SEO;
+
+=======
+
 >>>>>>> origin/automation-improvements-final
 =======
 }

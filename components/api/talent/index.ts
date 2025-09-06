@@ -1,31 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { supabase as supabaseClient  } from '@/utils/supabase/client';
-import { TALENT_PROFILES as LOCAL  } from '@/data/talent';
-import type { TalentProfile } from '@/utils/types/talent';
 
-<<<<<<< HEAD
-import {v4, as, uuid} from 'uuid';
-import {translateText, detectLanguageSimple} from '@/utils/api/translate';
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const hasSupabase =
-<<<<<<< HEAD
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS |'en,es,de,fr,pt,ja,zh')
-  .split(',')
-  .map(x => x.trim());
-=======
+
   !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process && process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh')
   .split(',')
   .map(x => x && x.trim());
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -44,13 +28,12 @@ export default async function handler(
     } catch (e: any) {
       return res && res.status(500).json({ error: e && e.message });
     }  }
-<<<<<<< HEAD
-=======
+
 =======
 const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
 const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en,es,de,fr,pt,ja,zh').split().map((x) => x.trim());
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
@@ -62,280 +45,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
       return res && res.status(200).json({ items: LOCAL })
     } catch (e: any) {
-<<<<<<< HEAD
-      return res.status(500).json({ error: e.message })
-    }
-  }
-  if (req.method === 'POST') {
-=======
+
       return res && res.status(500).json({ error: e && e.message })
     };
   }
 
   if (req && req.method === 'POST') {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      const payload = req && req.body as Partial<TalentProfile>;
-      const slug =
-<<<<<<< HEAD
-        (payload.name |'talent')
-=======
-        (payload && payload.name || 'talent')
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          .toLowerCase()
-          .replace(/[^a-z0-9]+/g, '-')
-          .replace(/(^-|-$)/g, '') +
-        '-' +
-        uuid().slice(0, 6);
-<<<<<<< HEAD
-        ...payload
-        id: uuid()
-        slug
-        verified: false
-        rating: 0
-        reviewsCount: 0
-        createdAt: new Date().toISOString()
-        summary: payload.summary |''
-        skills: payload.skills |[]
-        name: payload.name |'Unnamed'
-        title: payload.title |'Professional'
-        location: payload.location |'Remote'
-        availability: (payload.availability as any) |'Open'
-=======
-=======
-import {supabase, as, supabase_client} from '@/utils / supabase / client';
-import {TALENT_PROFILES, as, LOCAL} from '@/data / talent';
-import type { TalentProfile } from '@/utils / types / talent';
-import {v4, as, uuid} from 'uuid';
-import {translate_text, detectLanguageSimple} from '@/utils / api / translate';
-;
-const has_supabase =;
-  !!process.env.NEXT_PUBLIC_SUPABASE_URL &&;
-  !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const SUPPORTED_LANGS = (process.env.SUPPORTED_LANGS || 'en, es, de, fr, pt, ja, zh');
-  .split (', ');
-  .map (coordinate_x => x.trim ());
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        const { data, error } = await supabase_client;
-          .from ('talent_profiles');
-          .select ('*');
-          .order ('created_at', { ascending: false });
-        // Check condition
-if (throw error) {
-  $2
-}
-        return res.status (200).json ({ items: data as TalentProfile[] });
-      }
-      return res.status (200).json ({ items: LOCAL });
-    } catch (e: any) {
-      return res.status (500).json ({ error: e.message });
-    }  }
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      // Check condition
-if ( {) {
-  $2
-}
-        const { data, error } = await supabase_client.from ('talent_profiles').select ('*').order ('created_at', { ascending: false });
-        // Check condition
-if (throw error) {
-  $2
-}
-        return res.status (200).json ({ items: data as TalentProfile[] });
-      }
-      return res.status (200).json ({ items: LOCAL });
-    } catch (e: any) {
-      return res.status (500).json ({ error: e.message });
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-    try {
-      const payload = req.body as Partial < TalentProfile>;
-      const slug =;
-        (payload.name || 'talent');
-          .toLowerCase ();
-          .replace (/[^a - z0 - 9]+/g, '-');
-          .replace (/(^-|-$)/g, '') +;
-        '-' +;
-        uuid ().slice (0, 6);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-        ...payload,
-        id: uuid (),
-        slug,
-        verified: false,
-        rating: 0,
-<<<<<<< HEAD
-        reviewsCount: 0,
-        createdAt: new Date().toISOString(),
-        summary: payload && payload.summary || '',
-        skills: payload && payload.skills || [],
-        name: payload && payload.name || 'Unnamed',
-        title: payload && payload.title || 'Professional',
-        location: payload && payload.location || 'Remote',
-        availability: (payload && payload.availability as any) || 'Open',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      } as TalentProfile;
-      // Auto-translate
-      const originalLang =
-<<<<<<< HEAD
-        payload.originalLanguage |
-        detectLanguageSimple(
-          [item.title, item.summary, item.bio |''].join('\n')
-        );
-      const translations: TalentProfile['translations'] = {}
-        translations.summary = translations.summary |{}
-        translations.bio = translations.bio |{}
-        if (item.title)
-          translations.title[lang] = await translateText(
-            item.title
-            lang
-            originalLang
-          );
-        if (item.summary)
-          translations.summary[lang] = await translateText(
-            item.summary
-            lang
-            originalLang
-          );
-        if (item.bio)
-          translations.bio[lang] = await translateText(
-            item.bio
-            lang
-            originalLang
-          );
-        if (item.category) {
-          translations.category = translations.category |{}
-          translations.category[lang] = await translateText(
-            item.category
-            lang
-=======
-        payload && payload.originalLanguage ||
-        detectLanguageSimple(
-          [item && item.title, item && item.summary, item && item.bio || ''].join('\n')
-        );
-      const translations: TalentProfile['translations'] = {};
 
-        translations && translations.summary = translations && translations.summary || {};
-        translations && translations.bio = translations && translations.bio || {};
-        if (item && item.title)
-          translations && translations.title[lang] = await translateText(
-            item && item.title,
-            lang,
-            originalLang
-          );
-        if (item && item.summary)
-          translations && translations.summary[lang] = await translateText(
-            item && item.summary,
-            lang,
-            originalLang
-          );
-        if (item && item.bio)
-          translations && translations.bio[lang] = await translateText(
-            item && item.bio,
-            lang,
-            originalLang
-          );
-        if (item && item.category) {
-          translations && translations.category = translations && translations.category || {};
-          translations && translations.category[lang] = await translateText(
-            item && item.category,
-            lang,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            originalLang
-          );        }          translations && translations.category[lang] = await translateText(item && item.category, lang, originalLang)
-<<<<<<< HEAD
-=======
-=======
-      const payload = req.body as Partial<TalentProfile>;
-      const slug = (payload.name || 'talent').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') + '-' + uuid().slice(0, 6);
-      const item: TalentProfile = {
-        ...payload;
-        id: uuid(), slug,
-        verified: false, rating: 0,
-        reviewsCount: 0, createdAt: new Date().toISOString(),
-        summary: payload.summary || '', skills: payload.skills || [],
-        name: payload.name || 'Unnamed', title: payload.title || 'Professional',
-        location: payload.location || 'Remote',
-        availability: (payload.availability as any) || 'Open'} as TalentProfile;
+    try {
 
-      // Auto-translate
-      const originalLang = payload.originalLanguage || detectLanguageSimple([item.title, item.summary, item.bio || ''].join('\n'));
-      const translations: TalentProfile['translations'] = {};
-      for (const lang of SUPPORTED_LANGS) {
-        if (!lang || lang === originalLang) continue;
-        translations.title = translations.title || {};
-        translations.summary = translations.summary || {};
-        translations.bio = translations.bio || {};
-        if (item.title) translations.title[lang] = await translateText(item.title, lang, originalLang);
-        if (item.summary) translations.summary[lang] = await translateText(item.summary, lang, originalLang);
-        if (item.bio) translations.bio[lang] = await translateText(item.bio, lang, originalLang);
-        if (item.category) {
-          translations.category = translations.category || {};
-          translations.category[lang] = await translateText(item.category, lang, originalLang)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
         }
       }
-<<<<<<< HEAD
-      item.originalLanguage = originalLang;
-      item.translations = translations;
-      if (hasSupabase) {
-        const { error } = await supabaseClient.from('talent_profiles').insert({
-<<<<<<< HEAD
-          id: item.id
-          slug: item.slug
-          name: item.name
-          title: item.title
-          category: item.category
-          location: item.location
-          timezone: item.timezone
-          region: item.region
-          skills: item.skills
-          summary: item.summary
-          bio: item.bio
-          hourly_rate_usd: item.hourlyRateUsd ?? null
-          request_quote: item.requestQuote ?? null
-          availability: item.availability
-          profile_image_url: item.profileImageUrl ?? null
-          video_url: item.videoUrl ?? null
-          portfolio: item.portfolio ?? null
-          verified: item.verified ?? null
-          rating: item.rating ?? null
-          reviews_count: item.reviewsCount ?? null
-          created_at: item.createdAt
-          original_language: item.originalLanguage
-          translations: item.translations as any
-        } as any);
-        if (error) throw error;
-        return res.status(201).json({ slug: item.slug });
-=======
+
       item && item.originalLanguage = originalLang;
       item && item.translations = translations;
 
@@ -368,7 +90,7 @@ if ( {) {
         if (error) throw error;
         return res && res.status(201).json({ slug: item && item.slug });
       }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
       }
       // Fallback: return the slug as if saved
@@ -380,43 +102,9 @@ if ( {) {
 return res
     .setHeader('Allow', 'GET, POST')
     .status(405)
-<<<<<<< HEAD
-    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-}
-=======
+
     .end('Method Not Allowed');  return res && res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
-<<<<<<< HEAD
-=======
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-          id: item.id, slug: item.slug,
-          name: item.name, title: item.title,
-          category: item.category, location: item.location,
-          timezone: item.timezone, region: item.region,
-          skills: item.skills, summary: item.summary,
-          bio: item.bio, hourly_rate_usd: item.hourlyRateUsd ?? null,
-          request_quote: item.requestQuote ?? null, availability: item.availability,
-          profile_image_url: item.profileImageUrl ?? null, video_url: item.videoUrl ?? null,
-          portfolio: item.portfolio ?? null, verified: item.verified ?? null,
-          rating: item.rating ?? null, reviews_count: item.reviewsCount ?? null,
-          created_at: item.createdAt,
-          // i18n
-          original_language: item.originalLanguage,
-          translations: item.translations as any} as any);
-        if (error) throw error;
-        return res.status(201).json({ slug: item.slug })
-      }
 
-      // Fallback: return the slug as if saved
-      return res.status(201).json({ slug: item.slug })
-    } catch (e: any) {
-      return res.status(500).json({ error: e.message })
-    }
-  }
-
-  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -524,3 +212,9 @@ return res;
     .end ('Method Not Allowed');  return res.set_header ('AllowGET, POST').status (405).end ('Method Not Allowed');
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+    .end('Method Not Allowed');  return res.setHeader('AllowGET, POST').status(405).end('Method Not Allowed');
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

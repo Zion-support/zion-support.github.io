@@ -24,11 +24,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface FiveGSolutionsProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function FiveGSolutions({ }: FiveGSolutionsProps) {
   return (
     <div>
@@ -36,32 +34,11 @@ export default function FiveGSolutions({ }: FiveGSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD:src.pages.disabled/FiveGSolutions.jsx
-}
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-=======
-<<<<<<< HEAD:src && src.pages.disabled/FiveGSolutions && FiveGSolutions.jsx
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45:temp_exclude/src && src.pages.disabled/FiveGSolutions && FiveGSolutions.jsx
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/src.pages.disabled/FiveGSolutions.jsx
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+}
+
 =======
-:src.pages.disabled/FiveGSolutions.jsx
-}
-}
-}
-}
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4:temp_exclude/src.pages.disabled/FiveGSolutions.jsx
+
+

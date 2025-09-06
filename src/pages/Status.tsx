@@ -1,13 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from "@/components/SEO",
-import { useState, useEffect } from "react",
-import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
-import { Button } from "@/components/ui/button",
-import Link from "next/link",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { logWarn } from '@/utils/productionLogger';
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface ServiceStatus {
 
   name: string
@@ -15,15 +10,47 @@ interface ServiceStatus {
   description: string
   lastChecked: string
 }
-        return <CheckCircle className="h-5 w-5 text-green-500" />
-        return <Clock className="h-5 w-5 text-blue-500" />
-      default:
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
     this.state = { hasError: false };
+=======
+
+
+
+
+
+=======
+;
+=======
+
+const FALLBACK_SERVICES: ServiceStatus[] = [
+  {
+    name: "Marketplace API",
+    status: "operational",
+    description: "Product listings and search functionality",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Authentication Service", 
+    status: "operational",
+    description: "User login and registration",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Payment Processing",
+    status: "operational", 
+    description: "Checkout and payment handling",
+    lastChecked: new Date().toISOString()
+  },
+  {
+    name: "Talent Directory",
+    status: "operational",
+    description: "AI talent profiles and matching",
+    lastChecked: new Date().toISOString()
+
   }
   
   static getDerivedStateFromError(error) {
@@ -82,7 +109,12 @@ function Status() { const [last_updated, setLastUpdated] = useState (new Date ()
 }
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

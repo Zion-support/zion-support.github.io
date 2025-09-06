@@ -1,22 +1,5 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import {
-<<<<<<< HEAD
-  SERVICE_CATEGORIES
-  ALL_SERVICES
-  AI_SERVICES
-  IT_SERVICES
-  MICRO_SAAS_SERVICES
-  CYBERSECURITY_SERVICES
-  DATA_ANALYTICS_SERVICES
-  CLOUD_SOLUTIONS;} from '@/data/servicesData';import {
-=======
-import { 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   SERVICE_CATEGORIES;
   ALL_SERVICES
   AI_SERVICES
@@ -26,40 +9,100 @@ import {
   CYBERSECURITY_SERVICES;
   DATA_ANALYTICS_SERVICES;
   CLOUD_SOLUTIONS
-<<<<<<< HEAD
- } from '@/data/servicesData';
-import { ServiceCategory, ServiceSolution  } from '@/types/services';
-=======
+
 } from '@/data/servicesData';
 import { ServiceCategory, ServiceSolution } from '@/types/services';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 export function ServicesPage() {
+=======
+
+import { ServiceCategory, ServiceSolution } from '@/types/services';
+export function ServicesPage() {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchTerm, setSearchTerm] = useState('');
 
   const filteredServices = ALL_SERVICES.filter(service => {
-<<<<<<< HEAD
-    const matchesCategory =
-      selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch =
-      service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-      service.tags.some(tag =>
-        tag.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    return matchesCategory && matchesSearch;  });
-  const getServicesByCategory = (categoryId: string) => {
-    switch (categoryId) {    const matchesCategory = selectedCategory === 'all' |service.category === selectedCategory;
-    const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.description.toLowerCase().includes(searchTerm.toLowerCase()) |
-                         service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-    return matchesCategory && matchesSearch
-  const getServicesByCategory = (categoryId: string) => {
-    switch (categoryId) {
-      case 'ai-services':
+
+
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+        return AI_SERVICES;
+      case 'it-services':
+        return IT_SERVICES;
+      case 'micro-saas':
+        return MICRO_SAAS_SERVICES;
+      case 'cybersecurity':
+        return CYBERSECURITY_SERVICES;
+      case 'data-analytics':
+        return DATA_ANALYTICS_SERVICES;
+      case 'cloud-solutions':
+        return CLOUD_SOLUTIONS;
+      default:
+        return ALL_SERVICES;
+    }
+  }
+  const selectedServices =
+    selectedCategory === 'all'
+      ? filteredServices
+      : getServicesByCategory(selectedCategory);
+  return (
+    <div className='min-h-screen bg-gradient-to-br from-gray-50 to-gray-100'>
+      {/* Hero Section */}
+      <div className='bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white'>
+        <div className='container mx-auto px-4 py-20'>
+          <div className='text-center max-w-4xl mx-auto'>
+            <h1 className='text-5xl font-bold mb-6'>
+              Zion Tech Group Services
+            </h1>
+            <p className='text-xl mb-8 text-blue-100'>
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your
+              business. From cutting-edge artificial intelligence to robust
+              infrastructure support.
+            </p>
+            <div className='flex flex-wrap justify-center gap-4'>
+              <a
+                href='tel:+13024640950'
+                className='bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors'
+              >
+                📞 Call Now: +1 302 464 0950
+              </a>
+              <a
+                href='mailto:kleber@ziontechgroup.com'
+                className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
+  }
+  const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
+
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">
+      {/* Hero Section */}
+      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
+        <div className="container mx-auto px-4 py-20">
+          <div className="text-center max-w-4xl mx-auto">
+            <h1 className="text-5xl font-bold mb-6">
+              Zion Tech Group Services
+            </h1>
+            <p className="text-xl mb-8 text-blue-100">
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your business. 
+              From cutting-edge artificial intelligence to robust infrastructure support.
+            </p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a 
+                href="tel:+13024640950"
+                className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+              >
+                📞 Call Now: +1 302 464 0950
+              </a>
+              <a 
+                href="mailto:kleber@ziontechgroup.com"
+                className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
+              >
+
+=======
+import React, { useState } from 'react',;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {;
   SERVICE_CATEGORIES,;
   ALL_SERVICES,;
@@ -119,12 +162,7 @@ export function ServicesPage() {;
       default:;
         return ALL_SERVICES;
     }
-<<<<<<< HEAD
-  }
-  const selectedServices =
-    selectedCategory === 'all'
-      ? filteredServices
-=======
+
 =======
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory;
     const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -143,7 +181,7 @@ export function ServicesPage() {;
       case 'cloud-solutions': return CLOUD_SOLUTIONS;
       default: return ALL_SERVICES
     }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   };
 
   const selectedServices =;
@@ -172,50 +210,48 @@ export function ServicesPage() {;
                 📞 Call Now: +1 302 464 0950;
               </a>;
               <a
-<<<<<<< HEAD
-                href='mailto:kleber@ziontechgroup.com'
-                className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'              >    }
-  }
-=======
+
                 href='mailto:kleber@ziontechgroup && ziontechgroup.com'
                 className='bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors'>    }
   };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const selectedServices = selectedCategory === 'all' ? filteredServices : getServicesByCategory(selectedCategory);
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100">;
       {/* Hero Section */}
-<<<<<<< HEAD
-      <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">
-        <div className="container mx-auto px-4 py-20">
-          <div className="text-center max-w-4xl mx-auto">
-            <h1 className="text-5xl font-bold mb-6">
-              Zion Tech Group Services
-            </h1>
-            <p className="text-xl mb-8 text-blue-100">
-              Comprehensive IT, AI, and Micro SAAS solutions to transform your business.
+
+
+              Comprehensive IT, AI, and Micro SAAS solutions to transform your business. 
               From cutting-edge artificial intelligence to robust infrastructure support.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <a
+              <a 
+
+
                 href="tel:+13024640950"
                 className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
               >
                 📞 Call Now: +1 302 464 0950
-              </a>
-              <a
+
+
+              </Link>
+              <a 
+
                 href="mailto:kleber@ziontechgroup.com"
                 className="bg-blue-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-600 transition-colors"
               >
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ✉️ Email Us
               </a>
             </div>
           </div>
         </div>
       </div>
-<<<<<<< HEAD
-=======
+
       <div className="bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600 text-white">;
         <div className="container mx-auto px-4 py-20">;
           <div className="text-center max-w-4xl mx-auto">;
@@ -352,47 +388,29 @@ function ServicesPage() {
                 href="mailto:kleber@ziontechgroup.com";
                 className="bg - blue - 500 text - white px - 6 py - 3 rounded - lg font - semibold hover:bg - blue - 600 transition - colors";
               >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 ✉️ Email Us;
               </a>;
             </div>;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Contact Info Banner */}
-      <div className='bg-white border-b'>;
-        <div className='container mx-auto px-4 py-4'>;
-          <div className='flex flex-wrap justify-center items-center gap-8 text-gray-600'>;
-            <div className='flex items-center gap-2'>;
-              <span className='text-blue-600'>📍</span>;
-              <span>364 E Main St STE 1008, Middletown DE 19709</span>;
-            </div>;
-            <div className='flex items-center gap-2'>;
-              <span className='text-blue-600'>📱</span>;
-              <span>+1 302 464 0950</span>;
-            </div>;
-            <div className='flex items-center gap-2'>;
-              <span className='text-blue-600'>✉️</span>;
-              <span>kleber@ziontechgroup && ziontechgroup.com</span>;
-            </div>;
-            <div className='flex items-center gap-2'>;
-              <span className='text-blue-600'>🌐</span>;
-              <a
-<<<<<<< HEAD
-                href='https://ziontechgroup.com'
-                className='text-blue-600 hover:underline'
-              >                ziontechgroup.com              <span>364 E Main St STE 1008, Middletown DE 19709</span>
 =======
-
       {/* Contact Info Banner */}
+
+
       <div className="bg-white border-b">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap justify-center items-center gap-8 text-gray-600">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">📍</span>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <span>364 E Main St STE 1008, Middletown DE 19709</span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </div>
@@ -404,11 +422,21 @@ function ServicesPage() {
               <span className="text-blue-600">✉️</span>
               <span>kleber@ziontechgroup.com</span>
             </div>
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🌐</span>
               <a href="https://ziontechgroup.com" className="text-blue-600 hover:underline">
                 ziontechgroup.com
-              </a>
+
+
+              </Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </div>
           </div>
         </div>
@@ -471,42 +499,20 @@ function ServicesPage() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* Search and Filter Section */}
-<<<<<<< HEAD
-      <div className='container mx-auto px-4 py-8'>;
-        <div className='bg-white rounded-xl shadow-lg p-6 mb-8'>;
-          <div className='flex flex-col md:flex-row gap-4'>;
-            <div className='flex-1'>;
-              <input
-                type='text'
-                placeholder='Search services...'
-                value={searchTerm}
-                onChange={e => setSearchTerm(e && e.target.value)}
-                className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent';
-              />;
-            </div>;
-            <div className='flex gap-2'>;
-              {SERVICE_CATEGORIES && SERVICE_CATEGORIES.map(category => (                <button<input
-                type="text"
-                placeholder="Search services..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e && e.target.value)}
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent";
-              />;
-            </div>;
-            <div className="flex gap-2">;
-              {SERVICE_CATEGORIES && SERVICE_CATEGORIES.map((category) => (;
-<<<<<<< HEAD
 =======
 =======
+
+
       <div className="container mx-auto px-4 py-8">
         <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1">
               <input
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 type="text"
                 placeholder="Search services..."
                 value={searchTerm}
@@ -530,57 +536,57 @@ function ServicesPage() {
                   {category && category.icon} {category && category.name}
                 </button>;
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
+
             </div>;
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* Services Grid */}
-        <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>;
-          {selectedServices && selectedServices.map(service => (            <ServiceCard key={service && service.id} service={service} />        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">;
-          {selectedServices && selectedServices.map((service) => (;
-            <ServiceCard key={service && service.id} service={service} />;
-<<<<<<< HEAD
+
 =======
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
+
+
+          {selectedServices.map((service) => (
+            <ServiceCard key={service.id} service={service} />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
-<<<<<<< HEAD
-        </div>
-        {selectedServices.length === 0 && (
-          <div className='text-center py-12'>
-            <h3 className='text-xl text-gray-600 mb-4'>No services found</h3>
-            <p className='text-gray-500'>
-              Try adjusting your search or filter criteria
-            </p>          </div>          <div className="text-center py-12">
-=======
+
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
           {selectedServices.map((service) => (
             <ServiceCard key={service.id} service={service} />
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
           ))}
         </div>
 
         {selectedServices.length === 0 && (
           <div className="text-center py-12">
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+          <div className="text-center py-12">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <h3 className="text-xl text-gray-600 mb-4">No services found</h3>
             <p className="text-gray-500">Try adjusting your search or filter criteria</p>
           </div>
         )}
       </div>
       {/* Why Choose Zion Tech Group */}
-<<<<<<< HEAD
-      <div className='bg-white py-16'>
-        <div className='container mx-auto px-4'>
-          <div className='text-center mb-12'>
-            <h2 className='text-4xl font-bold text-gray-900 mb-4'>
+
+
+      <div className="bg-white py-16">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Why Choose Zion Tech Group?
             </h2>
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>
@@ -588,19 +594,31 @@ function ServicesPage() {
               drive real business results
             </p>
           </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-            <div className='text-center'>
-              <div className='bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='text-2xl'>🚀</span>
+
+
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🚀</span>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               <h3 className='text-xl font-semibold mb-2'>Innovation First</h3>
               <p className='text-gray-600'>
                 Cutting-edge AI and technology solutions
               </p>
             </div>
-            <div className='text-center'>
-              <div className='bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='text-2xl'>🛡️</span>
+
+
+            
+            <div className="text-center">
+              <div className="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🛡️</span>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               <h3 className='text-xl font-semibold mb-2'>
                 Enterprise Security
@@ -609,26 +627,26 @@ function ServicesPage() {
                 SOC 2, HIPAA, GDPR compliant solutions
               </p>
             </div>
-            <div className='text-center'>
-              <div className='bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='text-2xl'>⚡</span>
+
+
+            
+            <div className="text-center">
+              <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">⚡</span>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </div>
               <h3 className='text-xl font-semibold mb-2'>Fast Deployment</h3>
               <p className='text-gray-600'>Quick setup and implementation</p>
             </div>
-            <div className='text-center'>
-              <div className='bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4'>
-                <span className='text-2xl'>🎯</span>
-              </div>
-              <h3 className='text-xl font-semibold mb-2'>Proven Results</h3>
-              <p className='text-gray-600'>Trusted by businesses nationwide</p>            </div>              Why Choose Zion Tech Group?
-=======
+
       <div className="bg-white py-16">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Why Choose Zion Tech Group?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               We deliver innovative, reliable, and cost-effective solutions that drive real business results
@@ -656,17 +674,25 @@ function ServicesPage() {
               <h3 className="text-xl font-semibold mb-2">Fast Deployment</h3>
               <p className="text-gray-600">Quick setup and implementation</p>
             </div>
+=======
+
+            
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div className="text-center">
               <div className="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl">🎯</span>
               </div>
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
               <p className="text-gray-600">Trusted by businesses nationwide</p>
             </div>
           </div>
         </div>
       </div>
-=======
+
         </div>;
 
         {selectedServices && selectedServices.length === 0 && (;
@@ -686,6 +712,58 @@ function ServicesPage() {
         <div className='container mx-auto px-4'>;
           <div className='text-center mb-12'>;
             <h2 className='text-4xl font-bold text-gray-900 mb-4'>;
+=======
+      {/* CTA Section */}
+
+      <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
+        <div className="container mx-auto px-4 text-center">
+          <h2 className="text-4xl font-bold mb-6">
+
+
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
+            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
+          </p>
+          <div className="flex flex-wrap justify-center gap-4">
+            <a 
+              href="tel: +13024640950"
+              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors"
+            >
+              📞 Call +1 302 464 0950
+            </Link>
+            <a 
+              href="mailto:kleber@ziontechgroup.com"
+              className="bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors"
+            >
+              ✉️ Get Free Consultation
+
+            </Link>
+=======
+=======
+            </Link>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            <a 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+              href="https://ziontechgroup.com"
+              className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors"
+            >
+              🌐 Visit Website
+            </Link>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+=======
+  )
+      <div className="bg-white py-16">;
+        <div className="container mx-auto px-4">;
+          <div className="text-center mb-12">;
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Why Choose Zion Tech Group?;
             </h2>;
             <p className='text-xl text-gray-600 max-w-3xl mx-auto'>;
@@ -907,18 +985,7 @@ function ServicesPage() {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <div className='bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16'>;
-        <div className='container mx-auto px-4 text-center'>;
-          <h2 className='text-4xl font-bold mb-6'>;
-            Ready to Transform Your Business?;
-          </h2>;
-          <p className='text-xl mb-8 text-blue-100 max-w-2xl mx-auto'>;
-=======
       {/* CTA Section */}
       <div className='bg - gradient - to - r from - blue - 600 to - purple - 600 text - white py - 16'>;
         <div className='container mx - auto px - 4 text - center'>;
@@ -926,41 +993,17 @@ function ServicesPage() {
             Ready to Transform Your Business?;
           </h2>;
           <p className='text - xl mb - 8 text - blue - 100 max - w-2xl mx - auto'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             Get started with Zion Tech Group today and discover how our;
             innovative solutions can drive growth, efficiency, and success for;
             your organization.;
           </p>;
-<<<<<<< HEAD
-          <div className='flex flex-wrap justify-center gap-4'>;
-            <a
-              href='tel:+13024640950'
-              className='bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-50 transition-colors'>;
-              📞 Call +1 302 464 0950;
-            </a>;
-            <a
-              href='mailto:kleber@ziontechgroup && ziontechgroup.com'
-              className='bg-blue-500 text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-blue-600 transition-colors'>;
-              ✉️ Get Free Consultation;
-            </a>;
-            <a
-              href='https://ziontechgroup && ziontechgroup.com'
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'>            Ready to Transform Your Business?;
-          </h2>;
-          <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">;
-            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.;
-          </p>;
-          <div className="flex flex-wrap justify-center gap-4">;
-            <a
-<<<<<<< HEAD
-              href='https://ziontechgroup.com'
-              className='bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white hover:text-blue-600 transition-colors'            >            Ready to Transform Your Business?
-=======
+
       <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-16">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
             Ready to Transform Your Business?
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
           </h2>
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.
@@ -988,13 +1031,9 @@ function ServicesPage() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-interface ServiceCardProps {
-  service: ServiceSolution;  )
-=======
+
   )
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 }
 interface ServiceCardProps {
   service: ServiceSolution
@@ -1025,22 +1064,15 @@ interface ServiceCardProps {;
 
 interface ServiceCardProps {;
   service: ServiceSolution;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 function ServiceCard(): any ({ service }: ServiceCardProps) {;
   const [showDetails, setShowDetails] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const getPopularPlan = () => {
-    if (service.pricing.professional.popular)
-      return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional;  };    if (service.pricing.professional.popular) return service.pricing.professional;
-    if (service.pricing.basic.popular) return service.pricing.basic;
-    if (service.pricing.enterprise.popular) return service.pricing.enterprise;
-    return service.pricing.professional
-=======
+
 =======
 
   const getPopularPlan = () => {
@@ -1049,7 +1081,7 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
     if (service.pricing.enterprise.popular) return service.pricing.enterprise;
     return service.pricing.professional
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
   const getPopularPlan = () => {;
     if (service && service.pricing.professional && professional.popular);
@@ -1065,264 +1097,14 @@ function ServiceCard(): any ({ service }: ServiceCardProps) {;
   const popularPlan = getPopularPlan();
 
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    <div className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow'>;
-      {/* Service Image */}
-      <div className='h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden'>;
-        <img
-          src={service && service.images[0]}
-          alt={service && service.title}
-          className='w-full h-full object-cover'
-<<<<<<< HEAD
-        />
-        <div className='absolute top-4 right-4'>
-          <span className='bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold'>            {service.category}
-          </span>
-        </div>
-        {service.aiScore && (
-          <div className='absolute bottom-4 left-4'>
-            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>              AI Score: {service.aiScore}      {/* Service Image */}
-      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
-        <img
-          src={service.images[0]}
-          alt={service.title}
-=======
-        />;
-        <div className='absolute top-4 right-4'>;
-          <span className='bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold'>            {service && service.category}
-          </span>;
-        </div>;
-        {service && service.aiScore && (;
-          <div className='absolute bottom-4 left-4'>;
-            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>              AI Score: {service && service.aiScore}      {/* Service Image */}
-      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">;
-        <img
-          src={service && service.images[0]} 
-          alt={service && service.title}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          className="w-full h-full object-cover"
-        />;
-        <div className="absolute top-4 right-4">;
-          <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">;
-            {service && service.category}
-          </span>;
-        </div>;
-        {service && service.aiScore && (;
-          <div className='absolute bottom-4 left-4'>;
-            <span className='bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold'>          <div className="absolute bottom-4 left-4">;
-            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">;
-              AI Score: {service && service.aiScore}
-            </span>;
-          </div>;
-        )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-=======
-          <div className='flex flex - wrap justify - center gap - 4'>;
-            <a;
-              href='tel:+13024640950';
-              className='bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - blue - 50 transition - colors';
-            >;
-              📞 Call +1 302 464 0950;
-            </a>;
-            <a;
-              href='mailto:kleber@ziontechgroup.com';
-              className='bg - blue - 500 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - blue - 600 transition - colors';
-            >;
-              ✉️ Get Free Consultation;
-            </a>;
-            <a;
-              href='https://ziontechgroup.com';
-              className='bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - white hover:text - blue - 600 transition - colors'            >            Ready to Transform Your Business?;
-          </h2>;
-          <p className="text - xl mb - 8 text - blue - 100 max - w-2xl mx - auto">;
-            Get started with Zion Tech Group today and discover how our innovative solutions can drive growth, efficiency, and success for your organization.;
-          </p>;
-          <div className="flex flex - wrap justify - center gap - 4">;
-            <a;
-              href="tel: +13024640950";
-              className="bg - white text - blue - 600 px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - blue - 50 transition - colors";
-            >;
-              📞 Call +1 302 464 0950;
-            </a>;
-            <a;
-              href="mailto:kleber@ziontechgroup.com";
-              className="bg - blue - 500 text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - blue - 600 transition - colors";
-            >;
-              ✉️ Get Free Consultation;
-            </a>;
-            <a;
-              href="https://ziontechgroup.com";
-              className="bg - transparent border - 2 border - white text - white px - 8 py - 4 rounded - lg font - semibold text - lg hover:bg - white hover:text - blue - 600 transition - colors";
-            >;
-              🌐 Visit Website;
-            </a>;
-          </div>;
-        </div>;
-      </div>;
-    </div>);
-;
-interface ServiceCardProps {
-  service: ServiceSolution);
-}
-interface ServiceCardProps {
-  service: ServiceSolution;
-}
-/**
- * ServiceCard - Function description
- */
-function ServiceCard() {
-  const [show_details, setShowDetails] = useState (false);
-;
-  const getPopularPlan = () =>: any {
-    // Check condition
-if (
-      return service.pricing.professional) {
-  $2
-}
-    // Check condition
-if (return service.pricing.basic) {
-  $2
-}
-    // Check condition
-if (return service.pricing.enterprise) {
-  $2
-}
-    return service.pricing.professional;  }    // Check condition
-if (return service.pricing.professional) {
-  $2
-}
-    // Check condition
-if (return service.pricing.basic) {
-  $2
-}
-    // Check condition
-if (return service.pricing.enterprise) {
-  $2
-}
-    return service.pricing.professional;
-  const popular_plan = getPopularPlan ();
-;
-  return (
-    <div className='bg - white rounded - xl shadow - lg overflow - hidden hover:shadow - xl transition - shadow'>;
-      {/* Service Image */}
-      <div className='h - 48 bg - gradient - to - br from - blue - 500 to - purple - 600 relative overflow - hidden'>;
-        <img;
-          src={service.images[0]}
-          alt={service.title}
-          className='w - full h - full object - cover';
-        />;
-        <div className='absolute top - 4 right - 4'>;
-          <span className='bg - white text - blue - 600 px - 3 py - 1 rounded - full text - sm font - semibold'>            {service.category}
-          </span>;
-        </div>;
-        {service.ai_score && (
-          <div className='absolute bottom - 4 left - 4'>;
-            <span className='bg - green - 500 text - white px - 3 py - 1 rounded - full text - sm font - semibold'>              AI Score: {service.ai_score}      {/* Service Image */}
-      <div className="h - 48 bg - gradient - to - br from - blue - 500 to - purple - 600 relative overflow - hidden">;
-        <img;
-          src={service.images[0]}
-          alt={service.title}
-          className="w - full h - full object - cover";
-        />;
-        <div className="absolute top - 4 right - 4">;
-          <span className="bg - white text - blue - 600 px - 3 py - 1 rounded - full text - sm font - semibold">;
-            {service.category}
-          </span>;
-        </div>;
-        {service.ai_score && (
-          <div className='absolute bottom - 4 left - 4'>;
-            <span className='bg - green - 500 text - white px - 3 py - 1 rounded - full text - sm font - semibold'>          <div className="absolute bottom - 4 left - 4">;
-            <span className="bg - green - 500 text - white px - 3 py - 1 rounded - full text - sm font - semibold">;
-              AI Score: {service.ai_score}
-            </span>;
-          </div>)}
-      </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-      {/* Service Content */}
-      <div className='p - 6'>;
-        <div className='flex items - start justify - between mb - 3'>;
-          <h3 className='text - xl font - bold text - gray - 900 mb - 2'>;
-            {service.title}
-          </h3>;
-          <div className='flex items - center gap - 1'>;
-            <span className='text - yellow - 500'>⭐</span>;
-            <span className='text - sm font - medium'>;
-              {service.provider.rating}
-<<<<<<< HEAD
-            </span>
-            <span className='text-gray-500 text-sm'>
-              ({service.provider.reviewCount})
-            </span>
-          </div>
-        </div>
-        <p className='text-gray-600 mb-4 line-clamp-3'>{service.description}</p>
-        {/* Provider Info */}
-        <div className='flex items-center gap-3 mb-4'>
-          <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>
-            <span className='text-blue-600 font-semibold text-sm'>              {service.provider.name.charAt(0)}
-            </span>
-          </div>
-          <div>          </div>
-        </div>
-        <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      </div>;
 
-      {/* Service Content */}
-      <div className='p-6'>;
-        <div className='flex items-start justify-between mb-3'>;
-          <h3 className='text-xl font-bold text-gray-900 mb-2'>;
-            {service && service.title}
-          </h3>;
-          <div className='flex items-center gap-1'>;
-            <span className='text-yellow-500'>⭐</span>;
-            <span className='text-sm font-medium'>;
-              {service && service.provider.rating}
-            </span>;
-            <span className='text-gray-500 text-sm'>;
-              ({service && service.provider.reviewCount});
-            </span>;
-          </div>;
-        </div>;
 
-        <p className='text-gray-600 mb-4 line-clamp-3'>{service && service.description}</p>;
-
-        {/* Provider Info */}
-        <div className='flex items-center gap-3 mb-4'>;
-          <div className='w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center'>;
-            <span className='text-blue-600 font-semibold text-sm'>              {service && service.provider.name && name.charAt(0)}
-=======
-            </span>;
-            <span className='text - gray - 500 text - sm'>;
-              ({service.provider.review_count});
-            </span>;
-          </div>;
-        </div>;
-        <p className='text - gray - 600 mb - 4 line - clamp - 3'>{service.description}</p>;
-        {/* Provider Info */}
-        <div className='flex items - center gap - 3 mb - 4'>;
-          <div className='w - 8 h - 8 bg - blue - 100 rounded - full flex items - center justify - center'>;
-            <span className='text - blue - 600 font - semibold text - sm'>              {service.provider.name.char_at (0)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             </span>;
           </div>;
           <div>          </div>;
         </div>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-        <p className="text-gray-600 mb-4 line-clamp-3">{service && service.description}</p>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Provider Info */}
         <div className="flex items-center gap-3 mb-4">;
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">;
@@ -1336,10 +1118,7 @@ if (return service.pricing.enterprise) {
           </div>;
           {service && service.provider.verified && (;
             <span className='text-blue-600 text-sm'>✓ Verified</span>          )}
-<<<<<<< HEAD
-        </div>
-        {/* Pricing */}            <p className="font-medium text-gray-900">{service.provider.name}</p>
-=======
+
     <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
       {/* Service Image */}
       <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
@@ -1363,6 +1142,38 @@ if (return service.pricing.enterprise) {
       </div>
 
       {/* Service Content */}
+=======
+
+
+      {/* Service Image */}
+      <div className="h-48 bg-gradient-to-br from-blue-500 to-purple-600 relative overflow-hidden">
+        <img 
+          src={service.images[0]} 
+          alt={service.title}
+          className="w-full h-full object-cover"
+        />
+
+
+
+        <div className="absolute top-4 right-4">
+          <span className="bg-white text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+            {service.category}
+          </span>
+        </div>
+        {service.aiScore && (
+
+          <div className="absolute bottom-4 left-4">
+            <span className="bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+              AI Score: {service.aiScore}
+            </span>;
+          </div>;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        )}
+      </div>
+      {/* Service Content */}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="p-6">
         <div className="flex items-start justify-between mb-3">
           <h3 className="text-xl font-bold text-gray-900 mb-2">{service.title}</h3>
@@ -1376,6 +1187,10 @@ if (return service.pricing.enterprise) {
         <p className="text-gray-600 mb-4 line-clamp-3">{service.description}</p>
 
         {/* Provider Info */}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div className="flex items-center gap-3 mb-4">
           <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center">
             <span className="text-blue-600 font-semibold text-sm">
@@ -1383,16 +1198,18 @@ if (return service.pricing.enterprise) {
             </span>
           </div>
           <div>
+
+
+
             <p className="font-medium text-gray-900">{service.provider.name}</p>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <p className="text-sm text-gray-500">{service.provider.location}</p>
           </div>
           {service.provider.verified && (
             <span className="text-blue-600 text-sm">✓ Verified</span>
-<<<<<<< HEAD
-=======
+
           )}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
         </div>
 =======
         </div>;
@@ -1406,29 +1223,7 @@ if (return service.pricing.enterprise) {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Pricing */}
-<<<<<<< HEAD
-        <div className='bg-gray-50 rounded-lg p-4 mb-4'>;
-          <div className='text-center'>;
-            <div className='text-2xl font-bold text-gray-900'>;
-              {popularPlan && popularPlan.currency}
-              {popularPlan && popularPlan.price}
-              <span className='text-sm font-normal text-gray-500'>                /{popularPlan && popularPlan.period}
-              </span>;
-            </div>;
-            {popularPlan && popularPlan.popular && (;
-              <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>                Most Popular        <div className="bg-gray-50 rounded-lg p-4 mb-4">;
-          <div className="text-center">;
-            <div className="text-2xl font-bold text-gray-900">;
-              {popularPlan && popularPlan.currency}{popularPlan && popularPlan.price}
-              <span className="text-sm font-normal text-gray-500">;
-              </span>;
-            </div>;
-            {popularPlan && popularPlan.popular && (;
-              <span className='bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium'>              <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">;
-                Most Popular;
-              </span>;
-<<<<<<< HEAD
-=======
+
 =======
         <div className="bg-gray-50 rounded-lg p-4 mb-4">
           <div className="text-center">
@@ -1440,89 +1235,20 @@ if (return service.pricing.enterprise) {
             </div>
             {popularPlan.popular && (
               <span className="bg-blue-600 text-white px-2 py-1 rounded-full text-xs font-medium">
+
                 Most Popular
               </span>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-=======
+
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* Features Preview */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        <div className='mb-4'>;
-          <h4 className='font-semibold text-gray-900 mb-2'>Key Features:</h4>;
-          <div className='flex flex-wrap gap-2'>;
-            {service && service.features.slice(0, 3).map((feature, index) => (;
-              <span
-                key={index}
-<<<<<<< HEAD
-                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'              >            {service.features.slice(0, 3).map((feature, index) => (
-=======
-                className='bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs'>            {service && service.features.slice(0, 3).map((feature, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-              <span
-                key={index}
-                className="bg-blue-100 text-blue-800 px-2 py-1 rounded text-xs">;
-<<<<<<< HEAD
-                {feature}
-              </span>;
-            ))}
-            {service && service.features.length > 3 && (;
-              <span className='text-gray-500 text-xs'>                +{service && service.features.length - 3} more              <span className="text-gray-500 text-xs">;
-                +{service && service.features.length - 3} more;
-              </span>;
-=======
-                {feature}
-              </span>;
-            ))}
-            {service && service.features.length > 3 && (;
-              <span className='text-gray-500 text-xs'>                +{service && service.features.length - 3} more              <span className="text-gray-500 text-xs">;
-                +{service && service.features.length - 3} more;
-              </span>;
-=======
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 mb-2">Key Features:</h4>
-          <div className="flex flex-wrap gap-2">
-            {service.features.slice(0, 3).map((feature, index) => (
-              <span 
-=======
-        <p className="text - gray - 600 mb - 4 line - clamp - 3">{service.description}</p>;
-        {/* Provider Info */}
-        <div className="flex items - center gap - 3 mb - 4">;
-          <div className="w - 8 h - 8 bg - blue - 100 rounded - full flex items - center justify - center">;
-            <span className="text - blue - 600 font - semibold text - sm">;
-              {service.provider.name.char_at (0)}
-            </span>;
-          </div>;
-          <div>;
-            <p className='font - medium text - gray - 900'>{service.provider.name}</p>;
-            <p className='text - sm text - gray - 500'>{service.provider.location}</p>;
-          </div>;
-          {service.provider.verified && (
-            <span className='text - blue - 600 text - sm'>✓ Verified</span>          )}
-        </div>;
-        {/* Pricing */}            <p className="font - medium text - gray - 900">{service.provider.name}</p>;
-            <p className="text - sm text - gray - 500">{service.provider.location}</p>;
-          </div>;
-          {service.provider.verified && (
-            <span className="text - blue - 600 text - sm">✓ Verified</span>;
-        </div>;
-        {/* Pricing */}
-        <div className='bg - gray - 50 rounded - lg p - 4 mb - 4'>;
-          <div className='text - center'>;
-            <div className='text - 2xl font - bold text - gray - 900'>;
-              {popular_plan.currency}
-              {popular_plan.price}
-              <span className='text - sm font - normal text - gray - 500'>                /{popular_plan.period}
+
+
               </span>;
             </div>;
             {popular_plan.popular && (
@@ -1555,22 +1281,16 @@ if (return service.pricing.enterprise) {
                 {feature}
               </span>))}
             {service.features.length > 3 && (
-<<<<<<< HEAD
-              <span className="text-gray-500 text-xs">
-                +{service.features.length - 3} more
-              </span>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             )}
-<<<<<<< HEAD
-          </div>
-        </div>
-<<<<<<< HEAD
-=======
+
           </div>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* Action Buttons */}
         <div className='flex gap-2'>;
           <button
@@ -1579,37 +1299,36 @@ if (return service.pricing.enterprise) {
           <button
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors";
-<<<<<<< HEAD
-=======
+
 =======
 
         {/* Action Buttons */}
+=======
+        {/* Action Buttons */}
+
+
         <div className="flex gap-2">
           <button
             onClick={() => setShowDetails(!showDetails)}
             className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors"
           >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {showDetails ? 'Hide Details' : 'View Details'}
           </button>;
           <a
             href={`tel:+13024640950`}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'          >            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors"
-=======
-            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           >
             Call Now
           </a>
         </div>
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
             className='bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors'>            className="bg-green-600 text-white py-2 px-4 rounded-lg font-medium hover:bg-green-700 transition-colors";
 =======
               <span className='text - gray - 500 text - xs'>                +{service.features.length - 3} more              <span className="text - gray - 500 text - xs">;
@@ -1635,25 +1354,7 @@ if (return service.pricing.enterprise) {
             Call Now;
           </a>;
         </div>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-        {/* Detailed Information */}
-        {showDetails && (;
-          <div className='mt-6 pt-6 border-t border-gray-200'>;
-            <div className='space-y-4'>;
-              {/* Benefits */}
-              <div>;
-                <h4 className='font-semibold text-gray-900 mb-2'>Benefits:</h4>;
-                <ul className='list-disc list-inside text-sm text-gray-600 space-y-1'>                  {service && service.benefits.slice(0, 3).map((benefit, index) => (          <div className="mt-6 pt-6 border-t border-gray-200">;
-            <div className="space-y-4">;
-              {/* Benefits */}
-              <div>;
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>;
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">;
-                    <li key={index}>{benefit}</li>;
-<<<<<<< HEAD
-=======
 =======
 
         {/* Detailed Information */}
@@ -1662,49 +1363,20 @@ if (return service.pricing.enterprise) {
             <div className="space-y-4">
               {/* Benefits */}
               <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Benefits:</h4>
-                <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
-                  {service.benefits.slice(0, 3).map((benefit, index) => (
+
                     <li key={index}>{benefit}</li>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-<<<<<<< HEAD
-                </ul>
-              </div>
-=======
+
                 </ul>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Use Cases */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              <div>;
-                <h4 className='font-semibold text-gray-900 mb-2'>Use Cases:</h4>;
-                <div className='flex flex-wrap gap-2'>;
-                  {service && service.useCases.slice(0, 3).map((useCase, index) => (;
-                    <span
-                      key={index}
-<<<<<<< HEAD
-                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'                    >                  {service.useCases.slice(0, 3).map((useCase, index) => (
-=======
-                      className='bg-green-100 text-green-800 px-2 py-1 rounded text-xs'>                  {service && service.useCases.slice(0, 3).map((useCase, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                    <span
-                      key={index}
-                      className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs">;
-<<<<<<< HEAD
-=======
-=======
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Use Cases:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.useCases.slice(0, 3).map((useCase, index) => (
-                    <span 
-                      key={index}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="bg-green-100 text-green-800 px-2 py-1 rounded text-xs"
                     >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1712,44 +1384,15 @@ if (return service.pricing.enterprise) {
                       {useCase}
                     </span>;
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
+
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Technologies */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              <div>;
-                <h4 className='font-semibold text-gray-900 mb-2'>;
-                  Technologies:;
-                </h4>;
-                <div className='flex flex-wrap gap-2'>;
-                  {service && service.technologies.slice(0, 4).map((tech, index) => (;
-                    <span
-                      key={index}
-<<<<<<< HEAD
-                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'                    >                  {service.technologies.slice(0, 4).map((tech, index) => (
-=======
-                      className='bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs'>                  {service && service.technologies.slice(0, 4).map((tech, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                    <span
-                      key={index}
-                      className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs">;
-<<<<<<< HEAD
-=======
-=======
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Technologies:</h4>
-                <div className="flex flex-wrap gap-2">
-                  {service.technologies.slice(0, 4).map((tech, index) => (
-                    <span 
-                      key={index}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       className="bg-purple-100 text-purple-800 px-2 py-1 rounded text-xs"
                     >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -1757,29 +1400,30 @@ if (return service.pricing.enterprise) {
                       {tech}
                     </span>;
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-              {/* Deployment & Support */}
-<<<<<<< HEAD
-              <div className='grid grid-cols-2 gap-4 text-sm'>
+
+
+              <div className="grid grid-cols-2 gap-4 text-sm">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div>
                   <span className='font-medium text-gray-900'>Deployment:</span>
                   <p className='text-gray-600'>{service.deploymentTime}</p>
                 </div>
                 <div>
-                  <span className='font-medium text-gray-900'>Support:</span>
-                  <p className='text-gray-600'>
-                    {service.support.slice(0, 2).join(', ')}
-                  </p>                </div>                <div>
-=======
+
               <div className="grid grid-cols-2 gap-4 text-sm">
                 <div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                   <span className="font-medium text-gray-900">Deployment:</span>
                   <p className="text-gray-600">{service.deploymentTime}</p>
                 </div>
                 <div>
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <span className="font-medium text-gray-900">Support:</span>
                   <p className="text-gray-600">{service.support.slice(0, 2).join(', ')}</p>
                 </div>
@@ -1810,99 +1454,44 @@ if (return service.pricing.enterprise) {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* All Pricing Plans */}
-<<<<<<< HEAD
-              <div>;
-                <h4 className='font-semibold text-gray-900 mb-2'>;
-                  Pricing Plans:;
-                </h4>;
-                <div className='space-y-2'>;
-                  {Object && Object.entries(service && service.pricing).map(([plan, details]) => (;
-                    <div
-                      key={plan}
-                      className='flex justify-between items-center text-sm'>;
-                      <span className='capitalize font-medium'>{plan}</span>;
-                      <span className='text-gray-600'>;
-                        {details && details.currency}
-                        {details && details.price}/{details && details.period}                      </span>                    <div key={plan} className="flex justify-between items-center text-sm">;
-                      <span className="capitalize font-medium">{plan}</span>;
-                      <span className="text-gray-600">;
-                        {details && details.currency}{details && details.price}/{details && details.period}
-                    </div>;
-<<<<<<< HEAD
-=======
+
 =======
               <div>
                 <h4 className="font-semibold text-gray-900 mb-2">Pricing Plans:</h4>
                 <div className="space-y-2">
                   {Object.entries(service.pricing).map(([plan, details]) => (
-                    <div key={plan} className="flex justify-between items-center text-sm">
-                      <span className="capitalize font-medium">{plan}</span>
-                      <span className="text-gray-600">
-                        {details.currency}{details.price}/{details.period}
-                      </span>
-                    </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
+
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Contact CTA */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              <div className='bg-blue-50 rounded-lg p-4 text-center'>;
-                <p className='text-sm text-blue-800 mb-2'>;
-                  Ready to get started with {service && service.title}?;
-                </p>;
-                <div className='flex gap-2 justify-center'>;
-                  <a
-                    href={`tel:+13024640950`}
-                    className='bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors'>                  Ready to get started with {service && service.title}?;
-                </p>;
-                <div className="flex gap-2 justify-center">;
-                  <a
-                    href={`tel:+13024640950`}
-                    className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors">;
-                    📞 Call +1 302 464 0950;
-                  </a>;
-                  <a
-                    href={`mailto:kleber@ziontechgroup && ziontechgroup.com?subject=Inquiry about ${service && service.title}`}
-                    className='bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors'>                    className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors";
-                  >;
-                    ✉️ Email Inquiry;
-                  </a>;
-                </div>;
-              </div>;
-            </div>;
-          </div>;
-<<<<<<< HEAD
-        )}
-      </div>;
-    </div>;
-  );  );
-=======
-=======
-              <div className="bg-blue-50 rounded-lg p-4 text-center">
-                <p className="text-sm text-blue-800 mb-2">
+
+
                   Ready to get started with {service.title}?
                 </p>
                 <div className="flex gap-2 justify-center">
                   <a
                     href={`tel:+13024640950`}
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     className="bg-blue-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-blue-700 transition-colors"
                   >
                     📞 Call +1 302 464 0950
                   </a>
                   <a
                     href={`mailto:kleber@ziontechgroup.com?subject=Inquiry about ${service.title}`}
+
+
                     className="bg-green-600 text-white px-4 py-2 rounded text-sm font-medium hover:bg-green-700 transition-colors"
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   >
                     ✉️ Email Inquiry
                   </a>
@@ -1912,23 +1501,30 @@ if (return service.pricing.enterprise) {
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
-<<<<<<< HEAD
-      </div>
-    </div>
-<<<<<<< HEAD
-);  )
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
 }
+}
+}
+}
+}
+}
+}
+}
+}
+}
+
+
 =======
       </div>;
     </div>;
   );  );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
         {/* Detailed Information */}
         {show_details && (
@@ -2051,3 +1647,8 @@ if (return service.pricing.enterprise) {
     </div>));
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

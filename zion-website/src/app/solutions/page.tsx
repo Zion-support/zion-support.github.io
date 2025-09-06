@@ -1,70 +1,5 @@
 import {
-<<<<<<< HEAD
-  LightBulbIcon
-  CpuChipIcon
-  RocketLaunchIcon
-  ShieldCheckIcon
-  ChartBarIcon
-  GlobeAltIcon
-  UserGroupIcon
-  CogIcon
-} from '@heroicons/react/24/outline'
-const flagshipSolutions = [
-  {
-    name: 'AI Research Assistant'
-    description: 'Revolutionary autonomous research platform that accelerates scientific discovery across all domains.'
-    icon: LightBulbIcon
-    features: [
-      'Natural Language ProcessingMulti-modal LearningReal-time CollaborationAdvanced Analytics'
-    ]
-    href: '/solutions/ai-autonomous-research'}
-  {
-    name: 'Quantum Neural Networks'
-    description: 'Breakthrough quantum computing technology for next-generation AI applications.'
-    icon: CpuChipIcon
-    features: [
-      'Quantum SupremacyNeural Architecture SearchHybrid Classical-QuantumScalable Architecture'
-    ]
-    href: '/solutions/quantum-neural-networks'}
-  {
-    name: 'Autonomous Business Operations'
-    description: 'Self-optimizing business processes that adapt and improve automatically.'
-    icon: RocketLaunchIcon
-    features: [
-      'Process AutomationPredictive AnalyticsContinuous OptimizationReal-time Monitoring'
-    ]
-    href: '/solutions/autonomous-business'}
-  {
-    name: 'IT Asset Management'
-    description: 'Intelligent asset tracking and optimization for modern enterprise infrastructure.'
-    icon: ShieldCheckIcon
-    features: [
-      'Asset DiscoveryLifecycle ManagementSecurity ComplianceCost Optimization'
-    ]
-    href: '/solutions/it-asset-management'}]
-const industryApplications = [
-  {
-    name: 'Healthcare'
-    description: 'AI-powered diagnostics, drug discovery, and patient care optimization.'
-    icon: UserGroupIcon
-    useCases: ['Medical Imaging AnalysisDrug DiscoveryPatient Risk AssessmentClinical Decision Support']}
-  {
-    name: 'Finance'
-    description: 'Intelligent trading, risk assessment, and fraud detection systems.'
-    icon: ChartBarIcon
-    useCases: ['Algorithmic TradingCredit Risk AnalysisFraud DetectionPortfolio Optimization']}
-  {
-    name: 'Manufacturing'
-    description: 'Predictive maintenance, quality control, and supply chain optimization.'
-    icon: CogIcon
-    useCases: ['Predictive MaintenanceQuality ControlSupply Chain OptimizationProduction Planning']}
-  {
-    name: 'Retail'
-    description: 'Customer behavior analysis, inventory management, and personalized marketing.'
-    icon: GlobeAltIcon
-    useCases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}]
-const implementationSteps = [
-=======
+
   LightBulbIcon,
   CpuChipIcon,
   RocketLaunchIcon,
@@ -129,7 +64,7 @@ const industry_applications = [;
     icon: GlobeAltIcon,
     use_cases: ['Customer AnalyticsInventory ManagementPersonalized MarketingDemand Forecasting']}];
 const implementation_steps = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     step: '01'
     title: 'Discovery & Assessment'
@@ -151,13 +86,7 @@ const implementation_steps = [;
     description: 'Seamless deployment with comprehensive training for your team to maximize solution adoption.'
     icon: RocketLaunchIcon}
   {
-<<<<<<< HEAD
-    step: '05'
-    title: 'Ongoing Support'
-    description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.'
-    icon: ShieldCheckIcon}]
-export default function SolutionsPage() {
-=======
+
     step: '05',
     title: 'Ongoing Support',
     description: 'Continuous monitoring, optimization, and support to ensure your AI solution delivers lasting value.',
@@ -166,22 +95,26 @@ export default /**
  * SolutionsPage - Function description
  */
 function SolutionsPage() {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return (
     <div className=&quot;bg - black & quot;>;
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Hero section */}
       <div className=&quot;relative isolate px - 6 pt - 14 lg:px - 8&quot;>;
         <div className=&quot;mx - auto max - w-2xl py - 32 sm:py - 48 lg:py - 56 & quot;>;
           <div className=&quot;text - center & quot;>;
             <h1 className=&quot;text - 4xl font - bold tracking - tight text - white sm:text - 6xl & quot;>;
               AI Solutions for{' '}
-<<<<<<< HEAD
-              <span className=&quot;bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent&quot;>
-                Every Industry
-              </span>
-            </h1>
-            <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-              Discover our cutting-edge AI and technology solutions designed to transform your business
+
+
+            <p className="mt-6 text-lg leading-8 text-gray-300">
+              Discover our cutting-edge AI and technology solutions designed to transform your business 
+
+
               operations and drive unprecedented growth and innovation.
             </p>
           </div>
@@ -229,24 +162,38 @@ function SolutionsPage() {
                 </div>;
                 <a;
                   href={solution.href}
-className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:text - blue - 300 transition - colors duration - 200 & quot;
-                >;
-                  Learn more <span aria - hidden=&quot;true & quot;>→</span>;
-                </Link>;
-              </div>))}
+
+
+                  className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200"
+
+
+                >
+                  Learn more <span aria-hidden="true">→</span>
+                </Link>
+              </div>
+            ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </div>;
         </div>;
       </div>;
       {/* Industry Applications */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Industries</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Industries</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
             Transforming Every Sector
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            Our AI solutions are designed to adapt and excel across diverse industries
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            Our AI solutions are designed to adapt and excel across diverse industries, 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             delivering measurable results and competitive advantages.
           </p>
         </div>
@@ -292,15 +239,23 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
         </div>;
       </div>;
       {/* Implementation Process */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl lg:text-center&quot;>
-          <h2 className=&quot;text-base font-semibold leading-7 text-blue-400&quot;>Implementation</h2>
-          <p className=&quot;mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl lg:text-center">
+          <h2 className="text-base font-semibold leading-7 text-blue-400">Implementation</h2>
+          <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
             Our Proven Process
           </p>
-          <p className=&quot;mt-6 text-lg leading-8 text-gray-300&quot;>
-            From initial assessment to ongoing optimization, we guide you through every step
+          <p className="mt-6 text-lg leading-8 text-gray-300">
+            From initial assessment to ongoing optimization, we guide you through every step 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             of your AI transformation journey.
           </p>
         </div>
@@ -353,14 +308,22 @@ className=&quot;text - sm font - semibold leading - 6 text - blue - 400 hover:te
         </div>;
       </div>;
       {/* CTA section */}
-<<<<<<< HEAD
-<div className=&quot;mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8&quot;>
-        <div className=&quot;mx-auto max-w-2xl text-center&quot;>
-          <h2 className=&quot;text-3xl font-bold tracking-tight text-white sm:text-4xl&quot;>
+
+
+
+=======
+      <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+
+
+
             Ready to transform your business?
           </h2>
-          <p className=&quot;mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300&quot;>
-            Let's discuss how our AI solutions can accelerate your growth and give you a
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-300">
+            Let's discuss how our AI solutions can accelerate your growth and give you a 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             competitive edge in your industry.
           </p>
           <div className=&quot;mt-10 flex items-center justify-center gap-x-6&quot;>

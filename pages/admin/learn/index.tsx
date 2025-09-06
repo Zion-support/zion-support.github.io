@@ -1,34 +1,20 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import { useEffect, useState } from 'react';
 export default function AdminLearn() {
-<<<<<<< HEAD
-  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' })
-  const [message, setMessage] = useState('')
-=======
+
   const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),
   const [message, setMessage] = useState('');
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   async function saveCourse() {
     setMessage('')
     const resp = await fetch('/api/admin/learn/course', {
-<<<<<<< HEAD
-      method: 'POST'
-      headers: { 'Content-Type': 'application/json' }
-=======
+
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       body: JSON.stringify(form)
     })
     const data = await resp.json()
@@ -36,6 +22,40 @@ export default function AdminLearn() {
     else setMessage('Error: ' + (data.error |'unknown'))
 
   }
+=======
+      body: JSON.stringify(form)
+
+    }),
+    const data = await resp.json(),
+    if (data.ok) setMessage('Saved'),
+    else setMessage('Error: ' + (data.error || 'unknown'))
+
+=======
+import { useEffect, useState } from 'react';
+export default function AdminLearn(req, res) {
+  try {
+  const [form, setForm] = useState<any>({ id: '', title: '', category: 'AI Development', durationMinutes: 60, level: 'Beginner', isFree: true, certificationBadge: '' }),;
+  const [message, setMessage] = useState('');
+  async function saveCourse() {;
+    setMessage('');
+    const resp = await fetch('/api/admin/learn/course', {;
+      method: 'POST',;
+      headers: { 'Content-Type': 'application/json' },;
+      body: JSON.stringify(form);
+    }),;
+    const data = await resp.json();
+    if (data.ok) setMessage('Saved');
+    else setMessage('Error: ' + (data.error || 'unknown'));
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       <h1 className="text-2xl font-semibold">Learning Admin</h1>
@@ -58,16 +78,10 @@ export default function AdminLearn() {
         <label className="flex items-center gap-2 text-sm"><input type="checkbox" checked={form.isFree} onChange={(e) => setForm({ ...form, isFree: e.target.checked })} /> Free</label>
       </div>
       <button onClick={saveCourse} className="px-4 py-2 bg-blue-600 text-white rounded">Save Course</button>
-      {message && <div className="text-sm">{message}</div>}
-    </div>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import { useEffect, useState } from 'react',
 ;
@@ -120,3 +134,27 @@ function save_course() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+    </div>
+  );
+};
+
+=======
+      {message && <div className="text-sm">{message}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+    </div>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

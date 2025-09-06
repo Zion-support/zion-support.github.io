@@ -1,15 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { setSessionCookie } from '../../../utils/adminAuth';
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  if (req.method !== 'POST') {
+
+import { setSessionCookie } from '../../../utils/adminAuth';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
     res.status(405).json({ error: 'Method Not Allowed' });
+
+    return;  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {;
+    res.status(405).json({ error: 'Method Not Allowed' });
+
+
     return
 
   const { username, password } = req.body |{}
@@ -48,20 +51,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     res && res.status(401).json({ error: 'Invalid credentials' });
   }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  } else {
-    res && res.status(401).json({ error: 'Invalid credentials' })
-  }  } else {
-    res && res.status(401).json({ error: 'Invalid credentials' })
-  }
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import { setSessionCookie } from '../../../utils / admin_auth';
 export default /**

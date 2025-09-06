@@ -1,17 +1,13 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { AppLayout } from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO",
-import { ApplicationsTracker } from "@/components/jobs/applications",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Briefcase, Inbox } from "lucide-react",
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
+
+
+
+
 function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile(),
+  
 
-  const isMobile = useIsMobile();
-
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO
@@ -40,17 +36,7 @@ function ApplicationStatusTrackerContent() {
       </div>
     </>
   )
-}
-export default function ApplicationStatusTracker() {
-  return (
-    <ProtectedRoute>
-      <AppLayout>
-        <ApplicationStatusTrackerContent />
-      </AppLayout>
-    </ProtectedRoute>
-  )
-}
-=======
+
 import {AppLayout} from "@/layout/AppLayout";
 import {SEO} from "@/components/SEO";
 import {ApplicationsTracker} from "@/components/jobs/applications";
@@ -58,6 +44,18 @@ import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
 import {Briefcase, Inbox} from "lucide-react";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useIsMobile} from "@/hooks/use-mobile";
+=======
+
+
+=======
+import { AppLayout } from "@/layout/AppLayout",;
+import { SEO } from "@/components/SEO",;
+import { ApplicationsTracker } from "@/components/jobs/applications",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Briefcase, Inbox } from "lucide-react",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+
 function ApplicationStatusTrackerContent() {;
   const isMobile = useIsMobile();
 
@@ -91,11 +89,7 @@ function ApplicationStatusTrackerContent() {;
       </div>;
     </>;
   );
-}
 
-export default function ApplicationStatusTracker() {;
-  return (
-=======
 import { AppLayout } from '@/layout / AppLayout';
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
@@ -142,17 +136,16 @@ export default /**
  */
 function ApplicationStatusTracker() {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     <ProtectedRoute>;
       <AppLayout>;
         <ApplicationStatusTrackerContent />;
       </AppLayout>;
-<<<<<<< HEAD
-    </ProtectedRoute>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </ProtectedRoute>);
+=======
+
+
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

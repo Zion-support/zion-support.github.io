@@ -1,15 +1,32 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Certification  } from '@/types/resume';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { Edit, Trash2  } from 'lucide-react';
-import { format } from 'date-fns';
+
+
+import {Certification} from '@/types/resume';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {Edit, Trash2} from 'lucide-react';
+import {format} from 'date-fns';
+
+
 interface CertificationsListProps {
   certifications: Certification[];
   onEdit: (cert: Certification) => void;
   onDelete: (id: string) => void
+
+=======
+import { Certification } from '@/types/resume',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { Edit, Trash2 } from 'lucide-react',;
+import { format } from 'date-fns',;
+interface CertificationsListProps {;
+  certifications: Certification[],;
+  onEdit: (cert: Certification) => void;
+  onDelete: (id: string) => void;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function CertificationsList({
   certifications
@@ -34,18 +51,13 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
+
+
+
+
+
   return (
-<<<<<<< HEAD
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Certifications</h3>
-      {certifications.map((cert) => (
-        <Card key={cert.id} className="bg-muted/40">
-          <CardContent className="pt-6">
-            <div className="flex justify-between">
-              <div>
-                <h4 className="font-medium">{cert.name}</h4>
-                <p className="text-sm text-muted-foreground">
-=======
+
 import { Certification  } from '@/types / resume';
 import { Card, CardContent  } from '@/components / ui / card';
 import { Button  } from '@/components / ui / button';
@@ -76,26 +88,9 @@ if ( {) {
               <div>;
                 <h4 className="font - medium">{cert.name}</h4>;
                 <p className="text - sm text - muted - foreground">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   {cert.issuing_organization}
-                </p>;
-                <p className="text - xs text - muted - foreground mt - 1">;
-                  Issued:{" "}
-                  {cert.issue_date;
-                    ? typeof cert.issue_date === "string";
-                      ? cert.issue_date;
-                      : format (cert.issue_date, "MMM yyyy");
-                    : "N / A"}
-                  {cert.expiration_date && (
-                    <>;
-                      {" "}
-                      · Expires:{" "}
-<<<<<<< HEAD
-                      {typeof cert.expiration_date === "string"
-                        ? cert.expiration_date
-                        : format(cert.expiration_date, "MMM yyyy")}
-                    </>
-=======
+
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Certifications</h3>;
       {certifications && certifications.map((cert) => (;
@@ -114,7 +109,21 @@ if ( {) {
                       ? cert && cert.expiration_date ;
                       : format(cert && cert.expiration_date, 'MMM yyyy')}
                     </>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+                </p>
+                <p className="text-xs text-muted-foreground mt-1">
+
+                  Issued: {cert.issue_date ? (typeof cert.issue_date === 'string' 
+                    ? cert.issue_date 
+                    : format(cert.issue_date, 'MMM yyyy')) : 'N/A'}
+                  {cert.expiration_date && (;
+                    <> · Expires: {typeof cert.expiration_date === 'string';
+                      ? cert.expiration_date;
+                      : format(cert.expiration_date, 'MMM yyyy')}
+                    </>;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </p>;
               </div>;
@@ -129,14 +138,7 @@ if ( {) {
                 <Button
                   variant="ghost"
                   size="icon"
-<<<<<<< HEAD
-                  onClick={() => onDelete(cert.id!)}
-                >
-                  <Trash2 className="h-4 w-4" />
-                </Button>
-              </div>
-            </div>
-=======
+
                       {typeof cert.expiration_date === "string";
                         ? cert.expiration_date;
                         : format (cert.expiration_date, "MMM yyyy")}
@@ -160,14 +162,12 @@ if ( {) {
                 </Button>;
               </div>;
             </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             {cert.credential_url && (
               <p className="text - xs mt - 2">;
                 <a;
                   href={cert.credential_url}
-<<<<<<< HEAD
-                  target="_blank"
-=======
+
                   onClick={() => onDelete(cert && cert.id!)}
                 >;
                   <Trash2 className="h-4 w-4" />;
@@ -179,7 +179,7 @@ if ( {) {
                 <a
                   href={cert && cert.credential_url} 
                   target="_blank" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   rel="noopener noreferrer"
                   className="text-primary hover:underline">;
                   View credential;
@@ -189,15 +189,11 @@ if ( {) {
           </CardContent>;
         </Card>;
       ))}
-<<<<<<< HEAD
-    </div>
-  );
-}
-=======
+
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
                   target="_blank";
                   rel="noopener noreferrer";
@@ -211,3 +207,22 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  View credential
+                </Link>
+              </p>
+            )}
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

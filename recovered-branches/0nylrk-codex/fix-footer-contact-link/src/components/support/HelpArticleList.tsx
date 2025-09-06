@@ -1,31 +1,26 @@
-<<<<<<< HEAD
 
-import React from "react";
-<<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
 
-import { HELP_CATEGORIES } from "./help-content";
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {HELP_CATEGORIES} from "./help-content";
+
+=======
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
+
+
+
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
   searchQuery: string
-}
 
-export function HelpArticleList({
-  categoryId
-  onArticleSelect
-  searchQuery
-}: HelpArticleListProps) {
-  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
-  if (!category) {
-    return <div>Category not found</div>;
+
   }
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
@@ -33,7 +28,12 @@ export function HelpArticleList({
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
           article.content.toLowerCase().includes(searchQuery.toLowerCase())
       )
-    : category.articles;
+
+
+    : category.articles,
+  
+
+
   return (
     <div>
       <div className="mb-6">
@@ -113,16 +113,17 @@ export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQue
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  );
-}
+
+
+
+
+
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString("en-US", {
     year: "numeric"
     month: "long"
     day: "numeric"
-=======
+
     </div>;
   );
 }
@@ -132,7 +133,7 @@ function formatDate(): any (date: string): string {;
     year: "numeric",;
     month: "long",;
     day: "numeric";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   });
 }
 
@@ -215,3 +216,10 @@ function format_date (date: string): string {
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  })
+=======
+  })
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

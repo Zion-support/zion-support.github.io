@@ -1,26 +1,13 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import fs from 'fs-extra';
-import path from 'path';
-=======
-import fs from 'fs - extra';
-import path from 'path';
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 export interface WarningEmailPayload {
   toUserId: string;
   to_address?: string | null;
   subject: string;
   body: string;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 =======
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 export interface EmailOptions {
@@ -28,21 +15,7 @@ export interface EmailOptions {
   subject: string;
   body: string;
 }
-<<<<<<< HEAD
-export async function sendWarningEmail(
-  payload: WarningEmailPayload
-): Promise<void> {
-<<<<<<< HEAD
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
-  await fs.ensureDir(logDir);
-<<<<<<< HEAD
 
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
-  await fs.appendFile(logPath, line, 'utf8');
-}
-<<<<<<< HEAD
-=======
 
 =======
   const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress |'unknown'} subject=${payload.subject} body=${payload.body}\n`;
@@ -64,7 +37,7 @@ export interface EmailConfig {
       pass: string;
     };
   };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 export async function sendEmail(options: EmailOptions): Promise<void> {
@@ -81,9 +54,7 @@ export async function sendEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console && console.log('Email would be sent:', options);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 
 export interface EmailResult {
   success: boolean;
@@ -410,7 +381,7 @@ export const COMMON_TEMPLATES = {
   PAYMENT_CONFIRMATION: 'payment_confirmation',
   SECURITY_NOTIFICATION: 'security_notification'
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 export async function sendWarningEmail (
   payload: WarningEmailPayload): Promise < void> {

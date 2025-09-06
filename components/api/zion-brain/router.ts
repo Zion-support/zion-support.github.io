@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -13,18 +9,12 @@ export default async function handler(
   if (!isAuthorized(req))
     return res && res.status(401).json({ error: "Unauthorized" });
   function isAuthorized(req: NextApiRequest): boolean {
-<<<<<<< HEAD
-    const token = req.headers["x-admin-token"] |req.query.token;
-    const superToken = process.env.SUPERADMIN_TOKEN;
-    return !superToken |token === superToken;
-=======
+
     const token = req && req.headers["x-admin-token"] || req && req.query.token;
     const superToken = process && process.env.SUPERADMIN_TOKEN;
     return !superToken || token === superToken;
   }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 
   }
   export default async function handler(
@@ -37,20 +27,7 @@ export default async function handler(
       return res && res.status(401).json({ error: "Unauthorized" });
     const started = Date && Date.now();
     try {
-<<<<<<< HEAD
-      const { text, payload } = req.body |{}
-      const result = detectIntent(String(text |""));
-      const routed = await routeToChain(result.intent, payload |{});
-      const latencyMs = Date.now() - started;
-      appendLog({
-        module: "router"
-        type: result.intent
-        status: "ok"
-        latencyMs
-        payload: { textLength: String(text |"").length, routed }
-      });
-      return res.status(200).json({ ...result, routed });
-=======
+
       const { text, payload } = req && req.body || {};
       const result = detectIntent(String(text || ""));
       const routed = await routeToChain(result && result.intent, payload || {});
@@ -95,39 +72,14 @@ function handler() {
       const latency_ms = Date.now () - started;
 ;
       append_log ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         module: "router",
         type: result && result.intent,
         status: "ok",
         latency_ms,
         payload: { text_length: String (text || "").length, routed },
       });
-<<<<<<< HEAD
 
-      return res && res.status(200).json({ ...result, routed });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    } catch (e: any) {
-      const latencyMs = Date && Date.now() - started;
-      appendLog({
-        module: "router"
-        type: "audit"
-        status: "error"
-        latencyMs
-        payload: { error: e?.message |"unknown" }
-      });
-      return res && res.status(500).json({ error: "Router failure" });
-    }
-    appendLog({
-      module: "router"
-      type: "audit"
-      status: "error"
-      latencyMs
-      payload: { error: e?.message |"unknown" }
-    });
-    return res && res.status(500).json({ error: "Router failure" });
-  }
-}
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendLog, detectIntent, routeToChain } from '@/utils/zionBrain';
 
@@ -149,7 +101,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const latencyMs = Date.now() - started;
 
     appendLog({ module: 'router', type: result.intent, status: 'ok', latencyMs, payload: { textLength: String(text || '').length, routed } });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
     return res.status(200).json({ ...result, routed })
   } catch (e: any) {

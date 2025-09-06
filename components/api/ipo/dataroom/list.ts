@@ -1,20 +1,13 @@
-<<<<<<< HEAD
+
+
+
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 import { appendAuditLog, resolveDataPath } from "../../../../utils/api/storage";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const section = String(req.query.section |"General");
-  const dir = resolveDataPath(path.join("dataroom", section));
-=======
-  const section = String(req.query.section || 'General');
-  const dir = resolveDataPath(path.join('dataroom', section));
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
   if (!fs.existsSync(dir)) return res.status(200).json([]);
   const files = fs.readdirSync(dir).map((name) => ({ name }));
 =======
@@ -30,10 +23,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: "file_list", section });
   res && res.status(200).json(files);
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 =======
 import type { NextApiRequest, NextApiResponse } from './next';
 import fs from './fs';
@@ -57,3 +49,6 @@ function handler() {
   res.status (200).json (files);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,11 +1,4 @@
-<<<<<<< HEAD
-import React, { useMemo, useState } from 'react',
-import Link from 'next/link';
 
-import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,16 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useMemo, useState } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
@@ -49,31 +33,35 @@ import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zion
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
 export default function WhitepaperBuilderPage() {
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+=======
+
+import React, { useMemo, useState } from 'react';
+
+import Link from 'next/link';
+
+import {
+
+  getWhitepaperSections,;
+  OPERATOR_PROMPT,;
+
+} from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
+import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+
+export default function WhitepaperBuilderPage() {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
-<<<<<<< HEAD
-  const downloadHref = useMemo(() => {
-    if (edition === 'full') return '/docs/zion-protocol.pdf';
-<<<<<<< HEAD
-=======
+
 
   const downloadHref = useMemo(() => {;
     if (edition === 'full') return '/docs/zion-protocol && protocol.pdf';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     return `/api/zion-whitepaper-pdf?edition=${edition}`;
   }, [edition]);
   return (
-<<<<<<< HEAD
-    <div className='space-y-6'>
-      <div className='flex flex-col gap-2'>
-        <h1 className='text-3xl font-bold'>Zion Protocol Whitepaper</h1>
-        <p className='text-gray-600 dark:text-gray-300'>
-          Investor and Developer editions. Toggle, review, and download as PDF.
-        </p>
-      </div>
-      <div className='flex flex-wrap gap-3 items-center'>
-        <label className='font-medium'>Edition</label>
-=======
+
     <div className='space-y-6'>;
       <div className='flex flex-col gap-2'>;
         <h1 className='text-3xl font-bold'>Zion Protocol Whitepaper</h1>;
@@ -84,7 +72,7 @@ export default function WhitepaperBuilderPage() {
 
       <div className='flex flex-wrap gap-3 items-center'>;
         <label className='font-medium'>Edition</label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <select
           value={edition}
           onChange={e => setEdition(e && e.target.value as WhitepaperEdition)}
@@ -96,54 +84,15 @@ export default function WhitepaperBuilderPage() {
         </select>;
         <Link href={downloadHref} legacyBehavior>;
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
-<<<<<<< HEAD
-=======
+
 =======
     return `/api/zion-whitepaper-pdf?edition=${edition}`
   }, [edition]);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div className="flex flex-col gap-2">
-        <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>
-        <p className="text-gray-600 dark:text-gray-300">Investor and Developer editions. Toggle, review, and download as PDF.</p>
-      </div>
-      <div className="flex flex-wrap gap-3 items-center">
-        <label className="font-medium" htmlFor="input-Edition">Edition</label>
-        <select
-          value={edition}
-          onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
-          className="border rounded px-3 py-2 bg-white dark:bg-black"
-        >
-          <option value="full">Full</option>
-          <option value="investor">Investor</option>
-          <option value="developer">Developer</option>
-        </select>
-        <Link href={downloadHref} legacyBehavior>
-          <a className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90">
-            Download PDF
-          </a>
-        </Link>
-      </div>
-<<<<<<< HEAD
-      <div className='rounded border p-4 bg-gray-50 dark:bg-gray-900'>
-        <h2 className='text-xl font-semibold mb-2'>Operator Prompt</h2>
-        <pre className='whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200'>
-          {OPERATOR_PROMPT}
-        </pre>
-      </div>
-      <div className='space-y-10'>
-        {sections.map(s => (
-          <section key={s.id} className='space-y-2'>
-            <h2 className='text-2xl font-bold'>{s.title}</h2>
-            {s.subtitle ? <p className='text-gray-500'>{s.subtitle}</p> : null}
-            <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>
-              {s.contentMd}
-            </article>          </section>      <div className="space-y-10">
-=======
+
 
       <div className="rounded border p-4 bg-gray-50 dark:bg-gray-900">
         <h2 className="text-xl font-semibold mb-2">Operator Prompt</h2>
@@ -151,19 +100,13 @@ export default function WhitepaperBuilderPage() {
       </div>
 
       <div className="space-y-10">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
         {sections.map((s) => (
           <section key={s.id} className="space-y-2">
             <h2 className="text-2xl font-bold">{s.title}</h2>
             {s.subtitle ? <p className="text-gray-500">{s.subtitle}</p> : null}
             <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s.contentMd}</article>
-<<<<<<< HEAD
-        ))}
-      </div>
-    </div>
-);
-}
-=======
+
     <div className="space-y-6">;
       <div className="flex flex-col gap-2">;
         <h1 className="text-3xl font-bold">Zion Protocol Whitepaper</h1>;
@@ -233,59 +176,28 @@ if (return '/docs / zion - protocol.pdf') {
           value={edition}
           on_change={(e) => set_edition (e.target.value as WhitepaperEdition)}
           className="border rounded px - 3 py - 2 bg - white dark:bg - black";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         >;
           <option value="full">Full</option>;
           <option value="investor">Investor</option>;
           <option value="developer">Developer</option>;
         </select>;
-<<<<<<< HEAD
-        <Link href={downloadHref} legacyBehavior>;
-          <a className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90">;
-=======
+
         <Link href={download_href} legacy_behavior>;
           <a className="ml - 2 inline - flex items - center gap - 2 px - 4 py - 2 rounded bg - black text - white dark:bg - white dark:text - black hover:opacity - 90">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             Download PDF;
           </a>;
         </Link>;
       </div>;
-<<<<<<< HEAD
 
-      <div className='rounded border p-4 bg-gray-50 dark:bg-gray-900'>;
-        <h2 className='text-xl font-semibold mb-2'>Operator Prompt</h2>;
-        <pre className='whitespace-pre-wrap text-sm text-gray-700 dark:text-gray-200'>;
-          {OPERATOR_PROMPT}
-        </pre>;
-      </div>;
-
-      <div className='space-y-10'>;
-        {sections && sections.map(s => (;
-          <section key={s && s.id} className='space-y-2'>;
-            <h2 className='text-2xl font-bold'>{s && s.title}</h2>;
-            {s && s.subtitle ? <p className='text-gray-500'>{s && s.subtitle}</p> : null}
-            <article className='prose dark:prose-invert max-w-none whitespace-pre-wrap'>;
-              {s && s.contentMd}
-            </article>          </section>      <div className="space-y-10">;
-        {sections && sections.map((s) => (;
-          <section key={s && s.id} className="space-y-2">;
-            <h2 className="text-2xl font-bold">{s && s.title}</h2>;
-            {s && s.subtitle ? <p className="text-gray-500">{s && s.subtitle}</p> : null}
-            <article className="prose dark:prose-invert max-w-none whitespace-pre-wrap">{s && s.contentMd}</article>;
-        ))}
-      </div>;
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
           </section>
         ))}
       </div>
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
       <div className='rounded border p - 4 bg - gray - 50 dark:bg - gray - 900'>;
         <h2 className='text - xl font - semibold mb - 2'>Operator Prompt</h2>;
@@ -310,3 +222,9 @@ if (return '/docs / zion - protocol.pdf') {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

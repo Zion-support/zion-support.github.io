@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-import Head from 'next/head';
-import React from 'react';
-export default function ManifestoPage(): JSX.Element {
-  return (
-    <>
-      <Head>
-        <title>Zion Manifesto</title>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -61,13 +52,10 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import Head from 'next / head',
 import React from 'react',
@@ -125,3 +113,12 @@ export default function ManifestoPage (): JSX.Element {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,34 +1,10 @@
-<<<<<<< HEAD
 
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { SortDesc, ChevronDown } from "lucide-react";
-import {
 
-  DropdownMenu
-  DropdownMenuContent
-  DropdownMenuItem
-  DropdownMenuTrigger
-} from "@/components/ui/dropdown-menu";
 
-<<<<<<< HEAD
-interface SortDropdownProps {
-  sortOption: string;
-  setSortOption: (option: string) => void
-}
-export function SortDropdown({ sortOption, setSortOption }: SortDropdownProps) {
-  return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          className="w-full justify-between border-zion-blue-light text-white"
-        >
-          <div className="flex items-center gap-2">
-            <SortDesc className="h-4 w-4 text-zion-purple" />
-            {SORT_OPTIONS.find((opt) => opt.value === sortOption)?.label |
-=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 import React from './react';
 import { Button  } from '@/components / ui / button';
 import { SORT_OPTIONS  } from '@/data / sort_options';
@@ -58,7 +34,7 @@ function SortDropdown() {
           <div className="flex items - center gap - 2">;
             <SortDesc className="h - 4 w - 4 text - zion - purple" />;
             {SORT_OPTIONS.find ((opt) => opt.value === sort_option)?.label ||;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               "Sort by"}
           </div>;
           <ChevronDown className="h - 4 w - 4 ml - 2 opacity - 50" />;
@@ -71,13 +47,7 @@ function SortDropdown() {
         {SORT_OPTIONS.map ((option) => (
           <DropdownMenuItem;
             key={option.value}
-<<<<<<< HEAD
-            onClick={() => setSortOption(option.value)}
-            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
-              sortOption === option.value
-                ? "bg-zion-purple/20 text-zion-purple"
-                : ""
-=======
+
 interface SortDropdownProps {;
   sortOption: string,;
   setSortOption: (option: string) => void;
@@ -106,23 +76,18 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
             onClick={() => setSortOption(option && option.value)}
             className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${;
               sortOption === option && option.value ? "bg-zion-purple/20 text-zion-purple" : "";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             }`}
           >;
             {option && option.label}
           </DropdownMenuItem>;
         ))}
-<<<<<<< HEAD
-      </DropdownMenuContent>
-    </DropdownMenu>
-  );
-}
-=======
+
       </DropdownMenuContent>;
     </DropdownMenu>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
             on_click={() => setSortOption (option.value)}
             className={`text - white hover:bg - zion - blue - light / 30 cursor - pointer ${
@@ -137,3 +102,28 @@ export function SortDropdown(): any ({ sortOption, setSortOption }: SortDropdown
     </DropdownMenu>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+              "Sort by"}
+          </div>
+          <ChevronDown className="h-4 w-4 ml-2 opacity-50" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="start"
+        className="w-[200px] bg-zion-blue-dark border-zion-blue-light"
+      >
+        {SORT_OPTIONS.map((option) => (
+          <DropdownMenuItem
+            key={option.value}
+            onClick={() => setSortOption(option.value)}
+            className={`text-white hover:bg-zion-blue-light/30 cursor-pointer ${
+
+              sortOption === option.value ? "bg-zion-purple/20 text-zion-purple" : ""
+
+  );
+
+
+}
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

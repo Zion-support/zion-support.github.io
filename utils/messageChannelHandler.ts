@@ -1,7 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+=======
+
+=======
+
 }}}};
 ;
 ;
@@ -10,31 +12,18 @@
 }
 }
 }
-<<<<<<< HEAD
-},
 
-,
-
->>>>>>> cursor/fix-lint-push-and-merge-to-main-28da
-=======
 },;
 ,;
->>>>>>> cursor/automate-test-improve-and-merge-code-4094
+
 =======
-<<<<<<< HEAD
+
+
 =======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-export const messageChannelHandler = {
-  sendMessage: (message: string) => {},
-  receiveMessage: (callback: (message: string) => void) => {},
-  sendMessage: (message: any) => {},
-  receiveMessage: (callback: any) => {},
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
   receiveMessage: (callback: (message: unknown) => void) => void;
@@ -46,19 +35,27 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
-<<<<<<< HEAD
+
 };
+
+};
+
 =======
-};
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 };
 };
 };
 };
 ,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 // Message channel handler for real-time communication
 export class MessageChannelHandler {
@@ -107,8 +104,17 @@ if ( {) {
   }
 }
 export default MessageChannelHandler;
-<<<<<<< HEAD
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+},;
+,;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

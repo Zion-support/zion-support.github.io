@@ -1,43 +1,15 @@
-import { useEffect, useState } from 'react';
 
-type Note = {
-<<<<<<< HEAD
-  id: string
-  targetType: string
-  targetId: string
-  text: string
-  authorId: string
-  createdAt: number
-}
-export default function AdminNotesConsole() {
-<<<<<<< HEAD
-  const [isAdmin, setIsAdmin] = useState(true)
-  const [notes, setNotes] = useState<Note[]>([])
-  const [loading, setLoading] = useState(false)
-=======
   const [isAdmin, setIsAdmin] = useState(true);
   const [notes, setNotes] = useState<Note[]>([]);
   const [loading, setLoading] = useState(false);
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   useEffect(() => {
     async function load() {
       setLoading(true)
       try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } })
-        if (!res.ok) return
-        const data = await res.json()
-        setNotes(data.notes |[])
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } }),
-        if (!res.ok) return;
-        const data = await res.json();
-        setNotes(data.notes || [])
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 =======
   id: string,
   target_type: string,
@@ -72,10 +44,47 @@ if (return, ) {
         set_loading (false);
       }
     }
-<<<<<<< HEAD
-    if (isAdmin) load()
-  }, [isAdmin])
 
+
+=======
+
+type Note = {
+  id: string;
+  targetType: string;
+  targetId: string;
+  text: string;
+  authorId: string;
+  createdAt: number;
+};
+export default function AdminNotesConsole(req, res) {
+  try {
+  const [isAdmin, setIsAdmin] = useState(true);
+  const [notes, setNotes] = useState<Note[]>([]);
+  const [loading, setLoading] = useState(false);
+  useEffect(() => {;
+    async function load() {;
+      setLoading(true);
+      try {
+        const res = await fetch('/api/admin/notes-all', { headers: { 'X-Admin': isAdmin ? 'true' : 'false' } });
+        if (!res.ok) return,;
+        const data = await res.json();
+        setNotes(data.notes || []);
+      } finally {;
+        setLoading(false);
+        } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    if (isAdmin) load()
+  }, [isAdmin]),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between">
@@ -97,18 +106,10 @@ if (return, ) {
               <div className="font-medium mb-1">{n.targetType} • {n.targetId}</div>
               <div>{n.text}</div>
             </div>
-          ))}
-        </div>
-      )}
-    </div>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
     if (load ()) {
   $2
@@ -138,3 +139,7 @@ if (return, ) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

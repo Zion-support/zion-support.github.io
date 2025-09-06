@@ -1,28 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import React from 'react'
-import { useProjects } from '@/hooks/useProjects'
-import { SEO } from '@/components/SEO'
-=======
-import React from 'react';
-import { use_projects } from '@/hooks / use_projects';
-import { SEO } from '@/components / SEO';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 import {
-<<<<<<< HEAD
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -55,17 +34,34 @@ import {;
   CardFooter,;
   CardHeader,;
   CardTitle,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import Link from 'next/link';
 import { Clock, Briefcase } from 'lucide-react';
-
-<<<<<<< HEAD
-function ProjectsContent() {
-  const { projects, isLoading } = useProjects();
 =======
+} from '@/components/ui/card'
+import { Button } from '@/components/ui/button'
+import { Badge } from '@/components/ui/badge'
+import Link from 'next/link'
+
+=======
+import React from "react",
+import { useProjects } from "@/hooks/useProjects",
+import { SEO } from "@/components/SEO",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import Link from "next/link",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+import { Clock, Briefcase } from 'lucide-react'
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   Card
   CardContent
   CardDescription
@@ -82,7 +78,7 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects()
 function ProjectsContent() {
 
   const { projects, isLoading } = useProjects()
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 =======
 function ProjectsContent() { const { projects, isLoading  } = useProjects(),;
 function ProjectsContent() {;
@@ -94,15 +90,7 @@ function ProjectsContent() {;
       <SEO
         title='My Projects | Zion AI Marketplace'
         description='View and manage your projects.'
-<<<<<<< HEAD
-      />
-      <main className='container mx-auto px-4 py-8'>
-        <div className='mb-8'>
-          <h1 className='text-3xl font-bold'>My Projects</h1>
-          <p className='text-muted-foreground mt-1'>
-            All of your current and past projects
-          </p>
-=======
+
 import React from "react";
 import { useProjects } from "@/hooks/useProjects";
 import { SEO } from "@/components/SEO";
@@ -126,32 +114,27 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
         <div className="mb-8">
           <h1 className="text-3xl font-bold">My Projects</h1>
           <p className="text-muted-foreground mt-1">All of your current and past projects</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        </div>
 
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {isLoading ? (
           <p>Loading projects...</p>
         ) : projects.length === 0 ? (
           <p>You don't have any projects yet.</p>
         ) : (
-<<<<<<< HEAD
-          <div className='grid gap-6'>
-            {projects.map(project => (
-              <Card key={project.id}>
-                <CardHeader>
-                  <CardTitle className='flex items-center gap-2'>
-                    <Briefcase className='h-5 w-5 text-primary' />
-                    <span>{project.job?.title |'Project'}</span>
-                  </CardTitle>
-                  <CardDescription className='flex items-center gap-2 mt-1'>
-                    <Badge variant='outline'>{project.status}</Badge>
-                    <span className='flex items-center gap-1 text-xs text-muted-foreground'>
-                      <Clock className='h-3 w-3' />
-                      Started{' '}
-                      {new Date(project.start_date).toLocaleDateString()}
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+=======
+
+          <div className="grid gap-6">
+            {projects.map((project) => (
+=======
 =======
           <div className="grid gap-6">
             {projects.map((project) => (
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Card key={project.id}>
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
@@ -168,31 +151,29 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
-<<<<<<< HEAD
-                  <p className='text-sm text-muted-foreground line-clamp-2'>
-                    {project.job?.description |'Project details'}
-                  </p>
-                </CardContent>
-                <CardFooter>
-<<<<<<< HEAD
-                  <Button asChild variant='outline' className='w-full'>
-                    <Link href={`/project/${project.id}`}>View Details</Link>
-=======
+
                   <Button asChild variant='outline' className='w-full'>                    <Link href={`/project/${project.id}`}>View Details</Link>                  <p className="text-sm text-muted-foreground line-clamp-2">
                     {project.job?.description |"Project details"}
 =======
                   <p className="text-sm text-muted-foreground line-clamp-2">
+=======
+
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+=======
+=======
+                  <p className="text-sm text-muted-foreground line-clamp-2">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     {project.job?.description || "Project details"}
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   </p>
                 </CardContent>
                 <CardFooter>
                   <Button asChild variant="outline" className="w-full">
-<<<<<<< HEAD
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
-=======
+
                     <Link href={`/project/${project.id}`}>View Details</Link>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                   </Button>
                 </CardFooter>
               </Card>
@@ -204,6 +185,26 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
           <p className='text-muted-foreground mt-1'>;
             All of your current and past projects;
           </p>        </div>      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />;
+=======
+
+                    <Link href={`/project/${project.id}`}>View Details</Link>
+                  </Button>
+                </CardFooter>
+              </Card>
+import React from "react",;
+import { useProjects } from "@/hooks/useProjects",;
+import { SEO } from "@/components/SEO",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { Badge } from "@/components/ui/badge",;
+import Link from "next/link",;
+import { Clock, Briefcase } from 'lucide-react';
+function ProjectsContent() {;
+  const { projects, isLoading } = useProjects();
+  return (;
+    <>;
+      <SEO title="My Projects | Zion AI Marketplace" description="View and manage your projects." />;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <main className="container mx-auto px-4 py-8">;
         <div className="mb-8">;
           <h1 className="text-3xl font-bold">My Projects</h1>;
@@ -251,20 +252,20 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
                   </Button>;
                 </CardFooter>;
               </Card>;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
-<<<<<<< HEAD
-      </main>
-    </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-}
+
+
+
+
 =======
       </main>;
     </>;
@@ -272,20 +273,19 @@ function ProjectsContent() { const { projects, isLoading  } = useProjects(),
 
 export default function Projects() {;
   return <ProjectsContent />;}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function Projects() {;
   return <ProjectsContent />;
-=======
+
   )
 export default function Projects() {
   return <ProjectsContent /> }
 export default function Projects() {
   return <ProjectsContent />
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 }
 =======
   );
@@ -382,3 +382,11 @@ function Projects() {
   return <ProjectsContent />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+};
+}
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

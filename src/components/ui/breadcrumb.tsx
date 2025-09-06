@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import * as React from 'react'
-import { Slot } from '@radix-ui/react-slot'
-import { ChevronRight } from 'lucide-react'
 
-import { cn } from '@/lib/utils'
-const Breadcrumb = React.forwardRef<
-  HTMLElement
-  React.ComponentPropsWithoutRef<'nav'> & {
-    separator?: React.ReactNode
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React from 'react';
-import * as React from 'react';
-import { Slot } from '@radix-ui/react-slot';
-import { ChevronRight } from 'lucide-react';
 
-import { cn } from '@/lib/utils';
-
-const Breadcrumb = React && React.forwardRef<;
-  HTMLElement,;
-  React && React.ComponentPropsWithoutRef<'nav'> & {;
-    separator?: React && React.ReactNode;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 >(({ className, separator, ...props }, ref,) => (;
   <nav
@@ -47,43 +21,39 @@ const Breadcrumb = React.forward_ref<;
     className={cn (
       'inline - flex items - center gap - 1 text - sm text - zion - slate - light',      class_name)}
     {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-  />
-))
-Breadcrumb.displayName = 'Breadcrumb'
-    ref = {ref,}
+
+
+
+=======
+
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { ChevronRight } from 'lucide-react'
+ 
+import { cn } from "@/lib/utils"
+ 
+const Breadcrumb = React.forwardRef<
+  HTMLElement,
+  React.ComponentPropsWithoutRef<"nav"> & {
+    separator?: React.ReactNode
+  }
+>(({ className, separator, ...props }, ref) => (;
+  <nav;
+    ref={ref}
     aria-label="breadcrumb"
-    className = {cn(
-      "inline-flex items-center gap-1 text-sm text-zion-slate-light"
+    className={cn(
+
+
+
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       className
     ),}
     {...props}
   />
 ))
-Breadcrumb.displayName = 'Breadcrumb'
-  HTMLOListElement
-  React.ComponentPropsWithoutRef<'ol'>
->(({ className, ...props }, ref) => (
-  <ol
-    ref={ref}
-    className={cn('flex items-center gap-1.5', className)}    {...props}
-  />
-))
-BreadcrumbList.displayName = 'BreadcrumbList'
-const BreadcrumbItem = React.forwardRef<
-  HTMLLIElement
-  React.ComponentPropsWithoutRef<'li'>
->(({ className, ...props }, ref) => (
-  <li
-    ref={ref}
-    className={cn('inline-flex items-center gap-1.5', className)}    {...props}
-  />
-))
-BreadcrumbItem.displayName = 'BreadcrumbItem'
-const BreadcrumbLink = React.forwardRef<
-  HTMLAnchorElement
-=======
+
   />));
 Breadcrumb.display_name = 'Breadcrumb';
     ref = {ref, }
@@ -94,6 +64,12 @@ Breadcrumb.display_name = 'Breadcrumb';
     {...props}
   />));
 Breadcrumb.display_name = 'Breadcrumb';
+=======
+
+Breadcrumb.displayName = "Breadcrumb"
+ 
+const BreadcrumbList = React.forwardRef<
+
   HTMLOListElement,
   React.ComponentPropsWithoutRef<'ol'>;
 >(({ class_name, ...props }, ref) => (
@@ -117,39 +93,41 @@ const BreadcrumbLink = React.forward_ref<;
   React.ComponentPropsWithoutRef<'a'> & {
     as_child?: boolean;
   }
->(({ class_name, as_child = false, ...props }, ref) => {
-  const Comp = as_child ? Slot : 'a';
-      />);
-});
-BreadcrumbLink.display_name = 'BreadcrumbLink';
+
+>(({ className, asChild = false, ...props }, ref) => {
+  const Comp = asChild ? Slot : "a"
+ 
+  return (
+    <Comp
+      ref={ref}
+      className={cn("transition-colors hover:text-zion-cyan", className)}
+      {...props}
+    />
+  )
+})
+BreadcrumbLink.displayName = "BreadcrumbLink"
+ 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const BreadcrumbSeparator = ({
-<<<<<<< HEAD
-  children
-  className
-  ...props
-}: React.ComponentProps<'li'>) => (
+
+
+=======
+}: React.ComponentProps<"li">) => (
   <li
-    role='presentation'
-    aria-hidden='true'
-    className={cn('[&>svg]:size-3.5 text-zion-slate-light/70', className)}    {...props}
+    role="presentation"
+    aria-hidden="true"
+    className={cn("[&>svg]:size-3.5 text-zion-slate-light/70", className)}
+    {...props}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   >
     {children |<ChevronRight className='h-4 w-4' />}
   </li>
 )
-BreadcrumbSeparator.displayName = 'BreadcrumbSeparator'
-const BreadcrumbEllipsis = ({
-  className
-  ...props
-}: React.ComponentProps<'span'>) => (  <span
-    role='presentation'
-    aria-hidden='true'
-    className={cn('flex h-9 w-9 items-center justify-center', className)}    {...props}
-  >
-    &#8230
-  </span>
-    role="presentation"
-    aria-hidden="true"
-=======
+
   />;
 ));
 Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
@@ -198,7 +176,7 @@ const BreadcrumbList = React.forwardRef<
   HTMLOListElement;
   React.ComponentPropsWithoutRef<"ol">
 >(({ className, ...props }, ref) => (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   <ol
     ref={ref}
     className={cn('flex items-center gap-1 && 1.5', className)}    {...props}
@@ -263,17 +241,7 @@ const BreadcrumbEllipsis = ({;
     aria-hidden="true"
     className={cn("[&>svg]:size-3 && 3.5 text-zion-slate-light/70", className)}
     {...props}
-<<<<<<< HEAD
-  >
-    {children |<ChevronRight className="h-4 w-4" />}
-  </li>
-)
-BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
-const BreadcrumbEllipsis = ({
-  className
-  ...props
-}: React.ComponentProps<"span">) => (
-=======
+
   >;
     {children || <ChevronRight className="h-4 w-4" />}
   </li>;
@@ -284,45 +252,27 @@ const BreadcrumbEllipsis = ({;
   className;
   ...props;
 }: React && React.ComponentProps<"span">) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   <span
     role="presentation"
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    {...props}
-  >
-    &#8230
-  </span>
-)
-BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis'
+
+
 export {
   Breadcrumb
   BreadcrumbList
   BreadcrumbItem
   BreadcrumbLink
-  BreadcrumbSeparator
-  BreadcrumbEllipsis
-};)
-BreadcrumbEllipsis.displayName = "BreadcrumbElipssis"
-export {
-  Breadcrumb
-  BreadcrumbList
-  BreadcrumbItem
-  BreadcrumbLink
-  BreadcrumbSeparator
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
     {...props}>;
     &#8230,;
   </span>;
 );
 BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = 'BreadcrumbElipssis';
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 export {;
   Breadcrumb,;
@@ -336,26 +286,24 @@ BreadcrumbEllipsis && BreadcrumbEllipsis.displayName = "BreadcrumbElipssis";
 
 export {;
 =======
-  children,
-  class_name,
-  ...props;
-}: React.ComponentProps<'li'>) =>: any (
-  <li;
-    role='presentation';
-    aria - hidden='true';
-    className={cn ('[&>svg]:size - 3.5 text - zion - slate - light / 70', class_name)}    {...props}
-  >;
-    {children || <ChevronRight className='h - 4 w - 4' />}
-  </li>);
-BreadcrumbSeparator.display_name = 'BreadcrumbSeparator';
+
+  BreadcrumbSeparator;
+  BreadcrumbEllipsis};
+=======
+BreadcrumbSeparator.displayName = "BreadcrumbSeparator"
+ 
 const BreadcrumbEllipsis = ({
-  class_name,
-  ...props;
-}: React.ComponentProps<'span'>) =>: any (  <span;
-    role='presentation';
-    aria - hidden='true';
-    className={cn ('flex h - 9 w - 9 items - center justify - center', class_name)}    {...props}
-  >;
+  className,
+  ...props
+
+}: React.ComponentProps<"span">) => (
+  <span
+    role="presentation"
+    aria-hidden="true"
+    className={cn("flex h-9 w-9 items-center justify-center", className)}
+    {...props}
+  >
+
     &#8230,
   </span>;
     role="presentation";
@@ -389,23 +337,15 @@ export {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbSeparator,
-  BreadcrumbEllipsis,
-});
-BreadcrumbEllipsis.display_name = "BreadcrumbElipssis";
-export {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  Breadcrumb;
-  BreadcrumbList;
-  BreadcrumbItem;
-  BreadcrumbLink;
-  BreadcrumbSeparator;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  BreadcrumbEllipsis}
-<<<<<<< HEAD
+
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   BreadcrumbEllipsis}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  BreadcrumbEllipsis}
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,13 @@
-<<<<<<< HEAD
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-=======
+
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import path from 'path'
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default defineConfig({
   plugins: [react()],
   server: {
@@ -35,4 +38,6 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
-});
+
+})
+

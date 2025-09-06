@@ -1,41 +1,5 @@
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-export default function Services() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-8">Our Services</h1>
-        <p className="text-gray-300 text-lg">Comprehensive technology services for your business needs.</p>
-      </div>
-    </div>
-  );
-}
-=======
 import { Link } from 'react-router-dom';
 const Services: React.FC = () => {
   const services = [
@@ -92,10 +56,29 @@ const Services: React.FC = () => {
             Comprehensive technology solutions designed to accelerate your digital transformation and drive business growth.
           </p>
         </div>
+=======
+const Services: React.FC = () => {
+  return (
+    <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
+      <div className="container mx-auto px-4 py-16">
+        <div className="text-center mb-16">
+          <h1 className="text-5xl font-extrabold mb-6 animate-fade-in">
+            Our Services
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto animate-slide-up">
+            Comprehensive technology solutions designed to transform your business 
+            and drive innovation across all sectors.
+          </p>
+        </div>
+
+
       </div>
       {/* Services Grid */}
       <div className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <div key={index} className="bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group">
@@ -132,6 +115,9 @@ const Services: React.FC = () => {
             ))}
           </div>
         </div>
+
+
+
       </div>
       {/* Process Section */}
       <div className="py-20 bg-white">
@@ -141,6 +127,9 @@ const Services: React.FC = () => {
             <p className="text-xl text-gray-600">How we deliver exceptional results for your business</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+
+
+
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-bold text-blue-600">1</span>
@@ -169,6 +158,21 @@ const Services: React.FC = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-2">Support</h3>
               <p className="text-gray-600">We provide ongoing support and optimization to ensure your success.</p>
             </div>
+
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🎓</span>
+              </div>
+              <h3 className="text-lg font-semibold">Education</h3>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 bg-indigo-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl">🏛️</span>
+              </div>
+              <h3 className="text-lg font-semibold">Government</h3>
+            </div>
+
+
           </div>
         </div>
       </div>
@@ -190,6 +194,9 @@ const Services: React.FC = () => {
             >
               View Pricing
             </Link>
+
+
+
           </div>
         </div>
       </div>
@@ -218,12 +225,8 @@ const Services: React.FC = () => {;
     </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
-<<<<<<< HEAD
-}
-export default Services;
->>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
-=======
+
 };
 ;
 export default Services;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

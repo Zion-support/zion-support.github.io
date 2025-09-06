@@ -1,16 +1,4 @@
-<<<<<<< HEAD
 
-
-export type InterviewStatus =
-  | 'requested'
-  | 'confirmed'
-  | 'declined'
-  | 'rescheduled'
-  | 'completed'
-  | 'cancelled';
-export type InterviewType = 'video' | 'phone' | 'in-person';
-export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
-=======
 export type InterviewStatus =;
   | 'requested';
   | 'confirmed';
@@ -23,8 +11,24 @@ export type InterviewType = 'video' | 'phone' | 'in - person';
 ;
 export type MeetingPlatform = 'zoom' | 'google - meet' | 'teams' | 'other' | 'in - app';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export interface Interview {
+=======
+export type InterviewStatus = 
+  | 'requested' 
+  | 'confirmed' 
+  | 'declined' 
+  | 'rescheduled' 
+  | 'completed' ;
+
+  | 'cancelled';
+export type InterviewType = 'video' | 'phone' | 'in-person';
+export type MeetingPlatform = 'zoom' | 'google-meet' | 'teams' | 'other' | 'in-app';
+
+
+export interface Interview {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   client_id: string;
   talent_id: string;
@@ -41,15 +45,19 @@ export interface Interview {
   interview_type: InterviewType;
   client_name?: string;
   talent_name?: string;
-<<<<<<< HEAD
-  client_avatar?: string
-  talent_avatar?: string
-=======
+
   client_avatar?: string,
   talent_avatar?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface InterviewRequest {
+=======
+}
+
+
+export interface InterviewRequest {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   talent_id: string;
   client_id: string;
   scheduled_date: string;
@@ -57,23 +65,23 @@ export interface InterviewRequest {
   notes?: string;
   meeting_link?: string;
   meeting_platform?: MeetingPlatform;
-<<<<<<< HEAD
-  interview_type: InterviewType
-  title?: string
-=======
+
   interview_type: InterviewType,
   title?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface InterviewResponse {
+=======
+}
+
+
+export interface InterviewResponse {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   interview_id: string;
   status: InterviewStatus;
-<<<<<<< HEAD
-  alternative_date?: string
 
-  message?: string
-=======
   alternative_date?: string,
   message?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

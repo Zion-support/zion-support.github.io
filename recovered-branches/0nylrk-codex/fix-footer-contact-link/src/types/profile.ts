@@ -1,15 +1,13 @@
-export interface ProfileSkill {
-<<<<<<< HEAD
 
-  name: string
 
-  level: number, // 1-5
-  endorsements?: number
-=======
+
+
+
+
   name: string,
   level: number, // 1 - 5;
   endorsements?: number;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface ProfileProject {
   id: string;
@@ -17,36 +15,17 @@ export interface ProfileProject {
   description: string;
   image_url?: string;
   tags?: string[];
-<<<<<<< HEAD
 
-  url?: string
-
-  date: string
-=======
   url?: string,
   date: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface ProfileExperience {
   id: string;
   role: string;
   company: string;
   description: string;
-<<<<<<< HEAD
-  startDate: string;
 
-  endDate?: string
-
-  current?: boolean
-}
-export interface Availability {
-  status: 'available' | 'limited' | 'unavailable';
-  nextAvailable?: string;
-
-  message?: string
-
-  availableHours?: { day: string, hours: string }[]
-=======
   start_date: string;
   end_date?: string,
   current?: boolean;
@@ -56,7 +35,7 @@ export interface Availability {
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface ProfileData {
   id: string;
@@ -74,13 +53,10 @@ export interface ProfileData {
   projects: ProfileProject[];
   experience: ProfileExperience[];
   availability: Availability;
-<<<<<<< HEAD
 
-  hourlyRate?: number
-
-  contactEmail?: string
-=======
   hourly_rate?: number,
   contact_email?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

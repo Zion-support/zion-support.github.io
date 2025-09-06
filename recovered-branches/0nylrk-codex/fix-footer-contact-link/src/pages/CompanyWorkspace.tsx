@@ -1,21 +1,7 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",
-import { useAuth } from "@/hooks/useAuth",
-import { Navigate, useParams } from "react-router-dom",
-import { SEO } from "@/components/SEO",
-import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",
-import { useWhitelabel } from "@/context/WhitelabelContext";
-export default function CompanyWorkspace() {
-  const { companySlug } = useParams() as { companySlug?: string }
-  const { user } = useAuth();
-  const { company, isLoading, error } = useCompanyWorkspace(companySlug);
-  const { isWhitelabel, tenant, brandName } = useWhitelabel();
+
+
+
   if (isLoading) {
     return (
 
@@ -38,7 +24,7 @@ export default function CompanyWorkspace() {
   const hasAccess = true, // For demo purposes, always grant access
   if (!hasAccess) {
     return <Navigate to="/unauthorized" />
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -72,6 +58,22 @@ import {SEO} from "@/components/SEO";
 import {ProtectedRoute} from "@/components/ProtectedRoute";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 import {useWhitelabel} from "@/context/WhitelabelContext";
+=======
+
+      <SEO 
+
+=======
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { CompanyDashboard } from "@/components/enterprise/workspace/CompanyDashboard",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Navigate, useParams } from "react-router-dom",;
+import { SEO } from "@/components/SEO",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace",;
+import { useWhitelabel } from "@/context/WhitelabelContext",;
+
 export default function CompanyWorkspace() {;
   const { companySlug } = useParams() as { companySlug?: string };
   const { user } = useAuth();
@@ -104,10 +106,15 @@ export default function CompanyWorkspace() {;
     return <Navigate to="/unauthorized" />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
-  return (
-<<<<<<< HEAD
-    <ProtectedRoute>
-      <SEO
+
+;
+  return (;
+    <ProtectedRoute>;
+      <SEO;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         title={`${company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
         description={`${company.name}'s dedicated workspace ${isWhitelabel ? `on ${brandName}` : 'on Zion AI Marketplace'}. Collaborate with your team to find top talent.`}
       />
@@ -121,8 +128,7 @@ export default function CompanyWorkspace() {;
       <Footer />
     </ProtectedRoute>
   )
-}
-=======
+
     <ProtectedRoute>;
       <SEO
         title={`${company && company.name} Workspace - ${isWhitelabel ? brandName : 'Zion AI Marketplace'}`}
@@ -139,7 +145,7 @@ export default function CompanyWorkspace() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Header } from '@/components / Header';
@@ -207,3 +213,8 @@ if ( {) {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

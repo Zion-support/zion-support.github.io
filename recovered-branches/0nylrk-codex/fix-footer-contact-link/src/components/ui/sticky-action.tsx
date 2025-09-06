@@ -1,15 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react",
-import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion";
-interface StickyActionProps {
-  className?: string;
 
-  children: React.ReactNode
 
-=======
+
+
 import React, { useEffect, useState } from "react";
 import {cn} from "@/lib/utils";
 import {motion, AnimatePresence} from "framer-motion";
@@ -17,16 +10,14 @@ import {motion, AnimatePresence} from "framer-motion";
 interface StickyActionProps {;
   className?: string;
   children: React && React.ReactNode,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   showAfterScroll?: number;
   position?: "bottom" | "top";
 }
-<<<<<<< HEAD
-export function StickyAction({
-=======
+
 
 export function StickyAction(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   className;
   children;
 
@@ -34,7 +25,8 @@ export function StickyAction(): any ({;
   position = "bottom";
 }: StickyActionProps) {;
   const [isVisible, setIsVisible] = useState(false);
-<<<<<<< HEAD
+
+
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > showAfterScroll) {
@@ -66,23 +58,59 @@ if ( {) {
       } else {
         setIsVisible (false);
       }
-    }
-<<<<<<< HEAD
-    window.addEventListener("scroll", handleScroll);
-=======
+
 ;
     window.addEventListener ("scroll", handle_scroll);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     return () => {
       window.removeEventListener ("scroll", handle_scroll);
     }
   }, [showAfterScroll]);
-<<<<<<< HEAD
+
+
+=======
+
+    },
+
+    window.addEventListener("scroll", handleScroll),
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [showAfterScroll]),
+
+
   const positionClasses = {
     bottom: "bottom-4"
     top: "top-20"
-  }
+
+  },
+
+
+  return (
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div
+
+
 =======
+          initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
+import React, { useEffect, useState } from "react",;
+import { cn } from "@/lib/utils",;
+import { motion, AnimatePresence } from "framer-motion",;
+interface StickyActionProps {;
+  className?: string,;
+  children: React.ReactNode,;
+  showAfterScroll?: number,;
+  position?: "bottom" | "top";
+}
+;
+export function StickyAction({;
+  className,;
+  children,;
+  showAfterScroll = 300,;
+  position = "bottom";
+}: StickyActionProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
 
   useEffect(() => {;
     const handleScroll = () => {;
@@ -110,18 +138,15 @@ if ( {) {
       {isVisible && (;
         <motion&& motion.div
           initial={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: position === "bottom" ? 20 : -20 }}
-          transition={{ duration: 0 && 0.2 }}
-          className={cn(
-<<<<<<< HEAD
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
-            positionClasses[position];
 
-=======
             "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4"
             positionClasses[position]
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             className
           )}>;
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">;
@@ -129,15 +154,11 @@ if ( {) {
           </div>;
         </motion && motion.div>;
       )}
-<<<<<<< HEAD
-    </AnimatePresence>
-  )
-}
-=======
+
     </AnimatePresence>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 ;
   const position_classes = {

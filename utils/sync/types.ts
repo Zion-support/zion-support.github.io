@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-export type SyncScope = "full" | "dao" | "marketplace";
-export interface Peer {id: string;
-  baseUrl: string, // e.g., https: //zion-latam.example.org;
-  scope?: SyncScope;
-  paused?: boolean;
-}
-export interface InstanceConfig {instanceId: string;
-  optIn: boolean;
-  paused: boolean;
-  scope: SyncScope;
-  peers: Peer[];
-  secretConfigured: boolean;
-=======
+
 export type SyncScope = "full" | "dao" | "marketplace",
 export interface Peer {
   id: string,
@@ -26,54 +13,57 @@ export interface InstanceConfig {
   scope: SyncScope,
   peers: Peer[],
   secret_configured: boolean;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export type SyncEventType =;
   | "proposal";
   | "token_transfer";
   | "talent_mobility";
   | "dao_endorsement";
-<<<<<<< HEAD
-  | "leaderboard_entry";
-export interface BaseEventPayload {id: string;
-}
-export interface ProposalVoteEntry {voterId: string;
-  weight: number;
-  choice: string;
-}
-export interface ProposalPayload extends BaseEventPayload {proposalId: string;
-  title: string;
-  votes: ProposalVoteEntry[];
-}
-export interface TokenTransferPayload extends BaseEventPayload {txId: string;
+
+
+  | "leaderboard_entry",;
+export interface BaseEventPayload {;
+  id: string;
+
+
   token: string;
   amount: number;
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
+
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-export interface TalentMobilityPayload extends BaseEventPayload {personId: string;
+;
+export interface TalentMobilityPayload extends BaseEventPayload {;
+  personId: string;
+
+
   fromNation: string;
   toNation: string;
   role: string;
   startDate: string;
   endDate?: string;
-}
-export interface DaoEndorsementPayload extends BaseEventPayload {fromDAO: string;
-  toDAO: string;
-  resolutionId: string;
-  decision: "endorse" | "reject";
-  timestamp: number;
-}
-export interface LeaderboardEntryPayload extends BaseEventPayload {subjectId: string, // userId or teamId;
-  score: number;
-  category: string, // e.g., grants, contributions;
-  rank?: number;
-  period?: string, // e.g., 2025-Q3;
-=======
+
   | "leaderboard_entry",
 export interface BaseEventPayload {
   id: string;
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
 export interface ProposalVoteEntry {
   voter_id: string,
@@ -92,51 +82,36 @@ export interface TokenTransferPayload extends BaseEventPayload {
   from_subnet: string,
   to_subnet: string,
   timestamp: number;
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
 }
-export interface TalentMobilityPayload extends BaseEventPayload {
-  person_id: string,
-  from_nation: string,
-  to_nation: string,
-  role: string,
-  start_date: string,
-  end_date?: string;
-}
-export interface DaoEndorsementPayload extends BaseEventPayload {
-  fromDAO: string,
-  toDAO: string,
-  resolution_id: string,
-  decision: "endorse" | "reject",
-  timestamp: number;
-}
-export interface LeaderboardEntryPayload extends BaseEventPayload {
-  subject_id: string, // user_id or team_id;
-  score: number,
-  category: string, // e.g., grants, contributions;
-  rank?: number,
-  period?: string, // e.g., 2025 - Q3;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+;
+export interface LeaderboardEntryPayload extends BaseEventPayload {;
+  subjectId: string, // userId or teamId;
+
+
+
 }
 export type SyncEventPayload =;
   | ProposalPayload;
   | TokenTransferPayload;
   | TalentMobilityPayload;
   | DaoEndorsementPayload;
-<<<<<<< HEAD
-  | LeaderboardEntryPayload;
-export interface SyncEvent {eventId: string;
-  type: SyncEventType;
-  payload: SyncEventPayload;
+
+
+  | LeaderboardEntryPayload,;
+export interface SyncEvent {;
+
+
   originInstanceId: string;
   version: number;
   timestamp: number;
   merkleRoot?: string, // required for proposal events;
-}
-export interface MultiverseState {config: InstanceConfig;
-  lastSyncedAt: number;
-  seenEventIds: Record<string true>;
-  latestVersionByEntityId: Record<string number>;
-  proposalMerkleById: Record<string string>;
-=======
+
   | LeaderboardEntryPayload,
 export interface SyncEvent {
   event_id: string,
@@ -153,6 +128,21 @@ export interface MultiverseState {
   seenEventIds: Record < string true>,
   latestVersionByEntityId: Record < string number>,
   proposalMerkleById: Record < string string>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   events: SyncEvent[];
 }
+=======
+
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+;
+export interface MultiverseState {;
+  config: InstanceConfig,;
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

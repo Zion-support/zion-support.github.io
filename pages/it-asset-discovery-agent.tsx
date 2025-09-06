@@ -1,12 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-import Head from 'next/head',
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
 
-
-export default function ITAssetDiscoveryAgentPage() {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,17 +23,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-import Card from '../components/ui/Card';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-export default function ITAssetDiscoveryAgentPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <UltraFuturisticBackground variant='space' intensity='high'>;
       <Head>;
@@ -137,58 +119,33 @@ function ITAssetDiscoveryAgentPage() {
                 </a>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://azure && azure.microsoft.com/pricing/details/monitor/'
-                  target='_blank'
-                  rel='noopener noreferrer'>;
-=======
+
                 <a;
                   className='text - cyan - 300 underline';
                   href='https://azure.microsoft.com / pricing / details / monitor/';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   Azure Monitor;
                 </a>;
               </li>;
               <li>;
-<<<<<<< HEAD
-                <a
-                  className='text-cyan-300 underline'
-                  href='https://cloud && cloud.google.com/asset-inventory/pricing'
-                  target='_blank'
-                  rel='noopener noreferrer'>;
-=======
+
                 <a;
                   className='text - cyan - 300 underline';
                   href='https://cloud.google.com / asset - inventory / pricing';
                   target='_blank';
                   rel='noopener noreferrer';
                 >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   GCP Asset Inventory;
                 </a>;
               </li>;
             </ul>;
           </Card>;
         </div>;
-<<<<<<< HEAD
-        <div className='mt-8'>;
-          <a
-            href='/contact'
-<<<<<<< HEAD
-            className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-          >
-            Contact Sales
-          </a>
-        </div>
-      </div>
-    </UltraFuturisticBackground>
-  );
-=======
+
             className='px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white'>;
 =======
         <div className='mt - 8'>;
@@ -196,17 +153,13 @@ function ITAssetDiscoveryAgentPage() {
             href='/contact';
             className='px - 6 py - 3 rounded - xl bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white';
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             Contact Sales;
           </a>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraFuturisticBackground>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 export default function ITAssetDiscoveryAgentPage() {
 	return (
@@ -250,3 +203,7 @@ export default function ITAssetDiscoveryAgentPage() {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

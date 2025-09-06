@@ -1,35 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Gift } from 'lucide-react'
 
-const REWARDS = [
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
-]
-const REWARDS = [
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 }
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 }
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 }
-]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { Gift } from 'lucide-react';
-const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },;
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 },;
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 },;
-];
 
-const REWARDS = [;
-  { id: 'coupon5', title: '$5 Coupon', cost: 500 },;
-  { id: 'premium-week', title: 'Premium Week', cost: 1000 },;
-  { id: 'swag-pack', title: 'Swag Pack', cost: 2000 },;
-];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <div className='container max-w-xl py-10'>;
@@ -44,8 +14,7 @@ const REWARDS = [;
             </div>;
             <Gift className='h-5 w-5' />          </li>            <Gift className="h-5 w-5" />;
           </li>;
-<<<<<<< HEAD
-=======
+
 =======
 import { Gift } from 'lucide-react'
 
@@ -68,21 +37,15 @@ export default function RewardsPage() {
             </div>
             <Gift className="h-5 w-5" />
           </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
         ))}
-<<<<<<< HEAD
-      </ul>
-    </div>
-<<<<<<< HEAD
-  )
-}
-=======
+
       </ul>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   );
 }
@@ -117,3 +80,8 @@ const REWARDS = [;
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+import { Gift } from 'lucide-react'
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

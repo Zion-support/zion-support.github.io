@@ -1,13 +1,13 @@
-<<<<<<< HEAD
+
+
+
 
 
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
 import {Briefcase, Users, Check} from "lucide-react";
-type UserRole = "talent" | "client" | null;
-<<<<<<< HEAD
-=======
+
 import React, { useState } from './react';
 import { Button } from '@/components / ui / button';
 import { Card, CardContent } from '@/components / ui / card';
@@ -15,17 +15,37 @@ import { Briefcase, Users, Check } from './lucide-react';
 ;
 type UserRole = "talent" | "client" | null;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent } from "@/components/ui/card",
+import { Briefcase, Users, Check } from "lucide-react",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+type UserRole = "talent" | "client" | null,
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RolePickerProps {
   on_select: (role: UserRole) => void;
 }
-<<<<<<< HEAD
-export function RolePicker({ onSelect }: RolePickerProps) {
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null);
+
+
+
+
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role)
     onSelect(role)
-  }
+
+  },
+
+
 
   return (
     <div className="space-y-4 px-4">
@@ -73,51 +93,54 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
                 <Check className="h-5 w-5 text-primary" />;
               )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-=======
+
             </div>;
           </CardContent>;
         </Card>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <Card
+=======
+
+        <Card 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
               ? "border-primary bg-primary/5"
               : "border-border hover:border-primary/40"
           }`}
           onClick={() => handleSelect('client')}
-        >;
-          <CardContent className="p-5">;
-            <div className="flex items-center">;
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
-                <Users className="h-6 w-6 text-primary" />;
-              </div>;
-              <div className="flex-1">;
-                <h3 className="font-medium">I'm hiring</h3>;
-                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>;
-              </div>;
-              {selectedRole === 'client' && (;
-                <Check className="h-5 w-5 text-primary" />;
-              )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-}
-=======
+
 =======
 export /**
  * RolePicker - Function description
  */
 function RolePicker() {
   const [selected_role, setSelectedRole] = useState < UserRole>(null);
+=======
+        >
+          <CardContent className="p-5">
+            <div className="flex items-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-medium">I'm hiring</h3>
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
+              </div>
+              {selectedRole === 'client' && (
+                <Check className="h-5 w-5 text-primary" />
+
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Briefcase, Users, Check } from "lucide-react",;
+type UserRole = "talent" | "client" | null,;
+interface RolePickerProps {;
+  onSelect: (role: UserRole) => void;
+}
+
 ;
   const handle_select = (role: UserRole) =>: any {
     setSelectedRole (role),
@@ -175,12 +198,12 @@ function RolePicker() {
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

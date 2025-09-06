@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import React from 'react',
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,17 +23,14 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Shield  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 export default function SecurityAwarenessPhishingPage() {
 
   const service = extraServices.find(s =>
@@ -236,16 +231,10 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>;
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 export default function SecurityAwarenessPhishingPage() {
   const service = extraServices.find(s => s.link.endsWith('/security-awareness-phishing'));
@@ -293,12 +282,15 @@ export default function SecurityAwarenessPhishingPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

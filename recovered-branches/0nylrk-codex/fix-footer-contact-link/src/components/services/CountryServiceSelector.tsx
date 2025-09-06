@@ -1,14 +1,20 @@
 
-<<<<<<< HEAD
-import {
-<<<<<<< HEAD
-  onsiteServicePricing
-  CountryPricing
-} from "@/data/onsiteServicePricing";
-import { CountrySelector } from "./CountrySelector";
 
-import { PaymentSection } from "./PaymentSection";
-import { ServiceDetails } from "./ServiceDetails";
+
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {CountrySelector} from "./CountrySelector";
+import {PaymentSection} from "./PaymentSection";
+import {ServiceDetails} from "./ServiceDetails";
+
+=======
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void;
   selectedCountry?: CountryPricing | null
@@ -24,13 +30,16 @@ export function CountryServiceSelector({
           onCountryChange={onCountryChange |(() => {})}
           selectedCountry={initialCountry |null}
         />
+
+
+        
+
+
         {initialCountry && <PaymentSection selectedCountry={initialCountry} />}
       </div>
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>
-  );
-}
-=======
+
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {CountrySelector} from "./CountrySelector";
 import {PaymentSection} from "./PaymentSection";
@@ -56,7 +65,7 @@ export function CountryServiceSelector(): any ({ onCountryChange, selectedCountr
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   onsiteServicePricing,
   CountryPricing,
@@ -85,3 +94,10 @@ function CountryServiceSelector() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

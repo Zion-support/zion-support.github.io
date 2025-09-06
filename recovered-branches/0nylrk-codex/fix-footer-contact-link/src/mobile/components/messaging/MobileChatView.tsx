@@ -1,22 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from "lucide-react",
-import { cn } from "@/lib/utils",
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
-interface Message {
 
-  id: string
-  content: string
-  timestamp: string
-  isMe: boolean
 
-=======
+
+
 import React, { useState } from "react";
 import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
 import {Button} from "@/components/ui/button";
@@ -30,7 +16,7 @@ interface Message {;
   content: string,;
   timestamp: string,;
   isMe: boolean,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React, { useState } from './react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
@@ -40,36 +26,33 @@ import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from './
 import { cn } from '@/lib / utils';
 import { use_navigate } from './react-router-dom';
 import { toast } from './sonner';
+=======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface Message {
   id: string,
   content: string,
   timestamp: string,
-  is_me: boolean,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-  sender?: string;
-  avatar?: string;
-  status?: 'sent' | 'delivered' | 'read';
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 interface MobileChatViewProps {
   contact: {
 
     id: string
     name: string
     avatar?: string;
-<<<<<<< HEAD
-    status?: string
-  }
-  messages: Message[]
-  onBack: () => void
+
+  isMe: boolean,
+  sender?: string,
+  avatar?: string,
+  status?: 'sent' | 'delivered' | 'read'
+
+
+
 
   onSendMessage: (content: string) => void
 }
 export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {
-=======
+
 
 interface MobileChatViewProps {;
   contact: {;
@@ -84,45 +67,75 @@ interface MobileChatViewProps {;
 }
 
 export function MobileChatView(): any ({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const [newMessage, setNewMessage] = useState("");
 
   const navigate = useNavigate();
-<<<<<<< HEAD
-  const handleSend = () => {
-    if (newMessage.trim() !== "") {
-=======
+
 
   const handleSend = () => {;
     if (newMessage && newMessage.trim() !== "") {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       onSendMessage(newMessage);
       setNewMessage("");
     }
-<<<<<<< HEAD
-  }
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault()
-      handleSend()
+
+
+  const [newMessage, setNewMessage] = useState(""),
+  const navigate = useNavigate(),
+  
+  const handleSend = () => {
+    if (newMessage.trim() !== "") {
+      onSendMessage(newMessage),
+      setNewMessage("")
+;
+export function MobileChatView({ contact, messages, onBack, onSendMessage }: MobileChatViewProps) {;
+  const [newMessage, setNewMessage] = useState(""),;
+  const navigate = useNavigate(),;
+  const handleSend = () => {;
+    if (newMessage.trim() !== "") {;
+      onSendMessage(newMessage),;
+      setNewMessage("");
     }
-  }
+  },;
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
+    if (e.key === 'Enter' && !e.shiftKey) {;
+      e.preventDefault(),;
+      handleSend();
+    }
+  },
+
+  
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`;
     toast.success("Starting video call", {
       description: `Connecting with ${contact.name}...`
-    });
+
+
+    }),
+    
     // Navigate to video call page
     navigate(`/call/${roomId}`)
-  }
+  },
+  
+
+
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`;
     toast.success("Starting audio call", {
       description: `Connecting with ${contact.name}...`
-    });
+
+
+    }),
+    
     // Navigate to video call page with audio-only flag
     navigate(`/call/${roomId}?audioOnly=true`)
-  }
+  },
+  
+
+
   return (
     <div className="flex flex-col h-full pb-safe">
       <header className="sticky top-0 z-10 bg-background border-b border-border">
@@ -166,19 +179,19 @@ export function MobileChatView(): any ({ contact, messages, onBack, onSendMessag
           >
             <div
               className={cn(
-                "max-w-[80%] rounded-2xl px-4 py-2";
-                message.isMe
-                  ? "bg-primary text-primary-foreground rounded-tr-none"
+
+
+                "max-w-[80%] rounded-2xl px-4 py-2",
+                message.isMe 
+                  ? "bg-primary text-primary-foreground rounded-tr-none" 
+
+
                   : "bg-muted rounded-tl-none"
               )}
             >
               <p>{message.content}</p>
               <div className={cn(
-                "text-xs mt-1 flex justify-end";
 
-                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
-              )}>
-=======
     status?: string;
   }
   messages: Message[],
@@ -283,14 +296,12 @@ if ( {) {
               <div className={cn (
                 "text - xs mt - 1 flex justify - end";
                 message.is_me ? "text - primary - foreground / 80" : "text - muted - foreground")}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 {message.timestamp}
                 {message.is_me && message.status && (
                   <span className="ml - 1">;
                     {message.status === 'read' ? '✓✓' : '✓'}
-<<<<<<< HEAD
-                  </span>
-=======
+
   };
 
   const handleKeyDown = (e: React && React.KeyboardEvent<HTMLInputElement>) => {;
@@ -382,20 +393,25 @@ if ( {) {
                   <span className="ml-1">;
                     {message && message.status === 'read' ? '✓✓' : '✓'}
                   </span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+                "text-xs mt-1 flex justify-end",
+                message.isMe ? "text-primary-foreground/80" : "text-muted-foreground"
+              )}>
+
+                {message.timestamp}
+                {message.isMe && message.status && (
+                  <span className="ml-1">
+                    {message.status === 'read' ? '✓✓' : '✓'}
+                  </span>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             </div>;
           </div>;
         ))}
-<<<<<<< HEAD
-      </div>
-      <div className="sticky bottom-0 bg-background border-t border-border p-2">
-        <div className="flex items-center gap-2">
-          <Button variant="ghost" size="icon">
-            <PaperclipIcon className="h-5 w-5" />
-          </Button>
-=======
+
       </div>;
 
       <div className="sticky bottom-0 bg-background border-t border-border p-2">;
@@ -404,29 +420,12 @@ if ( {) {
             <PaperclipIcon className="h-5 w-5" />;
           </Button>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           <Input
             value={newMessage}
             onChange={(e) => setNewMessage(e && e.target.value)}
             onKeyDown={handleKeyDown}
-<<<<<<< HEAD
-            placeholder="Type a message..."
-            className="flex-1"
-          />
-          <Button
-            size="icon"
-            onClick={handleSend}
-            disabled={!newMessage.trim()}
-            className={!newMessage.trim() ? "opacity-50" : ""}
-          >
-            <Send className="h-5 w-5" />
-          </Button>
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
+
             placeholder="Type a message...";
             className="flex-1";
           />;
@@ -443,7 +442,7 @@ if ( {) {
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
                   </span>)}
               </div>;
@@ -475,3 +474,9 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

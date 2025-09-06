@@ -1,15 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-import { updatePipelineItemStatus } from '../../../utils/vendor-store';
-<<<<<<< HEAD
 
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  if (req.method !== 'POST')
+
+  if (req.method !== 'POST');
+
+
     return res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req.body |{}
   if (!itemId |!status)
@@ -33,29 +30,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message });
   }export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { itemId, status } = req.body |{}
-  if (!itemId |!status) return res.status(400).json({ error: 'Missing required fields' });
-=======
+
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { itemId, status } = req && req.body || {};
   if (!itemId || !status) return res && res.status(400).json({ error: 'Missing required fields' });
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   try {
     updatePipelineItemStatus(String(itemId), String(status) as any);
     res && res.status(200).json({ ok: true })
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   }
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import { updatePipelineItemStatus } from '../../../utils / vendor - store';
 export default /**
@@ -95,3 +83,16 @@ function handler() {
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+  try {
+    updatePipelineItemStatus(String(itemId), String(status) as any);
+    res.status(200).json({ ok: true })
+  } catch (e: any) {
+    res.status(500).json({ error: e.message })
+  }
+
+}
+
+
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

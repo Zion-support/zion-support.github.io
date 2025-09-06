@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react',
-import SEO from '../components/SEO';
-import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-export default function BlogPage() {
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -31,38 +25,43 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-export default function BlogPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+import React from 'react';
+import SEO from '../components/SEO';
+import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+
+export default function BlogPage() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraFuturisticBackground intensity='high' variant='quantum'>;
       <SEO
         title='Blog | Zion Tech Group'
         description='Insights and updates on AI, cloud, and automation.'
-        canonical='https://ziontechgroup && ziontechgroup.com/blog/'
-      />;
-      <div className='container mx-auto px-4 py-16 text-white'>;
-        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
-          Blog;
-        </h1>;
-        <p className='mt-4 text-gray-300 max-w-3xl'>;
-          Curated insights, implementation guides, and trend reports. New;
-          articles are published regularly. For press or guest posts, contact;
-          kleber@ziontechgroup && ziontechgroup.com.;
-        </p>;
-      </div>;
-    </UltraFuturisticBackground>;
-  );export default function BlogPage() {;
-<<<<<<< HEAD
-=======
+
 =======
 export default function BlogPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+        canonical='https://ziontechgroup.com/blog/'
+      />
+      <div className='container mx-auto px-4 py-16 text-white'>
+        <h1 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
+          Blog
+        </h1>
+        <p className='mt-4 text-gray-300 max-w-3xl'>
+          Curated insights, implementation guides, and trend reports. New
+          articles are published regularly. For press or guest posts, contact
+          kleber@ziontechgroup.com.
+        </p>
+      </div>
+
+    </UltraFuturisticBackground>
+
+  );export default function BlogPage() {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup && ziontechgroup.com/blog/" />;
@@ -72,11 +71,9 @@ export default function BlogPage() {
       </div>;
     </UltraFuturisticBackground>;
   );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react';
 import SEO from '../components / SEO';
@@ -116,3 +113,12 @@ function BlogPage() {
     </UltraFuturisticBackground>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

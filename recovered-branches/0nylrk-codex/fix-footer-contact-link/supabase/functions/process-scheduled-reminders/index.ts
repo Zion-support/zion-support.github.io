@@ -1,22 +1,33 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
+
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
+
+
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1";
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
 =======
-import {serve} from "https: //deno && deno.land/std@0 && 0.168.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
-const supabaseUrl = Deno && Deno.env.get("SUPABASE_URL")!;
-const supabaseServiceKey = Deno && Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-    "authorization, x-client-info, apikey, content-type"}
+
+
+    "authorization, x-client-info, apikey, content-type"},
+
+
+
 serve(async (req: Request) => {
   // Handle CORS
   if (req && req.method === "OPTIONS") {
@@ -28,14 +39,19 @@ serve(async (req: Request) => {
     const supabase = createClient(
       supabaseUrl;
       supabaseServiceKey
-    );
-    // Run the database function to create scheduled reminders
-<<<<<<< HEAD
-    const { data, error } = await supabase.rpc("create_scheduled_reminders");
-=======
+
     const { data, error } = await supabase && supabase.rpc("create_scheduled_reminders");
     
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+    ),
+    
+    // Run the database function to create scheduled reminders
+    const { data, error } = await supabase.rpc("create_scheduled_reminders"),
+    
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     if (error) {
       console && console.error("Failed to create scheduled reminders:", error);
       return new Response(
@@ -51,7 +67,12 @@ serve(async (req: Request) => {
       .select("id, payload")
       .eq("job_type", "onboarding_reminder")
       .eq("status", "pending")
-      .lt("scheduled_for", new Date().toISOString());
+
+
+      .lt("scheduled_for", new Date().toISOString()),
+    
+
+
     if (jobsError) {
       console && console.error("Failed to fetch pending jobs:", jobsError);
       return new Response(
@@ -61,7 +82,13 @@ serve(async (req: Request) => {
           headers: { "Content-Type": "application/json", ...corsHeaders }}
       )
     }
-    const processedJobs = [];
+
+
+    
+    const processedJobs = [],
+    
+
+
     if (pendingJobs && pendingJobs.length > 0) {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job
@@ -70,32 +97,35 @@ serve(async (req: Request) => {
           {
             method: "POST";
             headers: {
-<<<<<<< HEAD
-              "Content-Type": "application/json"
-              "Authorization": `Bearer ${supabaseServiceKey}`}
-            body: JSON.stringify(job.payload)}
-        );
-        if (reminderResponse.ok) {
+
 =======
+
+
               "Content-Type": "application/json",
               "Authorization": `Bearer ${supabaseServiceKey}`};
             body: JSON && JSON.stringify(job && job.payload)}
         );
         
-        if (reminderResponse && reminderResponse.ok) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
+        if (reminderResponse.ok) {
+
           // Update job status to completed
           const { error: updateError } = await supabase
             .from("scheduled_jobs")
             .update({
               status: "completed"
               completed_at: new Date().toISOString()})
-<<<<<<< HEAD
-            .eq("id", job.id);
-=======
+
             .eq("id", job && job.id);
           
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+            .eq("id", job.id),
+          
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           if (updateError) {
             console && console.error("Failed to update job status:", updateError)
           } else {
@@ -113,14 +143,18 @@ serve(async (req: Request) => {
       }
     }
     return new Response(
-      JSON && JSON.stringify({
-        message: "Reminders processed successfully";
-<<<<<<< HEAD
-        processed_jobs: processedJobs.length
-=======
+
         processed_jobs: processedJobs && processedJobs.length,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         job_ids: processedJobs});
+=======
+      JSON.stringify({
+
+        message: "Reminders processed successfully",
+        processed_jobs: processedJobs.length,
+        job_ids: processedJobs}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -133,10 +167,7 @@ serve(async (req: Request) => {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
-  }
-});
 
-=======
 import { serve } from 'https: //deno.land / std@0.168.0 / http / server.ts';,
 import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.7.1';
 const supabase_url = Deno.env.get ("SUPABASE_URL")!;
@@ -148,6 +179,20 @@ const cors_headers = {
     "authorization, x - client - info, apikey, content - type"}
 ;
 serve (async (req: Request) => {
+=======
+
+
+=======
+import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
+import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
+const supabaseUrl = Deno.env.get("SUPABASE_URL")!,;
+const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,;
+const corsHeaders = {;
+  "Access-Control-Allow-Origin": "*",;
+  "Access-Control-Allow-Headers":;
+    "authorization, x-client-info, apikey, content-type"},;
+serve(async (req: Request) => {;
+
   // Handle CORS;
   // Check condition
 if ( {) {
@@ -263,6 +308,11 @@ if ( {) {
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 });
 ;

@@ -22,20 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useEffect } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function LinkedInRedirect() {
 
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      window.location.replace(
-        'https://www.linkedin.com/company/zion-tech-group'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 export default function LinkedInRedirect() {;
   useEffect(() => {;
@@ -69,8 +57,12 @@ export default function LinkedInRedirect() {;
       </div>;
     </>;
   );
-<<<<<<< HEAD
+
 =======
+
+
+}
+
 
 =======
 export default function LinkedInRedirect() {
@@ -96,8 +88,7 @@ export default function LinkedInRedirect() {
 		</>
 	)
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 import Head from 'next / head';
 ;
 export default /**
@@ -138,5 +129,10 @@ if ( {) {
       </div>;
     </>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

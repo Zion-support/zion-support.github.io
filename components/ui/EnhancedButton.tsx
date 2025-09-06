@@ -1,34 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import React from "react";
 import clsx from "clsx";
 export type EnhancedButtonProps =;
@@ -36,34 +7,7 @@ export type EnhancedButtonProps =;
     variant?: "primary" | "secondary" | "ghost";
     size?: "sm" | "md" | "lg";
     fullWidth?: boolean;
-<<<<<<< HEAD
-  }
-const baseStyles =
-  "inline-flex items-center justify-center font-semibold rounded-md transition focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]";
-const sizeStyles: Record<NonNullable<EnhancedButtonProps["size"]>, string> = {
-  sm: "text-sm px-3 py-2"
-  md: "text-sm px-4 py-3"
-  lg: "text-base px-5 py-3"
-}
-const variantStyles: Record<
-  NonNullable<EnhancedButtonProps["variant"]>
-  string
-> = {
-  primary: "bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400"
-  secondary:
-    "bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100"
-  ghost:
-    "bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100"
-}
-export default function EnhancedButton({
-  className
-  variant = "primary"
-  size = "md"
-  fullWidth
 
-  ...props
-}: EnhancedButtonProps) {
-=======
   };
 
 const baseStyles =;
@@ -90,39 +34,7 @@ export default function EnhancedButton(): any ({;
   fullWidth,;
   ...props;
 }: EnhancedButtonProps) {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React from 'react';
-import clsx from 'clsx';
-export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
-  variant?: 'primary' | 'secondary' | 'ghost';
-  size?: 'sm' | 'md' | 'lg';
-  fullWidth?: boolean
-};
 
-const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]';
-
-const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
-  sm: 'text-sm px-3 py-2',
-  md: 'text-sm px-4 py-3',
-  lg: 'text-base px-5 py-3'
-};
-
-const variantStyles: Record<NonNullable<EnhancedButtonProps['variant']>, string> = {
-  primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400',
-  secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',
-  ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'
-};
-export default function EnhancedButton({
-  className,
-  variant = 'primary',
-  size = 'md',
-  fullWidth,
-  ...props
-}: EnhancedButtonProps) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
     <button
@@ -134,13 +46,9 @@ export default function EnhancedButton({
         className
       )}
       {...props}
-    />;
-  );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from './react';
 import clsx from './clsx';
@@ -185,3 +93,12 @@ function EnhancedButton() {
     />);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+=======
+    />;
+);
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

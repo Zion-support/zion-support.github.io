@@ -1,21 +1,19 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Apple, GithubIcon } from "lucide-react";
-import { cn } from "@/lib/utils";
-interface AppStoreButtonsProps {
-=======
 import React from "react";
 import {Apple, GithubIcon} from "lucide-react";
 import {cn} from "@/lib/utils";
 interface AppStoreButtonsProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   className?: string;
 =======
 import React from './react';
 import { Apple, GithubIcon } from './lucide-react';
 import { cn } from '@/lib / utils';
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface AppStoreButtonsProps {
   class_name?: string;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
@@ -24,34 +22,15 @@ interface AppStoreButtonsProps {
   onAppStoreClick?: () => void;
   onGooglePlayClick?: () => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
-=======
+
 
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   className;
 
   appStoreUrl = "#";
   googlePlayUrl = "#";
-<<<<<<< HEAD
-  onAppStoreClick
-  onGooglePlayClick
-}) => {
-  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!appStoreUrl |appStoreUrl === "#") {
-      e.preventDefault();
-      console.log("App Store download clicked")
-      onAppStoreClick?.()
-    }
-  }
-  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    if (!googlePlayUrl |googlePlayUrl === "#") {
-      e.preventDefault();
-      console.log("Google Play download clicked")
-      onGooglePlayClick?.()
-=======
+
   onAppStoreClick,;
   onGooglePlayClick;
 }) => {;
@@ -68,27 +47,26 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
       e && e.preventDefault();
       console && console.log("Google Play download clicked"),;
       onGooglePlayClick?.();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     }
   }
+=======
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
-<<<<<<< HEAD
-    <div className={cn("flex flex-col sm:flex-row gap-4", className)}>
-      <a
-        href={appStoreUrl}
-        className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
-        onClick={handleAppStoreClick}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <Apple className="h-8 w-8 mr-3" />
-        <div>
-          <div className="text-xs">Download on the</div>
-          <div className="text-xl font-semibold">App Store</div>
-        </div>
-      </a>
-      <a
-        href={googlePlayUrl}
+
+
+
+=======
+      </Link>
+
+
+      <a 
+        href={googlePlayUrl} 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         className="flex items-center bg-black text-white rounded-lg px-4 py-2 hover:bg-gray-900 transition-colors"
         onClick={handleGooglePlayClick}
         target="_blank"
@@ -111,9 +89,47 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
       </a>
     </div>
   )
-}
 
 =======
+
+};
+
+=======
+},
+import React from "react",;
+import { Apple, GithubIcon } from "lucide-react",;
+import { cn } from "@/lib/utils",;
+interface AppStoreButtonsProps {;
+  className?: string,;
+  appStoreUrl?: string,;
+  googlePlayUrl?: string,;
+  onAppStoreClick?: () => void,;
+  onGooglePlayClick?: () => void;
+}
+;
+export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({;
+  className,;
+  appStoreUrl = "#",;
+  googlePlayUrl = "#",;
+  onAppStoreClick,;
+  onGooglePlayClick;
+}) => {;
+  const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
+    if (!appStoreUrl || appStoreUrl === "#") {;
+      e.preventDefault(),;
+      // // // console.log("App Store download clicked"),;
+      onAppStoreClick?.();
+    }
+  },;
+  const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {;
+    if (!googlePlayUrl || googlePlayUrl === "#") {;
+      e.preventDefault(),;
+      // // // console.log("Google Play download clicked"),;
+      onGooglePlayClick?.();
+    }
+  };
+  return (;
+
     <div className={cn("flex flex-col sm:flex-row gap-4", className)}>;
       <a
         href={appStoreUrl} 
@@ -151,8 +167,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
     </div>;
   );
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
 export const AppStoreButtons: React.FC < AppStoreButtonsProps> = ({
   class_name;
   appStoreUrl = "#";
@@ -222,4 +237,11 @@ if ( {) {
     </div>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+export default AppStoreButtons;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

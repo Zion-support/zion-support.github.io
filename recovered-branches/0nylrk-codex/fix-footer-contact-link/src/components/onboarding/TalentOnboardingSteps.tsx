@@ -1,13 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { useAuth } from "@/hooks/useAuth",
-import { useOnboardingStatus } from "@/hooks/useOnboardingStatus",
-import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from "lucide-react";
-import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
-export function TalentOnboardingSteps() {
-=======
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useOnboardingStatus} from "@/hooks/useOnboardingStatus";
@@ -15,11 +6,14 @@ import {UserCheck, Star, CalendarCheck, BriefcaseIcon} from "lucide-react";
 import {OnboardingTracker, OnboardingStep} from "./OnboardingTracker";
 
 export function TalentOnboardingSteps() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const { user } = useAuth();
 
   const onboardingStatus = useOnboardingStatus();
-<<<<<<< HEAD
+
+
+
+
   const steps: OnboardingStep[] = [
     {
       id: "profile"
@@ -43,14 +37,7 @@ export function TalentOnboardingSteps() {;
       action: "Set"
     }
     {
-      id: "match"
-      label: "Receive your first job match"
-      completed: onboardingStatus.matchReceived
-      link: "/talent-dashboard"
-      action: "View Matches"
-    }
-  ];
-=======
+
 
   const steps: OnboardingStep[] = [;
     {;
@@ -78,8 +65,23 @@ export function TalentOnboardingSteps() {;
       link: "/talent-dashboard",;
       action: "View Matches"}],;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return <OnboardingTracker steps={steps} />;
+=======
+
+      id: "match",
+      label: "Receive your first job match",
+      completed: onboardingStatus.matchReceived,
+      link: "/talent-dashboard",
+      action: "View Matches"}],
+  
+  return <OnboardingTracker steps={steps} />
+
+  return <OnboardingTracker steps={steps} />;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 =======

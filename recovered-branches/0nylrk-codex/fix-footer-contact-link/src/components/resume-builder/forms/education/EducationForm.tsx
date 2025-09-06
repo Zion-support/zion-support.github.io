@@ -1,8 +1,8 @@
-<<<<<<< HEAD
 
 
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Education} from '@/types / resume';
@@ -11,9 +11,11 @@ import {format} from 'date - fns';
 import {EducationFormProps} from './types';
 import {EducationList} from './EducationList';
 import {EducationFormFields} from './EducationFormFields';
-<<<<<<< HEAD
-<<<<<<< HEAD
-export function EducationForm({
+
+
+export function EducationForm({ ;
+
+
   resumeId;
   educationEntries
   onComplete
@@ -71,12 +73,18 @@ export function EducationForm(): any ({ ;
       success = await updateEducation(editingId, educationData);
     } else {;
       success = await addEducation(resumeId, educationData);
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
-<<<<<<< HEAD
-    if (success) {
-      setEditingId(null)
-    }
-  }
+
+
+  };
+
+
+
   const handleEdit = (edu: Education) => {
     setEditingId(edu.id!)
     // Form reset happens in the child component
@@ -96,7 +104,12 @@ export function EducationForm(): any ({ ;
     if (success) {;
       setEditingId(null);
     }
+
+
   };
+
+=======
+  },;
 
   const handleEdit = (edu: Education) => {;
     setEditingId(edu && edu.id!),;
@@ -116,22 +129,27 @@ export function EducationForm(): any ({ ;
       onBack();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-  }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-<<<<<<< HEAD
-    <div className="space-y-6">
-      <div>
-        <h2 className="text-xl font-semibold mb-2">Education</h2>
-        <p className="text-muted-foreground">
-          Add your educational background and academic achievements.
-        </p>
-      </div>
-      <EducationList
-        educationEntries={educationEntries}
+
+
+      <EducationList 
+        educationEntries={educationEntries} 
+
         onEdit={handleEdit}
         onDelete={handleDelete}
       />
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Education' : 'Add Education'}
@@ -161,20 +179,7 @@ export function EducationForm(): any ({ ;
           isEditing={!!editingId}
           onSubmit={handleAddOrUpdate}
           onCancel={handleCancel}
-<<<<<<< HEAD
-        />
-      </div>
-      {!editingId && educationEntries.length > 0 && (
-        <div className="flex justify-end">
-          <Button type="button" onClick={onComplete}>
-            Next
-          </Button>
-        </div>
-      )}
-    </div>
-  )
-}
-=======
+
         />;
       </div>;
 
@@ -188,7 +193,7 @@ export function EducationForm(): any ({ ;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 export /**
  * EducationForm - Function description

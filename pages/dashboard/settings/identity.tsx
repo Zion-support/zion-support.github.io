@@ -1,4 +1,15 @@
-<<<<<<< HEAD
+
+
+import React, { useEffect, useState } from 'react',;
+import Head from 'next/head',;
+import type { KycProfile } from '../../../utils/kyc',;
+import { ProfileBadges } from '../../../components/ui/ProfileBadges',;
+export default function IdentitySettingsPage() {
+  const [userId, setUserId] = useState('demo-user'),
+  const [profile, setProfile] = useState<KycProfile | null>(null),
+  const [error, setError] = useState(''),
+
+
 
 import React, { useEffect, useState } from 'react';
 
@@ -11,16 +22,10 @@ export default function IdentitySettingsPage() {
   const [profile, setProfile] = useState<KycProfile | null>(null)
   const [error, setError] = useState('')
   async function load() {
+
+
     try {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
-      const data = await res.json()
-      if (data.ok) setProfile(data.profile)
-      else setError(data.error |'Not found')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
       const data = await res.json();
       if (data.ok) setProfile(data.profile);
@@ -51,18 +56,15 @@ function load() {
       else set_error (data.error || 'Not found');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } catch (e) {
-<<<<<<< HEAD
-      setError('Failed to fetch')
-=======
+
       set_error ('Failed to fetch');
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     }
   }
-<<<<<<< HEAD
-  useEffect(() => {
-    load()
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+
+
+  }, []),
+
 
   return (
     <>
@@ -73,23 +75,10 @@ function load() {
       <main className="max-w-3xl mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Identity</h1>
         <div className="mb-4">
-          <ProfileBadges profile={profile |undefined} />
-        </div>
-        <div className="mb-4 text-sm text-gray-600">
-          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'}
-        </div>
-        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</a>
-        {error && <div className="mt-3 text-sm text-red-600">{error}</div>}
-      </main>
-    </>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
   useEffect (() => {
     load (),
@@ -116,3 +105,40 @@ function load() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+          <ProfileBadges profile={profile || undefined} />
+        </div>
+        <div className="mb-4 text-sm text-gray-600">
+=======
+      </main>
+    </>
+  );
+};
+=======
+
+          Status: {profile ? profile.status : 'not_started'} • AML: {profile ? profile.amlStatus : 'unknown'  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        </div>
+        <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2">Go to verification</Link>
+        {error && <div className="mt-3 text-sm text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+      </main>
+    </>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

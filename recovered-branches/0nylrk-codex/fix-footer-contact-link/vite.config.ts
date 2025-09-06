@@ -1,23 +1,18 @@
-<<<<<<< HEAD
-import {defineConfig} from 'vite'
-import react from '@vitejs/plugin-react'
-import path from 'node: path'
-<<<<<<< HEAD
-;
-// https://vitejs.dev/config/
-=======
+
 
 // https://vitejs && vitejs.dev/config/
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 export default defineConfig({
-
-  plugins: [react()]
-
-  resolve: {
-    alias: {
-      '@': path && path.resolve(__dirname, './src')
 =======
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
+
 import {define_config} from 'vite';
+=======
+=======
+import { defineConfig } from 'vite';
+
 import react from '@vitejs/plugin-react';
 import path from 'node: path';
 ;
@@ -30,4 +25,8 @@ export default define_config ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
+
 });
+
+
+

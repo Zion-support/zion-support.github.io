@@ -1,16 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Header } from "@/components/Header",
-import { Footer } from "@/components/Footer",
-import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",
-import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",
-import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",
-import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",
-import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",
-import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials";
-import { SEO } from "@/components/SEO";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function EnterprisePlans() {
   return (
     <>
@@ -30,8 +22,7 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
-}
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -65,6 +56,21 @@ import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
 import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
+=======
+
+
+=======
+import React from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { EnterpriseHero } from "@/components/enterprise/EnterpriseHero",;
+import { EnterprisePricingTable } from "@/components/enterprise/EnterprisePricingTable",;
+import { EnterpriseFeatures } from "@/components/enterprise/EnterpriseFeatures",;
+import { EnterpriseCTA } from "@/components/enterprise/EnterpriseCTA",;
+import { EnterpriseTrustBadges } from "@/components/enterprise/EnterpriseTrustBadges",;
+import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",;
+import { SEO } from "@/components/SEO";
+
 export default function EnterprisePlans() {;
   return (
     <>;
@@ -106,12 +112,12 @@ function EnterprisePlans() {
         <EnterpriseCTA />;
       </main>;
       <Footer />;
-<<<<<<< HEAD
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

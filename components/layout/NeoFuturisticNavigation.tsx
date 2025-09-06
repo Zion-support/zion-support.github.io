@@ -1,61 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-import Link from 'next/link';
-import { useRouter } from 'next/router';
 
-import {
-  Menu
-  X
-  ChevronDown
-  ChevronRight
-  Phone
-  Mail
-  MapPin
-  Globe
-  ArrowRight
-  Sparkles
-  Brain
-  Atom
-  Shield
-  DollarSign
-  FileText
-  BarChart3
-  MessageSquare
-  Truck
-  Users
-  Database
-  Cpu
-  Cloud
-  Play
-  Search
-  ShieldCheck
-  TrendingUp
-  Rocket
-  Zap
-  Check
-  Star
-  Clock
-  Target
-  Building
-  Award
-  ChartBar
-  Lock
-  Smartphone
-  Palette
-  Calendar
-  CreditCard
-  Settings
-  Code
-  BookOpen
-  Activity
-  Bot
-  ChevronRight as ChevronRightIcon
-  Eye
-  FlaskConical
-  Link as LinkIcon;
-import Button from '../ui/Button';
-export default function NeoFuturisticNavigation() {
-=======
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -80,93 +23,16 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  Menu,;
-  X,;
-  ChevronDown,;
-  ChevronRight,;
-  Phone,;
-  Mail,;
-  MapPin,;
-  Globe,;
-  ArrowRight,;
-  Sparkles,;
-  Brain,;
-  Atom,;
-  Shield,;
-  DollarSign,;
-  FileText,;
-  BarChart3,;
-  MessageSquare,;
-  Truck,;
-  Users,;
-  Database,;
-  Cpu,;
-  Cloud,;
-  Play,;
-  Search,;
-  ShieldCheck,;
-  TrendingUp,;
-  Rocket,;
-  Zap,;
-  Check,;
-  Star,;
-  Clock,;
-  Target,;
-  Building,;
-  Award,;
-  ChartBar,;
-  Lock,;
-  Smartphone,;
-  Palette,;
-  Calendar,;
-  CreditCard,;
-  Settings,;
-  Code,;
-  BookOpen,;
-  Activity,;
-  Bot,;
-  ChevronRight as ChevronRightIcon,;
-  Eye,;
-  FlaskConical,;
-  Link as LinkIcon,;
-import Button from '../ui/Button';
 
-export default function NeoFuturisticNavigation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const router = useRouter();
-<<<<<<< HEAD
-  const contactInfo = {
-    mobile: '+1 302 464 0950'
-    email: 'kleber@ziontechgroup.com'
-    address: '364 E Main St STE 1008 Middletown DE 19709'
-    website: 'https://ziontechgroup.com'
-  }
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
-  }
-  const closeMobileMenu = () => {
-    setIsOpen(false);
-    setActiveDropdown(null);
-  }
-  const isActive = (path: string) => router.pathname === path;
+
+
+
+
+
   const serviceCategories = [
     {
       name: 'Quantum Computing'
@@ -457,6 +323,11 @@ export default function NeoFuturisticNavigation() {;
       link: '/reports'
     }
   ];
+
+
+
+
+
   // Popular quick links to flagship services
   const popularServiceLinks = [
     { name: 'AI Content Generator', href: '/ai-content-generator' }
@@ -469,6 +340,11 @@ export default function NeoFuturisticNavigation() {;
     { name: 'AI Sales Automation', href: '/ai-sales-automation' }
     { name: 'AI Market Research', href: '/ai-market-research' }
   ];
+
+
+
+
+
   // Newly added real services quick links
   const newServiceLinks = [
     {
@@ -862,11 +738,9 @@ export default function NeoFuturisticNavigation() {;
         <div
           className='h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600'
           style={{
-<<<<<<< HEAD
-            width: `${typeof window !== 'undefined' && document.body.scrollHeight > 0 ? Math.min(100, (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100) : 0}%`
-=======
+
             width: `${typeof window !== 'undefined' && document && document.body.scrollHeight> 0 ? Math && Math.min(100, (window && window.scrollY / (document && document.body.scrollHeight - window && window.innerHeight)) * 100) : 0}%`,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           }}
         />;
       </div>;
@@ -1336,69 +1210,7 @@ function NeoFuturisticNavigation() {
               </div>;
             </div>;
           </Link>;
-<<<<<<< HEAD
 
-          {/* Desktop Navigation */}
-          <div className='hidden lg:flex items-center space-x-8'>;
-            {/* Services Dropdown */}
-            <div className='relative group'>;
-              <button
-                className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-300 py-2'
-                onClick={() => toggleDropdown('services')}
-              >;
-                <span>Services</span>;
-                <ChevronDown
-                  className={`w-4 h-4 transition-transform duration-300 ${
-                    activeDropdown === 'services' ? 'rotate-180' : ''
-                  }`}
-                />;
-              </button>;
-              {activeDropdown === 'services' && (;
-                <div className='absolute top-full left-0 mt-2 w-[800px] bg-black/90 backdrop-blur-xl rounded-2xl border border-gray-700/50 shadow-2xl p-6'>;
-                  <div className='grid grid-cols-2 gap-6'>;
-                    {serviceCategories && serviceCategories.map((category, index) => (;
-                      <div key={index} className='group'>;
-                        <div className='flex items-center space-x-3 mb-3'>;
-                          <div
-                            className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color} bg-opacity-20`}>;
-                            {category && category.icon}
-                          </div>;
-                          <div>;
-                            <h3 className='text-white font-semibold group-hover:text-cyan-400 transition-colors'>;
-                              {category && category.name}
-                            </h3>;
-                            <p className='text-gray-400 text-sm'>;
-                              {category && category.description}
-                            </p>;
-                          </div>;
-                        </div>;
-                        <div className='space-y-2'>;
-                          {category && category.services.map((service, serviceIndex) => (;
-                            <div
-                              key={serviceIndex}
-                              className='flex items-center justify-between p-2 rounded-lg hover:bg-gray-800/50 transition-colors'>;
-                              <div>;
-                                <div className='text-white text-sm font-medium'>;
-                                  {service && service.name}
-                                </div>;
-                                <div className='text-gray-400 text-xs'>;
-                                  {service && service.description}
-                                </div>;
-                              </div>;
-                              <div className='text-cyan-400 text-sm font-semibold'>;
-                                {service && service.price}
-                              </div>;
-                            </div>;
-                          ))}
-                        </div>;
-                      </div>;
-                    ))}
-                  </div>;
-                  <div className='mt-6 pt-6 border-t border-gray-700/50'>;
-                    <div className='flex items-center justify-between'>;
-                      <div className='text-gray-400 text-sm'>;
-                        <span className='text-cyan-400 font-semibold'>;
-=======
           {/* Desktop Navigation */}
           <div className='hidden lg:flex items - center space - x-8'>;
             {/* Services Dropdown */}
@@ -1459,26 +1271,17 @@ function NeoFuturisticNavigation() {
                     <div className='flex items - center justify - between'>;
                       <div className='text - gray - 400 text - sm'>;
                         <span className='text - cyan - 400 font - semibold'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                           500+;
                         </span>{' '}
                         Revolutionary Services Available;
                       </div>;
                       <Button href='/services' variant='quantum' size='sm'>;
                         View All Services;
-<<<<<<< HEAD
-                        <ArrowRight className='w-4 h-4 ml-2' />;
-                      </Button>;
-                    </div>;
-                  </div>;
-                </div>;
-              )}
-<<<<<<< HEAD
-            </div>
-=======
+
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Direct Links */}
             <Link
               href='/it-services'
@@ -1547,17 +1350,12 @@ function NeoFuturisticNavigation() {
             </Link>;
             <Link
               href='/resources'
-<<<<<<< HEAD
-              className='text-gray-300 hover:text-white transition-colors duration-300 py-2'
-            >
-              Resources
-            </Link>
-=======
+
               className='text-gray-300 hover:text-white transition-colors duration-300 py-2'>;
               Resources;
             </Link>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* Popular Dropdown */}
             <div className='relative group'>;
               <button
@@ -1584,12 +1382,10 @@ function NeoFuturisticNavigation() {
                   </div>;
                 </div>;
               )}
-<<<<<<< HEAD
-            </div>
-=======
+
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             {/* New Dropdown */}
             <div className='relative group'>;
               <button
@@ -1621,30 +1417,23 @@ function NeoFuturisticNavigation() {
                   </div>;
                 </div>;
               )}
-<<<<<<< HEAD
-            </div>
-          </div>
-=======
+
             </div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           {/* Mobile Menu Button */}
           <button
             className='lg:hidden p-2 text-gray-300 hover:text-white transition-colors'
             onClick={() => setIsOpen(!isOpen)}
           >;
             {isOpen ? <X className='w-6 h-6' /> : <Menu className='w-6 h-6' />}
-<<<<<<< HEAD
-          </button>
-        </div>
-      </div>
-=======
+
           </button>;
         </div>;
       </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       {/* Mobile Menu */}
       {isOpen && (;
         <div className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-gray-700/50'>;
@@ -1659,9 +1448,12 @@ function NeoFuturisticNavigation() {
                   <span>Services</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
-<<<<<<< HEAD
-                  />
-                </button>
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -1707,12 +1499,16 @@ function NeoFuturisticNavigation() {
                     </div>;
                   </div>;
                 )}
-<<<<<<< HEAD
-              </div>
-=======
+
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Company Section */}
               <div>;
                 <button
@@ -1722,20 +1518,14 @@ function NeoFuturisticNavigation() {
                   <span>Company</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-company' ? 'rotate-90' : ''}`}
-<<<<<<< HEAD
-                  />
-                </button>
-                {activeDropdown === 'mobile-company' && (
-                  <div className='ml-4 space-y-3'>
-                    {companyInfo.map((item, index) => (
-=======
+
                   />;
                 </button>;
 
                 {activeDropdown === 'mobile-company' && (;
                   <div className='ml-4 space-y-3'>;
                     {companyInfo && companyInfo.map((item, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                       <Link
                         key={index}
                         href={item && item.link}
@@ -1746,12 +1536,10 @@ function NeoFuturisticNavigation() {
                     ))}
                   </div>;
                 )}
-<<<<<<< HEAD
-              </div>
-=======
+
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Resources Section */}
               <div>;
                 <button
@@ -1761,20 +1549,14 @@ function NeoFuturisticNavigation() {
                   <span>Resources</span>;
                   <ChevronRight
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-resources' ? 'rotate-90' : ''}`}
-<<<<<<< HEAD
-                  />
-                </button>
-                {activeDropdown === 'mobile-resources' && (
-                  <div className='ml-4 space-y-3'>
-                    {resources.map((item, index) => (
-=======
+
                   />;
                 </button>;
 
                 {activeDropdown === 'mobile-resources' && (;
                   <div className='ml-4 space-y-3'>;
                     {resources && resources.map((item, index) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                       <Link
                         key={index}
                         href={item && item.link}
@@ -1785,35 +1567,7 @@ function NeoFuturisticNavigation() {
                     ))}
                   </div>;
                 )}
-<<<<<<< HEAD
-              </div>
-              {/* Contact Info */}
-              <div className='pt-6 border-t border-gray-700/50'>
-                <div className='text-white font-semibold mb-4'>
-                  Contact Information
-                </div>
-                <div className='space-y-3'>
-                  <div className='flex items-center space-x-3'>
-                    <Phone className='w-5 h-5 text-cyan-400' />
-                    <span className='text-gray-300'>{contactInfo.mobile}</span>
-                  </div>
-                  <div className='flex items-center space-x-3'>
-                    <Mail className='w-5 h-5 text-purple-400' />
-                    <span className='text-gray-300'>{contactInfo.email}</span>
-                  </div>
-                  <div className='flex items-center space-x-3'>
-                    <MapPin className='w-5 h-5 text-green-400' />
-                    <span className='text-gray-300 text-sm'>
-                      {contactInfo.address}
-                    </span>
-                  </div>
-                  <div className='flex items-center space-x-3'>
-                    <Globe className='w-5 h-5 text-blue-400' />
-                    <span className='text-gray-300'>{contactInfo.website}</span>
-                  </div>
-                </div>
-                <div className='mt-6 space-y-3'>
-=======
+
               </div>;
 
               {/* Contact Info */}
@@ -1843,7 +1597,7 @@ function NeoFuturisticNavigation() {
                 </div>;
 
                 <div className='mt-6 space-y-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <Button
                     href='/services'
                     variant='quantum'
@@ -2166,12 +1920,11 @@ function NeoFuturisticNavigation() {
               </div>;
             </div>;
           </div>;
-<<<<<<< HEAD
-        </div>;
-      )}
-    </nav>;
-  );
-<<<<<<< HEAD
+
+
+
+
+
   `w-4 h-4 transition-transform duration-300 $ {
   activeDropdown === 'services' ? 'rotate-180' : ''
 }`
@@ -2205,8 +1958,7 @@ function NeoFuturisticNavigation() {
   /* Resources Section */
 }<div> <span>Resources</span> <ChevronRight className= {
   `w-5 h-5 transition-transform duration-300 $ {
-<<<<<<< HEAD
-=======
+
   activeDropdown === 'mobile-resources'? 'rotate-90': ''
 }`
 }/> </button>) )
@@ -2700,7 +2452,7 @@ export default function NeoFuturisticNavigation() {
 								</div>
 
 								<div className="mt-6 space-y-3">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 									<Button href="/services" variant="quantum" size="lg" className="w-full">
 										Explore Services
 										<ArrowRight className="w-5 h-5 ml-2" />
@@ -2715,9 +2467,7 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-);
-}
-=======
+
 
   `w-4 h-4 transition-transform duration-300 $ {;
   activeDropdown === 'services' ? 'rotate-180' : '' ;
@@ -2752,7 +2502,7 @@ export default function NeoFuturisticNavigation() {
   /* Resources Section */ ;
 }<div> <span>Resources</span> <ChevronRightclassName= {
   `w-5 h-5 transition-transform duration-300 $ {
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   activeDropdown === 'mobile-resources'? 'rotate-90': '' 
 }` 
 }/> </button>) ) ;
@@ -2775,10 +2525,8 @@ export default function NeoFuturisticNavigation() {
 		</nav>;
 	);
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 =======
         </div>)}
     </nav>);
@@ -2837,3 +2585,9 @@ export default function NeoFuturisticNavigation() {
   </nav>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+	);
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

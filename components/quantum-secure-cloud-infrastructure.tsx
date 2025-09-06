@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-import React from 'react';
-<<<<<<< HEAD
-import { motion  } from 'framer-motion';
-import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
-import SEO from '../components/SEO';
-export default function QuantumSecureCloudInfrastructure() {
-	return (
-		<ServiceLanding
-			title;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services", "Healthcare", "Government"]}
 			url="https: //ziontechgroup.com/quantum-secure-cloud-infrastructure"
 		/>
 	)
-}
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -102,3 +88,8 @@ return (<ServiceLanding;
   />);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

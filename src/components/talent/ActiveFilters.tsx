@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import { ClickableBadge } from '@/components/ui/clickable-badge';
-import { Button } from '@/components/ui/button';
-import { X } from 'lucide-react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import React from "react",
-import { ClickableBadge } from "@/components/ui/clickable-badge";
-import { Button } from "@/components/ui/button";
+
 import { X } from 'lucide-react'
 interface ActiveFiltersProps {
 
@@ -39,36 +27,47 @@ interface ActiveFiltersProps {
 
   clearFilters: () => void
 }
-export function ActiveFilters({
 
-  selectedSkills
-  toggleSkill
-  selectedAvailability
-  toggleAvailability
-  selectedRegions
-  toggleRegion
-  priceRange
-  setPriceRange
-  experienceRange
-  setExperienceRange
-  clearFilters
-}: ActiveFiltersProps) {
-  // Check if any filters are active
-  const hasActiveFilters =
-    selectedSkills.length > 0 |
-    selectedAvailability.length > 0 |
-    selectedRegions.length > 0 |
-    experienceRange[0] !== 0 |
-    experienceRange[1] !== 15 |
-    priceRange[0] !== 50 |
-    priceRange[1] !== 200
-  if (!hasActiveFilters) return null
+=======
+
+
+
+
+  const hasActiveFilters = null;
+    selectedSkills.length > 0 ||
+    selectedAvailability.length > 0 ||
+=======
+
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
+
+
+    selectedRegions.length > 0 ||
+    experienceRange[0] !== 0 ||
+    experienceRange[1] !== 15 ||
+    priceRange[0] !== 50 ||
+=======
+=======
+
+    priceRange[1] !== 200,
+  
+  if (!hasActiveFilters) return null,
 
   return (
-    <div className='mb-6 flex flex-wrap gap-2 items-center'>
-      <span className='text-zion-slate-light text-sm'>Active filters:</span>
+    <div className="mb-6 flex flex-wrap gap-2 items-center">
+      <span className="text-zion-slate-light text-sm">Active filters:</span>
+      
       {selectedSkills.map(skill => (
-=======
+        <ClickableBadge 
+          key={skill}
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2"
+import React from "react",;
+import { ClickableBadge } from "@/components/ui/clickable-badge",;
+import { Button } from "@/components/ui/button",;
+import { X } from 'lucide-react';
+
 interface ActiveFiltersProps {;
   selectedSkills: string[];
   toggleSkill: (skill: string) => void;
@@ -133,12 +132,10 @@ export function ActiveFilters(): any ({;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
       ))}
-<<<<<<< HEAD
-      {selectedAvailability.map(status => (
-=======
+
 
       {selectedAvailability && selectedAvailability.map(status => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <ClickableBadge
           key={status}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
@@ -151,26 +148,19 @@ export function ActiveFilters(): any ({;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
       ))}
-<<<<<<< HEAD
-      {selectedRegions.map(region => (
-=======
+
 
       {selectedRegions && selectedRegions.map(region => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <ClickableBadge
           key={region}
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => toggleRegion(region)}        >;
           {region}
-          <X className='h-3 w-3' />;
-        </ClickableBadge>;
-      ))}
-<<<<<<< HEAD
-      {(priceRange[0] !== 50 |priceRange[1] !== 200) && (
-=======
+
 
       {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setPriceRange([50, 200])}        >;
@@ -178,12 +168,10 @@ export function ActiveFilters(): any ({;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
       )}
-<<<<<<< HEAD
-      {(experienceRange[0] !== 0 |experienceRange[1] !== 15) && (
-=======
+
 
       {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <ClickableBadge
           className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2'
           onClick={() => setExperienceRange([0, 15])}        >;
@@ -191,28 +179,106 @@ export function ActiveFilters(): any ({;
           <X className='h-3 w-3' />;
         </ClickableBadge>;
       )}
+=======
+          <X className="h-3 w-3" />
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        </ClickableBadge>
+      ))}
+      
+      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (
+
+
+          ${priceRange[0]}-${priceRange[1]}/hr
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+
+      
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (
+
+          {experienceRange[0]}-{experienceRange[1]} years
+          <X className="h-3 w-3" />
+        </ClickableBadge>
+      )}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Button
         variant='ghost'
         size='sm'
         onClick={clearFilters}
-<<<<<<< HEAD
-        className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'      >
+
+
+        Clear All
+      </Button>
+    </div>
+  );
+};
+}
+
+=======
+      
+      <Button 
+        variant="ghost" 
+        size="sm" 
+        onClick={clearFilters}
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent"
+      >
+
+
+
         Clear All
       </Button>
     </div>
   )
-}
-=======
+
         className='h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent'>;
+=======
+
+=======
+
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      ))}
+;
+      {(priceRange[0] !== 50 || priceRange[1] !== 200) && (;
+        <ClickableBadge;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={() => setPriceRange([50, 200])}
+        >;
+          ${priceRange[0]}-${priceRange[1]}/hr;
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      )}
+;
+      {(experienceRange[0] !== 0 || experienceRange[1] !== 15) && (;
+        <ClickableBadge;
+          className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none flex items-center gap-1 pl-2";
+          onClick={() => setExperienceRange([0, 15])}
+        >;
+          {experienceRange[0]}-{experienceRange[1]} years;
+          <X className="h-3 w-3" />;
+        </ClickableBadge>;
+      )}
+;
+      <Button;
+        variant="ghost";
+        size="sm";
+        onClick={clearFilters}
+        className="h-7 text-xs text-zion-purple hover: text-zion-purple-light hover:bg-transparent";
+      >;
+
         Clear All;
       </Button>;
     </div>;
   );
 
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 
 
@@ -319,3 +385,9 @@ if (return null) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

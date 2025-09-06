@@ -1,26 +1,11 @@
 
+
+
+
 import {useState, useCallback} from 'react';
 import {supabase} from '@/integrations / supabase / client';
 import {Notification, FilterType, NotificationContextType} from './types';
-<<<<<<< HEAD
-export const useNotificationOperations = (userId?: string): NotificationContextType => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
-  const [loading, setLoading] = useState(false);
-  const [filter, setFilter] = useState<FilterType>('all');
-  const fetchNotifications = useCallback(async () => {
-    if (!userId) return;
-    setLoading(true);
-    try {
-      const { data, error } = await supabase
-        .from('notifications')
-        .select('*')
-        .eq('user_id', userId)
-        .order('created_at', { ascending: false });
-      if (error) throw error;
-      setNotifications(data |[])
-    } catch (err) {
-      console && console.error('Error fetching notifications:', err)
-=======
+
 export const useNotificationOperations = (user_id?: string): NotificationContextType => {
   const [notifications, set_notifications] = useState < Notification[]>([]);
   const [loading, set_loading] = useState (false);
@@ -46,60 +31,14 @@ if (throw error) {
       set_notifications (data || []);
     } catch (err) {
       console.error ('Error fetching notifications:', err);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
       set_loading (false);
     }
-<<<<<<< HEAD
-  }, [userId]);
-  const markAsRead = useCallback(async (id: string) => {
-    if (!userId) return
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('id', id)
-        .eq('user_id', userId);
-      if (error) throw error;
-      await fetchNotifications()
-    } catch (err) {
-      console && console.error('Error marking notification as read:', err)
-    }
-  }, [userId, fetchNotifications]);
-  const markAllAsRead = useCallback(async () => {
-    if (!userId) return;
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .update({ read: true })
-        .eq('user_id', userId)
-        .eq('read', false);
-      if (error) throw error;
-      await fetchNotifications()
-    } catch (err) {
-      console && console.error('Error marking all notifications as read:', err)
-    }
-  }, [userId, fetchNotifications]);
-  const dismissNotification = useCallback(async (id: string) => {
-    if (!userId) return
-    try {
-      const { error } = await supabase
-        .from('notifications')
-        .delete()
-        .eq('id', id)
-        .eq('user_id', userId);
-      if (error) throw error;
-      await fetchNotifications()
-    } catch (err) {
-      console && console.error('Error dismissing notification:', err)
-    }
-  }, [userId, fetchNotifications]);
-<<<<<<< HEAD
-  const filteredNotifications = notifications.filter(notification => {
-=======
+
 
   const filteredNotifications = notifications && notifications.filter(notification => {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     switch (filter) {
       case 'unread':
         return !notification && notification.read;
@@ -112,13 +51,11 @@ if (throw error) {
       default: return true
     }
   });
-<<<<<<< HEAD
-  const unreadCount = notifications.filter(n => !n.read).length;
-=======
+
 
   const unreadCount = notifications && notifications.filter(n => !n && n.read).length;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
   }, [user_id]);
 ;
@@ -213,8 +150,102 @@ if (throw error) {
     filter;
     markAsRead;
     markAllAsRead;
-<<<<<<< HEAD
+
     dismissNotification;
+=======
+import { useState, useCallback } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+import { Notification, FilterType, NotificationContextType } from './types',;
+export const useNotificationOperations = (userId?: string): NotificationContextType => {;
+  const [notifications, setNotifications] = useState<Notification[]>([]),;
+  const [loading, setLoading] = useState(false),;
+  const [filter, setFilter] = useState<FilterType>('all'),;
+  const fetchNotifications = useCallback(async () => {;
+    if (!userId) return,;
+    setLoading(true),;
+    try {;
+      const { data, error } = await supabase;
+        .from('notifications');
+        .select('*');
+        .eq('user_id', userId);
+        .order('created_at', { ascending: false }),;
+      if (error) throw error,;
+      setNotifications(data || []);
+    } catch (err) {;
+      console.error('Error fetching notifications:', err);
+    } finally {;
+      setLoading(false);
+    }
+  }, [userId]),;
+  const markAsRead = useCallback(async (id: string) => {;
+    if (!userId) return,;
+    try {;
+      const { error } = await supabase;
+        .from('notifications');
+        .update({ read: true });
+        .eq('id', id);
+        .eq('user_id', userId),;
+      if (error) throw error,;
+      await fetchNotifications();
+    } catch (err) {;
+      console.error('Error marking notification as read:', err);
+    }
+  }, [userId, fetchNotifications]),;
+  const markAllAsRead = useCallback(async () => {;
+    if (!userId) return,;
+    try {;
+      const { error } = await supabase;
+        .from('notifications');
+        .update({ read: true });
+        .eq('user_id', userId);
+        .eq('read', false),;
+      if (error) throw error,;
+      await fetchNotifications();
+    } catch (err) {;
+      console.error('Error marking all notifications as read:', err);
+    }
+  }, [userId, fetchNotifications]),;
+  const dismissNotification = useCallback(async (id: string) => {;
+    if (!userId) return,;
+    try {;
+      const { error } = await supabase;
+        .from('notifications');
+        .delete();
+        .eq('id', id);
+        .eq('user_id', userId),;
+      if (error) throw error,;
+      await fetchNotifications();
+    } catch (err) {;
+      console.error('Error dismissing notification:', err);
+    }
+  }, [userId, fetchNotifications]),;
+  const filteredNotifications = notifications.filter(notification => {;
+    switch (filter) {;
+      case 'unread':;
+        return !notification.read,;
+      case 'messages':;
+        return notification.type === 'message',;
+      case 'onboarding':;
+        return notification.type === 'onboarding',;
+      case 'system':;
+        return notification.type === 'system',;
+      default: return true;
+    }
+  }),;
+  const unreadCount = notifications.filter(n => !n.read).length,;
+  return {;
+    notifications,;
+    filteredNotifications,;
+    unreadCount,;
+    loading,;
+    filter,;
+    markAsRead,;
+    markAllAsRead,;
+    dismissNotification,;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setFilter;
     fetchNotifications}
 }

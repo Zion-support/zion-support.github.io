@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from 'react',
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,30 +23,20 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import Link from 'next/link';
 
 import {motion} from 'framer-motion';
 import {Menu, X, ChevronDown, Globe, Brain, Shield, Rocket, Cpu, Database, Users, Award, BookOpen, Phone} from 'lucide-react';
-<<<<<<< HEAD
-const EnhancedNavigation: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    }
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-  const services = [
-    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' }
-    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' }
-    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' }
-    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' }
-    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' }
+
+
+    { name: 'All Solutions', href: '/comprehensive-2025-services-showcase', icon: Globe, description: 'Complete collection of innovative solutions' },
+    { name: 'AI Business Intelligence', href: 'https://ziontechgroup.com/ai-business-intelligence', icon: Brain, description: 'AI-powered analytics and insights' },
+    { name: 'Quantum Cybersecurity', href: 'https://ziontechgroup.com/quantum-cybersecurity', icon: Shield, description: 'Quantum-resistant security solutions' },
+    { name: 'Edge Computing', href: 'https://ziontechgroup.com/edge-computing-orchestration', icon: Cpu, description: 'Edge orchestration and IoT management' },
+    { name: 'Space Technology', href: 'https://ziontechgroup.com/space-technology', icon: Rocket, description: 'Space exploration and satellite tech' },
+
+
     { name: 'Pricing', href: '/pricing-2025', icon: Award, description: 'Transparent pricing for all solutions' }
   ];
   const company = [
@@ -58,6 +46,11 @@ const EnhancedNavigation: React.FC = () => {
     { name: 'Blog & Insights', href: '/blog', icon: BookOpen, description: 'Stay updated with industry trends' }
     { name: 'Contact', href: '/contact', icon: Phone, description: 'Get in touch with our experts' }
   ];
+
+
+
+
+
   const toggleDropdown = (dropdown: string) => {
     setActiveDropdown(activeDropdown === dropdown ? null : dropdown)
   }
@@ -105,30 +98,17 @@ const EnhancedNavigation: React.FC = () => {;
     setIsOpen(false);
   }
   return (
-<<<<<<< HEAD
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled
-        ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl'
-=======
+
     <navclassName={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
         ? 'bg-slate-900/95 backdrop-blur-xl border-b border-white/10 shadow-2xl' 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         : 'bg-transparent'
     }`}>;
       <div className="max-w-7xl mx-auto px-6">;
         <div className="flex items-center justify-between h-20">;
           {/* Logo */}
-<<<<<<< HEAD
-          <Link href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">
-              <Brain className="w-6 h-6 text-white" />
-            </div>
-            <span className="text-xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
-              Zion Tech Group
-            </span>
-          </Link>
-=======
+
           <Link href="/" className="flex items-center space-x-3" onClick={closeAllDropdowns}>;
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-600 to-cyan-600 flex items-center justify-center">;
               <Brain className="w-6 h-6 text-white" />;
@@ -138,19 +118,19 @@ const EnhancedNavigation: React.FC = () => {;
             </span>;
           </Link>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center space-x-8">;
             {/* Services Dropdown */}
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('services')}
-<<<<<<< HEAD
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
-              >
-                <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
-              </button>
+
+
+              
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {activeDropdown === 'services' && (
                 <motion.div
 =======
@@ -188,25 +168,21 @@ const EnhancedNavigation: React.FC = () => {;
                   </div>;
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-            </div>
-=======
+
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {/* Company Dropdown */}
             <div className="relative">;
               <button
                 onClick={() => toggleDropdown('company')}
-<<<<<<< HEAD
-                className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors"
-              >
-                <span>Company</span>
-                <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'company' ? 'rotate-180' : ''}`} />
-              </button>
-              {activeDropdown === 'company' && (
-                <motion.div
-=======
+
                 className="flex items-center space-x-1 text-white hover:text-blue-300 transition-colors";
               >;
                 <span>Company</span>;
@@ -215,7 +191,7 @@ const EnhancedNavigation: React.FC = () => {;
 
               {activeDropdown === 'company' && (;
                 <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: 10 }}
@@ -239,17 +215,7 @@ const EnhancedNavigation: React.FC = () => {;
                   </div>;
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-            </div>
-            {/* CTA Button */}
-            <Link
-              href="/contact"
-              className="px-6 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors"
-            >
-              Get Started
-            </Link>
-          </div>
-=======
+
             </div>;
 
             {/* CTA Button */}
@@ -260,21 +226,30 @@ const EnhancedNavigation: React.FC = () => {;
             </Link>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 text-white hover:text-blue-300 transition-colors";
           >;
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-<<<<<<< HEAD
-          </button>
-        </div>
-=======
+
           </button>;
         </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Mobile Menu */}
         {isOpen && (;
           <motion&& motion.div
@@ -300,14 +275,11 @@ const EnhancedNavigation: React.FC = () => {;
                       </div>;
                     </Link>;
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
+
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Mobile Company */}
               <div>;
                 <h3 className="text-lg font-semibold text-gray-900 mb-4">Company</h3>;
@@ -325,14 +297,11 @@ const EnhancedNavigation: React.FC = () => {;
                       </div>;
                     </Link>;
                   ))}
-<<<<<<< HEAD
-                </div>
-              </div>
-=======
+
                 </div>;
               </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               {/* Mobile CTA */}
               <div className="pt-4 border-t border-gray-200">;
                 <Link
@@ -550,16 +519,7 @@ const EnhancedNavigation: React.FC = () => {
                 </Link>;
               </div>;
             </div>;
-<<<<<<< HEAD
-          </motion && motion.div>;
-        )}
-      </div>;
-    </nav>;
-  );
-}
-export default EnhancedNavigation;
 
-=======
           </motion.div>)}
       </div>;
     </nav>);
@@ -567,4 +527,15 @@ export default EnhancedNavigation;
 ;
 export default EnhancedNavigation;
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+export default EnhancedNavigation;
+
+=======
+export default EnhancedNavigation;
+=======
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

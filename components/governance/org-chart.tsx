@@ -22,34 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import dynamic from 'next/dynamic';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-const OrgChartPage = dynamic(
-  () => import('../../components/org/OrgChartPage')
-  { ssr: false }
-);
-export default function OrgChartGovernancePage() {
-  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false })
-export default function OrgChartGovernancePage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-const OrgChartPage = dynamic(;
-  () => import('../../components/org/OrgChartPage'),;
-  { ssr: false }
-);
 
-export default function OrgChartGovernancePage() {;
-  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),;
-export default function OrgChartGovernancePage() {;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return <OrgChartPage />;
 }
 =======
@@ -78,3 +52,11 @@ function OrgChartGovernancePage() {
   return <OrgChartPage />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+export default function OrgChartGovernancePage() {;
+  return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

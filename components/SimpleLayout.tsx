@@ -1,26 +1,10 @@
 
-<<<<<<< HEAD
+
+
+
 import React from 'react;';
 import * as React from 'react';
-<<<<<<< HEAD
-import Head from next/head';
-interface SimpleLayoutProps {
-  title: string
-  description?: string
-  children: React.ReactNode
-}
-export default function SimpleLayout({ title, description, children }: SimpleLayoutProps) {
-  return (
-    <>
-      <Head>
-        <title>{title}</title>
-        {description && <meta name="description" content={description} />}
-      </Head>
-      {children}
-    </>)
-}
 
-=======
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -51,6 +35,9 @@ interface SimpleLayoutProps {,;
   title: string,;
   description?: string,;
   children: React && React.ReactNode;
+=======
+
+
 };
 export default function SimpleLayout(): any ({ title, description, children }: SimpleLayoutProps) {,;
   return (,;
@@ -81,8 +68,9 @@ function SimpleLayout() {,
         <title>{title}</title>,
         {description && <meta name="description" content={description} />}
       </Head>,
-      {children}
-    </>);
-}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+      {children};
+    </>)
+};
+
+

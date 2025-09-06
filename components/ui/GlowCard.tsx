@@ -1,53 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react";
-export default function GlowCard({
-  title
-  children
-}: {
-  title: string;
-  children: React.ReactNode;
-}) {
 
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-
-export default function GlowCard(): any ({;
-  title,;
-  children,;
-}: {;
-  title: string;
-  children: React && React.ReactNode;
-}) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="group relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-md p-5 hover:bg-white/10 transition-colors">;
       <div className="absolute -inset-px rounded-xl bg-gradient-to-r from-cyan-500/0 via-fuchsia-500/0 to-violet-500/0 group-hover:from-cyan-500/20 group-hover:via-fuchsia-500/20 group-hover:to-violet-500/20 blur-xl" />;
@@ -66,8 +21,7 @@ export default function GlowCard(): any ({;
       </div>;
     </div>;
   );
-}
-=======
+
 import React from 'react';
 export default function GlowCard({ title, children }: { title: string, children: React.ReactNode }) {
   return (
@@ -80,7 +34,7 @@ export default function GlowCard({ title, children }: { title: string, children:
     </div>
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from './react';
 ;
@@ -106,3 +60,8 @@ function GlowCard() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

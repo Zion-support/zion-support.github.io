@@ -1,35 +1,23 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-import React from 'react';
-<<<<<<< HEAD
-import { SEO  } from '@/components/SEO';
-import { AppHeader  } from '@/layout/AppHeader';
-import { Footer  } from '@/components/Footer';
-import { ProtectedRoute  } from '@/components/ProtectedRoute';
-import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent';
+
+import {SEO} from '@/components/SEO';
+import {AppHeader} from '@/layout/AppHeader';
+import {Footer} from '@/components/Footer';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ProjectMilestonesContent} from '@/components/projects/milestones/ProjectMilestonesContent';
+
+=======
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ProjectMilestonesContent } from '@/components/projects/milestones/ProjectMilestonesContent',
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function ProjectMilestones() {
   return (
     <ProtectedRoute>
@@ -74,10 +62,14 @@ function ProjectMilestones() {
         <ProjectMilestonesContent />;
         <Footer />;
       </>;
-<<<<<<< HEAD
-    </ProtectedRoute>;
-  );
-}
+
+
+
+=======
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default ProjectMilestones;
 
 =======

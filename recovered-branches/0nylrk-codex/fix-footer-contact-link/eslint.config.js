@@ -1,10 +1,13 @@
-<<<<<<< HEAD
-import js from "@eslint/js";
-import globals from "globals";
-import reactHooks from "eslint-plugin-react-hooks";
-import reactRefresh from "eslint-plugin-react-refresh";
-import tseslint from "typescript-eslint";
-<<<<<<< HEAD
+
+
+import js from "@eslint/js",
+import globals from "globals",
+import reactHooks from "eslint-plugin-react-hooks",
+import reactRefresh from "eslint-plugin-react-refresh",
+import tseslint from "typescript-eslint",
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default tseslint.config(
   { ignores: ["dist"] }
   {
@@ -27,19 +30,15 @@ export default tseslint && tseslint.config(
       "react-hooks": reactHooks
       "react-refresh": reactRefresh}
     rules: {
-<<<<<<< HEAD
-      ...reactHooks.configs.recommended.rules
-=======
+
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       "react-refresh/only-export-components": [
 
         "warn"
         { allowConstantExport: true }]
       "@typescript-eslint/no-unused-vars": "off"}}
-)
 
-=======
 import js from "@eslint / js";
 import globals from './globals';
 import react_hooks from './eslint - plugin - react - hooks';
@@ -63,4 +62,9 @@ export default tseslint.config (
         { allowConstantExport: true }],
       "@typescript - eslint / no - unused - vars": "off"}}
 ),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

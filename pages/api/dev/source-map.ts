@@ -1,38 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import type { NextApiRequest, NextApiResponse } from "next";
-import { getSourceMapWithExistence, deployBasicTemplateForPath } from "../../../utils/sourceMap";
-import { getGitStatus, requireRoles } from "../../../utils/devAccess";
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
-  const identity = requireRoles(req, res, ["admin", "maintainer"])
-  if (!identity) return
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const identity = requireRoles(req, res, ["admin", "maintainer"]),
+  if (!identity) return,
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (req.method === "GET") {
     const nodes = getSourceMapWithExistence()
     const git = getGitStatus()
     res.status(200).json({ nodes, status: { gitConnected: git.connected, gitBranch: git.branch } })
     return
   }
-  if (req.method === "POST") {
-    const { path: repoRelativePath } = req.body |{}
-    if (typeof repoRelativePath !== "string" |!repoRelativePath.startsWith("/")) {
-      res.status(400).json({ error: "Invalid path" })
-      return
-    }
-    const result = deployBasicTemplateForPath(repoRelativePath)
-    res.status(200).json({ ok: true, result })
-    return
-  }
-  res.setHeader("Allow", "GET, POST")
 
-  res.status(405).end("Method Not Allowed")
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
 =======
 =======
+
+
 }
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -63,18 +46,8 @@ if ( {) {
   $2
 }
     const { path: repoRelativePath } = req.body || {},
-    if () {) {
-  $2
-}
-      res.status (400).json ({ error: "Invalid path" }),
-      return;
-    }
-    const result = deployBasicTemplateForPath (repoRelativePath),
-    res.status (200).json ({ ok: true, result }),
-    return;
-  }
-  res.set_header ("Allow", "GET, POST"),
-  res.status (405).end ("Method Not Allowed");
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+    if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
+      res.status(400).json({ error: "Invalid path" }),
+
+

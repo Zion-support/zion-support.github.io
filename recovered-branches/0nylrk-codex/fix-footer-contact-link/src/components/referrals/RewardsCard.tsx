@@ -1,17 +1,22 @@
 
-import {
-<<<<<<< HEAD
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
-import { ReferralReward } from "@/types/referrals";
 
-<<<<<<< HEAD
-import { formatDate } from "@/utils/referralUtils";
-import { BadgeDollarSign, Badge } from "lucide-react";
+
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {ReferralReward} from "@/types/referrals";
+import {formatDate} from "@/utils/referralUtils";
+import {BadgeDollarSign, Badge} from "lucide-react";
+
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { ReferralReward } from "@/types/referrals",
+import { formatDate } from "@/utils/referralUtils",
+import { BadgeDollarSign, Badge } from "lucide-react",
+
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RewardsCardProps {
   rewards: ReferralReward[];
   isLoading: boolean
@@ -59,29 +64,37 @@ if ( {) {
         </CardContent>;
       </Card>);
   }
-<<<<<<< HEAD
-  if (rewards.length === 0) {
-    return (
-      <Card>
-        <CardHeader>
-          <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
-            Your Rewards
-          </CardTitle>
-          <CardDescription>
-            Rewards earned from successful referrals
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <div className="flex flex-col items-center justify-center p-4 text-center">
-            <p className="text-muted-foreground">No rewards yet</p>
-            <p className="text-sm text-muted-foreground mt-1">
-              Refer users to earn rewards once they complete onboarding
-            </p>
-          </div>
-        </CardContent>
-      </Card>
+
 =======
+    );
+  }
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle className="flex items-center gap-2">
+          <BadgeDollarSign className="h-5 w-5" />
+          Your Rewards
+        </CardTitle>
+        <CardDescription>
+          Rewards earned from successful referrals
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {rewards.map((reward, index) => (
+            <div
+              key={reward.id}
+              className={`flex justify-between items-start ${
+                index !== rewards.length - 1 ? "border-b pb-3" : ""
+
+  )
+
+=======
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { ReferralReward } from "@/types/referrals",;
+import { formatDate } from "@/utils/referralUtils",;
+import { BadgeDollarSign, Badge } from "lucide-react",;
+
 interface RewardsCardProps {;
   rewards: ReferralReward[],;
   isLoading: boolean;
@@ -130,22 +143,7 @@ export function RewardsCard(): any ({ rewards, isLoading }: RewardsCardProps) {;
     );
   }
   return (
-<<<<<<< HEAD
-    <Card>
-      <CardHeader>
-        <CardTitle className="flex items-center gap-2">
-          <BadgeDollarSign className="h-5 w-5" />
-          Your Rewards
-        </CardTitle>
-        <CardDescription>
-          Rewards earned from successful referrals
-        </CardDescription>
-      </CardHeader>
-      <CardContent>
-        <div className="space-y-4">
-          {rewards.map((reward, index) => (
-            <div
-=======
+
   // Check condition
 if ( {) {
   $2
@@ -186,7 +184,7 @@ if ( {) {
         <div className="space - y-4">;
           {rewards.map ((reward, index) => (
             <div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               key={reward.id}
               className={`flex justify - between items - start ${
                 index !== rewards.length - 1 ? "border - b pb - 3" : "";
@@ -207,11 +205,7 @@ if ( {) {
                   Earned on {format_date (reward.created_at)}
                 </p>;
                 {reward.expires_at && (
-<<<<<<< HEAD
-                  <p className="text-xs text-muted-foreground">
-                    Expires on {formatDate(reward.expires_at)}
-                  </p>
-=======
+
     <Card>;
       <CardHeader>;
         <CardTitle className="flex items-center gap-2">;
@@ -248,32 +242,16 @@ if ( {) {
                   <p className="text-xs text-muted-foreground">;
                     Expires on {formatDate(reward && reward.expires_at)}
                   </p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 )}
               </div>;
             </div>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </CardContent>
-    </Card>
-  );
-}
-=======
+
         </div>;
       </CardContent>;
     </Card>;
   );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-                  <p className="text - xs text - muted - foreground">;
-                    Expires on {format_date (reward.expires_at)}
-                  </p>)}
-              </div>;
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,5 +1,34 @@
-<<<<<<< HEAD
 
+
+
+=======
+import React, { useEffect } from 'react',;
+import Head from 'next/head',;
+import Link from 'next/link',;
+import SignupForm from '@/components/auth/SignupForm',;
+import { AuthButtons } from '@/components/AuthButtons',;
+import { fireEvent } from '@/lib/analytics',;
+import { logInfo } from '@/utils/productionLogger',;
+import { useRouter } from 'next/router',;
+const RegisterPage = () => {
+  const router = useRouter(),
+
+  useEffect(() => {
+    fireEvent('signup_page_view')
+  }, []),
+
+  const handleSuccess = ({ email, emailVerificationRequired }: {
+    email: string,
+    emailVerificationRequired: boolean
+  }) => {
+    if (emailVerificationRequired) {
+      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
+    } else {
+      router.push('/auth/login?registrationSuccess=true')
+    }
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React, { useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,18 +37,7 @@ import { AuthButtons } from '@/components/AuthButtons';
 import { fireEvent } from '@/lib/analytics';
 import { logInfo } from '@/utils/productionLogger';
 import { useRouter } from 'next/router';
-const RegisterPage = () => {
-  const router = useRouter()
-  useEffect(() => {
-    fireEvent('signup_page_view')
-  }, [])
-  const handleSuccess = ({ email, emailVerificationRequired }: {
-    email: string
-    emailVerificationRequired: boolean
-  }) => {
-    if (emailVerificationRequired) {
-      router.push(`/verify-status?email=${encodeURIComponent(email)}`)
-=======
+
 import React, { useEffect } from 'react',
 import Head from 'next / head',
 import Link from 'next / link',
@@ -35,23 +53,31 @@ const RegisterPage = () =>: any {
   }, []),
   const handle_success = ({ email, emailVerificationRequired }: {
     email: string,
+=======
+
+const RegisterPage = () => {;
+  const router = useRouter();
+  useEffect(() => {;
+    fireEvent('signup_page_view');
+  }, []),;
+  const handleSuccess = ({ email, emailVerificationRequired }: {;
+    email: string;
+
     emailVerificationRequired: boolean;
   }) =>: any {
     // Check condition
 if ( {) {
   $2
 }
-      router.push (`/verify - status?email=${encodeURIComponent (email)}`);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    } else {
-<<<<<<< HEAD
-      router.push('/auth/login?registrationSuccess=true')
-=======
+
       router.push ('/auth / login?registration_success = true');
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     }
-<<<<<<< HEAD
-  }
+
+
+  },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <Head>
@@ -65,12 +91,7 @@ if ( {) {
               className="mx-auto h-12 w-auto"
               src="/logos/zion-logo.png"
               alt="Zion Tech"
-              width={48}
-              height={48}
-              onError={(e) => {
-                const target = e.currentTarget as HTMLImageElement
-                target.style.display = 'none'
-=======
+
   },
   return (
     <>;
@@ -90,7 +111,7 @@ if ( {) {
               on_error={(e) => {
                 const target = e.current_target as HTMLImageElement,
                 target.style.display = 'none';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               }}
             />;
             <h2 className="mt - 6 text - center text - 3xl font - extrabold text - gray - 900">;
@@ -98,7 +119,42 @@ if ( {) {
             </h2>;
             <p className="mt - 2 text - center text - sm text - gray - 600">;
               Or{' '}
-<<<<<<< HEAD
+
+
+              width={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              height={48  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              onError={(e) => {;
+                const target = e.currentTarget as HTMLImageElement;
+                target.style.display = 'none';
+              }  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+            />
+            <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
+              Create your account
+            </h2>
+            <p className="mt-2 text-center text-sm text-gray-600">
+
+              Or{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link
                 href="/auth/login"
                 className="font-medium text-blue-600 hover:text-blue-500 underline"
@@ -108,7 +164,16 @@ if ( {) {
             </p>
           </div>
           <SignupForm onSuccess={handleSuccess} />
-          {/* Social signup options */}
+
+
+          {/* Social signup options */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="mt-6">
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -122,7 +187,7 @@ if ( {) {
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-gray-500">
-=======
+
               <Link;
                 href="/auth / login";
                 className="font - medium text - blue - 600 hover:text - blue - 500 underline";
@@ -146,13 +211,34 @@ if ( {) {
           </div>;
           <div className="text - center mt - 4">;
             <p className="text - xs text - gray - 500">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               By creating an account, you agree to our{' '}
               <Link href="/legal / terms" className="text - blue - 600 hover:text - blue - 500">;
                 Terms of Service;
               </Link>{' '}
               and{' '}
-<<<<<<< HEAD
+
+
+              By creating an account, you agree to our{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              <Link href="/legal/terms" className="text-blue-600 hover:text-blue-500">
+                Terms of Service
+              </Link>{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+              and{' '  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Link href="/legal/privacy" className="text-blue-600 hover: text-blue-500">
                 Privacy Policy
               </Link>
@@ -162,15 +248,10 @@ if ( {) {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-=======
+
 };
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 export default RegisterPage;
 
 =======
@@ -186,3 +267,8 @@ export default RegisterPage;
 export default RegisterPage,
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+},
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

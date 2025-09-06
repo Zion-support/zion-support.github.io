@@ -1,32 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React, { useState, useEffect } from 'react'
-import {
-  FormField
-  FormItem
-  FormLabel
-  FormControl
-  FormMessage
-} from '@/components/ui/form'
-import { Input } from '@/components/ui/input'
-import { Textarea } from '@/components/ui/textarea'
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
-import { cn } from '@/lib/utils'
 
-import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
-import { Button } from '@/components/ui/button';
-interface ValidationRule {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import React, { useState, useEffect } from 'react';
 import {;
   FormField,;
@@ -54,20 +27,30 @@ interface ValidationRule {;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-<<<<<<< HEAD
-  custom?: (value: any) => string | null
-interface ValidatedFormFieldProps {
-  name: string;
-  label: string;
-  type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
-  placeholder?: string;
+
+
+  name: string
+  label: string
+  type?:
+    | 'text'
+    | 'email'
+    | 'password'
+    | 'tel'
+    | 'url'
+    | 'number'
+    | 'textarea'
+    | 'select'
+    | 'checkbox'
+  placeholder?: string
   description?: string;
   validation?: ValidationRule;
-  options?: { value: string, label: string }[],
-  form: any, // React Hook Form control
-  className?: string;
-  disabled?: boolean;
-  showValidIcon?: boolean;
+  options?: { value: string; label: string }[]
+  form: any; // React Hook Form control
+  className?: string
+  disabled?: boolean
+  showValidIcon?: boolean
+
+
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -197,44 +180,17 @@ if ( {) {
   $2
 }
     }
-<<<<<<< HEAD
-  }, [fieldValue, isTouched, debounceMs])
-  const validateField = (value: any): string | null => {
-    if (
-      validation.required &&
-      (!value |(typeof value === 'string' && value.trim() === ''))
-=======
+
   }, [field_value, is_touched, debounce_ms]);
   const validate_field = (value: any): string | null => {
     if (=== ''))) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     ) {
       return `${label} is required`;
     }
-<<<<<<< HEAD
-    if (typeof value === 'string') {
-      if (validation.minLength && value.length < validation.minLength) {
-        return `${label} must be at least ${validation.minLength} characters`
-      }
-      if (validation.maxLength && value.length > validation.maxLength) {
-        return `${label} must not exceed ${validation.maxLength} characters`
-      }
-      if (validation.pattern && !validation.pattern.test(value)) {
-        return `${label} format is invalid`
-      }
-    }
-    if (validation.custom) {
-      return validation.custom(value)
-    }
-    return null
-  }
-  const getValidationIcon = () => {
-    if (!showValidIcon |!isTouched |validationState === 'idle') return null
-    switch (validationState) {
-      case 'validating':
-=======
+
     // Check condition
 if ( {) {
   $2
@@ -272,7 +228,7 @@ if (return null) {
 }
     switch (validation_state) {
       case 'validating':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         return (
           <div className='animate - spin h - 4 w - 4 border - 2 border - primary border - t-transparent rounded - full' />);
       case 'valid':;
@@ -300,9 +256,23 @@ if (return '') {
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
-<<<<<<< HEAD
-      case 'textarea':
+
 =======
+
+
+=======
+import React, { useState, useEffect } from 'react';
+
+import { Checkbox } from '@/components/ui/checkbox';
+import { cn } from '@/lib/utils';
+import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+interface ValidationRule {;
+  required?: boolean,;
+  minLength?: number,;
+  maxLength?: number,;
+  pattern?: RegExp,;
+
   custom?: (value: any) => string | null;
 interface ValidatedFormFieldProps {;
   name: string;
@@ -403,86 +373,70 @@ export function ValidatedFormField(): any ({;
       return validation && validation.custom(value);
     }
 
-    return null;
-  };
 
-  const getValidationIcon = () => {;
-    if (!showValidIcon || !isTouched || validationState === 'idle') return null;
+    return null
+  },
 
-    switch (validationState) {;
-      case 'validating':;
-        return (
-          <div className='animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full' />;
-        );
-      case 'valid':;
-        return <CheckCircle className='h-4 w-4 text-green-500' />;
-      case 'invalid':;
-        return <AlertCircle className='h-4 w-4 text-red-500' />;
-      default:;
-        return null;
-    }
-  };
 
-  const getFieldClasses = () => {;
-    if (!isTouched) return '';
 
-    switch (validationState) {;
-      case 'valid':;
-        return 'border-green-500 focus:border-green-500 focus:ring-green-500/20';
-      case 'invalid':;
-        return 'border-red-500 focus:border-red-500 focus:ring-red-500/20';
-      default:;
-        return '';
-    }
-  };
 
-  const renderField = () => {;
-    const baseClasses = cn(getFieldClasses(), className);
+  const getValidationIcon = () => {
 
-    switch (type) {;
-      case 'textarea':;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+    switch (type) {
+      case 'textarea':
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         return (
           <div className='relative'>;
             <Textarea
-              disabled = {disabled,}
-              className = {baseClasses,}
-              rows = {4,}
-<<<<<<< HEAD
+
+
+              disabled={disabled}
+              className={baseClasses}
+              rows={4}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
-        )
-      case 'select':
-=======
+
               {...form && form.register(name)}
             />;
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>;
           </div>;
         );
+=======
+
+        ),
+
 
       case 'select':;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         return (
-          <div className='relative'>;
-            <Select
-              onValueChange={value => form && form.setValue(name, value)}
-              disabled={disabled}
-            >              <SelectTrigger className={baseClasses}>;
-                <SelectValue placeholder={placeholder} />;
-              </SelectTrigger>;
-              <SelectContent>;
-                {options && options.map(option => (                  <SelectItem key={option && option.value} value={option && option.value}>;
-                    {option && option.label}
-                  </SelectItem>;
+
+          <div className="relative">
+            <Select onValueChange={(value) => form.setValue(name, value)} disabled={disabled}>
+              <SelectTrigger className={baseClasses}>
+                <SelectValue placeholder={placeholder} />
+              </SelectTrigger>
+              <SelectContent>
+                {options.map((option) => (
+                  <SelectItem key={option.value} value={option.value}>
+
+
+                    {option.label}
+                  </SelectItem>
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 ))}
-<<<<<<< HEAD
-              </SelectContent>
-            </Select>
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>
-          </div>
-        )
+
+
+        ),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case 'checkbox':
 =======
               </SelectContent>;
@@ -503,13 +457,23 @@ export function ValidatedFormField(): any ({;
             />;
             <label
               htmlFor={name}
-              className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'>;
+
+
+              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {label}
             </label>;
             {getValidationIcon()}
-<<<<<<< HEAD
-          </div>
-        )
+
+
+        ),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       case 'password':
 =======
           </div>;
@@ -520,30 +484,41 @@ export function ValidatedFormField(): any ({;
         return (
           <div className='relative'>;
             <Input
-              type = {showPassword ? 'text' : 'password',}
-              disabled = {disabled,}
-              className = {cn(baseClasses, 'pr-20'),}
-              {...form && form.register(name)}
-            />;
-            <div className='absolute inset-y-0 right-0 flex items-center gap-1 pr-3'>;
+
+
+              type={showPassword ? 'text' : 'password'}
+              disabled={disabled}
+              className={cn(baseClasses, 'pr-20')}
+
+
+              {...form.register(name)}
+            />
+            <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
-                type='button'
-                variant='ghost'
-                size='sm'
-                className='h-7 w-7 p-0'
+
+                type="button"
+                variant="ghost"
+                size="sm"
+                className="h-7 w-7 p-0"
                 onClick={() => setShowPassword(!showPassword)}
-                aria-label={showPassword ? 'Hide password' : 'Show password'}              >;
-                {showPassword ? (;
-                  <EyeOff className='h-4 w-4' />;
-                ) : (;
-                  <Eye className='h-4 w-4' />;
+                aria-label={showPassword ? 'Hide password' : 'Show password'}
+              >
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                {showPassword ? (
+                  <EyeOff className="h-4 w-4" />
+                ) : (
+                  <Eye className="h-4 w-4" />
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
-<<<<<<< HEAD
-              </Button>
-            </div>
-          </div>
-        )
+
+
+        ),
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       default:
 =======
               </Button>;
@@ -556,29 +531,17 @@ export function ValidatedFormField(): any ({;
         return (
           <div className='relative'>;
             <Input
-              type = {type,}
-              disabled = {disabled,}
-              className = {baseClasses,}
-              {...form && form.register(name)}
-            />;
-            <div className='absolute inset-y-0 right-0 flex items-center pr-3'>;
-              {getValidationIcon()}
-<<<<<<< HEAD
-            </div>
-          </div>
-        )
-    }
-  }
-  if (type === 'checkbox') {
-        render={() => (
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>
-            <FormControl>{renderField()}</FormControl>            {(fieldError |description) && (
-              <div className='space-y-1'>
-                {fieldError && (
-                  <FormMessage className='text-sm text-red-500'>
-                    {fieldError.message}
-                  </FormMessage>
+
 =======
+
+              type={type}
+              disabled={disabled}
+              className={baseClasses}
+              {...form.register(name)}
+            />
+            <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+              {getValidationIcon()}
+
             </div>;
           </div>;
         );
@@ -587,27 +550,36 @@ export function ValidatedFormField(): any ({;
 
   if (type === 'checkbox') {;
 
-        render={() => (;
-          <FormItem className='flex flex-row items-start space-x-3 space-y-0'>;
-            <FormControl>{renderField()}</FormControl>            {(fieldError || description) && (;
-              <div className='space-y-1'>;
-                {fieldError && (;
-                  <FormMessage className='text-sm text-red-500'>;
-                    {fieldError && fieldError.message}
-                  </FormMessage>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+    return (;
+      <FormField;
+        control={form.control}
+        name={name}
+        render={() => (
+          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
+            <FormControl>
+              {renderField()}
+            </FormControl>
+            {(fieldError || description) && (
+              <div className="space-y-1">
+                {fieldError && (
+                  <FormMessage className="text-sm text-red-500">
+
+
+                    {fieldError.message}
+                  </FormMessage>
                 )}
-                {description && !fieldError && (;
-                  <p className='text-sm text-muted-foreground'>{description}</p>;
+                {description && !fieldError && (
+
+                  <p className="text-sm text-muted-foreground">{description}</p>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>;
             )}
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-    )
-=======
+
       case 'textarea':;
         return (
           <div className='relative'>;
@@ -708,25 +680,17 @@ if ( {) {
               </div>)}
           </FormItem>)}
       />);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
       render={() => (
         <FormItem>;
           <FormLabel className='text - sm font - medium'>;
             {label}
             {validation.required && (
-<<<<<<< HEAD
-              <span className='text-red-500 ml-1'>*</span>
-            )}          </FormLabel>
-          <FormControl>{renderField()}</FormControl>
-          {(fieldError |description) && (
-            <div className='space-y-1'>
-              {fieldError && (
-                <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
-                  <AlertCircle className='h-3 w-3' />
-                  {fieldError.message}
-                </FormMessage>
+
 =======
+
+
       />;
     );
   }
@@ -736,70 +700,34 @@ if ( {) {
         <FormItem>;
           <FormLabel className='text-sm font-medium'>;
             {label}
-            {validation && validation.required && (;
-              <span className='text-red-500 ml-1'>*</span>;
-            )}          </FormLabel>;
-          <FormControl>{renderField()}</FormControl>;
-          {(fieldError || description) && (;
-            <div className='space-y-1'>;
-              {fieldError && (;
-                <FormMessage className='text-sm text-red-500 flex items-center gap-1'>;
-                  <AlertCircle className='h-3 w-3' />;
-                  {fieldError && fieldError.message}
-                </FormMessage>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+            {validation.required && <span className="text-red-500 ml-1">*</span>}
+          </FormLabel>
+          <FormControl>
+            {renderField()}
+          </FormControl>
+          {(fieldError || description) && (
+            <div className="space-y-1">
+              {fieldError && (
+                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
+                  <AlertCircle className="h-3 w-3" />
+
+
+                  {fieldError.message}
+                </FormMessage>
               )}
-              {description && !fieldError && (;
-                <p className='text-sm text-muted-foreground'>{description}</p>;
+              {description && !fieldError && (
+
+                <p className="text-sm text-muted-foreground">{description}</p>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </div>;
           )}
         </FormItem>;
       )}
-<<<<<<< HEAD
-    />
-  )
-// Validation helpers for common patterns
-export const validationPatterns = {
-  email: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2}$/
-  phone: /^[\+]?[1-9][\d]{0,15}$/
-  url: /^https?:\/\/.+/
-  strongPassword:
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/
-}
-// Pre-configured validation rules
-export const commonValidations = {
-  required: { required: true }
-  email: {
-    required: true
-    pattern: validationPatterns.email
-    custom: (value: string,) => {
-      if (value && !validationPatterns.email.test(value)) {
-        return 'Please enter a valid email address'
-      }
-      return null
-    }
-  }
-  password: {
-    required: true
-    minLength: 8
-    custom: (value: string,) => {
-      if (value && !validationPatterns.strongPassword.test(value)) {
-        return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character'
-      }
-      return null
-    }
-  }
-  phone: {
-    pattern: validationPatterns.phone
-    custom: (value: string,) => {
-      if (value && !validationPatterns.phone.test(value)) {
-        return 'Please enter a valid phone number'
-      }
-      return null
-    }
-  }
-=======
+
               <span className='text - red - 500 ml - 1'>*</span>)}          </FormLabel>;
           <FormControl>{render_field ()}</FormControl>;
           {(field_error || description) && (
@@ -860,13 +788,17 @@ export const common_validations = {
       return null;
     },
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
     }
   }}
     }
-<<<<<<< HEAD
-  }}
+
+
+  }},
+    };
+  }};
+
 
 =======
     />;
@@ -911,16 +843,8 @@ export const commonValidations = {;
         return 'Please enter a valid phone number';
       }
       return null;
-    },;
-  },;
-};
-    };
-  }},;
-    };
-  }},;
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -928,3 +852,10 @@ export const commonValidations = {;
   }},
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+    }
+  }};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

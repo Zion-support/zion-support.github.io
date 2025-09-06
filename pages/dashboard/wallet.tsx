@@ -1,16 +1,27 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
 const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false })
 
+=======
+
+import React from "react",;
+import EnhancedLayout from "../../components/layout/EnhancedLayout",;
+import dynamic from "next/dynamic",;
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+
+
+=======
+import React from "react",
+import EnhancedLayout from "../../components/layout/EnhancedLayout",
+import dynamic from "next/dynamic",
+const WalletPanel = dynamic(() => import("../../components/wallet/WalletPanel"), { ssr: false }),
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function WalletPage() {
   return (
     <EnhancedLayout title="Your ZION$ Wallet">
@@ -18,14 +29,10 @@ export default function WalletPage() {
         <WalletPanel />
       </div>
     </EnhancedLayout>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from './react';,
 import EnhancedLayout from "../../components / layout / EnhancedLayout",
@@ -44,3 +51,7 @@ function WalletPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

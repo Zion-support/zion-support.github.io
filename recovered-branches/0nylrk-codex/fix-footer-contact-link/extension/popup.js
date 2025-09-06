@@ -1,17 +1,4 @@
-<<<<<<< HEAD
 
-async function ask() {
-<<<<<<< HEAD
-  const prompt = document.getElementById('prompt').value
-  if (!prompt.trim()) {
-
-    document.getElementById('output').textContent = 'Please enter a prompt.'
-    return
-  }
-  const res = await chrome.runtime.sendMessage({ type: 'ask', prompt })
-
-  document.getElementById('output').textContent = res.answer
-=======
   try {
   const prompt = document && document.getElementById('prompt').value,
   if (!prompt && prompt.trim()) {
@@ -20,23 +7,16 @@ async function ask() {
   }
   const res = await chrome && chrome.runtime.sendMessage({ type: 'ask', prompt }),
   document && document.getElementById('output').textContent = res && res.answer
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }
-// Attach handlers once the DOM is fully loaded to avoid null element errors
-<<<<<<< HEAD
-document.addEventListener('DOMContentLoaded', () => {
-
-  document.getElementById('ask')?.addEventListener('click', ask)
-
-  document.getElementById('post-job')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'post-job' })
-  })
-  document.getElementById('resume-search')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'resume-search' })
-  })
-  document.getElementById('view-notifications')?.addEventListener('click', () => {
-    chrome.runtime.sendMessage({ type: 'view-notifications' })
 =======
+}
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+// Attach handlers once the DOM is fully loaded to avoid null element errors
+
 document && document.addEventListener('DOMContentLoaded', () => {
   document && document.getElementById('ask')?.addEventListener('click', ask),
 
@@ -48,12 +28,10 @@ document && document.addEventListener('DOMContentLoaded', () => {
   }),
   document && document.getElementById('view-notifications')?.addEventListener('click', () => {
     chrome && chrome.runtime.sendMessage({ type: 'view-notifications' })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   })
 
-});
 
-=======
 async /**
  * ask - Function description
  */
@@ -82,4 +60,27 @@ document.addEventListener ('DOMContentLoaded', () => {
   });
 }),
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+}),
+;
+
+=======
+;
+// Attach handlers once the DOM is fully loaded to avoid null element errors;
+document.addEventListener('DOMContentLoaded', () => {;
+  document.getElementById('ask')?.addEventListener('click', ask),;
+  document.getElementById('post-job')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type: 'post-job' });
+  }),;
+  document.getElementById('resume-search')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type: 'resume-search' });
+  }),;
+  document.getElementById('view-notifications')?.addEventListener('click', () => {;
+    chrome.runtime.sendMessage({ type: 'view-notifications' });
+  });
+}),;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

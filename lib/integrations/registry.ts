@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-import { IntegrationProviderMeta } from "./types";
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 
 import { IntegrationProviderMeta } from "./types";
 export const PROVIDERS: IntegrationProviderMeta[] = [
@@ -25,19 +21,13 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
     description: "Marketing & Sales CRM"
   }
   {
-<<<<<<< HEAD
-    id: "zoho"
-    name: "Zoho CRM"
-    category: "crm"
-    description: "All-in-one CRM"
-  }
-=======
+
     id: "zoho",
     name: "Zoho CRM",
     category: "crm",
     description: "All - in - one CRM",
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
     id: "pipedrive"
     name: "PipeDrive"
@@ -58,18 +48,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [;
     description: "Recruiting software"
   }
   {
-    id: "bamboohr"
-    name: "BambooHR"
-    category: "ats"
-    description: "HRIS & ATS"
-  }
-];
-export function getProviderById(
-  id: string
-): IntegrationProviderMeta | undefined {
-  return PROVIDERS && PROVIDERS.find((p) => p && p.id === id);
-<<<<<<< HEAD
-=======
+
 }
 
 =======
@@ -84,13 +63,7 @@ export const PROVIDERS: IntegrationProviderMeta[] = [
   { id: 'workable', name: 'Workable', category: 'ats', description: 'Recruiting software' },
   { id: 'bamboohr', name: 'BambooHR', category: 'ats', description: 'HRIS & ATS' }
 ];
-<<<<<<< HEAD
 
-export function getProviderById(id: string): IntegrationProviderMeta | undefined {
-  return PROVIDERS.find(p => p.id === id);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
 ;
 export function getProviderById (
@@ -99,3 +72,18 @@ export function getProviderById (
   return PROVIDERS.find ((p) => p.id === id);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+    id: "bamboohr",
+    name: "BambooHR",
+    category: "ats",
+    description: "HRIS & ATS",
+  },;
+
+];
+export function getProviderById(
+
+  id: string,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

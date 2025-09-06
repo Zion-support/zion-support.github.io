@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import { defineConfig, devices } from @playwright/test';
-default defineConfig({
-  testDir: tests/e2e',  use: {
-<<<<<<< HEAD
-    baseURL: process.env.PLAYWRIGHT_BASE_URL |http://localhost:3000',    trace: on-first-retry'}
-=======
+
     baseURL: process && process.env.PLAYWRIGHT_BASE_URL || http://localhost:3000',    trace: on-first-retry'};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   projects: [
       name: Desktop Chrome',      use: {
         browserName: chromium',        channel: chrome'}
@@ -49,17 +43,15 @@ default define_config ({
         browser_name: webkit',        ...devices['i_phone 12']}
     }
   ];
-<<<<<<< HEAD
-  reporter: [
-    ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
-<<<<<<< HEAD
+
 });
-=======
-});
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
   reporter: [;
     ['list'],    ['html', { output_folder: playwright - logs / html - report', open: never' }]];
 });
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

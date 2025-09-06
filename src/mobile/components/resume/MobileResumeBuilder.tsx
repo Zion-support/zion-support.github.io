@@ -1,54 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button",
-import { Card, CardContent } from "@/components/ui/card",
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import {
-<<<<<<< HEAD
 
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue} from "@/components/ui/select"
-import { Label } from "@/components/ui/label"
-import { ChevronRight, Plus, Zap, Trash2 } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { ChevronRight, Zap, Star } from 'lucide-react'
-type ResumeStep = "basics" | "experience" | "education" | "skills"
-import React, { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Textarea } from "@/components/ui/textarea"
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue} from "@/components/ui/select"
-type ResumeStep = "basics" | "experience" | "education" | "skills"
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics")
-  const renderStepContent = () => {
-    switch (currentStep) {
-      case "basics": return <BasicsStep />
-      case "experience":
-        return <ExperienceStep />
-      case "education":
-        return <EducationStep />
-      case "skills":
-        return <SkillsStep />
-      default:
-        return <BasicsStep />
-    }
-  }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import {;
   Select;
   SelectContent;
@@ -100,39 +51,58 @@ export function MobileResumeBuilder() {;
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
         <Button
-          variant = {currentStep === "basics" ? "default" : "outline",}
+
+
+          variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
-          onClick = {(,) => setCurrentStep("basics"),}
-        >;
-          Basics;
-        </Button>;
+          onClick={() => setCurrentStep("basics")}
+
+
+        >
+          Basics
+        </Button>
         <Button
-          variant = {currentStep === "experience" ? "default" : "outline",}
+
+          variant={currentStep === "experience" ? "default" : "outline"}
           className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("experience"),}
-        >;
-          Experience;
-        </Button>;
+          onClick={() => setCurrentStep("experience")}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          Experience
+        </Button>
         <Button
-          variant = {currentStep === "education" ? "default" : "outline",}
+
+          variant={currentStep === "education" ? "default" : "outline"}
           className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("education"),}
-        >;
-          Education;
-        </Button>;
+          onClick={() => setCurrentStep("education")}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+        >
+          Education
+        </Button>
         <Button
-          variant = {currentStep === "skills" ? "default" : "outline",}
+
+          variant={currentStep === "skills" ? "default" : "outline"}
           className="flex-1 rounded-full"
-          onClick = {() => setCurrentStep("skills"),}
-<<<<<<< HEAD
+          onClick={() => setCurrentStep("skills")}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         >
           Skills
         </Button>
       </div>
       {renderStepContent()}
+
+
+      
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
       </Button>
@@ -165,10 +135,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-=======
+
         >;
           Skills;
         </Button>;
@@ -216,7 +183,7 @@ function BasicsStep() {;
           <Textarea
             id="summary" 
             placeholder="Write a brief summary about yourself" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             rows = {4,}
           />;
         </div>;
@@ -224,7 +191,15 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
+
+
+          <Textarea 
+            id="summary" 
+            placeholder="Write a brief summary about yourself" 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
   const addExperience = () => {
@@ -233,6 +208,14 @@ function ExperienceStep() {
   }
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
+
+
+  };
+};
+  );
+};
+
+
 =======
   Select;
   SelectContent;
@@ -399,16 +382,18 @@ function ExperienceStep() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-  )
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 
 =======
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-import Link from "next/link";
-export const metadata = {title: "Documentation - Zion Tech Group | Technical Guides & Resources";
-  description: "Access comprehensive technical documentation, guides, and resources for Zion Tech Group's products and services. Find API docs, tutorials, and best practices.";
-  keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"}
-export default function DocumentationPage() {return (;
-=======
+
 import Link from "next/link",;
 export const metadata = {;
   title: "Documentation - Zion Tech Group | Technical Guides & Resources",;
@@ -12,7 +6,7 @@ export const metadata = {;
   keywords: "documentation, technical guides, API docs, tutorials, Zion Tech Group, developer resources, technical resources"};
 export default function DocumentationPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
     <div className="min-h-screen">;
 =======
 import Link from './next / link';,

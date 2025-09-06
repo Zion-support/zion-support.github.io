@@ -1,64 +1,8 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ApiDocsSpec, Visibility } from '../../data/api-docs/types';
-=======
-import {ApiDocsSpec, Visibility} from '../../data / api - docs / types';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-interface SidebarProps {
-=======
-import {ApiDocsSpec, Visibility} from '../../data/api-docs/types';
 
-interface SidebarProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   spec: ApiDocsSpec;
-<<<<<<< HEAD
-  activeEndpointId?: string;
-  onSelectEndpoint: (endpointId: string) => void;
-  selectedVersion: string;
-  onChangeVersion: (v: string) => void;
-  visibilityFilter: Visibility | 'all';
 
-  onChangeVisibility: (v: Visibility | 'all') => void;
-
-<<<<<<< HEAD
-export default function Sidebar({
-  spec
-  activeEndpointId
-  onSelectEndpoint
-  selectedVersion
-  onChangeVersion
-  visibilityFilter
-  onChangeVisibility
-}: SidebarProps) {
-=======
 export default function Sidebar(): any ({;
   spec,;
   activeEndpointId,;
@@ -68,7 +12,7 @@ export default function Sidebar(): any ({;
   visibilityFilter,;
   onChangeVisibility,;
 }: SidebarProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>;
       <div>;
@@ -82,9 +26,7 @@ export default function Sidebar(): any ({;
               className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}
             >;
               {v}
-<<<<<<< HEAD
-            </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>
-=======
+
 interface SidebarProps {
   spec: ApiDocsSpec,
   activeEndpointId?: string;
@@ -100,47 +42,18 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
     <aside className="w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary">
       <div>
         <div className="text-lg font-semibold">Zion OS API</div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
         <div className="text-xs text-high-contrast-muted">Version</div>
         <div className="flex gap-2 mt-2 flex-wrap">
           {spec.versions.map((v) => (
             <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
-<<<<<<< HEAD
-=======
+
           ))}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
         </div>
       </div>
       <div>
-<<<<<<< HEAD
-        <div className='text-xs text-high-contrast-muted mb-1'>
-          Publish Mode
-        </div>
-        <select
-          className='w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm'
-          value={visibilityFilter}
-          onChange={e => onChangeVisibility(e.target.value as any)}
-        >
-          <option value='all'>All</option>
-          <option value='public'>Public</option>
-          <option value='partner'>Partner-only</option>
-          <option value='internal'>Internal</option>
-        </select>
-      </div>
-      <nav className='space-y-3'>
-        {spec.sections.map(section => (
-          <div key={section.id}>
-            <div className='text-sm font-medium mb-1'>{section.title}</div>
-            <ul className='space-y-1'>
-              {section.endpoints
-                .filter(e => e.versions.includes(selectedVersion))
-                .filter(e =>
-                  visibilityFilter === 'all'
-                    ? true
-                    : e.visibility === visibilityFilter
-                )
-                .map(e => (                  <li key={e.id}>        </select>
-=======
+
         <div className="text-xs text-high-contrast-muted mb-1">Publish Mode</div>
         <select className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={visibilityFilter} onChange={(e) => onChangeVisibility(e.target.value as any)}>
           <option value="all">All</option>
@@ -148,7 +61,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
           <option value="partner">Partner-only</option>
           <option value="internal">Internal</option>
         </select>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       </div>
       <nav className="space-y-3">
         {spec.sections.map((section) => (
@@ -212,19 +125,7 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                   <li key={e && e.id}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <button
-<<<<<<< HEAD
-                      className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e && e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
-                      onClick={() => onSelectEndpoint(e && e.id)}
-                    >;
-                      <span className='mr-2 inline-block w-10 text-center text-[10px] opacity-80'>;
-                        {e && e.method}
-                      </span>;
-                      <span className='font-mono'>{e && e.path}</span>                    </button>                      <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e && e.method}</span>;
-                      <span className="font-mono">{e && e.path}</span>;
-                    </button>;
-                  </li>;
-<<<<<<< HEAD
-=======
+
 =======
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e.id)}
@@ -233,20 +134,15 @@ export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, sele
                       <span className="font-mono">{e.path}</span>
                     </button>
                   </li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 ))}
             </ul>;
           </div>;
         ))}
-      </nav>;
-    </aside>;
-  );
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
   onSelectEndpoint: (endpoint_id: string) => void;
   selected_version: string;
@@ -333,3 +229,11 @@ function Sidebar() {
     </aside>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+      </nav>
+
+    </aside>
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,19 +1,31 @@
-<<<<<<< HEAD
 
-import React from 'react';
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
-export default function AIVideoEditingPage() {
-<<<<<<< HEAD
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
-  if (!service) return null
-=======
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
   if (!service) return null;
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+
+=======
+
+import React from 'react',;
+import Head from 'next/head',;
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react',;
+import Layout from '../components/layout/Layout',;
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services',;
+
+=======
+import React from 'react'
+import Head from 'next/head'
+import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react',
+import Layout from '../components/layout/Layout'
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services'
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+export default function AIVideoEditingPage() {
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'))
+  if (!service) return null,
+>>>>>>> fe9f06f7950cff0c8d855f93e475fc9658604231
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Layout>
       <Head>
@@ -34,7 +46,16 @@ export default function AIVideoEditingPage() {
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {service.features.slice(0, 12).map((feat, i) => (
                   <li key={i} className="flex items-start space-x-3 text-slate-200 w-5 h-5 text-amber-400 mt-0.5"><Check /><span>{feat}</span></li>
-                ))}
+
+
+                ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-amber-500/30 p-6 h-fit">
@@ -45,7 +66,12 @@ export default function AIVideoEditingPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Create Your First Cut<ArrowRight /></a>
+
+
+              <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Create Your First Cut<ArrowRight /></Link>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-amber-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
@@ -56,14 +82,10 @@ export default function AIVideoEditingPage() {
         </div>
       </div>
     </Layout>
-  )
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react',
 import Head from 'next / head',
@@ -123,3 +145,7 @@ if (return null, ) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

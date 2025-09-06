@@ -1,20 +1,33 @@
-<<<<<<< HEAD
 
-import { Resume } from "@/types/resume";
-import {
-  PreviewHeader
-  ResumeBasicInfoSection
-  WorkExperienceSection
-  EducationSection
-  SkillsSection
-  CertificationsSection
-} from "./preview";
 
-<<<<<<< HEAD
-interface PreviewResumeProps {
+import {Resume} from '@/types/resume';
+import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
+
+
+
+
+
+
+=======
+import { Resume } from '@/types/resume',;
+import {;
+  PreviewHeader,;
+  ResumeBasicInfoSection,;
+  WorkExperienceSection,;
+  EducationSection,;
+  SkillsSection,;
+  CertificationsSection;
+} from './preview',;
+interface PreviewResumeProps {;
   resume: Resume;
-  onBack: () => void
+  onBack: () => void;
+
+
+
 }
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
   return (
     <div className="space-y-6">
@@ -28,9 +41,7 @@ export function PreviewResume({ resume, onBack }: PreviewResumeProps) {
         <CertificationsSection certifications={resume.certifications} />
       </div>
     </div>
-  );
-}
-=======
+
 interface PreviewResumeProps {;
   resume: Resume,;
   onBack: () => void;
@@ -52,7 +63,7 @@ export function PreviewResume(): any ({ resume, onBack }: PreviewResumeProps) {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Resume  } from '@/types / resume';
 import {
@@ -86,3 +97,9 @@ function PreviewResume() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

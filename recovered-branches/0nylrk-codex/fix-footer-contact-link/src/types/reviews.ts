@@ -1,12 +1,13 @@
-<<<<<<< HEAD
 
-
-export type ReviewStatus = 'pending' | 'approved' | 'rejected';
-=======
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export interface Review {
+=======
+
+export interface Review {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   project_id: string;
   reviewer_id: string;
@@ -24,27 +25,25 @@ export interface Review {
   is_visible: boolean;
   report_count: number;
   reviewer_profile?: {
-<<<<<<< HEAD
-    display_name: string
-    avatar_url?: string
-=======
+
     display_name: string,
     avatar_url?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
 }
-export interface ReviewReport {
+
+
+
+export interface ReviewReport {;
+
+
   id: string;
   review_id: string;
   reporter_id: string;
   reason: string;
   status: 'pending' | 'resolved' | 'dismissed';
-<<<<<<< HEAD
-  created_at: string
 
-  resolved_at?: string
-=======
   created_at: string,
   resolved_at?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

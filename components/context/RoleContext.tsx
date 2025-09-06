@@ -1,20 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React, {
-<<<<<<< HEAD
-  createContext
-  useContext
-  useEffect
-  useMemo
-  useState;
-} from 'react';
-export type UserRole = 'client' | 'talent';
-type RoleContextValue = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import React, {;
   createContext,;
   useContext,;
@@ -29,9 +14,12 @@ type RoleContextValue = {;
   role: UserRole;
   setRole: (role: UserRole) => void;}
 const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-<<<<<<< HEAD
+
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
-  children
+
+  children,;
+
+
 }) => {  const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
 =======
@@ -64,33 +52,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 export type UserRole = 'client' | 'talent';
 ;
 type RoleContextValue = {
-<<<<<<< HEAD
-  role: UserRole,
-  setRole: (role: UserRole) => void
-};
 
-const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-
-export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [role, setRole] = useState<UserRole>('client');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-
-export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({;
-  children,;
-}) => {  const [role, setRole] = useState<UserRole>('client');
-
-  useEffect(() => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    try {import React, { createContext, useContext, useEffect, useMemo, useState } from 'react';
-export type UserRole = 'client' | 'talent';
-<<<<<<< HEAD
-type RoleContextValue = {
-  role: UserRole;
-  setRole: (role: UserRole) => void;  role: UserRole
-  setRole: (role: UserRole) => void
-}
-const RoleContext = createContext<RoleContextValue | undefined>(undefined);
-=======
   role: UserRole;
   set_role: (role: UserRole) => void;  role: UserRole,
   set_role: (role: UserRole) => void;
@@ -98,31 +60,28 @@ const RoleContext = createContext<RoleContextValue | undefined>(undefined);
 ;
 const RoleContext = create_context < RoleContextValue | undefined>(undefined);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
-  children
-}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-<<<<<<< HEAD
+
+
+  children,
+}) => {export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {;
+
   const [role, setRole] = useState<UserRole>('client');
   useEffect(() => {
     try {
-<<<<<<< HEAD
-      const saved =
-        typeof window !== 'undefined'
-          ? window.localStorage.getItem('zion_user_role')
-          : null;
-      if (saved === 'client' |saved === 'talent') {
-        setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' |saved === 'talent') {
-        setRole(saved)
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch {}
   }, []);
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem('zion_user_role', role);      }        window.localStorage.setItem('zion_user_role', role)
-=======
+
 
 type RoleContextValue = {;
   role: UserRole;
@@ -147,68 +106,36 @@ export const RoleProvider: React.FC<{ children: React && React.ReactNode }> = ({
         setRole(saved);      }      const saved = typeof window !== 'undefined' ? window && window.localStorage.getItem('zion_user_role') : null;
       if (saved === 'client' || saved === 'talent') {;
         setRole(saved);
-<<<<<<< HEAD
-=======
-=======
-      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
-      if (saved === 'client' || saved === 'talent') {
-        setRole(saved)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       }
     } catch {}
   }, []);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  useEffect(() => {;
-    try {;
-      if (typeof window !== 'undefined') {;
-        window && window.localStorage.setItem('zion_user_role', role);      }        window && window.localStorage.setItem('zion_user_role', role);
-<<<<<<< HEAD
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-  useEffect(() => {
-    try {
-      if (typeof window !== 'undefined') {
-        window.localStorage.setItem('zion_user_role', role)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+        window.localStorage.setItem('zion_user_role', role);      }
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch {}
   }, [role]);
   const value = useMemo(() => ({ role, setRole }), [role]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>;};  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
-}
-export function useRole(): RoleContextValue {
-const ctx = useContext(RoleContext);
-=======
+
 
   return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;};  return <RoleContext && RoleContext.Provider value={value}>{children}</RoleContext && RoleContext.Provider>;
-<<<<<<< HEAD
-=======
-=======
 
-  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
 
 export function useRole(): any (): RoleContextValue {;
   const ctx = useContext(RoleContext);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  return ctx;  return ctx;
-}
+
 
 =======
   return ctx

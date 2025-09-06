@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Card } from "@/components/ui/card",
-import { Skeleton } from "@/components/ui/skeleton";
-import { Button } from "@/components/ui/button";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function TalentPlaceholder() {
   return (
     <div className="p-8 text-center">
@@ -18,9 +17,7 @@ export function TalentPlaceholder() {
         Join as Talent
       </Button>
     </div>
-  );
-}
-=======
+
 import {Card} from "@/components/ui/card";
 import {Skeleton} from "@/components/ui/skeleton";
 import {Button} from "@/components/ui/button";
@@ -37,7 +34,7 @@ export function TalentPlaceholder() {;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Card  } from '@/components / ui / card';
 import { Skeleton  } from '@/components / ui / skeleton';
@@ -61,3 +58,14 @@ function TalentPlaceholder() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+=======
+  )
+
+}
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

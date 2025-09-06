@@ -24,20 +24,8 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next / head';
 import {Phone, Mail, MapPin, Check, ArrowRight, Eye} from 'lucide-react';
-<<<<<<< HEAD
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
-import { extraServices } from '../data/extra-services';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function WCAGScannerPage() {
 
-  const service = extraServices.find(s =>
-    s.link.endsWith('/wcag-accessibility-scanner')
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 export default function WCAGScannerPage() {;
   const service = extraServices && extraServices.find(s =>;
@@ -231,16 +219,10 @@ if (return null) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </UltraAdvancedFuturisticBackground>;
-  );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Star } from 'lucide-react';
 export default function WCAGScannerPage() {
@@ -289,12 +271,15 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </UltraAdvancedFuturisticBackground>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

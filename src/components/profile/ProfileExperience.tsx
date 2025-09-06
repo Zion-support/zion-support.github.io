@@ -1,75 +1,44 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
-import { Briefcase } from 'lucide-react'
-=======
-import { ProfileExperience as ProfileExperienceType } from '@/types / profile';
-import { Briefcase } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-interface ProfileExperienceProps {
-  experience: ProfileExperienceType[];
-export /**
- * ProfileExperience - Function description
- */
-function ProfileExperience() {
-  return (
-<<<<<<< HEAD
 
-    <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>
-      <h3 className='text-xl font-bold text-white mb-4'>Experience</h3>
-      <div className='space-y-6'>
-        {experience.map(exp => (
-          <div key={exp.id} className='flex'>
-            <div className='mr-4'>
-              <div className='h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center'>
-                <Briefcase className='h-5 w-5 text-zion-purple' />    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
-=======
-
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
-import { Briefcase } from 'lucide-react'
-
-interface ProfileExperienceProps {
-  experience: ProfileExperienceType[]
-}
-
-export function ProfileExperience({ experience }: ProfileExperienceProps) {
-  return (
-    <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-      <h3 className="text-xl font-bold text-white mb-4">Experience</h3>
-      <div className="space-y-6">
-        {experience.map((exp,) => (
           <div key={exp.id} className="flex">
             <div className="mr-4">
               <div className="h-10 w-10 rounded-full bg-zion-purple/20 flex items-center justify-center">
                 <Briefcase className="h-5 w-5 text-zion-purple" />
               </div>
             </div>
+
+
+            
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <div>
               <h4 className='text-white font-medium'>{exp.role}</h4>
               <div className='text-zion-cyan mb-1'>{exp.company}</div>
               <div className='text-sm text-zion-slate-light mb-2'>
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
-<<<<<<< HEAD
-              <p className='text-zion-slate'>{exp.description}</p>            </div>              <p className="text-zion-slate">{exp.description}</p>
-=======
+
               <p className="text-zion-slate">{exp.description}</p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             </div>
           </div>
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-  )
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
+=======
+
+}
+
+=======
+              <p className="text-zion-slate">{exp.description}</p>
+            </div>
+          </div>
+import { ProfileExperience as ProfileExperienceType } from "@/types/profile",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { Briefcase } from 'lucide-react';
 interface ProfileExperienceProps {;
   experience: ProfileExperienceType[];
@@ -112,10 +81,9 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
     <div className='bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8'>;
       <h3 className='text - xl font - bold text - white mb - 4'>Experience</h3>;
@@ -147,3 +115,9 @@ export function ProfileExperience(): any ({ experience }: ProfileExperienceProps
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

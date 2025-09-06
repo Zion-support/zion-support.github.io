@@ -1,64 +1,4 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-const \"About\": NextPage = () => {;
-import React from 'react';
-import Link from 'next/link';
-import type { NextPage } from 'next';
-import MainLayout from '../components/layout/MainLayout';
-import {Users,, Target,, Award,, Globe,, Shield,, Zap} from 'lucide-react';
-const "About": NextPage = () => {;
-  const values = [{;
-      title: \'Innovation\',;
-      \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',;
-      \"icon\": Zap;
-    },;
-    {;
-      \"title\": \'Excellence\',;
-      \"description\": \'We maintain the highest standards of quality in everything we do.\',;
-      \"icon\": Award;
-    },;
-    {;
-      \"title\": \'Integrity\',;
-      \"description\": \'We build trust through honest communication and ethical business practices.\',;
-      \"icon\": Shield;
-    },;
-    {;
-      \"title\": \'Collaboration\',;
-      \"description\": \'We work closely with our clients to ensure their success is our success.\',;
-      \"icon\": Users;
-    },;
-    {;
-      \"title\": \'Global Perspective\',;
-      \"description\": \'We bring international expertise and diverse perspectives to every project.\',;
-      \"icon\": Globe;
-    },;
-    {;
-      \"title\": \'Results-Driven\',;
-      \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',;
-      \"icon\": Target;
-=======
   const values = [{
       title: \'Innovation\',
       \"description\": \'We constantly push the boundaries of technology to deliver cutting-edge solutions.\',
@@ -88,7 +28,7 @@ const "About": NextPage = () => {;
       \"title\": \'Results-Driven\',
       \"description\": \'We focus on delivering measurable outcomes that drive business growth.\',
       \"icon\": Target
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
     }
   ];
   const team = [{
@@ -116,54 +56,8 @@ const "About": NextPage = () => {;
       \"image\": \'/team/david.jpg\'
     }
   ];
-<<<<<<< HEAD
-  const stats = [{ \"number\": \'150+\', \"label\": \'Projects Completed\' },;
-    { \"number\": \'50+\', \"label\": \'Happy Clients\' },;
-    { \"number\": \'5+\', \"label\": \'Years Experience\' },;
-    { \"number\": \'24/7\', \"label\": \'Support Available\' }
-  ];
-export default function AboutPage() {;
-  return (
-  const stats = [{ "number": '150+', "label": 'Projects Completed' },;
-    { "number": '50+', "label": 'Happy Clients' },;
-    { "number": '5+', "label": 'Years Experience' },;
-    { "number": '24/7', "label": 'Support Available' }
-  ];
-export default function AboutPage() {;
-  return (
-    <main>;
-      <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20">;
-        <div className="container mx-auto px-4 text-center">;
-          <h1 className="text-5xl "md": text-6xl font-bold mb-6">;
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Zion Tech Group</span>;
-          </h1>;
-          <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto text-gray-200">;
-            Leading technology solutions provider helping businesses transform their digital presence with cutting-edge AI, cloud, and modern development services.;
-          </p>;
-        </div>;
-      </section>;
-      <section className="py-20 bg-white">;
-        <div className="container mx-auto px-4 max-w-4xl text-center">;
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Mission</h2>;
-          <p className="text-xl text-gray-600">;
-            Empower businesses with innovative technology that drives growth, efficiency, and competitive advantage.;
-          </p>;
-        </div>;
-      </section>;
-      <section className="py-20 bg-gray-50">;
-        <div className="container mx-auto px-4 text-center">;
-          <h2 className="text-3xl "sm": text-4xl font-bold text-gray-900 mb-10">Our Values</h2>;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {[{ title: 'Excellence', "desc": 'We deliver solutions that exceed expectations.' },;
-              { "title": 'Integrity', "desc": 'We operate with honesty and transparency.' },;
-              { "title": 'Innovation', "desc": 'We embrace modern technologies to solve problems.' },;
-              { "title": 'Collaboration', "desc": 'We partner closely with clients for success.' }
-            ].map((v) => (;
-              <div key={v && v.title} className="bg-white rounded-lg p-8 shadow text-center">;
-                <h3 className="text-xl font-semibold mb-3">{v && v.title}</h3>;
-                <p className="text-gray-600">{v && v.desc}</p>;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
     <MainLayout
       title=\"About Us - Zion Tech Group\"
       description=\"Learn about Zion Tech Group\'s mission, values, and the team behind our innovative technology solutions.\"
@@ -212,67 +106,7 @@ export default function AboutPage() {;
         </div>
       </section>
       {/* Stats Section */}
-<<<<<<< HEAD
-      <section className=\"py-20 bg-gray-50\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">;
-            {stats && stats.map((stat) => (;
-              <div key={stat && stat.label} className=\"text-center\">;
-                <div className=\"text-4xl font-bold text-blue-600 mb-2\">{stat && stat.number}</div>;
-                <div className=\"text-gray-600\">{stat && stat.label}</div>;
-              <div key={stat && stat.label} className="text-center">;
-                <div className="text-4xl font-bold text-blue-600 mb-2">{stat && stat.number}</div>;
-                <div className="text-gray-600">{stat && stat.label}</div>;
-              </div>;
-            ))}
-          </div>;
-        </div>;
-      </section>;
-      <section className="py-20 bg-gray-50">;
-        <div className="container mx-auto px-4 text-center">;
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Work With Us?</h2>;
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">;
-            Let’s discuss how we can help transform your business.;
-          </p>;
-          <div className="flex flex-col "sm": flex-row justify-center gap-4">;
-            <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Get in Touch;
-            </Link>;
-            <Link href="/careers" className="bg-transparent border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-lg font-semibold transition-colors">;
-              Join Our Team;
-            </Link>;
-          </div>;
-        </div>;
-      </section>;
-    </main>;
-      {/* Values Section */}
-      <section className=\"py-20\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center mb-16\">;
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Values</h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
-              The principles that guide everything we do and shape our company culture;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">;
-            {values && values.map((value) => (;
-              <div key={value && value.title} className=\"text-center\">;
-                <div className=\"bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4\">;
-                  <value && value.icon className=\"h-8 w-8\" />;
-                </div>;
-                <h3 className=\"text-xl font-semibold text-gray-900 mb-3\">;
-                  {value && value.title}
-                </h3>;
-                <p className=\"text-gray-600\">;
-                  {value && value.description}
-                </p>;
-              </div>;
-=======
+
       <section className=\"py-20 bg-gray-50\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"grid grid-cols-2 md:grid-cols-4 gap-8\">
@@ -303,44 +137,13 @@ export default function AboutPage() {;
                   {value.description}
                 </p>
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
             ))}
           </div>
         </div>
       </section>
       {/* Team Section */}
-<<<<<<< HEAD
-      <section className=\"py-20 bg-gray-50\" id=\"team\">;
-        <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">;
-          <div className=\"text-center mb-16\">;
-            <h2 className=\"text-4xl font-bold text-gray-900 mb-4\">Our Team</h2>;
-            <p className=\"text-xl text-gray-600 max-w-3xl mx-auto\">;
-              Meet the passionate professionals who make Zion Tech Group a leader in ;
-              technology solutions;
-            </p>;
-          </div>;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-          <div className=\"grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8\">;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">;
-            {team && team.map((member) => (;
-              <div key={member && member.name} className=\"bg-white rounded-lg shadow-lg overflow-hidden\">;
-                <div className=\"h-48 bg-gradient-to-br from-blue-100 to-purple-100 flex items-center justify-center\">;
-                  <Users className=\"h-16 w-16 text-blue-600\" />;
-                </div>;
-                <div className=\"p-6\">;
-                  <h3 className=\"text-xl font-semibold text-gray-900 mb-1\">;
-                    {member && member.name}
-                  </h3>;
-                  <p className=\"text-blue-600 font-medium mb-3\">{member && member.role}</p>;
-                  <p className=\"text-gray-600 text-sm\">;
-                    {member && member.bio}
-                  </p>;
-                </div>;
-              </div>;
-=======
+
       <section className=\"py-20 bg-gray-50\" id=\"team\">
         <div className=\"max-w-7xl mx-auto px-4 \"sm\": px-6 lg:px-8\">
           <div className=\"text-center mb-16\">
@@ -365,7 +168,7 @@ export default function AboutPage() {;
                   </p>
                 </div>
               </div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
             ))}
           </div>
         </div>
@@ -428,21 +231,7 @@ export default function AboutPage() {;
     </MainLayout>
   );
 }
-<<<<<<< HEAD
-    <>;
-      <Helmet>;
-        <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>;
-        <meta name=\"description\" content=\"Learn about Zion Tech Group, a leading provider of AI, cybersecurity, cloud infrastructure, and emerging technology solutions. Discover our mission, values, and team.\" />;
-        <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />;
-        <link rel=\"canonical\" href=\""https\": //ziontechgroup && ziontechgroup.com/about\" />;
-      </Helmet>;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-      <div className=\"min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900\">;
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
-=======
+
     <>
       <Helmet>
         <title>About Us - Zion Tech Group | Leading Technology Solutions Provider</title>
@@ -450,7 +239,7 @@ export default function AboutPage() {;
         <meta name=\"keywords\" content=\"about zion tech group, technology company, AI solutions, cybersecurity, cloud services\" />
         <link rel=\"canonical\" href=\""https\": //ziontechgroup.com/about\" />
       </Helmet>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
         {/* Hero Section */}
         <section className=\"relative py-20 px-4\">
           <div className=\"max-w-7xl mx-auto\">
@@ -584,9 +373,5 @@ export default function AboutPage() {;
   );
 }
 }
-<<<<<<< HEAD
-}
-}
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+

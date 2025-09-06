@@ -1,37 +1,23 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-import React from 'react';
-<<<<<<< HEAD
-import { Button  } from '@/components/ui/button';
-import { useNavigate  } from 'react-router-dom';
-import { XCircle } from 'lucide-react';
-export default function PaymentCanceled() {
 
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
+import {XCircle} from 'lucide-react';
+export default function PaymentCanceled() {;
   const navigate = useNavigate();
 
+=======
+import React from 'react',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
+import { XCircle } from 'lucide-react',
+export default function PaymentCanceled() {
+  const navigate = useNavigate(),
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -49,7 +35,11 @@ export default function PaymentCanceled() {
           >
             Try Again
           </Button>
-          <Button
+
+
+          <Button 
+
+
             variant="outline"
             onClick={() => navigate('/dashboard')}
             className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white"
@@ -60,11 +50,19 @@ export default function PaymentCanceled() {
       </div>
     </div>
   )
-}
-=======
+
 import {Button} from '@/components/ui/button';
 import {useNavigate} from 'react-router-dom';
 import {XCircle} from 'lucide-react';
+=======
+
+
+=======
+import React from 'react',;
+import { Button } from '@/components/ui/button',;
+import { useNavigate } from 'react-router-dom',;
+import { XCircle } from 'lucide-react',;
+
 export default function PaymentCanceled() {;
   const navigate = useNavigate();
 
@@ -131,9 +129,11 @@ function PaymentCanceled() {
           </Button>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

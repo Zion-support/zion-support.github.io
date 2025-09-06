@@ -1,33 +1,24 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-=======
+
 import { useState, useEffect } from 'react';
-<<<<<<< HEAD
-import { WifiOff, Wifi } from 'lucide-react';
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 import { WifiOff, Wifi } from 'lucide-react'
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import { Alert, AlertDescription } from '@/components/ui/alert'
-export const OfflineIndicator = () => {
-  const [isOnline, setIsOnline] = useState(true)
-  const [showOfflineAlert, setShowOfflineAlert] = useState(false)
-  useEffect((,) => {
-    const updateOnlineStatus = () => {
-      const online = navigator.onLine
-      setIsOnline(online)
+
+
+
+
       if (!online) {
         setShowOfflineAlert(true)
       } else if (showOfflineAlert) {
         // Show brief "back online" message then hide
-        setTimeout(() => setShowOfflineAlert(false), 3000) }        setTimeout((,) => setShowOfflineAlert(false), 3000)
-        setTimeout(() => setShowOfflineAlert(false), 3000)
-<<<<<<< HEAD
-=======
+
 import { useState, useEffect } from 'react';
+=======
+
+        setTimeout(() => setShowOfflineAlert(false), 3000)
+import { useState, useEffect } from 'react',;
+
 import { WifiOff, Wifi } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components / ui / alert';
 export const OfflineIndicator = () =>: any {
@@ -68,10 +59,9 @@ export const OfflineIndicator = () => {;
         // Show brief "back online" message then hide;
         setTimeout(() => setShowOfflineAlert(false), 3000);      }        setTimeout((,) => setShowOfflineAlert(false), 3000);
         setTimeout(() => setShowOfflineAlert(false), 3000);
-<<<<<<< HEAD
+
 =======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     };
@@ -83,28 +73,8 @@ export const OfflineIndicator = () => {;
     window && window.addEventListener('online', updateOnlineStatus);
     window && window.addEventListener('offline', updateOnlineStatus);
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    return () => {;
-      window && window.removeEventListener('online', updateOnlineStatus);
-      window && window.removeEventListener('offline', updateOnlineStatus);
-    };  }, [showOfflineAlert]);      window && window.removeEventListener('offline', updateOnlineStatus);
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    }
-    // Set initial status;
-    updateOnlineStatus ();
-    // Listen for online / offline events;
-    window.addEventListener ('online', updateOnlineStatus);
-    window.addEventListener ('offline', updateOnlineStatus);
-    return () => {
-      window.removeEventListener ('online', updateOnlineStatus);
-      window.removeEventListener ('offline', updateOnlineStatus);
-    } }, [showOfflineAlert]);      window.removeEventListener ('offline', updateOnlineStatus);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
     }
   }, [showOfflineAlert]);
   // Check condition
@@ -112,37 +82,8 @@ if (return null) {
   $2
 }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    <div className='fixed top-4 right-4 z-50 max-w-sm pointer-events-none'>;
-      <Alert variant={isOnline ? 'default' : 'destructive'}>;
-        <div className='flex items-center gap-2'>;
-            <Wifi className='h-4 w-4' />;
-          ) : (;
-            <WifiOff className='h-4 w-4' />;
-          )}
-          <AlertDescription>;
-            {isOnline;
-              ? 'Connection restored';
-              : 'You are offline. Some features may not work.'}          </AlertDescription>            {isOnline ? (;
-              'Connection restored';
-            ) : (;
-              'You are offline. Some features may not work.';
-            )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        </div>
-      </Alert>
-    </div>
-=======
-    return () => {
-      window.removeEventListener('online', updateOnlineStatus);
-      window.removeEventListener('offline', updateOnlineStatus)
-    }
-  }, [showOfflineAlert]);
+
+
 
   if (!showOfflineAlert) return null;
 
@@ -170,17 +111,14 @@ if (return null) {
   )
 } }
 
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
         </div>;
       </Alert>;
     </div>;
   );
-};};
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 };
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -202,3 +140,9 @@ if (return null) {
 } }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+};
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

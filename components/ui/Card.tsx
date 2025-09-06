@@ -1,219 +1,24 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React from 'react';
-<<<<<<< HEAD
-import { cn } from '../../lib/utils';
-<<<<<<< HEAD
-// Define HTML element types
-interface HTMLElement {
-=======
 
-// Define HTML element types;
-interface HTMLElement {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  className: string;
-  id: string;
-  innerHTML: string;
-  textContent: string | null;
-  style: { [key: string]: string }
-}
-<<<<<<< HEAD
-=======
-import { cn } from '../../lib / utils';
-;
-// Define HTML element types;
-interface HTMLElement {
-  class_name: string;
-  id: string;
-  innerHTML: string;
-  text_content: string | null;
-  style: { [key: string]: string }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-interface HTMLDivElement extends HTMLElement {
-  tag_name: 'DIV';
-}
-interface HTMLParagraphElement extends HTMLElement {
-  tag_name: 'P';
-}
-interface HTMLHeadingElement extends HTMLElement {
-  tag_name: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
-}
-<<<<<<< HEAD
 
-const Card = React.forwardRef<
-  HTMLDivElement
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-=======
-
-interface HTMLDivElement extends HTMLElement {;
-  tagName: 'DIV';
-}
-
-interface HTMLParagraphElement extends HTMLElement {;
-  tagName: 'P';
-}
-
-interface HTMLHeadingElement extends HTMLElement {;
-  tagName: 'H1' | 'H2' | 'H3' | 'H4' | 'H5' | 'H6';
-}
-
-const Card = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-lg border bg-card text-card-foreground shadow-sm"
-
-      className
-    )}
-    {...props}
-  />;
-));
-Card && Card.displayName = "Card";
-
-<<<<<<< HEAD
-const CardHeader = React.forwardRef<
-  HTMLDivElement
-
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-=======
-const CardHeader = React && React.forwardRef<;
-  HTMLDivElement,;
-  React && React.HTMLAttributes<HTMLDivElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  <div
-    ref={ref}
-    className={cn("flex flex-col space-y-1 && 1.5 p-6", className)}
-    {...props}
-  />;
-));
-CardHeader && CardHeader.displayName = "CardHeader";
-
-<<<<<<< HEAD
-const CardTitle = React.forwardRef<
-  HTMLParagraphElement
-  React.HTMLAttributes<HTMLHeadingElement>
->(({ className, ...props }, ref) => (
-=======
-const CardTitle = React && React.forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HTMLAttributes<HTMLHeadingElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  <h3
-    ref={ref}
-    className={cn(
-      "text-2xl font-semibold leading-none tracking-tight"
-
-      className
-    )}
-    {...props}
-  />;
-));
-CardTitle && CardTitle.displayName = "CardTitle";
-
-<<<<<<< HEAD
-const CardDescription = React.forwardRef<
-  HTMLParagraphElement
-
-  React.HTMLAttributes<HTMLParagraphElement>
->(({ className, ...props }, ref) => (
-=======
-const CardDescription = React && React.forwardRef<;
-  HTMLParagraphElement,;
-  React && React.HTMLAttributes<HTMLParagraphElement>;
->(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  <p
-=======
-const Card = React.forward_ref<;
-  HTMLDivElement,
-  React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => (
-  <div;
-    ref={ref}
-    className={cn (
-      "rounded - lg border bg - card text - card - foreground shadow - sm",
-      class_name)}
-    {...props}
-  />));
-Card.display_name = "Card";
-;
-const CardHeader = React.forward_ref<;
-  HTMLDivElement,
-  React.HTMLAttributes < HTMLDivElement>;
->(({ class_name, ...props }, ref) => (
-  <div;
-    ref={ref}
-    className={cn ("flex flex - col space - y-1.5 p - 6", class_name)}
-    {...props}
-  />));
-CardHeader.display_name = "CardHeader";
-;
-const CardTitle = React.forward_ref<;
-  HTMLParagraphElement,
-  React.HTMLAttributes < HTMLHeadingElement>;
->(({ class_name, ...props }, ref) => (
-  <h3;
-    ref={ref}
-    className={cn (
-      "text - 2xl font - semibold leading - none tracking - tight",
-      class_name)}
-    {...props}
-  />));
-CardTitle.display_name = "CardTitle";
-;
-const CardDescription = React.forward_ref<;
-  HTMLParagraphElement,
-  React.HTMLAttributes < HTMLParagraphElement>;
->(({ class_name, ...props }, ref) => (
-  <p;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     ref={ref}
     className={cn ("text - sm text - muted - foreground", class_name)}
     {...props}
-<<<<<<< HEAD
-  />;
-));
-CardDescription && CardDescription.displayName = "CardDescription";
 
-<<<<<<< HEAD
-const CardContent = React.forwardRef<
-  HTMLDivElement
-
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-=======
 const CardContent = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   <div ref={ref} className={cn("p-6 pt-0", className)} {...props} />;
 ));
 CardContent && CardContent.displayName = "CardContent";
 
-<<<<<<< HEAD
-const CardFooter = React.forwardRef<
-  HTMLDivElement
 
-  React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-=======
 const CardFooter = React && React.forwardRef<;
   HTMLDivElement,;
   React && React.HTMLAttributes<HTMLDivElement>;
 >(({ className, ...props }, ref) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   <div
 =======
   />));
@@ -235,15 +40,13 @@ const CardFooter = React.forward_ref<;
     ref={ref}
     className={cn ("flex items - center p - 6 pt - 0", class_name)}
     {...props}
-<<<<<<< HEAD
-  />;
-));
-CardFooter && CardFooter.displayName = "CardFooter";
 
-<<<<<<< HEAD
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
-=======
 import React from 'react';
+=======
+
+import React from 'react',;
+
+
 interface CardProps {
   children: React.ReactNode;
   className?: string;
@@ -300,39 +103,35 @@ const Card: React.FC < CardProps> = ({
       on_click={on_click}
     >;
       {/* Subtle background pattern */}
-<<<<<<< HEAD
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 via-transparent to-purple-500/5 opacity-0 hover:opacity-100 transition-opacity duration-300" />
-=======
+
       <div className="absolute inset - 0 bg - gradient - to - br from - blue - 500 / 5 via - transparent to - purple - 500 / 5 opacity - 0 hover:opacity - 100 transition - opacity duration - 300" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       {/* Content wrapper */}
       <div className="relative z - 10">;
         {children}
-<<<<<<< HEAD
-      </div>
-      {/* Hover glow effect */}
-      {hover && (
-        <div className="absolute inset-0 rounded-xl bg-gradient-to-r from-blue-500/0 via-blue-500/5 to-blue-500/0 opacity-0 hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-      )}
-    </div>
-  )
-}
-export default Card;
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
       </div>;
       {/* Hover glow effect */}
       {hover && (
         <div className="absolute inset - 0 rounded - xl bg - gradient - to - r from - blue - 500 / 0 via - blue - 500 / 5 to - blue - 500 / 0 opacity - 0 hover:opacity - 100 transition - opacity duration - 300 pointer - events - none" />)}
     </div>);
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 },
 export default Card,
 ;
-;
-export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent }
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+
+=======
+export { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

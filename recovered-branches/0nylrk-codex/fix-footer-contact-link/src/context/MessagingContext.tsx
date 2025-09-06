@@ -1,11 +1,45 @@
-<<<<<<< HEAD
 
-import React, { createContext, useContext, useEffect, ReactNode } from 'react';
-<<<<<<< HEAD
-import { useAuth  } from '@/hooks/useAuth';
-import { MessagingContextType  } from '@/types/messaging';
-import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging';
-// Default context used when React type definitions are missing
+
+
+const defaultContext: MessagingContextType = {
+  messages: [],
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async () => {},
+  createConversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetchConversations: async () => {},
+  loadMessages: async () => {}
+};
+
+=======
+import React, { createContext, useContext, useEffect, ReactNode } from 'react',;
+import { useAuth } from '@/hooks/useAuth',;
+import { MessagingContextType } from '@/types/messaging',;
+import { useMessagingOperations, useMessagingRealtime } from '@/hooks/messaging',;
+// Default context used when React type definitions are missing;
+const defaultContext: MessagingContextType = {;
+  messages: [],;
+  conversations: [],;
+  unreadCount: 0,;
+  activeConversation: null,;
+  activeMessages: [],;
+  isLoading: false,;
+  sendMessage: async () => {},;
+  createConversation: async () => {},;
+  markAsRead: async () => {},;
+  setActiveConversation: () => {},;
+  fetchConversations: async () => {},;
+  loadMessages: async () => {}
+},
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 const defaultContext: MessagingContextType = {
   messages: []
@@ -26,11 +60,7 @@ const defaultContext: MessagingContextType = {
 // value instead of passing a generic type parameter directly.
 const MessagingContext = createContext(
   defaultContext as MessagingContextType
-);
-// Hook for using the messaging context
-export function useMessaging(): MessagingContextType {
-  // Cast to avoid type errors when React type definitions are missing
-=======
+
 import {useAuth} from '@/hooks/useAuth';
 import {MessagingContextType} from '@/types/messaging';
 import {useMessagingOperations, useMessagingRealtime} from '@/hooks/messaging';
@@ -61,18 +91,28 @@ const MessagingContext = createContext(;
 // Hook for using the messaging context;
 export function useMessaging(): any (): MessagingContextType {;
   // Cast to avoid type errors when React type definitions are missing;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   const context = useContext(MessagingContext) as MessagingContextType;
   if (context === undefined) {;
     throw new Error('useMessaging must be used within a MessagingProvider');
+=======
+
+),
+
+
+// Hook for using the messaging context
+export function useMessaging(): MessagingContextType {
+
+  // Cast to avoid type errors when React type definitions are missing
+  const context = useContext(MessagingContext) as MessagingContextType,
+
+  if (context === undefined) {
+    throw new Error('useMessaging must be used within a MessagingProvider')
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
   return context;
 }
-<<<<<<< HEAD
-// Provider component
-export function MessagingProvider({ children }: { children: ReactNode }) {
-  const { user } = useAuth();
-=======
+
 import React, { create_context, useContext, useEffect, ReactNode } from 'react';
 import {use_auth} from '@/hooks / use_auth';
 import {MessagingContextType} from '@/types / messaging';
@@ -118,12 +158,19 @@ export /**
 function MessagingProvider() {
   const { user } = use_auth ();
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   const {
 =======
 
 // Provider component;
 export function MessagingProvider(): any ({ children }: { children: ReactNode }) {;
+=======
+
+
+
+// Provider component
+export function MessagingProvider({ children }: { children: ReactNode }) {;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   const { user } = useAuth();
 
   const {;
@@ -141,56 +188,18 @@ export function MessagingProvider(): any ({ children }: { children: ReactNode })
     send_message;
     create_conversation;
     markAsRead;
-<<<<<<< HEAD
-    fetchConversations;
-    loadMessages;
-  } = useMessagingOperations(user);
-<<<<<<< HEAD
-  // Setup real-time subscription
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations);
-  // Calculate unread count from conversations
-  useEffect(() => {
-    if (conversations.length > 0) {
-      const count = conversations.reduce((acc, conversation) => acc + conversation.unread_count, 0);
-      setUnreadCount(count)
-    }
-  }, [conversations, setUnreadCount]);
-  // Fetch conversations when user changes
-  useEffect(() => {
-    if (user) {
-      fetchConversations()
-    } else {
-=======
 
-  // Setup real-time subscription;
-  useMessagingRealtime(user, activeConversation, setActiveMessages, fetchConversations);
 
-  // Calculate unread count from conversations;
-  useEffect(() => {;
-    if (conversations && conversations.length > 0) {;
-      const count = conversations && conversations.reduce((acc, conversation) => acc + conversation && conversation.unread_count, 0);
-      setUnreadCount(count);
-    }
-  }, [conversations, setUnreadCount]);
 
-  // Fetch conversations when user changes;
-  useEffect(() => {;
-    if (user) {;
-      fetchConversations();
-    } else {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setConversations([]);
       setUnreadCount(0);
     }
   }, [user, fetchConversations, setConversations, setUnreadCount]);
-<<<<<<< HEAD
-  // Create context value with all the methods and states
-  const contextValue: MessagingContextType = {
-=======
+
 
   // Create context value with all the methods and states;
   const contextValue: MessagingContextType = {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
     fetch_conversations;
     load_messages;
@@ -236,29 +245,18 @@ if ( {) {
     create_conversation;
     markAsRead;
     setActiveConversation;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    fetchConversations
-    loadMessages
-  }
-=======
+
     fetchConversations,;
     loadMessages;
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
-  return (
-    <MessagingContext && MessagingContext.Provider value={contextValue}>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {children}
-<<<<<<< HEAD
-    </MessagingContext.Provider>
-  )
-}
-=======
+
     </MessagingContext && MessagingContext.Provider>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
     fetch_conversations,
     load_messages;

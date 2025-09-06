@@ -1,9 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
@@ -13,42 +9,15 @@ const AiConsultingChat: NextPage = () => {;
       <Head>;
         <title>AiConsultingChat - Zion Tech Solutions</title>;
         <meta name="description" content="AiConsultingChat blog post" />{" "}
-<<<<<<< HEAD
-      </Head>;
 
-      <main>;
-        <h1>AiConsultingChat</h1>;
-        <p>Blog content coming soon...</p>;
-        <a href="/blog">Back to Blog</a>;
-      </main>;
-    </div>;
-  );
-};
-=======
-<<<<<<< HEAD
-      </Head>
-=======
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
+
 const AiConsultingChat: NextPage = () => {
   return (
     <div>
       <Head>
-        <title>AiConsultingChat - Zion Tech Solutions</title>
-        <meta name="description" content="AiConsultingChat blog post" />
-      </Head>
-      
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-      <main>
-        <h1>AiConsultingChat</h1>
-        <p>Blog content coming soon...</p>
-        <a href="/blog">Back to Blog</a>
-      </main>
-    </div>
-=======
+
       </Head>;
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
       <main>;
         <h1>AiConsultingChat</h1>;
@@ -60,10 +29,13 @@ const AiConsultingChat: NextPage = () => {
   );
 }
 export default AiConsultingChat;
-<<<<<<< HEAD
+
 
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+        <title>AiConsultingChat - Zion Tech Solutions</title>
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import type { NextPage } from './next';
 import Head from './next / head';

@@ -1,6 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
+
+
+import { useEffect, useState } from 'react';
+
+
 export default function Reports() {
   const [uptime, setUptime] = useState<any[]>([]),
   const [seo, setSeo] = useState<any>({}),
@@ -10,7 +12,9 @@ export default function Reports() {
   const [pagespeed, setPagespeed] = useState<any>({});
   useEffect(() => {
     Promise.all([
-<<<<<<< HEAD
+
+
+
 
       fetch('/api/reports/uptime')
         .then(r => r.json())
@@ -112,43 +116,14 @@ export default function Reports() {;
           ) : (;
             <div className='text-sm text-gray-500'>No data</div>;
           )}
-<<<<<<< HEAD
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>SEO (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Pages: {seo?.results?.length |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Broken Links (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Broken: {links?.broken?.length |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Dependencies (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Checked: {deps?.entries?.length |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>Changelog (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Commits: {changelog?.totalCommits |0}
-          </div>
-        </div>
-        <div className='border rounded p-4'>
-          <div className='font-medium mb-1'>PageSpeed (weekly)</div>
-          <div className='text-sm text-gray-600'>
-            Pages: {pagespeed?.results?.length |0}
-          </div>
-        </div>
-      </section>
-    </div>
-);
-=======
+
         </div>;
+=======
+
+
+}
+
+
 =======
       fetch('/api/reports/uptime').then((r) => r.json()).then(setUptime);
       fetch('/api/reports/seo').then((r) => r.json()).then(setSeo);
@@ -197,11 +172,7 @@ export default function Reports() {;
           </div>;
         </div>;
 
-<<<<<<< HEAD
-        <div className='border rounded p-4'>;
-          <div className='font-medium mb-1'>PageSpeed (weekly)</div>;
-          <div className='text-sm text-gray-600'>;
-=======
+
 import {useEffect, useState} from 'react';
 export default /**
  * Reports - Function description
@@ -287,17 +258,13 @@ function Reports() {
         <div className='border rounded p - 4'>;
           <div className='font - medium mb - 1'>PageSpeed (weekly)</div>;
           <div className='text - sm text - gray - 600'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             Pages: {pagespeed?.results?.length || 0}
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-    </div>;
-  );
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
         <div className="border rounded p-4">
           <div className="font-medium mb-1">Changelog (weekly)</div>
@@ -312,9 +279,13 @@ function Reports() {
     </div>
   )
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
     </div>);
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

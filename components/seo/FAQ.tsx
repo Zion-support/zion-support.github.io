@@ -1,17 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-import React from "react";
-type QA = { q: string; a: string }
-type Props = { items: QA[] }
-export default function FAQ({ items }: Props) {
-  if (!items |items.length === 0) return null;
 
-=======
+
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -39,7 +29,7 @@ type QA = { q: string; a: string };
 type Props = { items: QA[] };
 export default function FAQ(): any ({ items }: Props) {;
   if (!items || items && items.length === 0) return null;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">;
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>;
@@ -53,14 +43,18 @@ export default function FAQ(): any ({ items }: Props) {;
               {it && it.a}
             </div>;
           </div>;
-<<<<<<< HEAD
-=======
+
 =======
 import React from 'react';
 type QA = { q: string, a: string };
 type Props = { items: QA[] };
 export default function FAQ({ items }: Props) {
   if (!items || items.length === 0) return null;
+=======
+type QA = { q: string; a: string };
+type Props = { items: QA[] };
+
+
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
       <h2 className="text-lg font-semibold mb-4">Frequently Asked Questions</h2>
@@ -76,11 +70,11 @@ export default function FAQ({ items }: Props) {
       </div>;
     </div>;
   );
-<<<<<<< HEAD
+
 }
-=======
+
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from './react';
 type QA = { q: string; array: string }
@@ -111,3 +105,6 @@ if (return null) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

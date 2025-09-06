@@ -24,11 +24,9 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 interface Enhanced404PageProps {
   // Add props here as needed
-<<<<<<< HEAD
-}
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 export default function Enhanced404Page({ }: Enhanced404PageProps) {
   return (
     <div>
@@ -36,13 +34,9 @@ export default function Enhanced404Page({ }: Enhanced404PageProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD:src.disabled/components/unused/Enhanced404Page.jsx
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 =======

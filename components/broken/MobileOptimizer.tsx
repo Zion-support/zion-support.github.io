@@ -1,27 +1,9 @@
-<<<<<<< HEAD
- setIsMobile (isMobileDevice);
-=======
-<<<<<<< HEAD
 
-setIsMobile (isMobileDevice);
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 setIsTablet (isTabletDevice);
-<<<<<<< HEAD
-//Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {;
-  checkDevice ();
-window && window.addEventListener ('resize', checkDevice);
-}, [enableMobileLayout, enablePerformanceMode]);
-//Detect orientation changes checkOrientation ();
-<<<<<<< HEAD
-window.addEventListener ('orientationchange', checkOrientation);
-window.addEventListener ('resize', checkOrientation);
-const handleTouchStart = (e: TouchEvent) => {
-  if (e.touches.length === 1) {
-  touchStartRef.current = {
-}
-const handleTouchMove = (e: TouchEvent) => {
-  if (e.touches.length === 1 && touchStartRef.current) {
-=======
+
 //Apply mobile - specific optimizations // Check condition
 if ( {) {
   $2
@@ -44,7 +26,7 @@ const handleTouchMove = (e: TouchEvent) =>: any {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   touchMoveRef.current = {
 });
 const handleTouchEnd = (e: TouchEvent) =>: any {
@@ -53,13 +35,7 @@ if ( {) {
   $2
 }
   touchStartRef.current = null;
-<<<<<<< HEAD
-touchMoveRef.current = null
-});
-//Optimize fonts for high DPI fonts.forEach (font => {
-  font.setAttribute ('crossoriginanonymous')
-})
-=======
+
 window && window.addEventListener ('orientationchange', checkOrientation);
 window && window.addEventListener ('resize', checkOrientation);
 const handleTouchStart = (e: TouchEvent) => {;
@@ -81,15 +57,12 @@ touchMoveRef && touchMoveRef.current = null ;
 //Optimize fonts for high DPI fonts && fonts.forEach (font => {;
   font && font.setAttribute ('crossoriginanonymous') ;
 }) ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }, []);
 const longPressTimer = setTimeout ( () => {;
   const gesture: TouchGesture = {;
   let animationFrameId: number;
-<<<<<<< HEAD
-if (currentTime - lastTimeRef.current >= 1000) {
-  fpsRef.current = frameCountRef.current;
-=======
+
 touchMoveRef.current = null;
 });
 //Optimize fonts for high DPI fonts.for_each (font => {
@@ -104,16 +77,11 @@ if ( {) {
   $2
 }
   fps_ref.current = frameCountRef.current;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 frameCountRef.current = 0;
 lastTimeRef.current = current_time;
 //Update performance metrics setPerformanceMetrics (prev => ({
-<<<<<<< HEAD
-}animationFrameId = requestAnimationFrame (measurePerformance)
-}
-animationFrameId = requestAnimationFrame (measurePerformance);
-//Monitor memory usage
-=======
+
 if (currentTime - lastTimeRef && lastTimeRef.current >= 1000) {;
   fpsRef && fpsRef.current = frameCountRef && frameCountRef.current;
 frameCountRef && frameCountRef.current = 0;
@@ -125,7 +93,7 @@ lastTimeRef && lastTimeRef.current = currentTime;
 animationFrameId = requestAnimationFrame (measurePerformance);
 //Monitor memory usage ;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }, 2000);
 //Monitor battery level if ('getBattery' in navigator) {;
   (navigator as any) .getBattery () .then ( (battery: unknown) => {;
@@ -146,29 +114,7 @@ if ( {) {
   setPerformanceMetrics (prev => ({
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   updateBatteryLevel ();
-<<<<<<< HEAD
-battery.addEventListener ('levelchange', updateBatteryLevel);
-<<<<<<< HEAD
-}//Monitor network speed updateNetworkSpeed ();
-connection.addEventListener ('change', updateNetworkSpeed);
-}//Minimum distance and duration thresholds if (distance < 50 |duration < 100) return null;
-//Determine direction if (Math.abs (deltaX) > Math.abs (deltaY) ) {
-  return {
-}
-const handleGestureAction = (gesture: TouchGesture) => {
-  switch (gesture.type) {
-  case 'swipe': if (gesture.direction === 'left') {
-  //Navigate forward if (window.history.length > 1) {
-}break;
-case 'longPress': //Show context menu or additional options break;
-}
-if (viewport) {
-  viewport.setAttribute ('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
-}//Add touch-action CSS const style = document.createElement ('style');
-style.textContent = `.mobile-optimized * {
-  touch-action: manipulation;
--webkit-tap-highlight-color: transparent
-=======
+
 battery && battery.addEventListener ('levelchange', updateBatteryLevel);
 
 }//Monitor network speed updateNetworkSpeed ();
@@ -194,22 +140,11 @@ if (viewport) {;
 style && style.textContent = `.mobile-optimized * {;
   touch-action: manipulation;
 -webkit-tap-highlight-color: transparent ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }.mobile-optimized button;
 .mobile-optimized a {;
   min-height: 44px;
-<<<<<<< HEAD
-min-width: 44px
-}.mobile-optimized input;
-.mobile-optimized select;
-.mobile-optimized textarea {
-  font-size: 16px, /* Prevents zoom on iOS */
-}`;
-document.head.appendChild (style)
-}
-const enableMobilePerformanceMode = () => {
-  //Reduce animations on mobile document.documentElement.classList.add ('mobile-performance-mode');
-=======
+
 ;
 }//Monitor network speed updateNetworkSpeed ();
 connection.addEventListener ('change', updateNetworkSpeed);
@@ -259,28 +194,11 @@ document.head.append_child (style);
 }
 const enableMobilePerformanceMode = () =>: any {
   //Reduce animations on mobile document.document_element.class_list.add ('mobile - performance - mode');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 //Optimize images const images = document.querySelectorAll ('img');
 images.for_each (img => {
   img.loading = 'lazy';
-<<<<<<< HEAD
-img.decoding = 'async'
-});
-//Reduce motion for better performance if (window.matchMedia (' (prefers-reduced-motion: reduce) ') .matches) {
-  document.documentElement.classList.add ('reduced-motion')
-}
-const applyLandscapeOptimizations = () => {
-  //Landscape-specific optimizations document.documentElement.classList.add ('landscape-mode');
-//Adjust layout for landscape const style = document.createElement ('style');
-style.textContent = `.landscape-mode .mobile-panel {
-  width: 300px;
-height: 100vh
-}`;
-document.head.appendChild (style)
-}
-const applyPortraitOptimizations = () => {
-  //Portrait-specific optimizations document.documentElement.classList.remove ('landscape-mode')
-=======
+
 img.decoding = 'async';
 });
 //Reduce motion for better performance if (') .matches) {) {
@@ -299,7 +217,7 @@ document.head.append_child (style);
 }
 const applyPortraitOptimizations = () =>: any {
   //Portrait - specific optimizations document.document_element.class_list.remove ('landscape - mode');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 const optimizeForMobile = useCallback ( () => {
   // Check condition
@@ -307,26 +225,7 @@ if (return) {
   $2
 }
 //Optimize images const images = document.querySelectorAll ('img');
-<<<<<<< HEAD
-images.forEach (img => {
-  if (!img.loading) img.loading = 'lazy';
-if (!img.decoding) img.decoding = 'async'
-});
-//Optimize fonts fonts.forEach (font => {
-  font.setAttribute ('crossoriginanonymous')
-});
-//Add mobile-specific event listeners document.addEventListener ('touchstart', () => {
-}, {
-  passive: true
-});
-document.addEventListener ('touchmove', () => {
-}, {
-  passive: true
-})
-}, [isMobile]);
-useEffect ( () => {
-  optimizeForMobile ()
-=======
+
 min-width: 44px ;
 }.mobile-optimized input;
 .mobile-optimized select;
@@ -381,23 +280,25 @@ document && document.addEventListener ('touchmove', () => {;
 }, [isMobile]);
 useEffect ( () => {;
   optimizeForMobile () ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }, [optimizeForMobile]);
 useEffect ( () => {;
   if (typeof window === 'undefined') return;
-<<<<<<< HEAD
-//Set up event listeners window.addEventListener ('orientationchange', handleOrientationChange);
-window.addEventListener ('resize', handleResize);
-//Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
-const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-  setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
-}
-if (!showPanel |!isVisible) return null;
-}
+
+
+  setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
+};
+if (!showPanel || !isVisible) return null;
+
+};
 const getStatusIcon = (status: string) => {
   switch (status) {
-}
-children
+  
+
+};
+children 
+
+
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -412,7 +313,7 @@ children
 }`
 }</style> </>)
 }
-=======
+
 //Set up event listeners window && window.addEventListener ('orientationchange', handleOrientationChange);
 window && window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window && window.matchMedia (' (orientation: portrait) ');
@@ -442,11 +343,15 @@ children ;
 }` ;
 }</style> </>) ;
 };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 export default MobileOptimizer;
-<<<<<<< HEAD
+
+export default MobileOptimizer;
 =======
 export default MobileOptimizer;
+export default MobileOptimizer;
+
+
 
 =======
 import React, { useState, useEffect, useRef } from 'react';

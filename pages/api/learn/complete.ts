@@ -1,15 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-const usersPath = path.join(process.cwd(), 'datalearnusers.json');
-const coursesPath = path.join(process.cwd(), 'datalearncourses.json');
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 
 const usersPath = path.join(process.cwd(), 'datalearnusers.json')
 const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -27,21 +17,7 @@ res.setHeader('AllowPOST')
   const { userId = 'demo-user', courseId, enableBoost } = req.body |{}
   if (!courseId) return res.status(400).json({ error: 'courseId required' })
   try {
-<<<<<<< HEAD
-    const users = readJson(usersPath)
-    const courses = readJson(coursesPath)
-    const course = courses.find((c: any) => c.id === courseId)
-    if (!course) return res.status(404).json({ error: 'Course not found' })
-    const user = users[userId] |{ userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} }
-    if (!user.certifications.includes(courseId)) user.certifications.push(courseId)
-    if (!user.badges.includes(course.certificationBadge)) user.badges.push(course.certificationBadge)
-    if (typeof enableBoost === 'boolean') user.boostInSearch = enableBoost
-    // Mark progress complete
-    user.progress[courseId] = { completed: true, percent: 100, completedLessons: (course.lessons |[]).map((l: any) => l.id) }
-    users[userId] = user
-    writeJson(usersPath, users)
 
-=======
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
@@ -57,7 +33,7 @@ res.setHeader('AllowPOST')
 
     users[userId] = user;
     writeJson(usersPath, users);
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     return res.status(200).json({ ok: true, user })
 =======
 import type { NextApiRequest, NextApiResponse } from 'next',
@@ -71,8 +47,7 @@ const courses_path = path.join (process.cwd (), 'datalearncourses.json'),
 function read_json() {
   return JSON.parse (fs.readFileSync (p, 'utf - 8'));
 }
-<<<<<<< HEAD
-=======
+
 /**
  * write_json - Function description
  */
@@ -117,18 +92,24 @@ if (user.boostInSearch = enable_boost, ) {
     users[user_id] = user,
     write_json (users_path, users),
     return res.status (200).json ({ ok: true, user });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   } catch (e: any) {
     return res.status (500).json ({ error: e?.message ?? 'Failed to complete course' });
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+  }
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

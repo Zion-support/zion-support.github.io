@@ -1,61 +1,46 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from 'react'
-import {
-  Card
-  CardContent
-  CardDescription
-  CardFooter
-  CardHeader
-  CardTitle
-} from '@/components/ui/card'
-import { Button } from '@/components/ui/button'
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
 import { CreditCard, Plus, Trash } from 'lucide-react'
-<<<<<<< HEAD
-import React from "react"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
+
+
+
 =======
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { CreditCard, Plus, Trash } from 'lucide-react'
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function PaymentMethods() {
   // Mock payment methods
 
   const paymentMethods = [
     {
-<<<<<<< HEAD
-      id: 'pm-1'
-      type: 'credit_card'
-      brand: 'Visa'
-      last4: '4242'
-      expYear: 2025
-      isDefault: true
-    }
-    {
-      id: 'pm-2'
-      type: 'credit_card'
-      brand: 'Mastercard'
-      last4: '8888'
-      expMonth: 4
-      expYear: 2026
-      isDefault: false
-    }
-  ]
+
+
+      id: 'pm-1',
+      type: 'credit_card',
+      brand: 'Visa',
+      last4: '4242',
+
+
 =======
       id: "pm-1",
       type: "credit_card",
       brand: "Visa",
       last4: "4242",
       expMonth: 12,
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       expYear: 2025,
       isDefault: true},
     {
@@ -65,27 +50,22 @@ export function PaymentMethods() {
       last4: "8888",
       expMonth: 4,
       expYear: 2026,
-      isDefault: false}
-  ];
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Card>
       <CardHeader>
         <CardTitle>Payment Methods</CardTitle>
-<<<<<<< HEAD
-        <CardDescription>
-          Manage your payment methods for automatic billing
-        </CardDescription>
-      </CardHeader>
-      <CardContent className='space-y-4'>
-        {paymentMethods.map(method => (
-          <div            key={method.id}
-=======
+
         <CardDescription>Manage your payment methods for automatic billing</CardDescription>
       </CardHeader>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       <CardContent className="space-y-4">
         {paymentMethods.map((method,) => (
           <div
@@ -146,54 +126,19 @@ export function PaymentMethods() {;
           <div
             key = {method && method.id,}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            className={`flex items-center justify-between p-4 rounded-lg border ${
-<<<<<<< HEAD
-              method && method.isDefault ? 'bg-muted border-primary' : 'border-border'
-            }`}>;
-            <div className='flex items-center space-x-4'>;
-              <div className='h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background'>;
-                <CreditCard className='h-5 w-5' />;
-              </div>;
-              <div>;
-                <p className='font-medium'>;
-                  {method && method.brand} •••• {method && method.last4}
-                  {method && method.isDefault && (;
-                    <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0 && 0.5'>                      Default;
-                    </span>;
-                  )}
-                </p>;
-                <p className='text-sm text-muted-foreground'>                  Expires {method && method.expMonth}/{method && method.expYear}
-                </p>;
-              </div>;
-            </div>;
-            <div className='flex gap-2'>                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0 && 0.5">;
-                      Default;
-                    </span>;
-                  )}
-                </p>;
-                <p className='text-sm text-muted-foreground'>                <p className="text-sm text-muted-foreground">;
-                  Expires {method && method.expMonth}/{method && method.expYear}
-                </p>;
-              </div>;
-            </div>;
-            <div className='flex gap-2'>;
-              {!method && method.isDefault && (;
-                <Button size='sm' variant='ghost'>;
-                  Set Default;
-                </Button>;
-              )}
-              <Button size='sm' variant='ghost' className='text-destructive'>;
-                <Trash className='h-4 w-4' />              </Button>              {!method && method.isDefault && (;
-                <Button size="sm" variant="ghost">Set Default</Button>;
-              )}
-              <Button size="sm" variant="ghost" className="text-destructive">;
-                <Trash className="h-4 w-4" />;
-              </Button>;
-            </div>;
-          </div>;
-<<<<<<< HEAD
-        ))}
 =======
+
+        <CardDescription>Manage your payment methods for automatic billing</CardDescription>
+      </CardHeader>
+      <CardContent className="space-y-4">
+        {paymentMethods.map((method) => (
+          <div 
+            key={method.id}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+            className={`flex items-center justify-between p-4 rounded-lg border ${
+
 =======
               method.isDefault ? "bg-muted border-primary" : "border-border";
             }`}
@@ -206,18 +151,28 @@ export function PaymentMethods() {;
                 <p className="font-medium">
                   {method.brand} •••• {method.last4}
                   {method.isDefault && (
-                    <span className="ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5">
+
                       Default
                     </span>
                   )}
                 </p>
+
+
                 <p className="text-sm text-muted-foreground">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   Expires {method.expMonth}/{method.expYear}
                 </p>
               </div>
             </div>
+
+
             <div className="flex gap-2">
               {!method.isDefault && (
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <Button size="sm" variant="ghost">Set Default</Button>
               )}
               <Button size="sm" variant="ghost" className="text-destructive">
@@ -227,25 +182,108 @@ export function PaymentMethods() {;
           </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
-<<<<<<< HEAD
-      </CardContent>
-      <CardFooter>
-<<<<<<< HEAD
-        <Button className='gap-1'>
-          <Plus className='h-4 w-4' />          Add Payment Method        <Button className="gap-1">
+
+        <Button className="gap-1">
+
+=======
+
+        <Button className="gap-1">
+
+=======
+          <Plus className="h-4 w-4" />
+          Add Payment Method
+        </Button>
+      </CardFooter>;
+    </Card>;
+  );
+};
 =======
         <Button className="gap-1">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Plus className="h-4 w-4" />
           Add Payment Method
         </Button>
       </CardFooter>
     </Card>
-<<<<<<< HEAD
-  )
-}
+
+
 =======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+=======
+
+import React from "react",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Button } from "@/components/ui/button",;
+import { CreditCard, Plus, Trash } from 'lucide-react';
+export function PaymentMethods() {;
+  // Mock payment methods;
+  const paymentMethods = [;
+    {;
+      id: "pm-1",;
+      type: "credit_card",;
+      brand: "Visa",;
+      last4: "4242",;
+      expMonth: 12,;
+      expYear: 2025,;
+      isDefault: true},;
+    {;
+      id: "pm-2",;
+      type: "credit_card",;
+      brand: "Mastercard",;
+      last4: "8888",;
+      expMonth: 4,;
+      expYear: 2026;
+      isDefault: false}
+  ];
+  return (;
+    <Card>;
+      <CardHeader>;
+        <CardTitle>Payment Methods</CardTitle>;
+        <CardDescription>Manage your payment methods for automatic billing</CardDescription>;
+      </CardHeader>;
+      <CardContent className="space-y-4">;
+        {paymentMethods.map((method) => (;
+          <div;
+            key={method.id}
+            className={`flex items-center justify-between p-4 rounded-lg border ${;
+              method.isDefault ? "bg-muted border-primary" : "border-border";
+            }`}
+          >
+            <div className='flex items-center space-x-4'>
+              <div className='h-10 w-10 rounded-md border border-border flex items-center justify-center bg-background'>
+                <CreditCard className='h-5 w-5' />
+              </div>
+              <div>
+                <p className='font-medium'>
+                  {method.brand} •••• {method.last4}
+                  {method.isDefault && (
+                    <span className='ml-2 text-xs rounded-full bg-primary/20 text-primary px-2 py-0.5'>                      Default
+                    </span>
+                  )}
+                </p>
+                <p className='text-sm text-muted-foreground'>                  Expires {method.expMonth}/{method.expYear}
+                </p>
+              </div>
+            </div>
+            <div className='flex gap-2'>
+
+                      Default
+                    </span>
+                  )}
+                </p>
+
+                  Expires {method.expMonth}/{method.expYear}
+                </p>
+              </div>
+            </div>
+
+              </Button>
+
+            </div>
+          </div>
+        ))}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </CardContent>;
       <CardFooter>;
         <Button className='gap-1'>;
@@ -257,11 +295,10 @@ export function PaymentMethods() {;
     </Card>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import React from 'react';
 import {
@@ -369,3 +406,9 @@ function PaymentMethods() {
     </Card>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

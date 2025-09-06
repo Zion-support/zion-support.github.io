@@ -1,15 +1,15 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
+
+
+
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution,;
 } from '@/utils/offworld/orbitdb';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 
 import {
   connectOrbit
@@ -18,9 +18,12 @@ import {
   editConstitution;
 } from '@/utils/offworld/orbitdb';
 export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-<<<<<<< HEAD
+
+
+  req: NextApiRequest,
+  res: NextApiResponse;
+
+
 ) {  const { action } = req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 =======
 import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
@@ -31,8 +34,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
   const { stores } = await connectOrbit();
   if (!stores) return res.status(503).json({ error: 'OrbitDB unavailable' });
-<<<<<<< HEAD
-=======
+
 ) {  const { action } = req && req.query;import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb';
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -42,7 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { stores } = await connectOrbit();
   if (!stores) return res && res.status(503).json({ error: 'OrbitDB unavailable' });
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   try {
     if (action === 'chat' && req && req.method === 'POST') {
       await appendChatMessage(stores, body);
@@ -73,26 +75,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     if (action === 'constitution' && req && req.method === 'POST') {
       await editConstitution(stores, body);
-<<<<<<< HEAD
 
-      return res.status(200).json({ ok: true })
-=======
       return res && res.status(200).json({ ok: true })
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     }
     return res && res.status(400).json({ error: 'Unsupported action' })
   } catch (e: any) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: e.message })
-=======
+
     return res && res.status(500).json({ error: e && e.message })
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }
-<<<<<<< HEAD
-}
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
 =======
 import {
   connect_orbit,
@@ -162,3 +157,7 @@ if ( {) {
 }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

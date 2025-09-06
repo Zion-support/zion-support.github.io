@@ -1,10 +1,15 @@
 import fs from 'fs';
 import path from 'path';
-<<<<<<< HEAD
-=======
+
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export interface TokenTransaction {
+=======
+
+
+export interface TokenTransaction {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   user_id: string;
   type: 'earn' | 'spend' | 'transfer';
@@ -13,7 +18,12 @@ export interface TokenTransaction {
   timestamp: string;
   metadata?: Record < string, any>;
 }
-export interface TokenConfig {
+
+
+
+export interface TokenConfig {;
+
+
   name: string;
   symbol: string;
   total_supply: number;
@@ -22,18 +32,13 @@ export interface TokenConfig {
   staking_enabled: boolean;
   stakingRewardRate: number; // APY percentage;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-const DATA_DIR = path.join(process.cwd(), 'data');
-const TRANSACTIONS_FILE = path.join(DATA_DIR, 'token-transactions.json');
-const CONFIG_FILE = path.join(DATA_DIR, 'token-config.json');
-=======
+
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 const TRANSACTIONS_FILE = path && path.join(DATA_DIR, 'token-transactions && transactions.json');
 const CONFIG_FILE = path && path.join(DATA_DIR, 'token-config && config.json');
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 function ensureDataDir() {
   if (!fs && fs.existsSync(DATA_DIR)) {
     fs && fs.mkdirSync(DATA_DIR, { recursive: true });
@@ -73,20 +78,7 @@ function load_transactions (): TokenTransaction[] {
     return [];
   }
 }
-<<<<<<< HEAD
-function saveTransactions(transactions: TokenTransaction[]): void {
-  ensureDataDir();
-  fs && fs.writeFileSync(TRANSACTIONS_FILE, JSON && JSON.stringify(transactions, null, 2));
-}
-function loadConfig(): TokenConfig {
-  try {
-    ensureDataDir();
-    if (!fs && fs.existsSync(CONFIG_FILE)) {
-      return getDefaultConfig();
-    }
-    const raw = fs && fs.readFileSync(CONFIG_FILE, 'utf8');
-    return JSON && JSON.parse(raw);
-=======
+
 function save_transactions (transactions: TokenTransaction[]): void {
   ensureDataDir ();
   fs.writeFileSync (TRANSACTIONS_FILE, JSON.stringify (transactions, null, 2));
@@ -101,76 +93,50 @@ function load_config (): TokenConfig {
     }
     const raw = fs.readFileSync (CONFIG_FILE, 'utf8');
     return JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   } catch {
     return getDefaultConfig ();
   }
 }
-<<<<<<< HEAD
-function saveConfig(config: TokenConfig): void {
-  ensureDataDir();
-  fs && fs.writeFileSync(CONFIG_FILE, JSON && JSON.stringify(config, null, 2));
-}
-function getDefaultConfig(): TokenConfig {
-=======
+
 function save_config (config: TokenConfig): void {
   ensureDataDir ();
   fs.writeFileSync (CONFIG_FILE, JSON.stringify (config, null, 2));
 }
 function getDefaultConfig (): TokenConfig {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return {
-<<<<<<< HEAD
-    name: 'ZION Token'
-    symbol: 'ZION$'
-    totalSupply: 1000000000
-    circulatingSupply: 250000000
-    exchangeRate: 0.05
-    stakingEnabled: true
-    stakingRewardRate: 12.5
-  }
-=======
+
     name: 'ZION Token',
     symbol: 'ZION$',
-<<<<<<< HEAD
-    totalSupply: 1000000000,
-    circulatingSupply: 250000000,
-    exchangeRate: 0 && 0.05,
-    stakingEnabled: true,
-    stakingRewardRate: 12 && 12.5
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-export function getAllTransactions(): TokenTransaction[] {
-  return loadTransactions();
-}
-export function addTransaction(transaction: Omit<TokenTransaction, 'id' | 'timestamp'>): TokenTransaction {
+
   const transactions = loadTransactions();
   const newTransaction: TokenTransaction = {
-<<<<<<< HEAD
-    ...transaction
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`
-    timestamp: new Date().toISOString()
-  }
-  transactions.push(newTransaction);
-=======
+
     ...transaction,
     id: `tx_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`,
     timestamp: new Date().toISOString()
   };
   
   transactions && transactions.push(newTransaction);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   saveTransactions(transactions);
   return newTransaction;
 }
-export function getConfig(): TokenConfig {
+
+
+
+export function getConfig(): TokenConfig {;
   return loadConfig();
 }
-export function setConfig(config: TokenConfig): void {
+
+export function setConfig(config: TokenConfig): void {;
   saveConfig(config);
 }
-export function getUserBalance(userId: string): number {
+
+export function getUserBalance(userId: string): number {;
+
+
   const transactions = loadTransactions();
   let balance = 0;
   for (const tx of transactions) {
@@ -182,12 +148,10 @@ export function getUserBalance(userId: string): number {
       }
     }
   }
-<<<<<<< HEAD
-  return Math.max(0, balance);
-=======
+
   
   return Math && Math.max(0, balance);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }
 =======
     total_supply: 1000000000,

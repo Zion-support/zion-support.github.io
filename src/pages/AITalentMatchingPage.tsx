@@ -1,80 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from "react";
-<<<<<<< HEAD
-import { ServiceLandingTemplate } from "../components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp, Star } from 'lucide-react';
 
-=======
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp } from 'lucide-react'
-=======
-import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Bot, Users, TrendingUp } from 'lucide-react'
-import { Star } from 'lucide-react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
-<<<<<<< HEAD
-export default function AITalentMatchingPage() {
 
-  const benefits = [
-    {
-<<<<<<< HEAD
-      icon: Bot
-      title: "AI-Powered Matching"
-      description: "Advanced algorithms match the right talent with the right opportunities"
-    }
-    {
-      icon: Users
-      title: "Verified Professionals"
-      description: "All candidates are pre-screened and verified for quality"
-    }
-    {
-      icon: TrendingUp
-      title: "Success Tracking"
-      description: "Monitor performance and success rates of placements"
-    }
-  ]
-  const features = [
-    "Machine learning-based candidate matching"
-    "Comprehensive skill assessment tools"
-    "Real-time market analysis"
-    "Automated interview scheduling"
-    "Performance analytics dashboard"
-    "Custom matching criteria"
-  ]
-  const stats = [
-    { label: "Successful Placements", value: "95%" }
-    { label: "Client Satisfaction", value: "98%" }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 export default function AITalentMatchingPage() {;
   const benefits = [;
     {;
@@ -93,9 +21,21 @@ export default function AITalentMatchingPage() {;
       description: "Monitor performance and success rates of placements";
     }
   ];
-<<<<<<< HEAD
+
 =======
 =======
+
+=======
+=======
+import React from "react",
+import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate",
+import { Bot, Users, TrendingUp } from 'lucide-react'
+
+export default function AITalentMatchingPage() {
+  const benefits = [
+    {
+
+
       title: "Precise Candidate Matching",
       description: "Leverage AI algorithms to pair your roles with the most qualified experts.",
       icon: <Bot className = "h-8 w-8" />},
@@ -183,24 +123,10 @@ function AITalentMatchingPage() {
       benefits={benefits}
       features={features}
       stats={stats}
-<<<<<<< HEAD
-      ctaText="Start Matching Talent"
-      ctaLink="/contact"
-<<<<<<< HEAD
-    />
-  )
-=======
+
     />;
   );
-<<<<<<< HEAD
-}
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-}
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
       cta_text="Start Matching Talent";
       cta_link="/contact";
@@ -208,3 +134,10 @@ function AITalentMatchingPage() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+}
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

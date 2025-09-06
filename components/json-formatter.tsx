@@ -22,44 +22,17 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState } from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Code
-  Copy
-  RefreshCw
-  CheckCircle
-  XCircle
-  ArrowRight
-  Download
-  Upload
-  Settings
-  Eye;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import {;
-  Code,;
-  Copy,;
-  RefreshCw,;
-  CheckCircle,;
-  XCircle,;
-  ArrowRight,;
-  Download,;
-  Upload,;
-  Settings,;
-  Eye,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 import Head from 'next / head';
 import Card from '../components / ui / Card';
 import Button from '../components / ui / Button';
 import {
+=======
+import {
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Code,
   Copy,
   RefreshCw,
@@ -68,22 +41,21 @@ import {
   ArrowRight,
   Download,
   Upload,
-  Settings,
-  Eye,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+  Settings,;
+  Eye,;
+
+
 } from 'lucide-react';import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
-<<<<<<< HEAD
-export default function JSONFormatterPage() {;
-<<<<<<< HEAD
-=======
+
 =======
 import { Code, Copy, RefreshCw, CheckCircle, XCircle, ArrowRight, Download, Upload, Settings, Eye } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 export default function JSONFormatterPage() {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   const [inputJson, setInputJson] = useState('');
   const [formattedJson, setFormattedJson] = useState('');
@@ -98,112 +70,26 @@ export default function JSONFormatterPage() {
       setFormattedJson('');
       setIsValid(true);
       setErrorMessage('');
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      return;    }
-<<<<<<< HEAD
-=======
-export default /**
- * JSONFormatterPage - Function description
- */
-function JSONFormatterPage() {
-  const [input_json, setInputJson] = useState ('');
-  const [formatted_json, setFormattedJson] = useState ('');
-  const [is_valid, setIsValid] = useState (true);
-  const [error_message, setErrorMessage] = useState ('');
-  const [indent_size, setIndentSize] = useState (2);
-  const [compact_mode, setCompactMode] = useState (false);
-  const [showLineNumbers, setShowLineNumbers] = useState (true);
-;
-  const formatJSON = () =>: any {
-    if () {) {
-  $2
-}
-      setFormattedJson ('');
-      setIsValid (true);
-      setErrorMessage ('');
-      return;    }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    try {
-      const parsed = JSON.parse (input_json);
-      const formatted = compact_mode      return;
-    }
-    try {
-<<<<<<< HEAD
-      const parsed = JSON.parse(inputJson);
-      const formatted = compactMode
-        ? JSON.stringify(parsed)
-        : JSON.stringify(parsed, null, indentSize);
-=======
 
-    try {;
-      const parsed = JSON && JSON.parse(inputJson);
-      const formatted = compactMode      return;
-    }
 
-    try {;
-      const parsed = JSON && JSON.parse(inputJson);
-      const formatted = compactMode;
-        ? JSON && JSON.stringify(parsed);
-        : JSON && JSON.stringify(parsed, null, indentSize);
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      setFormattedJson(formatted);
-      setIsValid(true);
-      setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson('');    }        ? JSON.stringify(parsed)
-=======
-      return
-    }
-
-    try {
-      const parsed = JSON.parse(inputJson);
-      const formatted = compactMode 
-        ? JSON.stringify(parsed)
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        : JSON.stringify(parsed, null, indentSize);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
       setFormattedJson('');    }        ? JSON && JSON.stringify(parsed);
         : JSON && JSON.stringify(parsed, null, indentSize);
 
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       setFormattedJson(formatted);
       setIsValid(true);
       setErrorMessage('');
     } catch (error) {;
       setIsValid(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-      setFormattedJson('');
-=======
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson('')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+
     }
-<<<<<<< HEAD
-  }
-  const minifyJSON = () => {
-    if (!inputJson.trim()) return;
-<<<<<<< HEAD
-=======
+
     
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     try {
       const parsed = JSON.parse(inputJson);
       const minified = JSON.stringify(parsed);
@@ -219,116 +105,22 @@ function JSONFormatterPage() {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setFormattedJson(minified);
       setIsValid(true);
-<<<<<<< HEAD
-      setErrorMessage('');
-    } catch (error) {;
-      setIsValid(false);
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
-    } catch (error) {;
-=======
-      setErrorMessage('')
-    } catch (error) {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-      setIsValid(false);
-<<<<<<< HEAD
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-<<<<<<< HEAD
-  }
-  const validateJSON = () => {
-    if (!inputJson.trim()) {
-=======
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-<<<<<<< HEAD
-=======
-=======
-    }
-  };
 
-  const validateJSON = () => {
-    if (!inputJson.trim()) {
-      setIsValid(true);
-      setErrorMessage('');
-      return
-=======
-      const parsed = JSON.parse (input_json);
-      const formatted = compact_mode;
-        ? JSON.stringify (parsed);
-        : JSON.stringify (parsed, null, indent_size);
-;
-      setFormattedJson (formatted);
-      setIsValid (true);
-      setErrorMessage ('');
-    } catch (error) {
-      setIsValid (false);
-      setErrorMessage (error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson ('');    }        ? JSON.stringify (parsed);
-        : JSON.stringify (parsed, null, indent_size);
-;
-      setFormattedJson (formatted);
-      setIsValid (true);
-      setErrorMessage ('');
-    } catch (error) {
-      setIsValid (false);
-      setErrorMessage (error instanceof Error ? error.message : 'Invalid JSON');
-      setFormattedJson ('');
-    }
-  }
-;
-  const minifyJSON = () =>: any {
-    if () return) {
-  $2
-}
-    try {
-      const parsed = JSON.parse (input_json);
-      const minified = JSON.stringify (parsed);
-      setFormattedJson (minified);
-      setIsValid (true);
-      setErrorMessage ('');
-    } catch (error) {
-      setIsValid (false);
-      setErrorMessage (error instanceof Error ? error.message : 'Invalid JSON');    }      setErrorMessage ('');
-    } catch (error) {
-      setIsValid (false);
-      setErrorMessage (error instanceof Error ? error.message : 'Invalid JSON');
-  }
-;
-  const validateJSON = () =>: any {
-    if () {) {
-  $2
-}
-      setIsValid (true);
-      setErrorMessage ('');
-      return;    }      return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    }
-    try {
-<<<<<<< HEAD
-      JSON.parse(inputJson);
-      setIsValid(true);
       setErrorMessage('')
     } catch (error) {
+
       setIsValid(false);
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-    }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   };
 
-  const validateJSON = () => {;
-    if (!inputJson && inputJson.trim()) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      setIsValid(true);
-      setErrorMessage('');
-      return;    }      return;
-    }
-<<<<<<< HEAD
-    try {
-      JSON.parse(inputJson);
-=======
+
 
     try {;
       JSON && JSON.parse(inputJson);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       setIsValid(true);
       setErrorMessage('');
     } catch (error) {;
@@ -336,14 +128,8 @@ function JSONFormatterPage() {
       setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');    }      setErrorMessage('');
     } catch (error) {;
       setIsValid(false);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')
-  }
-  const clearAll = () => {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
       setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
   };
 
@@ -352,216 +138,11 @@ function JSONFormatterPage() {
     setInputJson('');
     setFormattedJson('');
     setIsValid(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    setErrorMessage('');
-<<<<<<< HEAD
-  }
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text);
-  }
-  const downloadJSON = (content: string, filename: string) => {
-    const blob = new Blob([content], { type: 'application/json' });    const url = URL.createObjectURL(blob);  }
-=======
-    setErrorMessage('')
-  };
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)
-  }
-  const downloadJSON = (content: string, filename: string) => {
-<<<<<<< HEAD
-    const blob = new Blob([content], { type: 'application/json' })
-=======
-    const blob = new Blob([content], { type: 'application/json' }),
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = filename;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-<<<<<<< HEAD
-    URL.revokeObjectURL(url);  }
-  const loadSampleJSON = () => {
-    const sample = {    URL.revokeObjectURL(url)
-  }
-  const loadSampleJSON = () => {
-    const sample = {
-      name: 'John Doe'
-      age: 30
-      email: 'john.doe@example.com'
-      address: {
-        street: '123 Main St'
-        city: 'Anytown'
-        state: 'CA'
-        zipCode: '12345'
-      }
-      phoneNumbers: [
-          type: 'home'
-          number: '555-123-4567'
-=======
-    URL.revokeObjectURL(url)
-  };
 
-  const loadSampleJSON = () => {
-    const sample = {
-      "name": "John Doe";
-      "age": 30;
-      "email": "john.doe@example.com";
-      "address": {
-        "street": "123 Main St";
-        "city": "Anytown";
-        "state": "CA";
-        "zipCode": "12345"
-      };
-      "phoneNumbers": [
-        {
-          "type": "home";
-          "number": "555-123-4567"
-        };
-        {
-          "type": "work";
-          "number": "555-987-6543"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-        }
-        {
-          type: 'work'
-          number: '555-987-6543'
-        }
-      ]
-      interests: ['programming', 'reading', 'hiking']
-      active: true
-      lastLogin: '2024-01-15T10:30:00Z'
-    }
-    setInputJson(JSON.stringify(sample, null, 2));
-    setFormattedJson('');
-    setIsValid(true);
-<<<<<<< HEAD
-    setErrorMessage('');  }
-  const getLineNumbers = (text: string) => {
-    const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');  };    setErrorMessage('')
-  }
-  const getLineNumbers = (text: string) => {
-    const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n');    return lines.map((_, index) => index + 1).join('\n')
-  }
-=======
-=======
-    setErrorMessage('')
-  };
-
-  const getLineNumbers = (text: string) => {
-    const lines = text.split('\n');
-    return lines.map((_, index) => index + 1).join('\n')
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  };
-
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);
-  };
-
-  const downloadJSON = (content: string, filename: string) => {;
-    const blob = new Blob([content], { type: 'application/json' });    const url = URL && URL.createObjectURL(blob);  };
-
-  const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);
-  };
-
-  const downloadJSON = (content: string, filename: string) => {;
-    const blob = new Blob([content], { type: 'application/json' }),;
-    const url = URL && URL.createObjectURL(blob);
-    const a = document && document.createElement('a');
-    a && a.href = url;
-    a && a.download = filename;
-    document && document.body.appendChild(a);
-    a && a.click();
-    document && document.body.removeChild(a);
-    URL && URL.revokeObjectURL(url);  };
-
-  const loadSampleJSON = () => {;
-    const sample = {    URL && URL.revokeObjectURL(url);
-  };
-
-  const loadSampleJSON = () => {;
-    const sample = {;
-      name: 'John Doe',;
-      age: 30,;
-      email: 'john && john.doe@example && example.com',;
-      address: {;
-        street: '123 Main St',;
-        city: 'Anytown',;
-        state: 'CA',;
-        zipCode: '12345',;
-      },;
-      phoneNumbers: [;
-          type: 'home',;
-          number: '555-123-4567',;
-        },;
-        {;
-          type: 'work',;
-          number: '555-987-6543',;
-        },;
-      ],;
-      interests: ['programming', 'reading', 'hiking'],;
-      active: true,;
-      lastLogin: '2024-01-15T10:30:00Z',;
-    };
-
-    setInputJson(JSON && JSON.stringify(sample, null, 2));
-    setFormattedJson('');
-    setIsValid(true);
-    setErrorMessage('');  };
-
-  const getLineNumbers = (text: string) => {;
-    const lines = text && text.split('\n');
-    return lines && lines.map((_, index) => index + 1).join('\n');  };    setErrorMessage('');
-  };
-
-  const getLineNumbers = (text: string) => {;
-    const lines = text && text.split('\n');
-    return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n');
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
-<<<<<<< HEAD
-    <>;
-      <Head>;
-        <title>JSON Formatter - Zion Tech Group</title>;
-        <meta
-          name='description'
-          content='Format, validate, and beautify JSON with our professional JSON formatter. Minify, prettify, and analyze JSON data with ease.'
-        />;
-        <meta property='og:title' content='JSON Formatter - Zion Tech Group' />;
-        <meta
-          property='og:description'
-          content='Professional JSON formatting and validation service.'
-<<<<<<< HEAD
-        />
-      </Head>
-      {/* Hero Section */}
-      <section className='pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <div className='mb-8'>
-            <div className='inline-flex items-center px-4 py-2 rounded-full bg-teal-500/20 border border-teal-400/30 text-teal-300 text-sm font-medium mb-6'>
-              <Code className='w-4 h-4 mr-2' />
-              Professional JSON Tools
-            </div>
-          </div>
-          <h1 className='text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight'>
-            JSON Formatter
-          </h1>
-          <p className='text-xl text-teal-200 max-w-4xl mx-auto leading-relaxed'>
-            Format, validate, and beautify JSON with our professional tools.
-            Minify, prettify, and analyze JSON data with advanced features and
-            real-time validation.          </p>      </Head>
-=======
+
     <>
       <Head>
         <title>JSON Formatter - Zion Tech Group</title>
@@ -570,7 +151,7 @@ function JSONFormatterPage() {
         <meta property="og:description" content="Professional JSON formatting and validation service." />
       </Head>
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-teal-900 via-cyan-900 to-blue-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -590,21 +171,9 @@ function JSONFormatterPage() {
         </div>
       </section>
       {/* JSON Formatter Tool */}
-<<<<<<< HEAD
-      <section className='py-20 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-              Format Your JSON Data
-            </h2>
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              Our advanced JSON formatter provides multiple formatting options
-              and real-time validation.            </p>
-          </div>
-          {/* Settings Bar */}      <section className="py-20 bg-gray-900">
-=======
+
       <section className="py-20 bg-gray-900">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -612,9 +181,7 @@ function JSONFormatterPage() {
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               Our advanced JSON formatter provides multiple formatting options and real-time validation.
-<<<<<<< HEAD
-          </div>
-=======
+
         />;
       </Head>;
 
@@ -676,7 +243,7 @@ function JSONFormatterPage() {
               Our advanced JSON formatter provides multiple formatting options and real-time validation.;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           {/* Settings Bar */}
           <Card className='p-6 bg-gray-800 border border-gray-700 mb-8'>;
             <div className='flex flex-wrap items-center justify-between gap-4'>;
@@ -704,21 +271,15 @@ function JSONFormatterPage() {
                   <label className="text-sm text-gray-300" htmlFor="input-Indent:">Indent:</label>;
                   <select
                     value={indentSize}
-<<<<<<< HEAD
-                    onChange={(e) => setIndentSize(Number(e.target.value))}
-                    className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500"
-<<<<<<< HEAD
-=======
+
                   >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                     <option value={2}>2 spaces</option>
                     <option value={4}>4 spaces</option>
                     <option value={8}>8 spaces</option>
                   </select>
                 </div>
-<<<<<<< HEAD
-                <div className='flex items-center space-x-2'>
-=======
+
                     onChange={(e) => setIndentSize(Number(e && e.target.value))}
                     className="px-3 py-2 bg-gray-700 border border-gray-600 rounded text-white text-sm focus:outline-none focus:ring-2 focus:ring-teal-500";
 =======
@@ -892,40 +453,20 @@ function JSONFormatterPage() {
                     value={indent_size}
                     on_change={(e) => setIndentSize (Number (e.target.value))}
                     className="px - 3 py - 2 bg - gray - 700 border border - gray - 600 rounded text - white text - sm focus:outline - none focus:ring - 2 focus:ring - teal - 500";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                     <option value={2}>2 spaces</option>;
                     <option value={4}>4 spaces</option>;
                     <option value={8}>8 spaces</option>;
                   </select>;
                 </div>;
-<<<<<<< HEAD
 
-                <div className='flex items-center space-x-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  <input
-                    type='checkbox'
-                    id='compactMode'
-                    checked={compactMode}
-                    onChange={e => setCompactMode(e && e.target.checked)}
-                    className='w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500';
-                  />;
-                  <label
-                    htmlFor='compactMode'
-<<<<<<< HEAD
-                    className='text-sm text-gray-300'
-                  >
-                    Compact mode
-                  </label>
-                </div>
-                <div className='flex items-center space-x-2'>
-=======
                     className='text-sm text-gray-300'>;
                     Compact mode;
                   </label>;
                 </div>;
 
                 <div className='flex items-center space-x-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <input
                     type='checkbox'
                     id='showLineNumbers'
@@ -935,15 +476,7 @@ function JSONFormatterPage() {
                   />;
                   <label
                     htmlFor='showLineNumbers'
-<<<<<<< HEAD
-                    className='text-sm text-gray-300'
-                  >
-                    Line numbers
-                  </label>
-                </div>
-              </div>
-              <div className='flex items-center space-x-3'>
-=======
+
                     className='text-sm text-gray-300'>;
 =======
                 <div className='flex items - center space - x-2'>;
@@ -973,39 +506,22 @@ function JSONFormatterPage() {
                     html_for='showLineNumbers';
                     className='text - sm text - gray - 300';
                   >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                     Line numbers;
                   </label>;
                 </div>;
               </div>;
-<<<<<<< HEAD
 
-              <div className='flex items-center space-x-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                <Button
-                  onClick={loadSampleJSON}
-                  variant='outline'
-                  size='sm'
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'                  <input
-<<<<<<< HEAD
-=======
 =======
                 
                 <div className="flex items-center space-x-2">
                   <input
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     type="checkbox"
                     id="compactMode"
                     checked={compactMode}
-<<<<<<< HEAD
-                    onChange={(e) => setCompactMode(e.target.checked)}
-                    className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
-                  />
-                  <label htmlFor="compactMode" className="text-sm text-gray-300" htmlFor="input-Compact mode">Compact mode</label>
-                </div>
-                <div className="flex items-center space-x-2">
-=======
+
                     onChange={(e) => setCompactMode(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
@@ -1013,20 +529,12 @@ function JSONFormatterPage() {
                 </div>;
 
                 <div className="flex items-center space-x-2">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <input
                     type="checkbox"
                     id="showLineNumbers"
                     checked={showLineNumbers}
-<<<<<<< HEAD
-                    onChange={(e) => setShowLineNumbers(e.target.checked)}
-                    className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500"
-                  />
-                  <label htmlFor="showLineNumbers" className="text-sm text-gray-300" htmlFor="input-Line numbers">Line numbers</label>
-                </div>
-              </div>
-              <div className="flex items-center space-x-3">
-=======
+
                     onChange={(e) => setShowLineNumbers(e && e.target.checked)}
                     className="w-4 h-4 text-teal-600 bg-gray-700 border-gray-600 rounded focus:ring-teal-500";
                   />;
@@ -1035,203 +543,14 @@ function JSONFormatterPage() {
               </div>;
 
               <div className="flex items-center space-x-3">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 <Button
                   onClick={loadSampleJSON}
                   variant="outline"
                   size="sm"
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700">;
-                  <Upload className="w-4 h-4 mr-2" />;
-                  Load Sample;
-                </Button>;
-                <Button
-                  onClick={clearAll}
-                  variant='outline'
-                  size='sm'
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'                  variant="outline"
-                  size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700">;
-                  <Upload className='w-4 h-4 mr-2' />                  Load Sample;
-                </Button>;
-                <Button
-                  onClick={clearAll}
-                  variant='outline'
-                  size='sm'
-<<<<<<< HEAD
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'                >
-=======
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                >
-                  <Upload className="w-4 h-4 mr-2" />
-                  Load Sample
-                </Button>
-                <Button
-                  onClick={clearAll}
-                  variant="outline"
-                  size="sm"
-                  className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                  Clear All
-                </Button>
-              </div>
-            </div>
-          </Card>
-<<<<<<< HEAD
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-            <Card className='p-8 bg-gray-800 border border-gray-700'>
-              <div className='flex items-center justify-between mb-6'>
-                <h3 className='text-2xl font-bold text-white flex items-center'>
-                  <Code className='w-6 h-6 mr-3 text-teal-400' />
-                  Input JSON
-                </h3>
-                <div className='flex items-center space-x-2'>
-=======
-                  className='border-gray-600 text-gray-300 hover:bg-gray-700'>;
-=======
-              <div className='flex items - center space - x-3'>;
-                <Button;
-                  on_click={loadSampleJSON}
-                  variant='outline';
-                  size='sm';
-                  className='border - gray - 600 text - gray - 300 hover:bg - gray - 700'                  <input;
-                    type="checkbox";
-                    id="compact_mode";
-                    checked={compact_mode}
-                    on_change={(e) => setCompactMode (e.target.checked)}
-                    className="w - 4 h - 4 text - teal - 600 bg - gray - 700 border - gray - 600 rounded focus:ring - teal - 500";
-                  />;
-                  <label html_for="compact_mode" className="text - sm text - gray - 300" html_for="input - Compact mode">Compact mode</label>;
-                </div>;
-                <div className="flex items - center space - x-2">;
-                  <input;
-                    type="checkbox";
-                    id="showLineNumbers";
-                    checked={showLineNumbers}
-                    on_change={(e) => setShowLineNumbers (e.target.checked)}
-                    className="w - 4 h - 4 text - teal - 600 bg - gray - 700 border - gray - 600 rounded focus:ring - teal - 500";
-                  />;
-                  <label html_for="showLineNumbers" className="text - sm text - gray - 300" html_for="input - Line numbers">Line numbers</label>;
-                </div>;
-              </div>;
-              <div className="flex items - center space - x-3">;
-                <Button;
-                  on_click={loadSampleJSON}
-                  variant="outline";
-                  size="sm";
-                  className="border - gray - 600 text - gray - 300 hover:bg - gray - 700";
-                >;
-                  <Upload className="w - 4 h - 4 mr - 2" />;
-                  Load Sample;
-                </Button>;
-                <Button;
-                  on_click={clear_all}
-                  variant='outline';
-                  size='sm';
-                  className='border - gray - 600 text - gray - 300 hover:bg - gray - 700'                  variant="outline";
-                  size="sm";
-                  className="border - gray - 600 text - gray - 300 hover:bg - gray - 700";
-                >;
-                  <Upload className='w - 4 h - 4 mr - 2' />                  Load Sample;
-                </Button>;
-                <Button;
-                  on_click={clear_all}
-                  variant='outline';
-                  size='sm';
-                  className='border - gray - 600 text - gray - 300 hover:bg - gray - 700'                >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  Clear All;
-                </Button>;
-              </div>;
-            </div>;
-          </Card>;
-<<<<<<< HEAD
 
-          <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
-            <Card className='p-8 bg-gray-800 border border-gray-700'>;
-              <div className='flex items-center justify-between mb-6'>;
-                <h3 className='text-2xl font-bold text-white flex items-center'>;
-                  <Code className='w-6 h-6 mr-3 text-teal-400' />;
-                  Input JSON;
-                </h3>;
-                <div className='flex items-center space-x-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                  <span
-                    className={`px-2 py-1 rounded text-xs font-medium ${
-                      isValid
-                        ? 'bg-green-500/20 text-green-400'
-                        : 'bg-red-500/20 text-red-400'
-                    }`}>                    {isValid ? 'Valid' : 'Invalid'}                <div className="flex items-center space-x-2">;
-                  <spanclassName={`px-2 py-1 rounded text-xs font-medium ${
-=======
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {/* Input Section */}
-            <Card className="p-8 bg-gray-800 border border-gray-700">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-white flex items-center">
-                  <Code className="w-6 h-6 mr-3 text-teal-400" />
-                  Input JSON
-                </h3>
-                <div className="flex items-center space-x-2">
-                  <span className={`px-2 py-1 rounded text-xs font-medium ${
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-                    isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
-<<<<<<< HEAD
-                  }`}>
-<<<<<<< HEAD
-                  </span>
-                </div>
-              </div>
-              <div className='space-y-4'>
-                <div className='relative'>
-=======
-          <div className='grid grid - cols - 1 lg:grid - cols - 2 gap - 8'>;
-            <Card className='p - 8 bg - gray - 800 border border - gray - 700'>;
-              <div className='flex items - center justify - between mb - 6'>;
-                <h3 className='text - 2xl font - bold text - white flex items - center'>;
-                  <Code className='w - 6 h - 6 mr - 3 text - teal - 400' />;
-                  Input JSON;
-                </h3>;
-                <div className='flex items - center space - x-2'>;
-                  <span;
-                    className={`px - 2 py - 1 rounded text - xs font - medium ${
-                      is_valid;
-                        ? 'bg - green - 500 / 20 text - green - 400';
-                        : 'bg - red - 500 / 20 text - red - 400';
-                    }`}
-                  >                    {is_valid ? 'Valid' : 'Invalid'}                <div className="flex items - center space - x-2">;
-                  <span className={`px - 2 py - 1 rounded text - xs font - medium ${
-                    is_valid ? 'bg - green - 500 / 20 text - green - 400' : 'bg - red - 500 / 20 text - red - 400';
-                  }`}>;
-                  </span>;
-                </div>;
-              </div>;
-              <div className='space - y-4'>;
-                <div className='relative'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                  {showLineNumbers && (
-                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space - y-4">;
-                <div className="relative">;
-                  {showLineNumbers && (
-<<<<<<< HEAD
-                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
-=======
-                    {isValid ? 'Valid' : 'Invalid'}
-                  </span>
-                </div>
-              </div>
-
-              <div className="space-y-4">
-                <div className="relative">
-                  {showLineNumbers && (
-                    <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
-                      {getLineNumbers(inputJson)}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>
 =======
                   }`}>;
@@ -1251,50 +570,36 @@ function JSONFormatterPage() {
                   )}
                   <textarea
                     value={inputJson}
-<<<<<<< HEAD
-                    onChange={e => setInputJson(e && e.target.value)}
-                    placeholder='Paste your JSON data here...'                    rows={15}                    onChange={(e) => setInputJson(e && e.target.value)}
-                    placeholder="Paste your JSON data here...";
-<<<<<<< HEAD
-=======
+
 =======
                     onChange={(e) => setInputJson(e.target.value)}
                     placeholder="Paste your JSON data here..."
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     rows={15}
                     className={`w-full p-4 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-teal-500 font-mono text-sm resize-none ${;
                       showLineNumbers ? 'pl-16' : '';
                     }`}
-<<<<<<< HEAD
-                  />
-                </div>
-                {!isValid && errorMessage && (
-<<<<<<< HEAD
-=======
+
                   />;
                 </div>;
 
                 {!isValid && errorMessage && (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <div className='p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>                    <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-<<<<<<< HEAD
-                <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-=======
+
 
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-<<<<<<< HEAD
-                <div className='flex space-x-3'>
-=======
+
 
                 <div className='flex space-x-3'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   <Button
                     onClick={formatJSON}
                     disabled={!inputJson && inputJson.trim()}
@@ -1319,40 +624,8 @@ function JSONFormatterPage() {
                     onClick={validateJSON}
                     disabled={!inputJson && inputJson.trim()}
                     variant='outline'
-<<<<<<< HEAD
-                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
-=======
-<<<<<<< HEAD
-                    className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'                  >                    variant="outline"
-=======
-                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
-                    <strong>Error:</strong> {errorMessage}
-                  </div>
-                )}
 
-                <div className="flex space-x-3">
-                  <Button
-                    onClick={formatJSON}
-                    disabled={!inputJson.trim()}
-                    className="flex-1 bg-gradient-to-r from-teal-600 to-cyan-600 hover:from-teal-700 hover:to-cyan-700 text-white py-3 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
-                  >
-                    <Code className="w-5 h-5 mr-2" />
-                    Format JSON
-                  </Button>
-                  <Button
-                    onClick={minifyJSON}
-                    disabled={!inputJson.trim()}
-                    variant="outline"
-                    className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
-                  >
-                    Minify
-                  </Button>
-                  <Button
-                    onClick={validateJSON}
-                    disabled={!inputJson.trim()}
-                    variant="outline"
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50"
                   >
                     Validate
@@ -1360,8 +633,7 @@ function JSONFormatterPage() {
                 </div>
               </div>
             </Card>
-<<<<<<< HEAD
-=======
+
                     className='border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50'>                    variant="outline";
                     className="border-gray-600 text-gray-300 hover:bg-gray-700 disabled:opacity-50";
 =======
@@ -1413,7 +685,7 @@ function JSONFormatterPage() {
                     variant='outline';
                     className='border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50'                  >                    variant="outline";
                     className="border - gray - 600 text - gray - 300 hover:bg - gray - 700 disabled:opacity - 50";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   >;
                     Validate;
@@ -1421,13 +693,8 @@ function JSONFormatterPage() {
                 </div>;
               </div>;
             </Card>;
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             {/* Output Section */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>;
               <div className='flex items-center justify-between mb-6'>;
@@ -1437,8 +704,7 @@ function JSONFormatterPage() {
                 </h3>;
                 {formattedJson && (;
                   <div className='flex items-center space-x-2'>;
-<<<<<<< HEAD
-=======
+
 =======
 
             {/* Output Section */}
@@ -1450,7 +716,7 @@ function JSONFormatterPage() {
                 </h3>
                 {formattedJson && (
                   <div className="flex items-center space-x-2">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     <Button
                       onClick={() => copyToClipboard(formattedJson)}
@@ -1462,145 +728,29 @@ function JSONFormatterPage() {
                       Copy;
                     </Button>;
                     <Button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                      onClick={() =>;
-                        downloadJSON(formattedJson, 'formatted && formatted.json');
-                      }
-                      variant='outline';
-                      size='sm';
-                      className='border-gray-600 text-gray-300 hover:bg-gray-700';
-                    >;
-                      <Download className='w-4 h-4 mr-2' />                      Download                  Formatted Output;
-                </h3>;
-                {formattedJson && (;
-                  <div className="flex items-center space-x-2">;
-                    <Button
-                      onClick={() => copyToClipboard(formattedJson)}
-                      variant="outline";
-                      size="sm";
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700";
-                    >;
-                      <Copy className="w-4 h-4 mr-2" />;
-                      Copy;
-                    </Button>;
-                    <Button
-                      onClick={() => downloadJSON(formattedJson, 'formatted && formatted.json')}
-                      variant="outline";
-                      size="sm";
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700";
-                    >;
-                      <Download className="w-4 h-4 mr-2" />;
-                      Download;
-                    </Button>;
-                  </div>;
-                )}
-<<<<<<< HEAD
-              </div>
-              <div className='space-y-4'>
-                  <div className='relative'>
-                    {showLineNumbers && (
-                      <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>
-=======
-              </div>;
 
-              <div className='space-y-4'>;
-                  <div className='relative'>;
-                    {showLineNumbers && (;
-                      <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                        {getLineNumbers(formattedJson)}
-                      </div>;
-                    )}
-                    <div
-                      className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                        showLineNumbers ? 'pl-16' : ''
-                      }`}>;
-                      <pre className='whitespace-pre-wrap'>{formattedJson}</pre>;
-                    </div>;
-                  </div>;
-                ) : (;
-                  <div className='bg-gray-700 p-6 rounded-lg border border-gray-600 text-center'>;
-                    <div className='text-6xl mb-4'>📄</div>;
-                    <p className='text-gray-400'>;
-                      Formatted JSON will appear here. Enter JSON data and click;
-                      format to get started.                    </p>                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">;
-                    <div className="text-6xl mb-4">📄</div>;
-                    <p className="text-gray-400">;
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.;
-                  </div>;
-                )}
-<<<<<<< HEAD
-                {formattedJson && (
-                  <div className='text-sm text-gray-400'>
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>
-                      • Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
-                      KB
-                    </p>                  </div>                  <div className="text-sm text-gray-400">
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
-=======
-                      onClick={() => downloadJSON(formattedJson, 'formatted.json')}
-                      variant="outline"
-                      size="sm"
-                      className="border-gray-600 text-gray-300 hover:bg-gray-700"
-                    >
-                      <Download className="w-4 h-4 mr-2" />
-                      Download
-                    </Button>
-                  </div>
-                )}
-              </div>
 
-<<<<<<< HEAD
-=======
-              <div className="space-y-4">
-                {formattedJson ? (
-                  <div className="relative">
-                    {showLineNumbers && (
-                      <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
-                        {getLineNumbers(formattedJson)}
-                      </div>
-                    )}
-                    <div className={`p-4 bg-gray-700 border border-gray-600 rounded-lg text-white font-mono text-sm overflow-auto max-h-96 ${
-                      showLineNumbers ? 'pl-16' : ''
-                    }`}>
-                      <pre className="whitespace-pre-wrap">{formattedJson}</pre>
-                    </div>
-                  </div>
-                ) : (
-                  <div className="bg-gray-700 p-6 rounded-lg border border-gray-600 text-center">
-                    <div className="text-6xl mb-4">📄</div>
-                    <p className="text-gray-400">
-                      Formatted JSON will appear here. Enter JSON data and click format to get started.
-                    </p>
-                  </div>
-                )}
-
-                {formattedJson && (
-                  <div className="text-sm text-gray-400">
-                    <p>• Characters: {formattedJson.length}</p>
-                    <p>• Lines: {formattedJson.split('\n').length}</p>
-                    <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
-                  </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Features */}
-<<<<<<< HEAD
-      <section className='py-20 bg-gray-800'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+
+
+
+              Professional JSON Formatting Features
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -1725,43 +875,21 @@ function JSONFormatterPage() {
               <h3 className="text-xl font-bold text-white mb-4">Customizable</h3>
               <p className="text-gray-400">
                 Adjust indentation size, toggle compact mode, and customize display options.
-<<<<<<< HEAD
-=======
+
               </p>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             </Card>
           </div>
         </div>
       </section>
       {/* Use Cases */}
-<<<<<<< HEAD
-      <section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-              Perfect For Every JSON Need
-            </h2>
-            <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-              From development to data analysis, our JSON formatter serves all
-              your formatting needs.
-            </p>
-          </div>
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>👨‍💻</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>Developers</h3>
-              <p className='text-gray-400 mb-6'>
-                Format API responses, debug JSON data, and prepare configuration
-                files with professional formatting.
-              </p>
-              <ul className='space-y-2 text-gray-300'>                <li>• API development and testing</li>              Perfect For Every JSON Need
-=======
+
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
               Perfect For Every JSON Need
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
               From development to data analysis, our JSON formatter serves all your formatting needs.
@@ -1780,89 +908,53 @@ function JSONFormatterPage() {
                 <li>• Debug and troubleshooting</li>
               </ul>
             </Card>
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>📊</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Data Analysts
-              </h3>
-              <p className='text-gray-400 mb-6'>
-                Clean and format JSON datasets for analysis, reporting, and data
-                visualization projects.
-              </p>
-              <ul className='space-y-2 text-gray-300'>                <li>• Data cleaning and preparation</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
-=======
+
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
               <div className="text-4xl mb-4">📊</div>
               <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>
               <p className="text-gray-400 mb-6">
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.
               </p>
               <ul className="space-y-2 text-gray-300">
-<<<<<<< HEAD
-=======
+
                 <li>• Data cleaning and preparation</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 <li>• Report generation</li>
                 <li>• Data validation</li>
               </ul>
             </Card>
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>🔧</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                DevOps Engineers
-              </h3>
-              <p className='text-gray-400 mb-6'>
-                Manage configuration files, validate deployment manifests, and
-                format infrastructure as code.
-              </p>
-              <ul className='space-y-2 text-gray-300'>                <li>• Configuration management</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
-=======
+
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>
               <p className="text-gray-400 mb-6">
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.
               </p>
               <ul className="space-y-2 text-gray-300">
-<<<<<<< HEAD
-=======
+
                 <li>• Configuration management</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 <li>• Infrastructure validation</li>
                 <li>• Deployment automation</li>
               </ul>
             </Card>
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>📝</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Technical Writers
-              </h3>
-              <p className='text-gray-400 mb-6'>
-                Format JSON examples for documentation, tutorials, and technical
-                specifications.
-              </p>
-              <ul className='space-y-2 text-gray-300'>                <li>• Documentation examples</li>            <Card className="p-8 bg-gray-700 border border-gray-600">
-=======
+
 
             <Card className="p-8 bg-gray-700 border border-gray-600">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
               <div className="text-4xl mb-4">📝</div>
               <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>
               <p className="text-gray-400 mb-6">
                 Format JSON examples for documentation, tutorials, and technical specifications.
               </p>
               <ul className="space-y-2 text-gray-300">
-<<<<<<< HEAD
-=======
+
                 <li>• Documentation examples</li>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
                 <li>• API documentation</li>
                 <li>• Technical specifications</li>
               </ul>
@@ -2165,32 +1257,7 @@ function JSONFormatterPage() {
               your formatting needs.;
             </p>;
           </div>;
-<<<<<<< HEAD
 
-          <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>👨‍💻</div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>Developers</h3>;
-              <p className='text-gray-400 mb-6'>;
-                Format API responses, debug JSON data, and prepare configuration;
-                files with professional formatting.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li>• API development and testing</li>              Perfect For Every JSON Need;
-            </h2>;
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">;
-              From development to data analysis, our JSON formatter serves all your formatting needs.;
-            </p>;
-          </div>;
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">;
-            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">👨‍💻</div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Developers</h3>;
-              <p className="text-gray-400 mb-6">;
-                Format API responses, debug JSON data, and prepare configuration files with professional formatting.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-=======
           <div className='grid grid - cols - 1 md:grid - cols - 2 gap - 8'>;
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>👨‍💻</div>;
@@ -2213,31 +1280,13 @@ function JSONFormatterPage() {
                 Format API responses, debug JSON data, and prepare configuration files with professional formatting.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 <li>• API development and testing</li>;
                 <li>• Configuration file management</li>;
                 <li>• Debug and troubleshooting</li>;
               </ul>;
             </Card>;
-<<<<<<< HEAD
 
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>📊</div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                Data Analysts;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Clean and format JSON datasets for analysis, reporting, and data;
-                visualization projects.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li>• Data cleaning and preparation</li>            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📊</div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Data Analysts</h3>;
-              <p className="text-gray-400 mb-6">;
-                Clean and format JSON datasets for analysis, reporting, and data visualization projects.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-=======
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📊</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -2254,30 +1303,12 @@ function JSONFormatterPage() {
                 Clean and format JSON datasets for analysis, reporting, and data visualization projects.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 <li>• Report generation</li>;
                 <li>• Data validation</li>;
               </ul>;
             </Card>;
-<<<<<<< HEAD
 
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>🔧</div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                DevOps Engineers;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Manage configuration files, validate deployment manifests, and;
-                format infrastructure as code.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li>• Configuration management</li>            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">🔧</div>;
-              <h3 className="text-2xl font-bold text-white mb-4">DevOps Engineers</h3>;
-              <p className="text-gray-400 mb-6">;
-                Manage configuration files, validate deployment manifests, and format infrastructure as code.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-=======
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>🔧</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -2294,30 +1325,12 @@ function JSONFormatterPage() {
                 Manage configuration files, validate deployment manifests, and format infrastructure as code.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 <li>• Infrastructure validation</li>;
                 <li>• Deployment automation</li>;
               </ul>;
             </Card>;
-<<<<<<< HEAD
 
-            <Card className='p-8 bg-gray-700 border border-gray-600'>;
-              <div className='text-4xl mb-4'>📝</div>;
-              <h3 className='text-2xl font-bold text-white mb-4'>;
-                Technical Writers;
-              </h3>;
-              <p className='text-gray-400 mb-6'>;
-                Format JSON examples for documentation, tutorials, and technical;
-                specifications.;
-              </p>;
-              <ul className='space-y-2 text-gray-300'>                <li>• Documentation examples</li>            <Card className="p-8 bg-gray-700 border border-gray-600">;
-              <div className="text-4xl mb-4">📝</div>;
-              <h3 className="text-2xl font-bold text-white mb-4">Technical Writers</h3>;
-              <p className="text-gray-400 mb-6">;
-                Format JSON examples for documentation, tutorials, and technical specifications.;
-              </p>;
-              <ul className="space-y-2 text-gray-300">;
-=======
             <Card className='p - 8 bg - gray - 700 border border - gray - 600'>;
               <div className='text - 4xl mb - 4'>📝</div>;
               <h3 className='text - 2xl font - bold text - white mb - 4'>;
@@ -2334,7 +1347,7 @@ function JSONFormatterPage() {
                 Format JSON examples for documentation, tutorials, and technical specifications.;
               </p>;
               <ul className="space - y-2 text - gray - 300">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 <li>• API documentation</li>;
                 <li>• Technical specifications</li>;
               </ul>;
@@ -2342,122 +1355,16 @@ function JSONFormatterPage() {
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-      {/* CTA Section */}
-<<<<<<< HEAD
-      <section className='py-20 bg-gradient-to-r from-teal-600 to-cyan-600'>;
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>;
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>;
-          </h2>;
-          <p className='text-xl text-teal-100 mb-8'>;
-            Join thousands of developers and professionals who trust our JSON;
-            formatter for their data needs.;
-          </p>;
-          <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-            <Button
-              href='/contact'
-              size='lg'
-              className='bg-white text-teal-600 hover:bg-gray-100'>;
-              Get Started Today;
-              <ArrowRight className='w-5 h-5 ml-2' />;
-            </Button>;
-            <Button
-              href='/pricing'
-              variant='outline'
-              size='lg'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-              className='border-white text-white hover:bg-white hover:text-teal-600'            >              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600"
-=======
-      <section className="py-20 bg-gradient-to-r from-teal-600 to-cyan-600">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
-            Ready to Format Your JSON?
-          </h2>
-          <p className="text-xl text-teal-100 mb-8">
-            Join thousands of developers and professionals who trust our JSON formatter for their data needs.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="/contact"
-              size="lg"
-              className="bg-white text-teal-600 hover:bg-gray-100"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-              href="/pricing"
-              variant="outline"
-              size="lg"
-              className="border-white text-white hover:bg-white hover:text-teal-600"
-            >
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-              View Pricing
-            </Button>
-          </div>
-        </div>
-      </section>
-    </>
-<<<<<<< HEAD
-);
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-              className='border-white text-white hover:bg-white hover:text-teal-600'>              href="/pricing";
-              variant="outline";
-              size="lg";
-              className="border-white text-white hover:bg-white hover:text-teal-600";
-<<<<<<< HEAD
-=======
-=======
-      {/* CTA Section */}
-      <section className='py - 20 bg - gradient - to - r from - teal - 600 to - cyan - 600'>;
-        <div className='max - w-4xl mx - auto px - 4 sm:px - 6 lg:px - 8 text - center'>;
-          <h2 className='text - 3xl sm:text - 4xl font - bold text - white mb - 6'>;
-          </h2>;
-          <p className='text - xl text - teal - 100 mb - 8'>;
-            Join thousands of developers and professionals who trust our JSON;
-            formatter for their data needs.;
-          </p>;
-          <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-            <Button;
-              href='/contact';
-              size='lg';
-              className='bg - white text - teal - 600 hover:bg - gray - 100';
-            >;
-              Get Started Today;
-              <ArrowRight className='w - 5 h - 5 ml - 2' />;
-            </Button>;
-            <Button;
-              href='/pricing';
-              variant='outline';
-              size='lg';
-              className='border - white text - white hover:bg - white hover:text - teal - 600'            >              href="/pricing";
-              variant="outline";
-              size="lg";
-              className="border - white text - white hover:bg - white hover:text - teal - 600";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               View Pricing;
             </Button>;
           </div>;
         </div>;
       </section>;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    </>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
   );
 }

@@ -1,29 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import Document, {
-<<<<<<< HEAD
-  Html
-  Head
-  Main
-  NextScript
-  DocumentContext;
-} from 'next/document';
 
-export default function Document() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import Document, {;
-  Html,;
-  Head,;
-  Main,;
-  NextScript,;
-  DocumentContext,;
-} from 'next/document';
-export default function Document() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <Html lang='en'>;
       <Head>;
@@ -88,14 +64,25 @@ function Document() {
         <Main />;
         <NextScript />;
       </body>;
-<<<<<<< HEAD
-    </Html>;
-<<<<<<< HEAD
-=======
+
   );
 }
 =======
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
+=======
+
+
+import Document, {
+
+  Html,
+  Head,
+  Main,
+  NextScript,;
+  DocumentContext,;
+
+} from 'next/document';
+
+
 
 export default function Document() {
   return (
@@ -115,9 +102,12 @@ export default function Document() {
     </Html>
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
     </Html>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

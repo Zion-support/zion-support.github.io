@@ -1,78 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react'
-import { Button } from '@/components/ui/button'
-import { Slider } from '@/components/ui/slider'
-import { Switch } from '@/components/ui/switch'
-import { Input } from '@/components/ui/input'
-import {
-  Select
-  SelectContent
-  SelectItem
-  SelectTrigger
-  SelectValue
-} from '@/components/ui/select'
-import { X, Filter } from 'lucide-react'
 
-  Sheet
-  SheetContent
-  SheetHeader
-  SheetTitle
-  SheetFooter
-  SheetTrigger
-} from '@/components/ui/sheet'
-import { Badge } from '@/components/ui/badge'
-import { Label } from '@/components/ui/label'
 
-interface BrowseFiltersProps {
-  type: 'jobs' | 'talents'
-export function BrowseFilters({ type }: BrowseFiltersProps) {
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
-  const addFilter = null;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Slider } from '@/components/ui/slider';
-import { Switch } from '@/components/ui/switch';
-import { Input } from '@/components/ui/input';
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue,;
-} from '@/components/ui/select';
-import { X, Filter } from 'lucide-react';
-import {;
-  Sheet,;
-  SheetContent,;
-  SheetHeader,;
-  SheetTitle,;
-  SheetFooter,;
-  SheetTrigger,;
-} from '@/components/ui/sheet';
-import { Badge } from '@/components/ui/badge';
-import { Label } from '@/components/ui/label';
-
-interface BrowseFiltersProps {;
-  type: 'jobs' | 'talents';
-
-export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
-  const [activeFilters, setActiveFilters] = useState<string[]>([]);
-
-  const addFilter = (filter: string) => {    if (!activeFilters && activeFilters.includes(filter)) {;
-      setActiveFilters([...activeFilters, filter]);
-    }
-  };
-
-  const removeFilter = (filter: string) => {;
-    setActiveFilters(activeFilters && activeFilters.filter(f => f !== filter));
-  };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='space-y-3'>;
       <div className='flex justify-between items-center px-4'>;
@@ -88,16 +15,7 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
               <SheetHeader>;
                 <SheetTitle>;
                   Filter {type === 'jobs' ? 'Jobs' : 'Talents'}
-<<<<<<< HEAD
-                </SheetTitle>
-              </SheetHeader>
-              <div className='py-6 space-y-6'>
-                {type === 'jobs' ? (
-                  <>
-                    <div className='space-y-2'>
-                      <Label>Job Type</Label>
-                      <div className='flex gap-2 flex-wrap'>
-=======
+
                 </SheetTitle>;
               </SheetHeader>;
 
@@ -107,7 +25,7 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                     <div className='space-y-2'>;
                       <Label>Job Type</Label>;
                       <div className='flex gap-2 flex-wrap'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                         <Badge
                           variant='outline'
                           className='cursor-pointer hover:bg-primary/5'>;
@@ -125,17 +43,7 @@ export function BrowseFilters(): any ({ type }: BrowseFiltersProps) {;
                         </Badge>;
                         <Badge
                           variant='outline'
-<<<<<<< HEAD
-                          className='cursor-pointer hover:bg-primary/5'
-                        >
-                          Freelance
-                        </Badge>
-                      </div>
-                    </div>
-                    <div className='space-y-2'>
-                      <Label>Experience Level</Label>
-                      <div className='flex gap-2 flex-wrap'>
-=======
+
                           className='cursor-pointer hover:bg-primary/5'>;
 =======
 import React, { useState } from 'react';
@@ -221,31 +129,12 @@ function BrowseFilters() {
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                           Freelance;
                         </Badge>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
 
-                    <div className='space-y-2'>;
-                      <Label>Experience Level</Label>;
-                      <div className='flex gap-2 flex-wrap'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Entry Level;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Mid Level;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-=======
                     <div className='space - y-2'>;
                       <Label > Experience Level</Label>;
                       <div className='flex gap - 2 flex - wrap'>;
@@ -265,45 +154,12 @@ function BrowseFilters() {
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                           Senior;
                         </Badge>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
-                  </>;
-                ) : (;
-                  <>;
-                    <div className='space-y-2'>;
-                      <Label>Specialization</Label>;
-                      <div className='flex gap-2 flex-wrap'>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Developer;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Designer;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-                          className='cursor-pointer hover:bg-primary/5'>;
-                          Marketing;
-                        </Badge>;
-                        <Badge
-                          variant='outline'
-<<<<<<< HEAD
-                          className='cursor-pointer hover:bg-primary/5'
-                        >
-                          Content
-                        </Badge>
-                      </div>
-                    </div>
-                    <div className='space-y-2'>
-                      <Label>Experience (years)</Label>
-=======
+
                           className='cursor-pointer hover:bg-primary/5'>;
 =======
                   </>) : (
@@ -333,31 +189,109 @@ function BrowseFilters() {
                           variant='outline';
                           className='cursor - pointer hover:bg - primary / 5';
                         >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                           Content;
                         </Badge>;
                       </div>;
                     </div>;
-<<<<<<< HEAD
 
-                    <div className='space-y-2'>;
-                      <Label>Experience (years)</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React, { useState } from "react",
+import { Button } from "@/components/ui/button",
+import { Slider } from "@/components/ui/slider",
+import { Switch } from "@/components/ui/switch",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+
+
+
+import { X, Filter } from 'lucide-react'
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetFooter, SheetTrigger } from "@/components/ui/sheet",
+import { Badge } from "@/components/ui/badge",
+import { Label } from "@/components/ui/label",
+interface BrowseFiltersProps {
+
+
+  return (
+    <div className="space-y-3">
+      <div className="flex justify-between items-center px-4">
+        <div className="flex items-center gap-2 overflow-x-auto py-1 hide-scrollbar">
+          <Sheet>
+            <SheetTrigger asChild>
+              <Button variant="outline" size="sm" className="gap-1">
+                <Filter className="h-3.5 w-3.5" /> 
+                Filter
+              </Button>
+            </SheetTrigger>
+            <SheetContent side="bottom" className="h-[85vh] rounded-t-xl">
+              <SheetHeader>
+                <SheetTitle>Filter {type === "jobs" ? "Jobs" : "Talents"}</SheetTitle>
+              </SheetHeader>
+
+              
+              <div className="py-6 space-y-6">
+                {type === "jobs" ? (
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                  <>
+                    <div className="space-y-2">
+                      <Label>Job Type</Label>
+                      <div className="flex gap-2 flex-wrap">
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Full Time</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Part Time</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Contract</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Freelance</Badge>
+                      </div>
+                    </div>
+
+                    
+                    <div className="space-y-2">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                      <Label>Experience Level</Label>
+                      <div className="flex gap-2 flex-wrap">
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Entry Level</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Mid Level</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Senior</Badge>
+                      </div>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="space-y-2">
+                      <Label>Specialization</Label>
+                      <div className="flex gap-2 flex-wrap">
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Developer</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Designer</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Marketing</Badge>
+                        <Badge variant="outline" className="cursor-pointer hover:bg-primary/5">Content</Badge>
+                      </div>
+                    </div>
+
+                    
+                    <div className="space-y-2">
+                      <Label>Experience (years)</Label>
                       <Slider
-                        aria-label='Years of experience'
+                        aria-label="Years of experience"
                         defaultValue={[0, 10]}
                         max={20}
                         step={1}
-                        className='my-4'                      />;
-                      <div className='flex justify-between text-xs text-muted-foreground'>;
-                        <span>0+ years</span>;
-                        <span>20+ years</span>;
-                      </div>;
-                    </div>;
-                  </>;
+                        className="my-4"
+                      />
+                      <div className="flex justify-between text-xs text-muted-foreground">
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+                        <span>0+ years</span>
+                        <span>20+ years</span>
+                      </div>
+                    </div>
+                  </>
                 )}
-<<<<<<< HEAD
-                <div className='space-y-2'>
+
+                
+                <div className="space-y-2">
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Location</Label>
                   <Select>
                     <SelectTrigger>
@@ -371,7 +305,13 @@ function BrowseFilters() {
                     </SelectContent>
                   </Select>
                 </div>
-                <div className='space-y-2'>
+
+
+                
+                <div className="space-y-2">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Salary Range</Label>
                   <div className='flex gap-4 items-center'>
                     <Input placeholder='Min' type='number' className='w-full' />
@@ -379,7 +319,13 @@ function BrowseFilters() {
                     <Input placeholder='Max' type='number' className='w-full' />
                   </div>
                 </div>
-                <div className='space-y-2'>
+
+
+                
+                <div className="space-y-2">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Skills</Label>
                   <div className='grid grid-cols-2 gap-2'>
 =======
@@ -416,60 +362,23 @@ function BrowseFilters() {
                     </SelectContent>;
                   </Select>;
                 </div>;
-<<<<<<< HEAD
 
-                <div className='space-y-2'>;
-                  <Label>Salary Range</Label>;
-                  <div className='flex gap-4 items-center'>;
-                    <Input placeholder='Min' type='number' className='w-full' />;
-                    <span>to</span>;
-                    <Input placeholder='Max' type='number' className='w-full' />;
-                  </div>;
-                </div>;
 
-                <div className='space-y-2'>;
-                  <Label>Skills</Label>;
-                  <div className='grid grid-cols-2 gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-                    <Badge
-                      variant='outline'
-                      className='cursor-pointer hover:bg-primary/5 justify-start'>;
-                      JavaScript;
-                    </Badge>;
-                    <Badge
-                      variant='outline'
-                      className='cursor-pointer hover:bg-primary/5 justify-start'>;
-                      React;
-                    </Badge>;
-                    <Badge
-                      variant='outline'
-                      className='cursor-pointer hover:bg-primary/5 justify-start'>;
-                      Python;
-                    </Badge>;
-                    <Badge
-                      variant='outline'
-                      className='cursor-pointer hover:bg-primary/5 justify-start'>;
-                      Figma;
-                    </Badge>;
-                    <Badge
-                      variant='outline'
-                      className='cursor-pointer hover:bg-primary/5 justify-start'>;
-                      UI/UX;
-                    </Badge>;
-                    <Badge
-                      variant='outline'
-<<<<<<< HEAD
-                      className='cursor-pointer hover:bg-primary/5 justify-start'
-                    >
-                      Node.js
-                    </Badge>
-                  </div>
-                </div>
-                <div className='flex items-center justify-between'>
+                
+                <div className="flex items-center justify-between">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   <Label>Only show verified profiles</Label>
                   <Switch />
                 </div>
               </div>
+
+
+              
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <SheetFooter>
                 <Button variant='outline' className='w-full'>
                   Reset
@@ -483,6 +392,12 @@ function BrowseFilters() {
               </SheetFooter>
             </SheetContent>
           </Sheet>
+
+
+          
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Select>
             <SelectTrigger className='w-[120px] h-8'>
               <SelectValue placeholder='Sort By' />
@@ -493,8 +408,7 @@ function BrowseFilters() {
               <SelectItem value='salary'>Highest Pay</SelectItem>
             </SelectContent>
           </Select>
-          {activeFilters.map(filter => (
-=======
+
                       className='cursor-pointer hover:bg-primary/5 justify-start'>;
                       Node && Node.js;
                     </Badge>;
@@ -576,21 +490,17 @@ function BrowseFilters() {
                 <Button;
                   className='w - full';
                   on_click={() => add_filter ('Experience: 3+ years')}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 >;
                   Apply Filters;
                 </Button>;
               </SheetFooter>;
             </SheetContent>;
           </Sheet>;
-<<<<<<< HEAD
 
           <Select>;
-            <SelectTrigger className='w-[120px] h-8'>;
-=======
-          <Select>;
             <SelectTrigger className='w-[120px] h - 8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               <SelectValue placeholder='Sort By' />;
             </SelectTrigger>;
             <SelectContent>;
@@ -599,35 +509,37 @@ function BrowseFilters() {
               <SelectItem value='salary'>Highest Pay</SelectItem>;
             </SelectContent>;
           </Select>;
-<<<<<<< HEAD
 
-          {activeFilters && activeFilters.map(filter => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            <Badge
-              key={filter}
-              variant='secondary'
-              className='flex items-center gap-1'>;
-              {filter}
-              <X
-                className='h-3 w-3 cursor-pointer'
-                onClick={() => removeFilter(filter)}              />;
-            </Badge>;
-          ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  )
-}
 =======
+
+      </div>;
+    </div>;
+  );
+};
+
+=======
+          
+          {activeFilters.map((filter) => (
+            <Badge 
+              key={filter} 
+              variant="secondary"
+              className="flex items-center gap-1"
+            >
+              {filter}
+              <X 
+                className="h-3 w-3 cursor-pointer" 
+                onClick={() => removeFilter(filter)} 
+              />
+            </Badge>
+          ))}
+
         </div>;
       </div>;
     </div>;
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -649,3 +561,9 @@ function BrowseFilters() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

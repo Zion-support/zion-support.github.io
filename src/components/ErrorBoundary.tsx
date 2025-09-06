@@ -1,13 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { Component, ErrorInfo, ReactNode } from 'react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React, { Component, ErrorInfo, ReactNode } from 'react';
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface Props {
   children: ReactNode;
 }
@@ -73,14 +65,7 @@ class ErrorBoundary extends Component<Props, State> {
         </div>
       );
     }
-<<<<<<< HEAD
-    return this.props.children
-  }
-}
-<<<<<<< HEAD
 
-export default ErrorBoundary;
-=======
 export default ErrorBoundary
 =======
     return { hasError: true, error };
@@ -145,7 +130,7 @@ export default ErrorBoundary
 };
 ,
 export { ErrorBoundary };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
     return this.props.children;
   }

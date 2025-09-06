@@ -2,26 +2,7 @@
 export const supabase = {
   // Add supabase functionality here;
   auth: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    signIn: (email: string, password: string) => null
-    signOut: () => null
-    getUser: () => null
-  }
-  from: (table: string) => ({
-    select: (columns: string) => ({
-      eq: (column: string, value: any) => ({
-        single: () => null
-      })
-    })
-    insert: (data: any) => ({
-      select: (columns: string) => ({
-        single: () => null
-      })
-    })
-  })
-}
-=======
+
     getUser: () => Promise<any>;
     signIn: (credentials: any) => Promise<any>;
     signOut: () => Promise<any>;
@@ -71,7 +52,7 @@ const supabaseConfig: SupabaseConfig = {
 };
 
 export const supabase = createSupabaseClient(supabaseConfig);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
     sign_in: (email: string, password: string) => null,
     sign_out: () => null,
@@ -91,3 +72,9 @@ export const supabase = createSupabaseClient(supabaseConfig);
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  });
+};
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

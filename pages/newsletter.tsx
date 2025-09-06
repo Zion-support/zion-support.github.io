@@ -1,7 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,27 +22,25 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import React, { useState } from "react";
 import Head from "next/head";
 import Layout from "./components/Layout";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
-=======
+
 import React, { useState } from './react';
 import Head from './next / head';
 import Layout from "./components / Layout";
 import { motion  } from './framer-motion';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 import {
-<<<<<<< HEAD
-=======
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Layout from './components/Layout';
 import { motion } from 'framer-motion';
 import { 
->>>>>>> origin/automation-improvements-final
+
   ArrowRight,
   Users,
   Calendar,
@@ -60,10 +55,7 @@ import {
   Star,
   TrendingUp,
   Award,
-<<<<<<< HEAD
-  Clock,
-<<<<<<< HEAD
-=======
+
 import {;
   ArrowRight,;
   Users,;
@@ -80,15 +72,18 @@ import {;
   TrendingUp,;
   Award,;
   Clock,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 } from "lucide-react";
 =======
   Clock
 } from 'lucide-react';
 >>>>>>> origin/automation-improvements-final
-
-<<<<<<< HEAD
 =======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
   ArrowRight
   Users
   Calendar
@@ -105,7 +100,8 @@ import {;
   Award
   Clock
 } from "lucide-react";
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const benefits = [
   {
     title: "Exclusive Content"
@@ -113,7 +109,7 @@ const benefits = [
       "Get access to exclusive white papers, case studies, and industry insights."
     icon: FileText
   }
-=======
+
 } from './lucide-react';
 ;
 const benefits = [;
@@ -123,15 +119,16 @@ const benefits = [;
       "Get access to exclusive white papers, case studies, and industry insights.",
     icon: FileText,
   },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    title: "Webinar Invitations",
-<<<<<<< HEAD
-=======
+
     title: "Webinar Invitations"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+=======
+  {
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     description:
       "Receive invitations to our expert-led webinars and virtual events."
     icon: Video
@@ -145,8 +142,7 @@ const benefits = [;
   {
     title: "Industry Insights"
     description:
-<<<<<<< HEAD
-=======
+
     description:;
       "Receive invitations to our expert - led webinars and virtual events.",
     icon: Video,
@@ -160,7 +156,7 @@ const benefits = [;
   {
     title: "Industry Insights",
     description:;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       "Stay updated with the latest trends and developments in technology.",
     icon: TrendingUp,
   },
@@ -181,27 +177,27 @@ const benefits = [;
   }
 >>>>>>> origin/automation-improvements-final
 =======
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       "Stay updated with the latest trends and developments in technology."
     icon: TrendingUp
   }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
-<<<<<<< HEAD
-const testimonials = [
-=======
+
 ;
 const testimonials = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    name: "Sarah Johnson",
-    role: "CTO, TechCorp",
-<<<<<<< HEAD
+
 =======
+
+
     name: "Sarah Johnson"
     role: "CTO, TechCorp"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
     content:
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable."
     rating: 5
@@ -243,9 +239,12 @@ export default function NewsletterPage() {
   }
 ];
 
-export default function NewsletterPage() {
-  const [email, setEmail] = useState('');
->>>>>>> origin/automation-improvements-final
+
+
+export default function NewsletterPage() {;
+  const [email, setEmail] = useState("");
+
+
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const handleSubmit = async (e) => {
@@ -311,18 +310,15 @@ export default function NewsletterPage() {;
     e && e.preventDefault();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     setIsLoading(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-    // Simulate API call;
-    await new Promise((resolve) => setTimeout(resolve, 2000));
 
 =======
+
     
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 2000));
     
->>>>>>> origin/automation-improvements-final
+
 =======
     // Simulate API call
     await new Promise((resolve) => setTimeout(resolve, 2000));
@@ -331,18 +327,13 @@ export default function NewsletterPage() {;
     setIsLoading(false);
   }
   return (
-<<<<<<< HEAD
-    <Layout>
-      <Head>
-        <title>Newsletter - Zion Tech Group</title>
-<<<<<<< HEAD
-        <meta
-          name="description"
-          content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features."
-        />
-=======
+
         <meta name="description" content="Subscribe to our newsletter for exclusive content, industry insights, and early access to new features." />
->>>>>>> origin/automation-improvements-final
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </Head>
       <div className="min-h-screen bg-gray-50">
 =======
@@ -364,26 +355,20 @@ export default function NewsletterPage() {;
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <h1 className="text-5xl font-bold mb-6">
-                Stay Ahead with Our Newsletter
-              </h1>
-              <p className="text-xl mb-8 text-blue-100">
-<<<<<<< HEAD
-                Get exclusive insights, industry trends, and early access to new
-                features delivered directly to your inbox.
-              </p>
-<<<<<<< HEAD
 
-=======
                 Get exclusive insights, industry trends, and early access to new features delivered directly to your inbox.
               </p>
               
->>>>>>> origin/automation-improvements-final
+
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {!isSubscribed ? (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -437,16 +422,12 @@ export default function NewsletterPage() {;
                   Successfully subscribed! Welcome to our community.;
                 </motion && motion.div>;
               )}
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </section>
-=======
+
             </motion && motion.div>;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* Benefits Section */}
         <section className="py-16 bg-white">;
           <div className="container mx-auto px-4">;
@@ -454,25 +435,19 @@ export default function NewsletterPage() {;
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                What You'll Get
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Join thousands of professionals who rely on our newsletter for
-                the latest insights and updates.
-=======
+
                 Join thousands of professionals who rely on our newsletter for the latest insights and updates.
->>>>>>> origin/automation-improvements-final
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
-=======
+
     content:;
       "The newsletter has been invaluable for staying ahead of industry trends. The insights are always relevant and actionable.",
     rating: 5,
@@ -598,7 +573,7 @@ function NewsletterPage() {
             <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
               {benefits.map ((benefit, index) => (
                 <motion.div;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   key={benefit.title}
                   className="text - center";
                   initial={{ opacity: 0, coordinate_y: 30 }}
@@ -610,15 +585,27 @@ function NewsletterPage() {
                   </div>;
                   <h3 className="text - xl font - semibold text - gray - 900 mb - 2">;
                     {benefit.title}
-<<<<<<< HEAD
-                  </h3>
-<<<<<<< HEAD
-                  <p className="text-gray-600">{benefit.description}</p>
-=======
+
                   <p className="text-gray-600">
                     {benefit.description}
                   </p>
->>>>>>> origin/automation-improvements-final
+
+=======
+                  key={benefit.title}
+                  className="text-center"
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
+                >
+                  <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <benefit.icon className="w-8 h-8 text-blue-600" />
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                    {benefit.title}
+                  </h3>
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </motion.div>
               ))}
             </div>
@@ -665,16 +652,13 @@ function NewsletterPage() {
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0 }}
-              >
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  10K+
-                </div>
-=======
+
                 <div className="text-4xl font-bold text-blue-600 mb-2">10K+</div>
->>>>>>> origin/automation-improvements-final
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-gray-600">Subscribers</div>
               </motion.div>
               <motion.div
@@ -698,16 +682,13 @@ function NewsletterPage() {
                 className="text-center"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-                transition={{ duration: 0.8, delay: 0.2 }}
-              >
-<<<<<<< HEAD
-                <div className="text-4xl font-bold text-blue-600 mb-2">
-                  Weekly
-                </div>
-=======
+
                 <div className="text-4xl font-bold text-blue-600 mb-2">Weekly</div>
->>>>>>> origin/automation-improvements-final
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="text-gray-600">Delivery</div>
               </motion.div>
               <motion.div
@@ -749,19 +730,13 @@ function NewsletterPage() {
               className="text-center mb-12"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                What Our Subscribers Say
-              </h2>
-              <p className="text-gray-600 max-w-2xl mx-auto">
-<<<<<<< HEAD
-                Don't just take our word for it. Here's what our community has
-                to say.
-=======
+
                 Don't just take our word for it. Here's what our community has to say.
->>>>>>> origin/automation-improvements-final
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -847,18 +822,9 @@ function NewsletterPage() {
                   initial={{ opacity: 0, coordinate_y: 30 }}
                   whileInView={{ opacity: 1, coordinate_y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-<<<<<<< HEAD
-                >
-                  <div className="flex items-center mb-4">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
-                      <Star
-                        key={i}
-                        className="w-4 h-4 text-yellow-400 fill-current"
-                      />
-=======
+
                       <Star key={i} className="w-4 h-4 text-yellow-400 fill-current" />
->>>>>>> origin/automation-improvements-final
+
 =======
               transition={{ duration: 0 && 0.8 }}>;
               <h2 className="text-3xl font-bold text-gray-900 mb-4">;
@@ -885,6 +851,10 @@ function NewsletterPage() {
                         className="w-4 h-4 text-yellow-400 fill-current"
                       />;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     ))}
                   </div>;
                   <p className="text-gray-600 mb-4 italic">;
@@ -900,16 +870,12 @@ function NewsletterPage() {
                   </div>;
                 </motion && motion.div>;
               ))}
-<<<<<<< HEAD
-            </div>
-          </div>
-        </section>
-=======
+
             </div>;
           </div>;
         </section>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-teal-600 text-white">;
           <div className="container mx-auto px-4">;
@@ -917,26 +883,20 @@ function NewsletterPage() {
               className="text-center max-w-4xl mx-auto"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
-              transition={{ duration: 0.8 }}
-            >
-              <h2 className="text-4xl font-bold mb-6">
-                Ready to Join Our Community?
-              </h2>
-              <p className="text-xl mb-8 text-green-100">
-<<<<<<< HEAD
-                Subscribe now and start receiving valuable insights delivered to
-                your inbox every week.
-              </p>
-<<<<<<< HEAD
 
-=======
                 Subscribe now and start receiving valuable insights delivered to your inbox every week.
               </p>
               
->>>>>>> origin/automation-improvements-final
+
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {!isSubscribed && (
                 <form onSubmit={handleSubmit} className="max-w-md mx-auto">
                   <div className="flex flex-col sm:flex-row gap-4">
@@ -981,18 +941,7 @@ function NewsletterPage() {
                   </div>;
                 </form>;
               )}
-<<<<<<< HEAD
-              <div className="mt-8 text-green-100 text-sm">
-                <p>✓ No spam, ever</p>
-                <p>✓ Unsubscribe anytime</p>
-                <p>✓ Free forever</p>
-              </div>
-            </motion.div>
-          </div>
-        </section>
-      </div>
-    </Layout>
-=======
+
 
               <div className="mt-8 text-green-100 text-sm">;
 =======
@@ -1064,28 +1013,14 @@ function NewsletterPage() {
                   </div>;
                 </form>)}
               <div className="mt - 8 text - green - 100 text - sm">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 <p>✓ No spam, ever</p>;
                 <p>✓ Unsubscribe anytime</p>;
                 <p>✓ Free forever</p>;
               </div>;
-<<<<<<< HEAD
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/automation-improvements-final
-=======
-}
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 =======
             </motion.div>;
           </div>;

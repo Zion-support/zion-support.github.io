@@ -1,14 +1,4 @@
-<<<<<<< HEAD
-// Fraud detection types
-export type AdminActionType =
-  | 'ban_user'
-  | 'suspend_user'
-  | 'flag_content'
-  | 'remove_content'
-  | 'investigate'
-  | 'dismiss'
-  | 'escalate';
-=======
+
 // Fraud detection types;
 export type AdminActionType =;
   | 'ban_user';
@@ -19,67 +9,56 @@ export type AdminActionType =;
   | 'dismiss';
   | 'escalate';
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 export interface AdminAction {
+=======
+
+
+export interface AdminAction {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   id: string;
   case_id: string;
   type: AdminActionType;
-<<<<<<< HEAD
-  adminId: string;
-  reason: string
-  details: Record<string, any>;
-  createdAt: string;
-  executedAt?: string;
-  status: 'pending' | 'executed' | 'failed'
-=======
+
   admin_id: string;
   reason: string,
   details: Record < string, any>;
   created_at: string;
   executed_at?: string;
   status: 'pending' | 'executed' | 'failed',
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface FraudDetectionResult {
   is_fraud: boolean;
+=======
+}
+
+
+export interface FraudDetectionResult {;
+
+  isFraud: boolean;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   confidence: number;
   reasons: string[];
-<<<<<<< HEAD
-  suggestedActions: AdminActionType[]
-  metadata: Record<string, any>;
-=======
+
   suggested_actions: AdminActionType[],
   metadata: Record < string, any>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }
 export interface FraudDetectionConfig {
+=======
+}
+
+
+export interface FraudDetectionConfig {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   enabled: boolean;
   rules: {
     suspicious_activity: {
       enabled: boolean;
-<<<<<<< HEAD
-      threshold: number
-    }
-    fakeProfile: {
-      enabled: boolean;
-      threshold: number
-    }
-    paymentFraud: {
-      enabled: boolean;
-      threshold: number
-    }
-    spam: {
-      enabled: boolean;
-      threshold: number
-    }
-  }
-  autoActions: {
-    enabled: boolean;
-    actions: AdminActionType[];
-    confidenceThreshold: number
-  }
-}
-=======
+
       threshold: number,
     }
     fake_profile: {
@@ -101,4 +80,17 @@ export interface FraudDetectionConfig {
     confidence_threshold: number,
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+
+
+=======
+    confidenceThreshold: number,
+  };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

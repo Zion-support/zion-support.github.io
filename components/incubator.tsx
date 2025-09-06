@@ -1,16 +1,5 @@
-<<<<<<< HEAD
-import Link from 'next/link';
-import EnhancedLayout from '../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function IncubatorPage() {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-export default function IncubatorPage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <EnhancedLayout>;
       <div className='max-w-3xl'>;
@@ -40,11 +29,16 @@ export default function IncubatorPage() {;
           <Link href={{ pathname: '/grants', query: { program: 'incubator' } }}><a className="px-4 py-2 border rounded">View Incubator Projects</a></Link>;
       </div>;
     </EnhancedLayout>;
-<<<<<<< HEAD
-=======
+
   );
 }
 =======
+=======
+
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export default function IncubatorPage() {
   return (
     <EnhancedLayout>
@@ -57,11 +51,7 @@ export default function IncubatorPage() {
         </div>
       </div>
     </EnhancedLayout>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
 import Link from 'next / link';
 import EnhancedLayout from '../components / layout / EnhancedLayout';
 export default /**
@@ -97,4 +87,10 @@ function IncubatorPage() {
       </div>;
     </EnhancedLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+  );
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

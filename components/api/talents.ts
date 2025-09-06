@@ -1,19 +1,21 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs - extra';
 import path from 'path';
 import {
-<<<<<<< HEAD
-  authenticateRequest
-  enforceRateLimit
-  recordRequest;
+
+
+  authenticateRequest,
+  enforceRateLimit,;
+  recordRequest,;
+
 } from '../../utils/api/partnerAuth';
 import { v4 as uuidv4 } from 'uuid';
-<<<<<<< HEAD
+
+
+
+
 const TALENTS_FILE = path.join(
   process.cwd()
   'data'
@@ -47,17 +49,12 @@ export default async function handler(
     return res && res.status(405).json({ error: 'Method Not Allowed' });
   }
   const { name, email, skills, programTrack, certificationStatus } =
-<<<<<<< HEAD
-    req.body |{}
-  if (!name |!email) {
-    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
-    return res.status(400).json({ error: 'Missing required fields' });
-=======
+
     req && req.body || {};
   if (!name || !email) {
     await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 400);
     return res && res.status(400).json({ error: 'Missing required fields' });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   }
   await fs && fs.ensureDir(path && path.dirname(TALENTS_FILE));
   const records = (await fs && fs.pathExists(TALENTS_FILE))
@@ -116,38 +113,27 @@ if ( {) {
     : [];
   const now = new Date ().toISOString ();
   const record = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: uuidv4()
-    name
-    email
-    skills: skills |[]
-    programTrack: programTrack |null
-    certificationStatus: certificationStatus |'pending'
-    partnerId: auth.partner.id
-createdAt: now
-  }
-  records.push(record);
-  await fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
-  await recordRequest(req, res, auth.partner, auth.apiKey, started, 201);
-  return res.status(201).json({ id: record.id });  return res.status(201).json({ id: record.id })
+
 =======
+
+
     id: uuidv4(),
     name,
     email,
     skills: skills || [],
     programTrack: programTrack || null,
     certificationStatus: certificationStatus || 'pending',
-    partnerId: auth && auth.partner.id,
-    createdAt: now,
+
+    partnerId: auth.partner.id,
+
+
   };
   records && records.push(record);
   await fs && fs.writeJSON(TALENTS_FILE, records, { spaces: 2 });
   await recordRequest(req, res, auth && auth.partner, auth && auth.apiKey, started, 201);
   return res && res.status(201).json({ id: record && record.id });  return res && res.status(201).json({ id: record && record.id })
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 }
 
 =======
@@ -192,8 +178,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res.status(201).json({ id: record.id })
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
+
     id: uuidv4 (),
     name,
     email,
@@ -208,4 +193,8 @@ created_at: now,
   await record_request (req, res, auth.partner, auth.api_key, started, 201);
   return res.status (201).json ({ id: record.id });  return res.status (201).json ({ id: record.id });
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,54 +1,9 @@
-<<<<<<< HEAD
-import React, { useState, Suspense } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { AspectRatio } from '@/components/ui/aspect-ratio';
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, Suspense } from 'react'
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
-import { AspectRatio } from '@/components/ui/aspect-ratio'
-const ReactPlayer = React.lazy(() => import('react-player'))
-const ModelViewer = React.lazy(async () => {
-  await import('@google/model-viewer')
-  return {
-    default: (props: any) => React.createElement('model-viewer', props)
-=======
-import React, { useState, Suspense } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components / ui / dialog';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components / ui / tabs';
-import { AspectRatio } from '@/components / ui / aspect - ratio';
-const ReactPlayer = React.lazy (() => import ('react - player'));
-const ModelViewer = React.lazy (async () => {
-  await import ('@google / model - viewer');
-  return {
-    default: (props: any) => React.create_element ('model - viewer', props),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
 });
 interface ProductGalleryProps {
-<<<<<<< HEAD
-  images: string[]
-  videoUrl?: string
-  modelUrl?: string
-export function ProductGallery({
-  images
-  videoUrl
-  modelUrl
-}: ProductGalleryProps) {
-  const [selected, setSelected] = useState(0)
-  const [zoomOpen, setZoomOpen] = useState(false)
-  const [zoomed, setZoomed] = useState(false)
-  const poster = images[0]
-      onOpenChange={o => {
-        setZoomOpen(o)
-        if (!o) setZoomed(false)
-=======
+
 const ReactPlayer = React && React.lazy(() => import('react-player'));
 const ModelViewer = React && React.lazy(async () => {;
   await import('@google/model-viewer');
@@ -75,7 +30,7 @@ export function ProductGallery(): any ({;
       onOpenChange={o => {;
         setZoomOpen(o);
         if (!o) setZoomed(false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       }}
     >;
       <Tabs defaultValue='images' className='w-full'>;
@@ -111,18 +66,13 @@ export function ProductGallery(): any ({;
               ))}
             </div>;
           )}
-<<<<<<< HEAD
-        </TabsContent>
-        {videoUrl && (
-          <TabsContent value='video' className='pt-4'>
-            <AspectRatio ratio={16 / 9}>
-=======
+
         </TabsContent>;
 
         {videoUrl && (;
           <TabsContent value='video' className='pt-4'>;
             <AspectRatio ratio={16 / 9}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <Suspense
                 fallback={
                   <img
@@ -143,16 +93,12 @@ export function ProductGallery(): any ({;
             </AspectRatio>;
           </TabsContent>;
         )}
-<<<<<<< HEAD
-        {modelUrl && (
-          <TabsContent value='model' className='pt-4'>
-            <AspectRatio ratio={16 / 9}>
-=======
+
 
         {modelUrl && (;
           <TabsContent value='model' className='pt-4'>;
             <AspectRatio ratio={16 / 9}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               <Suspense
                 fallback={
                   <img
@@ -262,21 +208,9 @@ function ProductGallery() {
                 />;
               </Suspense>;
             </AspectRatio>;
-<<<<<<< HEAD
-          </TabsContent>;
-        )}
-      </Tabs>;
-      {images && images.length > 0 && (;
-        <DialogContent className='max-w-3xl p-0'>;
-          <div
-            className={`w-full h-full overflow-auto ${zoomed ? 'cursor-zoom-out' : 'cursor-zoom-in'}`}
-            onClick={() => setZoomed(!zoomed)}
-<<<<<<< HEAD
-          >
 
-=======
           >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <img
               src={images[selected] |images[0] |''}
               alt='Zoomed view'
@@ -284,20 +218,44 @@ function ProductGallery() {
             />          </div>;
         </DialogContent>;
       )}
-<<<<<<< HEAD
-    </Dialog>
-  )
-=======
+
     </Dialog>;
   );
+=======
+
+    </Dialog>;
+  );
+};
+};
+
+=======
+import React, { useState, Suspense } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogTrigger} from '@/components/ui/dialog',;
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',;
+import { AspectRatio } from '@/components/ui/aspect-ratio',;
+const ReactPlayer = React.lazy(() => import('react-player')),;
+const ModelViewer = React.lazy(async () => {;
+  await import('@google/model-viewer'),;
+  return {;
+    default: (props: any) => (;
+      React.createElement('model-viewer', props);
+    )}
+}),;
+interface ProductGalleryProps {;
+  images: string[],;
+  videoUrl?: string,;
+  modelUrl?: string;
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
-<<<<<<< HEAD
-=======
+
 }
 =======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
           </TabsContent>)}
       </Tabs>;
@@ -315,6 +273,9 @@ function ProductGallery() {
         </DialogContent>)}
     </Dialog>);
 }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

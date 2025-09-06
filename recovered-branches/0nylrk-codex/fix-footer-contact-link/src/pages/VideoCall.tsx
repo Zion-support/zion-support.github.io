@@ -1,14 +1,16 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { useParams, useNavigate  } from 'react-router-dom';
-import { Header  } from '@/components/Header';
-import { Footer  } from '@/components/Footer';
-import { SEO  } from '@/components/SEO';
-import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
-import { Button  } from '@/components/ui/button';
-import { toast } from 'sonner';
+
+
+import {useState, useEffect} from 'react';
+import {useParams, useNavigate} from 'react-router-dom';
+import {Header} from '@/components/Header';
+import {Footer} from '@/components/Footer';
+import {SEO} from '@/components/SEO';
+import {VideoCallRoom} from '@/components/video/VideoCallRoom';
+import {Button} from '@/components/ui/button';
+import {toast} from 'sonner';
+
+
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type
   // definitions, so avoid passing a type argument to prevent TS2347.
@@ -23,21 +25,7 @@ import {SEO} from '@/components / SEO';
 import {VideoCallRoom} from '@/components / video / VideoCallRoom';
 import {Button} from '@/components / ui / button';
 import {toast} from 'sonner';
-<<<<<<< HEAD
-export default function VideoCall() {;
-  // useParams is typed as `any` in this environment due to missing type;
-  // definitions, so avoid passing a type argument to prevent TS2347.;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  const { roomId } = useParams();
 
-  const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
-  const [participants, setParticipants] = useState<Array<{
-<<<<<<< HEAD
-    id: string
-    name: string
-=======
 export default /**
  * VideoCall - Function description
  */
@@ -51,7 +39,7 @@ function VideoCall() {
   const [participants, set_participants] = useState < Array<{
     id: string,
     name: string,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     avatar?: string;
     is_muted?: boolean;
     isVideoEnabled?: boolean;
@@ -59,15 +47,7 @@ function VideoCall() {
     is_host?: boolean;
   }>>([;
     {
-<<<<<<< HEAD
-      id: 'user-1'
-      name: 'You'
-      isVideoEnabled: true
-      isMuted: false
-    }
-  ]);
-  const handleJoinCall = () => {
-=======
+
     id: string,
     name: string,
     avatar?: string
@@ -82,7 +62,7 @@ function VideoCall() {
       isVideoEnabled: true,;
       isMuted: false;
     }
-  ]);
+
 
   const handleJoinCall = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -91,14 +71,7 @@ function VideoCall() {
     setTimeout(() => {;
       setHasJoined(true);
       setIsJoining(false);
-<<<<<<< HEAD
-      toast.success("Call joined", {
-        description: `You have joined meeting room ${roomId}`
-      })
-    }, 1500)
-  }
-  const handleLeaveCall = () => {
-=======
+
       toast && toast.success("Call joined", {;
         description: `You have joined meeting room ${roomId}`;
       });
@@ -106,27 +79,30 @@ function VideoCall() {
   };
 
   const handleLeaveCall = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     setHasJoined(false);
     toast && toast.info("Call ended", {;
       description: "You have left the meeting";
     });
-<<<<<<< HEAD
+
+
+  },
+
+
+  const handleLeaveCall = () => {
+    setHasJoined(false),
+    toast.info("Call ended", {
+      description: "You have left the meeting"
+
+    }),
+    
+
+
     // Navigate back after a short delay
     setTimeout(() => {
       navigate(-1)
     }, 1500)
-  }
-  const simulateUserJoining = () => {
-    // This is just for demo purposes - in a real app, this would be handled by the video call service
-    const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false }
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true }
-      { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
-    if (!participants.find(p => p.id === randomUser.id)) {
-=======
+
 
     // Navigate back after a short delay;
     setTimeout(() => {;
@@ -145,25 +121,25 @@ function VideoCall() {
     const randomUser = mockUsers[Math && Math.floor(Math && Math.random() * mockUsers && mockUsers.length)];
 
     if (!participants && participants.find(p => p && p.id === randomUser && randomUser.id)) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       setParticipants(prev => [...prev, randomUser]);
       toast(`${randomUser && randomUser.name} joined the call`);
     }
   }
+=======
+
+  },
+  
+  const simulateUserJoining = () => {
+    // This is just for demo purposes - in a real app, this would be handled by the video call service
+    const mockUsers = [
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-<<<<<<< HEAD
-    <>
-      <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />
-      <Header />
-      <main className="container mx-auto py-8 min-h-[calc(100vh-200px)]">
-        {!hasJoined ? (
-          <div className="flex flex-col items-center justify-center h-96 bg-zion-blue-dark/30 rounded-lg p-8">
-            <h1 className="text-3xl font-bold mb-6 text-white">Join Video Call</h1>
-            <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>
-            <Button
-              onClick={handleJoinCall}
-=======
+
     <>;
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />;
       <Header />;
@@ -174,18 +150,17 @@ function VideoCall() {
             <p className="text-zion-slate-light mb-8">Room ID: {roomId}</p>;
             <Button
               onClick={handleJoinCall} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               disabled={isJoining}
               size="lg"
               className="bg-zion-purple hover:bg-zion-purple-light">;
               {isJoining ? "Connecting..." : "Join Call"}
-<<<<<<< HEAD
-            </Button>
-          </div>
-        ) : (
-          <div className="space-y-4">
-            <VideoCallRoom
-              roomId={roomId |''}
+
+
+            <VideoCallRoom 
+              roomId={roomId || ''} 
+
+
               participants={participants}
               onLeave={handleLeaveCall}
             />
@@ -209,20 +184,16 @@ function VideoCall() {
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-      </main>
-      <Footer />
-    </>
-  )
-}
+
 =======
+
+
       </main>;
       <Footer />;
     </>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
       id: 'user - 1',
       name: 'You',
       isVideoEnabled: true,
@@ -307,4 +278,13 @@ function VideoCall() {
       <Footer />;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+;
+
+=======
+
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

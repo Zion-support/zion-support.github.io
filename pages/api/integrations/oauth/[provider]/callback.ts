@@ -1,18 +1,5 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  res.status(200).json({
-    ok: true
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-  res && res.status(200).json({
-    ok: true,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     message:
       "OAuth mock callback successful. Use /api/integrations/connect to finalize connection."
   });
@@ -34,3 +21,7 @@ function handler() {
   });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

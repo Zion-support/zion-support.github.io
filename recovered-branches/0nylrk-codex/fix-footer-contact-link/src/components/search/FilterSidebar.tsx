@@ -1,11 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { Button } from "@/components/ui/button",
-import { Checkbox } from "@/components/ui/checkbox",
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface FilterSidebarProps {
   filters: {
 
@@ -13,15 +10,7 @@ interface FilterSidebarProps {
     selectedLocations: string[]
     selectedAvailability: string[]
     selectedRating: number | null
-  }
-  filterOptions: FilterOptions
-  onFilterChange: (filterType: string, value: string) => void
-  onRatingChange: (rating: number | null) => void
 
-  onClearFilters: () => void
-}
-export function FilterSidebar({
-=======
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {Checkbox} from "@/components/ui/checkbox";
@@ -41,7 +30,7 @@ interface FilterSidebarProps {;
 }
 
 export function FilterSidebar(): any ({;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   filters;
   filterOptions;
   onFilterChange;
@@ -49,16 +38,35 @@ export function FilterSidebar(): any ({;
   onClearFilters;
 }: FilterSidebarProps) {;
   return (
-<<<<<<< HEAD
+
+
+  },
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
+
+  onClearFilters: () => void
+}
+
+
+
+  onClearFilters
+}: FilterSidebarProps) {
+  return (
+
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">
       <div className="flex items-center justify-between mb-4">
         <h3 className="text-lg font-medium text-white flex items-center">
           <Filter className="mr-2 h-5 w-5" /> Filters
         </h3>
-        <Button
-          variant="outline"
+
+
+        <Button 
+          variant="outline" 
           size="sm"
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
+
           onClick={onClearFilters}
         >
           Clear All
@@ -236,17 +244,12 @@ export function FilterSidebar(): any ({;
               variant="outline"
               size="sm"
               onClick={() => onRatingChange(rating)}
-<<<<<<< HEAD
-              className={`${
-                filters.selectedRating === rating
-                  ? "bg-zion-purple/20 border-zion-purple text-zion-purple"
-                  : "border-zion-blue-light text-zion-slate-light"
-=======
+
               className={`${;
                 filters && filters.selectedRating === rating ;
                   ? "bg-zion-purple/20 border-zion-purple text-zion-purple" ;
                   : "border-zion-blue-light text-zion-slate-light";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
               }`}
             >;
               {rating === null ? (;
@@ -261,19 +264,13 @@ export function FilterSidebar(): any ({;
               )}
             </Button>;
           ))}
-<<<<<<< HEAD
-        </div>
-      </div>
-    </div>
-  )
-}
-=======
+
         </div>;
       </div>;
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import React from './react';
 import { Button } from '@/components / ui / button';

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,32 +22,90 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import React from "react";
 import Layout from "../components/Layout";
 =======
 import React from 'react';
-<<<<<<< HEAD
-import Layout from '../components/Layout';
->>>>>>> origin/automation-improvements-final
 
-export default function Contact() {;
-  return (
-    <Layout
-      title="Contact Us - Zion Tech Group"
-<<<<<<< HEAD
-      description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more."
-    >
-      <div className="min-h-screen bg-gray-50 py-20">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-<<<<<<< HEAD
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
-              Contact Us
-            </h1>
 =======
+
+
+
+=======
+import Head from 'next/head';
+import { useState } from 'react';
+import { ContactInfo } from '../types';
+
+
+
+export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const contact: ContactInfo = {
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    site: 'https://ziontechgroup.com'
+  };
+  const services = [
+    'AI Automation Platform',
+    'Cloud Infrastructure',
+    'Micro SaaS Development',
+    'Cybersecurity Solutions',
+    'Data Analytics & BI',
+    'Blockchain Solutions',
+    'Other'
+  ];
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    try {
+      // Simulate API call
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      setSubmitStatus('success');
+      setFormData({
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''
+      });
+    } catch (error) {
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
+  return (
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Contact Us</h1>
->>>>>>> origin/automation-improvements-final
+
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
               Get in touch with our team for your technology needs.
 =======
@@ -95,10 +149,7 @@ export default function Contact() {
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
+
 =======
 import Head from 'next/head';
 
@@ -184,12 +235,17 @@ const ContactPage: React.FC = () => {
                   <ContactForm />
                 </div>
               </div>
+=======
+
+}
+=======
+
+
             </div>
           </div>
         </div>
       </div>
-    </>
-=======
+
       description="Get in touch with Zion Tech Group for your technology needs. Contact us for AI services, IT solutions, and more.">;
       <div className="min-h-screen bg-gray-50 py-20">;
         <div className="container mx-auto px-4">;
@@ -207,10 +263,18 @@ const ContactPage: React.FC = () => {
         </div>;
       </div>;
     </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+
+    </>
+
+  );
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27

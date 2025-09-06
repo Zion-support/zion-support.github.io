@@ -1,17 +1,9 @@
-<<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
+
+
 =======
-<<<<<<< HEAD
-=======
-import React from 'react';
-import Link from 'next/link';
-import Head from 'next/head';
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 =======
 
@@ -44,41 +36,20 @@ import Head from 'next/head';
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
-<<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-export default function HomePage() {
-=======
+
 import React from 'react';
 import Link from 'next/link';
 import Head from 'next/head';
 export default function HomePage() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/index.page.tsx
+
   return (
     <>;
       <Head>;
         <title>Zion Tech Group — AI, Micro SaaS, IT Solutions</title>;
         <meta
           name=\"description\"
-<<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
-          content=\"AI solutions, Micro SaaS products, and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com\"
-        />
-        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />
-        <meta property=\""og\": title\" content=\"Zion Tech Group — AI, Micro SaaS, IT Solutions\" />
-        <meta property=\""og\": description\" content=\"AI services, micro SaaS platforms, and enterprise-grade IT solutions.\" />
-        <meta property=\""og\": type\" content=\"website\" />
-        <meta property=\"og:url\" content=\"https://ziontechgroup.com/\" />
-        <meta name=\"twitter:card\" content=\"summary_large_image\" />
-        <link rel=\"canonical\" href=\"https://ziontechgroup.com/\"  />
-      </Head>
-            <p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
 =======
           content=\"AI solutions, Micro SaaS products, and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup && ziontechgroup.com\"
         />;
@@ -92,18 +63,15 @@ export default function HomePage() {;
       </Head>;
             <p>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a:temp_exclude/pages._archive_corrupted/index.page.tsx
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Mobile: <a className=\"text-blue-700\" href=\"tel:+13024640950\">+1 302 464 0950</a> · Email:{\' \'}
               <a className=\"text-blue-700\" href=\""mailto\": kleber@ziontechgroup && ziontechgroup.com\">kleber@ziontechgroup && ziontechgroup.com</a> · Address: 364 E;
               Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '}
-<<<<<<< HEAD:pages._archive_corrupted/index.page.tsx
-              <a className="text-blue-700" href=""mailto": kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+
+
               Main St STE 1008 Middletown DE 19709
             </p>
           </div>
@@ -111,16 +79,8 @@ export default function HomePage() {;
       </main>
     </>
   );
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
-=======
-<<<<<<< HEAD
-=======
-import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+
+
 =======
 
 import React from 'react'; import Link from 'next/link'; import Head from 'next/head'; export default function HomePage() { return ( <> <Head> <title>Zion Tech Group — AI,Micro SaaS,IT Solutions</title> <meta name="description" content="AI solutions,Micro SaaS products,and enterprise IT services. Contact +1 302 464 0950 • kleber@ziontechgroup.com" /> <meta name="viewport" content="width=device-width,initial-scale=1" /> <meta property="og:title" content="Zion Tech Group — AI,Micro SaaS,IT Solutions" /> <meta property="og:description" content="AI services,micro SaaS platforms,and enterprise-grade IT solutions." /> <meta property="og:type" content="website" /> <meta property="og:url" content="https: <meta name="twitter:card" content="summary_large_image" /> <link rel="canonical" href="https: </Head> <p> Mobile: <a className="text-blue-700" href="tel:+13024640950">+1 302 464 0950</a> · Email:{' '} <a className="text-blue-700" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a> · Address: 364 E Main St STE 1008 Middletown DE 19709 </p> </div> </section> </main> </> );

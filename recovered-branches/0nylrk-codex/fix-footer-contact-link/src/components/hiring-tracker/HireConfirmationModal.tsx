@@ -1,11 +1,14 @@
-import React, { useState } from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+
+import React, { useState } from 'react',
 import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+
+
   DialogTitle} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -14,24 +17,10 @@ import { Textarea } from "@/components/ui/textarea",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication } from "@/types/jobs";
-export interface HireConfirmationModalProps {
 
-  isOpen: boolean
-  onClose: () => void
-  candidateData?: TalentProfile;
-  application?: JobApplication;
-  onConfirm: () => void
-
-  isSubmitting?: boolean
-}
-export function HireConfirmationModal({
-  isOpen;
-
-  onClose
-  candidateData
 =======
+
+
 import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
 import {Input} from "@/components/ui/input";
@@ -51,7 +40,10 @@ export interface HireConfirmationModalProps {;
   isSubmitting?: boolean;
 }
 
-export function HireConfirmationModal(): any ({ ;
+
+export function HireConfirmationModal({ ;
+
+
   isOpen;
   onClose, ;
   candidateData, ;
@@ -65,16 +57,84 @@ export function HireConfirmationModal(): any ({ ;
   const [updateAvailability, setUpdateAvailability] = useState(true);
   const [isLoading, setIsLoading] = useState(false);
   const { user } = useAuth();
-<<<<<<< HEAD
-  // Get talent information from either candidateData or application
-  const talentData = candidateData |(application?.talent_profile as TalentProfile);
-  const handleHireCandidate = async () => {
-    if (!projectName |!projectDescription) {
-      toast({
-        title: 'Required fields missing'
-        description: 'Please fill in both project name and description.'
-        variant: 'destructive'})
-      return
+
+=======
+
+import React, { useState } from 'react',
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { TalentProfile } from "@/types/talent",
+
+import { useAuth } from "@/hooks/useAuth",
+import { JobApplication } from "@/types/jobs",
+export interface HireConfirmationModalProps {
+  isOpen: boolean,
+  onClose: () => void,
+  candidateData?: TalentProfile,
+  application?: JobApplication,
+  onConfirm: () => void,
+  isSubmitting?: boolean
+import React, { useState } from 'react',;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogHeader,;
+  DialogTitle} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Label } from "@/components/ui/label",;
+import { Textarea } from "@/components/ui/textarea",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { TalentProfile } from "@/types/talent",;
+import { useAuth } from "@/hooks/useAuth",;
+import { JobApplication } from "@/types/jobs",;
+export interface HireConfirmationModalProps {;
+  isOpen: boolean,;
+  onClose: () => void,;
+  candidateData?: TalentProfile,;
+  application?: JobApplication,;
+  onConfirm: () => void,;
+  isSubmitting?: boolean;
+}
+;
+export function HireConfirmationModal({;
+  isOpen,;
+  onClose,;
+  candidateData,;
+  application,;
+  onConfirm,;
+  isSubmitting = false;
+}: HireConfirmationModalProps) {;
+  const [projectName, setProjectName] = useState(''),;
+  const [projectDescription, setProjectDescription] = useState(''),;
+  const [updateAvailability, setUpdateAvailability] = useState(true),;
+  const [isLoading, setIsLoading] = useState(false),;
+  const { user } = useAuth(),;
+  // Get talent information from either candidateData or application;
+  const talentData = candidateData || (application?.talent_profile as TalentProfile),;
+  const handleHireCandidate = async () => {;
+    if (!projectName || !projectDescription) {;
+      toast({;
+        title: 'Required fields missing',;
+        description: 'Please fill in both project name and description.',;
+        variant: 'destructive'}),;
+      return;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
     if (!user) {
       toast({
@@ -89,7 +149,7 @@ export function HireConfirmationModal(): any ({ ;
         description: 'Talent information is missing.'
         variant: 'destructive'})
       return
-=======
+
 
   // Get talent information from either candidateData or application;
   const talentData = candidateData || (application?.talent_profile as TalentProfile);
@@ -117,12 +177,16 @@ export function HireConfirmationModal(): any ({ ;
         description: 'Talent information is missing.',;
         variant: 'destructive'}),;
       return;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     }
-    setIsLoading(true);
-<<<<<<< HEAD
-    // Create a new project
 =======
+    }
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+    setIsLoading(true);
+
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from '@/components / ui / dialog';
 import { Button } from '@/components / ui / button';
 import { Input } from '@/components / ui / input';
@@ -188,28 +252,13 @@ if ( {) {
     setIsLoading (true);
 ;
     // Create a new project;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     try {
       const { data: project_data, error: project_error } = await supabase;
         .from ('projects');
         .insert ([;
           {
-<<<<<<< HEAD
-            client_id: user.id
-            talent_id: talentData.user_id
-            job_id: application?.job_id |null
-            title: projectName
-            description: projectDescription
-            status: 'active'
-            payment_terms: 'hourly'}])
-        .select()
-        .single();
-      if (projectError) {
-        toast({
-          title: 'Error creating project'
-          description: projectError.message
-          variant: 'destructive'})
-=======
+
 
     // Create a new project;
     try {;
@@ -232,27 +281,11 @@ if ( {) {
           title: 'Error creating project',;
           description: projectError && projectError.message,;
           variant: 'destructive'}),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         setIsLoading(false);
         return;
       }
-<<<<<<< HEAD
-      // Create a new hiring record
-      const { error: hiringError } = await supabase
-        .from('hiring_records')
-        .insert([
-          {
-            client_id: user.id
-            talent_id: talentData.user_id
-            project_id: projectData.id
-            hire_date: new Date().toISOString()
-            status: 'active'}])
-      if (hiringError) {
-        toast({
-          title: 'Error creating hiring record'
-          description: hiringError.message
-          variant: 'destructive'})
-=======
+
 
       // Create a new hiring record;
       const { error: hiringError } = await supabase;
@@ -270,24 +303,11 @@ if ( {) {
           title: 'Error creating hiring record',;
           description: hiringError && hiringError.message,;
           variant: 'destructive'}),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         setIsLoading(false);
         return;
       }
-<<<<<<< HEAD
-      // Update the availability status
-      if (updateAvailability) {
-        try {
-          const { error: availabilityError } = await supabase
-            .from('talent_profiles')
-            .update({ availability_type: 'unavailable' })
-            .eq('id', talentData.id);
-          if (availabilityError) {
-            toast({
-              title: 'Error updating availability'
-              description: availabilityError.message
-              variant: 'destructive'})
-=======
+
 
       // Update the availability status;
       if (updateAvailability) {;
@@ -302,7 +322,7 @@ if ( {) {
               title: 'Error updating availability',;
               description: availabilityError && availabilityError.message,;
               variant: 'destructive'}),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             setIsLoading(false);
 =======
             client_id: user.id,
@@ -370,41 +390,97 @@ if ( {) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             return;
           }
-<<<<<<< HEAD
-        } catch (error) {
-<<<<<<< HEAD
-          console.error('Error updating availability:', error);
-          toast({
-            title: 'Error updating availability'
-            description: 'Failed to update candidate availability status.'
-            variant: 'destructive'})
-=======
+
         } catch (error) {;
           console && console.error('Error updating availability:', error);
           toast({;
             title: 'Error updating availability',;
             description: 'Failed to update candidate availability status.',;
             variant: 'destructive'}),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           setIsLoading(false);
           return;
         }
       }
-<<<<<<< HEAD
-      toast({
-        title: 'Candidate hired successfully'
-        description: `${talentData.full_name} has been hired for the project.`})
-      onConfirm();
-      onClose()
-    } catch (error) {
-      console.error('Error hiring candidate:', error);
-      toast({
-        title: 'Error hiring candidate'
-        description: 'Failed to hire candidate. Please try again.'
-        variant: 'destructive'})
-    } finally {
-      setIsLoading(false)
+
+
 =======
+    }
+
+  };
+
+=======
+;
+    setIsLoading(true),;
+    // Create a new project;
+    try {;
+      const { data: projectData, error: projectError } = await supabase;
+        .from('projects');
+        .insert([;
+          {;
+            client_id: user.id,;
+            talent_id: talentData.user_id,;
+            job_id: application?.job_id || null,;
+            title: projectName,;
+            description: projectDescription,;
+            status: 'active',;
+            payment_terms: 'hourly'}]);
+        .select();
+        .single(),;
+      if (projectError) {;
+        toast({;
+          title: 'Error creating project',;
+          description: projectError.message,;
+          variant: 'destructive'}),;
+        setIsLoading(false),;
+        return;
+      }
+;
+      // Create a new hiring record;
+      const { error: hiringError } = await supabase;
+        .from('hiring_records');
+        .insert([;
+          {;
+            client_id: user.id,;
+            talent_id: talentData.user_id,;
+            project_id: projectData.id,;
+            hire_date: new Date().toISOString(),;
+            status: 'active'}]),;
+      if (hiringError) {;
+        toast({;
+          title: 'Error creating hiring record',;
+          description: hiringError.message,;
+          variant: 'destructive'}),;
+        setIsLoading(false),;
+        return;
+      }
+;
+      // Update the availability status;
+      if (updateAvailability) {;
+        try {;
+          const { error: availabilityError } = await supabase;
+            .from('talent_profiles');
+            .update({ availability_type: 'unavailable' });
+            .eq('id', talentData.id),;
+          if (availabilityError) {;
+            toast({;
+              title: 'Error updating availability',;
+              description: availabilityError.message,;
+              variant: 'destructive'}),;
+            setIsLoading(false),;
+            return;
+          }
+        } catch (error) {;
+          console.error('Error updating availability:', error),;
+          toast({;
+            title: 'Error updating availability',;
+            description: 'Failed to update candidate availability status.',;
+            variant: 'destructive'}),;
+          setIsLoading(false),;
+          return;
+        }
+      }
+;
 
       toast({;
         title: 'Candidate hired successfully',;
@@ -421,24 +497,15 @@ if ( {) {
       setIsLoading(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
-  }
+
+  },
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   return (
-<<<<<<< HEAD
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Confirm Hire</DialogTitle>
-          <DialogDescription>
-            Confirm that you want to hire {talentData?.full_name |"this candidate"} for a new project.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="grid gap-4 py-4">
-          <div className="grid grid-cols-4 items-center gap-4">
-            <Label htmlFor="projectName" className="text-right">
-              Project Name
-            </Label>
-=======
+
     <Dialog open={isOpen} onOpenChange={onClose}>;
       <DialogContent className="sm:max-w-[425px]">;
         <DialogHeader>;
@@ -452,7 +519,7 @@ if ( {) {
             <Label htmlFor="projectName" className="text-right">;
               Project Name;
             </Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
             <Input
               id="projectName"
               value={projectName}
@@ -481,26 +548,7 @@ if ( {) {
             />;
             <label
               htmlFor="updateAvailability"
-<<<<<<< HEAD
-              className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed"
-            >
-              Update talent availability to "Unavailable"
-            </label>
-          </div>
-        </div>
-        <div className="flex justify-end gap-2">
-          <Button type="button" variant="secondary" onClick={onClose}>
-            Cancel
-          </Button>
-          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting |isLoading}>
-            {isLoading ? "Hiring..." : "Confirm Hire"}
-          </Button>
-        </div>
-      </DialogContent>
-    </Dialog>
-  )
-}
-=======
+
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed">;
 =======
           console.error ('Error updating availability:', error);
@@ -572,26 +620,12 @@ if ( {) {
               html_for="update_availability";
               className="text - sm font - medium leading - none peer - disabled:cursor - not - allowed";
             >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               Update talent availability to "Unavailable";
             </label>;
           </div>;
         </div>;
-<<<<<<< HEAD
-        <div className="flex justify-end gap-2">;
-          <Button type="button" variant="secondary" onClick={onClose}>;
-            Cancel;
-          </Button>;
-          <Button type="button" onClick={handleHireCandidate} disabled={isSubmitting || isLoading}>;
-            {isLoading ? "Hiring..." : "Confirm Hire"}
-          </Button>;
-        </div>;
-      </DialogContent>;
-    </Dialog>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
         <div className="flex justify - end gap - 2">;
           <Button type="button" variant="secondary" on_click={on_close}>;
             Cancel;
@@ -603,4 +637,10 @@ if ( {) {
       </DialogContent>;
     </Dialog>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

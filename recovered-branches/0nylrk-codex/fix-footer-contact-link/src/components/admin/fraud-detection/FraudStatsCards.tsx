@@ -1,39 +1,29 @@
-<<<<<<< HEAD
 
-import React from "react";
-<<<<<<< HEAD
-import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
-=======
+
 import {;
   Card,;
   CardHeader,;
   CardTitle,;
   CardDescription,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 } from "@/components/ui/card";
 
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
 import { FraudStats } from "@/types/fraud";
 interface FraudStatsCardsProps {;
   stats: FraudStats;
-}
-<<<<<<< HEAD
-export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
-  return (
+=======
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-4 mb-8">
-      <Card>
-        <CardHeader className="pb-2">
-          <CardTitle className="text-2xl font-bold">
-            {stats.total_flags}
-          </CardTitle>
-          <CardDescription>Total Flags</CardDescription>
-        </CardHeader>
-      </Card>
+interface FraudStatsCardsProps {
+  stats: FraudStats
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -72,11 +62,12 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
             <CardDescription > Pending Review</CardDescription>;
           </div>;
           {stats.pending_flags > 0 && (
-<<<<<<< HEAD
-            <ShieldAlert className="h-5 w-5 text-amber-500" />
-          )}
-        </CardHeader>
-      </Card>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -88,6 +79,12 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <AlertTriangle className="h-5 w-5 text-amber-500" />
         </CardHeader>
       </Card>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2 flex flex-row items-center justify-between">
           <div>
@@ -99,6 +96,12 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <AlertCircle className="h-5 w-5 text-red-500" />
         </CardHeader>
       </Card>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -107,6 +110,12 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <CardDescription>Actions Taken</CardDescription>
         </CardHeader>
       </Card>
+
+
+      
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardHeader className="pb-2">
           <CardTitle className="text-2xl font-bold">
@@ -115,8 +124,7 @@ export const FraudStatsCards: React.FC < FraudStatsCardsProps> = ({ stats }) => 
           <CardDescription>False Positives</CardDescription>
         </CardHeader>
       </Card>
-    </div>
-=======
+
 
 export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
   return (
@@ -186,7 +194,7 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
         </CardHeader>;
       </Card>;
     </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
 }
 
@@ -236,3 +244,16 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {;
 }
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+    </div>
+
+    </div>;
+);
+};
+
+
+export default FraudStatsCards;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

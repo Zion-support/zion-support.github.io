@@ -22,12 +22,8 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
-<<<<<<< HEAD
-import Head from 'next/head';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 export default function InvestorsPage() {
 =======
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -75,11 +71,10 @@ export default function InvestorsPage() {;
       </div>;
     </div>;
   );	return (
-<<<<<<< HEAD
-=======
+
 export default function InvestorsPage() {
 	return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -97,10 +92,7 @@ export default function InvestorsPage() {
 				<div className="pt-4 text-slate-300">Contact IR: <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></div>
 			</div>
 		</div>
-	)
-}
-<<<<<<< HEAD
-=======
+
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
 				<title>Investors | Zion Tech Group</title>;
@@ -120,7 +112,7 @@ export default function InvestorsPage() {
 		</div>;
 	),;
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 =======
@@ -188,3 +180,9 @@ function InvestorsPage() {
   </div>),
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+	),
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

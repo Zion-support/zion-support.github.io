@@ -1,15 +1,17 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { useState, useEffect  } from 'react';
-import { Card, CardContent  } from '@/components/ui/card';
-import { Button  } from '@/components/ui/button';
-import { FilePlus, Loader2  } from 'lucide-react';
-import { ProjectCard  } from './ProjectCard';
-import { ProjectForm  } from './ProjectForm';
-import { PortfolioProject  } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-export function PortfolioBuilder() {
+
+
+import {useState, useEffect} from 'react';
+import {Card, CardContent} from '@/components/ui/card';
+import {Button} from '@/components/ui/button';
+import {FilePlus, Loader2} from 'lucide-react';
+import {ProjectCard} from './ProjectCard';
+import {ProjectForm} from './ProjectForm';
+import {PortfolioProject} from '@/types/resume';
+import {usePortfolio} from '@/hooks/usePortfolio';
+export function PortfolioBuilder() {;
+
+
   const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio();
   const [showAddProject, setShowAddProject] = useState(false);
 
@@ -32,7 +34,46 @@ export function PortfolioBuilder() {
     if (success) {
       fetchProjects();
     }
-  }
+
+
+  };
+
+=======
+import { useState, useEffect } from 'react',;
+import { Card, CardContent } from '@/components/ui/card',;
+import { Button } from '@/components/ui/button',;
+import { FilePlus, Loader2 } from 'lucide-react',;
+import { ProjectCard } from './ProjectCard',;
+import { ProjectForm } from './ProjectForm',;
+import { PortfolioProject } from '@/types/resume',;
+import { usePortfolio } from '@/hooks/usePortfolio',;
+export function PortfolioBuilder() {;
+  const { projects, fetchProjects, deleteProject, isLoading } = usePortfolio(),;
+  const [showAddProject, setShowAddProject] = useState(false),;
+  const [editingProject, setEditingProject] = useState<PortfolioProject | null>(null),;
+  useEffect(() => {;
+    fetchProjects();
+  }, [fetchProjects]),;
+  const handleAddSuccess = () => {;
+    setShowAddProject(false),;
+    fetchProjects();
+  },;
+  const handleEditSuccess = () => {;
+    setEditingProject(null),;
+    fetchProjects();
+  },;
+  const handleDeleteProject = async (projectId: string) => {;
+    const success = await deleteProject(projectId),;
+    if (success) {;
+      fetchProjects();
+    }
+  },
+
+
+
+  
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">
@@ -63,11 +104,7 @@ export function PortfolioBuilder() {
         <Card>
           <CardContent className="pt-6">
             <h2 className="text-xl font-semibold mb-6">
-              {editingProject ? "Edit Project" : "Add New Project"}
-            </h2>
-            <ProjectForm
-              project={editingProject |undefined}
-=======
+
 import {useState, useEffect} from 'react';
 import {Card, CardContent} from '@/components/ui/card';
 import {Button} from '@/components/ui/button';
@@ -132,6 +169,9 @@ export function PortfolioBuilder() {;
         <Card>;
           <CardContent className="pt-6">;
             <h2 className="text-xl font-semibold mb-6">;
+=======
+
+
               {editingProject ? 'Edit Project' : 'Add New Project'}
             </h2>;
 
@@ -142,19 +182,29 @@ export function PortfolioBuilder() {;
               onCancel={() => {;
                 setShowAddProject(false);
                 setEditingProject(null);
-<<<<<<< HEAD
+
 
 =======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+            <ProjectForm 
+              project={editingProject || undefined}
+              onSuccess={editingProject ? handleEditSuccess : handleAddSuccess}
+
+              onCancel={() => {;
+                setShowAddProject(false);
+                setEditingProject(null);
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               }}
             />;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
       {/* Projects List */}
       {projects && projects.length > 0 ? (;
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
@@ -166,38 +216,7 @@ export function PortfolioBuilder() {;
               onDelete={handleDeleteProject}
             />;
           ))}
-<<<<<<< HEAD
-        </div>
-      ) : (
-        !showAddProject && (
-          <Card className="text-center py-12">
-            <CardContent>
-              <div className="flex flex-col items-center gap-4">
-                <div className="bg-muted/50 p-6 rounded-full">
-                  <FilePlus className="h-12 w-12 text-muted-foreground" />
-                </div>
-                <h3 className="text-xl font-medium">
-                  No portfolio projects yet
-                </h3>
-                <p className="text-muted-foreground max-w-md mx-auto">
-                  Add your best work to showcase your skills and experience to
-                  potential employers.
-                </p>
-                <Button
-                  onClick={() => setShowAddProject(true)}
-                  className="mt-2"
-                >
-                  Add Your First Project
-                </Button>
-              </div>
-            </CardContent>
-          </Card>
-        )
-      )}
-    </div>
-  );
-}
-=======
+
         </div>;
       ) : (;
         !showAddProject && (;
@@ -329,22 +348,14 @@ if ( {) {
                 <Button;
                   on_click={() => setShowAddProject (true)}
                   className="mt - 2";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 >;
                   Add Your First Project;
                 </Button>;
               </div>;
             </CardContent>;
-<<<<<<< HEAD
-          </Card>;
-        );
-      )}
-    </div>;
-  );
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
           </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

@@ -1,29 +1,30 @@
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
+
+
+          className={`cursor-pointer transition-all ${
+            selectedRole === 'client' 
+              ? "border-primary bg-primary/5" 
+              : "border-border hover:border-primary/40"
+          }`}
+          onClick={() => handleSelect('client')}
+        >
+          <CardContent className="p-5">
+            <div className="flex items-center">
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+                <Users className="h-6 w-6 text-primary" />
+              </div>
+              <div className="flex-1">
+                <h3 className="font-medium">I'm hiring</h3>
+                <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
+              </div>
+              {selectedRole === 'client' && (
+
+                <Check className="h-5 w-5 text-primary" />
+import React, { useState } from "react",;
+import { Button } from "@/components/ui/button",;
+import { Card, CardContent } from "@/components/ui/card",;
 import { Briefcase, Users, Check } from 'lucide-react';
-type UserRole = 'talent' | 'client' | null;
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from "react",
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Users, Check } from 'lucide-react'
-
-type UserRole = any;
-  return (
-    <div className='space-y-4 px-4'>
-      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>
-      <p className='text-muted-foreground'>
-        Choose how you want to use our platform
-      </p>
-      <div className='space-y-3 mt-6'>
-=======
+type UserRole = "talent" | "client" | null,;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
 export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
@@ -64,16 +65,12 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'talent' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-=======
+
             </div>;
           </CardContent>;
         </Card>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         <Card
           className={`cursor-pointer transition-all ${
             selectedRole === 'client'
@@ -96,15 +93,7 @@ export function RolePicker(): any ({ onSelect }: RolePickerProps) {;
               {selectedRole === 'client' && (;
                 <Check className='h-5 w-5 text-primary' />;
               )}
-<<<<<<< HEAD
-            </div>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
-  )
-}
-=======
+
 =======
 import React, { useState } from 'react';
 import { Button } from '@/components / ui / button';
@@ -174,18 +163,13 @@ function RolePicker() {
               </div>;
               {selected_role === 'client' && (
                 <Check className='h - 5 w - 5 text - primary' />)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             </div>;
           </CardContent>;
         </Card>;
       </div>;
-<<<<<<< HEAD
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 =======
 
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -194,3 +178,8 @@ function RolePicker() {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+;
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

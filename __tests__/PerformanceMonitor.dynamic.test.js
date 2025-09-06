@@ -1,18 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+
+
 import React from 'react';
-<<<<<<< HEAD
-import { render, screen } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import PerformanceMonitor from '../components/PerformanceMonitor.dynamic';
-<<<<<<< HEAD
-describe('PerformanceMonitor', () => {
-  test('renders without crashing', () => {
-    render(<PerformanceMonitor />);
-    expect(screen.getByTestId('performance-monitor')).toBeInTheDocument();
-=======
+
 import { render, screen } from '@testing - library / react';
 import '@testing - library / jest - dom';
 import PerformanceMonitor from '../components / PerformanceMonitor.dynamic';
@@ -20,9 +9,17 @@ describe ('PerformanceMonitor', () => {
   test ('renders without crashing', () => {
     render (<PerformanceMonitor />);
     expect (screen.getByTestId ('performance - monitor')).toBeInTheDocument ();
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   });
 });
+=======
+
+
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+=======
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 =======
 import React from 'react'
 import { render, screen, fireEvent } from '@testing-library/react'
@@ -30,16 +27,9 @@ import '@testing-library/jest-dom'
 import PerformanceMonitordynamic from '../components/PerformanceMonitor && PerformanceMonitor.dynamic'
 describe('PerformanceMonitordynamic'
   test('renders without crashing'
-<<<<<<< HEAD
-      screen.getByTestId('performancemonitor.dynamic'
-  test('displays correct content'
-  test('handles user interactions'
-  test('applies correct styling'
-const React from "react"; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceMonitordynamic from "./components/PerformanceMonitor.dynamic"; describe('PerformanceMonitordynamic', () => { test("renders without crashing",() => { render(<PerformanceMonitordynamic />); expect( screen.getByTestId("performancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<PerformanceMonitordynamic />)}); test("applies correct styling"
->>>>>>> origin/automation-improvements-final
-=======
+
       screen && screen.getByTestId('performancemonitor ; import { render,screen,fireEvent } from "@testing-library/react"; import "@testing-library/jest-dom"; import PerformanceMonitordynamic from "./components/PerformanceMonitor ; describe('PerformanceMonitordynamic', () => { test("renders without crashing",() => { render(<PerformanceMonitordynamic />); expect( screen && screen.getByTestId("performancemonitor && performancemonitor.dynamic") ).toBeInTheDocument()}); test("displays correct content",() => { render(<PerformanceMonitordynamic />)}); test("handles user interactions",() => { render(<PerformanceMonitordynamic />)}); test("applies correct styling"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 
 describe('PerformanceMonitor', () => {
@@ -64,3 +54,7 @@ describe('PerformanceMonitor', () => {
   });
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-a580
+=======
+
+>>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,70 +1,62 @@
-<<<<<<< HEAD
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React from 'react';
-<<<<<<< HEAD
-import { Navigate  } from 'react-router-dom';
-import { useAuth  } from '@/hooks/useAuth';
-import { useTenantAdminStatus  } from '@/hooks/useWhitelabelTenant';
-import { useWhitelabel } from '@/context/WhitelabelContext';
-export interface ProtectedRouteProps {
 
-  children: React.ReactNode
 
-=======
+
+
 import {Navigate} from 'react-router-dom';
-<<<<<<< HEAD
-import {useAuth} from '@/hooks/useAuth';
-import {useTenantAdminStatus} from '@/hooks/useWhitelabelTenant';
-import {useWhitelabel} from '@/context/WhitelabelContext';
-export interface ProtectedRouteProps {;
-  children: React && React.ReactNode,;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+export interface ProtectedRouteProps {
+  children: React.ReactNode,;
+
+
   adminOnly?: boolean;
   tenantAdminAllowed?: boolean;
   requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
 }
-<<<<<<< HEAD
-export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
-=======
+
 
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   children;
 
   adminOnly = false;
-<<<<<<< HEAD
-  tenantAdminAllowed = false
+
+
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
+  children;
+  adminOnly = false;
+
+=======
+import React from 'react',
+import { Navigate } from 'react-router-dom',
+import { useAuth } from '@/hooks/useAuth',
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',
+import { useWhitelabel } from '@/context/WhitelabelContext',
+export interface ProtectedRouteProps {
+  children: React.ReactNode,
+  adminOnly?: boolean,
+  tenantAdminAllowed?: boolean,
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin"
+}
+
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ 
+  children,
+  adminOnly = false,
+
+  tenantAdminAllowed = false,
   requiredUserType
 }) => {
-  const { user, isLoading } = useAuth();
-  const { tenant } = useWhitelabel();
-  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id)
-  const isCheckingPermissions = isLoading |isCheckingTenantAdmin;
+  const { user, isLoading } = useAuth(),
+  const { tenant } = useWhitelabel(),
+  const { isAdmin: isTenantAdmin, isLoading: isCheckingTenantAdmin } = useTenantAdminStatus(tenant?.id),
+  
+  const isCheckingPermissions = isLoading || isCheckingTenantAdmin;
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Show loading state if auth or tenant admin status is still being checked
   if (isCheckingPermissions) {
     return <div className="flex h-screen w-full items-center justify-center">
@@ -85,10 +77,25 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   // Check for specific user type if required
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />
-  }
-  return <>{children}</>
-}
+
 =======
+
+import React from 'react',;
+import { Navigate } from 'react-router-dom',;
+import { useAuth } from '@/hooks/useAuth',;
+import { useTenantAdminStatus } from '@/hooks/useWhitelabelTenant',;
+import { useWhitelabel } from '@/context/WhitelabelContext',;
+export interface ProtectedRouteProps {;
+  children: React.ReactNode,;
+  adminOnly?: boolean,;
+  tenantAdminAllowed?: boolean,;
+  requiredUserType?: "creator" | "jobSeeker" | "employer" | "buyer" | "admin";
+}
+;
+export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({;
+  children,;
+  adminOnly = false,;
+
   tenantAdminAllowed = false,;
   requiredUserType;
 }) => {;
@@ -127,7 +134,8 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({ ;
   return <>{children}</>;
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 export default ProtectedRoute;
 
 =======

@@ -1,12 +1,26 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Education  } from '@/types/resume';
-import { EducationItem } from './EducationItem';
+
+
+import {Education} from '@/types/resume';
+import {EducationItem} from './EducationItem';
+
+
 interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void
+
+=======
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export function EducationList({
   educationEntries
@@ -28,22 +42,13 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return null;
   }
+
+
+
+
+
   return (
-<<<<<<< HEAD
-    <div className="space-y-4">
-      <h3 className="text-md font-medium">Added Education</h3>
-      {educationEntries.map((edu) => (
-        <EducationItem
-          key={edu.id}
-          education={edu}
-          onEdit={onEdit}
-          onDelete={onDelete}
-        />
-      ))}
-    </div>
-  );
-}
-=======
+
     <div className="space-y-4">;
       <h3 className="text-md font-medium">Added Education</h3>;
       {educationEntries && educationEntries.map((edu) => (;
@@ -57,7 +62,7 @@ export function EducationList(): any ({ educationEntries, onEdit, onDelete }: Ed
     </div>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 import { Education  } from '@/types / resume';
 import { EducationItem  } from './EducationItem';
@@ -89,3 +94,10 @@ if ( {) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  )
+}
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

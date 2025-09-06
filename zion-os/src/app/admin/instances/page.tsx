@@ -1,27 +1,33 @@
-<<<<<<< HEAD
-// import { prisma } from "@/lib/prisma";
-interface InstanceWithCounts {id: string;
-  name: string;
-  slug: string;
-  domain: string | null;
-  subdomain: string | null;
-  vertical: string;
-  defaultLanguage: string;
-  tokenSystem: string;
-  governanceType: string;
-  isPublic: boolean;
-  region: string | null;
-  country: string | null;
-  createdAt: Date;
-  updatedAt: Date;
-  daoConfig: any | null;
+
+
+// import { prisma } from "@/lib/prisma",;
+interface InstanceWithCounts {;
+  id: string,;
+  name: string,;
+  slug: string,;
+  domain: string | null,;
+  subdomain: string | null,;
+  vertical: string,;
+  defaultLanguage: string,;
+  tokenSystem: string,;
+  governanceType: string,;
+  isPublic: boolean,;
+  region: string | null,;
+  country: string | null,;
+  createdAt: Date,;
+  updatedAt: Date,;
+  daoConfig: any | null,;
   _count: {;
-    deployments: number;
+    deployments: number,;
     features: number;
   }
 }
-export default function InstancesPage() {const instances: any[] = [], // Temporary empty array;
-  const error: string | null = null;
+;
+export default function InstancesPage() {;
+  const instances: any[] = [], // Temporary empty array;
+  const error: string | null = null,;
+
+
   return (;
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-7xl mx-auto">;
@@ -73,12 +79,14 @@ function InstancesPage() {
             <p className="text - sm text - white / 50">;
               Please ensure your database is properly configured and the DATABASE_URL environment variable is set.;
             </p>;
-<<<<<<< HEAD
-          </div>;
-        )}
-=======
+
           </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Stats Overview */}
         <div className="grid grid - cols - 1 md:grid - cols - 4 gap - 6 mb - 8">;
           <div className="glass - effect rounded - xl p - 6 text - center">;
@@ -105,15 +113,7 @@ function InstancesPage() {
           </div>;
         </div>;
         {/* Instances Grid */}
-<<<<<<< HEAD
-        {instances.length > 0 && (;
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">;
-            {instances.map((inst) => (;
-              <div key={inst.id} className="feature-card group hover-lift">;
-                <div className="flex items-start justify-between mb-4">;
-                  <div className="flex items-center gap-3">;
-                    <div className={`w-3 h-3 rounded-full ${inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
-=======
+
         {instances.length > 0 && (
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6">;
             {instances.map ((inst) => (
@@ -122,7 +122,13 @@ function InstancesPage() {
                   <div className="flex items - center gap - 3">;
                     <div className={`w - 3 h - 3 rounded - full ${
                       inst.is_public ? 'bg - green - 500' : 'bg - yellow - 500';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+                    <div className={`w-3 h-3 rounded-full ${;
+                      inst.isPublic ? 'bg-green-500' : 'bg-yellow-500';
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     }`}></div>;
                     <div className="font - semibold text - lg text - white group - hover:text - blue - 400 transition - colors">;
                       {inst.name}
@@ -136,7 +142,11 @@ function InstancesPage() {
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
                     <span className="w - 4 h - 4">🌐</span>;
                     <span className="truncate">;
-                      {inst.domain |inst.subdomain |inst.slug}
+
+
+                      {inst.domain || inst.subdomain || inst.slug}
+
+
                     </span>;
                   </div>;
                   <div className="flex items - center gap - 2 text - sm text - white / 70">;
@@ -147,9 +157,11 @@ function InstancesPage() {
                     <div className="flex items - center gap - 2 text - sm text - white / 70">;
                       <span className="w - 4 h - 4">📍</span>;
                       <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-<<<<<<< HEAD
-                    </div>;
-                  )}
+
+
+;
+
+
                   <div className="flex items-center gap-2 text-sm text-white/70">;
                     <span className="w-4 h-4">🔧</span>;
                     <span>Token: {getTokenSystemLabel(inst.tokenSystem)}</span>;
@@ -173,8 +185,11 @@ function InstancesPage() {
                 <div className="mt - 4 pt - 4 border - t border - white / 10">;
                   <div className="flex gap - 2">;
                     <a;
-<<<<<<< HEAD
-                      href={`/admin/instances/${inst.id}`}
+
+
+                      href={`/admin/instances/${inst.id}`} ;
+
+
                       className="flex-1 text-center py-2 px-3 text-sm bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors";
 =======
                       href={`/admin / instances/${inst.id}`}
@@ -184,8 +199,11 @@ function InstancesPage() {
                       Manage;
                     </a>;
                     <a;
-<<<<<<< HEAD
-                      href={`/admin/instances/${inst.id}/deployments`}
+
+
+                      href={`/admin/instances/${inst.id}/deployments`} ;
+
+
                       className="flex-1 text-center py-2 px-3 text-sm border border-white/20 hover:border-white/40 text-white rounded-lg transition-colors";
 =======
                       href={`/admin / instances/${inst.id}/deployments`}
@@ -196,15 +214,15 @@ function InstancesPage() {
                     </a>;
                   </div>;
                 </div>;
-<<<<<<< HEAD
-              </div>;
-            ))}
-          </div>;
-        )}
-=======
+
               </div>))}
           </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Empty State */}
         {instances.length === 0 && !error && (
           <div className="text - center py - 16">;
@@ -261,12 +279,12 @@ function InstancesPage() {
           {instances.map ((inst) => (
             <div key={inst.id} className="card card - hover">;
               {/* Instance Header */}
-<<<<<<< HEAD
-              <div className="flex items-start justify-between mb-4">;
-                <div className="flex-1">;
-                  <h3 className="text-xl font-semibold text-white mb-1">{inst.name}</h3>;
-                  <div className="flex items-center space-x-2 mb-2">;
-                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
+
+
+                    <span className={`px-2 py-1 rounded-full text-xs font-medium ${;
+                      inst.vertical === 'GENERAL' ? 'bg-blue-500/20 text-blue-400' :;
+
+
                       inst.vertical === 'HEALTH' ? 'bg-green-500/20 text-green-400' :;
                       inst.vertical === 'EDUCATION' ? 'bg-purple-500/20 text-purple-400' :;
                       inst.vertical === 'LAW' ? 'bg-yellow-500/20 text-yellow-400' :;
@@ -300,7 +318,11 @@ function InstancesPage() {
               <div className="space - y-3 mb - 4">;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                   <span>🌐</span>;
-                  <span>{inst.domain |inst.subdomain |inst.slug}</span>;
+
+
+                  <span>{inst.domain || inst.subdomain || inst.slug}</span>;
+
+
                 </div>;
                 <div className="flex items - center space - x-2 text - sm text - white / 70">;
                   <span>🏛️</span>;
@@ -310,9 +332,11 @@ function InstancesPage() {
                   <div className="flex items - center space - x-2 text - sm text - white / 70">;
                     <span>📍</span>;
                     <span>{inst.region}{inst.country ? `, ${inst.country}` : ''}</span>;
-<<<<<<< HEAD
-                  </div>;
-                )}
+
+
+;
+
+
                 <div className="flex items-center space-x-2 text-sm text-white/70">;
 =======
                   </div>)}
@@ -336,8 +360,11 @@ function InstancesPage() {
               {/* Actions */}
               <div className="flex space - x-2">;
                 <a;
-<<<<<<< HEAD
-                  href={`/admin/instances/${inst.id}`}
+
+
+                  href={`/admin/instances/${inst.id}`} ;
+
+
                   className="flex-1 btn-secondary text-center text-sm py-2";
 =======
                   href={`/admin / instances/${inst.id}`}
@@ -347,8 +374,11 @@ function InstancesPage() {
                   Manage;
                 </a>;
                 <a;
-<<<<<<< HEAD
-                  href={`/admin/instances/${inst.id}/deployments`}
+
+
+                  href={`/admin/instances/${inst.id}/deployments`} ;
+
+
                   className="flex-1 btn-secondary text-center text-sm py-2";
 =======
                   href={`/admin / instances/${inst.id}/deployments`}
@@ -362,15 +392,15 @@ function InstancesPage() {
               <div className="text - xs text - white / 40 mt - 3 pt - 3 border - t border - white / 10">;
                 Created: {new Date (inst.created_at).toLocaleDateString ()}
               </div>;
-<<<<<<< HEAD
-            </div>;
-          ))}
-        </div>;
-      )}
-=======
+
             </div>))}
         </div>)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Quick Actions */}
       <div className="card text - center py - 8">;
         <h2 className="text - 2xl font - semibold mb - 4">Quick Actions</h2>;
@@ -536,16 +566,7 @@ function InstancesPage() {
         </div>)}
     </div>);
 }
-<<<<<<< HEAD
-function getGovernanceLabel(type: string) {switch (type) {;
-    case "ADMIN": return "Admin Control";
-    case "DAO_LITE": return "DAO-lite";
-    case "DAO_FULL": return "Full DAO";
-    default: return type;
-  }
-}
-function getTokenSystemLabel(type: string) {switch (type) {;
-=======
+
 /**
  * getGovernanceLabel - Function description
  */
@@ -562,7 +583,23 @@ function getGovernanceLabel() {
  */
 function getTokenSystemLabel() {
   switch (type) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+;
+function getGovernanceLabel(type: string) {;
+  switch (type) {;
+    case "ADMIN": return "Admin Control",;
+    case "DAO_LITE": return "DAO-lite",;
+    case "DAO_FULL": return "Full DAO",;
+    default: return type;
+  }
+}
+;
+function getTokenSystemLabel(type: string) {;
+  switch (type) {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     case "SHARED": return "ZION$ Shared";
     case "LOCAL": return "Local Token";
     default: return type;

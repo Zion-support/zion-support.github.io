@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-import { Fragment } from "react",
-import { Route, Routes } from "react-router-dom",
-import { ProtectedRoute } from "../components/ProtectedRoute",
-import CommunityPage from "../pages/CommunityPage",
-import ForumCategoryPage from "../pages/ForumCategoryPage",
-import ForumPostPage from "../pages/ForumPostPage",
-import CreatePostPage from "../pages/CreatePostPage",
-import EditPostPage from "../pages/EditPostPage";
-import CommunityProfilePage from "../pages/CommunityProfilePage";
-<<<<<<< HEAD
 
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const CommunityRoutes = () => {
 =======
 const CommunityRoutes = () => {;
@@ -17,13 +10,40 @@ const CommunityRoutes = () => {;
   return (
     <Routes>;
       {/* Public routes */}
-<<<<<<< HEAD
-      <Route path="/community" element={<CommunityPage />} />
-      <Route path="/forum" element={<CommunityPage />} />
-      <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />
-      <Route path="/community/post/:postId" element={<ForumPostPage />} />
-      <Route path="/community/profile/:userId" element={<CommunityProfilePage />} />
+
 =======
+      {/* Protected routes */}
+      <Route
+        path="/community/create"
+        element={
+          <ProtectedRoute>
+            <CreatePostPage />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/community/edit/:postId"
+        element={
+          <ProtectedRoute>
+            <EditPostPage />
+          </ProtectedRoute>
+
+
+=======
+import { Fragment } from "react",;
+import { Route, Routes } from "react-router-dom",;
+import { ProtectedRoute } from "../components/ProtectedRoute",;
+import CommunityPage from "../pages/CommunityPage",;
+import ForumCategoryPage from "../pages/ForumCategoryPage",;
+import ForumPostPage from "../pages/ForumPostPage",;
+import CreatePostPage from "../pages/CreatePostPage",;
+import EditPostPage from "../pages/EditPostPage",;
+import CommunityProfilePage from "../pages/CommunityProfilePage",;
+const CommunityRoutes = () => {;
+  return (;
+    <Routes>;
+      {/* Public routes */}
+
       <Route path="/community" element={<CommunityPage />} />;
       <Route path="/forum" element={<CommunityPage />} />;
       <Route path="/community/category/:categoryId" element={<ForumCategoryPage />} />;
@@ -60,37 +80,24 @@ const CommunityRoutes = () =>: any {
           </ProtectedRoute>;
         }
       />;
-<<<<<<< HEAD
-      <Route
-        path="/community/edit/:postId"
-=======
+
       <Route;
         path="/community / edit/:post_id";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         element={
           <ProtectedRoute>;
             <EditPostPage />;
           </ProtectedRoute>;
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-      />
-    </Routes>
-  )
-}
-export default CommunityRoutes;
-=======
+
       />;
     </Routes>;
   );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
-      />;
-    </Routes>);
-}
-;
+},;
 export default CommunityRoutes;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

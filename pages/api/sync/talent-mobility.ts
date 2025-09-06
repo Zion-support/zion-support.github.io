@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -22,16 +17,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
-<<<<<<< HEAD
-=======
+
   };
 
   if (!personId || !fromNation || !toNation || !role || !startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -39,29 +30,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`
   const version = nextVersionFor(state, entityKey)
   const event = {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    eventId: uuidv4()
-    type: "talent_mobility" as const
-    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
-    originInstanceId: state.config.instanceId
-    version
-    timestamp: Date.now()}
-  upsertEvent(state, event)
-  writeState(state)
-  const body = { ...event, propagate: false }
-  const headers: Record<string, string> = {}
-  const sig = signPayload(body)
-  if (sig) headers["x-zion-signature"] = sig
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-    eventId: uuidv4(), type: "talent_mobility" as const,
-    payload: {
-       id: entityKey, personId, fromNation, toNation, role, startDate, endDate 
-    },
-    originInstanceId: state.config.instanceId, version,
-    timestamp: Date.now()};
+
+
 
   upsertEvent(state, event);
   writeState(state);
@@ -71,22 +41,91 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const sig = signPayload(body);
   if (sig) headers["x-zion-signature"] = sig;
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-<<<<<<< HEAD
-        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {}
       })
-  );
+  ),
 
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-}
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
+};
+
 =======
+import type { NextApiRequest, NextApiResponse } from 'next';
+export default async function handler(req, res) {
+  try {
+  res.status(200).json({ message: 'Talent mobility processed' });
+import type { NextApiRequest, NextApiResponse } from "next",
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",
+import { signPayload } from "../../../utils/sync/signature",
+import axios from "axios",
+import { v4 as uuidv4 } from "uuid",
+import { nextVersionFor } from "../../../utils/sync/versioning",
+export default async function handler(req, res) {
+  try {
+  if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
+  const state = readState(),
+  if (!state.config.optIn || state.config.paused) {
+    return res.status(403).json({ error: "Sync disabled for this instance" })
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
+    personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
+  },
+  if (!personId || !fromNation || !toNation || !role || !startDate) {
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  const entityKey = `${personId}:${startDate}`,
+  const version = nextVersionFor(state, entityKey),
+  const event = {
+    eventId: uuidv4(),
+    type: "talent_mobility" as const,
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()},
+  upsertEvent(state, event),
+  writeState(state),
+  const body = { ...event, propagate: false },
+  const headers: Record<string, string> = {},
+  const sig = signPayload(body),
+  if (sig) headers["x-zion-signature"] = sig,
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  await Promise.all(
+    state.config.peers
+      .filter((p) => !p.paused)
+      .map(async (peer) => {
+
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
 =======
 import type { NextApiRequest, NextApiResponse } from './next';,
@@ -141,20 +180,13 @@ if (headers["x - zion - signature"] = sig, ) {
       .filter ((p) => !p.paused);
       .map (async (peer) => {
         const url = new URL ("/api / sync / publish", peer.base_url).to_string (),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         try {
           await axios.post (url, body, { headers, timeout: 5000 });
         } catch {}
-<<<<<<< HEAD
-      })
-  )
 
-  return res.status(200).json({ status: "created", version, eventId: event.eventId })
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
       })),
   return res.status (200).json ({ status: "created", version, event_id: event.event_id });
@@ -162,3 +194,119 @@ if (headers["x - zion - signature"] = sig, ) {
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 })
+        } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      })
+  ),
+  return res.status(200).json({ status: "created", version, eventId: event.eventId })
+import type { NextApiRequest, NextApiResponse } from "next";
+import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
+import { signPayload } from "../../../utils/sync/signature";
+import axios from "axios";
+import { v4 as uuidv4 } from "uuid";
+import { nextVersionFor } from "../../../utils/sync/versioning";
+export default async function handler(req, res) {
+  try {
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {;
+    personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string;
+  },;
+  if (!personId || !fromNation || !toNation || !role || !startDate) {;
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+  const entityKey = `${personId}:${startDate}`;
+  const version = nextVersionFor(state, entityKey);
+  const event = {;
+    eventId: uuidv4();
+    type: "talent_mobility" as const;
+    payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate },;
+    originInstanceId: state.config.instanceId,;
+    version,;
+    timestamp: Date.now()},;
+  upsertEvent(state, event);
+  writeState(state);
+  const body = { ...event, propagate: false },;
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+  await Promise.all(;
+    state.config.peers;
+      .filter((p) => !p.paused);
+      .map(async (peer) => {;
+        const url = new URL("/api/sync/publish", peer.baseUrl).toString();
+        try {
+          await axios.post(url, body, { headers, timeout: 5000 });
+        } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      });
+  );
+  return res.status(200).json({ status: "created", version, eventId: event.eventId });
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

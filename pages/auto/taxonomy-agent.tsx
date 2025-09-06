@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
@@ -19,36 +10,21 @@ const TaxonomyAgent: NextPage = () => {
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
         <p>Suggests topic tags for each page to improve discovery and navigation.</p>
-        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</a></Link>
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
+=======
+=======
+        <Link href="/data/reports/taxonomy/latest.json"><a className="text-blue-600 underline">Latest Taxonomy Report (JSON)</Link></Link>
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </main>
     </div>
   )
-}
-export default TaxonomyAgent;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-import type { NextPage } from 'next',
-import Head from 'next / head',
-import Link from 'next / link',
-const TaxonomyAgent: NextPage = () => {
-  return (
-    <div>;
-      <Head>;
-        <title > AI Taxonomy Tagger Agent</title>;
-        <meta name="description" content="Daily AI - generated page tags." />;
-      </Head>;
-      <main className="space - y-4">;
-        <h1 className="text - 2xl font - bold">AI Taxonomy Tagger Agent</h1>;
-        <p > Suggests topic tags for each page to improve discovery and navigation.</p>;
-        <Link href="/data / reports / taxonomy / latest.json"><a className="text - blue - 600 underline">Latest Taxonomy Report (JSON)</a></Link>;
-      </main>;
-    </div>);
 },
-export default TaxonomyAgent,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

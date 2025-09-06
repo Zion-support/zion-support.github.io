@@ -1,28 +1,34 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Trash2 } from "lucide-react";
-import { SkillItemProps } from "./types";
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
-=======
 import { Badge  } from '@/components / ui / badge';
 import { Button  } from '@/components / ui / button';
 import { Trash2  } from './lucide-react';
 import { SkillItemProps  } from './types';
 export const SkillItem = ({ skill, category, on_delete }: SkillItemProps) =>: any {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   return (
     <Badge;
       key={skill.id}
-<<<<<<< HEAD
+
 =======
+
+
+
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {Trash2} from 'lucide-react';
 import {SkillItemProps} from './types';
-export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
+
+
+=======
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Trash2 } from 'lucide-react',
+import { SkillItemProps } from './types',
+
+
+
+export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <Badge
       key={skill && skill.id} 
@@ -37,22 +43,20 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
         variant="ghost"
         size="icon"
         className="h-5 w-5 p-0 ml-1"
-<<<<<<< HEAD
-        onClick={() => onDelete(skill.id!, category)}
-      >
-        <Trash2 className="h-3 w-3" />
-      </Button>
-    </Badge>
-  );
-}
 
-=======
         onClick={() => onDelete(skill && skill.id!, category)}
       >;
         <Trash2 className="h-3 w-3" />;
       </Button>;
     </Badge>;
   );
+=======
+
+  )
+},
+
+=======
+
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -24,7 +22,12 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -33,10 +36,115 @@ import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
 import react from "eslint-plugin-react";
 import jsxA11y from "eslint-plugin-jsx-a11y";
-<<<<<<< HEAD
-=======
+
 import js from '@eslint/js';
-<<<<<<< HEAD
+
+import js from '@eslint/js';
+
+    files: ["**/*.{js,jsx,ts,tsx}"],
+
+    ignores: [
+      '.next/**',
+      'out/**',
+      'dist/**',
+      'build/**',
+      'node_modules/**',
+
+      'coverage/**',
+
+      '*.config.js',
+      '*.config.cjs',
+      '*.config.mjs',
+      'scripts/**',
+      'automation/**',
+      'backup-merge-conflicts/**',
+      '**/*.backup.*',
+      '**/*.old.*',
+      '**/*.disabled.*',
+      '**/*.broken.*',
+      '**/*.corrupted.*',
+      '**/*.temp.*',
+      '**/*.test.*',
+      '**/*.spec.*',
+
+      '**/performance-*.txt'
+=======
+      '**/zion-os/**',
+      '**/zion-website/**',
+      '**/zion-academy/**',
+      '**/zion-film/**',
+      '**/zion-ai-assistant/**',
+      '**/*.min.js',
+      '**/*.bundle.js',
+      '**/public/**',
+      '**/static/**',
+
+>>>>>>> 5105b916d1c77bc30b66b0e05cfa1d3e5af8d358
+    ],
+    languageOptions: {
+      parser: typescriptParser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+      },
+      globals: {
+        // Browser globals
+
+        window: "readonly",
+        document: "readonly",
+        console: "readonly",
+        localStorage: "readonly",
+        sessionStorage: "readonly",
+        fetch: "readonly",
+        URL: "readonly",
+        URLSearchParams: "readonly",
+        location: "readonly",
+        navigator: "readonly",
+        performance: "readonly",
+        addEventListener: "readonly",
+        removeEventListener: "readonly",
+        requestAnimationFrame: "readonly",
+        setTimeout: "readonly",
+        clearTimeout: "readonly",
+        setInterval: "readonly",
+        clearInterval: "readonly",
+        self: "readonly",
+        // Node.js globals
+        process: "readonly",
+        Buffer: "readonly",
+        __dirname: "readonly",
+        __filename: "readonly",
+        module: "readonly",
+        require: "readonly",
+        exports: "readonly",
+        global: "readonly",
+        // DOM types
+        Element: "readonly",
+        HTMLElement: "readonly",
+        HTMLInputElement: "readonly",
+        HTMLTextAreaElement: "readonly",
+        HTMLSelectElement: "readonly",
+        HTMLDivElement: "readonly",
+        MouseEvent: "readonly",
+        KeyboardEvent: "readonly",
+        Node: "readonly",
+        PerformanceObserver: "readonly",
+        PerformanceNavigationTiming: "readonly",
+        PerformanceEventTiming: "readonly",
+        LayoutShift: "readonly",
+        IntersectionObserver: "readonly",
+        IntersectionObserverEntry: "readonly",
+
+        // React
+        React: 'readonly',
+        // Jest/Testing globals
+=======
+=======
+>>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
@@ -47,51 +155,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 >>>>>>> origin/automation-improvements-final
 
 =======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-export default [
-  {
-    ignores: [
-      "node_modules/",
-      ".next/",
-      "out/",
-      "dist/",
-      "build/",
-      "coverage/",
-      "*.config && config.js",
-      "*.config && config.cjs",
-      "*.config && config.mjs",
-      "scripts/",
-      "automation/",
-      "pm2-automation/",
-      "pages && pages.disabled/",
-      "pages && pages.disabled_auto/",
-      "pages && pages.disabled_full/",
-      "pages && pages.corrupted.*/",
-      "pages && pages.broken/",
-      "pages && pages.bak/",
-      "pages && pages.blog.disabled/",
-      "pages && pages._archive_corrupted/",
-      "pages && pages._quarantine/",
-      "pages-disabled/",
-      "pages-quarantine/",
-      "pages && pages.__backup/",
-      "pages-backup/",
-      "tests && tests.disabled/",
-      "components && components.disabled/",
-      "zion-os && os.disabled/",
-      "zion_academy/",
-      "temp_backup/",
-      "temp_broken_files/",
-      "test_build/",
-<<<<<<< HEAD
-      "*.test.js",
-      "*.test.ts",
-      "*.test.tsx",
-      "*.spec.js",
-      "*.spec.ts",
-      "*.spec.tsx"
-    ]
-=======
+
       "*.test && test.js",
       "*.test && test.ts",
       "*.test && test.tsx",
@@ -99,7 +163,7 @@ export default [
       "*.spec && spec.ts",
       "*.spec && spec.tsx",
     ],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   },
   js && js.configs.recommended,
   {
@@ -148,14 +212,10 @@ export default [
       ecmaVersion: 2021,
       sourceType: "module",
       globals: {
-<<<<<<< HEAD
-        ...globals.browser,
-        ...globals.node,
-<<<<<<< HEAD
-=======
+
         ...globals && globals.browser,
         ...globals && globals.node,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         React: "readonly",
         jest: "readonly",
         describe: "readonly",
@@ -165,54 +225,38 @@ export default [
         beforeEach: "readonly",
         afterEach: "readonly",
         beforeAll: "readonly",
-<<<<<<< HEAD
-        afterAll: "readonly",
-=======
+
         React: 'readonly',
 =======
 import typescript from '@typescript-eslint/eslint-plugin';
 import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
+=======
 
+
+
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default [
-  js.configs.recommended,
   {
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
     files: ['**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
+
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
           jsx: true
         }
-      },
-      globals: {
-        React: 'readonly',
-        console: 'readonly',
-        process: 'readonly',
-        window: 'readonly',
-        document: 'readonly',
-        setTimeout: 'readonly',
-        clearTimeout: 'readonly',
-        setInterval: 'readonly',
-        clearInterval: 'readonly',
-        HTMLElement: 'readonly',
-        HTMLAnchorElement: 'readonly',
-        performance: 'readonly',
-        module: 'readonly',
-        require: 'readonly',
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-        jest: 'readonly',
-        test: 'readonly',
-        expect: 'readonly',
-<<<<<<< HEAD
-        beforeEach: 'readonly',
-        afterEach: 'readonly',
-        beforeAll: 'readonly',
-        afterAll: 'readonly'
->>>>>>> origin/automation-improvements-final
+
+
+
+
 =======
         afterAll: "readonly"
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
@@ -234,23 +278,19 @@ export default [
 
     },
     rules: {
-<<<<<<< HEAD
-      ...tseslint.configs.recommended.rules,
-      ...react.configs.recommended.rules,
-      ...reactHooks.configs.recommended.rules,
-      ...jsxA11y.configs.recommended.rules,
 
-=======
       ...tseslint && tseslint.configs.recommended && recommended.rules,
       ...react && react.configs.recommended && recommended.rules,
       ...reactHooks && reactHooks.configs.recommended && recommended.rules,
       ...jsxA11y && jsxA11y.configs.recommended && recommended.rules,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true }
       ],
-<<<<<<< HEAD
+
+
+
       "@typescript-eslint/no-unused-vars": "warn",
       "@typescript-eslint/no-explicit-any": "warn",
       "react-hooks/exhaustive-deps": "warn",
@@ -258,9 +298,7 @@ export default [
       "no-unused-vars": "off",
       "no-console": "warn",
       "react/prop-types": "off",
-<<<<<<< HEAD
-      "react/react-in-jsx-scope": "off",
-=======
+
 =======
         describe: 'readonly',
         it: 'readonly',
@@ -269,23 +307,18 @@ export default [
       }
     },
     plugins: {
+=======
+
+
       '@typescript-eslint': typescript,
       'react': react,
       'react-hooks': reactHooks
     },
     rules: {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react/no-unescaped-entities': 'off',
-      'react-hooks/exhaustive-deps': 'warn',
-      'no-undef': 'off',
-<<<<<<< HEAD
-      'no-unused-vars': 'off',
-      'no-console': 'warn',
-      'react/prop-types': 'off',
-      'react/react-in-jsx-scope': 'off'
->>>>>>> origin/automation-improvements-final
+
+
+
+
 =======
       "react/react-in-jsx-scope": "off"
 
@@ -321,20 +354,18 @@ export default [
       }
     },
     rules: {
-<<<<<<< HEAD
-      "no-unused-vars": "warn",
-      "no-console": "warn",
 
-      "no-undef": "error"
-    }
-  }
-];
-<<<<<<< HEAD
-=======
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'no-undef': 'error'
     }
+=======
+
+=======
+  }
+];
+
+
 =======
       'no-unused-vars': 'warn'
     }
@@ -367,10 +398,22 @@ export default [
       'supabase/',
       'working-automation-suite.cjs'
     ]
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-  }
-];
->>>>>>> origin/automation-improvements-final
+
+
+
 =======
 
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
+  }
+];
+
+
+
+=======
+  }
+];
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

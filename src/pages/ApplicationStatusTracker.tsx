@@ -1,80 +1,73 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { SEO } from '@/components/SEO'
-import { ApplicationsTracker } from '@/components/jobs/applications'
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card'
-=======
 
-import { SEO } from "@/components/SEO";
-import { ApplicationsTracker } from "@/components/jobs/applications";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-import { Briefcase, Inbox } from 'lucide-react'
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { useIsMobile } from "@/hooks/use-mobile";
-function ApplicationStatusTrackerContent() {
-<<<<<<< HEAD
-  const isMobile = null;
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import { SEO } from '@/components/SEO';
-import { ApplicationsTracker } from '@/components/jobs/applications';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { Briefcase, Inbox } from 'lucide-react';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { useIsMobile } from '@/hooks/use-mobile';
-function ApplicationStatusTrackerContent() {;
-  const isMobile = useIsMobile();
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <SEO
         title='Application Status Tracker | Zion AI Marketplace'
         description='Track the status of your job applications in the Zion AI marketplace.'
-<<<<<<< HEAD
-      />
-      <div className='container mx-auto px-4 py-8'>
-        <div className='flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8'>
-          <div>
-            <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>
-              Application Status Tracker
-            </h1>
-            <p className='text-muted-foreground mt-1'>
-              Track where you stand in the hiring process
-            </p>
-          </div>
-        </div>
-        <div className='grid grid-cols-1 gap-6'>
-          <Card>
-            <CardHeader className='border-b bg-muted/50'>
-              <CardTitle className='flex items-center text-lg'>
-                <Inbox className='mr-2 h-5 w-5' /> Your Applications
-=======
+
   const isMobile = useIsMobile();
 
 
+=======
+
+  const isMobile = useIsMobile()
+
+=======
+
+import { SEO } from "@/components/SEO",
+import { ApplicationsTracker } from "@/components/jobs/applications",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Briefcase, Inbox } from 'lucide-react'
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { useIsMobile } from "@/hooks/use-mobile",
+function ApplicationStatusTrackerContent() {
+  const isMobile = useIsMobile(),
+  
+
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <SEO 
         title="Application Status Tracker | Zion AI Marketplace" 
         description="Track the status of your job applications in the Zion AI marketplace." 
       />
+
+
       
       <div className="container mx-auto px-4 py-8">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-8">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div>
             <h1 className={`text-${isMobile ? '2xl' : '3xl'} font-bold`}>Application Status Tracker</h1>
             <p className="text-muted-foreground mt-1">Track where you stand in the hiring process</p>
           </div>
         </div>
 
+
+
+
         <div className="grid grid-cols-1 gap-6">
           <Card>
             <CardHeader className="border-b bg-muted/50">
+
+=======
+          <Card>
+            <CardHeader className='border-b bg-muted/50'>
+              <CardTitle className='flex items-center text-lg'>
+                <Inbox className='mr-2 h-5 w-5' /> Your Applications              </CardTitle>            <CardHeader className="border-b bg-muted/50">
+=======
+
+        <div className="grid grid-cols-1 gap-6">
+          <Card>
+            <CardHeader className="border-b bg-muted/50">
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <CardTitle className="flex items-center text-lg">
                 <Inbox className="mr-2 h-5 w-5" /> Your Applications
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -87,23 +80,40 @@ function ApplicationStatusTrackerContent() {;
         </div>
       </div>
     </>
-<<<<<<< HEAD
-  )
-}
-=======
+
   );
 }
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 export default function ApplicationStatusTracker() {
   return (
     <ProtectedRoute>
       <ApplicationStatusTrackerContent />
     </ProtectedRoute>
-<<<<<<< HEAD
-  )
-}
+
 =======
+  )
+
+      <ApplicationStatusTrackerContent />;
+    </ProtectedRoute>;
+  );
+};
+
+=======
+import { SEO } from "@/components/SEO",;
+import { ApplicationsTracker } from "@/components/jobs/applications",;
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",;
+import { Briefcase, Inbox } from 'lucide-react';
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+import { useIsMobile } from "@/hooks/use-mobile",;
+function ApplicationStatusTrackerContent() {;
+  const isMobile = useIsMobile();
+  return (;
+    <>;
+      <SEO;
+        title="Application Status Tracker | Zion AI Marketplace";
+        description="Track the status of your job applications in the Zion AI marketplace.";
+
       />;
 
       <div className='container mx-auto px-4 py-8'>;
@@ -144,11 +154,10 @@ export default function ApplicationStatusTracker() {;
     </ProtectedRoute>;
   );
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import { SEO } from '@/components / SEO';
 import { ApplicationsTracker } from '@/components / jobs / applications';
@@ -205,3 +214,9 @@ function ApplicationStatusTracker() {
     </ProtectedRoute>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

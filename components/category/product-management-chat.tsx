@@ -1,18 +1,14 @@
 import type { NextPage } from 'next';
-<<<<<<< HEAD
-import Link from 'next/link';
-import Seo from '../../components/seo/Seo';
-<<<<<<< HEAD
-  return (
-=======
-<<<<<<< HEAD
+
+
+
 
   return (
-<<<<<<< HEAD
 =======
+
 const ProductManagementChat: NextPage = () => {
   return (
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
     <div>
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />
       <main>
@@ -23,8 +19,8 @@ const ProductManagementChat: NextPage = () => {
     </div>
   )
 }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
     <div>;
       <Seo title="Product Management" description="Product management strategy and insights by Zion." openGraph={{ title: 'Product Management', description: 'Product management strategy and insights by Zion.' }} />;
       <main>;
@@ -38,10 +34,8 @@ const ProductManagementChat: NextPage = () => {
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ProductManagementChat;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 import Link from 'next / link';
 import Seo from '../../components / seo / Seo';
@@ -59,3 +53,10 @@ import Seo from '../../components / seo / Seo';
 export default ProductManagementChat;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+export default ProductManagementChat;
+
+
+export default ProductManagementChat;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

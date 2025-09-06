@@ -1,37 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
-<<<<<<< HEAD
-//Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
- //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -50,12 +18,30 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeITServicesExpansion2025V3;
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-//Filter services by category //Animation variants const containerVariants = {
-  hidden: {
-  opacity: 0
+
+
+  opacity: 0 
+
+=======
+import React from 'react';
+
+interface EnhancedHomepageProps {
+  className?: string;
 }
+
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedHomepage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+
+
+
+};
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1
@@ -84,8 +70,7 @@ visible: {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
-<<<<<<< HEAD
-=======
+
 =======
 import React, { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -108,46 +93,12 @@ import Head from 'next/head';
 // Import our enhanced components
 import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import PerformanceMonitor from './PerformanceMonitor';
 
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-// Import service data
-import { revolutionary2044AdvancedMicroSaas  } from '../data/revolutionary-2044-advanced-micro-saas';
-import { revolutionary2044ITServices  } from '../data/revolutionary-2044-it-services';
-import { revolutionary2044AIServices  } from '../data/revolutionary-2044-ai-services';
-import { realEnterpriseMicroSaas2025  } from '../data/2025-real-enterprise-micro-saas';
-import { innovativeITServicesExpansion2025V3  } from '../data/2025-innovative-it-services-expansion-v3';
-import { innovativeAIServicesExpansion2025V3  } from '../data/2025-innovative-ai-services-expansion-v3';
-import { innovative2025ITInfrastructureServices  } from '../data/2025-innovative-it-infrastructure-services';
-import { innovative2025AIAutonomousServices } from '../data/2025-innovative-ai-autonomous-services';
 
-const EnhancedHomepage: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
-  const [currentServiceIndex, setCurrentServiceIndex] = useState(0);
-  const [colorScheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber');
-  const [showPerformanceMonitor, setShowPerformanceMonitor] = useState(false);
-  useEffect(() => {
-    setIsVisible(true);
-    // Auto-rotate featured services
-    const interval = setInterval(() => {
-      setCurrentServiceIndex((prev) => (prev + 1) % 6)
-    }, 6000);
-    // Track mouse movement for parallax effects
-    const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })
-    }
-    // Show performance monitor after 5 seconds
-    const performanceTimer = setTimeout(() => {
-      setShowPerformanceMonitor(true)
-    }, 5000);
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => {
-=======
 // Import service data;
 import { revolutionary2044AdvancedMicroSaas } from '../data/revolutionary-2044-advanced-micro-saas';
 import { revolutionary2044ITServices } from '../data/revolutionary-2044-it-services';
@@ -186,20 +137,17 @@ const EnhancedHomepage: React.FC = () => {;
     window && window.addEventListener('mousemove', handleMouseMove);
 
     return () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       clearInterval(interval);
       clearTimeout(performanceTimer);
       window && window.removeEventListener('mousemove', handleMouseMove);
     }
   }, []);
-<<<<<<< HEAD
-  // Combine all revolutionary services
-  const allRevolutionaryServices = [
-=======
+
 
   // Combine all revolutionary services;
   const allRevolutionaryServices = [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 =======
 //Filter services by category //Animation variants const container_variants = {
   hidden: {
@@ -276,30 +224,7 @@ const EnhancedHomepage: React.FC = () => {
     ...innovative2025ITInfrastructureServices;
     ...innovative2025AIAutonomousServices;
   ];
-<<<<<<< HEAD
-<<<<<<< HEAD
-  // Filter services by category
-  const getFilteredServices = () => {
-    if (selectedCategory === 'all') return allRevolutionaryServices;
-    return allRevolutionaryServices.filter(service =>
-      service.category.toLowerCase().includes(selectedCategory.toLowerCase()) |
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase())
-    )
-  }
-  const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const }
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const }
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const }
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const }
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const }
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
-  ];
-  // Get featured services for rotation
-  const featuredServices = allRevolutionaryServices.slice(0, 6);
-  // Animation variants
-  const containerVariants = {
-    hidden: { opacity: 0 }
-=======
+
 ;
   // Filter services by category;
   const getFilteredServices = () =>: any {
@@ -327,16 +252,16 @@ if (return allRevolutionaryServices) {
   // Animation variants;
   const container_variants = {
     hidden: { opacity: 0 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     visible: {
       opacity: 1
       transition: {
-<<<<<<< HEAD
-        duration: 0.8
-        staggerChildren: 0.1
-      }
-    }
-  }
+
+
+  };
+
+
+
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -396,14 +321,17 @@ if (return allRevolutionaryServices) {
     animate: {
       coordinate_y: [-10, 10, -10];
       transition: {
-<<<<<<< HEAD
-        duration: 3
+
+
+        duration: 3,
+
+
         ease: "easeInOut" as const
       }
     }
   }
   const handleCategoryChange = (categoryId: string) => {
-=======
+
 
   // Filter services by category;
   const getFilteredServices = () => {;
@@ -473,41 +401,26 @@ if (return allRevolutionaryServices) {
   };
 
   const handleCategoryChange = (categoryId: string) => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
     setSelectedCategory(categoryId);
     const category = categories && categories.find(cat => cat && cat.id === categoryId);
     if (category) {;
       setColorScheme(category && category.scheme);
     }
   }
-  return (
-<<<<<<< HEAD
-    <>
-      <Head>
-        <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>
-        <meta name="description" content="Experience the future of technology with Zion Tech Group's revolutionary AI consciousness, quantum computing, and autonomous solutions. Transform your business with cutting-edge innovation." />
-        <meta name="keywords" content="AI consciousness, quantum computing, autonomous solutions, space technology, cybersecurity, business intelligence, Zion Tech Group, 2045 technology" />
-        <meta property="og:title" content="Zion Tech Group - Revolutionary 2045 Technology" />
-        <meta property="og:description" content="Pioneering the future of technology with revolutionary AI consciousness and quantum computing solutions." />
-        <meta property="og:url" content="https://ziontechgroup.com" />
-        <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://ziontechgroup.com" />
-        {/* Performance and SEO Meta Tags */}
-        <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-        <meta name="theme-color" content="#00d4ff" />
-        <meta name="robots" content="index, follow" />
-        <meta name="author" content="Zion Tech Group" />
-        {/* Preload critical resources */}
-        <link rel="preload" href="/fonts/inter-var.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//fonts.googleapis.com" />
-        <link rel="dns-prefetch" href="//fonts.gstatic.com" />
-      </Head>
-      {/* Enhanced Navigation */}
-      <EnhancedNavigation />
-      <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
-        {/* Hero Section */}
-        <motion.section
 =======
+    setSelectedCategory(categoryId);
+    const category = categories.find(cat => cat.id === categoryId);
+    if (category) {
+      setColorScheme(category.scheme)
+    }
+
+  };
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return (
+
     <>;
       <Head>;
         <title>Zion Tech Group - Revolutionary 2045 Technology Solutions</title>;
@@ -537,30 +450,28 @@ if (return allRevolutionaryServices) {
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">;
         {/* Hero Section */}
         <motion&& motion.section 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
           variants={heroVariants}
           initial="hidden"
           animate="visible">;
           <div className="relative z-10 text-center max-w-6xl mx-auto">;
             {/* Main Heading */}
-<<<<<<< HEAD
-            <motion.h1
-              className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
-              variants={itemVariants}
-            >
-              Zion Tech Group
-            </motion.h1>
-            <motion.p
+
+
+            
+=======
+
+            <motion.p 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
               Pioneering the Future of Technology with Revolutionary AI Consciousness
               Quantum Computing, and Autonomous Solutions
             </motion.p>
-            {/* CTA Buttons */}
-            <motion.div
-=======
+
             <motion&& motion.h1 
               className="text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6"
               variants={itemVariants}>;
@@ -573,6 +484,11 @@ if (return allRevolutionaryServices) {
               Pioneering the Future of Technology with Revolutionary AI Consciousness,;
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
+=======
+
+
+=======
+
 
             {/* CTA Buttons */}
             <motion&& motion.div 
@@ -582,45 +498,7 @@ if (return allRevolutionaryServices) {
               <Link href="/services">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl"
-<<<<<<< HEAD
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Explore Services
-                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </motion.button>
-              </Link>
-              <Link href="/quote">
-                <motion.button
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Quote
-                  <ArrowUpRight className="inline-block ml-2 w-5 h-5" />
-                </motion.button>
-              </Link>
-            </motion.div>
-            {/* Contact Information */}
-            <motion.div
-              className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400"
-              variants={itemVariants}
-            >
-              <div className="flex items-center space-x-2">
-                <Phone className="w-4 h-4 text-cyan-400" />
-                <span>+1 302 464 0950</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Mail className="w-4 h-4 text-cyan-400" />
-                <span>kleber@ziontechgroup.com</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <MapPin className="w-4 h-4 text-cyan-400" />
-                <span>364 E Main St STE 1008 Middletown DE 19709</span>
-              </div>
-            </motion.div>
-          </div>
-=======
+
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
                   Explore Services;
@@ -658,49 +536,12 @@ if (return allRevolutionaryServices) {
             </motion && motion.div>;
           </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           {/* Floating Elements */}
           <motion&& motion.div
             className="absolute top-20 left-10 text-cyan-400/20"
             variants={floatingVariants}
-<<<<<<< HEAD
-            animate="animate"
-          >
-            <Atom className="w-8 h-8" />
-          </motion.div>
-          <motion.div
-            className="absolute top-40 right-20 text-blue-400/20"
-            variants={floatingVariants}
-            animate="animate"
-            style={{ animationDelay: '1s' }}
-          >
-            <Brain className="w-6 h-6" />
-          </motion.div>
-          <motion.div
-            className="absolute bottom-40 left-20 text-purple-400/20"
-            variants={floatingVariants}
-            animate="animate"
-            style={{ animationDelay: '2s' }}
-          >
-            <Rocket className="w-7 h-7" />
-          </motion.div>
-        </motion.section>
-        {/* Category Filter */}
-        <motion.section
-          className="py-16 px-4 lg:px-8"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <div className="max-w-6xl mx-auto">
-            <motion.h2
-              className="text-3xl md:text-4xl font-bold text-center text-white mb-12"
-              variants={itemVariants}
-            >
-              Explore Our Revolutionary Services
-            </motion.h2>
-            <motion.div
-=======
+
             animate="animate">;
             <Atom className="w-8 h-8" />;
           </motion && motion.div>;
@@ -736,7 +577,15 @@ if (return allRevolutionaryServices) {
             </motion && motion.h2>;
 
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+            
+=======
+
+            <motion.div 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-wrap justify-center gap-4 mb-12"
               variants={itemVariants}>;
               {categories && categories.map((category) => (;
@@ -755,20 +604,23 @@ if (return allRevolutionaryServices) {
                   {category && category.name}
                 </motion && motion.button>;
               ))}
-<<<<<<< HEAD
-            </motion.div>
-          </div>
-        </motion.section>
+
+
+
+=======
+
+
         {/* Services Grid */}
-        <motion.section
+        <motion.section 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
         >
           <div className="max-w-7xl mx-auto">
-            <motion.div
-=======
+
             </motion && motion.div>;
           </div>;
         </motion && motion.section>;
@@ -781,13 +633,17 @@ if (return allRevolutionaryServices) {
           animate="visible">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+            <motion.div 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
               variants={containerVariants}>;
               {getFilteredServices().slice(0, 12).map((service, index) => (;
                 <EnhancedServiceCard
-<<<<<<< HEAD
-=======
+
         duration: 3,
         ease: "easeInOut" as const;
       }
@@ -971,17 +827,13 @@ if ( {) {
             >;
               {getFilteredServices ().slice (0, 12).map ((service, index) => (
                 <EnhancedServiceCard;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   key={service.id}
                   id={service.id}
                   title={service.name}
                   description={service.description}
                   category={service.category}
-<<<<<<< HEAD
-                  type={(service as any).type |service.category}
-                  features={service.features?.map(f => ({ name: f, description: f }))}
-                  slug={(service as any).slug |service.id}
-=======
+
                   key={service && service.id}
                   id={service && service.id}
                   title={service && service.name}
@@ -990,7 +842,7 @@ if ( {) {
                   type={(service as any).type || service && service.category}
                   features={service && service.features?.map(f => ({ name: f, description: f }))}
                   slug={(service as any).slug || service && service.id}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                   index={index}
                   isPopular={Math && Math.random() > 0 && 0.7}
                   isNew={Math && Math.random() > 0 && 0.8}
@@ -1000,16 +852,12 @@ if ( {) {
                   technologies={['AICloudSecurityAutomation']}
                 />;
               ))}
-<<<<<<< HEAD
-            </motion.div>
-            {getFilteredServices().length > 12 && (
-              <motion.div
-=======
+
             </motion && motion.div>;
 
             {getFilteredServices().length > 12 && (;
               <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 className="text-center mt-12"
                 variants={itemVariants}>;
                 <Link href="/services">;
@@ -1023,11 +871,16 @@ if ( {) {
                 </Link>;
               </motion && motion.div>;
             )}
-<<<<<<< HEAD
-          </div>
-        </motion.section>
+
+
+
+=======
+
+
         {/* Featured Service Showcase */}
-        <motion.section
+        <motion.section 
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           className="py-16 px-4 lg:px-8"
           variants={containerVariants}
           initial="hidden"
@@ -1040,8 +893,7 @@ if ( {) {
             >
               Featured Revolutionary Services
             </motion.h2>
-            <motion.div
-=======
+
           </div>;
         </motion && motion.section>;
 
@@ -1059,7 +911,12 @@ if ( {) {
             </motion && motion.h2>;
 
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+            <motion.div 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
               <AnimatePresence mode="wait">;
@@ -1073,15 +930,7 @@ if ( {) {
                   <div>;
                     <h3 className="text-2xl font-bold text-white mb-4">;
                       {featuredServices[currentServiceIndex]?.name}
-<<<<<<< HEAD
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {featuredServices[currentServiceIndex]?.description}
-                    </p>
-                    <div className="flex flex-wrap gap-4 mb-6">
-                      {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (
-                        <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">
-=======
+
                     </h3>;
 
                     <p className="text-gray-300 mb-6 leading-relaxed">;
@@ -1091,13 +940,19 @@ if ( {) {
                     <div className="flex flex-wrap gap-4 mb-6">;
                       {featuredServices[currentServiceIndex]?.features?.slice(0, 3).map((feature, idx) => (;
                         <span key={idx} className="text-xs text-gray-400 bg-gray-800/50 px-3 py-1 rounded-full border border-gray-600">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                           {feature}
                         </span>;
                       ))}
-<<<<<<< HEAD
+
+                          {feature}
+                        </span>
+                      ))}
                     </div>
-                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug |featuredServices[currentServiceIndex]?.id}`}>
+
+                    <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
+
+
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
@@ -1137,15 +992,18 @@ if ( {) {
             >
               Ready to Transform Your Business?
             </motion.h2>
-            <motion.p
+
+
+            <motion.p 
+
+
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
             >
               Join the future of technology with Zion Tech Group's revolutionary solutions.
               Get started today and experience the power of AI consciousness and quantum computing.
             </motion.p>
-            <motion.div
-=======
+
                     </div>;
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>;
@@ -1196,35 +1054,18 @@ if ( {) {
             </motion && motion.p>;
 
             <motion&& motion.div 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+            <motion.div 
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
               variants={itemVariants}>;
               <Link href="/quote">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-<<<<<<< HEAD
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Get Started Today
-                  <ArrowRight className="inline-block ml-2 w-5 h-5" />
-                </motion.button>
-              </Link>
-              <Link href="/contact">
-                <motion.button
-                  className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-bold rounded-xl text-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Contact Us
-                  <Phone className="inline-block ml-2 w-5 h-5" />
-                </motion.button>
-              </Link>
-            </motion.div>
-          </div>
-        </motion.section>
-      </UltraFuturisticBackground>
-=======
+
                   whileHover={{ scale: 1 && 1.05 }}
                   whileTap={{ scale: 0 && 0.95 }}>;
                   Get Started Today;
@@ -1246,29 +1087,29 @@ if ( {) {
         </motion && motion.section>;
       </UltraFuturisticBackground>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Performance Monitor */}
       <AnimatePresence>;
         {showPerformanceMonitor && (;
           <PerformanceMonitor />;
         )}
-<<<<<<< HEAD
-      </AnimatePresence>
-    </>
-  )
-}
-=======
+
       </AnimatePresence>;
     </>;
   );
 };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-export default EnhancedHomepage;
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+export default EnhancedHomepage;
+
+
+
 =======
                   type={(service as any).type || service.category}
                   features={service.features?.map (function => ({ name: f, description: f }))}
@@ -1426,3 +1267,6 @@ export default EnhancedHomepage;
 export default EnhancedHomepage;
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

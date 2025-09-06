@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-import React from "react",
-import { QrCodeIcon } from "lucide-react";
-import { AppStoreButtons } from "./AppStoreButtons";
 
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export const DownloadSection: React.FC = () => {
   // These would typically come from environment variables or a config
   const appStoreUrl = "#"; // Replace with actual App Store URL when available
@@ -22,9 +20,7 @@ export const DownloadSection: React.FC = () => {
                 Download the Zion app now and take your tech career or hiring
                 needs to the next level. Available on iOS and Android.
               </p>
-              <AppStoreButtons
-                className="mb-8"
-=======
+
 import React from './react';
 import { QrCodeIcon  } from './lucide-react';
 import { AppStoreButtons  } from './AppStoreButtons';
@@ -47,14 +43,23 @@ export const DownloadSection: React.FC = () => {
               </p>;
               <AppStoreButtons;
                 className="mb - 8";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console.log ("App Store button clicked")}
                 onGooglePlayClick={() =>;
                   console.log ("Google Play button clicked");
                 }
-<<<<<<< HEAD
+
+
+              
+              <AppStoreButtons 
+                className="mb-8" 
+=======
+              <AppStoreButtons 
+                className="mb-8" 
+
+
               />
               <div className="text-sm text-gray-400">
                 <p>Compatible with iOS 14+ and Android 8.0+</p>
@@ -74,10 +79,7 @@ export const DownloadSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-}
 
-=======
 import React from "react";
 import {QrCodeIcon} from "lucide-react";
 import {AppStoreButtons} from "./AppStoreButtons";
@@ -103,6 +105,14 @@ export const DownloadSection: React.FC = () => {;
                 googlePlayUrl={googlePlayUrl}
                 onAppStoreClick={() => console && console.log("App Store button clicked")}
                 onGooglePlayClick={() => console && console.log("Google Play button clicked")}
+=======
+
+};
+
+=======
+  )
+},
+
               />;
 
               <div className="text-sm text-gray-400">;
@@ -137,13 +147,15 @@ export const DownloadSection: React.FC = () => {;
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-    </section>;
-  );
-};
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
+
     </section>);
 }
 ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+=======
+
+export default DownloadSection;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

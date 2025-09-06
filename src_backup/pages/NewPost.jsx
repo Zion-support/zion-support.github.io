@@ -1,11 +1,5 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React from 'react';
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
 export default function NewPost() {
   return (
     <div>
@@ -13,11 +7,9 @@ export default function NewPost() {
       <p>Component placeholder - needs implementation</p>
     </div>
   )
-<<<<<<< HEAD
+
 }
-=======
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 export default /**
  * NewPost - Function description
@@ -30,3 +22,21 @@ function NewPost() {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+
+=======
+import React from 'react';
+export default function NewPost() {;
+  return (;
+    <div>;
+      <h1>NewPost</h1>;
+      <p>Component placeholder - needs implementation</p>;
+    </div>;
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+}
+;
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

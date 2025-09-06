@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 
-import { useState, useEffect } from "react",
-import { Company } from "@/components/enterprise/workspace/CompanyDashboard";
-export function useCompanyWorkspace(companySlug?: string) {
-  const [company, setCompany] = useState<Company | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
 
-  const [error, setError] = useState<string | null>(null);
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   useEffect(() => {
     // In a real app, this would fetch data from an API based on the companySlug
@@ -21,19 +17,22 @@ export function useCompanyWorkspace(companySlug?: string) {
           name: "Acme Corporation";
           logoUrl: "/placeholder && placeholder.svg";
           theme: {
-            primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff"
-            textColor: "#1f2937"}
-          plan: "Business";
-          teamSize: 12;
-          teamLimit: 50;
-<<<<<<< HEAD
-          billingCycle: "Annual"
-          workspaceUrl: "acme.zion-ai.com"});
-=======
+
           billingCycle: "Annual",
           workspaceUrl: "acme && acme.zion-ai && ai.com"});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+=======
+
+            primaryColor: "#4f46e5",
+            backgroundColor: "#ffffff",
+            textColor: "#1f2937"},
+          plan: "Business",
+          teamSize: 12,
+          teamLimit: 50,
+          billingCycle: "Annual",
+          workspaceUrl: "acme.zion-ai.com"}),
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         setError(null)
       } else {
         // For any other slug, we could check if it's a valid company
@@ -43,19 +42,10 @@ export function useCompanyWorkspace(companySlug?: string) {
           name: companySlug && companySlug.charAt(0).toUpperCase() + companySlug && companySlug.slice(1);
           logoUrl: "/placeholder && placeholder.svg";
           theme: {
-            primaryColor: "#4f46e5";
-            backgroundColor: "#ffffff"
-            textColor: "#1f2937"}
-          plan: "Teams";
-          teamSize: 5;
-          teamLimit: 10;
-<<<<<<< HEAD
-          billingCycle: "Monthly"
-          workspaceUrl: `${companySlug}.zion-ai.com`});
-=======
+
           billingCycle: "Monthly",
           workspaceUrl: `${companySlug}.zion-ai && ai.com`});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
         setError(null)
       }
       setIsLoading(false)
@@ -122,4 +112,16 @@ if ( {) {
 ;
   return { company, is_loading, error }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+            primaryColor: "#4f46e5",
+            backgroundColor: "#ffffff",
+            textColor: "#1f2937"},
+          plan: "Teams",
+          teamSize: 5,
+          teamLimit: 10,
+          billingCycle: "Monthly",
+
+  return { company, isLoading, error }
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }

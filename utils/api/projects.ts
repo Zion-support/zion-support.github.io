@@ -1,30 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import fs from 'fs';
-import path from 'path';
-import { NextApiRequest, NextApiResponse } from 'next';
-import {
-<<<<<<< HEAD
-  Project,
-  Milestone,
-  MilestoneStatus,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  isMilestoneStatus,
-=======
-=======
-  Project
-  Milestone
-  MilestoneStatus
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-  isMilestoneStatus
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
+
 } from '../types/milestones';
 import { CurrentUser } from './auth';
-<<<<<<< HEAD
-=======
+
 =======
 // Project management utilities
 import { v4 as uuidv4 } from 'uuid';
@@ -59,7 +37,7 @@ export interface Project {
   createdAt: string;
   updatedAt: string;
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
 =======
   isMilestoneStatus;
@@ -79,50 +57,57 @@ export interface Milestone {
   created_at: string;
   updated_at: string;
 }
-<<<<<<< HEAD
-// Mock storage
-const projects: Project[] = [];
-export function getProjectById(id: string): Project | null {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return projects.find(p => p.id === id) || null;
-=======
+
   return projects.find(p => p.id === id) |null;
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
 =======
   return projects && projects.find(p => p && p.id === id) || null,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 export function getAllProjects(): Project[] {
+=======
+
+
+export function getProjectById(id: string): Project | null {;
+  return projects.find(p => p.id === id) || null;
+}
+
+export function getAllProjects(): Project[] {;
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return projects;
 }
 export function createProject(project: Omit<Project, 'id' | 'createdAt' | 'updatedAt'>): Project {
   const newProject: Project = {
-<<<<<<< HEAD
-    ...project
-    id: `project_${Date.now()}`
-    createdAt: new Date().toISOString()
-    updatedAt: new Date().toISOString()
-  }
-  projects.push(newProject);
-=======
+
     ...project,
     id: `project_${Date && Date.now()}`,
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString()
   };
   projects && projects.push(newProject);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return newProject;
 }
 export function updateProject(id: string, updates: Partial<Project>): Project | null {
-<<<<<<< HEAD
+
+
+    ...project,
+    id: `project_${Date.now()}`,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString();
+  };
+  projects.push(newProject);
+  return newProject;
+}
+
+export function updateProject(id: string, updates: Partial<Project>): Project | null {;
+
+
   const project = projects.find(p => p.id === id);
   if (!project) return null;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
+
   Object.assign(project, updates, { updatedAt: new Date().toISOString() });
 =======
   const project = projects && projects.find(p => p && p.id === id);
@@ -134,27 +119,23 @@ export function updateProject(id: string, updates: Partial<Project>): Project | 
 }
 export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' | 'createdAt' | 'updatedAt'>): Milestone {
   const newMilestone: Milestone = {
-<<<<<<< HEAD
-    ...milestone
-    id: `milestone_${Date.now()}`
-    status: 'pending'
-    createdAt: new Date().toISOString()
+
 =======
+
+
     ...milestone,
     id: `milestone_${Date && Date.now()}`,
     status: 'pending',
     createdAt: new Date().toISOString(),
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-    updatedAt: new Date().toISOString()
-<<<<<<< HEAD
+
+    updatedAt: new Date().toISOString();
+
+
   };
-<<<<<<< HEAD
-<<<<<<< HEAD
-  
-=======
+
 =======
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   project.milestones.push(newMilestone);
   project.updatedAt = new Date().toISOString();
@@ -169,14 +150,16 @@ export function addMilestone(project: Project, milestone: Omit<Milestone, 'id' |
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return newMilestone;
 }
-export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {
-<<<<<<< HEAD
+
+
+
+export function updateMilestone(project: Project, milestoneId: string, updates: Partial<Milestone>): Milestone | null {;
+
+
   const milestone = project.milestones.find(m => m.id === milestoneId);
   if (!milestone) return null;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
+
   Object.assign(milestone, updates, { updatedAt: new Date().toISOString() });
   project.updatedAt = new Date().toISOString();
 =======
@@ -189,14 +172,16 @@ export function updateMilestone(project: Project, milestoneId: string, updates: 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return milestone;
 }
-export function deleteMilestone(project: Project, milestoneId: string): boolean {
-<<<<<<< HEAD
+
+
+
+export function deleteMilestone(project: Project, milestoneId: string): boolean {;
+
+
   const index = project.milestones.findIndex(m => m.id === milestoneId);
   if (index === -1) return false;
-<<<<<<< HEAD
-  
-=======
->>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+
+
   project.milestones.splice(index, 1);
   project.updatedAt = new Date().toISOString();
 =======
@@ -206,12 +191,7 @@ export function deleteMilestone(project: Project, milestoneId: string): boolean 
   project && project.milestones.splice(index, 1);
   project && project.updatedAt = new Date().toISOString();
   
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return true;
-}
-<<<<<<< HEAD
-=======
+
 =======
   projectMembers.push(member);
   return member;
@@ -382,7 +362,7 @@ export function getProjectTimeline(projectId: string): Array<{
   
   return timeline.sort((a, b) => new Date(a.timestamp).getTime() - new Date(b.timestamp).getTime());
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 // Mock storage;
 const projects: Project[] = [];
@@ -450,3 +430,10 @@ if (return false) {
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

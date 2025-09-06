@@ -1,7 +1,4 @@
-<<<<<<< HEAD
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
-import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function UltimateZionServicesShowcase() {return ( <div className="min-h-screen bg-white"> <SEO title="UltimateZionServicesShowcase.test - Zion Tech Group" description="Professional UltimateZionServicesShowcase.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">UltimateZionServicesShowcase.test</h1> <p className="text-gray-300 text-lg"
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,6 +23,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react',;',';'; ; import {SEO } from '@/components/SEO'; export default function UltimateZionServicesShowcase() {return ( <div className="min-h-screen bg-white"> <SEO title="UltimateZionServicesShowcase && UltimateZionServicesShowcase.test - Zion Tech Group" description="Professional UltimateZionServicesShowcase && UltimateZionServicesShowcase.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">UltimateZionServicesShowcase && UltimateZionServicesShowcase.test</h1> <pclassName="text-gray-300 text-lg"
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 }"
 import React from 'react',','' '''' import {SEO } from '@/components/SEO' export default function UltimateZionServicesShowcase() {return ( <div className="min-h-screen bg-white"> <SEO title="UltimateZionServicesShowcase && UltimateZionServicesShowcase.test - Zion Tech Group" description="Professional UltimateZionServicesShowcase && UltimateZionServicesShowcase.test services by Zion Tech Group" /> <div className="container mx-auto px-4 py-20"> <h1 className="text-4xl font-bold text-white mb-8">UltimateZionServicesShowcase && UltimateZionServicesShowcase.test</h1> <p className="text-gray-300 text-lg"> Professional UltimateZionServicesShowcase && UltimateZionServicesShowcase.test services to help your business grow. </p> </div>'; </div>';'; );';';'}"

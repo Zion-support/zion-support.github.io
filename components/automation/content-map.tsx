@@ -1,34 +1,5 @@
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-}
-) )
-}</ul> </section> <section>) )
-}</ul> </section> </div>)
-=======
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Entry = { route: string, file: string },
-interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
-
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {
-    const file = path.join(process.cwd(), 'publicautomationcontent-map.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-    return { props: { report: data }, revalidate: 21600 }
-  } catch {
-    return { props: { report: null }, revalidate: 21600 }
-  }
-};
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ContentMap({ report }: Props) {
   if (!report) return <div>No content map yet. Check back later.</div>;
   const sections = Object.entries(report.bySection).sort((a, b) => b[1] - a[1]);
@@ -82,22 +53,13 @@ export default function ContentMap(): any ({ report }: Props) {;
           {report && report.pages.map((p, i) => (;
             <li key={i} className="flex justify-between gap-4"><span className="truncate">{p && p.route}</span><span className="text-gray-500 truncate">{p && p.file}</span></li>;
           ))}
-<<<<<<< HEAD
-        </ul>
-      </section>
-    </div>
-);
-}
-=======
+
         </ul>;
       </section>;
     </div>;
   );
 }
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
 }
 ) );
@@ -139,3 +101,9 @@ if (return <div > No content map yet. Check back later.</div>) {
     </div>);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+=======
+
+  );
+}
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

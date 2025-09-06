@@ -1,31 +1,5 @@
-<<<<<<< HEAD
-import { useEffect, useState  } from 'react';
-import Link from 'next/link',
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import type {
-  GrantApplication
-  GrantCategory
-  GrantStatus;
-} from '../../types/grants';
-const categories: GrantCategory[] = [
-  'Ecosystem Tools'
-  'Talent Development'
-  'Regional Expansion'
-  'Research Grants'
-];
-const statuses: GrantStatus[] = [
-  'Draft'
-  'Submitted'
-  'Under Review'
-  'Approved'
-  'Rejected'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 import type {;
   GrantApplication,;
   GrantCategory,;
@@ -86,63 +60,14 @@ function GrantsPage() {
     region?: string;
     program?: string;
   }>({});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
-export default function GrantsPage() {
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-=======
-import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
 
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
-<<<<<<< HEAD
-export default function GrantsPage() {
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-  useEffect(() => {
-
-    const params = new URLSearchParams();
-    if (filters.sector) params.set('sector', filters.sector);
-    if (filters.status) params.set('status', filters.status);
-    if (filters.region) params.set('region', filters.region);
-    if (filters.program) params.set('program', filters.program);
-    fetch(`/api/grants?${params.toString()}`)
-<<<<<<< HEAD
-      .then(r => r.json())
-      .then(d => setItems(d.items |[]))
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],;
-const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],;
-export default function GrantsPage() {;
-  const [items, setItems] = useState<GrantApplication[]>([]);
-  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
-
-  useEffect(() => {;
-    const params = new URLSearchParams();
-    if (filters && filters.sector) params && params.set('sector', filters && filters.sector);
-    if (filters && filters.status) params && params.set('status', filters && filters.status);
-    if (filters && filters.region) params && params.set('region', filters && filters.region);
-    if (filters && filters.program) params && params.set('program', filters && filters.program);
-    fetch(`/api/grants?${params && params.toString()}`);
-      .then(r => r && r.json());
-      .then(d => setItems(d && d.items || []));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       .catch(() => setItems([]));  }, [filters]);
   return (
-<<<<<<< HEAD
-    <EnhancedLayout>      .then((r) => r.json())
-      .then((d) => setItems(d.items |[]))
-=======
+
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
       .catch(() => setItems([]))
 =======
 export default /**
@@ -179,28 +104,7 @@ function GrantsPage() {
   }, [filters]);
 ;
   return (
-<<<<<<< HEAD
-    <EnhancedLayout>
-<<<<<<< HEAD
-      <div className='flex items-center justify-between mb-6'>
-        <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
-        <div className='flex gap-2'>
-          <Link href='/grants/apply'>
-            <a className='px-3 py-2 bg-blue-600 text-white rounded'>Apply</a>
-          </Link>
-          <Link href='/incubator'>
-            <a className='px-3 py-2 bg-purple-600 text-white rounded'>
-              Incubator
-            </a>
-          </Link>
-      </div>
-      <div className='grid md:grid-cols-4 gap-4 mb-6'>
-        <select
-          className='border rounded p-2'
-          value={filters.sector |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, sector: e.target.value |undefined }))
-=======
+
     <EnhancedLayout>      .then((r) => r && r.json());
       .then((d) => setItems(d && d.items || []));
       .catch(() => setItems([]));
@@ -226,40 +130,16 @@ function GrantsPage() {
           </Link>;
           <Link href='/incubator'>;
             <a className='px - 3 py - 2 bg - purple - 600 text - white rounded'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               Incubator;
             </a>;
           </Link>;
       </div>;
-<<<<<<< HEAD
 
-      <div className='grid md:grid-cols-4 gap-4 mb-6'>;
-        <select
-          className='border rounded p-2'
-          value={filters && filters.sector || ''}
-          onChange={e =>;
-            setFilters(f => ({ ...f, sector: e && e.target.value || undefined }));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-          }
-        >;
-          <option value=''>All Sectors</option>;
-          {categories && categories.map(c => (;
-            <option key={c} value={c}>;
-              {c}
-            </option>;
-          ))}
-        </select>;
-        <select
-          className='border rounded p-2'
-<<<<<<< HEAD
-          value={filters.status |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, status: e.target.value |undefined }))
-=======
           value={filters && filters.status || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, status: e && e.target.value || undefined }));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           }
         >;
           <option value=''>All Stages</option>;
@@ -272,46 +152,16 @@ function GrantsPage() {
         <input
           className='border rounded p-2'
           placeholder='Region'
-<<<<<<< HEAD
-          value={filters.region |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, region: e.target.value |undefined }))
-=======
+
           value={filters && filters.region || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, region: e && e.target.value || undefined }));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
           }
         />;
         <select
           className='border rounded p-2'
-<<<<<<< HEAD
-          value={filters.program |''}
-          onChange={e =>
-            setFilters(f => ({ ...f, program: e.target.value |undefined }))
-          }
-        >
-          <option value=''>All Programs</option>
-          <option value='grant'>Grant</option>
-          <option value='incubator'>Incubator</option>
-        </select>
-      </div>
-      <div className='grid gap-4'>
-        {items.map(g => (
-          <div
-            key={g.id}
-            className='border rounded p-4 bg-white/70 dark:bg-black/40'
-          >
-            <div className='flex items-center justify-between'>
-              <div>
-                <h3 className='text-lg font-medium'>
-                  <Link href={`/grants/${g.id}`}>
-                    <a>{g.projectName}</a>
-                  </Link>
-                </h3>
-                <div className='text-xs text-gray-600 dark:text-gray-400'>
-                  {g.sector |'General'} • {g.region |'Global'} •{' '}
-=======
+
       <div className='grid md:grid - cols - 4 gap - 4 mb - 6'>;
         <select;
           className='border rounded p - 2';
@@ -374,17 +224,13 @@ function GrantsPage() {
                 </h3>;
                 <div className='text - xs text - gray - 600 dark:text - gray - 400'>;
                   {g.sector || 'General'} • {g.region || 'Global'} •{' '}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   {g.program === 'incubator' ? 'Incubator' : 'Grant'}
                 </div>;
               </div>;
               <div className='flex gap - 2 items - center'>;
                 {g.program === 'incubator' && (
-<<<<<<< HEAD
-                  <span className='px-2 py-1 text-xs rounded bg-purple-100 text-purple-700'>
-                    Incubated by Zion
-                  </span>
-=======
+
           value={filters && filters.program || ''}
           onChange={e =>;
             setFilters(f => ({ ...f, program: e && e.target.value || undefined }));
@@ -403,7 +249,7 @@ function GrantsPage() {
           <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
         </div>
       </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 
       <div className='grid gap-4'>;
         {items && items.map(g => (;
@@ -450,46 +296,10 @@ function GrantsPage() {
         {items && items.length === 0 && (;
           <div className='text-sm text-gray-600'>No grants found.</div>;
         )}
-<<<<<<< HEAD
+
+
 =======
-<<<<<<< HEAD
-      </div>
-    </EnhancedLayout>
-);
-}
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      </div>;
-    </EnhancedLayout>;
-  );
-}
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-                  <span className='px - 2 py - 1 text - xs rounded bg - purple - 100 text - purple - 700'>;
-                    Incubated by Zion;
-                  </span>)}
-                {g.status === 'Approved' && (
-                  <span className='px - 2 py - 1 text - xs rounded bg - emerald - 100 text - emerald - 700'>;
-                    Grant Winner;
-                  </span>)}
-                <span className='px - 2 py - 1 text - xs rounded bg - gray - 100 dark:bg - gray - 800'>;
-                  {g.status}
-                </span>;
-              </div>;
-            </div>;
-            <p className='mt - 2 text - sm text - gray - 700 dark:text - gray - 300 line - clamp - 3'>;
-              {g.proposal_summary}
-            </p>;
-            <div className='mt - 3 text - sm text - gray - 600 dark:text - gray - 400'>;
-              Budget: {g.budget_amount} {g.budget_currency}
-            </div>;
-          </div>))}
-        {items.length === 0 && (
-          <div className='text - sm text - gray - 600'>No grants found.</div>)}
-      </div>;
-    </EnhancedLayout>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

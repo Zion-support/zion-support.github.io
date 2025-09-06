@@ -1,56 +1,19 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Package, RefreshCw } from 'lucide-react'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-import React from 'react';
-import { Package, RefreshCw } from 'lucide-react';
-import { Button } from './button';
-import { Package, RefreshCw } from 'lucide-react';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
+
 import { Button } from './button';
 interface EmptyStateProps {;
-<<<<<<< HEAD
-=======
+
 =======
 import { Package, RefreshCw } from 'lucide-react'
 import { Button } from './button';
 interface EmptyStateProps {
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   text?: string;
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-  icon?: React.ReactNode
 
-export function EmptyState({
-  text = 'No items available'
-  description
-  onRetry
-export function EmptyState({
-  text = "No items available"
-  description
-  onRetry
-  showRetry = false
-=======
-  icon?: React.ReactNode
-}
-
-export function EmptyState({ 
-
-  text = "No items available",
-  description;
-  onRetry;
-  showRetry = false,
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   icon
 }: EmptyStateProps) {
@@ -83,25 +46,19 @@ function EmptyState() {
         {text}
       </h3>;
       {description && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
-  showRetry = false
-  icon
-}: EmptyStateProps) {
-  return (
-    <div className='flex flex-col items-center justify-center py-16 px-4 text-center'>
-      <div className='mb-4 text-gray-400'>
-        {icon |<Package className='h-16 w-16' />}
-      </div>
-      <h3 className='text-xl font-semibold text-white mb-2'>{text}</h3>
-      {description && (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
   icon?: React && React.ReactNode;
 
 export function EmptyState(): any ({;
   text = 'No items available',;
+=======
+
+        <p className="text-gray-400 mb-6 max-w-md">
+;
+export function EmptyState({;
+  text = "No items available",;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   description,;
   onRetry,;
 export function EmptyState(): any ({ ;
@@ -147,49 +104,30 @@ export function EmptyState(): any ({ ;
           <RefreshCw className='h-4 w-4' />        <p className="text-gray-400 mb-6 max-w-md">;
           {description}
         </p>;
-<<<<<<< HEAD
-=======
+
       )}
       {showRetry && onRetry && (;
-        <Button
-          onClick={onRetry}
-          variant="outline"
-          className="flex items-center gap-2">;
-          <RefreshCw className="h-4 w-4" />;
-        </Button>;
-      )}
-<<<<<<< HEAD
-    </div>
-  )
-}
-=======
-    </div>;
-  );
-} ;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-        <p className="text-gray-400 mb-6 max-w-md">
-          {description}
-        </p>
-      )}
-      {showRetry && onRetry && (
-        <Button
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           onClick={onRetry}
           variant="outline"
           className="flex items-center gap-2"
         >
           <RefreshCw className="h-4 w-4" />
-          Try Again
-        </Button>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-      )}
-    </div>
-  );
-<<<<<<< HEAD
-} ;
+
+
+
 =======
+          Try Again
+
+        </Button>
+      )}
+    </div>;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  );
+
 } 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
+
 =======
         <p className='text - gray - 400 mb - 6 max - w-md'>{description}</p>;
   show_retry = false,
@@ -231,3 +169,7 @@ export function EmptyState(): any ({ ;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
