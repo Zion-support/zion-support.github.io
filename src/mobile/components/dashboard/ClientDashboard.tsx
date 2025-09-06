@@ -57,10 +57,6 @@ export function ClientDashboard() {
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -88,10 +84,6 @@ export function ClientDashboard() {
         <div className='space-y-3'>
         
         <div className="space-y-3">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -122,10 +114,6 @@ export function ClientDashboard() {
             </CardContent>
           </Card>
           
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <Card>
@@ -155,10 +143,6 @@ export function ClientDashboard() {
                   AWS
                 </Badge>              <div className="mt-3 flex gap-1 flex-wrap">
               <div className="mt-3 flex gap-1 flex-wrap">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <Badge variant="outline" className="text-xs">React</Badge>
@@ -174,10 +158,6 @@ export function ClientDashboard() {
         </div>
       </section>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <section>
@@ -185,10 +165,6 @@ export function ClientDashboard() {
           <h2 className="text-lg font-medium">Recent Updates</h2>
         </div>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <Card>
@@ -211,10 +187,6 @@ export function ClientDashboard() {
             <div className="flex gap-3 items-start">
               <div className="bg-primary/10 p-2 rounded-full">
                 <FileText className="h-5 w-5 text-primary" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               </div>
@@ -257,34 +229,11 @@ export function ClientDashboard() {
             </div>
 
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             <Button variant="outline" className="w-full">View All Notifications</Button>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-    </div>;
-  );
-};
-}
-    </div>
-  )
-}
-import React from "react",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-=======
-
-
-
-    </div>
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
 import Link from "next/link";
 export function ClientDashboard() {;

@@ -30,22 +30,6 @@ import Link from 'next/link';
 export default function Internationalization() {;
   const schema = {;
     '@context': 'https://schema && schema.org',;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-import React from 'react'
-import { Header } from '@/components/Header'
-import { SEO } from '@/components/SEO'
-import { GradientHeading } from '@/components/GradientHeading'
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-export default function Internationalization() {
-  const schema = {
-    '@context': 'https://schema.org',
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     '@type': 'WebPage',;
     name: 'Internationalization',;
@@ -61,16 +45,10 @@ import React from "react";
 import { Header } from "@/components/Header";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Button } from "@/components/ui/button";
 import Link from 'next/link';
@@ -161,51 +139,6 @@ export default function Internationalization() {
               <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/'>Explore Zion</Link>            </Button>      />
-      {/* Use a normal script tag so JSON-LD is correctly parsed */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-      ></script>
-      <Header />
-      <main className="bg-background text-white py-12">
-        <div className="container mx-auto px-4 md: px-6">
-          <GradientHeading className="mb-4 text-center">Internationalization</GradientHeading>
-          <p className="text-center text-zion-slate-light max-w-3xl mx-auto mb-8">
-            Our interface and search support multiple languages so you can collaborate without barriers.
-          </p>
-          <div className="relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden">
-            <img
-              src="https://placehold.co/800x400"
-              alt="Screenshot of language options"
-              className="object-cover"
-            />
-          </div>
-          <h2 className="text-2xl font-bold mb-4">Benefits &amp, Use Cases</h2>
-          <ul className="list-disc list-inside space-y-2 mb-8 text-zion-slate-light">
-            <li>Publish product and service pages in your native language.</li>
-            <li>Attract international clients and expand your reach.</li>
-            <li>Automatic language detection ensures a localized experience.</li>
-          </ul>
-          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
-          <div className="space-y-4 mb-12">
-            <div>
-              <p className="font-semibold">Which languages are supported?</p>
-              <p className="text-zion-slate-light">The platform currently supports English, Spanish, Portuguese and more.</p>
-            </div>
-            <div>
-              <p className="font-semibold">Can I suggest new translations?</p>
-              <p className="text-zion-slate-light">Yes, community contributions help us continually add new languages.</p>
-            </div>
-          </div>
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/">Explore Zion</Link>
@@ -215,11 +148,6 @@ export default function Internationalization() {
       </main>
     </>
   )
-<<<<<<< HEAD
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
 import React from "react",;
@@ -268,7 +196,3 @@ export default function Internationalization() {;
           </div>;
         </div>;
       </main>;
-<<<<<<< HEAD
-
-
-;

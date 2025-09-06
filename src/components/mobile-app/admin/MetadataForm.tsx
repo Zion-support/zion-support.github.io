@@ -1,18 +1,8 @@
 interface MetadataFormProps {;
   form: UseFormReturn<AppMetadataValues>;
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
-import { Badge } from '@/components/ui/badge'
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
-import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
@@ -239,17 +229,6 @@ if ( {) {
                   </FormControl>
                 </FormItem>
               )}
-<<<<<<< HEAD
-            />
-          </div>
-        </Form>
-      </CardContent>
-    </Card>
-  )
-}
-};
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                     {long_description.length}/{maxDescriptionLength} characters;
                   </FormDescription>;

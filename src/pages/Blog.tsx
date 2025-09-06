@@ -1,28 +1,6 @@
 // Categories for filtering
 
 const CATEGORIES = [
-<<<<<<< HEAD
-  'All Categories'
-  'Trends'
-  'Marketing'
-  'Sustainability'
-  'Ethics'
-  'Recruitment'
-  'Infrastructure'
-]
-export interface BlogProps {
-  posts?: BlogPost[]
-export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
-  logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts })
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState('All Categories')
-  const [posts, setPosts] = useState<BlogPost[]>([...initialPosts])
-  const query = useDebounce(searchQuery, 300)
-  const [isLoading, setIsLoading] = useState(false)
-  const router = useRouter()
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   "All Categories",
   "Trends",
   "Marketing",
@@ -45,10 +23,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const [isLoading, setIsLoading] = useState(false),
   const router = useRouter(),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   // Reset state when navigating away to avoid cross-page leakage
   useEffect(() => {
@@ -91,10 +65,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         const data: BlogPost[] = await fetchWithRetry(
           `/api/blog?query=${encodeURIComponent(query)}`
         ),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         setPosts(data)
       } catch (err) {
@@ -102,14 +72,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       } finally {
         setIsLoading (false);
       }
-<<<<<<< HEAD
-    }
-    fetchPosts()
-  }, [query])
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
     fetchPosts()
@@ -119,22 +81,11 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-<<<<<<< HEAD
-      selectedCategory === 'All Categories' |
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Filter blog posts based on selected category only.
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory = null;
       selectedCategory === 'All Categories' ||
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       post.category === selectedCategory
     return matchesCategory
   })
@@ -143,12 +94,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage filteredPosts:', { data: filteredPosts })
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
 
@@ -159,10 +104,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   // Search filtering is handled server-side.
   const filteredPosts = posts.filter(post => {
     const matchesCategory =
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       selectedCategory === "All Categories" || post.category === selectedCategory,
 
     return matchesCategory
@@ -173,12 +114,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
   
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <>
       <SEO
@@ -192,127 +127,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         <div className="container mx-auto">
           <div className="text-center mb-12">
             <GradientHeading>AI & Tech Insights</GradientHeading>
-<<<<<<< HEAD
-            <p className='mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto'>
-              Expert perspectives on artificial intelligence, tech innovation
-              and digital transformation
-            </p>
-          </div>
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 &&
-            (() => {
-              const featuredPost = featuredPosts[0]
-              if (!featuredPost) return null
-              return (
-                <div className='mb-16'>
-                  <h2 className='text-2xl font-bold text-white mb-6'>
-                    Featured Article
-                  </h2>
-                  <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-                    <div className='aspect-video overflow-hidden rounded-lg'>
-                      <img
-                        src={featuredPost.featuredImage}
-                        alt={
-                          featuredPost.featuredImageAlt |featuredPost.title
-                        }
-                        className='object-cover w-full h-full hover:scale-105 transition-transform duration-300'
-                        onError={e => {
-                          const target = e.currentTarget as HTMLImageElement
-                          target.src = '/images/blog-placeholder.svg'
-                        }}
-                      />
-                    </div>
-                    <div className='flex flex-col justify-center'>
-                      <span className='text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2'>
-                        {featuredPost.category}
-                      </span>
-                      <h3 className='text-3xl font-bold text-white mb-4'>
-                        {featuredPost.title}
-                      </h3>
-                      <p className='text-zion-slate-light mb-6'>
-                        {featuredPost.excerpt}                      </p>
-                      <div className='flex items-center mb-6'>
-                        <img
-                          src={featuredPost.author.avatarUrl}
-                          alt={featuredPost.author.name}
-                          className='w-10 h-10 rounded-full mr-3'
-                          onError={e => {
-                            const target = e.currentTarget as HTMLImageElement
-                            target.src = '/images/blog-placeholder.svg'
-                          }}
-                        />
-                        <div>
-                          <p className='text-white font-medium'>
-                            {featuredPost.author.name}
-                          </p>
-                          <p className='text-sm text-zion-slate-light'>
-                            {featuredPost.publishedDate} •{' '}
-                            {featuredPost.readTime}
-                          </p>
-                        </div>
-                      </div>
-                      <Button
-                        asChild
-                        className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit'
-                      >
-                        <Link href={`/blog/${featuredPost.slug}`}>
-                          Read Article
-                        </Link>
-                      </Button>
-            <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto">
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation
-            </p>
-          </div>
-          
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featuredPosts.length > 0 && (() => {
-            const featuredPost = featuredPosts[0],
-            if (!featuredPost) return null,
-            
-            return (
-            <div className="mb-16">
-              <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                <div className="aspect-video overflow-hidden rounded-lg">
-                  <img
-                    src={featuredPost.featuredImage}
-                    alt={featuredPost.featuredImageAlt || featuredPost.title}
-                    className="object-cover w-full h-full hover: scale-105 transition-transform duration-300"
-                    onError={(e) => {
-                      const target = e.currentTarget as HTMLImageElement,
-                      target.src = "/images/blog-placeholder.svg"
-                    }}
-                  />
-                </div>
-                <div className="flex flex-col justify-center">
-                  <span className="text-sm text-zion-cyan bg-zion-blue-dark px-3 py-1 rounded-full inline-block mb-2">
-                    {featuredPost.category}
-                  </span>
-                  <h3 className="text-3xl font-bold text-white mb-4">
-                    {featuredPost.title}
-                  </h3>
-                  <p className="text-zion-slate-light mb-6">
-                    {featuredPost.excerpt}
-                  </p>
-                  <div className="flex items-center mb-6">
-                    <img
-                      src={featuredPost.author.avatarUrl}
-                      alt={featuredPost.author.name}
-                      className="w-10 h-10 rounded-full mr-3"
-                      onError={(e) => {
-                        const target = e.currentTarget as HTMLImageElement,
-                        target.src = "/images/blog-placeholder.svg"
-                      }}
-                    />
-                    <div>
-                      <p className="text-white font-medium">{featuredPost.author.name}</p>
-                      <p className="text-sm text-zion-slate-light">
-                        {featuredPost.publishedDate} • {featuredPost.readTime}
-                      </p>
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     </div>
                   </div>
                   <Button 
@@ -669,10 +483,6 @@ if (return null) {
                       value={category}
                       className='text-white'>                      {category}
                     </SelectItem>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -699,11 +509,6 @@ if (return null) {
               {filteredPosts.map((post) => (
                 <Card
                   key={post.id}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   asChild
                   className="bg-zion-blue-dark border border-zion-blue-light hover:border-zion-purple transition-all duration-300 group-hover:shadow-lg"
                 >
@@ -752,10 +557,6 @@ if (return null) {
                           const target = e.currentTarget as HTMLImageElement,
                           target.src = "/images/blog-placeholder.svg"
                         }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                       />
                     </div>
@@ -925,10 +726,6 @@ if (return null) {
                   </CardFooter>;
                   </Link>;
                 </Card>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               ))}
@@ -1064,28 +861,6 @@ min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4"> <h1 > Blog</h1> <div cl
                     className="px-4 py-2 bg-blue-600/20 border border-blue-400/30 rounded-full text-blue-300 text-sm">
                   >
                     {category.name}
-<<<<<<< HEAD
-                  </span>
-export default function Blog() {
-  const blogPosts = [], image: "/api/placeholder/600/400"
-  {"
-      id: 1, title: "The Future of AI in Enterprise: 2025 Trends and Predictions","
-      excerpt: "Explore the latest AI trends transforming enterprise operations and how businesses can leverage these technologies for competitive advantage.", author: "Dr. Sarah Chen","
-      date: "2025-01-15", readTime: "8 min read","
-      category: "AI & Machine Learning", tags: ["AI,Enterprise,Technology"], image: "/api/placeholder/600/400"
-      featured: true}, { id: 2}, {
-      id: 2
-      title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot
-      excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot
-      author: &quot,Prof. Michael Rodriguez&quot
-      date: &quot,2025-01-12&quot
-      readTime: &quot,12 min read&quot
-      category: &quot,Quantum Computing&quot
-      tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot]
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       id: 2,
       title: &quot,Quantum Computing Breakthroug,h: What It Means for Your Business&quot,
       excerpt: &quot,Understanding the latest quantum computing advances and their practical applications in solving complex business problems.&quot,
@@ -1094,11 +869,6 @@ export default function Blog() {
       readTime: &quot,12 min read&quot,;
       category: &quot,Quantum Computing&quot;
       tags: [&quot,Quantum&quot, &quot;Computing&quot, &quot;Innovation&quot],
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       image: &quot,/api/placeholder/600/400&quot,"
       title: "Quantum Computing Breakthrough: What It Means for Your Business", excerpt: "Understanding the latest quantum computing advances and their practical applications in solving complex business problems.","
       author: "Prof. Michael Rodriguez", date: "2025-01-12","
@@ -1817,408 +1587,3 @@ key = "{post && post.id}
                         <spanclassName="&quottext-sm" text-gray-400&quot>{category && category.count}&quot;</span>;
                       </Link>;
                     ))}
-<<<<<<< HEAD
-
-                  </div>;
-                {/* comment */}";
-                <div className="bg-gradient-to-br from-blue-600/20 to-purple-600/20 rounded-xl p-6 border border-blue-400/30">;";
-                  <h3 className="text-xl font-bold text-white mb-4">Stay Updated</h3>;";
-                  <p className="text-gray-300 mb-4">;
-                    Get the latest technology insights delivered to your inbox.;
-                  </p>;";
-                  <div className="space-y-3">;
-                    <input"
-                      type="email""
-                      placeholder="Enter your email""
-                      className="w-full px-4 py-3 bg-slate-800/50 border border-slate-600/50 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500">;
-                   />;";
-                    <button className="w-full px-4 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all duration-200">;
-    <>";
-      <SEO title="&quot;Blog" - Zion Tech Group | Technology Insights & Industry News & quot;";
-        description="&quot;Stay" updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group & apos;s expert team.&quot;";
-        keywords="&quot;technology" blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news & quot>;
-    />&quot;";
-        title = "Blog - Zion Tech Group | Technology Insights & Industry News;
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group & apos;s expert team.;
-        keywords = "technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news;
-        description="Stay updated with the latest insights on AI, quantum computing, cybersecurity, and emerging technologies from Zion Tech Group"s expert team. ";
-        keywords="technology blog, AI insights, quantum computing, cybersecurity, digital transformation, tech news" />;
-      ";
-      <div className="&quot;min - h-screen" bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900 & quot;>;
-        {/* comment */}&quot;";
-        <section className="&quot;py - 20" bg - gradient - to - r from - blue - 600 / 20 to - purple - 600 / 20 & quot;>&quot;
-          <div className="&quot;container" mx - auto px - 4&quot;>&quot;";
-            <motion.div, ";
-initial = "{{" opacity: 0, coordinate_y: 20 }}";
-              animate="{{" opacity: 1, coordinate_y: 0 }}";
-              transition="{{" duration: 0.8   }}";
-              className="text - center max - w-4xl mx - auto">";
-              <h1 className="text - 5xl md: text - 6xl font - bold text - white mb - 6">,
-                Technology Insights, ";
-transition="{{" duration: 0.8 }}";
-              className="&quot;text - center" max - w-4xl mx - auto & quot;
-            >&quot;";
-              <h1 className="&quot;text - 5xl" md: text - 6xl font - bold text - white mb - 6&quot, >;
-                Technology Insights & quot,
-              </h1>",
-              <p class_name = "&quot, text - xl" text - gray - 300 mb - 8&quot, >;
-                Stay ahead of the curve with expert insights on AI, quantum computing,
-                cybersecurity, and the latest technology trends shaping our future.&quot;";
-              <p class_name = "text - xl text - gray - 300 mb - 8">;
-                Stay ahead of the curve with expert insights on AI, quantum computing, cybersecurity, and the latest technology trends shaping our future.;
-              </p>";
-              <div className="&quot;flex" flex - wrap justify - center gap - 4&quot;>;
-                {categories.slice (0, 4).map ((category, index) => (&quot}";
-                  <span key = "{category.name}
-                    className="&quot;px - 4" py - 2 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - sm & quot>;
-                  >;
-                    {category.name}&quot;
-                  </span>))}
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-";
-        <div className="container mx - auto px - 4 py - 16">;";
-          <div class_name = "grid grid - cols - 1 lg: grid - cols - 4 gap - 12">,
-            {/* comment */}";
-            <div className="lg: col - span - 3">,
-              {/* comment */}
-              {featured_posts.length > 0 && (";
-                <section className="mb - 16">;";
-                  <h2 className="text - 3xl font - bold text - white mb - 8 flex items - center">;";
-                    <TrendingUp className="w - 8 h - 8 mr - 3 text - blue - 400"  />;
-                    Featured Articles;
-                  </h2>;";
-                  <div class_name = "grid grid - cols - 1 md: grid - cols - 2 gap - 8">,
-                    {featured_posts.map ((post, index) => (
-                      <motion.article;";
-        <div className="&quot;container" mx - auto px - 4 py - 16 & quot;>&quot;
-          <div className="&quot;grid" grid - cols - 1 lg: grid - cols - 4 gap - 12 & quot, >;
-            {/* comment */}&quot;";
-            <div className="&quot;lg:" col - span - 3&quot, >";
-        <div class_name = "container mx - auto px - 4 py - 16">";
-          <div className="grid grid - cols - 1 lg: grid - cols - 4 gap - 12">,
-            {/* comment */}";
-            <div className="lg: col - span - 3">,
-              {/* comment */}
-              {featured_posts.length > 0 && (&quot}";
-                <section className="&quot;mb - 16 & quot;">&quot;
-                  <h2 className="&quot;text - 3xl" font - bold text - white mb - 8 flex items - center & quot;>&quot;
-                    <TrendingUp className="&quot;w - 8" h - 8 mr - 3 text - blue - 400 & quot;       />;
-                    Featured Articles & quot;
-                  </h2>";
-                  <div className="&quot;grid" grid - cols - 1 md: grid - cols - 2 gap - 8&quot, >;
-                    {featured_posts.map ((post, index) => (&quot}
-                      <motion.article, ";
-key = "{post.id}
-                        initial="{{" opacity: 0, coordinate_y: 20 }}";
-                        animate="{{" opacity: 1, coordinate_y: 0 }}";
-                        transition="{{" duration: 0.8, delay: index * 0.1 }}">;
-                        className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl overflow - hidden border border - slate - 600 / 50 hover: border - blue - 400 / 50 transition - all duration - 300 hover:scale - 105",
-                      >, ",
-                        <div class_name = "h - 48 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 flex items - center justify - center">, ";
-                          <div className="text - 6xl opacity - 20">, ";
-                            {post.category === "AI & Machine Learning" && <Brain  />}";
-                            {post.category === "Quantum Computing" && <Atom  />}";
-                            {post.category === "Micro SaaS" && <Rocket  />}";
-                            {post.category === "Cybersecurity" && <Shield  />}
-                          </div>;
-                        </div>;";
-                        <div className="p - 6">;";
-                          <div className="flex items - center gap - 4 mb - 3">;";
-                            <span className="px - 3 py - 1 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - xs">;
-                              {post.category}
-                            </span>;";
-                            <span className="text - yellow - 400 text - xs font - medium">Featured</span>;
-                          </div>;";
-                          <h3 class_name = "{"text - xl" font - bold text - white mb - 3 hover: text - blue - 400 transition - colors">, ";
-                            <Link to="{"/blog/${post.id}"}">{post.title}</Link>;
-                          </h3>;";
-                          <p className=""text - gray - 300" mb - 4 line - clamp - 3"}>{post.excerpt}</p>;";
-                          <div className="flex items - center justify - between text - sm text - gray - 400">;";
-                            <div className="flex items - center gap - 4">;";
-                              <span className="flex items - center">;";
-                                <User className="w - 4 h - 4 mr - 1"  />;
-                                {post.author}
-                              </span>;";
-                              <span className="flex items - center">;";
-                                <Calendar className="w - 4 h - 4 mr - 1"  />;
-                                {new Date (post.date).toLocaleDateString ()}
-                              </span>;
-                            </div>;";
-                            <span className="flex items - center">;";
-                              <Clock className="w - 4 h - 4 mr - 1"  />;
-                              {post.read_time}
-                            </span>;
-                          </div>;
-                      </motion.article>;";
-                        className="&quot;bg - gradient - to - br" from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl overflow - hidden border border - slate - 600 / 50 hover:border - blue - 400 / 50 transition - all duration - 300 hove, r: scale - 105 & quot;
-                      >&quot;";
-                        <div className="&quot;h - 48" bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 flex items - center justify - center & quot;>&quot,
-                          <div className="&quot, text - 6xl" opacity - 20 & quot, >",
-                            {post.category === &quot, AI & Machine Learning & quot, &&"}&quot <Brain  />}";
-                            {post.category === &quot;Quantum Computing & quot; &&"}&quot <Atom  />}";
-                            {post.category === &quot;Micro SaaS & quot; &&"}&quot <Rocket  />}";
-                            {post.category === &quot;Cybersecurity & quot; &&"}&quot <Shield  />}
-                          </div>;
-                        </div>";
-                        <div className="&quot;p - 6&quot;">&quot;
-                          <div className="&quot;flex" items - center gap - 4 mb - 3&quot;>&quot;
-                            <span className="&quot;px - 3" py - 1 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - xs & quot;>;
-                              {post.category}&quot;
-                            </span>";
-                            <span className="&quot;text - yellow - 400" text - xs font - medium & quot;>Featured & quot </span>;
-                          </div>";
-                          <h3 className="&quot;text - xl" font - bold text - white mb - 3 hover: text - blue - 400 transition - colors & quot, >&quot,
-                            <Link to = "{"/blog/${post.id}"}">{post.title}</Link>;
-                          </h3>";
-                          <p className="&quot;text - gray - 300" mb - 4 line - clamp - 3&quot;>{post.excerpt}&quot </p>";
-                          <div className="&quot;flex" items - center justify - between text - sm text - gray - 400 & quot;>&quot;
-                            <div className="&quot;flex" items - center gap - 4&quot;>&quot;
-                              <span className="&quot;flex" items - center & quot;>&quot;
-                                <User className="&quot;w - 4" h - 4 mr - 1&quot;       />;
-                                {post.author}&quot;
-                              </span>";
-                              <span className="&quot;flex" items - center & quot;>&quot;
-                                <Calendar className="&quot;w - 4" h - 4 mr - 1&quot;       />;
-                                {new Date (post.date).toLocaleDateString ()}&quot;
-                              </span>;
-                            </div>";
-                            <span className="&quot;flex" items - center & quot;>&quot;
-                              <Clock className="&quot;w - 4" h - 4 mr - 1&quot;       />;
-                              {post.read_time}&quot;
-                            </span>;
-                          </div>;
-                      </motion.article>))}
-                  </div>;
-                </section>)}
-              {/* comment */}
-              <section>;";
-                <h2 className="text - 3xl font - bold text - white mb - 8">Latest Articles</h2>;";
-                <div className="space - y-8">;
-                  {regular_posts.map ((post, index) => (
-                    <motion.article>;
-              <section>";
-                <h2 className="&quot;text - 3xl" font - bold text - white mb - 8&quot;>Latest Articles & quot </h2>";
-                <div className="&quot;space - y-8 & quot;">;
-                  {regular_posts.map ((post, index) => (&quot}
-                    <motion.article, ";
-key = "{post.id}
-                      initial="{{" opacity: 0, coordinate_y: 20 }}";
-                      animate="{{" opacity: 1, coordinate_y: 0 }}";
-                      transition="{{" duration: 0.8, delay: index * 0.1 }}";
-                      className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl p - 6 border border - slate - 600 / 50 hover: border - blue - 400 / 50 transition - all duration - 300">;
-                    >, ";
-                      <div className="flex flex - col md:flex - row gap - 6">, ",
-                        <div class_name = "md:w - 48 h - 32 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - lg flex items - center justify - center flex - shrink - 0">, ";
-                          <div className="text - 4xl opacity - 20">, ";
-                            {post.category === "AI & Machine Learning" && <Brain  />}";
-                            {post.category === "Quantum Computing" && <Atom  />}";
-                            {post.category === "Micro SaaS" && <Rocket  />}";
-                            {post.category === "Cybersecurity" && <Shield  />}";
-                            {post.category === "Digital Transformation" && <Globe  />}";
-                            {post.category === "Cloud Computing" && <Code  />}
-                          </div>;
-                        </div>;";
-                        <div className="flex - 1">;";
-                          <div className="flex items - center gap - 4 mb - 3">;";
-                            <span className="px - 3 py - 1 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - xs">;
-                              {post.category}
-                            </span>;
-                          </div>;";
-                          <h3 class_name = "{"text - xl" font - bold text - white mb - 3 hover: text - blue - 400 transition - colors">, ";
-                            <Link to="{"/blog/${post.id}"}">{post.title}</Link>;
-                          </h3>;";
-                          <p className=""text - gray - 300" mb - 4"}>{post.excerpt}</p>;";
-                          <div className="flex items - center justify - between">;";
-                            <div className="flex items - center gap - 4 text - sm text - gray - 400">;";
-                              <span className="flex items - center">;";
-                                <User className="w - 4 h - 4 mr - 1"  />;
-                                {post.author}
-                              </span>;";
-                              <span className="flex items - center">;";
-                                <Calendar className="w - 4 h - 4 mr - 1"  />;
-                                {new Date (post.date).toLocaleDateString ()}
-                              </span>;";
-                              <span className="flex items - center">;";
-                                <Clock className="{"w - 4" h - 4 mr - 1"  />;
-                                {post.read_time}
-                              </span>;
-                            </div>;
-                            <Link;";
-                              to = "{"/blog/${post.id}"}
-                              className=""flex" items - center text - blue - 400 hover:text - blue - 300 transition - colors"}>;
-                            >;
-                              Read More;";
-                              <ArrowRight className="w - 4 h - 4 ml - 1"  />;
-                            </Link>;
-                          </div>;
-                    </motion.article>;";
-                      className="&quot;bg - gradient - to - br" from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl p - 6 border border - slate - 600 / 50 hover: border - blue - 400 / 50 transition - all duration - 300 & quot,
-                    >&quot, ",
-                      <div className="&quot;flex" flex - col md: flex - row gap - 6&quot, >&quot,
-                        <div className="&quot, m, d: " w - 48 h - 32 bg - gradient - to - br from - blue - 500 / 20 to - purple - 500 / 20 rounded - lg flex items - center justify - center flex - shrink - 0&quot;>&quot,
-                          <div className="&quot, text - 4xl" opacity - 20 & quot, >",
-                            {post.category === &quot, AI & Machine Learning & quot, &&"}&quot <Brain  />}";
-                            {post.category === &quot;Quantum Computing & quot; &&"}&quot <Atom  />}";
-                            {post.category === &quot;Micro SaaS & quot; &&"}&quot <Rocket  />}";
-                            {post.category === &quot;Cybersecurity & quot; &&"}&quot <Shield  />}";
-                            {post.category === &quot;Digital Transformation & quot; &&"}&quot <Globe  />}";
-                            {post.category === &quot;Cloud Computing & quot; &&"}&quot <Code  />}
-                          </div>;
-                        </div>";
-                        <div className="&quot;flex - 1&quot;">&quot;
-                          <div className="&quot;flex" items - center gap - 4 mb - 3&quot;>&quot;
-                            <span className="&quot;px - 3" py - 1 bg - blue - 600 / 20 border border - blue - 400 / 30 rounded - full text - blue - 300 text - xs & quot;>;
-                              {post.category}&quot;
-                            </span>;
-                          </div>";
-                          <h3 className="&quot;text - xl" font - bold text - white mb - 3 hover: text - blue - 400 transition - colors & quot, >&quot,
-                            <Link to = "{"/blog/${post.id}"}">{post.title}</Link>;
-                          </h3>";
-                          <p className="&quot;text - gray - 300" mb - 4&quot;>{post.excerpt}&quot </p>";
-                          <div className="&quot;flex" items - center justify - between & quot;>&quot;
-                            <div className="&quot;flex" items - center gap - 4 text - sm text - gray - 400 & quot;>&quot;
-                              <span className="&quot;flex" items - center & quot;>&quot;
-                                <User className="&quot;w - 4" h - 4 mr - 1&quot;       />;
-                                {post.author}&quot;
-                              </span>";
-                              <span className="&quot;flex" items - center & quot;>&quot;
-                                <Calendar className="&quot;w - 4" h - 4 mr - 1&quot;       />;
-                                {new Date (post.date).toLocaleDateString ()}&quot;
-                              </span>";
-                              <span className="&quot;flex" items - center & quot;>&quot;
-                                <Clock className="&quot;w - 4" h - 4 mr - 1&quot;       />;
-                                {post.read_time}&quot;
-                              </span>;
-                            </div>";
-                            <Link to = "{"/blog/${post.id}"}"">;
-                              className="&quot;flex" items - center text - blue - 400 hover: text - blue - 300 transition - colors & quot, ";
-                              class_name = ""flex" items - center text - blue - 400 hover: text - blue - 300 transition - colors">,
-                              Read More & quot, ",
-                              <ArrowRight className="&quot;w - 4" h - 4 ml - 1&quot,       />&quot,
-                            </Link>;
-                          </div>;
-                    </motion.article>))}
-                </div>;
-              </section>;
-            </div>;
-            {/* comment */}";
-            <div className="lg: col - span - 1">;";
-              <div className="sticky top - 8 space - y-8">;";
-            <div className="&quot, lg:col - span - 1&quot, ">&quot, ",
-              <div class_name = "&quot, sticky" top - 8 space - y-8 & quot, >;
-                {/* comment */}&quot;";
-                <div className="&quot;bg - gradient - to - br" from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl p - 6 border border - slate - 600 / 50 & quot;>&quot;
-                  <h3 className="&quot;text - xl" font - bold text - white mb - 4&quot;>Categories & quot </h3>";
-                  <div className="&quot;space - y-3 & quot;">;
-                    {categories.map ((category, index) => (&quot}";
-                      <Link key = "{category.name}"">;
-                        to="{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " &apos;-&apos)}"}";
-                        className="&quot;flex" items - center justify - between p - 3 rounded - lg hover: bg - slate - 700 / 50 transition - colors group & quot>;
-                      >&quot;&apos;";
-                        <div className="&quot, flex" items - center & quot, >&quot, ",
-                          <category.icon className="&quot;w - 5" h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300 & quot, />&quot, ";
-                          <span className="&quot, text - gray - 300" group - hove, r: text - white & quot, >{category.name}&quot </span>";
-            <div class_name = "lg: col - span - 1">";
-              <div className="sticky top - 8 space - y-8">,
-                {/* comment */}";
-                <div className="bg - gradient - to - br from - slate - 800 / 50 to - slate - 700 / 50 rounded - xl p - 6 border border - slate - 600 / 50">;";
-                  <h3 className="text - xl font - bold text - white mb - 4">Categories</h3>;";
-                  <div className="{"space - y-3"">;
-                    {categories.map ((category, index) => (
-                      <Link;";
-                        key = "{category.name}
-                        to="{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " "-")}"}";
-                        className=""flex" items - center justify - between p - 3 rounded - lg hover:bg - slate - 700 / 50 transition - colors group"}>;
-                      >;";
-                        <div className="flex items - center">;";
-                          <category.icon class_name = "w - 5 h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300" />, ";
-                          <span className="text - gray - 300 group - hover:text - white">{category.name}</span>;
-                        </div>;";
-                        <span className="{"text - sm" text - gray - 400">{category.count}</span>;
-                      </Link>;";
-                        to = "{"/blog / category/${category.name.toLowerCase ().replace (/\s+/g, " "-')}"}";
-                        className=""flex" items - center justify - between p - 3 rounded - lg hover: bg - slate - 700 / 50 transition - colors group"}
-                      >";
-                        <div className="flex items - center">";
-                          <category.icon className="w - 5 h - 5 text - blue - 400 mr - 3 group - hover: text - blue - 300" />",
-                          <span className="text - gray - 300 group - hover:text - white">{category.name}</span>;
-                        </div>";
-                        <span className="&quot;text - sm" text - gray - 400 & quot;>{category.count}&quot </span>;
-                      </Link>))}
-                  </div>;
-                {/* comment */}";
-                <div className="bg - gradient - to - br from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30">;";
-                  <h3 className="text - xl font - bold text - white mb - 4">Stay Updated</h3>;";
-                  <p className="text - gray - 300 mb - 4">;
-                    Get the latest technology insights delivered to your inbox.;
-                  </p>;";
-                  <div className="space - y-3">;
-                    <input;";
-                      type="email";";
-                      placeholder="Enter your email";";
-                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500">;
-                  />;";
-                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
-
-                      Subscribe;
-                    </button>;
-                  </div>;
-    </>";
-
-
-
-                <div className="&quot;bg - gradient - to - br" from - blue - 600 / 20 to - purple - 600 / 20 rounded - xl p - 6 border border - blue - 400 / 30 & quot;>&quot;
-                  <h3 className="&quot;text - xl" font - bold text - white mb - 4&quot;>Stay Updated & quot </h3>";
-                  <p className="&quot, text - gray - 300" mb - 4&quot, >;
-                    Get the latest technology insights delivered to your inbox.&quot,
-                  </p>",
-                  <div className="&quot;space - y-3 & quot;">&quot,
-                    <input type="&quot;email & quot;
-                      placeholder="&quot;Enter" your email & quot;";
-                      className="&quot;w - full" px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500 & quot, >;
-                  />&quot, ";
-                    <button class_name = "&quot, w - full" px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hove, r: to - purple - 700 transition - all duration - 200 & quot, >;
-                      Subscribe & quot, ";
-                      type="email;
-                      placeholder="Enter your email;
-                      className="w - full px - 4 py - 3 bg - slate - 800 / 50 border border - slate - 600 / 50 rounded - lg text - white placeholder - gray - 400 focus: outline - none focus:ring - 2 focus:ring - blue - 500" />";
-                    <button className="w - full px - 4 py - 3 bg - gradient - to - r from - blue - 600 to - purple - 600 text - white font - semibold rounded - lg hover:from - blue - 700 hover:to - purple - 700 transition - all duration - 200">;
-                      Subscribe,
-                    </button>;
-                  </div>;
-</>),
-  )})))))))));
-}
-
-;
-<<<<<<< HEAD
-
-                variant="outline"
-                onClick={() => {
-                  setSearchQuery(""),
-                  setSelectedCategory("All Categories")
-          {!isLoading && filteredPosts.length === 0 && (;
-            <div className="text-center py-16">;
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
-              <Button;
-                variant="outline";
-                onClick={() => {;
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
-                }}
-                className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-              >;
-                Clear all filters;
-              </Button>;
-            </div>;
-          )}
-        </div>;
-      </div>;
-    </>;
-  );
-}
-;

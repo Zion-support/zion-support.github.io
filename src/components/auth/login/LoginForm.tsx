@@ -4,39 +4,6 @@ import { z } from "zod";
 import { LogIn, User, Eye, EyeOff } from 'lucide-react'
 import { fireEvent  } from '@/lib/analytics';
 import { useAuth } from "@/context/auth/AuthProvider",
-<<<<<<< HEAD
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import {
-
-  Form
-  FormControl
-  FormField
-  FormItem
-  FormLabel
-  FormMessage
-import { Button } from "@/components/ui/button",
-import { Input } from "@/components/ui/input",
-=======
-
-import { useState } from 'react';
-import { use_router } from 'next / router';
-import { use_form, ControllerRenderProps } from 'react - hook - form';
-import { zod_resolver } from '@hookform / resolvers / zod';
-import { z } from 'zod';
-import { LogIn, User, Eye, EyeOff } from 'lucide-react';
-import { fire_event } from '@/lib / analytics';
-import { use_auth } from '@/context / auth / AuthProvider';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
-import { useState  } from './react';
-import { use_form, ControllerRenderProps  } from './react - hook - form';
-import { zod_resolver  } from '@hookform / resolvers / zod';
-import { z  } from './zod';
-import { use_auth  } from '@/context / auth / AuthProvider';
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   Form,
   FormControl,
@@ -44,10 +11,6 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 } from '@/components / ui / form';
 import { Alert, AlertDescription } from '@/components / ui / alert';
 import Link from 'next / link';
@@ -146,11 +109,7 @@ import {
             errorMessage =
               'Your email is not confirmed. Please check your inbox for a confirmation link.'
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   FormMessage} from "@/components/ui/form",
 import { Alert, AlertDescription } from "@/components/ui/alert",
@@ -195,10 +154,6 @@ export function LoginForm() {
       // Pass email and password to the login function
       const result = await login(data.email, data.password, data.rememberMe)
       const result = await login(data.email, data.password, data.rememberMe),
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           } else {
             error_message = result.error.message;
@@ -348,54 +303,9 @@ export function LoginForm() {;
     router && router.push(`/verify-status?email=${encodeURIComponent(email)}`);
   };
 
-<<<<<<< HEAD
-
-        onSubmit={form && form.handleSubmit(onSubmit, errors => {;
-          const firstError = Object && Object.keys(errors)[0] as keyof LoginFormValues;
-          if (firstError) {;
-            form && form.setFocus(firstError);
-
-          }        })}
-        className='space-y-6';
-      >;
-        <FormField
-          control={form && form.control}
-          name='email'
-      {form.form_state.errors.root && (
-        <Alert variant='destructive' className='mb - 4'>;
-          <AlertDescription>;
-            {form.form_state.errors.root.message}
-          </AlertDescription>;
-        </Alert>)}
-      <form;
-        on_submit={form.handle_submit (on_submit, errors => {
-          const first_error = Object.keys (errors)[0] as keyof LoginFormValues;
-          // Check condition
-if ( {) {
-  $2
-}
-            form.set_focus (first_error);
-          }        })}
-        className='space - y-6';
-      >;
-        <FormField;
-          control={form.control}
-          name='email';
-          render={({
-            field
-          }: {
-
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 >>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Form {...form}>
@@ -439,10 +349,6 @@ if ( {) {
           render={({ field }: { field: ControllerRenderProps<LoginFormValues "email"> }) => (
             <FormItem>
               <FormLabel className="text-zion-slate-light">Email address</FormLabel>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <FormControl>
                 <div className='relative'>
@@ -502,10 +408,6 @@ if ( {) {
                     aria-invalid={!!form.formState.errors.email}
                     className="bg-zion-blue pl-10 text-white placeholder:text-zion-blue-light border-zion-blue-light focus:border-zion-purple"
                     {...field}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                   />
                   <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -567,10 +469,6 @@ if ( {) {
                     {...field}
                   />
                   <User className='absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4' />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
                 </div>
               </FormControl>
@@ -689,13 +587,6 @@ if ( {) {
         />;
         <FormField;
           control={form.control}
-<<<<<<< HEAD
-          name="rememberMe"
-          render={({ field }: { field: ControllerRenderProps<LoginFormValues "rememberMe"> }) => (
-            <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <FormControl>
             field: ControllerRenderProps<LoginFormValues, 'rememberMe'>;
           }) => (;
@@ -710,11 +601,6 @@ if ( {) {
                   className="border-zion-blue-light data-[state=checked]:bg-zion-purple data-[state=checked]:text-white"
                   aria-label="Remember me"
                 />
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </FormControl>
               <div className="space-y-1 leading-none">
                 <FormLabel className="text-zion-slate-light">Remember me</FormLabel>
@@ -886,11 +772,6 @@ if ( {) {
             className="w-1/2 ml-2"
             onClick={handleCheckStatus}
           >
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Check status
           </Button>
         </div>
@@ -902,29 +783,6 @@ if ( {) {
       </form>
     </Form>
   )
-<<<<<<< HEAD
-}else {
-  fireEvent ('login', {'
-  method: 'email'
-})
-}finally {
-  setIsSubmitting (false)
-}
-const handleResendEmail = async () => {'
-  const email = form.getValues ('email')
-if (!email) {'
-  form.setError ('root', {'
-  message: 'Please enter your email address.'
-})
-return
-return;
-=======
-
-
-return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }setIsResending (true);'
 setVerificationMessage ('')
 try {'
@@ -953,16 +811,6 @@ if (!email) {'
   form.setError ('root', {'
   message: 'Please enter your email address.'
 })
-<<<<<<< HEAD
-return
-return;
-=======
-
-
-return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }router.push (`/verify-status?email=$ {
   encodeURIComponent (email)
 }`)

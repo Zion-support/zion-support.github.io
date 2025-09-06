@@ -166,12 +166,6 @@ const WhitepaperViewPage: React.FC = () => {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
         return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
@@ -259,7 +253,6 @@ export default WhitepaperViewPage;
 
 },
 ;
-=======
       }
       setLoading(true),;
       setError(null),;
@@ -356,10 +349,6 @@ export default WhitepaperViewPage;
     </div>;
   );
 },;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default WhitepaperViewPage,;
 

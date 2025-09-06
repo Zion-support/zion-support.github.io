@@ -36,8 +36,4 @@ export default defineConfig({
   optimizeDeps: {
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
-<<<<<<< HEAD
 });
-=======
-});
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

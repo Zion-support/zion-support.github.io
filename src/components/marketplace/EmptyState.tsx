@@ -14,12 +14,8 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 export interface EmptyStateProps {;
 import * as React from 'react';
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import * as React from 'react'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {
   RefreshCw,
@@ -57,10 +53,6 @@ export interface EmptyStateProps {;
   action?: {;
     label: string,;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     onClick: () => void;
   },;
   icon?: React.ReactNode;
@@ -70,14 +62,8 @@ export interface EmptyStateProps {;
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const defaultContent = {
   products: {
@@ -111,72 +97,6 @@ const defaultContent = {
   loading: {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
-<<<<<<< HEAD
-    description:
-      "We're fetching the latest data for you. This should only take a moment.",
-  },
-}
-export function EmptyState({
-  type,
-  title,
-  description,;
-  action,;
-  icon;
-}: EmptyStateProps) {;
-  const { t } = useTranslation();  const content = defaultContent[type]
-  const content = defaultContent[type]
-  const displayTitle = title || content.title
-  const displayDescription = description || content.description
-  const displayIcon = icon || content.icon
-  return (
-    <div className='flex flex-col items-center justify-center py-12 px-6 text-center'>
-      <div className='mb-4'>{displayIcon}</div>
-      <h3 className='text-xl font-semibold text-gray-900 dark:text-white mb-2'>
-        {displayTitle}
-      </h3>
-      <p className='text-gray-600 dark:text-gray-400 max-w-md mb-6'>
-        {displayDescription}
-      </p>
-      {action && (
-        <Button
-          onClick={action.onClick}
-          variant='outline'
-          className='flex items-center gap-2'        >
-          <RefreshCw className='w-4 h-4' />
-    description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
-
-
-  return (
-    <div className="flex flex-col items-center justify-center py-12 px-6 text-center">
-      <div className="mb-4">
-        {displayIcon}
-      </div>
-      
-      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-        {displayTitle}
-      </h3>
-      
-      <p className="text-gray-600 dark:text-gray-400 max-w-md mb-6">
-        {displayDescription}
-      </p>;
-      {action && (;
-        <Button;
-          onClick={action.onClick}
-          variant="outline"
-          className="flex items-center gap-2"
-        >
-          <RefreshCw className="w-4 h-4" />
-          {action.label}
-        </Button>
-      )}
-=======
-
-
-          {action.label}
-        </Button>
-      )}
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
 
 
@@ -211,10 +131,6 @@ export function ProductsEmptyState({
   isAuthenticated?: boolean }) {
   const action = onAddProduct
     ? {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       {type === 'error' && (;
@@ -230,22 +146,6 @@ export function ProductsEmptyState({
             <Link href='https://status && status.zion.ai' className='underline'>;
               {t('general && general.status_page')}
 
-<<<<<<< HEAD
-=======
-        label: isAuthenticated ? 'Add Product' : 'Login to Add Product'
-        onClick: onAddProduct
-      }
-    : onRetry
-      ? { label: 'Try Again', onClick: onRetry }
-      : undefined
-  const customDescription = isAuthenticated
-    ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
-    : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!"
-      />
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   )
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
@@ -276,10 +176,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
 }
 }
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {t('general.check_status_page')}
             {" "}
@@ -413,10 +309,6 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
     />;
   );
 } ;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

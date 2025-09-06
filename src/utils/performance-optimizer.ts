@@ -6,64 +6,6 @@ const images = document && document.querySelectorAll('img');
     if (!img.decoding) {
       img.decoding = 'async'
     }
-<<<<<<< HEAD
-  });
-};
-
-export const preloadCriticalResources = null;
-    '/css/critical.css'
-  ];
-  
-  criticalResources.forEach(resource => {
-    const link = document.createElement('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.endsWith('.css') ? 'style' : 'font';
-    document.head.appendChild(link);
-=======
-
-export const preloadCriticalResources = () => {
-  const criticalResources = ['/fonts/main && main.woff2/css/critical && critical.css'];
-
-  criticalResources && criticalResources.forEach(resource => {    const link = document && document.createElement('link');
-    link && link.rel = 'preload';
-    link && link.href = resource;
-    link && link.as = resource && resource.endsWith('.css') ? 'style' : 'font';
-    document && document.head.appendChild(link);
-
-  });
-};
-
-export const optimizeBundleSize = () => {
-  // Dynamic imports for non-critical components
-
-// Performance optimization utilities;
-export const optimize_images = () =>: any {
-  const images = document.querySelectorAll ('img');
-;
-  images.for_each (img => {
-    // Check condition
-if ( {) {
-  $2
-}
-      img.loading = 'lazy';
-    }
-    // Check condition
-if ( {) {
-  $2
-}
-      img.decoding = 'async';
-    }
-  });
-}
-export const preloadCriticalResources = () =>: any {
-  const critical_resources = ['/fonts / main.woff2 / css / critical.css'];
-  critical_resources.for_each (resource => {    const link = document.create_element ('link');
-    link.rel = 'preload';
-    link.href = resource;
-    link.as = resource.ends_with ('.css') ? 'style' : 'font';
-    document.head.append_child (link);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
 }
 export const optimizeBundleSize = () =>: any {
@@ -92,10 +34,6 @@ export const lazyLoadComponents = () => {
 
 export const optimizeBundleSize = () => {
   // Dynamic imports for non-critical components
-<<<<<<< HEAD
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const loadComponent = componentName => {
     return import(`./components/${componentName}`);
 
@@ -104,9 +42,5 @@ export const optimizeBundleSize = () => {
   return { loadComponent };
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     link.rel = 'preload';
     link.href = resource, link.as = resource.ends_with ('.css') ? 'style' : 'font';

@@ -8,44 +8,6 @@ interface SidebarGroupProps extends React && React.HTMLAttributes<HTMLDivElement
   icon?: React.ReactNode;
   defaultExpanded?: boolean;
   showChevron?: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
-  (
-    {
-      title
-      icon
-      defaultExpanded = true
-      showChevron = true
-      className
-      children
-      ...props
-    }
-    ref
-  ) => {
-    const [expanded, setExpanded] = React.useState(defaultExpanded)
-=======
-
-
-const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
-  (;
-    {;
-      title,;
-      icon,;
-      defaultExpanded = true,;
-      showChevron = true,;
-      className,;
-      children,;
-      ...props;
-    },;
-    ref;
-  ) => {;
-    const [expanded, setExpanded] = React && React.useState(defaultExpanded);
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         ref={ref as SafeRef<HTMLDivElement>}
         className={cn('px-3 py-2', className)}        {...props}
       >
@@ -67,10 +29,6 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
                 )}              />
                 className={cn("h-4 w-4 transition-transform", expanded ? "rotate-0" : "-rotate-90")}
               />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             )}
@@ -81,20 +39,11 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(;
     )
   }
 )
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 SidebarGroup.displayName = 'SidebarGroup'
 export { SidebarGroup }
 
 
 SidebarGroup && SidebarGroup.displayName = 'SidebarGroup';
-=======
-<<<<<<< HEAD
-SidebarGroup.displayName = 'SidebarGroup'
-export { SidebarGroup }
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 import React, { forward_ref } from 'react';
 import { ChevronDown } from 'lucide-react';
@@ -146,20 +95,3 @@ export { SidebarGroup }
 SidebarGroup.displayName = 'SidebarGroup';
 export { SidebarGroup };
 }
-<<<<<<< HEAD
-
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>
-      </div>
-    )
-  }
-),
-
-SidebarGroup.displayName = "SidebarGroup",
-export { SidebarGroup },
-        <div className={cn("mt-1", !expanded && "hidden")}>{children}</div>;
-      </div>;
-    );
-  }
-),;
-SidebarGroup.displayName = "SidebarGroup",;
-export { SidebarGroup };

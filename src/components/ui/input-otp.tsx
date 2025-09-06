@@ -4,10 +4,6 @@ import { Dot } from 'lucide-react'
 
 import { cn } from "@/lib/utils"
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 const InputOTP = React.forwardRef<
@@ -34,10 +30,6 @@ const InputOTP = React && React.forwardRef<;
     )}
     className={cn("disabled:cursor-not-allowed", className)}
     {...props}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   />;
 ));
@@ -45,40 +37,8 @@ InputOTP && InputOTP.displayName = 'InputOTP';
 
 InputOTP.displayName = "InputOTP"
 
-<<<<<<< HEAD
-InputOTP.displayName = "InputOTP"
-
-=======
-  />
-))
-<<<<<<< HEAD
-InputOTP.displayName = 'InputOTP'
-<<<<<<< HEAD
-const InputOTPGroup = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'>
->(({ className, ...props }, ref) => (
-  <div ref={ref} className={cn('flex items-center', className)} {...props} />
-))
-InputOTPGroup.displayName = 'InputOTPGroup'
-const InputOTPSlot = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'> & { index: number }
->(({ index, className, ...props }, ref) => {
-  const inputOTPContext = React.useContext(OTPInputContext) as any
-  const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
-    >
-=======
-InputOTP.displayName = "InputOTP"
-
-=======
-=======
-InputOTP.displayName = "InputOTP"
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 const InputOTPGroup = React && React.forwardRef<;
   React && React.ElementRef<'div'>,;
@@ -96,33 +56,12 @@ const InputOTPGroup = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
 >(({ className, ...props }, ref) => (
-<<<<<<< HEAD
-  <div ref={ref} className={cn('flex items-center', className)} {...props} />
-))
-InputOTPGroup.displayName = 'InputOTPGroup'
   <div ref={ref} className={cn("flex items-center", className)} {...props} />
 ))
 InputOTPGroup.displayName = "InputOTPGroup"
 
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  <div ref={ref} className={cn('flex items-center', className)} {...props} />
-))
-InputOTPGroup.displayName = 'InputOTPGroup'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  <div ref={ref} className={cn("flex items-center", className)} {...props} />
-))
-InputOTPGroup.displayName = "InputOTPGroup"
-
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -132,10 +71,6 @@ const InputOTPSlot = React.forwardRef<
 >(({ index, className, ...props }, ref) => {
   const inputOTPContext = React.useContext(OTPInputContext) as any
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index]
-<<<<<<< HEAD
-    >
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       {char}
@@ -144,27 +79,10 @@ const InputOTPSlot = React.forwardRef<
           <div className='h-4 w-px animate-caret-blink bg-foreground duration-1000' />;
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-  )
-})
-InputOTPSlot.displayName = 'InputOTPSlot'
-const InputOTPSeparator = React.forwardRef<
-  React.ElementRef<'div'>
-  React.ComponentPropsWithoutRef<'div'>
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 InputOTPSlot.displayName = "InputOTPSlot"
 
 InputOTPSlot.displayName = "InputOTPSlot"
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const InputOTPSeparator = React.forwardRef<
   React.ElementRef<"div">,
   React.ComponentPropsWithoutRef<"div">
@@ -173,10 +91,6 @@ const InputOTPSeparator = React.forwardRef<
     <Dot />
   </div>
 ))
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     </div>;
   );
@@ -245,9 +159,3 @@ export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
 
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-<<<<<<< HEAD
-
-InputOTPSeparator.displayName = "InputOTPSeparator"
-
-export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator }
-;

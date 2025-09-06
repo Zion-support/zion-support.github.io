@@ -92,10 +92,6 @@ export function PointsBadge() {;
     }
   },
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -118,10 +114,6 @@ export function PointsBadge() {;
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
             >
               <Gift className="h-4 w-4" aria-hidden="true" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
               <span>{`${points} pts`}</span>
             </Link>
@@ -177,10 +169,6 @@ export function PointsBadge() {;
 
 
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         {isAuthenticated && (
@@ -228,12 +216,6 @@ export function PointsBadge() {;
                 className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
                 aria-label="Refresh points"
               >
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <RefreshCw
                   className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
                   aria-hidden="true"
@@ -245,18 +227,6 @@ export function PointsBadge() {;
             </TooltipContent>
           </Tooltip>
         )}
-<<<<<<< HEAD
-      </div>
-      {!isAuthenticated && (
-        <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
-      )}
-    </TooltipProvider>
-  )
-}
-}
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 
       </div>;
@@ -266,18 +236,3 @@ export function PointsBadge() {;
     </TooltipProvider>;
   );
 }
-<<<<<<< HEAD
-
-}
-
-
-              <p className='text - sm'>Refresh points balance</p>;
-            </TooltipContent>;
-          </Tooltip>)}
-      </div>;
-      {!is_authenticated && (
-        <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />)}
-    </TooltipProvider>);
-}
-}
-;

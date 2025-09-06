@@ -10,10 +10,6 @@ id: string;
     totalAmount: string;
     progress: number;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react';
 import { Card, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -34,28 +30,7 @@ import { toast } from 'sonner';
 
 
 
-<<<<<<< HEAD
-=======
-  const router = useRouter()
-  const startProjectCall = () => {
-    const roomId = `project-${project.id}`
-    toast.success('Starting project call', {
-      description: 'Initializing video connection...'
-    })
-    router.push(`/call/${roomId}`)
-  }
-  const messageClient = () => {
-    toast.info('Opening message thread with client', {
-      description: `Messaging ${project.client.name}...`
-    })
-    // Navigate to messaging with this client
-  }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 import React from "react",
@@ -157,10 +132,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
     // Navigate to messaging with this client
   },
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -186,10 +157,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             
             <div className="space-y-1">
               <div className="flex justify-between items-center text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                 <span>Progress</span>
@@ -200,10 +167,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
             <div className='grid grid-cols-2 gap-3 text-sm'>
             
             <div className="grid grid-cols-2 gap-3 text-sm">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               <div>
@@ -226,10 +189,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
               </div>
             </div>
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <div>
@@ -271,10 +230,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                 onClick={startProjectCall}
               >
                 <Video className="h-4 w-4" /> Call
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
               </Button>
@@ -302,10 +257,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {
                   <div className="flex items-center gap-2">
                     {milestone.status === "completed" ? (
                       <CheckCircle className="h-5 w-5 text-green-500" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                     ) : (
@@ -505,11 +456,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 <div className="pl-7">
                   <div className="flex justify-between text-sm">
                     <span className="text-muted-foreground">Due Date:</span>
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <span>{milestone.dueDate}</span>
                   </div>
                   <div className="flex justify-between text-sm">
@@ -530,10 +476,6 @@ export function MobileProjectView({ project, milestones }: ProjectViewProps) {;
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   </Badge>;

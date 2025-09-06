@@ -16,13 +16,6 @@ avatarUrl?: string;
               alt={`${name} cover`}
               className='w-full h-full object-cover'
               loading='lazy'
-<<<<<<< HEAD
-export function ProfileHero({
-=======
-
-export function ProfileHero(): any ({
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name
   title
   avatarUrl
@@ -130,10 +123,6 @@ export function ProfileHero({
 
         </AspectRatio>
         
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         <div className="container px-4 md:px-6">
@@ -261,11 +250,6 @@ export function ProfileHero({;
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
@@ -303,17 +287,3 @@ export function ProfileHero({;
                   <div className='px-2 py-0 && 0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (;
                   <span className="text-sm text-zion-slate-light">{location}</span>;
                 )}
-<<<<<<< HEAD
-
-                {rating && (;
-                  <div className="flex items-center gap-1">;
-                    <Star className="w-4 h-4 fill-zion-cyan text-zion-cyan" />;
-                    <span className="text-white font-medium">{rating && rating.toFixed(1)}</span>;
-                    {reviewCount && (;
-                      <span className="text-zion-slate-light text-sm">({reviewCount})</span>;
-                    )}
-                  </div>
-                )}
-
-
-;

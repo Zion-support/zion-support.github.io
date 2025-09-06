@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import React, { useState, Suspense } from 'react';
-=======
-import React from 'react';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import ErrorBoundary from './components/ErrorBoundary';
 import Header from './components/Header';
@@ -20,12 +16,6 @@ const About = React.lazy(() => import('./pages/About'));
 const Services = React.lazy(() => import('./pages/Services'));
 const Pricing = React.lazy(() => import('./pages/Pricing'));
 const Contact = React.lazy(() => import('./pages/Contact'));
-
-// Service pages
-const Cybersecurity = React.lazy(() => import('./pages/Cybersecurity'));
-const CloudMigration = React.lazy(() => import('./pages/CloudMigration'));
-const DevOps = React.lazy(() => import('./pages/DevOps'));
-const MobileDevelopment = React.lazy(() => import('./pages/MobileDevelopment'));
 
 const HomePage = () => (
   <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
@@ -72,7 +62,6 @@ const HomePage = () => (
           <Card title="Scalability" description="Solutions designed to grow with you." />
           <Card title="Security" description="Robust protection for all your data." />
           <Card title="Support" description="24/7 dedicated customer assistance." />
-<<<<<<< HEAD
         </div>
       </div>
     </div>
@@ -97,28 +86,16 @@ function App() {
                 <Route path="/services" element={<Services />} />
                 <Route path="/pricing" element={<Pricing />} />
                 <Route path="/contact" element={<Contact />} />
-                
-                {/* Service pages */}
-                <Route path="/services/cybersecurity" element={<Cybersecurity />} />
-                <Route path="/services/cloud-migration" element={<CloudMigration />} />
-                <Route path="/services/devops" element={<DevOps />} />
-                <Route path="/services/mobile-development" element={<MobileDevelopment />} />
               </Routes>
             </Suspense>
           </main>
           
           <Footer />
           <PerformanceMonitor />
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>
       </Router>
     </ErrorBoundary>
   );
 }
 
-<<<<<<< HEAD
 export default App;
-=======
-export default App;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

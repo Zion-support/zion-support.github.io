@@ -70,13 +70,6 @@ export default FilterSidebar;
             </div>
           ))}
         </div>
-<<<<<<< HEAD
-      </div>
-    </>
-  )}
-'"`
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   filters: FilterGroup[];
@@ -121,24 +114,3 @@ function FilterSidebar() {
     </>;
   )};
 '"`;
-<<<<<<< HEAD
-
-
-
-import React from 'react',;
-interface FilterSidebarProps {;
-  className?: string,;
-  children?: React.ReactNode;
-}
-;
-export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
-  className,;
-  children;
-}) => {;
-  return (;
-    <div className={`filter-sidebar ${className || ''}`}>;
-      {children}
-    </div>;
-  );
-};
-export default FilterSidebar;

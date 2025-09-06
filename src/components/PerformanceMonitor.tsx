@@ -44,23 +44,13 @@ const PerformanceMonitor: React.FC = () => {
     return null;
   }
 
-<<<<<<< HEAD
   return (
-    <div className={`fixed top-4 right-4 z-50 p-3 rounded-lg text-xs font-mono ${
-      metrics.isSlow 
-        ? 'bg-red-100 text-red-800 border border-red-300' 
-        : 'bg-green-100 text-green-800 border border-green-300'
-    }`}>
-      <div className="font-semibold mb-1">Performance</div>
+    <div className="fixed bottom-4 right-4 bg-black bg-opacity-75 text-white p-2 rounded text-xs font-mono z-50">
       <div>Load: {metrics.loadTime}ms</div>
       <div>Memory: {metrics.memoryUsage}MB</div>
-      {metrics.isSlow && <div className="text-red-600 font-semibold">⚠️ Slow</div>}
+      {metrics.isSlow && <div className="text-red-400">⚠️ Slow</div>}
     </div>
   );
 };
 
 export default PerformanceMonitor;
-=======
-import React from 'react';
-;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

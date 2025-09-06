@@ -50,25 +50,10 @@ import {
 } from "@/data/docsSearchData"
 } from "@/data/docsSearchData",
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 interface ApiDocsLayoutProps {
   children: React.ReactNode;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -78,26 +63,11 @@ export function ApiDocsLayout({ children }: ApiDocsLayoutProps) {
   const navigationItems = [
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const router = useRouter(),
   const currentPath = router.pathname,
   const [searchValue, setSearchValue] = useState(""),
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-  const navigationItems = [
-=======
-
-
-  const navigationItems = [
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
    { title: "Getting Started", path: "/developers/docs/getting-started" },
     { title: "API Reference", path: "/developers/docs/reference" },
     { title: "Webhooks", path: "/developers/docs/webhooks" },
@@ -171,10 +141,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
     <div className="flex min-h-screen bg-zinc-950">;
      {/* Sidebar */}
      <div className="hidden md:block w-64 border-r border-zinc-800 p-6 sticky top-0 h-screen overflow-y-auto">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Link href="/developers/docs" className="flex items-center mb-8">
@@ -206,10 +172,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
          onChange={setSearchValue}
          onSelectSuggestion={handleSelectSuggestion}
          searchSuggestions={docsSearchSuggestions}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
          placeholder="Search documentation"
@@ -239,10 +201,6 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
            : "text-zinc-400 hover:text-white hover:bg-zinc-900"
          )}
         >;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
          {item.title}
         </Link>
@@ -268,22 +226,12 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }</nav> </div> {
   /* Main content */ "
 }<div className="flex-grow max-w-5xl mx-auto px-4 py-8 md:px-8 md:py-12"> {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   children
 }</div> </div>)
 }export default ApiDocsLayout
 "export default ApiDocsLayout
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };
 /* Sidebar */ ";
@@ -391,11 +339,3 @@ if ( {) {
 }</div> </div>) 
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
-<<<<<<< HEAD
-
-     </div>;
-    </div>;
-  );
-}
-;
-export default ApiDocsLayout;

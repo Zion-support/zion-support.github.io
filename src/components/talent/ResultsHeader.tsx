@@ -4,12 +4,6 @@ interface ResultsHeaderProps {;
   resultCount: number;
 }
 
-<<<<<<< HEAD
-export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="flex items-center mb-6 text-zion-slate-light">
       {isLoading ? (
@@ -57,26 +51,11 @@ export function ResultsHeader({ isLoading, resultCount }: ResultsHeaderProps) {
             ? 'No talents found. Try adjusting your filters.'
             : `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`}          {resultCount === 0 ? (
           {resultCount === 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             "No talents found. Try adjusting your filters."
           ) : (
             `Found ${resultCount} talent${resultCount !== 1 ? 's' : ''}`
           )}
-<<<<<<< HEAD
-      )}
-    </div>
-  )
-  )
-}
-}
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   );
 };
 };
@@ -101,21 +80,6 @@ function ResultsHeader() {
             ? 'No talents found. Try adjusting your filters.';
             : `Found ${result_count} talent${result_count !== 1 ? 's' : ''}`}        </span>)}
     </div>);
-=======
-<<<<<<< HEAD
-      )}
-    </div>
-  )
-<<<<<<< HEAD
-  )
-}
-}
-=======
-  );
-};
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </span>;
       )}
     </div>;

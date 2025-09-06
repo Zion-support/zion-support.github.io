@@ -18,10 +18,6 @@ interface JobMatchCardProps {;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
   showApplied?: boolean
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function JobMatchesCard(): any ({;
   match,;
@@ -41,28 +37,7 @@ export function JobMatchesCard(): any ({;
 
 }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-export function JobMatchesCard({
-  match
-  onApply
-  onDecline
-  showApplied = false
-}: JobMatchCardProps) {
-  const job = match.job
-  if (!job) return null
-<<<<<<< HEAD
-=======
-=======
-}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
@@ -70,10 +45,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   
   if (!job) return null,
   
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   return (
@@ -176,25 +147,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
 
               {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
             </div>;
           </div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
@@ -206,10 +164,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex items-center text-sm">
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -256,19 +210,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <Button 

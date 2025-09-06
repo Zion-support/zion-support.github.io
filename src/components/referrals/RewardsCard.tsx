@@ -29,10 +29,6 @@ import { ReferralReward } from "@/types/referrals"
 import { formatDate } from "@/utils/referralUtils"
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -46,13 +42,8 @@ import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter }
 
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface RewardsCardProps {
 
@@ -73,12 +64,6 @@ interface RewardsCardProps {
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
 
-<<<<<<< HEAD
-=======
-          <CardTitle className="flex items-center gap-2">
-            <BadgeDollarSign className="h-5 w-5" />
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             Your Rewards
           </CardTitle>
@@ -90,10 +75,6 @@ interface RewardsCardProps {
           </div>
         </CardContent>
       </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -108,10 +89,6 @@ interface RewardsCardProps {
             <BadgeDollarSign className='h-5 w-5' />
           <CardTitle className="flex items-center gap-2">
             <BadgeDollarSign className="h-5 w-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             Your Rewards
@@ -141,11 +118,6 @@ interface RewardsCardProps {
 
 
     )
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return (
     <Card>
@@ -154,10 +126,6 @@ interface RewardsCardProps {
           <BadgeDollarSign className='h-5 w-5' />
         <CardTitle className="flex items-center gap-2">
           <BadgeDollarSign className="h-5 w-5" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           Your Rewards
         </CardTitle>
@@ -208,11 +176,6 @@ interface RewardsCardProps {
   );
 };
 }
-<<<<<<< HEAD
-}
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
         <div className="space-y-4">
           {rewards.map((reward, index) => (
@@ -427,44 +390,3 @@ if ( {) {
     </Card>;
   );
 }
-<<<<<<< HEAD
-
-        <div className='space - y-4'>          {rewards.map ((reward, index) => (
-            <div;
-              key={reward.id}
-        <div className="space - y-4">;
-          {rewards.map ((reward, index, ) => (
-            <div;
-              key = {reward.id, }
-              className={`flex justify - between items - start ${
-                index !== rewards.length - 1 ? 'border - b pb - 3' : '';
-              }`}
-            >;
-              <div>;
-                <div className='flex items - center gap - 2'>;
-                  {reward.reward_type === 'credit' ? (
-                    <BadgeDollarSign className='h - 4 w - 4 text - green - 600' />) : (
-                    <Badge className='h - 4 w - 4 text - blue - 600' />)}
-                  <p className='font - medium'>                    {reward.reward_type === 'credit'                  <p className="font - medium">;
-                    {reward.reward_type === 'credit';
-                      ? `$${reward.amount?.to_fixed (2)} Credit`;
-                      : 'Visibility Boost'}
-                  </p>;
-                </div>;
-                <p className='text - xs text - muted - foreground mt - 1'>;
-                  Earned on {format_date (reward.created_at)}
-                </p>;
-                {reward.expires_at && (
-                  <p className='text - xs text - muted - foreground'>                    Expires on {format_date (reward.expires_at)}                <p className="text - xs text - muted - foreground mt - 1">;
-                  Earned on {format_date (reward.created_at)}
-                </p>;
-                {reward.expires_at && (
-                  <p className="text - xs text - muted - foreground">;
-                  </p>)}
-              </div>;
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;

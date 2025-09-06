@@ -92,13 +92,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
 
   if (!isAuthenticated) {;
     return (
-<<<<<<< HEAD
-      <Dialog open>
-        <DialogContent className="bg-zion-blue border-zion-blue-light text-white">
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           <DialogHeader>
             <DialogTitle>Authentication required</DialogTitle>
           </DialogHeader>
@@ -111,10 +104,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
               Sign In
             </Link>          </Button>          <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
           <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
             <Link href="/auth/login?returnTo=/equipment/recommendations">Sign In</Link>
@@ -133,10 +122,6 @@ export default function EquipmentRecommendations() { const { isAuthenticated, us
     );
   }
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         ))}

@@ -2,12 +2,6 @@ resetFilters: () => void
 }
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
 
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   searchQuery
   setSearchQuery
   statusFilter
@@ -54,20 +48,10 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
   resetFilters}) => {
   return (
     <div className="flex flex-col md:flex-row gap-4 mb-6">
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="relative flex-1">
         <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
         <Input
           placeholder="Search by user or content..."
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           value = {searchQuery,}
 
 
@@ -85,10 +69,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="actioned">Actioned</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -104,10 +84,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
           <SelectItem value="dangerous">Dangerous</SelectItem>
         </SelectContent>
       </Select>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 
@@ -126,10 +102,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
         </SelectContent>
       </Select>
       
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
       <Button variant="outline" onClick={resetFilters} className="md: w-auto">
@@ -137,12 +109,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
       </Button>
     </div>
   )
-<<<<<<< HEAD
-}
-'"}
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
           onChange = {(e,) => setSearchQuery(e && e.target.value),}
 
@@ -234,10 +200,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
     </div>;
   );
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 

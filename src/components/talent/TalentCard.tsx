@@ -22,10 +22,6 @@ import { TalentProfile } from "@/types/talent",
 import { RatingStars } from '@/components/RatingStars',
 import { useAuth } from '@/context/auth/AuthProvider',
 import { useCart } from '@/context/CartContext',
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 export interface TalentCardProps {
@@ -50,10 +46,6 @@ export interface TalentCardProps {;
   onViewProfile: (id: string) => void,;
   onRequestHire: (talent: TalentProfile) => void,;
   isAuthenticated: boolean;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 }
@@ -71,36 +63,10 @@ const TalentCardComponent = ({
     if (onViewProfile) {
       onViewProfile(talent.id)
     }
-<<<<<<< HEAD
-  }
-  },;
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
-  },
-
-=======
-<<<<<<< HEAD
-  }
-=======
-<<<<<<< HEAD
-=======
-  },;
-  const handleRequestHire = (e: React.MouseEvent) => {;
-    e.preventDefault(),;
-    e.stopPropagation(),;
-    if (onRequestHire) {;
-      onRequestHire(talent);
-    }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   },
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
 
@@ -165,11 +131,6 @@ const TalentCardComponent = ({;
       tabIndex = {0,}
       onClick={handleViewProfile}
       tabIndex={0}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       <div className="p-6">
         <div className="flex items-start">
@@ -182,10 +143,6 @@ const TalentCardComponent = ({;
                   alt = {talent.full_name,}
                   src={talent.profile_picture_url}
                   alt={talent.full_name}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
                   className="w-full h-full object-cover"
@@ -222,10 +179,6 @@ const TalentCardComponent = ({;
 
 
             
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
             {/* Location & Availability */}
             <div className="mt-2 flex flex-wrap gap-3 text-sm">
@@ -247,10 +200,6 @@ const TalentCardComponent = ({;
             </div>;
           </div>;
         </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
         {/* Skills */}
@@ -269,50 +218,11 @@ const TalentCardComponent = ({;
 
                 <span
                   key = {index,}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light">;
 
               {skills.map((skill, index) => (
                 <span 
                   key={index}
-<<<<<<< HEAD
-
-                  className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light"
-                >
-                  {skill}
-                </span>;
-              ))}
-              {(talent.skills?.length || 0) > 5 && (
-                <span className="px-2 py-1 text-xs rounded-full bg-zion-purple/20 text-zion-cyan">
-                  +{(talent.skills?.length || 0) - 5} more
-                </span>
-              )}
-            </div>
-          </div>
-        )}
-
-
-
-        {/* Hourly Rate & Actions */}
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent && talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent && talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-          </div>
-          
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
           <div className="flex items-center gap-2">
@@ -326,11 +236,6 @@ const TalentCardComponent = ({;
                 variant="secondary"
                 onClick = {handleRequestHire,}
                 onClick={handleRequestHire}
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 className="bg-zion-purple hover:bg-zion-purple-light text-white"
               >
                 Hire
@@ -339,19 +244,6 @@ const TalentCardComponent = ({;
             <Button
               size="sm"
               variant="ghost"
-<<<<<<< HEAD
-              onClick={(e,) => {
-                e.stopPropagation()
-              onClick={(e) => {
-              onClick={(e) => {
-=======
-
-
-              onClick={(e) => {
-              onClick={(e) => {
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 e.stopPropagation(),
                 handleViewProfile()
               }}
@@ -364,54 +256,6 @@ const TalentCardComponent = ({;
       </div>
     </Card>
   )
-<<<<<<< HEAD
-}
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
-export const TalentCard = React.memo(TalentCardComponent)
-TalentCard.displayName = 'TalentCard'
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-},
-
-export const TalentCard = React.memo(TalentCardComponent),
-TalentCard.displayName = 'TalentCard',
-;
-export const TalentCard = React.memo(TalentCardComponent);
-TalentCard.displayName = 'TalentCard';
-        <div className="mt-5 flex items-center justify-between">;
-          <div>;
-            {talent.hourly_rate ? (;
-              <div className="text-white font-bold">;
-                ${talent.hourly_rate}
-                <span className="text-zion-slate-light font-normal">/hr</span>;
-              </div>;
-            ) : (;
-              <div className="text-zion-slate-light">Rate not specified</div>;
-            )}
-          </div>;
-          <div className="flex items-center gap-2">;
-            {isAuthenticated && (;
-              <Button;
-                size="sm";
-                variant="secondary";
-                onClick={handleRequestHire}
-                className="bg-zion-purple hover:bg-zion-purple-light text-white";
-              >;
-                Hire;
-              </Button>;
-            )}
-            <Button;
-              size="sm";
-              variant="ghost";
-              onClick={(e) => {;
-                e.stopPropagation(),;
-=======
-
-              onClick={(e,) => {;
-                e && e.stopPropagation(),;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 handleViewProfile();
               }}
               className="text-zion-cyan hover: text-white hover:bg-zion-blue-light";
@@ -566,10 +410,6 @@ if ( {) {
           </div>;
         </div>;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
     </Card>);
