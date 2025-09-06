@@ -1,14 +1,20 @@
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
-<<<<<<< HEAD
+import typescript from '@typescript-eslint/eslint-plugin';
+import typescriptParser from '@typescript-eslint/parser';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
-import typescript from '@typescript-eslint/eslint-plugin';
-import tsparser from '@typescript-eslint/parser';
+import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
 
+const compat = new FlatCompat({
+  baseDirectory: import.meta.dirname,
+  recommendedConfig: js.configs.recommended,
+  allConfig: js.configs.all,
+});
+
 export default [
-  js.configs.recommended,
+  ...compat.extends('next/core-web-vitals'),
   {
     ignores: [
       'node_modules/**',
@@ -80,7 +86,7 @@ export default [
     ],
   },
   {
-    files: ['src/**/*.{js,jsx,ts,tsx}', 'app/**/*.{js,jsx,ts,tsx}'],
+    files: ['src/**/*.{js,jsx,ts,tsx}', 'pages/**/*.{js,jsx,ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
       globals: {
@@ -96,27 +102,7 @@ export default [
         beforeAll: 'readonly',
         afterAll: 'readonly',
       },
-      parser: tsparser,
-=======
-import typescript from '@typescript-eslint/eslint-plugin';
-import typescriptParser from '@typescript-eslint/parser';
-import react from 'eslint-plugin-react';
-import reactHooks from 'eslint-plugin-react-hooks';
-import nextPlugin from '@next/eslint-plugin-next';
-
-const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
-  recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
-});
-
-export default [
-  ...compat.extends('next/core-web-vitals'),
-  {
-    files: ['**/*.{js,jsx,ts,tsx}'],
-    languageOptions: {
       parser: typescriptParser,
->>>>>>> main
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -127,9 +113,9 @@ export default [
     },
     plugins: {
       '@typescript-eslint': typescript,
-<<<<<<< HEAD
-      'react': react,
+      react,
       'react-hooks': reactHooks,
+      '@next/next': nextPlugin,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -145,6 +131,8 @@ export default [
       'no-console': ['warn', { allow: ['warn', 'error'] }],
       'prefer-const': 'error',
       'no-debugger': 'warn',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
     },
     settings: {
       react: {
@@ -171,19 +159,4 @@ export default [
       'no-console': 'off',
     },
   },
-=======
-      react,
-      'react-hooks': reactHooks,
-      '@next/next': nextPlugin,
-    },
-    rules: {
-      'react/react-in-jsx-scope': 'off',
-      'react/prop-types': 'off',
-      '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn',
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'warn',
-    },
-  },
->>>>>>> main
 ];

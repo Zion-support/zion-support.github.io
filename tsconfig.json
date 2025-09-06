@@ -1,9 +1,5 @@
 {
   "compilerOptions": {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
     "target": "ES2020",
     "lib": [
       "dom",
@@ -16,30 +12,13 @@
       "es2021",
       "es2022"
     ],
-<<<<<<< HEAD
-=======
-=======
-    "target": "es5",
-    "lib": ["dom", "dom.iterable", "es6"],
->>>>>>> main
->>>>>>> main
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
     "noEmit": true,
     "esModuleInterop": true,
-<<<<<<< HEAD
     "module": "esnext",
     "moduleResolution": "bundler",
-=======
-<<<<<<< HEAD
-    "module": "ESNext",
-    "moduleResolution": "node",
-=======
-    "module": "esnext",
-    "moduleResolution": "bundler",
->>>>>>> main
->>>>>>> main
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
@@ -51,7 +30,6 @@
     ],
     "baseUrl": ".",
     "paths": {
-<<<<<<< HEAD
       "@/*": ["./src/*"],
       "@/components/*": ["./src/components/*"],
       "@/pages/*": ["./src/pages/*"],
@@ -62,17 +40,7 @@
       "@/assets/*": ["./src/assets/*"]
     },
     "allowSyntheticDefaultImports": true
-  }
-=======
-      "@/*": ["./*"],
-      "@/components/*": ["./components/*"],
-      "@/pages/*": ["./pages/*"],
-      "@/styles/*": ["./styles/*"],
-      "@/utils/*": ["./utils/*"],
-      "@/types/*": ["./types/*"]
-    }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
->>>>>>> main
 }

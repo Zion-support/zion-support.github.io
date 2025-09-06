@@ -4,15 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
-    "dev": "vite",
-    "build": "vite build",
-=======
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "build:netlify": "node scripts/build-with-error-handling.js",
->>>>>>> main
     "prebuild": "echo \"Starting build...\"",
     "export": "vite build",
     "postbuild": "echo \"Build completed\"",
@@ -302,19 +297,9 @@
     "@radix-ui/react-toast": "^1.1.5",
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-tooltip": "^1.0.7",
-<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.9.0",
     "@stripe/stripe-js": "^7.9.0",
-=======
-<<<<<<< HEAD
-    "@reduxjs/toolkit": "^2.9.0",
-    "@stripe/stripe-js": "^7.9.0",
-=======
-    "@reduxjs/toolkit": "^2.8.2",
-    "@stripe/stripe-js": "^2.3.0",
     "@sendgrid/mail": "^8.1.5",
->>>>>>> main
->>>>>>> main
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -425,15 +410,8 @@
     "ts-jest": "^29.4.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2",
-<<<<<<< HEAD
-    "vite": "^7.1.4"
-=======
     "vite": "^7.1.4",
     "web-vitals": "^5.1.0"
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> main
   },
   "engines": {
     "node": ">=18.0.0",
@@ -460,8 +438,4 @@
   ],
   "author": "Zion Tech Group",
   "license": "MIT"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> main

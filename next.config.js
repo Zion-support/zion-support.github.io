@@ -1,13 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-<<<<<<< HEAD
   reactStrictMode: true,
-};
-
-export default nextConfig;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
   compress: true,
   poweredByHeader: false,
   generateEtags: true,
@@ -15,12 +8,14 @@ export default nextConfig;
     formats: ['image/webp', 'image/avif'],
     minimumCacheTTL: 60,
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384]
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['images.unsplash.com', 'via.placeholder.com'],
   },
   experimental: {
     optimizeCss: true,
     optimizePackageImports: ['lucide-react', '@radix-ui/react-icons']
   },
+  serverExternalPackages: ['sharp'],
   webpack: (config, { dev, isServer }) => {
     if (dev) {
       config.watchOptions = {
@@ -77,51 +72,6 @@ export default nextConfig;
     }
     
     return config;
-  }
-=======
-	reactStrictMode: false,
-	trailingSlash: true,
-	output: 'export',
-	images: {
-		unoptimized: true
-	},
-	eslint: {
-		ignoreDuringBuilds: true
-	},
-	async redirects() {
-		return [
-			{ source: '/api-documentation', destination: '/api-docs', permanent: true },
-			{ source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
-		];
-	},
-	webpack: (config, { isServer }) => {
-		// Exclude problematic directories from webpack compilation
-		config.watchOptions = {
-			...config.watchOptions,
-			ignored: ['**/apps/**', '**/temp_conflicts/**', '**/node_modules/**']
-		};
-
-		// Add custom webpack rule to ignore apps directory
-		config.module.rules.push({
-			test: /\.(ts|tsx|js|jsx)$/,
-			include: /apps\//,
-			use: 'ignore-loader'
-		});
-
-		return config;
-	}
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-};
-
-export default nextConfig;
-=======
-  reactStrictMode: true,
-  experimental: {
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  images: {
-    domains: ['images.unsplash.com', 'via.placeholder.com'],
-    formats: ['image/webp', 'image/avif'],
   },
   async headers() {
     return [
@@ -151,14 +101,9 @@ export default nextConfig;
         destination: '/',
         permanent: true,
       },
+      { source: '/api-documentation', destination: '/api-docs', permanent: true },
+      { source: '/ai-consciousness-evolution-2025', destination: '/ai-consciousness-evolution-2029', permanent: false }
     ];
-  },
-  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
-    // Add custom webpack configuration here if needed
-    return config;
-  },
-  env: {
-    CUSTOM_KEY: process.env.CUSTOM_KEY,
   },
   typescript: {
     ignoreBuildErrors: false,
@@ -166,31 +111,9 @@ export default nextConfig;
   eslint: {
     ignoreDuringBuilds: false,
   },
-  output: 'standalone',
-  poweredByHeader: false,
-  compress: true,
-  generateEtags: true,
-  httpAgentOptions: {
-    keepAlive: true,
-  },
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
-  distDir: '.next',
-  assetPrefix: '',
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
   trailingSlash: false,
   skipTrailingSlashRedirect: true,
   skipMiddlewareUrlNormalize: true,
-  experimental: {
-    optimizePackageImports: ['@radix-ui/react-icons'],
-  },
-  serverExternalPackages: ['sharp'],
 };
 
-module.exports = nextConfig;
->>>>>>> main
->>>>>>> main
+export default nextConfig;
