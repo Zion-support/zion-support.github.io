@@ -52,9 +52,15 @@ import {
   BookOpenCheck,
   HelpCircle,
   FileText,
+<<<<<<< HEAD
   Video,;
   Headphones,;} from 'lucide-react';import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight, ;
+=======
+  Video,
+  Headphones,;} from 'lucide-react';import { 
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight, 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users;
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare;
@@ -405,6 +411,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+<<<<<<< HEAD
   return (
     <footer className='relative bg-black text-white overflow-hidden'>
       {/* Background Effects */}
@@ -428,6 +435,9 @@ const UltraFuturisticFooter2035: React.FC = () => {
             duration: 20,
             repeat: Infinity,
             ease: 'linear',          }}
+=======
+          }}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       <div className='relative z-10'>            ease: 'linear'
@@ -467,6 +477,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
                     </p>
                   </div>
                 </div>
+<<<<<<< HEAD
                 <p className='text-gray-300 leading-relaxed max-w-md'>
                   Leading the future with cutting-edge AI consciousness, quantum
                   computing, and innovative micro SAAS solutions. Transform your
@@ -522,12 +533,23 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       className="p-2 bg-gray-800/50 hover:bg-gray-700/50 rounded-lg text-gray-400 hover:text-white transition-all duration-200 hover:scale-110"
+=======
+
+                {/* Social Links */}
+
+                    >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {social.icon}
                     </a>
                   ))}
                 </div>
               </motion.div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Footer Sections */}
             {footerSections.map((section, index) => (
               <motion.div
@@ -536,6 +558,10 @@ const UltraFuturisticFooter2035: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='space-y-4'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='flex items-center gap-2'>
                   {section.icon}
@@ -564,6 +590,10 @@ const UltraFuturisticFooter2035: React.FC = () => {
                             ? 'text-cyan-400 hover:text-cyan-300'                          link.featured 
                             ? 'text-cyan-400 hover:text-cyan-300' 
                             : 'text-gray-400 hover:text-white'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         }`}
                       >
                         {link.name}
@@ -574,12 +604,20 @@ const UltraFuturisticFooter2035: React.FC = () => {
               </motion.div>
             ))}
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Bottom Section */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3 }}
             className='mt-16 pt-8 border-t border-gray-800/50'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
               <div className='text-sm text-gray-400'>
@@ -634,7 +672,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 /* Animated grid */ 
+=======
+  /* Animated grid */ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon 
 }</a>) ) 
@@ -657,7 +699,11 @@ const UltraFuturisticFooter2035: React.FC = () => {
   /* Bottom Section */ 
 }<motion.div > <div className="flex flex-col md:flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>) 
 };
+<<<<<<< HEAD
 export default UltraFuturisticFooter2035;  )
 };
 
 export default UltraFuturisticFooter2035;
+=======
+export default UltraFuturisticFooter2035;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

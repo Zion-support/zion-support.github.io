@@ -1,5 +1,10 @@
 import React, { forwardRef } from 'react';
+<<<<<<< HEAD
 export type ResumeData = {;
+=======
+
+export type ResumeData = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   name: string;
   contact?: {
     email?: string;
@@ -27,6 +32,7 @@ export type ResumeData = {;
     start?: string;
     end?: string;
     location?: string;
+<<<<<<< HEAD
     bullets?: string[];
   }>;
   education?: Array<{
@@ -43,6 +49,10 @@ export type ResumeData = {;
     technologies?: string[];
   }>;
 };
+=======
+
+    {children}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export type ResumePreviewProps = {;
   data: ResumeData;
@@ -113,6 +123,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               {data.contact?.phone && <span>{data.contact.phone}</span>}
               {data.contact?.location && <span>{data.contact.location}</span>}
               {data.contact?.website && (
+<<<<<<< HEAD
                 <a
                   className='underline'
                   href={data.contact.website}
@@ -122,6 +133,9 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                 </a>
               )}
               {data.contact?.linkedin && (                <a className="underline" href={data.contact.website} target="_blank" rel="noreferrer">
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {data.contact.website}
                 </a>
               )}
@@ -150,6 +164,10 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               )}
             </div>
           </header>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Summary */}
           {data.summary && (
             <section className='mb-5'>
@@ -160,6 +178,10 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
               <SectionTitle>Professional Summary</SectionTitle>
               <p className="mt-2 text-sm leading-relaxed text-gray-800 dark:text-gray-200">{data.summary}</p>
             </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           )}
 
           {/* Skills & Technologies */}
@@ -178,6 +200,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                   <span
                     key={`tech-${idx}`}
                     className='px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700'
+<<<<<<< HEAD
                   >                    {t}              <SectionTitle>Skills & Technologies</SectionTitle>
               <div className="mt-2 text-sm flex flex-wrap gap-2">
                 {data.skills?.map((s, idx) => (
@@ -193,6 +216,19 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     {t}
                   </span>
                 ))}
+=======
+                  >                    {t}
+
+                    {s}
+                  </span>
+                ))}
+                {data.technologies?.map((t, idx) => (
+
+                    {t}
+
+                  </span>
+                ))}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </section>
           )}
@@ -209,6 +245,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                         {role.title}
                         {role.company ? ` • ${role.company}` : ''}
                       </h3>
+<<<<<<< HEAD
                       <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (              <SectionTitle>Work Experience</SectionTitle>
               <div className="mt-2 space-y-3">
                 {data.experience.map((role, idx) => (
@@ -220,6 +257,12 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                       </h3>
                       <div className="text-xs text-gray-600 dark:text-gray-300">
                         {(role.start || role.end) && (
+=======
+                      <div className='text-xs text-gray-600 dark:text-gray-300'>                        {(role.start || role.end) && (
+
+                        {(role.start || role.end) && (
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <span>
                             {role.start || ''}
                             {role.end ? ` – ${role.end}` : ''}
@@ -260,6 +303,12 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     <div className="font-medium text-gray-900 dark:text-white">{ed.institution}</div>
                     <div className="text-gray-700 dark:text-gray-300">
                       {[ed.degree, ed.start && ed.end ? `${ed.start} – ${ed.end}` : ed.start || ed.end]
+<<<<<<< HEAD
+=======
+
+                        .filter(Boolean)
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         .join(' • ')}
                     </div>
                   </div>
@@ -343,6 +392,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
 
 ResumePreview.displayName = 'ResumePreview';
 
+<<<<<<< HEAD
 export default ResumePreview;
 
 }
@@ -354,3 +404,6 @@ export default ResumePreview;
 }
 }
 }
+=======
+export default ResumePreview;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

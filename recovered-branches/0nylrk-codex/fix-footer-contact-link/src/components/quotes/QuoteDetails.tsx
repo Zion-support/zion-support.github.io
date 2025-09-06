@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription} from "@/components/ui/dialog";
 import {Button} from "@/components/ui/button";
@@ -8,10 +9,28 @@ import {Separator} from "@/components/ui/separator";
 import {QuoteStatusBadge} from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
 import {format} from "date-fns";
+=======
+import React from "react",
+import { 
+  Dialog,
+  DialogContent, 
+  DialogHeader, 
+  DialogTitle, 
+  DialogDescription 
+} from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { QuoteStatusBadge } from "./QuoteStatusBadge",
+import type { QuoteRequest } from "@/types/quotes",
+import { format } from "date-fns",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface QuoteDetailsProps {
   quote: QuoteRequest | null,
   isOpen: boolean,
   onClose: () => void
+<<<<<<< HEAD
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -25,6 +44,39 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       return dateString
     }
   };
+=======
+import React from "react",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogHeader,;
+  DialogTitle,;
+  DialogDescription;
+} from "@/components/ui/dialog",;
+import { Button } from "@/components/ui/button",;
+import { Calendar, User, Mail, Clock, DollarSign } from "lucide-react",;
+import { Card, CardContent } from "@/components/ui/card",;
+import { Separator } from "@/components/ui/separator",;
+import { QuoteStatusBadge } from "./QuoteStatusBadge",;
+import type { QuoteRequest } from "@/types/quotes",;
+import { format } from "date-fns",;
+interface QuoteDetailsProps {;
+  quote: QuoteRequest | null,;
+  isOpen: boolean,;
+  onClose: () => void;
+}
+;
+export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
+  if (!quote) return null,;
+  const formatDate = (dateString?: string) => {;
+    if (!dateString) return 'Not specified',;
+    try {;
+      return format(new Date(dateString), 'PPP');
+    } catch (e) {;
+      return dateString;
+    }
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
@@ -100,4 +152,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       </DialogContent>
     </Dialog>
   )
+<<<<<<< HEAD
 };
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

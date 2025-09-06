@@ -12,11 +12,14 @@ import Link from 'next/link';
 export default function MarketPricing() {;
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
 
+<<<<<<< HEAD
   const markets = [
     { id: 'ai-consciousness', name: 'AI Consciousness', icon: <Brain className="w-6 h-6" /> },
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ];
 
   const marketData = {
@@ -351,6 +354,10 @@ export default function MarketPricing() {;
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Competitive Analysis Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -727,6 +734,10 @@ export default function MarketPricing() {;
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Market Trends Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -781,6 +792,10 @@ export default function MarketPricing() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
@@ -842,6 +857,7 @@ pricingAnalysis: {
 pricingAnalysis: {
   lowEnd: '$20 per user/month', midRange: '$40 per user/month', highEnd: '$100 per user/month', ourPosition: 'Competitive pricing with AI advantages' 
 
+<<<<<<< HEAD
 };
 
 };
@@ -856,3 +872,6 @@ export default MarketPricing;export default MarketPricing;
 }
 }
 }
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

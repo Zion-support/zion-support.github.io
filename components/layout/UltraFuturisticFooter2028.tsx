@@ -202,6 +202,7 @@ const socialLinks = [
 
 export default function UltraFuturisticFooter2028() {
   return (
+<<<<<<< HEAD
     <footer className='bg-black/95 backdrop-blur-xl border-t border-purple-500/30'>
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
@@ -289,12 +290,21 @@ export default function UltraFuturisticFooter2028() {
                 <Globe className="w-4 h-4 text-purple-400" />
                 <a href={contactInfo.website} className="text-sm hover:text-white transition-colors">
                   {contactInfo.website}
+=======
+
+                  {contactInfo.website}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </a>
               </div>
             </div>
             {/* Social Links */}
             <div className='flex space-x-4 mt-6'>
               {socialLinks.map(social => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <a
                   key={social.name}
                   href={social.href}
@@ -302,6 +312,7 @@ export default function UltraFuturisticFooter2028() {
                   rel='noopener noreferrer'
                   className='w-10 h-10 bg-purple-900/30 hover:bg-purple-900/50 border border-purple-500/30 rounded-lg flex items-center justify-center text-purple-300 hover:text-white transition-all duration-300 hover:shadow-lg hover:shadow-cyan-400/40'
                 >
+<<<<<<< HEAD
                   <social.icon className='w-5 h-5' />                </a>                <a
                   key={social.name}
                   href={social.href}
@@ -317,6 +328,20 @@ export default function UltraFuturisticFooter2028() {
           {/* Service Categories */}
           <div className='lg:col-span-2'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+=======
+                  <social.icon className='w-5 h-5' />                </a>
+
+                </a>
+
+              ))}
+            </div>
+          </div>
+
+          {/* Service Categories */}
+          <div className='lg:col-span-2'>
+            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               🚀 Our Services
             </h3>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -352,9 +377,17 @@ export default function UltraFuturisticFooter2028() {
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+=======
+
+          {/* Quick Links */}
+          <div className='lg:col-span-1'>
+            <h3 className='text-lg font-semibold text-white mb-6 border-b border-purple-500/30 pb-2'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Quick Links
             </h3>
             {/* Company Links */}
@@ -386,11 +419,19 @@ export default function UltraFuturisticFooter2028() {
                 ))}
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Resource Links */}
             <div className='mb-6'>
               <h4 className='font-medium text-purple-300 mb-3'>Resources</h4>
               <ul className='space-y-2'>
                 {resourceLinks.map(link => (
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <li key={link.name}>
                     <Link
                       href={link.href}
@@ -408,10 +449,18 @@ export default function UltraFuturisticFooter2028() {
                 ))}
               </ul>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Newsletter Signup */}
             <div className='bg-purple-900/20 border border-purple-500/30 rounded-lg p-4'>
               <h4 className='font-medium text-white mb-3'>Stay Updated</h4>
               <p className='text-sm text-purple-200 mb-3'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Get the latest insights on future technology and AI innovations.
               </p>
               <div className='flex space-x-2'>
@@ -505,6 +554,7 @@ export default function UltraFuturisticFooter2028() {
           <MessageCircle className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300" />
         </Link>
       </div>
+<<<<<<< HEAD
       {/* Background Effects */}
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute top-0 left-0 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl'></div>
@@ -525,3 +575,7 @@ export default function UltraFuturisticFooter2028() {
 }
 }
 }
+=======
+
+      {/* Background Effects */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

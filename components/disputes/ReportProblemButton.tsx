@@ -21,6 +21,7 @@ export default function ReportProblemButton({
         Report a Problem
       </a>
     </Link>
+<<<<<<< HEAD
 );
 }
 export default function ReportProblemButton({
@@ -43,3 +44,6 @@ export default function ReportProblemButton({
     </Link>
   );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

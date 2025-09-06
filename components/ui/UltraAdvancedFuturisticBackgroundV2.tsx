@@ -318,12 +318,22 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
           transition={{
             duration: 7,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Quantum Energy Particles */}
       <div className='fixed inset-0 pointer-events-none z-20'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -348,15 +358,30 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
               opacity: [0, 1, 0];
               scale: [0, 1, 0]
             }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
         ))}
       </div>
+=======
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+      </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Neural Network Connections */}
       <div className='fixed inset-0 pointer-events-none z-30'>
         <svg className='w-full h-full'>
@@ -398,20 +423,35 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
+<<<<<<< HEAD
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+=======
+                ease: 'easeInOut',              }}
+
+              }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           ))}
         </svg>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Content */}
       <div className='relative z-40'>{children}</div>
     </div>
   );
 };
 
+<<<<<<< HEAD
 export default UltraAdvancedFuturisticBackgroundV2;    </div>
   )
 };
 
 export default UltraAdvancedFuturisticBackgroundV2;
+=======
+export default UltraAdvancedFuturisticBackgroundV2;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

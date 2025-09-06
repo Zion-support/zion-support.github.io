@@ -353,6 +353,11 @@ const serviceCategories = [
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -456,6 +461,10 @@ export default function UltraFuturisticNavigation2034() {;
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
               <span className='hover:text-cyan-400 transition-colors'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {contactInfo.mobile}
               </span>
             </div>
@@ -527,6 +536,10 @@ export default function UltraFuturisticNavigation2034() {;
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='relative'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-500 rounded-xl flex items-center justify-center'>
@@ -557,6 +570,7 @@ export default function UltraFuturisticNavigation2034() {;
               </div>
             </motion.div>
             {/* Desktop Navigation */}
+<<<<<<< HEAD
             <div className='hidden lg:flex items-center space-x-8'>
               {quickLinks.map(link => (
                 <Link
@@ -572,10 +586,15 @@ export default function UltraFuturisticNavigation2034() {;
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium"
+=======
+
+                >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
 
+<<<<<<< HEAD
               {/* Services Dropdown */}
               <div className='relative group'>
                 <button className='flex items-center space-x-1 text-gray-300 hover:text-cyan-400 transition-colors duration-200 font-medium'>
@@ -624,6 +643,8 @@ export default function UltraFuturisticNavigation2034() {;
                               key={service.name}
                               href={service.href}
                               className="block text-xs text-gray-300 hover:text-cyan-400 transition-colors"
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             >
                               {service.name}
                             </Link>
@@ -676,6 +697,10 @@ export default function UltraFuturisticNavigation2034() {;
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -708,6 +733,7 @@ export default function UltraFuturisticNavigation2034() {;
                   </Link>
                 ))}
 
+<<<<<<< HEAD
                 {/* Mobile Services Accordion */}
                 {serviceCategories.map(category => (
                   <div
@@ -734,6 +760,8 @@ export default function UltraFuturisticNavigation2034() {;
                       <ChevronDown className={`w-4 h-4 transition-transform duration-200 ${
                         activeDropdown === category.title ? 'rotate-180' : ''
                       }`} />
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </button>
                     <AnimatePresence>
                       {activeDropdown === category.title && (
@@ -781,6 +809,7 @@ export default function UltraFuturisticNavigation2034() {;
           )}
         </AnimatePresence>
       </nav>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
@@ -788,3 +817,10 @@ export default function UltraFuturisticNavigation2034() {;
     </>
   );
 }
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-20'></div>
+    </>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

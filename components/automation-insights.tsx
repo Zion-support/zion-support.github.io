@@ -154,15 +154,29 @@ export default function AutomationInsightsPage() {
                     <div className="text-4xl font-bold text-fuchsia-400 mb-2">{item.metric}</div>
                     <div className="text-lg font-semibold text-white mb-1">{item.label}</div>
                     <div className="text-sm text-white/70">{item.description}</div>
+<<<<<<< HEAD
                 ))}
               </div>
             </div>
+=======
+
+                  </div>
+
+                ))}
+              </div>
+            </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Automation Trends */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-fuchsia-400'>
                 Latest Automation Trends
               </h2>
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {automationTrends.map((trend, index) => (
                   <div
                     key={index}
@@ -184,6 +198,7 @@ export default function AutomationInsightsPage() {
                       href={`/blog/${trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'
                     >
+<<<<<<< HEAD
                       Read More <span className='ml-1'>→</span>                    </Link>                {automationTrends.map((trend, index) => (
                   <div key={index} className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 hover:bg-white/15 transition-all duration-300">
                     <div className="flex items-center justify-between mb-4">
@@ -198,10 +213,20 @@ export default function AutomationInsightsPage() {
                     >
                       Read More <span className="ml-1">→</span>
                     </Link>
+=======
+                      Read More <span className='ml-1'>→</span>                    </Link>
+
+                    </Link>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Automation Tools & Frameworks */}
             <div className='mb-16'>
               <h2 className='text-3xl font-bold mb-8 text-center text-green-400'>
@@ -235,6 +260,10 @@ export default function AutomationInsightsPage() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Call to Action */}
             <div className='bg-gradient-to-r from-cyan-400/20 to-fuchsia-400/20 backdrop-blur-xl rounded-2xl p-8 text-center'>
               <h2 className='text-3xl font-bold mb-4 text-white'>
@@ -243,6 +272,10 @@ export default function AutomationInsightsPage() {
               <p className='text-xl text-white/80 mb-6'>
                 Let our experts help you build the automation systems of the
                 future
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </p>
               <div className='flex flex-wrap justify-center gap-4'>
                 <Link
@@ -273,5 +306,10 @@ export default function AutomationInsightsPage() {
         </main>
       </div>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Layout from '../components/Layout';
 
@@ -10,6 +11,10 @@ export default function TestPage() {
     </Layout>;
   );
 }
+=======
+import React from 'react'
+import Head from 'next/head'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function TestPage() {
   return (
     <>
@@ -26,4 +31,11 @@ export default function TestPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

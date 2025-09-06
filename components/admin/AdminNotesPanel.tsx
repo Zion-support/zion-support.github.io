@@ -90,6 +90,7 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       await fetchNotes();
     } finally {
+<<<<<<< HEAD
       setAdding(false);    }      if (!res.ok) {
         alert('Failed to add note');
         return
@@ -98,6 +99,10 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       await fetchNotes()
     } finally {
       setAdding(false)
+=======
+      setAdding(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -178,5 +183,10 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
         )}
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

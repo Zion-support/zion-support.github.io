@@ -105,6 +105,7 @@ export default async function handler(
 
     const referralConversions = referralsData.filter(r => r.converted).length;
 
+<<<<<<< HEAD
     const geoCounts: Record<string, number> = {};
     usersData.forEach(u => {
       geoCounts[u.country || 'Unknown'] =
@@ -169,3 +170,6 @@ res.status(200).json({
   }}
 
 }
+=======
+    const geoCounts: Record<string, number> = {};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

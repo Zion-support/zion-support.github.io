@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const { spawn } = require('child_process'),;
+=======
+const { spawn } = require('child_process');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 console.log('🚀 Starting development server...'),;
 // Start the development server;
 const devProcess = spawn('npm', ['rundev'], {;

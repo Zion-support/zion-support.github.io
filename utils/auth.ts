@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export interface User {;
@@ -90,4 +91,8 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {;
   } catch {
     return null;
   }
+=======
+
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

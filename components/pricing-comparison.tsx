@@ -282,6 +282,7 @@ export default function PricingComparisonPage() {
                 View Comparison
               </Button>
               <Button
+<<<<<<< HEAD
                 href='/pricing'
                 variant='outline'
                 size='lg'
@@ -327,6 +328,11 @@ export default function PricingComparisonPage() {
                 >
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white mx-auto mb-6`}>
                     {insight.icon}
+=======
+
+                    {insight.icon}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <p className={`text-lg font-semibold ${insight.color}`}>
                     {insight.insight}
@@ -336,6 +342,10 @@ export default function PricingComparisonPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Detailed Comparison */}
         <section id='comparison' className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -457,6 +467,7 @@ export default function PricingComparisonPage() {
                           <div className='inline-flex items-center px-3 py-1 rounded-full bg-gray-500/20 text-gray-400 text-sm font-medium mb-4'>
                             {competitor.name}
                           </div>
+<<<<<<< HEAD
                           <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (                    <div key={compIndex} className="lg:col-span-1">
                       <Card className="h-full border border-gray-700">
                         <div className="text-center p-6">
@@ -464,6 +475,12 @@ export default function PricingComparisonPage() {
                             {competitor.name}
                           </div>
                           <div className="flex items-center justify-center mb-4">
+=======
+                          <div className='flex items-center justify-center mb-4'>                            {[...Array(5)].map((_, i) => (
+
+                            {[...Array(5)].map((_, i) => (
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               <Star
                                 key={i}
                                 className={`w-4 h-4 ${
@@ -476,6 +493,10 @@ export default function PricingComparisonPage() {
                             <span className='text-sm text-gray-400 ml-2'>
                               {competitor.rating}
                             </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                           <div className='mb-4'>
                             <p className='text-lg font-semibold text-white'>
@@ -544,10 +565,19 @@ export default function PricingComparisonPage() {
             ))}
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <section className='py-24 bg-gradient-to-r from-indigo-600 to-purple-600'>
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+              Ready to Save Money and Get Better Features?
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-indigo-100 mb-12'>
               Start your free trial today and see why thousands of businesses
@@ -578,6 +608,7 @@ export default function PricingComparisonPage() {
                 className="bg-white text-indigo-600 hover:bg-gray-100"
                 Try AI Content Generator
               </Button>
+<<<<<<< HEAD
               <Button
                 href='/cloud-monitoring'
                 variant='secondary'
@@ -605,3 +636,6 @@ export default function PricingComparisonPage() {
     </>
 );
 }
+=======
+              <Button
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

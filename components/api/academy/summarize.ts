@@ -44,6 +44,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ summary: text.trim() });
   } catch (err) {
     return fallback();
+<<<<<<< HEAD
   }
     const text = completion.choices?.[0]?.message?.content ?? '';
     return res.status(200).json({ summary: text.trim() })
@@ -51,3 +52,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return fallback()
 };
 }
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

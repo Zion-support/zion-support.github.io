@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }function getAllServices () : Service[] {
   return enhancedRealMicroSaasServices .concat (extraServices as Service[], additionalEnhancedServices as Service[]) .concat (newlyAddedServices as unknown as Service[]) .concat (curatedMarketServices as Service[]) .concat (new2025Services as unknown as Service[]) .concat (marketValidatedServices as unknown as Service[]) .concat (moreRealServices2025 as unknown as Service[]) .concat (verified2025Additions as unknown as Service[]) .concat (realServicesQ12025 as unknown as Service[]) 
 }return {
@@ -17,7 +21,11 @@ fallback: false
 }| Zion Tech Group</title> ;
 };
 null;
+<<<<<<< HEAD
 2)
+=======
+2) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 }/> </Head> </li>) ) 
 }</ul> </div>) ) 
@@ -58,5 +66,9 @@ null;
 };
 export default ServiceDetail 
 export default ServiceDetail
+<<<<<<< HEAD
 };
 ;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

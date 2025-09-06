@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {
   Bell,
   FileText,
@@ -84,3 +85,6 @@ export function AppSidebar() {
     </Sidebar>;
   );
 };
+=======
+import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

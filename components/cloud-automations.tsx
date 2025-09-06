@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from 'react';
+<<<<<<< HEAD
 export default function CloudAutomationsPage() {;
+=======
+
+export default function CloudAutomationsPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [data, setData] = useState<any>(null);
   useEffect(() => {
     fetch('/api/cloud-automations-status')

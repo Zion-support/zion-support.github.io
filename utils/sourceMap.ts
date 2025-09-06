@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock source map utility
 export function getSourceMapWithExistence() {
   return {
@@ -58,3 +59,6 @@ export function deployBasicTemplateForPath(
 }
 }
 }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

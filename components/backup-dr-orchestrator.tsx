@@ -4,6 +4,10 @@ import {Phone, Mail, MapPin, Check, ArrowRight, Shield} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { extraServices } from '../data/extra-services';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function BackupDROrchestratorPage() {
   const service = extraServices.find(s =>
     s.link.endsWith('/backup-dr-orchestrator');
@@ -98,5 +102,8 @@ export default function BackupDROrchestratorPage() {
   );
 }
 
+<<<<<<< HEAD
 ;
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

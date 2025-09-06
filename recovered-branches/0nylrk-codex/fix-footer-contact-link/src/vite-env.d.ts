@@ -51,6 +51,7 @@ declare let process: {;
 
 // Badge component type fixes
 declare module '@/components/ui/badge' {
+<<<<<<< HEAD
   export interface BadgeProps {};
 ;
   export const Badge: React.FC<BadgeProps>;
@@ -118,12 +119,100 @@ declare module '@livekit/components-react' {;
     serverUrl?: string,;
     onDisconnect?: () => void;
     className?: string;
+=======
+  export interface BadgeProps {
+    className?: string,
+    variant?: "default" | "secondary" | "destructive" | "outline",
+    children?: React.ReactNode,
+    key?: string | number
+},;
+// Badge component type fixes;
+declare module '@/components/ui/badge' {;
+  export interface BadgeProps {;
+    className?: string,;
+    variant?: "default" | "secondary" | "destructive" | "outline",;
+    children?: React.ReactNode,;
+    key?: string | number;
+  }
+;
+  export const Badge: React.FC<BadgeProps>;
+}
+;
+// FeatureCard type fixes;
+declare module '@/components/FeatureCard' {;
+  export interface FeatureCardProps {;
+    title: string,;
+    description: string,;
+    icon: React.ReactNode,;
+    className?: string,;
+    key?: number | string;
+  }
+}
+;
+// ListingScoreCard type fixes;
+declare module '@/components/ListingScoreCard' {;
+  export interface ListingScoreCardProps {;
+    title: string,;
+    description: string,;
+    category: string,;
+    image?: string,;
+    tags?: string[],;
+    author?: string,;
+    authorImage?: string,;
+    aiScore?: number,;
+    rating?: number,;
+    reviewCount?: number,;
+    key?: string | number,;
+    variant?: string;
+  }
+;
+  export const ListingScoreCard: React.FC<ListingScoreCardProps>;
+}
+;
+// ChatMessage type fixes;
+declare module '@/components/ChatAssistant/ChatMessage' {;
+  export interface ChatMessageProps {;
+    role: 'user' | 'assistant',;
+    message: string,;
+    timestamp?: Date,;
+    key?: string | number;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 ;
   export const VideoCall: React.FC<VideoCallProps>;
   export const LiveKitRoom: React.FC<any>;
 }
 ;
+<<<<<<< HEAD
+=======
+// ProductListingCard type fixes;
+declare module '@/components/ProductListingCard' {;
+  export interface ProductListingCardProps {;
+    listing: any,;
+    view?: any,  // Made optional to fix the errors;
+    onRequestQuote: (listingId: string) => void,;
+    key?: string | number;
+  }
+;
+  export const ProductListingCard: React.FC<ProductListingCardProps>;
+}
+;
+// Removed custom lucide-react stub;
+// Create a replacement stub for LiveKit components;
+declare module '@livekit/components-react' {;
+  export interface VideoCallProps {;
+    room?: string,;
+    token?: string,;
+    serverUrl?: string,;
+    onDisconnect?: () => void;
+    className?: string;
+  }
+;
+  export const VideoCall: React.FC<VideoCallProps>;
+  export const LiveKitRoom: React.FC<any>;
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 declare module '@livekit/components-styles' {;
   // Empty stub for the styles;
 }

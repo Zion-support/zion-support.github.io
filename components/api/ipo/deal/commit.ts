@@ -15,5 +15,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   writeJsonFile('deal/soft-commits.json', commits);
   res.status(200).json(record);  res.status(200).json(record)
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

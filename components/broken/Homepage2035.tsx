@@ -25,9 +25,15 @@ import {
   Cpu,
   Atom,
   Satellite,
+<<<<<<< HEAD
   Gamepad2,;
   Palette,;} from 'lucide-react';import {
   ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, ;
+=======
+  Gamepad2,
+  Palette,;} from 'lucide-react';import { 
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035';
@@ -203,6 +209,7 @@ const Homepage2035: React.FC = () => {
     ...innovative2025AIServicesBatch
   ];
 
+<<<<<<< HEAD
   const filteredServices = activeCategory === 'all' 
     ? allServices 
     : allServices.filter(service => {
@@ -218,6 +225,8 @@ const Homepage2035: React.FC = () => {
 
   if (isLoading) {
     return <LoadingFallback />
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   return (
@@ -229,8 +238,13 @@ const Homepage2035: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className='mb-8'        <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
+=======
+              className='mb-8'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -273,6 +287,10 @@ const Homepage2035: React.FC = () => {
                 </motion.button>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -317,25 +335,44 @@ const Homepage2035: React.FC = () => {
                   <div className='text-3xl font-bold text-white mb-1'>
                     {stat.value}
                   </div>
+<<<<<<< HEAD
                   <div className='text-gray-400 text-sm'>{stat.label}</div>                </motion.div>                  className="text-center"
                 >
                   <div className="text-cyan-400 mb-2 flex justify-center">{stat.icon}</div>
                   <div className="text-3xl font-bold text-white mb-1">{stat.value}</div>
                   <div className="text-gray-400 text-sm">{stat.label}</div>
+=======
+                  <div className='text-gray-400 text-sm'>{stat.label}</div>                </motion.div>
+
+                </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Revolutionary Technology Solutions
@@ -350,6 +387,10 @@ const Homepage2035: React.FC = () => {
                 Discover our comprehensive portfolio of cutting-edge services designed to transform your business
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Category Filter */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -362,6 +403,10 @@ const Homepage2035: React.FC = () => {
             >
               {categories.map((category) => (
                 <motion.button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={category.id}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -377,6 +422,10 @@ const Homepage2035: React.FC = () => {
                 </motion.button>
               ))}
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Services Grid */}
             <motion.div
               variants={staggerContainer}
@@ -397,6 +446,10 @@ const Homepage2035: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* View All Services Button */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -410,7 +463,12 @@ const Homepage2035: React.FC = () => {
                 className='bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-400 hover:to-pink-400 text-white font-bold py-4 px-8 rounded-full text-lg transition-all duration-300 flex items-center space-x-2 mx-auto'
               >
                 <span>View All Services</span>
+<<<<<<< HEAD
                 <ArrowRight className='w-5 h-5' />              </motion.button>              className="text-center mt-16"
+=======
+                <ArrowRight className='w-5 h-5' />              </motion.button>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <motion.button
                 whileHover={{ scale: 1.05 }}
@@ -430,11 +488,19 @@ const Homepage2035: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-900/50">
           <div className="max-w-7xl mx-auto">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className='text-4xl sm:text-5xl font-bold text-white mb-6'>
                 Why Choose Zion Tech Group?
@@ -529,6 +595,10 @@ const Homepage2035: React.FC = () => {
                   transition={{ duration: 0.8, delay: index * 0.1 }}
                   viewport={{ once: true }}
                   className='text-center p-6 rounded-2xl bg-gray-800/50 border border-gray-700/30 hover:border-cyan-400/50 transition-all duration-300 group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300'>
                     {feature.icon}
@@ -536,6 +606,7 @@ const Homepage2035: React.FC = () => {
                   <h3 className='text-xl font-bold text-white mb-3'>
                     {feature.title}
                   </h3>
+<<<<<<< HEAD
                   <p className='text-gray-300'>{feature.description}</p>                </motion.div>                >
                   <div className="text-cyan-400 mb-4 flex justify-center group-hover:scale-110 transition-transform duration-300">
                     {feature.icon}
@@ -543,15 +614,29 @@ const Homepage2035: React.FC = () => {
                   <h3 className="text-xl font-bold text-white mb-3">{feature.title}</h3>
                   <p className="text-gray-300">{feature.description}</p>
                 </motion.div>
+=======
+                  <p className='text-gray-300'>{feature.description}</p>                </motion.div>
+
+                </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -605,7 +690,11 @@ const Homepage2035: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 animate: {
+=======
+  animate: {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
 
@@ -671,7 +760,11 @@ const filteredServices = activeCategory === 'all' ? allServices return (<Layout>
 
 }> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8" > Join thousands of companies already leveraging our cutting-edge technology solutions </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <motion.button > <span>Get Started Today</span> <ArrowRight className="w-5 h-5" /> </motion.button> <motion.button 
 };
+<<<<<<< HEAD
 export default Homepage2035;  )
 };
 
 export default Homepage2035;
+=======
+export default Homepage2035;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

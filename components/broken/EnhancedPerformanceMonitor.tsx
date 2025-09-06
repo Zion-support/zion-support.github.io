@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 //FCP recommendations if (metrics.fcp > 2000) {
+=======
+ //FCP recommendations if (metrics.fcp > 2000) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   recs.push ({
   
 }return recs;

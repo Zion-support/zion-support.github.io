@@ -61,13 +61,19 @@ export default function TrustPage() {;
     form.reset();  }
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
     form.reset()
+=======
+    <EnhancedLayout>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   return (
     <EnhancedLayout>
+<<<<<<< HEAD
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
@@ -131,6 +137,11 @@ export default function TrustPage() {;
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
+=======
+
+                      </li>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     ))}
                   </ul>
                 </div>
@@ -139,6 +150,7 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
+<<<<<<< HEAD
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
@@ -197,3 +209,11 @@ export default function TrustPage() {;
     </EnhancedLayout>
 );
 }
+=======
+            </div>
+
+                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
+                </div>
+              )}
+            </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

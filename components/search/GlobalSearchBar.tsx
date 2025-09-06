@@ -110,6 +110,7 @@ export default function GlobalSearchBar() {;
     rec.start()
   };
 
+<<<<<<< HEAD
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">
       <input
@@ -138,6 +139,10 @@ export default function GlobalSearchBar() {;
                   }}
                   className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
                 >
+=======
+                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {s}
                 </button>
               </li>
@@ -146,5 +151,9 @@ export default function GlobalSearchBar() {;
         </div>
       )}
     </form>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

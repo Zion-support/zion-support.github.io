@@ -52,6 +52,11 @@ import Link from 'next/link';import {
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight
 } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+// Import our new innovative services
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { innovative2046AIServices } from '../data/innovative-2046-ai-services';
 import { innovative2046ITServices } from '../data/innovative-2046-it-services';
 import { innovative2046MicroSAASServices } from '../data/innovative-2046-micro-saas-services';
@@ -81,12 +86,20 @@ const QuantumLoadingFallback = () => (
         />
       ))}
     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     {/* Quantum loading animation */}
     <motion.div
       initial={{ opacity: 0, scale: 0.5 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 1 }}
       className='text-center relative z-10'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     >
       <div className='relative'>
         <motion.div
@@ -251,6 +264,7 @@ const Homepage2046: React.FC = () => {
         {/* Enhanced animated background */}
         <div className='absolute inset-0'>
           {/* Quantum grid effect */}
+<<<<<<< HEAD
           <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>  ];
 
   const filteredServices = allServices.filter(service => {
@@ -269,11 +283,19 @@ const Homepage2046: React.FC = () => {
         <div className="absolute inset-0">
           {/* Quantum grid effect */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse"></div>
+=======
+          <div className='absolute inset-0 bg-[linear-gradient(rgba(6,182,212,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(6,182,212,0.1)_1px,transparent_1px)] bg-[size:50px_50px] animate-pulse'></div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Floating orbs */}
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
               className='absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               animate={{
                 x: [0, Math.random() * 100 - 50],
                 y: [0, Math.random() * 100 - 50],
@@ -300,15 +322,27 @@ const Homepage2046: React.FC = () => {
                 left: Math.random() * 100 + '%',
                 top: Math.random() * 100 + '%'}}
             />
+<<<<<<< HEAD
           ))}
         </div>
+=======
+
+          ))}
+        </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Hero Section */}
         <section
           id='hero'
           className='relative z-10 min-h-screen flex items-center justify-center px-4'
         >
+<<<<<<< HEAD
           <div className='text-center max-w-6xl mx-auto'>            <motion.div        <section id="hero" className="relative z-10 min-h-screen flex items-center justify-center px-4">
           <div className="text-center max-w-6xl mx-auto">
+=======
+          <div className='text-center max-w-6xl mx-auto'>            <motion.div
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
@@ -414,6 +448,7 @@ const Homepage2046: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 2 }}
             >
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-center'>
                 <div className='flex flex-col items-center'>
                   <Phone className='w-6 h-6 text-cyan-400 mb-2' />
@@ -447,11 +482,20 @@ const Homepage2046: React.FC = () => {
           <div className='max-w-7xl mx-auto'>            <motion.div        <section id="services" className="relative z-10 py-20 px-4">
           <div className="max-w-7xl mx-auto">
             <motion.div
+=======
+
+            <motion.div
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className='text-5xl md:text-6xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -471,6 +515,10 @@ const Homepage2046: React.FC = () => {
                 Discover our cutting-edge quantum AI, neural interface, and space technology solutions that are transforming industries worldwide.
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search and Filter */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -478,6 +526,10 @@ const Homepage2046: React.FC = () => {
               transition={{ duration: 1, delay: 0.2 }}
               viewport={{ once: true }}
               className='mb-12'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='flex flex-col md:flex-row gap-4 justify-center items-center'>
                 <div className='relative flex-1 max-w-md'>
@@ -491,6 +543,7 @@ const Homepage2046: React.FC = () => {
                   />
                 </div>
                 <div className='flex gap-2'>
+<<<<<<< HEAD
                   {categories.map(category => (                    <button            >
               <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
                 <div className="relative flex-1 max-w-md">
@@ -506,6 +559,12 @@ const Homepage2046: React.FC = () => {
                 <div className="flex gap-2">
                   {categories.map((category) => (
                     <button
+=======
+                  {categories.map(category => (                    <button
+
+                    <button
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       key={category}
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 ${
@@ -520,13 +579,22 @@ const Homepage2046: React.FC = () => {
                 </div>
               </div>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Services Grid */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.4 }}
               viewport={{ once: true }}
+<<<<<<< HEAD
               className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+              className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'            >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -537,6 +605,10 @@ const Homepage2046: React.FC = () => {
                   viewport={{ once: true }}
                   whileHover={{ y: -10, scale: 1.02 }}
                   className='group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full'>
                     <div className='flex items-start justify-between mb-4'>
@@ -547,6 +619,7 @@ const Homepage2046: React.FC = () => {
                         <span className='inline-block bg-gradient-to-r from-cyan-500 to-purple-600 text-white text-xs px-2 py-1 rounded-full'>
                           {service.category}
                         </span>
+<<<<<<< HEAD
                         <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (                >
                   <div className="bg-black/30 backdrop-blur-lg rounded-2xl p-6 border border-cyan-400/30 hover:border-cyan-400/60 transition-all duration-300 h-full">
                     <div className="flex items-start justify-between mb-4">
@@ -559,6 +632,12 @@ const Homepage2046: React.FC = () => {
                         </span>
                         <div className="flex items-center gap-1 mt-1">
                           {[...Array(5)].map((_, i) => (
+=======
+                        <div className='flex items-center gap-1 mt-1'>                          {[...Array(5)].map((_, i) => (
+
+                          {[...Array(5)].map((_, i) => (
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             <Star
                               key={i}
                               className={`w-4 h-4 ${
@@ -573,7 +652,13 @@ const Homepage2046: React.FC = () => {
                           </span>                        </div>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>                          <span className="text-gray-400 text-sm ml-1">({service.reviews})</span>
+=======
+
+                    <h3 className='text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors duration-300'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                       </div>
                     </div>
@@ -658,6 +743,10 @@ const Homepage2046: React.FC = () => {
                 </motion.div>
               ))}
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Call to Action */}
             <motion.div
               initial={{ opacity: 0, y: 50 }}
@@ -665,6 +754,10 @@ const Homepage2046: React.FC = () => {
               transition={{ duration: 1, delay: 0.6 }}
               viewport={{ once: true }}
               className='text-center mt-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='bg-gradient-to-r from-cyan-500/20 to-purple-600/20 backdrop-blur-lg rounded-3xl p-12 border border-cyan-400/30'>
                 <h3 className='text-3xl md:text-4xl font-bold text-white mb-6'>
@@ -729,7 +822,11 @@ const Homepage2046: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Homepage2046;  )
 };
 
 export default Homepage2046;
+=======
+export default Homepage2046;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

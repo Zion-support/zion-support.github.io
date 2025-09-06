@@ -120,6 +120,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       </div>
       <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
+<<<<<<< HEAD
   return (
     <section className="relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden">
       {/* Animated Background Elements */}
@@ -130,11 +131,21 @@ const ComprehensiveServicesShowcase2025 = () => {
       </div>
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
+=======
+      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+
+        {/* Header */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-4xl md:text-6xl font-bold bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent mb-6'>
             Revolutionary 2025 Services
@@ -150,6 +161,10 @@ const ComprehensiveServicesShowcase2025 = () => {
             Discover our comprehensive suite of cutting-edge micro SAAS services, IT solutions, and AI innovations designed to transform your business and drive success in the digital age.
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Service Categories */}
         <motion.div
           variants={containerVariants}
@@ -177,6 +192,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                   <h3 className='text-3xl font-bold text-white mb-2'>
                     {category.title}
                   </h3>
+<<<<<<< HEAD
                   <p className='text-gray-400 text-lg'>                    {category.description}            >
               {/* Category Header */}
               <div className="flex items-center mb-8">
@@ -189,11 +205,22 @@ const ComprehensiveServicesShowcase2025 = () => {
                   </h3>
                   <p className="text-gray-400 text-lg">
                     {category.description}
+=======
+                  <p className='text-gray-400 text-lg'>                    {category.description}
+
+                    {category.description}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </p>
                 </div>
               </div>
               {/* Services Grid */}
+<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+=======
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6'>                {category.services.map((service, serviceIndex) => (
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -201,12 +228,17 @@ const ComprehensiveServicesShowcase2025 = () => {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                     className='group relative bg-gradient-to-br from-slate-800/50 to-slate-700/30 backdrop-blur-xl rounded-2xl p-6 border border-slate-700/50 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:shadow-xl hover:shadow-cyan-500/30'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   >
                     {/* Service Header */}
                     <div className='mb-4'>
                       <h4 className='text-xl font-semibold text-white mb-2 group-hover:text-purple-300 transition-colors'>
                         {service.name}
                       </h4>
+<<<<<<< HEAD
                       <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}                  >
                     {/* Service Header */}
                     <div className="mb-4">
@@ -215,6 +247,12 @@ const ComprehensiveServicesShowcase2025 = () => {
                       </h4>
                       <p className="text-gray-400 text-sm leading-relaxed">
                         {service.description}
+=======
+                      <p className='text-gray-400 text-sm leading-relaxed'>                        {service.description}
+
+                        {service.description}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </p>
                     </div>
                     {/* Features */}
@@ -250,6 +288,10 @@ const ComprehensiveServicesShowcase2025 = () => {
                         )}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Pricing */}
                     <div className='mb-4'>
                       <div className='flex items-center justify-between'>
@@ -321,6 +363,7 @@ const ComprehensiveServicesShowcase2025 = () => {
                             {useCase}
                           </span>
                         ))}
+<<<<<<< HEAD
                     </div>
                     {/* CTA Button */}
                     <div className='mt-6'>
@@ -338,22 +381,42 @@ const ComprehensiveServicesShowcase2025 = () => {
                       >
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
+=======
+
+                      </div>
+                    </div>
+
+                    {/* CTA Button */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </a>
                     </div>
                     {/* Hover Effect Overlay */}
                     <div className='absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                    <div className="absolute inset-0 bg-gradient-to-r from-purple-600/10 to-pink-600/10 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
                   </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ))}
               </div>
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className='text-center mt-20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='bg-gradient-to-r from-purple-600/20 to-pink-600/20 backdrop-blur-xl rounded-3xl p-8 border border-purple-500/30'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -407,7 +470,11 @@ const ComprehensiveServicesShowcase2025 = () => {
   );
 };
 
+<<<<<<< HEAD
 export default ComprehensiveServicesShowcase2025;  )
 };
 
 export default ComprehensiveServicesShowcase2025;
+=======
+export default ComprehensiveServicesShowcase2025;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

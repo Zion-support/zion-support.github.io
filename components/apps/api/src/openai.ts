@@ -25,5 +25,8 @@ Add responsibilities, requirements, and benefits in bullet points.`;
   });
   return completion.output_text
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

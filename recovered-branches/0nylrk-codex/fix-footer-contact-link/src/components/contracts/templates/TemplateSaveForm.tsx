@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {useForm} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -11,17 +12,32 @@ import {Button} from "@/components/ui/button";
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Switch} from "@/components/ui/switch";
+=======
+import { useState } from "react",
+import { useForm } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Loader2 } from "lucide-react",
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",
+import { ContractTemplate } from "@/types/contracts",
+import { useContractTemplates } from "@/hooks/useContractTemplates",
+import { Button } from "@/components/ui/button",
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const formSchema = z.object({
-  title: z.string().min(1, "Title is required");
+  title: z.string().min(1, "Title is required"),
   isDefault: z.boolean().default(false)}),
 
-type FormValues = z.infer<typeof formSchema>;
+type FormValues = z.infer<typeof formSchema>,
 
 interface TemplateSaveFormProps {
   onCancel: () => void,
   onComplete: () => void,
-  editTemplate?: ContractTemplate | null;
+  editTemplate?: ContractTemplate | null,
   currentValues?: ContractFormValues
+<<<<<<< HEAD
 }
 
 export function TemplateSaveForm({;
@@ -58,13 +74,73 @@ export function TemplateSaveForm({;
           title: values.title,
           templateData: currentValues,
           isDefault: values.isDefault})
+=======
+import { useState } from "react",;
+import { useForm } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { Loader2 } from "lucide-react",;
+import { ContractFormValues } from "@/components/contracts/components/ContractForm",;
+import { ContractTemplate } from "@/types/contracts",;
+import { useContractTemplates } from "@/hooks/useContractTemplates",;
+import { Button } from "@/components/ui/button",;
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Switch } from "@/components/ui/switch",;
+const formSchema = z.object({;
+  title: z.string().min(1, "Title is required"),;
+  isDefault: z.boolean().default(false)}),;
+type FormValues = z.infer<typeof formSchema>,;
+interface TemplateSaveFormProps {;
+  onCancel: () => void,;
+  onComplete: () => void,;
+  editTemplate?: ContractTemplate | null,;
+  currentValues?: ContractFormValues;
+}
+;
+export function TemplateSaveForm({;
+  onCancel,;
+  onComplete,;
+  editTemplate,;
+  currentValues;
+}: TemplateSaveFormProps) {;
+  const [saving, setSaving] = useState(false),;
+  const { createTemplate, updateTemplate } = useContractTemplates(),;
+  const form = useForm<FormValues>({;
+    resolver: zodResolver(formSchema),;
+    defaultValues: {;
+      title: editTemplate?.title || "",;
+      isDefault: editTemplate?.is_default || false}}),;
+  const onSubmit = async (values: FormValues) => {;
+    if (!currentValues && !editTemplate) {;
+      return;
+    }
+;
+    setSaving(true),;
+    try {;
+      if (editTemplate) {;
+        await updateTemplate.mutateAsync({;
+          templateId: editTemplate.id,;
+          title: values.title,;
+          templateData: editTemplate.template_data,;
+          isDefault: values.isDefault});
+      } else if (currentValues) {;
+        await createTemplate.mutateAsync({;
+          title: values.title,;
+          templateData: currentValues;
+          isDefault: values.isDefault});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
       onComplete()
     } finally {
       setSaving(false)
     }
+<<<<<<< HEAD
   };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   return (
     <Form {...form}>

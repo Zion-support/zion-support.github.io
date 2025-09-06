@@ -43,6 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!auth) {
     return res.status(401).json({ error: "Unauthorized" });
   }
+<<<<<<< HEAD
   if (!(await enforceRateLimit(auth.apiKey))) {
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 429);
     return res.status(429).json({ error: "Rate limit exceeded" })
@@ -71,3 +72,8 @@ await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
 }
 }
 }
+=======
+  const { email, programTrack } = req.body || {};
+  if (!email) {
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

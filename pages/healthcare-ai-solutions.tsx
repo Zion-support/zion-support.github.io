@@ -7,7 +7,15 @@ export default function HealthcareAISolutions() {
 			slug="healthcare-ai-solutions"
 			description="Deploy AI for diagnostics assistance, care management, operational optimization, and compliance workflows. Improve outcomes while protecting patient privacy."
 			subtitle="Clinically aware AI that augments providers and reduces administrative burden."
+<<<<<<< HEAD
 			pricePerMonthUSD={2999}
+=======
+			pricePerMonthUSD={2999  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 			implementationWeeks="Implementation: 6–12 weeks"
 			roiNote="Reduce admin time 20–40% and improve throughput"
 			features={[
@@ -17,9 +25,33 @@ export default function HealthcareAISolutions() {
 				"Capacity forecasting and staffing optimization",
 				"HIPAA-compliant data pipelines and audit",
 				"EHR integrations: HL7/FHIR, Epic, Cerner"
+<<<<<<< HEAD
 			]}
 			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]}
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
 };
+=======
+			]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			industries={["Hospitals", "Clinics", "Payers", "HealthTech"]  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
+		/>
+	)
+			canonical="https: //ziontechgroup.com/healthcare-ai-solutions";
+		/>;
+	);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

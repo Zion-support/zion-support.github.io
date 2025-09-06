@@ -1,5 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const UltraFuturisticBackground2047: React.FC = () => {
   const [isClient, setIsClient] = useState(false);
 
@@ -12,6 +16,14 @@ const UltraFuturisticBackground2047: React.FC = () => {
       <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
     );
   }
+<<<<<<< HEAD
+=======
+
+  return (
+    <>
+      {/* Background Gradient */}
+      <div className='fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black' />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <>
@@ -201,12 +213,22 @@ const UltraFuturisticBackground2047: React.FC = () => {
                   duration: 3,
                   repeat: Infinity as any,
                   delay: i * 0.1,
+<<<<<<< HEAD
                   ease: 'easeInOut',                  ease: "easeInOut"
                 }}
+=======
+
+                }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               />
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Neon Glow Effects */}
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 opacity-5'>
           <div className='w-full h-full bg-gradient-to-r from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl' />
@@ -244,6 +266,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
             ease: "linear"
           }}
         />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Pulse Rings */}
         <motion.div
           className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4'
@@ -327,6 +353,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
           <div className="w-full h-full border-2 border-purple-400 rounded-full" />
         </motion.div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CSS for hexagon clip */}
       <style jsx>{`
         .clip-hexagon {
@@ -344,6 +374,7 @@ const UltraFuturisticBackground2047: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2047;        }
       `}</style>
     </>
@@ -351,3 +382,6 @@ export default UltraFuturisticBackground2047;        }
 };
 
 export default UltraFuturisticBackground2047;
+=======
+export default UltraFuturisticBackground2047;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

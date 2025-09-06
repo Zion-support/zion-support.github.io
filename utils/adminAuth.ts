@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 
 export interface Session {;
@@ -33,3 +34,6 @@ export const isAdmin = () => {
   // Placeholder implementation;
   return true;
 };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

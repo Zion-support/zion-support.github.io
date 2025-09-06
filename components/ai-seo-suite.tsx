@@ -26,8 +26,14 @@ import {
 } from 'lucide-react';
 export default function AISeosuitePage() {
   const features = [
+<<<<<<< HEAD
     {;
       icon: <Search className='w-8 h-8 text-white' />,import { Search, TrendingUp, Target, BarChart3, Globe, Zap, Users, CheckCircle, ArrowRight, Play, Star, Eye, Brain, Shield, Lock, Sparkles, ChartBar, Lightbulb, Rocket, Settings } from 'lucide-react';
+=======
+    {
+      icon: <Search className='w-8 h-8 text-white' />,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AISeosuitePage() {
   const features = [
     {
@@ -80,6 +86,7 @@ export default function AISeosuitePage() {
     },;
   ];
 
+<<<<<<< HEAD
   const seoTools = [
     {
       category: 'Keyword Research',
@@ -179,6 +186,8 @@ export default function AISeosuitePage() {
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,
       tools: ['Ranking trackerTraffic analysisConversion trackingCompetitor monitoringCustom dashboards']
     }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ];
 
   const pricingPlans = [
@@ -349,6 +358,11 @@ export default function AISeosuitePage() {
     { metric: 'Conversion Rate', value: '+80%', description: 'Increase in conversion rates' },
     { metric: 'ROI', value: '400%', description: 'Average return on investment' }
 
+<<<<<<< HEAD
+=======
+  ];
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <>
       <Head>
@@ -513,6 +527,7 @@ export default function AISeosuitePage() {
                 <h3 className='text-xl font-bold mb-4 text-white group-hover:text-blue-400 transition-colors duration-300'>
                   {feature.title}
                 </h3>
+<<<<<<< HEAD
                 <p className='text-gray-400 leading-relaxed'>                  {feature.description}              Powerful SEO Features
             </h2>
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -536,12 +551,22 @@ export default function AISeosuitePage() {
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
                   {feature.description}
+=======
+                <p className='text-gray-400 leading-relaxed'>                  {feature.description}
+
+                  {feature.description}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* SEO Tools Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -561,6 +586,7 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoTools.map((tool, index) => (
               <Card
@@ -595,6 +621,11 @@ export default function AISeosuitePage() {
                         <div key={toolIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                           {toolName}
+=======
+
+                          {toolName}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                       ))}
                     </div>
@@ -605,6 +636,10 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Success Metrics Section */}
       <section className='py-24 bg-gray-900 relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -624,6 +659,7 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
             {successMetrics.map((metric, index) => (
               <Card
@@ -647,10 +683,19 @@ export default function AISeosuitePage() {
                 <h3 className="text-xl font-bold mb-2 text-white">{metric.metric}</h3>
                 <p className="text-gray-400 text-sm">{metric.description}</p>
               </Card>
+=======
+
+              </Card>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -670,6 +715,7 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -710,6 +756,11 @@ export default function AISeosuitePage() {
                         <div key={benefitIndex} className="flex items-center text-sm text-gray-300">
                           <TrendingUp className="w-4 h-4 text-blue-400 mr-2 flex-shrink-0" />
                           {benefit}
+=======
+
+                          {benefit}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                       ))}
                     </div>
@@ -720,6 +771,10 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -760,6 +815,7 @@ export default function AISeosuitePage() {
                   </div>
                 )}
 
+<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -784,6 +840,10 @@ export default function AISeosuitePage() {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />
                       {feature}
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </li>
                   ))}
                 </ul>
@@ -804,6 +864,10 @@ export default function AISeosuitePage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -823,6 +887,7 @@ export default function AISeosuitePage() {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
+<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-4 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -848,15 +913,28 @@ export default function AISeosuitePage() {
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
+=======
+
+              </Card>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-green-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             Ready to Dominate Search Rankings?
           </h2>
           <p className='text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -907,6 +985,7 @@ export default function AISeosuitePage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
 
@@ -915,4 +994,7 @@ export default function AISeosuitePage() {
 }
 }
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

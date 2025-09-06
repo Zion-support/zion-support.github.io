@@ -8,6 +8,11 @@ export default function EndpointDetail({
 }: {;
   endpoint: EndpointSpec;
 }) {
+<<<<<<< HEAD
+=======
+
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     <div className='space-y-4'>
       <div>
         <div className='text-xl font-semibold text-high-contrast'>
@@ -42,6 +47,7 @@ export default function EndpointDetail({
         <CodeSamples samples={endpoint.samples} />
       </div>
       <div>
+<<<<<<< HEAD
         <div className='font-medium mb-2'>Try It</div>
         <TryItConsole
           method={endpoint.method}
@@ -68,6 +74,11 @@ export default function EndpointDetail({
             {endpoint.rateLimits.map((r, idx) => (
               <li key={idx}>{r.tier}: {r.limitPerMinute}/min{r.burst ? `, burst ${r.burst}` : ''}</li>
             ))}
+=======
+
+            ))}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </ul>
         </div>
       )}
@@ -83,6 +94,12 @@ export default function EndpointDetail({
           <ul className="list-disc pl-5 text-sm text-high-contrast-muted">
             {endpoint.errors.map((e) => (
               <li key={e.code}><strong>{e.code}</strong> ({e.httpStatus}) - {e.message}</li>
+<<<<<<< HEAD
+=======
+
+            ))}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </ul>
         </div>
       )}

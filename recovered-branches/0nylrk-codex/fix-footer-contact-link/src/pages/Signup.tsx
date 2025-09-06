@@ -1,28 +1,43 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {Link, Navigate} from "react-router-dom";
 import {useForm, type, UseFormReturn} from "react-hook-form";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {z} from "zod";
 import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react";
+=======
+import { useState } from "react",
+import { Link, Navigate } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-import {useAuth} from "@/hooks/useAuth";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Checkbox} from "@/components/ui/checkbox";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 // Form validation schema
 const signupSchema = z
   .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters");
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
     password: z.string()
       .min(8, "Password must be at least 8 characters")
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter")
       .regex(/[a-z]/, "Password must contain at least one lowercase letter")
-      .regex(/[0-9]/, "Password must contain at least one number");
+      .regex(/[0-9]/, "Password must contain at least one number"),
     confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
       message: "You must accept the terms and conditions"})})
@@ -30,13 +45,21 @@ const signupSchema = z
     message: "Passwords do not match",
     path: ["confirmPassword"]}),
 
-type SignupFormValues = z.infer<typeof signupSchema>;
+type SignupFormValues = z.infer<typeof signupSchema>,
 
+<<<<<<< HEAD
 export default function Signup() {;
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+=======
+export default function Signup() {
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   // Initialize react-hook-form
   const form = useForm({
@@ -52,13 +75,13 @@ export default function Signup() {;
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions
     
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       await signup(data.email, data.password, data.displayName)
     } finally {
       setIsSubmitting(false)
     }
-  };
+  },
 
   // Redirect if user is already logged in and has completed profile
   if (isAuthenticated && user?.profileComplete) {
@@ -110,6 +133,119 @@ export default function Signup() {;
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { Link, Navigate } from "react-router-dom",;
+import { useForm, type UseFormReturn } from "react-hook-form",;
+import { zodResolver } from "@hookform/resolvers/zod",;
+import { z } from "zod",;
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Button } from "@/components/ui/button",;
+import { Input } from "@/components/ui/input",;
+import { Checkbox } from "@/components/ui/checkbox",;
+import {;
+  Form,;
+  FormControl,;
+  FormField,;
+  FormItem,;
+  FormLabel,;
+  FormMessage} from "@/components/ui/form",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+// Form validation schema;
+const signupSchema = z;
+  .object({;
+    displayName: z.string().min(2, "Name must be at least 2 characters"),;
+    email: z.string().email("Please enter a valid email"),;
+    password: z.string();
+      .min(8, "Password must be at least 8 characters");
+      .regex(/[A-Z]/, "Password must contain at least one uppercase letter");
+      .regex(/[a-z]/, "Password must contain at least one lowercase letter");
+      .regex(/[0-9]/, "Password must contain at least one number"),;
+    confirmPassword: z.string(),;
+    termsAccepted: z.boolean().refine(val => val === true, {;
+      message: "You must accept the terms and conditions"})});
+  .refine(data => data.password === data.confirmPassword, {;
+    message: "Passwords do not match",;
+    path: ["confirmPassword"]}),;
+type SignupFormValues = z.infer<typeof signupSchema>,;
+export default function Signup() {;
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),;
+  const [showPassword, setShowPassword] = useState(false),;
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),;
+  const [isSubmitting, setIsSubmitting] = useState(false),;
+  // Initialize react-hook-form;
+  const form = useForm({;
+    resolver: zodResolver(signupSchema),;
+    defaultValues: {;
+      displayName: "",;
+      email: "",;
+      password: "",;
+      confirmPassword: "",;
+      termsAccepted: false}}) as UseFormReturn<SignupFormValues>,;
+  // Form submission handler;
+  const onSubmit = async (data: SignupFormValues) => {;
+    if (isSubmitting) return, // Prevent multiple submissions;
+    setIsSubmitting(true);
+    try {;
+      await signup(data.email, data.password, data.displayName);
+    } finally {;
+      setIsSubmitting(false);
+    }
+  };
+  // Redirect if user is already logged in and has completed profile;
+  if (isAuthenticated && user?.profileComplete) {;
+    return <Navigate to="/" />;
+  }
+;
+  // Redirect to onboarding if user is authenticated but hasn't completed profile;
+  if (isAuthenticated && !user?.profileComplete) {;
+    return <Navigate to="/onboarding" />;
+  }
+
+  return (
+    <>
+      <Header />
+      <div className="flex min-h-screen bg-zion-blue">
+        <div className="flex-1 flex flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
+          <div className="mx-auto w-full max-w-sm lg:w-96">
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold tracking-tight text-white">
+                Create your account
+              </h2>
+              <p className="mt-2 text-sm text-zion-slate-light">
+                Already have an account?{" "}
+                <Link to="/login" className="font-medium text-zion-cyan hover:text-zion-cyan-light">;
+                  Sign in;
+                </Link>;
+              </p>;
+            </div>;
+            <div className="bg-zion-blue-dark rounded-lg p-6">;
+              <Form {...form}>;
+                <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6" noValidate>;
+                  <FormField;
+                    control={form.control}
+                    name="displayName"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-zion-slate-light">Full Name</FormLabel>
+                        <FormControl>
+                          <div className="relative">
+                            <Input
+                              placeholder="John Doe"
+                              className="bg-zion-blue pl-10 text-white placeholder:text-zion-slate border-zion-blue-light focus:border-zion-purple"
+                              {...field}
+                              aria-autocomplete="none";
+                              autoComplete="off";
+                            />;
+                            <User className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />;
+                          </div>;
+                        </FormControl>;
+                        <FormMessage className="text-red-400" />;
+                      </FormItem>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     )}
                   />
 
@@ -232,11 +368,11 @@ export default function Signup() {;
                             I agree to the{" "}
                             <a href="/terms" className="text-zion-cyan hover:text-zion-cyan-light">
                               Terms of Service
-                            </a>{" "}
+                            </Link>{" "}
                             and{" "}
                             <a href="/privacy" className="text-zion-cyan hover:text-zion-cyan-light">
                               Privacy Policy
-                            </a>
+                            </Link>
                           </FormLabel>
                           <FormMessage className="text-red-400" />
                         </div>

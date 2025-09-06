@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const ts = new Date () .toISOString () 
+=======
+ const ts = new Date () .toISOString () 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;

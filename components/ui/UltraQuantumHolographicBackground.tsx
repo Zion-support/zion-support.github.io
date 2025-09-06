@@ -219,7 +219,12 @@ export default function UltraQuantumHolographicBackground({;
           this.vy += 0.1;
           if (this.y > dimensions.height) {
             this.y = -10;
+<<<<<<< HEAD
             this.vy = Math.random() * 2 + 1;          }            this.vy = Math.random() * 2 + 1
+=======
+            this.vy = Math.random() * 2 + 1;          }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -377,7 +382,12 @@ export default function UltraQuantumHolographicBackground({;
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -448,6 +458,7 @@ export default function UltraQuantumHolographicBackground({;
 
       {/* Holographic Overlay Effects */}
       <div className='fixed inset-0 z-10 pointer-events-none'>
+<<<<<<< HEAD
         <motion.div
           className='absolute inset-0'
           animate={{
@@ -544,6 +555,21 @@ export default function UltraQuantumHolographicBackground({;
             repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+
+        }}
+      />
+
+      {/* Holographic Overlay Effects */}
+
+          }}
+        />
+
+        {/* Holographic Scan Lines */}
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Content Layer */}
@@ -571,6 +597,7 @@ export default function UltraQuantumHolographicBackground({;
           transition={{
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -578,3 +605,10 @@ export default function UltraQuantumHolographicBackground({;
     </div>
 );  )
 }
+=======
+
+          }}
+        />
+      </div>
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

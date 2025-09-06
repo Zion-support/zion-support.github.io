@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
@@ -16,6 +17,24 @@ export default defineConfig({
       '@styles': path.resolve(__dirname, './src/styles'),
       '@assets': path.resolve(__dirname, './src/assets')
     }
+=======
+import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import {defineConfig, splitVendorChunkPlugin} from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [
+    react({
+      include: '**/*.{jsx,js,ts,tsx}',
+      fastRefresh: true,
+
+    }),
+    splitVendorChunkPlugin(),
+  ],
+  resolve: {
+    alias: {
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   },
   css: {
     postcss: false
@@ -33,6 +52,7 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
+<<<<<<< HEAD
           'react-vendor': ['react', 'react-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
@@ -71,3 +91,74 @@ export default defineConfig({
     open: true 
   }
 });
+=======
+
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+
+    },
+    chunkSizeWarningLimit: 1000,
+    reportCompressedSize: false,
+    emptyOutDir: true,
+    assetsInlineLimit: 4096,
+  },
+  optimizeDeps: {
+    include: [
+      'reactreact-domreact-router-domframer-motion',
+      'lucide-react@radix-ui/react-accordion@radix-ui/react-alert-dialog@radix-ui/react-avatar',
+      '@radix-ui/react-checkbox@radix-ui/react-collapsible@radix-ui/react-dialog@radix-ui/react-dropdown-menu',
+      '@radix-ui/react-label@radix-ui/react-popover@radix-ui/react-progress@radix-ui/react-radio-group',
+      '@radix-ui/react-scroll-area@radix-ui/react-select@radix-ui/react-separator@radix-ui/react-slider',
+      '@radix-ui/react-slot@radix-ui/react-switch@radix-ui/react-tabs@radix-ui/react-toast',
+      '@radix-ui/react-tooltip'
+    ],
+    exclude: ['@radix-ui/react-icons'],
+    esbuildOptions: {
+
+  },
+  esbuild: {
+    jsx: 'automatic',
+  },
+  server: {
+    port: 3000,
+    host: true,
+    open: true,
+    cors: true,
+    hmr: {
+      overlay: false,
+    },
+    fs: {
+
+  },
+  preview: {
+    port: 4173,
+    host: true,
+    open: true,
+  },
+  define: {
+    __DEV__: JSON.stringify(process.env.NODE_ENV === 'development'),
+    __PROD__: JSON.stringify(process.env.NODE_ENV === 'production'),
+
+  experimental: {
+    renderBuiltUrl(filename, { hostType }) {
+      if (hostType === 'js') {
+        return { js: `__ASSET__${filename}__` };
+      } else {
+        return { relative: true };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

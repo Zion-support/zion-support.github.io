@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import {Badge} from '@/components/ui/badge';
 import {Button} from '@/components/ui/button';
 import {Trash2} from 'lucide-react';
 import {SkillItemProps} from './types';
+=======
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+import { Trash2 } from 'lucide-react',
+import { SkillItemProps } from './types',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   return (
     <Badge 
@@ -23,5 +30,10 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
         <Trash2 className="h-3 w-3" />
       </Button>
     </Badge>
+<<<<<<< HEAD
   );
 };
+=======
+  )
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

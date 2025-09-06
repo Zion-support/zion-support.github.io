@@ -181,7 +181,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.lineWidth = 1;
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -239,7 +244,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.lineWidth = strength * 2;
             ctx.moveTo(nodes[i].x, nodes[i].y);
             ctx.lineTo(nodes[j].x, nodes[j].y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -442,6 +452,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
   );
 };
 
+<<<<<<< HEAD
 export default UltraAdvancedFuturisticBackground;
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">
@@ -479,3 +490,6 @@ export default UltraAdvancedFuturisticBackground;
 };
 
 export default UltraAdvancedFuturisticBackground;
+=======
+export default UltraAdvancedFuturisticBackground;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

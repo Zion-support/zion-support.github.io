@@ -313,6 +313,11 @@ const serviceCategories = [
       { name: 'Smart Financial Management', href: '/services/smart-financial-management-platform' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -455,6 +460,7 @@ const footerSections = [
       { name: 'Research', href: '/research' },
     ],
   },];
+<<<<<<< HEAD
 
 export default function UltraFuturisticFooter2029V2() {
   return (
@@ -462,10 +468,13 @@ export default function UltraFuturisticFooter2029V2() {
     ]
   };
 ];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default function UltraFuturisticFooter2029V2() {
   return (
     <footer className='relative bg-black/90 backdrop-blur-xl border-t border-cyan-500/20'>
+<<<<<<< HEAD
       {/* Main Footer Content */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 gap-12'>
@@ -476,6 +485,16 @@ export default function UltraFuturisticFooter2029V2() {
           {/* Company Info */}
           <div className="lg:col-span-2 xl:col-span-1">
             <motion.div
+=======
+
+];
+
+export default function UltraFuturisticFooter2029V2() {
+  return (
+
+            <motion.div
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
@@ -553,6 +572,10 @@ export default function UltraFuturisticFooter2029V2() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Service Categories */}
           {footerSections.map((section, index) => (
             <motion.div
@@ -591,6 +614,10 @@ export default function UltraFuturisticFooter2029V2() {
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Service Showcase */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -598,6 +625,10 @@ export default function UltraFuturisticFooter2029V2() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className='mt-16 pt-12 border-t border-gray-800'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h3 className='text-2xl font-bold text-white text-center mb-8'>
             Featured 2029 Services
@@ -615,6 +646,10 @@ export default function UltraFuturisticFooter2029V2() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div
                   className={`p-4 rounded-xl bg-gradient-to-br ${category.color} bg-opacity-10 border border-cyan-500/20 hover:border-cyan-500/40 transition-all duration-300`}
@@ -660,6 +695,10 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Bottom Footer */}
       <div className='border-t border-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
@@ -687,11 +726,18 @@ export default function UltraFuturisticFooter2029V2() {
                 className='hover:text-cyan-400 transition-colors duration-300 ml-2'
               >
                 Terms of Service
+<<<<<<< HEAD
               </Link>            </motion.div>              className="text-gray-400 text-sm"
             >
               © 2025 Zion Tech Group. All rights reserved. | 
               <Link href="/privacy" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Privacy Policy</Link> | 
               <Link href="/terms" className="hover:text-cyan-400 transition-colors duration-300 ml-2">Terms of Service</Link>
+=======
+              </Link>            </motion.div>
+
+            </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Social Links */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -699,6 +745,10 @@ export default function UltraFuturisticFooter2029V2() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='flex items-center space-x-4'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               {socialLinks.map(social => (
                 <Link
@@ -708,6 +758,7 @@ export default function UltraFuturisticFooter2029V2() {
                   rel='noopener noreferrer'
                   className={`p-2 rounded-lg bg-gray-800/50 hover:bg-cyan-500/20 text-gray-400 ${social.color} transition-all duration-300 hover:scale-110`}
                 >
+<<<<<<< HEAD
                   <social.icon className='w-4 h-4' />                </Link>            >
               {socialLinks.map((social) => (
                 <Link
@@ -719,11 +770,21 @@ export default function UltraFuturisticFooter2029V2() {
                 >
                   <social.icon className="w-4 h-4" />
                 </Link>
+=======
+                  <social.icon className='w-4 h-4' />                </Link>
+
+                </Link>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </motion.div>
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Newsletter Signup */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -731,6 +792,10 @@ export default function UltraFuturisticFooter2029V2() {
         transition={{ duration: 0.6, delay: 0.4 }}
         viewport={{ once: true }}
         className='bg-gradient-to-r from-cyan-500/10 to-purple-500/10 border-t border-cyan-500/20'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8'>
           <div className='text-center'>
@@ -770,6 +835,12 @@ export default function UltraFuturisticFooter2029V2() {
           </div>
         </div>
       </motion.div>
+<<<<<<< HEAD
     </footer>;
 );
 }
+=======
+    </footer>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

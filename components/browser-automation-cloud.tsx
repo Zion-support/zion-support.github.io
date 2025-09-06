@@ -1,6 +1,10 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import {Check, ExternalLink} from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function BrowserAutomationCloudPage() {
   const features = [
     'Parallel Playwright/Puppeteer execution',
@@ -99,4 +103,3 @@ export default function BrowserAutomationCloudPage() {
 		</>
 	),
 }
-;

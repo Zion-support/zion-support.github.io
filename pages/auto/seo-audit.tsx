@@ -12,11 +12,19 @@ const SEOAudit: NextPage = () => {
         <h1 className="text-2xl font-bold">Autonomous SEO Auditor</h1>
         <p>Scans pages to detect missing meta tags and basic SEO issues and commits a structured report.</p>
         <div>
+<<<<<<< HEAD
           <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</a></Link>
+=======
+          <Link href="/data/reports/seo/latest.json"><a className="text-blue-600 underline">Latest SEO Report (JSON)</Link></Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         </div>
       </main>
     </div>
   )
 },
+<<<<<<< HEAD
 
 export default SEOAudit,;
+=======
+export default SEOAudit,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -76,6 +76,7 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Failed to generate. You can edit manually and export.');
     } finally {
+<<<<<<< HEAD
       setIsGenerating(false);    }      const data = await res.json();
       setDraftMarkdown(data.markdown || '');
       setDraftJson(data.json || null);
@@ -85,6 +86,10 @@ export default function ProposalGenerator() {
       setStatusMessage('Failed to generate. You can edit manually and export.')
     } finally {
       setIsGenerating(false)
+=======
+      setIsGenerating(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -109,6 +114,7 @@ export default function ProposalGenerator() {
       setStatusMessage('Exported. Files saved.');
     } catch (e) {
       console.error(e);
+<<<<<<< HEAD
       setStatusMessage('Export failed');    }      const data = await res.json();
       setExportLinks({ pdfUrl: data.pdfUrl, jsonUrl: data.jsonUrl, mdUrl: data.mdUrl }),
       setStatusMessage('Exported. Files saved.')
@@ -116,6 +122,12 @@ export default function ProposalGenerator() {
       console.error(e);
       setStatusMessage('Export failed')
     }
+=======
+      setStatusMessage('Export failed');    }
+
+    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   async function handleSubmitBridge() {
@@ -142,11 +154,16 @@ export default function ProposalGenerator() {
   return (
     <div className='space-y-6'>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>
+<<<<<<< HEAD
         <div className='space-y-4'>      const data = await res.json();
       setStatusMessage(`Submitted. Status: ${data.status || 'queued'}. IPFS: ${data.ipfsCid || 'N/A'}`)
     } catch (e) {
       console.error(e);
       setStatusMessage('Submission failed')
+=======
+        <div className='space-y-4'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -250,6 +267,7 @@ export default function ProposalGenerator() {
           </div>
           <div className='flex gap-2'>
             <button
+<<<<<<< HEAD
               className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}            <input
               className="w-full border rounded px-3 py-2"
               value={form.regionalScope}
@@ -297,6 +315,10 @@ export default function ProposalGenerator() {
           <div className="flex gap-2">
             <button
               className="px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50"
+=======
+              className='px-4 py-2 bg-blue-600 text-white rounded disabled:opacity-50'              onClick={handleGenerate}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               onClick={handleGenerate}
               disabled={isGenerating}
             >
@@ -367,6 +389,10 @@ export default function ProposalGenerator() {
                     JSON
                   </a>                </div>                  <a className="text-blue-600 underline" href={exportLinks.jsonUrl} target="_blank" rel="noreferrer">JSON</a>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               )}
             </div>
           )}
@@ -384,5 +410,10 @@ export default function ProposalGenerator() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

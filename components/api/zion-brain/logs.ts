@@ -31,6 +31,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   }
 
   const byModule: Record<string, number> = {};
+<<<<<<< HEAD
   const byType: Record<string, number> = {};
 
   return res.status(200).json({
@@ -47,3 +48,6 @@ return res.status(200).json({ entries: entries.slice(-200), byModule, byType, to
 }
 
 }
+=======
+  const byType: Record<string, number> = {};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

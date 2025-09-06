@@ -1,10 +1,25 @@
 
+<<<<<<< HEAD
 import {Resume} from '@/types/resume';
 import {PreviewHeader, ResumeBasicInfoSection, WorkExperienceSection, EducationSection, SkillsSection, CertificationsSection} from './preview';
 
 interface PreviewResumeProps {
   resume: Resume,
   onBack: () => void
+=======
+import { Resume } from '@/types/resume',;
+import {;
+  PreviewHeader,;
+  ResumeBasicInfoSection,;
+  WorkExperienceSection,;
+  EducationSection,;
+  SkillsSection,;
+  CertificationsSection;
+} from './preview',;
+interface PreviewResumeProps {;
+  resume: Resume;
+  onBack: () => void;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function PreviewResume({ resume, onBack }: PreviewResumeProps) {

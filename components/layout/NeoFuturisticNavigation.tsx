@@ -52,7 +52,12 @@ import {
   FlaskConical,;
   Link as LinkIcon,;
 import Button from '../ui/Button';
+<<<<<<< HEAD
 export default function NeoFuturisticNavigation() {;
+=======
+
+export default function NeoFuturisticNavigation() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
@@ -692,6 +697,10 @@ export default function NeoFuturisticNavigation() {;
                     className={`w-5 h-5 transition-transform duration-300 ${activeDropdown === 'mobile-services' ? 'rotate-90' : ''}`}
                   />
                 </button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {activeDropdown === 'mobile-services' && (
                   <div className='ml-4 space-y-3'>
                     {serviceCategories.map((category, index) => (
@@ -733,6 +742,10 @@ export default function NeoFuturisticNavigation() {;
                   </div>
                 )}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Company Section */}
               <div>
                 <button

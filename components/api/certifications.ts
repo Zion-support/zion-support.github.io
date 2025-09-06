@@ -30,5 +30,9 @@ export default async function handler(
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
+<<<<<<< HEAD
 };
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

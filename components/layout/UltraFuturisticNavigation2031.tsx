@@ -316,6 +316,11 @@ const serviceCategories = [
       { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -358,6 +363,10 @@ export default function UltraFuturisticNavigation2031() {;
           <div className='flex items-center space-x-6'>
             <div className='flex items-center space-x-2'>
               <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <span>{contactInfo.mobile}</span>
             </div>
             <div className='flex items-center space-x-2'>
@@ -401,6 +410,10 @@ export default function UltraFuturisticNavigation2031() {;
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
               className='flex items-center space-x-3'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl flex items-center justify-center'>
                 <Rocket className='w-6 h-6 text-white' />
@@ -432,6 +445,10 @@ export default function UltraFuturisticNavigation2031() {;
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='relative group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <Link
                     href={item.href}
@@ -441,6 +458,7 @@ export default function UltraFuturisticNavigation2031() {;
                     <span>{item.name}</span>
                   </Link>
                   {/* Hover effect */}
+<<<<<<< HEAD
                   <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>                >
                   <Link
                     href={item.href}
@@ -454,12 +472,26 @@ export default function UltraFuturisticNavigation2031() {;
                 </motion.div>
               ))}
             </div>
+=======
+                  <div className='absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-cyan-500 to-purple-500 transition-all duration-300 group-hover:w-full'></div>                </motion.div>
+
+                </motion.div>
+
+              ))}
+            </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>              <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 }}
+<<<<<<< HEAD
                 className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >            <div className="hidden lg:flex items-center space-x-4">
+=======
+                className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 transform hover:shadow-xl hover:shadow-cyan-500/30'              >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
@@ -480,6 +512,10 @@ export default function UltraFuturisticNavigation2031() {;
             {/* Mobile menu button */}
             <div className='lg:hidden'>              <motion.button            <div className="lg:hidden">
               <motion.button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1 }}
@@ -522,6 +558,12 @@ export default function UltraFuturisticNavigation2031() {;
                     <category.icon className="w-4 h-4" />
                     <span className="text-sm font-medium">{category.title.split(' ')[0]}</span>
                     <ChevronDown className="w-3 h-3 transition-transform duration-200 group-hover:rotate-180" />
+<<<<<<< HEAD
+=======
+
+                  </button>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Dropdown Menu */}
                   <AnimatePresence>
                     {activeCategory === category.title && (
@@ -531,6 +573,10 @@ export default function UltraFuturisticNavigation2031() {;
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-black/90 backdrop-blur-xl border border-cyan-500/20 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       >
                         <div className='p-4'>
                           <div className='mb-3'>
@@ -558,6 +604,10 @@ export default function UltraFuturisticNavigation2031() {;
                                   delay: serviceIndex * 0.05,
                                 }}
                                 className='group cursor-pointer'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               >
                                 <Link
                                   href={service.href}
@@ -605,6 +655,10 @@ export default function UltraFuturisticNavigation2031() {;
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -614,6 +668,10 @@ export default function UltraFuturisticNavigation2031() {;
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed top-0 right-0 h-full w-80 bg-black/95 backdrop-blur-xl border-l border-cyan-500/20 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='p-6'>
               <div className='flex justify-between items-center mb-8'>
@@ -680,6 +738,7 @@ export default function UltraFuturisticNavigation2031() {;
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg:h-40'></div>
     </>
@@ -687,3 +746,10 @@ export default function UltraFuturisticNavigation2031() {;
     </>
   ),
 }
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-32 lg:h-40'></div>
+    </>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

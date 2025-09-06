@@ -307,6 +307,7 @@ export default function StudioHostPage() {
               >                {publishing ? 'Publishing…' : 'Update RSS'}
               </button>
             </div>
+<<<<<<< HEAD
             {episode.audio && (              <p>{episode.bestQuote}</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -368,3 +369,11 @@ export default function StudioHostPage() {
   );
 }
 ;
+=======
+            {episode.audio && (
+
+                {publishing ? 'Publishing…' : 'Update RSS'}
+              </button>
+            </div>
+            {episode.audio && (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

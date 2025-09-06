@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export async function connectMetaMask(): Promise<string[]> {
   if (typeof window === 'undefined' || !window.ethereum) {;
     throw new Error('MetaMask is not installed');
@@ -68,5 +69,8 @@ declare global {
       on: (event: string, callback: (accounts: string[]) => void) => void;
       removeListener: (event: string, callback: (accounts: string[]) => void) => void;
     };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

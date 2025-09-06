@@ -190,7 +190,12 @@ export default function DynamicServicePage() {;
       </div>
     </UltraAdvancedFuturisticBackground>
   );
+<<<<<<< HEAD
 // Static export support: generate root-level pages for service slugs;
+=======
+
+// Static export support: generate root-level pages for service slugs
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Svc = (typeof enhancedRealMicroSaasServices)[number];
 
 function collectAllServices(): Svc[] {
@@ -249,6 +254,7 @@ export const getStaticPaths: GetStaticPaths = async () => {;
         }
     }
   } catch {}
+<<<<<<< HEAD
 
   // Exclude any slug that conflicts with an existing root page file
   const uniqueNonConflicting = Array.from(candidateSlugs).filter(
@@ -277,3 +283,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.
   return { props: {} };
 };
+=======
+
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -35,6 +35,7 @@ export default function InteractiveSearch({
         </button>
       )}
     </motion.div>
+<<<<<<< HEAD
 );
 }
 import React from "react";
@@ -67,6 +68,8 @@ export default function InteractiveSearch() {;
         </button>;
       </div>;
     </form>;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }}
 

@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import { ProviderConnection, SyncLogEntry } from "./types";
 import { v4 as uuidv4 } from "uuid";
+=======
+import { ProviderConnection, SyncLogEntry } from './types';
+import { v4 as uuidv4 } from 'uuid';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 async function mockProviderCall<T>(
   connection: ProviderConnection,
@@ -51,3 +56,16 @@ export const ats = {
     return mockProviderCall(connection, "update_status", { status });
   },
 };
+<<<<<<< HEAD
+=======
+
+// Email actions
+export const email = {
+  async sendNotification(
+    connection: ProviderConnection,
+    notification: Record<string, any>
+  ) {
+    return executeProviderAction(connection, 'sendNotification', { notification });
+  },
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

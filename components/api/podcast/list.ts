@@ -25,6 +25,7 @@ function ensureStorage() {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   ensureStorage(),;
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
   const simplified = episodes.map(e => ({
@@ -47,3 +48,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 }
 }
+=======
+  ensureStorage();
+  const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

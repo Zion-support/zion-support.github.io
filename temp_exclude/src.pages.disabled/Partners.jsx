@@ -1,0 +1,17 @@
+import React from 'react';
+interface PartnersProps {
+  // Add props here as needed
+}
+export default function Partners({ }: PartnersProps) {
+  return (
+    <div>
+      <h1>Partners</h1>
+      <p>This component is currently under development.</p>
+    </div>
+  );
+:src.pages.disabled/Partners.jsx
+}
+}
+}
+}
+}

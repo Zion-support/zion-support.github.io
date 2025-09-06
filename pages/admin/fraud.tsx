@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react',;
 ;
+=======
+import React, { useEffect, useMemo, useState } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface FraudItem {
   id: string,
   userId: string | null,
@@ -8,56 +12,59 @@ interface FraudItem {
   heuristic: { reasons: string[], severity: string },
   gpt?: { label: string, reason: string, confidence: number },
   status: string
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 export default function FraudAdminPage() {
-  const [items, setItems] = useState<FraudItem[]>([]),
-  const [adminToken, setAdminToken] = useState<string>(''),
-  const [loading, setLoading] = useState<boolean>(false),
-  const [error, setError] = useState<string | null>(null),
-
+  const [items, setItems] = useState<FraudItem[]>([]);
+  const [adminToken, setAdminToken] = useState<string>('');
+  const [loading, setLoading] = useState<boolean>(false);
+  const [error, setError] = useState<string | null>(null);
   useEffect(() => {
-    const saved = localStorage.getItem('admin-token') || '',
-    setAdminToken(saved)
-  }, []),
-
+    const saved = localStorage.getItem('admin-token') || '';
+    setAdminToken(saved);
+  }, []);
   const fetchItems = async () => {
-    setLoading(true),
-    setError(null),
+    setLoading(true);
+    setError(null);
     try {
-      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} }),
-      const json = await res.json(),
-      if (!res.ok) throw new Error(json.error || 'Failed to load'),
-      setItems(json.items || [])
+      const res = await fetch('/api/fraud/admin/list', { headers: adminToken ? { 'x-admin-token': adminToken } : {} });
+      const json = await res.json();
+      if (!res.ok) throw new Error(json.error || 'Failed to load');
+      setItems(json.items || []);
     } catch (e: any) {
-      setError(e.message || 'Failed to load')
+      setError(e.message || 'Failed to load');
     } finally {
-      setLoading(false)
-    }
-  },
-
+      setLoading(false);
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  };
   useEffect(() => {
-    fetchItems(),
+    fetchItems();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [adminToken]),
-
+  }, [adminToken]);
   const onSaveToken = () => {
-    localStorage.setItem('admin-token', adminToken),
-    fetchItems()
-  },
-
+    localStorage.setItem('admin-token', adminToken);
+    fetchItems();
+  };
   const takeAction = async (id: string, action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        ...(adminToken ? { 'x-admin-token': adminToken } : {})},
-      body: JSON.stringify({ fraudId: id, action })}),
-    const json = await res.json(),
-    if (res.ok) fetchItems(),
-    else alert(json.error || 'Action failed')
-  },
-
+        ...(adminToken ? { 'x-admin-token': adminToken } : {})
+      },
+      body: JSON.stringify({ fraudId: id, action })
+    });
+    const json = await res.json();
+    if (res.ok) fetchItems();
+    else alert(json.error || 'Action failed');
+  };
   return (
     <div className="p-6 max-w-7xl mx-auto">
       <h1 className="text-2xl font-bold mb-4">Fraud Monitoring - Admin Review</h1>
@@ -65,15 +72,41 @@ export default function FraudAdminPage() {
         <input
           className="border rounded px-2 py-1 w-80"
           placeholder="Admin token (optional)"
+<<<<<<< HEAD
           value={adminToken}
           onChange={(e) => setAdminToken(e.target.value)}
+=======
+          value={adminToken  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          onChange={(e) => setAdminToken(e.target.value)  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
         <button className="bg-blue-600 text-white px-3 py-1 rounded" onClick={onSaveToken}>Save</button>
         <button className="bg-gray-200 px-3 py-1 rounded" onClick={fetchItems}>Refresh</button>
       </div>
+<<<<<<< HEAD
       {loading && <div>Loading...</div>}
       {error && <div className="text-red-600">{error}</div>}
 
+=======
+      {loading && <div>Loading...</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      {error && <div className="text-red-600">{error}</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       <div className="overflow-x-auto">
         <table className="min-w-full border">
           <thead>
@@ -97,7 +130,15 @@ export default function FraudAdminPage() {
                   <div className="text-sm space-y-1">
                     {it.heuristic?.reasons?.slice(0, 3).map((r, idx) => (
                       <div key={idx} className="text-gray-700">{r}</div>
+<<<<<<< HEAD
                     ))}
+=======
+                    ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                 </td>
                 <td className="p-2 border">
@@ -115,10 +156,22 @@ export default function FraudAdminPage() {
                   </div>
                 </td>
               </tr>
-            ))}
+            ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
           </tbody>
         </table>
       </div>
     </div>
   );
+<<<<<<< HEAD
 };
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

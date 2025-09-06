@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node
 
 import fs from "fs";
@@ -77,3 +78,22 @@ files.forEach((file) => {
 });
 
 console.log(`\nTotal files fixed: ${totalFixed}`);
+=======
+  }
+}},
+// Run all fixes,
+fixFooter(),
+fixAccessibility(),
+fixAiServices(),
+fixApiDocs(),
+fixCareers(),
+// // // console.log('🎉 Syntax error fixes completed'),
+}},;
+// Run all fixes,;
+fixFooter(),;
+fixAccessibility(),;
+fixAiServices(),;
+fixApiDocs(),;
+fixCareers(),;
+// // // console.log('🎉 Syntax error fixes completed'),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

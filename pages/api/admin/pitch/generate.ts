@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import { ensureAdminFromApi } from "../../../../utils/auth";
 import OpenAI from "openai";
@@ -28,8 +29,13 @@ export default async function handler(
     "Token Strategy",
     "Ask & Call to Action",
   ];
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
+<<<<<<< HEAD
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.
 Operator Prompt: ${operatorPrompt}
 Company Mission: ${inputs?.mission}
@@ -83,3 +89,42 @@ function extractSection(body: string, title: string): string {
   }
 return "";
 }
+=======
+    const isAdmin = req.headers['x-admin'] === 'true';
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+
+    if (req.method === 'POST') {
+      const { operatorPrompt, inputs, metrics } = req.body || {};
+      const seed = [
+        'Problem & Opportunity',
+        'Solution & Product',
+        'Market Size (TAM/SAM/SOM)',
+        'Traction & Metrics',
+        'Business Model',
+        'Go-To-Market',
+        'Team',
+        'Roadmap',
+        'Token Strategy',
+        'Ask & Call to Action'
+      ];
+
+      // Mock pitch generation
+      const generatedPitch = {
+        slides: seed.map((title, index) => ({
+          id: index + 1,
+          title,
+          content: `Generated content for ${title}`
+        }))
+      };
+
+      res.json(generatedPitch);
+    } else {
+      res.setHeader('Allow', 'POST');
+      res.status(405).end('Method Not Allowed');
+    }
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

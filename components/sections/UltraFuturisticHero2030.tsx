@@ -81,6 +81,7 @@ export default function UltraFuturisticHero2030() {
 
 export default function UltraFuturisticHero2030() {
   return (
+<<<<<<< HEAD
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>
       {/* Background Glow Effects */}
       <div className='absolute inset-0 pointer-events-none'>
@@ -96,11 +97,21 @@ export default function UltraFuturisticHero2030() {
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Main Heading */}
+=======
+
+        {/* Main Heading */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           className='mb-8'        >          className="mb-8"
+=======
+          className='mb-8'        >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -161,12 +172,20 @@ export default function UltraFuturisticHero2030() {
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.
           </motion.p>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Buttons */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
           className='flex flex-col sm:flex-row items-center justify-center gap-6 mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <Link
             href='/contact'
@@ -205,12 +224,21 @@ export default function UltraFuturisticHero2030() {
             </span>
           </Link>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Features Grid */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.2 }}
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16"
+=======
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16'        >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {features.map((feature, index) => (
             <motion.div
@@ -219,6 +247,10 @@ export default function UltraFuturisticHero2030() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 + index * 0.1 }}
               className='group p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10 hover:border-purple-500/30 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 hover:bg-white/10'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-12 h-12 bg-gradient-to-r from-purple-500 to-cyan-500 rounded-xl flex items-center justify-center mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <feature.icon className='w-6 h-6 text-white' />
@@ -233,14 +265,26 @@ export default function UltraFuturisticHero2030() {
               <h3 className="text-lg font-semibold text-white mb-2">{feature.title}</h3>
               <p className="text-gray-400 text-sm">{feature.description}</p>
             </motion.div>
+<<<<<<< HEAD
           ))}
         </motion.div>
+=======
+
+          ))}
+        </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.6 }}
+<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+=======
+          className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'        >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {stats.map((stat, index) => (
             <motion.div
@@ -249,6 +293,10 @@ export default function UltraFuturisticHero2030() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8, delay: 1.8 + index * 0.1 }}
               className='text-center group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='w-16 h-16 bg-gradient-to-r from-purple-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300'>
                 <stat.icon className='w-8 h-8 text-purple-400' />
@@ -263,14 +311,26 @@ export default function UltraFuturisticHero2030() {
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.number}</div>
               <div className="text-gray-400 text-sm">{stat.label}</div>
             </motion.div>
+<<<<<<< HEAD
           ))}
         </motion.div>
+=======
+
+          ))}
+        </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Contact Information */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.0 }}
           className='bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 rounded-2xl p-8 backdrop-blur-sm'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <h3 className='text-2xl font-bold text-white mb-6'>
             Ready to Transform Your Business?
           </h3>
@@ -309,12 +369,20 @@ export default function UltraFuturisticHero2030() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Trust Indicators */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 2.2 }}
           className='mt-16 text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <p className='text-gray-400 text-sm mb-4'>
             Trusted by leading companies worldwide
@@ -390,6 +458,10 @@ export default function UltraFuturisticHero2030() {
           }}
         />
       </div>
+<<<<<<< HEAD
     </section>
 );  )
 }
+=======
+    </section>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

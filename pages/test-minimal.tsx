@@ -1,5 +1,10 @@
 import React from 'react';
+<<<<<<< HEAD
 export default function TestMinimal() {;
+=======
+export default function TestMinimal(req, res) {
+  try {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (;
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>;
       <h1>Minimal Test Page</h1>;
@@ -7,4 +12,11 @@ export default function TestMinimal() {;
       <p>If you can see this page, Next.js is working correctly.</p>;
     </div>;
   );
+<<<<<<< HEAD
+=======
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

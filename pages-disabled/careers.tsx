@@ -218,6 +218,10 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Open Positions */}
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
@@ -306,6 +310,10 @@ export default function CareersPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -340,4 +348,3 @@ export default function CareersPage() {
     </div>
   )
 }
-;

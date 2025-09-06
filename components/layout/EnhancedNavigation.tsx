@@ -254,6 +254,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             >
               <Search className="w-5 h-5" />
             </motion.button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Notifications */}
             <motion.button
               initial={{ opacity: 0, scale: 0.8 }}
@@ -264,6 +268,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
               <Bell className="w-5 h-5" />
               <div className="absolute top-1 right-1 w-2 h-2 bg-red-500 rounded-full animate-pulse" />
             </motion.button>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Button */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
@@ -290,6 +298,10 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
           </motion.button>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation */}
       <AnimatePresence>
         {isOpen && (
@@ -367,4 +379,9 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     </nav>
 );
 };
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 interface SkeletonProps {
   className?: string;
   height?: string;
@@ -93,3 +94,10 @@ export default Skeleton;  )
 };
 
 export default Skeleton;
+=======
+
+interface SkeletonProps {
+  className?: string;
+  height?: string;
+  width?: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

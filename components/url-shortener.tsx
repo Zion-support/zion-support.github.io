@@ -387,6 +387,10 @@ export default function URLShortenerPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
         <section className='py-20 bg-gray-800'>
@@ -576,6 +580,11 @@ export default function URLShortenerPage() {;
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Professional URL Shortening Features
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to create, manage, and track your shortened
@@ -785,7 +794,11 @@ export default function URLShortenerPage() {;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
 
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

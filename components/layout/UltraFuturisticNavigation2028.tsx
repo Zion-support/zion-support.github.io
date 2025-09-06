@@ -433,6 +433,11 @@ const serviceCategories = [
       { name: 'Sustainable Supply Chain', href: '/sustainable-supply-chain', description: 'Green supply chain solutions', price: '$3,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
@@ -494,7 +499,11 @@ export default function UltraFuturisticNavigation2028() {;
   );
 
   return (
+<<<<<<< HEAD
     <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>  };
+=======
+    <nav className='relative z-50 bg-black/90 backdrop-blur-xl border-b border-purple-500/30'>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleCategoryLeave = () => {
     setActiveCategory(null)
@@ -560,6 +569,10 @@ export default function UltraFuturisticNavigation2028() {;
       {/* Main Navigation */}
       <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-between h-20'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Logo */}
           <div className='flex items-center'>
             <Link href='/' className='flex items-center space-x-3 group'>
@@ -636,6 +649,7 @@ export default function UltraFuturisticNavigation2028() {;
                                 </div>
                                 <span className='text-xs text-purple-400 font-medium'>
                                   {service.price}
+<<<<<<< HEAD
                                 </span>                              </div>            {/* Service Categories */}
             <div className="relative group">
               <button className="flex items-center space-x-2 text-purple-200 hover:text-white transition-colors py-2">
@@ -670,6 +684,12 @@ export default function UltraFuturisticNavigation2028() {;
                                 </div>
                                 <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                               </div>
+=======
+                                </span>                              </div>
+
+                              </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </Link>
                           ))}
                         </div>
@@ -696,6 +716,10 @@ export default function UltraFuturisticNavigation2028() {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Company Links */}
             {companyLinks.slice(1, 5).map(link => (
               <Link
@@ -714,10 +738,20 @@ export default function UltraFuturisticNavigation2028() {;
                 <link.icon className="w-4 h-4" />
                 <span>{link.name.replace(/^[🏠🚀⭐💰📊📚🎯📞🔒]/g, '').trim()}</span>
               </Link>
+<<<<<<< HEAD
             ))}
           </div>
           {/* Search and Actions */}
           <div className='hidden lg:flex items-center space-x-4'>
+=======
+
+            ))}
+          </div>
+
+          {/* Search and Actions */}
+          <div className='hidden lg:flex items-center space-x-4'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search */}
             <div className='relative'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-purple-400' />
@@ -765,6 +799,10 @@ export default function UltraFuturisticNavigation2028() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -773,6 +811,10 @@ export default function UltraFuturisticNavigation2028() {;
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
             className='lg:hidden bg-black/95 backdrop-blur-xl border-t border-purple-500/30'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='px-4 py-6 space-y-6'>
               {/* Mobile Search */}
@@ -829,6 +871,7 @@ export default function UltraFuturisticNavigation2028() {;
                           key={service.name}
                           href={service.href}
                           onClick={closeMenu}
+<<<<<<< HEAD
                           className='block p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                         >
                           <h4 className='text-sm font-medium text-white'>
@@ -844,11 +887,20 @@ export default function UltraFuturisticNavigation2028() {;
                           <h4 className="text-sm font-medium text-white">{service.name}</h4>
                           <p className="text-xs text-purple-300">{service.description}</p>
                           <span className="text-xs text-purple-400 font-medium">{service.price}</span>
+=======
+
+                        </Link>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       ))}
                     </div>
                   </div>
                 ))}
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Mobile Company Links */}
               <div className='space-y-4'>
                 <h3 className='text-lg font-semibold text-white border-b border-purple-500/30 pb-2'>
@@ -867,6 +919,7 @@ export default function UltraFuturisticNavigation2028() {;
                       key={link.name}
                       href={link.href}
                       onClick={closeMenu}
+<<<<<<< HEAD
                       className='flex items-center space-x-3 p-3 rounded-lg bg-purple-900/20 hover:bg-purple-900/40 transition-colors'
                     >
                       <link.icon className='w-5 h-5 text-purple-400' />
@@ -881,6 +934,18 @@ export default function UltraFuturisticNavigation2028() {;
               </div>
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
+=======
+
+                    </Link>
+
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className='pt-4 border-t border-purple-500/30'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <Link
                   href='/contact'
                   onClick={closeMenu}
@@ -896,6 +961,10 @@ export default function UltraFuturisticNavigation2028() {;
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
         <div className='absolute top-full left-0 right-0 bg-black/95 backdrop-blur-xl border border-purple-500/30 rounded-2xl shadow-2xl z-50'>
@@ -918,6 +987,7 @@ export default function UltraFuturisticNavigation2028() {;
                     </div>
                     <span className='text-xs text-purple-400 font-medium'>
                       {service.price}
+<<<<<<< HEAD
                     </span>                  </div>                <Link
                   key={service.name}
                   href={service.href}
@@ -930,6 +1000,12 @@ export default function UltraFuturisticNavigation2028() {;
                     </div>
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
+=======
+                    </span>                  </div>
+
+                  </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </Link>
               ))}
             </div>
@@ -937,5 +1013,10 @@ export default function UltraFuturisticNavigation2028() {;
         </div>
       )}
     </nav>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

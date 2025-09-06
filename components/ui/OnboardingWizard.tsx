@@ -25,10 +25,16 @@ export default function OnboardingWizard() {;
         window.localStorage.setItem('zion_has_onboarded', '1');
       }
     } catch {}
+<<<<<<< HEAD
     setOpen(false);  }        window.localStorage.setItem('zion_has_onboarded1')
       }
     } catch {}
     setOpen(false)
+=======
+    setOpen(false);  }
+
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   if (!open) return null;
 
@@ -145,5 +151,9 @@ export default function OnboardingWizard() {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -30,10 +31,60 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       const application = applications.find(app => app.id === applicationId);
       if (application && !application.viewed_at) {
         await markApplicationAsViewed(applicationId)
+=======
+import { useState } from "react",
+import { JobApplication, ApplicationStatus } from "@/types/jobs",
+import { useJobApplications } from "@/hooks/useJobApplications",
+import {
+  ApplicationsTable,
+  EmptyState,
+  ErrorState,
+  LoadingState,
+  ScoreDialog
+} from "./applications",
+
+interface JobApplicationsTableProps {
+  jobId: string
+import { useState } from "react",;
+import { JobApplication, ApplicationStatus } from "@/types/jobs",;
+import { useJobApplications } from "@/hooks/useJobApplications",;
+import {;
+  ApplicationsTable,;
+  EmptyState,;
+  ErrorState,;
+  LoadingState,;
+  ScoreDialog;
+} from "./applications",;
+interface JobApplicationsTableProps {;
+  jobId: string;
+}
+;
+export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {;
+  const {;
+    applications,;
+    isLoading,;
+    error,;
+    updateApplicationStatus,;
+    markApplicationAsViewed,;
+    refetch;
+  } = useJobApplications(jobId),;
+  const [processingId, setProcessingId] = useState<string | null>(null),;
+  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null),;
+  const [showScoreDialog, setShowScoreDialog] = useState(false),;
+  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {;
+    setProcessingId(applicationId),;
+    try {;
+      await updateApplicationStatus(applicationId, newStatus),;
+      // If it's not already viewed, mark it as viewed;
+      const application = applications.find(app => app.id === applicationId),;
+      if (application && !application.viewed_at) {;
+        await markApplicationAsViewed(applicationId);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } finally {
       setProcessingId(null)
     }
+<<<<<<< HEAD
   };
 
   const handleViewScore = (application: JobApplication) => {
@@ -51,6 +102,21 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
 
   if (isLoading) {
     return <LoadingState />
+=======
+  },;
+  const handleViewScore = (application: JobApplication) => {;
+    setSelectedApplication(application),;
+    setShowScoreDialog(true);
+  },;
+  const handleViewApplication = async (applicationId: string) => {;
+    await markApplicationAsViewed(applicationId);
+  };
+  const handleScoreUpdated = (updatedApplication: JobApplication) => {;
+    refetch();
+  };
+  if (isLoading) {;
+    return <LoadingState />;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   if (error) {

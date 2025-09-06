@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const { execSync } = require('child_process'),;
+=======
+const { execSync } = require('child_process');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 console.log('Testing Next.js installation...'),;
 try {;
   // Check if Next.js is installed;

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {createClient} from '@supabase/supabase-js';
 import fs from 'fs/promises';
 import {createReadStream} from 'fs';
@@ -13,6 +14,22 @@ const {
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),
   process.exit(1)
+=======
+import { createClient } from '@supabase/supabase-js',;
+import fs from 'fs/promises',;
+import { createReadStream } from 'fs',;
+import path from 'path',;
+import FormData from 'form-data',;
+import fetch from 'node-fetch',;
+const {;
+  SUPABASE_URL,;
+  SUPABASE_SERVICE_ROLE_KEY,;
+  OPENAI_API_KEY;
+} = process.env,;
+if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {;
+  console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),;
+  process.exit(1);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY),
@@ -101,7 +118,39 @@ async function createFineTune(filePath) {
     })
   }),
   const job = await jobRes.json(),
+<<<<<<< HEAD
   console.log('Fine-tune job created:', job.id)
+=======
+  // // // console.log('Fine-tune job created:', job.id)
+;
+async function createFineTune(filePath) {;
+  const formData = new FormData(),;
+  formData.append('purposefine-tune'),;
+  formData.append('file', createReadStream(filePath), path.basename(filePath)),;
+  const uploadRes = await fetch('https://api.openai.com/v1/files', {;
+    method: 'POST',;
+    headers: {;
+      Authorization: `Bearer ${OPENAI_API_KEY}`,;
+      ...formData.getHeaders();
+    },;
+    body: formData;
+  }),;
+  const uploaded = await uploadRes.json(),;
+  // NOTE: additional parameters may be required depending on OpenAI API changes;
+  const jobRes = await fetch('https://api.openai.com/v1/fine_tuning/jobs', {;
+    method: 'POST',;
+    headers: {;
+      'Content-Type': 'application/json',;
+      Authorization: `Bearer ${OPENAI_API_KEY}`;
+    },;
+    body: JSON.stringify({;
+      training_file: uploaded.id,;
+      model: 'gpt-3.5-turbo';
+    });
+  }),;
+  const job = await jobRes.json(),;
+  // // // console.log('Fine-tune job created:', job.id);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 async function main() {
@@ -110,8 +159,15 @@ async function main() {
   await saveJsonl(pairs, 'training-data.jsonl'),
   await createFineTune('training-data.jsonl')
 }
+<<<<<<< HEAD
 
 main().catch((err) => {
   console.error('Training workflow failed', err)
 }),
 ;
+=======
+;
+main().catch((err) => {;
+  console.error('Training workflow failed', err);
+});
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

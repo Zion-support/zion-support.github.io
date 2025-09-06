@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 setIsMobile (isMobileDevice);
+=======
+ setIsMobile (isMobileDevice);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -163,6 +167,7 @@ children
 };
 export default MobileOptimizer;
 export default MobileOptimizer;
+<<<<<<< HEAD
 
 }
 }
@@ -172,3 +177,5 @@ export default MobileOptimizer;
 }
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

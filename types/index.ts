@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export interface ContactInfo {;
   phone: string;
   email: string;
@@ -594,3 +595,7 @@ export interface PaginatedResponse<T> {;
   };
 }
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-2c83
+=======
+export interface ContactInfo {
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

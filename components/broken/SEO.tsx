@@ -158,6 +158,10 @@ const SEO: React.FC<SEOProps> = ({
         content='black-translucent'
       />
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -217,6 +221,10 @@ const SEO: React.FC<SEOProps> = ({
       />
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -268,6 +276,7 @@ export default SEO;            __html: JSON.stringify(structuredData)
           }}
         />
       )}
+<<<<<<< HEAD
     </Head>
   );
 };
@@ -276,3 +285,6 @@ export default SEO;  )
 };
 
 export default SEO;
+=======
+    </Head>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

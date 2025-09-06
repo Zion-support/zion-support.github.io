@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type UIKitKind = 'ios' | 'android' | 'web';
 
 export interface TokenSet {;
@@ -50,4 +51,7 @@ export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit
     },
     tokens
   };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

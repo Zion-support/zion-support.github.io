@@ -201,6 +201,10 @@ const Enhanced2026ServicesShowcase = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -219,13 +223,22 @@ const Enhanced2026ServicesShowcase = () => {
             Experience the future with our cutting-edge AI, quantum, and emerging technology services designed to transform your business
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Category Overview */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
           viewport={{ once: true }}
+<<<<<<< HEAD
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >          className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+          className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {categories.map((category, index) => (
             <motion.div
@@ -236,6 +249,10 @@ const Enhanced2026ServicesShowcase = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05, y: -5 }}
               className='group text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div
                 className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
@@ -254,10 +271,20 @@ const Enhanced2026ServicesShowcase = () => {
               <h3 className="text-lg font-bold text-white mb-2">{category.name}</h3>
               <p className="text-2xl font-bold text-cyan-400">{category.count}</p>
             </motion.div>
+<<<<<<< HEAD
           ))}
         </motion.div>
         {/* Featured Services Grid */}
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+=======
+
+          ))}
+        </motion.div>
+
+        {/* Featured Services Grid */}
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>          {featuredServices.map((service, index) => (
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {featuredServices.map((service, index) => (
             <motion.div
               key={service.id}
@@ -267,6 +294,10 @@ const Enhanced2026ServicesShowcase = () => {
               viewport={{ once: true }}
               whileHover={{ scale: 1.02, y: -5 }}
               className='group relative'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div
                 className={`absolute inset-0 bg-gradient-to-r ${service.color} opacity-10 rounded-2xl blur-xl group-hover:blur-2xl transition-all duration-500`}
@@ -302,6 +333,7 @@ const Enhanced2026ServicesShowcase = () => {
                   </div>
                 </div>
                 {/* Description */}
+<<<<<<< HEAD
                 <p className='text-gray-300 text-sm mb-4 leading-relaxed'>                <p className="text-gray-300 text-sm mb-4 leading-relaxed">
                   {service.description}
                 </p>
@@ -318,12 +350,29 @@ const Enhanced2026ServicesShowcase = () => {
                     {service.features.slice(0, 2).map((feature, i) => (
                       <li key={i} className="flex items-center text-gray-400 text-xs">
                         <Star className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+=======
+
+                  {service.description}
+                </p>
+
+                {/* Features */}
+
+                        {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </li>
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
                 {/* Price and CTA */}
                 <div className='flex items-center justify-between'>
+=======
+
+                {/* Price and CTA */}
+                <div className='flex items-center justify-between'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <span className='text-2xl font-bold text-cyan-400'>
                       {service.price}
@@ -351,6 +400,10 @@ const Enhanced2026ServicesShowcase = () => {
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -358,6 +411,10 @@ const Enhanced2026ServicesShowcase = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           className='text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='bg-gradient-to-r from-cyan-900/20 via-purple-900/20 to-pink-900/20 border border-cyan-500/20 rounded-2xl p-8'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -414,6 +471,7 @@ const Enhanced2026ServicesShowcase = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Enhanced2026ServicesShowcase;  )
 };
 
@@ -421,3 +479,6 @@ export default Enhanced2026ServicesShowcase;
 
 }
 }
+=======
+export default Enhanced2026ServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

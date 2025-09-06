@@ -45,5 +45,9 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.type === 'view-notifications') {
     chrome.tabs.create({ url: `${BASE_URL}/notifications` })
   }
+<<<<<<< HEAD
 }),
 ;
+=======
+}),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

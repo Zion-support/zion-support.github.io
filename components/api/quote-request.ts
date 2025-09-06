@@ -62,6 +62,7 @@ export default async function handler(
           : [];
       }
 
+<<<<<<< HEAD
       let saved: any = null;
       if (supabase) {
         const { data, error } = await supabase
@@ -93,3 +94,12 @@ export default async function handler(
     return res.status(500).json({ message: "Server error" });
   }
 }
+=======
+    return res
+      .status(200)
+      .json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
+  } catch (e: any) {
+    console.error('quote-request error', e);
+    return res.status(500).json({ message: 'Server error' });
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

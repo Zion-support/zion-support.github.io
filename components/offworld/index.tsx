@@ -52,6 +52,7 @@ export default function OffworldConsole() {;
   }
 
   async function broadcast() {
+<<<<<<< HEAD
     setStatus('Broadcasting manifesto...');
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST',
@@ -141,3 +142,6 @@ export default function OffworldConsole() {;
 }
 
 }
+=======
+    setStatus('Broadcasting manifesto...');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

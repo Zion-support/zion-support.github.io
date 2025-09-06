@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export class TestingSystem {
   static async testUserInteraction(
     element: HTMLElement,
@@ -15,3 +16,6 @@ export class TestingSystem {
   }
 
 }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

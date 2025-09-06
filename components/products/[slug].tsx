@@ -4,6 +4,10 @@ import {useRouter} from 'next/router';
 import Link from 'next/link';
 import EnhancedLayout from '@/components/layout/EnhancedLayout';
 import equipment from '@/data/equipment.json';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const EquipmentDetail: NextPage = () => {
   const router = useRouter(),
   const { slug } = router.query as { slug?: string };
@@ -94,4 +98,8 @@ const EquipmentDetail: NextPage = () => {
   )
 };
 
+<<<<<<< HEAD
 export default EquipmentDetail;
+=======
+export default EquipmentDetail;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

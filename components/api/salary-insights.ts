@@ -275,6 +275,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
 
+<<<<<<< HEAD
   // Tags
   const scarceSkills = [
     'RAG',
@@ -322,3 +323,6 @@ return res.status(200).json(response);  return res.status(200).json(response)
 }
 }
 }
+=======
+  // Tags
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

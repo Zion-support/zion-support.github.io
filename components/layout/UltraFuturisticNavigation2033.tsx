@@ -410,6 +410,7 @@ export default function UltraFuturisticNavigation2033() {;
                   className='flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'
                 >
                   <span>Services</span>
+<<<<<<< HEAD
                   <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>              {/* Services Mega Menu */}
               <div className="relative group">
                 <button
@@ -420,6 +421,12 @@ export default function UltraFuturisticNavigation2033() {;
                   <span>Services</span>
                   <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180" />
                 </button>
+=======
+                  <ChevronDown className='w-4 h-4 transition-transform duration-200 group-hover:rotate-180' />                </button>
+
+                </button>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mega Menu */}
                 <AnimatePresence>
                   {activeCategory === 'services' && (
@@ -431,6 +438,10 @@ export default function UltraFuturisticNavigation2033() {;
                       onMouseEnter={() => setActiveCategory('services')}
                       onMouseLeave={() => setActiveCategory(null)}
                       className='absolute top-full left-0 w-screen max-w-6xl bg-gray-900/95 backdrop-blur-xl border border-purple-500/20 rounded-2xl shadow-2xl p-8 -ml-4'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className='grid grid-cols-2 lg:grid-cols-4 gap-8'>
                         {serviceCategories.map(category => (
@@ -463,6 +474,7 @@ export default function UltraFuturisticNavigation2033() {;
                                     </div>
                                     <p className='text-sm text-gray-400'>
                                       {service.description}
+<<<<<<< HEAD
                                     </p>                                  </div>                    >
                       <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                         {serviceCategories.map((category) => (
@@ -491,6 +503,12 @@ export default function UltraFuturisticNavigation2033() {;
                                     </div>
                                     <p className="text-sm text-gray-400">{service.description}</p>
                                   </div>
+=======
+                                    </p>                                  </div>
+
+                                  </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                                 </Link>
                               ))}
                             </div>
@@ -501,16 +519,27 @@ export default function UltraFuturisticNavigation2033() {;
                   )}
                 </AnimatePresence>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Quick Links */}
               {quickLinks.map(link => (
                 <Link
                   key={link.name}
                   href={link.href}
+<<<<<<< HEAD
                   className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >              {quickLinks.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}
                   className="text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50"
+=======
+                  className='text-gray-300 hover:text-white transition-colors duration-200 py-2 px-3 rounded-lg hover:bg-gray-800/50'                >
+
+                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {link.name}
                 </Link>
               ))}
@@ -548,6 +577,10 @@ export default function UltraFuturisticNavigation2033() {;
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         <AnimatePresence>
           {isOpen && (
@@ -557,6 +590,11 @@ export default function UltraFuturisticNavigation2033() {;
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className='lg:hidden bg-gray-900/95 backdrop-blur-xl border-t border-purple-500/20'
+<<<<<<< HEAD
+=======
+
+            >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <div className='px-4 py-6 space-y-6'>
                 {/* Mobile Services */}
                 <div className='space-y-4'>
@@ -590,6 +628,10 @@ export default function UltraFuturisticNavigation2033() {;
                     </div>
                   ))}
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Mobile Quick Links */}
                 <div className='space-y-4'>
                   <h3 className='text-lg font-semibold text-white'>
@@ -614,8 +656,15 @@ export default function UltraFuturisticNavigation2033() {;
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
                 {/* Mobile Contact Button */}
                 <div className='pt-4'>
+=======
+
+                {/* Mobile Contact Button */}
+                <div className='pt-4'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <Link
                     href='/contact'
                     onClick={closeMenu}
@@ -645,4 +694,8 @@ export default function UltraFuturisticNavigation2033() {;
 }</div> </div>) ) 
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
+<<<<<<< HEAD
 }</AnimatePresence> </nav> </>) }
+=======
+}</AnimatePresence> </nav> </>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

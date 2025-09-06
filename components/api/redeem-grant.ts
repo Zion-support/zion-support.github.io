@@ -53,6 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { studentEmail, grantCode, courseId } = req.body || {};
   if (!studentEmail || !grantCode || !courseId) {
+<<<<<<< HEAD
     await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
     return res.status(400).json({ error: 'Missing required fields' });
   await fs.ensureDir(path.dirname(REDEMPTIONS_FILE));
@@ -77,3 +78,6 @@ redeemedAt: now,
 }
 }
 }
+=======
+    await recordRequest(req, res, auth.partner, auth.apiKey, started, 400);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

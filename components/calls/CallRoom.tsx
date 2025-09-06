@@ -129,6 +129,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
 
   const handleLeave = () => {
     if (room) {
+<<<<<<< HEAD
       room.disconnect();
     }
     const durationSec = connectedAt
@@ -138,6 +139,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     }
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
     onLeave?.(durationSec)
+=======
+
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const gridCols = useMemo(() => {
     const count = participants.length || 1;
@@ -160,6 +165,7 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
       </div>
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
+<<<<<<< HEAD
           <ParticipantTile
             key={String((p as any).sid || (p as any).identity) + idx}
             participant={p}
@@ -178,3 +184,10 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     </div>
 );
 }
+=======
+
+        ))}
+      </div>
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

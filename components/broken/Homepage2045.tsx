@@ -37,6 +37,11 @@ import Link from 'next/link';import {
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles
 } from 'lucide-react';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+// Import our new innovative services
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { innovative2040FuturisticServices } from '../data/innovative-2040-futuristic-services';
 import { innovative2040ITServices } from '../data/innovative-2040-it-services';
 import { revolutionary2043AdvancedServices } from '../data/revolutionary-2043-advanced-services';
@@ -186,6 +191,7 @@ const Homepage2045: React.FC = () => {
     );
   }
 
+<<<<<<< HEAD
   return (
     <Layout>
       <div className='min-h-screen bg-black text-white relative overflow-x-hidden'>
@@ -233,6 +239,10 @@ const Homepage2045: React.FC = () => {
                 repeat: Infinity,
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
+=======
+              }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             />
           </div>
           {/* Hero Content */}
@@ -240,7 +250,12 @@ const Homepage2045: React.FC = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+<<<<<<< HEAD
               className='mb-8'            >          <div className="relative z-10 text-center max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+=======
+              className='mb-8'            >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -272,6 +287,10 @@ const Homepage2045: React.FC = () => {
                 Transform your business with Zion Tech Group's revolutionary AI services, quantum computing, and cutting-edge emerging technologies. Leading the future of technology innovation.
               </motion.p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -302,12 +321,20 @@ const Homepage2045: React.FC = () => {
                 Explore Services
               </Link>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Stats */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
               className='mt-16 grid grid-cols-1 md:grid-cols-3 gap-8'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='text-center'>
                 <div className='text-3xl md:text-4xl font-bold text-cyan-400 mb-2'>
@@ -346,11 +373,19 @@ const Homepage2045: React.FC = () => {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section id="featured-services" className="py-20 relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent'>
@@ -374,6 +409,7 @@ const Homepage2045: React.FC = () => {
               </p>
             </motion.div>
             {/* Service Categories Grid */}
+<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {
                   icon: <Brain className='w-12 h-12' />,
@@ -470,11 +506,20 @@ const Homepage2045: React.FC = () => {
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>            <motion.div        <section id="latest-innovations" className="py-20 relative bg-gray-900/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
+=======
+
+            <motion.div
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
               className='text-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <h2 className='text-4xl md:text-5xl font-bold mb-6'>
                 <span className='bg-gradient-to-r from-purple-400 to-pink-500 bg-clip-text text-transparent'>
@@ -496,6 +541,7 @@ const Homepage2045: React.FC = () => {
               </p>
             </motion.div>
             {/* Featured New Services */}
+<<<<<<< HEAD
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
               {revolutionary2043AdvancedServices
                 .slice(0, 4)
@@ -563,6 +609,11 @@ const Homepage2045: React.FC = () => {
                 View All Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
+=======
+
+              </Link>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </motion.div>
           </div>
         </section>
@@ -571,6 +622,10 @@ const Homepage2045: React.FC = () => {
           <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>            <motion.div        <section id="contact-cta" className="py-20 relative">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -624,6 +679,10 @@ const Homepage2045: React.FC = () => {
   transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
 
+<<<<<<< HEAD
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
   /* CTA Buttons */ 
 }<motion.div > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <Link href="/services" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Explore Services </a> </motion.div> {
@@ -650,4 +709,10 @@ const Homepage2045: React.FC = () => {
   once: true 
 
 }> Ready to Transform? </span> </h2> <p className="text-xl text-gray-300 mb-8" > Let's discuss how our revolutionary technology solutions can drive your business into the future. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" > <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-500 text-white rounded-lg font-semibold text-lg hover:from-cyan-600 hover:to-purple-600 transition-all duration-300 shadow-lg shadow-cyan-500/25 hover:shadow-xl hover:shadow-cyan-500/30 transform hover:scale-105" > Get Started </a> <a href="tel:+1 302 464 0950" className="px-8 py-4 border border-cyan-400/50 text-cyan-400 rounded-lg font-semibold text-lg hover:bg-cyan-400/10 transition-all duration-300 transform hover:scale-105" > Call Now </a> </div> </motion.div> </div> </section> </div> </Layout>) 
+<<<<<<< HEAD
 };export default Homepage2045;export default Homepage2045;
+=======
+};export default Homepage2045;
+
+export default Homepage2045;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

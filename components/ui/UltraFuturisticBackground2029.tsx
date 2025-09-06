@@ -528,8 +528,14 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
           transition={{
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Gradient overlays for depth */}
@@ -538,6 +544,7 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
       {/* Content */}
       <div className='relative z-10'>{children}</div>
     </div>
+<<<<<<< HEAD
   );      {/* Content */}
       <div className="relative z-10">
         {children}
@@ -545,3 +552,6 @@ export default function UltraFuturisticBackground2029({ children }: { children: 
     </div>
   )
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

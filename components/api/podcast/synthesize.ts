@@ -117,6 +117,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       mp4Url: publicBase + '.mp4'};
 
     episodes[idx] = episode;
+<<<<<<< HEAD
     fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
     return res.status(200).json({ episode });
@@ -131,3 +132,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: error?.message || 'Synthesis failed' })
 };
 }
+=======
+    fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

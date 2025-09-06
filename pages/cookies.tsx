@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
@@ -343,23 +344,14 @@ export default function CookiePolicyPage() {
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Layout from '../components/Layout';
+=======
+import React from 'react',
+import SEO from '../components/SEO',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function CookiesPage() {
   return (
     <UltraAdvancedFuturisticBackground>
-      <SEO
-        title='Cookie Policy | Zion Tech Group'
-        description='Information about cookies used by Zion Tech Group.'
-        canonical='https://ziontechgroup.com/cookies/'
-      />
-      <div className='container mx-auto px-4 py-24 text-white'>
-        <div className='max-w-3xl mx-auto space-y-6'>
-          <h1 className='text-4xl md:text-5xl font-bold'>Cookie Policy</h1>
-          <p className='text-gray-300'>
-            We use minimal, privacy‑respecting analytics. Some third‑party
-            embeds may set cookies. You can block non‑essential cookies via your
-            browser.
-          </p>
-          <ul className='list-disc list-inside text-gray-300 space-y-1'>
       <SEO title="Cookie Policy | Zion Tech Group" description="Information about cookies used by Zion Tech Group." canonical="https://ziontechgroup.com/cookies/" />
       <div className="container mx-auto px-4 py-24 text-white">
         <div className="max-w-3xl mx-auto space-y-6">
@@ -370,13 +362,9 @@ export default function CookiesPage() {
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
-          <p className='text-gray-400 text-sm'>
-            Questions?{' '}
-            <a className='text-cyan-400' href='mailto:kleber@ziontechgroup.com'>
-              kleber@ziontechgroup.com
-            </a>
-          </p>
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</Link></p>
         </div>
+<<<<<<< HEAD
       </Layout>
     </>;
   );
@@ -386,3 +374,14 @@ export default function CookiesPage() {
     </UltraAdvancedFuturisticBackground>
   )
 }
+=======
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

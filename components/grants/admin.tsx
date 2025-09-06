@@ -1,7 +1,12 @@
 import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
+<<<<<<< HEAD
 export default function GrantsAdminPage() {;
+=======
+
+export default function GrantsAdminPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [token, setToken] = useState('');
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [selected, setSelected] = useState<GrantApplication | null>(null);
@@ -85,6 +90,7 @@ export default function GrantsAdminPage() {;
 
   return (
     <EnhancedLayout>
+<<<<<<< HEAD
       <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2'>
@@ -296,9 +302,19 @@ export default function GrantsAdminPage() {;
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
             )}
+=======
+
+            )}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

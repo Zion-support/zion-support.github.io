@@ -17,6 +17,7 @@ export default async function handler(
     return res.status(200).json({ slug, reviews: [], average: null, count: 0 })
 
   if (req.method === 'POST') {
+<<<<<<< HEAD
     // In a real implementation, validate and insert review into Supabase
     return res.status(201).json({ ok: true });
   }
@@ -32,3 +33,6 @@ return res
 
 }
 }
+=======
+    // In a real implementation, validate and insert review into Supabase
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

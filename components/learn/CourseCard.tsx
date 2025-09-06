@@ -1,5 +1,10 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 export type Course = {;
+=======
+
+export type Course = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   title: string;
   durationMinutes: number;
@@ -54,5 +59,9 @@ export default function CourseCard({ course }: { course: Course }) {
         </Link>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

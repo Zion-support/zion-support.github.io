@@ -47,6 +47,11 @@ export default function DepRadarPage({ outdated, generatedAt }: { outdated: Outd
           </table>
         </div>
       )}
+<<<<<<< HEAD
     </div>;
 );
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

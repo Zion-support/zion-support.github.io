@@ -1,10 +1,18 @@
+<<<<<<< HEAD
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const SecurityAuditingChat: NextPage = () => {
   return (
     <div>
       <Head>
+<<<<<<< HEAD
         <title>SecurityAuditingChat - Zion Tech Solutions</title>
         <meta name="description" content="SecurityAuditingChat service" />{" "}
       </Head>
@@ -18,3 +26,6 @@ const SecurityAuditingChat: NextPage = () => {
 };
 
 export default SecurityAuditingChat;
+=======
+        <title>SecurityAuditingChat - Zion Tech Solutions</title>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

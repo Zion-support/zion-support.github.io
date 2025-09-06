@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 };
 ) ) 
 }</ul> </section> <section>) ) 
 }</ul> </section> </div>)
 export default function KnowledgeGraph({ report }: Props) {;
+=======
+ 
+};
+) ) 
+}</ul> </section> <section>) ) 
+}</ul> </section> </div>) 
+export default function KnowledgeGraph({ report }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!report) return <div>No knowledge graph yet.</div>;
   return (
     <div className="space-y-6">

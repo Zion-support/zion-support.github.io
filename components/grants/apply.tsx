@@ -194,6 +194,10 @@ export default function ApplyGrantPage() {;
             onChange={e => setPitchDeckUrl(e.target.value)}
           />
         </label>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {error && <div className='text-sm text-red-600'>{error}</div>}
 
         <div className='flex gap-3'>
@@ -263,5 +267,9 @@ export default function ApplyGrantPage() {;
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

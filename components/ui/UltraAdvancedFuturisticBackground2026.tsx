@@ -130,7 +130,12 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
+<<<<<<< HEAD
         ctx.restore();      }        ctx.restore()
+=======
+        ctx.restore();      }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     }
 
@@ -181,10 +186,17 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             ctx.stroke();
           }
         });
+<<<<<<< HEAD
         ctx.restore();      }            ctx.stroke()
           }
         });
         ctx.restore()
+=======
+        ctx.restore();      }
+
+      }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     // Quantum field class
@@ -230,10 +242,17 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
           ctx.stroke();
         }
 
+<<<<<<< HEAD
         ctx.restore();      }          ctx.stroke()
         }
         
         ctx.restore()
+=======
+        ctx.restore();      }
+
+      }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     // Holographic layer class
@@ -282,12 +301,19 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
 
+<<<<<<< HEAD
         ctx.restore();      }        
         ctx.beginPath();
         ctx.rect(-this.width / 2, -this.height / 2, this.width, this.height);
         ctx.stroke();
         
         ctx.restore()
+=======
+        ctx.restore();      }
+
+      }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     // Get color based on scheme
@@ -502,6 +528,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
               ctx.lineTo(otherParticle.x, otherParticle.y);
               ctx.stroke();
               ctx.restore();
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           });
         });
@@ -538,6 +568,10 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
         className='absolute inset-0 w-full h-full'
         style={{ zIndex: -1 }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Additional visual effects */}
       {enableMultidimensional && (
         <div className='absolute inset-0 pointer-events-none'>
@@ -599,6 +633,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<
             transition={{
               duration: 10,
               repeat: Infinity,
+<<<<<<< HEAD
               ease: 'easeInOut',              ease: "easeInOut"
             }}
           />
@@ -616,3 +651,10 @@ export default UltraAdvancedFuturisticBackground2026;      {children}
 };
 
 export default UltraAdvancedFuturisticBackground2026;
+=======
+
+            }}
+          />
+        </div>
+      )}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -37,6 +37,7 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 
   useEffect(() => {
     try {
+<<<<<<< HEAD
       const saved =
         typeof window !== 'undefined'
           ? window.localStorage.getItem('zion_user_role')
@@ -45,6 +46,9 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
         setRole(saved);      }      const saved = typeof window !== 'undefined' ? window.localStorage.getItem('zion_user_role') : null;
       if (saved === 'client' || saved === 'talent') {
         setRole(saved)
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch {}
   }, []);
@@ -52,7 +56,12 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
+<<<<<<< HEAD
         window.localStorage.setItem('zion_user_role', role);      }        window.localStorage.setItem('zion_user_role', role)
+=======
+        window.localStorage.setItem('zion_user_role', role);      }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
     } catch {}
   }, [role]);
@@ -65,8 +74,12 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({
 export function useRole(): RoleContextValue {;
 const ctx = useContext(RoleContext);
   if (!ctx) throw new Error('useRole must be used within RoleProvider');
+<<<<<<< HEAD
   return ctx;  return ctx
 }
 
 }
 }
+=======
+  return ctx;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

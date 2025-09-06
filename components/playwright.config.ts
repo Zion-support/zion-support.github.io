@@ -1,4 +1,11 @@
+<<<<<<< HEAD
  trace: on-first-retry' 
+=======
+// Playwright.config utility
+export const Playwright.config = () => {
+  // Implementation here
+  return null;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 reporter: [ ['list'], ['json', {
   outputFile: playwright-logs/test-results.json' 

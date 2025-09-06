@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock database utility
 import fs from 'fs';
 import path from 'path';
@@ -30,3 +31,9 @@ export function appendToJsonArrayFile<T>(fileName: string, item: T): void {;
   items.push(item);
   writeJsonFile<T[]>(fileName, items);
 }
+=======
+import fs from 'fs';
+import path from 'path';
+
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

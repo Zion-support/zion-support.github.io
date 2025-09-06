@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export interface TreeNode {;
+=======
+
+export interface TreeNode {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   name: string;
   path: string;
   type: 'folder' | 'file';
@@ -118,6 +123,7 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
             />          ))}
         </div>
       )}
+<<<<<<< HEAD
     </div>        {hasChildren ? (
           <button className="text-sm" onClick={toggle} aria-label="Toggle">
             {open ? "▾" : "▸"}
@@ -138,6 +144,10 @@ function NodeItem({ node, depth, onDeploy }: { node: TreeNode, depth: number, on
         <div className="ml-4 border-l pl-2">
           {node.children!.map((child) => (
             <NodeItem key={child.path} node={child} depth={depth + 1} onDeploy={onDeploy} />
+=======
+    </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </div>
       )}
@@ -149,6 +159,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
     <div className='w-full'>
       {nodes.map(n => (        <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
+<<<<<<< HEAD
     </div>;
   );  )
 }
@@ -192,3 +203,7 @@ export default Tree;
 }export default Tree;}
 
 export default Tree;
+=======
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

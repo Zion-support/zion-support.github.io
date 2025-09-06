@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { PerformanceMetrics } from '../types';
 
 export const measurePerformance = (): PerformanceMetrics | null => {
@@ -87,3 +88,6 @@ export const logPerformanceMetrics = (metrics: PerformanceMetrics, label = 'Perf
   if (metrics.ttfb !== undefined) console.log('Time to First Byte:', `${metrics.ttfb.toFixed(2)}ms`);
   console.groupEnd();
 };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

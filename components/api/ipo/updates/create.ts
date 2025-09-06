@@ -30,5 +30,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   writeJsonFile('updates.json', updates);
   res.status(200).json(update)
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

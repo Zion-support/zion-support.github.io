@@ -177,8 +177,12 @@ export async function getServerSideProps({
       destination: shortUrl.originalUrl,
       permanent: false,
     },
+<<<<<<< HEAD
   };      destination: shortUrl.originalUrl;
       permanent: false
     }
 };
 }
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

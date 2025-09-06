@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AutomationPage() {
   return (
     <div className="container mx-auto px-4 py-10">
@@ -7,4 +10,3 @@ export default function AutomationPage() {
     </div>
   ),
 }
-;

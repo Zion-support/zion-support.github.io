@@ -21,5 +21,9 @@ const LanguageSync: NextPage = () => {
     </div>
   )
 },
+<<<<<<< HEAD
 
 export default LanguageSync,;
+=======
+export default LanguageSync,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

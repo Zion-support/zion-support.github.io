@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Props = {
   category: string;
   level: string;
@@ -62,7 +66,11 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
         <option value='true'>Free</option>
         <option value='false'>Paid</option>
       </select>
+<<<<<<< HEAD
     </div>;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );        value={isFree}
         onChange={(e) => onChange({ category, level, isFree: e.target.value })}
       >
@@ -73,5 +81,8 @@ export default function FilterBar({ category, level, isFree, onChange }: Props) 
     </div>
   );
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -38,5 +38,9 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
       aria-label="Download as PDF"
       Download as PDF
     </button>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

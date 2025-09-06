@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -12,36 +13,54 @@ import {ProtectedRoute} from "@/components/ProtectedRoute";
 export default function RequestsPanel() {;
   const { user } = useAuth();
   const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
+=======
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",
+import { useAuth } from "@/hooks/useAuth",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import { 
+  RequestsHeader,
+  QuoteRequestsList 
+} from "@/components/quotes",
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+export default function RequestsPanel() {
+  const { user } = useAuth(),
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
 
   const {
-    quotes;
-    unreadCount;
-    isLoading;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter;
-    markAsViewed;
-    markAsResponded;
+    quotes,
+    unreadCount,
+    isLoading,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    markAsViewed,
+    markAsResponded,
     toggleArchive
-  } = useTalentQuotes();
+  } = useTalentQuotes(),
 
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
+    setSelectedQuote(quote),
     setShowDetails(true),
     
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id)
     }
-  };
+  },
 
   // Filter quotes by archive status
-  const activeQuotes = quotes.filter(q => !q.is_archived);
-  const archivedQuotes = quotes.filter(q => q.is_archived);
+  const activeQuotes = quotes.filter(q => !q.is_archived),
+  const archivedQuotes = quotes.filter(q => q.is_archived),
 
   return (
     <ProtectedRoute>
@@ -50,6 +69,57 @@ export default function RequestsPanel() {;
         <div className="min-h-screen bg-zion-blue px-4 py-8">
           <div className="container mx-auto">
             <RequestsHeader
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { useTalentQuotes } from "@/hooks/useTalentQuotes",;
+import { useAuth } from "@/hooks/useAuth",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",;
+import {;
+  RequestsHeader,;
+  QuoteRequestsList;
+} from "@/components/quotes",;
+import type { QuoteRequest } from "@/types/quotes",;
+import { ProtectedRoute } from "@/components/ProtectedRoute",;
+export default function RequestsPanel() {;
+  const { user } = useAuth(),;
+  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker',;
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),;
+  const [showDetails, setShowDetails] = useState(false),;
+  const {;
+    quotes,;
+    unreadCount,;
+    isLoading,;
+    statusFilter,;
+    setStatusFilter,;
+    archiveFilter,;
+    setArchiveFilter,;
+    markAsViewed,;
+    markAsResponded,;
+    toggleArchive;
+  } = useTalentQuotes(),;
+  const handleViewDetails = (quote: QuoteRequest) => {;
+    setSelectedQuote(quote),;
+    setShowDetails(true),;
+    // If status is new, mark as viewed;
+    if (quote.status === 'new') {;
+      markAsViewed(quote.id);
+    }
+  },;
+  // Filter quotes by archive status;
+  const activeQuotes = quotes.filter(q => !q.is_archived),;
+  const archivedQuotes = quotes.filter(q => q.is_archived);
+  return (;
+    <ProtectedRoute>;
+      <div>;
+        <Header />;
+        <div className="min-h-screen bg-zion-blue px-4 py-8">;
+          <div className="container mx-auto">;
+            <RequestsHeader;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               unreadCount={unreadCount}
               statusFilter={statusFilter}
               setStatusFilter={setStatusFilter}
@@ -89,9 +159,15 @@ export default function RequestsPanel() {;
         <QuoteDetails
           quote={selectedQuote}
           isOpen={showDetails}
+<<<<<<< HEAD
           onClose={() => {
             setShowDetails(false);
             setSelectedQuote(null)
+=======
+          onClose={() => {;
+            setShowDetails(false);
+            setSelectedQuote(null);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
         />
         

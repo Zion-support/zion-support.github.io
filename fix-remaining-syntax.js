@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 }});
 
 ;
@@ -94,3 +95,19 @@ errorFiles.forEach(file => {
 
 // Run the main function
 main().catch(console.error);
+=======
+<<<<<<< HEAD
+}});
+console.log(`Fixed ${fixedCount} files`);
+;
+};
+});
+console.log(`Fixed ${fixedCount} files`);
+;
+,
+}),;
+console.log(`Fixed ${fixedCount} files`),;
+,;
+=======
+>>>>>>> main
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

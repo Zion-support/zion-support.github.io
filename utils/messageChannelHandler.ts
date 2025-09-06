@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Message channel handler for real-time communication
 export class MessageChannelHandler {;
   private channels: Map<string, MessageChannel> = new Map();
@@ -26,3 +27,9 @@ export class MessageChannelHandler {;
 }
 
 export default MessageChannelHandler;
+=======
+}}}};
+;
+},;
+,;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

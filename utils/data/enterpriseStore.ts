@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise',;
 const generateId = () => Math.random().toString(36).slice(2, 10),;
 const seedCompany: CompanyRecord = {;
   id: 'cmp_acme',;
   name: 'Acme Corporation',;
+=======
+import { CompanyRecord, CompanyMember, EnterpriseRole, InvoiceRecord } from '../types/enterprise';
+const generateId = () => Math.random().toString(36).slice(2, 10);
+const seedCompany: CompanyRecord = {;
+  id: 'cmp_acme';
+  name: 'Acme Corporation';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   slug: 'acme',;
   logoUrl: '/logo-acme.svg',;
   brandColor: '#4F46E5',;
@@ -23,6 +31,7 @@ const seedCompany: CompanyRecord = {;
   invoices: [;
     { id: 'inv_001', companyId: 'cmp_acme', number: 'INV-1001', amountUsd: 499.0, periodStartIso: '2025-07-01', periodEndIso: '2025-07-31', status: 'paid' },;
     { id: 'inv_002', companyId: 'cmp_acme', number: 'INV-1002', amountUsd: 499.0, periodStartIso: '2025-08-01', periodEndIso: '2025-08-31', status: 'open' }]},;
+<<<<<<< HEAD
 const companiesById: Record<string CompanyRecord> = { [seedCompany.id]: seedCompany },;
 const companiesBySlug: Record<string CompanyRecord> = { [seedCompany.slug]: seedCompany },;
 export const store = {;
@@ -40,6 +49,25 @@ export const store = {;
       name: input.name || 'New Company',;
       slug,;
       logoUrl: input.logoUrl,;
+=======
+const companiesById: Record<string, CompanyRecord> = { [seedCompany.id]: seedCompany };
+const companiesBySlug: Record<string, CompanyRecord> = { [seedCompany.slug]: seedCompany };
+export const store = {;
+  getCompanyBySlug(slug: string) {;
+    return companiesBySlug[slug] || null;
+  };
+  getCompanyById(id: string) {;
+    return companiesById[id] || null;
+  };
+  createCompany(input: Partial<CompanyRecord>): CompanyRecord {;
+    const id = `cmp_${generateId()}`;
+    const slug = input.slug || `co-${generateId()}`;
+    const record: CompanyRecord = {;
+      id;
+      name: input.name || 'New Company';
+      slug;
+      logoUrl: input.logoUrl;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       brandColor: input.brandColor || '#111827',;
       plan: input.plan || {;
         tier: 'teams',;
@@ -54,15 +82,24 @@ export const store = {;
     return record;
   },;
   addMember(companyId: string, name: string, email: string, role: EnterpriseRole): CompanyMember | null {;
+<<<<<<< HEAD
     const company = companiesById[companyId],;
     if (!company) return null,;
     const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
     company.members.push(member),;
     company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length),;
+=======
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    const member: CompanyMember = { id: `mem_${generateId()}`, name, email, role },;
+    company.members.push(member);
+    company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: email, action: 'added_member' }),;
     return member;
   },;
   removeMember(companyId: string, memberId: string): boolean {;
+<<<<<<< HEAD
     const company = companiesById[companyId],;
     if (!company) return false,;
     const before = company.members.length,;
@@ -80,12 +117,34 @@ export const store = {;
     const member = company.members.find(m => m.id === memberId),;
     if (!member) return false,;
     member.role = role,;
+=======
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+      company.plan.seatsUsed = Math.min(company.plan.seatsPurchased, company.members.length);
+      company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'removed_member', meta: { memberId } });
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+    return changed;
+  },;
+  updateMemberRole(companyId: string, memberId: string, role: EnterpriseRole): boolean {;
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    member.role = role;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_role', meta: { memberId, role } }),;
     return true;
   },;
   setUsageLimits(companyId: string, monthlyJobPosts: number, budgetCapUsd: number): boolean {;
+<<<<<<< HEAD
     const company = companiesById[companyId],;
     if (!company) return false,;
+=======
+    const company = companiesById[companyId];
+    if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     company.plan.usageLimits = { monthlyJobPosts, budgetCapUsd },;
     company.activity.unshift({ id: generateId(), timestampIso: new Date().toISOString(), actorEmail: 'system', action: 'updated_usage_limits', meta: { monthlyJobPosts, budgetCapUsd } }),;
     return true;

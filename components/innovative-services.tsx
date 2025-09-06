@@ -377,6 +377,7 @@ export default function InnovativeServicesPage() {;
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
                       <option value='All'>All Categories</option>
+<<<<<<< HEAD
                       {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
                       value={selectedCategory}
                       onChange={(e) => setSelectedCategory(e.target.value)}
@@ -385,18 +386,32 @@ export default function InnovativeServicesPage() {;
                       <option value="All">All Categories</option>
                       {categories.map((category) => (
                         <option key={category.name} value={category.name}>
+=======
+                      {categories.map(category => (                        <option key={category.name} value={category.name}>
+
+                        <option key={category.name} value={category.name}>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {category.name} ({category.count})
                         </option>
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
                   {/* Price Range Filter */}
                   <div className='flex-shrink-0'>
+=======
+
+                  {/* Price Range Filter */}
+                  <div className='flex-shrink-0'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <select
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
+<<<<<<< HEAD
                       {priceRanges.map(range => (                        <option key={range.value} value={range.value}>                    <select
                       value={priceRange}
                       onChange={(e) => setPriceRange(e.target.value)}
@@ -404,18 +419,32 @@ export default function InnovativeServicesPage() {;
                     >
                       {priceRanges.map((range) => (
                         <option key={range.value} value={range.value}>
+=======
+                      {priceRanges.map(range => (                        <option key={range.value} value={range.value}>
+
+                        <option key={range.value} value={range.value}>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {range.label}
                         </option>
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
                   {/* Sort Options */}
                   <div className='flex-shrink-0'>
+=======
+
+                  {/* Sort Options */}
+                  <div className='flex-shrink-0'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
                       className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                     >
+<<<<<<< HEAD
                       {sortOptions.map(option => (                        <option key={option.value} value={option.value}>                    <select
                       value={sortBy}
                       onChange={(e) => setSortBy(e.target.value)}
@@ -423,14 +452,28 @@ export default function InnovativeServicesPage() {;
                     >
                       {sortOptions.map((option) => (
                         <option key={option.value} value={option.value}>
+=======
+                      {sortOptions.map(option => (                        <option key={option.value} value={option.value}>
+
+                        <option key={option.value} value={option.value}>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           {option.value}
                         </option>
                       ))}
                     </select>
                   </div>
+<<<<<<< HEAD
                   {/* View Mode Toggle */}
                   <div className='flex-shrink-0'>
                     <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
+=======
+
+                  {/* View Mode Toggle */}
+                  <div className='flex-shrink-0'>
+                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${
@@ -450,6 +493,7 @@ export default function InnovativeServicesPage() {;
                       <button
                         onClick={() => setViewMode('list')}
                         className={`px-3 py-2 rounded-lg transition-all ${
+<<<<<<< HEAD
                           viewMode === 'list'
                             ? 'bg-cyan-500 text-white'
                             : 'text-gray-400 hover:text-white'
@@ -459,6 +503,11 @@ export default function InnovativeServicesPage() {;
                         }`}
                       >
                         <List className="w-5 h-5" />
+=======
+
+                      </button>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   </div>
                 </div>
@@ -503,6 +552,7 @@ export default function InnovativeServicesPage() {;
                             </div>
                           </div>
                           {service.popular && (
+<<<<<<< HEAD
                             <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR              {filteredServices.length === 0 ? (
                 <div className="text-center py-20">
                   <div className="text-6xl mb-4">🔍</div>
@@ -531,10 +581,24 @@ export default function InnovativeServicesPage() {;
                             </div>
                           )}
                         </div>
+=======
+                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR
+
+                              POPULAR
+
+                            </div>
+                          )}
+                        </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -622,8 +686,24 @@ export default function InnovativeServicesPage() {;
                             )}
                           </div>
                         </div>
+<<<<<<< HEAD
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+=======
+
+                        {/* Key Features */}
+
+                                +{service.features.length - 3} more features
+
+                              </div>
+                            )}
+                          </div>
+                        </div>
+
+                        {/* Market Info */}
+                        <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -695,11 +775,19 @@ export default function InnovativeServicesPage() {;
               )}
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Ready to Lead the Future?
                 </h2>
                 <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>
@@ -718,6 +806,7 @@ export default function InnovativeServicesPage() {;
                   <Button
                     href={`mailto:${contactInfo.email}`}
                     variant='secondary'
+<<<<<<< HEAD
                     className='px-8 py-4 text-lg'                  Ready to Lead the Future?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -752,6 +841,15 @@ export default function InnovativeServicesPage() {;
                 <div className="mt-8 text-sm text-gray-400">
                   <div>Address: {contactInfo.address}</div>
                   <div className="mt-1">Website: {contactInfo.website}</div>
+=======
+                    className='px-8 py-4 text-lg'
+
+                    Call Now: {contactInfo.mobile}
+                  </Button>
+                  <Button
+                    href={`mailto:${contactInfo.email}`}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -759,10 +857,14 @@ export default function InnovativeServicesPage() {;
         </div>
       </QuantumHolographicBackground>
     </>
+<<<<<<< HEAD
 );
 }
 
 }
 }
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

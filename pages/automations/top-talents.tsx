@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextPage, GetServerSideProps } from "next";
 import fs from "fs";
 import path from "path";
@@ -12,6 +13,14 @@ type TalentItem = {
 
 type Props = { items: TalentItem[] };
 
+=======
+import type { NextPage, GetServerSideProps } from 'next',
+import fs from 'fs',
+import path from 'path',
+import Link from 'next/link',
+type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
+type Props = { items: TalentItem[] },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -22,21 +31,27 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
             <div className="enhanced-card hover:shadow-lg cursor-pointer flex items-center justify-between">
               <div>
                 <div className="font-medium">{t.talentName}</div>
-                <div className="text-sm text-gray-600">
-                  {t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews
-                </div>
+                <div className="text-sm text-gray-600">{t.averageRating.toFixed(1)}★ • {t.totalReviews} reviews</div>
               </div>
               <span className="pill">Auto</span>
             </div>
           </Link>
-        ))}
-        {!items.length && <div className="enhanced-card">No data yet.</div>}
+        ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+        {!items.length && <div className="enhanced-card">No data yet.</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
       </div>
     </main>
-  );
-};
-
+  )
+},
 export const getServerSideProps: GetServerSideProps = async () => {
+<<<<<<< HEAD
   const p = path.join(
     process.cwd(),
     "public",
@@ -52,4 +67,23 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } };
 };
 
+=======
+  const p = path.join(process.cwd(), 'publicautomationstop-talents.json'),
+  let items: TalentItem[] = [],
+  try {
+    const raw = fs.readFileSync(p, 'utf8'),
+    const data = JSON.parse(raw),
+    items = data.items || []
+  } catch {  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+  return { props: { items }   } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default TopTalentsPage;

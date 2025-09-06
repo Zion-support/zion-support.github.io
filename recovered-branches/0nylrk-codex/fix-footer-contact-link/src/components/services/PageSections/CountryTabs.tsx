@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from "react";
 import {Search} from "lucide-react";
 import {Input} from "@/components/ui/input";
@@ -6,6 +7,15 @@ import {Button} from "@/components/ui/button";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {CountryServiceCard} from "@/components/services/CountryServiceCard";
 import {CountryPricing} from "@/data/onsiteServicePricing";
+=======
+import { useState } from "react",
+import { Search } from "lucide-react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",
+import { CountryPricing } from "@/data/onsiteServicePricing",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface CountryTabsProps {
   popularCountries: string[],
   filteredCountries: CountryPricing[],
@@ -14,8 +24,13 @@ interface CountryTabsProps {
   setSearchQuery: (query: string) => void
 }
 
+<<<<<<< HEAD
 export function CountryTabs({ ;
   popularCountries;
+=======
+export function CountryTabs({ 
+  popularCountries,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   filteredCountries, 
   handleCountrySelect, 
   searchQuery, 
@@ -45,6 +60,55 @@ export function CountryTabs({ ;
               <CountryServiceCard 
                 key={country.country} 
                 country={country} 
+<<<<<<< HEAD
+=======
+import { useState } from "react",;
+import { Search } from "lucide-react",;
+import { Input } from "@/components/ui/input",;
+import { Button } from "@/components/ui/button",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { CountryServiceCard } from "@/components/services/CountryServiceCard",;
+import { CountryPricing } from "@/data/onsiteServicePricing",;
+interface CountryTabsProps {;
+  popularCountries: string[],;
+  filteredCountries: CountryPricing[],;
+  handleCountrySelect: (country: CountryPricing) => void,;
+  searchQuery: string,;
+  setSearchQuery: (query: string) => void;
+}
+;
+export function CountryTabs({;
+  popularCountries,;
+  filteredCountries,;
+  handleCountrySelect;
+  searchQuery;
+  setSearchQuery;
+}: CountryTabsProps) {;
+  return (;
+    <Tabs defaultValue="featured" className="w-full">;
+      <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">;
+        <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple">;
+          Featured Countries;
+        </TabsTrigger>;
+        <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple">;
+          All Countries;
+        </TabsTrigger>;
+      </TabsList>;
+      <TabsContent value="featured" className="mt-0">;
+        <div className="mb-6">;
+          <h2 className="text-2xl font-bold text-white text-center">Featured Service Locations</h2>;
+          <p className="text-zion-slate-light text-center mt-2">;
+            Browse our most popular service destinations;
+          </p>;
+        </div>;
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">;
+          {filteredCountries;
+            .filter(country => popularCountries.includes(country.country));
+            .map(country => (;
+              <CountryServiceCard;
+                key={country.country} ;
+                country={country} ;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 onSelect={handleCountrySelect}
                 isPopular={true}
               />

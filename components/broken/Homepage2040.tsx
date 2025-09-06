@@ -1,6 +1,22 @@
+<<<<<<< HEAD
 //Enhanced animation variants for better performance const containerVariants = {
   hidden: {
   opacity: 0 
+=======
+import React from 'react';
+
+interface Homepage2040Props {
+  className?: string;
+}
+
+const Homepage2040: React.FC<Homepage2040Props> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>Homepage2040</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 visible: {
   opacity: 1, transition: {
@@ -265,6 +281,10 @@ const Homepage2040: React.FC = () => {
               >
                 Pioneering the future of technology with revolutionary AI, quantum computing, and autonomous solutions that transform businesses worldwide
               </motion.p>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Enhanced CTA Section */}
               <motion.div 
                 variants={itemVariants}
@@ -289,6 +309,10 @@ const Homepage2040: React.FC = () => {
                   </button>
                 </Link>
               </motion.div>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Enhanced Trust Indicators */}
               <motion.div
                 variants={itemVariants}
@@ -345,6 +369,10 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Service Categories */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -395,6 +423,10 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Featured Services Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-7xl mx-auto">
@@ -462,6 +494,10 @@ const Homepage2040: React.FC = () => {
                           {service.price}
                         </span>
                       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {/* CTA Button */}
                       <Link 
                         href={service.link}
@@ -473,6 +509,10 @@ const Homepage2040: React.FC = () => {
                     </motion.div>
                   ))}
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* View All Services Button */}
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -493,6 +533,10 @@ const Homepage2040: React.FC = () => {
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced CTA Section */}
         <section className="py-20 px-4 relative">
           <div className="max-w-4xl mx-auto text-center">

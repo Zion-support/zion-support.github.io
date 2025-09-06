@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import {useParams, useNavigate} from "react-router-dom";
 import {useDisputes} from "@/hooks/useDisputes";
@@ -22,41 +23,67 @@ export function DisputeDetail() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes();
+=======
+import React, { useState, useEffect } from "react",
+import { useParams, useNavigate } from "react-router-dom",
+import { useDisputes } from "@/hooks/useDisputes",
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",
+import { Button } from "@/components/ui/button",
+import { Textarea } from "@/components/ui/textarea",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Separator } from "@/components/ui/separator",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { format, formatDistanceToNow } from "date-fns",
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
+import { toast } from "sonner",
+export function DisputeDetail() {
+  // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+  const { disputeId } = useParams() as { disputeId?: string },
+  const navigate = useNavigate(),
+  const { user } = useAuth(),
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
-  const [dispute, setDispute] = useState<any>(null);
-  const [messages, setMessages] = useState<DisputeMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [message, setMessage] = useState("");
-  const [isSending, setIsSending] = useState(false);
+  const [dispute, setDispute] = useState<any>(null),
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [message, setMessage] = useState(""),
+  const [isSending, setIsSending] = useState(false),
   const [resolution, setResolution] = useState({
     summary: "",
     resolution_type: "compromise"}),
-  const [activeTab, setActiveTab] = useState("overview");
+  const [activeTab, setActiveTab] = useState("overview"),
 
   // Check if user is admin (placeholder - implement proper admin check)
-  const isAdmin = user?.userType === "admin";
+  const isAdmin = user?.userType === "admin",
   
   useEffect(() => {
-    if (!disputeId) return;
+    if (!disputeId) return,
 
     const loadDisputeData = async () => {
-      setIsLoading(true);
+      setIsLoading(true),
       try {
-        const disputeData = await getDisputeById(disputeId);
+        const disputeData = await getDisputeById(disputeId),
         if (!disputeData) {
-          toast.error("Dispute not found");
-          navigate("/dashboard/disputes");
+          toast.error("Dispute not found"),
+          navigate("/dashboard/disputes"),
           return
         }
-        setDispute(disputeData);
+        setDispute(disputeData),
         
-        const messagesData = await getDisputeMessages(disputeId);
+        const messagesData = await getDisputeMessages(disputeId),
         setMessages(messagesData)
       } catch (error) {
-        console.error("Error loading dispute data:", error);
+        console.error("Error loading dispute data:", error),
         toast.error("Failed to load dispute")
       } finally {
         setIsLoading(false)
+<<<<<<< HEAD
       }
     };
     
@@ -71,16 +98,82 @@ export function DisputeDetail() {
       setDispute({ ...dispute, status })
     }
   };
+=======
+import React, { useState, useEffect } from "react",;
+import { useParams, useNavigate } from "react-router-dom",;
+import { useDisputes } from "@/hooks/useDisputes",;
+import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes",;
+import { Button } from "@/components/ui/button",;
+import { Textarea } from "@/components/ui/textarea",;
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
+import { Badge } from "@/components/ui/badge",;
+import { Separator } from "@/components/ui/separator",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import { format, formatDistanceToNow } from "date-fns",;
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
+import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react",;
+import { useAuth } from "@/hooks/useAuth",;
+import { toast } from "sonner",;
+export function DisputeDetail() {;
+  // useParams may be untyped in this environment, so avoid passing a;
+  // type argument and cast the result instead to prevent TS2347 errors.;
+  const { disputeId } = useParams() as { disputeId?: string },;
+  const navigate = useNavigate(),;
+  const { user } = useAuth(),;
+  const { getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage } = useDisputes(),;
+  const [dispute, setDispute] = useState<any>(null),;
+  const [messages, setMessages] = useState<DisputeMessage[]>([]),;
+  const [isLoading, setIsLoading] = useState(true),;
+  const [message, setMessage] = useState(""),;
+  const [isSending, setIsSending] = useState(false),;
+  const [resolution, setResolution] = useState({;
+    summary: "",;
+    resolution_type: "compromise"}),;
+  const [activeTab, setActiveTab] = useState("overview"),;
+  // Check if user is admin (placeholder - implement proper admin check);
+  const isAdmin = user?.userType === "admin",;
+  useEffect(() => {;
+    if (!disputeId) return,;
+    const loadDisputeData = async () => {;
+      setIsLoading(true),;
+      try {;
+        const disputeData = await getDisputeById(disputeId),;
+        if (!disputeData) {;
+          toast.error("Dispute not found"),;
+          navigate("/dashboard/disputes"),;
+          return;
+        }
+        setDispute(disputeData),;
+        const messagesData = await getDisputeMessages(disputeId),;
+        setMessages(messagesData);
+      } catch (error) {;
+        console.error("Error loading dispute data:", error),;
+        toast.error("Failed to load dispute");
+      } finally {;
+        setIsLoading(false);
+      }
+    },;
+    loadDisputeData();
+  }, [disputeId, navigate, getDisputeById, getDisputeMessages]),;
+  const handleStatusChange = async (status: DisputeStatus) => {;
+    if (!disputeId) return,;
+    const success = await updateDisputeStatus(disputeId, status),;
+    if (success && dispute) {;
+      setDispute({ ...dispute, status });
+    }
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleResolveDispute = async () => {
-    if (!disputeId) return;
+    if (!disputeId) return,
     
     if (!resolution.summary) {
-      toast.error("Please provide a resolution summary");
+      toast.error("Please provide a resolution summary"),
       return
     }
     
-    const success = await resolveDispute(disputeId, resolution);
+    const success = await resolveDispute(disputeId, resolution),
     if (success && dispute) {
       setDispute({ 
         ...dispute, 
@@ -90,24 +183,25 @@ export function DisputeDetail() {
         resolved_at: new Date().toISOString()
       })
     }
-  };
+  },
 
   const handleSendMessage = async () => {
-    if (!disputeId || !message.trim()) return;
+    if (!disputeId || !message.trim()) return,
     
-    setIsSending(true);
+    setIsSending(true),
     try {
-      const success = await addDisputeMessage(disputeId, message, isAdmin);
+      const success = await addDisputeMessage(disputeId, message, isAdmin),
       if (success) {
         // Refresh messages
-        const updatedMessages = await getDisputeMessages(disputeId);
-        setMessages(updatedMessages);
+        const updatedMessages = await getDisputeMessages(disputeId),
+        setMessages(updatedMessages),
         setMessage("")
       }
     } catch (error) {
       console.error("Error sending message:", error)
     } finally {
       setIsSending(false)
+<<<<<<< HEAD
     }
   };
 
@@ -118,6 +212,51 @@ export function DisputeDetail() {
         <p>Loading dispute details...</p>
       </div>
     )
+=======
+  },;
+  const handleResolveDispute = async () => {;
+    if (!disputeId) return,;
+    if (!resolution.summary) {;
+      toast.error("Please provide a resolution summary"),;
+      return;
+    }
+;
+    const success = await resolveDispute(disputeId, resolution),;
+    if (success && dispute) {;
+      setDispute({;
+        ...dispute,;
+        status: "resolved",;
+        resolution_summary: resolution.summary,;
+        resolution_type: resolution.resolution_type,;
+        resolved_at: new Date().toISOString();
+      });
+    }
+  },;
+  const handleSendMessage = async () => {;
+    if (!disputeId || !message.trim()) return,;
+    setIsSending(true),;
+    try {;
+      const success = await addDisputeMessage(disputeId, message, isAdmin),;
+      if (success) {;
+        // Refresh messages;
+        const updatedMessages = await getDisputeMessages(disputeId),;
+        setMessages(updatedMessages),;
+        setMessage("");
+      }
+    } catch (error) {;
+      console.error("Error sending message:", error);
+    } finally {;
+      setIsSending(false);
+    }
+  },;
+  if (isLoading) {;
+    return (;
+      <div className="p-8 text-center">;
+        <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div>;
+        <p>Loading dispute details...</p>;
+      </div>;
+    );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   if (!dispute) {
@@ -133,11 +272,12 @@ export function DisputeDetail() {
 
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
-      case "open": return "default";
+      case "open": return "default",
       case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
-      case "closed": return "outline";
+      case "closed": return "outline",
       default: return "default"
+<<<<<<< HEAD
     }
   };
 
@@ -148,6 +288,36 @@ export function DisputeDetail() {
           <div className="flex items-center gap-2">
             <h1 className="text-2xl font-bold">Dispute Case</h1>
             <Badge variant={getStatusBadgeVariant(dispute.status)}>
+=======
+;
+  if (!dispute) {;
+    return (;
+      <div className="p-8 text-center">;
+        <p>Dispute not found</p>;
+        <Button onClick={() => navigate("/dashboard/disputes")} className="mt-4">;
+          Back to Disputes;
+        </Button>;
+      </div>;
+    );
+  }
+;
+  const getStatusBadgeVariant = (status: DisputeStatus) => {;
+    switch (status) {;
+      case "open": return "default",;
+      case "under_review": return "secondary",;
+      case "resolved": return "outline", // Changed from "success" to "outline";
+      case "closed": return "outline",;
+      default: return "default";
+    }
+  },;
+  return (;
+    <div className="container mx-auto p-4 space-y-6">;
+      <div className="flex flex-wrap items-center justify-between gap-4">;
+        <div>;
+          <div className="flex items-center gap-2">;
+            <h1 className="text-2xl font-bold">Dispute Case</h1>;
+            <Badge variant={getStatusBadgeVariant(dispute.status)}>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {dispute.status.replace('_ ')}
             </Badge>
           </div>
@@ -273,7 +443,7 @@ export function DisputeDetail() {
                       messages
                         .filter(msg => !msg.is_admin_note)
                         .map((msg) => {
-                          const isCurrentUser = user?.id === msg.user_id;
+                          const isCurrentUser = user?.id === msg.user_id,
                           return (
                             <div
                               key={msg.id}
@@ -447,9 +617,27 @@ export function DisputeDetail() {
                           onClick={() => {
                             if (message.trim()) {
                               addDisputeMessage(disputeId!, message, true).then(() => {
-                                getDisputeMessages(disputeId!).then(setMessages);
+                                getDisputeMessages(disputeId!).then(setMessages),
                                 setMessage("")
                               })
+<<<<<<< HEAD
+=======
+                      </div>;
+                      <div className="mt-4 space-y-4">;
+                        <Textarea;
+                          placeholder="Add an admin note (only visible to administrators)...";
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                        />;
+                        <Button;
+                          variant="outline";
+                          onClick={() => {;
+                            if (message.trim()) {;
+                              addDisputeMessage(disputeId!, message, true).then(() => {;
+                                getDisputeMessages(disputeId!).then(setMessages);
+                                setMessage("");
+                              });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             }
                           }}
                         >

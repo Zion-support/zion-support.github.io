@@ -260,6 +260,7 @@ export default async function handler(
     const detectedLanguage = isEnglish ? 'en' : 'unknown';
     const confidence = isEnglish ? 0.95 : 0.5;
 
+<<<<<<< HEAD
     const result: TextAnalysisResult = {
       text,
         characters,
@@ -321,3 +322,6 @@ export default async function handler(
     res.status(500).json({ error: 'Internal server error' })
   }
 }
+=======
+    const result: TextAnalysisResult = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

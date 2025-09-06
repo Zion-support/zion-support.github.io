@@ -180,6 +180,10 @@ export default function QuantumServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Quantum Services */}
         <section className="py-20 px-4">
           <div className="max-w-6xl mx-auto">
@@ -249,6 +253,10 @@ export default function QuantumServices() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* CTA Section */}
         <section className="py-20 px-4 bg-gradient-to-b from-gray-900 to-black">
           <div className="max-w-4xl mx-auto text-center">
@@ -283,9 +291,16 @@ export default function QuantumServices() {
         </section>
       </main>
     </Layout>
+<<<<<<< HEAD
   );
 };
 
 export default QuantumServicesPage;
 
 }
+=======
+  )
+};
+
+export default QuantumServicesPage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

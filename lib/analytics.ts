@@ -26,7 +26,11 @@ export const trackEvent = (
 export const trackPageView = (url: string) => {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('config', GA_TRACKING_ID, {
+<<<<<<< HEAD
       page_path: url,;
+=======
+      page_path: url,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     });
   }
 };

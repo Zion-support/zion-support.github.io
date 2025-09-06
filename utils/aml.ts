@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type WatchlistMatch = {;
   list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
   name: string;
@@ -40,3 +41,5 @@ class MockAmlProvider implements AmlProvider {
 export function getAmlProvider(): AmlProvider {;
   return new MockAmlProvider();
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

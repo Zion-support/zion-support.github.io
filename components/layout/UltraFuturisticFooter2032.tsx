@@ -352,6 +352,7 @@ const itemVariants = {
 
 export default function UltraFuturisticFooter2032() {
   return (
+<<<<<<< HEAD
     <footer className='relative bg-gradient-to-b from-black via-gray-900 to-black border-t border-cyan-500/30 overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0'>
@@ -476,6 +477,11 @@ export default function UltraFuturisticFooter2032() {
                   <Globe className="w-4 h-4 text-cyan-400" />
                   <a href={contactInfo.website} target="_blank" rel="noopener noreferrer" className="hover:text-cyan-300 transition-colors">
                     {contactInfo.website}
+=======
+
+                    {contactInfo.website}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </a>
                 </div>
               </div>
@@ -483,6 +489,10 @@ export default function UltraFuturisticFooter2032() {
             {/* Service Categories */}
             <motion.div variants={itemVariants} className='lg:col-span-2'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Our Revolutionary Services
               </h3>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
@@ -517,9 +527,17 @@ export default function UltraFuturisticFooter2032() {
                 ))}
               </div>
             </motion.div>
+<<<<<<< HEAD
             {/* Quick Links & Company Info */}
             <motion.div variants={itemVariants} className='lg:col-span-1'>
               <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+=======
+
+            {/* Quick Links & Company Info */}
+            <motion.div variants={itemVariants} className='lg:col-span-1'>
+              <h3 className='text-xl font-semibold text-white mb-8 bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Quick Access
               </h3>
               {/* Quick Links */}
@@ -554,6 +572,10 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Company Info */}
               <div className='mb-8'>
                 <h4 className='text-lg font-medium text-white mb-4'>Company</h4>
@@ -561,9 +583,14 @@ export default function UltraFuturisticFooter2032() {
                     <li key={index}>
                       <Link
                         href={item.href}
+<<<<<<< HEAD
                         className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >              <div className="mb-8">
                 <h4 className="text-lg font-medium text-white mb-4">Company</h4>
                 <ul className="space-y-2">
+=======
+                        className='text-slate-300 hover:text-purple-300 transition-colors duration-200 text-sm'                      >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {companyInfo.map((item, index) => (
                     <li key={index}>
                       <Link
@@ -576,6 +603,10 @@ export default function UltraFuturisticFooter2032() {
                   ))}
                 </ul>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Social Links */}
               <div>
                 <h4 className='text-lg font-medium text-white mb-4'>
@@ -590,6 +621,7 @@ export default function UltraFuturisticFooter2032() {
                     <a
                       key={index}
                       href={social.href}
+<<<<<<< HEAD
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20'
@@ -599,11 +631,20 @@ export default function UltraFuturisticFooter2032() {
                       className="w-10 h-10 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 rounded-lg flex items-center justify-center text-cyan-400 hover:text-cyan-300 hover:border-cyan-400/50 transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-cyan-500/20"
                     >
                       <social.icon className="w-5 h-5" />
+=======
+
+                    </a>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   ))}
                 </div>
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Newsletter Signup */}
           <motion.div
             variants={itemVariants}
@@ -611,6 +652,10 @@ export default function UltraFuturisticFooter2032() {
           >
             <div className='text-center'>
               <h3 className='text-2xl font-bold text-white mb-4'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 Stay Ahead with Future Technology
               </h3>
               <p className='text-slate-300 mb-8 max-w-2xl mx-auto'>
@@ -709,7 +754,11 @@ export default function UltraFuturisticFooter2032() {
         </motion.button>
       </div>
     </footer>
+<<<<<<< HEAD
 );
 }
 
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

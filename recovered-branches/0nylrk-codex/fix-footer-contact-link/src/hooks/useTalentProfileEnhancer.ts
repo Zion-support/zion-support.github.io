@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {useState} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 export interface TalentProfileData {;
@@ -38,6 +39,44 @@ export function useTalentProfileEnhancer() {;
 
       if (error) {
         throw new Error(error.message)
+=======
+import { useState } from 'react',;
+import { supabase } from '@/integrations/supabase/client',;
+export interface TalentProfileData {;
+  name: string,;
+  title: string,;
+  bio: string,;
+  skills: string[],;
+  location?: string;
+}
+;
+export interface CategorizedSkills {;
+  programming: string[],;
+  devops: string[],;
+  platforms: string[],;
+  softSkills: string[],;
+  other: string[];
+}
+;
+export interface EnhancedProfile {;
+  summary: string,;
+  categorizedSkills: CategorizedSkills;
+}
+;
+export function useTalentProfileEnhancer() {;
+  const [isGenerating, setIsGenerating] = useState(false),;
+  const [error, setError] = useState<string | null>(null),;
+  const enhanceProfile = async (profileData: TalentProfileData): Promise<EnhancedProfile | null> => {;
+    setIsGenerating(true),;
+    setError(null),;
+    try {;
+      // Call the Supabase Edge Function;
+      const { data, error } = await supabase.functions.invoke('talent-profile-enhancer', {;
+        body: { talentData: profileData }
+      }),;
+      if (error) {;
+        throw new Error(error.message);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
       
       return data as EnhancedProfile
@@ -47,12 +86,20 @@ export function useTalentProfileEnhancer() {;
     } finally {
       setIsGenerating(false)
     }
+<<<<<<< HEAD
   };
   
   return {
     enhanceProfile;
     isGenerating;
     error
+=======
+  },;
+  return {;
+    enhanceProfile;
+    isGenerating;
+    error;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }
 ;

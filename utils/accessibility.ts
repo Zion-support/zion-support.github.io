@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const generateId = (prefix: string = 'id'): string => {;
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
 };
@@ -126,5 +127,8 @@ export const createSkipLink = (targetId: string, text: string = 'Skip to main co
     }
   });
   
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return skipLink;
 };

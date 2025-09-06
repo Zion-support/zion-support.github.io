@@ -39,6 +39,11 @@ export default function VendorRegisterPage() {;
     } finally {
       setLoading(false);    }
   }
+<<<<<<< HEAD
+=======
+
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (            .map(s => s.trim())
             .filter(Boolean);
@@ -60,6 +65,7 @@ export default function VendorRegisterPage() {;
     }
   }
 
+<<<<<<< HEAD
   return (
     <div className='max-w-2xl mx-auto space-y-6'>
       <h1 className='text-2xl font-semibold'>
@@ -129,3 +135,6 @@ export default function VendorRegisterPage() {;
     </div>
 );
 }
+=======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

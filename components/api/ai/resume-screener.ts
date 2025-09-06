@@ -38,5 +38,8 @@ export default async function handler(
   const text = await generateText(prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res.status(200).json({ results: text })
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

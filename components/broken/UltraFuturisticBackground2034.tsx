@@ -351,10 +351,16 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         cancelAnimationFrame(animationRef.current);
       }
       window.removeEventListener('resize', resizeCanvas);
+<<<<<<< HEAD
     };  }, [intensity]);        cancelAnimationFrame(animationRef.current)
       }
       window.removeEventListener('resize', resizeCanvas)
     }
+=======
+    };  }, [intensity]);
+
+  }, [intensity]);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   // Mouse move handler for interactive effects
   useEffect(() => {
@@ -437,6 +443,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 6,
             repeat: -1,
+<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -462,11 +469,23 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             duration: 12,
             repeat: -1,
             ease: 'linear',            ease: "linear"
+=======
+
+          }}
+          transition={{
+            duration: 12,
+            repeat: -1,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
         />
       </div>
       {/* Energy waves */}
       <div className='absolute inset-0'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/10 to-transparent'
           animate={{
@@ -502,8 +521,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           transition={{
             duration: 20,
             repeat: -1,
+<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Holographic matrix effect */}
@@ -524,10 +549,15 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
               opacity: [0, 1, 0];
               scaleY: [0, 1, 0]
             }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transition={{
               duration: 3,
               delay: i * 0.1,
               repeat: -1,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
@@ -535,6 +565,19 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       </div>
       {/* Cyberpunk grid */}
       <div className='absolute inset-0'>
+=======
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+      </div>
+
+      {/* Cyberpunk grid */}
+      <div className='absolute inset-0'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           className='absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]'
           style={{
@@ -552,6 +595,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
   );
 };
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2034;        <motion.div
           className="absolute inset-0 bg-[linear-gradient(rgba(0,255,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,255,255,0.1)_1px,transparent_1px)]"
           style={{
@@ -559,10 +603,15 @@ export default UltraFuturisticBackground2034;        <motion.div
           }}
           animate={{
             opacity: [0.3, 0.6, 0.3]
+=======
+export default UltraFuturisticBackground2034;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 4,
             repeat: -1,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -575,3 +624,10 @@ export default UltraFuturisticBackground2034;  )
 };
 
 export default UltraFuturisticBackground2034;
+=======
+
+          }}
+        />
+      </div>
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

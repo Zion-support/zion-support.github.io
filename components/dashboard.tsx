@@ -122,7 +122,11 @@ export default function Dashboard() {
         </section>
       </main>
     </div>
+<<<<<<< HEAD
 );
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 }fetchBranding () 
 }, [tenantId]);

@@ -298,9 +298,13 @@ export default function ComprehensivePricingPage() {;
       metric: '2000%+',
       label: 'Average ROI',
       description: 'Proven business value',
+<<<<<<< HEAD
       icon: <TrendingUp className='w-6 h-6' />,
     },      icon: <TrendingUp className="w-6 h-6" />
     }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   ];
 
   const containerVariants = {
@@ -325,6 +329,11 @@ export default function ComprehensivePricingPage() {;
       },
     },
 
+<<<<<<< HEAD
+=======
+  };
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>
       <div className='min-h-screen'>
@@ -377,6 +386,7 @@ export default function ComprehensivePricingPage() {;
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
               >
+<<<<<<< HEAD
                 <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Comprehensive
                 </span>
@@ -397,10 +407,14 @@ export default function ComprehensivePricingPage() {;
               </motion.h1>
               <motion.p 
                 className="text-xl md:text-2xl text-gray-300 mb-12 leading-relaxed"
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
+<<<<<<< HEAD
                 Transparent pricing for all our revolutionary micro SaaS
                 services. Choose the perfect plan for your business with
                 guaranteed ROI and enterprise-grade reliability.
@@ -411,6 +425,9 @@ export default function ComprehensivePricingPage() {;
               {/* Market Stats */}
               <motion.div 
                 className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -427,15 +444,29 @@ export default function ComprehensivePricingPage() {;
                     <div className="text-3xl font-bold text-cyan-400 mb-2">{stat.metric}</div>
                     <div className="text-gray-400 text-sm">{stat.label}</div>
                     <div className="text-gray-500 text-xs">{stat.description}</div>
+<<<<<<< HEAD
                 ))}
               </motion.div>
+=======
+
+                  </div>
+
+                ))}
+              </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* CTA Buttons */}
               <motion.div
                 className='flex flex-col sm:flex-row gap-4 justify-center items-center'                initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
               >              <motion.div 
                 className="flex flex-col sm:flex-row gap-4 justify-center items-center"
+=======
+              >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.6 }}
@@ -497,6 +528,12 @@ export default function ComprehensivePricingPage() {;
           <div className="container mx-auto px-4">
             <motion.div 
               className="text-center mb-16"
+<<<<<<< HEAD
+=======
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -632,16 +669,27 @@ export default function ComprehensivePricingPage() {;
             </motion.div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Pricing Grid */}
         <section id='services-pricing' className='py-20'>
           <div className='container mx-auto px-4'>
             {/* Filters and Controls */}
             <motion.div
+<<<<<<< HEAD
               className='mb-8'              initial={{ opacity: 0, y: 20 }}        <section id="services-pricing" className="py-20">
           <div className="container mx-auto px-4">
             {/* Filters and Controls */}
             <motion.div 
               className="mb-8"
+=======
+              className='mb-8'              initial={{ opacity: 0, y: 20 }}
+
+              initial={{ opacity: 0, y: 20 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
@@ -725,6 +773,7 @@ export default function ComprehensivePricingPage() {;
               }
               variants={containerVariants}
               initial='hidden'
+<<<<<<< HEAD
               whileInView='visible'              viewport={{ once: true }}            <motion.div 
               className={viewMode === 'grid' 
                 ? "grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8"
@@ -733,6 +782,12 @@ export default function ComprehensivePricingPage() {;
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
+=======
+              whileInView='visible'              viewport={{ once: true }}
+
+              viewport={{ once: true }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               {filteredServices.map((service, index) => (
                 <motion.div
@@ -741,7 +796,12 @@ export default function ComprehensivePricingPage() {;
                   whileHover={{ y: -5 }}
                 >
                   <UltraFuturisticCard
+<<<<<<< HEAD
                     variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}                    variant={service.variant as any || 'quantum-advanced'}
+=======
+                    variant={(service.variant as any) || 'quantum-advanced'}                    size={viewMode === 'grid' ? 'large' : 'medium'}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     size={viewMode === 'grid' ? 'large' : 'medium'}
                     className={`h-full cursor-pointer ${viewMode === 'list' ? 'flex flex-col md:flex-row' : ''}`}
                   >
@@ -784,6 +844,7 @@ export default function ComprehensivePricingPage() {;
                               <span className="text-gray-300">{feature}</span>
                           ))}
                         </div>
+<<<<<<< HEAD
                         <div className='text-center space-y-2'>
                           <Button
                             variant='primary'
@@ -951,10 +1012,14 @@ export default function ComprehensivePricingPage() {;
                 transition={{ duration: 0.6 }}
               >              <motion.div 
                 className="text-center py-16"
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 0.6 }}
               >
+<<<<<<< HEAD
                 <div className='text-6xl mb-4'>🔍</div>
                 <h3 className='text-2xl font-bold text-white mb-2'>
                   No Services Found
@@ -1087,11 +1152,20 @@ export default function ComprehensivePricingPage() {;
                   <div className="text-white font-semibold">{contactInfo.address}</div>
                   <div className="text-gray-400 text-sm">Visit our office</div>
                 </div>
+=======
+
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </motion.div>
           </div>
         </section>
       </div>
     </UltraFuturisticBackground>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

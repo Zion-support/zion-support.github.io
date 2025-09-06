@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card'
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form'
@@ -148,3 +149,16 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
     </Card>
   )
 };
+=======
+
+import React from "react",
+import { UseFormReturn } from "react-hook-form",
+import { AppMetadataValues } from "./MetadataManager",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form",
+import { Badge } from "@/components/ui/badge",
+import { X } from 'lucide-react'
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+=======
+ const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   return new Promise ( (resolve) => {
   if (typeof window !== 'undefined' && 'performance' in window) {
   //Wait for page to be fully loaded if (document.readyState === 'complete') {
@@ -75,5 +79,8 @@ if (score >= 50) return 'Needs Improvement';
 };
 
 export default PerformanceMonitor;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

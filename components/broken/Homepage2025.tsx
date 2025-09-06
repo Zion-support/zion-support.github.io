@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
 ...innovative2035AIServices;
@@ -202,6 +206,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) ) 
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) 
 }export default Homepage2025;export default Homepage2025;
+<<<<<<< HEAD
 
 }
 }
@@ -221,3 +226,5 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

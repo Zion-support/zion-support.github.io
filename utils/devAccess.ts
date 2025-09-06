@@ -52,4 +52,7 @@ export function requireRoles(
     return undefined;
   }
   return identity;
+<<<<<<< HEAD
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

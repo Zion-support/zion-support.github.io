@@ -1,7 +1,28 @@
-import * as React from &quot;react&quot;
+import * as React from "react"
 
-import { cn } from &quot;@/lib/utils&quot;
+import { cn } from "@/lib/utils"
 
+<<<<<<< HEAD
+=======
+const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(
+  ({ className, type, ...props }, ref) => {
+    return (
+      <input
+        type={type}
+        className={cn(
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm",
+          className
+import * as React from "react";
+import { cn } from "@/lib/utils";
+const Input = React.forwardRef<HTMLInputElement React.ComponentProps<"input">>(;
+  ({ className, type, ...props }, ref) => {;
+    return (;
+      <input;
+        type={type}
+        className={cn(;
+          "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm";
+          className;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
         ref={ref}
         {...props}
@@ -9,6 +30,12 @@ import { cn } from &quot;@/lib/utils&quot;
     );
   }
 )
+<<<<<<< HEAD
 Input.displayName = &quot;Input&quot;
 export { Input };
+=======
+Input.displayName = "Input"
+
+export { Input }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;

@@ -297,10 +297,18 @@ export default function UltimateFuturisticServicesShowcase2025() {;
           </motion.div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Search and Filter Section */}
       <section className='py-12 bg-gradient-to-r from-black via-purple-900/10 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex flex-col lg:flex-row gap-6 items-center justify-between'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Search */}
             <div className='relative flex-1 max-w-md'>
               <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -312,6 +320,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 className='w-full pl-10 pr-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'              />
             </div>
             {/* Category Filter */}
+<<<<<<< HEAD
             <div className='flex flex-wrap gap-3'>            {/* Search */}
             <div className="relative flex-1 max-w-md">
               <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -339,15 +348,34 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 <option value="all">All Categories</option>
                 {serviceCategories.map((category) => (
                   <option key={category.title} value={category.title}>
+=======
+            <div className='flex flex-wrap gap-3'>
+
+              />
+            </div>
+
+            {/* Category Filter */}
+
+                  <option key={category.title} value={category.title}>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {category.title} ({category.count})
                   </option>
                 ))}
               </select>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Sort Options */}
               <select
                 value={sortBy}
                 onChange={e => setSortBy(e.target.value)}
                 className='px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <option value='popular'>Most Popular</option>
                 <option value='price-low'>Price: Low to High</option>
@@ -372,6 +400,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded ${viewMode === 'grid' ? 'bg-purple-500 text-white' : 'text-gray-400'}`}
                 >
+<<<<<<< HEAD
                   <div className='grid grid-cols-2 gap-1 w-4 h-4'>
                     <div className='bg-current rounded-sm'></div>
                     <div className='bg-current rounded-sm'></div>
@@ -417,6 +446,11 @@ export default function UltimateFuturisticServicesShowcase2025() {;
             initial="hidden"
             animate="visible"
             className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}
+=======
+
+          >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {sortedServices.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -444,6 +478,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     <div
                       className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center text-3xl`}
                     >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {service.icon}
                     </div>
                   </div>
@@ -495,6 +533,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     ))}
                     {service.features.length > 4 && (
                       <div className='text-sm text-purple-400 mt-2'>                        +{service.features.length - 4} more features
+<<<<<<< HEAD
                 {/* Features */}
                 <div className="mb-6">
                   <h4 className="text-white font-semibold mb-3 flex items-center">
@@ -515,6 +554,21 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     )}
                   </div>
                 </div>
+=======
+
+                        {feature}
+                      </div>
+                    ))}
+                    {service.features.length > 4 && (
+
+                        +{service.features.length - 4} more features
+
+                      </div>
+                    )}
+                  </div>
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Service Details */}
                 <div className='grid grid-cols-2 gap-4 mb-6 text-sm'>
                   <div className='text-gray-400'>
@@ -522,6 +576,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                     <span className='text-white font-medium'>
                       {service.setupTime}
                     </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <div className='text-gray-400'>
                     <span className='block'>Trial</span>
@@ -607,6 +665,7 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                 {/* Contact Info */}
                 <div className='mt-6 pt-6 border-t border-white/10'>
                   <div className='text-center text-sm text-gray-400'>
+<<<<<<< HEAD
                     <p>Contact us for custom pricing and implementation</p>
                     <div className='flex items-center justify-center space-x-4 mt-2'>
                       <a
@@ -629,6 +688,16 @@ export default function UltimateFuturisticServicesShowcase2025() {;
                       <a href={`mailto:${contactInfo.email}`} className="flex items-center text-purple-400 hover:text-purple-300">
                         <Mail className="w-4 h-4 mr-1" />
                         {contactInfo.email}
+=======
+
+                  </button>
+                </div>
+
+                {/* Contact Info */}
+
+                        {contactInfo.email}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </a>
                     </div>
                   </div>
@@ -636,6 +705,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* No Results */}
           {sortedServices.length === 0 && (
             <div className='text-center py-16'>
@@ -664,11 +737,19 @@ export default function UltimateFuturisticServicesShowcase2025() {;
           )}
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20'>
         <div className='max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/20 via-black to-pink-900/20">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -715,5 +796,10 @@ export default function UltimateFuturisticServicesShowcase2025() {;
         </div>
       </section>
     </Layout>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

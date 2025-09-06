@@ -306,7 +306,11 @@ const categories = [
   { name: "Performance", count: 1, icon: Zap },
 ];
 
-export default function GuidesPage() {
+interface GuidesProps {
+  className?: string;
+}
+
+const Guides: React.FC<GuidesProps> = ({ className }) => {
   return (
     <Layout>
       <Head>

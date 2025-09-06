@@ -14,7 +14,12 @@ class SEOAccessibility {; constructor() {; this.projectRoot = process.cwd(); thi
 ; const scanDirectory = (currentDir) = > {; const items = fs.readdirSync(currentDir); items.forEach(item = > {; const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath);
 ; if (stat.isDirectory()) {; scanDirectory(fullPath)} else if (item.endsWith('.js') || item.endsWith('.jsx') || item.endsWith('.ts') || item.endsWith('.tsx')) {; files.push(fullPath)}})};
 ;
+<<<<<<< HEAD
 
 
 }
 }
+=======
+      });
+    },;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

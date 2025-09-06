@@ -65,6 +65,10 @@ export default async function handler(
   } catch (error: any) {
 console.error('Assistant API error:', error?.message || error);
     return res.status(500).json({ error: 'Assistant request failed' });
+<<<<<<< HEAD
   }    return res.status(500).json({ error: 'Assistant request failed' })
   };
 }
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

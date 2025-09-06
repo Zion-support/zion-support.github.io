@@ -143,6 +143,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
       />
       {/* Gradient Overlays */}  }, []);
 
+<<<<<<< HEAD
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">
       {/* Animated Background Canvas */}
@@ -193,6 +194,15 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
             rotate: [45, 405];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]
+=======
+      {/* Gradient Overlays */}
+
+        style={{ zIndex: 0 }}
+      />
+
+      {/* Gradient Overlays */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 8,
@@ -242,9 +252,17 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
           transition={{
             duration: 12,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
+=======
+
+          }}
+
+        />
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Floating Circles */}
         <motion.div
           className='absolute top-1/3 left-1/3 w-16 h-16 border border-purple-400/40 rounded-full'
@@ -310,8 +328,14 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
           transition={{
             duration: 5,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Energy Waves */}
@@ -319,6 +343,10 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 3 }}
       >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           className='absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-500 to-transparent'
           animate={{
@@ -380,10 +408,16 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'linear',
             delay: 4,            ease: "linear",
             delay: 4
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Quantum Particles */}
@@ -391,6 +425,10 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
         className='absolute inset-0 pointer-events-none'
         style={{ zIndex: 4 }}
       >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
@@ -413,21 +451,37 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
               scale: [0, 1, 0];
               opacity: [0, 1, 0]
             }}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 3,
+<<<<<<< HEAD
               ease: 'easeInOut',            }}              ease: "easeInOut"
             }}
           />
         ))}
       </div>
+=======
+              ease: 'easeInOut',            }}
+
+            }}
+
+          />
+        ))}
+      </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Content */}
       <div className='relative' style={{ zIndex: 10 }}>        {children}
       </div>
       {/* Bottom Glow */}      <div className="relative" style={{ zIndex: 10 }}>
         {children}
       </div>
+<<<<<<< HEAD
       {/* Bottom Glow */}
       <div
         className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-purple-900/20 to-transparent pointer-events-none'
@@ -449,3 +503,7 @@ export default function UltraFuturisticBackground2028({ children }: UltraFuturis
 }
 }
 }
+=======
+
+      {/* Bottom Glow */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -88,6 +88,7 @@ export default function SalaryInsightsPage() {;
     } catch (e: any) {
       setError(e.message || 'Unexpected error');
     } finally {
+<<<<<<< HEAD
       setLoading(false);    }      if (!res.ok) throw new Error('Failed to fetch insights');
       const json = (await res.json()) as InsightResponse;
       setData(json)
@@ -95,6 +96,10 @@ export default function SalaryInsightsPage() {;
       setError(e.message || 'Unexpected error')
     } finally {
       setLoading(false)
+=======
+      setLoading(false);    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -142,6 +147,10 @@ export default function SalaryInsightsPage() {;
         history.unshift(payload);
         localStorage.setItem(key, JSON.stringify(history.slice(0, 50)));
         alert('Insight saved locally');
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       } catch {}
     })();
   }
@@ -381,6 +390,7 @@ export default function SalaryInsightsPage() {;
               ) : (
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />
               )}
+<<<<<<< HEAD
               {data && (
                 <table className='w-full mt-3 text-sm'>
                   <thead>
@@ -438,6 +448,9 @@ export default function SalaryInsightsPage() {;
               ) : (
                 <div className='h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded' />                <div className="h-40 animate-pulse bg-gray-100 dark:bg-gray-900 rounded" />
               )}
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </div>
           {data?.gptRecommendation && (
@@ -448,6 +461,7 @@ export default function SalaryInsightsPage() {;
               </p>            </div>
           )}
 
+<<<<<<< HEAD
           {data && (            <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
               <h3 className="font-medium mb-2">GPT Recommendation</h3>
               <p className="text-sm text-gray-700 dark:text-gray-300 whitespace-pre-wrap">{data.gptRecommendation}</p>
@@ -481,3 +495,11 @@ export default function SalaryInsightsPage() {;
     </div>
 );
 }
+=======
+          {data && (
+
+            </div>
+          )}
+
+          {data && (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

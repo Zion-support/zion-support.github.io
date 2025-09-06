@@ -9,5 +9,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const data = readJsonFile('updates.json', [] as any[]);
   res.status(200).json(data)
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

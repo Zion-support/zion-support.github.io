@@ -1,10 +1,19 @@
 
+<<<<<<< HEAD
 import {Education} from '@/types/resume';
 import {EducationItem} from './EducationItem';
 interface EducationListProps {
   educationEntries: Education[],
   onEdit: (education: Education) => void,
   onDelete: (id: string) => void
+=======
+import { Education } from '@/types/resume',;
+import { EducationItem } from './EducationItem',;
+interface EducationListProps {;
+  educationEntries: Education[],;
+  onEdit: (education: Education) => void;
+  onDelete: (id: string) => void;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export function EducationList({ educationEntries, onEdit, onDelete }: EducationListProps) {

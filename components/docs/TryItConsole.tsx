@@ -51,6 +51,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
 
   return (
     <div className='space-y-2'>
+<<<<<<< HEAD
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {
         method;
@@ -62,6 +63,10 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
       setResponse(String(e?.message || e))
     } finally {
       setLoading(false)
+=======
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -108,6 +113,7 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
         </div>
       </div>
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
+<<<<<<< HEAD
         <div>
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
           <textarea
@@ -133,3 +139,6 @@ export default function TryItConsole({ method, path, requiresAuth }: TryItProps)
     </div>
 );
 }
+=======
+        <div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

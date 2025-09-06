@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
+<<<<<<< HEAD
 
 const EnhancedFooter: React.FC = () => {;
   const currentYear = new Date().getFullYear();
@@ -105,6 +106,11 @@ export default function EnhancedFooter() {
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github },;
   ];
+=======
+
+const EnhancedFooter: React.FC = () => {
+  const currentYear = new Date().getFullYear();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -263,5 +269,8 @@ export default function EnhancedFooter() {
 };
 
 export default EnhancedFooter;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

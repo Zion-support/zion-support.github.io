@@ -95,6 +95,7 @@ export default function EnhancedHero2026({
               ease: 'easeInOut',
               delay: Math.random() * 2,            }}  };
 
+<<<<<<< HEAD
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Enhanced Background Elements */}
@@ -114,14 +115,22 @@ export default function EnhancedHero2026({
               y: [0, -30, 0];
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.5, 1]
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
+<<<<<<< HEAD
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
               delay: Math.random() * 2
             }}
+=======
+
+            }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           />
         ))}
       </div>
@@ -164,6 +173,7 @@ export default function EnhancedHero2026({
               Transform your business with our revolutionary AI, Quantum, and IT infrastructure services. 
               <span className="text-cyan-400 font-semibold"> 1000+ cutting-edge solutions</span> delivering unprecedented ROI.
           </motion.div>
+<<<<<<< HEAD
           {/* Enhanced Stats Grid */}
           <motion.div
             className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'
@@ -233,10 +243,21 @@ export default function EnhancedHero2026({
                 </div>
                 <div className="text-xs text-gray-400 leading-tight">
                   {stat.label}
+=======
+
+          {/* Enhanced Stats Grid */}
+
+                  {stat.label}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </div>
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Enhanced CTA Section */}
           <motion.div variants={itemVariants} className='space-y-6'>
             <div className='flex flex-col sm:flex-row gap-4 justify-center items-center'>
@@ -299,6 +320,10 @@ export default function EnhancedHero2026({
               </div>
             </div>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Contact Information */}
           <motion.div
             variants={itemVariants}
@@ -348,5 +373,9 @@ export default function EnhancedHero2026({
         </motion.div>
       </div>
     </section>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

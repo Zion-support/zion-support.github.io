@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Trophy } from 'lucide-react'
 import { Progress } from '@/components/ui/progress'
 interface ReputationDisplayProps {
@@ -8,6 +9,18 @@ export const ReputationDisplay = ({
   size = 'md',}: ReputationDisplayProps) => {
 export const ReputationDisplay = ({ 
   reputation
+=======
+
+import { Trophy } from 'lucide-react'
+import { Progress } from "@/components/ui/progress",
+interface ReputationDisplayProps {
+  reputation: number,
+  size?: 'sm' | 'md' | 'lg'
+}
+
+export const ReputationDisplay = ({ 
+  reputation,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   size = 'md' 
 }: ReputationDisplayProps,) => {
   // Calculate next milestone
@@ -17,6 +30,7 @@ export const ReputationDisplay = ({
   // Styling based on size
   const sizeClasses = {
     sm: {
+<<<<<<< HEAD
       container: 'text-xs',
       icon: 'w-3 h-3',
       progress: 'h-1',  // Styling based on size
@@ -25,6 +39,21 @@ export const ReputationDisplay = ({
       container: "text-xs",
       icon: "w-3 h-3",
       progress: "h-1"
+=======
+      container: "text-xs",
+      icon: "w-3 h-3",
+      progress: "h-1"
+    },
+    md: {
+      container: "text-sm",
+      icon: "w-4 h-4",
+      progress: "h-2" 
+    },
+    lg: {
+      container: "text-base",
+      icon: "w-5 h-5",
+      progress: "h-3"
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     md: {
       container: "text-sm",
@@ -50,6 +79,17 @@ export const ReputationDisplay = ({
       </div>
     </div>
   )
+<<<<<<< HEAD
+=======
+},
+
+export default ReputationDisplay,
+import { Trophy } from 'lucide-react';
+import { Progress } from "@/components/ui/progress",;
+interface ReputationDisplayProps {;
+  reputation: number,;
+  size?: 'sm' | 'md' | 'lg';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 export default ReputationDisplay
 '
@@ -81,5 +121,8 @@ export default ReputationDisplay
   )
 };
 export default ReputationDisplay;
+<<<<<<< HEAD
 ';
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

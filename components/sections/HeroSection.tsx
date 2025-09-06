@@ -84,6 +84,10 @@ const HeroSection: React.FC = () => {
           transition={{ duration: 0.8 }}
           className='max-w-6xl mx-auto'        >          className="max-w-6xl mx-auto"
         >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -94,10 +98,17 @@ const HeroSection: React.FC = () => {
             <Star className='w-5 h-5 text-yellow-400 fill-current' />
             <span className='text-white font-medium'>
               Leading Technology Solutions Provider
+<<<<<<< HEAD
             </span>          </motion.div>            className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-6 py-3 mb-8"
           >
             <Star className="w-5 h-5 text-yellow-400 fill-current" />
             <span className="text-white font-medium">Leading Technology Solutions Provider</span>
+=======
+            </span>          </motion.div>
+
+          </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Main Heading */}
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
@@ -112,6 +123,10 @@ const HeroSection: React.FC = () => {
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
             </span>
           </motion.h1>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -126,12 +141,21 @@ const HeroSection: React.FC = () => {
             From AI development to cloud architecture, we help companies revolutionize their digital presence 
             and achieve sustainable growth in the modern technology landscape.
 
+<<<<<<< HEAD
+=======
+          </motion.p>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <Link
               href='/contact'
@@ -159,12 +183,21 @@ const HeroSection: React.FC = () => {
               <span className="text-lg font-medium">Watch Demo</span>
             </button>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto"
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 max-w-4xl mx-auto'          >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -173,6 +206,10 @@ const HeroSection: React.FC = () => {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 className='text-center group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors'>
                   <stat.icon className='w-8 h-8 text-blue-400' />
@@ -187,10 +224,18 @@ const HeroSection: React.FC = () => {
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400 font-medium">{stat.label}</div>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </motion.div>
         </motion.div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -211,7 +256,12 @@ const HeroSection: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default HeroSection;        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+=======
+export default HeroSection;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
@@ -225,6 +275,7 @@ export default HeroSection;        className="absolute bottom-8 left-1/2 transfo
           />
         </motion.div>
       </motion.div>
+<<<<<<< HEAD
     </section>
   );
 };
@@ -233,3 +284,6 @@ export default HeroSection;  )
 };
 
 export default HeroSection;
+=======
+    </section>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

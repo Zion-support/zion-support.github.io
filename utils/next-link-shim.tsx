@@ -1,5 +1,5 @@
-import React from 'react';
 
+<<<<<<< HEAD
 // Define HTMLAnchorElement if not available
 interface HTMLElement {
   className: string;
@@ -47,3 +47,5 @@ export default function Link({ href, children, className, ...rest }: LinkProps) 
     </a>
   );
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

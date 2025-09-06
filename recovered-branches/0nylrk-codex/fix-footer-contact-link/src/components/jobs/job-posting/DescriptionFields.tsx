@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { Control } from "react-hook-form";
 import {
@@ -24,13 +25,44 @@ export function DescriptionFields({
   return (
     <>
       <FormField
+=======
+
+import React from 'react',
+import { Control } from 'react-hook-form',
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
+import { Textarea } from "@/components/ui/textarea",
+import { JobSchemaType } from './validation',
+interface DescriptionFieldsProps {
+  control: Control<JobSchemaType>,
+  handleEditorChange: (content: string) => void,
+  editorContent: string
+import React from 'react',;
+import { Control } from 'react-hook-form',;
+import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",;
+import { Textarea } from "@/components/ui/textarea",;
+import { JobSchemaType } from './validation',;
+interface DescriptionFieldsProps {;
+  control: Control<JobSchemaType>,;
+  handleEditorChange: (content: string) => void,;
+  editorContent: string;
+}
+;
+export function DescriptionFields({ control, handleEditorChange, editorContent }: DescriptionFieldsProps) {;
+  return (;
+    <>;
+      <FormField;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
+<<<<<<< HEAD
               <Textarea
+=======
+              <Textarea 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 value={editorContent}
                 onChange={(e) => {;
                   handleEditorChange(e.target.value);
@@ -130,7 +162,12 @@ export function DescriptionFields({
             <FormMessage />
           </FormItem>
         )}
+<<<<<<< HEAD
       />
     </>
+=======
+      />;
+    </>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }

@@ -64,8 +64,15 @@ const UltraFuturisticBackground2046: React.FC = () => {
             break;
           case 'energy':
             this.color = `hsl(${40 + Math.random() * 60}, 100%, 70%)`;
+<<<<<<< HEAD
             break;        }            break
         }
+=======
+            break;        }
+
+        }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
 
       update() {
@@ -376,6 +383,10 @@ const UltraFuturisticBackground2046: React.FC = () => {
           ease: 'easeInOut',
         }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Quantum particle canvas */}
       <canvas
         ref={canvasRef}
@@ -484,6 +495,7 @@ export default UltraFuturisticBackground2046;              ease: "easeInOut",
           />
         ))}
       </div>
+<<<<<<< HEAD
     </div>
   );
 };
@@ -492,3 +504,6 @@ export default UltraFuturisticBackground2046;  )
 };
 
 export default UltraFuturisticBackground2046;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

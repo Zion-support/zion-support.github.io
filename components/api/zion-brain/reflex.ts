@@ -66,7 +66,11 @@ return res.status(405).json({ error: 'Method not allowed' });
       return res.status(500).json({ error: 'Reflex failure' })
   }
 
+<<<<<<< HEAD
   return res.status(405).json({ error: 'Method not allowed' });
 }
 
 }
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

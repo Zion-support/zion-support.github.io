@@ -73,6 +73,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: e.message })
 };
 }
+<<<<<<< HEAD
 
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react'
+=======
+import React, { Component, ErrorInfo, ReactNode } from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 interface Props {
   children: ReactNode
@@ -16,8 +20,13 @@ class ErrorBoundary extends Component<Props, State> {
     this.state = { hasError: false }
   }
 
+<<<<<<< HEAD
   static getDerivedStateFromError(error: Error): State {
     return { hasError: true, error }
+=======
+  public componentDidCatch(error: Error, errorInfo: ErrorInfo) {
+    console.error('ErrorBoundary caught an error:', error, errorInfo);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -28,6 +37,7 @@ class ErrorBoundary extends Component<Props, State> {
   render() {
     if (this.state.hasError) {
       return (
+<<<<<<< HEAD
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
           <div className="max-w-md w-full bg-white shadow-lg rounded-lg p-6">
             <div className="flex items-center mb-4">
@@ -69,10 +79,27 @@ class ErrorBoundary extends Component<Props, State> {
           </div>
         </div>
       )
+=======
+        <div className="error-boundary">
+          <h2>Something went wrong.</h2>
+          <p>We're sorry, but something unexpected happened. Please try refreshing the page.</p>
+          <button 
+            onClick={() => window.location.reload()}
+            className="btn-primary"
+          >
+            Refresh Page
+          </button>
+        </div>
+      );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     return this.props.children
   }
+<<<<<<< HEAD
 }
 ;
 export default ErrorBoundary;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

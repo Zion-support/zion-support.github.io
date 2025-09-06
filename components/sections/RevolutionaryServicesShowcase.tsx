@@ -98,12 +98,15 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         <motion.div
           className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
 
+<<<<<<< HEAD
   return (
     <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -134,9 +137,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           </p>
         </motion.div>
         {/* Category Filter */}
+<<<<<<< HEAD
         <motion.div
           className='flex flex-wrap justify-center gap-4 mb-12'        <motion.div 
           className="flex flex-wrap justify-center gap-4 mb-12"
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -160,12 +167,23 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               }`}
             >
               {category.name}
+<<<<<<< HEAD
               <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}              <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">
                 {category.count}
+=======
+              <span className='ml-2 px-2 py-1 bg-white/20 rounded-full text-xs'>                {category.count}
+
+                {category.count}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </span>
             </button>
           ))}
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.div
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12'
@@ -181,6 +199,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               key={service.id}
               variants={itemVariants}
               className='group relative cursor-pointer'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               style={{ perspective: '1000px' }}
             >
               <div className='absolute -inset-1 rounded-2xl bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 opacity-0 blur-lg transition-all duration-300 group-hover:opacity-75'></div>
@@ -215,6 +237,10 @@ const RevolutionaryServicesShowcase: React.FC = () => {
                   <div className='flex items-start justify-between mb-4'>
                     <div className='flex items-center space-x-3'>
                       <div className='text-4xl'>{service.icon}</div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       <div>
                         <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors duration-300'>
                           {service.name}
@@ -354,11 +380,20 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
         {/* Load More Button */}
         {visibleServices < filteredServices.length && (
           <motion.div
             className='text-center'            initial={{ opacity: 0 }}          <motion.div 
             className="text-center"
+=======
+
+        {/* Load More Button */}
+        {visibleServices < filteredServices.length && (
+          <motion.div
+            className='text-center'            initial={{ opacity: 0 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -366,7 +401,12 @@ const RevolutionaryServicesShowcase: React.FC = () => {
           >
             <button
               onClick={loadMore}
+<<<<<<< HEAD
               className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >              className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40"
+=======
+              className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25 hover:shadow-cyan-500/40'            >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               Load More Revolutionary Services
             </button>
@@ -375,8 +415,13 @@ const RevolutionaryServicesShowcase: React.FC = () => {
 
         {/* Call to Action */}
         <motion.div
+<<<<<<< HEAD
           className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}        <motion.div 
           className="text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20"
+=======
+          className='text-center mt-20 p-8 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl border border-cyan-500/20'          initial={{ opacity: 0, y: 30 }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -425,7 +470,11 @@ const RevolutionaryServicesShowcase: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default RevolutionaryServicesShowcase;  )
 };
 
 export default RevolutionaryServicesShowcase;
+=======
+export default RevolutionaryServicesShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

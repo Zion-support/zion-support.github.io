@@ -374,6 +374,7 @@ export default function UltraFuturisticBackground2038({
             const alpha = (noise + 0.5) * 0.1;
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
+<<<<<<< HEAD
               ctx.fillRect(x, y, 20, 20);            }      // Create quantum field effects
       if (theme === 'consciousness' || theme === 'quantum') {
         const time = Date.now() * 0.001;
@@ -384,6 +385,10 @@ export default function UltraFuturisticBackground2038({
             if (alpha > 0.05) {
               ctx.fillStyle = `rgba(139, 92, 246, ${alpha})`;
               ctx.fillRect(x, y, 20, 20)
+=======
+              ctx.fillRect(x, y, 20, 20);            }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }
           }
         }
@@ -521,6 +526,7 @@ export default function UltraFuturisticBackground2038({
           ctx.fill();
         }
 
+<<<<<<< HEAD
         // Boundary wrapping with quantum tunneling effect
         if (
           particle.x < 0 ||
@@ -548,6 +554,8 @@ export default function UltraFuturisticBackground2038({
           } else {
             particle.x = (particle.x + canvas.width) % canvas.width;
             particle.y = (particle.y + canvas.height) % canvas.height
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
 
@@ -602,6 +610,7 @@ export default function UltraFuturisticBackground2038({
                 className='absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20'
                 style={{
                   left: `${(i * 5) % 100}%`,
+<<<<<<< HEAD
                   top: `${(i * 3) % 100}%`,                  top: `${(i * 3) % 100}%`}}
                 animate={{
                   height: [32, 64, 32];
@@ -610,6 +619,10 @@ export default function UltraFuturisticBackground2038({
                   duration: 3 + i * 0.2,
                   repeat: Infinity,
                   ease: "easeInOut"
+=======
+                  top: `${(i * 3) % 100}%`,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   height: [32, 64, 32],
@@ -632,6 +645,7 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className='absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent opacity-30'
                 style={{
+<<<<<<< HEAD
                   top: `${(i * 7) % 100}%`,            {[...Array(15)].map((_, i) => (
               <motion.div
                 key={i}
@@ -644,6 +658,10 @@ export default function UltraFuturisticBackground2038({
                   duration: 4 + i * 0.3,
                   repeat: Infinity,
                   ease: "easeInOut"
+=======
+                  top: `${(i * 7) % 100}%`,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   opacity: [0.3, 0.8, 0.3],
@@ -666,6 +684,7 @@ export default function UltraFuturisticBackground2038({
                 className='absolute w-96 h-96 border border-pink-500/20 rounded-full'
                 style={{
                   left: `${(i * 12) % 100}%`,
+<<<<<<< HEAD
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
                 key={i}
@@ -680,6 +699,10 @@ export default function UltraFuturisticBackground2038({
                   duration: 6 + i * 0.5,
                   repeat: Infinity,
                   ease: "easeInOut"
+=======
+                  top: `${(i * 8) % 100}%`,
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }}
                 animate={{
                   scale: [1, 1.5, 1],
@@ -694,6 +717,10 @@ export default function UltraFuturisticBackground2038({
           </div>
         )}
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {children}
     </div>
   );
@@ -728,6 +755,10 @@ animate ();
 }</div>) 
 }</div> {
   children 
+<<<<<<< HEAD
 }</div>)   )
 }
 ;
+=======
+}</div>)
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

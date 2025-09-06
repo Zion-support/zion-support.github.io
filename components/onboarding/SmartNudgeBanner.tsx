@@ -44,7 +44,12 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
     setHidden(true);
     try {
       if (typeof window !== 'undefined')
+<<<<<<< HEAD
         localStorage.setItem(storageKey, 'dismissed');    } catch {}      if (typeof window !== 'undefined') localStorage.setItem(storageKey, 'dismissed')
+=======
+        localStorage.setItem(storageKey, 'dismissed');    } catch {}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } catch {}
   }, [storageKey]);
 
@@ -61,6 +66,7 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
       </button>
       <div className='text-sm'>{message}</div>
     </div>
+<<<<<<< HEAD
   );        <X size={16} />
       </button>
       <div className="text-sm">
@@ -71,3 +77,6 @@ export default function SmartNudgeBanner({ role, userId, message }: SmartNudgeBa
 }
 
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -24,6 +24,7 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     pageSize: pageSize ? Number(pageSize) : 20,
     filters,
     format: (format as any) || undefined,
+<<<<<<< HEAD
   };    search;
     sort;
     order: (order as any) || 'desc';
@@ -32,6 +33,9 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters,
     format: (format as any) || undefined}
 }
+=======
+  };
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 function toCsv(rows: any[]): string {
   if (!rows.length) return '';
@@ -122,12 +126,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter(
             (r: any) => String((r as any)[k]) === String(v)
+<<<<<<< HEAD
           );        }        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
       }
       if (params.filters) {
         for (const [k, v] of Object.entries(params.filters)) {
           filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
       }
+=======
+          );        }
+
+        }
+
+      }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       if (params.sort) {
         filtered.sort((a: any, b: any) => {
           const av = (a as any)[params.sort!];
@@ -148,6 +160,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           `attachment; filename="${type}.csv"`
         );
         return res.status(200).send(toCsv(pageItems));
+<<<<<<< HEAD
+=======
+
+      }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       return res.status(200).json({ items: pageItems, total });
     }
   }
@@ -177,8 +194,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         updated_at: new Date().toISOString(),
       };
       list[idx] = updated as any;
+<<<<<<< HEAD
       return res.status(200).json({ item: updated });    }      return res.status(200).json({ item: updated })
     }
+=======
+      return res.status(200).json({ item: updated });    }
+
+    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 
   if (req.method === 'DELETE') {
@@ -202,8 +226,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
+<<<<<<< HEAD
 return res.status(405).json({ error: 'Method not allowed' });
 
 }return res.status (200) .send (toCsv (data || []) );
 }return res.status (200) .send (toCsv (pageItems) );
 }
+=======
+  return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

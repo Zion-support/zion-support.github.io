@@ -2,8 +2,14 @@ import type { GetServerSideProps } from 'next';
 import {FormEvent, useState} from 'react';
 import type { Vendor } from '../../utils/vendor-types';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function VendorProfilePage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+
+export default function VendorProfilePage({ vendor }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [message, setMessage] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -44,6 +50,7 @@ export default function VendorProfilePage({ vendor }: Props) {;
   }
 
   return (
+<<<<<<< HEAD
     <div className='space-y-8'>
       <div className='flex items-center gap-4'>
         {vendor.logoUrl ? (
@@ -151,6 +158,21 @@ export default function VendorProfilePage({ vendor }: Props) {;
                   <div className="font-medium">{sp.title}</div>
                   <div className="text-sm text-gray-500">{sp.description}</div>
                 </div>
+=======
+
+        </div>
+      </div>
+
+      <div>
+
+      </div>
+
+      {vendor.packages && vendor.packages.length > 0 && (
+        <div>
+
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             ))}
           </div>
@@ -184,6 +206,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async ctx => {;
   const { getVendorBySlug } = await import('../../utils/vendor-store');
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } };
+<<<<<<< HEAD
 };            {loading ? 'Submitting...' : 'Send'}
           </button>
           {message && <div className="text-sm">{message}</div>}
@@ -200,3 +223,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {;
   const vendor = slug ? getVendorBySlug(slug) || null : null;
   return { props: { vendor } }
 };
+=======
+};
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

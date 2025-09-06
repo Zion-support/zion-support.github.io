@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
     allServices = [...allServices, ...newServices]
@@ -44,11 +45,45 @@ const ServicesPage: React.FC = () => {
             <a href="/micro-saas" className="text-blue-600 hover:text-blue-700 font-semibold">
               Learn More →
             </a>
+=======
+import React from 'react';
+
+const ServicesPage: React.FC = () => {
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-16">
+        <h1 className="text-4xl font-bold text-gray-900 mb-8">Our Services</h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">IT Solutions</h3>
+            <p className="text-gray-600">
+              Comprehensive IT infrastructure and support services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">AI Services</h3>
+            <p className="text-gray-600">
+              Artificial intelligence solutions and automation services.
+            </p>
+          </div>
+          <div className="bg-white p-6 rounded-lg shadow-md">
+            <h3 className="text-xl font-semibold mb-4">Blockchain</h3>
+            <p className="text-gray-600">
+              Blockchain development and Web3 solutions.
+            </p>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 };
 export default ServicesPage;
 };
+=======
+  );
+};
+
+export default ServicesPage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

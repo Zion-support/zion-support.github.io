@@ -55,6 +55,10 @@ interface ServiceCategory {
   icon: React.ReactNode,
   color: string
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const serviceCategories: ServiceCategory[] = [
   {
     id: 'ai-ml',
@@ -312,6 +316,7 @@ const services: Service[] = [
     id: 'cloud-native-platform',
     title: 'Cloud-Native Development Platform',
     description: 'Modern cloud-native development and deployment platform',
+<<<<<<< HEAD
     icon: <FaCloud className='w-6 h-6' />,
     features: [
       'Kubernetes orchestration',
@@ -343,6 +348,9 @@ const services: Service[] = [
   },];      'Faster deploymentImproved scalabilityBetter resource utilizationEnhanced reliability'
     ]
   }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ];
 
 const EnhancedServicesShowcase2025: React.FC = () => {
@@ -382,7 +390,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         service.technologies.some(tech => tech.toLowerCase().includes(searchTerm.toLowerCase()))
       )
     }
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price':
@@ -447,12 +459,20 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             From AI-powered automation to quantum computing, we're building tomorrow's innovations today.
           </p>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Search and Filters */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           className='mb-12'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='flex flex-col md:flex-row gap-4 items-center justify-center'>
             <div className='relative flex-1 max-w-md'>
@@ -474,6 +494,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             >
               <option value='name'>Sort by Name</option>
               <option value='price'>Sort by Price</option>
+<<<<<<< HEAD
               <option value='category'>Sort by Category</option>            </select>        >
           <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
             <div className="relative flex-1 max-w-md">
@@ -497,6 +518,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </select>
           </div>
         </motion.div>
+=======
+              <option value='category'>Sort by Category</option>            </select>
+
+            </select>
+
+          </div>
+        </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Category Tabs */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -508,6 +538,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
         >
           <div className="flex flex-wrap justify-center gap-4">
             <button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                 selectedCategory === 'all'
@@ -519,6 +553,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </button>
             {serviceCategories.map(category => (              <button            {serviceCategories.map((category) => (
               <button
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
                 className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -533,12 +571,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             ))}
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
           className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+=======
+          className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'        >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           {filteredServices.map((service, index) => (
             <motion.div
@@ -548,6 +595,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -5, scale: 1.02 }}
               className='bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl p-6 cursor-pointer hover:bg-white/20 transition-all duration-300'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               onClick={() => handleServiceSelect(service)}
             >
               <div className='flex items-center gap-3 mb-4'>
@@ -573,6 +624,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 {service.technologies.slice(0, 3).map(tech => (
                   <span
                     key={tech}
+<<<<<<< HEAD
                     className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >              onClick={() => handleServiceSelect(service)}
             >
               <div className="flex items-center gap-3 mb-4">
@@ -591,6 +643,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     key={tech}
                     className="px-2 py-1 bg-white/10 rounded text-xs text-gray-300"
                   >
+=======
+                    className='px-2 py-1 bg-white/10 rounded text-xs text-gray-300'                  >
+
+                  >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {tech}
                   </span>
                 ))}
@@ -622,6 +680,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </motion.div>
           ))}
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* No Results */}
         {filteredServices.length === 0 && (
           <motion.div
@@ -635,6 +697,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </h3>
             <p className='text-gray-400'>
               Try adjusting your search terms or category filters
+<<<<<<< HEAD
             </p>          </motion.div>            className="text-center py-16"
           >
             <div className="text-6xl mb-4">🔍</div>
@@ -642,6 +705,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             <p className="text-gray-400">Try adjusting your search terms or category filters</p>
         )}
       </div>
+=======
+            </p>          </motion.div>
+
+          </motion.div>
+
+        )}
+      </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Service Detail Modal */}
       <AnimatePresence>
         {selectedService && (
@@ -649,8 +721,15 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
+<<<<<<< HEAD
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4"
             onClick={closeModal}
+=======
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
+
+            onClick={closeModal}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
@@ -658,6 +737,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               exit={{ scale: 0.9, opacity: 0 }}
               className='bg-gray-900 border border-white/20 rounded-2xl p-8 max-w-4xl w-full max-h-[90vh] overflow-y-auto'
               onClick={e => e.stopPropagation()}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <div className='flex items-start justify-between mb-6'>
                 <div className='flex items-center gap-4'>
@@ -691,6 +774,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 </div>
                 <button
                   onClick={closeModal}
+<<<<<<< HEAD
                   className='p-2 hover:bg-white/10 rounded-lg transition-colors'
                 >
                   <span className='text-2xl'>×</span>
@@ -725,10 +809,19 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                       <li key={index} className="flex items-center gap-2 text-gray-300">
                         <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
                         {feature}
+=======
+
+                        {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       </li>
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Benefits */}
                 <div>
                   <h3 className='text-xl font-bold text-white mb-4'>
@@ -750,6 +843,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   </ul>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Technologies */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -759,6 +856,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                   {selectedService.technologies.map(tech => (
                     <span
                       key={tech}
+<<<<<<< HEAD
                       className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >              <div className="mt-8">
                 <h3 className="text-xl font-bold text-white mb-4">Technologies</h3>
                 <div className="flex flex-wrap gap-3">
@@ -766,11 +864,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                     <span
                       key={tech}
                       className="px-3 py-2 bg-white/10 rounded-lg text-gray-300"
+=======
+                      className='px-3 py-2 bg-white/10 rounded-lg text-gray-300'                    >
+
+                    >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {tech}
                     </span>
                   ))}
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Pricing */}
               <div className='mt-8'>
                 <h3 className='text-xl font-bold text-white mb-4'>
@@ -802,6 +910,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                       </button>
                     </div>
                   ))}
+<<<<<<< HEAD
+=======
+
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </motion.div>
           </motion.div>
@@ -811,7 +925,11 @@ const EnhancedServicesShowcase2025: React.FC = () => {
 );
 };
 
+<<<<<<< HEAD
 export default EnhancedServicesShowcase2025;  )
 };
 
 export default EnhancedServicesShowcase2025;
+=======
+export default EnhancedServicesShowcase2025;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
@@ -72,3 +73,5 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing
   };
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

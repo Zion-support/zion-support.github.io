@@ -1,8 +1,15 @@
 
+<<<<<<< HEAD
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
 import {Control} from "react-hook-form";
 import {BasicInfoFormData} from "./schema";
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
+import { Input } from "@/components/ui/input",
+import { Control } from "react-hook-form",
+import { BasicInfoFormData } from "./schema",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ContactFieldsProps {
   control: Control<BasicInfoFormData>
 }
@@ -21,6 +28,31 @@ export function ContactFields({ control }: ContactFieldsProps) {
             </FormControl>
             <FormMessage />
           </FormItem>
+<<<<<<< HEAD
+=======
+import { FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
+import { Input } from "@/components/ui/input",;
+import { Control } from "react-hook-form",;
+import { BasicInfoFormData } from "./schema";
+interface ContactFieldsProps {;
+  control: Control<BasicInfoFormData>;
+}
+;
+export function ContactFields({ control }: ContactFieldsProps) {;
+  return (;
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
+      <FormField;
+        control={control}
+        name="location"
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>Location</FormLabel>
+            <FormControl>
+              <Input placeholder="San Francisco, CA" {...field} />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         )}
       />
 

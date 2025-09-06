@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 import dynamic from 'next/dynamic',;
 const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false }),
 
 export default function BookBuilderPage() {
   return <BookBuilder />;
 };
+=======
+import dynamic from 'next/dynamic';
+const BookBuilder = dynamic(() => import('../components/book/BookBuilder'), { ssr: false });
+export default function BookBuilderPage(req, res) {
+  try {
+  return <BookBuilder />;
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

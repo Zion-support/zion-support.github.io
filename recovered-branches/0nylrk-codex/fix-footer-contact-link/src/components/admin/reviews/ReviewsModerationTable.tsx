@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -5,25 +6,56 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
+=======
+import { useState } from "react",
+import { useMutation } from "@tanstack/react-query",
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { Review, ReviewStatus } from "@/types/reviews",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
-import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
   onRefresh: () => void
 }
 
+<<<<<<< HEAD
 export function ReviewsModerationTable({;
   reviews;
   isLoading;
+=======
+export function ReviewsModerationTable({
+  reviews,
+  isLoading,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
@@ -35,34 +67,34 @@ export function ReviewsModerationTable({;
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-        .eq("id", reviewId);
+        .eq("id", reviewId),
 
-      if (error) throw error;
+      if (error) throw error,
       return { reviewId, status }
-    };
+    },
     onSuccess: (data) => {
       toast({
         title: "Review updated",
         description: `Review has been ${data.status}.`}),
-      onRefresh();
+      onRefresh(),
       setViewDetailsOpen(false)
-    };
+    },
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
         variant: "destructive"})
-    }});
+    }}),
 
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
-      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
+      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
       case "rejected":
         return "bg-red-100 text-red-800 hover:bg-red-200",
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-  };
+  },
 
   const getInitials = (name: string) => {
     return name
@@ -70,7 +102,7 @@ export function ReviewsModerationTable({;
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-  };
+  },
 
   if (isLoading) {
     return (
@@ -96,16 +128,16 @@ export function ReviewsModerationTable({;
 
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-  };
+  },
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
-  };
+  },
 
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),
     setViewDetailsOpen(true)
-  };
+  },
 
   const renderStars = (rating: number) => {
     return (
@@ -115,6 +147,7 @@ export function ReviewsModerationTable({;
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
+<<<<<<< HEAD
         ))}
       </div>
     )
@@ -141,6 +174,157 @@ export function ReviewsModerationTable({;
                   <Avatar className="h-8 w-8">
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
+=======
+import { useState } from "react",;
+import { useMutation } from "@tanstack/react-query",;
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
+import { format } from "date-fns",;
+import { toast } from "@/hooks/use-toast",;
+import { supabase } from "@/integrations/supabase/client",;
+import { Review, ReviewStatus } from "@/types/reviews",;
+import {;
+  Table,;
+  TableBody,;
+  TableCell,;
+  TableHead,;
+  TableHeader,;
+  TableRow} from "@/components/ui/table",;
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
+import {;
+  Dialog,;
+  DialogContent,;
+  DialogDescription,;
+  DialogFooter,;
+  DialogHeader,;
+  DialogTitle} from "@/components/ui/dialog",;
+import {;
+  DropdownMenu,;
+  DropdownMenuContent,;
+  DropdownMenuItem,;
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",;
+import { Badge } from "@/components/ui/badge",;
+import { Button } from "@/components/ui/button",;
+interface ReviewsModerationTableProps {;
+  reviews: Review[],;
+  isLoading: boolean,;
+  onRefresh: () => void;
+}
+;
+export function ReviewsModerationTable({;
+  reviews,;
+  isLoading,;
+  onRefresh}: ReviewsModerationTableProps) {;
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),;
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),;
+  const { mutate: updateReviewStatus, isPending } = useMutation({;
+    mutationFn: async ({;
+      reviewId,;
+      status}: {;
+      reviewId: string,;
+      status: ReviewStatus;
+    }) => {;
+      const { error } = await supabase;
+        .from("reviews");
+        .update({ status });
+        .eq("id", reviewId),;
+      if (error) throw error,;
+      return { reviewId, status }
+    },;
+    onSuccess: (data) => {;
+      toast({;
+        title: "Review updated",;
+        description: `Review has been ${data.status}.`}),;
+      onRefresh(),;
+      setViewDetailsOpen(false);
+    },;
+    onError: (error: Error) => {;
+      toast({;
+        title: "Error",;
+        description: `Failed to update review: ${error.message}`,;
+        variant: "destructive"});
+    }}),;
+  const getStatusColor = (status: ReviewStatus) => {;
+    switch (status) {;
+      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",;
+      case "rejected":;
+        return "bg-red-100 text-red-800 hover:bg-red-200",;
+      default:;
+        return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200";
+    }
+  },;
+  const getInitials = (name: string) => {;
+    return name;
+      .split(" ");
+      .map((n) => n[0]);
+      .join("");
+      .toUpperCase();
+  },;
+  if (isLoading) {;
+    return (;
+      <div className="space-y-4">;
+        <div className="h-12 w-full bg-muted rounded animate-pulse" />;
+        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
+        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
+        <div className="h-16 w-full bg-muted rounded animate-pulse" />;
+      </div>;
+    );
+  }
+;
+  if (reviews.length === 0) {;
+    return (;
+      <div className="py-10 text-center">;
+        <h3 className="text-lg font-medium mb-2">No reviews to moderate</h3>;
+        <p className="text-muted-foreground">;
+          All reviews have been processed. Check back later for new submissions.;
+        </p>;
+      </div>;
+    );
+  }
+;
+  const handleApprove = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "approved" });
+  },;
+  const handleReject = (reviewId: string) => {;
+    updateReviewStatus({ reviewId, status: "rejected" });
+  },;
+  const handleViewDetails = (review: Review) => {;
+    setSelectedReview(review),;
+    setViewDetailsOpen(true);
+  };
+  const renderStars = (rating: number) => {;
+    return (;
+      <div className="flex">;
+        {[1, 2, 3, 4, 5].map((star) => (;
+          <Star;
+            key={star}
+            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
+          />;
+        ))}
+      </div>;
+    );
+  };
+  return (;
+    <>;
+      <Table>;
+        <TableHeader>;
+          <TableRow>;
+            <TableHead>Reviewer</TableHead>;
+            <TableHead>Rating</TableHead>;
+            <TableHead>Date</TableHead>;
+            <TableHead>Status</TableHead>;
+            <TableHead>Reports</TableHead>;
+            <TableHead className="text-right">Actions</TableHead>;
+          </TableRow>;
+        </TableHeader>;
+        <TableBody>;
+          {reviews.map((review) => (;
+            <TableRow key={review.id}>;
+              <TableCell>;
+                <div className="flex items-center gap-2">;
+                  <Avatar className="h-8 w-8">;
+                    {review.reviewer_profile?.avatar_url ? (;
+                      <AvatarImage;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
                       />
@@ -230,11 +414,19 @@ export function ReviewsModerationTable({;
                           Mark as approved
                         </DropdownMenuItem>
                       )}
+<<<<<<< HEAD
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
               </TableCell>
             </TableRow>
+=======
+                    </DropdownMenuContent>;
+                  </DropdownMenu>;
+                </div>;
+              </TableCell>;
+            </TableRow>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           ))}
         </TableBody>
       </Table>

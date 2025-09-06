@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Partners() {
   const [form, setForm] = useState({
     name: '',
@@ -194,8 +198,19 @@ export default function Partners() {
             <p className="text-sm">Your API Key:</p>
             <pre className="bg-gray-100 p-3 rounded text-xs overflow-auto">{result.apiKey}</pre>
             <a href={result.dashboardUrl} className="inline-block mt-4 bg-black text-white px-4 py-2 rounded">Go to Dashboard</a>
+<<<<<<< HEAD
         )}
       </div>
     </div>
 );
 }
+=======
+
+          </div>
+
+        )}
+      </div>
+    </div>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

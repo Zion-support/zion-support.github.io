@@ -8,6 +8,7 @@ export const optimizeImages = () => {
     if (!img.decoding) {
       img.decoding = 'async'
     }
+<<<<<<< HEAD
   })
 }
 export const preloadCriticalResources = () => {
@@ -28,3 +29,21 @@ export const optimizeBundleSize = () => {
     link.rel = 'preload'
     link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
 ;
+=======
+  });
+};
+
+export const lazyLoadComponents = () => {
+  console.log('Lazy loading components...');
+};
+
+export const optimizeBundleSize = () => {
+  // Dynamic imports for non-critical components
+  const loadComponent = componentName => {
+    return import(`./components/${componentName}`);
+  };
+
+  return { loadComponent };
+};
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

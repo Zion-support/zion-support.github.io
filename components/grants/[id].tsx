@@ -20,7 +20,12 @@ export default function GrantDetailPage() {;
       .finally(() => setLoading(false));  }, [id]);
 
   const addUpdate = async () => {
+<<<<<<< HEAD
     if (!id || !updateContent.trim()) return;    fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))
+=======
+    if (!id || !updateContent.trim()) return;
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }, [id]);
 
   const addUpdate = async () => {
@@ -77,6 +82,7 @@ export default function GrantDetailPage() {;
           </span>
         </div>
       </div>
+<<<<<<< HEAD
       <div className='grid md:grid-cols-3 gap-6'>
         <div className='md:col-span-2 space-y-4'>
           <section className='border rounded p-4 bg-white/70 dark:bg-black/40'>
@@ -218,3 +224,8 @@ export default function GrantDetailPage() {;
     </EnhancedLayout>
 );
 }
+=======
+    </EnhancedLayout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

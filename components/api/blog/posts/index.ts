@@ -64,8 +64,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(201).json(post);
   }
 
+<<<<<<< HEAD
 return res.status(405).end();
 }
 
 }
 }
+=======
+  return res.status(405).end();
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

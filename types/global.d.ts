@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Global type declarations for DOM types
 declare global {
   interface Window {
@@ -87,4 +88,7 @@ declare global {
 }
 
 // Re-export DOM types that might not be available;
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export {};

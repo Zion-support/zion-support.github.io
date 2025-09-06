@@ -18,5 +18,9 @@ const CustomerSupportChatbot: NextPage = () => {
     </div>
   )
 },
+<<<<<<< HEAD
 
 export default CustomerSupportChatbot,;
+=======
+export default CustomerSupportChatbot,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

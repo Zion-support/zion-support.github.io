@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+ import type { NextApiRequest, NextApiResponse } from 'next';
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface EmailValidationResult {
   email: string;
   isValid: boolean;

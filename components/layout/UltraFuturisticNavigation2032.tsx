@@ -320,6 +320,11 @@ const serviceCategories = [
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const mainNavigation = [
   { name: 'Home', href: '/', icon: Home },
@@ -465,6 +470,7 @@ export default function UltraFuturisticNavigation2032() {;
             </Link>
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items-center space-x-8'>
+<<<<<<< HEAD
               {mainNavigation.map(item => (            {/* Logo */}
             <Link href="/" className="flex items-center space-x-3 group">
               <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
@@ -555,10 +561,20 @@ export default function UltraFuturisticNavigation2032() {;
                             </div>
                           </div>
                           <div className="space-y-2">
+=======
+              {mainNavigation.map(item => (
+
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             {category.services.map((service, serviceIndex) => (
                               <Link
                                 key={serviceIndex}
                                 href={service.href}
+<<<<<<< HEAD
                                 className='block p-3 rounded-lg hover:bg-gray-800/50 transition-colors group'
                               >
                                 <div className='flex items-center justify-between'>
@@ -573,6 +589,11 @@ export default function UltraFuturisticNavigation2032() {;
                                     {service.price}
                                   </div>                                </div>                                  <div className="text-cyan-400 font-semibold text-sm">{service.price}</div>
                                 </div>
+=======
+
+                                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                               </Link>
                             ))}
                           </div>
@@ -583,16 +604,29 @@ export default function UltraFuturisticNavigation2032() {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
             {/* CTA Buttons */}
             <div className='hidden lg:flex items-center space-x-4'>
               <Link href='/contact'>
                 <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">
               <Link href="/contact">
                 <button className="px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl">
+=======
+
+            {/* CTA Buttons */}
+            <div className='hidden lg:flex items-center space-x-4'>
+              <Link href='/contact'>
+                <button className='px-6 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-lg font-semibold hover:from-cyan-600 hover:to-blue-700 transition-all duration-200 shadow-lg hover:shadow-xl'>                  Get Started
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   Get Started
                 </button>
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={toggleMenu}
@@ -609,6 +643,10 @@ export default function UltraFuturisticNavigation2032() {;
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isOpen && (
@@ -618,6 +656,10 @@ export default function UltraFuturisticNavigation2032() {;
             exit={{ opacity: 0, x: '100%' }}
             transition={{ duration: 0.3 }}
             className='fixed inset-0 z-50 lg:hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div
               className='absolute inset-0 bg-black/80 backdrop-blur-xl'
@@ -681,11 +723,21 @@ export default function UltraFuturisticNavigation2032() {;
                     >
                       <item.icon className="w-5 h-5" />
                       <span>{item.name}</span>
+<<<<<<< HEAD
                     </Link>
                   ))}
 
                   {/* Services Accordion */}
                   <div className='space-y-2'>
+=======
+
+                    </Link>
+                  ))}
+
+                  {/* Services Accordion */}
+                  <div className='space-y-2'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <button
                       onClick={() =>
                         setActiveCategory(activeCategory === 0 ? null : 0)
@@ -736,6 +788,10 @@ export default function UltraFuturisticNavigation2032() {;
                       </div>
                     )}
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Company Links */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -760,6 +816,10 @@ export default function UltraFuturisticNavigation2032() {;
                       ))}
                     </div>
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   {/* Contact Info */}
                   <div className='pt-4 border-t border-gray-700/50'>
                     <div className='text-sm font-medium text-gray-400 mb-3'>
@@ -768,6 +828,10 @@ export default function UltraFuturisticNavigation2032() {;
                     <div className='space-y-2 text-sm text-gray-400'>
                       <div className='flex items-center space-x-2'>
                         <Phone className='w-4 h-4 text-cyan-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         <span>{contactInfo.mobile}</span>
                       </div>
                       <div className='flex items-center space-x-2'>
@@ -804,6 +868,7 @@ export default function UltraFuturisticNavigation2032() {;
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
       {/* Spacer for fixed navigation */}
       <div className='h-20' />
     </>
@@ -813,3 +878,10 @@ export default function UltraFuturisticNavigation2032() {;
 }
 
 }
+=======
+
+      {/* Spacer for fixed navigation */}
+      <div className='h-20' />
+    </>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

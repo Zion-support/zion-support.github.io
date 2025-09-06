@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
 import EnhancedServiceCard from './ui/EnhancedServiceCard';
 import PerformanceMonitor from './PerformanceMonitor';
@@ -13,6 +14,21 @@ import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
   opacity: 0 
+=======
+import React from 'react';
+
+interface EnhancedHomepageProps {
+  className?: string;
+}
+
+const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
+  return (
+    <div className={className || ''}>
+      <h1>EnhancedHomepage</h1>
+      <p>This component is under development.</p>
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 };
 visible: {
   opacity: 1, transition: {
@@ -207,6 +223,10 @@ const EnhancedHomepage: React.FC = () => {
               Pioneering the Future of Technology with Revolutionary AI Consciousness,
               Quantum Computing, and Autonomous Solutions
             </motion.p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* CTA Buttons */}
             <motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
@@ -314,6 +334,10 @@ const EnhancedHomepage: React.FC = () => {
             </motion.div>
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
@@ -365,6 +389,10 @@ const EnhancedHomepage: React.FC = () => {
             )}
           </div>
         </motion.section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Featured Service Showcase */}
         <motion.section 
           className="py-16 px-4 lg:px-8"
@@ -481,6 +509,10 @@ const EnhancedHomepage: React.FC = () => {
           </div>
         </motion.section>
       </UltraFuturisticBackground>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Performance Monitor */}
       <AnimatePresence>
         {showPerformanceMonitor && (

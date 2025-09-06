@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Fraud detection types
 export type AdminActionType = 
   | 'ban_user'
@@ -53,4 +54,7 @@ export interface FraudDetectionConfig {;
     actions: AdminActionType[];
     confidenceThreshold: number,
   };
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

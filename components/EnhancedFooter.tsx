@@ -60,6 +60,7 @@ const EnhancedFooter: React.FC = () => {
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+<<<<<<< HEAD
     {
       name: 'LinkedIn',
       href: 'https://linkedin.com/company/ziontechgroup',
@@ -70,6 +71,8 @@ const EnhancedFooter: React.FC = () => {
       href: 'https://twitter.com/ziontechgroup',
       icon: Twitter,
     },
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <footer className='bg-slate-950 border-t border-white/10'>
@@ -144,6 +147,10 @@ const EnhancedFooter: React.FC = () => {
             </div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Section */}
         <div className='pt-8 border-t border-white/10'>
           <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
@@ -160,6 +167,7 @@ const EnhancedFooter: React.FC = () => {
             {/* Social Links */}
             <div className='flex items-center space-x-4'>
               {socialLinks.map(social => (
+<<<<<<< HEAD
                 <a
                   key={social.name}
                   href={social.href}
@@ -178,6 +186,16 @@ const EnhancedFooter: React.FC = () => {
                 >
                   <social.icon className="w-5 h-5" />
                 </a>
+=======
+
+              © {currentYear} Zion Tech Group. All rights reserved.
+            </div>
+
+            {/* Social Links */}
+
+                </a>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </div>
@@ -188,6 +206,7 @@ const EnhancedFooter: React.FC = () => {
 };export default EnhancedFooter;  )
 };
 
+<<<<<<< HEAD
 export default EnhancedFooter;
 import React from "react";
   FileText,
@@ -410,3 +429,6 @@ company updates.;
       </button>,
     </footer>,
   )}"'
+=======
+export default EnhancedFooter;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

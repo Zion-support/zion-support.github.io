@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -21,9 +22,33 @@ export default function Marketplace() {;
   const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
   const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
   const [selectedRating, setSelectedRating] = useState<number | null>(null);
+=======
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Grid3X3, ListFilter } from "lucide-react",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { FilterSidebar } from "@/components/search/FilterSidebar",
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
+import { SearchSuggestion } from "@/types/search",
+import { AppLayout } from "@/layout/AppLayout",
+export default function Marketplace() {
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
-  const filterOptions = generateFilterOptions();
+  const filterOptions = generateFilterOptions(),
   
   // Filter listings based on selected filters
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
@@ -32,6 +57,40 @@ export default function Marketplace() {;
         !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false
+<<<<<<< HEAD
+=======
+import React, { useState } from "react",;
+import { Header } from "@/components/Header",;
+import { Footer } from "@/components/Footer",;
+import { Button } from "@/components/ui/button",;
+import { Link } from "react-router-dom",;
+import { Grid3X3, ListFilter } from "lucide-react",;
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",;
+import { FilterSidebar } from "@/components/search/FilterSidebar",;
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",;
+import { ProductListingCard } from "@/components/ProductListingCard",;
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",;
+import { toast } from "@/hooks/use-toast",;
+import { useNavigate } from "react-router-dom",;
+import { SearchSuggestion } from "@/types/search",;
+import { AppLayout } from "@/layout/AppLayout",;
+export default function Marketplace() {;
+  const navigate = useNavigate(),;
+  const [searchQuery, setSearchQuery] = useState(""),;
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),;
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),;
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),;
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),;
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),;
+  const filterOptions = generateFilterOptions(),;
+  // Filter listings based on selected filters;
+  const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {;
+    // Search filter;
+    if (searchQuery && !listing.title.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !listing.description.toLowerCase().includes(searchQuery.toLowerCase()) &&;
+        !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {;
+      return false;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
     
     // Product type filter
@@ -55,36 +114,36 @@ export default function Marketplace() {;
     }
     
     return true
-  });
+  }),
   
   const handleFilterChange = (filterType: string, value: string) => {
-    console.log(`Filter changed: ${filterType} = ${value}`),
+    // // // console.log(`Filter changed: ${filterType} = ${value}`),
     switch (filterType) {
       case 'productType':
         setSelectedProductTypes(prev => 
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
+        ),
+        break,
       case 'location':
         setSelectedLocations(prev => 
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
-        break;
+        ),
+        break,
       case 'availability':
         setSelectedAvailability(prev => 
           prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]
-        );
+        ),
         break
     }
-  };
+  },
   
   const clearAllFilters = () => {
-    setSearchQuery("");
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
+    setSearchQuery(""),
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
     setSelectedRating(null)
-  };
+  },
   
   // Handle requesting a quote
   const handleRequestQuote = (listingId: string) => {
@@ -94,7 +153,7 @@ export default function Marketplace() {;
       toast({
         title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`
-      });
+      }),
       
       // Navigate to the quote request page with the listing information
       navigate("/request-quote", {
@@ -105,11 +164,65 @@ export default function Marketplace() {;
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0]
+<<<<<<< HEAD
+=======
+;
+    return true;
+  }),;
+  const handleFilterChange = (filterType: string, value: string) => {;
+    // // // console.log(`Filter changed: ${filterType} = ${value}`),;
+    switch (filterType) {;
+      case 'productType':;
+        setSelectedProductTypes(prev =>;
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
+        ),;
+        break,;
+      case 'location':;
+        setSelectedLocations(prev =>;
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
+        ),;
+        break,;
+      case 'availability':;
+        setSelectedAvailability(prev =>;
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value];
+        ),;
+        break;
+    }
+  },;
+  const clearAllFilters = () => {;
+    setSearchQuery(""),;
+    setSelectedProductTypes([]),;
+    setSelectedLocations([]),;
+    setSelectedAvailability([]),;
+    setSelectedRating(null);
+  },;
+  // Handle requesting a quote;
+  const handleRequestQuote = (listingId: string) => {;
+    const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId),;
+    if (listing) {;
+      toast({;
+        title: "Quote Requested",;
+        description: `Your quote request for ${listing.title} has been sent.`;
+      }),;
+      // Navigate to the quote request page with the listing information;
+      navigate("/request-quote", {;
+        state: {;
+          serviceType: listing.category,;
+          specificItem: {;
+            id: listing.id,;
+            title: listing.title,;
+            category: listing.category,;
+            image: listing.images?.[0];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       })
     }
+<<<<<<< HEAD
   };
+=======
+  },
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <AppLayout>
@@ -145,11 +258,11 @@ export default function Marketplace() {;
         {/* Main layout with sidebar and results */}
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
           {/* Sidebar Filters */}
-          <div className="lg: col-span-1">
+          <div className="lg:col-span-1">
             <FilterSidebar
               filters={{
-                selectedProductTypes;
-                selectedLocations;
+                selectedProductTypes,
+                selectedLocations,
                 selectedAvailability,
                 selectedRating
               }}
@@ -180,6 +293,10 @@ export default function Marketplace() {;
                 {searchQuery && ` for "${searchQuery}"`}
               </p>
             </div>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Display actual marketplace listings */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {filteredListings.length > 0 ? (

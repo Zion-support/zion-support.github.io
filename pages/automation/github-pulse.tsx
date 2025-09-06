@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 import EnhancedLayout from '../../components/layout/EnhancedLayout',;
 // @ts-ignore
 import data from '../../data/github-pulse.json',;
+=======
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
+// @ts-ignore;
+import data from '../../data/github-pulse.json',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function GithubPulsePage() {
   const repo = data?.repo || {},
   const last24h = data?.last24h || {},
@@ -20,13 +26,25 @@ export default function GithubPulsePage() {
       </div>
     </EnhancedLayout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-
 function Metric({ label, value }: { label: string, value: any }) {
   return (
     <div className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
       <div className="text-xs text-gray-500 dark:text-gray-400">{label}</div>
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
+<<<<<<< HEAD
   );
 };
+=======
+  )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

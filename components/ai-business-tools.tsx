@@ -369,6 +369,10 @@ export default function AIBusinessToolsPage() {
           >
             <div className='text-center group'>
               <div className='text-3xl md:text-4xl font-bold mb-3 text-green-400 group-hover:scale-110 transition-transform duration-300'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {aiTools.length}+
               </div>
               <div className='text-gray-400 text-sm'>AI Tools</div>
@@ -422,6 +426,12 @@ export default function AIBusinessToolsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
+<<<<<<< HEAD
+=======
+
+              <button
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full text-sm font-medium transition-all duration-300 ${
@@ -436,6 +446,10 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Tools Grid */}
       <section id='tools' className='py-24 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -444,6 +458,11 @@ export default function AIBusinessToolsPage() {
               {selectedCategory === 'All'
                 ? 'All AI Tools'
                 : `${selectedCategory} Tools`}
+<<<<<<< HEAD
+=======
+
+            </h2>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
               {selectedCategory === 'All'
                 ? 'Discover the most powerful AI tools that are transforming how businesses operate and create content.'
@@ -487,6 +506,10 @@ export default function AIBusinessToolsPage() {
                     <p className='text-gray-400 leading-relaxed mb-4'>
                       {tool.description}
                     </p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -539,11 +562,19 @@ export default function AIBusinessToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* AI Benefits Section */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-4xl sm:text-5xl font-bold mb-8 text-white leading-tight'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Why Choose AI Tools?
             </h2>
             <p className='text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -658,8 +689,12 @@ export default function AIBusinessToolsPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
 
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

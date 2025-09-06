@@ -72,6 +72,7 @@ export default function Web3LoginButton() {;
     } catch {}
     setUser(null);
 
+<<<<<<< HEAD
   if (user) {
     const base =
       displayName || `${user.address.slice(0, 6)}…${user.address.slice(-4)}`;
@@ -129,3 +130,9 @@ export default function Web3LoginButton() {;
 }
 }
 }
+=======
+  }
+
+  return (
+    <>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 // Marketplace types
 export interface Offer {;
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   createdAtIso: string;
   clientId: string;
@@ -7,12 +11,8 @@ export interface Offer {;
   startDateIso: string;
   scopeSummary: string;
   paymentTerms: PaymentTerms;
-  agreementUrl?: string;
-  status: 'SENT' | 'CONFIRMED' | 'CHANGES_REQUESTED' | 'DECLINED';
-  changeRequestNote?: string;
-  projectId?: string;
-}
 
+<<<<<<< HEAD
 export interface PaymentTerms {;
   type: 'hourly' | 'fixed' | 'milestone';
   amount?: number;
@@ -25,18 +25,16 @@ export interface PaymentTerms {;
 }
 
 export interface Project {;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   title: string;
   summary: string;
   clientId: string;
   talentSlug: string;
   startDateIso: string;
-  status: 'ACTIVE' | 'COMPLETED' | 'CANCELLED';
-  timeline: any[];
-  documents: ProjectDocument[];
-  notes: ProjectNote[];
-}
 
+<<<<<<< HEAD
 export interface ProjectDocument {;
   id: string;
   name: string;
@@ -51,3 +49,5 @@ export interface ProjectNote {;
   content: string;
   createdAtIso: string;
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

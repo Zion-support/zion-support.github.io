@@ -68,7 +68,12 @@ export default function ChatWidget() {;
           eventType,
           payload,
         }),
+<<<<<<< HEAD
       });    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, eventType, payload })})
+=======
+      });    } catch {}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } catch {}
   }
 
@@ -83,8 +88,13 @@ export default function ChatWidget() {;
           tag: 'escalate',
         }),
       });
+<<<<<<< HEAD
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
       setShowEscalation(true)
+=======
+      setShowEscalation(true);    } catch {}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     } catch {}
   }
 
@@ -159,6 +169,7 @@ export default function ChatWidget() {;
   return (
     <div className='fixed bottom-4 right-4 z-50'>      }
 
+<<<<<<< HEAD
       if (data?.meta?.intentMatched === false) {
         setFailedIntents((n) => {
           const next = n + 1;
@@ -176,6 +187,8 @@ export default function ChatWidget() {;
         { role: 'assistant', content: 'Sorry, something went wrong. Please try again or contact support.', timestamp: Date.now() }])
     } finally {
       setIsLoading(false)
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
   }
 
@@ -230,6 +243,10 @@ export default function ChatWidget() {;
                     m.role === 'assistant'
                       ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   }
                 >
                   {m.content}
@@ -253,6 +270,7 @@ export default function ChatWidget() {;
                   <button
                     key={q}
                     onClick={() => onSend(q)}
+<<<<<<< HEAD
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">
               <div className="flex flex-wrap gap-2 mb-2">
                 {quickReplies.map((q) => (
@@ -260,6 +278,12 @@ export default function ChatWidget() {;
                     key={q}
                     onClick={() => onSend(q)}
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+=======
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
+
+                  >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {q}
                   </button>
                 ))}
@@ -284,6 +308,7 @@ export default function ChatWidget() {;
                 <button
                   onClick={() => onSend()}
                   disabled={isLoading}
+<<<<<<< HEAD
                   className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >            {!showEscalation ? (
               <div className="flex gap-2">
                 <input
@@ -297,6 +322,10 @@ export default function ChatWidget() {;
                   }}
                   placeholder="Ask a question…"
                   className="flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+=======
+                  className='rounded-xl px-4 py-2 text-sm bg-blue-600 text-white disabled:opacity-50'                >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 />
                 <button
                   onClick={() => onSend()}
@@ -334,5 +363,10 @@ export default function ChatWidget() {;
         </div>
       )}
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

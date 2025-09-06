@@ -6,7 +6,11 @@ import {
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
+<<<<<<< HEAD
 export default function WhitepaperBuilderPage() {;
+=======
+export default function WhitepaperBuilderPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
 

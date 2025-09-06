@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 import {useTranslation} from 'react-i18next';
 import i18n from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',

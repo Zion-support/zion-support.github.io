@@ -39,5 +39,8 @@ export default async function handler(
   const text = await generateText(prompt, 'You are an expert technical recruiter and compensation analyst.');
   return res.status(200).json({ jobDescription: text })
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

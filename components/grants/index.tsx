@@ -53,6 +53,7 @@ export default function GrantsPage() {;
   }, [filters]);
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
@@ -164,3 +165,6 @@ export default function GrantsPage() {;
     </EnhancedLayout>
 );
 }
+=======
+    <EnhancedLayout>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

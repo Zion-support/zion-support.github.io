@@ -45,8 +45,11 @@ export default function APIRateLimiterPage() {;
 
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return;
+<<<<<<< HEAD
     { value: '10000', label: '10000 requests', description: 'Enterprise' }
   ];
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(2, 9) + '_' + Date.now().toString(36);
@@ -136,11 +139,18 @@ export default function APIRateLimiterPage() {;
       case 'rate_limited':
         return <AlertTriangle className='w-5 h-5 text-red-400' />;
       default:
+<<<<<<< HEAD
         return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }      case 'rate_limited':
         return <AlertTriangle className="w-5 h-5 text-red-400" />;
       default:
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />
     }
+=======
+        return <AlertTriangle className='w-5 h-5 text-yellow-400' />;    }
+
+    }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   };
 
   const getStatusColor = (status: string) => {
@@ -269,6 +279,7 @@ export default function APIRateLimiterPage() {;
                     Rate Limit
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
                     {rateLimits.map(limit => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Rate Limit
                   ">
@@ -276,6 +287,12 @@ export default function APIRateLimiterPage() {;
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {rateLimits.map((limit) => (
+=======
+                    {rateLimits.map(limit => (                      <button
+
+                      <button
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         key={limit.value}
                         onClick={() => setRateLimit(limit.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -290,15 +307,24 @@ export default function APIRateLimiterPage() {;
                         </div>                      </button>                        <div className="font-medium">{limit.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{limit.description}</div>
                       </button>
+<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
+=======
+
+                    ))}
+                  </div>
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Time Window */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
                     Time Window
                   </label>
                   <div className='grid grid-cols-2 gap-3'>
+<<<<<<< HEAD
                     {timeWindows.map(window => (                      <button                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
                     Time Window
                   ">
@@ -306,6 +332,12 @@ export default function APIRateLimiterPage() {;
                   </label>
                   <div className="grid grid-cols-2 gap-3">
                     {timeWindows.map((window) => (
+=======
+                    {timeWindows.map(window => (                      <button
+
+                      <button
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         key={window.value}
                         onClick={() => setTimeWindow(window.value)}
                         className={`p-3 rounded-lg border text-left transition-all ${
@@ -320,9 +352,17 @@ export default function APIRateLimiterPage() {;
                         </div>                      </button>                        <div className="font-medium">{window.label}</div>
                         <div className="text-xs text-gray-400 mt-1">{window.description}</div>
                       </button>
+<<<<<<< HEAD
                     ))}
                   </div>
                 </div>
+=======
+
+                    ))}
+                  </div>
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* API Key Generation */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
@@ -386,6 +426,10 @@ export default function APIRateLimiterPage() {;
                 </Button>
               </div>
             </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Test Results */}
             <Card className='p-8 bg-gray-800 border border-gray-700'>
               <div className='flex items-center justify-between mb-6'>
@@ -394,6 +438,12 @@ export default function APIRateLimiterPage() {;
               <div className="flex items-center justify-between mb-6">
                 <h3 className="text-2xl font-bold text-white flex items-center">
                   <BarChart3 className="w-6 h-6 mr-3 text-blue-400" />
+<<<<<<< HEAD
+=======
+
+                  Test Results
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 </h3>
                 {testResults.length > 0 && (
                   <Button
@@ -420,6 +470,7 @@ export default function APIRateLimiterPage() {;
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
+<<<<<<< HEAD
                         result.status === 'success'
                           ? 'border-green-500/30 bg-green-500/10'
                           : 'border-red-500/30 bg-red-500/10'
@@ -480,14 +531,23 @@ export default function APIRateLimiterPage() {;
                         <div>
                           <span className="text-gray-400">Response Time:</span>
                           <span className="ml-2 text-white">{result.responseTime.toFixed(0)}ms</span>
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         </div>
                       </div>
                       {result.status === 'rate_limited' && (
+<<<<<<< HEAD
                         <div className='mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300'>
                           <strong>Rate Limited:</strong> Request exceeded the
                           limit of {rateLimit} requests per {timeWindow}                        <div className="mt-3 p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
                           <strong>Rate Limited:</strong> Request exceeded the limit of {rateLimit} requests per {timeWindow}
                         </div>
+=======
+
+                        </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       )}
                     </div>
                   ))}
@@ -507,11 +567,20 @@ export default function APIRateLimiterPage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Advanced Rate Limiting Features
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Enterprise-grade rate limiting with intelligent algorithms and
@@ -657,8 +726,13 @@ const response = await axios.get(\`https://api.zion.tech\${endpoint}\`, {
   headers: {
     'Authorization': \`Bearer \${apiKey}\`,
     'X-RateLimit-Limit': '${rateLimit}',
+<<<<<<< HEAD
     'X-RateLimit-Window': '${timeWindow}'  }    'Authorization': \`Bearer \${apiKey}\`;
     'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'
+=======
+    'X-RateLimit-Window': '${timeWindow}'  }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 });
 
@@ -803,6 +877,10 @@ print('Rate Limit Info:', {
         </div>
       </section>
     </>;
+<<<<<<< HEAD
   );    </>
   )
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 </div>) ) 
+=======
+ </div>) ) 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }</div> </div>) import fs from 'fs';
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';

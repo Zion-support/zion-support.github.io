@@ -178,8 +178,17 @@ export default function ServicesShowcase2026() {;
           <meta property="og:url" content="https://ziontechgroup.com/2026-services-showcase" />
           <meta property="og:type" content="website" />
           <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase" />
+<<<<<<< HEAD
         {/* Navigation */}
         <UltraAdvancedNavigation />
+=======
+
+        </Head>
+
+        {/* Navigation */}
+        <UltraAdvancedNavigation />
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Hero Section */}
         <section className='relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>            <motion.div        <section className="relative z-10 pt-32 pb-16 px-4 sm:px-6 lg:px-8">
@@ -302,6 +311,10 @@ export default function ServicesShowcase2026() {;
                     ))}
                   </select>
                 </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Sort By */}
                 <div className='relative'>
                   <TrendingUp className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
@@ -351,6 +364,10 @@ export default function ServicesShowcase2026() {;
                         </span>
                       )}
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Service Title */}
                     <h3 className='text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors duration-300'>                      {service.name}
                     </h3>
@@ -369,6 +386,7 @@ export default function ServicesShowcase2026() {;
                     {/* Price */}
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
+<<<<<<< HEAD
                         <span className='text-gray-400 text-lg font-normal'>
                           {service.period}
                         </span>
@@ -411,10 +429,34 @@ export default function ServicesShowcase2026() {;
                         {service.features.slice(0, 3).map((feature, idx) => (
                           <li key={idx} className="text-gray-400 text-xs flex items-center">
                             <Zap className="w-3 h-3 text-cyan-400 mr-2 flex-shrink-0" />
+=======
+
+                      {service.name}
+                    </h3>
+
+                    {/* Tagline */}
+
+                      {service.tagline}
+                    </p>
+
+                    {/* Price */}
+
+                      {service.description}
+                    </p>
+
+                    {/* Features */}
+
+                            {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </li>
                         ))}
                       </ul>
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     {/* Category and Technology */}
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-xs text-gray-500 bg-gray-700/50 px-2 py-1 rounded'>
@@ -427,10 +469,19 @@ export default function ServicesShowcase2026() {;
                       <span className="text-xs text-gray-500">
                       </span>
                     </div>
+<<<<<<< HEAD
                     {/* CTA Button */}
                     <a
                       href={service.link}
                       className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >                      className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block"
+=======
+
+                    {/* CTA Button */}
+                    <a
+                      href={service.link}
+                      className='w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold py-3 px-4 rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 text-center block'                    >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       Learn More
                     </a>
@@ -438,6 +489,10 @@ export default function ServicesShowcase2026() {;
                 </motion.div>
               ))}
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* No Results */}
             {filteredServices.length === 0 && (
               <motion.div
@@ -451,6 +506,7 @@ export default function ServicesShowcase2026() {;
                 </h3>
                 <p className='text-gray-400'>
                   Try adjusting your search terms or filters
+<<<<<<< HEAD
                 </p>              </motion.div>                className="text-center py-16"
               >
                 <div className="text-6xl mb-4">🔍</div>
@@ -459,11 +515,25 @@ export default function ServicesShowcase2026() {;
             )}
           </div>
         </section>
+=======
+                </p>              </motion.div>
+
+              </motion.div>
+
+            )}
+          </div>
+        </section>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Contact Section */}
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -540,6 +610,7 @@ export default function ServicesShowcase2026() {;
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
+<<<<<<< HEAD
 );
 }
 
@@ -547,4 +618,7 @@ export default function ServicesShowcase2026() {;
 }
 }
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

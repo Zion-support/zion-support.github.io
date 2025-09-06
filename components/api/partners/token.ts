@@ -19,6 +19,7 @@ export default async function handler(
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
+<<<<<<< HEAD
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {;
     res.setHeader("Allow", "POST");
@@ -58,3 +59,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 }
+=======
+
+  }
+  const { partner, apiKey: key } = match;
+  const token = signJwt(
+    {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

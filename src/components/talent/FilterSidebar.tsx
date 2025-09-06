@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
 import { Filter } from 'lucide-react'
@@ -9,6 +10,20 @@ import { RegionFilter } from './filters/RegionFilter'
 import { ExperienceFilter } from './filters/ExperienceFilter'
 import { PriceFilter } from './filters/PriceFilter'
 import { FilterSidebarProps } from '@/types/filters'
+=======
+
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Filter } from 'lucide-react'
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export function FilterSidebar({
   searchTerm,
   setSearchTerm,
@@ -27,6 +42,7 @@ export function FilterSidebar({
   sortOption,
   setSortOption,
   clearFilters,
+<<<<<<< HEAD
   isMobileFilterOpen,}: FilterSidebarProps) {
   return (
     <>
@@ -68,6 +84,16 @@ export function FilterSidebar({
         </Button>
       </div>
           className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent"
+=======
+  isMobileFilterOpen
+}: FilterSidebarProps) {
+  return (
+    <>
+      {/* Filter header */}
+      <div className="flex items-center justify-between mb-6">
+        <h3 className="text-lg font-semibold text-white flex items-center">
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           Filters
         </h3>
         <Button 
@@ -79,6 +105,58 @@ export function FilterSidebar({
           Clear All
         </Button>
       </div>
+<<<<<<< HEAD
+=======
+      
+import React from "react",;
+import { Button } from "@/components/ui/button",;
+import { Filter } from 'lucide-react';
+import { SearchFilter } from "./filters/SearchFilter",;
+import { SortFilter } from "./filters/SortFilter",;
+import { SkillsFilter } from "./filters/SkillsFilter",;
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",;
+import { RegionFilter } from "./filters/RegionFilter",;
+import { ExperienceFilter } from "./filters/ExperienceFilter",;
+import { PriceFilter } from "./filters/PriceFilter",;
+import { FilterSidebarProps } from "@/types/filters",;
+export function FilterSidebar({;
+  searchTerm,;
+  setSearchTerm,;
+  selectedSkills,;
+  toggleSkill,;
+  selectedAvailability,;
+  toggleAvailability,;
+  selectedRegions,;
+  toggleRegion,;
+  priceRange,;
+  setPriceRange,;
+  experienceRange,;
+  setExperienceRange,;
+  expandedSections,;
+  toggleSection,;
+  sortOption,;
+  setSortOption;
+  clearFilters;
+  isMobileFilterOpen;
+}: FilterSidebarProps) {;
+  return (;
+    <>;
+      {/* Filter header */}
+      <div className="flex items-center justify-between mb-6">;
+        <h3 className="text-lg font-semibold text-white flex items-center">;
+          <Filter className="h-4 w-4 mr-2 text-zion-purple" />;
+          Filters;
+        </h3>;
+        <Button;
+          variant="ghost";
+          size="sm";
+          onClick={clearFilters}
+          className="h-7 text-xs text-zion-purple hover:text-zion-purple-light hover:bg-transparent";
+        >;
+          Clear All;
+        </Button>;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Search */}
       <SearchFilter searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       {/* Sorting */}
@@ -121,6 +199,7 @@ export function FilterSidebar({
         setPriceRange={setPriceRange}
         expanded={expandedSections.price}
         toggleSection={() => toggleSection('price')}
+<<<<<<< HEAD
         isMobileFilterOpen={isMobileFilterOpen}      />
 
       {isMobileFilterOpen && (
@@ -183,6 +262,12 @@ export function FilterSidebar({
       
       {isMobileFilterOpen && (
         <Button 
+=======
+        isMobileFilterOpen={isMobileFilterOpen}
+      />;
+      {isMobileFilterOpen && (;
+        <Button;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           onClick={() => window.dispatchEvent(new CustomEvent('closeMobileFilter'))}
           className="w-full bg-zion-purple hover:bg-zion-purple-dark text-white mt-4"
         >
@@ -191,5 +276,10 @@ export function FilterSidebar({
       )}
     </>;
   );
+<<<<<<< HEAD
 };
 }
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

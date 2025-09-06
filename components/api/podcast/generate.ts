@@ -121,6 +121,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     }
 
     const episodes = readEpisodes();
+<<<<<<< HEAD
     const episode = {
       id,
       createdAt: new Date().toISOString(),
@@ -159,3 +160,6 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 
 }
 }
+=======
+    const episode = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

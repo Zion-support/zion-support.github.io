@@ -18,5 +18,9 @@ const LandingPageGenerator: NextPage = () => {
     </div>
   )
 },
+<<<<<<< HEAD
 
 export default LandingPageGenerator,;
+=======
+export default LandingPageGenerator,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

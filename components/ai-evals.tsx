@@ -12,6 +12,10 @@ import {
 } from 'lucide-react';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -171,5 +175,9 @@ export default function AIEvalsPage() {
 				</div>
 			</section>
 		</QuantumHolographicMatrixBackground>
+<<<<<<< HEAD
 );
+=======
+	);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

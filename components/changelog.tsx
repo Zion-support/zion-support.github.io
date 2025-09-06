@@ -15,6 +15,7 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
 
 export default function ChangelogPage({ content, generatedAt }: Props) {
   return (
+<<<<<<< HEAD
     <main className='mx-auto max-w-4xl px-4 py-12'>
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
       {generatedAt && (
@@ -38,6 +39,14 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
         </div>
       )}
     </main>;
+=======
+
+          No changelog generated yet.
+
+        </div>
+      )}
+    </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }
 
@@ -51,6 +60,7 @@ export async function getStaticProps() {
     };
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
+<<<<<<< HEAD
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
@@ -58,3 +68,6 @@ export async function getStaticProps() {
 }
 
 }
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

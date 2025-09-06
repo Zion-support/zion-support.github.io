@@ -27,6 +27,7 @@ const getNotificationStyles = (type: Notification["type"]): string => {
 export default function NotificationSystem({
   notifications,
   onDismiss,
+<<<<<<< HEAD
 key={notification.id},
           className={`max-w-sm w-full border rounded-lg p-4 shadow-lg ${getNotificationStyles(notification.type)}`},
 
@@ -67,6 +68,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
   }, []),
 
 }: NotificationSystemProps) {;
+=======
+}: NotificationSystemProps) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (notifications.length === 0) return null;
 
   return (
@@ -97,6 +101,9 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
     </div>;
   );
 }
+<<<<<<< HEAD
 
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

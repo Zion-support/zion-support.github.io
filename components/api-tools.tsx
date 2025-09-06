@@ -271,6 +271,7 @@ export default function ApiToolsPage() {
   return (
     <>
       <Head>
+<<<<<<< HEAD
         <title>
           API Tools & Developer Services | Zion Tech Group - Powerful APIs for
           Modern Applications
@@ -326,6 +327,11 @@ export default function ApiToolsPage() {
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             {categories.map((category) => (
               <button
+=======
+
+              <button
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 key={category}
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
@@ -340,6 +346,10 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* API Tools Grid */}
       <section className='py-24 bg-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -348,6 +358,10 @@ export default function ApiToolsPage() {
               {selectedCategory === 'All'
                 ? 'All API Tools'
                 : `${selectedCategory} APIs`}
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               {filteredTools.length} APIs available. Each tool is
@@ -394,6 +408,7 @@ export default function ApiToolsPage() {
                         </span>
                       </div>
                     </div>
+<<<<<<< HEAD
                     <p className='text-gray-400 leading-relaxed mb-6'>
                       {tool.description}
                     </p>
@@ -474,6 +489,9 @@ export default function ApiToolsPage() {
                         className="bg-indigo-600 hover:bg-indigo-700"
                       >
                         <ExternalLink className="w-4 h-4 mr-2" />
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         Visit API
                       </Button>
                       <Button
@@ -511,11 +529,19 @@ export default function ApiToolsPage() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Developer Resources */}
       <section className='py-24 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-20'>
             <h2 className='text-3xl sm:text-4xl font-bold mb-6 text-white'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Developer Resources
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
@@ -608,8 +634,12 @@ export default function ApiToolsPage() {
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
 
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

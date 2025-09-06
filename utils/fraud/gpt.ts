@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 
 export async function classifyWithGPT(
@@ -81,3 +82,6 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
 }
 
 }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

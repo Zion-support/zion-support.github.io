@@ -342,12 +342,22 @@ const UltraFuturisticBackground2026: React.FC<
           transition={{
             duration: 10,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
           animate={{
@@ -383,8 +393,14 @@ const UltraFuturisticBackground2026: React.FC<
           transition={{
             duration: 20,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
+=======
+
+          }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         />
       </div>
       {/* Content */}
@@ -398,6 +414,7 @@ const UltraFuturisticBackground2026: React.FC<
   );
 };
 
+<<<<<<< HEAD
 export default UltraFuturisticBackground2026;
       {/* Holographic Overlay */}
       <div className="fixed inset-0 pointer-events-none z-40">
@@ -409,3 +426,6 @@ export default UltraFuturisticBackground2026;
 };
 
 export default UltraFuturisticBackground2026;
+=======
+export default UltraFuturisticBackground2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

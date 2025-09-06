@@ -1,7 +1,11 @@
 import React from "react";
 type QA = { q: string; a: string };
 type Props = { items: QA[] };
+<<<<<<< HEAD
 export default function FAQ({ items }: Props) {;
+=======
+export default function FAQ({ items }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   if (!items || items.length === 0) return null;
   return (
     <div className="mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">

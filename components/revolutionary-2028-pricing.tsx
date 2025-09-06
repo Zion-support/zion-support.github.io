@@ -399,6 +399,7 @@ export default function Revolutionary2028Pricing() {
                         >
                           <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                           <span className='text-purple-200'>{feature}</span>                        </li>
+<<<<<<< HEAD
                     <div className="mb-8">
                       <div className="flex items-baseline space-x-2">
                         <span className="text-4xl font-bold text-white">{tier.price}</span>
@@ -416,6 +417,14 @@ export default function Revolutionary2028Pricing() {
                         </li>
                       ))}
                     </ul>
+=======
+
+                        </li>
+
+                      ))}
+                    </ul>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <Link
                       href={tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
@@ -429,6 +438,10 @@ export default function Revolutionary2028Pricing() {
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -453,6 +466,7 @@ export default function Revolutionary2028Pricing() {
               Detailed pricing for our individual services. Mix and match to create your perfect solution.
           </div>
           {servicePricing.map((category, categoryIndex) => (
+<<<<<<< HEAD
             <div key={category.category} className='mb-16'>
               <h3 className='text-3xl font-bold text-white mb-8 text-center'>
                 {category.category}
@@ -557,6 +571,9 @@ export default function Revolutionary2028Pricing() {
                           <div className="text-right">
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                           </div>
                         </div>
                       </div>
@@ -568,6 +585,10 @@ export default function Revolutionary2028Pricing() {
           ))}
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -577,6 +598,10 @@ export default function Revolutionary2028Pricing() {
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Our Pricing
               </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -590,11 +615,19 @@ export default function Revolutionary2028Pricing() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -621,6 +654,10 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -647,6 +684,10 @@ export default function Revolutionary2028Pricing() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -675,11 +716,19 @@ export default function Revolutionary2028Pricing() {
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>          <motion.div      <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
@@ -726,9 +775,14 @@ export default function Revolutionary2028Pricing() {
         </div>
       </section>
       <UltraFuturisticFooter2028 />
+<<<<<<< HEAD
     </>;
 );
 }
 
 }
+=======
+    </>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

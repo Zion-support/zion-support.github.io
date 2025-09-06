@@ -232,6 +232,7 @@ const certifications = [
 
 export default function UltraFuturisticFooter2030() {
   return (
+<<<<<<< HEAD
     <footer className='bg-gradient-to-br from-black via-purple-900/20 to-black text-white relative overflow-hidden'>
       {/* Animated Background */}
       <div className='absolute inset-0'>
@@ -349,6 +350,11 @@ export default function UltraFuturisticFooter2030() {
                   <Globe className="w-4 h-4 text-purple-400" />
                   <a href={contactInfo.website} className="hover:text-purple-400 transition-colors">
                     {contactInfo.website.replace('https://', '')}
+=======
+
+                    {contactInfo.website.replace('https://', '')}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </a>
                 </div>
               </div>
@@ -357,6 +363,10 @@ export default function UltraFuturisticFooter2030() {
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Rocket className='w-5 h-5 text-purple-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>Our Services</span>
               </h4>
               <div className='grid grid-cols-1 gap-4'>
@@ -390,6 +400,10 @@ export default function UltraFuturisticFooter2030() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Quick Links */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
@@ -438,10 +452,18 @@ export default function UltraFuturisticFooter2030() {
                 ))}
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Social & Certifications */}
             <div className='space-y-6'>
               <h4 className='text-lg font-semibold text-white flex items-center space-x-2'>
                 <Users className='w-5 h-5 text-green-400' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>Connect & Trust</span>
               </h4>
               {/* Social Links */}
@@ -462,6 +484,7 @@ export default function UltraFuturisticFooter2030() {
                     <a
                       key={index}
                       href={social.href}
+<<<<<<< HEAD
                       target='_blank'
                       rel='noopener noreferrer'
                       className='w-10 h-10 bg-gray-800/50 hover:bg-purple-500/20 rounded-lg flex items-center justify-center text-gray-400 hover:text-purple-400 transition-all duration-200 hover:shadow-lg hover:shadow-cyan-400/40'
@@ -474,10 +497,23 @@ export default function UltraFuturisticFooter2030() {
                   ))}
                 </div>
               </div>
+=======
+
+                    </a>
+
+                  ))}
+                </div>
+              </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Certifications */}
               <div className='space-y-3'>
                 <h5 className='text-sm font-medium text-green-300 flex items-center space-x-2'>
                   <Award className='w-4 h-4' />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <span>Certifications</span>
                 </h5>
                 <div className='grid grid-cols-1 gap-2'>
@@ -500,11 +536,19 @@ export default function UltraFuturisticFooter2030() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Bar */}
         <div className='border-t border-purple-500/20'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0'>
+<<<<<<< HEAD
               <div className='flex items-center space-x-6 text-sm text-gray-400'>;
+=======
+              <div className='flex items-center space-x-6 text-sm text-gray-400'>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <span>&copy; 2024 Zion Tech Group. All rights reserved.</span>
                 <Link
                   href='/privacy'
@@ -541,7 +585,10 @@ export default function UltraFuturisticFooter2030() {
       </div>
     </footer>
   );
+<<<<<<< HEAD
 }
 ;
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

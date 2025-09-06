@@ -11,7 +11,12 @@ import {
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
+<<<<<<< HEAD
 export default function FuturisticFooter() {;
+=======
+
+export default function FuturisticFooter() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
 
 export default function FuturisticFooter() {;
@@ -150,6 +155,10 @@ export default function FuturisticFooter() {;
               ))}
             </div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Quick Links */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -176,6 +185,10 @@ export default function FuturisticFooter() {;
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -202,6 +215,10 @@ export default function FuturisticFooter() {;
               ))}
             </ul>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -307,6 +324,9 @@ export default function FuturisticFooter() {;
     </footer>
 );
 }
+<<<<<<< HEAD
 
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

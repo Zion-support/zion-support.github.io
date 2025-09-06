@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import {
   Card,
@@ -7,34 +8,61 @@ import {
   CardTitle,;
 } from "@/components/ui/card";
 import { AnalyticsChart } from "@/components/analytics/AnalyticsChart";
+=======
+
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface PageViewsChartProps {
-  data: Array<{ date: string; views: number }>;
-  timeRange: string;
-  onTimeRangeChange: (range: string) => void;
+  data: Array<{ date: string, views: number }>,
+  timeRange: string,
+  onTimeRangeChange: (range: string) => void
 }
 
-export function PageViewsChart({
-  data,
-  timeRange,
-  onTimeRangeChange,
-}: PageViewsChartProps) {
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {
   return (
     <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">
       <CardHeader className="pb-2">
         <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>
-        <CardDescription className="text-zion-slate-light">
-          Daily page view statistics
-        </CardDescription>
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>
       </CardHeader>
       <CardContent className="p-0 pb-4">
-        <AnalyticsChart
+        <AnalyticsChart 
           title=""
+<<<<<<< HEAD
+=======
+import React from "react",;
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
+import { AnalyticsChart } from "@/components/analytics/AnalyticsChart",;
+interface PageViewsChartProps {;
+  data: Array<{ date: string, views: number }>,;
+  timeRange: string;
+  onTimeRangeChange: (range: string) => void;
+}
+;
+export function PageViewsChart({ data, timeRange, onTimeRangeChange }: PageViewsChartProps) {;
+  return (;
+    <Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden">;
+      <CardHeader className="pb-2">;
+        <CardTitle className="text-white text-lg">Page Views Trend</CardTitle>;
+        <CardDescription className="text-zion-slate-light">Daily page view statistics</CardDescription>;
+      </CardHeader>;
+      <CardContent className="p-0 pb-4">;
+        <AnalyticsChart;
+          title="";
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           data={data || []}
           dataKeys={["views"]}
           timeRange={timeRange}
           onTimeRangeChange={onTimeRangeChange}
+<<<<<<< HEAD
         />
       </CardContent>
+=======
+        />;
+      </CardContent>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Card>;
   );
 }

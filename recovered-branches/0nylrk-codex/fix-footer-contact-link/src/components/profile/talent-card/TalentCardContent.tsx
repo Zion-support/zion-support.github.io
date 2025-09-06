@@ -1,12 +1,19 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react";
 import {MapPin} from "lucide-react";
 import {TalentCardSkills} from "./TalentCardSkills";
+=======
+import React, { useState } from "react",
+import { MapPin } from "lucide-react",
+import { TalentCardSkills } from "./TalentCardSkills",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface TalentCardContentProps {
   summary: string | undefined,
   bio: string,
   timezone: string | undefined,
   skills: string[] | undefined
+<<<<<<< HEAD
 }
 
 export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
@@ -14,6 +21,22 @@ export function TalentCardContent({ summary, bio, timezone, skills }: TalentCard
 
   return (
     <div>
+=======
+import React, { useState } from "react",;
+import { MapPin } from "lucide-react",;
+import { TalentCardSkills } from "./TalentCardSkills",;
+interface TalentCardContentProps {;
+  summary: string | undefined,;
+  bio: string,;
+  timezone: string | undefined,;
+  skills: string[] | undefined;
+}
+;
+export function TalentCardContent({ summary, bio, timezone, skills }: TalentCardContentProps) {;
+  const [isHovering, setIsHovering] = useState(false);
+  return (;
+    <div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Location */}
       {timezone && (
         <div className="flex items-center gap-2 text-sm text-zion-slate-light mb-3">

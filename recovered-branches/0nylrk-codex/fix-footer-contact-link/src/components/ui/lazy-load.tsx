@@ -1,40 +1,91 @@
 
+<<<<<<< HEAD
 import {useEffect, useState, useRef, ReactNode} from "react";
 import {cn} from "@/lib/utils";
 import {Skeleton} from "@/components/ui/skeleton";
+=======
+import { useEffect, useState, useRef, ReactNode } from "react",
+import { cn } from "@/lib/utils",
+import { Skeleton } from "@/components/ui/skeleton",
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface LazyLoadProps {
-  height?: string | number;
-  width?: string | number;
+  height?: string | number,
+  width?: string | number,
   children: ReactNode,
-  loadingComponent?: ReactNode;
+  loadingComponent?: ReactNode,
   className?: string
 }
 
+<<<<<<< HEAD
 export function LazyLoad({;
   height = "200px";
   width = "100%";
   children;
   loadingComponent;
+=======
+export function LazyLoad({
+  height = "200px",
+  width = "100%",
+  children,
+  loadingComponent,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false),
+  const [isLoaded, setIsLoaded] = useState(false),
+  const containerRef = useRef<HTMLDivElement>(null),
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
-          setIsVisible(true);
+          setIsVisible(true),
           observer.disconnect()
         }
-      };
+      },
       {
         rootMargin: "200px", // Start loading when element is within 200px of viewport
+<<<<<<< HEAD
         threshold: 0.1}
     );
 
     if (containerRef.current) {
       observer.observe(containerRef.current)
+=======
+import { useEffect, useState, useRef, ReactNode } from "react",;
+import { cn } from "@/lib/utils",;
+import { Skeleton } from "@/components/ui/skeleton",;
+interface LazyLoadProps {;
+  height?: string | number,;
+  width?: string | number,;
+  children: ReactNode,;
+  loadingComponent?: ReactNode,;
+  className?: string;
+}
+;
+export function LazyLoad({;
+  height = "200px",;
+  width = "100%",;
+  children,;
+  loadingComponent,;
+  className}: LazyLoadProps) {;
+  const [isVisible, setIsVisible] = useState(false),;
+  const [isLoaded, setIsLoaded] = useState(false),;
+  const containerRef = useRef<HTMLDivElement>(null),;
+  useEffect(() => {;
+    const observer = new IntersectionObserver(;
+      (entries) => {;
+        if (entries[0].isIntersecting) {;
+          setIsVisible(true),;
+          observer.disconnect();
+        }
+      },;
+      {;
+        rootMargin: "200px", // Start loading when element is within 200px of viewport;
+        threshold: 0.1}
+    ),;
+    if (containerRef.current) {;
+      observer.observe(containerRef.current);
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     }
 
     return () => {
@@ -42,6 +93,7 @@ export function LazyLoad({;
         observer.unobserve(containerRef.current)
       }
     }
+<<<<<<< HEAD
   }, []);
 
   useEffect(() => {
@@ -57,16 +109,30 @@ export function LazyLoad({;
 
   const defaultLoadingComponent = (
     <Skeleton
+=======
+  }, []),;
+  useEffect(() => {;
+    if (isVisible) {;
+      // Simulate loading delay (remove in production);
+      const timer = setTimeout(() => {;
+        setIsLoaded(true);
+      }, 500),;
+      return () => clearTimeout(timer);
+    }
+  }, [isVisible]),;
+  const defaultLoadingComponent = (;
+    <Skeleton;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       style={{ height, width }}
       className="rounded-md bg-zion-blue-light/20"
     />
-  );
+  ),
 
   return (
     <div
       ref={containerRef}
       className={cn("transition-opacity duration-500", 
-        isLoaded ? "opacity-100" : "opacity-0";
+        isLoaded ? "opacity-100" : "opacity-0",
         className
       )}
     >

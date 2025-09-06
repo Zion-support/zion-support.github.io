@@ -40,6 +40,10 @@ export default function TokenIntegrationsPage() {;
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ region, stakeUsd: stake }),
     });
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     const data = await res.json();
     setSuggestion(data);
   }
@@ -85,6 +89,7 @@ export default function TokenIntegrationsPage() {;
     setSuggestion(data)
   }
 
+<<<<<<< HEAD
   return (
     <div className="space-y-8">
       <section className="space-y-2">
@@ -108,6 +113,10 @@ export default function TokenIntegrationsPage() {;
                 <span>{r.network} — {r.reason}</span>
                 <span className="font-medium">+{r.points} ZION$</span>
               </div>
+=======
+              </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         )}
@@ -195,6 +204,10 @@ export default function TokenIntegrationsPage() {;
         </ul>
       </section>
     </div>
+<<<<<<< HEAD
   );
 }
 ;
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

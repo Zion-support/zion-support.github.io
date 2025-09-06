@@ -1,5 +1,9 @@
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function Placeholder() {
   return (
     <main className='min-h-screen p-8'>
@@ -16,7 +20,11 @@ export default function Placeholder() {
           <a className='text-blue-600 hover:underline'>Back to Home</a>
         </Link>
       </div>
+<<<<<<< HEAD
     </main>;
+=======
+    </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );export default function Placeholder() {
   return (
     <main className="min-h-screen p-8">
@@ -32,5 +40,8 @@ export default function Placeholder() {
     </main>;
   );
 }
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

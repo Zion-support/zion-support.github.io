@@ -50,6 +50,7 @@ export default function UltraFuturisticHero2027() {
     },;
   ];
 
+<<<<<<< HEAD
   const stats = [
     {
       number: '1000+',
@@ -106,6 +107,8 @@ export default function UltraFuturisticHero2027() {
             y: [0, -20, 0];
             scale: [1, 1.2, 1];
             opacity: [0.3, 0.6, 0.3]
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 8,
@@ -157,6 +160,7 @@ export default function UltraFuturisticHero2027() {
           transition={{
             duration: 12,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: "easeInOut"
           }}
         />
@@ -169,11 +173,25 @@ export default function UltraFuturisticHero2027() {
       </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center">
+=======
+
+          }}
+        />
+
+        {/* Grid Pattern */}
+
+          {/* Main Heading */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h1 className='text-6xl md:text-8xl lg:text-9xl font-bold mb-6 leading-tight'>
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>
@@ -195,6 +213,10 @@ export default function UltraFuturisticHero2027() {
               </span>
             </h2>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Subtitle */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -208,12 +230,20 @@ export default function UltraFuturisticHero2027() {
           >
             Experience revolutionary AI consciousness evolution, quantum computing breakthroughs, and practical micro SAAS solutions that will transform your business beyond imagination.
           </motion.p>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* CTA Buttons */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className='flex flex-col sm:flex-row gap-6 justify-center mb-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <Link
               href='/2027-services-showcase'
@@ -244,12 +274,21 @@ export default function UltraFuturisticHero2027() {
               <span>Start Your Journey</span>
             </Link>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Features Grid */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'          >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {features.map((feature, index) => (
               <motion.div
@@ -258,6 +297,10 @@ export default function UltraFuturisticHero2027() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
                 className='group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30'>
                   <div
@@ -265,6 +308,7 @@ export default function UltraFuturisticHero2027() {
                   >
                     <feature.icon className='w-8 h-8 text-white' />
                   </div>
+<<<<<<< HEAD
                   <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>                    {feature.text}              >
                 <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30">
                   <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
@@ -272,17 +316,32 @@ export default function UltraFuturisticHero2027() {
                   </div>
                   <h3 className="text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300">
                     {feature.text}
+=======
+                  <h3 className='text-white font-semibold text-center group-hover:text-cyan-400 transition-colors duration-300'>                    {feature.text}
+
+                    {feature.text}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </h3>
                 </div>
               </motion.div>
             ))}
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Stats */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.0 }}
+<<<<<<< HEAD
             className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >            className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16"
+=======
+            className='grid grid-cols-2 md:grid-cols-4 gap-8 mb-16'          >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             {stats.map((stat, index) => (
               <motion.div
@@ -291,6 +350,10 @@ export default function UltraFuturisticHero2027() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: 1.2 + index * 0.1 }}
                 className='text-center group'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div
                   className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}
@@ -303,6 +366,7 @@ export default function UltraFuturisticHero2027() {
                 <div className='flex justify-center mt-2'>
                   <stat.icon
                     className={`w-5 h-5 ${stat.color} group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}
+<<<<<<< HEAD
                   />                </div>              >
                 <div className={`text-4xl md:text-5xl font-bold mb-2 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300 ${stat.color}`}>
                   {stat.number}
@@ -316,12 +380,26 @@ export default function UltraFuturisticHero2027() {
               </motion.div>
             ))}
           </motion.div>
+=======
+                  />                </div>
+
+                </div>
+
+              </motion.div>
+            ))}
+          </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Trust Indicators */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 1.4 }}
             className='bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 max-w-4xl mx-auto'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <h3 className='text-2xl font-bold text-white mb-6'>
               Trusted by Industry Leaders
@@ -339,11 +417,19 @@ export default function UltraFuturisticHero2027() {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {['Fortune 500Tech GiantsResearch LabsGovernment'].map((trust, index) => (
                 <motion.div
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={trust}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 1.6 + index * 0.1 }}
                   className='text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 >
                   <div className='w-16 h-16 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-3'>
                     <Shield className='w-8 h-8 text-cyan-400' />
@@ -354,11 +440,16 @@ export default function UltraFuturisticHero2027() {
                   </div>
                   <div className="text-cyan-300 font-medium">{trust}</div>
                 </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </motion.div>
         </div>
       </div>
+<<<<<<< HEAD
       {/* Bottom Glow */}
       <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
     </section>
@@ -374,3 +465,10 @@ export default function UltraFuturisticHero2027() {
 }
 }
 }
+=======
+
+      {/* Bottom Glow */}
+      <div className='absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-cyan-500/20 via-transparent to-transparent pointer-events-none' />
+    </section>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

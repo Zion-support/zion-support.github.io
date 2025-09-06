@@ -468,12 +468,25 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             backgroundSize: '50px 50px'
           }} />
         </div>
+<<<<<<< HEAD
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}          className="absolute inset-0 w-full h-full"
           style={{ filter: 'blur(0.5px)' }}
         />
+=======
+
+        {/* Canvas for animated particles */}
+        <canvas
+          ref={canvasRef}
+          className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0.5px)' }}
+
+          style={{ filter: 'blur(0.5px)' }}
+
+        />
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Floating neon orbs */}
         <motion.div
           className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
@@ -520,6 +533,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
           transition={{
             duration: 8,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',            ease: 'easeInOut'
           }}
         />
@@ -538,6 +552,14 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             animate={{
               y: [-100, 100, -100];
               opacity: [0, 0.3, 0]
+=======
+
+          }}
+        />
+
+        {/* Quantum energy waves */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             }}
             transition={{
               duration: 4,
@@ -571,6 +593,7 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
             }}
           />
         </div>
+<<<<<<< HEAD
       </div>
       {/* Render children */}
       {children}
@@ -581,3 +604,6 @@ export default function UltraFuturisticBackground2035({ children }: UltraFuturis
     </>
   )
 }
+=======
+      </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -12,6 +12,10 @@ import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/quantum-ai-brain-computer-interface');
@@ -110,5 +114,8 @@ export default function QuantumAIBCIPage() {;
     </UltraAdvancedFuturisticBackground>
   );
 }
+<<<<<<< HEAD
 ;
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -86,6 +86,7 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
           (isLocal ? 'You' : 'Participant')}
       </div>
     </div>
+<<<<<<< HEAD
   );  }, [participant]);
 
   return (
@@ -98,3 +99,6 @@ export default function ParticipantTile({ participant, isLocal, displayName }: P
     </div>
 );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

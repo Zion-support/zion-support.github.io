@@ -1,4 +1,8 @@
 import React from 'react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Props = {
   message: string;
   onJoin?: () => void;
@@ -33,9 +37,15 @@ export default function InviteBanner({ message, onJoin, canJoin = true }: Props)
           Join Meeting
         </button>
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
 
 }
 }
+=======
+    </div>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

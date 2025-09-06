@@ -1,5 +1,9 @@
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import {Rocket, ShieldCheck, BadgeCheck} from 'lucide-react';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ServicesPage() {
   return (
     <EnhancedLayout>
@@ -46,5 +50,9 @@ export default function ServicesPage() {
           <p className="mt-1 text-sm opacity-80">Copilots, agents, vector search, and automation tailored to your product.</p>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
   );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

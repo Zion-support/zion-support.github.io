@@ -24,8 +24,13 @@ export default function QuantumFinancialTradingPlatformPage() {
               <div className="text-3xl font-bold text-white text-base font-medium text-gray-400">Starting at $18,999<span >/month</span></div>
               <div className="text-sm text-gray-400 mt-2">Trial: 30 days • Setup: 2–3 weeks</div>
               <div className="mt-6 flex gap-3">
+<<<<<<< HEAD
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</a>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
+=======
+                <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
+                <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </div>
           </div>
@@ -33,6 +38,13 @@ export default function QuantumFinancialTradingPlatformPage() {
       </div>
     </Layout>
   )
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;

@@ -15,8 +15,15 @@ export function formatCurrency(amount: number, currency = "USD"): string {
     style: "currency", currency,;
   }).format(amount);
 }
+<<<<<<< HEAD
 
 };
 
 },
 
+=======
+
+
+};
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

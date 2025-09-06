@@ -127,6 +127,7 @@ export default function Assistant() {;
         </button>
       </form>
     </div>
+<<<<<<< HEAD
   );      >
         <input
           className="flex-1 border rounded px-3 py-2 text-sm"
@@ -141,3 +142,6 @@ export default function Assistant() {;
 }
 
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

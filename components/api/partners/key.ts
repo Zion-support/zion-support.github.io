@@ -41,6 +41,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (existing) existing.active = false;
   // Create new key
   const now = new Date().toISOString();
+<<<<<<< HEAD
   const newKey = {
     id: uuidv4(),
     partnerId: auth.partner.id,
@@ -64,3 +65,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
 }
 }
+=======
+  const newKey = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

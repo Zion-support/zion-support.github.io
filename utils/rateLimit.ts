@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 const rateLimitMap = new Map<string, { count: number; resetTime: number }>();
 const RATE_LIMIT_WINDOW = 15 * 60 * 1000; // 15 minutes
 const RATE_LIMIT_MAX_REQUESTS = 100; // 100 requests per window
@@ -31,3 +32,5 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   rateLimitMap.set(key, current);
   return true;
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

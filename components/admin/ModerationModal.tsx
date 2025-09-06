@@ -1,5 +1,10 @@
 import React, { useState } from 'react';
+<<<<<<< HEAD
 export type ModerationModalProps = {;
+=======
+
+export type ModerationModalProps = {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag: any | null;
   onClose: () => void;
   onAction: (
@@ -118,5 +123,9 @@ export default function ModerationModal({
           <button onClick={() => onAction('ban', adminNotes)} className="px-3 py-2 rounded bg-gray-800 text-white">Ban User</button>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

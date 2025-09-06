@@ -202,7 +202,12 @@ const EnhancedFuturisticBackground: React.FC<
 
         // Fade out near end of life
         if (this.life < 20) {
+<<<<<<< HEAD
           this.opacity *= 0.95;        }          this.opacity *= 0.95
+=======
+          this.opacity *= 0.95;        }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 
@@ -234,8 +239,13 @@ const EnhancedFuturisticBackground: React.FC<
       }
 
       isDead() {
+<<<<<<< HEAD
         return this.life <= 0 || this.opacity < 0.01;      }        
         ctx.restore()
+=======
+        return this.life <= 0 || this.opacity < 0.01;      }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       }
 
       isDead() {
@@ -378,6 +388,7 @@ const EnhancedFuturisticBackground: React.FC<
 
       // Create connections between nearby particles
       connections = [];
+<<<<<<< HEAD
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
@@ -391,6 +402,9 @@ const EnhancedFuturisticBackground: React.FC<
           );
           if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]))
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -487,4 +501,8 @@ const EnhancedFuturisticBackground: React.FC<
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedFuturisticBackground;
+=======
+export default EnhancedFuturisticBackground;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

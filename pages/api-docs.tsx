@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -156,18 +157,28 @@ export default function APIDocsPage() {
 import Layout from '../components/Layout';
 
 export default function APIDocsPage() {
+=======
+import React from 'react',
+import Head from 'next/head',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+=======
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
-        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</Link> for the full reference.</p>
       </div>
+<<<<<<< HEAD
     </Layout>;
 );
     </>
@@ -175,3 +186,29 @@ export default function ApiDocsPage() {
 }
 
 }
+=======
+    </>
+  )
+import React from 'react';
+import Head from 'next/head';
+export default function ApiDocsPage(req, res) {
+  try {
+  return (;
+    <>;
+      <Head>;
+        <title>API Docs | Zion Tech Group</title>;
+        <meta name="description" content="API reference and guides." />;
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />;
+      </Head>;
+      <div className="container mx-auto px-4 py-16 text-gray-200">;
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>;
+        <p className="text-gray-300">See <a href="/api-docs" className="text-cyan-400 underline">API Documentation</a> for the full reference.</p>;
+      </div>;
+    </>;
+  );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

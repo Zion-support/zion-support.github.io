@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import {Skill} from '@/types/resume';
 interface SkillsSectionProps {
   skills: Skill[]
@@ -12,10 +13,25 @@ export function SkillsSection({ skills }: SkillsSectionProps) {
       acc[category] = []
     }
     acc[category].push(skill);
+=======
+import { Skill } from '@/types/resume',;
+interface SkillsSectionProps {;
+  skills: Skill[];
+}
+;
+export function SkillsSection({ skills }: SkillsSectionProps) {;
+  // Group skills by category;
+  const skillsByCategory = skills.reduce((acc, skill) => {;
+    const category = skill.category || 'Other',;
+    if (!acc[category]) {;
+      acc[category] = [];
+    }
+    acc[category].push(skill),
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     return acc
-  }, {} as Record<string, Skill[]>);
+  }, {} as Record<string Skill[]>),
 
-  if (skills.length === 0) return null;
+  if (skills.length === 0) return null,
   
   return (
     <div className="mb-6">

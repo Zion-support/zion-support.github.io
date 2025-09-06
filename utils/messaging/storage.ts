@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Messaging storage utilities
 export interface Message {;
   id: string;
@@ -593,5 +594,8 @@ export function formatMessageTime(isoString: string): string {;
     return `${Math.floor(diffInHours / 24)}d ago`;
   } else {
     return date.toLocaleDateString();
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
 }

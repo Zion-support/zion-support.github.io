@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+=======
+
+import { Badge } from '@/components/ui/badge',
+import { Button } from '@/components/ui/button',
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import { Trash2 } from 'lucide-react'
 import { SkillItemProps } from './types'
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
@@ -7,7 +13,7 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
   return (
     <Badge 
-      key = {skill.id,}
+      key={skill.id} 
       variant="secondary"
       className="flex items-center gap-1 py-1.5 px-3"
     >
@@ -19,13 +25,14 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps,) => {
         variant="ghost"
         size="icon"
         className="h-5 w-5 p-0 ml-1"
-        onClick = {() => onDelete(skill.id!, category),}
+        onClick={() => onDelete(skill.id!, category)}
         aria-label="Delete skill"
       >
         <Trash2 className="h-3 w-3" />
       </Button>
     </Badge>
   )
+<<<<<<< HEAD
 }
 "
 
@@ -57,3 +64,6 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {
   );
 } };
 };
+=======
+},
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

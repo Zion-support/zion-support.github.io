@@ -5,7 +5,12 @@ import {getServiceById} from '../../data/micro-saas-services';
 import ServiceDetail from '../../components/sections/ServiceDetail';
 import Button from '../../components/ui/Button';
 import {ArrowLeft, ExternalLink} from 'lucide-react';
+<<<<<<< HEAD
 export default function ServiceDetailPage() {;
+=======
+
+export default function ServiceDetailPage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { id } = router.query;
 
@@ -118,12 +123,24 @@ export default function ServiceDetailPage() {;
             </div>
           </div>
         </nav>
+<<<<<<< HEAD
         {/* Service Detail Content */}
         <ServiceDetail service={service} />
+=======
+
+        {/* Service Detail Content */}
+        <ServiceDetail service={service} />
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Related Services CTA */}
         <section className='py-16 bg-gray-900/50'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
             <h2 className='text-3xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Looking for Something Else?
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-gray-400 mb-8 max-w-2xl mx-auto'>
               Explore our complete portfolio of micro SaaS services to find the
@@ -147,6 +164,7 @@ export default function ServiceDetailPage() {;
                 className="shadow-2xl shadow-blue-500/25"
                 View All Services
               </Button>
+<<<<<<< HEAD
               <Button
                 href='/contact'
                 variant='outline'
@@ -165,3 +183,6 @@ export default function ServiceDetailPage() {;
   );
 }
 ;
+=======
+              <Button
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

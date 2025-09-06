@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest } from 'next';
 
 export function extractClientIp(req: NextApiRequest): string | null {;
@@ -21,3 +22,6 @@ export function getClientIp(req: any): string {;
   
   return remoteAddress || 'unknown';
 }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

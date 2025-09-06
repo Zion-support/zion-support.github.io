@@ -24,6 +24,7 @@ export default function OffworldDeploy() {;
   }
 
   return (
+<<<<<<< HEAD
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {
       setError(e.message),
@@ -77,3 +78,16 @@ export default function OffworldDeploy() {;
     </div>
 );
 }
+=======
+    <div className='min-h-screen p-8'>
+
+    }
+  }
+
+  return (
+
+        </div>
+      )}
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

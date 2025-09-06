@@ -336,6 +336,10 @@ export default function UltraFuturisticFooter2026() {
               </div>
             </motion.div>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Service Categories */}
           {serviceCategories.map((category, index) => (
             <motion.div
@@ -384,9 +388,18 @@ export default function UltraFuturisticFooter2026() {
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
         {/* Additional Links */}
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {/* Company Links */}
+=======
+
+        {/* Additional Links */}
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}
+
+          {/* Company Links */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -416,6 +429,10 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Resources */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -446,6 +463,10 @@ export default function UltraFuturisticFooter2026() {
               ))}
             </ul>
           </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Social Media */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -470,22 +491,36 @@ export default function UltraFuturisticFooter2026() {
                 <Link
                   key={index}
                   href={social.href}
+<<<<<<< HEAD
                   className='w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group'
                 >
                   <social.icon className='w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300' />                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
                 >
                   <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
                 </Link>
+=======
+
+                </Link>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           </motion.div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Newsletter Signup */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5 }}
           className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='text-center'>
             <h3 className='text-2xl font-bold text-white mb-4'>
@@ -523,12 +558,20 @@ export default function UltraFuturisticFooter2026() {
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='flex flex-col md:flex-row justify-between items-center'>
             <div className='text-gray-400 text-sm mb-4 md:mb-0'>
@@ -578,6 +621,7 @@ export default function UltraFuturisticFooter2026() {
           </div>
         </motion.div>
       </div>
+<<<<<<< HEAD
     </footer>;
 );
 }
@@ -585,4 +629,8 @@ export default function UltraFuturisticFooter2026() {
 }
 }
 }
+=======
+    </footer>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

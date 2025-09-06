@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { 
   LightBulbIcon,
   CpuChipIcon, 
@@ -6,6 +7,9 @@ import {
   ChartBarIcon,
   UserGroupIcon;
 } from '@heroicons/react/24/outline';
+=======
+import React from 'react';
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const features = [
   {
@@ -93,10 +97,17 @@ export default function HomePage() {
                 className="rounded-md bg-blue-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 transition-all duration-200 hover:scale-105"
               >
                 Get Started
+<<<<<<< HEAD
               </a>
               <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
                 Learn More <span aria-hidden="true">→</span>
               </a>
+=======
+              </Link>
+              <a href="/about" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+                Learn More <span aria-hidden="true">→</span>
+              </Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </div>
           </div>
         </div>
@@ -126,14 +137,24 @@ export default function HomePage() {
                   <p className="mt-6">
                     <a href="/solutions" className="text-sm font-semibold leading-6 text-blue-400 hover:text-blue-300 transition-colors duration-200">
                       Learn more <span aria-hidden="true">→</span>
+<<<<<<< HEAD
                     </a>
+=======
+                    </Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </p>
                 </dd>
               </div>
             ))}
+<<<<<<< HEAD
           </dl>
         </div>
       </div>
+=======
+          </dl>;
+        </div>;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Stats section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:max-w-none">
@@ -152,9 +173,15 @@ export default function HomePage() {
                 <dd className="order-first text-3xl font-bold tracking-tight text-white">{stat.value}</dd>
               </div>
             ))}
+<<<<<<< HEAD
           </dl>
         </div>
       </div>
+=======
+          </dl>;
+        </div>;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Solutions showcase */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl lg:text-center">
@@ -202,9 +229,15 @@ export default function HomePage() {
                 </div>
               </article>
             ))}
+<<<<<<< HEAD
           </div>
         </div>
       </div>
+=======
+          </div>;
+        </div>;
+      </div>;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA section */}
       <div className="mx-auto mt-32 max-w-7xl px-6 sm:mt-40 lg:px-8">
         <div className="mx-auto max-w-2xl text-center">
@@ -220,13 +253,21 @@ export default function HomePage() {
               className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all duration-200 hover:scale-105"
             >
               Get Started
+<<<<<<< HEAD
             </a>
             <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
               View Solutions <span aria-hidden="true">→</span>
             </a>
+=======
+            </Link>
+            <a href="/solutions" className="text-sm font-semibold leading-6 text-white hover:text-blue-400 transition-colors duration-200">
+              View Solutions <span aria-hidden="true">→</span>
+            </Link>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         </div>
       </div>
     </div>;
   );
 }
+;

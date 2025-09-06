@@ -51,6 +51,7 @@ export default async function handler(
     return res.status(200).json({ ok: true, data });
   } catch (e: any) {
     return res.status(500).send(e?.message || 'Unexpected error');
+<<<<<<< HEAD
   }      }
       return res.status(500).send(error.message || 'Database error')
     }
@@ -60,3 +61,6 @@ export default async function handler(
     return res.status(500).send(e?.message || 'Unexpected error')
 };
 }
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

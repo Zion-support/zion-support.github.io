@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const { execSync } = require('child_process'),;
+=======
+const { execSync } = require('child_process');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
@@ -23,7 +27,11 @@ try {;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
       // Resolve conflicts by accepting our version;
+<<<<<<< HEAD
       const files = conflictFiles.trim().split('\n'),;
+=======
+      const files = conflictFiles.trim().split('\n');
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       for (const file of files) {;
         if (file.trim()) {;
           console.log(`Resolving conflicts in: ${file}`),;
@@ -46,7 +54,11 @@ try {;
   const branches = execSync('git branch -r', { encoding: 'utf8' }),;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
+<<<<<<< HEAD
     .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
+=======
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;

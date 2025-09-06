@@ -270,6 +270,11 @@ const companyLinks = [
       { name: 'Digital Reality Interface', href: '/digital-reality-interface-2028', description: 'Next-gen reality interface', price: '$4,999/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home },
@@ -637,6 +642,7 @@ export default function UltraFuturisticNavigation2027() {;
           href: '/cloud-platform',
           description: 'Scalable cloud infrastructure',
           price: 'Custom',
+<<<<<<< HEAD
           icon: '☁️',
         },
         {          name: 'Edge Computing Orchestration',
@@ -668,6 +674,8 @@ export default function UltraFuturisticNavigation2027() {;
         }
       ]
     }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -758,11 +766,18 @@ export default function UltraFuturisticNavigation2027() {;
             {navigation.map(item => (
               <div key={item.name} className='relative group'>
                 <motion.button
+<<<<<<< HEAD
                   className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}          <nav className="hidden xl:flex items-center space-x-1">
             {navigation.map((item) => (
               <div key={item.name} className="relative group">
                 <motion.button
                   className="flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20"
+=======
+                  className='flex items-center space-x-2 px-4 py-3 text-gray-300 hover:text-white transition-all duration-300 rounded-xl hover:bg-gray-800/50 hover:shadow-lg hover:shadow-cyan-500/20'                  onMouseEnter={() => setActiveDropdown(item.name)}
+
+                  onMouseEnter={() => setActiveDropdown(item.name)}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   onMouseLeave={() => setActiveDropdown(null)}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
@@ -773,11 +788,18 @@ export default function UltraFuturisticNavigation2027() {;
                     {item.icon}
                   </div>
                   <span className='font-medium'>{item.name}</span>
+<<<<<<< HEAD
                   <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />                </motion.button>                  <div className={`p-2 rounded-lg bg-gradient-to-br ${item.color} shadow-lg`}>
                     {item.icon}
                   </div>
                   <span className="font-medium">{item.name}</span>
                   <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform duration-300" />
+=======
+                  <ChevronDown className='w-4 h-4 group-hover:rotate-180 transition-transform duration-300' />                </motion.button>
+
+                </motion.button>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {/* Dropdown Menu */}
                 <AnimatePresence>
                   {activeDropdown === item.name && (
@@ -787,6 +809,10 @@ export default function UltraFuturisticNavigation2027() {;
                       exit={{ opacity: 0, y: 10, scale: 0.95 }}
                       transition={{ duration: 0.2 }}
                       className='absolute top-full left-0 mt-2 w-96 bg-gray-900/95 backdrop-blur-xl border border-gray-700/50 rounded-2xl shadow-2xl shadow-cyan-500/20 overflow-hidden'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     >
                       <div className='p-4'>
                         <div className='flex items-center space-x-3 mb-4'>
@@ -824,6 +850,7 @@ export default function UltraFuturisticNavigation2027() {;
                                 <div className='text-sm font-medium text-cyan-400'>
                                   {child.price}
                                 </div>
+<<<<<<< HEAD
                                 <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>                    >
                       <div className="p-4">
                         <div className="flex items-center space-x-3 mb-4">
@@ -853,6 +880,12 @@ export default function UltraFuturisticNavigation2027() {;
                                 <div className="text-sm font-medium text-cyan-400">{child.price}</div>
                                 <ChevronRight className="w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors" />
                               </div>
+=======
+                                <ChevronRight className='w-4 h-4 text-gray-500 group-hover:text-cyan-400 transition-colors' />                              </div>
+
+                              </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                             </Link>
                           ))}
                         </div>
@@ -863,8 +896,15 @@ export default function UltraFuturisticNavigation2027() {;
               </div>
             ))}
           </nav>
+<<<<<<< HEAD
           {/* Right Side */}
           <div className='flex items-center space-x-4'>
+=======
+
+          {/* Right Side */}
+          <div className='flex items-center space-x-4'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Contact Info */}
             <div className='hidden lg:flex items-center space-x-4 text-sm'>
               <a
@@ -895,8 +935,15 @@ export default function UltraFuturisticNavigation2027() {;
                 <span>{contactInfo.email}</span>
               </a>
             </div>
+<<<<<<< HEAD
             {/* CTA Button */}
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+=======
+
+            {/* CTA Button */}
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <Link
                 href='/contact'
                 className='hidden lg:inline-flex items-center space-x-2 px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl shadow-lg shadow-cyan-500/30 hover:shadow-xl hover:shadow-cyan-500/40 transition-all duration-300'
@@ -909,6 +956,10 @@ export default function UltraFuturisticNavigation2027() {;
                 <span>Get Started</span>
               </Link>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -925,6 +976,10 @@ export default function UltraFuturisticNavigation2027() {;
           </div>
         </div>
       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
@@ -934,6 +989,10 @@ export default function UltraFuturisticNavigation2027() {;
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.3 }}
             className='xl:hidden bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <div className='container mx-auto px-4 py-6'>
               <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
@@ -985,8 +1044,15 @@ export default function UltraFuturisticNavigation2027() {;
                     ))}
                   </div>
                 </div>
+<<<<<<< HEAD
                 {/* Quick Links & Contact */}
                 <div className='space-y-6'>
+=======
+
+                {/* Quick Links & Contact */}
+                <div className='space-y-6'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   <div>
                     <h3 className='text-lg font-semibold text-white mb-4'>
                       Quick Links
@@ -1118,4 +1184,8 @@ export default function UltraFuturisticNavigation2027() {;
 };export default UltraFuturisticNavigation2027;  )
 };
 
+<<<<<<< HEAD
 export default UltraFuturisticNavigation2027;
+=======
+export default UltraFuturisticNavigation2027;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

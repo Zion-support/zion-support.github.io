@@ -34,4 +34,12 @@ buildOptimizer.start().catch(console.error);
 // Start the service;
 const buildOptimizer = new BuildOptimizer();
 buildOptimizer.start().catch(console.error);
+<<<<<<< HEAD
 
+=======
+},;
+,;
+// Start the service,;
+const buildOptimizer = new BuildOptimizer(),;
+buildOptimizer.start().catch(console.error),;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

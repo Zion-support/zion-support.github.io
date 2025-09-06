@@ -58,12 +58,21 @@ useEffect ( () => {
       {/* Placeholder */}
       <img
         src={placeholder}
+<<<<<<< HEAD
         alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${        alt=""
+=======
+        alt=''        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
           isLoaded ? 'opacity-0' : 'opacity-100'
         }`}
         style={{ width, height }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Actual Image */}
       {isInView && (
         <motion.img
@@ -87,6 +96,7 @@ export default LazyImage;          className="w-full h-full object-cover"
           style={{ width, height }}
         />
       )}
+<<<<<<< HEAD
     </div>
   );
 };
@@ -95,3 +105,6 @@ export default LazyImage;  )
 };
 
 export default LazyImage;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

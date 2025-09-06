@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import Link from "next/link";
 import EnhancedButton from "./EnhancedButton";
@@ -8,14 +9,15 @@ export type EmptyStateProps = {;
   primaryAction?: { label: string; href: string };
   secondaryAction?: { label: string; href: string };
 };
+=======
+import React from 'react';
 
-export default function EmptyState({
-  title,
-  description,
-  icon,
-  primaryAction,
-  secondaryAction,
-}: EmptyStateProps) {
+interface EmptyStateProps {
+  className?: string;
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+const EmptyState: React.FC<EmptyStateProps> = ({ className }) => {
   return (
     <div className='w-full border border-dashed border-gray-300 dark:border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3'>
       <div className='text-3xl opacity-70'>{icon ?? '🧭'}</div>
@@ -62,6 +64,7 @@ export default function EmptyState({ title, description, icon, primaryAction, se
           )}
         </div>
       )}
+<<<<<<< HEAD
     </div>;
   );
 }
@@ -69,3 +72,10 @@ export default function EmptyState({ title, description, icon, primaryAction, se
 }
 }
 }
+=======
+    </div>
+  );
+};
+
+export default EmptyState;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

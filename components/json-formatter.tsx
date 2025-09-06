@@ -372,10 +372,17 @@ export default function JSONFormatterPage() {;
               <div className='space-y-4'>
                 <div className='relative'>
                   {showLineNumbers && (
+<<<<<<< HEAD
                     <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}              <div className="space-y-4">
                 <div className="relative">
                   {showLineNumbers && (
                     <div className="absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden">
+=======
+                    <div className='absolute left-0 top-0 bottom-0 w-12 bg-gray-700 border-r border-gray-600 text-xs text-gray-400 p-2 font-mono overflow-hidden'>                      {getLineNumbers(inputJson)}
+
+                      {getLineNumbers(inputJson)}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   )}
                   <textarea
@@ -394,7 +401,12 @@ export default function JSONFormatterPage() {;
                   </div>
                 )}
 
+<<<<<<< HEAD
                 <div className='flex space-x-3'>                  <div className="p-3 bg-red-500/20 border border-red-500/30 rounded text-sm text-red-300">
+=======
+                <div className='flex space-x-3'>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     <strong>Error:</strong> {errorMessage}
                   </div>
                 )}
@@ -519,21 +531,37 @@ export default function JSONFormatterPage() {;
                     <p>
                       • Size: {((formattedJson.length * 2) / 1024).toFixed(2)}{' '}
                       KB
+<<<<<<< HEAD
                     </p>                  </div>                  <div className="text-sm text-gray-400">
                     <p>• Characters: {formattedJson.length}</p>
                     <p>• Lines: {formattedJson.split('\n').length}</p>
                     <p>• Size: {(formattedJson.length * 2 / 1024).toFixed(2)} KB</p>
+=======
+                    </p>                  </div>
+
+                  </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 )}
               </div>
             </Card>
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='text-center mb-16'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
+<<<<<<< HEAD
+=======
+
+              Professional JSON Formatting Features
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             </h2>
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
               Everything you need to work with JSON data efficiently and
@@ -741,5 +769,10 @@ export default function JSONFormatterPage() {;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
+=======
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

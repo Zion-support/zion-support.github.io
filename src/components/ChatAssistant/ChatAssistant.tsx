@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return;
@@ -21,6 +22,28 @@ export interface Message {
   message: string,
   timestamp: Date,
   read?: boolean
+=======
+import React, {;
+  useState,;
+  useEffect,;
+  useRef,;
+  ReactNode,;
+  useContext} from 'react',;
+import { AuthContext } from '../../context/auth/AuthContext',;
+import { useDebounce } from '../../hooks/useDebounce',;
+import { useLocalStorage } from '../../hooks/useLocalStorage',;
+import { ChatMessage } from './ChatMessage',;
+import { ChatInput } from './ChatInput',;
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar',;
+import { Button } from '@/components/ui/button',;
+import { X } from 'lucide-react';
+export interface Message {;
+  id: string,;
+  role: 'user' | 'assistant',;
+  message: string,;
+  timestamp: Date,;
+  read?: boolean;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export interface ChatAssistantProps {
@@ -215,7 +238,11 @@ export function ChatAssistant({
             variant="ghost"
             size="icon"
             className="text-white hover:bg-zion-purple/10 rounded-full"
+<<<<<<< HEAD
             onClick = {onClose,}
+=======
+            onClick={onClose}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             aria-label="Close chat"
           >
             <X className="h-5 w-5" />
@@ -238,6 +265,7 @@ export function ChatAssistant({
               <p>Start a conversation with {recipient.name}</p>
               {starterQuestions.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-2">
+<<<<<<< HEAD
                   {starterQuestions.map((q, idx,) => (
                     <Button
                       key = {idx,}
@@ -245,6 +273,15 @@ export function ChatAssistant({
                       className="text-xs"
                       onClick = {(,) => handleSendMessage(q),}
                     >
+=======
+                  {starterQuestions.map((q, idx) => (
+                    <Button
+                      key={idx}
+                      variant="outline"
+                      className="text-xs"
+                      onClick={() => handleSendMessage(q)}
+                    >;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                       {q}
                     </Button>
                   ))}
@@ -283,13 +320,21 @@ export function ChatAssistant({
             <div className="flex justify-end space-x-3">
               <Button
                 variant="outline"
+<<<<<<< HEAD
                 onClick = {handleModalCancel,}
+=======
+                onClick={handleModalCancel}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="text-white border-zion-purple hover:bg-zion-purple/10"
               >
                 Cancel
               </Button>
               <Button
+<<<<<<< HEAD
                 onClick = {handleModalSendConfirm,}
+=======
+                onClick={handleModalSendConfirm}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 className="bg-zion-purple hover:bg-zion-purple-dark text-white"
               >
                 Send
@@ -300,5 +345,10 @@ export function ChatAssistant({
       )}
     </div>
   );
+<<<<<<< HEAD
 };
 };
+=======
+}
+;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

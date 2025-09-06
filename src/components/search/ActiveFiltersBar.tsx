@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 export default ActiveFiltersBar; import React from 'react'
@@ -11,6 +12,19 @@ interface SearchFilters {
   maxPrice: number,
   minRating: number,
   sort: string
+=======
+import React from 'react',;
+import { X } from 'lucide-react';
+import { Button } from '@/components/ui/button',;
+import { Badge } from '@/components/ui/badge',;
+interface SearchFilters {;
+  types: string[],;
+  category: string,;
+  minPrice: number,;
+  maxPrice: number,;
+  minRating: number,;
+  sort: string;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 interface ActiveFiltersBarProps {
@@ -108,9 +122,16 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
   return (
     <div className={`flex items-center gap-2 flex-wrap ${className}`}>
       <span className="text-sm font-medium text-muted-foreground">Active filters:</span>
+<<<<<<< HEAD
       {activeFilters.map(filter => (
         <Badge 
           key = {filter.key,}
+=======
+      
+      {activeFilters.map(filter => (
+        <Badge 
+          key={filter.key} 
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           variant="secondary" 
           className="flex items-center gap-1 pl-2 pr-1"
         >
@@ -121,7 +142,11 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
             variant="ghost"
             size="sm"
             className="h-4 w-4 p-0 hover:bg-transparent"
+<<<<<<< HEAD
             onClick = {(,) => removeFilter(filter.key),}
+=======
+            onClick={() => removeFilter(filter.key)}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             aria-label={`Remove ${filter.label} filter`}
           >
             <X className="h-3 w-3" />
@@ -132,7 +157,11 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
       <Button
         variant="ghost"
         size="sm"
+<<<<<<< HEAD
         onClick = {onClearAll,}
+=======
+        onClick={onClearAll}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         className="text-xs h-6 px-2"
       >
         Clear all
@@ -142,6 +171,7 @@ export const ActiveFiltersBar: React.FC<ActiveFiltersBarProps> = ({
 },
 
 export default ActiveFiltersBar,
+<<<<<<< HEAD
 interface Filter {
   key: string
   value: string
@@ -160,3 +190,5 @@ interface ActiveFiltersBarProps extends React.PropsWithChildren<{}> {
     </div>;
   )};
 '";
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
 export type ProjectParticipantRole = 'client' | 'talent';
 
@@ -51,3 +52,6 @@ export interface UpdateMilestoneRequest {;
 }
 
 }
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

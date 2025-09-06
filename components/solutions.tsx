@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
  const SolutionsPage: React.FC = () => {
   const industrySolutions = [ {
   category: 'Healthcare & Life Sciences', solutions: [ {
@@ -101,6 +106,7 @@
 export default Solutions;};
 
 export default Solutions;
+<<<<<<< HEAD
 
 }
 }
@@ -115,3 +121,5 @@ export default Solutions;
 }
 }
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

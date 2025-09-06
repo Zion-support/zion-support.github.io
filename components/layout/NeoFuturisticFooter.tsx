@@ -8,7 +8,12 @@ import {
   Github,
   Linkedin,;
   ExternalLink,;
+<<<<<<< HEAD
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
+=======
+} from 'lucide-react';
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -16,6 +21,7 @@ const contactInfo = {
   website: 'https://ziontechgroup.com',};
 
 export default function NeoFuturisticFooter() {
+<<<<<<< HEAD
   return (  website: 'https://ziontechgroup.com';
 };
 
@@ -149,3 +155,11 @@ export default function NeoFuturisticFooter() {
 }
 
 ;
+=======
+  return (
+
+};
+
+export default function NeoFuturisticFooter() {
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

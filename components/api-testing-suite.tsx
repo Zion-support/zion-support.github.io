@@ -13,10 +13,16 @@ import {
   AlertTriangle,
   Clock,;
   Database,;
+<<<<<<< HEAD
 } from 'lucide-react';import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {;
+=======
+} from 'lucide-react';
+
+export default function APITestingSuitePage() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
   const [apiEndpoint, setApiEndpoint] = useState('');
@@ -334,6 +340,7 @@ export default function APITestingSuitePage() {;
               View Pricing
             </Button>
             <Button
+<<<<<<< HEAD
               href='/contact'
               variant='outline'
               size='lg'
@@ -406,6 +413,11 @@ export default function APITestingSuitePage() {;
                     </h3>
                     <p className="text-gray-400 leading-relaxed">
                       {feature.description}
+=======
+
+                      {feature.description}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </p>
                   </div>
                 </div>
@@ -414,11 +426,19 @@ export default function APITestingSuitePage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Test Types Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Comprehensive Testing Coverage
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -471,6 +491,10 @@ export default function APITestingSuitePage() {;
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Demo Test Results */}
       {testResults && (
         <section className='section-padding bg-gradient-cursor-accent'>
@@ -554,6 +578,7 @@ export default function APITestingSuitePage() {;
                         </span>
                         <span className='text-xs text-gray-400'>
                           {test.value}
+<<<<<<< HEAD
                         </span>                      </div>                  {testResults.tests.map((test, index) => (
                     <div key={index} className="flex items-center justify-between">
                       <span className="text-gray-300 text-sm">{test.name}</span>
@@ -565,10 +590,20 @@ export default function APITestingSuitePage() {;
                         </span>
                         <span className="text-xs text-gray-400">{test.value}</span>
                       </div>
+=======
+                        </span>                      </div>
+
+                      </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </div>
                   ))}
                 </div>
               </Card>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {/* Performance Metrics */}
               <Card className='border-gradient-indigo'>
                 <h3 className='text-2xl font-bold mb-6 text-white'>
@@ -580,6 +615,10 @@ export default function APITestingSuitePage() {;
                     <span className='text-indigo-400 font-bold'>
                       {testResults.responseTime}
                     </span>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   </div>
                   <div className='flex justify-between items-center'>
                     <span className='text-gray-400'>Throughput</span>
@@ -616,6 +655,7 @@ export default function APITestingSuitePage() {;
                 {testResults.recommendations.map((rec, index) => (
                   <div key={index} className='flex items-start space-x-3'>
                     <CheckCircle className='w-5 h-5 text-indigo-400 mt-1 flex-shrink-0' />
+<<<<<<< HEAD
                     <span className='text-gray-300'>{rec}</span>                  </div>            <Card className="border-gradient-indigo">
               <h3 className="text-2xl font-bold mb-6 text-white">Optimization Recommendations</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -623,6 +663,12 @@ export default function APITestingSuitePage() {;
                   <div key={index} className="flex items-start space-x-3">
                     <CheckCircle className="w-5 h-5 text-indigo-400 mt-1 flex-shrink-0" />
                     <span className="text-gray-300">{rec}</span>
+=======
+                    <span className='text-gray-300'>{rec}</span>                  </div>
+
+                  </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 ))}
               </div>
             </Card>
@@ -635,6 +681,10 @@ export default function APITestingSuitePage() {;
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -667,6 +717,7 @@ export default function APITestingSuitePage() {;
                   </div>
                 )}
 
+<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {plan.name}
@@ -693,6 +744,10 @@ export default function APITestingSuitePage() {;
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-indigo-400 mr-3 flex-shrink-0" />
                       {feature}
+=======
+                      {feature}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                     </li>
                   ))}
                 </ul>
@@ -702,22 +757,38 @@ export default function APITestingSuitePage() {;
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
+<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>                  href="/contact"
                   size="lg"
                   className={`w-full ${plan.popular ? 'bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-600 hover:to-purple-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}
                 >
                   Get Started
                   <ArrowRight className="w-5 h-5 ml-2" />
+=======
+                  <ArrowRight className='w-5 h-5 ml-2' />                </Button>
+
+                </Button>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-indigo-600 to-purple-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='container-cursor text-center relative z-10'>
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
+<<<<<<< HEAD
+=======
+
+            Ready to Test Your APIs?
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </h2>
           <p className='text-responsive-md text-indigo-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of developers and businesses using our API testing
@@ -746,7 +817,11 @@ export default function APITestingSuitePage() {;
         </div>
       </section>
     </>
+<<<<<<< HEAD
 );
 }
 
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }

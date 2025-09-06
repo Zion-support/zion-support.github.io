@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Signature utilities
 export const signature = {
   // Add signature functionality here
@@ -5,3 +6,7 @@ export const signature = {
   sign: (message: string, privateKey: string) => '',
   recover: (signature: string, message: string) => '';
 };
+=======
+
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -582,6 +582,7 @@ export default function MicroSaasServicesPage() {
                       {insight.growth}
                     </div>
                   </div>
+<<<<<<< HEAD
                   <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>              Market Overview & Competitive Analysis
             </h2>
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">
@@ -603,16 +604,30 @@ export default function MicroSaasServicesPage() {
                   </div>
                   <p className="text-gray-400 text-sm">{insight.description}</p>
                 </div>
+=======
+                  <p className='text-gray-400 text-sm'>{insight.description}</p>                </div>
+
+                </div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </Card>
             ))}
           </div>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Services Grid */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               Our Micro SaaS Services
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -782,6 +797,7 @@ export default function MicroSaasServicesPage() {
                             ))}
                         </div>
                         <div>
+<<<<<<< HEAD
                           <p className='text-sm text-gray-400 mb-1'>
                             Key Competitors
                           </p>
@@ -915,6 +931,9 @@ export default function MicroSaasServicesPage() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">Global Infrastructure</h3>
                 <p className="text-gray-400 text-sm">Worldwide availability with enterprise-grade reliability</p>
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               </div>
             </Card>
           </div>
@@ -955,6 +974,7 @@ export default function MicroSaasServicesPage() {
             >
               Get Started
             </Button>
+<<<<<<< HEAD
             <Button
               href='/pricing'
               variant='outline'
@@ -971,3 +991,6 @@ export default function MicroSaasServicesPage() {
     </>
 );
 }
+=======
+            <Button
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -41,4 +41,10 @@ export default function AdminLayout({ children }: { children: ReactNode }) {;
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+};
+
+export default Layout;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

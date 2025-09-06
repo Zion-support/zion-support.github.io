@@ -45,6 +45,7 @@ export default async function handler(
     return res.status(200).json({ cid, provider });
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' });
+<<<<<<< HEAD
   }    return res.status(200).json({ cid, provider })
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' })
@@ -53,3 +54,6 @@ export default async function handler(
 
 }
 }
+=======
+  }
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

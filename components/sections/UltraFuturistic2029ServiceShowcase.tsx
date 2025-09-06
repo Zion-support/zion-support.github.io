@@ -184,6 +184,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       </div>
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}  };
 
+<<<<<<< HEAD
   return (
     <section className="py-20 relative overflow-hidden">
       {/* Background Elements */}
@@ -194,11 +195,22 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
       </div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
+=======
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>        {/* Header */}
+
+        {/* Header */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
+<<<<<<< HEAD
           className='text-center mb-16'        >          className="text-center mb-16"
+=======
+          className='text-center mb-16'        >
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -206,17 +218,32 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             transition={{ duration: 0.8, delay: 0.1 }}
             className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6'          >            className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-400 to-blue-400 bg-clip-text text-transparent mb-6"
           >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {title}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
+<<<<<<< HEAD
             className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >            className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
           >
             {subtitle}
           </motion.p>
         </motion.div>
+=======
+            className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'          >
+
+          >
+
+            {subtitle}
+          </motion.p>
+        </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Filters and Controls */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -234,6 +261,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             <span className="text-gray-300 text-sm font-medium">Filter by:</span>
             <div className="flex flex-wrap gap-2">
               {categories.map((category) => (
+<<<<<<< HEAD
+=======
+
+                <button
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 ${
@@ -247,9 +280,17 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               ))}
             </div>
           </div>
+<<<<<<< HEAD
           {/* Sort Options */}
           <div className='flex items-center space-x-2'>
             <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
+=======
+
+          {/* Sort Options */}
+          <div className='flex items-center space-x-2'>
+            <span className='text-gray-300 text-sm font-medium'>Sort by:</span>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <select
               value={sortBy}
               onChange={e => setSortBy(e.target.value as any)}
@@ -257,6 +298,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <option value='innovation'>Innovation Level</option>
               <option value='price'>Price</option>
+<<<<<<< HEAD
               <option value='rating'>Rating</option>            </select>            <select
               value={sortBy}
               onChange={(e) => setSortBy(e.target.value as any)}
@@ -268,6 +310,15 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </select>
           </div>
         </motion.div>
+=======
+              <option value='rating'>Rating</option>            </select>
+
+            </select>
+
+          </div>
+        </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Services Grid */}
         <motion.div
           variants={containerVariants}
@@ -286,6 +337,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             >
               <UltraFuturisticServiceCard
                 service={service}
+<<<<<<< HEAD
                 className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />              className="group"
             >
               <UltraFuturisticServiceCard
@@ -294,12 +346,26 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </motion.div>
           ))}
         </motion.div>
+=======
+                className='h-full transform group-hover:shadow-xl hover:shadow-cyan-500/30 transition-transform duration-300'              />
+
+              />
+
+            </motion.div>
+          ))}
+        </motion.div>
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Call to Action */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className='text-center mt-16'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         >
           <div className='bg-gradient-to-r from-purple-900/20 to-pink-900/20 border border-purple-500/30 rounded-2xl p-8 backdrop-blur-sm'>
             <h3 className='text-3xl font-bold text-white mb-4'>
@@ -342,12 +408,21 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
             </div>
           </div>
         </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Innovation Stats */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.5 }}
           className='mt-20'
+<<<<<<< HEAD
+=======
+
+        >
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>
             {[
               {
@@ -383,12 +458,22 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
+<<<<<<< HEAD
+=======
+
+            ].map((stat, index) => (
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 className='text-center'
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               >
                 <div
                   className={`w-16 h-16 bg-gradient-to-br ${stat.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}
@@ -405,6 +490,10 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
                 <div className="text-3xl font-bold text-white mb-2">{stat.value}</div>
                 <div className="text-gray-400">{stat.label}</div>
               </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             ))}
           </div>
         </motion.div>
@@ -413,7 +502,11 @@ const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceSho
   );
 };
 
+<<<<<<< HEAD
 export default UltraFuturistic2029ServiceShowcase;  )
 };
 
 export default UltraFuturistic2029ServiceShowcase;
+=======
+export default UltraFuturistic2029ServiceShowcase;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

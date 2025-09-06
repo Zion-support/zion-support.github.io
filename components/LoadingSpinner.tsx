@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl';
@@ -33,27 +34,23 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           {text}
         </p>
       )}
+=======
+export default function LoadingSpinner() {
+  return (
+    <div className="min-h-screen bg-slate-950 flex items-center justify-center">
+      <div className="text-center text-white">
+        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
+        <p className="text-lg">Loading...</p>
+      </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </div>
   );
-
-  if (fullScreen) {
-    return (
-      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">
-        {spinner}
-      </div>
-    );
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
-  return spinner;
-};
-
-export default LoadingSpinner;
-import React from 'react;
-import { Loader2 } from 'lucide-react;
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg;
-  text?: string;'  className?: string;
 }
+<<<<<<< HEAD
 
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
   size = 'md', text,'  className = ; }) => {'  const sizeClasses = {'    sm: 'w-4 h-4',
@@ -64,3 +61,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({;
         <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
 };
 export default LoadingSpinner;
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

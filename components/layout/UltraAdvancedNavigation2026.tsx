@@ -253,6 +253,11 @@ const serviceCategories = [
       { name: 'AI Business Intelligence', href: '/autonomous-business-intelligence-network', description: 'Self-evolving BI', price: '$1,299/month' }
     ]
   }
+<<<<<<< HEAD
+=======
+
+];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const companyLinks = [
   { name: 'Home', href: '/', icon: Home },
@@ -445,6 +450,11 @@ const UltraAdvancedNavigation2026 = () => {
         { name: 'DevOps', href: '/services?category=devops', description: 'Development and operations' }
       ]
     }
+<<<<<<< HEAD
+=======
+
+  ];
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const contactInfo = {
     phone: '+1 302 464 0950',
@@ -464,6 +474,10 @@ const UltraAdvancedNavigation2026 = () => {
       >
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <div className='flex items-center justify-between h-20'>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Logo */}
             <Link href='/' className='flex items-center space-x-3 group'>
               <div className='relative'>
@@ -502,6 +516,7 @@ const UltraAdvancedNavigation2026 = () => {
             <div className='hidden lg:flex items-center space-x-8'>
               {navigationItems.map(item => (
                 <div key={item.name} className='relative group'>
+<<<<<<< HEAD
                     onClick={() =>
                       setActiveDropdown(
                         activeDropdown === item.name ? null : item.name
@@ -580,6 +595,14 @@ const UltraAdvancedNavigation2026 = () => {
                                   {subItem.name}
                                 </div>
                                 <div className="text-gray-400 text-sm group-hover:text-gray-300 transition-colors duration-200">
+=======
+
+              </div>
+            </Link>
+
+            {/* Desktop Navigation */}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                                   {subItem.description}
                                 </div>
                               </Link>
@@ -607,6 +630,10 @@ const UltraAdvancedNavigation2026 = () => {
                   href='/services'
                   className='text-gray-300 hover:text-white transition-colors duration-200 font-medium'
                 >
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                   All Services
                 </Link>
                 <Link
@@ -647,6 +674,10 @@ const UltraAdvancedNavigation2026 = () => {
                 Get Started
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -663,6 +694,10 @@ const UltraAdvancedNavigation2026 = () => {
           </div>
         </div>
       </nav>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Mobile Navigation Overlay */}
       <AnimatePresence>
         {isOpen && (
@@ -671,8 +706,15 @@ const UltraAdvancedNavigation2026 = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
+<<<<<<< HEAD
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}            className="fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden"
             onClick={() => setIsOpen(false)}
+=======
+            className='fixed inset-0 bg-black/80 backdrop-blur-sm z-40 lg:hidden'            onClick={() => setIsOpen(false)}
+
+            onClick={() => setIsOpen(false)}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           >
             <motion.div
               initial={{ x: '100%' }}
@@ -713,6 +755,7 @@ const UltraAdvancedNavigation2026 = () => {
                 </button>
               </div>
               {/* Mobile Navigation Items */}
+<<<<<<< HEAD
               <div className='space-y-4'>
                 {navigationItems.map(item => (
                   <div
@@ -738,6 +781,11 @@ const UltraAdvancedNavigation2026 = () => {
                           href={subItem.href}
                           className='block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1'                          onClick={() => setIsOpen(false)}                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
                           onClick={() => setIsOpen(false)}
+=======
+
+                          onClick={() => setIsOpen(false)}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                         >
                           {subItem.name}
                         </Link>
@@ -819,14 +867,22 @@ const UltraAdvancedNavigation2026 = () => {
           </motion.div>
         )}
       </AnimatePresence>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Spacer for fixed navigation */}
       <div className='h-20'></div>
     </>
   );
 };
 
+<<<<<<< HEAD
 export default UltraAdvancedNavigation2026;    </>
   );
 }
 
 export default UltraAdvancedNavigation2026;
+=======
+export default UltraAdvancedNavigation2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

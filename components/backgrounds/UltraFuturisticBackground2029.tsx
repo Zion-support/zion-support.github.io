@@ -157,7 +157,12 @@ export default function UltraFuturisticBackground2029() {;
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
+<<<<<<< HEAD
                   ctx.stroke();                }                  ctx.stroke()
+=======
+                  ctx.stroke();                }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 }
               }
             }
@@ -419,6 +424,10 @@ export default function UltraFuturisticBackground2029() {;
           ease: 'easeInOut',
         }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -436,6 +445,7 @@ export default function UltraFuturisticBackground2029() {;
           transition={{
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -450,10 +460,15 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
+=======
+            ease: 'easeInOut',
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -474,10 +489,14 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3]
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -498,10 +517,14 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2]
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
+<<<<<<< HEAD
             ease: 'easeInOut',
           }}
         />
@@ -541,6 +564,11 @@ export default function UltraFuturisticBackground2029() {;
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.2, 1]
             }}
+=======
+
+            }}
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             transition={{
               duration: 3 + i * 0.5,
               repeat: Infinity,
@@ -551,5 +579,9 @@ export default function UltraFuturisticBackground2029() {;
         ))}
       </div>
     </div>
+<<<<<<< HEAD
 );  )
 }
+=======
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

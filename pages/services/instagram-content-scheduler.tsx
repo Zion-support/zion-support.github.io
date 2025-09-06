@@ -18,5 +18,9 @@ const InstagramContentScheduler: NextPage = () => {
     </div>
   )
 },
+<<<<<<< HEAD
 
 export default InstagramContentScheduler,;
+=======
+export default InstagramContentScheduler,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

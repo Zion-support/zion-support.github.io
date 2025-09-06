@@ -2,7 +2,12 @@ import React, { useMemo, useState } from 'react';
 import { useUser } from '../../providers/UserProvider';
 import { useToast } from '../ui/ToastProvider';
 import Link from 'next/link';
+<<<<<<< HEAD
 export default function OnboardingWizard() {;
+=======
+
+export default function OnboardingWizard() {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const { user, completeOnboarding, setUser } = useUser();
   const { addToast } = useToast();
   const [step, setStep] = useState(0);
@@ -11,16 +16,20 @@ export default function OnboardingWizard() {;
   const steps = useMemo(() => {
     if (isClient) {
       return [
+<<<<<<< HEAD
 export default function OnboardingWizard() {
   const { user, completeOnboarding, setUser } = useUser()
   const { addToast } = useToast()
   const [step, setStep] = useState(0)
 
   const isClient = user?.role === 'client'
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const steps = useMemo(() => {
     if (isClient) {
       return [
+<<<<<<< HEAD
         {
           title: 'Ready to find top IT talent?',
           content: (
@@ -219,3 +228,10 @@ export default function OnboardingWizard() {
     </div>
 );
 }
+=======
+
+        )}
+      </div>
+    </div>
+  );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

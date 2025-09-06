@@ -136,6 +136,7 @@ app.get('/notifications', async (req, reply) => {
     const res = await client.query(
       `SELECT id, channel, title, body, data, read, created_at FROM notification
        WHERE read = false ORDER BY created_at DESC LIMIT 20`
+<<<<<<< HEAD
     );
     return res.rows;
   });
@@ -155,3 +156,6 @@ app.listen({ port, host: '0.0.0.0' }).catch((err) => {
   app.log.error(err);
   process.exit(1)
 });
+=======
+    );
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

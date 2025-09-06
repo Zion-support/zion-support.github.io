@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react',;
 import type { NextPage } from 'next',;
 import type { Review } from '../../types/reviews',;
@@ -15,19 +16,46 @@ const AdminReviewsPage: NextPage = () => {
       setAll(data.reviews),
       setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
     }
+=======
+import React, { useEffect, useState } from 'react';
+import type { NextPage } from 'next';
+import type { Review } from '../../types/reviews';
+const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key');
+const AdminReviewsPage: NextPage = () => {;
+  const [pending, setPending] = useState<Review[]>([]);
+  const [all, setAll] = useState<Review[]>([]);
+  const [adminKey, setAdminKey] = useState('');
+  async function refresh() {;
+    const res = await fetch('/api/admin/debug/reviews');
+    const data = await res.json();
+    if (res.ok) {;
+      setAll(data.reviews);
+      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed));
+      } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
-
-  useEffect(() => { refresh() }, []),
-
-  async function moderate(action: 'approve' | 'remove', reviewId: string) {
-    const res = await fetch('/api/reviews/moderate', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},
-      body: JSON.stringify({ action, reviewId })}),
-    if (res.ok) refresh()
+}
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
-
+}
+;
+  useEffect(() => { refresh() }, []),;
+  async function moderate(action: 'approve' | 'remove', reviewId: string) {;
+    const res = await fetch('/api/reviews/moderate', {;
+      method: 'POST',;
+      headers: {;
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'},;
+      body: JSON.stringify({ action, reviewId })}),;
+    if (res.ok) refresh();
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
   return (
     <main className="max-w-5xl mx-auto p-6 space-y-6">
       <h1 className="text-2xl font-semibold">Review Moderation</h1>
@@ -47,8 +75,16 @@ const AdminReviewsPage: NextPage = () => {
                 <button className="enhanced-button enhanced-button-secondary" onClick={() => moderate('remove', r.id)}>Remove</button>
               </div>
             </div>
-          ))}
-          {!pending.length && <div>No pending reviews.</div>}
+          ))  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+          {!pending.length && <div>No pending reviews.</div>  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
         </div>
       </section>
       <section className="enhanced-card">
@@ -58,5 +94,9 @@ const AdminReviewsPage: NextPage = () => {
     </main>
   )
 },
+<<<<<<< HEAD
 
 export default AdminReviewsPage,;
+=======
+export default AdminReviewsPage,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -44,6 +44,7 @@ export default function ApiDocsPage({ docs }: PageProps) {
             <div dangerouslySetInnerHTML={{ __html: section.html }} />
           )}
           {section.code && section.code.length > 0 && (
+<<<<<<< HEAD
             <div className='space-y-4 mt-4'>
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>
@@ -51,11 +52,20 @@ export default function ApiDocsPage({ docs }: PageProps) {
                 </CodeBlock>              ))}            <div className="space-y-4 mt-4">
               {section.code.map((c, idx) => (
                 <CodeBlock key={idx} language={c.language}>{c.content}</CodeBlock>
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               ))}
             </div>
           )}
         </section>
       ))}
+<<<<<<< HEAD
     </DocsLayout>;
 );
 }
+=======
+    </DocsLayout>
+  );
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

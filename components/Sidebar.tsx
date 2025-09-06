@@ -156,5 +156,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {;
 };
 
 export default Sidebar;
+<<<<<<< HEAD
 
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

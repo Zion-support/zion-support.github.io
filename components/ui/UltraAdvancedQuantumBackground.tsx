@@ -96,7 +96,12 @@ const UltraAdvancedQuantumBackground: React.FC<
         if (this.life <= 0) {
           this.life = this.maxLife;
           this.x = Math.random() * canvas.width;
+<<<<<<< HEAD
           this.y = Math.random() * canvas.height;        }          this.y = Math.random() * canvas.height
+=======
+          this.y = Math.random() * canvas.height;        }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         }
       }
 
@@ -318,7 +323,12 @@ const UltraAdvancedQuantumBackground: React.FC<
             ctx.beginPath();
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
+<<<<<<< HEAD
             ctx.stroke();          }            ctx.stroke()
+=======
+            ctx.stroke();          }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }
         }
       }
@@ -424,6 +434,10 @@ const UltraAdvancedQuantumBackground: React.FC<
           ease: 'easeInOut',
           delay: 2,        }}
       />
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       {/* Quantum Canvas */}
       <canvas
         ref={canvasRef}
@@ -436,6 +450,7 @@ const UltraAdvancedQuantumBackground: React.FC<
 
       {/* Content Layer */}
       <div className='relative z-10'>{children}</div>
+<<<<<<< HEAD
       {/* Quantum Energy Waves */}
       <div className='absolute bottom-0 left-0 right-0 h-32 overflow-hidden'>
         <motion.div
@@ -463,12 +478,20 @@ const UltraAdvancedQuantumBackground: React.FC<
     </div>
   );
 };
+=======
+
+        style={{ zIndex: 1 }}
+      />
+
+      {/* Content Layer */}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",
             delay: 2
           }}
         />
       </div>
+<<<<<<< HEAD
     </div>
   );
 };
@@ -477,3 +500,6 @@ export default UltraAdvancedQuantumBackground;  )
 };
 
 export default UltraAdvancedQuantumBackground;
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

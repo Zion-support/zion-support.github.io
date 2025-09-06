@@ -54,6 +54,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const payload = req.body as VotePayload;
   if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+<<<<<<< HEAD
     res.status(400).json({ error: 'Missing fields' });
     return;
   }
@@ -83,3 +84,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 }
 }
 }
+=======
+    res.status(400).json({ error: 'Missing fields' });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

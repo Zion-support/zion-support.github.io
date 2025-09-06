@@ -45,6 +45,7 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
       console.warn('Screen share failed', e)
   };
 
+<<<<<<< HEAD
   return (
     <div className='flex items-center gap-3'>
       <button
@@ -73,3 +74,6 @@ export default function Controls({ room, onLeave, accent = 'cyan' }: Props) {;
     </div>
 );
 }
+=======
+  return (
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
@@ -8,10 +9,17 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
     }
   } catch (error) {
     console.error('Error reading file:', error);
+=======
+
+  await writeAllDisputes(all);
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   }
-  return defaultValue;
 }
 
+<<<<<<< HEAD
 export function writeJson<T>(filePath: string, data: T): void {
   try {;
     const fs = require('fs');
@@ -21,9 +29,19 @@ export function writeJson<T>(filePath: string, data: T): void {
       fs.mkdirSync(dir, { recursive: true });
     }
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+=======
+}
+;
+export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
+  const dir = getDisputeUploadDir(caseId);
+  await mkdir(dir, { recursive: true });
+  return dir;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   } catch (error) {
-    console.error('Error writing file:', error);
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
   }
+<<<<<<< HEAD
 }
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {;
@@ -41,3 +59,6 @@ export async function ensureDisputeUploadDir(caseId: string): Promise<string> {;
   await mkdir(dir, { recursive: true });
   return dir;
 }
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

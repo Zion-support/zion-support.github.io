@@ -2813,6 +2813,10 @@ export default function ServicesAdvertisingPage() {
               </a>
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <section id='data-residency-geo-router' className='space-y-2'>
             <h3 className='text-xl font-semibold text-white'>
               Data Residency & Geo Routing Proxy
@@ -4742,5 +4746,9 @@ export default function ServicesAdvertisingPage() {
 			</div>
 		</div>
 	),
+<<<<<<< HEAD
 };
 ;
+=======
+}
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

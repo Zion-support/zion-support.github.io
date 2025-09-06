@@ -2,8 +2,14 @@ import type { GetServerSideProps } from 'next';
 import {FormEvent, useEffect, useState} from 'react';
 import type { Vendor } from '../utils/vendor-types';
 
+<<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {;
+=======
+type Props = { vendor: Vendor | null };
+
+export default function AgencyDashboardPage({ vendor }: Props) {
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
   const [pkgDesc, setPkgDesc] = useState('');
@@ -46,6 +52,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
 
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return;
+<<<<<<< HEAD
     const packages = [
       ...(activeVendor.packages || []),
       {
@@ -60,6 +67,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
     setPkgDesc('');
     setPkgPrice('');
   }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className='space-y-8'>
@@ -142,6 +151,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
           </div>
         </form>
       </section>
+<<<<<<< HEAD
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -205,6 +215,8 @@ export default function AgencyDashboardPage({ vendor }: Props) {;
     </div>
   );
 }
+=======
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
@@ -227,6 +239,11 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     });
     fetchItems();
 
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   useEffect(() => {
     fetchItems();
   }, []);
@@ -269,6 +286,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             <option value="lost">Lost</option>
         </div>
       ))}
+<<<<<<< HEAD
     </div>
   );
 
@@ -284,3 +302,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   const vendor = listVendors()[0] || null, // tie to auth later
   return { props: { vendor } }
 };
+=======
+    </div>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

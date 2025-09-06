@@ -141,6 +141,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
       <div className="relative p-8 rounded-2xl bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-white/10 hover:border-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm overflow-hidden">
         {/* Enhanced Background Glow */}
         <div className={`absolute inset-0 bg-gradient-to-br ${styles.gradient} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Popular Badge */}
         {service.popular && (
           <motion.div
@@ -194,6 +198,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             </motion.div>
           ))}
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Market Information */}
         {service.marketPrice && (
           <div className="border-t border-white/10 pt-4 mb-6 space-y-3 relative z-10">
@@ -253,6 +261,10 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
             Get Started
           </motion.button>
         </div>
+<<<<<<< HEAD
+=======
+        
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Enhanced Hover Effects */}
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
@@ -262,4 +274,8 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
 
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 
+<<<<<<< HEAD
 export default UltraFuturisticServiceCard2026;
+=======
+export default UltraFuturisticServiceCard2026;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

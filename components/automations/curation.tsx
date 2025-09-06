@@ -1,6 +1,10 @@
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 type Experiment = {
   title: string;
 hypothesis?: string;
@@ -40,6 +44,7 @@ export default function CurationPage({ updatedAt, items }: Props) {
         </p>
       )}
 
+<<<<<<< HEAD
       <div className='mt-6 space-y-4'>
         {items.map((exp, idx) => (
           <div
@@ -80,6 +85,23 @@ export default function CurationPage({ updatedAt, items }: Props) {
         )}
       </div>
     </main>;
+=======
+                {exp.impact ? `Impact: ${exp.impact}/5` : null}
+
+              </div>
+            )}
+          </div>
+        ))}
+        {!items.length && (
+          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>            Nothing to show yet.
+
+            Nothing to show yet.
+
+          </div>
+        )}
+      </div>
+    </main>
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 
 export async function getStaticProps() {
@@ -117,6 +139,7 @@ export async function getStaticProps() {
   } catch {
     return {
       props: {
+<<<<<<< HEAD
         updatedAt: null,
         items: [],
       },
@@ -126,3 +149,6 @@ export async function getStaticProps() {
       revalidate: 300}
 };
 }
+=======
+        updatedAt: null,
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

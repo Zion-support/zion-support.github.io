@@ -9,6 +9,7 @@ const Page: NextPage = () => {
       </Head>
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-3xl font-bold mb-6">Auto Update 2025-08-08T17-37-01-527Z</h1>
+<<<<<<< HEAD
         {/* Page content */}
       </div>
     </>
@@ -16,3 +17,15 @@ const Page: NextPage = () => {
 },
 
 export default Page,;
+=======
+        {/* Page content */  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+      </div>;
+    </>;
+  );
+};
+export default Page;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1

@@ -44,6 +44,10 @@ const Features: React.FC<FeaturesProps> = ({
             {subtitle}
           </p>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Features Grid */}
         <div className={`grid grid-cols-1 gap-8 ${gridCols[columns]}`}>
           {features.map((feature, index) => (

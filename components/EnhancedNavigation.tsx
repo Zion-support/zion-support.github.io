@@ -71,6 +71,10 @@ const EnhancedNavigation: React.FC = () => {
                 <span>Services</span>
                 <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === 'services' ? 'rotate-180' : ''}`} />
               </button>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
               {activeDropdown === 'services' && (
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
@@ -101,6 +105,10 @@ const EnhancedNavigation: React.FC = () => {
                 </motion.div>
               )}
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             {/* Company Dropdown */}
             <div className="relative">
               <button
@@ -146,6 +154,10 @@ const EnhancedNavigation: React.FC = () => {
               Get Started
             </Link>
           </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
@@ -154,6 +166,10 @@ const EnhancedNavigation: React.FC = () => {
             {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
           </button>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         {/* Mobile Menu */}
         {isOpen && (
           <motion.div
@@ -221,4 +237,8 @@ const EnhancedNavigation: React.FC = () => {
   );
 };
 
+<<<<<<< HEAD
 export default EnhancedNavigation;
+=======
+export default EnhancedNavigation;
+>>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
