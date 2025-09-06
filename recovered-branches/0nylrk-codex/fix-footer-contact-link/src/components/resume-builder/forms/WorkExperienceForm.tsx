@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -21,7 +19,6 @@ import { useResume  } from '@/hooks/useResume';
 import { Alert, AlertDescription  } from '@/components/ui/alert';
 import { Card, CardContent  } from '@/components/ui/card';
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
-=======
 import {useState} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
@@ -38,7 +35,6 @@ import {useResume} from '@/hooks/useResume';
 import {Alert, AlertDescription} from '@/components/ui/alert';
 import {Card, CardContent} from '@/components/ui/card';
 import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Define schema for form validation
 
 const workExperienceSchema = z.object({
@@ -56,12 +52,9 @@ interface WorkExperienceFormProps {
   onComplete: () => void
   onBack: () => void
 }
-<<<<<<< HEAD
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {
-=======
 
 export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume();
   const [editingId, setEditingId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -106,7 +99,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: ''
           location: ''})
         setEditingId(null)
-=======
 import { useState } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
@@ -192,22 +184,13 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           description: '',;
           location: ''}),;
         setEditingId(null);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (err: any) {
       setError(err.message |'An error occurred')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
@@ -219,15 +202,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)
     }
-<<<<<<< HEAD
   }
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   const handleEdit = (work: WorkExperience) => {;
     setEditingId(work.id!),;
@@ -241,16 +220,11 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       await deleteWorkExperience(id);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleEnhanceDescription = (enhancedContent: string) => {
     form.setValue('description', enhancedContent)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="space-y-6">
       <div>
@@ -307,10 +281,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           ))}
         </div>
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       <div className="bg-muted/40 p-6 rounded-lg">
         <h3 className="text-md font-medium mb-4">
           {editingId ? 'Update Experience' : 'Add Experience'}
@@ -353,17 +324,14 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   <FormItem>
                     <FormLabel>Start Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
                       <Input
                         type="date"
                         {...field}
                         value={field.value |''}
-=======
                       <Input 
                         type="date" 
                         {...field} 
                         value={field.value || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       />
                     </FormControl>
                     <FormMessage />
@@ -456,20 +424,17 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
-<<<<<<< HEAD
                       company_name: ''
                       role_title: ''
                       start_date: format(new Date(), 'yyyy-MM-dd');
                       is_current: false
                       description: ''
 
-=======
                       company_name: '',
                       role_title: '',
                       start_date: format(new Date(), 'yyyy-MM-dd'),
                       is_current: false,
                       description: '',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       location: ''})
                   } else {
                     onBack()
@@ -488,7 +453,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
                     Next
                   </Button>
                 )}
-<<<<<<< HEAD
               </div>
             </div>
           </form>
@@ -497,7 +461,6 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
     </div>
   )
 }
-=======
               </div>;
             </div>;
           </form>;
@@ -507,4 +470,3 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

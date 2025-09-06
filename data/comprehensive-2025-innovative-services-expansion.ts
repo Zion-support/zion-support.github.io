@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface ComprehensiveInnovativeService {
   id: string;
@@ -470,7 +469,6 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
 ];
 export default comprehensiveInnovativeServices;
 
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface ComprehensiveInnovativeService {;
   id: string,;
@@ -938,9 +936,4 @@ export const comprehensiveInnovativeServices: ComprehensiveInnovativeService[] =
     marketAdvantage: 'Advanced AI energy platform with comprehensive sustainability features';
   }
 ];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default comprehensiveInnovativeServices;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

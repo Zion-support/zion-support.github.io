@@ -1,6 +1,5 @@
-<<<<<<< HEAD:netlify/functions/cron-hourly-uptime.js
-=======
-<<<<<<< HEAD:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
+:netlify/functions/cron-hourly-uptime.js
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
 const { upsertFile } = require('./_lib/github'),;
 exports.handler = async function() {;
   try {;
@@ -48,12 +47,8 @@ exports.handler = async function() {;
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
 const { upsertFile } = require('./_lib/github');
 exports.handler = async function () {
   try {
@@ -122,7 +117,7 @@ exports.handler = async function () {
       body: JSON.stringify({ ok: true, count: results.length })
     }
   } catch (e) {
-<<<<<<< HEAD:netlify/functions/cron-hourly-uptime.js
+:netlify/functions/cron-hourly-uptime.js
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 };  try {
@@ -174,7 +169,6 @@ exports.handler = async function () {
 
 }
 
-=======
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
 };  try {
@@ -225,12 +219,8 @@ exports.handler = async function () {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
-<<<<<<< HEAD
->>>>>>> main:netlify/functions/cron-hourly-uptime.js
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
-=======
-<<<<<<< HEAD:netlify/functions/cron-hourly-uptime.js
-=======
->>>>>>> main:netlify/functions/cron-hourly-uptime.js
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+main:netlify/functions/cron-hourly-uptime.js
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js
+:netlify/functions/cron-hourly-uptime.js
+main:netlify/functions/cron-hourly-uptime.js
+:backup-problematic-files/netlify/functions/cron-hourly-uptime.js

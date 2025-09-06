@@ -2,7 +2,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   ArrowRight
   Star
   Users
@@ -11,7 +10,6 @@ import {
   Shield
   Globe
   Rocket;
-=======
   ArrowRight,
   Star,
   Users,
@@ -20,7 +18,6 @@ import {
   Shield,
   Globe,;
   Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 interface ServiceCardProps {
@@ -62,12 +59,9 @@ interface ServiceCardProps {
     rating: number;
     reviews: number;
     marketSize?: string;
-<<<<<<< HEAD
-=======
     growthRate?: string;
   };
   index: number;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     growthRate?: string;
   }
@@ -89,7 +83,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       case 'micro saas':
         return <TrendingUp className='w-5 h-5' />;
       default:
-<<<<<<< HEAD
         return <Zap className='w-5 h-5' />;    }        return <Zap className="w-5 h-5" />;
       case 'quantum & emerging tech':
         return <Rocket className="w-5 h-5" />;
@@ -102,33 +95,21 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
       default:
         return <Zap className="w-5 h-5" />
     }
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         return <Zap className='w-5 h-5' />;    }
 
     }
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
       return color;
     }
     return 'from-cyan-500 to-blue-500';
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     >
       {/* Glow effect */}
       <div className='absolute -inset-1 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-25 group-hover:opacity-75 transition duration-1000 group-hover:duration-200'></div>
@@ -147,7 +128,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
               <div>
                 <div className='flex items-center space-x-2'>
                   {getCategoryIcon(service.category)}
-<<<<<<< HEAD
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service.category}    }
     return 'from-cyan-500 to-blue-500'
   }
@@ -186,16 +166,10 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
                   {getCategoryIcon(service.category)}
                   <span className="text-xs font-medium text-gray-400 uppercase tracking-wider">
                     {service.category}
-=======
                   <span className='text-xs font-medium text-gray-400 uppercase tracking-wider'>                    {service.category}
 
                     {service.category}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </span>
                 </div>
               </div>
@@ -217,22 +191,15 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           <h3 className='text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300'>
             {service.name}
           </h3>
-<<<<<<< HEAD
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r from-cyan-400 to-purple-400 transition-all duration-300">
             {service.name}
           </h3>
           <p className="text-gray-300 text-sm leading-relaxed">
-=======
 
           <p className='text-gray-300 text-sm leading-relaxed'>            {service.tagline}
 
             {service.tagline}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </p>
         </div>
         {/* Stats */}
@@ -243,14 +210,7 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
                 {service.rating}
               </div>
               <div className='text-xs text-gray-400'>Rating</div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </div>
             <div className='text-center'>
               <div className='text-2xl font-bold text-purple-400'>
@@ -318,31 +278,17 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             )}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Features preview */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Features
           </h4>
-<<<<<<< HEAD
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (        <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Features</h4>
           <div className="space-y-2">
-=======
           <div className='space-y-2'>            {service.features.slice(0, 3).map((feature, idx) => (
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {service.features.slice(0, 3).map((feature, idx) => (
               <motion.div
                 key={idx}
@@ -350,21 +296,13 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.6 + idx * 0.1 }}
                 className='flex items-center space-x-2 text-sm'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full'></div>
                 <span className='text-gray-300'>{feature}</span>
               </motion.div>
             ))}
             {service.features.length > 3 && (
-<<<<<<< HEAD
               <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features              >
                 <div className="w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full"></div>
                 <span className="text-gray-300">{feature}</span>
@@ -373,45 +311,25 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             {service.features.length > 3 && (
               <div className="text-xs text-gray-500 mt-2">
                 +{service.features.length - 3} more features
-=======
               <div className='text-xs text-gray-500 mt-2'>                +{service.features.length - 3} more features
 
                 +{service.features.length - 3} more features
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             )}
           </div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Benefits */}
         <div className='relative z-10 mb-6'>
           <h4 className='text-sm font-semibold text-gray-300 mb-3'>
             Key Benefits
           </h4>
-<<<<<<< HEAD
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (        <div className="relative z-10 mb-6">
           <h4 className="text-sm font-semibold text-gray-300 mb-3">Key Benefits</h4>
           <div className="space-y-2">
-=======
           <div className='space-y-2'>            {service.benefits.slice(0, 2).map((benefit, idx) => (
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {service.benefits.slice(0, 2).map((benefit, idx) => (
               <motion.div
                 key={idx}
@@ -421,7 +339,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
                 className='flex items-center space-x-2 text-sm'
               >
                 <div className='w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full'></div>
-<<<<<<< HEAD
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>                className="flex items-center space-x-2 text-sm"
               >
                 <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-emerald-400 rounded-full"></div>
@@ -429,7 +346,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             ))}
           </div>
         </div>
-=======
                 <span className='text-gray-300'>{benefit}</span>              </motion.div>
 
               </motion.div>
@@ -438,11 +354,6 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
           </div>
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Market info */}
         {service.marketSize && service.growthRate && (
           <div className='relative z-10 mb-6'>
@@ -469,30 +380,19 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             </div>
           </div>
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* CTA Button */}
         <div className='relative z-10'>          <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'        <div className="relative z-10">
-=======
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <motion.a
             href={service.link}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-<<<<<<< HEAD
             className='group/btn relative w-full inline-flex items-center justify-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-semibold rounded-xl overflow-hidden transition-all duration-300 hover:shadow-lg hover:shadow-cyan-500/25'
           >
             <span className='relative z-10 flex items-center space-x-2'>
@@ -509,41 +409,24 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({
             <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 opacity-0 group-hover/btn:opacity-100 transition-opacity duration-300"></div>
           </motion.a>
         </div>
-=======
 
           </motion.a>
 
         </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Hover overlay */}
         <motion.div
           initial={{ opacity: 0 }}
           whileHover={{ opacity: 1 }}
           className='absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </motion.div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticServiceCardV2;        />
       </div>
     </motion.div>
@@ -551,13 +434,5 @@ export default UltraFuturisticServiceCardV2;        />
 }
 export default UltraFuturisticServiceCardV2;
 
-<<<<<<< HEAD
-=======
 export default UltraFuturisticServiceCardV2;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default UltraFuturisticServiceCardV2;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

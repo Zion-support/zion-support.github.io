@@ -1,22 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
 import MainLayout from '../src/components/layout/MainLayout';
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   ArrowRight
   Phone
   Mail
@@ -31,7 +18,6 @@ import {
   BarChart3
   Cloud
   Shield
-=======
   ArrowRight,
   Phone,
   Mail,
@@ -46,7 +32,6 @@ import {
   BarChart3,
   Cloud,
   Shield;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 const caseStudies = [
   {
@@ -110,7 +95,6 @@ const stats = [
   { number: "99.9%", label: "Success Rate" }
   { number: "24/7", label: "Support Available" }
 ];
-<<<<<<< HEAD
 
 export default function CaseStudiesPage() {
   return (
@@ -305,26 +289,13 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </MainLayout>
-<<<<<<< HEAD
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
-=======
-=======
+origin/main
 import Head from 'next/head';
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
 import Link from 'next/link';
 import Layout from '../components/Layout';
 export default function CaseStudiesPage() {
@@ -347,17 +318,11 @@ export default function CaseStudiesPage() {
         </p>
       </section>
     </Layout>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
  </Head> </section> </Layout>
-=======
 export default function CaseStudiesPage() {
   return (
     <MainLayout
@@ -579,13 +544,10 @@ export default function CaseStudiesPage() {
   );
 
  </Head> </section> </Layout>
-=======
 import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 export default function CaseStudiesPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	return (
 		<Layout>
 			<Head>
@@ -599,13 +561,8 @@ export default function CaseStudiesPage() {
 			</section>
 		</Layout>
 	)
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -630,5 +587,3 @@ export default function CaseStudiesPage(req, res) {
   }
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

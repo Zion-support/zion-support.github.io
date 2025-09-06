@@ -37,7 +37,6 @@ module.exports = { upsertFile };async function getFile(owner, repo, path, token)
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`
   const resp = await fetch(url, {
     headers: {
-<<<<<<< HEAD
 
       'Authorization': `token ${token}`
       'Accept': 'application/vnd.github+json'
@@ -77,7 +76,6 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 
 module.exports = { upsertFile }
 
-=======
       'Authorization': `token ${token}`,
       'Accept': 'application/vnd.github+json'
     }
@@ -111,13 +109,6 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 }
 
 module.exports = { upsertFile },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

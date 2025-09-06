@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface FuturisticAIService2030 {;
   id: string;
@@ -347,21 +346,18 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.'
     launchDate: '2030-01-10'
     customers: 6
     rating: 5.0
     reviews: 4
   }
-=======
       'Advanced AI space technology platform with autonomous space missions, AI-powered exploration, and intelligent space operations.',
     launchDate: '2030-01-10',
     customers: 6,
     rating: 5.0,
     reviews: 4,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -374,12 +370,8 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [
     rating: 5.0
 
     reviews: 4
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface FuturisticAIService2030 {;
   id: string,;
@@ -642,10 +634,5 @@ export const futuristicAIServices2030: FuturisticAIService2030[] = [;
     customers: 6,;
     rating: 5.0;
     reviews: 4;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

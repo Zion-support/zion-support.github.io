@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 //Zion Tech Group Website JavaScript
 })
-=======
 //Zion Tech Group Website JavaScript 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Search function
 function performSearch(query) {
@@ -15,7 +11,6 @@ function performSearch(query) {
     const searchResults = document.querySelector('.search-results')
     if (searchResults) {
         const results = [
-<<<<<<< HEAD
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' }
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' }
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' }
@@ -26,12 +21,9 @@ function performSearch(query) {
 
         )
 
-=======
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 // Zion Tech Group Website JavaScript;
 document.addEventListener('DOMContentLoaded', function() {;
     // Mobile Navigation Toggle;
@@ -316,20 +308,14 @@ function performSearch(query) {;
             { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },;
             { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },;
             { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item => 
             item.title.toLowerCase().includes(query)
         ),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         if (results.length > 0) {
             searchResults.innerHTML = results.map(result =>
                 `<a href="${result.url}" class="search-result-item">${result.title}</a>`
-<<<<<<< HEAD
 
             ).join('')
 
@@ -427,15 +413,11 @@ function initializeModals() {
         if (e.key === 'Escape') {
             modals.forEach(modal => {
                 if (modal.classList.contains('active')) {
-=======
             ).join(''),
             searchResults.style.display = 'block'
         } else {
             searchResults.innerHTML = '<div class="search-result-item no-results">No results found</div>',
             searchResults.style.display = 'block'
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         }
     }
 }
@@ -481,8 +463,6 @@ function initializeTooltips() {
             if (this.tooltip) {
                 this.tooltip.remove(),
                 this.tooltip = null
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ].filter(item =>;
             item.title.toLowerCase().includes(query);
         ),;
@@ -534,17 +514,10 @@ function initializeTooltips() {;
             if (this.tooltip) {;
                 this.tooltip.remove(),;
                 this.tooltip = null;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
         });
     });
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 // Modal initialization
 function initializeModals() {
@@ -590,8 +563,6 @@ function initializeModals() {
                 if (modal.classList.contains('active')) {
                     modal.classList.remove('active'),
                     document.body.style.overflow = ''
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 // Modal initialization;
 function initializeModals() {;
@@ -632,20 +603,15 @@ function initializeModals() {;
                 if (modal.classList.contains('active')) {;
                     modal.classList.remove('active'),;
                     document.body.style.overflow = '';
-<<<<<<< HEAD
                 }
             });
         }
     });
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
                     modal.classList.remove('active')
 
                     document.body.style.overflow = ''
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
             })
         }
@@ -655,16 +621,13 @@ function initializeModals() {;
 function logPerformance() {
 
     if ('performance' in window) {
-<<<<<<< HEAD
         const perfData = performance.getEntriesByType('navigation')[0]
         console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms')
 
         console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
-=======
         const perfData = window.window.window.performance.getEntriesByType('navigation')[0],
         // // // console.log('Page Load Time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms'),
         // // // console.log('DOM Content Loaded:', perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart, 'ms')
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
 }
 // Error tracking
@@ -676,14 +639,9 @@ window.addEventListener('error', function(e) {
 })
 // Analytics tracking (replace with your analytics service)
 function trackEvent(eventName, eventData = {}) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
-<<<<<<< HEAD
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     console.log('Event tracked:', eventName, eventData)
 
@@ -767,14 +725,11 @@ document.addEventListener('click', function(e) {
     }
 })
 // Log performance when page is fully loaded
-<<<<<<< HEAD
 
 window.addEventListener('load', logPerformance)
 
-=======
     // // // console.log('Event tracked:', eventName, eventData),
     // Implement your analytics tracking here
-=======
 window.addEventListener('load', logPerformance),
 
 }
@@ -782,8 +737,6 @@ window.addEventListener('load', logPerformance),
 }
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 // Performance monitoring;
 function logPerformance() {;
@@ -822,8 +775,3 @@ document.addEventListener('click', function(e) {;
 }),;
 // Log performance when page is fully loaded;
 window.addEventListener('load', logPerformance),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

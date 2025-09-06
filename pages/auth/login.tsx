@@ -1,30 +1,20 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useEffect, useState, FormEvent  } from 'react';
 import Link from 'next/link',
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
-=======
 import {useRouter} from 'next/router';
 import {useEffect, useState, FormEvent} from 'react';
-=======
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Link from 'next/link';
 import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import { signIn } from 'next-auth/react';
 import { supabase } from '@/utils/supabase/client';
-<<<<<<< HEAD
 import type {
-<<<<<<< HEAD
   AuthError
   User
   AuthChangeEvent
@@ -34,7 +24,6 @@ import {
   logInfo
   logWarn
   logErrorToProduction;
-=======
   AuthError,
   User,
   AuthChangeEvent,;
@@ -44,28 +33,23 @@ import {
   logInfo,
   logWarn,;
   logErrorToProduction,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardHeader
   CardTitle;
-=======
   Card,
   CardContent,
   CardDescription,
   CardHeader,;
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/card';
 const LoginPage = () => {
-=======
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
 import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import { useTranslation } from 'react-i18next';
@@ -73,11 +57,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 const LoginPage = () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const router = useRouter();
   const { t } = useTranslation();
   const [email, setEmail] = useState('');
@@ -91,7 +70,6 @@ const LoginPage = () => {;
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
   const [isResendingVerification, setIsResendingVerification] = useState(false);
-<<<<<<< HEAD
   // States for the new proactive resend form
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -332,7 +310,6 @@ const LoginPage = () => {;
               'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError);
           setShowProactiveResendForm(false); // Hide proactive form if reactive one is triggered
-=======
   // States for the new proactive resend form;
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
@@ -387,9 +364,6 @@ const LoginPage = () => {;
         if (mounted) {;
           setIsCheckingSession(false);
           setSessionChecked(true);
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
           );        }
@@ -563,8 +537,6 @@ const LoginPage = () => {;
       setIsProactivelyResending(false);    }
   };
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true');
           } catch (error) {
     console.error("Error:", error);
@@ -775,10 +747,6 @@ const LoginPage = () => {;
   }
 }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleLogin = async (e: FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
@@ -807,7 +775,6 @@ const LoginPage = () => {;
             message: 'Please verify your email address before logging in. Check your inbox for a verification link.'
           } as AuthError),
           setShowProactiveResendForm(false), // Hide proactive form if reactive one is triggered
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           // Auto-resend verification email
           setTimeout(() => {
             handleResendVerification()
@@ -816,7 +783,6 @@ const LoginPage = () => {;
           // MODIFIED SECTION FOR BETTER ERROR MESSAGES
           let displayMessage = 'Login failed. Please check your credentials and try again.', // Default user-friendly message
           if (signInError.message) {
-<<<<<<< HEAD
             if (
               signInError.message
                 .toLowerCase()
@@ -887,11 +853,7 @@ const LoginPage = () => {;
       return () => clearTimeout(timer);
     }
     return undefined; // Explicitly return undefined if condition is not met  }, [isEmailUnverified, verificationEmailSent, email, router]);
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               if (signInError.message.toLowerCase().includes('invalid login credentials')) {
                   displayMessage = 'Invalid email or password. Please try again.'
               } else if (signInError.message.toLowerCase().includes('network request failed')) {
@@ -1007,11 +969,6 @@ const LoginPage = () => {;
 }
     return undefined, // Explicitly return undefined if condition is not met
   }, [isEmailUnverified, verificationEmailSent, email, router]),
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // --- Rendering Logic ---
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
@@ -1024,16 +981,13 @@ const LoginPage = () => {;
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
-<<<<<<< HEAD
     );  }
-=======
     )
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
@@ -1046,7 +1000,6 @@ const LoginPage = () => {;
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
         </div>
       </div>
-<<<<<<< HEAD
     );  }
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
@@ -1060,11 +1013,7 @@ const LoginPage = () => {;
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
     );
     return null; // Or a minimal loader/empty div  }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     )
     return undefined, // Explicitly return undefined if condition is not met;
   }, [isEmailUnverified, verificationEmailSent, email, router]),;
@@ -1119,29 +1068,17 @@ const LoginPage = () => {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
-<<<<<<< HEAD
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>          <CardHeader>
-=======
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
         <Card className="w-full max-w-md">
           <CardHeader>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
               Enter your email and password to access your account
@@ -1153,7 +1090,6 @@ const LoginPage = () => {;
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
                 </div>
-<<<<<<< HEAD
               )}
               <div className='space-y-2'>
                 <label htmlFor='email' className='text-sm font-medium'>
@@ -1198,7 +1134,6 @@ const LoginPage = () => {;
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >                  Sign up
-=======
               )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1209,9 +1144,6 @@ const LoginPage = () => {;
                   Email
                 </label>
                 <Input
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   id='email'
                   type='email'
                   value={email}
@@ -1250,8 +1182,6 @@ const LoginPage = () => {;
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >                  Sign up
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   id="email"
                   type="email"
                   value={email  } catch (error) {
@@ -1314,11 +1244,6 @@ const LoginPage = () => {;
 }
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
                   Sign up
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Link>
               </p>
             </div>
@@ -1326,14 +1251,9 @@ const LoginPage = () => {;
         </Card>
       </div>
     </>
-<<<<<<< HEAD
 );
 };export default LoginPage;
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 },
 export default LoginPage,
@@ -1366,8 +1286,3 @@ export default LoginPage,
   );
 },;
 export default LoginPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

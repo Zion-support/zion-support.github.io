@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import "dotenv/config";
 import express from "express";
 import cors from "cors";
@@ -26,7 +25,6 @@ app.post("/api/ai/milestones", async (req, res) => {try {;
 });
 const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {// // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
-=======
 import "dotenv/config",;
 import express from "express",;
 import cors from "cors",;
@@ -58,5 +56,4 @@ app.post("/api/ai/milestones", async (req, res) => {;
 const port = process.env.PORT ? Number(process.env.PORT) : 4321,;
 app.listen(port, () => {;
   // // // console.log(`zion-ai-assistant listening on http://localhost:${port}`);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 });

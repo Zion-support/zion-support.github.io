@@ -1,26 +1,17 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react',
-=======
 import React, { useMemo, useState } from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Link from 'next/link';
 
 import {
-<<<<<<< HEAD
   getWhitepaperSections
   OPERATOR_PROMPT;
-=======
   getWhitepaperSections,;
   OPERATOR_PROMPT,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
-<<<<<<< HEAD
 export default function WhitepaperBuilderPage() {;
-=======
 export default function WhitepaperBuilderPage() {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [edition, setEdition] = useState<WhitepaperEdition>('full');
   const sections = useMemo(() => getWhitepaperSections(edition), [edition]);
   const downloadHref = useMemo(() => {
@@ -94,10 +85,7 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 );
 }
-=======
   );
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

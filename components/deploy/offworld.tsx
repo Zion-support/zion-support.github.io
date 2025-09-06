@@ -1,20 +1,14 @@
-<<<<<<< HEAD
 import { useState  } from 'react';
 import Head from 'next/head',
-=======
 import {useState} from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function OffworldDeploy() {
   const [cid, setCid] = useState<string | null>(null),
   const [status, setStatus] = useState<string>(''),
-=======
 export default function OffworldDeploy() {;
   const [cid, setCid] = useState<string | null>(null);
   const [status, setStatus] = useState<string>('');
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [error, setError] = useState<string>('');
   const [provider, setProvider] = useState<string>('');
   async function handleDeploy() {
@@ -36,10 +30,6 @@ export default function OffworldDeploy() {;
 
   }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <div className='min-h-screen p-8'>      setStatus('Deployed successfully')
     } catch (e: any) {
       setError(e.message)
@@ -47,7 +37,6 @@ export default function OffworldDeploy() {;
   }
   return (
     <div className='min-h-screen p-8'>
-<<<<<<< HEAD
       <Head>
         <title>Zion Offworld Deploy</title>
       </Head>
@@ -93,11 +82,7 @@ export default function OffworldDeploy() {;
     </div>
 );
 }
-=======
-<<<<<<< HEAD
-=======
     <div className='min-h-screen p-8'>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     }
   }
@@ -108,8 +93,3 @@ export default function OffworldDeploy() {;
       )}
     </div>
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

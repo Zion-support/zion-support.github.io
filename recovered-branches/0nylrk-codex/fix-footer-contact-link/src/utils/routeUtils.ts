@@ -1,39 +1,25 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { completeSitemap, SitemapItem } from "@/config/sitemap";
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import {completeSitemap, SitemapItem} from "@/config/sitemap";
 // Find a route by path in the complete sitemap
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path);
 };
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Find a route by path in the complete sitemap
 
 export const findRouteByPath = (path: string): SitemapItem | undefined => {
   return completeSitemap.find(route => route.path === path)
-<<<<<<< HEAD
 }
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Check if a route requires authentication
 export const isProtectedRoute = (path: string): boolean => {
-<<<<<<< HEAD
   const route = findRouteByPath(path)
-=======
   const route = findRouteByPath(path),
-<<<<<<< HEAD
   return route?.requiredAuth === true;
 };
 
@@ -41,37 +27,27 @@ export const isProtectedRoute = (path: string): boolean => {
 export const canAccessRoute = (;
   path: string;
   isAuthenticated: boolean;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return route?.requiredAuth === true
-<<<<<<< HEAD
 }
-=======
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Check if a route is accessible by a specific user type
 export const canAccessRoute = (
   path: string,
   isAuthenticated: boolean,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   userType?: string | null
 ): boolean => {
   const route = findRouteByPath(path)
   // If route doesn't exist in our sitemap
   if (!route) return true, // Default to accessible
   // If route requires authentication and user is not authenticated
-<<<<<<< HEAD
   if (route.requiredAuth && !isAuthenticated) return false;
-=======
   if (route.requiredAuth && !isAuthenticated) return false,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // If route requires specific roles and user doesn't have one
   if (route.requiredRoles && route.requiredRoles.length > 0) {
     if (!userType) return false,
     return route.requiredRoles.includes(userType as any)
-<<<<<<< HEAD
   }
   return true
 }
@@ -99,12 +75,8 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
     }
   }
   return breadcrumbs
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { completeSitemap, SitemapItem } from "@/config/sitemap",;
 // Find a route by path in the complete sitemap;
 export const findRouteByPath = (path: string): SitemapItem | undefined => {;
@@ -159,9 +131,4 @@ export const getBreadcrumbsForPath = (path: string): Array<{label: string, path:
   }
 ;
   return breadcrumbs;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

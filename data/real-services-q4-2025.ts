@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
   mobile: '+1 302 464 0950'
@@ -61,7 +60,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     description:
       'Simple affiliate tracking for SMBs with link shortener, UTM builder, payout automation, and cross-device attribution.'
     features: [
-<<<<<<< HEAD
       'Link shortener and branded domains'
       'UTM builder and traffic quality scoring'
       'Multi-touch attribution and deduplication'
@@ -97,7 +95,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.6
     reviews: 21
   }
-=======
       'Link shortener and branded domains',
       'UTM builder and traffic quality scoring',
       'Multi-touch attribution and deduplication',
@@ -133,7 +130,6 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
     rating: 4.6,
     reviews: 21,
   },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {
     id: 'return-management-saas'
     name: 'Return Management SaaS'
@@ -451,13 +447,9 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		customers: 9;
 		rating: 4.5
 		reviews: 6
-<<<<<<< HEAD
 	}
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -650,10 +642,5 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [;
 		customers: 9,;
 		rating: 4.5;
 		reviews: 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

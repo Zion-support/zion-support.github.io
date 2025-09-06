@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react";
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import {
-<<<<<<< HEAD
 
   Bell
   FileText
@@ -23,7 +19,6 @@ import {
   SidebarMenuButton
   SidebarGroupLabel
   SidebarGroupContent
-=======
   Bell,
   FileText,
   Home,
@@ -41,7 +36,6 @@ import {
   SidebarMenuButton,
   SidebarGroupLabel,
   SidebarGroupContent,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/sidebar";
 
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",
@@ -76,14 +70,7 @@ import {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <SidebarGroup>
           <SidebarGroupLabel>Content</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -107,14 +94,7 @@ import {
             </SidebarMenu>
           </SidebarGroupContent>
         </SidebarGroup>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <SidebarGroup>
           <SidebarGroupLabel>Settings</SidebarGroupLabel>
           <SidebarGroupContent>
@@ -139,16 +119,9 @@ import {
           </SidebarGroupContent>
         </SidebarGroup>
       </SidebarContent>
-<<<<<<< HEAD
-=======
     </Sidebar>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from "lucide-react",;
 import {;
@@ -242,9 +215,7 @@ export function AppSidebar() {;
           </SidebarGroupContent>;
         </SidebarGroup>;
       </SidebarContent>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     </Sidebar>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

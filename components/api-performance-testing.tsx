@@ -1,17 +1,12 @@
-<<<<<<< HEAD
 import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
-=======
 import React from "react";
 import SEO from "../components/SEO";
 import { Check, ExternalLink } from "lucide-react";
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function ApiPerformanceTestingPage() {
 
-<<<<<<< HEAD
   const features = [
     "k6/Gatling-compatible test runner"
     "SLO-aware latency reports"
@@ -19,14 +14,8 @@ export default function ApiPerformanceTestingPage() {
     "CI checks and PR annotations"
     "Synthetic traffic for staging"
   ];
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default function ApiPerformanceTestingPage() {
   const features = [
     "k6/Gatling-compatible test runner",
@@ -36,12 +25,8 @@ export default function ApiPerformanceTestingPage() {
     "Synthetic traffic for staging",;
   ];
 
-<<<<<<< HEAD
 return (
-=======
   return (
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <>
       <SEO
         title="API Performance Testing"
@@ -162,7 +147,4 @@ return (
     </>
   );
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

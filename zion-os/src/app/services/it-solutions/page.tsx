@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 interface ITService {id: string;
@@ -281,7 +280,6 @@ const itServices: ITService[] = [;
   }
 ];
 export default function ITSolutionsPage() {return (;
-=======
 "use client",;
 import { useState } from "react",;
 interface ITService {;
@@ -573,7 +571,6 @@ const itServices: ITService[] = [;
 ],;
 export default function ITSolutionsPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="space-y-8">;
       {/* Header */}
       <div className="text-center space-y-4">;

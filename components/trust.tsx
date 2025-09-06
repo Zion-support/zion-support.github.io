@@ -3,15 +3,12 @@ import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
 import TrustRadar from '../components/ui/TrustRadar';
 import RiskIndicator from '../components/ui/RiskIndicator';
-<<<<<<< HEAD
 export default function TrustPage() {
   const [userId, setUserId] = useState<string>('demo-user'),
   const [data, setData] = useState<any>(null),
-=======
 export default function TrustPage() {;
   const [userId, setUserId] = useState<string>('demo-user');
   const [data, setData] = useState<any>(null);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [loading, setLoading] = useState<boolean>(true);
   const [showLogic, setShowLogic] = useState<boolean>(false);
   useEffect(() => {
@@ -62,26 +59,15 @@ export default function TrustPage() {;
     alert('Appeal submitted');
     form.reset();  }
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     <EnhancedLayout>    await fetch('/api/trust/appeal', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ userId, message, contactEmail }) });
     alert('Appeal submitted');
 
-<<<<<<< HEAD
     form.reset()
-<<<<<<< HEAD
-=======
-=======
     <EnhancedLayout>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Trust & Reputation</h1>
@@ -145,8 +131,6 @@ export default function TrustPage() {;
                         <span>{c.key}</span>
                         <span>{Math.round(c.raw * 100)} / weighted {c.weighted.toFixed(3)}</span>
                       </li>
-=======
-<<<<<<< HEAD
   }
 
   return (
@@ -154,13 +138,9 @@ export default function TrustPage() {;
 
                       </li>
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
                       </li>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ))}
                   </ul>
                 </div>
@@ -169,7 +149,6 @@ export default function TrustPage() {;
                 <div className='bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap'>                  <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
-<<<<<<< HEAD
             </div>                <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded p-3 text-sm whitespace-pre-wrap">
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
@@ -228,15 +207,9 @@ export default function TrustPage() {;
     </EnhancedLayout>
 );
 }
-=======
             </div>
 
                   <strong>Operator GPT Analysis:</strong> {data.reasonSummary}
                 </div>
               )}
             </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

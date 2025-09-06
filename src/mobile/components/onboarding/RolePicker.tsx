@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
@@ -22,15 +19,12 @@ export function RolePicker({ onSelect }: RolePickerProps) {
       </p>
       <div className='space-y-3 mt-6'>
         <Card
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
 
-<<<<<<< HEAD
 type UserRole = any;
   return (
     <div className='space-y-4 px-4'>
@@ -40,7 +34,6 @@ type UserRole = any;
       </p>
       <div className='space-y-3 mt-6'>
         <Card
-=======
 type UserRole = "talent" | "client" | null,
 
 interface RolePickerProps {
@@ -62,11 +55,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
 
       <div className="space-y-3 mt-6">
         <Card 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className={`cursor-pointer transition-all ${
             selectedRole === 'talent' 
               ? "border-primary bg-primary/5" 
@@ -89,16 +77,9 @@ export function RolePicker({ onSelect }: RolePickerProps) {
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
         <Card
-=======
 
         <Card 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
@@ -116,7 +97,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
               </div>
               {selectedRole === 'client' && (
-<<<<<<< HEAD
                 <Check className='h-5 w-5 text-primary' />
               )}
             </div>
@@ -127,7 +107,6 @@ export function RolePicker({ onSelect }: RolePickerProps) {
   );
 };
 }
-=======
                 <Check className="h-5 w-5 text-primary" />
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -200,8 +179,3 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

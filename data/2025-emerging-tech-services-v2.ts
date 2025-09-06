@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EmergingTechService {
-=======
 export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -437,7 +432,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-<<<<<<< HEAD
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
     ]
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
@@ -451,7 +445,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
-=======
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -465,7 +458,6 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market',
     growthRate: '75% annually',
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
 
     ];
@@ -687,14 +679,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [
     marketSize: '$35B autonomous vehicle market'
 
     growthRate: '75% annually'
-<<<<<<< HEAD
   }
 ];
-=======
 export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -968,10 +955,5 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 export default function CaseStudiesPage() {return (;
-=======
 export default function CaseStudiesPage() {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div className="min-h-screen py-20">;
       {/* Hero Section */}
       <section className="relative mb-20">;

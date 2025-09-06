@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const cuttingEdgeMicroSaasServices2025 = [
   {
     id: 'customer-success-ai-pro'
@@ -428,7 +424,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Financial Data Providers'
     ]
     compliance: [
-<<<<<<< HEAD
       'Basel III'
       'Solvency II'
       'Dodd-Frank'
@@ -436,7 +431,6 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards'
     ]
   }
-=======
       'Basel III',
       'Solvency II',
       'Dodd-Frank',
@@ -444,18 +438,13 @@ export const cuttingEdgeMicroSaasServices2025 = [
       'Risk Management Standards',
     ],
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Portfolio risk assessmentInvestment strategy optimizationRegulatory compliance reportingRisk model developmentPerformance analysis and attribution'
     ];
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'];
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards']
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export const cuttingEdgeMicroSaasServices2025 = [;
   {;
     id: 'customer-success-ai-pro',;
@@ -661,10 +650,5 @@ export const cuttingEdgeMicroSaasServices2025 = [;
     ],;
     integrations: ['Bloomberg TerminalReuters EikonTrading PlatformsRisk Management SystemsFinancial Data Providers'],;
     compliance: ['Basel IIISolvency IIDodd-FrankFinancial RegulationsRisk Management Standards'];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -24,7 +22,6 @@ export default function NewDisputePage() {
     clientId
   } = router.query as Record<string, string>;  const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId |'');
-=======
 import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -42,8 +39,6 @@ const REASONS = [
 type ReasonType = (typeof REASONS)[number];
 
 export default function NewDisputePage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -53,17 +48,14 @@ const REASONS = [;
 type ReasonType = typeof REASONS[number];
 export default function NewDisputePage(req, res) {
   try {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const router = useRouter();
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
   const user = useCurrentUser();
   const [projectId, setProjectId] = useState(qProjectId || '');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [reason, setReason] = useState<ReasonType>('Scope Disagreement');
   const [reasonDetails, setReasonDetails] = useState('');
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
-<<<<<<< HEAD
   const [talentUserId, setTalentUserId] = useState(talentId |'');
   const [clientUserId, setClientUserId] = useState(
     clientId |(user.role === 'client' ? user.id : '')
@@ -110,7 +102,6 @@ export default function NewDisputePage(req, res) {
     } finally {
       setSubmitting(false);    }
   }
-=======
   const [talentUserId, setTalentUserId] = useState(talentId || '');
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
@@ -128,9 +119,6 @@ export default function NewDisputePage(req, res) {
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })}),;
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
       if (files.length > 0) {
         const filePayload = await Promise.all(
@@ -153,8 +141,6 @@ export default function NewDisputePage(req, res) {
       setSubmitting(false);    }
   }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       if (files.length > 0) {;
         const filePayload = await Promise.all(;
           files.map(async (f) => ({;
@@ -187,11 +173,6 @@ export default function NewDisputePage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <EnhancedLayout>
       <div className="max-w-2xl mx-auto">
@@ -230,7 +211,6 @@ export default function NewDisputePage(req, res) {
             <textarea value={description} onChange={e => setDescription(e.target.value)} required rows={5} className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
           <div>
-<<<<<<< HEAD
             <label className='block text-sm font-medium'>Attachments</label>
             <input
               type='file'
@@ -238,23 +218,19 @@ export default function NewDisputePage(req, res) {
               onChange={e => setFiles(Array.from(e.target.files |[]))}
               className='mt-1'
             />
-=======
             <label className="block text-sm font-medium">Attachments</label>
             <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
           </div>
           <div className="pt-2">
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </div>
         </form>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
 const reader = new FileReader();
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -265,30 +241,15 @@ const reader = new FileReader();
 function toBase64(file: File): Promise<string> {;
   return new Promise((resolve, reject) => {;
     const reader = new FileReader();
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

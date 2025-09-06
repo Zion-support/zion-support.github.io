@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EnterpriseITService2029V2 {
-=======
 export interface EnterpriseITService2029V2 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -315,21 +310,18 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
     funding: 'Series B funding, $180M valuation'
     exit: 'IPO or enterprise acquisition'
     contact: {
-<<<<<<< HEAD
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
       website: 'https://ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
   }
-=======
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       website: 'https://ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
     },
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      'Enterprise IT operationsData center managementApplication performance managementInfrastructure automationService desk automationIT service management'
 
     ];
@@ -367,15 +359,10 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [
       website: 'https://ziontechgroup.com'
 
       address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
     }
   }
 ];
-=======
 export interface EnterpriseITService2029V2 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   description: string,;
@@ -604,11 +591,6 @@ export const enterpriseITServices2029V2: EnterpriseITService2029V2[] = [;
       email: 'kleber@ziontechgroup.com',;
       website: 'https://ziontechgroup.com',;
       address: '364 E Main St STE 1008 Middletown DE 19709';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

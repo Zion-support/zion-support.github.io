@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { UnifiedService } from '../types/unified-service-types';
 
 const contact = {
@@ -263,7 +262,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     ]
     roi: 'Improve knowledge discovery by 80%. Reduce information search time by 70%. Increase collaboration efficiency by 60%.'
     competitors: [
-<<<<<<< HEAD
       'Microsoft SharePoint'
       'Confluence'
       'Notion'
@@ -276,7 +274,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6
     reviews: 41
     contactInfo: contact
-=======
       'Microsoft SharePoint',
       'Confluence',
       'Notion',
@@ -289,7 +286,6 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6,
     reviews: 41,
     contactInfo: contact,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];      'AI knowledge discoveryIntelligent categorizationSemantic searchKnowledge graphsCollaborative workspacesVersion controlAccess controlAnalytics dashboard';
       'Integration capabilitiesMobile access'
     ];
@@ -313,13 +309,9 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [
     rating: 4.6;
     reviews: 41
     contactInfo: contact
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { UnifiedService } from '../types/unified-service-types',;
 const contact = {;
   mobile: '+1 302 464 0950',;
@@ -466,10 +458,5 @@ export const cuttingEdgeEnterpriseSolutions: UnifiedService[] = [;
     rating: 4.6,;
     reviews: 41;
     contactInfo: contact;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

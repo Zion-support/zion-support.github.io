@@ -1,16 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { jsPDF  } from 'jspdf';
 import { PortfolioProject  } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
 export function addPortfolioSection(
-=======
 import {jsPDF} from 'jspdf';
 import {PortfolioProject} from '@/types/resume';
 import {PdfThemeColors} from '../themeConfig';
 export function addPortfolioSection(;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   doc: jsPDF;
   projects: PortfolioProject[];
   colors: PdfThemeColors;
@@ -68,7 +64,6 @@ export function addPortfolioSection(;
       if (project.demo_url) {
         doc.text(`Demo: ${project.demo_url}`, 20, yPos);
         yPos += 4
-=======
 import { jsPDF } from 'jspdf',;
 import { PortfolioProject } from '@/types/resume',;
 import { PdfThemeColors } from '../themeConfig',;
@@ -134,20 +129,11 @@ export function addPortfolioSection(;
       if (project.demo_url) {;
         doc.text(`Demo: ${project.demo_url}`, 20, yPos),;
         yPos += 4;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     yPos += 10, // Add space between projects
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // If there are more projects than we're displaying
   if (projects.length > maxProjects) {
     doc.setFontSize(10);
@@ -155,13 +141,9 @@ export function addPortfolioSection(;
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
 
     yPos += 6
-<<<<<<< HEAD
   }
   return yPos + 5
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   // If there are more projects than we're displaying;
   if (projects.length > maxProjects) {;
@@ -169,13 +151,8 @@ export function addPortfolioSection(;
     doc.setTextColor(colors.text);
     doc.text(`+ ${projects.length - maxProjects} more projects not shown`, 20, yPos);
     yPos += 6;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ;
   return yPos + 5;
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

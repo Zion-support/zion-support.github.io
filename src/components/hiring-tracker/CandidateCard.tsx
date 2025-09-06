@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -12,7 +11,6 @@ import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed t
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
 import {
-<<<<<<< HEAD
   MessageSquare
   User
   FileText
@@ -20,7 +18,6 @@ import {
   Calendar
   AlertTriangle
   BriefcaseIcon
-=======
   MessageSquare,
   User,
   FileText,
@@ -28,7 +25,6 @@ import {
   Calendar,
   AlertTriangle,;
   BriefcaseIcon;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';// Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
 import { Draggable } from "@/lib/dnd-stub"
@@ -66,7 +62,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
     application.updated_at &&
     new Date(application.updated_at).getTime() <
       Date.now() - 7 * 24 * 60 * 60 * 1000
-=======
 import { useState } from "react",
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -79,23 +74,14 @@ import { Avatar as AvatarPrimitive } from "@/components/ui/avatar", // Renamed t
 import { Button } from "@/components/ui/button",
 import { Textarea } from "@/components/ui/textarea",
 import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, BriefcaseIcon } from 'lucide-react'
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handleSaveNotes = () => {
     // Here you would save the notes to the database
     // For now, we'll just show a toast
     toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Notes saved'
       description: 'Your notes have been saved'
-=======
       title: 'Notes saved',
       description: 'Your notes have been saved',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     })
     setShowNotes(false)
   }
@@ -106,9 +92,7 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
       description: 'Offer has been sent to the talent.'
     })
   }
-<<<<<<< HEAD
   const candidateName = application.talent_profile?.full_name |'Candidate'
-=======
   const candidateName = application.talent_profile?.full_name || 'Candidate'
   return (
     <>
@@ -117,8 +101,6 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       title: "Notes saved",
       description: "Your notes have been saved"
     }),
@@ -132,19 +114,16 @@ import { MessageSquare, User, FileText, MoreVertical, Calendar, AlertTriangle, B
       description: "Offer has been sent to the talent."
     })
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const candidateName = application.talent_profile?.full_name || "Candidate",
   
   return (
     <>
       <Draggable draggableId={application.id} index={index}>
-<<<<<<< HEAD
         {provided => (
           <Card
             className='mb-2 p-0 shadow-sm border'
             ref={provided.innerRef}            {...provided.draggableProps}
-=======
         {(provided) => (
           <Card 
             className="mb-2 p-0 shadow-sm border"
@@ -208,16 +187,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
             className="mb-2 p-0 shadow-sm border";
             ref={provided.innerRef}
             {...provided.draggableProps}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {...provided.dragHandleProps}
           >
             <CardContent className='p-3'>
               {/* Candidate Header */}
-<<<<<<< HEAD
               <div className='flex justify-between items-start mb-2'>
                 <div className='flex items-center gap-2'>
                   <AvatarPrimitive className='h-8 w-8'>
@@ -245,7 +218,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </p>
                   </div>
                 </div>
-=======
               <div className="flex justify-between items-start mb-2">;
                 <div className="flex items-center gap-2">;
                   <AvatarPrimitive className="h-8 w-8"> {/* Using renamed AvatarPrimitive */}
@@ -273,11 +245,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   </div>
                 </div>
                 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <DropdownMenu>
                   <DropdownMenuTrigger asChild>
                     <Button variant="ghost" className="h-8 w-8 p-0">
@@ -303,7 +270,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                         </Link>
                       </DropdownMenuItem>
                     )}
-<<<<<<< HEAD
                   </DropdownMenuContent>
                 </DropdownMenu>
               </div>
@@ -347,7 +313,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
               {/* Action Buttons */}
               <div className='flex justify-between mt-2 gap-1'>
                 <Button variant='outline' size='sm' className='flex-1' asChild>
-=======
                   </DropdownMenuContent>;
                 </DropdownMenu>;
               </div>;
@@ -394,18 +359,11 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <Link href={`/messages?talentId=${application.talent_id}`}>
                     <MessageSquare className="h-3 w-3 mr-1" /> Message
                   </Link>
                 </Button>
-<<<<<<< HEAD
                 <Button variant='outline' size='sm' className='flex-1' asChild>
-=======
                 
                 <Button 
                   variant="outline" 
@@ -413,11 +371,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                   className="flex-1"
                   asChild
                 >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {application.resume?.file_url ? (
                     <a href={application.resume.file_url} target="_blank" rel="noopener noreferrer">
                       <FileText className="h-3 w-3 mr-1" /> Resume
@@ -428,7 +381,6 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
                     </span>
                   )}
                 </Button>
-<<<<<<< HEAD
                 <Button
                   variant='default'
                   size='sm'
@@ -524,17 +476,13 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
 }application= {
   application
 }onConfirm= {
-<<<<<<< HEAD
   handleHireConfirmed
 }/> </>)
 }'"}
-=======
   handleHireConfirmed 
 }/> </>) 
 }'"};
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
                 <Button 
                   variant="default" 
@@ -560,8 +508,3 @@ export function CandidateCard({ application, index }: CandidateCardProps) {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

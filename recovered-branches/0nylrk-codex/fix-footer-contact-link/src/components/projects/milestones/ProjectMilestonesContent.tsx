@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 
 import {useParams} from 'react-router-dom';
@@ -10,14 +9,11 @@ import {useAuth} from '@/hooks/useAuth';
 import {Tabs, TabsContent, TabsList, TabsTrigger} from '@/components/ui/tabs';
 import {useDisputeCheck} from '@/hooks/useDisputeCheck';
 import {MilestoneActivities, MilestoneManager, MilestoneCreator, ProjectActions, ProjectHeader} from './components';
-<<<<<<< HEAD
 export function ProjectMilestonesContent() {
   const { projectId } = useParams() as { projectId?: string }
-=======
 
 export function ProjectMilestonesContent() {;
   const { projectId } = useParams() as { projectId?: string };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { getProjectById } = useProjects();
   const {
@@ -48,7 +44,6 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId);
         if (projectData) {
           setProject(projectData)
-=======
 import React, { useState, useEffect } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { useProjects } from '@/hooks/useProjects',;
@@ -92,11 +87,6 @@ export function ProjectMilestonesContent() {;
         const projectData = await getProjectById(projectId),;
         if (projectData) {;
           setProject(projectData);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (error) {
         console.error("Error loading project:", error)
@@ -104,7 +94,6 @@ export function ProjectMilestonesContent() {;
         setIsLoading(false)
       }
     }
-<<<<<<< HEAD
     loadProject();
     refetch()
   }, [projectId, getProjectById, refetch]);
@@ -117,7 +106,6 @@ export function ProjectMilestonesContent() {;
   // Determine project type based on job category or default to "Other"
   const projectType = job?.category |"Other";
   if (isLoading |!project) {
-=======
     
     loadProject(),
     refetch()
@@ -135,7 +123,6 @@ export function ProjectMilestonesContent() {;
   const projectType = job?.category || "Other",
 
   if (isLoading || !project) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <div className="container mx-auto py-8 px-4">
         <div className="flex justify-center items-center h-64">
@@ -154,40 +141,27 @@ export function ProjectMilestonesContent() {;
       amount: data.amount
       status: "pending" as const
       due_date: data.due_date ? data.due_date.toISOString() : undefined
-<<<<<<< HEAD
     }
     await createMilestone(milestoneData);
     setActiveTab('milestones');
     await handleMilestoneCreated()
   }
-=======
     },
     
     await createMilestone(milestoneData),
     setActiveTab('milestones'),
     await handleMilestoneCreated()
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="container mx-auto py-8 px-4">
-<<<<<<< HEAD
       <ProjectHeader title={project.job?.title |"Untitled Project"} />
-=======
       <ProjectHeader title={project.job?.title || "Untitled Project"} />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex justify-between items-center my-6">
         <h2 className="text-2xl font-bold">Payment Milestones</h2>
-<<<<<<< HEAD
         <ProjectActions
           projectId={projectId |''}
-=======
         <ProjectActions 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       } catch (error) {;
         console.error("Error loading project:", error);
       } finally {;
@@ -237,12 +211,7 @@ export function ProjectMilestonesContent() {;
       <div className="flex justify-between items-center my-6">;
         <h2 className="text-2xl font-bold">Payment Milestones</h2>;
         <ProjectActions;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           projectId={projectId || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           isUnderDispute={isUnderDispute}
           disputeId={disputeId}
           isTalent={isTalent}
@@ -258,13 +227,10 @@ export function ProjectMilestonesContent() {;
           )}
         </TabsList>
         <TabsContent value="milestones">
-<<<<<<< HEAD
           <MilestoneManager
             projectId={projectId |''}
-=======
           <MilestoneManager 
             projectId={projectId || ''}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             milestones={milestones}
             activities={activities}
             isLoading={milestonesLoading}
@@ -283,13 +249,10 @@ export function ProjectMilestonesContent() {;
           <MilestoneActivities projectId={projectId |''} />
         </TabsContent>
         <TabsContent value="create">
-<<<<<<< HEAD
           {(isClient |isTalent) && (
             <MilestoneCreator
-=======
           {(isClient || isTalent) && (
             <MilestoneCreator 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               onSubmit={handleMilestoneSubmit}
               isSubmitting={isSubmitting}
               onCancel={() => setActiveTab('milestones')}
@@ -299,17 +262,14 @@ export function ProjectMilestonesContent() {;
               projectType={projectType}
             />
           )}
-<<<<<<< HEAD
         </TabsContent>
       </Tabs>
     </div>
   )
 }
-=======
         </TabsContent>;
       </Tabs>;
     </div>;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

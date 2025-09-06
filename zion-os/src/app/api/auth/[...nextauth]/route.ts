@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { PrismaAdapter } from "@auth/prisma-adapter";
@@ -49,7 +48,6 @@ const handler = NextAuth({adapter: PrismaAdapter(prisma);
   pages: {signIn: "/auth/signin";
     signUp: "/auth/signup"}});
 export { handler as GET, handler as POST }
-=======
 import NextAuth from "next-auth",;
 import CredentialsProvider from "next-auth/providers/credentials",;
 import { PrismaAdapter } from "@auth/prisma-adapter",;
@@ -114,4 +112,3 @@ const handler = NextAuth({;
     signIn: "/auth/signin",;
     signUp: "/auth/signup"}}),;
 export { handler as GET, handler as POST };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

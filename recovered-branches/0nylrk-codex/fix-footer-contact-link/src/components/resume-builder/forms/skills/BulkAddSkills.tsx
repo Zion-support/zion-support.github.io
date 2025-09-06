@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Loader2, Sparkles} from 'lucide-react';
@@ -49,7 +45,6 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess()
         } catch (err) {
           setError('Failed to parse categorized skills. Please try again.')
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Loader2, Sparkles } from 'lucide-react',;
@@ -97,57 +92,35 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
           await onSuccess();
         } catch (err) {;
           setError('Failed to parse categorized skills. Please try again.');
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
     } catch (err: any) {
       setError(err.message |'Failed to categorize skills')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="bg-muted/40 p-6 rounded-lg">
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>
       <div className="space-y-4">
         <div className="space-y-2">
           <label className="text-sm font-medium">Enter multiple skills (comma separated)</label>
-<<<<<<< HEAD
           <Textarea
-=======
           <Textarea 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className="min-h-24"
             placeholder="Python, React, TypeScript, Project Management, Communication..."
             value={bulkSkills}
             onChange={(e) => setBulkSkills(e.target.value)}
           />
         </div>
-<<<<<<< HEAD
         <Button
-=======
         <Button 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           onClick={handleCategorizeSkills}
-<<<<<<< HEAD
           disabled={isEnhancing |!bulkSkills.trim()}
-=======
           disabled={isEnhancing || !bulkSkills.trim()}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className="gap-2"
         >
           {isEnhancing ? (
@@ -164,16 +137,8 @@ export const BulkAddSkills = ({ resumeId, onSuccess }: BulkAddSkillsProps) => {;
       </div>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

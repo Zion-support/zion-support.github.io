@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { OpenAI } = require('openai');
@@ -13,7 +12,6 @@ function readAll() {
 
   } catch (e) {
     return []
-=======
 const fs = require('fs'),;
 const path = require('path'),;
 const { OpenAI } = require('openai'),;
@@ -26,11 +24,6 @@ function readAll() {;
     return JSON.parse(raw || '[]');
   } catch (e) {;
     return [];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
 function lastNDays(days) {
@@ -46,7 +39,6 @@ async function main() {
     console.error('Missing OPENAI_API_KEY')
     process.exit(1)
   }
-<<<<<<< HEAD
   const all = readAll()
   const recent = all.filter(lastNDays(7))
   const downs = recent.filter((r) => r.rating === 'down')
@@ -56,7 +48,6 @@ async function main() {
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.')
     console.log('No low-rated feedback to analyze.')
-=======
   const all = readAll(),
   const recent = all.filter(lastNDays(7)),
   const downs = recent.filter((r) => r.rating === 'down'),
@@ -69,7 +60,6 @@ async function main() {
   if (downs.length === 0) {
     fs.writeFileSync(summaryPath, '# Weekly Feedback Analysis\n\nNo thumbs-down feedback this week.'),
     // // // console.log('No low-rated feedback to analyze.'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return
   }
   const prompt = `You are an AI QA analyst. Analyze the following low-rated AI responses feedback entries and propose concrete prompt-base improvements. Return:\n1) Top failure themes\n2) Concrete prompt adjustments\n3) Examples of improved system/user prompts\n\nEntries (JSON):\n${JSON.stringify(downs.slice(-100), null, 2)}`
@@ -86,27 +76,17 @@ async function main() {
   const md = `# Weekly Feedback Analysis (low-rated)\n\nDate: ${new Date().toISOString()}\n\n## Summary\n${text}\n`
   fs.writeFileSync(summaryPath, md)
   // Append to prompt improvements
-<<<<<<< HEAD
-<<<<<<< HEAD
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : ''
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`)
-=======
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   console.log('Analysis written to', summaryPath)
 }
 main().catch((e) => { console.error(e), process.exit(1) });
 
-<<<<<<< HEAD
-=======
   const current = fs.existsSync(baselinePath) ? fs.readFileSync(baselinePath, 'utf8') : '',
   fs.writeFileSync(baselinePath, `${current}\n\n## ${new Date().toISOString()}\n${text}\n`),
-=======
 main().catch((e) => { console.error(e), process.exit(1) }),;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // // // console.log('Analysis written to', summaryPath)
   const all = readAll(),;
   const recent = all.filter(lastNDays(7)),;
@@ -138,8 +118,3 @@ main().catch((e) => { console.error(e), process.exit(1) }),;
 }
 ;
 main().catch((e) => { console.error(e), process.exit(1) }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

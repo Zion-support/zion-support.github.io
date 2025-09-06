@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
@@ -39,19 +38,15 @@ const Sidebar = () => {
           ))}
         </nav>
       </div>
-<<<<<<< HEAD
     </aside>
   )
 }
 export default Sidebar
-=======
     </div>
   );
 };
 
 export default Sidebar;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 import React from 'react';
 
 export const Sidebar: React.FC = () => {
@@ -89,4 +84,3 @@ export const Sidebar: React.FC = () => {
     </aside>
   );
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

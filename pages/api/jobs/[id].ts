@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readJsonFile, writeJsonFile } from "../../../utils/db";
 import type { Job } from "../../../utils/types";
 import { rateLimit } from "../../../utils/rateLimit";
 import { getRequestUserEmail, isAdminEmail } from "../../../utils/auth";
 const FILE = "jobs.json";
-<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (!rateLimit(req, res)) return;
   const { id } = req.query;
   const jobs = readJsonFile<Job[]>(FILE, []);
@@ -22,7 +15,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   if (idx === -1) {
     res.status(404).json({ error: "Job not found" });
     return;
-<<<<<<< HEAD
   }
   if (req.method === "GET") {
     res.status(200).json({ job: jobs[idx] });
@@ -68,9 +60,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res.status(405).end("Method Not Allowed");
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -196,21 +185,13 @@ export default function handler(req, res) {
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
   if (req.method === "PATCH") {
     const userEmail = getRequestUserEmail(req);
@@ -255,7 +236,4 @@ export default function handler(req, res) {
 res.setHeader("Allow", "GET, PATCH");
   res.status(405).end("Method Not Allowed");
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

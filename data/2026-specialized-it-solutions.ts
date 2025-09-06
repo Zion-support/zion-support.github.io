@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface SpecializedITSolution2026 {
-=======
 export interface SpecializedITSolution2026 {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -599,34 +594,28 @@ export const specializedITSolutions2026: SpecializedITSolution2026[] = [
     contactInfo: contact
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.'
     launchDate: '2024-05-25'
     customers: 67
     rating: 4.4
     reviews: 33
   }
-=======
       'AI-powered backup and disaster recovery platform with intelligent optimization, automated testing, and comprehensive recovery orchestration.',
     launchDate: '2024-05-25',
     customers: 67,
     rating: 4.4,
     reviews: 33,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];
 export const getSpecializedITSolutions2026ByCategory = (category: string) => {
   return specializedITSolutions2026.filter(
     solution => solution.category === category;
   );
-<<<<<<< HEAD
 }
 export const getPopularSpecializedITSolutions2026 = () => {
-=======
 };
 
 export const getPopularSpecializedITSolutions2026 = () => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return specializedITSolutions2026.filter(solution => solution.popular);
 }
 export const getSpecializedITSolutions2026ByPriceRange = (
@@ -639,14 +628,9 @@ export const getSpecializedITSolutions2026ByPriceRange = (
   });
 };    return price >= minPrice && price <= maxPrice
   })
-<<<<<<< HEAD
 }
 
-=======
 export interface SpecializedITSolution2026 {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1009,9 +993,4 @@ export const getSpecializedITSolutions2026ByPriceRange = (minPrice: number, maxP
     const price = parseInt(solution.price.replace('$', '')),;
     return price >= minPrice && price <= maxPrice;
   });
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

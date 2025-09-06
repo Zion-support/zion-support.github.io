@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Button} from "@/components/ui/button";
@@ -12,8 +9,6 @@ import ForumCategories from "@/components/community/ForumCategories";
 import PostCard from "@/components/community/PostCard";
 import {useAuth} from "@/hooks/useAuth";
 import {ForumPost} from "@/types/community";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Button } from "@/components/ui/button",
@@ -22,7 +17,6 @@ import { SEO } from "@/components/SEO",
 import { AppLayout } from "@/layout/AppLayout",
 import ForumCategories from "@/components/community/ForumCategories",
 import PostCard from "@/components/community/PostCard",
-<<<<<<< HEAD
 import { useAuth } from "@/hooks/useAuth";
 import { ForumPost } from "@/types/community";
 // Mock data for featured posts
@@ -114,13 +108,8 @@ export default function CommunityPage() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
 
-=======
 import { useAuth } from "@/hooks/useAuth",
 import { ForumPost } from "@/types/community",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock data for featured posts
 const featuredPosts: ForumPost[] = [
   {
@@ -207,17 +196,13 @@ const recentPosts: ForumPost[] = [
   }
 ],
 
-<<<<<<< HEAD
 export default function CommunityPage() {;
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("categories");
-=======
 export default function CommunityPage() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("categories"),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <SEO
@@ -259,7 +244,6 @@ export default function CommunityPage() {
             <div className="space-y-4">
               {recentPosts.map((post) => (
                 <PostCard key={post.id} post={post} />
-<<<<<<< HEAD
               ))}
             </div>
           </TabsContent>
@@ -267,11 +251,7 @@ export default function CommunityPage() {
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",;
 import { Link } from "react-router-dom",;
 import { Button } from "@/components/ui/button",;
@@ -417,10 +397,5 @@ export default function CommunityPage() {;
       </div>;
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

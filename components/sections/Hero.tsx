@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React from 'react',
-=======
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../ui/Button';
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react';
 interface HeroProps {
@@ -22,10 +19,7 @@ interface HeroProps {
     label: string;
     color: string;
   }>;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const Hero: React.FC<HeroProps> = ({
   title
   subtitle
@@ -65,7 +59,6 @@ const Hero: React.FC<HeroProps> = ({
           <h1 className='text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black mb-8 text-white leading-tight tracking-tight'>
             {title}
           </h1>
-<<<<<<< HEAD
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
     text: string
     href: string
@@ -117,22 +110,16 @@ const Hero: React.FC<HeroProps> = ({
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light">
             {subtitle}
           </p>
-<<<<<<< HEAD
           {/* Action Buttons */}
           {(primaryAction |secondaryAction) && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           <p className='text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}
 
             {subtitle}
 
           </p>
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           {/* Action Buttons */}
           {(primaryAction || secondaryAction) && (
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <div className='flex flex-col sm:flex-row gap-6 justify-center items-center mb-20'>
               {primaryAction && (
                 <Button
@@ -142,7 +129,6 @@ const Hero: React.FC<HeroProps> = ({
                   style={{ animationDelay: '0.2s' }}
                 >
                   {primaryAction.text}
-<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>              {primaryAction && (
                 <Button
                   href={primaryAction.href}
@@ -153,16 +139,10 @@ const Hero: React.FC<HeroProps> = ({
                   {primaryAction.text}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-=======
                   <ArrowRight className='w-5 h-5 ml-2' />                </Button>
 
                 </Button>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
               {secondaryAction && (
                 <Button
@@ -183,14 +163,7 @@ const Hero: React.FC<HeroProps> = ({
             </div>
           )}
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Stats Section */}
         {stats && (
           <div
@@ -207,7 +180,6 @@ const Hero: React.FC<HeroProps> = ({
                   </div>
                   <div className='absolute -inset-2 bg-gradient-to-r from-transparent via-blue-500/5 to-transparent rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300' />
                 </div>
-<<<<<<< HEAD
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}            {stats.map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative">
@@ -218,25 +190,16 @@ const Hero: React.FC<HeroProps> = ({
                 </div>
                 <div className="text-gray-400 text-xs sm:text-sm md:text-base font-medium">
                   {stat.label}
-=======
                 <div className='text-gray-400 text-xs sm:text-sm md:text-base font-medium'>                  {stat.label}
 
                   {stat.label}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
               </div>
             ))}
           </div>
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         {/* Trust Indicators */}
         <div
           className='mt-16 md:mt-20 animate-fade-in'
@@ -269,7 +232,6 @@ const Hero: React.FC<HeroProps> = ({
         <div className='w-6 h-10 border-2 border-white/20 rounded-full flex justify-center'>
           <div className='w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse' />        </div>
       </div>
-<<<<<<< HEAD
       {/* Decorative Elements */}      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/20 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-blue-500 rounded-full mt-2 animate-pulse" />
@@ -289,13 +251,9 @@ const Hero: React.FC<HeroProps> = ({
 }
 export default Hero;
 
-<<<<<<< HEAD
-=======
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
       {/* Decorative Elements */}
 
@@ -303,8 +261,3 @@ export default Hero;
       </div>
 
       {/* Decorative Elements */}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

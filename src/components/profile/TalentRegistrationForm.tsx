@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -12,8 +9,6 @@ import { Switch } from '@/components/ui/switch'
 import { Badge } from '@/components/ui/badge'
 import { Separator } from '@/components/ui/separator'
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger'
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -23,8 +18,6 @@ import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import { Switch } from "@/components/ui/switch",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { Separator } from "@/components/ui/separator";
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
 import {
@@ -36,10 +29,8 @@ import {
   FormItem
   FormLabel
   FormMessage
-=======
 import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 import {
   Form,
   FormControl,
@@ -47,9 +38,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-<<<<<<< HEAD
   FormMessage,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/form'
   Card
   CardContent
@@ -105,8 +94,6 @@ availability: z.enum (["available", "limited", "unavailable"])
 enhancedProfile: z.boolean () .default (true)
 })
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other'
-<<<<<<< HEAD
-=======
 import { Separator } from "@/components/ui/separator",
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger',
 import {
@@ -116,7 +103,6 @@ import {
   FormField,
   FormItem,
   FormLabel,
-=======
 }
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) 
@@ -131,8 +117,6 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] =
     useState<EnhancedProfile | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   FormMessage} from "@/components/ui/form",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { X, Sparkles, Upload, Clock, Check, Briefcase, MapPin, UserRound } from 'lucide-react'
@@ -206,13 +190,10 @@ interface CategorizedSkills {;
   platforms: string[],;
   softSkills: string[],;
   other: string[];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {
   setSkillTags (skillTags.filter ( (s) => s !== skill) )
 }
-<<<<<<< HEAD
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -223,15 +204,12 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] =
     useState<EnhancedProfile | null>(null)
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null)
-=======
-=======
 }
 ;
 interface EnhancedProfile {;
   summary: string,;
   categorizedSkills: CategorizedSkills;
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -242,17 +220,10 @@ export function TalentRegistrationForm() {
   const [generatedContent, setGeneratedContent] = useState<EnhancedProfile | null>(null),
   const [uploadedAvatar, setUploadedAvatar] = useState<string | null>(null),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Initialize form with default values
   const form = useForm<TalentFormValues>({
     resolver: zodResolver(talentProfileSchema) as any
     defaultValues: {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: user?.displayName |''
       title: ''
       bio: ''
@@ -262,7 +233,6 @@ export function TalentRegistrationForm() {
       availability: 'available'
       enhancedProfile: true
     }
-=======
       name: user?.displayName || '',
       title: '',
       bio: '',
@@ -272,7 +242,6 @@ export function TalentRegistrationForm() {
       availability: 'available',
       enhancedProfile: true,
     },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   })
   // Handle adding skill tags
   const handleAddSkill = () => {
@@ -332,7 +301,6 @@ export function TalentRegistrationForm() {
       )
       if (error) {
         throw new Error(error.message)
-<<<<<<< HEAD
       }
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
@@ -361,9 +329,6 @@ export function TalentRegistrationForm() {
           description:
             'AI has created a professional bio and suggested additional skills for your profile.'
         })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       name: user?.displayName || "",
       title: "",
       bio: "",
@@ -479,17 +444,10 @@ export function TalentRegistrationForm() {;
       }),;
       if (error) {;
         throw new Error(error.message);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
 
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         setGeneratedContent(data as EnhancedProfile)
         toast({
           title: 'Enhanced Profile Generated',
@@ -499,8 +457,6 @@ export function TalentRegistrationForm() {;
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content')
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setGeneratedContent(data as EnhancedProfile),
         
         toast({
@@ -509,16 +465,12 @@ export function TalentRegistrationForm() {;
       } else {
         // Fallback for mock/development mode
         logWarn('Mock AI response - using fallback content'),
-<<<<<<< HEAD
         setGeneratedContent({
           summary: "Experienced professional with expertise in modern technologies and best practices.",
           categorizedSkills: {
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         setGeneratedContent({
           summary: "Experienced professional with expertise in modern technologies and best practices.",
           categorizedSkills: {
-<<<<<<< HEAD
             programming: ['JavaScript', 'TypeScript', 'React'],
             devops: ['Docker', 'CI/CD', 'AWS'],
             platforms: ['Node.js', 'Next.js', 'Vercel'],
@@ -531,8 +483,6 @@ export function TalentRegistrationForm() {;
           description:
             'AI has created a professional bio and suggested additional skills for your profile.',
         })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             programming: ["JavaScript", "TypeScript", "React"],
             devops: ["Docker", "CI/CD", "AWS"],
             platforms: ["Node.js", "Next.js", "Vercel"],
@@ -544,15 +494,9 @@ export function TalentRegistrationForm() {;
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional skills for your profile."})
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
     } catch (error: any) {
-<<<<<<< HEAD
       logErrorToProduction('Error generating enhanced profile:', {
         data: error
       })
@@ -574,7 +518,6 @@ export function TalentRegistrationForm() {;
       // Extract all skills from categorized skills and properly type cast them
       const allCategorizedSkills = generatedContent.categorizedSkills
       const newSkills: string[] = []
-=======
       logErrorToProduction('Error generating enhanced profile:', { data: error }),
       toast({
         title: "Generation failed",
@@ -594,24 +537,15 @@ export function TalentRegistrationForm() {;
       const allCategorizedSkills = generatedContent.categorizedSkills,
       const newSkills: string[] = [],
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Safely extract and flatten skills from each category
       Object.values(allCategorizedSkills).forEach(categorySkills => {
         if (Array.isArray(categorySkills)) {
           categorySkills.forEach(skill => {
-<<<<<<< HEAD
-<<<<<<< HEAD
             if (
               typeof skill === 'string' &&
               skill &&
               !skillTags.includes(skill)
-=======
             if (true) {}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ) {
               newSkills.push(skill)
             }
@@ -640,7 +574,6 @@ export function TalentRegistrationForm() {;
         return 'bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple'
     }
   }
-=======
             if (typeof skill === 'string' && skill && !skillTags.includes(skill)) {
               newSkills.push(skill)
 ;
@@ -712,23 +645,15 @@ export function TalentRegistrationForm() {;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Send notification email
   const sendEnhancementNotification = async (userId: string, email: string) => {
     try {
       await supabase.functions.invoke('send-email', {
         body: {
-<<<<<<< HEAD
           to: email
           subject: 'Your Zion Talent Profile Has Been Enhanced'
-=======
           to: email,
           subject: "Your Zion Talent Profile Has Been Enhanced",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           html: `
           <div style="font-family: Arial, sans-serif, max-width: 600px, margin: 0 auto,">
             <h2 style="color: #6D28D9,">Profile Enhancement Complete</h2>
@@ -739,15 +664,10 @@ export function TalentRegistrationForm() {;
               <p style="color: #666, font-size: 12px,">© ${new Date().getFullYear()} Zion Marketplace</p>
             </div>
           </div>
-<<<<<<< HEAD
           `
-<<<<<<< HEAD
         }
-=======
-<<<<<<< HEAD
           `,
         },
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
     } catch (error) {
       logErrorToProduction('Failed to send notification email:', {
@@ -755,11 +675,7 @@ export function TalentRegistrationForm() {;
       })
     }
   }
-=======
-<<<<<<< HEAD
-=======
           `
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },;
   // Send notification email;
   const sendEnhancementNotification = async (userId: string, email: string) => {;
@@ -786,25 +702,16 @@ export function TalentRegistrationForm() {;
     }
   },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   // Handle form submission
   const onSubmit = async (values: TalentFormValues) => {
     if (skillTags.length === 0) {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Skills required'
         description: 'Please add at least one skill to your profile.'
         variant: 'destructive'
-=======
         title: 'Skills required',
         description: 'Please add at least one skill to your profile.',
         variant: 'destructive',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       })
       return;
     }
@@ -813,9 +720,6 @@ export function TalentRegistrationForm() {;
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error('User not authenticated')
-<<<<<<< HEAD
-=======
-=======
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
@@ -828,14 +732,8 @@ export function TalentRegistrationForm() {;
       // For actual implementation with Supabase
       if (!user?.id) {
         throw new Error("User not authenticated")
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       // Enhance profile if not already done
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       let finalSummary = ''
       let finalSkills = skillTags
       if (values.enhancedProfile && !generatedContent) {
@@ -866,8 +764,6 @@ export function TalentRegistrationForm() {;
                 categorySkills.forEach(skill => {
                   if (typeof skill === 'string' && skill) {
                     aiSkills.push(skill)
-=======
-<<<<<<< HEAD
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
@@ -883,8 +779,6 @@ export function TalentRegistrationForm() {;
       }
       
       // Enhance profile if not already done
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       let finalSummary = "",
       let finalSkills = skillTags,
       
@@ -943,15 +837,9 @@ export function TalentRegistrationForm() {;
                 categorySkills.forEach(skill => {;
                   if (typeof skill === 'string' && skill) {;
                     aiSkills.push(skill);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }
                 })
               }
-<<<<<<< HEAD
             })
             // Create a unique set of skills
             finalSkills = [...new Set([...skillTags, ...aiSkills])]
@@ -967,7 +855,6 @@ export function TalentRegistrationForm() {;
       // Get user email for notification
       const { data: userData } = await supabase.auth.getUser()
       const userEmail = (userData as any).user?.email
-=======
             }),;
             // Create a unique set of skills;
             finalSkills = [...new Set([...skillTags, ...aiSkills])];
@@ -989,54 +876,29 @@ export function TalentRegistrationForm() {;
       const { data: userData } = await supabase.auth.getUser(),
       const userEmail = (userData as any).user?.email,
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Create the talent profile
       // In a real implementation, this would save to Supabase
       setTimeout(() => {
         toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
           title: 'Profile Created Successfully'
-=======
           title: 'Profile Created Successfully',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           description:
             'Your talent profile has been published and is now visible in the directory.'
         })
-=======
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
         }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         setIsSubmitting(false)
       }, 1500)
-=======
         
         setIsSubmitting(false)
       }, 1500),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // Here would be the actual code to save the profile to Supabase
       /*
       const { error } = await supabase
@@ -1052,22 +914,14 @@ export function TalentRegistrationForm() {;
           hourly_rate: Number(values.hourlyRate)
           availability_status: values.availability
           // Other fields would be handled here
-<<<<<<< HEAD
         })
       if (error) throw error
-=======
         }),
 
       if (error) throw error,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       */
 
     } catch (error: any) {
-<<<<<<< HEAD
       logErrorToProduction('Error creating profile:', { data: error })
       toast({
         title: 'Error Creating Profile'
@@ -1210,7 +1064,6 @@ export function TalentRegistrationForm() {;
                             alt='Avatar preview'
                             className='w-full h-full object-cover'
                             loading='lazy'                          />
-=======
       logErrorToProduction('Error creating profile:', { data: error }),
       toast({
         title: "Error Creating Profile",
@@ -1382,11 +1235,6 @@ export function TalentRegistrationForm() {;
                             className="w-full h-full object-cover"
                             loading="lazy"
                           />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -1394,7 +1242,6 @@ export function TalentRegistrationForm() {;
                         </div>
                       )}
                     </div>
-<<<<<<< HEAD
                     <label className='flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors'>
                       <Upload className='mr-2 h-4 w-4' />
                       <span>Upload Photo</span>
@@ -1424,7 +1271,6 @@ export function TalentRegistrationForm() {;
                       <FormLabel className='text-zion-slate-light'>
                         About Yourself
                       </FormLabel>
-=======
 
                     <label className="flex items-center justify-center px-4 py-2 rounded-md bg-zion-purple hover:bg-zion-purple-dark text-white cursor-pointer transition-colors">
                       <Upload className="mr-2 h-4 w-4" />
@@ -1452,11 +1298,6 @@ export function TalentRegistrationForm() {;
                   render={({ field }: { field: any }) => (
                     <FormItem>
                       <FormLabel className="text-zion-slate-light">About Yourself</FormLabel>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <FormControl>
                         <Textarea
                           className="h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white"
@@ -1464,17 +1305,12 @@ export function TalentRegistrationForm() {;
                           {...field}
                         />
                       </FormControl>
-<<<<<<< HEAD
                       <FormMessage className='text-red-400' />
                       <FormDescription className='text-zion-slate'>
                         {field.value?.length |0}/1000 characters
                       </FormDescription>
                     </FormItem>
                   )}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />
                 {/* AI Enhancement Option */}
                 <FormField
@@ -1485,16 +1321,12 @@ export function TalentRegistrationForm() {;
                       <div className='space-y-0.5'>
                         <FormLabel className='text-white flex items-center'>
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement
-=======
-<<<<<<< HEAD
                       <FormMessage className="text-red-400" />
                       <FormDescription className="text-zion-slate">
                         {field.value?.length || 0}/1000 characters
                       </FormDescription>
                     </FormItem>
                   )}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 />;
                 {/* AI Enhancement Option */}
                 <FormField;
@@ -1506,11 +1338,6 @@ export function TalentRegistrationForm() {;
                         <FormLabel className="text-white flex items-center">
                           <Sparkles className="w-4 h-4 mr-2 text-zion-purple" />
                           AI Profile Enhancement
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </FormLabel>
                         <FormDescription className="text-zion-slate-light">
                           Let AI help optimize your profile for better visibility and engagement
@@ -1518,34 +1345,22 @@ export function TalentRegistrationForm() {;
                       </div>
                       <FormControl>
                         <Switch
-<<<<<<< HEAD
                           aria-label='AI profile enhancement'
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className='data-[state=checked]:bg-zion-purple'                        />
-=======
                           aria-label="AI profile enhancement"
                           checked={field.value}
                           onCheckedChange={field.onChange}
                           className="data-[state=checked]:bg-zion-purple"
                         />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </FormControl>
                     </FormItem>
                   )}
                 />
-<<<<<<< HEAD
                 {form.watch('enhancedProfile') && (
                   <div className='flex justify-end'>
                     <Button
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       type='button'
                       variant='outline'
                       className='border-zion-purple text-zion-purple hover:bg-zion-purple/10'
@@ -1555,14 +1370,10 @@ export function TalentRegistrationForm() {;
                       {isGenerating
                         ? 'Generating...'
                         : 'Generate Enhanced Profile'}
-=======
-<<<<<<< HEAD
                 
                 {form.watch("enhancedProfile") && (
                   <div className="flex justify-end">
                     <Button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       type="button"
                       variant="outline"
                       className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
@@ -1571,11 +1382,6 @@ export function TalentRegistrationForm() {;
                     >
                       <Sparkles className="mr-2 h-4 w-4" />
                       {isGenerating ? "Generating..." : "Generate Enhanced Profile"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </Button>
                   </div>
                 )}
@@ -1588,7 +1394,6 @@ export function TalentRegistrationForm() {;
                         AI-Generated Content
                       </h4>
                       <Button
-<<<<<<< HEAD
                         type='button'
                         size='sm'
                         className='bg-zion-purple hover:bg-zion-purple-dark text-white'
@@ -1618,7 +1423,6 @@ export function TalentRegistrationForm() {;
                                 key={category}
                                 className='flex items-center gap-2'
                               >                                <Badge
-=======
                         type="button"
                         size="sm"
                         className="bg-zion-purple hover:bg-zion-purple-dark text-white"
@@ -1639,22 +1443,15 @@ export function TalentRegistrationForm() {;
                             {Object.entries(generatedContent.categorizedSkills).map(([category, skills]) => (;
                               <div key={category} className="flex items-center gap-2">;
                                 <Badge;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                   className={`w-fit ${getCategoryColor(category as CategoryType)}`}
                                 >
                                   {category}
-<<<<<<< HEAD
                                 </Badge>
                                 <div className='flex flex-wrap gap-1'>
                                   {skills.map((skill: string) => (
                                     <Badge
                                       key={skill}
                                       className='bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none'                                    >
-=======
                                 </Badge>;
                                 <div className="flex flex-wrap gap-1">;
                                   {skills.map((skill: string) => (;
@@ -1662,11 +1459,6 @@ export function TalentRegistrationForm() {;
                                       key={skill}
                                       className="bg-zion-purple/20 hover:bg-zion-purple/30 text-zion-purple border-none";
                                     >;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                       {skill}
                                     </Badge>
                                   ))}
@@ -1679,7 +1471,6 @@ export function TalentRegistrationForm() {;
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
               </div>
               <Separator className='bg-zion-blue-light/50' />
               {/* Skills and Availability */}
@@ -1697,7 +1488,6 @@ export function TalentRegistrationForm() {;
                           Skills
                         </FormLabel>
                         <div className='flex gap-2'>
-=======
               </div>;
               <Separator className="bg-zion-blue-light/50" />;
               {/* Skills and Availability */}
@@ -1712,11 +1502,6 @@ export function TalentRegistrationForm() {;
                       <FormItem>
                         <FormLabel className="text-zion-slate-light">Skills</FormLabel>
                         <div className="flex gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <Input
                               className="flex-1 bg-zion-blue border-zion-blue-light text-white"
@@ -1726,7 +1511,6 @@ export function TalentRegistrationForm() {;
                             />
                           </FormControl>
                           <Button
-<<<<<<< HEAD
                             type='button'
                             variant='outline'
                             className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
@@ -1760,7 +1544,6 @@ export function TalentRegistrationForm() {;
                       <p className='text-zion-slate text-sm italic'>
                         No skills added yet
                       </p>
-=======
                             type="button"
                             variant="outline"
                             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
@@ -1794,16 +1577,10 @@ export function TalentRegistrationForm() {;
                     ))}
                     {skillTags.length === 0 && (;
                       <p className="text-zion-slate text-sm italic">No skills added yet</p>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </div>
                 {/* Availability Section */}
-<<<<<<< HEAD
                 <div className='space-y-4'>
                   <h3 className='text-lg font-medium text-white'>
                     Availability
@@ -1862,7 +1639,6 @@ export function TalentRegistrationForm() {;
                                 className='text-white flex items-center gap-2'
                               >
                                 <div className='h-2 w-2 rounded-full bg-red-500'></div>
-=======
                 <div className="space-y-4">
                   <h3 className="text-lg font-medium text-white">Availability</h3>
                   <FormField
@@ -1914,11 +1690,6 @@ export function TalentRegistrationForm() {;
                               />
                               <label htmlFor="unavailable" className="text-white flex items-center gap-2">
                                 <div className="h-2 w-2 rounded-full bg-red-500"></div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                                 Currently Unavailable
                               </label>
                             </div>
@@ -1931,18 +1702,11 @@ export function TalentRegistrationForm() {;
                 </div>
               </div>
             </CardContent>
-<<<<<<< HEAD
             <CardFooter className='border-t border-zion-blue-light pt-6'>
               <div className='flex flex-col sm:flex-row gap-4 w-full sm:justify-between'>
-=======
 
             <CardFooter className="border-t border-zion-blue-light pt-6">
               <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Button
                   type="button"
                   variant="outline"
@@ -1950,24 +1714,17 @@ export function TalentRegistrationForm() {;
                 >
                   Save as Draft
                 </Button>
-<<<<<<< HEAD
                 <Button
                   type='submit'
                   className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'
                   disabled={isSubmitting}                >
                   {isSubmitting ? 'Creating Profile...' : 'Create Profile'}
-=======
                 <Button 
                   type="submit"
                   className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Profile"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </Button>
               </div>
             </CardFooter>
@@ -1977,12 +1734,8 @@ export function TalentRegistrationForm() {;
     </div>
   )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 //Generate enhanced profile with AI return
-=======
 //Generate enhanced profile with AI return;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }//Call the Supabase Edge Function const {
   data, error '
 }= await supabase.functions.invoke ('talent-profile-enhancer', {
@@ -2024,11 +1777,8 @@ if (Array.isArray (categorySkills) ) {
   await supabase.functions.invoke ('send-email', {
   body: {'"
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {
-<<<<<<< HEAD
   new Date () .getFullYear ()
-=======
   new Date () .getFullYear () 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }Zion Marketplace</p>
 }
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {
@@ -2145,15 +1895,8 @@ return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-
 }<div className="space-y-4"> <h3 className="text-lg font-medium text-white" >Availability</h3> <FormField <FormLabel className="text-zion-slate-light">Current Status</FormLabel> <FormControl> <div className="space-y-2"> <div className="flex items-center space-x-2" > <input /> <label htmlFor="available" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-green-500"></div> Available Now </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="limited" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className="flex items-center space-x-2" > <input /> <label htmlFor="unavailable" className="text-white flex items-center gap-2"> <div className="h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className="border-t border-zion-blue-light pt-6"> <div className="flex flex-col sm:flex-row gap-4 w-full sm:justify-between" > <Button type="button" variant="outline" className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
 }
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

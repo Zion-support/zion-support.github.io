@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -15,11 +12,8 @@ export function OnChainExport() {;
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react";
 import {
@@ -36,7 +30,6 @@ export function OnChainExport() {
   const { toast } = useToast();
   const { user } = useAuth();
 
-=======
 import { Button } from "@/components/ui/button",
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from "lucide-react",
 import {
@@ -52,9 +45,7 @@ export function OnChainExport() {
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
   const { toast } = useToast(),
   const { user } = useAuth(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleConnectWallet = async () => {
     try {
       // Check if wallet is available
@@ -68,27 +59,21 @@ export function OnChainExport() {
         return
       }
       // Request accounts
-<<<<<<< HEAD
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
       const address = accounts[0];
-=======
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Sign message to verify ownership
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`
       await ethereum.request({
         method: 'personal_sign'
         params: [address, message]
-<<<<<<< HEAD
       });
       setIsConnected(true);
-=======
       }),
       
       setIsConnected(true),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Wallet connected"
         description: `Wallet ${address.slice(0, 6)}...${address.slice(-4)} connected successfully`})
@@ -99,7 +84,6 @@ export function OnChainExport() {
         variant: "destructive"
       })
     }
-<<<<<<< HEAD
   }
   const handleExportTokens = async () => {
     setIsExporting(true);
@@ -108,7 +92,6 @@ export function OnChainExport() {
       // Simulate token export
       await new Promise(resolve => setTimeout(resolve, 2000));
       setExportStatus('success');
-=======
   },
   
   const handleExportTokens = async () => {
@@ -120,7 +103,6 @@ export function OnChainExport() {
       await new Promise(resolve => setTimeout(resolve, 2000)),
       
       setExportStatus('success'),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Tokens exported"
         description: "Your ZION$ tokens have been exported to your wallet"})
@@ -133,19 +115,13 @@ export function OnChainExport() {
       })
     } finally {
       setIsExporting(false)
-<<<<<<< HEAD
     };
   };
-=======
     }
-<<<<<<< HEAD
   }
 
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Card>
       <CardHeader>
@@ -201,18 +177,13 @@ export function OnChainExport() {
               Connect Wallet
             </Button>
           </div>
-<<<<<<< HEAD
         )}
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
 };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -346,8 +317,3 @@ export function OnChainExport() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

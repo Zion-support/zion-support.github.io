@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -14,7 +12,6 @@ import { cn  } from '@/lib/utils';
 import { fireEvent  } from '@/lib/analytics';
 import {logErrorToProduction} from '@/utils/productionLogger';
 const signupSchema = null;
-=======
 
   path: ["confirmPassword"]}),
 
@@ -46,8 +43,6 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from '@hookform/resolvers/zod',
@@ -442,7 +437,6 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
               <span className={cn('font-medium', 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
@@ -484,7 +478,6 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {;
             {errors.password.message}
           </p>
         )}
-<<<<<<< HEAD
       </div>
 
 
@@ -516,7 +509,6 @@ type SignupFormData = z.infer<typeof signupSchema>
               <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :}
 }
 
-=======
       </div>;
       {/* Confirm Password Field */}
       <div className="space-y-2">
@@ -585,8 +577,3 @@ type SignupFormData = z.infer<typeof signupSchema>
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

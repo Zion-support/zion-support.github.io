@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface Revolutionary2026MicroSaasService {
-=======
 export interface Revolutionary2026MicroSaasService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -19,7 +14,6 @@ export interface Revolutionary2026MicroSaasService {;
     email: string;
 
     address: string;
-<<<<<<< HEAD
   }
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] =
   [
@@ -65,9 +59,7 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
     }
   }
 ];
-=======
 export interface Revolutionary2026MicroSaasService {;
-=======
   };
 
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] =
@@ -100,8 +92,6 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
       "Transformative capabilities";
       "Advanced technology";
       "Innovation platform";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -130,27 +120,19 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
       "Transformative capabilities",
       "Advanced technology",
       "Innovation platform",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       "Future-ready solutions"
     ],
     link: "/services/2026-revolutionary-micro-saas",
     category: "Revolutionary 2026 Micro SAAS",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
-<<<<<<< HEAD
       mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",      address: "364 E Main St STE 1008 Middletown DE 19709"
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       address: "364 E Main St STE 1008 Middletown DE 19709"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

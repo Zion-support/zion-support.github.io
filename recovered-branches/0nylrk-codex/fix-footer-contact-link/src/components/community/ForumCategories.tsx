@@ -1,22 +1,14 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Link} from "react-router-dom";
 import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
 import {useAuth} from "@/hooks/useAuth";
 import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
 import {ForumCategory, ForumCategoryInfo} from "@/types/community";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import {
   MessageSquare;
   Briefcase;
@@ -24,7 +16,6 @@ import {
   FileText;
   Megaphone
 } from "@/components/icons",
-<<<<<<< HEAD
 import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
@@ -36,13 +27,8 @@ const categories: ForumCategoryInfo[] = [
 
     icon: "Briefcase"
   }
-=======
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -51,7 +37,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Briefcase"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
 
     id: "project-help"
@@ -60,7 +45,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "MessageSquare"
-<<<<<<< HEAD
   }
   {
 
@@ -71,7 +55,6 @@ const categories: ForumCategoryInfo[] = [
 
     icon: "Code"
   }
-=======
   },
   {
     id: "ai-tools",
@@ -80,7 +63,6 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false,
     icon: "Code"
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
 
     id: "feedback"
@@ -89,11 +71,8 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: false
 
     icon: "FileText"
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   {
 
     id: "announcements"
@@ -102,19 +81,15 @@ const categories: ForumCategoryInfo[] = [
     adminOnly: true
     icon: "Megaphone"
   }
-<<<<<<< HEAD
 ];
-=======
 ],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const iconMap = {
   Briefcase,
   MessageSquare,
   Code,
   FileText,
   Megaphone
-<<<<<<< HEAD
 }
 export const ForumCategories = () => {
   const { user } = useAuth();
@@ -122,24 +97,19 @@ export const ForumCategories = () => {
   const visibleCategories = categories.filter(
     category => !category.adminOnly |isAdmin
   );
-=======
 },
 
-<<<<<<< HEAD
 export const ForumCategories = () => {;
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-=======
 export const ForumCategories = () => {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const visibleCategories = categories.filter(
     category => !category.adminOnly || isAdmin
   ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="grid gap-4 md: grid-cols-2 lg:grid-cols-3">
       {visibleCategories.map((category) => {
@@ -159,14 +129,12 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
-<<<<<<< HEAD
       })}
     </div>
   )
 }
 export default ForumCategories;
 
-=======
 import { Link } from "react-router-dom",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -251,9 +219,4 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default ForumCategories;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

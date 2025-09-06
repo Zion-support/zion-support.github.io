@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
         description: "Please sign in to make a purchase."})
 import { useRouter } from 'next/router'
@@ -12,12 +10,9 @@ interface PaymentButtonProps {
   className?: string
   onPaymentInitiated?: () => void
 
-=======
         description: "Please sign in to make a purchase."}),
 import { useRouter } from 'next/router'
 import {logErrorToProduction} from '@/utils/productionLogger'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { cn } from "@/lib/utils",
@@ -27,38 +22,23 @@ import { supabase } from "@/integrations/supabase/client",
 import { Loader2 } from 'lucide-react'
 import { useRouter } from 'next/router',
 import {logErrorToProduction} from '@/utils/productionLogger',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PaymentButtonProps {
   amount: number,
   serviceId: string,
   providerId: string,
-<<<<<<< HEAD
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   buttonText?: string
   className?: string
   onPaymentInitiated?: () => void
-=======
   buttonText?: string,
   className?: string,
   onPaymentInitiated?: () => void,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   redirectUrl?: string
 }
 export function PaymentButton({
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   amount
   serviceId
   providerId
@@ -69,7 +49,6 @@ export function PaymentButton({
   const [isProcessing, setIsProcessing] = useState(false)
   const { isAuthenticated, user } = useAuth()
   const router = useRouter()
-<<<<<<< HEAD
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
@@ -96,9 +75,6 @@ export function PaymentButton({
       if (error) {
         throw error
       }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   amount,
   serviceId,
   providerId,
@@ -110,19 +86,12 @@ export function PaymentButton({
   const { isAuthenticated, user } = useAuth(),
   const router = useRouter(),
   
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
         title: "Authentication required",
         description: "Please sign in to make a purchase."}),
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`)
       router.push(`/auth/login?returnTo=${returnTo}`)
       return;
@@ -132,8 +101,6 @@ export function PaymentButton({
       setIsProcessing(true)
       if (onPaymentInitiated) {
         onPaymentInitiated()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       const returnTo = encodeURIComponent(`/checkout?sku=${serviceId}`),
       router.push(`/auth/login?returnTo=${returnTo}`),
       return
@@ -181,27 +148,17 @@ export function PaymentButton({;
       setIsProcessing(true),;
       if (onPaymentInitiated) {;
         onPaymentInitiated();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       // Call the create-checkout edge function
       const { data, error } = await supabase.functions.invoke("create-checkout", {
         body: {
-<<<<<<< HEAD
           amount,
           serviceId,
-=======
-<<<<<<< HEAD
           amount
           serviceId
-=======
           amount,
           serviceId,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           providerId,
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
@@ -211,7 +168,6 @@ export function PaymentButton({;
         throw error
       }
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Type assertion needed for mock Supabase client compatibility
       if ((data as any)?.url) {
         // Open Stripe checkout in a new tab
@@ -219,10 +175,7 @@ export function PaymentButton({;
       } else {
         throw new Error("No checkout URL returned")
       }
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     } catch (error) {
       logErrorToProduction('Payment error:', { data: error })
       toast({
@@ -234,7 +187,6 @@ export function PaymentButton({;
       setTimeout(() => {
         setIsProcessing(false)
       }, 1500)
-<<<<<<< HEAD
     }
   }
   return (
@@ -244,11 +196,7 @@ export function PaymentButton({;
       className={cn(;
         "relative min-w-[120px]";        className
       ),}
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       // Call the create-checkout edge function;
       const { data, error } = await supabase.functions.invoke("create-checkout", {;
@@ -292,11 +240,6 @@ export function PaymentButton({;
         "relative min-w-[120px]",
         className
       )}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     >
       {isProcessing ? (
         <>
@@ -306,7 +249,6 @@ export function PaymentButton({;
       ) : (
         buttonText
       )}
-<<<<<<< HEAD
     </Button>
   )
 }catch (error) {'
@@ -324,17 +266,8 @@ toast ({
 }</Button>)
 }'"  )
 }
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </Button>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

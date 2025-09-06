@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import {
 
   Select
@@ -9,15 +8,9 @@ import {
 } from "@/components/ui/select";
 
 import { SortFilterProps } from "@/types/filters";
-=======
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {SortFilterProps} from "@/types/filters";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {
   Select,
   SelectContent,
@@ -25,11 +18,6 @@ import {
   SelectTrigger,
   SelectValue} from "@/components/ui/select",
 import { SortFilterProps } from "@/types/filters",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
   return (
     <div className="mb-6">
@@ -49,16 +37,9 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {
         </SelectContent>
       </Select>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {;
   Select,;
   SelectContent,;
@@ -86,12 +67,7 @@ export function SortFilter({ sortOption, setSortOption }: SortFilterProps) {;
       </Select>;
     </div>;
   );
-<<<<<<< HEAD
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

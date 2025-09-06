@@ -1,7 +1,5 @@
 
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-<<<<<<< HEAD
 // Use the shared icon wrapper
 
 import {Bell} from '@/components/icons';
@@ -25,13 +23,8 @@ export const NotificationCenter: React.FC = () => {
   } = useNotifications();
   const [open, setOpen] = useState(false);
   const [error, setError] = useState<string | null>(null);
-=======
 import React, { useState, useEffect } from 'react',
-=======
-=======
 import React, { useState, useEffect } from 'react',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Use the shared icon wrapper
 import { Bell } from '@/components/icons',
 import { Button } from '@/components/ui/button',
@@ -49,13 +42,10 @@ export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
     unreadCount, 
-<<<<<<< HEAD
     markAsRead, ;
     markAllAsRead;
-=======
     markAsRead, 
     markAllAsRead,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     dismissNotification, 
     loading,
     filter,
@@ -66,7 +56,6 @@ export const NotificationCenter: React.FC = () => {
   const [open, setOpen] = useState(false),
   const [error, setError] = useState<string | null>(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Refresh notifications when popover opens
   useEffect(() => {
     if (open) {
@@ -78,13 +67,11 @@ export const NotificationCenter: React.FC = () => {
           console.error("Failed to fetch notifications:", err),
           setError("Couldn't load notifications"),
           toast.error("Failed to load notifications")
-<<<<<<< HEAD
         }
       }
       loadNotifications()
     }
   }, [open, fetchNotifications]);
-=======
 import React, { useState, useEffect } from 'react',;
 // Use the shared icon wrapper;
 import { Bell } from '@/components/icons',;
@@ -129,12 +116,7 @@ export const NotificationCenter: React.FC = () => {;
       loadNotifications();
     }
   }, [open, fetchNotifications]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleMarkAllAsRead = async () => {
     try {
       await markAllAsRead(),
@@ -143,19 +125,16 @@ export const NotificationCenter: React.FC = () => {;
       console.error("Failed to mark notifications as read:", err),
       toast.error("Failed to update notifications")
     }
-<<<<<<< HEAD
   }
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   }
-=======
   },
 
   const handleFilterChange = (newFilter: FilterType) => {
     setFilter(newFilter as any)
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
@@ -163,8 +142,6 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />
           {unreadCount > 0 && (
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">
-<<<<<<< HEAD
-=======
   }, [open, fetchNotifications]),;
   const handleMarkAllAsRead = async () => {;
     try {;
@@ -185,11 +162,6 @@ export const NotificationCenter: React.FC = () => {;
           <Bell className="h-5 w-5 text-zion-slate-light" />;
           {unreadCount > 0 && (;
             <span className="absolute -top-0.5 -right-0.5 flex h-5 w-5 items-center justify-center rounded-full bg-zion-cyan text-[10px] text-white font-medium">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {unreadCount > 9 ? '9+' : unreadCount}
             </span>
           )}
@@ -200,49 +172,33 @@ export const NotificationCenter: React.FC = () => {;
           unreadCount={unreadCount}
           onMarkAllAsRead={handleMarkAllAsRead}
         />
-<<<<<<< HEAD
         <NotificationFilter
           filter={filter as FilterType}
           onFilterChange={handleFilterChange}
         />
-<<<<<<< HEAD
         <NotificationList
-=======
         
-=======
         <NotificationFilter 
           filter={filter as FilterType} 
           onFilterChange={handleFilterChange} 
         />
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <NotificationList 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           loading={loading}
           error={error}
           notifications={filteredNotifications}
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
-<<<<<<< HEAD
         />
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
     </Popover>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         />;
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

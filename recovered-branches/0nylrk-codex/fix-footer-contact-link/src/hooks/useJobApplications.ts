@@ -1,24 +1,16 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState, useEffect} from "react";
 import {supabase} from "@/integrations/supabase/client";
 import {useAuth} from "@/hooks/useAuth";
 import {JobApplication, ApplicationStatus} from "@/types/jobs";
 import {toast} from "sonner";
-<<<<<<< HEAD
 export const useJobApplications = (jobId?: string) => {
-=======
 export const useJobApplications = (jobId?: string) => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-=======
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -29,16 +21,13 @@ export const useJobApplications = (jobId?: string) => {
   const [applications, setApplications] = useState<JobApplication[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const fetchApplications = async () => {
     if (!user) {
       setIsLoading(false),
       return
     }
     try {
-<<<<<<< HEAD
       setIsLoading(true);
       let query = supabase
         .from("job_applications")
@@ -48,7 +37,6 @@ export const useJobApplications = (jobId?: string) => {
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio)
         `)
         .order("created_at", { ascending: false });
-=======
       setIsLoading(true),
       
       let query = supabase
@@ -60,7 +48,6 @@ export const useJobApplications = (jobId?: string) => {
         `)
         .order("created_at", { ascending: false }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Filter by job if jobId is provided
       if (jobId) {
         query = query.eq("job_id", jobId)
@@ -76,33 +63,26 @@ export const useJobApplications = (jobId?: string) => {
           const { data: jobIds } = await supabase
             .from("jobs")
             .select("id")
-<<<<<<< HEAD
             .eq("client_id", user.id);
-=======
             .eq("client_id", user.id),
           
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           if (jobIds && jobIds.length > 0) {
             const jobIdArray = jobIds.map(job => job.id),
             query = query.in("job_id", jobIdArray)
           }
         }
       }
-<<<<<<< HEAD
       const { data, error: fetchError } = await query;
       if (fetchError) throw fetchError;
-=======
       
       const { data, error: fetchError } = await query,
       
       if (fetchError) throw fetchError,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Transform the data to match our application types
       const transformedData = data.map((app: any) => ({
         ...app,
         talent_profile: app.talent_profile ? {
-<<<<<<< HEAD
           ...app.talent_profile;
           full_name: app.talent_profile.display_name;
           profile_picture_url: app.talent_profile.avatar_url
@@ -114,7 +94,6 @@ export const useJobApplications = (jobId?: string) => {
     } catch (err: any) {
       console.error("Error fetching applications:", err);
       setError("Failed to fetch applications: " + err.message)
-=======
           ...app.talent_profile,
           full_name: app.talent_profile.display_name,
           profile_picture_url: app.talent_profile.avatar_url,
@@ -127,17 +106,13 @@ export const useJobApplications = (jobId?: string) => {
     } catch (err: any) {
       console.error("Error fetching applications:", err),
       setError("Failed to fetch applications: " + err.message),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast.error("Failed to fetch applications")
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const applyToJob = async (jobId: string, coverLetter: string, resumeId?: string) => {
     if (!user) {
       toast.error("You must be logged in to apply for jobs"),
@@ -147,7 +122,6 @@ export const useJobApplications = (jobId?: string) => {
       const { data, error } = await supabase
         .from("job_applications")
         .insert({
-<<<<<<< HEAD
           job_id: jobId;
           talent_id: user.id;
           resume_id: resumeId;
@@ -156,7 +130,6 @@ export const useJobApplications = (jobId?: string) => {
         })
         .select()
         .single();
-=======
           job_id: jobId,
           talent_id: user.id,
           resume_id: resumeId,
@@ -166,14 +139,11 @@ export const useJobApplications = (jobId?: string) => {
         .select()
         .single(),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (error) {
         if (error.code === '23505') { // Unique violation
           toast.error("You have already applied to this job")
         } else {
           throw error
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -221,16 +191,9 @@ export const useJobApplications = (jobId?: string) => {;
             const jobIdArray = jobIds.map(job => job.id),;
             query = query.in("job_id", jobIdArray);
           }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
         return false
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
       // Add the new application to the local state
       const newApplication = data as JobApplication;
       setApplications(prev => [newApplication, ...prev]);
@@ -242,9 +205,6 @@ export const useJobApplications = (jobId?: string) => {;
       return false
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       const { data, error: fetchError } = await query,;
       if (fetchError) throw fetchError,;
@@ -294,10 +254,6 @@ export const useJobApplications = (jobId?: string) => {;
         }
         return false;
       }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       // Add the new application to the local state
       const newApplication = data as JobApplication,
@@ -312,25 +268,20 @@ export const useJobApplications = (jobId?: string) => {;
     }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const updateApplicationStatus = async (applicationId: string, status: ApplicationStatus) => {
     try {
       const { error } = await supabase
         .from("job_applications")
         .update({ status })
-<<<<<<< HEAD
         .eq("id", applicationId);
       if (error) throw error;
-=======
         .eq("id", applicationId),
       
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update the local state
       setApplications(prev =>
         prev.map(app => app.id === applicationId ? { ...app, status } : app)
-<<<<<<< HEAD
       );
       toast.success(`Application status updated to ${status}`);
       return true
@@ -340,7 +291,6 @@ export const useJobApplications = (jobId?: string) => {;
       return false
     }
   }
-=======
       ),
       
       toast.success(`Application status updated to ${status}`),
@@ -352,7 +302,6 @@ export const useJobApplications = (jobId?: string) => {;
     }
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase
@@ -363,29 +312,22 @@ export const useJobApplications = (jobId?: string) => {;
         })
         .eq("id", applicationId)
         .is("viewed_at", null), // Only update if not already viewed
-<<<<<<< HEAD
       if (error) throw error;
-=======
       
       if (error) throw error,
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Update the local state
       setApplications(prev =>
         prev.map(app => app.id === applicationId ?
           { ...app, status: "viewed", viewed_at: new Date().toISOString() } : app
         )
-<<<<<<< HEAD
       );
-=======
       ),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return true
     } catch (err) {
       console.error("Error marking application as viewed:", err),
       return false
-<<<<<<< HEAD
     }
   }
   // Fetch applications when component mounts or dependencies change
@@ -402,13 +344,9 @@ export const useJobApplications = (jobId?: string) => {;
     applyToJob;
     updateApplicationStatus
     markApplicationAsViewed
-<<<<<<< HEAD
   }
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
       // Add the new application to the local state;
       const newApplication = data as JobApplication,;
@@ -477,10 +415,5 @@ export const useJobApplications = (jobId?: string) => {;
     applyToJob,;
     updateApplicationStatus;
     markApplicationAsViewed;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

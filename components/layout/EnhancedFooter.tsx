@@ -1,12 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Phone, Mail, MapPin, Globe;
@@ -16,10 +11,8 @@ import { Phone, Mail, MapPin, Globe;
  } from 'lucide-react';
 const contactInfo = null;
   ];
-=======
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   const company = null;
   ];
@@ -96,21 +89,18 @@ const socialLinks = [
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear()
   const services = [
-<<<<<<< HEAD
     { name: 'AI Services', href: '/ai-services' }
     { name: 'IT Services', href: '/it-services' }
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' }
     { name: 'Micro SaaS', href: '/micro-saas' }
     { name: 'Security', href: '/security' }
     { name: 'Case Studies', href: '/case-studies' }
-=======
     { name: 'AI Services', href: '/ai-services' },
     { name: 'IT Services', href: '/it-services' },
     { name: 'Blockchain Solutions', href: '/blockchain-solutions' },
     { name: 'Micro SaaS', href: '/micro-saas' },;
     { name: 'Security', href: '/security' },;
     { name: 'Case Studies', href: '/case-studies' },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   const company = [
     { name: 'About Us', href: '/about' }
@@ -131,17 +121,11 @@ export default function EnhancedFooter() {
     { name: 'GitHub', href: 'https://github.com/zion-tech-group', icon: Github }
 
   ];
-<<<<<<< HEAD
-=======
-=======
 
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear();
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
-<<<<<<< HEAD
     <footer className;
                   return (
                     <a
@@ -173,7 +157,6 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
               Get exclusive insights into the latest AI, quantum computing, and IT innovations. 
               Be the first to know about new services and breakthrough technologies.
-=======
     <footer className="bg-gray-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -186,7 +169,6 @@ const EnhancedFooter: React.FC = () => {
             <p className="text-gray-300 mb-6">
               Leading technology solutions provider helping businesses transform
               their digital presence.
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex space-x-4">
               <a
@@ -328,19 +310,10 @@ const EnhancedFooter: React.FC = () => {
       </div>
     </footer>
   );
-<<<<<<< HEAD
 }
 export default EnhancedFooter;
-=======
 };
 
 export default EnhancedFooter;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

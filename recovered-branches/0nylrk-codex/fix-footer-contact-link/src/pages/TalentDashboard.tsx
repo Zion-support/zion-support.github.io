@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -23,8 +20,6 @@ import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviews
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -41,24 +36,17 @@ import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { TalentOnboardingSteps } from "@/components/onboarding/TalentOnboardingSteps",
 import { MyApplications } from "@/components/jobs/MyApplications",
-<<<<<<< HEAD
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner";
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard";
 function TalentDashboardContent() {
   const { user } = useAuth();
   const [activeTab, setActiveTab] = useState("job-matches");
-=======
 import { ProjectOfferBanner } from "@/components/projects/ProjectOfferBanner",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 function TalentDashboardContent() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState("job-matches"),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO
@@ -135,8 +123,6 @@ function TalentDashboardContent() {
                 </div>
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
             
 import { useState, useEffect } from "react",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -235,11 +221,6 @@ function TalentDashboardContent() {;
                 </div>;
               </CardContent>;
             </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* New Onboarding Progress Tracker */}
             <TalentOnboardingSteps />
             {/* Upcoming Interviews Card */}
@@ -315,7 +296,6 @@ function TalentDashboardContent() {;
     </>
   )
 }
-<<<<<<< HEAD
 export default function TalentDashboard() {
   return (
     <ProtectedRoute>
@@ -323,8 +303,6 @@ export default function TalentDashboard() {
     </ProtectedRoute>
   )
 }
-<<<<<<< HEAD
-=======
 ;
 export default function TalentDashboard() {;
   return (;
@@ -334,7 +312,4 @@ export default function TalentDashboard() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

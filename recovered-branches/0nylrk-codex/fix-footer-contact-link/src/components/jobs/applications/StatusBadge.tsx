@@ -1,13 +1,9 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import { ApplicationStatus } from "@/types/jobs";
 import { Badge } from "@/components/ui/badge";
 interface StatusBadgeProps {
   status: ApplicationStatus;
 }
-<<<<<<< HEAD
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
     case "new": return <Badge variant;
@@ -15,7 +11,6 @@ export function StatusBadge({ status }: StatusBadgeProps) {
       return <Badge variant="outline">{status}</Badge>;
   }
 }
-=======
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Badge } from "@/components/ui/badge",
@@ -25,12 +20,9 @@ interface StatusBadgeProps {
 
 export function StatusBadge({ status }: StatusBadgeProps) {
   switch (status) {
-<<<<<<< HEAD
     case "new":;
       return <Badge variant="secondary">Submitted</Badge>;
-=======
     case "new": return <Badge variant="secondary">Submitted</Badge>,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     case "viewed":
       return <Badge variant="outline">Viewed</Badge>,
     case "shortlisted":
@@ -42,14 +34,9 @@ export function StatusBadge({ status }: StatusBadgeProps) {
     case "rejected":
       return <Badge className="bg-red-100 text-red-800">Not Selected</Badge>,
     default:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       return <Badge variant="outline">{status}</Badge>;
   }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return <Badge variant="outline">{status}</Badge>
 import { ApplicationStatus } from "@/types/jobs",;
 import { Badge } from "@/components/ui/badge",;
@@ -75,8 +62,3 @@ export function StatusBadge({ status }: StatusBadgeProps) {;
   }
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

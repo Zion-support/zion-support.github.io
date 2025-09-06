@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from 'react';
 import { Dialog;
   DialogContent;
@@ -8,8 +7,6 @@ import { Dialog;
 import { AIEnhancementPanel  } from './AIEnhancementPanel';
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer';
 interface AIEnhancementDialogProps {
-<<<<<<< HEAD
-=======
   title: string,
   isOpen: boolean,
   onClose: () => void,
@@ -24,8 +21,6 @@ export function AIEnhancementDialog({;
   onClose;
   onApply;
   defaultOptions;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from 'react',;
 import {;
   Dialog,;
@@ -42,7 +37,6 @@ interface AIEnhancementDialogProps {;
   defaultOptions: AIEnhancementOptions,;
   initialContent?: string;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   title: string
   isOpen: boolean
@@ -58,18 +52,14 @@ export function AIEnhancementDialog({
   onClose,
   onApply,
   defaultOptions,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   initialContent
 }: AIEnhancementDialogProps) {
 
   const handleApply = (content: string) => {
     onApply(content)
     onClose()
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>

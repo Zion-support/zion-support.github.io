@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { createContext, useContext, useEffect, useState } from "react";
 type Theme = "dark" | "light" | "system";
@@ -62,7 +61,6 @@ export const useTheme = () => {const context = useContext(ThemeProviderContext);
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 }
-=======
 "use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
@@ -138,4 +136,3 @@ export const useTheme = () => {;
     throw new Error("useTheme must be used within a ThemeProvider");
   return context;
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

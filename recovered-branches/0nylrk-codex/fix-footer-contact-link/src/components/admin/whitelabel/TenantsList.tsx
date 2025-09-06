@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
@@ -112,7 +111,6 @@ export function TenantsList() {
       });
     }
   }
-=======
 import React, { useState, useEffect } from "react";
 import { supabase } from "@/integrations/supabase/client";
 import {
@@ -121,26 +119,17 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-<<<<<<< HEAD
   TableRow,;
-=======
   TableRow,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-<<<<<<< HEAD
   DropdownMenuTrigger,
-=======
-<<<<<<< HEAD
 DropdownMenuTrigger,;
-=======
   DropdownMenuTrigger,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
 import { toast } from "@/hooks/use-toast";
@@ -152,7 +141,6 @@ import {
   Power,
   PowerOff,
   Users,
-<<<<<<< HEAD
   RefreshCcw,;
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -160,8 +148,6 @@ export function TenantsList() {;
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
-<<<<<<< HEAD
-=======
   useEffect(() => {
     loadTenants();
   }, []);
@@ -249,7 +235,6 @@ export function TenantsList() {;
       });
     }
   };
-=======
   RefreshCcw,
 } from "@/components/icons";
 import { format } from "date-fns";
@@ -257,7 +242,6 @@ export function TenantsList() {
   const [tenants, setTenants] = useState<WhitelabelTenant[]>([]);
   const [isLoading, setIsLoading] = useState(true);
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react',;
 import { supabase } from '@/integrations/supabase/client',;
 import {;
@@ -350,11 +334,6 @@ export function TenantsList() {;
         description: error.message});
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <div className="space-y-4">
@@ -484,17 +463,10 @@ export function TenantsList() {;
           </Table>
         </div>
       )}
-<<<<<<< HEAD
     </div>
   );
 }
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

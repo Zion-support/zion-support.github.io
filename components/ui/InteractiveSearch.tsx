@@ -2,13 +2,10 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 
 export default function InteractiveSearch({
-<<<<<<< HEAD
   placeholder = 'Search talent, skills, or jobs...'
 }: {
-=======
   placeholder = 'Search talent, skills, or jobs...',
 }: {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   placeholder?: string;
 }) {
   const [value, setValue] = useState('');
@@ -40,7 +37,6 @@ export default function InteractiveSearch({
         </button>
       )}
     </motion.div>
-<<<<<<< HEAD
 );
 }
 import React from "react";
@@ -69,15 +65,9 @@ export default function InteractiveSearch() {export default function Interactive
         </button>;
       </div>;
     </form>;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   );
 }}
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   );
 }}
 
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

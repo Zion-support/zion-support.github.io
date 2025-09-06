@@ -1,16 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import { Sparkles, Loader2  } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-=======
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -21,17 +17,13 @@ interface AIEnhancementButtonProps {
   buttonText?: string;
   className?: string
 }
-<<<<<<< HEAD
 export function AIEnhancementButton({
-=======
 
 export function AIEnhancementButton({;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-<<<<<<< HEAD
 
   buttonText = "Enhance with AI";
   className
@@ -54,10 +46,7 @@ export function AIEnhancementButton({;
     }
   }
 
-=======
   buttonText = "Enhance with AI";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -77,7 +66,6 @@ export function AIEnhancementButton({
   context,
   onEnhanced,
   buttonText = "Enhance with AI",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   className
 }: AIEnhancementButtonProps) {
   const { enhanceContent, isEnhancing } = useResumeEnhancer(),
@@ -88,9 +76,6 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     
     setError(null);
     const enhancedContent = await enhanceContent(
@@ -103,8 +88,6 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent)
     }
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -116,12 +99,7 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Button
       type="button"
@@ -139,9 +117,6 @@ export function AIEnhancementButton({
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

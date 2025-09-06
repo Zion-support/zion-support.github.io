@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const SAMPLE_QUERIES = [
   'React developers under $50/hr',
   'Part-time DevOps jobs in LATAM',
@@ -32,7 +27,6 @@ const SKILLS = [
   'PostgreSQL',
   'Rust'
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
@@ -48,12 +42,8 @@ const SAMPLE_QUERIES = [
   "DevOps engineers with Kubernetes"
 ];
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
-<<<<<<< HEAD
   if (req.method !== "GET") {
-=======
   if (req.method !== "GET") {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     res.setHeader("Allow", "GET");
     return res.status(405).json({ error: "Method not allowed" });
 
@@ -67,11 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     s.toLowerCase().includes(query)
   ).slice(0, 5);
   return res.status(200).json({ suggestions });
-<<<<<<< HEAD
-=======
-=======
 }
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -84,7 +70,6 @@ const SKILLS = [;
 ],;
 export default function handler(req, res) {
   try {
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const q = ((req.query.q as string) || '').toLowerCase();
   const suggestions = new Set<string>();
 
@@ -96,10 +81,7 @@ export default function handler(req, res) {
   }
 
   res.status(200).json({ ok: true, suggestions: Array.from(suggestions).slice(0, 8) });
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -113,5 +95,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

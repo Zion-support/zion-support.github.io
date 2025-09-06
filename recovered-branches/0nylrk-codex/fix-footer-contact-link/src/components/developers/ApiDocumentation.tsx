@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {BookOpen, Code, Copy, Terminal} from "lucide-react";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -9,24 +6,15 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Alert, AlertDescription} from "@/components/ui/alert";
 import {Badge} from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Alert, AlertDescription } from "@/components/ui/alert",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
-=======
 import { Badge } from "@/components/ui/badge",
 import CodeBlock from "./CodeBlock",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApiDocumentation() {
   return (
 
@@ -75,40 +63,29 @@ export function ApiDocumentation() {
   method: 'GET'
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
   };
 });
-=======
   }
-<<<<<<< HEAD
 });
 const data = await response.json();
 console.log(data),`;
-=======
 }),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
 const data = await response.json(),
 // // // console.log(data),`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
 }
 response = requests.get(
-<<<<<<< HEAD
     'https: //api.ziontechgroup.com/v1/jobs'
     params={'limit': 10, 'category': 'development'}
-=======
     'https: //api.ziontechgroup.com/v1/jobs',;
     params={'limit': 10, 'category': 'development'};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     headers=headers
 )
 data = response.json()
 print(data)`
-=======
 import { useState } from "react",;
 import { BookOpen, Code, Copy, Terminal } from "lucide-react",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -179,34 +156,25 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
               responseExamples={{
                 success: `{
   "data": [
     {
-<<<<<<< HEAD
       "id": "job_abc123";
       "title": "Senior React Developer";
       "description": "We need an experienced React developer...";
       "category": "development"
       "skills": ["react", "typescript", "node.js"];
-=======
       "id": "job_abc123",
       "title": "Senior React Developer",
       "description": "We need an experienced React developer...",
       "category": "development",
       "skills": ["react", "typescript", "node.js"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       "budget": {
         "min": 5000,
         "max": 10000,
         "currency": "USD"
-<<<<<<< HEAD
       }
       "status": "active";
       "client_id": "user_xyz789";
@@ -214,23 +182,15 @@ print(data)`;
     }
     // More jobs...
   ];
-=======
       },
       "status": "active",
       "client_id": "user_xyz789",
       "created_at": "2025-05-15T10:30:00Z"
     },
     // More jobs...
-<<<<<<< HEAD
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   ];
-=======
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   "meta": {
     "total": 42,
     "page": 1,
@@ -257,20 +217,16 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/jobs/\${jobId}\`
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-<<<<<<< HEAD
 });
 const data = await response.json();
 console.log(data),`;
-=======
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
 }
 job_id = 'job_abc123'
 response = requests.get(;
@@ -279,7 +235,6 @@ response = requests.get(;
 )
 data = response.json()
 print(data)`
-=======
             />;
             <EndpointSection;
               method="GET";
@@ -314,45 +269,34 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
               responseExamples={{
                 success: `{
   "data": {
-<<<<<<< HEAD
     "id": "job_abc123";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
     "skills": ["react", "typescript", "node.js"];
-=======
     "id": "job_abc123",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
-<<<<<<< HEAD
     }
     "status": "active";
     "client_id": "user_xyz789";
     "created_at": "2025-05-15T10: 30:00Z";
     "deadline": "2025-06-30T23:59:59Z"
-=======
     },
     "status": "active",
     "client_id": "user_xyz789",
     "created_at": "2025-05-15T10:30:00Z",
     "deadline": "2025-06-30T23:59:59Z",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "application_count": 12
   }
 }`
@@ -378,37 +322,28 @@ print(data)`;
   -H "Authorization: Bearer YOUR_API_KEY" \\
   -H "Content-Type: application/json" \\
   -d '{
-<<<<<<< HEAD
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
     "skills": ["react", "typescript", "node.js"];
-=======
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
-<<<<<<< HEAD
     }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "deadline": "2025-06-30T23:59:59Z"
   }'`,
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/jobs', {
   method: 'POST'
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   body: JSON.stringify({
     title: 'Senior React Developer'
     description: 'We need an experienced React developer...'
@@ -418,14 +353,12 @@ print(data)`;
       min: 5000
       max: 10000
       currency: 'USD'
-<<<<<<< HEAD
     }
     deadline: '2025-06-30T23:59:59Z'
   })
 });
 const data = await response.json();
 console.log(data),`;
-=======
     },
     deadline: '2025-06-30T23:59:59Z'
   })
@@ -433,19 +366,14 @@ console.log(data),`;
 
 const data = await response.json(),
 // // // console.log(data),`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 python: `import requests
 import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 payload = {
-=======
 
 payload = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'title': 'Senior React Developerdescription': 'We need an experienced React developer...category': 'developmentskills': ['reacttypescriptnode.js'];
     'budget': {
         'min': 5000;
@@ -461,7 +389,6 @@ response = requests.post(
 )
 data = response.json()
 print(data)`
-=======
             />;
             <EndpointSection;
               method="POST";
@@ -537,43 +464,32 @@ response = requests.post(;
 );
 data = response.json();
 print(data)`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
               responseExamples={{
                 success: `{
   "data": {
-<<<<<<< HEAD
     "id": "job_def456";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
     "category": "development"
     "skills": ["react", "typescript", "node.js"];
-=======
     "id": "job_def456",
     "title": "Senior React Developer",
     "description": "We need an experienced React developer...",
     "category": "development",
     "skills": ["react", "typescript", "node.js"],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "budget": {
       "min": 5000,
       "max": 10000,
       "currency": "USD"
-<<<<<<< HEAD
     }
     "status": "new";
     "client_id": "user_xyz789";
     "created_at": "2025-05-16T14: 22:10Z"
-=======
     },
     "status": "new",
     "client_id": "user_xyz789",
     "created_at": "2025-05-16T14:22:10Z",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "deadline": "2025-06-30T23:59:59Z"
   }
 }`
@@ -601,34 +517,26 @@ print(data)`;
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-<<<<<<< HEAD
 });
 const data = await response.json();
 console.log(data),`;
-=======
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
 }
 response = requests.get(
-<<<<<<< HEAD
     'https: //api.ziontechgroup.com/v1/talent'
     params={'skills': 'react,typescript'}
-=======
     'https: //api.ziontechgroup.com/v1/talent',;
     params={'skills': 'react,typescript'};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     headers=headers
 )
 data = response.json()
 print(data)`
-=======
             />;
           </TabsContent>;
           <TabsContent value="talent" className="space-y-6">;
@@ -667,17 +575,11 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
               responseExamples={{
                 success: `{
   "data": [
     {
-<<<<<<< HEAD
       "id": "talent_abc123";
       "display_name": "Jane Smith";
       "headline": "Senior Frontend Developer"
@@ -688,7 +590,6 @@ print(data)`;
     }
     // More talent profiles...
   ];
-=======
       "id": "talent_abc123",
       "display_name": "Jane Smith",
       "headline": "Senior Frontend Developer",
@@ -698,16 +599,9 @@ print(data)`;
       "rating_count": 15
     },
     // More talent profiles...
-<<<<<<< HEAD
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   ];
-=======
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   "meta": {
     "total": 28,
     "page": 1,
@@ -734,20 +628,16 @@ const response = await fetch(\`https://api.ziontechgroup.com/v1/talent/\${talent
   headers: {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
   }
-<<<<<<< HEAD
 });
 const data = await response.json();
 console.log(data),`;
-=======
 }),
 
 const data = await response.json(),
 // // // console.log(data),`,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 python: `import requests
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
-<<<<<<< HEAD
 }
 talent_id = 'talent_abc123'
 response = requests.get(;
@@ -756,7 +646,6 @@ response = requests.get(;
 )
 data = response.json()
 print(data)`
-=======
             />;
             <EndpointSection;
               method="GET";
@@ -791,16 +680,10 @@ response = requests.get(;
 );
 data = response.json();
 print(data)`;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
               responseExamples={{
                 success: `{
   "data": {
-<<<<<<< HEAD
     "id": "talent_abc123";
     "display_name": "Jane Smith";
     "headline": "Senior Frontend Developer";
@@ -809,7 +692,6 @@ print(data)`;
     "availability": "available";
     "average_rating": 4.8;
     "rating_count": 15;
-=======
     "id": "talent_abc123",
     "display_name": "Jane Smith",
     "headline": "Senior Frontend Developer",
@@ -818,7 +700,6 @@ print(data)`;
     "availability": "available",
     "average_rating": 4.8,
     "rating_count": 15,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "portfolio": [
       {
         "id": "proj_123",
@@ -830,28 +711,19 @@ print(data)`;
     ],
     "certifications": [
       {
-<<<<<<< HEAD
         "name": "AWS Certified Developer";
         "issuing_organization": "Amazon Web Services";
         "issue_date": "2024-01-15"
       }
     ]
-=======
         "name": "AWS Certified Developer",
         "issuing_organization": "Amazon Web Services",
         "issue_date": "2024-01-15"
       }
     ];
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }`
               }}
-<<<<<<< HEAD
-=======
             />
           </TabsContent>
           
@@ -1405,11 +1277,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {;
   }
 }`
               }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
           </TabsContent>
           <TabsContent value="quotes" className="space-y-6">
@@ -1468,15 +1335,9 @@ import json
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 payload = {
-=======
 payload = {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     'talent_id': 'talent_abc123project_name': 'E-commerce Website Redesignproject_summary': 'Redesign our outdated e-commerce website with modern UIproject_description': 'Our current website is 5 years old and needs a complete overhaul...timeline': '2-3 monthsbudget_min': 8000;
     'budget_max': 12000;
     'requester_name': 'John Doerequester_email': 'john@example.com'
@@ -1536,19 +1397,16 @@ console.log(data),`;
 headers = {
     'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'
 }
-<<<<<<< HEAD
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes'
     headers=headers
 )
-=======
 
 response = requests.get(
     'https: //api.ziontechgroup.com/v1/quotes',
     headers=headers
 )
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 data = response.json()
 print(data)`
               }}
@@ -1602,10 +1460,7 @@ function verifyWebhookSignature(payload, signature, secret) {
     Buffer.from(expectedSignature)
   )
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 // Example usage in Express.js
 app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   const signature = req.headers['x-zion-signature'];
@@ -1614,10 +1469,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   if (!verifyWebhookSignature(payload, signature, webhookSecret)) {
     return res.status(401).send('Invalid signature')
   }
-<<<<<<< HEAD
-=======
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Process the webhook event
   const event = JSON.parse(payload);
   console.log('Received valid webhook:', event);
@@ -1740,11 +1592,8 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "message": "The request was invalid";
     "details": [
       {
-<<<<<<< HEAD
         "field": "project_name"
-=======
         "field": "project_name",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         "message": "Project name is required"
       }
     ]
@@ -1773,7 +1622,6 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
   )
 }
 // Helper component for API endpoint documentation
-<<<<<<< HEAD
 function EndpointSection({
   method
   endpoint
@@ -1785,7 +1633,6 @@ function EndpointSection({
 }) {
   const [activeTab, setActiveTab] = useState("curl");
 
-=======
 function EndpointSection({ 
   method, 
   endpoint, 
@@ -1797,7 +1644,6 @@ function EndpointSection({
 }) {
   const [activeTab, setActiveTab] = useState("curl"),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="border border-zinc-800 rounded-md">
       <div className="p-4">
@@ -1812,8 +1658,6 @@ function EndpointSection({
                 : method === 'PUT'
                 ? "border-yellow-500 text-yellow-400 font-mono"
                 : "border-red-500 text-red-400 font-mono"
-<<<<<<< HEAD
-=======
                 language="json";
               />;
               <h4 className="text-md font-semibold mt-6 mb-2">Rate Limiting</h4>;
@@ -1862,11 +1706,6 @@ function EndpointSection({;
                 : method === 'PUT';
                 ? "border-yellow-500 text-yellow-400 font-mono";
                 : "border-red-500 text-red-400 font-mono";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             }
           >
             {method}
@@ -1906,10 +1745,7 @@ function EndpointSection({;
           </table>
         </div>
       )}
-<<<<<<< HEAD
-=======
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {codeExamples && (
         <div className="border-t border-zinc-800 p-4">
           <div className="flex items-center mb-2">
@@ -1945,22 +1781,12 @@ function EndpointSection({;
           />
         </div>
       )}
-<<<<<<< HEAD
     </div>
   )
 }
-<<<<<<< HEAD
-=======
 
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     </div>;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

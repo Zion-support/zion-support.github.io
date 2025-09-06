@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 import { Link } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
@@ -16,7 +15,6 @@ import {
 export function UserMenu() {
   const { user, logout } = useAuth();
   const { toast } = useToast();
-=======
 import { Link } from "react-router-dom";
 import { useAuth } from "@/hooks/useAuth";
 import { useToast } from "@/hooks/use-toast";
@@ -30,11 +28,9 @@ import {
   DropdownMenuTrigger,;
 } from "@/components/ui/dropdown-menu";
 
-<<<<<<< HEAD
 export function UserMenu() {;
   const { user, logout } = useAuth();
   const { toast } = useToast();
-=======
 import { Link } from "react-router-dom",
 import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
@@ -51,28 +47,23 @@ import {
 export function UserMenu() {
   const { user, logout } = useAuth(),
   const { toast } = useToast(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSignOut = async () => {
     try {
       await logout()
     } catch (error) {
       toast({
-<<<<<<< HEAD
         title: "Error signing out"
         description: "There was an error signing you out. Please try again."
         variant: "destructive"
       });
     }
   }
-=======
         title: "Error signing out",
         description: "There was an error signing you out. Please try again.",
         variant: "destructive"})
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (!user) {
     return (
@@ -92,7 +83,6 @@ export function UserMenu() {
       <DropdownMenuTrigger asChild>
         <Button variant="ghost" className="h-8 w-8 rounded-full">
           <Avatar className="h-8 w-8">
-<<<<<<< HEAD
             <AvatarImage
               src={user.avatarUrl |""}
               alt={user.displayName |"User Avatar"}
@@ -100,27 +90,22 @@ export function UserMenu() {
             <AvatarFallback>
               {user.displayName?.charAt(0).toUpperCase() |"U"}
             </AvatarFallback>
-=======
             <AvatarImage src={user.avatarUrl || ""} alt={user.displayName || "User Avatar"} />
             <AvatarFallback>{user.displayName?.charAt(0).toUpperCase() || "U"}</AvatarFallback>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           </Avatar>
           <span className="sr-only">Open user menu</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <div className="grid gap-2 px-2 py-2">
-<<<<<<< HEAD
           <div className="text-sm font-medium leading-none">
             {user.displayName |"User"}
           </div>
           <div className="text-muted-foreground text-xs leading-none">
             {user.email}
           </div>
-=======
           <div className="text-sm font-medium leading-none">{user.displayName || "User"}</div>
           <div className="text-muted-foreground text-xs leading-none">{user.email}</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
@@ -139,10 +124,8 @@ export function UserMenu() {
         <DropdownMenuItem onClick={handleSignOut}>Sign Out</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-<<<<<<< HEAD
   );
 }
-=======
   )
 import { Link } from "react-router-dom",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -219,8 +202,3 @@ export function UserMenu() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

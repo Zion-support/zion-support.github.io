@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 /* eslint-env node */
 module.exports = {
-<<<<<<< HEAD
-=======
   env: {
     node: true,
     es2021: true
@@ -14,26 +7,17 @@ module.exports = {
   extends: ["next/core-web-vitals", "plugin:@typescript-eslint/recommended"],
   parser: "@typescript-eslint/parser",
   plugins: ["@typescript-eslint"],
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
 /* eslint-env node */
 module.exports = {
-<<<<<<< HEAD
   extends: [
     'next/core-web-vitals',
     '@typescript-eslint/recommended'
   ],
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
 export default {
   extends: ['next/core-web-vitals', 'next/typescript'],
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
+ursor/add-new-services-and-deploy-updates-0462
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
@@ -50,15 +34,11 @@ export default {
     '@typescript-eslint/no-unused-vars': 'warn',
     'no-console': 'off',
     'no-undef': 'off',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     'react/no-unescaped-entities': 'off',
     '@typescript-eslint/no-explicit-any': 'warn'
   },
   env: {
-=======
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/fix-syntax-push-and-merge-to-main-40de
   "extends": [
     "next/core-web-vitals",
     "next/typescript"
@@ -134,17 +114,13 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
->>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
+ursor/add-new-services-and-deploy-updates-0462
+ursor/fix-syntax-push-and-merge-to-main-40de
     node: true,
     browser: true,
     es2021: true
   },
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+ursor/integrate-build-improve-and-re-verify-8f7d
   env: {
     node: true,
     es2021: true
@@ -162,12 +138,8 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
   ignorePatterns: [
     'node_modules/',
     '.next/',
@@ -324,8 +296,6 @@ module.exports = {
     'clean-conflicts.js',
     'commit-and-push.js'
   ]
-<<<<<<< HEAD
-=======
   parserOptions: {
     ecmaVersion: 2020,
     sourceType: 'module',
@@ -333,7 +303,7 @@ module.exports = {
       jsx: true
     }
   extends: ['next/core-web-vitals'],
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
   rules: {
     "@typescript-eslint/no-unused-vars": "off",
     "@typescript-eslint/no-explicit-any": "off",
@@ -344,7 +314,6 @@ module.exports = {
     "@next/next/no-html-link-for-pages": "off",
     "@next/next/no-img-element": "off"
   },
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
   ignorePatterns: [
     "node_modules/",
     ".next/",
@@ -500,41 +469,21 @@ module.exports = {
     "build-verification.js",
     "check-syntax.js",
     "clean-conflicts.js",
-<<<<<<< HEAD
     "commit-and-push.js"
   ]
-<<<<<<< HEAD
-<<<<<<< HEAD
 };
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
     "commit-and-push.js",
   ],
 };
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 };
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 };
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
     "commit-and-push.js"
   ]
 };
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 };
 ;
 ;
@@ -569,8 +518,3 @@ module.exports = {;
     'automation/netlify/src/apps/';
   ];
 },;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

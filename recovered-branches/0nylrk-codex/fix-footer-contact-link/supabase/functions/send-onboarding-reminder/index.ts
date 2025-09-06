@@ -1,45 +1,32 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
-=======
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",
 import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers":
-<<<<<<< HEAD
     "authorization, x-client-info, apikey, content-type"}
 interface ReminderPayload {
   user_id: string;
   missing_milestone: string
-=======
     "authorization, x-client-info, apikey, content-type"},
 
 interface ReminderPayload {
   user_id: string,
   missing_milestone: string,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   role: string
 }
 serve(async (req: Request) => {
@@ -53,19 +40,16 @@ serve(async (req: Request) => {
     const supabase = createClient(
       supabaseUrl,
       supabaseServiceKey
-<<<<<<< HEAD
     );
     const payload = await req.json() as ReminderPayload;
     const { user_id, missing_milestone, role } = payload;
     if (!user_id |!missing_milestone |!role) {
-=======
     ),
     
     const payload = await req.json() as ReminderPayload,
     const { user_id, missing_milestone, role } = payload,
     
     if (!user_id || !missing_milestone || !role) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return new Response(
         JSON.stringify({ error: "Missing required fields" }),
         {
@@ -78,14 +62,11 @@ serve(async (req: Request) => {
       .from("profiles")
       .select("email, display_name")
       .eq("id", user_id)
-<<<<<<< HEAD
       .single();
     if (userError |!userData) {
-=======
       .single(),
     
     if (userError || !userData) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       return new Response(
         JSON.stringify({ error: "User not found", details: userError }),
         {
@@ -96,7 +77,6 @@ serve(async (req: Request) => {
     // Create message based on role and missing milestone
     const milestoneMessages = {
       talent: {
-<<<<<<< HEAD
         profile_completed: "complete your profile to get discovered by clients";
         skills_added: "add your skills to get better job matches"
         availability_set: "set your availability to help clients know when you can work"}
@@ -113,7 +93,6 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>";
       to: userData.email;
       subject: "Complete your next step on Zion AI Marketplace"
-=======
         profile_completed: "complete your profile to get discovered by clients",
         skills_added: "add your skills to get better job matches",
         availability_set: "set your availability to help clients know when you can work"},
@@ -132,7 +111,6 @@ serve(async (req: Request) => {
       from: "Zion AI Marketplace <notifications@zion.ai>",
       to: userData.email,
       subject: "Complete your next step on Zion AI Marketplace",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       html: `
         <div style="font-family: sans-serif, max-width: 600px, margin: 0 auto,">
           <h2>Hi ${name},</h2>
@@ -146,12 +124,9 @@ serve(async (req: Request) => {
           </div>
           <p>The Zion AI Marketplace Team</p>
         </div>
-<<<<<<< HEAD
       `});
-=======
       `}),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (emailError) {
       return new Response(
         JSON.stringify({ error: "Failed to send email", details: emailError }),
@@ -164,32 +139,26 @@ serve(async (req: Request) => {
     const { data: notification, error: notificationError } = await supabase.rpc(
       "create_notification",
       {
-<<<<<<< HEAD
         _user_id: user_id;
         _title: "Complete your next step"
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`;
         _type: "onboarding"}
     );
-=======
         _user_id: user_id,
         _title: "Complete your next step",
         _message: `Don't forget to ${action} to get the most out of Zion AI Marketplace.`,
         _type: "onboarding"}
     ),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (notificationError) {
       console.error("Failed to create notification:", notificationError)
     }
     return new Response(
       JSON.stringify({
-<<<<<<< HEAD
         message: "Reminder sent successfully"
         notification_id: notification});
-=======
         message: "Reminder sent successfully",
         notification_id: notification}),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -202,14 +171,9 @@ serve(async (req: Request) => {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
 });
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -336,10 +300,5 @@ serve(async (req: Request) => {;
         status: 500,;
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

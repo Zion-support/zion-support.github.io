@@ -4,25 +4,19 @@ import { generateText } from '@/utils/ai';
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
-<<<<<<< HEAD
 ) {
   const method = (req.method |'POST').toUpperCase();
-=======
 ) {;
   const method = (req.method || 'POST').toUpperCase();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
 import { Star } from 'lucide-react';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
 
   const method = (req.method |'POST').toUpperCase()
-=======
   const method = (req.method || 'POST').toUpperCase(),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const auth = authenticateRequest(req, false);
   if (!auth.ok) return res.status(401).json({ error: auth.error });
@@ -48,19 +42,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     prompt
     'You are a recruiting ops specialist with excellent writing skills.'
   );
-<<<<<<< HEAD
   return res.status(200).json({ email: text });  const text = await generateText(prompt, 'You are a recruiting ops specialist with excellent writing skills.');
 
   return res.status(200).json({ email: text })
 }
-<<<<<<< HEAD
-=======
   return res.status(200).json({ email: text });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
 }
-=======
   return res.status(200).json({ email: text });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

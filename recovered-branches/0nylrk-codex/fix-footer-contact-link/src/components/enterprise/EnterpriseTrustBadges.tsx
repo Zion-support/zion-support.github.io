@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function EnterpriseTrustBadges() {
   return (
     <section className="py-10 px-4 md: px-6 border-t border-b border-border">
@@ -17,21 +12,12 @@ export function EnterpriseTrustBadges() {
           <p className="text-muted-foreground">
             We maintain the highest standards of data protection and compliance
           </p>
-=======
-<<<<<<< HEAD
 import React from "react";
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import React from "react",
 import { Shield, Lock, Award, CheckCircle } from "lucide-react",
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
           <div className="flex items-center justify-center gap-2 p-4 rounded-lg border border-border">
@@ -52,20 +38,13 @@ import { Shield, Lock, Award, CheckCircle } from "lucide-react",
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     </section>
-<<<<<<< HEAD
   );
 }
-=======
-=======
-<<<<<<< HEAD
     </section>;
   );
 }
-=======
     </section>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
 import React from "react",;
 import { Shield, Lock, Award, CheckCircle } from "lucide-react";
@@ -100,8 +79,3 @@ export function EnterpriseTrustBadges() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

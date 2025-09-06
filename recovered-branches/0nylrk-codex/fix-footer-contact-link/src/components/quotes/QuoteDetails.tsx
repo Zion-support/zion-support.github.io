@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 
 import {
@@ -16,12 +15,8 @@ import { Separator } from "@/components/ui/separator";
 
 import { QuoteStatusBadge } from "./QuoteStatusBadge";
 import type { QuoteRequest } from "@/types/quotes";
-<<<<<<< HEAD
 import { format } from "date-fns";
-=======
 import {format} from "date-fns";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",
 import { 
   Dialog,
@@ -37,16 +32,10 @@ import { Separator } from "@/components/ui/separator",
 import { QuoteStatusBadge } from "./QuoteStatusBadge",
 import type { QuoteRequest } from "@/types/quotes",
 import { format } from "date-fns",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuoteDetailsProps {
   quote: QuoteRequest | null;
   isOpen: boolean;
   onClose: () => void
-<<<<<<< HEAD
 }
 
 export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {;
@@ -58,12 +47,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
     } catch (e) {
       return dateString;
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import {;
   Dialog,;
@@ -95,12 +80,7 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
       return dateString;
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
@@ -175,19 +155,10 @@ export const QuoteDetails = ({ quote, isOpen, onClose }: QuoteDetailsProps) => {
         </div>
       </DialogContent>
     </Dialog>
-<<<<<<< HEAD
   );
 }
 
-=======
   )
-<<<<<<< HEAD
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 };
-=======
 },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

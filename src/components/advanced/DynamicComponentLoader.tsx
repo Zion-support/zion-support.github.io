@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client'
 import React, {
   Suspense
@@ -45,7 +44,6 @@ const EnhancedLoading: React.FC<{
       <div className='flex flex-col items-center space-y-4'>
         <div className='relative'>
           <Loader2 className='h-8 w-8 animate-spin text-primary' />          {showProgress && (
-=======
 'use client';
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -90,23 +88,15 @@ const EnhancedLoading: React.FC<{
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
-<<<<<<< HEAD
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`,
-=======
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               }}
               initial={{ rotate: 0 }}
               animate={{ rotate: 360 }}
@@ -126,14 +116,7 @@ const EnhancedLoading: React.FC<{
     </CardContent>
   </Card>
 )
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Enhanced Error Component
 const EnhancedError: React.FC<{
   error: Error
@@ -142,24 +125,17 @@ const EnhancedError: React.FC<{
   retryCount: number
   maxRetries: number
 }> = ({ error, retry, isOnline, retryCount, maxRetries }) => (
-<<<<<<< HEAD
   <Card className='w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10'>
     <CardContent className='p-6'>
       <div className='flex flex-col items-center space-y-4'>
         <div className='p-3 rounded-full bg-red-100 dark:bg-red-900/20'>          {isOnline ? (
             <AlertTriangle className='h-6 w-6 text-red-600' />
-=======
   <Card className="w-full max-w-md mx-auto border-red-200 bg-red-50 dark:bg-red-900/10">
     <CardContent className="p-6">
       <div className="flex flex-col items-center space-y-4">
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ) : (
             <WifiOff className="h-6 w-6 text-red-600" />
           )}
@@ -168,7 +144,6 @@ const EnhancedError: React.FC<{
           <h3 className="font-semibold text-red-900 dark:text-red-100">
             {isOnline ? 'Loading Failed' : 'Offline'}
           </h3>
-<<<<<<< HEAD
           <p className='text-sm text-red-700 dark:text-red-200 mt-1'>
             {isOnline
               ? error.message |'Failed to load component'
@@ -176,7 +151,6 @@ const EnhancedError: React.FC<{
           </p>
           {retryCount > 0 && (
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
-=======
           <p className="text-sm text-red-700 dark:text-red-200 mt-1">
             {isOnline 
               ? error.message || 'Failed to load component'
@@ -184,29 +158,20 @@ const EnhancedError: React.FC<{
             }
           </p>
           {retryCount > 0 && (
-<<<<<<< HEAD
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
             <p className='text-xs text-red-600 dark:text-red-300 mt-2'>
-=======
             <p className="text-xs text-red-600 dark:text-red-300 mt-2">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               Retry {retryCount}/{maxRetries}
             </p>
           )}
         </div>
         {retryCount < maxRetries && (
-<<<<<<< HEAD
           <Button
             onClick={retry}
             variant='outline'
             size='sm'
             className='border-red-300 text-red-700 hover:bg-red-100'          >
             <RefreshCw className='h-4 w-4 mr-2' />
-=======
           <Button 
             onClick={retry} 
             variant="outline" 
@@ -214,18 +179,12 @@ const EnhancedError: React.FC<{
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Try Again
           </Button>
         )}
       </div>
     </CardContent>
   </Card>
-<<<<<<< HEAD
 )
 // Network Status Hook
 const useNetworkStatus = () => {
@@ -274,12 +233,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         })
       }, 100)
       return () => clearInterval(interval)
-<<<<<<< HEAD
     }
-=======
     };
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -363,7 +319,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
         />
       </motion.div>
     )
-=======
 );
 // Network Status Hook;
 const useNetworkStatus = () => {;
@@ -508,11 +463,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   // Success state
   if (DynamicComponent) {
@@ -524,7 +474,6 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-<<<<<<< HEAD
             className = {className,}
           >
             <DynamicComponent {...props}>{children}</DynamicComponent>
@@ -548,7 +497,6 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
     />
   )
 }
-=======
             className={className}
           >;
             <DynamicComponent {...props}>;
@@ -577,19 +525,11 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   );
 }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(
-<<<<<<< HEAD
 //   (,) => import('recharts').then(module => ({ default: module.LineChart }))
-=======
 //   () => import('recharts').then(module => ({ default: module.LineChart })),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -600,12 +540,9 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //   }
 // )
 // export const DynamicThreeComponent = createDynamicComponent(
-<<<<<<< HEAD
 //   (,) => import('three').then(module => ({ default: module.WebGLRenderer }))
 
-=======
 //   () => import('three').then(module => ({ default: module.WebGLRenderer })),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 //   {
 //     loadingComponent: () => (
 //       <div className="w-full h-96 bg-muted animate-pulse rounded-lg flex items-center justify-center">
@@ -613,24 +550,12 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
 //       </div>
 //     )
 //   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 // )
 export default DynamicComponentLoader; export default DynamicComponentLoader
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // );
-<<<<<<< HEAD
 ;
 export default DynamicComponentLoader; export default DynamicComponentLoader ;
 ;
 }
 }
-=======
 export default DynamicComponentLoader;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

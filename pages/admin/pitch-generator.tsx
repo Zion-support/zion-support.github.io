@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import Head from 'next/head';
 interface Slide {
@@ -31,12 +27,9 @@ function SlidePreview({
       </div>
     </button>
   );
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async ctx => {
-=======
 
 export const getServerSideProps: GetServerSideProps = async ctx => {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const result = await requireAdminRole(ctx);
   // @ts-ignore
   if ('redirect' in result) return result;
@@ -44,21 +37,18 @@ export const getServerSideProps: GetServerSideProps = async ctx => {;
 }
 export default function PitchGenerator() {
   const [builder, setBuilder] = useState<BuilderState>({
-<<<<<<< HEAD
     mission: ''
     fundingStage: ''
     vision: ''
     roundType: ''
     targetRaise: ''
     assets: []
-=======
     mission: '',
     fundingStage: '',
     vision: '',
     roundType: '',
     targetRaise: '',
     assets: [],;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   });  const [slides, setSlides] = useState<Slide[]>([]);
   const [activeIndex, setActiveIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -81,7 +71,6 @@ export default function PitchGenerator() {
     []
   );
   const autoFetchMetrics = useCallback(async () => {
-=======
 import React, { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -153,17 +142,11 @@ export default function PitchGenerator(req, res) {
   };
   const operatorPrompt = useMemo(() => `Create a 10-slide investor pitch deck for a high-growth AI services marketplace. Include market size, traction, business model, team, token strategy, and call to action.`, []),;
   const autoFetchMetrics = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/metrics');
       const data = await res.json();
       return data;
-<<<<<<< HEAD
     } catch (e) {
       return {}
     } finally {
@@ -227,7 +210,6 @@ export default function PitchGenerator(req, res) {
     [slides]
   );
   const addSlide = useCallback(async () => {
-=======
     } catch (error) {
       return {  } catch (error) {
     console.error("Error:", error);
@@ -290,16 +272,10 @@ export default function PitchGenerator(req, res) {
 }
   }, [slides]),;
   const addSlide = useCallback(async () => {;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/add-slide', { method: 'POST' });
       const json = await res.json();
-<<<<<<< HEAD
       setSlides(arr => [
         ...arr
         {
@@ -321,7 +297,6 @@ export default function PitchGenerator(req, res) {
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ slides, format: 'pdf', version: versionTag })
       });      const blob = await res.blob();
-=======
       setSlides((arr) => [...arr, { id: uid(), title: json.title || 'New Slide', content: json.content || '' }]),;
       setActiveIndex(slides.length);
     } catch (error) {
@@ -338,14 +313,12 @@ export default function PitchGenerator(req, res) {
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'pdf', version: versionTag }) }),;
       const blob = await res.blob();
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
       a.download = `pitch-deck-${versionTag |'draft'}.pdf`;
       a.click();
       URL.revokeObjectURL(url);
-<<<<<<< HEAD
     } catch (e) {
     } finally {
       setLoading(false);    }
@@ -362,7 +335,6 @@ export default function PitchGenerator(req, res) {
           version: versionTag
         })
       });
-=======
     } catch (error) {
     } finally {;
       setLoading(false);
@@ -376,17 +348,14 @@ export default function PitchGenerator(req, res) {
     setLoading(true);
     try {
       const res = await fetch('/api/admin/pitch/export', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ slides, format: 'gslides', version: versionTag }) }),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       const json = await res.json();
       if (json && json.url) {;
         window.open(json.url, '_blank');
-<<<<<<< HEAD
       }
     } catch (e) {
     } finally {
       setLoading(false);    }
   }, [slides, versionTag]);
-<<<<<<< HEAD
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides(arr =>
       arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s))
@@ -394,10 +363,7 @@ export default function PitchGenerator(req, res) {
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null
     const { type, data } = slide.chart;
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -412,17 +378,12 @@ export default function PitchGenerator(req, res) {
   }
 }
   }, [slides, versionTag]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const updateActiveSlide = (updates: Partial<Slide>) => {
     setSlides((arr) => arr.map((s, i) => (i === activeIndex ? { ...s, ...updates } : s)))
   },
   const renderChartPreview = (slide: Slide) => {
     if (!slide.chart) return null,
     const { type, data } = slide.chart,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <div className="mt-3">
         <div className="text-xs text-gray-500 dark:text-gray-400">Chart preview: {type}</div>
@@ -438,7 +399,6 @@ export default function PitchGenerator(req, res) {
             <div className="w-full">
               <div className="flex flex-col gap-1">
                 {data.map((d, idx) => (
-<<<<<<< HEAD
                   <div
                     key={d.label}
                     className='bg-purple-500 text-white text-xs px-2 py-1'
@@ -449,7 +409,6 @@ export default function PitchGenerator(req, res) {
               </div>
             </div>
           )}
-=======
                   <div key={d.label} className="bg-purple-500 text-white text-xs px-2 py-1" style={{ width: `${100 - idx * 12}%` }}>{d.label}: {d.value}</div>
                 ))  } catch (error) {
     console.error("Error:", error);
@@ -463,11 +422,6 @@ export default function PitchGenerator(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {type === 'timeline' && (
             <div className="text-xs grid grid-cols-4 gap-2 w-full">
               {data.map((d) => (
@@ -475,19 +429,14 @@ export default function PitchGenerator(req, res) {
                   <div className="font-medium">{d.label}</div>
                   <div>{d.value}</div>
                 </div>
-<<<<<<< HEAD
               ))}
             </div>
           )}
-<<<<<<< HEAD
         </div>
       </div>
     );
   }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -499,21 +448,15 @@ export default function PitchGenerator(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       </div>
     )
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <EnhancedLayout>
       <Head>
         <title>Pitch Generator - Admin</title>
       </Head>
-<<<<<<< HEAD
       <div className='space-y-6'>
         <div className='flex items-center justify-between'>
           <h1 className='text-2xl font-semibold'>Pitch Generator</h1>
@@ -600,7 +543,6 @@ export default function PitchGenerator(req, res) {
                 onDragEnter={prevent}
                 className='mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400'
               >
-=======
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Pitch Generator</h1>
@@ -610,7 +552,6 @@ export default function PitchGenerator(req, res) {
             <button onClick={exportGoogleSlides} disabled={loading || slides.length === 0} className="px-3 py-2 rounded bg-green-600 text-white disabled:opacity-50">Export to Google Slides</button>
           </div>
         </div>
-<<<<<<< HEAD
         <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
           <div className='lg:col-span-1 space-y-4'>
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
@@ -651,7 +592,6 @@ export default function PitchGenerator(req, res) {
                 className='w-full border rounded px-2 py-1 bg-transparent'
               >
                 <option value=''>Select</option>                <option>Seed</option>
-=======
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
           <div className="lg:col-span-1 space-y-4">
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
@@ -666,19 +606,16 @@ export default function PitchGenerator(req, res) {
               <select value={builder.roundType} onChange={(e) => setBuilder({ ...builder, roundType: e.target.value as any })} className="w-full border rounded px-2 py-1 bg-transparent">
                 <option value="">Select</option>
                 <option>Seed</option>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <option>Series A</option>
                 <option>Token Sale</option>
               </select>
               <label className="block text-sm mt-3 mb-1">Target raise amount</label>
               <input value={builder.targetRaise} onChange={(e) => setBuilder({ ...builder, targetRaise: e.target.value })} className="w-full border rounded px-2 py-1 bg-transparent" />
               <div onDrop={onAssetDrop} onDragOver={prevent} onDragEnter={prevent} className="mt-4 border-2 border-dashed rounded-md p-4 text-center text-sm text-gray-500 dark:text-gray-400">
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 Drag & drop logos, photos here
                 <div className="text-xs mt-1">{builder.assets.length} file(s) added</div>
               </div>
             </div>
-<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>Auto Data</div>
               <button
@@ -688,17 +625,11 @@ export default function PitchGenerator(req, res) {
                 Refresh
               </button>
               <ul className='text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300'>                <li>Active users (30d)</li>
-=======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">Auto Data</div>
               <button onClick={autoFetchMetrics} className="px-2 py-1 rounded bg-gray-100 dark:bg-gray-800 text-sm">Refresh</button>
               <ul className="text-sm mt-2 list-disc ml-5 text-gray-600 dark:text-gray-300">
                 <li>Active users (30d)</li>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <li>GMV, MRR, YoY growth</li>
                 <li>Total completed projects</li>
                 <li>Global reach</li>
@@ -706,15 +637,11 @@ export default function PitchGenerator(req, res) {
                 <li>Notable clients or case studies</li>
               </ul>
             </div>
-<<<<<<< HEAD
             <div className='border rounded-md p-4 bg-white/70 dark:bg-gray-900'>
               <div className='font-medium mb-2'>History</div>
               <div className='text-xs text-gray-500 dark:text-gray-400'>
-<<<<<<< HEAD
                 Version: {versionTag |'—'}
-=======
                 Version: {versionTag || '—'}
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <ul className='mt-2 space-y-1 text-sm'>
                 {history.map(h => (
@@ -840,14 +767,10 @@ export default function PitchGenerator(req, res) {
 </main>
     </>
   );
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <div className="border rounded-md p-4 bg-white/70 dark:bg-gray-900">
               <div className="font-medium mb-2">History</div>
               <div className="text-xs text-gray-500 dark:text-gray-400">Version: {versionTag || '—'}</div>
@@ -917,8 +840,3 @@ export default function PitchGenerator(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

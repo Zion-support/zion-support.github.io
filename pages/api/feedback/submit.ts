@@ -1,24 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs";
 import path from "path";
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   if (req.method !== "POST") return res.status(405).end();
   const { responseId, rating, comment, pagePath, aiModel } = req.body |{}
   if (!responseId |!rating |!["up", "down"].includes(rating)) {
     return res.status(400).json({ error: "Missing responseId or rating" });
   }
   const entry = {
-<<<<<<< HEAD
     id: responseId
     rating
     comment: String(comment |"").slice(0, 2000)
@@ -27,7 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
     userAgent: req.headers["user-agent"] |""
     ts: Date.now()
   }
-=======
     id: responseId,
     rating,
 comment: String(comment || "").slice(0, 2000),
@@ -36,8 +30,6 @@ comment: String(comment || "").slice(0, 2000),
     userAgent: req.headers["user-agent"] || "",
     ts: Date.now(),
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'Feedback submitted' });
@@ -124,22 +116,12 @@ export default function handler(req, res) {
     aiModel: String(aiModel || '');
     userAgent: req.headers['user-agent'] || '',;
     ts: Date.now()},;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);
   return res.status(200).json({ ok: true });
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -153,8 +135,3 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

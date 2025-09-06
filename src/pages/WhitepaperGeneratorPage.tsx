@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase  } from '@/integrations/supabase/client';
-=======
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Import the new preview panel
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
-<<<<<<< HEAD
 import { toast } from "sonner";
 import { logErrorToProduction } from '@/utils/productionLogger';
 interface WhitepaperSection {
@@ -32,7 +27,6 @@ value: number
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text
 }
 const WhitepaperGeneratorPage: React.FC = () => {'
-=======
 import React, { useState, useEffect, useCallback } from 'react'
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -59,7 +53,6 @@ value: number
   return text.toString () .toLowerCase () .replace (/\s+/g, '-') //Replace spaces with - .replace (/[^\w-]+/g, '') //Remove all non-word chars .replace (/--+/g, '-') //Replace multiple - with single - .replace (/^-+/, '') //Trim - from start of text .replace (/-+$/,  ''), //Trim - from end of text 
 };
 const WhitepaperGeneratorPage: React.FC = () => {';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [tokenName, setTokenName] = useState ('My Awesome Token');'
 const [tokenSupply, setTokenSupply] = useState<string> ('1000000000');'
 const [useCases, setUseCases] = useState ('To facilitate transactions and reward users in our innovative freelance AI marketplace. It will be used for payments, staking for dispute resolution, and accessing premium features.');'
@@ -72,14 +65,11 @@ const [distributionData, setDistributionData] = useState<DistributionItem[]> ([ 
 
 }
 {'
-<<<<<<< HEAD
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20'
-=======
   id: crypto.randomUUID (),  name: 'Private Sale Investors', percentage: '20' 
 }
 {'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35' 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 {'
   id: crypto.randomUUID (),  name: 'Ecosystem Development Fund', percentage: '35'
@@ -485,7 +475,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
     setShareableLink(null)
     setCurrentSharedWhitepaperId(null)
     setCurrentSharedWhitepaperIsPublic(null)
-<<<<<<< HEAD
     try {
       const whitepaperPayload = {
         tokenName
@@ -669,9 +658,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
       setIsSubmittingToCounsel(false)
     }
   }
-=======
-=======
-=======
 import React, { useState, useEffect, useCallback } from 'react',
 import { supabase } from '@/integrations/supabase/client',
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor',
@@ -680,7 +666,6 @@ import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Trash2, Download, Share2 } from 'lucide-react'
 import { Send } from 'lucide-react', // Added Send icon
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { toast } from "sonner",
 import { logErrorToProduction } from '@/utils/productionLogger',
 interface WhitepaperSection {
@@ -1023,19 +1008,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
     setShareableLink(null),
     setCurrentSharedWhitepaperId(null),
     setCurrentSharedWhitepaperIsPublic(null),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     try {
       const whitepaperPayload = {
         tokenName,
         tokenSupply,
         sections,
         distributionChartData,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         distributionBreakdown,
       }
       const { data: response, error: funcError } =
@@ -1215,8 +1193,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
       setIsSubmittingToCounsel(false)
     }
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         distributionBreakdown},
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
@@ -1434,15 +1410,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
 },
 
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100">
       {/* Left Column: Inputs and Editors */}
-<<<<<<< HEAD
       <div className='md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto'>
         <div className='flex justify-between items-center mb-6'>
           <h1 className='text-xl font-bold text-center flex-grow'>
@@ -1499,10 +1469,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <form onSubmit={e => e.preventDefault()} className='space-y-6'>
           {/* ... (Input fields remain the same) ... */}
           <div>
@@ -1590,8 +1556,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 >
                   <Trash2 className='h-4 w-4' />
                 </Button>              </div>
-=======
-<<<<<<< HEAD
       <div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto">
         <div className="flex justify-between items-center mb-6">
             <h1 className="text-xl font-bold text-center flex-grow">Whitepaper Configuration</h1>
@@ -1607,8 +1571,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 </Button>
             </div>
         </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
@@ -1638,15 +1600,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <Input type="number" placeholder="%" value={item.percentage} onChange={(e) => handleDistributionChange(item.id, 'percentage', e.target.value)} className="w-24" min="0" max="100"/>
                 <Button variant="ghost" size="icon" onClick={() => removeDistributionItem(item.id)} aria-label="Remove"><Trash2 className="h-4 w-4"/></Button>
               </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
-<<<<<<< HEAD
               <label
                 htmlFor='distributionBreakdownDetails'
                 className='block text-sm font-medium'
@@ -1660,18 +1616,11 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
                 rows={2}
               />            </div>
-=======
               <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div>
-<<<<<<< HEAD
             <label
               htmlFor='governanceLogic'
               className='block text-sm font-medium'
@@ -1686,18 +1635,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               className='mt-1 block w-full border-gray-300 rounded-md shadow-sm'
               rows={3}
             />
-=======
             <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>
             <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
             <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
           <div>
             <label
@@ -1716,7 +1659,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
             />          </div>
           {/* END OF INPUT FIELDS */}
           <Button
-<<<<<<< HEAD
             type='button'
             onClick={handleGenerateWhitepaper}
             disabled={
@@ -1740,7 +1682,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 {error}
               </p>
             )}
-=======
             type="button"
             onClick={handleGenerateWhitepaper}
             disabled={isLoading || isDownloading || isSharing || isSubmittingToCounsel}
@@ -1754,15 +1695,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           {error && !isLoading && !isDownloading && !isSharing && !isSubmittingToCounsel &&
             <p className="text-center text-sm text-red-600 p-2 bg-red-50 rounded-md">{error}</p>
           }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
                 <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
                 <Button
-<<<<<<< HEAD
                   onClick={handleTogglePublicStatus}
                   variant='outline'
                   size='sm' // smaller button
@@ -1801,7 +1739,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                     ? 'Public'
                     : 'Private (Only admins can view)'}
                 </p>
-=======
                     onClick={handleTogglePublicStatus}
                     variant="outline"
                     size="sm" // smaller button
@@ -1936,34 +1873,22 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 <p className="text-xs mt-1 text-gray-600">;
                     Currently: {currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view)"}
                 </p>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
-<<<<<<< HEAD
           {isSharing && (
             <p className='text-center text-sm text-blue-600'>
               Generating shareable link...
             </p>
           )}
-<<<<<<< HEAD
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-=======
-=======
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               type='button'
               onClick={handleSubmitToCounsel}
               disabled={
@@ -1981,15 +1906,11 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               Submitting to counsel...
             </p>
           )}
-=======
-<<<<<<< HEAD
            {isSharing && <p className="text-center text-sm text-blue-600">Generating shareable link...</p>}
 
           {/* Submit to Counsel Button */}
           {sections.length > 0 && (
             <Button
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 type="button"
                 onClick={handleSubmitToCounsel}
                 disabled={isSubmittingToCounsel || isLoading || isSharing || isDownloading}
@@ -2003,50 +1924,30 @@ const WhitepaperGeneratorPage: React.FC = () => {;
           )}
            {isSubmittingToCounsel && <p className="text-center text-sm text-blue-600">Submitting to counsel...</p>}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </form>
         {/* Section Editors */}
         {sections.length > 0 && (
-<<<<<<< HEAD
           <div className='mt-8 pt-6 border-t'>
             <h2 className='text-xl font-bold mb-4 text-center'>
               Edit Generated Sections
             </h2>
             {sections.map(section => (
-=======
           <div className="mt-8 pt-6 border-t">
             <h2 className="text-xl font-bold mb-4 text-center">Edit Generated Sections</h2>
             {sections.map((section) => (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <WhitepaperSectionEditor
                 key={section.id}
                 title={section.title}
                 content={section.content}
-<<<<<<< HEAD
                 onContentChange={newContent =>
                   handleSectionContentChange(section.id, newContent)
                 }              />
-=======
                 onContentChange={(newContent) => handleSectionContentChange(section.id, newContent)}
               />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         )}
         {rawDraft && (
-<<<<<<< HEAD
           <div className='mt-6 p-3 border rounded-md'>
             <Button
               onClick={() => setShowRawDraft(!showRawDraft)}
@@ -2061,7 +1962,6 @@ const WhitepaperGeneratorPage: React.FC = () => {;
               </pre>
             )}
           </div>
-=======
             <div className="mt-6 p-3 border rounded-md">
             <Button onClick={() => setShowRawDraft(!showRawDraft)} variant="outline" size="sm" className="w-full">
                 {showRawDraft ? 'Hide' : 'Show'} Raw Generated Text
@@ -2072,15 +1972,9 @@ const WhitepaperGeneratorPage: React.FC = () => {;
                 </pre>;
             )}
             </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </div>
       {/* Right Column: Preview Panel - Pass ref here */}
-<<<<<<< HEAD
       <div
         id='preview-panel-content'
         ref={previewPanelRef}
@@ -2096,16 +1990,12 @@ const WhitepaperGeneratorPage: React.FC = () => {;
   )
 }
 export default WhitepaperGeneratorPage
-<<<<<<< HEAD
 '"
 
-=======
 '";
 ;
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       <div id="preview-panel-content" ref={previewPanelRef} className="md:w-1/2 lg:w-3/5 xl:w-2/3 p-1">
         <WhitepaperPreviewPanel
             sections={sections}
@@ -2118,8 +2008,3 @@ export default WhitepaperGeneratorPage
   );
 },;
 export default WhitepaperGeneratorPage;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

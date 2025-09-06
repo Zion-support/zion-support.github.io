@@ -5,7 +5,6 @@ import Link from 'next/link';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Card from '../../components/ui/Card';
 const posts = [
-<<<<<<< HEAD
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' }
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' }
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' }
@@ -13,14 +12,12 @@ const posts = [
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' }
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }]
 
-=======
   { slug: 'ai-automation-trends-2025', title: 'AI Automation Trends 2025', excerpt: 'What forward-leaning teams ship next with agents, RAG, and guardrails.' },
   { slug: 'cloud-native-automation', title: 'Cloud-Native Automation', excerpt: 'GitOps, SLOs, and platform engineering patterns that scale.' },
   { slug: 'future-of-work', title: 'Future of Work', excerpt: 'Autonomous agents, copilots, and the new operating model.' },
   { slug: 'performance-optimization', title: 'Performance Optimization', excerpt: 'Web vitals, RUM, and release health for conversion lifts.' },
   { slug: 'ai-ethics-automation', title: 'AI Ethics & Automation', excerpt: 'Responsible AI with evaluations, safety baselines, and governance.' },
   { slug: 'autonomous-content-generation', title: 'Autonomous Content Generation', excerpt: 'Ship content faster with quality and factuality checks.' }],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function BlogIndexPage() {
   return (
     <UltraFuturisticBackground  intensity="medium">
@@ -43,25 +40,18 @@ export default function BlogIndexPage() {
               <p className="text-gray-400 mb-4">{p.excerpt}</p>
               <Link href={`/blog/${p.slug}`} className="text-cyan-400 hover:text-white font-medium">Read →</Link>
             </div>
-<<<<<<< HEAD
           ))}
         </div>
       </div>
     </UltraFuturisticBackground>
   )
 }
-=======
           ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>;
       </div>;
     </UltraFuturisticBackground>;
@@ -71,10 +61,5 @@ export default function BlogIndexPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

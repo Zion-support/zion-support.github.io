@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {DragDropContext, Droppable, Draggable} from "react-beautiful-dnd";
 import {useJobApplications} from "@/hooks/useJobApplications";
@@ -15,8 +12,6 @@ import {useIsMobile} from "@/hooks/use-mobile";
 interface DnDLocation {
   droppableId: string,
   index: number
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd",
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -25,11 +20,9 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Skeleton } from "@/components/ui/skeleton",
 import { toast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { KanbanColumn } from "./KanbanColumn";
 import { useIsMobile } from "@/hooks/use-mobile";
 interface DnDLocation {
-=======
 import { KanbanColumn } from "./KanbanColumn",
 import { useIsMobile } from "@/hooks/use-mobile",
 interface DnDLocation {
@@ -48,10 +41,6 @@ import { useIsMobile } from "@/hooks/use-mobile",;
 interface DnDLocation {;
   droppableId: string,;
   index: number;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 interface DropResult {;
@@ -59,7 +48,6 @@ interface DropResult {;
   source: DnDLocation,;
   destination?: DnDLocation | null;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   droppableId: string
 
@@ -97,14 +85,10 @@ const COLUMNS = [
     description: "Not moving forward"}]
 interface KanbanBoardProps {
   jobId?: string
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
-=======
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { applications, isLoading, updateApplicationStatus } = useJobApplications(jobId);
   const [columns, setColumns] = useState<Record<string, JobApplication[]>>({});
   const isMobile = useIsMobile();
@@ -128,7 +112,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {
       return
     }
-<<<<<<< HEAD
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId);
     if (!application) return;
@@ -143,9 +126,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       ...columns;
       [source.droppableId]: sourceColumn;
       [destination.droppableId]: destColumn});
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
 // Define the kanban board columns based on application statuses;
 const COLUMNS = [;
@@ -197,10 +177,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
          destination.index === source.index)) {;
       return;
     }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     
     // Get the application that was dragged
     const application = applications.find(app => app.id === draggableId),
@@ -220,7 +196,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
       [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Update status in the database
     try {
       await updateApplicationStatus(draggableId, newStatus),
@@ -234,13 +209,10 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
         description: "Please try again"
         variant: "destructive"})
     }
-<<<<<<< HEAD
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>
@@ -253,8 +225,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />
             </CardContent>
           </Card>
-<<<<<<< HEAD
-=======
 ;
     // Get the application that was dragged;
     const application = applications.find(app => app.id === draggableId),;
@@ -296,21 +266,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
               <Skeleton className="h-[400px] w-full" />;
             </CardContent>;
           </Card>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         ))}
       </div>
     )
   }
-<<<<<<< HEAD
   if (!applications |applications.length === 0) {
-=======
   
   if (!applications || applications.length === 0) {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <Card className="text-center py-16">
         <CardContent>
@@ -331,7 +293,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
             id={column.id}
             title={column.title}
             description={column.description}
-<<<<<<< HEAD
             applications={columns[column.id] |[]}
             count={columns[column.id]?.length |0}
           />
@@ -340,7 +301,6 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
     </DragDropContext>
   )
 }
-=======
             applications={columns[column.id] || []}
             count={columns[column.id]?.length || 0}
           />
@@ -350,4 +310,3 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

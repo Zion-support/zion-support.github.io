@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import i18n from 'i18next';
 import { initReactI18next  } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector',
@@ -49,7 +48,6 @@ i18n.on('languageChanged', (lng) => {
 });
 export default i18n;
 
-=======
 import i18n from 'i18next',;
 import { initReactI18next } from 'react-i18next',;
 import LanguageDetector from 'i18next-browser-languagedetector',;
@@ -96,9 +94,4 @@ i18n.on('languageChanged', (lng) => {;
   // If user is authenticated, save language preference to profile;
   // This will be implemented in the LanguageContext;
 }),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default i18n;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

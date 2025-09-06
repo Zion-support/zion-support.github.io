@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useMemo } from "react";
 import {
   onsiteServicePricing
@@ -18,7 +16,6 @@ import {
 
 import { Globe, Search, ArrowUpDown } from "lucide-react";
 import { Button } from "@/components/ui/button";
-=======
 import {useState, useMemo} from "react";
 import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
 import {Input} from "@/components/ui/input";
@@ -27,21 +24,14 @@ import {Globe, Search, ArrowUpDown} from "lucide-react";
 import {Button} from "@/components/ui/button";
 export function ITServicePricingTable() {;
   const [searchQuery, setSearchQuery] = useState("");
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useMemo } from "react",
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
 import { Input } from "@/components/ui/input",
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
 import { Globe, Search, ArrowUpDown } from "lucide-react",
 import { Button } from "@/components/ui/button",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [sortConfig, setSortConfig] = useState<{
     key: keyof CountryPricing;
     direction: "ascending" | "descending"
@@ -51,12 +41,9 @@ export function ITServicePricingTable() {
     direction: "ascending"
   });
   const sortedData = useMemo(() => {
-<<<<<<< HEAD
     let filteredData = [...onsiteServicePricing];
-=======
     let filteredData = [...onsiteServicePricing],
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Filter by search query
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>
@@ -71,7 +58,6 @@ export function ITServicePricingTable() {
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1;
       }
-<<<<<<< HEAD
       return 0;
     });
     return filteredData;
@@ -85,7 +71,6 @@ export function ITServicePricingTable() {
           : "ascending"
     });
   }
-=======
       return 0
     }),
     
@@ -100,7 +85,6 @@ export function ITServicePricingTable() {
           ? "descending" 
           : "ascending"})
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">
@@ -166,8 +150,6 @@ export function ITServicePricingTable() {
                   No countries match your search
                 </TableCell>
               </TableRow>
-<<<<<<< HEAD
-=======
 import { useState, useMemo } from "react",;
 import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",;
 import { Input } from "@/components/ui/input",;
@@ -267,11 +249,6 @@ export function ITServicePricingTable() {;
                   No countries match your search;
                 </TableCell>;
               </TableRow>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           </TableBody>
         </Table>

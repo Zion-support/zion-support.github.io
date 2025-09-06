@@ -1,12 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
-<<<<<<< HEAD
   createSessionCookie
   validateCredentials;
-=======
   createSessionCookie,;
   validateCredentials,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {;
@@ -31,8 +28,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader('Set-Cookie', cookie);
 
   return res.status(200).json({ ok: true })
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

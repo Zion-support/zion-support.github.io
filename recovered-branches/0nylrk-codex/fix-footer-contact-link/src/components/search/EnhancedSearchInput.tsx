@@ -1,18 +1,12 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from "react";
 import {Search, X} from "lucide-react";
 import {Input} from "@/components/ui/input";
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
 import {SearchSuggestion} from "@/types/search";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect, useRef } from "react",
 import { Search, X } from "lucide-react",
 import { Input } from "@/components/ui/input",
-<<<<<<< HEAD
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
 import { SearchSuggestion } from "@/types/search";
 interface EnhancedSearchInputProps {
@@ -34,13 +28,8 @@ export function EnhancedSearchInput({
   const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
   const inputRef = useRef<HTMLInputElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-=======
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EnhancedSearchInputProps {
   value: string,
   onChange: (value: string) => void,
@@ -48,13 +37,10 @@ interface EnhancedSearchInputProps {
   searchSuggestions: SearchSuggestion[]
 }
 
-<<<<<<< HEAD
 export function EnhancedSearchInput({ ;
   value;
-=======
 export function EnhancedSearchInput({ 
   value,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onChange, 
   placeholder = "Search...", 
   searchSuggestions 
@@ -64,14 +50,12 @@ export function EnhancedSearchInput({
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Filter suggestions based on input value
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty
       setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
       return
-<<<<<<< HEAD
     }
     const filtered = searchSuggestions.filter(suggestion =>
       suggestion.text.toLowerCase().includes(value.toLowerCase())
@@ -89,7 +73,6 @@ export function EnhancedSearchInput({
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsFocused(false)
-<<<<<<< HEAD
       }
     }
     document.addEventListener("mousedown", handleClickOutside);
@@ -101,9 +84,6 @@ export function EnhancedSearchInput({
     inputRef.current?.blur()
   }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect, useRef } from "react",;
 import { Search, X } from "lucide-react",;
 import { Input } from "@/components/ui/input",;
@@ -150,10 +130,6 @@ export function EnhancedSearchInput({;
     function handleClickOutside(event: MouseEvent) {;
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {;
         setIsFocused(false);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     
@@ -167,7 +143,6 @@ export function EnhancedSearchInput({;
     inputRef.current?.blur()
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="relative w-full" ref={containerRef}>
       <div className="relative">
@@ -177,8 +152,6 @@ export function EnhancedSearchInput({;
         <Input
           ref={inputRef}
           type="text"
-<<<<<<< HEAD
-=======
 ;
     document.addEventListener("mousedown", handleClickOutside),;
     return () => document.removeEventListener("mousedown", handleClickOutside);
@@ -197,11 +170,6 @@ export function EnhancedSearchInput({;
         <Input;
           ref={inputRef}
           type="text";
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           value={value}
           onChange={(e) => onChange(e.target.value)}
           onFocus={() => setIsFocused(true)}

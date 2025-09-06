@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
 import { Star, Flag, User } from 'lucide-react'
@@ -7,7 +6,6 @@ import { Review } from '@/types/reviews'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-<<<<<<< HEAD
 import {  Dialog,  Dialog
   DialogContent
   DialogDescription
@@ -15,9 +13,7 @@ import {  Dialog,  Dialog
   DialogHeader
   DialogTitle
   DialogTrigger
-=======
 import {  Dialog,  Dialog,
-=======
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -28,15 +24,12 @@ import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
   Dialog,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   DialogContent,
   DialogDescription,
   DialogFooter,
   DialogHeader,
   DialogTitle,
-<<<<<<< HEAD
   DialogTrigger,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/dialog'
 import { Textarea } from '@/components/ui/textarea'
 interface ReviewCardProps {
@@ -73,8 +66,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`}
-<<<<<<< HEAD
-=======
 
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
@@ -90,7 +81,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-=======
           />
         ))}
       </div>
@@ -101,8 +91,6 @@ import {
       .split(' ')
       .map(n => n[0])
       .join('')            className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
@@ -137,17 +125,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
           <Star
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           />
         ))}
       </div>
     )
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
   const getInitials = (name: string) => {
     return name
@@ -159,11 +140,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       </div>
     )
   }
-=======
   },
   
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getInitials = (name: string,) => {
     return name
       .split(" ")
@@ -172,12 +150,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .toUpperCase()
       .substring(0, 2)
   }
-=======
-<<<<<<< HEAD
   },
   
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const getInitials = (name: string) => {
     return name
       .split(" ")
@@ -187,18 +161,12 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       .substring(0, 2)
   },
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="border rounded-lg p-4 bg-card">
       <div className="flex justify-between items-start mb-3">
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
             <Avatar>
-<<<<<<< HEAD
               <AvatarFallback className='bg-muted'>
                 <User className='h-4 w-4' />              </AvatarFallback>  }
   const getInitials = (name: string) => {
@@ -216,12 +184,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
         <div className="flex items-center gap-3">
           {review.is_anonymous ? (
             <Avatar>
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <AvatarFallback className="bg-muted">
                 <User className="h-4 w-4" />
               </AvatarFallback>
@@ -232,7 +194,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 <AvatarImage src={review.reviewer_profile.avatar_url} alt={review.reviewer_profile.display_name} />
               ) : (
                 <AvatarFallback>
-<<<<<<< HEAD
                   {review.reviewer_profile?.display_name
                     ? getInitials(review.reviewer_profile.display_name)
                     : '??'}                </AvatarFallback>
@@ -244,7 +205,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
                 <AvatarFallback>
                   {review.reviewer_profile?.display_name ?
                     getInitials(review.reviewer_profile.display_name) : "??"}
-=======
                   {review.reviewer_profile?.display_name ? 
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
@@ -321,19 +281,10 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   {review.reviewer_profile?.display_name ?;
                     getInitials(review.reviewer_profile.display_name) : "??"}
                 </AvatarFallback>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </Avatar>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div>
             <div className='font-medium'>
               {review.is_anonymous
@@ -346,7 +297,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               })}
             </div>
           </div>
-=======
           
           <div>
             <div className="font-medium">
@@ -359,23 +309,18 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
         </div>;
         <div className="flex">;
           {renderStars(review.rating)}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         </div>
         <div className='flex'>{renderStars(review.rating)}</div>
       </div>
       <div className='mb-4'>
         <p className='text-sm whitespace-pre-wrap'>{review.review_text}</p>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
       {(review.communication_rating |
         review.quality_rating |
         review.timeliness_rating |
-=======
       {(review.communication_rating ||
         review.quality_rating ||
         review.timeliness_rating ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         review.would_work_again !== undefined) && (
         <div className='border-t pt-3 mt-3'>
           <div className='flex flex-wrap gap-2'>
@@ -385,10 +330,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                 <span className='ml-1 text-yellow-500'>
                   {review.communication_rating}/5
                 </span>
-<<<<<<< HEAD
-=======
       
-=======
               </Badge>
             )}
 
@@ -419,10 +361,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
                   : 'Would not work again'}              </Badge>
                 {review.would_work_again ? "Would work again" : "Would not work again"}
           <div>
-=======
           
           <div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <div className="font-medium">
               {review.is_anonymous ? "Anonymous" : review.reviewer_profile?.display_name || "User"}
             </div>
@@ -438,7 +378,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
       <div className="mb-4">
         <p className="text-sm whitespace-pre-wrap">{review.review_text}</p>
       </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {(review.communication_rating || review.quality_rating || review.timeliness_rating || review.would_work_again !== undefined) && (
         <div className="border-t pt-3 mt-3">
           <div className="flex flex-wrap gap-2">
@@ -446,39 +385,31 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               <Badge variant="outline" className="flex gap-1 items-center">
                 Communication
                 <span className="ml-1 text-yellow-500">{review.communication_rating}/5</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Badge>
             )}
             {review.quality_rating && (
-<<<<<<< HEAD
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Quality
                 <span className='ml-1 text-yellow-500'>
                   {review.quality_rating}/5
                 </span>
-=======
               <Badge variant="outline" className="flex gap-1 items-center">
                 Quality
                 <span className="ml-1 text-yellow-500">{review.quality_rating}/5</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Badge>
             )}
             {review.timeliness_rating && (
-<<<<<<< HEAD
               <Badge variant='outline' className='flex gap-1 items-center'>
                 Timeliness
                 <span className='ml-1 text-yellow-500'>
                   {review.timeliness_rating}/5
                 </span>
-=======
               <Badge variant="outline" className="flex gap-1 items-center">
                 Timeliness
                 <span className="ml-1 text-yellow-500">{review.timeliness_rating}/5</span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </Badge>
             )}
             {review.would_work_again !== undefined && (
-<<<<<<< HEAD
               <Badge
                 variant={review.would_work_again ? 'default' : 'secondary'}
                 className={`${review.would_work_again ? 'bg-green-100 text-green-800 hover:bg-green-200' : 'bg-gray-100 text-gray-800 hover:bg-gray-200'}`}              >
@@ -525,9 +456,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             )}
             {review.would_work_again !== undefined && (
               <Badge
-=======
               <Badge 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 variant={review.would_work_again ? "default" : "secondary"}
                 className={`${review.would_work_again ? "bg-green-100 text-green-800 hover:bg-green-200" : "bg-gray-100 text-gray-800 hover:bg-gray-200"}`}
               >
@@ -537,11 +466,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           </div>
         </div>
       )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className='mt-3 flex justify-end'>
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
           <DialogTrigger asChild>
@@ -552,7 +477,6 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
           <DialogTrigger asChild>
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
-=======
       
       <div className="mt-3 flex justify-end">
         <Dialog open={isReportDialogOpen} onOpenChange={setIsReportDialogOpen}>
@@ -560,23 +484,14 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
             <Button variant="ghost" size="sm" className="text-muted-foreground">
               <Flag className="h-3 w-3 mr-1" />
               Report
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </Button>
           </DialogTrigger>
           <DialogContent>
             <DialogHeader>
               <DialogTitle>Report Review</DialogTitle>
               <DialogDescription>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 If you believe this review violates our community guidelines
-=======
                 If you believe this review violates our community guidelines,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -587,12 +502,8 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               placeholder="Why are you reporting this review?"
               value = {reportReason,}
               onChange = {(e,) => setReportReason(e.target.value),}
-<<<<<<< HEAD
               className="min-h-[100px]"
             />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 If you believe this review violates our community guidelines, please provide details below.
               </DialogDescription>
             </DialogHeader>
@@ -601,51 +512,34 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {;
               placeholder="Why are you reporting this review?"
               value={reportReason}
               onChange={(e) => setReportReason(e.target.value)}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="min-h-[100px]"
             />
             
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             <DialogFooter>
               <Button variant="outline" onClick={() => setIsReportDialogOpen(false)}>
                 Cancel
               </Button>
-<<<<<<< HEAD
               <Button
                 onClick={handleReport}
                 disabled={!reportReason.trim() |isReporting}              >
                 {isReporting ? 'Submitting...' : 'Submit Report'}              </Button>                {isReporting ? "Submitting..." : "Submit Report"}
-=======
               <Button 
                 onClick={handleReport} 
                 disabled={!reportReason.trim() || isReporting}
               >
                 {isReporting ? "Submitting..." : "Submit Report"}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
-<<<<<<< HEAD
       </div>
     </div>
   )
-<<<<<<< HEAD
 }</div>)
-=======
-<<<<<<< HEAD
       </div>;
     </div>;
   );
 }</div>) ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };"
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {"
   review.is anonymous ? (<Avatar> <AvatarFallback className="bg-muted"> <User className="h-4 w-4" /> </AvatarFallback> </Avatar>) : (<Avatar> {
@@ -685,16 +579,10 @@ return (<div className="border rounded-lg p-4 bg-card"> <div className="flex jus
   !reportReason.trim () |isReporting
 }> </Button> </DialogFooter> </DialogContent> </Dialog> </div> </div>)
 }"}
-=======
-<<<<<<< HEAD
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
       </div>
     </div>
   )
 }
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

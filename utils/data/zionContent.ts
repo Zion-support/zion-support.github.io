@@ -1,23 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export type Infobox = {founder: string;
   launchYear: string;
   token: string;
-=======
 export type Infobox = {;
   founder: string,;
   launchYear: string,;
   token: string,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   protocolType: string;
 }
 export type WikiSection = {id: string;
   title: string;
   paragraphs: string[];
-<<<<<<< HEAD
 }
 export type WikiContent = {title: string;
-=======
 },;
 export type WikiContent = {;
   title: string,;
@@ -28,8 +22,6 @@ export type WikiContent = {;
 },;
 export type DocsContent = {;
   productOverview: WikiSection,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export type Infobox = {
   founder: string;
   launchYear: string;
@@ -43,12 +35,10 @@ export type WikiSection = {
 };
 export type WikiContent = {
   title: string;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   intro: string;
   infobox: Infobox;
   sections: WikiSection[];
   references: string[];
-<<<<<<< HEAD
 }
 export type DocsContent = {productOverview: WikiSection;
   developerApi: WikiSection;
@@ -185,22 +175,14 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {const se
   return lines.join('\n');
 }
 export function slugify(input: string): string {return input;
-=======
 };
 export type DocsContent = {
   productOverview: WikiSection;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   developerApi: WikiSection,;
   governanceGuide: WikiSection,;
   tokenomics: WikiSection,;
   team: WikiSection,;
   publicRoadmap: WikiSection;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 },;
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,;
 export function generateZionWiki(): WikiContent {;
@@ -209,8 +191,6 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings',;
     launchYear: '2025',;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
 export const operatorPrompt = `Write a Wikipedia-style article about Zion OS — the world’s first decentralized AI protocol for trust, work, and talent. Include use cases, launch history, modules, and governance model.`,;
 export function generateZionWiki(): WikiContent {;
@@ -219,23 +199,13 @@ export function generateZionWiki(): WikiContent {;
   const infobox: Infobox = {;
     founder: 'Zion Holdings';
     launchYear: '2025';
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     token: 'ZION$',;
     protocolType: 'Decentralized AI marketplace & governance protocol'},;
   const sections: WikiSection[] = [;
     {;
-<<<<<<< HEAD
       id: 'history-launch';
-=======
-<<<<<<< HEAD
       id: 'history-launch',;
-=======
       id: 'history-launch';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       title: 'History and Launch',;
       paragraphs: [;
         'Zion OS originated from the need to coordinate AI work, attribution, and payments across a multi-agent economy. Early prototypes focused on agent task routing and provable contribution tracking.The mainnet-ready architecture was announced in 2025 alongside the ZION$ token model for incentive alignment, with a progressive decentralization path through the Zion DAO.']},;
@@ -270,9 +240,6 @@ export function generateZionWiki(): WikiContent {;
       paragraphs: [;
         'Initial adoption focuses on developer ecosystems, open-source contributors, and AI-native organizations seeking transparent marketplaces for model-centric work.Partnerships emphasize interoperability, agent standards, and safety benchmarks that enable reliable collaboration at scale.']}],;
   const references = [;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'],;
   return { title, intro, infobox, sections, references }
 }
@@ -379,8 +346,6 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
   }
   return lines.join('\n');
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     '[1] Zion OS whitepaper (forthcoming).[2] Governance guidelines and working group charters (draft).[3] ZionGPT evaluation benchmarks (in progress).'];
   return { title, intro, infobox, sections, references   } catch (error) {
     console.error("Error:", error);
@@ -535,28 +500,16 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
 export function slugify(input: string): string {;
   return input;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     .toLowerCase();
     .replace(/[^a-z0-9\s-]/g, '');
     .trim();
     .replace(/\s+/g, '-');
     .replace(/-+/g, '-');
-<<<<<<< HEAD
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }

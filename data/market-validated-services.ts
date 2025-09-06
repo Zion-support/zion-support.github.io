@@ -501,7 +501,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
     description:
       'Spin up a managed vector index with ingestion pipelines, filters, and access controls to power semantic search.'
     features: [
-<<<<<<< HEAD
       'Managed vector DB'
       'Ingestion pipelines'
       'Metadata filters'
@@ -519,7 +518,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 ];import { ServiceVariant  } from "../types/service-variants";
 
 export interface MarketValidatedService {
-=======
       'Managed vector DB',
       'Ingestion pipelines',
       'Metadata filters',
@@ -536,7 +534,6 @@ export interface MarketValidatedService {
   },;
 ];import { ServiceVariant  } from "../types/service-variants";
 export interface MarketValidatedService {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string;
 	name: string;
 	tagline: string;
@@ -551,7 +548,6 @@ export interface MarketValidatedService {;
 	customers?: number;
 	trialDays?: number;
 	setupTime?: string;
-<<<<<<< HEAD
 
 	contactInfo: {mobile: string;
 		email: string;
@@ -938,7 +934,6 @@ export const marketValidatedServices: MarketValidatedService[] = [;
 		customers: 410;
 		trialDays: 14;
 		setupTime: '2 hours';
-=======
 	contactInfo: {
 		mobile: string;
 		email: string;
@@ -1294,7 +1289,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		rating: 4.5,
 		customers: 420,
 		trialDays: 14,
-<<<<<<< HEAD
 		setupTime: "30 minutes",;
 		contactInfo;,
 },
@@ -1310,7 +1304,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		category: "AI & Assistants",
 		link: "https://ziontechgroup.com/ai-phone-agent",
 		variant: "quantum-holographic-advanced",
-=======
 		setupTime: '30 minutes',
 		contactInfo
 	},
@@ -1327,7 +1320,6 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		category: 'AI & Assistants',
 		link: 'https://ziontechgroup.com/ai-phone-agent',
 		variant: 'quantum-holographic-advanced',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 		rating: 4.6,
 		customers: 380,
 		trialDays: 7,
@@ -1351,15 +1343,8 @@ export const marketValidatedServices: MarketValidatedService[] = [
 		customers: 410,
 		trialDays: 14,
 		setupTime: '2 hours',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 		contactInfo
 	}
 ];
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

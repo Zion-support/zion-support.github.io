@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next',;
 import fs from 'fs',;
 import path from 'path',;
@@ -34,15 +31,12 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
       } catch {}
     }
     return rows
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
 type EventRow = {
-<<<<<<< HEAD
 
   name: string
   page?: string
@@ -69,7 +63,6 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         rows.push(obj)
       } catch {}
 
-=======
   name: string;
   page?: string;
   userType?: string;
@@ -99,19 +92,13 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
       } catch {
         // Skip invalid JSON lines
       }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     }
     return rows;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   } catch {
     return [];
   }
 }
 
-<<<<<<< HEAD
 function featureFromPath(page?: string): string {
 if (!page) return 'other'
   const p = page.toLowerCase()
@@ -140,7 +127,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 .sort((a, b) => b.value - a.value)
   const events = Object.entries(byEvent)
     .map(([label, value]) => ({ label, value }))
-<<<<<<< HEAD
     .sort((a, b) => b.value - a.value)
   const days = Object.keys(byDay).sort()
   const line = days.map((d) => ({ date: d, value: byDay[d] }))
@@ -149,7 +135,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }
 
-=======
     .sort((a, b) => b.value - a.value),
 
   const days = Object.keys(byDay).sort(),
@@ -160,8 +145,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 ;
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     await ensureAdminFromApi(req);
@@ -180,8 +163,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

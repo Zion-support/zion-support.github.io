@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import {useState} from "react";
 import {useMutation} from "@tanstack/react-query";
 import {Check, X, User, Star, MoreHorizontal} from "lucide-react";
@@ -10,16 +6,12 @@ import {format} from "date-fns";
 import {toast} from "@/hooks/use-toast";
 import {supabase} from "@/integrations/supabase/client";
 import {Review, ReviewStatus} from "@/types/reviews";
-<<<<<<< HEAD
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
 import {Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle} from "@/components/ui/dialog";
 import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
 import {Badge} from "@/components/ui/badge";
 import {Button} from "@/components/ui/button";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",
 import { useMutation } from "@tanstack/react-query",
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
@@ -27,10 +19,6 @@ import { format } from "date-fns",
 import { toast } from "@/hooks/use-toast",
 import { supabase } from "@/integrations/supabase/client",
 import { Review, ReviewStatus } from "@/types/reviews",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import {
   Table,
@@ -54,34 +42,24 @@ import {
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ReviewsModerationTableProps {
   reviews: Review[]
   isLoading: boolean
 
   onRefresh: () => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export function ReviewsModerationTable({;
   reviews;
   isLoading;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ReviewsModerationTable({
   reviews,
   isLoading,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onRefresh}: ReviewsModerationTableProps) {
   const [selectedReview, setSelectedReview] = useState<Review | null>(null),
-<<<<<<< HEAD
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
-=======
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
 
@@ -94,7 +72,6 @@ export function ReviewsModerationTable({
       const { error } = await supabase
         .from("reviews")
         .update({ status })
-<<<<<<< HEAD
         .eq("id", reviewId);
       if (error) throw error;
       return { reviewId, status }
@@ -108,7 +85,6 @@ export function ReviewsModerationTable({
       onRefresh();
       setViewDetailsOpen(false)
     }
-=======
         .eq("id", reviewId),
 
       if (error) throw error,
@@ -121,19 +97,15 @@ export function ReviewsModerationTable({
       onRefresh(),
       setViewDetailsOpen(false)
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     onError: (error: Error) => {
       toast({
 
         title: "Error"
         description: `Failed to update review: ${error.message}`
         variant: "destructive"})
-<<<<<<< HEAD
     }});
-=======
     }}),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
@@ -142,24 +114,18 @@ export function ReviewsModerationTable({
       default:
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"
     }
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const getInitials = (name: string) => {
     return name
       .split(" ")
       .map((n) => n[0])
       .join("")
       .toUpperCase()
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <div className="space-y-4">
@@ -182,28 +148,22 @@ export function ReviewsModerationTable({
   }
   const handleApprove = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "approved" })
-<<<<<<< HEAD
   }
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   }
-=======
   },
 
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review)
     setViewDetailsOpen(true)
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderStars = (rating: number) => {
     return (
       <div className="flex">
@@ -212,7 +172,6 @@ export function ReviewsModerationTable({
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />
-<<<<<<< HEAD
         ))}
       </div>
     )
@@ -239,12 +198,8 @@ export function ReviewsModerationTable({
                   <Avatar className="h-8 w-8">
                     {review.reviewer_profile?.avatar_url ? (
                       <AvatarImage
-<<<<<<< HEAD
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState } from "react",;
 import { useMutation } from "@tanstack/react-query",;
 import { Check, X, User, Star, MoreHorizontal } from "lucide-react",;
@@ -394,13 +349,8 @@ export function ReviewsModerationTable({;
                   <Avatar className="h-8 w-8">;
                     {review.reviewer_profile?.avatar_url ? (;
                       <AvatarImage;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name || ""}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       />
                     ) : (
                       <AvatarFallback>
@@ -488,23 +438,16 @@ export function ReviewsModerationTable({;
                           Mark as approved
                         </DropdownMenuItem>
                       )}
-<<<<<<< HEAD
                     </DropdownMenuContent>
                   </DropdownMenu>
                 </div>
               </TableCell>
             </TableRow>
-=======
                     </DropdownMenuContent>;
                   </DropdownMenu>;
                 </div>;
               </TableCell>;
             </TableRow>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           ))}
         </TableBody>
       </Table>

@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useApiErrorHandling  } from '@/hooks/useApiErrorHandling';
-=======
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import ProductCard from '@/components/ProductCard';
 
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
@@ -13,21 +9,18 @@ import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
-<<<<<<< HEAD
   ArrowUp
   Filter
   SortAsc
   Sparkles
   TrendingUp
   Star
-=======
   ArrowUp,
   Filter,
   SortAsc,
   Sparkles,
   TrendingUp,;
   Star;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -63,7 +56,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
             ${Math.round(stats.averagePrice)}
           </div>
           <div className='text-sm text-muted-foreground'>Avg Price</div>
-=======
 import { useRouter } from 'next/router',;
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling',;
 import ProductCard from '@/components/ProductCard',;
@@ -105,11 +97,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         <div className="text-center">
           <div className="text-2xl font-bold text-blue-400">${Math.round(stats.averagePrice)}</div>
           <div className="text-sm text-muted-foreground">Avg Price</div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
         <div className="text-center">
           <div className="text-2xl font-bold text-green-400">{stats.averageRating.toFixed(1)}</div>
@@ -124,18 +111,13 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
           <div className="text-sm text-muted-foreground">Categories</div>
         </div>
       </div>
-<<<<<<< HEAD
     </CardContent>
   </Card>
-<<<<<<< HEAD
 );
-=======
-<<<<<<< HEAD
     </CardContent>;
   </Card>;
 );
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Filter and sort controls
 const FilterControls: React.FC<{
   sortBy: string;
@@ -158,7 +140,6 @@ const FilterControls: React.FC<{
   showRecommended: boolean;
   setShowRecommended: (show: boolean) => void;
   loading: boolean;}> = ({
-<<<<<<< HEAD
   sortBy
   setSortBy
   filterCategory
@@ -261,12 +242,8 @@ const FilterControls: React.FC<{
         onChange={e => setFilterAvailability(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
-=======
-=======
-=======
     </CardContent>
   </Card>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ),
 
 // Filter and sort controls
@@ -292,10 +269,6 @@ const FilterControls: React.FC<{
   setShowRecommended: (show: boolean) => void,
   loading: boolean
 }> = ({
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   sortBy,
   setSortBy,
   filterCategory,
@@ -315,9 +288,6 @@ const FilterControls: React.FC<{
   locations,
   showRecommended,
   setShowRecommended,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   loading,
 }) => (
   <div className='flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative'>
@@ -401,8 +371,6 @@ const FilterControls: React.FC<{
         onChange={e => setFilterAvailability(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>Any Availability</option>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   loading
 }) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">
@@ -490,24 +458,17 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">Any Availability</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {availabilityOptions.map(opt => (
           <option key={opt} value={opt as string}>{opt}</option>
         ))}
       </select>
     </div>
-<<<<<<< HEAD
     <div className='flex items-center gap-2'>
       <select
         value={filterLocation}
         onChange={e => setFilterLocation(e.target.value)}
         className='bg-background border border-border px-3 py-2 rounded'      >
         <option value=''>All Locations</option>
-=======
 
     <div className="flex items-center gap-2">
       <select
@@ -516,31 +477,21 @@ const FilterControls: React.FC<{
         className="bg-background border border-border px-3 py-2 rounded"
       >
         <option value="">All Locations</option>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
         ))}
       </select>
     </div>
     <Button
-<<<<<<< HEAD
       variant={showRecommended ? 'default' : 'outline'}
       size='sm'
       onClick={() => setShowRecommended(!showRecommended)}
       className='flex items-center gap-2'    >
       <Sparkles className='h-4 w-4' />
       {showRecommended ? 'All Products' : 'Recommended'}
-<<<<<<< HEAD
     </Button>
   </div>
 );
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -548,21 +499,15 @@ const FilterControls: React.FC<{
     >
       <Sparkles className="h-4 w-4" />
       {showRecommended ? "All Products" : "Recommended"}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </Button>
   </div>
 ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 /**
  * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
  * Includes intelligent filtering, sorting, and recommendation features
  */
-<<<<<<< HEAD
 export default function Marketplace() {;
   const router = useRouter();
   const { t } = useTranslation();
@@ -571,9 +516,7 @@ export default function Marketplace() {;
   const firstRenderRef = useRef(true);
   const isRefreshingAfterFilterChange = useRef(false); // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-=======
 export default function Marketplace() {
-<<<<<<< HEAD
   const router = useRouter();
   const { t } = useTranslation();
   const { toast } = useToast();
@@ -593,7 +536,6 @@ export default function Marketplace() {
   const [filterAvailability, setFilterAvailability] = useState('');
   const [filterLocation, setFilterLocation] = useState('');
   const { handleApiError, retryQuery } = useApiErrorHandling();
-=======
   const router = useRouter(),
   const { t } = useTranslation(),
   const { toast } = useToast(),
@@ -601,7 +543,6 @@ export default function Marketplace() {
   const firstRenderRef = useRef(true),
   const isRefreshingAfterFilterChange = useRef(false), // New ref to track refresh state
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const [sortBy, setSortBy] = useState('newest'),
   const [filterCategory, setFilterCategory] = useState(''),
@@ -613,7 +554,6 @@ export default function Marketplace() {
   const [filterLocation, setFilterLocation] = useState(''),
   const { handleApiError, retryQuery } = useApiErrorHandling(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Handle Add Product button with authentication check
   const handleAddProduct = useCallback(() => {
     if (!isAuthenticated) {
@@ -623,12 +563,8 @@ export default function Marketplace() {
     // Check if user has permission to add products (simplified to admin check)
     if (user && user.userType !== 'admin') {
       toast({
-<<<<<<< HEAD
-<<<<<<< HEAD
         title: 'Admin Access Required'
-=======
         title: 'Admin Access Required',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         description:
           'Only administrators can add products to the marketplace. Please contact an administrator.'
         variant: 'destructive'
@@ -853,7 +789,6 @@ export default function Marketplace() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-=======
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
@@ -1112,12 +1047,7 @@ export default function Marketplace() {;
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)
   }, []),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Loading state with skeleton
   if (loading && products.length === 0) {
     return (
@@ -1125,7 +1055,6 @@ export default function Marketplace() {;
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-<<<<<<< HEAD
           className='text-center mb-8'
         >
           <h1 className='text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
@@ -1191,7 +1120,6 @@ export default function Marketplace() {;
           {t('marketplace.hero_title')}
         </h1>
         <p className='text-muted-foreground text-lg'>
-=======
           className="text-center mb-8";
         >;
           <h1 className="text-4xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">;
@@ -1263,11 +1191,6 @@ export default function Marketplace() {;
           {t('marketplace.hero_title')}
         </h1>;
         <p className="text-muted-foreground text-lg">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
@@ -1286,7 +1209,6 @@ export default function Marketplace() {;
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.3 }}
-<<<<<<< HEAD
       >
         <FilterControls
           sortBy = {sortBy,}
@@ -1311,7 +1233,6 @@ export default function Marketplace() {;
           loading = {isFetching,}
         />
       </motion.div>
-=======
       >;
         <FilterControls;
           sortBy={sortBy}
@@ -1336,11 +1257,6 @@ export default function Marketplace() {;
           loading={isFetching}
         />;
       </motion.div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Product Grid */}
       <motion.div
         className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
@@ -1348,36 +1264,22 @@ export default function Marketplace() {;
         animate={{ opacity: 1 }}
         transition={{ delay: 0.4 }}
       >
-<<<<<<< HEAD
         <AnimatePresence mode='popLayout'>
           {products.map((product, index) => (            <motion.div
               key = {product.id,}
               ref = {index === products.length - 1 ? lastElementRef : null,}
-=======
         <AnimatePresence mode="popLayout">
           {products.map((product, index) => (
             <motion.div
               key={product.id}
               ref={index === products.length - 1 ? lastElementRef : null}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.9 }}
               transition={{ delay: Math.min(index * 0.03, 0.5) }}
               whileHover={{ scale: 1.02 }}
-<<<<<<< HEAD
               className='relative group'
-=======
               className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <ProductCard
                 product={{
@@ -1394,15 +1296,10 @@ export default function Marketplace() {;
                   reviewCount: product.reviewCount |0
                   created_at: product.createdAt
                   updated_at: product.createdAt, // Use createdAt for both
-<<<<<<< HEAD
-<<<<<<< HEAD
                   stock: product.stock
                   in_stock: (product.stock |0) > 0
-=======
                   stock: product.stock,
-<<<<<<< HEAD
                   in_stock: (product.stock || 0) > 0,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }}
                 onBuy = {async () => {
                   if (!isAuthenticated) {
@@ -1410,7 +1307,6 @@ export default function Marketplace() {;
                     return; // Stop further execution
                   }                  try {
                     await router.push(`/checkout/${product.id}`);
-<<<<<<< HEAD
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', {
                       data: error
@@ -1433,11 +1329,7 @@ export default function Marketplace() {;
               {product.aiScore && product.aiScore > 90 && (
                 <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
                   <Sparkles className='h-3 w-3 mr-1' />
-=======
                   stock: product.stock,
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   in_stock: (product.stock || 0) > 0
                 }}
                 onBuy={async () => {;
@@ -1447,10 +1339,6 @@ export default function Marketplace() {;
                   }
                   try {
                     await router.push(`/checkout/${product.id}`)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({
@@ -1459,9 +1347,6 @@ export default function Marketplace() {;
                       variant: "destructive"}),
                     // Re-throw to allow ProductCard's catch to also run if needed,
                     // though ProductCard will reset its state in .finally() regardless.
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                     throw error;
                   }
                 }}
@@ -1472,8 +1357,6 @@ export default function Marketplace() {;
               {product.aiScore && product.aiScore > 90 && (
                 <Badge className='absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black'>
                   <Sparkles className='h-3 w-3 mr-1' />
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     throw error
                   try {;
                     await router.push(`/checkout/${product.id}`);
@@ -1494,26 +1377,16 @@ export default function Marketplace() {;
               {product.aiScore && product.aiScore > 90 && (;
                 <Badge className="absolute -top-2 -right-2 bg-gradient-to-r from-yellow-500 to-orange-500 z-10 text-black">;
                   <Sparkles className="h-3 w-3 mr-1" />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   AI {product.aiScore}
                 </Badge>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Featured Badge */}
               {product.featured && (
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>
                   <Star className='h-3 w-3 mr-1' />
                   Featured
                 </Badge>
-=======
 ;
               {/* Featured Badge */}
               {product.featured && (;
@@ -1521,23 +1394,14 @@ export default function Marketplace() {;
                   <Star className="h-3 w-3 mr-1" />;
                   Featured;
                 </Badge>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </motion.div>
           ))}
         </AnimatePresence>
       </motion.div>
       {/* Loading More Indicator */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       {(isFetching |loading) && (
-=======
       {(isFetching || loading) && (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='mt-8'
           initial={{ opacity: 0 }}
@@ -1545,7 +1409,6 @@ export default function Marketplace() {;
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
-=======
       {(isFetching || loading) && (;
         <motion.div;
           className="mt-8";
@@ -1555,17 +1418,11 @@ export default function Marketplace() {;
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">;
             {Array.from({ length: 4 }).map((_, i) => (;
               <SkeletonCard key={`loading-${i}`} />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </motion.div>
       )}
       {/* End of Results */}
-<<<<<<< HEAD
       {!hasMore && products.length > 0 && (
         <motion.div
           className='text-center mt-12 py-8 border-t'
@@ -1579,7 +1436,6 @@ export default function Marketplace() {;
             Showing {products.length} AI-powered solutions
           </div>
         </motion.div>
-=======
       {!hasMore && products.length > 0 && (;
         <motion.div;
           className="text-center mt-12 py-8 border-t";
@@ -1593,36 +1449,23 @@ export default function Marketplace() {;
             Showing {products.length} AI-powered solutions;
           </div>;
         </motion.div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       )}
       {/* Scroll to Top Button */}
-<<<<<<< HEAD
       <AnimatePresence>
         {showScrollTop && (
           <motion.button
             onClick={scrollToTop}
             className='fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50'            initial={{ opacity: 0, scale: 0 }}
-=======
       <AnimatePresence>;
         {showScrollTop && (;
           <motion.button;
             onClick={scrollToTop}
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
-<<<<<<< HEAD
           >
             <ArrowUp className='h-5 w-5 text-primary-foreground' />
           </motion.button>
@@ -1832,8 +1675,6 @@ const Marketplace = () => {return (;
     </>;
   );
 }
-<<<<<<< HEAD
-=======
 ;
 }
 }
@@ -1851,8 +1692,6 @@ const Marketplace = () => {return (;
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
@@ -1862,8 +1701,3 @@ const Marketplace = () => {return (;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

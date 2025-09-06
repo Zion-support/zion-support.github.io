@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -24,8 +21,6 @@ export default function ITOnsiteServicesPage() {;
   
   // Check for success parameter in URL
   const success = searchParams.get("success");
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -39,7 +34,6 @@ import { PageHero } from "@/components/services/PageSections/PageHero",
 import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
 import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
 import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
-<<<<<<< HEAD
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {
@@ -49,7 +43,6 @@ export default function ITOnsiteServicesPage() {
   // Check for success parameter in URL
 
   const success = searchParams.get("success");
-=======
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
 import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",
 export default function ITOnsiteServicesPage() {
@@ -59,12 +52,7 @@ export default function ITOnsiteServicesPage() {
   
   // Check for success parameter in URL
   const success = searchParams.get("success"),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Show success toast if redirected from successful payment
   useEffect(() => {
     if (success === "true") {
@@ -72,17 +60,14 @@ export default function ITOnsiteServicesPage() {
         title: "Payment Successful"
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})
     }
-<<<<<<< HEAD
   }, [success]);
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
-=======
   }, [success]),
   
   // Popular countries for the featured cards
   const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Filter countries based on search query
   const filteredCountries = onsiteServicePricing
     .filter(country =>
@@ -90,7 +75,6 @@ export default function ITOnsiteServicesPage() {
     )
     .sort((a, b) => {
       // First, sort by popular status
-<<<<<<< HEAD
       const aIsPopular = popularCountries.includes(a.country);
       const bIsPopular = popularCountries.includes(b.country);
       if (aIsPopular && !bIsPopular) return -1;
@@ -98,7 +82,6 @@ export default function ITOnsiteServicesPage() {
       // Then sort alphabetically
       return a.country.localeCompare(b.country)
     });
-=======
       const aIsPopular = popularCountries.includes(a.country),
       const bIsPopular = popularCountries.includes(b.country),
       
@@ -109,26 +92,20 @@ export default function ITOnsiteServicesPage() {
       return a.country.localeCompare(b.country)
     }),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country)
     // Scroll to the service details section
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })
     }, 100)
-<<<<<<< HEAD
   }
 
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <AppLayout>
       <section className="py-16 bg-zion-blue">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-<<<<<<< HEAD
-=======
 import { useState, useEffect } from "react",;
 import { useSearchParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -185,20 +162,12 @@ export default function ITOnsiteServicesPage() {;
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Hero Section with Features */}
           <PageHero />
           {/* Country Selection Tabs */}
           <div className="mb-12">
-<<<<<<< HEAD
             <CountryTabs
-=======
             <CountryTabs 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               popularCountries={popularCountries}
               filteredCountries={filteredCountries}
               handleCountrySelect={handleCountrySelect}
@@ -234,16 +203,7 @@ export default function ITOnsiteServicesPage() {;
       <QuoteFormSection />
     </AppLayout>
   )
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

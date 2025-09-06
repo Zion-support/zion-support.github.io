@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState} from "react";
 import {formatDistanceToNow} from "date-fns";
 import {JobApplication} from "@/types/jobs";
@@ -12,8 +9,6 @@ import {Link} from "react-router-dom";
 import {StatusBadge} from "./StatusBadge";
 import {ApplicationProgress} from "./ApplicationProgress";
 import {toast} from "sonner";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState } from "react",
 import { formatDistanceToNow } from "date-fns",
 import { JobApplication } from "@/types/jobs",
@@ -22,41 +17,28 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from "lucide-react",
 import { Link } from "react-router-dom",
 import { StatusBadge } from "./StatusBadge",
-<<<<<<< HEAD
 import { ApplicationProgress } from "./ApplicationProgress";
 import { toast } from "sonner";
-=======
 import { ApplicationProgress } from "./ApplicationProgress",
 import { toast } from "sonner",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ApplicationCardProps {
   application: JobApplication
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 interface ApplicationCardProps {
   application: JobApplication
 }
 
-<<<<<<< HEAD
 export function ApplicationCard({ application }: ApplicationCardProps) {;
   const [expanded, setExpanded] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted": return (
@@ -85,11 +67,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       default:
         return null
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card className="overflow-hidden">
@@ -137,10 +116,8 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
                   <span className="ml-2 text-xs text-muted-foreground">Relevance to job requirements</span>
                 </div>
               </div>
-<<<<<<< HEAD
             )}
           </div>
-=======
 import { useState } from "react",;
 import { formatDistanceToNow } from "date-fns",;
 import { JobApplication } from "@/types/jobs",;
@@ -240,11 +217,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
               </div>;
             )}
           </div>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         )}
       </CardContent>
       <CardFooter className="flex flex-col gap-3 pt-0">
@@ -265,13 +237,10 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
             </Button>
           </div>
         </div>
-<<<<<<< HEAD
         <Button
           variant="secondary"
-=======
         <Button 
           variant="secondary" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           size="sm"
           className="w-full"
           asChild
@@ -283,9 +252,6 @@ export function ApplicationCard({ application }: ApplicationCardProps) {;
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
 
 export default WhitepaperViewPage; import React, { useState, useEffect } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase  } from '@/integrations/supabase/client';
 import WhitepaperPreviewPanel from '@/components/WhitepaperPreviewPanel', // Re-use the preview panel
@@ -30,11 +26,7 @@ interface SharedWhitepaper {
   }
   created_at: string
   is_public: boolean
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react',;
 import { useRouter } from 'next/router', // Changed from useParams;
 import { supabase } from '@/integrations/supabase/client',;
@@ -60,13 +52,8 @@ interface SharedWhitepaper {;
   },;
   created_at: string,;
   is_public: boolean;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const WhitepaperViewPage: React.FC = () => {
   const router = useRouter()
   const { id: rawId } = router.query
@@ -78,15 +65,11 @@ const WhitepaperViewPage: React.FC = () => {
   useEffect((,) => {
     const fetchWhitepaper = async () => {
       if (!id) {
-<<<<<<< HEAD
         setError("No whitepaper ID provided.")
         setLoading(false)
         return
-=======
         setError("No whitepaper ID provided."),
         setLoading(false),
-<<<<<<< HEAD
-=======
         return
 ;
 const WhitepaperViewPage: React.FC = () => {;
@@ -102,12 +85,7 @@ const WhitepaperViewPage: React.FC = () => {;
       if (!id) {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         return;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       setLoading(true)
       setError(null)
@@ -126,11 +104,8 @@ const WhitepaperViewPage: React.FC = () => {;
       } finally {
         setLoading(false)
       }
-<<<<<<< HEAD
     }
-=======
     },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     fetchWhitepaper()
   }, [id])
   if (loading) {
@@ -181,7 +156,6 @@ const WhitepaperViewPage: React.FC = () => {;
                 <span className="px-3 py-1 text-xs font-semibold text-yellow-800 bg-yellow-200 rounded-full">
                     Private (Admin View)
                 </span>
-<<<<<<< HEAD
             )}
         </div>
       <WhitepaperPreviewPanel
@@ -192,15 +166,11 @@ const WhitepaperViewPage: React.FC = () => {;
       />
     </div>
   )
-<<<<<<< HEAD
 }
 export default WhitepaperViewPage;
 
-=======
 },
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -267,10 +237,5 @@ export default WhitepaperViewPage;
     </div>;
   );
 },;
-<<<<<<< HEAD
 export default WhitepaperViewPage;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export default WhitepaperViewPage;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

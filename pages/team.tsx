@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import Head from "next/head";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
   ArrowRight
   Phone
   Mail
@@ -24,7 +16,6 @@ import {
   Globe
   Code
   Shield
-=======
   ArrowRight,
   Phone,
   Mail,
@@ -37,20 +28,12 @@ import {
   Globe,
   Code,
   Shield,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Layout from "../components/Layout";
 const teamMembers = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     id: 1,
     name: "Kleber Santos",
     position: "CEO & Founder",
@@ -60,12 +43,8 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/klebersantos",
     twitter: "https://twitter.com/klebersantos",
     github: "https://github.com/klebersantos",
-<<<<<<< HEAD
     expertise: ["Strategic Leadership", "AI/ML", "Cloud Architecture", "Business Development"]
   },
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
     id: 1
     name: "Kleber Santos"
     position: "CEO & Founder"
@@ -75,7 +54,6 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/klebersantos"
     twitter: "https://twitter.com/klebersantos"
     github: "https://github.com/klebersantos"
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
     expertise: [
       "Strategic Leadership"
       "AI/ML"
@@ -83,7 +61,7 @@ const teamMembers = [
       "Business Development"
     ]
   }
->>>>>>> origin/main
+origin/main
   {
     id: 2
     name: "Sarah Johnson"
@@ -138,7 +116,6 @@ const teamMembers = [
     expertise: ["Data Science", "Big Data", "Predictive Analytics", "BI"]
   }
   {
-<<<<<<< HEAD
     id: 6,
     name: "Lisa Wang",
     position: "Head of Product Development",
@@ -148,12 +125,9 @@ const teamMembers = [
     linkedin: "https://linkedin.com/in/lisawang",
     twitter: "https://twitter.com/lisawang",
     github: "https://github.com/lisawang",
-<<<<<<< HEAD
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"],
   },
-=======
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-=======
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -180,10 +154,9 @@ const teamMembers = [
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
   }
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
     id: 6
     name: "Lisa Wang"
     position: "Head of Product Development"
@@ -194,9 +167,6 @@ const teamMembers = [
     twitter: "https://twitter.com/lisawang"
     github: "https://github.com/lisawang"
     expertise: ["Product Strategy", "SaaS Development", "UX/UI", "Mobile Apps"]
-<<<<<<< HEAD
-=======
-=======
     name: 'Dr. Sarah Johnson',
     role: 'Chief Technology Officer',
     expertise: 'AI & Machine Learning',
@@ -223,10 +193,9 @@ const teamMembers = [
     expertise: 'Project Management',
     icon: Users,
     description: 'Leading our development teams with agile methodologies and client-focused delivery.'
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 const departments = [
   {
@@ -287,14 +256,8 @@ const stats = [
 
 export default function TeamPage() {
   return (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     <Layout
       title="Our Team - Zion Tech Group"
       description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
@@ -577,13 +540,7 @@ export default function TeamPage() {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
     <>
       <SEO
         title='Our Team | Zion Tech Group'
@@ -597,12 +554,9 @@ export default function TeamPage() {
         </p>
       </div>
     </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+origin/automation-improvements-final
     </Layout>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 import Head from "next/head";
@@ -644,12 +598,7 @@ const teamMembers = [
 ];
 export default function TeamPage() {
   return (
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
     <>
       <SEO
         title="Our Team | Zion Tech Group"
@@ -662,18 +611,10 @@ export default function TeamPage() {
           Profiles coming soon. For inquiries, contact us.
         </p>
       </div>
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
     </>;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   return (
     <>
@@ -690,20 +631,13 @@ export default function TeamPage() {
       </div>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import SEO from '../components/SEO';
 export default function TeamPage() {	return (
-=======
 import React from 'react',
 import SEO from '../components/SEO',
 export default function TeamPage() {
 	return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 		<>
 			<SEO title="Our Team | Zion Tech Group" description="Meet the leadership team at Zion Tech Group." canonical="/team" />
 			<div className="container mx-auto px-4 py-16">
@@ -712,11 +646,6 @@ export default function TeamPage() {
 			</div>
 		</>
 	)
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
+ursor/fix-lint-push-and-merge-to-main-ae4e
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

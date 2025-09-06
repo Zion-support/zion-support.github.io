@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {ContractTemplate} from "@/types/contracts";
 import {Button} from "@/components/ui/button";
 import {Loader2, Edit, Trash, Star, StarOff} from "lucide-react";
@@ -10,13 +7,10 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Separator} from "@/components/ui/separator";
 import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from "@/components/ui/alert-dialog";
 import {useState} from "react";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ContractTemplate } from "@/types/contracts",
 import { Button } from "@/components/ui/button",
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",
 import { useContractTemplates } from "@/hooks/useContractTemplates",
-<<<<<<< HEAD
 import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import {
@@ -58,7 +52,6 @@ export function TemplateList({
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   }
-=======
 import { Card, CardContent } from "@/components/ui/card",
 import { Separator } from "@/components/ui/separator",
 import {
@@ -71,18 +64,11 @@ import {
   AlertDialogHeader,
   AlertDialogTitle} from "@/components/ui/alert-dialog",
 import { useState } from "react",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface TemplateListProps {
   templates: ContractTemplate[],
   isLoading: boolean,
   onSelect: (template: ContractTemplate) => void,
   onEdit: (template: ContractTemplate) => void
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
 
 export function TemplateList({;
@@ -104,8 +90,6 @@ export function TemplateList({;
       setTemplateToDelete(null)
     }
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { ContractTemplate } from "@/types/contracts",;
 import { Button } from "@/components/ui/button",;
 import { Loader2, Edit, Trash, Star, StarOff } from "lucide-react",;
@@ -146,15 +130,10 @@ export function TemplateList({;
       setTemplateToDelete(null);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleSetDefault = async (templateId: string) => {
     await setDefaultTemplate.mutateAsync(templateId)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   if (isLoading) {
     return (
@@ -207,15 +186,12 @@ export function TemplateList({;
               </div>
             </div>
             <Separator className="my-3" />
-<<<<<<< HEAD
             <Button
               onClick={() => onSelect(template)}
               variant="outline"
-=======
             <Button 
               onClick={() => onSelect(template)} 
               variant="outline" 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="w-full"
             >
               Use This Template
@@ -236,7 +212,6 @@ export function TemplateList({;
             <AlertDialogAction
               className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
               onClick={handleDeleteConfirm}
-<<<<<<< HEAD
             >
               Delete
             </AlertDialogAction>
@@ -246,7 +221,6 @@ export function TemplateList({;
     </div>
   )
 }
-=======
             >;
               Delete;
             </AlertDialogAction>;
@@ -257,4 +231,3 @@ export function TemplateList({;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

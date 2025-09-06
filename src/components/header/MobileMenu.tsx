@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter  } from 'next/router';
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react'
@@ -19,14 +17,11 @@ export interface MobileMenuProps {
 const protectedRoutes = null;
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.
-=======
 name: item.key === 'explore' ? t('general.explore') : t(`nav.${item.key}`)})),  )
 }
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Home, Search, BriefcaseIcon, MessageSquare, User, X, MessageCircle } from 'lucide-react';
@@ -144,7 +139,6 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
                 openLoginModal(item.href);
                 // It's important to call onClose AFTER openLoginModal if the modal might be part of the same parent that controls menu visibility.;
                 // Or ensure modal is rendered at a higher level. Given AppHeader structure, this should be okay.;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               }
               onClose(), // Close mobile menu on any click
             }}
@@ -166,13 +160,6 @@ export function MobileMenu({ unreadCount = 0, onClose, openLoginModal }: MobileM
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

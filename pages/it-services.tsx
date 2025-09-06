@@ -1,25 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Link from 'next/link',
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Head from 'next/head';
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 import {
-<<<<<<< HEAD
   Server
   Shield
   Cloud
@@ -56,7 +43,6 @@ import {
   Brain
   DollarSign
   Rocket
-=======
   Server,
   Shield,
   Cloud,
@@ -93,7 +79,6 @@ import {
   Brain,
   DollarSign,
   Rocket;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 const itServices = [{
     title: 'Cloud Infrastructure Management'
@@ -105,26 +90,19 @@ const itServices = [{
     popular: true
   }
   {
-<<<<<<< HEAD
     title: 'Cybersecurity Solutions',
     description: 'Enterprise-grade security services to protect your digital assets and data.',
     icon: Shield,
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response'],
     pricing: '$5,000 - $40,000/project',
-<<<<<<< HEAD
     category: 'Security',
-=======
     title: 'Cybersecurity Solutions'
     description: 'Enterprise-grade security services to protect your digital assets and data.'
     icon: Shield
     features: ['Threat Detection', 'Vulnerability Assessment', 'Security Audits', 'Incident Response']
     pricing: '$5,000 - $40,000/project'
     category: 'Security'
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
     popular: true
   }
   {
@@ -703,14 +681,8 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-=======
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
 import { 
   Server, 
   Shield, 
@@ -747,9 +719,7 @@ import {
   Search, 
   ShoppingCart, 
   BookOpen, 
-<<<<<<< HEAD
   Rocket,
-=======
 import {
   Server
   Shield
@@ -787,14 +757,8 @@ import {
   ShoppingCart
   BookOpen
   Rocket
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
+origin/main
   Rocket,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   Laptop;
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -812,25 +776,18 @@ const itServices = [
     link: '/contact'
   }
   {
-<<<<<<< HEAD
     title: 'Cybersecurity Solutions',
     description: 'Comprehensive security services to protect your business from cyber threats',
     icon: Shield,
     features: ['Security Assessment', 'Threat Monitoring', 'Incident Response', 'Compliance'],
     pricing: '$1,500 - $8,000/month',
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
     category: 'Security',
     popular: true,
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection'],
     marketPrice: '$4,000/month',
-=======
     title: 'Cybersecurity Solutions'
     description: 'Comprehensive security services to protect your business from cyber threats'
     icon: Shield
@@ -840,11 +797,7 @@ const itServices = [
     popular: true
     benefits: ['Enhanced security posture', 'Reduced risk', 'Compliance assurance', '24/7 protection']
     marketPrice: '$4,000/month'
-<<<<<<< HEAD
->>>>>>> origin/main
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
     link: '/contact'
   }
   {
@@ -868,12 +821,9 @@ const industries = [
   { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning management systems' }
   { name: 'Government', icon: Globe, description: 'Secure government IT solutions and compliance' }
 ];
-<<<<<<< HEAD
 
 export default function ITServices() {
-=======
 export default function ITServices() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
   useEffect(() => {
@@ -1147,21 +1097,14 @@ export default function ITServices() {;
       ]
     }
   ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const filteredServices =
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
 
   return (
-<<<<<<< HEAD
     <Layout>
-<<<<<<< HEAD
-=======
-=======
 import Link from 'next/link';
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
@@ -1325,8 +1268,6 @@ export default function ITServices(req, res) {
     : services.filter(service => service.category === selectedCategory),
   return (
     <>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Head>
         <title>IT Services - Zion Tech Group</title>
         <meta
@@ -1341,10 +1282,6 @@ export default function ITServices(req, res) {
         <meta name='robots' content='index, follow' />
         <link rel='canonical' href={`${contact.site}/it-services`} />
       </Head>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <ErrorBoundary level='page'>
         <main className='min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white'>
           {/* Hero Section */}
@@ -1387,20 +1324,11 @@ export default function ITServices(req, res) {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Services Grid */}
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
-<<<<<<< HEAD
-=======
-=======
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */  } catch (error) {
@@ -1477,8 +1405,6 @@ export default function ITServices(req, res) {
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {filteredServices.map((service, index) => (
                   <div                    key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
@@ -1488,13 +1414,9 @@ export default function ITServices(req, res) {
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                         Popular
                       </div>
-<<<<<<< HEAD
                     )}
-=======
-<<<<<<< HEAD
                     )}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <h3 className='text-xl font-bold mb-3'>{service.name}</h3>
                     <p className='text-slate-300 mb-4 text-sm'>
                       {service.description}
@@ -1504,13 +1426,11 @@ export default function ITServices(req, res) {
                         Key Features:
                       </h4>
                       <ul className='text-slate-400 text-sm space-y-1'>
-<<<<<<< HEAD
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
                           </li>
                         ))}
-=======
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>                            {feature}
@@ -1568,7 +1488,6 @@ export default function ITServices(req, res) {
                         strokeWidth={2}
                         d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                       />
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1593,7 +1512,6 @@ export default function ITServices(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </ul>
                     </div>
                     <div className='mb-4'>
@@ -1602,14 +1520,12 @@ export default function ITServices(req, res) {
                       </h4>
                       <div className='flex flex-wrap gap-1'>
                         {service.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                           <span
                             key={benefitIndex}
                             className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
                           >                            {benefit}
                           </span>
                         ))}
-=======
                           <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
                             {benefit  } catch (error) {
     console.error("Error:", error);
@@ -1622,7 +1538,6 @@ export default function ITServices(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </div>
                     <div className='flex items-center justify-between mb-4'>
@@ -1635,9 +1550,6 @@ export default function ITServices(req, res) {
                     </div>
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>                      Learn More
                     </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
                   <Head>
                   <title>IT Services - Zion Tech Group</title>
@@ -1648,23 +1560,14 @@ export default function ITServices(req, res) {
       <section className="relative bg-gradient-to-br from-green-900 via-emerald-900 to-teal-900 text-white py-20 overflow-hidden">
 <div className="absolute inset-0">
                   <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse">
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
                   </div>
-<<<<<<< HEAD
                 ))}
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Technology Stack Section */}
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
@@ -1686,7 +1589,6 @@ export default function ITServices(req, res) {
                         strokeWidth={2}
                         d='M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z'
                       />
-=======
                       </div>;
                     </div>;
                     <div className="flex items-center justify-between mb-4">;
@@ -1720,8 +1622,6 @@ export default function ITServices(req, res) {
                   <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Cloud Platforms</h3>
@@ -1729,10 +1629,6 @@ export default function ITServices(req, res) {
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1747,15 +1643,10 @@ export default function ITServices(req, res) {
                         strokeWidth={2}
                         d='M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z'
                       />
-<<<<<<< HEAD
-=======
-=======
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Security</h3>
@@ -1763,10 +1654,6 @@ export default function ITServices(req, res) {
                     Zero-trust architecture and advanced threat protection
                   </p>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1787,16 +1674,11 @@ export default function ITServices(req, res) {
                         strokeWidth={2}
                         d='M15 12a3 3 0 11-6 0 3 3 0 016 0z'
                       />
-<<<<<<< HEAD
-=======
-=======
                 <div className="text-center">
                   <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>DevOps</h3>
@@ -1804,10 +1686,6 @@ export default function ITServices(req, res) {
                     CI/CD pipelines and infrastructure automation
                   </p>
                 </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className='text-center'>
                   <div className='w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4'>
                     <svg
@@ -1822,15 +1700,10 @@ export default function ITServices(req, res) {
                         strokeWidth={2}
                         d='M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1'
                       />
-<<<<<<< HEAD
-=======
-=======
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </svg>
                   </div>
                   <h3 className='text-xl font-bold mb-2'>Blockchain</h3>
@@ -1840,17 +1713,10 @@ export default function ITServices(req, res) {
               </div>
             </div>
           </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* CTA Section */}
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl md:text-4xl font-bold mb-8'>
-<<<<<<< HEAD
-=======
-=======
           {/* CTA Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1859,8 +1725,6 @@ export default function ITServices(req, res) {
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to Transform Your IT Infrastructure?
               </h2>
               <p className='text-lg text-slate-300 mb-8'>
@@ -1868,15 +1732,9 @@ export default function ITServices(req, res) {
                 technology solutions can modernize your infrastructure and
                 accelerate your digital transformation.
               </p>
-<<<<<<< HEAD
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-=======
-<<<<<<< HEAD
               <div className='flex flex-col sm:flex-row items-center justify-center gap-4'>
-=======
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'
@@ -1885,10 +1743,6 @@ export default function ITServices(req, res) {
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
                 <a
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
                 >
@@ -2079,9 +1933,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -2091,9 +1942,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 </p>
                   <div className="text-3xl font-bold text-green-600 mb-6">
                   {level.pricing}
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
-=======
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
@@ -2116,7 +1964,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
-=======
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
@@ -2257,11 +2104,9 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
               >
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">
                   {level.name}
@@ -2407,15 +2252,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 View All Services
               </Link>
             </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
               >
                 IT Services
               </h1>
-<<<<<<< HEAD
               <p
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
@@ -2428,7 +2268,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 From cloud infrastructure to quantum computing, we provide
                 cutting-edge technology solutions that scale with your business
                 and drive innovation.
-=======
               <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 100+ Comprehensive IT Solutions
               </p>
@@ -2436,44 +2275,26 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                 Transform your business with our enterprise-grade IT services. From cloud infrastructure 
                 to quantum computing, we provide cutting-edge technology solutions that scale with your 
                 business and drive innovation.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
               </p>
             </div>
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
           </motion.div>
         </div>
       </section>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-<<<<<<< HEAD
-=======
-=======
                   href={`tel:${contact.phone.replace(/[^\d+]/g,'')}`  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
           </section>
 
           {/* Category Filter */}
-<<<<<<< HEAD
           <section className='py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
               <div className='flex flex-wrap justify-center gap-4 mb-8'>
                 {categories.map(category => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
 
                   <Link
                     href={service.link}
@@ -2541,12 +2362,10 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
-=======
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -2564,25 +2383,21 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </section>
 
           {/* Services Grid */}
-<<<<<<< HEAD
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
                   <div
-=======
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <div 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     {service.popular && (
-<<<<<<< HEAD
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
                         Popular
                       </div>
@@ -2601,7 +2416,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
-=======
                       <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
@@ -2616,14 +2430,12 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-<<<<<<< HEAD
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                         Benefits:
@@ -2634,19 +2446,16 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                             key={benefitIndex}
                             className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
                           >
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
                       <div className="flex flex-wrap gap-1">
                         {service.benefits.map((benefit, benefitIndex) => (
                           <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                             {benefit}
                           </span>
                         ))}
                       </div>
                     </div>
-<<<<<<< HEAD
 
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
@@ -2658,7 +2467,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     </div>
 
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
-=======
                     
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -2666,7 +2474,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                     </div>
                     
                     <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                       Learn More
                     </button>
                   </div>
@@ -2676,7 +2483,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
           </section>
 
           {/* Technology Stack Section */}
-<<<<<<< HEAD
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
@@ -2704,7 +2510,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   <p className='text-slate-400'>
                     AWS, Azure, GCP, and hybrid cloud solutions
                   </p>
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
                 </div>
                   <ul className="space-y-3 mb-8">
                   {level.features.map((feature, featureIndex) => (
@@ -2715,7 +2521,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
                   ))}
                 </ul>
                   <Link
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   href="/contact"
                   className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors inline-flex items-center justify-center ${
                     index === 1
@@ -2823,7 +2628,6 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
               </address>
             </motion.div>
           </div>
-<<<<<<< HEAD
           <motion.div
             className="bg-gradient-to-r from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center"
             initial={{ opacity: 0, y: 30 }}
@@ -2847,43 +2651,26 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
         </div>
       </section>
                   </div>
-=======
         </section>
       </div>
     </Layout>
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
-<<<<<<< HEAD
 
-=======
             </div>
-=======
             </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-=======
->>>>>>> origin/main
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/main
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
 }
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 }
-=======
           <section className="py-16 px-4 bg-slate-900/40">;
             <div className="max-w-6xl mx-auto">;
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">;
@@ -2978,9 +2765,5 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+ursor/fix-lint-push-and-merge-to-main-ae4e

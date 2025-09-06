@@ -1,38 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'KYC uploaded' });
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { KycDocumentMeta, KycProfile } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
 import crypto from 'crypto';
-<<<<<<< HEAD
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
-<<<<<<< HEAD
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
-=======
 const DATA_DIR = path.join(process.cwd(), 'datakyc'),;
 const FILE = path.join(DATA_DIR, 'profiles.json');
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function load(): Record<string, KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8');
     return JSON.parse(raw);
-<<<<<<< HEAD
   } catch {
     return {}
   }
@@ -81,7 +65,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 res.status(200).json({ ok: true, profile });
 }
 
-=======
   } catch {;
     return {  } catch (error) {
     console.error("Error:", error);
@@ -170,10 +153,5 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

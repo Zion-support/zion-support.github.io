@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -15,7 +13,6 @@ import { Switch  } from '@/components/ui/switch';
 import { Label  } from '@/components/ui/label';
 import { toast } from 'sonner';
 export default function AccountSettings() {
-=======
 import {useState, useEffect} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -30,13 +27,11 @@ import {Switch} from '@/components/ui/switch';
 import {Label} from '@/components/ui/label';
 import {toast} from 'sonner';
 export default function AccountSettings() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const [displayWeb3, setDisplayWeb3] = useState(false);
   const [didHandle, setDidHandle] = useState('');
   const [enableBackup, setEnableBackup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
-<<<<<<< HEAD
   useEffect(() => {
     try {
 
@@ -46,9 +41,6 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3);
         setDidHandle(parsed.didHandle |'');
         setEnableBackup(!!parsed.enableBackup)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from 'react',
 import { Header } from '@/components/Header',
 import { Footer } from '@/components/Footer',
@@ -68,7 +60,6 @@ export default function AccountSettings() {
   const [didHandle, setDidHandle] = useState(''),
   const [enableBackup, setEnableBackup] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   useEffect(() => {
     try {
@@ -78,11 +69,6 @@ export default function AccountSettings() {
         setDisplayWeb3(!!parsed.displayWeb3),
         setDidHandle(parsed.didHandle || ''),
         setEnableBackup(!!parsed.enableBackup)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -110,32 +96,19 @@ export default function AccountSettings() {;
         setDisplayWeb3(!!parsed.displayWeb3),;
         setDidHandle(parsed.didHandle || ''),;
         setEnableBackup(!!parsed.enableBackup);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (e) {
       console.error('Error loading account settings', e)
     }
-<<<<<<< HEAD
   }, []);
-<<<<<<< HEAD
   const handleSave = () => {
     setIsSubmitting(true);
-=======
   }, []),
-=======
-=======
   }, []),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const handleSave = () => {
     setIsSubmitting(true),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // Simulate API call
     setTimeout(() => {
       try {
@@ -150,7 +123,6 @@ export default function AccountSettings() {;
         toast.error('Failed to save settings')
       } finally {
         setIsSubmitting(false)
-<<<<<<< HEAD
       }
     }, 1000)
   }
@@ -177,7 +149,6 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {
           setDidHandle(ensName)
-=======
   }, []),;
   const handleSave = () => {;
     setIsSubmitting(true),;
@@ -222,11 +193,6 @@ export default function AccountSettings() {;
         const ensName = await provider.lookupAddress(address);
         if (ensName) {;
           setDidHandle(ensName);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       } catch (error) {
         console.error('ENS lookup error:', error)
@@ -235,18 +201,10 @@ export default function AccountSettings() {;
     } catch (error: any) {
       toast.error(error.message |'Failed to connect wallet')
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -423,7 +381,6 @@ export default function AccountSettings() {;
                   Restore Profile from Backup
                 </Button>
                 <p className="text-xs text-gray-500 mt-1">
-<<<<<<< HEAD
                   {enableBackup
                     ? 'Restore your profile data from decentralized storage'
                     : 'Enable backup first to use this feature'}
@@ -437,7 +394,6 @@ export default function AccountSettings() {;
     </>
   )
 }
-=======
                   {enableBackup 
                     ? 'Restore your profile data from decentralized storage' 
                     : 'Enable backup first to use this feature'}
@@ -452,4 +408,3 @@ export default function AccountSettings() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

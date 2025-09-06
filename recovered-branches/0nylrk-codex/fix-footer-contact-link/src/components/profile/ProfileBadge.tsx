@@ -1,24 +1,14 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react";
 import {BadgeCheck, Star, Clock, Award} from "lucide-react";
 import {cn} from "@/lib/utils";
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated';
-=======
 import React from "react",
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",
 import { cn } from "@/lib/utils",
 type BadgeType = 'verified' | 'featured' | 'new' | 'top-rated',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface ProfileBadgeProps {
   type: BadgeType
   className?: string
@@ -38,7 +28,6 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       text: "New"
       colors: "bg-green-500/20 text-green-400"}
     "top-rated": {
-<<<<<<< HEAD
       icon: Award
       text: "Top Rated"
       colors: "bg-purple-500/20 text-purple-400"}}
@@ -48,35 +37,25 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium";
       colors;
 
-=======
       icon: Award,
       text: "Top Rated",
       colors: "bg-purple-500/20 text-purple-400"}},
-<<<<<<< HEAD
 ;
   const { icon: Icon, text, colors } = badgeConfig[type];
-=======
 
   const { icon: Icon, text, colors } = badgeConfig[type],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
   return (
     <div className={cn(
       "flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium",
       colors,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       className
     )}>
       <Icon className="w-3 h-3" />
       <span>{text}</span>
     </div>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { BadgeCheck, Star, Clock, Award } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -115,10 +94,5 @@ export function ProfileBadge({ type, className }: ProfileBadgeProps) {;
       <span>{text}</span>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

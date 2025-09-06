@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 export interface Q4Service {;
-=======
 export interface Q4Service {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   id: string;
   name: string;
   tagline: string;
@@ -23,11 +20,8 @@ export interface Q4Service {
   realService: boolean;
   technology?: string[];
   integrations?: string[];
-<<<<<<< HEAD
   useCases?: string[],
-=======
   useCases?: string[];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   roi?: string;
   competitors?: string[],
   marketSize?: string;
@@ -48,8 +42,6 @@ export interface Q4Service {
   rating?: number;
 
   reviews?: number;
-<<<<<<< HEAD
-<<<<<<< HEAD
 const contact = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
@@ -774,7 +766,6 @@ export const real2025Q4Additions = [
   }
 ];
 
-=======
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -1013,10 +1004,7 @@ export const realQ4Services2025: RealQ4Service[] = [
     reviews: 28,
   },
 ];
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 export const real2025Q4Additions = [
   {
     id: 'ai-governed-rag-platform',
@@ -1035,12 +1023,9 @@ export const real2025Q4Additions = [
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: `https://ziontechgroup.com/services/${toSlug('ai-governed-rag-platform')}`,
-<<<<<<< HEAD
     marketPosition:;
       'Safer alternative to DIY RAG; comparable to Guardrails/Evals + vector DB stacks.',
-=======
     marketPosition: 'Safer alternative to DIY RAG, comparable to Guardrails/Evals + vector DB stacks.',
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     targetAudience: 'Platform, data, and compliance teams',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -1441,4 +1426,3 @@ export const real2025Q4Additions = [
     reviews: 9
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

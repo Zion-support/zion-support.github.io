@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage",;
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle",;
@@ -9,7 +6,6 @@ import axios from "axios",;
 import { v4 as uuidv4 } from "uuid",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
@@ -32,7 +28,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const merkleRoot = computeMerkleRootFromVotes(votes)
   const version = (state.latestVersionByEntityId[proposalId] |0) + 1
   const event = {
-<<<<<<< HEAD
     eventId: uuidv4()
     type: "proposal" as const
     payload: { id: proposalId, proposalId, title, votes }
@@ -46,7 +41,6 @@ merkleRoot}
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
-=======
     eventId: uuidv4(),
     type: "proposal" as const,
     payload: { id: proposalId, proposalId, title, votes },
@@ -78,8 +72,6 @@ merkleRoot},
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId });
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -141,27 +133,21 @@ export default async function handler(req, res) {
   const headers: Record<string, string> = {},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
       .map(async (peer) => {
-<<<<<<< HEAD
         const url = new URL("/api/sync/publish", peer.baseUrl).toString()
-=======
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         try {
           await axios.post(url, body, { headers, timeout: 5000 })
         } catch {
           // ignore
-<<<<<<< HEAD
         }
       })
   )
 
   return res.status(200).json({ status: "created", merkleRoot, version, eventId: event.eventId })
-=======
           } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -271,10 +257,5 @@ export default async function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

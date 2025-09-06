@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState  } from 'react';
 import { Header  } from '@/components/Header';
 import { Footer  } from '@/components/Footer';
@@ -13,7 +11,6 @@ import { ProtectedRoute  } from '@/components/ProtectedRoute';
 import { Tabs, TabsList, TabsTrigger, TabsContent  } from '@/components/ui/tabs';
 import { useToast } from '@/hooks/use-toast';
 export default function TokenManager() {
-=======
 import {useEffect, useState} from 'react';
 import {Header} from '@/components/Header';
 import {Footer} from '@/components/Footer';
@@ -27,7 +24,6 @@ import {ProtectedRoute} from '@/components/ProtectedRoute';
 import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs';
 import {useToast} from '@/hooks/use-toast';
 export default function TokenManager() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const { user } = useAuth();
   const { toast } = useToast();
   const [transactions, setTransactions] = useState<TokenTransaction[]>([]),
@@ -66,12 +62,8 @@ export default function TokenManager() {;
         variant: 'destructive'
       })
     }
-<<<<<<< HEAD
   }
-=======
   };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useEffect, useState } from 'react',;
 import { Header } from '@/components/Header',;
 import { Footer } from '@/components/Footer',;
@@ -123,11 +115,6 @@ export default function TokenManager() {;
       });
     }
   },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <ProtectedRoute adminOnly>

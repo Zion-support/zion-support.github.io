@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 interface EmptyFraudStateProps {
   hasFilters: boolean
@@ -32,17 +28,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 import React from "react"
 import {Button} from "@/components/ui/button"
 import {ShieldAlert} from 'lucide-react'
-=======
 
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from 'lucide-react'
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface EmptyFraudStateProps {
 
   hasFilters: boolean
@@ -63,16 +53,11 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
       )}
     </div>
   )
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { ShieldAlert } from 'lucide-react';
@@ -96,13 +81,8 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({;
       </p>;
       {hasFilters && (;
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       )}
     </div>;
   );
-<<<<<<< HEAD
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

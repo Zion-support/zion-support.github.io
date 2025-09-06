@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 resizeCanvas ();
 window.addEventListener ('resize', resizeCanvas);
 // Initialize particles
@@ -143,24 +140,14 @@ export default function UltraFuturisticBackground2029() {;
                   ctx.beginPath();
                   ctx.moveTo(particle.x, particle.y);
                   ctx.lineTo(partner.x, partner.y);
-<<<<<<< HEAD
                   ctx.stroke();                }                  ctx.stroke()
-=======
                   ctx.stroke();                }
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 }
               }
             }
             break;
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           case 'holographic':
             // Holographic particles with rainbow effect
             const time = Date.now() * 0.001;
@@ -391,14 +378,7 @@ export default function UltraFuturisticBackground2029() {;
           ease: 'easeInOut'
         }}
       />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -411,18 +391,13 @@ export default function UltraFuturisticBackground2029() {;
         <motion.div
           className='absolute top-1/4 left-1/4 w-96 h-96 rounded-full border border-cyan-500/20'
           animate={{
-<<<<<<< HEAD
             scale: [1, 1.2, 1]
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
-<<<<<<< HEAD
             duration: 4
             repeat: Infinity
-=======
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ease: 'easeInOut',      {/* Canvas for particle effects */}
       <canvas
         ref={canvasRef}
@@ -437,24 +412,18 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1, 1.2, 1];
             opacity: [0.1, 0.3, 0.1]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 4
             repeat: Infinity
             ease: 'easeInOut'
-=======
-=======
             ease: 'easeInOut',
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 4,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         {/* Holographic matrix */}
@@ -474,23 +443,17 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1.2, 1, 1.2];
             opacity: [0.3, 0.1, 0.3]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 5
             repeat: Infinity
             ease: 'easeInOut'
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 5,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
         {/* Neural network nodes */}
@@ -510,23 +473,17 @@ export default function UltraFuturisticBackground2029() {;
           animate={{
             scale: [1, 1.1, 1];
             opacity: [0.2, 0.4, 0.2]
-<<<<<<< HEAD
           }}
           transition={{
             duration: 6
             repeat: Infinity
             ease: 'easeInOut'
-=======
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'easeInOut',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }}
         />
       </div>
@@ -565,8 +522,6 @@ export default function UltraFuturisticBackground2029() {;
               opacity: [0.3, 0.8, 0.3];
               scale: [1, 1.2, 1]
             }}
-=======
-<<<<<<< HEAD
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1],          }}
           transition={{
@@ -591,13 +546,9 @@ export default function UltraFuturisticBackground2029() {;
 
             }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
             }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             transition={{
               duration: 3 + i * 0.5
               repeat: Infinity
@@ -609,13 +560,6 @@ export default function UltraFuturisticBackground2029() {;
         ))}
       </div>
     </div>
-<<<<<<< HEAD
 );  )
 }
-=======
   );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

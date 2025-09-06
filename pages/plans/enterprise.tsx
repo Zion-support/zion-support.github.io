@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 import Link from 'next/link';
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Link from 'next/link',;
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' },
@@ -10,7 +6,6 @@ const features = [
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
@@ -91,11 +86,7 @@ export default function EnterprisePlans() {
                   ))}
                 </tr>
               ))}
-=======
-<<<<<<< HEAD
-=======
 import Link from 'next/link';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const features = [;
   { key: 'private_portal', label: 'Private hiring portal' },;
   { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },;
@@ -199,11 +190,6 @@ export default function EnterprisePlans(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </tbody>
           </table>
         </div>
@@ -219,21 +205,12 @@ export default function EnterprisePlans(req, res) {
         </div>
       </section>
     </main>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

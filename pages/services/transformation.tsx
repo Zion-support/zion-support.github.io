@@ -1,15 +1,9 @@
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
   Rocket
   Zap
   Shield
@@ -89,8 +83,6 @@ export default function DigitalTransformationPage() {
     { number: '24/7', label: 'Support Available', icon: Clock }
   ];
 
-=======
-=======
   Rocket,
   Zap,
   Shield,
@@ -106,9 +98,7 @@ export default function DigitalTransformationPage() {
 } from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -117,10 +107,6 @@ import {
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function DigitalTransformationPage() {
   const services = [
     {
@@ -153,12 +139,10 @@ export default function DigitalTransformationPage() {
       features: ["Stakeholder Engagement", "Training Programs", "Communication Strategy", "Success Metrics"],
       price: "From $8,000",
       icon: Users,
-<<<<<<< HEAD
       color: 'from-emerald-500 to-teal-500',
     },;
   ];
 
-=======
       color: "from-emerald-500 to-teal-500"
       } catch (error) {
     console.error("Error:", error);
@@ -166,7 +150,6 @@ export default function DigitalTransformationPage() {
   }
 }
   ],
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const stats = [
     { number: "500+", label: "Transformations Completed", icon: Rocket },
     { number: "40%", label: "Average Cost Reduction", icon: TrendingUp },
@@ -177,12 +160,10 @@ export default function DigitalTransformationPage() {
   }
 }
   ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Digital Transformation Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='End-to-end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services.'
@@ -207,7 +188,6 @@ export default function DigitalTransformationPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className='mb-8'
-=======
         <meta name="description" content="End-to-end digital transformation solutions from Zion Tech Group. Strategy, modernization, automation, and change management services." />
         <meta property="og:title" content="Digital Transformation Services - Zion Tech Group" />
         <meta property="og:description" content="End-to-end digital transformation solutions for modern businesses." />
@@ -238,16 +218,10 @@ export default function DigitalTransformationPage() {
   }
 }
             className="mb-8"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-yellow-400 via-orange-400 to-yellow-400 bg-clip-text text-transparent mb-6">
               Digital Transformation
             </h1>
-<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               End-to-end digital transformation solutions that modernize your
               business            </p>
@@ -262,14 +236,8 @@ export default function DigitalTransformationPage() {
               From strategy development to implementation, we guide businesses
               through complete digital transformation journeys that drive
               innovation, efficiency, and growth.
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               End-to-end digital transformation solutions that modernize your business
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             </p>
           </motion.div>
           <motion.div
@@ -301,7 +269,6 @@ export default function DigitalTransformationPage() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
       {/* Stats Section */}
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
@@ -313,7 +280,6 @@ export default function DigitalTransformationPage() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='text-center'
-=======
       {/* Stats Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -490,16 +456,10 @@ export default function DigitalTransformationPage(req, res) {
   }
 }
                 className="text-center"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-yellow-500/20 to-orange-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-orange-400" />
                 </div>
-<<<<<<< HEAD
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
@@ -516,7 +476,6 @@ export default function DigitalTransformationPage(req, res) {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
               </motion.div>
@@ -557,18 +516,12 @@ export default function DigitalTransformationPage(req, res) {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">Digital Transformation Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
               Comprehensive transformation solutions designed to modernize your business operations
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>            {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -577,7 +530,6 @@ export default function DigitalTransformationPage(req, res) {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <motion.div
@@ -607,16 +559,10 @@ export default function DigitalTransformationPage(req, res) {
   }
 }
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-orange-500/30 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -630,7 +576,6 @@ export default function DigitalTransformationPage(req, res) {
                       <CheckCircle className='w-5 h-5 text-orange-400 mr-3 flex-shrink-0' />                      {feature}
                     </li>
                   ))}
-=======
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
@@ -648,11 +593,6 @@ export default function DigitalTransformationPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </ul>
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-orange-400">{service.price}</span>
@@ -661,7 +601,6 @@ export default function DigitalTransformationPage(req, res) {
                   </button>
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -673,7 +612,6 @@ export default function DigitalTransformationPage(req, res) {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -710,11 +648,6 @@ export default function DigitalTransformationPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Transform Your Business?
@@ -735,15 +668,11 @@ export default function DigitalTransformationPage(req, res) {
       </section>
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 )
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) )
-=======
 ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30
@@ -757,14 +686,10 @@ export default function DigitalTransformationPage(req, res) {
   {
   once: true
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>)
-<<<<<<< HEAD
-=======
 
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
           >;
             <h2 className="text-4xl font-bold text-white mb-6">;
@@ -792,8 +717,3 @@ export default function DigitalTransformationPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

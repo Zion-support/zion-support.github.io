@@ -1,11 +1,9 @@
-<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
+:pages-disabled/quantum-energy.tsx
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
 import React from "react";
 import Head from "next/head";
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -13,7 +11,6 @@ import {
   ArrowRight
   Brain
   Star
-=======
   Phone,
   Mail,
   MapPin,
@@ -21,18 +18,14 @@ import {
   ArrowRight,
   Brain,
   Star,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground";
 import Button from "../components/ui/Button";
 import { enhancedRealMicroSaasServices } from "../data/enhanced-real-micro-saas-services";
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices.find((s) =>
-<<<<<<< HEAD
     s.link.endsWith("/quantum-ai-brain-computer-interface")
-=======
     s.link.endsWith("/quantum-ai-brain-computer-interface"),;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
   if (!service) return null;
 
@@ -71,7 +64,7 @@ export default function QuantumAIBCIPage() {
                     <span>{feat}</span>
                   </li>
                 ))}
-<<<<<<< HEAD:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
               </ul>;
             </div>;
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">;
@@ -94,7 +87,6 @@ export default function QuantumAIBCIPage() {
       </div>;
     </UltraAdvancedFuturisticBackground>;
   ),;
-=======
               </ul>
             </div>
             <div className="bg-black/30 rounded-2xl border border-purple-500/30 p-6 h-fit">
@@ -145,15 +137,10 @@ export default function QuantumAIBCIPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-<<<<<<< HEAD:pages-disabled/quantum-energy.tsx
-<<<<<<< HEAD
-=======
-=======
->>>>>>> main:pages-disabled/quantum-energy.tsx
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+:pages-disabled/quantum-energy.tsx
+main:pages-disabled/quantum-energy.tsx
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
 }
-=======
->>>>>>> main:pages-disabled/quantum-energy.tsx
+main:pages-disabled/quantum-energy.tsx
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx
+:backup-problematic-files/temp_conflicts/pages/quantum-ai-brain-computer-interface.tsx

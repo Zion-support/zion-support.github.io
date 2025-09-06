@@ -315,43 +315,27 @@ const UltraFuturisticBackground2026: React.FC<
             opacity: [0.4, 0.7, 0.4]
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
             duration: 10
             repeat: Infinity
             ease: 'linear',            ease: "linear"
           }}
-=======
             duration: 10,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 10,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Energy Field Effects */}
       <div className='fixed inset-0 pointer-events-none z-20'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <motion.div
           className='absolute inset-0 bg-gradient-to-r from-transparent via-cyan-500/5 to-transparent'
           animate={{
@@ -385,31 +369,22 @@ const UltraFuturisticBackground2026: React.FC<
             y: ['-100%100%']
           }}
           transition={{
-<<<<<<< HEAD
-<<<<<<< HEAD
             duration: 20
             repeat: Infinity
             ease: 'linear',            ease: "linear"
           }}
-=======
             duration: 20,
             repeat: Infinity,
 
           }}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
             duration: 20,
             repeat: Infinity,
-<<<<<<< HEAD
             ease: 'linear',            ease: "linear"
           }}
-=======
 
           }}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
       {/* Content */}
@@ -421,13 +396,9 @@ const UltraFuturisticBackground2026: React.FC<
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraFuturisticBackground2026;
       {/* Holographic Overlay */}
       <div className="fixed inset-0 pointer-events-none z-40">
@@ -439,13 +410,5 @@ export default UltraFuturisticBackground2026;
 }
 export default UltraFuturisticBackground2026;
 
-<<<<<<< HEAD
-=======
 export default UltraFuturisticBackground2026;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default UltraFuturisticBackground2026;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

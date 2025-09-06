@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { getConfig } from "../../../../utils/token/service",;
 import { tokenStore } from "../../../../utils/token/storage",;
@@ -17,12 +14,9 @@ const body = req.body || {},
   }
   return res.status(405).json({ error: "Method not allowed" });
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getConfig } from "../../../../utils/token/service";
 import { tokenStore } from "../../../../utils/token/storage";
-<<<<<<< HEAD
 
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -41,7 +35,6 @@ const body = req.body |{}
   return res.status(405).json({ error: "Method not allowed" })
 }
 
-=======
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -64,8 +57,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

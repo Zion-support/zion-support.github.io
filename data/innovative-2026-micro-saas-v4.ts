@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026MicroSaasServiceV4 {;
   id: string;
@@ -741,21 +740,18 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'AI-powered legal document generation platform with compliance checking and legal support.'
       launchDate: '2026-02-20'
       customers: 120
       rating: 4.9
       reviews: 98
     }
-=======
         'AI-powered legal document generation platform with compliance checking and legal support.',
       launchDate: '2026-02-20',
       customers: 120,
       rating: 4.9,
       reviews: 98,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI document generationCompliance checkingCustomizable templatesLegal clause libraryRisk assessmentDocument versioningElectronic signaturesLegal research tools';
       'Multi-jurisdiction supportExpert consultation'
@@ -814,12 +810,8 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     customers: 120;
     rating: 4.9;
     reviews: 98
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026MicroSaasServiceV4 {;
   id: string,;
@@ -1258,10 +1250,5 @@ export const innovative2026MicroSaasServicesV4: Innovative2026MicroSaasServiceV4
     customers: 120,;
     rating: 4.9;
     reviews: 98;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

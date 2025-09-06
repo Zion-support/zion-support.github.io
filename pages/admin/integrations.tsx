@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useMemo, useState  } from 'react';
 import Head from 'next/head';
 
@@ -96,14 +94,9 @@ const AdminIntegrationsPage: React.FC = () => {  const [providers, setProviders]
     })
     [providers]
   );
-=======
 import { useEffect, useMemo, useState } from 'react';
-=======
 import React, { useState } from 'react';
-=======
 import { useEffect, useMemo, useState } from 'react';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string   } catch (error) {
     console.error("Error:", error);
@@ -150,9 +143,6 @@ export default function AdminIntegrationsPage() {
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh();
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     } finally {
       setLoading(false);
     }  }
@@ -192,8 +182,6 @@ export default function AdminIntegrationsPage() {
     [providers]
   );
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     } finally { setLoading(false);   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -238,11 +226,6 @@ export default function AdminIntegrationsPage() {
     crm: providers.filter(p => p.category === 'crm'),
     ats: providers.filter(p => p.category === 'ats')
   }), [providers]);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   function Card({ p }: { p: ProviderMeta }) {
     const conn = connections[p.id] |{ status: 'disconnected' }
     const isConnected = conn.status === 'connected';
@@ -268,7 +251,6 @@ export default function AdminIntegrationsPage() {
 }
           {isConnected && (
             <>
-<<<<<<< HEAD
               <button
                 onClick={() => resync(p.id)}
                 disabled={loading}
@@ -293,11 +275,7 @@ export default function AdminIntegrationsPage() {
         </div>
       </div>
     );  }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
@@ -315,11 +293,6 @@ export default function AdminIntegrationsPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   function RulesModal() {
     if (!selected) return null,
     const provider = providers.find(p => p.id === selected)!,
@@ -331,7 +304,6 @@ export default function AdminIntegrationsPage() {
           <div className="space-y-3 text-sm">
             {isCrm ? (
               <>
-<<<<<<< HEAD
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -373,7 +345,6 @@ export default function AdminIntegrationsPage() {
                       />{' '}
                       Manual only
                     </label>                  </div>
-=======
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoCreateContacts} onChange={e => setSyncRules({ ...syncRules, autoCreateContacts: e.target.checked })} /> Auto-create contacts</label>
                 <div>
                   <div className="mb-1">Push notes:</div>
@@ -381,12 +352,10 @@ export default function AdminIntegrationsPage() {
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
                   </div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>
               </>
             ) : (
               <>
-<<<<<<< HEAD
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -413,10 +382,8 @@ export default function AdminIntegrationsPage() {
                   />{' '}
                   Auto-upload resumes
                 </label>
-=======
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoSyncApplicants} onChange={e => setSyncRules({ ...syncRules, autoSyncApplicants: e.target.checked })} /> Auto-sync applicants</label>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoUploadResumes} onChange={e => setSyncRules({ ...syncRules, autoUploadResumes: e.target.checked })} /> Auto-upload resumes</label>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               </>
             )  } catch (error) {
     console.error("Error:", error);
@@ -430,7 +397,6 @@ export default function AdminIntegrationsPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     );  }
   return (
     <>
@@ -472,7 +438,6 @@ export default function AdminIntegrationsPage() {
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
-=======
     ),
     } catch (error) {
     console.error("Error:", error);
@@ -481,7 +446,6 @@ export default function AdminIntegrationsPage() {
 }
   return (
     <>
-<<<<<<< HEAD
       <Head>
         <title>Admin Integrations • Zion</title>
       </Head>
@@ -520,7 +484,6 @@ export default function AdminIntegrationsPage() {
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>          </ul>
-=======
       <Head><title>Admin Integrations • Zion</title></Head>
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
@@ -552,11 +515,6 @@ export default function AdminIntegrationsPage() {
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
           </ul>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </section>
         <section>
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
@@ -565,7 +523,6 @@ export default function AdminIntegrationsPage() {
       </main>
       <RulesModal />
     </>
-<<<<<<< HEAD
   );
 function ManualOverrideForm() {
   const [jobId, setJobId] = useState('');
@@ -582,11 +539,7 @@ function ManualOverrideForm() {
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
 
-<<<<<<< HEAD
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
   } catch (error) {
     console.error("Error:", error);
@@ -607,11 +560,6 @@ function ManualOverrideForm() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40 max-w-xl">
       <div className="grid grid-cols-1 gap-3">
@@ -626,10 +574,7 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
 
 }
 }
@@ -637,16 +582,9 @@ function ManualOverrideForm() {
 }
 }
 }
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   ),
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

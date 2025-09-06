@@ -1,17 +1,11 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from 'react',
 import Head from 'next/head',
-<<<<<<< HEAD
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
@@ -166,7 +160,6 @@ const testimonials = [
     avatar: '👩‍🔒'
   },];
 
-=======
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -180,10 +173,6 @@ import {
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services',
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
@@ -239,9 +228,6 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,
     color: 'from-purple-500 to-pink-600',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     features: [
       'Quantum Encryption',
       'Network Optimization',
@@ -306,8 +292,6 @@ const testimonials = [
     avatar: '👩‍🔒',
   },];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
 import React from 'react';
 import Head from 'next/head';
@@ -446,11 +430,6 @@ const testimonials = [;
   }
 }
 ],
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function AdvancedITInfrastructureServices() {
   return (
     <Layout>
@@ -464,7 +443,6 @@ export default function AdvancedITInfrastructureServices() {
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://ziontechgroup.com/advanced-it-infrastructure-services" />
       </Head>
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
@@ -472,7 +450,6 @@ export default function AdvancedITInfrastructureServices() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-=======
       {/* Hero Section */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -497,34 +474,24 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Advanced IT Infrastructure Services
             </h1>
-<<<<<<< HEAD
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>
               Revolutionary infrastructure solutions with quantum computing
               edge computing, and AI-powered automation for the future
-=======
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
               {heroStats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
-=======
                   key={index  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -546,11 +513,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   {stat.icon  } catch (error) {
     console.error("Error:", error);
@@ -578,7 +540,6 @@ export default function AdvancedITInfrastructureServices() {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>          <motion.div
@@ -587,7 +548,6 @@ export default function AdvancedITInfrastructureServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
       </section>
       {/* Features Section */  } catch (error) {
     console.error("Error:", error);
@@ -618,11 +578,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -631,7 +586,6 @@ export default function AdvancedITInfrastructureServices() {
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>            {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -640,7 +594,6 @@ export default function AdvancedITInfrastructureServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='relative group'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {heroFeatures.map((feature, index) => (
               <motion.div
@@ -670,11 +623,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -688,7 +636,6 @@ export default function AdvancedITInfrastructureServices() {
                   </div>
                 </div>
               </motion.div>
-<<<<<<< HEAD
             ))}
           </div>
         </div>
@@ -700,7 +647,6 @@ export default function AdvancedITInfrastructureServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
             ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -738,16 +684,10 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
             </h2>
-<<<<<<< HEAD
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
               Comprehensive infrastructure solutions covering quantum computing
               edge computing, security, and data centers
@@ -761,27 +701,21 @@ export default function AdvancedITInfrastructureServices() {
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className='relative'
-=======
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Comprehensive infrastructure solutions covering quantum computing, edge computing, security, and data centers
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='space-y-16'>            {serviceCategories.map((category, categoryIndex) => (
               <motion.div
-<<<<<<< HEAD
-=======
                 key={categoryIndex}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
                 className='relative'
-=======
           <div className="space-y-16">
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 key={categoryIndex  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -808,11 +742,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="relative"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -821,7 +750,6 @@ export default function AdvancedITInfrastructureServices() {
                   <h3 className="text-3xl font-bold text-white mb-4">{category.title}</h3>
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>                  {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -830,7 +758,6 @@ export default function AdvancedITInfrastructureServices() {
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
                       className='relative group'
-=======
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
@@ -860,11 +787,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                       className="relative group"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -886,7 +808,6 @@ export default function AdvancedITInfrastructureServices() {
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
                           </div>
-<<<<<<< HEAD
                           <p className='text-gray-300 text-sm mb-4'>
                             {service.description}
                           </p>
@@ -902,7 +823,6 @@ export default function AdvancedITInfrastructureServices() {
                                   {feature}
                                 </div>
                               ))}
-=======
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
                             {service.features.slice(0, 3).map((feature, featureIndex) => (
@@ -919,11 +839,6 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                           <div className="flex items-center justify-between">
                             <Link
@@ -951,7 +866,6 @@ export default function AdvancedITInfrastructureServices() {
                         </div>
                       </div>
                     </motion.div>
-<<<<<<< HEAD
                   ))}
                 </div>
               </motion.div>
@@ -967,7 +881,6 @@ export default function AdvancedITInfrastructureServices() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
             className='text-center mb-16'
-=======
                   ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -1012,11 +925,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
             className="text-center mb-16"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -1025,7 +933,6 @@ export default function AdvancedITInfrastructureServices() {
               Real feedback from organizations that have transformed their infrastructure with our advanced services
             </p>
           </motion.div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>            {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -1034,7 +941,6 @@ export default function AdvancedITInfrastructureServices() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
               <motion.div
@@ -1064,11 +970,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -1082,7 +983,6 @@ export default function AdvancedITInfrastructureServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />                    ))}
                   </div>
                 </div>
@@ -1098,7 +998,6 @@ export default function AdvancedITInfrastructureServices() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-=======
                       <Star key={i} className="w-4 h-4 fill-current" />
                     ))  } catch (error) {
     console.error("Error:", error);
@@ -1144,11 +1043,6 @@ export default function AdvancedITInfrastructureServices() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
@@ -1165,13 +1059,11 @@ export default function AdvancedITInfrastructureServices() {
 }
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />                Call Now: {contactInfo.mobile}
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
-=======
                 <Phone className="mr-2 w-5 h-5" />
                 Call Now: {contactInfo.mobile  } catch (error) {
     console.error("Error:", error);
@@ -1186,11 +1078,6 @@ export default function AdvancedITInfrastructureServices() {
   }
 }
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
@@ -1203,28 +1090,16 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
         </div>
       </section>
-<<<<<<< HEAD
     </Layout>
-<<<<<<< HEAD
 );
-=======
-=======
-<<<<<<< HEAD
     </Layout>;
 );
 
 }
-=======
     </Layout>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

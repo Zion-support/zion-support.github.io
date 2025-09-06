@@ -1,25 +1,19 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
-<<<<<<< HEAD
   Card
   CardContent
   CardDescription
   CardFooter
   CardHeader
   CardTitle
-=======
   Card,
   CardContent,
   CardDescription,
   CardFooter,
   CardHeader,
   CardTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { IntegrationCards } from "./IntegrationCards";
@@ -28,7 +22,6 @@ import { Badge } from "@/components/ui/badge";
 
 import { WebhookManager } from "./WebhookManager";
 import { IntegrationsSyncLog } from "./IntegrationsSyncLog";
-<<<<<<< HEAD
 export function IntegrationsHub() {;
   const [activeTab, setActiveTab] = useState("marketplace");
 
@@ -41,10 +34,8 @@ export function IntegrationsHub() {;
             Connect your platform with the tools and services you use every day
           </p>
         </div>
-=======
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace");
-<<<<<<< HEAD
   return (
     <div className="space-y-6">
       <div className="flex justify-between items-center">
@@ -54,7 +45,6 @@ export function IntegrationsHub() {
             Connect your platform with the tools and services you use every day
           </p>
         </div>
-=======
 
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -68,24 +58,12 @@ import { IntegrationsSyncLog } from "./IntegrationsSyncLog",
 export function IntegrationsHub() {
   const [activeTab, setActiveTab] = useState("marketplace"),
   
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="flex gap-2">
           <Button variant="outline">View Documentation</Button>
           <Button>Connect New Integration</Button>
         </div>
       </div>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Card>
           <CardHeader className="pb-2">
@@ -111,14 +89,7 @@ export function IntegrationsHub() {
             </div>
           </CardContent>
         </Card>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Card className="md:col-span-2">
           <CardHeader className="pb-2">
             <CardTitle className="text-lg">Recent Activity</CardTitle>
@@ -153,47 +124,26 @@ export function IntegrationsHub() {
           </CardFooter>
         </Card>
       </div>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
         <TabsList className="grid grid-cols-3 md: w-[400px]">
           <TabsTrigger value="marketplace">Marketplace</TabsTrigger>
           <TabsTrigger value="zapier">Zapier</TabsTrigger>
           <TabsTrigger value="webhooks">Webhooks</TabsTrigger>
         </TabsList>
-<<<<<<< HEAD
-=======
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <div className="mt-6">
           <TabsContent value="marketplace" className="m-0">
             <IntegrationCards />
           </TabsContent>
-<<<<<<< HEAD
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
-=======
           
           <TabsContent value="zapier" className="m-0">
             <ZapierIntegration />
           </TabsContent>
           
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <TabsContent value="webhooks" className="m-0">
             <Card>
               <CardHeader>
@@ -206,14 +156,7 @@ export function IntegrationsHub() {
                 <WebhookManager />
               </CardContent>
             </Card>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <Card className="mt-6">
               <CardHeader>
                 <CardTitle>Synchronization Log</CardTitle>
@@ -229,13 +172,8 @@ export function IntegrationsHub() {
         </div>
       </Tabs>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   )
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -361,11 +299,6 @@ export function IntegrationsHub() {;
         </div>;
       </Tabs>;
     </div>;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

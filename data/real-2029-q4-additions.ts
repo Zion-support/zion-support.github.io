@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { RealMarketService } from './real-market-services';
 
   mobile: '+1 302 464 0950'
@@ -16,7 +15,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:
       'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.'
     features: [
-<<<<<<< HEAD
       'Intent classification and priority scoring'
       'One-click reply drafts with tone controls'
       'Auto-tagging and routing to teams'
@@ -46,7 +44,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     variant: 'ai-futuristic'
     contactInfo: contact
     realImplementation: true
-=======
       'Intent classification and priority scoring',
       'One-click reply drafts with tone controls',
       'Auto-tagging and routing to teams',
@@ -76,7 +73,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'Shared inbox connectors, rules engine, and prompt templates with human-in-the-loop.'
     launchDate: '2029-10-12'
@@ -94,7 +90,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:
       'Launch high-conversion mobile surveys with skip logic, NPS/CSAT templates, and shareable dashboards. Embed on sites or share links; export to CSV and data warehouses.'
     features: [
-<<<<<<< HEAD
       'Branching logic and progress-save'
       'Question bank: CSAT, NPS, PMF, churn'
       'Anonymous or identified responses'
@@ -116,7 +111,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     realService: true
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge']
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery']
-=======
       'Branching logic and progress-save',
       'Question bank: CSAT, NPS, PMF, churn',
       'Anonymous or identified responses',
@@ -138,7 +132,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     realService: true,
     technology: ['Next.js', 'PostgreSQL', 'Tailwind', 'Vercel Edge'],
     integrations: ['Google Sheets', 'Zapier', 'Segment', 'BigQuery'],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     useCases: [
       'Landing page surveys'
       'In-product polls'
@@ -532,7 +525,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     description:
       'Define goals, attach metrics, and get auto-generated weekly summaries. Import from spreadsheets or data warehouses and share scorecards with stakeholders.'
     features: [
-<<<<<<< HEAD
       'Goal trees and KPI ownership'
       'Weekly executive summaries'
       'Alerting on thresholds and trends'
@@ -567,7 +559,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4.4
     reviews: 16
   }
-=======
       'Goal trees and KPI ownership',
       'Weekly executive summaries',
       'Alerting on thresholds and trends',
@@ -602,7 +593,6 @@ export const real2029Q4Additions: RealMarketService[] = [
     rating: 4.4,
     reviews: 16,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];	{
 		id: 'ai-email-triage-copilot';
 		name: 'AI Email Triage Copilot'
@@ -1009,13 +999,9 @@ export const real2029Q4Additions: RealMarketService[] = [
 		customers: 36;
 		rating: 4.4
 		reviews: 16
-<<<<<<< HEAD
 	}
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { RealMarketService } from './real-market-services',;
 const contact = {;
 	mobile: '+1 302 464 0950',;
@@ -1430,10 +1416,5 @@ export const real2029Q4Additions: RealMarketService[] = [;
 		customers: 36,;
 		rating: 4.4;
 		reviews: 16;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
 export default async function handler(
@@ -10,7 +6,6 @@ export default async function handler(
   res: NextApiResponse
 ) {
   const usingPlaceholder =
-<<<<<<< HEAD
     (process.env.NEXT_PUBLIC_SUPABASE_URL |"").includes("placeholder") |
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY |"placeholder-key") ===
       "placeholder-key";
@@ -45,16 +40,11 @@ export default async function handler(
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
-=======
     (process.env.NEXT_PUBLIC_SUPABASE_URL || "").includes("placeholder") ||
     (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===;
       "placeholder-key";
-=======
 import type { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -76,13 +66,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       res.setHeader('Allow', 'GET');
       res.status(405).end('Method Not Allowed');
     }
-<<<<<<< HEAD
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
     const supabase = getServerSupabase();
     const { data, error } = await supabase
@@ -96,11 +82,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(200).json({ partners: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

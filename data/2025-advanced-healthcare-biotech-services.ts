@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 
@@ -353,21 +352,18 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
       }
       realImplementation: true
       implementationDetails:
-<<<<<<< HEAD
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.'
       launchDate: '2024-11-01'
       customers: 34
       rating: 4.8
       reviews: 19
     }
-=======
         'Advanced clinical trial platform with AI-powered optimization, patient recruitment, and data management.',
       launchDate: '2024-11-01',
       customers: 34,
       rating: 4.8,
       reviews: 19,
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];    features: [
       'AI-powered trial design optimizationIntelligent patient recruitment and matchingReal-time data collection and monitoringPredictive analytics and insightsRegulatory compliance managementSite and investigator managementRisk assessment and mitigationIntegration with EDC systems';
       'Mobile data collection appAPI for research platforms'
@@ -397,12 +393,8 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     rating: 4.8
 
     reviews: 19
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface AdvancedHealthcareBiotechService {;
   id: string,;
@@ -665,10 +657,5 @@ export const advancedHealthcareBiotechServices2025: AdvancedHealthcareBiotechSer
     customers: 34,;
     rating: 4.8;
     reviews: 19;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

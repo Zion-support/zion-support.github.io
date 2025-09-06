@@ -34,7 +34,6 @@ export function useMessageChannelHandler({
 
   onError
 }: MessageChannelHandlerProps = {}) {
-<<<<<<< HEAD
   const handleMessage = useCallback(
     (event: MessageEvent<unknown>) => {
       try {
@@ -45,7 +44,6 @@ export function useMessageChannelHandler({
         if (onError) {
           onError(error as Error);
         }
-=======
   const handleMessage = useCallback((event: MessageEvent<unknown>) => {
     try {
       if (onMessage) {;
@@ -54,7 +52,6 @@ export function useMessageChannelHandler({
     } catch (error) {
       if (onError) {
         onError(error as Error);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     }
     [onMessage, onError]
@@ -65,33 +62,14 @@ export function useMessageChannelHandler({
       window.removeEventListener("message", handleMessage);
     }
   }, [handleMessage]);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 }
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-<<<<<<< HEAD
+ursor/integrate-build-improve-and-re-verify-8f7d
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
-=======
 import { useEffect,useCallback } from 'react'; interface MessageEvent { data: unknown} interface MessageChannelHandlerProps { onMessage?: (message: unknown) => void; onError?: (error: Error) => void} export function useMessageChannelHandler({ onMessage,onError }: MessageChannelHandlerProps = {}) { const handleMessage = useCallback((event: MessageEvent) => { try { if (onMessage) { onMessage(event.data)} } catch (error) { if (onError) { onError(error as Error)} } },[onMessage,onError]); useEffect(() => { window.addEventListener('message',handleMessage); return () => { window.removeEventListener('message',handleMessage)}},[handleMessage])}
->>>>>>> cursor/add-new-services-and-deploy-updates-0462
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/add-new-services-and-deploy-updates-0462
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 }
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/main
+origin/automation-improvements-final

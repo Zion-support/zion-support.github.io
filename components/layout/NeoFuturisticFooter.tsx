@@ -2,7 +2,6 @@ import React from 'react';
 
 import { motion } from 'framer-motion';
 import {
-<<<<<<< HEAD
   Phone
   Mail
   MapPin
@@ -11,7 +10,6 @@ import {
   Linkedin
   ExternalLink;
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-=======
   Phone,
   Mail,
   MapPin,
@@ -19,36 +17,24 @@ import {
   Github,
   Linkedin,;
   ExternalLink,;
-<<<<<<< HEAD
 } from 'lucide-react';
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 } from 'lucide-react';import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react';
-=======
 } from 'lucide-react';
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const contactInfo = {
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export default function NeoFuturisticFooter() {
-<<<<<<< HEAD
   return (  website: 'https://ziontechgroup.com'
 }
-=======
-<<<<<<< HEAD
   return (  website: 'https://ziontechgroup.com';
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
     <footer className='relative mt-20 border-t border-slate-800/60 bg-black/60 backdrop-blur-xl overflow-hidden'>
       <div className='absolute inset-0 pointer-events-none'>
         <div className='absolute -inset-x-10 -top-32 h-64 bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 blur-3xl' />
@@ -175,21 +161,11 @@ export default function NeoFuturisticFooter() {
     </footer>;
   );
 }
-<<<<<<< HEAD
-=======
-=======
 
 ;
-=======
   return (
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 };
 
 export default function NeoFuturisticFooter() {
   return (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

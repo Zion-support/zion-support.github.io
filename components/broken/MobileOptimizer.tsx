@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 setIsMobile (isMobileDevice);
-=======
  setIsMobile (isMobileDevice);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 setIsMobile (isMobileDevice);
-=======
  setIsMobile (isMobileDevice);
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 setIsTablet (isTabletDevice);
 //Apply mobile-specific optimizations if (isMobileDevice && enableMobileLayout) {
   checkDevice ();
@@ -135,7 +127,6 @@ useEffect ( () => {
 window.addEventListener ('resize', handleResize);
 //Set up orientation change detection const mediaQuery = window.matchMedia (' (orientation: portrait) ');
 const handleMediaQueryChange = (e: MediaQueryListEvent) => {
-<<<<<<< HEAD
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape')
 }
 if (!showPanel |!isVisible) return null;
@@ -144,7 +135,6 @@ const getStatusIcon = (status: string) => {
   switch (status) {
 }
 children
-=======
   setCurrentOrientation (e.matches ? 'portrait' : 'landscape') 
 };
 if (!showPanel || !isVisible) return null;
@@ -156,7 +146,6 @@ const getStatusIcon = (status: string) => {
 
 };
 children 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }{
   /* Mobile Optimization Panel */
 }<AnimatePresence> {
@@ -173,12 +162,7 @@ children
 }
 export default MobileOptimizer;
 export default MobileOptimizer;
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 }
 }
 }
@@ -187,6 +171,3 @@ export default MobileOptimizer;
 }
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

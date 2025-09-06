@@ -1,16 +1,12 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { UserProfile, UserDetails  } from '@/types/auth';
 import { supabase  } from '@/integrations/supabase/client';
 import { Message, Conversation  } from '@/types/messaging';
 import { toast } from '@/hooks/use-toast';
-=======
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -49,7 +45,6 @@ export function useMessages(;
       );
       if (unreadMessages.length > 0) {
         await markAsRead(conversationId)
-=======
 import { UserProfile, UserDetails } from '@/types/auth',;
 import { supabase } from '@/integrations/supabase/client',;
 import { Message, Conversation } from '@/types/messaging',;
@@ -91,24 +86,15 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   };
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   /**
    * Send a message to an existing conversation
    */
@@ -137,12 +123,8 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
-<<<<<<< HEAD
       // Update conversations list
       await fetchConversations();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   },;
   /**;
    * Send a message to an existing conversation;
@@ -173,29 +155,19 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
       // Update conversations list
       await fetchConversations(),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Return the sent message
       return data
     } catch (error) {
       console.error('Error sending message:', error),
       toast({
-<<<<<<< HEAD
         title: "Failed to send message";
         description: "Please try again later"
         variant: "destructive"
       })
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
   }
   /**
@@ -246,14 +218,10 @@ export function useMessages(;
     sendMessage;
 
     markAsRead
-=======
-<<<<<<< HEAD
         title: "Failed to send message",
         description: "Please try again later",
         variant: "destructive"
       })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       // Update conversations list;
       await fetchConversations(),;
@@ -315,10 +283,5 @@ export function useMessages(;
     loadMessages;
     sendMessage;
     markAsRead;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 }

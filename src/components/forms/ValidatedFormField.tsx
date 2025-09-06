@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState, useEffect } from 'react'
 import {
   FormField
@@ -13,19 +9,16 @@ import {
 } from '@/components/ui/form'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-<<<<<<< HEAD
   Select
   SelectContent
   SelectItem
   SelectTrigger
   SelectValue
-=======
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,;
   SelectValue;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from '@/components/ui/select'; import { Checkbox } from '@/components/ui/checkbox'
 import { cn } from '@/lib/utils'
 
@@ -38,7 +31,6 @@ interface ValidationRule {
   pattern?: RegExp;
   custom?: (value: any) => string | null
 interface ValidatedFormFieldProps {
-<<<<<<< HEAD
   name: string;
   label: string;
   type?: 'text' | 'email' | 'password' | 'tel' | 'url' | 'number' | 'textarea' | 'select' | 'checkbox';
@@ -50,7 +42,6 @@ interface ValidatedFormFieldProps {
   className?: string;
   disabled?: boolean;
   showValidIcon?: boolean;
-=======
   name: string
   label: string
   type?:
@@ -71,7 +62,6 @@ interface ValidatedFormFieldProps {
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   debounceMs?: number
 export function ValidatedFormField({
 
@@ -138,7 +128,6 @@ export function ValidatedFormField({
     if (validation.custom) {
       return validation.custom(value)
     }
-<<<<<<< HEAD
     return null
   }
   const getValidationIcon = () => {
@@ -169,9 +158,6 @@ export function ValidatedFormField({
   }
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useEffect } from 'react';
 
 import { Checkbox } from '@/components/ui/checkbox';
@@ -266,15 +252,8 @@ export function ValidatedFormField({;
 
     return null
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const getValidationIcon = () => {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     if (!showValidIcon || !isTouched || validationState === 'idle') return null
     switch (validationState) {
       case 'validating':
@@ -302,8 +281,6 @@ export function ValidatedFormField({;
   }
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className)
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     if (!showValidIcon || !isTouched || validationState === 'idle') return null,
 
     switch (validationState) {
@@ -344,36 +321,23 @@ export function ValidatedFormField({;
   const renderField = () => {
     const baseClasses = cn(getFieldClasses(), className),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     switch (type) {
       case 'textarea':
         return (
           <div className="relative">
             <Textarea
-<<<<<<< HEAD
               disabled = {disabled,}
               className = {baseClasses,}
               rows = {4,}
-=======
               disabled={disabled}
               className={baseClasses}
               rows={4}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {...form.register(name)}
             />
             <div className="absolute top-2 right-2">
               {getValidationIcon()}
             </div>
           </div>
-<<<<<<< HEAD
         )
       case 'select':
         return (
@@ -386,7 +350,6 @@ export function ValidatedFormField({;
               </SelectTrigger>
               <SelectContent>
                 {options.map(option => (                  <SelectItem key={option.value} value={option.value}>
-=======
         ),
 
       case 'select':
@@ -399,11 +362,6 @@ export function ValidatedFormField({;
               <SelectContent>
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {option.label}
                   </SelectItem>
                 ))}
@@ -413,16 +371,9 @@ export function ValidatedFormField({;
               {getValidationIcon()}
             </div>
           </div>
-<<<<<<< HEAD
         )
-=======
         ),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case 'checkbox':
         return (
           <div className="flex items-center space-x-2">
@@ -434,60 +385,37 @@ export function ValidatedFormField({;
             />
             <label
               htmlFor={name}
-<<<<<<< HEAD
               className='text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70'            >
-=======
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {label}
             </label>
             {getValidationIcon()}
           </div>
-<<<<<<< HEAD
         )
-=======
         ),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       case 'password':
         return (
           <div className="relative">
             <Input
-<<<<<<< HEAD
               type = {showPassword ? 'text' : 'password',}
               disabled = {disabled,}
               className = {cn(baseClasses, 'pr-20'),}
-=======
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {...form.register(name)}
             />
             <div className="absolute inset-y-0 right-0 flex items-center gap-1 pr-3">
               {getValidationIcon()}
               <Button
-<<<<<<< HEAD
                 type='button'
                 variant='ghost'
                 size='sm'
                 className='h-7 w-7 p-0'
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}              >
-=======
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -495,11 +423,6 @@ export function ValidatedFormField({;
                 onClick={() => setShowPassword(!showPassword)}
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
@@ -508,21 +431,13 @@ export function ValidatedFormField({;
               </Button>
             </div>
           </div>
-<<<<<<< HEAD
         )
-=======
         ),
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       default:
         return (
           <div className="relative">
             <Input
-<<<<<<< HEAD
               type = {type,}
               disabled = {disabled,}
               className = {baseClasses,}
@@ -542,7 +457,6 @@ export function ValidatedFormField({;
               <div className='space-y-1'>
                 {fieldError && (
                   <FormMessage className='text-sm text-red-500'>
-=======
               type={type}
               disabled={disabled}
               className={baseClasses}
@@ -569,30 +483,17 @@ export function ValidatedFormField({;
               <div className="space-y-1">
                 {fieldError && (
                   <FormMessage className="text-sm text-red-500">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {fieldError.message}
                   </FormMessage>
                 )}
                 {description && !fieldError && (
-<<<<<<< HEAD
                   <p className='text-sm text-muted-foreground'>{description}</p>
-=======
                   <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 )}
               </div>
             )}
           </FormItem>
         )}
-<<<<<<< HEAD
       />
     )
   }
@@ -609,7 +510,6 @@ export function ValidatedFormField({;
               {fieldError && (
                 <FormMessage className='text-sm text-red-500 flex items-center gap-1'>
                   <AlertCircle className='h-3 w-3' />
-=======
       />;
     );
   }
@@ -632,30 +532,17 @@ export function ValidatedFormField({;
               {fieldError && (
                 <FormMessage className="text-sm text-red-500 flex items-center gap-1">
                   <AlertCircle className="h-3 w-3" />
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
-<<<<<<< HEAD
                 <p className='text-sm text-muted-foreground'>{description}</p>
-=======
                 <p className="text-sm text-muted-foreground">{description}</p>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               )}
             </div>
           )}
         </FormItem>
       )}
-<<<<<<< HEAD
     />
   )
 // Validation helpers for common patterns
@@ -700,17 +587,13 @@ export const commonValidations = {
   }
 }
     }
-<<<<<<< HEAD
   }}
     }
   }}
 
-=======
   }},
     };
   }};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     />;
   );
 }
@@ -753,8 +636,3 @@ export const commonValidations = {;
       return null;
     }
   }};
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

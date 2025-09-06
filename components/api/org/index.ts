@@ -6,12 +6,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).json({ error: 'Method not allowed' });  }export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     return res.status(405).json({ error: 'Method not allowed' })
-<<<<<<< HEAD
   }
-=======
   };
   const data = readOrgData();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   const data = readOrgData();
   const parseArray = (v?: string | string[]) => {
@@ -49,7 +46,4 @@ const filters: OrgFilters = {
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);  return res.status(200).json(filtered)
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

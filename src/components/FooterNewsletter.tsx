@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input  } from '@/components/ui/input';
 import { Button  } from '@/components/ui/button';
 import { useToast  } from '@/hooks/use-toast';
-=======
 import React, { useState, useRef } from 'react'
 import { Input } from '@/components/ui/input'
 import { Button } from '@/components/ui/button'
 import { useToast } from '@/hooks/use-toast'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Loader2 } from 'lucide-react'
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function FooterNewsletter(): React.ReactElement {
@@ -40,7 +36,6 @@ export function FooterNewsletter(): React.ReactElement {
     }
     setIsSubmitting(true)
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`; // Generate a base for unique ID
-<<<<<<< HEAD
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST'
@@ -91,9 +86,6 @@ export function FooterNewsletter(): React.ReactElement {
         value={email}
         onChange={e => setEmail(e.target.value)}
         autoComplete='email'        required
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState, useRef } from 'react',
 import { Input } from '@/components/ui/input',
 import { Button } from '@/components/ui/button',
@@ -128,18 +120,11 @@ export function FooterNewsletter(): React.ReactElement {
 
     setIsSubmitting(true),
     const uniqueToastIdBase = `newsletter-toast-${Date.now()}`, // Generate a base for unique ID
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     try {
       const res = await fetch('/api/newsletter', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
         body: JSON.stringify({ email: trimmedEmail }),
       })
       const data = await res.json().catch(() => ({})); // Ensure data is an object even on parse error
@@ -185,8 +170,6 @@ export function FooterNewsletter(): React.ReactElement {
         value={email}
         onChange={e => setEmail(e.target.value)}
         autoComplete='email'        required
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         body: JSON.stringify({ email: trimmedEmail })
       }),
 
@@ -276,28 +259,15 @@ export function FooterNewsletter(): React.ReactElement {;
         onChange={(e) => setEmail(e.target.value)}
         autoComplete="email"
         required
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       />
       {emailError && <p className="text-red-500 text-sm mt-1">{emailError}</p>}
       {/* Honeypot field */}
       <input
-<<<<<<< HEAD
         type='text'
-=======
         type="text"
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         value={honeypot}
         onChange={e => setHoneypot(e.target.value)}
         tabIndex={-1}
-<<<<<<< HEAD
         autoComplete='off'
         style={{ display: 'none' }}
       />
@@ -318,12 +288,8 @@ export function FooterNewsletter(): React.ReactElement {;
     </form>
   )
 }
-<<<<<<< HEAD
 }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         autoComplete="off"
         style={{ display: 'none' }}
       />
@@ -345,8 +311,3 @@ export function FooterNewsletter(): React.ReactElement {;
     </form>;
   );
 } ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

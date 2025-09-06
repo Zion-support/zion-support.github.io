@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {;
   id: string;
@@ -43,20 +42,17 @@ export interface RealMarketService {;
 
   reviews: number;
 const contact = {
-<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com',}
 export const realMarketServices: RealMarketService[] = [
-=======
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',};
 
 export const realMarketServices: RealMarketService[] = [;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   {  mobile: '+1 302 464 0950';
   email: 'kleber@ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -73,7 +69,6 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.'
     features: [
-<<<<<<< HEAD
       'Unified API for multiple LLM providers'
       'Spend caps, rate limits, and usage alerts'
       'PII redaction and secrets filtering'
@@ -97,7 +92,6 @@ export const realMarketServices: RealMarketService[] = [
     category: 'AI & Data'
     realService: true
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic']
-=======
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
       'PII redaction and secrets filtering',
@@ -121,7 +115,6 @@ export const realMarketServices: RealMarketService[] = [
     category: 'AI & Data',
     realService: true,
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     integrations: [
       'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'
     ]
@@ -494,7 +487,6 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.'
     features: [
-<<<<<<< HEAD
       'Provider selection guide'
       'Schema and index templates'
       'ETL/ingestion pipelines'
@@ -524,7 +516,6 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic'
     contactInfo: contact
     realImplementation: true
-=======
       'Provider selection guide',
       'Schema and index templates',
       'ETL/ingestion pipelines',
@@ -554,7 +545,6 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'Terraform and IaC modules, ETL pipelines, sample notebooks.'
     launchDate: '2024-08-20'
@@ -1459,7 +1449,6 @@ export const realMarketServices: RealMarketService[] = [
     textColor: 'text-emerald-300'
     link: 'https://ziontechgroup.com/services/api-backfill-reconciliation'
     marketPosition:
-<<<<<<< HEAD
       'Bridges the gap between brittle webhook flows and reliable data pipelines.'
     targetAudience: 'Data engineers, platform teams, RevOps'
     trialDays: 14
@@ -1476,7 +1465,6 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic'
     contactInfo: contact
     realImplementation: true
-=======
       'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
@@ -1493,7 +1481,6 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     implementationDetails:
       'Replay-safe pullers, checksum compare, and reconciliation dashboards.'
     launchDate: '2025-08-22'
@@ -2109,7 +2096,6 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.'
     features: [
-<<<<<<< HEAD
       'RAG over proposals & policies'
       'Section templates and styles'
       'Evidence citations'
@@ -2136,7 +2122,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B RFP tooling'
     growthRate: '20% YoY'
     variant: 'ai-futuristic' as any
-=======
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
@@ -2163,7 +2148,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$1B RFP tooling',
     growthRate: '20% YoY',
     variant: 'ai-futuristic' as any,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2533,7 +2517,6 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.'
     features: [
-<<<<<<< HEAD
       'Contacts and notes'
       'Reminders and tasks'
       'Simple pipeline stages'
@@ -2561,7 +2544,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$20B SMB CRM'
     growthRate: '10% YoY'
     variant: 'analytics-futuristic' as any
-=======
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',
@@ -2589,7 +2571,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$20B SMB CRM',
     growthRate: '10% YoY',
     variant: 'analytics-futuristic' as any,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2613,7 +2594,6 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.'
     features: [
-<<<<<<< HEAD
       'AI suggestions and variants'
       'Tone and length tuning'
       'Performance benchmarks'
@@ -2641,7 +2621,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$3B marketing AI'
     growthRate: '24% YoY'
     variant: 'ai-futuristic' as any
-=======
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
@@ -2669,7 +2648,6 @@ export const realMarketServices: RealMarketService[] = [
     marketSize: '$3B marketing AI',
     growthRate: '24% YoY',
     variant: 'ai-futuristic' as any,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     contactInfo: {
       mobile: '+1 302 464 0950'
       email: 'kleber@ziontechgroup.com'
@@ -2794,13 +2772,9 @@ export const realMarketServices: RealMarketService[] = [
     customers: 88;
     rating: 4.6
     reviews: 36
-<<<<<<< HEAD
   }
 ];
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface RealMarketService {;
   id: string,;
@@ -4976,10 +4950,5 @@ export const realMarketServices: RealMarketService[] = [;
     customers: 88,;
     rating: 4.6;
     reviews: 36;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

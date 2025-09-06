@@ -1,12 +1,7 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-<<<<<<< HEAD
   Brain
   Network
   Cloud
@@ -21,7 +16,6 @@ import {
   Award
   Clock
   Globe
-=======
   Brain,
   Network,
   Cloud,
@@ -36,7 +30,6 @@ import {
   Award,
   Clock,
   Globe,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "lucide-react";
 import Layout from "../components/Layout";
 const serviceCategories = [
@@ -122,12 +115,10 @@ const serviceCategories = [
   }
 ];
 const stats = [
-<<<<<<< HEAD
   { number: "500+", label: "Projects Completed" },
   { number: "99.9%", label: "Uptime Guarantee" },
   { number: "24/7", label: "Support Available" },
   { number: "50+", label: "Countries Served" },
-=======
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -190,28 +181,22 @@ const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
   { number: '50+', label: 'Countries Served' }
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
   { number: "500+", label: "Projects Completed" }
   { number: "99.9%", label: "Uptime Guarantee" }
   { number: "24/7", label: "Support Available" }
   { number: "50+", label: "Countries Served" }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 const benefits = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
     title: "Expert Team",
     description: "Experienced professionals with deep industry knowledge",
     icon: Users,
   },
-=======
     title: "Expert Team"
     description: "Experienced professionals with deep industry knowledge"
     icon: Users
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
   {
     title: "Cutting-Edge Technology"
     description: "Latest technologies and innovative solutions"
@@ -223,12 +208,10 @@ const benefits = [
     icon: Globe
   }
   {
-<<<<<<< HEAD
     title: "Proven Results",
     description: "Track record of successful implementations",
     icon: Award,
   },
-=======
     title: 'Expert Team',
     description: 'Experienced professionals with deep industry knowledge',
     icon: Users
@@ -248,13 +231,11 @@ const benefits = [
     description: 'Track record of successful implementations',
     icon: Award
   }
->>>>>>> origin/automation-improvements-final
-=======
+origin/automation-improvements-final
     title: "Proven Results"
     description: "Track record of successful implementations"
     icon: Award
   }
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
 ];
 export default function ServicesOverviewPage() {
   return (
@@ -271,20 +252,9 @@ export default function ServicesOverviewPage() {
             <div className="absolute top-40 right-10 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
           
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+origin/automation-improvements-final
           <div className="container mx-auto px-4 relative z-10">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -293,10 +263,6 @@ export default function ServicesOverviewPage() {
               className="text-center"
             >
               <h1 className="text-4xl md:text-6xl font-bold mb-6">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 Our{" "}
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
                   Services
@@ -306,16 +272,12 @@ export default function ServicesOverviewPage() {
                 Comprehensive technology services designed to transform your
                 business operations, enhance security, and drive innovation
                 across all technology domains.
-<<<<<<< HEAD
-=======
-=======
                 Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">Services</span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Comprehensive technology services designed to transform your business operations, 
                 enhance security, and drive innovation across all technology domains.
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
               </p>
             </motion.div>
           </div>
@@ -335,17 +297,12 @@ export default function ServicesOverviewPage() {
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-<<<<<<< HEAD
                   <div className="text-gray-600 font-medium">{stat.label}</div>
-=======
-<<<<<<< HEAD
                   <div className="text-gray-600 font-medium">{stat.label}</div>
-=======
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
                 </motion.div>
               ))}
             </div>
@@ -364,15 +321,10 @@ export default function ServicesOverviewPage() {
                 Service Categories
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 We offer a comprehensive range of technology services to meet
                 all your business needs.
-=======
                 We offer a comprehensive range of technology services to meet all your business needs.
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -384,46 +336,22 @@ export default function ServicesOverviewPage() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
                 >
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                   <div
                     className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}
                   >
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
-=======
                   <div className={`h-32 bg-gradient-to-r ${category.color} flex items-center justify-center`}>
                     <category.icon className="w-16 h-16 text-white" />
                   </div>
                   
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+origin/automation-improvements-final
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
                       {category.title}
                     </h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
                     </p>
@@ -437,9 +365,6 @@ export default function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-center text-sm text-gray-600"
                           >
-<<<<<<< HEAD
-=======
-=======
                     
                     <p className="text-gray-600 mb-4 leading-relaxed">
                       {category.description}
@@ -450,28 +375,16 @@ export default function ServicesOverviewPage() {
                       <ul className="space-y-1">
                         {category.services.map((service, idx) => (
                           <li key={idx} className="flex items-center text-sm text-gray-600">
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
                             <CheckCircle className="w-3 h-3 text-green-500 mr-2 flex-shrink-0" />
                             {service}
                           </li>
                         ))}
                       </ul>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
                     
->>>>>>> origin/automation-improvements-final
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+origin/automation-improvements-final
                     <Link
                       href={category.link}
                       className="w-full bg-blue-600 hover:bg-blue-700 text-white px-4 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center justify-center group"
@@ -498,19 +411,11 @@ export default function ServicesOverviewPage() {
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                 We deliver exceptional results through innovation, expertise,
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 We deliver exceptional results through innovation, expertise
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
                 and unwavering commitment to your success.
-=======
                 We deliver exceptional results through innovation, expertise, and unwavering commitment to your success.
->>>>>>> origin/automation-improvements-final
+origin/automation-improvements-final
               </p>
             </motion.div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -525,19 +430,14 @@ export default function ServicesOverviewPage() {
                   <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <benefit.icon className="w-8 h-8 text-blue-600" />
                   </div>
-<<<<<<< HEAD
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
-=======
-<<<<<<< HEAD
                   <h3 className="text-lg font-bold text-gray-900 mb-3">
                     {benefit.title}
                   </h3>
-=======
                   <h3 className="text-lg font-bold text-gray-900 mb-3">{benefit.title}</h3>
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
                   <p className="text-gray-600">{benefit.description}</p>
                 </motion.div>
               ))}
@@ -556,17 +456,12 @@ export default function ServicesOverviewPage() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
-<<<<<<< HEAD
                 Let's discuss how our comprehensive services can help you
                 achieve your business goals.
-=======
-<<<<<<< HEAD
                 Let's discuss how our comprehensive services can help you
                 achieve your business goals.
-=======
                 Let's discuss how our comprehensive services can help you achieve your business goals.
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/automation-improvements-final
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link

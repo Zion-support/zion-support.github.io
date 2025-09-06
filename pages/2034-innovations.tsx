@@ -1,22 +1,12 @@
-<<<<<<< HEAD
 import React from 'react',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head';
 import { motion  } from 'framer-motion';
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032';
 import UltraFuturisticFooter2034 from '../components/layout/UltraFuturisticFooter2034';
 
-<<<<<<< HEAD
 }
-=======
-=======
-=======
 import React from 'react',
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import UltraFuturisticNavigation2032 from '../components/layout/UltraFuturisticNavigation2032',
@@ -27,17 +17,11 @@ const contactInfo = {
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'
 },
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function Innovations2034Page() {
   return (
     <>
       <Head>
         <title>2034 Cutting-Edge Innovations | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today."
@@ -88,7 +72,6 @@ export default function Innovations2034Page() {
             <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_80%,rgba(236,73,153,0.15),transparent_50%)] animate-pulse delay-2000'></div>
             {/* Floating Elements */}
             <div className='absolute inset-0'>
-=======
         <meta name="description" content="Experience the future with our revolutionary 2034 micro SAAS services, IT solutions, and AI platforms. From AI consciousness to space mining automation, we're building tomorrow's technology today." />
         <meta name="keywords" content="2034 innovations, AI consciousness, quantum computing, space mining, metaverse, neural interfaces, fusion energy, nanotechnology, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -135,24 +118,14 @@ export default function Innovations2034Page() {
   }
 }
             <div className="absolute inset-0">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {[...Array(15)].map((_, i) => (
                 <motion.div
                   key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-60"
                   style={{
-<<<<<<< HEAD
-<<<<<<< HEAD
                     left: `${Math.random() * 100}%`
                     top: `${Math.random() * 100}%`
-=======
                     left: `${Math.random() * 100}%`,
-<<<<<<< HEAD
                     top: `${Math.random() * 100}%`,
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   }}
                   animate={{
                     y: [0, -100, 0]
@@ -172,11 +145,7 @@ export default function Innovations2034Page() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 1 }}
-=======
-<<<<<<< HEAD
                     left: `${Math.random() * 100}%`,
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     top: `${Math.random() * 100}%`}  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -224,11 +193,6 @@ export default function Innovations2034Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
               <motion.h1 className="text-6xl md:text-8xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-8 leading-tight"
                 initial={{ opacity: 0, scale: 0.8 }  } catch (error) {
@@ -253,7 +217,6 @@ export default function Innovations2034Page() {
                 <br />
                 <span className="text-6xl md:text-8xl">Innovations</span>
               </motion.h1>
-<<<<<<< HEAD
               <motion.p
                 className='text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'                initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -269,7 +232,6 @@ export default function Innovations2034Page() {
                 transition={{ duration: 1, delay: 0.6 }}
                 className='flex flex-col sm:flex-row items-center justify-center gap-6'
               >
-=======
               <motion.p className="text-xl md:text-3xl text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12"
                 initial={{ opacity: 0, y: 30 }  } catch (error) {
     console.error("Error:", error);
@@ -302,11 +264,6 @@ export default function Innovations2034Page() {
   }
 }
                 transition={{ duration: 1, delay: 0.6 }} className="flex flex-col sm:flex-row items-center justify-center gap-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <motion.button
                   whileHover={{ scale: 1.05 }  } catch (error) {
     console.error("Error:", error);
@@ -328,7 +285,6 @@ export default function Innovations2034Page() {
               </motion.div>
             </motion.div>
           </div>
-<<<<<<< HEAD
           {/* Scroll Indicator */}
           <motion.div
             initial={{ opacity: 0 }}
@@ -336,7 +292,6 @@ export default function Innovations2034Page() {
             transition={{ duration: 1, delay: 1 }}
             className='absolute bottom-8 left-1/2 transform -translate-x-1/2'
           >
-=======
           {/* Scroll Indicator */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -354,11 +309,6 @@ export default function Innovations2034Page() {
   }
 }
             transition={{ duration: 1, delay: 1 }} className="absolute bottom-8 left-1/2 transform -translate-x-1/2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               animate={{ y: [0, 10, 0] }  } catch (error) {
     console.error("Error:", error);
@@ -377,7 +327,6 @@ export default function Innovations2034Page() {
             </motion.div>
           </motion.div>
         </section>
-<<<<<<< HEAD
         {/* Innovation Categories Overview */}
         <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
           <div className='container mx-auto px-4'>            <motion.div
@@ -388,7 +337,6 @@ export default function Innovations2034Page() {
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
         {/* Innovation Categories Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -414,11 +362,6 @@ export default function Innovations2034Page() {
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Innovation Categories
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -426,9 +369,7 @@ export default function Innovations2034Page() {
                 each designed to revolutionize industries and accelerate human progress.
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>              {[
-<<<<<<< HEAD
                 {
                   icon: '🧠'
                   title: 'AI Consciousness'
@@ -504,12 +445,8 @@ export default function Innovations2034Page() {
                       className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {category.icon}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {
                   icon: '🧠',
                   title: 'AI Consciousness',
@@ -564,9 +501,6 @@ export default function Innovations2034Page() {
                   title: 'Digital Twins',
                   description: 'Digital twin simulation and edge AI computing',
                   color: 'from-teal-500 to-cyan-600',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   count: '2+ Services',
                 },              ].map((category, index) => (
                 <motion.div
@@ -582,8 +516,6 @@ export default function Innovations2034Page() {
                       className={`w-16 h-16 bg-gradient-to-br ${category.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {category.icon}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   count: '2+ Services'
                   } catch (error) {
     console.error("Error:", error);
@@ -620,11 +552,6 @@ export default function Innovations2034Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                       {category.title  } catch (error) {
@@ -640,7 +567,6 @@ export default function Innovations2034Page() {
   }
 }
                     </p>
-<<<<<<< HEAD
                     <div className='text-cyan-400 font-semibold text-sm'>                      {category.count}
                     </div>
                   </div>
@@ -660,7 +586,6 @@ export default function Innovations2034Page() {
               className='text-center mb-16'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
                     <div className="text-cyan-400 font-semibold text-sm">
                       {category.count  } catch (error) {
     console.error("Error:", error);
@@ -709,11 +634,6 @@ export default function Innovations2034Page() {
 }
               viewport={{ once: true }} className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Why Choose Zion Tech Group?
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -721,9 +641,7 @@ export default function Innovations2034Page() {
                 one breakthrough innovation at a time.
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>              {[
-<<<<<<< HEAD
                 {
                   icon: '🚀'
                   title: 'First-to-Market'
@@ -780,12 +698,8 @@ export default function Innovations2034Page() {
                       className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {feature.icon}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 {
                   icon: '🚀',
                   title: 'First-to-Market',
@@ -819,9 +733,6 @@ export default function Innovations2034Page() {
                 {
                   icon: '💎',
                   title: 'Premium Support',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   description:
                     '24/7 expert support from our team of technology pioneers and industry experts.',
                   color: 'from-indigo-500 to-purple-600',
@@ -839,8 +750,6 @@ export default function Innovations2034Page() {
                       className={`w-16 h-16 bg-gradient-to-br ${feature.color} rounded-xl flex items-center justify-center text-3xl mb-4 group-hover:scale-110 transition-transform duration-300`}
                     >
                       {feature.icon}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   description: '24/7 expert support from our team of technology pioneers and industry experts.',
                   color: 'from-indigo-500 to-purple-600'
                   } catch (error) {
@@ -878,11 +787,6 @@ export default function Innovations2034Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {feature.title  } catch (error) {
@@ -891,7 +795,6 @@ export default function Innovations2034Page() {
   }
 }
                     </h3>
-<<<<<<< HEAD
                     <p className='text-gray-400'>{feature.description}</p>                  </div>
                 </motion.div>
               ))}
@@ -908,7 +811,6 @@ export default function Innovations2034Page() {
               className='max-w-4xl mx-auto'
             >
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
                     <p className="text-gray-400">
                       {feature.description  } catch (error) {
     console.error("Error:", error);
@@ -951,30 +853,18 @@ export default function Innovations2034Page() {
 }
               viewport={{ once: true }} className="max-w-4xl mx-auto">
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 Ready to Build the Future?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
                 Join the ranks of forward-thinking organizations that are already leveraging our 2034 innovations
                 to transform their industries and accelerate their growth.
               </p>
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-8'>
                 <div className='flex items-center justify-center space-x-3 text-gray-300'>
                   <span className='text-cyan-400'>📱</span>
-=======
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 <div className="flex items-center justify-center space-x-3 text-gray-300">
                   <span className="text-cyan-400">📱</span>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-3 text-gray-300">
@@ -1000,18 +890,11 @@ export default function Innovations2034Page() {
         </section>
       </div>
       <UltraFuturisticFooter2034 />
-<<<<<<< HEAD
     </>
-<<<<<<< HEAD
 );
-=======
-=======
-<<<<<<< HEAD
     </>;
 );
-=======
     </>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
         <section className="py-20 bg-gradient-to-r from-cyan-900/20 to-purple-900/20">;
           <div className="container mx-auto px-4 text-center">;
@@ -1074,8 +957,3 @@ export default function Innovations2034Page() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

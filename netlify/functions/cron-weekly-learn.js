@@ -50,8 +50,6 @@ exports.handler = async function () {
     }
 
 
-<<<<<<< HEAD
-=======
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
@@ -62,12 +60,10 @@ exports.handler = async function () {
       await upsertFile({ owner, repo, path: 'data/learn/insights-weekly.json', content, message: 'chore(automation): weekly learning insights', token })
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return { statusCode: 200, body: JSON.stringify({ ok: true, summary }) }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
 
 };      }
       topBadges: Object.values(users).reduce((map, u) => {
@@ -88,6 +84,4 @@ exports.handler = async function () {
   }
 }
 
-=======
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

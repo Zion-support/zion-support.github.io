@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import Head from 'next/head';
@@ -10,7 +8,6 @@ import {
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025';
-=======
 import React, { useState } from 'react',;
 import Head from 'next/head',;
 import { motion, AnimatePresence } from 'framer-motion',;
@@ -20,7 +17,6 @@ import {
 } from 'lucide-react',;
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',;
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function ComprehensivePricingPage() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
@@ -45,7 +41,6 @@ export default function ComprehensivePricingPage() {
     { id: 'Edge Computing', name: 'Edge', icon: '🌐' }
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' }
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
-<<<<<<< HEAD
   ]
   const filteredServices = selectedCategory === 'all'
     ? allServices
@@ -54,9 +49,6 @@ export default function ComprehensivePricingPage() {
     const categoryData = categories.find(cat => cat.id === category)
     return categoryData?.icon |'🚀'
   }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -95,10 +87,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ],
   const filteredServices = selectedCategory === 'all'
     ? allServices
@@ -107,22 +95,18 @@ export default function ComprehensivePricingPage(req, res) {
     const categoryData = categories.find(cat => cat.id === category),
     return categoryData?.icon || '🚀'
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const calculateYearlyPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '').replace(, ''))
     return `$${(price * 12 * 0.8).toFixed(0)}`, // 20% discount for yearly
-<<<<<<< HEAD
   }
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   }
 
-=======
   },
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
@@ -132,19 +116,12 @@ export default function ComprehensivePricingPage(req, res) {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-pricing-2025" />
       </Head>
       <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
-<<<<<<< HEAD
         {/* Header */}
-=======
         {/* Header */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
@@ -170,19 +147,12 @@ export default function ComprehensivePricingPage(req, res) {
               <p className="text-xl text-white/70 max-w-3xl mx-auto mb-8">
                 Revolutionary micro SAAS services that transform businesses with cutting-edge AI, quantum computing, and emerging technologies
               </p>
-<<<<<<< HEAD
               {/* Billing Toggle */}
-=======
               {/* Billing Toggle */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="flex items-center justify-center gap-4 mb-12">
                 <span className="text-white/60">Monthly</span>
                 <button
@@ -208,11 +178,9 @@ export default function ComprehensivePricingPage(req, res) {
                   <span className="bg-green-500/20 text-green-400 px-3 py-1 rounded-full text-sm font-medium">
                     Save 20%
                   </span>
-<<<<<<< HEAD
                 )}
               </div>
               {/* Stats */}
-=======
                 )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -224,11 +192,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white/5 rounded-2xl p-6 border border-white/10">
                   <div className="text-3xl font-bold text-blue-400">{allServices.length}+</div>
@@ -250,7 +213,6 @@ export default function ComprehensivePricingPage(req, res) {
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Category Filter */}
         <section className="px-6 mb-16">
           <div className="max-w-7xl mx-auto">
@@ -258,7 +220,6 @@ export default function ComprehensivePricingPage(req, res) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
-=======
         {/* Category Filter */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -282,16 +243,10 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="flex flex-wrap justify-center gap-3"
             >
               {categories.map((category) => (
                 <button
-<<<<<<< HEAD
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-3 rounded-full font-medium transition-all duration-300 flex items-center gap-2 ${
@@ -308,7 +263,6 @@ export default function ComprehensivePricingPage(req, res) {
           </div>
         </section>
         {/* Services Grid */}
-=======
                   key={category.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -349,24 +303,17 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <section className="px-6 pb-20">
           <div className="max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
               <AnimatePresence mode="wait">
                 {filteredServices.map((service, index) => (
                   <motion.div
-<<<<<<< HEAD
                     key={service.id}
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -30 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-=======
                     key={service.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -392,11 +339,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300"
                   >
                     {/* Popular Badge */  } catch (error) {
@@ -409,10 +351,8 @@ export default function ComprehensivePricingPage(req, res) {
                         <Star className="w-3 h-3" />
                         Popular
                       </div>
-<<<<<<< HEAD
                     )}
                     {/* Service Header */}
-=======
                     )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -424,22 +364,15 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     <div className="p-6">
                       <div className="flex items-start justify-between mb-4">
                         <div className="text-4xl">{service.icon}</div>
                         <div className="text-right">
                           <div className="text-3xl font-bold text-white">
-<<<<<<< HEAD
                             {billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price}
                           </div>
                           <div className="text-white/60">
                             {billingCycle === 'yearly' ? '/year' : service.period}
-=======
                             {billingCycle === 'yearly' ? calculateYearlyPrice(service.price) : service.price  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -452,40 +385,26 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           </div>
                         </div>
                       </div>
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
-<<<<<<< HEAD
                       {/* Key Features */}
-=======
                       {/* Key Features */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="space-y-2 mb-6">
                         {service.features.slice(0, 4).map((feature, idx) => (
                           <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                             <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
                             <span className="line-clamp-2">{feature}</span>
                           </div>
-<<<<<<< HEAD
                         ))}
                       </div>
                       {/* Service Stats */}
-=======
                         ))  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -497,11 +416,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       <div className="grid grid-cols-3 gap-4 mb-6 text-center">
                         <div>
                           <div className="text-lg font-bold text-blue-400">{service.rating}</div>
@@ -516,7 +430,6 @@ export default function ComprehensivePricingPage(req, res) {
                           <div className="text-xs text-white/60">Trial</div>
                         </div>
                       </div>
-<<<<<<< HEAD
                       {/* Expand/Collapse Button */}
                       <button
                         onClick={() => toggleServiceExpansion(service.id)}
@@ -530,7 +443,6 @@ export default function ComprehensivePricingPage(req, res) {
                       {/* CTA Button */}
                       <a
                         href={service.link}
-=======
                       {/* Expand/Collapse Button */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -564,18 +476,12 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         target="_blank"
                         rel="noopener noreferrer"
                         className="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white py-3 px-4 rounded-xl font-medium text-center block hover:from-blue-700 hover:to-cyan-700 transition-all duration-300 flex items-center justify-center gap-2"
                       >
                         Get Started
                         <ExternalLink className="w-4 h-4" />
-<<<<<<< HEAD
                       </a>
                     </div>
                     {/* Expanded Details */}
@@ -590,7 +496,6 @@ export default function ComprehensivePricingPage(req, res) {
                         >
                           <div className="p-6 bg-white/5">
                             {/* Market Position */}
-=======
                       </Link>
                     </div>
                     {/* Expanded Details */  } catch (error) {
@@ -629,41 +534,27 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Market Position</h4>
                               <p className="text-white/70 text-sm">{service.marketPosition}</p>
                             </div>
-<<<<<<< HEAD
                             {/* Technology Stack */}
-=======
                             {/* Technology Stack */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Technology Stack</h4>
                               <div className="flex flex-wrap gap-2">
                                 {service.technology.map((tech, idx) => (
                                   <span key={idx} className="bg-white/10 text-white/70 px-3 py-1 rounded-full text-xs">
-<<<<<<< HEAD
                                     {tech}
                                   </span>
                                 ))}
                               </div>
                             </div>
                             {/* Use Cases */}
-=======
                                     {tech  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -682,25 +573,18 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">Use Cases</h4>
                               <div className="space-y-1">
                                 {service.useCases.map((useCase, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <Target className="w-3 h-3 text-blue-400" />
-<<<<<<< HEAD
                                     {useCase}
                                   </div>
                                 ))}
                               </div>
                             </div>
                             {/* ROI and Benefits */}
-=======
                                     {useCase  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -719,11 +603,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             <div className="mb-6">
                               <h4 className="text-lg font-semibold text-white mb-2">ROI & Benefits</h4>
                               <p className="text-white/70 text-sm mb-3">{service.roi}</p>
@@ -731,14 +610,12 @@ export default function ComprehensivePricingPage(req, res) {
                                 {service.benefits.map((benefit, idx) => (
                                   <div key={idx} className="flex items-center gap-2 text-sm text-white/60">
                                     <TrendingUp className="w-3 h-3 text-green-400" />
-<<<<<<< HEAD
                                     {benefit}
                                   </div>
                                 ))}
                               </div>
                             </div>
                             {/* Contact Information */}
-=======
                                     {benefit  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -757,11 +634,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             <div className="bg-white/5 rounded-xl p-4">
                               <h4 className="text-lg font-semibold text-white mb-3">Contact Information</h4>
                               <div className="space-y-2 text-sm text-white/60">
@@ -773,7 +645,6 @@ export default function ComprehensivePricingPage(req, res) {
                             </div>
                           </div>
                         </motion.div>
-<<<<<<< HEAD
                       )}
                     </AnimatePresence>
                   </motion.div>
@@ -790,7 +661,6 @@ export default function ComprehensivePricingPage(req, res) {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-=======
                       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -835,11 +705,6 @@ export default function ComprehensivePricingPage(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               className="text-center"
             >
               <div className="bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-3xl p-12 border border-blue-500/30">
@@ -856,15 +721,8 @@ export default function ComprehensivePricingPage(req, res) {
                   >
                     Contact Sales Team
                     <ArrowRight className="w-5 h-5" />
-<<<<<<< HEAD
                   </a>
-=======
                   </Link>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <a
                     href="tel:+13024640950"
                     className="bg-white/10 text-white py-4 px-8 rounded-xl font-medium hover:bg-white/20 transition-all duration-300 flex items-center justify-center gap-2"
@@ -878,13 +736,8 @@ export default function ComprehensivePricingPage(req, res) {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   );
 };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   )
               className="text-center";
             >;
@@ -921,9 +774,5 @@ export default function ComprehensivePricingPage(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
 }
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

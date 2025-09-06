@@ -1,16 +1,11 @@
-<<<<<<< HEAD
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { StarIcon } from 'lucide-react'
-=======
-<<<<<<< HEAD
 import { cn } from '@/lib/utils'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button';
 import { StarIcon } from 'lucide-react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useStateimport Image from 'next/image'; // Import next/image
 import React, { useState } from 'react'; // Import useState
@@ -29,7 +24,6 @@ interface ListingScoreCardProps {
   className?: string
 
 export function ListingScoreCard({
-<<<<<<< HEAD
   title
   description
   image
@@ -45,15 +39,11 @@ export function ListingScoreCard({
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
     >
-=======
-=======
   title,
   description,
   image,
   category,
-=======
 import { cn } from "@/lib/utils",
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { StarIcon } from 'lucide-react'
@@ -79,10 +69,6 @@ export function ListingScoreCard({
   description, 
   image, 
   category, 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   tags,
   author,
   authorImage,
@@ -91,14 +77,9 @@ export function ListingScoreCard({
   reviewCount = 0,
   className
 }: ListingScoreCardProps) {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const [mainImageError, setMainImageError] = useState(false)
   const [authorImageError, setAuthorImageError] = useState(false)
     >
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [mainImageError, setMainImageError] = useState(false),
   const [authorImageError, setAuthorImageError] = useState(false),
 
@@ -107,22 +88,15 @@ export function ListingScoreCard({
       "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group",
       className
     )}>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {image && !mainImageError && (
         <div className="h-48 w-full overflow-hidden relative"> {/* Added relative for Image layout fill */}
           <Image
-<<<<<<< HEAD
             src={image}
             alt={title}
             className='object-cover transition-transform duration-300 group-hover:scale-105'
             onError={() => setMainImageError(true)}
             priority={false}
             sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw' // General sizes          />
-<<<<<<< HEAD
         </div>
       )}
       {(!image |mainImageError) && ( // Fallback if no image or error
@@ -142,9 +116,6 @@ export function ListingScoreCard({
             <div className='text-xs italic text-zion-slate-light'>
               Beta – simulated results
             </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             src={image} 
             alt={title} 
             className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -152,10 +123,6 @@ export function ListingScoreCard({
             priority={false}
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" // General sizes
           />
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         </div>
       )}
       {(!image || mainImageError) && ( // Fallback if no image or error
@@ -171,7 +138,6 @@ export function ListingScoreCard({
           </Badge>
           {aiScore === undefined || aiScore === null ? (
             <div className="text-xs italic text-zion-slate-light">Beta – simulated results</div>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           ) : (
             aiScore > 0 && (
               <div className="flex items-center px-2 py-1 bg-zion-cyan/10 rounded text-zion-cyan text-xs">
@@ -181,7 +147,6 @@ export function ListingScoreCard({
             )
           )}
         </div>
-<<<<<<< HEAD
         <h3 className='text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors'>
           {title}
         </h3>
@@ -200,11 +165,7 @@ export function ListingScoreCard({
                       ? 'text-zion-cyan fill-zion-cyan'
                       : 'text-zion-slate-light'
                   )}                />
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow line-clamp-2">{description}</p>
         
@@ -308,11 +269,6 @@ export function ListingScoreCard({;
                       : "text-zion-slate-light";
                   )}
                 />;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               ))}
             </div>
             <span className="text-sm text-zion-slate-light ml-1">
@@ -320,12 +276,7 @@ export function ListingScoreCard({;
             </span>
           </div>
         )}
-<<<<<<< HEAD
         {tags && tags.length > 0 && (
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className='flex flex-wrap gap-2 mb-4'>
             {tags.map((tag, i) => (
               <Badge
@@ -340,12 +291,8 @@ export function ListingScoreCard({;
         <Button className='w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white'>
           Request Quote
         </Button>
-=======
-<<<<<<< HEAD
         
         {tags && tags.length > 0 && (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
@@ -359,11 +306,6 @@ export function ListingScoreCard({;
           Request Quote
         </Button>
         
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {author && (
           <div className="flex items-center mt-4 pt-4 border-t border-zion-blue-light">
             {authorImage && !authorImageError ? (
@@ -371,14 +313,12 @@ export function ListingScoreCard({;
                 <Image
                   src={authorImage}
                   alt={author}
-<<<<<<< HEAD
                   className='object-cover rounded-full'
                   onError={() => setAuthorImageError(true)}
                   priority={false}                />
               </div>
             ) : (
               <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple'>
-=======
                   className="object-cover rounded-full"
                   onError={() => setAuthorImageError(true)}
                   priority={false}
@@ -386,41 +326,23 @@ export function ListingScoreCard({;
               </div>
             ) : (
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2 flex items-center justify-center text-zion-purple">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {author.charAt(0)}
               </div>
             )}
-<<<<<<< HEAD
             <span className='text-sm text-zion-slate-light'>{author}</span>
-<<<<<<< HEAD
           </div>
         )}
       </div>
     </div>
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
             <span className="text-sm text-zion-slate-light">{author}</span>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           </div>
         )}
       </div>;
     </div>;
   );
-<<<<<<< HEAD
 };
 }
-=======
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

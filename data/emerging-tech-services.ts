@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface EmergingTechService {
-=======
 export interface EmergingTechService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -960,21 +955,18 @@ export const emergingTechServices: EmergingTechService[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.'
     launchDate: '2024-09-01'
     customers: 35
     rating: 4.8
     reviews: 28
   }
-=======
       'Advanced autonomous AI factory platform with full manufacturing automation, quality control, and operational optimization capabilities.',
     launchDate: '2024-09-01',
     customers: 35,
     rating: 4.8,
     reviews: 28,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -987,14 +979,9 @@ export const emergingTechServices: EmergingTechService[] = [
     rating: 4.8
 
     reviews: 28
-<<<<<<< HEAD
   }
 ];
-=======
 export interface EmergingTechService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -1516,10 +1503,5 @@ export const emergingTechServices: EmergingTechService[] = [;
     customers: 35,;
     rating: 4.8,;
     reviews: 28;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
@@ -20,8 +17,6 @@ import {format, addDays} from "date-fns";
 import {CalendarIcon, Check, Clock} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
 import {useInterviews} from "@/hooks/useInterviews";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",
@@ -38,17 +33,10 @@ import { useForm } from "react-hook-form",
 import { z } from "zod",
 import { format, addDays } from "date-fns",
 import { CalendarIcon, Check, Clock } from "lucide-react",
-<<<<<<< HEAD
 import { toast } from "@/components/ui/use-toast";
 import { useInterviews } from "@/hooks/useInterviews";
-=======
 import { toast } from "@/components/ui/use-toast",
 import { useInterviews } from "@/hooks/useInterviews",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface InterviewRequestFormProps {
 
   talent: TalentProfile
@@ -59,7 +47,6 @@ const formSchema = z.object({
   date: z.date({
     required_error: "Please select a date for the interview."}).refine(date => date > new Date(), {
     message: "Interview date must be in the future"
-<<<<<<< HEAD
   });
   time: z.string().min(1, "Please select a time for the interview.");
   duration: z.string().min(1, "Please select the interview duration.");
@@ -70,7 +57,6 @@ const formSchema = z.object({
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
   }),
   time: z.string().min(1, "Please select a time for the interview."),
   duration: z.string().min(1, "Please select the interview duration."),
@@ -79,17 +65,13 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
   title: z.string().min(3, "Please provide a brief title for the interview."),
   notes: z.string().optional()}),
 
-<<<<<<< HEAD
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {;
   const { requestInterview } = useInterviews();
   const [isSubmitting, setIsSubmitting] = useState(false);
-=======
 export function InterviewRequestForm({ talent, onClose, userDetails }: InterviewRequestFormProps) {
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema)
     defaultValues: {
@@ -106,7 +88,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         variant: "destructive"})
       return
     }
-<<<<<<< HEAD
     setIsSubmitting(true);
     try {
       // Combine date and time
@@ -114,7 +95,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       const scheduledDate = new Date(dateTimeString);
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration);
-=======
 
     setIsSubmitting(true),
 
@@ -126,7 +106,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       // Calculate end time based on duration
       const durationMinutes = parseInt(values.duration),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       await requestInterview({
         talent_id: talent.id
         client_id: userDetails.id
@@ -137,12 +116,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
         meeting_link: values.meetingLink
         interview_type: "video"
         title: values.title
-<<<<<<< HEAD
       });
-=======
       }),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       toast({
         title: "Interview requested"
         description: `Your interview request with ${talent.full_name} has been sent.`})
@@ -158,15 +134,12 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
     }
   }
   const timeSlots = [
-<<<<<<< HEAD
     "09:00", "09:30", "10:00", "10:30", "11:00", "11: 30"
     "12:00", "12:30", "13:00", "13:30", "14:00", "14: 30"
     "15:00", "15:30", "16:00", "16:30", "17:00", "17: 30"
-=======
     "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
     "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
     "15:00", "15:30", "16:00", "16:30", "17:00", "17:30",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     "18:00", "18:30", "19:00", "19:30", "20: 00"
   ]
   return (
@@ -211,12 +184,9 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                       <Button
                         variant="outline"
                         className={cn(
-<<<<<<< HEAD
                           "w-full pl-3 text-left font-normal";
 
-=======
                           "w-full pl-3 text-left font-normal",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                           !field.value && "text-muted-foreground"
                         )}
                       >
@@ -242,8 +212,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 </Popover>
                 <FormMessage />
               </FormItem>
-<<<<<<< HEAD
-=======
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from "@/components/ui/form",;
@@ -406,11 +374,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
                 </Popover>;
                 <FormMessage />;
               </FormItem>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             )}
           />
           <FormField
@@ -504,10 +467,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             )}
           />
         )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         <FormField
           control={form.control}
           name="notes"
@@ -515,11 +475,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
             <FormItem>
               <FormLabel>Notes (Optional)</FormLabel>
               <FormControl>
-<<<<<<< HEAD
                 <Textarea
-=======
                 <Textarea 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   placeholder="Share what you'd like to discuss in this interview"
                   className="h-20"
                   {...field}
@@ -540,9 +497,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails }: Interview
       </form>
     </Form>
   )
-<<<<<<< HEAD
 }
-=======
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

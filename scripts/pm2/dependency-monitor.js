@@ -1,7 +1,6 @@
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
-<<<<<<< HEAD
 class DependencyMonitor {constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'); this.startTime = Date.now()}; log(message) {const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`; try {fs.appendFileSync(this.logFile, logMessage)} catch (error) {console.error('Error writing to log file: ', error.message)}}; async checkNpmAudit() {try {; this.log('🔒 Running npm audit...'); const auditResult = execSync('npm audit --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'}); const audit = JSON.parse(auditResult); return audit} catch (error) {// npm audit might fail if there are vulnerabilities; try {; const output = error.stdout?.toString() |error.stderr?.toString() |''; if (output.includes('npm ERR!')) {; // Try to parse the error output for vulnerability info; const lines = output.split('\n'); const vulnerabilities = []; lines.forEach(line = > {; if (line.includes('│')) {; const parts = line.split('│').map(p = > p.trim()).filter(Boolean); if (parts.length > = 4) {; vulnerabilities.push({; package: parts[0], severity: parts[1], title: parts[2]
     path: parts[3]})}}}); return { vulnerabilities, error: true }}} catch (parseError) {this.log(`Error parsing npm audit output: ${parseError.message}`)}; return { error: true, message: error.message }}}; async checkOutdatedPackages() {try {; this.log('📦 Checking for outdated packages...'); const outdatedResult = execSync('npm outdated --json', {; cwd: this.projectRoot, encoding: 'utf8', stdio: 'pipe'}); const outdated = JSON.parse(outdatedResult); return outdated} catch (error) {// npm outdated returns non-zero exit code if there are outdated packages; try {; const output = error.stdout?.toString() |''; if (output) {; return JSON.parse(output)}} catch (parseError) {this.log(`Error parsing npm outdated output: ${parseError.message}`)}; return {}}}; async checkPackageLock() {try {; const packageLockPath = path.join(this.projectRoot, 'package-lock.json'); if (!fs.existsSync(packageLockPath)) {; return { exists: false, message: 'No package-lock.json found' }}; const packageLock = JSON.parse(fs.readFileSync(packageLockPath, 'utf8')); const lockfileVersion = packageLock.lockfileVersion; return {exists: true, lockfileVersion, dependencies: Object.keys(packageLock.dependencies |{}).length; devDependencies: Object.keys(packageLock.devDependencies |{}).length}} catch (error) {return { exists: false, error: error.message }}}; async checkNodeVersion() {try {; const nodeVersion = process.version; const npmVersion = execSync('npm --version', {; cwd: this.projectRoot
     encoding: 'utf8'}).trim(); return { nodeVersion, npmVersion }} catch (error) {return { error: error.message }}}; async checkGitHooks() {try {; const hooksDir = path.join(this.projectRoot, '.git/hooks'); if (!fs.existsSync(hooksDir)) {; return { exists: false, message: 'No git hooks directory found' }}; const hooks = fs.readdirSync(hooksDir); const activeHooks = hooks.filter(hook = > {const hookPath = path.join(hooksDir, hook); const stats = fs.statSync(hookPath); return stats.isFile() && (hook.endsWith('.sample') |stats.mode & 0o111)}); return { exists: true, hooks: activeHooks }} catch (error) {return { error: error.message }}}; async generateReport(auditResult, outdatedResult, packageLockInfo, nodeInfo, gitHooksInfo) {const report = {; timestamp: new Date().toISOString(), summary: {
@@ -18,7 +17,6 @@ class DependencyMonitor {constructor() {; this.projectRoot = process.cwd(); this
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 monitor.run().catch(error = > {process.exit(1)});
-=======
 ;
 class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); this.logFile = path.join(this.projectRoot, 'logs/pm2/dependency-monitor.log'); this.reportFile = path.join(this.projectRoot, 'logs/pm2/dependency-report.json'); this.startTime = Date.now()};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = `[${timestamp}] ${message}\n`;
@@ -68,11 +66,6 @@ class DependencyMonitor {; constructor() {; this.projectRoot = process.cwd(); th
 // Run the dependency monitor;
 const monitor = new DependencyMonitor();
 monitor.run().catch(error = > {; process.exit(1)});
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 #!/usr/bin/env node,;
 const fs = require('fs'),;
 const path = require('path'),;
@@ -713,8 +706,3 @@ const monitor = new DependencyMonitor(),;
 monitor.run().catch(error => {,;
   process.exit(1);
 }),;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -178,9 +178,8 @@ export function CountryTabs({;
   page ;
 }> <PaginationButton /> </PaginationItem>) ) ;
 }<PaginationItem> <PaginationNext /> </PaginationItem> </PaginationContent> </Pagination> </div>) ;
-<<<<<<< HEAD:temp_broken_files/services/PageSections/CountryTabs.tsx
+:temp_broken_files/services/PageSections/CountryTabs.tsx
 }</TabsContent> </Tabs>) ;"}"
-=======
 }</TabsContent> </Tabs>) ;
 }"
->>>>>>> cursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx
+ursor/fix-lint-push-and-merge-to-main-e10e:src/components/services/PageSections/CountryTabs.tsx

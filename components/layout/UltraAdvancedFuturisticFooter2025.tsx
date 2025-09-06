@@ -2,7 +2,6 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
   Mail
   Phone
   MapPin
@@ -20,7 +19,6 @@ import {
   BookOpen
   Briefcase
   Atom;
-=======
   Mail,
   Phone,
   MapPin,
@@ -38,7 +36,6 @@ import {
   BookOpen,
   Briefcase,;
   Atom,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from 'lucide-react';
 
 import Link from 'next/link';
@@ -184,7 +181,6 @@ const footerSections: FooterSection[] = [
   },  {
     title: 'Resources'
     links: [
-<<<<<<< HEAD
       { label: 'Blog', href: '/blog', description: 'Industry insights' },  {
     title: 'Solutions'
     links: [
@@ -309,17 +305,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
-=======
       { label: 'Blog', href: '/blog', description: 'Industry insights' },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const footerSections = [
     {
       title: 'Services'
       items: [
-<<<<<<< HEAD
         { label: 'AI & Machine Learning', href: '/ai-services' }
         { label: 'Quantum Computing', href: '/quantum-computing' }
         { label: 'Space Technology', href: '/space-tech' }
@@ -363,7 +356,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
         { label: 'Support', href: '/support' }
       ]
     }
-=======
         { label: 'AI & Machine Learning', href: '/ai-services' },
         { label: 'Quantum Computing', href: '/quantum-computing' },
         { label: 'Space Technology', href: '/space-tech' },
@@ -408,7 +400,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       ],
     },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   ];
   const socialLinks = [
     {
@@ -446,50 +437,35 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       y: 0
       opacity: 1
       transition: {
-<<<<<<< HEAD
         duration: 0.5
       }
     }
   }
-=======
         duration: 0.5,
       },
     },
 
   };
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <footer className='relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden'>
       {/* Animated Background Elements */}
       <div className='absolute inset-0 -z-10'>        {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
             key={i}  }
-=======
             key={i}  };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-purple-900 to-gray-900 text-white overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 -z-10">
-=======
-<<<<<<< HEAD
             key={i}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Quantum Particle Field */}
         {[...Array(30)].map((_, i) => (
           <motion.div
             key={i}
-<<<<<<< HEAD
             className='absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full'
             animate={{
               x: [0, Math.random() * 1000, 0]
@@ -637,13 +613,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 <div className="flex items-center space-x-3 text-gray-300">
                   <Globe className="w-4 h-4 text-blue-400" />
                   <a href="https://ziontechgroup.com" className="hover:text-white transition-colors duration-200">
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     ziontechgroup.com
                   </a>
                 </div>
@@ -689,14 +659,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
               </motion.div>
             ))}
           </motion.div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Social Links & Newsletter */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -704,14 +667,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
             className='mt-16 pt-12 border-t border-gray-800/50'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           >
             <div className='flex flex-col lg:flex-row items-center justify-between gap-8'>
               {/* Social Links */}
@@ -727,7 +683,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     whileHover={{ y: -2 }}
                     whileTap={{ scale: 0.95 }}
                   >
-<<<<<<< HEAD
                     <social.icon className='w-5 h-5' />                  </motion.a>          >
             <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
               {/* Social Links */}
@@ -747,7 +702,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   </motion.a>
                 ))}
               </div>
-=======
                     <social.icon className='w-5 h-5' />                  </motion.a>
 
                   </motion.a>
@@ -755,11 +709,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 ))}
               </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               {/* Newsletter Signup */}
               <div className='flex-1 max-w-md'>
                 <h5 className='text-lg font-semibold text-white mb-3'>
@@ -768,14 +717,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                 <p className='text-gray-400 text-sm mb-4'>
                   Get the latest insights on AI consciousness, quantum
                   computing, and future technology.
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
                 <div className='flex space-x-2'>
                   <input
@@ -784,7 +726,6 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                     className='flex-1 px-4 py-3 bg-gray-800/50 border border-gray-700/50 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent'
                   />
                   <motion.button
-<<<<<<< HEAD
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}                </p>
                 <div className="flex space-x-2">
                   <input
@@ -794,14 +735,8 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
                   />
                   <motion.button
                     className="px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200"
-=======
                     className='px-6 py-3 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-semibold hover:from-purple-600 hover:to-pink-600 transition-all duration-200'                    whileHover={{ scale: 1.05 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -812,14 +747,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         {/* Bottom Bar */}
         <motion.div
           initial={{ opacity: 0 }}
@@ -827,14 +755,7 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
           className='border-t border-gray-800/50 bg-gray-900/50 backdrop-blur-xl'
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         >
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
             <div className='flex flex-col md:flex-row items-center justify-between gap-4'>
@@ -874,23 +795,16 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
           </div>
         </motion.div>
       </div>
-<<<<<<< HEAD
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}        className="fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50"
-=======
 
       {/* Scroll to Top Button */}
       <motion.button
         onClick={scrollToTop}
         className='fixed bottom-8 right-8 w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-full shadow-2xl hover:shadow-purple-500/25 transition-all duration-200 z-50'        whileHover={{ scale: 1.1, y: -2 }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         whileHover={{ scale: 1.1, y: -2 }}
         whileTap={{ scale: 0.9 }}
         initial={{ opacity: 0, scale: 0 }}
@@ -901,26 +815,14 @@ const UltraAdvancedFuturisticFooter2025: React.FC = () => {
       </motion.button>
     </footer>
   );
-<<<<<<< HEAD
 }
-=======
 };
 
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default UltraAdvancedFuturisticFooter2025;      </motion.button>
     </footer>
   )
 }
 export default UltraAdvancedFuturisticFooter2025;
 
-<<<<<<< HEAD
-=======
 export default UltraAdvancedFuturisticFooter2025;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
 export default UltraAdvancedFuturisticFooter2025;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from "react";
 import {
-<<<<<<< HEAD
 
   Table
   TableBody
@@ -12,14 +8,12 @@ import {
   TableHead
   TableHeader
   TableRow
-=======
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
 TableRow,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/table";
 import { Badge } from "@/components/ui/badge";
 import { CalendarIcon, Search } from "lucide-react";
@@ -71,7 +65,6 @@ export function TeamActivity() {
       category: "candidates"
     }
     {
-<<<<<<< HEAD
       id: 6
       user: "Jamie Smith"
       action: "Updated budget"
@@ -79,7 +72,6 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3)
       category: "billing"
     }
-=======
       id: 6,
       user: "Jamie Smith",
       action: "Updated budget",
@@ -87,9 +79,7 @@ export function TeamActivity() {
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing",
     },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
-<<<<<<< HEAD
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
     const now = new Date();
@@ -97,7 +87,6 @@ export function TeamActivity() {
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
-=======
 
 import React from "react",
 import {
@@ -165,7 +154,6 @@ export function TeamActivity() {
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60)),
     const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (diffMins < 60) {
       return `${diffMins} minutes ago`
     } else if (diffHrs < 24) {
@@ -175,7 +163,6 @@ export function TeamActivity() {
     } else {
       return date.toLocaleDateString()
     }
-<<<<<<< HEAD
   }
   const getCategoryBadge = (category: string) => {
     const categoryStyles: Record<
@@ -189,7 +176,6 @@ export function TeamActivity() {
     }
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>;
   }
-=======
   },
 
   const getCategoryBadge = (category: string) => {
@@ -201,7 +187,6 @@ export function TeamActivity() {
 
     return <Badge variant={categoryStyles[category].variant}>{category}</Badge>
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <div className="space-y-6">
@@ -242,8 +227,6 @@ export function TeamActivity() {
                 </TableCell>
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>
                 <TableCell className="text-muted-foreground">
-<<<<<<< HEAD
-=======
 import React from "react",;
 import {;
   Table,;
@@ -365,11 +348,6 @@ export function TeamActivity() {;
                 </TableCell>;
                 <TableCell>{getCategoryBadge(activity.category)}</TableCell>;
                 <TableCell className="text-muted-foreground">;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {formatDate(activity.timestamp)}
                 </TableCell>
               </TableRow>
@@ -377,14 +355,7 @@ export function TeamActivity() {;
           </TableBody>
         </Table>
       </div>
-<<<<<<< HEAD
-=======
       
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       <div className="flex items-center justify-between">
         <Button variant="outline" size="sm">
           Previous
@@ -397,15 +368,8 @@ export function TeamActivity() {;
         </Button>
       </div>
     </div>
-<<<<<<< HEAD
   );
 }
-=======
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React from "react";
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
 import { 
@@ -19,7 +18,6 @@ import {
 } from "@/components/ui/dropdown-menu",
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-<<<<<<< HEAD
 import { formatDate } from "@/utils/dateUtils";
 interface QuotesTableProps {
 
@@ -30,10 +28,7 @@ interface QuotesTableProps {
   toggleArchive: (id: string, isArchived: boolean) => void
   deleteQuote: (id: string) => void
 
-=======
 import {formatDate} from "@/utils/dateUtils";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import { 
@@ -54,10 +49,6 @@ import {
 import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface QuotesTableProps {
   quotes: QuoteRequest[],
   isArchived?: boolean,
@@ -65,23 +56,16 @@ interface QuotesTableProps {
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails: (quote: QuoteRequest) => void
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export const QuotesTable: React.FC<QuotesTableProps> = ({;
   quotes;
   isArchived = false;
   isLoading;
   updateStatus;
   toggleArchive;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-<<<<<<< HEAD
   quotes;
 
   isArchived = false;
@@ -89,15 +73,12 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
   updateStatus;
   toggleArchive;
   deleteQuote
-=======
   quotes,
   isArchived = false,
   isLoading,
   updateStatus,
   toggleArchive,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   deleteQuote,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   onViewDetails
 }) => {
   return (
@@ -236,8 +217,6 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                           </DropdownMenuItem>
                         </DropdownMenuContent>
                       </DropdownMenu>
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",;
 import {;
@@ -413,35 +392,20 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({;
                           </DropdownMenuItem>;
                         </DropdownMenuContent>;
                       </DropdownMenu>;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     )}
                   </div>
                 </TableCell>
               </TableRow>
             ))
           )}
-<<<<<<< HEAD
         </TableBody>
       </Table>
     </div>
   )
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
         </TableBody>;
       </Table>;
     </div>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

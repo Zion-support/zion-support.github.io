@@ -1,25 +1,16 @@
-<<<<<<< HEAD
-=======
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion, FilterOptions } from '@/types/search';
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
-<<<<<<< HEAD
   {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
-=======
-<<<<<<< HEAD
   {;
 import { ProductListing } from "@/types/listings";
 import { SearchSuggestion, FilterOptions } from "@/types/search";
-=======
   {
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 // Mock marketplace listings with more realistic data
 export const MARKETPLACE_LISTINGS: ProductListing[] = [
   {
@@ -357,7 +348,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
       id: 'serverpro'
     }
     images: [
-<<<<<<< HEAD
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500'
     ]
     createdAt: '2023-12-15T09:45:00.000Z'
@@ -366,7 +356,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true
     location: 'North America'
     availability: '2-4 Weeks'
-=======
       'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500',
     ],
     createdAt: '2023-12-15T09:45:00.000Z',
@@ -375,7 +364,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
     featured: true,
     location: 'North America',
     availability: '2-4 Weeks',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   },];      name: "ServerPro Systems";
       id: "serverpro"}
     images: ["https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&h=500"];
@@ -390,7 +378,6 @@ export const MARKETPLACE_LISTINGS: ProductListing[] = [
 // Generate search suggestions based on existing listings
 export const generateSearchSuggestions = (): SearchSuggestion[] => {
   const suggestions = [
-<<<<<<< HEAD
     'AI models'
     'GPT integration'
     'Machine learning'
@@ -409,7 +396,6 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'GPU cluster'
     'Edge computing'
     'High performance storage'
-=======
     'AI models',
     'GPT integration',
     'Machine learning',
@@ -428,20 +414,17 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     'GPU cluster',
     'Edge computing',
     'High performance storage',;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ];
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
     text
     type: 'product', // Use a valid type from the updated SearchSuggestion interface
-<<<<<<< HEAD
   }));};  ];
   // Convert strings to SearchSuggestion objects
   return suggestions.map(text => ({
     text;
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
-<<<<<<< HEAD
 }
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
@@ -494,10 +477,7 @@ ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price |0));
 
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
   }));};
 
 import { ProductListing } from "@/types/listings",
@@ -816,17 +796,10 @@ export const generateSearchSuggestions = (): SearchSuggestion[] => {
     type: 'product' // Use a valid type from the updated SearchSuggestion interface
   }))
 },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 // Generate filter options for sidebar
 export const generateFilterOptions = (): FilterOptions => {
   // Extract unique categories, locations, and availability options from listings
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   const productTypes = [
     ...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category)),;
   ].sort();
@@ -841,17 +814,11 @@ export const generateFilterOptions = (): FilterOptions => {
     ),
   ].sort();
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const productTypes = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.category))].sort(),
   const locations = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.location).filter(Boolean))].sort(),
   const availability = [...new Set(MARKETPLACE_LISTINGS.map(listing => listing.availability).filter(Boolean))].sort(),
   
   return {
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     productTypes: productTypes.map(type => ({
       label: type,
       value: type
@@ -864,9 +831,6 @@ export const generateFilterOptions = (): FilterOptions => {
       label: item,
       value: item
     })),
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     ratingOptions: [1, 2, 3, 4, 5], // Add rating options
   };
 };
@@ -890,8 +854,6 @@ availabilityOptions: availability.map (item => ({
 ratingOptions: [1, 2, 3, 4, 5] // Add rating options 
 
 };export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     ratingOptions: [1, 2, 3, 4, 5] // Add rating options
 import { ProductListing } from "@/types/listings",;
 import { SearchSuggestion, FilterOptions } from "@/types/search",;
@@ -1229,9 +1191,4 @@ export const generateFilterOptions = (): FilterOptions => {;
   }
 },;
 export const MAX_PRICE = Math.max(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const MIN_PRICE = Math.min(...MARKETPLACE_LISTINGS.map(listing => listing.price || 0));
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

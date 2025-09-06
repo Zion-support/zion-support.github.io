@@ -1,16 +1,12 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
-=======
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import Button from '../components/ui/Button';
 
 import {
-<<<<<<< HEAD
   Lock
   Shield
   Eye
@@ -24,7 +20,6 @@ import {
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 
 export default function PasswordCheckerPage() {
-=======
   Lock,
   Shield,
   Eye,
@@ -37,7 +32,6 @@ export default function PasswordCheckerPage() {
   ArrowRight,;
 } from 'lucide-react';import { Lock, Shield, Eye, EyeOff, Copy, RefreshCw, CheckCircle, XCircle, AlertTriangle, ArrowRight } from 'lucide-react';
 export default function PasswordCheckerPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
   const [strength, setStrength] = useState(0);
@@ -277,14 +271,7 @@ export default function PasswordCheckerPage() {;
           content='Advanced password strength analyzer with security recommendations.'
         />
       </Head>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Hero Section */}
       <section className='pt-32 pb-20 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
@@ -400,14 +387,7 @@ export default function PasswordCheckerPage() {;
                     </button>
                   </div>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Generate Password */}
                 <div>
                   <Button
@@ -420,14 +400,7 @@ export default function PasswordCheckerPage() {;
                     Generate Strong Password
                   </Button>
                 </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Generated Password Display */}
                 {generatedPassword && (
                   <div className='p-4 bg-gray-700 rounded-lg border border-gray-600'>
@@ -445,7 +418,6 @@ export default function PasswordCheckerPage() {;
                         Copy
                       </Button>
                     </div>
-<<<<<<< HEAD
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}                      <Button
                         onClick={() => copyToClipboard(generatedPassword)}
                         variant="outline"
@@ -458,16 +430,10 @@ export default function PasswordCheckerPage() {;
                     </div>
                     <div className="mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all">
                       {generatedPassword}
-=======
                     <div className='mt-2 p-2 bg-gray-800 rounded text-sm font-mono text-white break-all'>                      {generatedPassword}
 
                       {generatedPassword}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                   </div>
                 )}
@@ -500,7 +466,6 @@ export default function PasswordCheckerPage() {;
                         {strengthText} ({strength}/100)
                       </span>
                     </div>
-<<<<<<< HEAD
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                        className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}                <div className="space-y-6">
                   {/* Strength Score */}
@@ -512,30 +477,16 @@ export default function PasswordCheckerPage() {;
                     </div>
                     <div className='w-full bg-gray-700 rounded-full h-3'>
                       <div                    <div className="w-full bg-gray-700 rounded-full h-3">
-<<<<<<< HEAD
                       <div
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       <div 
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         className={`h-3 rounded-full transition-all duration-300 ${getStrengthBarColor()}`}
                         style={{ width: `${strength}%` }}
                       />
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Security Checks */}
                   <div>
                     <h4 className='text-lg font-semibold text-white mb-3'>
@@ -547,19 +498,12 @@ export default function PasswordCheckerPage() {;
                           {getCheckIcon(passed)}
                           <span
                             className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}
-<<<<<<< HEAD
                           >                            {key === 'length' && 'At least 8 characters'}                      {Object.entries(checks).map(([key, passed]) => (
                         <div key={key} className="flex items-center space-x-3">
                           {getCheckIcon(passed)}
                           <span className={`text-sm ${passed ? 'text-green-400' : 'text-red-400'}`}>
-=======
                           >                            {key === 'length' && 'At least 8 characters'}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             {key === 'length' && 'At least 8 characters'}
                             {key === 'uppercase' && 'Contains uppercase letter'}
                             {key === 'lowercase' && 'Contains lowercase letter'}
@@ -573,14 +517,7 @@ export default function PasswordCheckerPage() {;
                       ))}
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   {/* Suggestions */}
                   {suggestions.length > 0 && (
                     <div>
@@ -596,23 +533,16 @@ export default function PasswordCheckerPage() {;
                             <AlertTriangle className='w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0' />
                             <span className='text-sm text-yellow-300'>
                               {suggestion}
-<<<<<<< HEAD
                             </span>                          </div>                      <h4 className="text-lg font-semibold text-white mb-3">Suggestions</h4>
                       <div className="space-y-2">
                         {suggestions.map((suggestion, index) => (
                           <div key={index} className="flex items-start space-x-3">
                             <AlertTriangle className="w-4 h-4 text-yellow-400 mt-0.5 flex-shrink-0" />
                             <span className="text-sm text-yellow-300">{suggestion}</span>
-=======
                             </span>                          </div>
 
                           </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         ))}
                       </div>
                     </div>
@@ -633,14 +563,7 @@ export default function PasswordCheckerPage() {;
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Features */}
       <section className='py-20 bg-gray-800'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -805,15 +728,8 @@ export default function PasswordCheckerPage() {;
       <section className='py-20 bg-gradient-to-r from-indigo-600 to-purple-600'>
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
           <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
             Ready to Secure Your Passwords?
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </h2>
           <p className='text-xl text-indigo-100 mb-8'>
             Join thousands of users who trust our password strength checker to
@@ -842,17 +758,9 @@ export default function PasswordCheckerPage() {;
         </div>
       </section>
     </>
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-}
-=======
-}
-=======
   );
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+}
+  );
+}

@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import * as LabelPrimitive from '@radix-ui/react-label';
 import {useReactId} from '@/hooks/useReactId';
 import {Slot} from '@radix-ui/react-slot';
 import {Controller, type, FieldPath, type, FieldValues, FormProvider, useFormContext,} from 'react-hook-form';
-<<<<<<< HEAD
 import {cn} from '@/lib/utils';
 import {Label} from '@/components/ui/label';
 const Form = FormProvider;
@@ -15,9 +13,6 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ''
 });
 const FormField = ({ ...props }: any) =></FormFieldContextValue> {
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import * as React from "react"
 import * as LabelPrimitive from "@radix-ui/react-label"
 import { useReactId } from "@/hooks/useReactId"
@@ -28,10 +23,6 @@ import {
   type FieldValues,
   FormProvider,
   useFormContext} from "react-hook-form"
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
@@ -46,12 +37,10 @@ const FormFieldContext = React.createContext<FormFieldContextValue>({
   name: ""})
 
 const FormField = ({ ...props }: any) => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <FormFieldContext.Provider value={{ name: props.name }}>
       <Controller {...props} />
     </FormFieldContext.Provider>
-<<<<<<< HEAD
   );
 }
 const useFormField = () => {
@@ -63,7 +52,6 @@ const useFormField = () => {
   ) as FormItemContextValue | null;
   const { getFieldState, formState } = useFormContext();
   const fieldState = getFieldState(fieldContext.name, formState);
-=======
   )
 }
 
@@ -74,12 +62,10 @@ const useFormField = () => {
 
   const fieldState = getFieldState(fieldContext.name, formState)
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!fieldContext) {
     throw new Error("useFormField should be used within <FormField>")
   }
   if (!itemContext) {
-<<<<<<< HEAD
     throw new Error('useFormField should be used within <FormItem>');
   }
   const { id } = itemContext as FormItemContextValue;
@@ -96,15 +82,11 @@ type FormItemContextValue = {
   id: string
 }
 const FormItemContext = React.createContext<FormItemContextValue | null>(null);
-<<<<<<< HEAD
 const FormItem = React.forwardRef<
   HTMLDivElement
   React.HTMLAttr</HTMLDivElement>ibutes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
   const id = useReactId();
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     throw new Error("useFormField should be used within <FormItem>")
   }
 
@@ -123,10 +105,6 @@ type FormItemContextValue = {;
 }
 
 const FormItemContext = React.createContext<FormItemContextValue | null>(null)
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 const FormItem = React.forwardRef<
   HTMLDivElement,
@@ -134,12 +112,10 @@ const FormItem = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const id = useReactId()
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <FormItemContext.Provider value={{ id }}>
       <div ref={ref} className={cn("space-y-2", className)} {...props} />
     </FormItemContext.Provider>
-<<<<<<< HEAD
   );
 });
 FormItem.displayName = 'FormItem';
@@ -179,7 +155,6 @@ const FormMessage = React.</HTMLParagraphElement>forwardRef<
   const body = error ? String(error?.message) : children;
   if (!body) {
     return null;
-=======
   )
 })
 FormItem.displayName = "FormItem"
@@ -190,21 +165,12 @@ const FormLabel = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { error, formItemId } = useFormField()
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Label
       ref={ref}
       className={cn(error && "text-destructive", className)}
       htmlFor={formItemId}
       {...props}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     />
   )
 })
@@ -216,11 +182,6 @@ const FormControl = React.forwardRef<
 >(({ ...props }, ref) => {
   const { error, formItemId, formDescriptionId, formMessageId } = useFormField()
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <Slot
       ref={ref}
@@ -232,10 +193,6 @@ const FormControl = React.forwardRef<
       }
       aria-invalid={!!error}
       {...props}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     />
   )
 })
@@ -247,21 +204,12 @@ const FormDescription = React.forwardRef<
 >(({ className, ...props }, ref) => {
   const { formDescriptionId } = useFormField()
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <p
       ref={ref}
       id={formDescriptionId}
       className={cn("text-sm text-muted-foreground", className)}
       {...props}
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     />
   )
 })
@@ -275,21 +223,13 @@ const FormMessage = React.forwardRef<
   const body = error ? String(error?.message) : children
 
   if (!body) {
-<<<<<<< HEAD
     return null
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
     return null;
-=======
     return null
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
     >
       {body}
     </p>
-<<<<<<< HEAD
   );
 });
 FormMessage.displayName = 'FormMessage';
@@ -303,7 +243,6 @@ export {
   FormMessage
   FormField
 }
-=======
   )
 })
 FormMessage.displayName = "FormMessage"
@@ -316,16 +255,9 @@ export {
   FormControl,
   FormDescription,
   FormMessage,
-<<<<<<< HEAD
   FormField}
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
   FormField,;
 };
-=======
   FormField}
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

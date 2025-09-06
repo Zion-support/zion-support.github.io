@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
@@ -24,12 +23,8 @@ const Contact: React.FC = () => {
     console.log('Form submitted:', formData);
     alert('Thank you for your message! We will get back to you soon.');
   };
-=======
-import React from 'react';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
-<<<<<<< HEAD
     <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white min-h-screen">
       <div className="container mx-auto px-4 py-16">
         <div className="text-center mb-16">
@@ -50,18 +45,6 @@ import React from 'react';
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-2">
                   Full Name
-=======
-    <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold text-gray-900 mb-8">Contact Us</h1>
-        <div className="max-w-2xl mx-auto">
-          <div className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
-            <form className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Name
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </label>
                 <input
                   type="text"
@@ -122,7 +105,6 @@ import React from 'react';
                 Send Message
               </Button>
             </form>
-<<<<<<< HEAD
           </div>
 
           {/* Contact Information */}
@@ -167,8 +149,6 @@ import React from 'react';
                 </a>
               </div>
             </div>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           </div>
         </div>
       </div>

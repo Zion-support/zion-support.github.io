@@ -1,64 +1,40 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
 import {Badge} from "@/components/ui/badge";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-=======
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export function CurrentSubscription() {
   // Mock subscription data
 
   const subscription = {
-<<<<<<< HEAD
     plan: "Business"
     status: "active"
     billingCycle: "Annual"
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
     amount: "$1,999.00";
-=======
     plan: "Business",
     status: "active",
-<<<<<<< HEAD
     billingCycle: "Annual",;
     startDate: "May 1, 2025";
     nextBillingDate: "May 1, 2026";
     amount: "$1,999.00";
-=======
     billingCycle: "Annual",
     startDate: "May 1, 2025",
     nextBillingDate: "May 1, 2026",
     amount: "$1,999.00",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     teamSeats: {
       used: 32
       total: 50
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <Card>
@@ -116,12 +92,7 @@ export function CurrentSubscription() {
       </CardFooter>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React from "react",;
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -196,10 +167,5 @@ export function CurrentSubscription() {;
       </CardFooter>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

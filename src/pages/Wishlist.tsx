@@ -1,17 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     return null, // Or a loading spinner }
 export default function WishlistPage(function WishlistPage(function WishlistPage(function WishlistPage() {): any {): any {): any {}; const { favorites, loading } = useFavorites(); const { user } = useAuth(); if(!user) {}; navigate('/login'); return null}; const addToCart: any = (item: { id: string; title?: string; price?: number   }) => {}; let cart = stored ? JSON.parse(stored) : []; if(existing) existing.quantity += 1;'; else cart.push({ id: item.id, name: item.title |'Item', price: item.price |0, quantity: 1 });'; safeStorage.setItem('guestCart', JSON.stringify(cart))}; return acc}, {}); return acc}, {}); return() <div className="container py-8">""";" <h1 className="text-3xl font-bold mb-6">Wishlist</h1> {loading ? ( <p>Loading...</p>; ) : favorites.length === 0 ? (;" <p>No items saved.</p>";" ) : (""";" <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> {favorites.map(fav => {}; '; if (fav.item_type === 'talent') {}; return talent ? ( <TalentCard; key={fav.item_id}; talent={talent}; onViewProfile={() => {}}; onRequestHire={() => {}}; isAuthenticated={true}; />; ) : null};" ";" return item ? (""";" <div key={fav.item_id} className="relative">";" <ProductListingCard listing={item} />""";" <Button size="sm" className="absolute bottom-2 right-2" onClick={() => addToCart(item)}>; Add to Cart </Button> </div>; ) : null})} </div>; )} </div>;" )}";" '""";"
 }
-<<<<<<< HEAD
 
-=======
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useFavorites } from '@/hooks/useFavorites',;
 import { X } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/marketplaceData',;
@@ -136,8 +128,3 @@ export default function WishlistPage() {;
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

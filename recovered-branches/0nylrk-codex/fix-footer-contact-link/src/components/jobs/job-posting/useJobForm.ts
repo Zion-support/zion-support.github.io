@@ -1,6 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -9,7 +7,6 @@ import { toast } from "sonner";
 import { useNavigate  } from 'react-router-dom';
 import { jobSchema, JobSchemaType  } from './validation';
 import { useAuth } from "@/hooks/useAuth";
-=======
 import {useState, useEffect} from 'react';
 import {useForm} from 'react-hook-form';
 import {zodResolver} from "@hookform/resolvers/zod";
@@ -26,8 +23,6 @@ export interface JobPostingProps {;
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
   const { user } = useAuth();
   const navigate = useNavigate();
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from 'react',
 import { useForm } from 'react-hook-form',
 import { zodResolver } from "@hookform/resolvers/zod",
@@ -36,17 +31,12 @@ import { toast } from "sonner",
 import { useNavigate } from 'react-router-dom',
 import { jobSchema, JobSchemaType } from './validation',
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export interface JobPostingProps {
   jobId?: string,
   onSuccess?: () => void
 }
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
-<<<<<<< HEAD
   const { user } = useAuth();
   const navigate = useNavigate();
   const [startDate, setStartDate] = useState<Date | undefined>(undefined);
@@ -54,10 +44,8 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isRemote, setIsRemote] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null);
-=======
   const { user } = useAuth(),
   const navigate = useNavigate(),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
   const [startDate, setStartDate] = useState<Date | undefined>(undefined),
   const [endDate, setEndDate] = useState<Date | undefined>(undefined),
@@ -65,11 +53,9 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const form = useForm<JobSchemaType>({
     resolver: zodResolver(jobSchema),
     defaultValues: {
-<<<<<<< HEAD
       title: '';
       company: '';
       location: '';
@@ -132,7 +118,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   }
 }
 
-=======
       title: '',
       company: '',
       location: '',
@@ -158,9 +143,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       toast.error("You must be logged in to post a job"),
       navigate("/login"),
       return
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
 
     setIsLoading(true);
@@ -178,8 +160,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
 
       if (onSuccess) {
         onSuccess()
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from 'react',;
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from "@hookform/resolvers/zod",;
@@ -242,10 +222,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
         user_id: user.id},;
       if (onSuccess) {;
         onSuccess();
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       }
       
       return jobData
@@ -255,9 +231,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
       throw error
     } finally {
       setIsLoading(false)
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
   };
 
@@ -273,8 +246,6 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues;
     setInitialValues;
     submitJob
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       return jobData;
     } catch (error: any) {;
@@ -297,10 +268,5 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {;
     initialValues,;
     setInitialValues;
     submitJob;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

@@ -1,37 +1,23 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { supabase } from "@/integrations/supabase/client";
-=======
 import {supabase} from "@/integrations/supabase/client";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-=======
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
     const { data, error } = await supabase
       .from('quote_requests')
-<<<<<<< HEAD
       .select(`;
         *;
-=======
       .select(`
         *,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
         talent:talent_id (
           display_name
         )
       `)
-<<<<<<< HEAD
       .order('created_at', { ascending: false });
     if (error) throw error;
     // Format the data to include talent_name
@@ -39,7 +25,6 @@ export const quoteRequestService = {
       ...item
       talent_name: item.talent?.display_name |'Unknown Talent'})) as QuoteRequest[]
   }
-=======
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
@@ -50,26 +35,22 @@ export const quoteRequestService = {
       talent_name: item.talent?.display_name || 'Unknown Talent'})) as QuoteRequest[]
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Get quote requests for a specific talent
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase
       .from('quote_requests')
       .select('*')
       .eq('talent_id', talentId)
-<<<<<<< HEAD
       .order('created_at', { ascending: false });
     if (error) throw error;
     return data as QuoteRequest[]
   }
-=======
       .order('created_at', { ascending: false }),
     
     if (error) throw error,
     return data as QuoteRequest[]
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   // Get a single quote request by id
   getById: async (id: string) => {
     const { data, error } = await supabase
@@ -81,7 +62,6 @@ export const quoteRequestService = {
         )
       `)
       .eq('id', id)
-<<<<<<< HEAD
       .single();
     if (error) throw error;
     return {
@@ -135,7 +115,6 @@ export const quoteRequestService = {
   }
 }
 
-=======
       .single(),
     
     if (error) throw error,
@@ -152,9 +131,6 @@ export const quoteRequestService = {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     }
     
     // If marking as in_review and viewed_at is null, set viewed_at
@@ -201,8 +177,6 @@ export const quoteRequestService = {
     
     if (error) throw error;
     return true
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -296,10 +270,5 @@ export const quoteRequestService = {;
       .eq('id', id),;
     if (error) throw error;
     return true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

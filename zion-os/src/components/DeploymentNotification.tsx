@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 "use client";
 import { useState } from "react";
 import {Rocket;
@@ -88,7 +87,6 @@ export default function DeploymentNotification({updates;
     }
   }
   if (updates.length === 0) return null;
-=======
 "use client",;
 import { useState } from "react",;
 import {;
@@ -190,7 +188,6 @@ export default function DeploymentNotification({;
     }
   },;
   if (updates.length === 0) return null,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="fixed top-4 right-4 z-50 space-y-3 max-w-md">;
       {updates.map((update) => (;
@@ -223,11 +220,8 @@ export default function DeploymentNotification({;
             <div className="mb-3 p-3 bg-white/10 rounded-lg border border-white/20">;
               <div className="flex items-center gap-2 mb-2">;
                 <div className="p-1 bg-white/20 rounded">;
-<<<<<<< HEAD
                   {getVerticalIcon(update.vertical |'GENERAL')}
-=======
                   {getVerticalIcon(update.vertical || 'GENERAL')}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 </div>;
                 <span className="font-medium text-white text-sm">;
                   {update.instanceName}
@@ -252,10 +246,7 @@ export default function DeploymentNotification({;
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Progress Bar (for deployment updates) */}
           {update.progress !== undefined && (;
             <div className="mb-3 space-y-2">;
@@ -271,10 +262,7 @@ export default function DeploymentNotification({;
               </div>;
             </div>;
           )}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Action Buttons */}
           {update.actions && update.actions.length > 0 && (;
             <div className="flex gap-2 pt-2 border-t border-white/20">;
@@ -282,12 +270,9 @@ export default function DeploymentNotification({;
                 <button;
                   key={index}
                   onClick={() => handleAction(update.id, action.action)}
-<<<<<<< HEAD
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${action.action === 'deploy' |action.action === 'retry';
-=======
                   className={`flex-1 flex items-center justify-center gap-2 px-3 py-2 text-xs font-medium rounded-lg transition-all duration-200 ${;
                     action.action === 'deploy' || action.action === 'retry';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       ? 'bg-blue-600 hover:bg-blue-700 text-white';
                       : action.action === 'view';
                       ? 'bg-green-600 hover:bg-green-700 text-white';
@@ -303,10 +288,7 @@ export default function DeploymentNotification({;
               ))}
             </div>;
           )}
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {/* Timestamp */}
           <div className="absolute bottom-2 right-4 text-xs text-white/60">;
             {formatTimestamp(update.timestamp)}
@@ -316,7 +298,6 @@ export default function DeploymentNotification({;
     </div>;
   );
 }
-<<<<<<< HEAD
 // Example usage with mock data;
 export function DeploymentNotificationExample() {const [updates, setUpdates] = useState<DeploymentUpdate[]>([;
     {;
@@ -355,7 +336,6 @@ export function DeploymentNotificationExample() {const [updates, setUpdates] = u
   const handleAction = (id: string, action: string) => {// // // console.log(`Action ${action} for update ${id}`);
     // Handle different actions here;
   }
-=======
 ;
 // Example usage with mock data;
 export function DeploymentNotificationExample() {;
@@ -399,7 +379,6 @@ export function DeploymentNotificationExample() {;
     // // // console.log(`Action ${action} for update ${id}`);
     // Handle different actions here;
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <DeploymentNotification;
       updates={updates}

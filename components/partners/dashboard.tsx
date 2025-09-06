@@ -1,34 +1,23 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { useEffect, useState } from "react";
-=======
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);import { useEffect, useState } from "react";
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import Head from "next/head";
 export default function PartnerDashboard() {;
   const [apiKey, setApiKey] = useState("");
-<<<<<<< HEAD
   const [token, setToken] = useState<string | null>(null),
   const [usage, setUsage] = useState<any>(null),
-=======
 import { useEffect, useState } from 'react';
 import Head from 'next/head';
-=======
-=======
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
 
   const [token, setToken] = useState<string | null>(null);
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [usage, setUsage] = useState<any>(null);
   const [loading, setLoading] = useState(false);
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export default function PartnerDashboard() {
   const [apiKey, setApiKey] = useState('');  const [token, setToken] = useState<string | null>(null);
@@ -36,7 +25,6 @@ export default function PartnerDashboard() {
   const [token, setToken] = useState<string | null>(null);
 
   const [usage, setUsage] = useState<any>(null);
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const [loading, setLoading] = useState(false);
   useEffect(() => {
 
@@ -98,7 +86,6 @@ export default function PartnerDashboard() {
     }
   }
   return (
-<<<<<<< HEAD
     <div className='min-h-screen bg-gray-50 text-gray-900'>
         <title>Zion Partner Dashboard</title>
       </Head>
@@ -177,15 +164,9 @@ export default function PartnerDashboard() {
                     {Object.entries(usage.byEndpoint |{}).map(([k, v]) => (
                       <li key={k}>{k}: {v as any}</li>
                     ))}
-=======
 
                     ))}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </ul>
                 </div>
               </div>
@@ -196,7 +177,6 @@ export default function PartnerDashboard() {
               <p className="text-gray-500 text-sm">No usage yet.</p>
             )}
           </div>
-<<<<<<< HEAD
         </div>
         <div className='bg-white p-6 rounded-lg shadow mt-6'>
           <h3 className='font-medium mb-2'>SDKs</h3>
@@ -223,10 +203,4 @@ export default function PartnerDashboard() {
     </div>
 );
 }
-=======
         </div>
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

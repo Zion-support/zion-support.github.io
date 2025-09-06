@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useCallback } from 'react';
 import { checkMessage, monitorContent  } from '@/services/fraud';
 import { toast  } from '@/hooks/use-toast';
@@ -7,14 +6,10 @@ import { supabase } from '@/integrations/supabase/client';
 // Props for the middleware component
 interface FraudDetectionMiddlewareProps {
   children: React.ReactNode
-<<<<<<< HEAD
 }
 // Interface for the context
 interface FraudDetectionContextType {
   scanMessageContent: (
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import React, { useCallback } from 'react',;
 import { checkMessage, monitorContent } from '@/services/fraud',;
 import { toast } from '@/hooks/use-toast',;
@@ -22,10 +17,6 @@ import { supabase } from '@/integrations/supabase/client',;
 // Props for the middleware component;
 interface FraudDetectionMiddlewareProps {;
   children: React.ReactNode;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
 // Interface for the context;
@@ -40,7 +31,6 @@ interface FraudDetectionContextType {;
     explanation?: string;
   }>;
 }
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
     userId: string
     messageId: string
@@ -57,18 +47,12 @@ interface FraudDetectionContextType {;
 // TS2347, so we cast the default value instead of using a type parameter.
 
 export const FraudDetectionContext = React.createContext(
-<<<<<<< HEAD
   undefined as FraudDetectionContextType | undefined;
 );
-=======
   undefined as FraudDetectionContextType | undefined
-<<<<<<< HEAD
 );
-=======
 ),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> = ({ children }) => {
   // Function to scan message content for fraud
   const scanMessageContent = useCallback(async (
@@ -78,18 +62,12 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
     userEmail?: string
   ): Promise<{ isSafe: boolean, explanation?: string }> => {
     try {
-<<<<<<< HEAD
       // First do a quick local check using the fraud detection service;
       const quickCheck = checkMessage(content);
-=======
       // First do a quick local check using the fraud detection service
-<<<<<<< HEAD
       const quickCheck = checkMessage(content);
-=======
       const quickCheck = checkMessage(content),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // If the quick check finds suspicious content, flag it
       if (quickCheck.isSuspicious) {
         // Flag the content for review
@@ -99,12 +77,9 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
           'message',
           messageId,
           content
-<<<<<<< HEAD
         );
-=======
         ),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         // If it's dangerous, show a warning to the user
         if (quickCheck.severity === 'dangerous') {
           toast({
@@ -112,26 +87,19 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
             description: "Your message contains content that may violate our terms of service."
             variant: "destructive"
             duration: 5000
-<<<<<<< HEAD
           });
           return {
             isSafe: false
-=======
           }),
           
           return { 
             isSafe: false,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           }
             explanation: "Message contains prohibited content. Please review our communication guidelines."
           };
       }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       // For suspicious but not dangerous content, log but let it pass through
       if (quickCheck.severity === 'suspicious') {
         console.log('Suspicious content detected but allowed:', content)
@@ -146,33 +114,20 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         console.error('Error analyzing message:', error);
         return { isSafe: true }, // Default to safe on error
       }
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (data.classification === 'dangerous') {
         toast({
           title: "Message Blocked"
           description: data.explanation |"This message contains prohibited content."
           variant: "destructive"
-<<<<<<< HEAD
         });
         return {
           isSafe: false
           explanation: data.explanation
-=======
         }),
         return { 
           isSafe: false,
           explanation: data.explanation
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
       if (data.classification === 'dangerous') {;
         toast({;
@@ -183,17 +138,11 @@ export const FraudDetectionMiddleware: React.FC<FraudDetectionMiddlewareProps> =
         return {;
           isSafe: false,;
           explanation: data.explanation;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         }
       }
       */
       // Message is considered safe
       return { isSafe: true }
-<<<<<<< HEAD
     } catch (error) {
       console.error('Error in fraud detection:', error);
       // On error, let the message pass through but log the error
@@ -216,12 +165,8 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware')
   }
   return context
-<<<<<<< HEAD
 }
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     } catch (error) {;
       console.error('Error in fraud detection:', error),;
       // On error, let the message pass through but log the error;
@@ -244,9 +189,4 @@ export const useFraudDetection = () => {;
     throw new Error('useFraudDetection must be used within a FraudDetectionMiddleware');
   }
   return context;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

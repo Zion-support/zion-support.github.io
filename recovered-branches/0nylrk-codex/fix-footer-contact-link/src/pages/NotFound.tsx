@@ -1,36 +1,25 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
 const NotFound = () => {
   const location = useLocation();
-=======
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
-=======
 import {useLocation} from "react-router-dom";
 import {useEffect} from "react";
-=======
 import { useLocation } from "react-router-dom",
 import { useEffect } from "react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const NotFound = () => {
   const location = useLocation(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     console.error(
       "404 Error: User attempted to access non-existent route:"
       location.pathname
     )
-<<<<<<< HEAD
   }, [location.pathname]);
-=======
   }, [location.pathname]),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="text-center">
@@ -42,18 +31,11 @@ const NotFound = () => {
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
 export default NotFound;
 
-=======
 },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default NotFound,
 import { useLocation } from "react-router-dom",;
 import { useEffect } from "react",;
@@ -77,9 +59,4 @@ const NotFound = () => {;
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default NotFound;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

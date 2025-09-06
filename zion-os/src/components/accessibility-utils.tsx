@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 "use client";
 import { useEffect, useRef, useState } from "react";
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {return (;
-=======
 "use client",;
 import { useEffect, useRef, useState } from "react",;
 // Skip link component for keyboard navigation;
 export function SkipLink({ targetId, children }: { targetId: string, children: React.ReactNode }) {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <a;
       href={`#${targetId}`}
       className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-[var(--accent)] text-white px-4 py-2 rounded z-50";
@@ -18,7 +15,6 @@ export function SkipLink({ targetId, children }: { targetId: string, children: R
     </a>;
   );
 }
-<<<<<<< HEAD
 // Live region for screen reader announcements;
 export function LiveRegion({message;
   role = "status";
@@ -27,7 +23,6 @@ export function LiveRegion({message;
   role?: "status" | "alert" | "log";
   "aria-live"?: "polite" | "assertive" | "off";
 }) {return (;
-=======
 ;
 // Live region for screen reader announcements;
 export function LiveRegion({;
@@ -40,7 +35,6 @@ export function LiveRegion({;
   "aria-live"?: "polite" | "assertive" | "off";
 }) {;
   return (;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     <div;
       role={role}
       aria-live={ariaLive}
@@ -51,7 +45,6 @@ export function LiveRegion({;
     </div>;
   );
 }
-<<<<<<< HEAD
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {const containerRef = useRef<HTMLDivElement>(null);
   useEffect(() => {;
@@ -62,7 +55,6 @@ export function useFocusTrap(enabled: boolean = true) {const containerRef = useR
     );
     const firstElement = focusableElements[0] as HTMLElement;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-=======
 ;
 // Focus trap for modals and dialogs;
 export function useFocusTrap(enabled: boolean = true) {;
@@ -75,30 +67,25 @@ export function useFocusTrap(enabled: boolean = true) {;
     ),;
     const firstElement = focusableElements[0] as HTMLElement,;
     const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     const handleKeyDown = (e: KeyboardEvent) => {;
       if (e.key === "Tab") {;
         if (e.shiftKey) {;
           if (document.activeElement === firstElement) {;
-<<<<<<< HEAD
             e.preventDefault();
             lastElement.focus();
           }
         } else {if (document.activeElement === lastElement) {;
             e.preventDefault();
-=======
             e.preventDefault(),;
             lastElement.focus();
           }
         } else {;
           if (document.activeElement === lastElement) {;
             e.preventDefault(),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             firstElement.focus();
           }
         }
       }
-<<<<<<< HEAD
     }
     container.addEventListener("keydown", handleKeyDown);
     return () => container.removeEventListener("keydown", handleKeyDown);
@@ -148,7 +135,6 @@ export function Announcement({message;
       return () => clearTimeout(timer);
     }
   }, [message]);
-=======
     },;
     container.addEventListener("keydown", handleKeyDown),;
     return () => container.removeEventListener("keydown", handleKeyDown);
@@ -205,7 +191,6 @@ export function Announcement({;
       return () => clearTimeout(timer);
     }
   }, [message]),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div aria-live={priority} aria-atomic="true" className="sr-only">;
       {announcements.map((announcement, index) => (;
@@ -214,7 +199,6 @@ export function Announcement({;
     </div>;
   );
 }
-<<<<<<< HEAD
 // Progress indicator component;
 export function ProgressIndicator({value;
   max;
@@ -223,7 +207,6 @@ export function ProgressIndicator({value;
   max: number;
   label: string;
 }) {const percentage = Math.round((value / max) * 100);
-=======
 ;
 // Progress indicator component;
 export function ProgressIndicator({;
@@ -236,7 +219,6 @@ export function ProgressIndicator({;
   label: string;
 }) {;
   const percentage = Math.round((value / max) * 100),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="space-y-2">;
       <div className="flex justify-between text-sm">;
@@ -257,7 +239,6 @@ export function ProgressIndicator({;
     </div>;
   );
 }
-<<<<<<< HEAD
 // Collapsible section component;
 export function CollapsibleSection({title;
   children;
@@ -267,7 +248,6 @@ export function CollapsibleSection({title;
   defaultExpanded?: boolean;
 }) {const [isExpanded, setIsExpanded] = useState(defaultExpanded);
   const contentRef = useRef<HTMLDivElement>(null);
-=======
 ;
 // Collapsible section component;
 export function CollapsibleSection({;
@@ -281,7 +261,6 @@ export function CollapsibleSection({;
 }) {;
   const [isExpanded, setIsExpanded] = useState(defaultExpanded),;
   const contentRef = useRef<HTMLDivElement>(null),;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="border border-[var(--border)] rounded-lg">;
       <button;
@@ -298,12 +277,9 @@ export function CollapsibleSection({;
       <div;
         id={`collapsible-${title.toLowerCase().replace(/\s+/g, '-')}`}
         ref={contentRef}
-<<<<<<< HEAD
         className={`overflow-hidden transition-all duration-300 ${isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
-=======
         className={`overflow-hidden transition-all duration-300 ${;
           isExpanded ? "max-h-96 opacity-100" : "max-h-0 opacity-0";
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         }`}
         aria-hidden={!isExpanded}
       >;
@@ -314,7 +290,6 @@ export function CollapsibleSection({;
     </div>;
   );
 }
-<<<<<<< HEAD
 // Tooltip component with proper accessibility;
 export function Tooltip({children;
   content;
@@ -329,7 +304,6 @@ export function Tooltip({children;
     left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
   }
-=======
 ;
 // Tooltip component with proper accessibility;
 export function Tooltip({;
@@ -349,7 +323,6 @@ export function Tooltip({;
     left: "right-full top-1/2 transform -translate-y-1/2 mr-2";
     right: "left-full top-1/2 transform -translate-y-1/2 ml-2";
   };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (;
     <div className="relative inline-block">;
       <div;

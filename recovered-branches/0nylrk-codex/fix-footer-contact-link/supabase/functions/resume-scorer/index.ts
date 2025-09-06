@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts"
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
@@ -7,27 +6,20 @@ import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-<<<<<<< HEAD
 import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",;
 import {createClient} from "https: //esm.sh/@supabase/supabase-js@2";
-=======
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 serve(async (req) => {
   // Handle CORS preflight requests
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders })
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
   const supabaseUrl = Deno.env.get("SUPABASE_URL") |"";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") |"";
   const openAiKey = Deno.env.get("OPENAI_API_KEY") |"";
@@ -40,7 +32,6 @@ serve(async (req) => {
   const supabase = createClient(supabaseUrl, supabaseAnonKey);
   try {
     const { applicationId } = await req.json();
-=======
 
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "";
@@ -49,8 +40,6 @@ serve(async (req) => {
   if (!openAiKey) {
     return new Response(
       JSON.stringify({ error: "OpenAI API key is not configured" });
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 ;
   const supabaseUrl = Deno.env.get("SUPABASE_URL") || "",;
   const supabaseAnonKey = Deno.env.get("SUPABASE_ANON_KEY") || "",;
@@ -58,10 +47,6 @@ serve(async (req) => {
   if (!openAiKey) {;
     return new Response(;
       JSON.stringify({ error: "OpenAI API key is not configured" }),;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
   }
@@ -71,7 +56,6 @@ serve(async (req) => {
   try {
     const { applicationId } = await req.json(),
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (!applicationId) {
       throw new Error("Application ID is required")
     }
@@ -88,12 +72,9 @@ serve(async (req) => {
         talent_profile:profiles!talent_id(bio, skills)
       `)
       .eq("id", applicationId)
-<<<<<<< HEAD
       .single();
-=======
       .single(),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (appError) {
       throw new Error(`Failed to fetch application: ${appError.message}`)
     }
@@ -101,14 +82,11 @@ serve(async (req) => {
       throw new Error("Application not found")
     }
     // 2. Fetch resume details if a resume_id is provided
-<<<<<<< HEAD
     let resumeContent = "";
     let resumeSkills: string[] = []
-=======
     let resumeContent = "",
     let resumeSkills: string[] = [],
     
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (application.resume_id) {
       const { data: resume, error: resumeError } = await supabase
         .from("talent_resumes")
@@ -120,12 +98,9 @@ serve(async (req) => {
           education!inner(institution, degree, field_of_study)
         `)
         .eq("id", application.resume_id)
-<<<<<<< HEAD
         .single();
-=======
         .single(),
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       if (resumeError) {
         console.error("Error fetching resume:", resumeError)
       } else if (resume) {
@@ -144,20 +119,15 @@ serve(async (req) => {
           ).join("\n")}
           Skills:
           ${resume.resume_skills.map((skill: any) => skill.name).join(", ")}
-<<<<<<< HEAD
         `;
-=======
         `,
         
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)
       }
     }
     // 3. If no resume content, use talent profile and cover letter
     if (!resumeContent) {
       resumeContent = `
-<<<<<<< HEAD
-<<<<<<< HEAD
         Bio: ${application.talent_profile?.bio |""}
         Cover Letter: ${application.cover_letter |""}
         Skills: ${application.talent_profile?.skills?.join(", ") |""}
@@ -168,14 +138,11 @@ serve(async (req) => {
     const jobTitle = application.job?.title |"";
     const jobDescription = application.job?.description |"";
     const jobSkills = application.job?.skills |[];
-=======
         Bio: ${application.talent_profile?.bio || ""}
         Cover Letter: ${application.cover_letter || ""}
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `;
       resumeSkills = application.talent_profile?.skills || []
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
     );
   }
 ;
@@ -257,10 +224,6 @@ serve(async (req) => {
         Skills: ${application.talent_profile?.skills?.join(", ") || ""}
       `,;
       resumeSkills = application.talent_profile?.skills || [];
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     // 4. Prepare job details
@@ -268,18 +231,14 @@ serve(async (req) => {
     const jobDescription = application.job?.description || "",
     const jobSkills = application.job?.skills || [],
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     // 5. Process using OpenAI to calculate match score
     const openAIResponse = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST"
       headers: {
-<<<<<<< HEAD
         "Authorization": `Bearer ${openAiKey}`;
         "Content-Type": "application/json"}
-=======
         "Authorization": `Bearer ${openAiKey}`,
         "Content-Type": "application/json"},
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       body: JSON.stringify({
         model: "gpt-4o-mini",
         messages: [
@@ -288,11 +247,8 @@ serve(async (req) => {
             content: `You are an expert resume analyzer that compares resumes against job descriptions
             to determine how well a candidate matches a job. Analyze the resume and job details
             provided, focusing on skills, experience, and qualifications.`
-<<<<<<< HEAD
           }
-=======
           },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           {
             role: "user"
             content: `
@@ -307,7 +263,6 @@ serve(async (req) => {
             2. A brief summary of why this score was given (1-2 sentences)
             3. A detailed breakdown of how well the candidate's skills and experience align with job requirements
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match"
-<<<<<<< HEAD
             Respond in JSON format with the following structure: {
               "score": 75;
               "summary": "Good match with relevant experience in required technologies.";
@@ -317,7 +272,6 @@ serve(async (req) => {
                   "matching": ["skill1", "skill2"];
                   "missing": ["skill3"]
                 }
-=======
             
             Respond in JSON format with the following structure:
             {
@@ -329,34 +283,24 @@ serve(async (req) => {
                   "matching": ["skill1", "skill2"],
                   "missing": ["skill3"]
                 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 "experience_match": {
                   "score": 70,
                   "analysis": "Candidate has X years experience in relevant field."
-<<<<<<< HEAD
                 }
-=======
                 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 "education_match": {
                   "score": 65,
                   "analysis": "Candidate has relevant degree."
                 }
-<<<<<<< HEAD
               }
               "suggestion": "Recommended for Review"
             }`
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           }
         ];
         temperature: 0.5})});
     if (!openAIResponse.ok) {
       const errorData = await openAIResponse.json();
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`)
-<<<<<<< HEAD
     }
     const aiResult = await openAIResponse.json();
     let matchResult;
@@ -364,13 +308,9 @@ serve(async (req) => {
       // Extract JSON from the response
       const content = aiResult.choices[0].message.content;
       matchResult = JSON.parse(content);
-=======
               },
               "suggestion": "Recommended for Review"
             }`
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     // 4. Prepare job details;
     const jobTitle = application.job?.title || "",;
@@ -434,10 +374,6 @@ serve(async (req) => {
     if (!openAIResponse.ok) {;
       const errorData = await openAIResponse.json(),;
       throw new Error(`OpenAI API Error: ${JSON.stringify(errorData)}`);
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
     const aiResult = await openAIResponse.json(),
@@ -448,7 +384,6 @@ serve(async (req) => {
       const content = aiResult.choices[0].message.content,
       matchResult = JSON.parse(content),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Validate required fields
       if (!matchResult.score |!matchResult.summary |!matchResult.suggestion) {
         throw new Error("Invalid response format")
@@ -461,7 +396,6 @@ serve(async (req) => {
     const { error: updateError } = await supabase
       .from("job_applications")
       .update({
-<<<<<<< HEAD
         match_score: matchResult.score;
         match_summary: matchResult.summary;
         match_breakdown: matchResult.breakdown;
@@ -469,7 +403,6 @@ serve(async (req) => {
         scored_at: new Date().toISOString()
       })
       .eq("id", applicationId);
-=======
         match_score: matchResult.score,
         match_summary: matchResult.summary,
         match_breakdown: matchResult.breakdown,
@@ -478,13 +411,11 @@ serve(async (req) => {
       })
       .eq("id", applicationId),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     if (updateError) {
       throw new Error(`Failed to update application with score: ${updateError.message}`)
     }
     // 7. Return the match results
     return new Response(
-<<<<<<< HEAD
       JSON.stringify({
         success: true
         matchResult
@@ -492,7 +423,6 @@ serve(async (req) => {
       {
         status: 200
         headers: { ...corsHeaders, "Content-Type": "application/json" }
-=======
       JSON.stringify({ 
         success: true, 
         matchResult 
@@ -500,13 +430,11 @@ serve(async (req) => {
       { 
         status: 200, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       }
     )
   } catch (error) {
     console.error("Error in resume-scorer function:", error),
     return new Response(
-<<<<<<< HEAD
       JSON.stringify({ error: error.message });
       {
         status: 500
@@ -516,18 +444,12 @@ serve(async (req) => {
   }
 });
 
-=======
       JSON.stringify({ error: error.message }),
       { 
         status: 500, 
         headers: { ...corsHeaders, "Content-Type": "application/json" } 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       }
     )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ;
     const aiResult = await openAIResponse.json(),;
     let matchResult,;
@@ -579,10 +501,5 @@ serve(async (req) => {
         headers: { ...corsHeaders, "Content-Type": "application/json" } ;
       }
     );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 });
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

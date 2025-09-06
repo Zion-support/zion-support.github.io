@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 export interface Revolutionary2027ItService {
-=======
 export interface Revolutionary2027ItService {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   tagline: string;
@@ -17,14 +12,9 @@ export interface Revolutionary2027ItService {;
   contactInfo: {
     mobile: string;
     email: string;
-<<<<<<< HEAD
-=======
 export interface Revolutionary2027ItService {;
-=======
     address: string;
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -40,17 +30,11 @@ export interface Revolutionary2027ItService {;
     address: string;
   }
 }
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
     address: string;
   }
 export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   {
-<<<<<<< HEAD
     id: '2027-revolutionary-it'
     name: '2027 Revolutionary IT Platform'
     tagline: 'Revolutionary IT for 2027'
@@ -80,7 +64,6 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
     }
   }
 ];
-=======
     id: "2027-revolutionary-it",
     name: "2027 Revolutionary IT Platform",
     tagline: "Revolutionary IT for 2027",
@@ -97,11 +80,8 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
     category: "Revolutionary 2027 IT",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
@@ -109,13 +89,9 @@ export const revolutionary2027ITServices: Revolutionary2027ItService[] = [
   },;
 ];      mobile: "+1 302 464 0950";
       email: "kleber@ziontechgroup.com";
-=======
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

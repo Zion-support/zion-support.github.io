@@ -1,5 +1,4 @@
 
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useParams  } from 'react-router-dom';
 import { Header  } from '@/components/Header';
@@ -12,12 +11,9 @@ import { MessageSquare, FileText, Video, Calendar, Users, Settings, X  } from 'l
 import { VideoCallRoom  } from '@/components/video/VideoCallRoom';
 import { toast  } from 'sonner';
 export default function ProjectRoom() {
-<<<<<<< HEAD
 
   const { projectId } = useParams() as { projectId: string }
-=======
   const { projectId } = useParams() as { projectId: string },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [activeTab, setActiveTab] = useState('chat');
   const [isInCall, setIsInCall] = useState(false);
   const [callParticipants, setCallParticipants] = useState<Array<{
@@ -39,7 +35,6 @@ export default function ProjectRoom() {
       isMuted: false
     }
   ]);
-=======
 import React, { useState } from 'react',;
 import { useParams } from 'react-router-dom',;
 import { Header } from '@/components/Header',;
@@ -72,12 +67,7 @@ export default function ProjectRoom() {;
       isMuted: false;
     }
   ]),
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const startVideoCall = () => {
     setIsInCall(true),
     toast.success("Video call started", {
@@ -87,18 +77,14 @@ export default function ProjectRoom() {;
     if (activeTab !== 'video') {
       setActiveTab('video')
     }
-<<<<<<< HEAD
   }
-=======
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const endVideoCall = () => {
     setIsInCall(false),
     toast.info("Video call ended", {
       description: "Call duration and participants will be logged"
     })
-<<<<<<< HEAD
   }
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service
@@ -114,7 +100,6 @@ export default function ProjectRoom() {;
     }
   }
 
-=======
   },
   
   const simulateUserJoining = () => {
@@ -122,9 +107,6 @@ export default function ProjectRoom() {;
     const mockUsers = [
       { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
       { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ];
     
@@ -135,8 +117,6 @@ export default function ProjectRoom() {;
       toast(`${randomUser.name} joined the call`)
     }
   };
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   ]),;
   const startVideoCall = () => {;
     setIsInCall(true),;
@@ -167,12 +147,7 @@ export default function ProjectRoom() {;
       toast(`${randomUser.name} joined the call`);
     }
   },
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO title={`Project Room - ${projectId}`} description="Collaborate on your project" />
@@ -258,11 +233,8 @@ export default function ProjectRoom() {;
               <CardContent className="min-h-[400px] p-4">
                 {isInCall ? (
                   <div className="space-y-4">
-<<<<<<< HEAD
                     <VideoCallRoom
-=======
                     <VideoCallRoom 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                       roomId={`project-${projectId}`}
                       participants={callParticipants}
                       onLeave={endVideoCall}
@@ -336,16 +308,7 @@ export default function ProjectRoom() {;
       <Footer />
     </>
   )
-<<<<<<< HEAD
 }
-=======
 }
-<<<<<<< HEAD
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
 ;
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

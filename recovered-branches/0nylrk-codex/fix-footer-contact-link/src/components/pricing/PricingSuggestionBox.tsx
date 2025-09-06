@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {TooltipProvider, Tooltip, TooltipTrigger, TooltipContent} from "@/components/ui/tooltip";
@@ -9,24 +6,15 @@ import {Card, CardContent} from "@/components/ui/card";
 import {Badge} from "@/components/ui/badge";
 import {Loader2, Info, ThumbsUp} from "lucide-react";
 import {PricingSuggestion} from "@/services/pricingSuggestionService";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React from "react",
 import { Button } from "@/components/ui/button",
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-<<<<<<< HEAD
 import { Loader2, Info, ThumbsUp } from "lucide-react";
 import { PricingSuggestion } from "@/services/pricingSuggestionService";
-=======
 import { Loader2, Info, ThumbsUp } from "lucide-react",
 import { PricingSuggestion } from "@/services/pricingSuggestionService",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PricingSuggestionBoxProps {
 
   suggestion: PricingSuggestion | null
@@ -35,27 +23,18 @@ interface PricingSuggestionBoxProps {
 
   rateType: "hourly" | "fixed"
 }
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
   suggestion;
   isLoading;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-<<<<<<< HEAD
   suggestion;
   isLoading;
 
   onApplySuggestion
-=======
   suggestion,
   isLoading,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   onApplySuggestion,
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   rateType}) => {
   if (isLoading) {
     return (
@@ -70,8 +49,6 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
         </CardContent>
       </Card>
     )
-<<<<<<< HEAD
-=======
 import React from "react",;
 import { Button } from "@/components/ui/button",;
 import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",;
@@ -104,19 +81,11 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
         </CardContent>;
       </Card>;
     );
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
   if (!suggestion) {
     return null
   }
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const confidenceColor = {
     High: "bg-green-100 text-green-800"
     Medium: "bg-yellow-100 text-yellow-800"
@@ -166,14 +135,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
       </CardContent>
     </Card>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 
-=======
 };
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 },
 ;
   const confidenceColor = {;
@@ -228,8 +192,3 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({;
 };
 
 export default PricingSuggestionBox;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

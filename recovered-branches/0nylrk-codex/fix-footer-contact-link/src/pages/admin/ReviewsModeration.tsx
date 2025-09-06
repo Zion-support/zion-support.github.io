@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -12,8 +9,6 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Star, AlertTriangle} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
@@ -22,7 +17,6 @@ import { ProtectedRoute } from "@/components/ProtectedRoute",
 import { useState, useEffect } from "react",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-<<<<<<< HEAD
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
@@ -30,19 +24,13 @@ function ReviewsModerationContent() {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-=======
 import { Star, AlertTriangle } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
   const [isLoading, setIsLoading] = useState(true),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const fetchReviews = async () => {
     setIsLoading(true),
     try {
@@ -59,7 +47,6 @@ function ReviewsModerationContent() {
         variant: "destructive"})
       setIsLoading(false)
     }
-<<<<<<< HEAD
   }
   useEffect(() => {
     fetchReviews()
@@ -68,7 +55,6 @@ function ReviewsModerationContent() {
     fetchReviews()
   }
 
-=======
   },
 
   useEffect(() => {
@@ -79,7 +65,6 @@ function ReviewsModerationContent() {
     fetchReviews()
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO
@@ -133,8 +118,6 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
 export default function ReviewsModeration() {
   return (
@@ -143,9 +126,6 @@ export default function ReviewsModeration() {
     </ProtectedRoute>
   )
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -236,7 +216,6 @@ function ReviewsModerationContent() {;
       <Footer />;
     </>;
   );
-<<<<<<< HEAD
 }
 ;
 export default function ReviewsModeration() {;
@@ -247,9 +226,6 @@ export default function ReviewsModeration() {;
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 }
 
 export default function ReviewsModeration() {
@@ -260,4 +236,3 @@ export default function ReviewsModeration() {
   )
 }
 ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

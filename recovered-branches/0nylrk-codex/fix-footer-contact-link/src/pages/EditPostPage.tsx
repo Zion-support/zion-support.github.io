@@ -1,7 +1,4 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import {useState, useEffect} from "react";
 import {Link, useNavigate, useParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -11,8 +8,6 @@ import PostForm from "@/components/community/PostForm";
 import {useToast} from "@/hooks/use-toast";
 import {ForumPost, ForumCategory} from "@/types/community";
 import {useAuth} from "@/hooks/useAuth";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -20,17 +15,10 @@ import { SEO } from "@/components/SEO",
 import { Button } from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
 import { useToast } from "@/hooks/use-toast",
-<<<<<<< HEAD
 import { ForumPost, ForumCategory } from "@/types/community";
 import { useAuth } from "@/hooks/useAuth";
-=======
 import { ForumPost, ForumCategory } from "@/types/community",
 import { useAuth } from "@/hooks/useAuth",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface PostFormValues {
 
   title: string
@@ -40,8 +28,6 @@ interface PostFormValues {
   tags: string
 }
 // Mock post data
-<<<<<<< HEAD
-=======
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -60,9 +46,7 @@ const mockPost: ForumPost = {
   isAnswered: true,
   isFeatured: true
 },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
 const mockPost: ForumPost = {
   id: "1"
   title: "Best practices for AI model fine-tuning"
@@ -81,8 +65,6 @@ const mockPost: ForumPost = {
   isAnswered: true
   isFeatured: true
 }
-=======
-<<<<<<< HEAD
 export default function EditPostPage() {;
   const { postId } = useParams() as { postId?: string };
   const navigate = useNavigate();
@@ -90,36 +72,27 @@ export default function EditPostPage() {;
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function EditPostPage() {
-<<<<<<< HEAD
   const { postId } = useParams() as { postId?: string }
   const navigate = useNavigate();
   const { toast } = useToast();
   const { user } = useAuth();
   const [post, setPost] = useState<ForumPost | null>(mockPost);
   const [isLoading, setIsLoading] = useState(true);
-=======
   const { postId } = useParams() as { postId?: string },
   const navigate = useNavigate(),
   const { toast } = useToast(),
   const { user } = useAuth(),
   const [post, setPost] = useState<ForumPost | null>(mockPost),
   const [isLoading, setIsLoading] = useState(true),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   useEffect(() => {
     // In a real app, we would fetch the post data here
     // For now, we'll just use the mock data
     setIsLoading(false)
-<<<<<<< HEAD
   }, [postId]);
-=======
   }, [postId]),
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (isLoading) {
     return (
       <AppLayout>
@@ -144,14 +117,11 @@ export default function EditPostPage() {
     )
   }
   // Check if the user is the author or an admin
-<<<<<<< HEAD
   const isAuthor = user?.id === post.authorId;
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin';
-=======
   const isAuthor = user?.id === post.authorId,
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin',
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   if (!isAuthor && !isAdmin) {
     return (
       <AppLayout>
@@ -170,12 +140,9 @@ export default function EditPostPage() {
     content: post.content
     categoryId: post.categoryId as ForumCategory
     tags: post.tags.join(", ")
-<<<<<<< HEAD
   }
-=======
   },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally update the post in the database
@@ -183,12 +150,9 @@ export default function EditPostPage() {
       toast({
         title: "Post updated"
         description: "Your post has been updated successfully"
-<<<<<<< HEAD
       });
-=======
       }),
       
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       // Redirect back to the post
       navigate(`/community/post/${postId}`)
     } catch (error) {
@@ -198,11 +162,8 @@ export default function EditPostPage() {
         variant: "destructive"
       })
     }
-<<<<<<< HEAD
   }
-=======
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <AppLayout>
@@ -224,27 +185,19 @@ export default function EditPostPage() {
           <span className="text-sm font-medium">Edit</span>
         </div>
         <h1 className="text-3xl font-bold mb-8">Edit Post</h1>
-<<<<<<< HEAD
         <PostForm
           initialValues={initialValues}
           onSubmit={handleSubmit}
           isEditing={true}
-=======
         <PostForm 
           initialValues={initialValues} 
           onSubmit={handleSubmit} 
           isEditing={true} 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         />
       </div>
     </AppLayout>
   )
-<<<<<<< HEAD
-<<<<<<< HEAD
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { useState, useEffect } from "react",;
 import { Link, useNavigate, useParams } from "react-router-dom",;
 import { AppLayout } from "@/layout/AppLayout",;
@@ -386,10 +339,5 @@ export default function EditPostPage() {;
       </div>;
     </AppLayout>;
   );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

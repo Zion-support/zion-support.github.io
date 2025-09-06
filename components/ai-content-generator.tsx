@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-=======
 import {
   Brain,
   Zap,
@@ -21,7 +19,6 @@ import {
   Lock,;
   Sparkles,;
 } from 'lucide-react';
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
 import {
   Brain
@@ -141,7 +138,6 @@ import {
       period: '/month'
       description: 'For large organizations and enterprises'
       features: [
-<<<<<<< HEAD
         'Unlimited words'
         'All templates + custom'
         'Full SEO suite'
@@ -162,7 +158,6 @@ import {
       color: 'border-purple-600'
       buttonColor: 'bg-purple-600 hover:bg-purple-700'
     }
-=======
         'Unlimited words',
         'All templates + custom',
         'Full SEO suite',
@@ -180,7 +175,6 @@ import {
 
   ];
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   const useCases = [
     {
       title: 'Blog Writing'
@@ -234,13 +228,8 @@ import {
     }
   ];
   const integrations = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' }
-=======
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     {
       name: 'Shopify'
       icon: '🛒'
@@ -254,17 +243,11 @@ import {
     { name: 'Mailchimp', icon: '📧', description: 'Email campaign content' }
     { name: 'Slack', icon: '💬', description: 'Team collaboration' }
     { name: 'Zapier', icon: '⚡', description: '500+ app integrations' }
-=======
-<<<<<<< HEAD
     { name: 'WordPress', icon: '🔌', description: 'Direct plugin integration' },
 
   ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 
   ];
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
   return (
     <>
@@ -420,7 +403,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {features.map((feature, index) => (
               <Card
@@ -454,29 +436,16 @@ import {
                 </h3>
                 <p className="text-gray-400 leading-relaxed">
                   {feature.description}
-=======
 
                   {feature.description}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </p>
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Use Cases Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -496,7 +465,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {useCases.map((useCase, index) => (
               <Card
@@ -537,15 +505,9 @@ import {
                         <div key={exampleIndex} className="flex items-center text-sm text-gray-300">
                           <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                           {example}
-=======
 
                           {example}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </div>
                       ))}
                     </div>
@@ -556,14 +518,7 @@ import {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Pricing Section */}
       <section
         id='pricing'
@@ -603,11 +558,7 @@ import {
                     </span>
                   </div>
                 )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
                     {plan.name}
@@ -632,17 +583,11 @@ import {
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />
                       {feature}
-=======
-<<<<<<< HEAD
 
                       {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
                       {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
@@ -663,14 +608,7 @@ import {
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Integrations Section */}
       <section className='py-24 bg-black relative overflow-hidden'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10'>
@@ -690,7 +628,6 @@ import {
             <p className="text-xl text-gray-400 max-w-4xl mx-auto leading-relaxed">
             </p>
           </div>
-<<<<<<< HEAD
           <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6'>
             {integrations.map((integration, index) => (
               <Card
@@ -716,40 +653,20 @@ import {
                 <h3 className="font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-sm text-gray-400">{integration.description}</p>
               </Card>
-=======
 
               </Card>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-blue-600 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10'>
           <h2 className='text-4xl sm:text-5xl font-bold text-white mb-8'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             Ready to Transform Your Content Creation?
           </h2>
           <p className='text-xl text-purple-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
@@ -801,13 +718,7 @@ import {
       </section>
     </>
   );
-<<<<<<< HEAD
 }
-=======
-<<<<<<< HEAD
 }
 ;
-=======
 }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

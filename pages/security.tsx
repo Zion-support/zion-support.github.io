@@ -1,18 +1,6 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+origin/automation-improvements-final
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Users, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
@@ -55,10 +43,7 @@ const securityFeatures = [
     details: ['24/7 incident response', 'Security team on standby', 'Rapid containment', 'Post-incident analysis']
   }
 ];
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const securityStats = [
   { number: '99.9%', label: 'Uptime Guarantee' }
   { number: '24/7', label: 'Security Monitoring' }
@@ -66,7 +51,6 @@ const securityStats = [
   { number: '100%', label: 'Data Encryption' }
 ];
 export default function SecurityPage() {
-<<<<<<< HEAD
 
   return (
     <Layout
@@ -83,7 +67,6 @@ export default function SecurityPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-=======
   return (
     <Layout
       title="Security - Zion Tech Group"
@@ -99,7 +82,6 @@ export default function SecurityPage() {
             <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-4000"></div>
           </div>
           <div className="container mx-auto px-4 relative z-10">
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin } from 'lucide-react';
@@ -173,7 +155,6 @@ export default function Security(req, res) {
 }
         <section className="pt-32 pb-20 px-6">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
             <motion.div
               initial={{ opacity: 0, y: 20 }  } catch (error) {
     console.error("Error:", error);
@@ -236,7 +217,6 @@ export default function Security(req, res) {
             </motion.p>
           </div>
         </section>
-<<<<<<< HEAD
         {/* Security Stats */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
@@ -248,7 +228,6 @@ export default function Security(req, res) {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
-=======
         {/* Security Overview */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -256,7 +235,6 @@ export default function Security(req, res) {
 }
         <section className="py-20 px-6">
           <div className="max-w-6xl mx-auto">
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -278,13 +256,11 @@ export default function Security(req, res) {
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
               {securityStats.map((stat, index) => (
                 <motion.div
-<<<<<<< HEAD
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   className="text-center"
-=======
                   key={measure.id  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -306,16 +282,10 @@ export default function Security(req, res) {
   }
 }
                   className="bg-slate-800/50 rounded-2xl p-8 border border-white/10 hover:border-cyan-500/30 transition-colors duration-300"
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 >
                   <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
                     {stat.number}
                   </div>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   <div className="text-gray-600 font-medium">
                     {stat.label}
                   </div>
@@ -367,8 +337,6 @@ export default function Security(req, res) {
                           {detail}
                         </li>
                       ))}
-<<<<<<< HEAD
-=======
                     </ul>
                   </div>
                 </motion.div>
@@ -451,7 +419,6 @@ export default function Security(req, res) {
                 >
                   View Compliance Details
 </Link>
-=======
                   <ul className="space-y-3">
                     {measure.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start">
@@ -567,7 +534,6 @@ export default function Security(req, res) {
                       <li>• Automated threat detection</li>
                       <li>• Rapid incident response team</li>
                       <li>• Regular security drills</li>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </ul>
                   </div>
                 </motion.div>
@@ -591,12 +557,10 @@ export default function Security(req, res) {
                 We maintain compliance with industry standards and regulations to ensure your data is protected.
               </p>
             </motion.div>
-<<<<<<< HEAD
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Shield className="w-8 h-8 text-green-600" />
-=======
             {/* Contact Security Team */  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -633,7 +597,6 @@ export default function Security(req, res) {
                     <p className="text-white font-semibold">Security Email</p>
                     <p className="text-gray-300">security@ziontechgroup.com</p>
                   </div>
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 </div>
                 <h3 className="text-lg font-bold text-gray-900 mb-2">SOC 2 Type II</h3>
                 <p className="text-gray-600 text-sm">Service Organization Control 2 Type II compliance</p>
@@ -642,7 +605,6 @@ export default function Security(req, res) {
                 <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Lock className="w-8 h-8 text-blue-600" />
                 </div>
-<<<<<<< HEAD
                 <h3 className="text-lg font-bold text-gray-900 mb-2">ISO 27001</h3>
                 <p className="text-gray-600 text-sm">Information Security Management System</p>
               </div>
@@ -689,21 +651,10 @@ export default function Security(req, res) {
                   className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300 font-semibold"
                 >
                   View Compliance Details
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
                 </Link>
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
                 </Link>
-<<<<<<< HEAD
-=======
-=======
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
 import {
   Shield,
   Lock,
@@ -719,8 +670,7 @@ import {
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 import Head from 'next/head';
 import {motion} from 'framer-motion';
 import {Shield, Lock, Eye, Database, Server, Key, CheckCircle, Mail, Phone, MapPin,} from 'lucide-react';
@@ -1034,9 +984,7 @@ export default function Security() {
                     <p className='text-white font-semibold'>PGP Key</p>
                     <p className='text-gray-300'>Available on request</p>                  </div>
                 </div>
-<<<<<<< HEAD
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
                 
                 <div className="flex items-center">
                   <Phone className="w-5 h-5 text-red-400 mr-3" />
@@ -1046,108 +994,60 @@ export default function Security() {
                   </div>
                 </div>
                 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <div className="flex items-center">
                   <Key className="w-5 h-5 text-red-400 mr-3" />
                   <div>
                     <p className="text-white font-semibold">PGP Key</p>
                     <p className="text-gray-300">Available on request</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
                   </div>
                 </div>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
 </Link>
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
-=======
+origin/main
+origin/automation-improvements-final
 </Link>
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
                   </div>
                 </div>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
             </motion.div>
           </div>
         </section>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-      </div>
-<<<<<<< HEAD
-    </Layout>
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
       </div>
     </Layout>
-<<<<<<< HEAD
+      </div>
+    </Layout>
   );
 }  )
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
+ursor/integrate-build-improve-and-re-verify-8f7d
 
         <EnhancedFooter />
       </div>
-=======
-<<<<<<< HEAD
     </Layout>;
   );
 }  )
 }
 )
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     </>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
+origin/cursor/integrate-build-improve-and-re-verify-c7b5
+ursor/integrate-build-improve-and-re-verify-8f7d
+origin/automation-improvements-final
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
   )
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
->>>>>>> origin/cursor/fix-syntax-push-and-merge-to-main-ba45
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-242d
-=======
+ursor/integrate-build-improve-and-re-verify-b76c
+origin/cursor/fix-syntax-push-and-merge-to-main-ba45
+origin/cursor/integrate-build-improve-and-re-verify-242d
 )
 }
->>>>>>> origin/main
-=======
+origin/main
   )
 }
-=======
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+ursor/fix-lint-push-and-merge-to-main-ae4e

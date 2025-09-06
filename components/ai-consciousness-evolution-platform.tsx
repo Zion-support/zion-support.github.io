@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
-=======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
-=======
  const AIConsciousnessEvolutionPlatform: React.FC = () => {
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const features = [ {
   return (<Layout> <SEO <motion.div initial= {
   {
@@ -31,12 +23,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   opacity: 0, y: 20
 }animate= {
   {
-<<<<<<< HEAD
   opacity: 1, y: 0
-=======
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.6, delay: index * 0.1
@@ -54,12 +43,9 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
   opacity: 0, y: 20
 }animate= {
   {
-<<<<<<< HEAD
   opacity: 1, y: 0
-=======
   opacity: 1, y: 0 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8
@@ -83,13 +69,11 @@ const containerVariants = {
 }
 visible: {
   opacity: 1, transition: {
-<<<<<<< HEAD
   staggerChildren: 0.1
 }
 }
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
 
-=======
   staggerChildren: 0.1 
 
 };
@@ -97,10 +81,6 @@ visible: {
 };
 
 };export default AIConsciousnessEvolutionPlatform;export default AIConsciousnessEvolutionPlatform;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
 
 }
 }
@@ -108,6 +88,3 @@ visible: {
 }
 }
 }
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

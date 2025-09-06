@@ -1,9 +1,5 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { useState } from 'react';
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -18,7 +14,6 @@ import {Skeleton} from "@/components/ui/skeleton";
 import {SEO} from "@/components/SEO";
 import {useNavigate} from "react-router-dom";
 import {cn} from "@/lib/utils";
-=======
 import React, { useState } from 'react',
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -39,11 +34,6 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { SEO } from "@/components/SEO",
 import { useNavigate } from "react-router-dom",
 import { cn } from "@/lib/utils",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -61,12 +51,9 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
     default:
       return <Bell className={cn(className, "text-gray-500")} />
   }
-<<<<<<< HEAD
 }
-=======
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':
@@ -83,7 +70,6 @@ const getNotificationTypeBadge = (type: NotificationType) => {
       return <Badge className="bg-yellow-500">System</Badge>
     default:
       return <Badge variant="outline">Notification</Badge>
-<<<<<<< HEAD
   }
 }
 const NotificationCard: React.FC<{
@@ -104,7 +90,6 @@ const NotificationCard: React.FC<{
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)
-=======
 import React, { useState } from 'react',;
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
@@ -179,28 +164,15 @@ const NotificationCard: React.FC<{;
   const handleAction = () => {;
     if (!notification.read) {;
       onMarkAsRead(notification.id);
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
     if (notification.action_url) {
       navigate(notification.action_url)
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
   }
-=======
   },
-=======
   };
-=======
   },
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <div className={cn(
       "border rounded-lg shadow-sm p-4 mb-3 group transition-colors",
@@ -263,14 +235,10 @@ const NotificationCard: React.FC<{;
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
-=======
 },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function NotificationsPage() {
-<<<<<<< HEAD
   const {;
     filteredNotifications;
     unreadCount;
@@ -279,7 +247,6 @@ export default function NotificationsPage() {
     dismissNotification;
     loading;
     filter;
-=======
   const {
     filteredNotifications,
     unreadCount,
@@ -288,15 +255,11 @@ export default function NotificationsPage() {
     dismissNotification,
     loading,
     filter,
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
     setFilter
-<<<<<<< HEAD
   } = useNotifications() as NotificationContextType;
 
-=======
   } = useNotifications() as NotificationContextType,
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <SEO
@@ -361,7 +324,6 @@ export default function NotificationsPage() {
                   ))}
                 </div>
               )}
-<<<<<<< HEAD
             </TabsContent>
           </Tabs>
         </div>
@@ -370,7 +332,6 @@ export default function NotificationsPage() {
     </>
   )
 }
-=======
             </TabsContent>;
           </Tabs>;
         </div>;
@@ -380,4 +341,3 @@ export default function NotificationsPage() {
   );
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

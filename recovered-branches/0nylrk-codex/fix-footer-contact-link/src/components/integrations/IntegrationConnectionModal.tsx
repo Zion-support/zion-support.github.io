@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {
   Dialog
@@ -9,8 +7,6 @@ import {
   DialogFooter
   DialogHeader
   DialogTitle
-=======
-<<<<<<< HEAD
 import React, { useState } from "react";
 import {
   Dialog,
@@ -19,7 +15,6 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -39,10 +34,8 @@ interface Integration {
 interface IntegrationConnectionModalProps {
   isOpen: boolean;
   onClose: () => void;
-<<<<<<< HEAD
   integration: Integration
 }
-=======
   integration: Integration;
 }
 
@@ -52,8 +45,6 @@ export function IntegrationConnectionModal({
   integration,
 }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false);
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 export function IntegrationConnectionModal({
   isOpen
@@ -89,7 +80,6 @@ export function IntegrationConnectionModal({
     onClose();
   }
 
-=======
 import React, { useState } from "react",
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
@@ -130,7 +120,6 @@ interface IntegrationConnectionModalProps {;
 
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   const [syncSettings, setSyncSettings] = useState({
     autoCreateContacts: true,
     pushNotes: false,
@@ -164,7 +153,6 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     onClose()
   },
   
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-md">
@@ -180,39 +168,24 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <div>
             <DialogTitle>{integration.name} Integration</DialogTitle>
             <DialogDescription>
-<<<<<<< HEAD
               {integration.status === "connected" |
               integration.status === "warning"
                 ? "Manage your connection settings"
-=======
               {integration.status === "connected" || integration.status === "warning" 
                 ? "Manage your connection settings" 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                 : `Connect your ${integration.name} account`}
             </DialogDescription>
           </div>
         </DialogHeader>
-<<<<<<< HEAD
-<<<<<<< HEAD
         {integration.status === "connected" |
-=======
         {integration.status === "connected" ||
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         integration.status === "warning" ? (
-=======
         
         {(integration.status === "connected" || integration.status === "warning") ? (
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <>
             <div className="grid gap-4 py-4">
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">Sync Settings</h3>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="autoCreateContacts"
@@ -222,24 +195,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         ...syncSettings
                         autoCreateContacts: checked as boolean
                       })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="autoCreateContacts" 
                     checked={syncSettings.autoCreateContacts} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, autoCreateContacts: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }
                   />
                   <Label htmlFor="autoCreateContacts">Auto-create contacts in {integration.name}</Label>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="pushNotes"
@@ -249,24 +215,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         ...syncSettings
                         pushNotes: checked as boolean
                       })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="pushNotes" 
                     checked={syncSettings.pushNotes} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, pushNotes: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }
                   />
                   <Label htmlFor="pushNotes">Push notes and comments</Label>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="syncJobDetails"
@@ -276,24 +235,17 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         ...syncSettings
                         syncJobDetails: checked as boolean
                       })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncJobDetails" 
                     checked={syncSettings.syncJobDetails} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncJobDetails: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }
                   />
                   <Label htmlFor="syncJobDetails">Sync job details</Label>
                 </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className="flex items-center space-x-2">
                   <Checkbox
                     id="syncApplicantData"
@@ -303,31 +255,19 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                         ...syncSettings
                         syncApplicantData: checked as boolean
                       })
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
                 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
                 <div className="flex items-center space-x-2">
                   <Checkbox 
                     id="syncApplicantData" 
                     checked={syncSettings.syncApplicantData} 
                     onCheckedChange={(checked) => 
                       setSyncSettings({...syncSettings, syncApplicantData: checked as boolean})
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                     }
                   />
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>
                 </div>
               </div>
-<<<<<<< HEAD
-=======
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="space-y-2">
                 <h3 className="text-sm font-medium">API Details</h3>
                 <p className="text-xs text-muted-foreground">
@@ -337,14 +277,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </p>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <DialogFooter className="flex items-center justify-between">
               <Button variant="outline" onClick={handleDisconnect} type="button">
                 Disconnect
@@ -358,23 +291,14 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <>
             <div className="space-y-4 py-4">
               <p className="text-sm">
-<<<<<<< HEAD
                 Connect your {integration.name} account to sync job contacts
                 applicants, and more. You'll be redirected to {integration.name}{" "}
                 to authorize this connection.
               </p>
-=======
                 Connect your {integration.name} account to sync job contacts, applicants, and more. 
                 You'll be redirected to {integration.name} to authorize this connection.
               </p>
-<<<<<<< HEAD
-=======
               
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               <div className="space-y-4">
                 <h3 className="text-sm font-medium">What will be synced:</h3>
                 <ul className="list-disc pl-4 text-sm space-y-1">
@@ -385,27 +309,18 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                 </ul>
               </div>
             </div>
-<<<<<<< HEAD
-=======
             
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             <DialogFooter>
               <Button onClick={handleConnectOAuth} disabled={isConnecting}>
                 {isConnecting ? "Connecting..." : `Connect to ${integration.name}`}
               </Button>
             </DialogFooter>
           </>
-<<<<<<< HEAD
         )}
       </DialogContent>
     </Dialog>
   );
 }
-=======
 ;
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {;
   const [isConnecting, setIsConnecting] = useState(false),;
@@ -550,8 +465,3 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
   );
 }
 ;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4

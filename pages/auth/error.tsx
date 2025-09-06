@@ -4,20 +4,15 @@ import { Button } from '@/components/ui/button';
 import { AlertTriangle } from 'lucide-react';
 import Link from 'next/link';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 const errorMessages: Record<string string> = {OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] |errorMessages.default
-=======
 const errorMessages: Record<string string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 const errorMessages: Record<string, string> = {;
   OAuthSignin: 'The authentication provider is temporarily unavailable. Please try again later.';
   default: 'There was an issue with your authentication request.';
@@ -25,25 +20,17 @@ const errorMessages: Record<string, string> = {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export default function AuthErrorPage() {
   const { query } = useRouter()
   const message = errorMessages[query.error as string] || errorMessages.default
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
   return (
     <>
       <Head>
-<<<<<<< HEAD
         <title>Authentication Error - Zion Tech Marketplace</title>;
         <meta name=&quot;description&quot; content=&quot;Authentication error page&quot; />
-=======
         <title>Authentication Error - Zion Tech Marketplace</title>
         <meta name="description" content="Authentication error page" />
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
       </Head>
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-red-50 to-orange-100 dark:from-gray-900 dark:to-gray-800 p-4">
         <Card className="w-full max-w-md">
@@ -68,13 +55,10 @@ export default function AuthErrorPage() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
-=======
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
 ;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

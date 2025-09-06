@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 export interface Innovative2026AIServiceV4 {;
   id: string;
@@ -436,21 +435,18 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     }
     realImplementation: true
     implementationDetails:
-<<<<<<< HEAD
       'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.'
     launchDate: '2024-08-01'
     customers: 89
     rating: 4.7
     reviews: 167
   }
-=======
       'Full AI emotional intelligence platform with emotion recognition, sentiment analysis, and comprehensive emotional response capabilities.',
     launchDate: '2024-08-01',
     customers: 89,
     rating: 4.7,
     reviews: 167,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -463,12 +459,8 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [
     rating: 4.7
 
     reviews: 167
-<<<<<<< HEAD
   }
 ];
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 import { ServiceVariant } from '../types/service-variants',;
 export interface Innovative2026AIServiceV4 {;
   id: string,;
@@ -731,10 +723,5 @@ export const innovative2026AIServicesV4: Innovative2026AIServiceV4[] = [;
     customers: 89,;
     rating: 4.7;
     reviews: 167;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   }
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

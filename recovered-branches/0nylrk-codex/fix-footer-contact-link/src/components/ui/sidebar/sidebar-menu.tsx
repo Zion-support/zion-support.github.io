@@ -1,34 +1,20 @@
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import React, { forwardRef } from "react";
 import {ChevronDown} from "lucide-react";
 import {cn} from "@/lib/utils";
 import {SafeRef} from "@/types/ref-types";
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 import React, { forwardRef } from "react",
 import { ChevronDown } from "lucide-react",
-<<<<<<< HEAD
 import { cn } from "@/lib/utils";
 import { SafeRef } from "@/types/ref-types";
-=======
 import { cn } from "@/lib/utils",
 import { SafeRef } from "@/types/ref-types",
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode,
   active?: boolean,
   href?: string,
   target?: string,
   badge?: React.ReactNode
-<<<<<<< HEAD
-=======
 import React, { forwardRef } from "react",;
 import { ChevronDown } from "lucide-react",;
 import { cn } from "@/lib/utils",;
@@ -39,11 +25,6 @@ interface SidebarMenuItemProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string,;
   target?: string,;
   badge?: React.ReactNode;
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 
 const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
@@ -55,13 +36,10 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
-<<<<<<< HEAD
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
             active && "bg-accent font-medium text-accent-foreground"
-=======
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
             active && "bg-accent font-medium text-accent-foreground",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
             className
           )}
         >
@@ -72,12 +50,7 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           {badge && <span>{badge}</span>}
         </a>
       )
-<<<<<<< HEAD
-<<<<<<< HEAD
     }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(;
             "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",;
@@ -92,25 +65,17 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
           {badge && <span>{badge}</span>}
         </a>;
       );
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     return (
       <button
         ref={ref}
         type="button"
         className={cn(
-<<<<<<< HEAD
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent";
           active && "bg-accent font-medium text-accent-foreground"
-=======
           "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent",
           active && "bg-accent font-medium text-accent-foreground",
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
           className
         )}
         {...props}
@@ -123,21 +88,13 @@ const SidebarMenuItem = forwardRef<HTMLButtonElement, SidebarMenuItemProps>(
       </button>
     )
   }
-<<<<<<< HEAD
 );
-<<<<<<< HEAD
 SidebarMenuItem.displayName = "SidebarMenuItem";
-=======
 ),
-=======
-=======
 ),
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 
 SidebarMenuItem.displayName = "SidebarMenuItem",
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 interface SidebarMenuGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
   children: React.ReactNode
@@ -149,18 +106,11 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
       <div className="pl-2">{children}</div>
     </div>
   )
-<<<<<<< HEAD
 }
 export { SidebarMenuItem, SidebarMenuGroup }
 
-=======
 },
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export { SidebarMenuItem, SidebarMenuGroup },
 ),;
 SidebarMenuItem.displayName = "SidebarMenuItem",;
@@ -177,9 +127,4 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ title, children, ..
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export { SidebarMenuItem, SidebarMenuGroup };
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

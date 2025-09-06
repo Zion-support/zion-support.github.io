@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export type InnovativeMicroSaas = {
-=======
 export type InnovativeMicroSaas = {;
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string;
   name: string;
   description: string;
@@ -91,7 +86,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     id: 'candidate-screening-copilot'
     name: 'Candidate Screening Copilot'
     description:
-<<<<<<< HEAD
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.'
     category: 'Human Resources'
     pricing: { starter: '$69/mo' }
@@ -101,7 +95,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
     realService: true
   }
-=======
       'Summarize resumes, score against job descriptions, and auto-generate interview question sets.',
     category: 'Human Resources',
     pricing: { starter: '$69/mo' },
@@ -111,7 +104,6 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
     link: 'https://ziontechgroup.com/services/candidate-screening-copilot',
     realService: true,
   },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 ];	id: string;
 	name: string;
 	description: string;
@@ -186,15 +178,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		useCases: ['Faster hiringBias reduction'];
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot'
 		realService: true
-<<<<<<< HEAD
 	}
 ];
 
-=======
 export type InnovativeMicroSaas = {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	id: string,;
 	name: string,;
 	description: string,;
@@ -269,10 +256,5 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [;
 		useCases: ['Faster hiringBias reduction'],;
 		link: 'https://ziontechgroup.com/services/candidate-screening-copilot',;
 		realService: true;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 	}
 ];
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

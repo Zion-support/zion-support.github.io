@@ -1,7 +1,4 @@
-<<<<<<< HEAD
 
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 {
   /* Robots Meta */
 }{
@@ -35,7 +32,6 @@
 }{
   type === 'article' && (<> {
   publishedTime && <meta property="article:published time" content= {
-<<<<<<< HEAD
   publishedTime
 }/>
 }{
@@ -49,7 +45,6 @@
 }{
   section && <meta property="article:section" content= {
   section
-=======
   publishedTime 
 }/>
 }{
@@ -63,21 +58,17 @@
 }{
   section && <meta property="article:section" content= {
   section 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }/>
 }{
   tags.map ( (tag, index) => (<meta key= {
   index
 }property="article:tag" content= {
-<<<<<<< HEAD
   tag
 }/>
 }</>)
-=======
   tag 
 }/>
 }</>) 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }{
   /* Structured Data */
 }<script
@@ -167,10 +158,7 @@ const SEO: React.FC<SEOProps> = ({
           ))}
         </>
       )}
-<<<<<<< HEAD
-=======
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
       {/* Additional Meta Tags */}
       <meta
         name='viewport'
@@ -184,14 +172,7 @@ const SEO: React.FC<SEOProps> = ({
         content='black-translucent'
       />
       <meta name='apple-mobile-web-app-title' content='Zion Tech Group' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Structured Data */}
       <script
         type='application/ld+json'
@@ -226,14 +207,12 @@ const SEO: React.FC<SEOProps> = ({
                 {
                   '@type': 'Offer'
                   itemOffered: {
-<<<<<<< HEAD
                     '@type': 'Service'
                     name: 'AI & Machine Learning Solutions'
                   }
                 }
                 {
                   '@type': 'Offer'
-=======
                     '@type': 'Service',
                     name: 'AI & Machine Learning Solutions',
                   },
@@ -247,7 +226,6 @@ const SEO: React.FC<SEOProps> = ({
                 },
                 {
                   '@type': 'Offer',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
                   itemOffered: {
                     '@type': 'Service'
                     name: 'Quantum Computing Services'
@@ -267,14 +245,7 @@ const SEO: React.FC<SEOProps> = ({
       />
       {/* Canonical URL */}
       <link rel='canonical' href={fullUrl} />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* Favicon and App Icons */}
       <link rel='icon' href='/favicon.ico' />
       <link
@@ -325,20 +296,12 @@ export default SEO;            __html: JSON.stringify(structuredData)
           }}
         />
       )}
-<<<<<<< HEAD
     </Head>
   );
 }
 export default SEO;  )
 }
 export default SEO;
-<<<<<<< HEAD
 
-=======
     </Head>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-=======
     </Head>
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
