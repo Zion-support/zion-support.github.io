@@ -18,29 +18,29 @@ export default function AIMeetingAssistantPage() {
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
           Transform every meeting into actionable insights with our AI-powered
           assistant. Get real-time transcription, intelligent summaries, and
-          automatic action item extraction with 95% accuracy.
+          automatic action item extraction.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="mailto:kleber@ziontechgroup.com?subject=AI Meeting Assistant Demo"
+          <Link
+            href="/contact"
             className="bg-purple-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors"
           >
-            Try Free Demo
-          </a>
-          <a
-            href="tel:+13024640950"
-            className="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-600 hover:text-white transition-colors"
+            Get Started
+          </Link>
+          <Link
+            href="#demo"
+            className="border border-purple-600 text-purple-600 px-8 py-3 rounded-lg font-semibold hover:bg-purple-50 transition-colors"
           >
-            Call +1 302 464 0950
-          </a>
+            Watch Demo
+          </Link>
         </div>
       </section>
 
-      {/* Key Features */}
-      <section className="py-12">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Revolutionary Meeting Features
+      {/* Features Section */}
+      <section className="py-16">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+            Powerful Features
           </h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Our AI assistant handles every aspect of your meetings, from
@@ -74,12 +74,12 @@ export default function AIMeetingAssistantPage() {
 
       {/* CTA Section */}
       <section className="bg-gray-900 text-white py-16 rounded-lg">
-        <div className="text-center">
-          <h2 className="text-4xl font-bold mb-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold mb-6">
             Ready to Transform Your Meetings?
           </h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join thousands of teams already saving 50% of their meeting time with our AI assistant.
+          <p className="text-xl text-gray-300 mb-8">
+            Join thousands of teams already using our AI Meeting Assistant to make their meetings more productive and actionable.
           </p>
           <Link
             href="/contact"
