@@ -29,8 +29,6 @@ class EnhancedMasterAutomationOrchestrator {
     const timestamp = new Date().toISOString();
 
   }
-
-  log(message, type = 'INFO') {
     const timestamp = new Date().toISOString();
 
       };
