@@ -5,20 +5,11 @@ export default function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <div className="main-layout">{children}</div>;
-}
-                isOpen={sidebarOpen},;
-                onClose={() => setSidebarOpen(false)},;
-              />,;
-              <div className="flex-1 ml-80">,;
-                {children},;
-              </div>,;
-            </div>,;
-          )},;
-          {!showSidebar && children},;
-        </main>,;
-        <Footer />,;
-      </div>,;
-    </>,;
+  return (
+    <div className="min-h-screen bg-gray-900">
+      <main className="container mx-auto px-4 py-8">
+        {children}
+      </main>
+    </div>
   );
-},;
+}

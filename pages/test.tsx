@@ -1,3 +1,8 @@
+import React from 'react';
+import Head from 'next/head';
+
+export default function TestPage() {
+  return (
     <>
       <Head>
         <title>Test Page | Zion Tech Group</title>
@@ -6,20 +11,5 @@
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>
-  )
-}
-import React from 'react';
-import MainLayout from '../src/components/layout/MainLayout';
-
-export default function TestPage() {
-  return (
-    <MainLayout title="Test Page - Zion Tech Group">
-      <div className="container mx-auto px-4 py-16">
-        <h1 className="text-4xl font-bold mb-8">Test Page</h1>
-        <p className="text-lg text-gray-700">
-          This is a test page.
-        </p>
-      </div>
-    </MainLayout>
   );
 }

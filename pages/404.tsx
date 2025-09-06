@@ -1,27 +1,26 @@
 import React from 'react';
-import MainLayout from '../components/layout/MainLayout';
-
-        </div>
-      </div>
-    </MainLayout>
-  );
-}
-import type { NextPage } from 'next';
 import Head from 'next/head';
+import Link from 'next/link';
 
-const NotFoundPage: NextPage = () => {
+const NotFoundPage = () => {
   return (
-    <div>
+    <>
       <Head>
-        <title>404 - Zion Tech Solutions</title>
-        <meta name="description" content="404 page" />
+        <title>404 - Zion Tech Group</title>
+        <meta name="description" content="Page not found" />
       </Head>
       
-      <main>
-        <h1>404</h1>
-        <p>This page is under construction.</p>
-      </main>
-    </div>
+      <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-6xl font-bold mb-4">404</h1>
+          <p className="text-xl mb-8">This page is under construction.</p>
+          <Link href="/" className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700">
+            Go Home
+          </Link>
+        </div>
+      </div>
+    </>
   );
 };
 
+export default NotFoundPage;
