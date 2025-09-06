@@ -18,12 +18,20 @@ export interface IntentMatch {
   confidence: number;
 }
 
-export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch {
-  const queryLower = query && query.toLowerCase();
+export function matchIntent(
+  query: string,
+  articles: HelpArticle[],
+): IntentMatch {
+  const queryLower = query.toLowerCase();
   const matchedArticles: string[] = [];
   let confidence = 0;
 
-
+  for (const article of articles) {
+    const titleMatch = article.title.toLowerCase().includes(queryLower);
+    const contentMatch = article.content.toLowerCase().includes(queryLower);
+    const tagMatch = article.tags.some((tag) =>
+      tag.toLowerCase().includes(queryLower),
+    );
 
     if (titleMatch || contentMatch || tagMatch) {
       matchedArticles && matchedArticles.push(article && article.id);
@@ -34,24 +42,33 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   return {
     intentMatched: matchedArticles && matchedArticles.length > 0,
     matchedArticleIds: matchedArticles,
-    confidence: Math && Math.min(confidence, 1)
+    confidence: Math.min(confidence, 1),
   };
 }
 
+export function getArticlesByCategory(
+  articles: HelpArticle[],
+  category: string,
+): HelpArticle[] {
+  return articles.filter((article) => article.category === category);
+}
 
+export function getArticlesByTag(
+  articles: HelpArticle[],
+  tag: string,
+): HelpArticle[] {
+  return articles.filter((article) => article.tags.includes(tag));
 }
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-  // Add support functionality here;
-  log_event: (event: any) => null,
-  get_articles: () => [],
-  getArticleById: (id: string) => null;
+
+export function searchArticles(
+  articles: HelpArticle[],
+  query: string,
+): HelpArticle[] {
+  const queryLower = query.toLowerCase();
+  return articles.filter(
+    (article) =>
+      article.title.toLowerCase().includes(queryLower) ||
+      article.content.toLowerCase().includes(queryLower) ||
+      article.tags.some((tag) => tag.toLowerCase().includes(queryLower)),
+  );
 }
-;
-export const logSupportEventToOperator = (event: any) =>: any {
-  // Add support event logging functionality here;
-  return null;
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39

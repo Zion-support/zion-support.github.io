@@ -1,5 +1,4 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
 
 const Home: React.FC = () => {
   return (
@@ -116,35 +115,5 @@ const Home: React.FC = () => {
     </div>
   );
 };
-
-function Card({ title, description, href, icon }: { 
-  title: string; 
-  description: string; 
-  href: string; 
-  icon: string; 
-}) {
-  return (
-    <Link 
-      to={href} 
-      className="group border border-gray-200 rounded-xl p-6 block hover:border-blue-300 hover:shadow-lg transition-all duration-200 bg-white"
-    >
-      <div className="text-4xl mb-4">{icon}</div>
-      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
-      <p className="text-gray-600 leading-relaxed">{description}</p>
-    </Link>
-  );
-}
-
-function FeatureCard({ title, description }: { 
-  title: string; 
-  description: string; 
-}) {
-  return (
-    <div className="text-center p-6">
-      <h3 className="text-lg font-semibold text-gray-900 mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
-    </div>
-  );
-}
 
 export default Home;

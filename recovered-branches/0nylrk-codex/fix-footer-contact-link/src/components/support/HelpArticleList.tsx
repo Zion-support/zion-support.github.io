@@ -1,38 +1,37 @@
-
-
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
-
-=======
-import React from "react",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { HELP_CATEGORIES } from "./help-content",
-
-
-
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleListProps {
-  categoryId: string,
-  onArticleSelect: (articleId: string) => void,
-  searchQuery: string
+  categoryId: string;
+  onArticleSelect: (articleId: string) => void;
+  searchQuery: string;
+}
 
+export function HelpArticleList({
+  categoryId,
+  onArticleSelect,
+  searchQuery,
+}: HelpArticleListProps) {
+  const category = HELP_CATEGORIES.find((cat) => cat.id === categoryId);
 
+  if (!category) {
+    return <div>Category not found</div>;
   }
-  
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
   // Filter articles based on search query
   const filteredArticles = searchQuery
     ? category.articles.filter(
         (article) =>
-          article.title.toLowerCase().includes(searchQuery.toLowerCase()) |
-          article.content.toLowerCase().includes(searchQuery.toLowerCase())
+          article.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+          article.content.toLowerCase().includes(searchQuery.toLowerCase()),
       )
-
-
-    : category.articles,
-  
-
+    : category.articles;
 
   return (
     <div>
@@ -40,6 +39,7 @@ interface HelpArticleListProps {
         <h2 className="text-2xl font-bold mb-2">{category.name}</h2>
         <p className="text-zion-slate-light">{category.description}</p>
       </div>
+
       {filteredArticles.length === 0 ? (
         <div className="text-center py-8">
           <h3 className="text-lg font-medium mb-2">No articles found</h3>
@@ -50,13 +50,28 @@ interface HelpArticleListProps {
       ) : (
         <div className="space-y-4">
           {filteredArticles.map((article) => (
-=======
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {HELP_CATEGORIES} from "./help-content";
-interface HelpArticleListProps {;
-  categoryId: string,;
-  onArticleSelect: (articleId: string) => void,;
-  searchQuery: string;
+            <Card
+              key={article.id}
+              className="cursor-pointer hover:border-zion-purple/50 transition-colors"
+              onClick={() => onArticleSelect(article.id)}
+            >
+              <CardHeader className="pb-2">
+                <CardTitle className="text-lg">{article.title}</CardTitle>
+                <CardDescription className="text-zion-slate-light text-sm">
+                  Last updated: {formatDate(article.lastUpdated)}
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm text-zion-slate-light truncate">
+                  {article.content.substring(0, 120)}...
+                </p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      )}
+    </div>
+  );
 }
 
 export function HelpArticleList(): any ({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {;

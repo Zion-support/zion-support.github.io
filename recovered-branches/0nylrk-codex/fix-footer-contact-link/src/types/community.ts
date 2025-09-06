@@ -1,35 +1,15 @@
-
-export type ForumCategory = 
-
-
-  | 'getting-hired'
-  | 'project-help'
-  | 'ai-tools'
-  | 'feedback'
-  | 'announcements';
-=======
-export type ForumCategory =;
-  | 'getting - hired';
-  | 'project - help';
-  | 'ai - tools';
-  | 'feedback';
-  | 'announcements';
-
-
-
-export interface ForumCategoryInfo {;
-
+export type ForumCategory =
+  | "getting-hired"
+  | "project-help"
+  | "ai-tools"
+  | "feedback"
+  | "announcements";
 
   id: ForumCategory;
   name: string;
   description: string;
-
-  admin_only: boolean,
+  adminOnly: boolean;
   icon: string;
-
-}
-export interface ForumPost {
-=======
 }
 
 
@@ -49,16 +29,11 @@ export interface ForumPost {;
   updated_at: string;
   upvotes: number;
   downvotes: number;
-
-  reply_count: number;
-  is_answered?: boolean;
-  is_pinned?: boolean;
-  is_locked?: boolean,
-  is_featured?: boolean;
-
-}
-export interface ForumReply {
-=======
+  replyCount: number;
+  isAnswered?: boolean;
+  isPinned?: boolean;
+  isLocked?: boolean;
+  isFeatured?: boolean;
 }
 
 
@@ -76,13 +51,8 @@ export interface ForumReply {;
   created_at: string;
   updated_at: string;
   upvotes: number;
-
-  downvotes: number,
-  is_answer?: boolean;
-
-}
-export interface Badge {
-=======
+  downvotes: number;
+  isAnswer?: boolean;
 }
 
 
@@ -92,6 +62,9 @@ export interface Badge {;
   id: string;
   name: string;
   description: string;
+  icon: string;
+  color: string;
+}
 
   icon: string,
   color: string;
@@ -109,8 +82,8 @@ export interface CommunityUser {
 export interface UserBadge {;
 
   userId: string;
-  badgeId: string
-  awardedAt: string
+  badgeId: string;
+  awardedAt: string;
 }
 
 
@@ -125,6 +98,6 @@ export interface CommunityUser {;
   post_count: number;
   reply_count: number;
   badges: Badge[];
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  isVerified: boolean;
+  isModerator: boolean;
+}

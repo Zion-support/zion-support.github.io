@@ -1,16 +1,8 @@
-
-
-
-
-// Types used across fraud detection modules;
-import {FraudSeverity} from '@/types / fraud';
+// Types used across fraud detection modules
+import { FraudSeverity } from "@/types/fraud";
 export interface AnalysisResult {
-  is_suspicious: boolean,
+  isSuspicious: boolean;
   reasons: string[];
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 export interface MessageAnalysisResult extends AnalysisResult {
   severity: FraudSeverity;
@@ -19,17 +11,15 @@ export interface MessageAnalysisResult extends AnalysisResult {
 
 
 export interface MessageAnalysisResult extends AnalysisResult {
-  severity: FraudSeverity
+  severity: FraudSeverity;
 }
 
 
 
 export interface EmailAnalysisResult extends AnalysisResult {}
 export interface FlagResult {
-
-  success: boolean,
+  success: boolean;
   error?: string;
-
 }
 
 

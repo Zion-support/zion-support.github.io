@@ -1,9 +1,4 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-import type { NextApiRequest, NextApiResponse } from "next",;
+import type { NextApiRequest, NextApiResponse } from "next",
 ;
 
 =======
@@ -17,6 +12,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { name, url } = req.body || {},
   if (!name) return res.status(400).json({ ok: false, error: "Missing name" }),
   // Echo back URL, real impl would upload to storage (Supabase, S3, etc.)
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return res.status(201).json({ ok: true, file: { name, url: url || null } })
+};

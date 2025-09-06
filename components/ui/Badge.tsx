@@ -24,12 +24,7 @@ interface HTMLElement {
 }
 
 interface HTMLDivElement extends HTMLElement {
-  tag_name: 'DIV';
-}
-
-
-interface HTMLDivElement extends HTMLElement {;
-  tagName: 'DIV';
+  tagName: "DIV";
 }
 
 const badgeVariants = cva(;
@@ -93,5 +88,5 @@ function Badge() {
   return (
     <div className={cn (badge_variants ({ variant }), class_name)} {...props} />);
 }
-export { Badge, badge_variants }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+export { Badge, badgeVariants };

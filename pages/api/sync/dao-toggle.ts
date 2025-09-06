@@ -1,8 +1,3 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 ;
@@ -22,6 +17,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const state = readState(),
   state.config.paused = Boolean(paused),
   writeState(state),
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  return res.status(200).json({ paused: state.config.paused })
+};

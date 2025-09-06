@@ -1,5 +1,5 @@
-
-
+import type { NextApiRequest, NextApiResponse } from "next",;
+import { readState } from "../../../utils/sync/storage",;
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const state = readState()
@@ -67,7 +67,8 @@ export default async function handler(req, res) {
       scope: state.config.scope,
       opt_in: state.config.opt_in,
       paused: state.config.paused,
+      lastSyncedAt: state.lastSyncedAt})
+  }
 
-
-
-
+  return res.status(405).json({ error: "Method not allowed" })
+};

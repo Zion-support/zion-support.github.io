@@ -1,8 +1,3 @@
-
-=======
-}
-
-=======
 import type { NextApiRequest, NextApiResponse } from 'next',
 ;
 export default async /**
@@ -43,5 +38,9 @@ function escape_html() {
   const url = `data: text/html,base64,${base64}`,
   res.status(200).json({ url })
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+function escapeHtml(str: string) {
+  return String(str)
+    .replace(/&/g, '&amp,')
+    .replace(/</g, '&lt,')
+    .replace(/>/g, '&gt,')
+};

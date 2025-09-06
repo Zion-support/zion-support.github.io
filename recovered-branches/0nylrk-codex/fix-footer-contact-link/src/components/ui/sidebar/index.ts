@@ -1,5 +1,4 @@
-
-// Export components from their respective files;
+// Export components from their respective files
 export * from "./Sidebar.tsx";
 
 export * from "./SidebarItem";

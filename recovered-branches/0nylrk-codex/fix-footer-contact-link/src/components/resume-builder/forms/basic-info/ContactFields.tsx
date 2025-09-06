@@ -1,26 +1,16 @@
-
-
+import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormMessage,
-} from '@/components / ui / form';
-import { Input  } from '@/components / ui / input';
-import { Control  } from './react - hook - form';
-import { BasicInfoFormData  } from './schema';
-
+} from "@/components/ui/form";
+import { Input } from "@/components/ui/input";
+import { Control } from "react-hook-form";
+import { BasicInfoFormData } from "./schema";
 interface ContactFieldsProps {
-  control: Control < BasicInfoFormData>;
+  control: Control<BasicInfoFormData>;
 }
-
-=======
-
-
-import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Control} from "react-hook-form";
-import {BasicInfoFormData} from "./schema";
 
 
 =======
@@ -144,14 +134,17 @@ function ContactFields() {
       <FormField
         control={control}
         name="linkedin"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>LinkedIn</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://linkedin && linkedin.com/in/username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>;
+        render={({ field }) => (
+          <FormItem>
+            <FormLabel>LinkedIn</FormLabel>
+            <FormControl>
+              <Input
+                placeholder="https://linkedin.com/in/username"
+                {...field}
+              />
+            </FormControl>
+            <FormMessage />
+          </FormItem>
         )}
       />;
 
@@ -168,36 +161,9 @@ function ContactFields() {
             <FormMessage />;
           </FormItem>;
         )}
-
-      />;
-    </div>;
+      />
+    </div>
   );
-}
-
-=======
-              />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="github";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > GitHub</FormLabel>;
-            <FormControl>;
-              <Input placeholder="https://github.com / username" {...field} />;
-            </FormControl>;
-            <FormMessage />;
-          </FormItem>)}
-      />;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-  )
 }
 ;
 

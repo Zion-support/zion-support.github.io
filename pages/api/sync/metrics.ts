@@ -1,7 +1,3 @@
-
-
-=======
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
 ;
@@ -51,4 +47,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
       const p = e.payload as any,
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  const topContributors = Object.entries(contributionsBySubject)
+    .map(([subjectId, score]) => ({ subjectId, score }))
+    .sort((a, b) => b.score - a.score)
+    .slice(0, 10),
+
+  return res.status(200).json({
+    treasuryTotals: totalsByToken,
+    topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt})
+};

@@ -1,49 +1,19 @@
-
-
-import { supabase } from '@/integrations/supabase/client',
-
-=======
-import {supabase} from '@/integrations/supabase/client';
-=======
-import { supabase } from '@/integrations/supabase/client',
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { supabase } from "@/integrations/supabase/client";
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
     const { error } = await supabase
-      .from('analytics_events')
+      .from("analytics_events")
+      .select("id")
+      .limit(1);
 
-
-      .select('id')
-
-
-    if (error && error.code === 'PGRST204') {
-      console && console.log('Creating analytics tables...');
-      await createAnalyticsTables()
-
-
-
-=======
-import { supabase } from '@/integrations/supabase/client',;
-export async function ensureAnalyticsTablesExist() {;
-  try {;
-    // Check if analytics_events table exists;
-    const { error } = await supabase;
-      .from('analytics_events');
-      .select('id');
-      .limit(1),;
-    if (error && error.code === 'PGRST204') {;
-      // // // console.log('Creating analytics tables...'),;
+    if (error && error.code === "PGRST204") {
+      console.log("Creating analytics tables...");
       await createAnalyticsTables();
     }
-  } catch (error) {;
-    console.warn('Error checking if analytics tables exist:', error),;
-    // No need to create tables here, as this could be a connection error;
-
-
-
+  } catch (error) {
+    console.warn("Error checking if analytics tables exist:", error);
+    // No need to create tables here, as this could be a connection error
   }
 }
 
@@ -52,7 +22,7 @@ export async function ensureAnalyticsTablesExist() {;
 async function createAnalyticsTables() {
   try {
     // Create analytics_events table
-    await supabase && supabase.rpc('exec', {
+    await supabase.rpc("exec", {
       sql: `
         CREATE TABLE IF NOT EXISTS public && public.analytics_events (
           id UUID PRIMARY KEY DEFAULT uuid_generate_v4();
@@ -256,14 +226,13 @@ function createAnalyticsTables() {
           ROUND((c.conversion_count::numeric / NULLIF(p.view_count, 0)) * 100, 2) AS conversion_rate
         FROM conversions c
         LEFT JOIN page_views p ON c.date = p.date
-        ORDER BY c.date DESC,
-      `
+        ORDER BY c.date DESC;
+      `,
+    });
 
-    }),
-    
-    // // // console.log('Analytics tables created successfully')
+    console.log("Analytics tables created successfully");
   } catch (error) {
-    console.error('Error creating analytics tables:', error),
+    console.error("Error creating analytics tables:", error);
     // Tables creation failed, but we can still continue
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

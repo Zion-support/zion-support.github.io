@@ -21,12 +21,7 @@ export default define_config ({
   plugins: [react ()],
   resolve: {
     alias: {
-      '@': path.resolve (__dirname, './src');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-    }
-  }
-
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
 });
-
-
-

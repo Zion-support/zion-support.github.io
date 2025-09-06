@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Pricing: React.FC = () => {
   return (
@@ -84,56 +84,5 @@ const Pricing: React.FC = () => {
     </div>
   );
 };
-
-function PricingCard({
-  name,
-  price,
-  period,
-  description,
-  features,
-  isPopular
-}: {
-  name: string;
-  price: string;
-  period: string;
-  description: string;
-  features: string[];
-  isPopular: boolean;
-}) {
-  return (
-    <div className={`border rounded-xl p-8 ${isPopular ? 'border-blue-500 bg-blue-50' : 'border-gray-200'}`}>
-      {isPopular && (
-        <div className="text-center mb-4">
-          <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-            Most Popular
-          </span>
-        </div>
-      )}
-      <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>
-      <div className="mb-4">
-        <span className="text-4xl font-bold text-gray-900">{price}</span>
-        <span className="text-gray-600">/{period}</span>
-      </div>
-      <p className="text-gray-600 mb-6">{description}</p>
-      <ul className="space-y-3 mb-8">
-        {features.map((feature, index) => (
-          <li key={index} className="flex items-center">
-            <span className="text-green-500 mr-3">✓</span>
-            {feature}
-          </li>
-        ))}
-      </ul>
-      <button 
-        className={`w-full py-3 px-4 rounded-lg font-semibold transition-colors ${
-          isPopular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
-        }`}
-      >
-        Get Started
-      </button>
-    </div>
-  );
-}
 
 export default Pricing;

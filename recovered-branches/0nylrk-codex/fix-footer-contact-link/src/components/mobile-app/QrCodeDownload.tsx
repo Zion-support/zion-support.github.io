@@ -1,12 +1,11 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import React from "react";
+import { QrCode } from "lucide-react";
+import { AppStoreButtons } from "./AppStoreButtons";
 export const QrCodeDownload: React.FC = () => {
   // App store links - these would come from environment variables in production
   const appStoreUrl = "#"; // Replace with actual App Store URL
   const googlePlayUrl = "#"; // Replace with actual Google Play URL
+
   return (
     <section className="py-16 bg-gradient-to-b from-zion-blue to-zion-blue-dark">
       <div className="container mx-auto px-4">
@@ -23,19 +22,18 @@ export const QrCodeDownload: React.FC = () => {
                 store of choice.
               </p>
 
-
-              <AppStoreButtons 
-                className="mb-8" 
-
-
+              <AppStoreButtons
+                className="mb-8"
                 appStoreUrl={appStoreUrl}
                 googlePlayUrl={googlePlayUrl}
               />
+
               <div className="flex gap-2 items-center text-sm text-gray-400">
                 <span className="block h-1 w-1 rounded-full bg-zion-purple"></span>
                 <span>Compatible with iOS 14+ and Android 8.0+</span>
               </div>
             </div>
+
             <div className="flex-shrink-0">
               <div className="bg-white p-6 rounded-xl shadow-lg">
                 <div className="w-48 h-48 flex items-center justify-center bg-white rounded-lg">
@@ -51,12 +49,7 @@ export const QrCodeDownload: React.FC = () => {
         </div>
       </div>
     </section>
-
-import React from "react";
-import {QrCode} from "lucide-react";
-import {AppStoreButtons} from "./AppStoreButtons";
-=======
-
+  );
 };
 
 =======

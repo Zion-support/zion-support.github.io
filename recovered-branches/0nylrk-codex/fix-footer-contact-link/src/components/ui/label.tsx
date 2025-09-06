@@ -1,7 +1,6 @@
-
-
-import * as React from "react"
-import * as LabelPrimitive from "@radix-ui/react-label"
+import * as React from "react";
+import * as LabelPrimitive from "@radix-ui/react-label";
+import { cva, type, VariantProps } from "class-variance-authority";
 
 
 
@@ -9,8 +8,9 @@ import * as LabelPrimitive from "@radix-ui/react-label"
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const labelVariants = cva(
-  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70"
+  "text-sm font-medium leading-none peer-disabled: cursor-not-allowed peer-disabled:opacity-70",
 );
+
 const Label = React.forwardRef<
   React.ElementRef<typeof LabelPrimitive.Root>
 
@@ -32,8 +32,8 @@ const label_variants = cva (
     className={cn(labelVariants(), className)}
     {...props}
   />
-))
-Label.displayName = LabelPrimitive.Root.displayName
+));
+Label.displayName = LabelPrimitive.Root.displayName;
 
 export { Label };
 ;

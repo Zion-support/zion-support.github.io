@@ -1,26 +1,10 @@
-
-export type ProjectStatus = 
-
-
-  | 'offer_sent'
-  | 'offer_accepted'
-  | 'changes_requested'
-  | 'in_progress'
-  | 'completed'
-  | 'canceled';
-=======
-export type ProjectStatus =;
-  | 'offer_sent';
-  | 'offer_accepted';
-  | 'changes_requested';
-  | 'in_progress';
-  | 'completed';
-  | 'canceled';
-
-
-
-export interface Project {;
-
+export type ProjectStatus =
+  | "offer_sent"
+  | "offer_accepted"
+  | "changes_requested"
+  | "in_progress"
+  | "completed"
+  | "canceled";
 
   id: string;
   client_id: string;
@@ -28,26 +12,24 @@ export interface Project {;
   job_id: string;
   start_date: string;
   scope_summary: string;
-  payment_terms: 'hourly' | 'fixed' | 'milestone';
+  payment_terms: "hourly" | "fixed" | "milestone";
   agreement_url?: string;
   status: ProjectStatus;
   created_at: string;
   updated_at: string;
   job?: {
-
-    title: string,
+    title: string;
     description: string;
-  }
+  };
   talent_profile?: {
     full_name: string;
-    professional_title?: string,
+    professional_title?: string;
     profile_picture_url?: string;
-  }
+  };
   client_profile?: {
-    display_name: string,
+    display_name: string;
     avatar_url?: string;
-
-  }
+  };
 }
 
 
@@ -61,10 +43,7 @@ export interface ProjectNote {;
   content: string;
   created_at: string;
   created_by_profile?: {
-
-    display_name: string,
+    display_name: string;
     avatar_url?: string;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  }
+  };
 }

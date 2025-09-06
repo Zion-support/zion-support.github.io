@@ -1,8 +1,3 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
 import type { NextApiRequest, NextApiResponse } from "next",;
 import { readState, writeState } from "../../../utils/sync/storage",;
 import { Peer } from "../../../utils/sync/types",;
@@ -36,5 +31,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     state.config.peers.push({ id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false })
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+  writeState(state),
+  return res.status(200).json({ peers: state.config.peers })
+};

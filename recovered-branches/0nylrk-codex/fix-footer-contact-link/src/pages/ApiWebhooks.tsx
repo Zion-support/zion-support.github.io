@@ -1,35 +1,3 @@
-
-
-
-
-export function ApiWebhooks() {
-  // Sample webhook event payload
-
-  const newApplicationPayload = `{
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-
 import React from "react";
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
 import {CodeBlock} from "@/components/developers/CodeBlock";
@@ -382,156 +350,181 @@ app.listen(3000, () => {
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
+    <ApiDocsLayout>
+      <div className="max-w-3xl prose prose-invert">
+        <h1>Webhooks</h1>
 
-=======
+        <p>
+          Webhooks allow your application to receive real-time notifications
+          when events occur in the Zion AI Marketplace. Instead of constantly
+          polling our API for updates, webhooks push data to your server
+          whenever relevant events happen.
+        </p>
 
-;
-// Webhook endpoint with signature verification;
-app.post('/webhooks/zion', verifyWebhookSignature, (req, res) => {;
-  const { event_type, data } = req.body,;
-  // Handle different event types;
-  switch (event_type) {;
-    case 'new_application':;
-      // // // console.log('New application received:', data.application_id),;
-      // Process the new application...;
-      break,;
-    case 'talent_hired':;
-      // // // console.log('Talent hired:', data.talent_id),;
-      // Update your system...;
-      break,;
-    case 'quote_received':;
-      // // // console.log('New quote received:', data.quote_id),;
-      // Process the quote...;
-      break,;
-    case 'message_received':;
-      // // // console.log('New message received:', data.message_id),;
-      // Process the message...;
-      break,;
-    default:;
-      // // // console.log('Unknown event type:', event_type);
-  }
-;
-  // Always return a 200 response quickly;
-  res.status(200).send('Webhook received');
-}),;
-app.listen(3000, () => {;
-  // // // console.log('Webhook server listening on port 3000');
-}),`,;
-  return (;
+        <h2>Supported Events</h2>
+        <p>You can subscribe to the following webhook events:</p>
 
-    <ApiDocsLayout>;
-      <div className="max-w-3xl prose prose-invert">;
-        <h1>Webhooks</h1>;
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-zinc-800">
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">
+                  Event Type
+                </th>
+                <th className="text-left py-2 px-4 text-zinc-300 font-medium">
+                  Description
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-zinc-800">
+                <td className="py-2 px-4 text-white font-mono">
+                  new_application
+                </td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when a talent applies to one of your job postings
+                </td>
+              </tr>
+              <tr className="border-b border-zinc-800">
+                <td className="py-2 px-4 text-white font-mono">talent_hired</td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when a talent is hired for a project
+                </td>
+              </tr>
+              <tr className="border-b border-zinc-800">
+                <td className="py-2 px-4 text-white font-mono">
+                  quote_received
+                </td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when you receive a quote request
+                </td>
+              </tr>
+              <tr>
+                <td className="py-2 px-4 text-white font-mono">
+                  message_received
+                </td>
+                <td className="py-2 px-4 text-zinc-300">
+                  Triggered when you receive a new message
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
 
-        <p>;
-          Webhooks allow your application to receive real-time notifications when events occur in the Zion AI Marketplace.;
-          Instead of constantly polling our API for updates, webhooks push data to your server whenever relevant events happen.;
-        </p>;
+        <h2>Setting Up Webhooks</h2>
+        <p>
+          You can configure webhooks in the{" "}
+          <a href="/developers/portal" className="text-zion-cyan">
+            Developer Portal
+          </a>{" "}
+          under the Webhooks tab. For each webhook, you'll need to provide:
+        </p>
 
-        <h2>Supported Events</h2>;
-        <p>You can subscribe to the following webhook events:</p>;
+        <ul>
+          <li>A name for the webhook (for your reference)</li>
+          <li>The URL where you want to receive webhook events</li>
+          <li>The event types you want to subscribe to</li>
+        </ul>
 
-        <div className="overflow-x-auto mb-6">;
-          <table className="w-full border-collapse">;
-            <thead>;
-              <tr className="border-b border-zinc-800">;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Event Type</th>;
-                <th className="text-left py-2 px-4 text-zinc-300 font-medium">Description</th>;
-              </tr>;
-            </thead>;
-            <tbody>;
-              <tr className="border-b border-zinc-800">;
-                <td className="py-2 px-4 text-white font-mono">new_application</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when a talent applies to one of your job postings</td>;
-              </tr>;
-              <tr className="border-b border-zinc-800">;
-                <td className="py-2 px-4 text-white font-mono">talent_hired</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when a talent is hired for a project</td>;
-              </tr>;
-              <tr className="border-b border-zinc-800">;
-                <td className="py-2 px-4 text-white font-mono">quote_received</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when you receive a quote request</td>;
-              </tr>;
-              <tr>;
-                <td className="py-2 px-4 text-white font-mono">message_received</td>;
-                <td className="py-2 px-4 text-zinc-300">Triggered when you receive a new message</td>;
-              </tr>;
-            </tbody>;
-          </table>;
-        </div>;
+        <p>
+          After creating a webhook, you'll be given a webhook secret that you
+          should use to verify that incoming requests are genuinely from Zion.
+        </p>
 
-        <h2>Setting Up Webhooks</h2>;
-        <p>;
-          You can configure webhooks in the <a href="/developers/portal" className="text-zion-cyan">Developer Portal</a> under the Webhooks tab.;
-          For each webhook, you'll need to provide:;
-        </p>;
+        <h2>Webhook Payload Format</h2>
+        <p>All webhook payloads follow a common format:</p>
 
-        <ul>;
-          <li>A name for the webhook (for your reference)</li>;
-          <li>The URL where you want to receive webhook events</li>;
-          <li>The event types you want to subscribe to</li>;
-        </ul>;
+        <Tabs defaultValue="new_application">
+          <TabsList>
+            <TabsTrigger value="new_application">New Application</TabsTrigger>
+            <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>
+            <TabsTrigger value="quote_received">Quote Received</TabsTrigger>
+            <TabsTrigger value="message_received">Message Received</TabsTrigger>
+          </TabsList>
+          <TabsContent value="new_application">
+            <CodeBlock
+              code={newApplicationPayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+          <TabsContent value="talent_hired">
+            <CodeBlock
+              code={newHirePayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+          <TabsContent value="quote_received">
+            <CodeBlock
+              code={quoteReceivedPayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+          <TabsContent value="message_received">
+            <CodeBlock
+              code={messageReceivedPayload}
+              language="json"
+              showLineNumbers={true}
+            />
+          </TabsContent>
+        </Tabs>
 
-        <p>;
-          After creating a webhook, you'll be given a webhook secret that you should use to verify that incoming requests are genuinely from Zion.;
-        </p>;
+        <h2>Verifying Webhook Signatures</h2>
+        <p>
+          To ensure webhook requests are genuinely from Zion, you should verify
+          the signature included in each request. We include two HTTP headers
+          with each webhook request:
+        </p>
 
-        <h2>Webhook Payload Format</h2>;
-        <p>All webhook payloads follow a common format:</p>;
+        <ul>
+          <li>
+            <code>X-Zion-Signature</code>: HMAC-SHA256 signature
+          </li>
+          <li>
+            <code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was
+            sent
+          </li>
+        </ul>
 
-        <Tabs defaultValue="new_application">;
-          <TabsList>;
-            <TabsTrigger value="new_application">New Application</TabsTrigger>;
-            <TabsTrigger value="talent_hired">Talent Hired</TabsTrigger>;
-            <TabsTrigger value="quote_received">Quote Received</TabsTrigger>;
-            <TabsTrigger value="message_received">Message Received</TabsTrigger>;
-          </TabsList>;
-          <TabsContent value="new_application">;
-            <CodeBlock code={newApplicationPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="talent_hired">;
-            <CodeBlock code={newHirePayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="quote_received">;
-            <CodeBlock code={quoteReceivedPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-          <TabsContent value="message_received">;
-            <CodeBlock code={messageReceivedPayload} language="json" showLineNumbers={true} />;
-          </TabsContent>;
-        </Tabs>;
+        <p>Here's an example of verifying a webhook in Node.js:</p>
 
-        <h2>Verifying Webhook Signatures</h2>;
-        <p>;
-          To ensure webhook requests are genuinely from Zion, you should verify the signature included in each request.;
-          We include two HTTP headers with each webhook request:;
-        </p>;
+        <CodeBlock
+          code={webhookHandlerJs}
+          language="javascript"
+          showLineNumbers={true}
+        />
 
-        <ul>;
-          <li><code>X-Zion-Signature</code>: HMAC-SHA256 signature</li>;
-          <li><code>X-Zion-Timestamp</code>: Unix timestamp when the webhook was sent</li>;
-        </ul>;
+        <h2>Testing Webhooks</h2>
+        <p>
+          You can test your webhook implementation using the Developer Portal.
+          From the Webhooks tab; select "Test Webhook" next to any configured
+          webhook to send a test payload to your endpoint.
+        </p>
 
-        <p>Here's an example of verifying a webhook in Node && Node.js:</p>;
-
-        <CodeBlock code={webhookHandlerJs} language="javascript" showLineNumbers={true} />;
-
-        <h2>Testing Webhooks</h2>;
-        <p>;
-          You can test your webhook implementation using the Developer Portal. From the Webhooks tab;
-          select "Test Webhook" next to any configured webhook to send a test payload to your endpoint.;
-        </p>;
-
-        <h2>Best Practices</h2>;
-        <ul>;
-          <li><strong>Respond quickly</strong>: Return a 200 response as soon as you receive the webhook, then process it asynchronously</li>;
-          <li><strong>Verify signatures</strong>: Always verify webhook signatures to ensure requests are legitimate</li>;
-          <li><strong>Implement retries</strong>: Prepare for occasional failures by implementing retry logic</li>;
-          <li><strong>Monitor webhook activity</strong>: Use the Developer Portal to view webhook delivery history and logs</li>;
-        </ul>;
-      </div>;
-    </ApiDocsLayout>;
+        <h2>Best Practices</h2>
+        <ul>
+          <li>
+            <strong>Respond quickly</strong>: Return a 200 response as soon as
+            you receive the webhook, then process it asynchronously
+          </li>
+          <li>
+            <strong>Verify signatures</strong>: Always verify webhook signatures
+            to ensure requests are legitimate
+          </li>
+          <li>
+            <strong>Implement retries</strong>: Prepare for occasional failures
+            by implementing retry logic
+          </li>
+          <li>
+            <strong>Monitor webhook activity</strong>: Use the Developer Portal
+            to view webhook delivery history and logs
+          </li>
+        </ul>
+      </div>
+    </ApiDocsLayout>
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;

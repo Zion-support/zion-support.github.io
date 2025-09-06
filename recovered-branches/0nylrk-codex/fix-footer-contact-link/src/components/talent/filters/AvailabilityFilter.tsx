@@ -1,29 +1,19 @@
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+import { ChevronDown, ChevronUp } from "lucide-react";
+import { Checkbox } from "@/components/ui/checkbox";
+import { AvailabilityFilterProps } from "@/types/filters";
 const AVAILABILITY_OPTIONS = [
-  { id: "full_time", label: "Full-time" }
-  { id: "part_time", label: "Part-time" }
-=======
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {AvailabilityFilterProps} from "@/types/filters";
-const AVAILABILITY_OPTIONS = [;
-  { id: "full_time", label: "Full-time" },;
-  { id: "part_time", label: "Part-time" },;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  { id: "project", label: "Project-based" }
+  { id: "full_time", label: "Full-time" },
+  { id: "part_time", label: "Part-time" },
+  { id: "project", label: "Project-based" },
+];
 
-export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailability, expanded, toggleSection, isMobileFilterOpen }: AvailabilityFilterProps) {;
-
-  return (
-=======
-
-],
-
-
+export function AvailabilityFilter({
+  selectedAvailability,
+  toggleAvailability,
+  expanded,
+  toggleSection,
+  isMobileFilterOpen,
+}: AvailabilityFilterProps) {
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
       <button
@@ -37,6 +27,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
       </button>
+
       {expanded && (
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map((option) => (
@@ -106,9 +97,7 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
   );
 =======
     </div>
-
-  )
-
+  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

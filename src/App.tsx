@@ -1,29 +1,4 @@
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Button from './components/Button'
-import Card from './components/Card'
-import ServiceCard from './components/ServiceCard'
-import { Header } from './components/Header'
-import Footer from './components/Footer'
-import About from './pages/About'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
-import Pricing from './pages/Pricing'
-
-const Home = () => (
-  <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center mb-12">
-        <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
-          Zion Tech Group
-        </h1>
-        <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
-          Leading AI & Technology Solutions for a Smarter Future
-        </p>
-        <Button variant="primary" size="large" onClick={() => alert('Learn More!')}>
-          Explore Our Services
-        </Button>
-      </div>
+import React from 'react';
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <ServiceCard
@@ -55,27 +30,5 @@ const Home = () => (
         </div>
       </div>
     </div>
-  </div>
-)
-
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header onMenuClick={() => {}} />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/pricing" element={<Pricing />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  )
+  );
 }
-
-export default App;

@@ -4,17 +4,18 @@ interface IntegrationState {
   overrides: any[];
 }
 let state: IntegrationState = {
-
-
+  connections: [],
+  logs: [],
+  overrides: [],
 };
 
 export function getState(): IntegrationState {;
   return { ...state };
 }
 
-export function writeState(updater: (state: IntegrationState) => void): IntegrationState {;
-
-
+export function writeState(
+  updater: (state: IntegrationState) => void,
+): IntegrationState {
   updater(state);
   return { ...state }
 }
@@ -37,16 +38,6 @@ export function reset_state (): void {
   state = {
     connections: [],
     logs: [],
-    overrides: [];
-  }
-}
-
-=======
-
-    connections: [],
-    logs: [],
-    overrides: [];
+    overrides: [],
   };
-
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
