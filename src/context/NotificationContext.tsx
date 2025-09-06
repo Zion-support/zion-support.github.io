@@ -1,157 +1,141 @@
-import React, { createContext, useContext, useState, useCallback } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { CheckCircle, XCircle, AlertCircle, Info, X } from 'lucide-react';
-
-export type NotificationType = 'success' | 'error' | 'warning' | 'info';
+import React, { createContext, useContext, useState, useCallback } from 'react'
 
 export interface Notification {
-  id: string;
-  type: NotificationType;
-  title: string;
-  message?: string;
-  duration?: number;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
+  id: string
+  type: 'success' | 'error' | 'warning' | 'info'
+  title: string
+  message?: string
+  duration?: number
 }
 
 interface NotificationContextType {
-  notifications: Notification[];
-  addNotification: (notification: Omit<Notification, 'id'>) => void;
-  removeNotification: (id: string) => void;
-  clearAllNotifications: () => void;
+  notifications: Notification[]
+  addNotification: (notification: Omit<Notification, 'id'>) => void
+  removeNotification: (id: string) => void
+  clearNotifications: () => void
 }
 
-const NotificationContext = createContext<NotificationContextType | undefined>(undefined);
+const NotificationContext = createContext<NotificationContextType | undefined>(undefined)
 
 export const useNotifications = () => {
-  const context = useContext(NotificationContext);
+  const context = useContext(NotificationContext)
   if (context === undefined) {
-    throw new Error('useNotifications must be used within a NotificationProvider');
+    throw new Error('useNotifications must be used within a NotificationProvider')
   }
-  return context;
-};
+  return context
+}
 
 interface NotificationProviderProps {
-  children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
-  const [notifications, setNotifications] = useState<Notification[]>([]);
+  const [notifications, setNotifications] = useState<Notification[]>([])
 
   const addNotification = useCallback((notification: Omit<Notification, 'id'>) => {
-    const id = Math.random().toString(36).substr(2, 9);
+    const id = Math.random().toString(36).substr(2, 9)
     const newNotification: Notification = {
-      id,
-      duration: 5000,
       ...notification,
-    };
+      id,
+      duration: notification.duration || 5000
+    }
 
-    setNotifications(prev => [...prev, newNotification]);
+    setNotifications(prev => [...prev, newNotification])
 
-    // Auto remove notification after duration
     if (newNotification.duration && newNotification.duration > 0) {
       setTimeout(() => {
-        removeNotification(id);
-      }, newNotification.duration);
+        removeNotification(id)
+      }, newNotification.duration)
     }
-  }, []);
+  }, [])
 
   const removeNotification = useCallback((id: string) => {
-    setNotifications(prev => prev.filter(notification => notification.id !== id));
-  }, []);
+    setNotifications(prev => prev.filter(notification => notification.id !== id))
+  }, [])
 
-  const clearAllNotifications = useCallback(() => {
-    setNotifications([]);
-  }, []);
+  const clearNotifications = useCallback(() => {
+    setNotifications([])
+  }, [])
 
-  const getIcon = (type: NotificationType) => {
-    switch (type) {
-      case 'success':
-        return <CheckCircle className="w-5 h-5 text-green-400" />;
-      case 'error':
-        return <XCircle className="w-5 h-5 text-red-400" />;
-      case 'warning':
-        return <AlertCircle className="w-5 h-5 text-yellow-400" />;
-      case 'info':
-        return <Info className="w-5 h-5 text-blue-400" />;
-      default:
-        return <Info className="w-5 h-5 text-blue-400" />;
-    }
-  };
-
-  const getBgColor = (type: NotificationType) => {
-    switch (type) {
-      case 'success':
-        return 'bg-green-900/50 border-green-500/20';
-      case 'error':
-        return 'bg-red-900/50 border-red-500/20';
-      case 'warning':
-        return 'bg-yellow-900/50 border-yellow-500/20';
-      case 'info':
-        return 'bg-blue-900/50 border-blue-500/20';
-      default:
-        return 'bg-blue-900/50 border-blue-500/20';
-    }
-  };
+  const value = {
+    notifications,
+    addNotification,
+    removeNotification,
+    clearNotifications
+  }
 
   return (
-    <NotificationContext.Provider
-      value={{
-        notifications,
-        addNotification,
-        removeNotification,
-        clearAllNotifications,
-      }}
-    >
+    <NotificationContext.Provider value={value}>
       {children}
-      
-      {/* Notification Container */}
-      <div className="fixed top-4 right-4 z-50 space-y-2">
-        <AnimatePresence>
-          {notifications.map((notification) => (
-            <motion.div
-              key={notification.id}
-              initial={{ opacity: 0, x: 300, scale: 0.8 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              exit={{ opacity: 0, x: 300, scale: 0.8 }}
-              transition={{ duration: 0.3, ease: "easeInOut" }}
-              className={`max-w-sm w-full ${getBgColor(notification.type)} backdrop-blur-sm rounded-lg border p-4 shadow-lg`}
-            >
-              <div className="flex items-start">
-                <div className="flex-shrink-0 mr-3">
-                  {getIcon(notification.type)}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <h4 className="text-sm font-semibold text-white">
-                    {notification.title}
-                  </h4>
-                  {notification.message && (
-                    <p className="mt-1 text-sm text-gray-300">
-                      {notification.message}
-                    </p>
-                  )}
-                  {notification.action && (
-                    <button
-                      onClick={notification.action.onClick}
-                      className="mt-2 text-sm text-cyan-400 hover:text-cyan-300 font-medium"
-                    >
-                      {notification.action.label}
-                    </button>
-                  )}
-                </div>
+      <NotificationContainer />
+    </NotificationContext.Provider>
+  )
+}
+
+const NotificationContainer: React.FC = () => {
+  const { notifications, removeNotification } = useNotifications()
+
+  return (
+    <div className="fixed top-4 right-4 z-50 space-y-2">
+      {notifications.map(notification => (
+        <div
+          key={notification.id}
+          className={`max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden ${
+            notification.type === 'success' ? 'border-l-4 border-green-400' :
+            notification.type === 'error' ? 'border-l-4 border-red-400' :
+            notification.type === 'warning' ? 'border-l-4 border-yellow-400' :
+            'border-l-4 border-blue-400'
+          }`}
+        >
+          <div className="p-4">
+            <div className="flex items-start">
+              <div className="flex-shrink-0">
+                {notification.type === 'success' && (
+                  <svg className="h-6 w-6 text-green-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                )}
+                {notification.type === 'error' && (
+                  <svg className="h-6 w-6 text-red-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                )}
+                {notification.type === 'warning' && (
+                  <svg className="h-6 w-6 text-yellow-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L3.732 16.5c-.77.833.192 2.5 1.732 2.5z" />
+                  </svg>
+                )}
+                {notification.type === 'info' && (
+                  <svg className="h-6 w-6 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                )}
+              </div>
+              <div className="ml-3 w-0 flex-1 pt-0.5">
+                <p className="text-sm font-medium text-gray-900">
+                  {notification.title}
+                </p>
+                {notification.message && (
+                  <p className="mt-1 text-sm text-gray-500">
+                    {notification.message}
+                  </p>
+                )}
+              </div>
+              <div className="ml-4 flex-shrink-0 flex">
                 <button
+                  className="bg-white rounded-md inline-flex text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                   onClick={() => removeNotification(notification.id)}
-                  className="flex-shrink-0 ml-2 text-gray-400 hover:text-white transition-colors"
                 >
-                  <X className="w-4 h-4" />
+                  <span className="sr-only">Close</span>
+                  <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clipRule="evenodd" />
+                  </svg>
                 </button>
               </div>
-            </motion.div>
-          ))}
-        </AnimatePresence>
-      </div>
-    </NotificationContext.Provider>
-  );
-};
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  )
+}

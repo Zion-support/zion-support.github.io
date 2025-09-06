@@ -1,38 +1,26 @@
-import React from 'react'';
-import { Outlet } from 'react-router-dom'';
-import { Footer } from '@/components/Footer';
+import React from 'react'
+import AppHeader from './AppHeader'
 
 interface AppLayoutProps {
-	children?: React.ReactNode
-	hideFooter?: boolean
+  children: React.ReactNode
 }
 
-export function AppLayout({ children, hideFooter = false }: AppLayoutProps) {
-	return (
-		<div className="flex flex-col min-h-screen bg-background">
-			<main className="flex-grow">
-				{children ?? <Outlet />}
-			</main>
-			{!hideFooter && <Footer />}
-		</div>
-	)
-}
-import React from "react";
-
-import React from "react";
-interface AppLayoutProps {
-  children?: React.ReactNode;
-  hideFooter?: boolean;
-}
-export function AppLayout({ children }: AppLayoutProps) {
+const AppLayout: React.FC<AppLayoutProps> = ({ children }) => {
   return (
-    <div className="flex flex-col min-h-screen">
-      <main id="main-content" className="flex-grow">
+    <div className="min-h-screen bg-gray-50">
+      <AppHeader />
+      <main className="flex-1">
         {children}
       </main>
+      <footer className="bg-gray-900 text-white py-8">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <p>&copy; 2024 Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
     </div>
-  );
+  )
 }
-		</div>;
-	);
-}'"
+
+export default AppLayout
