@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI-Powered Project Management Platform | Zion Tech Group',
@@ -40,7 +39,7 @@ export default function AIProjectManagementPage() {
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold text-gray-900 mb-4">Intelligent Project Management</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Our AI-powered platform learns from your team's patterns to optimize workflows and predict project outcomes.
+            Our AI-powered platform learns from your team&apos;s patterns to optimize workflows and predict project outcomes.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

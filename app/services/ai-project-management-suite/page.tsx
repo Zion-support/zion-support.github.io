@@ -1,5 +1,4 @@
 import React from 'react';
-import Link from 'next/link';
 
 export const metadata = {
   title: 'AI Project Management Suite | Zion Tech Group',
@@ -215,7 +214,7 @@ export default function AIProjectManagementSuitePage() {
               2
             </div>
             <h3 className="text-lg font-semibold text-gray-900 mb-3">AI Learning</h3>
-            <p className="text-gray-600">AI analyzes your team's work patterns and project history to optimize recommendations</p>
+            <p className="text-gray-600">AI analyzes your team&apos;s work patterns and project history to optimize recommendations</p>
           </div>
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
