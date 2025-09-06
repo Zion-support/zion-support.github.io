@@ -6,6 +6,6 @@ const EnhancedAbout.js = ({ className }) => {
       <h1>EnhancedAbout.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

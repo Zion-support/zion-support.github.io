@@ -481,10 +481,7 @@ if ( {) {
 
                   top: `${(i * 3) % 100}%`,
 
-
-
                   left: `${(i * 5) % 100}%`,
-
 
                 }}
                   left: `${(i * 5) % 100}%`
@@ -548,7 +545,6 @@ if ( {) {
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (
               <motion.div
 
-
                   left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`,            {[...Array(8)].map((_, i) => (;
               <motion&& motion.div
@@ -556,7 +552,7 @@ if ( {) {
                   top: `${(i * 8) % 100}%`,            {[...Array (8)].map ((_, i) => (
               <motion.div;
                 key={i}
-                className="absolute w - 96 h - 96 border border - pink - 500 / 20 rounded - full";
+                className="absolute w - 96 h - 96 border border - pink-500 / 20 rounded-full";
                 style={{
                   left: `${(i * 12) % 100}%`
                   top: `${(i * 8) % 100}%`}}
@@ -568,12 +564,7 @@ if ( {) {
 
                   ease: "easeInOut"
 
-
                   left: `${(i * 12) % 100}%`,
-
-
-
-
 
                 }}
                 animate={{
@@ -602,9 +593,7 @@ if ( {) {
 
       {children}
     </div>;
-  );
-
-
+  )
 };
 // Enhanced animation loop with consciousness and quantum effects ;
 

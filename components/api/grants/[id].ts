@@ -19,7 +19,6 @@ function grantPath(id: string) {
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
-
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -34,7 +33,6 @@ function writeGrant(record: GrantApplication) {
   if (!id) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
-
 
   if (!id) {
     res.status(400).json({ error: 'Missing id' });

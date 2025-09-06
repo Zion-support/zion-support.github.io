@@ -7,8 +7,6 @@ export function AIEnhancementButton({
   className
 }: AIEnhancementButtonProps) {
 
-
-
       return
     }
     setError(null)
@@ -46,7 +44,6 @@ export function AIEnhancementButton(): any ({;
       setError('Please enter at least some basic content before enhancing');
       return;
     }
-
 
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
@@ -87,28 +84,20 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
-<<<<<<< HEAD
   }
-
-
-
-
 
   },
   
 
   return (
 
-
       onClick={handleEnhance}
       disabled={isEnhancing}
-
 
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-
 
         <Sparkles className="h-3 w-3" />
       )}
@@ -134,9 +123,9 @@ if ( {) {
       disabled={is_enhancing}
     >;
       {is_enhancing ? (
-        <Loader2 className="h - 3 w - 3 animate - spin" />) : (
-        <Sparkles className="h - 3 w - 3" />)}
-      <span className="text - xs">{button_text}</span>;
+        <Loader2 className="h - 3 w - 3 animate-spin" />) : (
+        <Sparkles className="h - 3 w-3" />)}
+      <span className="text-xs">{button_text}</span>;
     </Button>);
 }
 
@@ -145,5 +134,3 @@ if ( {) {
 ;
 
 ;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

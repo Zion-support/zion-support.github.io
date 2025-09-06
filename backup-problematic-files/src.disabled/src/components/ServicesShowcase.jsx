@@ -6,6 +6,6 @@ const ServicesShowcase = ({ className }) => {
       <h1>ServicesShowcase</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

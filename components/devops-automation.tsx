@@ -29,8 +29,8 @@ export default function DevOpsAutomationPage() {
   const features = [
     {
       icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines'
-      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',;
-      description: 'Automated build, test, and deployment workflows';
+      icon: <GitBranch className='w-6 h-6' />,      title: 'CI/CD Pipelines',,
+  description: 'Automated build, test, and deployment workflows';
 
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600'
     }
@@ -85,10 +85,10 @@ export default function DevOpsAutomationPage() {;
     {;
       icon: <GitBranch className='w-6 h-6' />,import { GitBranch, Zap, Shield, BarChart3, Check, Star, GitPullRequest, Cpu } from 'lucide-react';
     {
-      icon: <Zap className="w - 6 h - 6" />,
+      icon: <Zap className="w-6 h-6" />,
       title: 'Infrastructure as Code',
     {
-      icon: <Shield className="w - 6 h - 6" />,
+      icon: <Shield className="w-6 h-6" />,
       title: 'Security Automation',
       description: 'Automated security scanning and compliance checks',
   ];
@@ -275,9 +275,7 @@ export default function DevOpsAutomationPage() {;
           </div>;
         </section>;
 
-
         {/* Automation Examples Section */}
-
 
         {/* Automation Examples Section */}
         <section className='py-24 bg-gray-800'>
@@ -326,16 +324,16 @@ export default function DevOpsAutomationPage() {;
                   </h3>;
                   <p className='text - gray - 400'>{example.description}</p>                </Card>                What You Can Automate;
               </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+              <p className="text - xl text - gray - 400 max-w-3xl mx-auto">;
                 See how Zion DevOps can transform your development workflow.;
               </p>;
             </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 4 gap - 8">;
+            <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-4 gap-8">;
               {automation_examples.map ((example, index) => (
                 <Card;
 
                   key={index}
-                  className="text - center group hover:scale - 105 transition - transform duration - 300";
+                  className="text - center group hover:scale - 105 transition-transform duration-300";
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl flex items - center justify - center text - 3xl mx - auto mb - 6 bg - gradient - to - br ${example.color}`}>;
                     {example.icon}
@@ -408,22 +406,17 @@ export default function DevOpsAutomationPage() {;
                         <li key={featureIndex} className="flex items-center text-gray-300">;
                           <Check className="w-5 h-5 text-blue-400 mr-3 flex-shrink-0" />;
 
-
         {/* Pricing Section */}
         <section id="pricing" className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
               <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
 
-
-
-
         {/* Pricing Section */}
         <section id='pricing' className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
 
                 Simple, Transparent Pricing
               </h2>
@@ -474,8 +467,6 @@ export default function DevOpsAutomationPage() {;
 
                           {feature}
 
-
-
                         </li>
                           {feature}
                         </li>;
@@ -495,8 +486,8 @@ export default function DevOpsAutomationPage() {;
                     <div className='absolute -top - 4 left - 1/2 transform -translate - x-1 / 2'>;
                       <span className='bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium'>                        Most Popular;
                       </span>;
-                    </div>)}                    <div className="absolute -top - 4 left - 1/2 transform -translate - x-1 / 2">;
-                      <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text - sm font - medium">;
+                    </div>)}                    <div className="absolute -top - 4 left-1/2 transform -translate-x-1 / 2">;
+                      <span className="bg - blue - 500 text - white px - 4 py - 2 rounded - full text-sm font-medium">;
                         Most Popular;
                       </span>;
                     </div>)}
@@ -518,11 +509,11 @@ export default function DevOpsAutomationPage() {;
                           className='flex items - center text - gray - 300';
                         >;
                           <Check className='w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0' />                          {feature}                    </div>;
-                    <p className="text - gray - 300 mb - 8">{plan.description}</p>;
-                    <ul className="text - left space - y-3 mb - 8">;
+                    <p className="text - gray-300 mb-8">{plan.description}</p>;
+                    <ul className="text - left space-y-3 mb-8">;
                       {plan.features.map ((feature, feature_index) => (
-                        <li key={feature_index} className="flex items - center text - gray - 300">;
-                          <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex - shrink - 0" />;
+                        <li key={feature_index} className="flex items - center text-gray-300">;
+                          <Check className="w - 5 h - 5 text - blue - 400 mr - 3 flex-shrink-0" />;
                           {feature}
                         </li>))}
                     </ul>;
@@ -557,16 +548,11 @@ export default function DevOpsAutomationPage() {;
           </div>
         </section>
 
-
-
-
-
         {/* Market Comparison Section */}
         <section className='py-24 bg-gray-800'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
               <h2 className='text-3xl sm:text-4xl font-bold text-white mb-8'>
-
 
         {/* Market Comparison Section */}
         <section className="py-24 bg-gray-800">
@@ -670,9 +656,7 @@ export default function DevOpsAutomationPage() {;
           </div>;
         </section>;
 
-
         {/* Testimonials Section */}
-
 
         {/* Testimonials Section */}
         <section className='py-24 bg-gray-900'>
@@ -723,7 +707,6 @@ export default function DevOpsAutomationPage() {;
             </div>
           </div>
         </section>
-
 
                 </Card>
               ))}
@@ -803,10 +786,10 @@ export default function DevOpsAutomationPage() {;
                     <h3 className='text - xl font - bold text - white mb - 2'>;
                       {competitor.competitor}
                     </h3>;
-                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p - 6">;
-                  <div className="text - center mb - 6">;
-                    <h3 className="text - xl font - bold text - white mb - 2">{competitor.competitor}</h3>;
-                    <div className="flex items - center justify - center mb - 2">;
+                    <div className='flex items - center justify - center mb - 2'>                      {[...Array (5)].map ((_, i) => (                <Card key={index} className="p-6">;
+                  <div className="text-center mb-6">;
+                    <h3 className="text - xl font - bold text-white mb-2">{competitor.competitor}</h3>;
+                    <div className="flex items - center justify-center mb-2">;
                         <Star;
                           key={i}
                           className={`w - 5 h - 5 ${
@@ -835,17 +818,17 @@ export default function DevOpsAutomationPage() {;
                         {competitor.pros.map ((pro, pro_index) => (
                           <li key={pro_index} className='flex items - center'>;
                             <Check className='w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0' />                            {pro}                  </div>;
-                  <div className="mb - 4">;
-                    <p className="text - lg font - semibold text - white mb - 1">Pricing: {competitor.pricing}</p>;
-                    <p className="text - sm text - gray - 400">Repositories: {competitor.repositories}</p>;
+                  <div className="mb-4">;
+                    <p className="text - lg font - semibold text-white mb-1">Pricing: {competitor.pricing}</p>;
+                    <p className="text - sm text-gray-400">Repositories: {competitor.repositories}</p>;
                   </div>;
-                  <div className="space - y-2">;
+                  <div className="space-y-2">;
                     <div>;
-                      <p className="text - sm font - medium text - green - 400 mb - 1">Pros:</p>;
-                      <ul className="text - sm text - gray - 300 space - y-1">;
+                      <p className="text - sm font - medium text - green-400 mb-1">Pros:</p>;
+                      <ul className="text - sm text - gray-300 space-y-1">;
                         {competitor.pros.map ((pro, pro_index) => (
-                          <li key={pro_index} className="flex items - center">;
-                            <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex - shrink - 0" />;
+                          <li key={pro_index} className="flex items-center">;
+                            <Check className="w - 4 h - 4 text - green - 400 mr - 2 flex-shrink-0" />;
                             {pro}
                           </li>))}
                       </ul>;
@@ -859,11 +842,11 @@ export default function DevOpsAutomationPage() {;
                           <li key={con_index} className='flex items - center'>;
                             <span className='w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0'>;
                               ×;
-                            </span>                            {con}                      <p className="text - sm font - medium text - red - 400 mb - 1">Cons:</p>;
-                      <ul className="text - sm text - gray - 300 space - y-1">;
+                            </span>                            {con}                      <p className="text - sm font - medium text - red-400 mb-1">Cons:</p>;
+                      <ul className="text - sm text - gray-300 space-y-1">;
                         {competitor.cons.map ((con, con_index) => (
-                          <li key={con_index} className="flex items - center">;
-                            <span className="w - 4 h - 4 text - red - 400 mr - 2 flex - shrink - 0">×</span>;
+                          <li key={con_index} className="flex items-center">;
+                            <span className="w - 4 h - 4 text - red - 400 mr - 2 flex-shrink-0">×</span>;
                           </li>))}
                       </ul>;
                     </div>;
@@ -903,18 +886,18 @@ export default function DevOpsAutomationPage() {;
                     </p>                  </div>                Trusted by DevOps Teams Worldwide;
               </h2>;
             </div>;
-            <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+            <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
               {testimonials.map ((testimonial, index) => (
-                <Card key={index} className="p - 6">;
-                  <div className="flex items - center mb - 4">;
+                <Card key={index} className="p-6">;
+                  <div className="flex items-center mb-4">;
                     {[...Array (testimonial.rating)].map ((_, i) => (
-                      <Star key={i} className="w - 5 h - 5 text - yellow - 400 fill - current" />))}
+                      <Star key={i} className="w - 5 h - 5 text - yellow-400 fill-current" />))}
                   </div>;
-                  <p className="text - gray - 300 mb - 6 italic">"{testimonial.content}"</p>;
+                  <p className="text - gray-300 mb-6 italic">"{testimonial.content}"</p>;
                   <div>;
-                    <p className="font - semibold text - white">{testimonial.name}</p>;
-                    <p className="text - sm text - gray - 400">{testimonial.role}</p>;
-                    <p className="text - sm text - blue - 400">{testimonial.company}</p>;
+                    <p className="font-semibold text-white">{testimonial.name}</p>;
+                    <p className="text - sm text-gray-400">{testimonial.role}</p>;
+                    <p className="text - sm text-blue-400">{testimonial.company}</p>;
                   </div>;
                 </Card>))}
             </div>;
@@ -944,7 +927,7 @@ export default function DevOpsAutomationPage() {;
                 className='border - white text - white hover:bg - white hover:text - blue - 600'              >                href="#signup";
                 variant="secondary";
                 size="lg";
-                className="bg - white text - blue - 600 hover:bg - gray - 100";
+                className="bg - white text - blue - 600 hover:bg-gray-100";
                 Start Free Trial;
               </Button>;
               <Button;
@@ -954,7 +937,7 @@ export default function DevOpsAutomationPage() {;
                 className='border - white text - white hover:bg - white hover:text - blue - 600'                href="/contact";
                 variant="outline";
                 size="lg";
-                className="border - white text - white hover:bg - white hover:text - blue - 600";
+                className="border - white text - white hover:bg - white hover:text-blue-600";
                 Contact Sales;
               </Button>;
             </div>;

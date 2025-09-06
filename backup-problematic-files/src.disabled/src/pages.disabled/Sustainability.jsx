@@ -6,6 +6,6 @@ const Sustainability = ({ className }) => {
       <h1>Sustainability</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

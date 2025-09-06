@@ -15,7 +15,6 @@ export default function UnderDisputeBadge(): any ({;
   projectId,;
 }: {;
 
-
   projectId,
 }: {;
   projectId: string;
@@ -79,6 +78,6 @@ if (return null) {
   $2
 }
   return (
-    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow - 300 text - xs">;
+    <span className="inline - flex items - center gap - 1 px - 2 py - 1 rounded bg - yellow - 100 text - yellow - 800 border border - yellow-300 text-xs">;
       Under Dispute;
     </span>);

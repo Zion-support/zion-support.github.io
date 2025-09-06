@@ -6,6 +6,6 @@ const AdminDashboard = ({ className }) => {
       <h1>AdminDashboard</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

@@ -28,8 +28,6 @@ import {
   Code
   Database
 
-
-
   Zap;
   Shield,
   BarChart3,
@@ -51,9 +49,6 @@ import {
       ]
       cons: ['Limited reporting', 'No time tracking', 'Smaller ecosystem']
     }
-
-
-
 
         'Lightning fast',
         'Beautiful design',
@@ -194,9 +189,6 @@ import {
                       {service.description}
                     </p>
 
-
-
-
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-gray-300 mb-2'>
                         Key Features:
@@ -331,9 +323,9 @@ import {
                         <div className='text - sm text - gray - 300 max - w-xs'>;
                           {service.use_case}
                         </div>                      </div>;
-                      <div className="text - right">;
-                        <div className="text - xs text - gray - 500 mb - 1">Use Case:</div>;
-                        <div className="text - sm text - gray - 300 max - w-xs">{service.use_case}</div>;
+                      <div className="text-right">;
+                        <div className="text - xs text - gray-500 mb-1">Use Case:</div>;
+                        <div className="text - sm text - gray-300 max-w-xs">{service.use_case}</div>;
                     </div>;
                   </div>;
                 </div>;
@@ -352,10 +344,6 @@ import {
             your business needs. Get personalized recommendations and;
             implementation support.;
           </p>;
-
-
-
-
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden'>

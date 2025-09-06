@@ -12,4 +12,3 @@ export default function Iotedge(): any ({ }: IotedgeProps) {;
     </div>;
   );
 
-

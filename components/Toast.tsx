@@ -8,8 +8,8 @@ interface Toast {
   duration?: number;
   action?: {
     label: string;
-    onClick: () => void;
-  };
+    onClick: () => void
+};
 }
 
 interface ToastContextType {
@@ -26,7 +26,7 @@ export const useToast = () => {
   if (!context) {
     throw new Error('useToast must be used within a ToastProvider');
   }
-  return context;
+  return context
 };
 
 interface ToastProviderProps {
@@ -76,7 +76,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </ToastContext.Provider>
-  );
+  )
 };
 
 interface ToastContainerProps {
@@ -91,7 +91,7 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => 
         <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
       ))}
     </div>
-  );
+  )
 };
 
 interface ToastItemProps {
@@ -111,8 +111,8 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
 
   const handleRemove = () => {
     setIsLeaving(true);
-    setTimeout(() => onRemove(toast.id), 300);
-  };
+    setTimeout(() => onRemove(toast.id), 300)
+};
 
   const getToastStyles = () => {
     const baseStyles = "max-w-sm w-full bg-white shadow-lg rounded-lg pointer-events-auto ring-1 ring-black ring-opacity-5 overflow-hidden transform transition-all duration-300 ease-in-out";
@@ -125,8 +125,8 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
       return `${baseStyles} translate-x-0 opacity-100`;
     }
     
-    return `${baseStyles} translate-x-full opacity-0`;
-  };
+    return `${baseStyles} translate-x-full opacity-0`
+};
 
   const getIconAndColor = () => {
     switch (toast.type) {
@@ -209,7 +209,7 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
         </div>
       </div>
     </div>
-  );
+  )
 };
 
 // Convenience hooks for different toast types
@@ -225,5 +225,5 @@ export const useToastNotifications = () => {
       addToast({ type: 'warning', title, message, ...options }),
     info: (title: string, message?: string, options?: Partial<Toast>) => 
       addToast({ type: 'info', title, message, ...options }),
-  };
+  }
 };

@@ -6,6 +6,6 @@ const MobileFeatureShowcase = ({ className }) => {
       <h1>MobileFeatureShowcase</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

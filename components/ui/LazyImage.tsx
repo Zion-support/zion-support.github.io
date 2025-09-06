@@ -56,8 +56,8 @@ import React from 'react';
         }
       }
       { threshold }
-    );
-  };
+    )
+};
 
   return (
     <div className={`relative overflow-hidden ${className}`}>;
@@ -88,8 +88,6 @@ if ( {) {
         style={{ width, height }}
       />
 
-
-
       />
       
       {/* Actual Image */}
@@ -115,7 +113,7 @@ export default LazyImage;
     </div>);
 }
 ;
-export default LazyImage;          className="w - full h - full object - cover";
+export default LazyImage;          className="w - full h-full object-cover";
           loading="lazy";
           style={{ width, height }}
         />)}

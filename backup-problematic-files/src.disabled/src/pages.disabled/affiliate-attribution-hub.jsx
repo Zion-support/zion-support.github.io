@@ -6,6 +6,6 @@ const Affiliate-attribution-hub = ({ className }) => {
       <h1>Affiliate-attribution-hub</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

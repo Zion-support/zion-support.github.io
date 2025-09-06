@@ -1,6 +1,4 @@
 import { MetadataRoute } from 'next';
-<<<<<<< HEAD
-=======
 
 export default function sitemap(): MetadataRoute.Sitemap {;
   const baseUrl = 'https: //ziontechgroup.com';
@@ -21,7 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
     '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
@@ -30,22 +27,6 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
-<<<<<<< HEAD
-=======
-
-    ...routes,;
-    ...aiServices,;
-    ...quantumServices,;
-    ...networkServices,;
-    ...complianceServices];
-  return allRoutes.map((route) => ({;
-    url: `${baseUrl}${route}`,;
-
-    lastModified: new Date();
-    changeFrequency: 'weekly';
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export default function sitemap (): MetadataRoute.Sitemap {
   const base_url = 'https: //ziontechgroup.com';
   const routes = [;
     '',
@@ -80,8 +61,6 @@ export default function sitemap (): MetadataRoute.Sitemap {
     url: `${base_url}${route}`,
     last_modified: new Date ();
     change_frequency: 'weekly';
-=======
-<<<<<<< HEAD
 export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https: //ziontechgroup.com';
   const routes = [;
     '';
@@ -98,28 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {const baseUrl = 'https
     '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation';
     '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation';
     '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant';
-    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';
-=======
-export default function sitemap(): MetadataRoute.Sitemap {;
-  const baseUrl = 'https: //ziontechgroup.com';
-  const routes = [;
-    '',;
-    '/about/services/ai-services/quantum-services/cybersecurity/enterprise-it/research-development/space-tech',;
-    '/case-studies/news/events/webinars/white-papers/docs/contact/privacy',;
-    '/terms/cookies/accessibility/multiverse/launch/admin/instances/admin/os-deploy'];
-  const aiServices = [;
-    '/ai-autonomous-business-manager/ai-autonomous-business-operations/ai-autonomous-business-platform/ai-autonomous-business-process-automation/ai-autonomous-code-review/ai-autonomous-creative-director/ai-autonomous-data/ai-autonomous-decision-engine',;
-    '/ai-autonomous-decision-platform/ai-autonomous-devops/ai-autonomous-ecosystem-manager/ai-autonomous-ecosystem/ai-autonomous-education-professor/ai-autonomous-healthcare-physician/ai-autonomous-learning-system/ai-autonomous-legal-counsel',;
-    '/ai-autonomous-logistics/ai-autonomous-manufacturing/ai-autonomous-research-assistant/ai-autonomous-research/ai-autonomous-robotics/ai-autonomous-scientific-researcher/ai-autonomous-security/ai-autonomous-systems-platform',;
-    '/ai-autonomous-testing/ai-autonomous-vehicle-platform/ai-autonomous-vehicle/ai-autonomous-vehicles-platform/ai-autonomous-vehicles/ai-autonomous-venture-capitalist/ai-biomedical-research/ai-biotech-drug-discovery',;
-    '/ai-blockchain-analytics/ai-blockchain-governance/ai-brain-computer-interface/ai-brain-interface/ai-brand-personality-generator/ai-business-intelligence-elite-2026/ai-business-intelligence-pro/ai-business-intelligence-suite-2029',;
-    '/ai-business-intelligence-suite/ai-business-intelligence/ai-climate-prediction-engine/ai-climate-prediction-platform/ai-climate-prediction/ai-code-generation-enterprise/ai-code-review-copilot/ai-code-review',;
-    '/ai-compliance-automation/ai-computer-vision-platform/ai-consciousness-evolution-2025/ai-consciousness-evolution-2029/ai-consciousness-evolution-platform/ai-consciousness-evolution/ai-consciousness-simulation-platform/ai-consciousness-simulation',;
-    '/ai-consciousness-simulator/ai-content-creation-revolution/ai-content-creation/ai-content-factory/ai-content-generation-automation-2033/ai-content-generation-pro-2029/ai-content-generator/ai-content-marketing-automation',;
-    '/ai-content-personalization-engine/ai-creativity-studio/ai-market-research/ai-powered-enterprise-security/ai-powered-it-asset-management/ai-automation-services/advanced-ai-automation-services/ai-assistant',;
-    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub',;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
+    '/ai-agents/ai-agent-orchestrator/ai-analytics-copilot/ai-ad-creative-generator/agentic-rag-helpdesk/agentic-rag/agentic-sales-outreach/affiliate-attribution-hub';    '/advanced-research-automation/advanced-cybersecurity-suite/advanced-it-infrastructure-services/accessibility-auditor/accessibility-scanner'];
   const quantumServices = [;
     '/quantum-neural-network-platform/quantum-cloud-infrastructure/quantum-financial-trading/quantum-network-optimization/quantum-private-network-solutions/quantum-private-network-solutions-2026'];
   const networkServices = [;
@@ -127,25 +85,13 @@ export default function sitemap(): MetadataRoute.Sitemap {;
   const complianceServices = [;
     '/soc2-compliance-automation'];
   const allRoutes = [;
-<<<<<<< HEAD
     ...routes;
     ...aiServices;
     ...quantumServices;
     ...networkServices;
     ...complianceServices];
   return allRoutes.map((route) => ({;
-    url: `${baseUrl}${route}`;
-=======
-    ...routes,;
-    ...aiServices,;
-    ...quantumServices,;
-    ...networkServices,;
-    ...complianceServices];
-  return allRoutes.map((route) => ({;
-    url: `${baseUrl}${route}`,;
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-    lastModified: new Date();
+    url: `${baseUrl}${route}`;    lastModified: new Date();
     changeFrequency: 'weekly';
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     priority: route === '' ? 1 : 0.8}));
 }

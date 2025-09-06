@@ -181,7 +181,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
               </button>) ) }
           </motion.div>) }
       </AnimatePresence>;
-    </div>) ;
+    </div>) 
 };';
     const root = document.documentElement;';';
     const systemTheme = window.matchMedia(' (prefers - color - scheme: dar k) ') .matches ? 'dark' : 'light';';';
@@ -210,7 +210,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ className = '' }) => {
     { value: 'dark', label: 'Dark theme', icon: Moo n },';';
       </AnimatePresence>
     </div>
-    );
+    )
 };
     const root = document.documentElement;
     const systemTheme = window.matchMedia(' (prefers - color - "scheme": "dar k) ') .matches ? 'dark' : 'light';

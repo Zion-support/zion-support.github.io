@@ -1,6 +1,5 @@
 if (isLoading) {
     return (
-<<<<<<< HEAD
       <div className="space-y-4">;
         {[1, 2, 3].map((i,) => (;
           <Card key={i}>;
@@ -9,33 +8,18 @@ if (isLoading) {
               <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>;
               <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>;
             </CardContent>;
-          </Card>;
-=======
-      <div className="space-y-4">
-        {[1, 2, 3].map((i) => (
-          <Card key={i}>
-            <CardContent className="p-6">
-              <div className="h-6 w-48 bg-muted rounded animate-pulse mb-4"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-full mb-2"></div>
-              <div className="h-4 bg-muted rounded animate-pulse w-3/4"></div>
-            </CardContent>
-          </Card>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        ))}
+          </Card>;        ))}
       </div>
     )
   }
 
-
   
-
 
   if (milestones.length === 0 && !showAddForm) {
     return (
       <EmptyState
         icon = {<span className="text-3xl">📊</span>,}
         title="No Milestones Yet"
-
 
         description={isClient ? 
           "Break down the project into manageable milestones to track progress and payments." : 
@@ -48,7 +32,6 @@ if (isLoading) {
         }
 
   }
-
 
   if (milestones && milestones.length === 0 && !showAddForm) {;
     return (
@@ -65,7 +48,6 @@ if (isLoading) {
           } : undefined;
         }
   return (
-<<<<<<< HEAD
     <div className="space-y-6">;
       {isClient && !showAddForm && (;
         <div className="flex justify-end">;
@@ -73,28 +55,14 @@ if (isLoading) {
             <Plus className="h-4 w-4 mr-2" />;
             Add Milestone;
           </Button>;
-        </div>;
-=======
-    <div className="space-y-6">
-      {isClient && !showAddForm && (
-        <div className="flex justify-end">
-          <Button onClick={() => setShowAddForm(true)}>
-            <Plus className="h-4 w-4 mr-2" />
-            Add Milestone
-          </Button>
-        </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      )}
-
+        </div>;      )}
 
       
-
 
       {showAddForm && (
         <Card>
           <CardContent className="pt-6">
             <h3 className="text-lg font-medium mb-4">Create New Milestone</h3>
-
 
       {showAddForm && (;
         <Card>;
@@ -110,7 +78,6 @@ if (isLoading) {
           </CardContent>
         </Card>
       )}
-
 
       <div className="space-y-4">;
         {milestones && milestones.map((milestone,) => (;
@@ -131,7 +98,7 @@ if (isLoading) {
 
       </div>;
     </div>;
-  );
+  )
 };
 
   // Check condition
@@ -139,13 +106,13 @@ if ( {) {
   $2
 }
     return (
-      <div className="space - y-4">;
+      <div className="space-y-4">;
         {[1, 2, 3].map ((i, ) => (
           <Card key={i}>;
-            <CardContent className="p - 6">;
-              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb - 4"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - full mb - 2"></div>;
-              <div className="h - 4 bg - muted rounded animate - pulse w - 3/4"></div>;
+            <CardContent className="p-6">;
+              <div className="h - 6 w - 48 bg - muted rounded animate - pulse mb-4"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w - full mb-2"></div>;
+              <div className="h - 4 bg - muted rounded animate - pulse w-3/4"></div>;
             </CardContent>;
           </Card>))}
       </div>);
@@ -156,7 +123,7 @@ if ( {) {
 }
     return (
       <EmptyState;
-        icon = {<span className="text - 3xl">📊</span>, }
+        icon = {<span className="text-3xl">📊</span>, }
         title="No Milestones Yet";
         description = {is_client ?;
           "Break down the project into manageable milestones to track progress and payments." :;
@@ -170,18 +137,18 @@ if ( {) {
       />);
   }
   return (
-    <div className="space - y-6">;
+    <div className="space-y-6">;
       {is_client && !showAddForm && (
-        <div className="flex justify - end">;
+        <div className="flex justify-end">;
           <Button on_click={(, ) => setShowAddForm (true)}>;
-            <Plus className="h - 4 w - 4 mr - 2" />;
+            <Plus className="h - 4 w - 4 mr-2" />;
             Add Milestone;
           </Button>;
         </div>)}
       {showAddForm && (
         <Card>;
-          <CardContent className="pt - 6">;
-            <h3 className="text - lg font - medium mb - 4">Create New Milestone</h3>;
+          <CardContent className="pt-6">;
+            <h3 className="text - lg font - medium mb-4">Create New Milestone</h3>;
             <AddMilestoneForm;
               on_submit = {handle_submit, }
               is_submitting = {is_submitting, }
@@ -189,7 +156,7 @@ if ( {) {
             />;
           </CardContent>;
         </Card>)}
-      <div className="space - y-4">;
+      <div className="space-y-4">;
         {milestones.map ((milestone, ) => (
           <MilestoneCard;
             key = {milestone.id, }

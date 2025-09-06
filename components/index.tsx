@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 import {
 
-
   Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
   ChevronRight, ExternalLink, TrendingUp, BarChart3, Cloud, Network
  } from 'lucide-react';
@@ -60,7 +59,6 @@ import EnhancedTestimonialsSection from '../components/EnhancedTestimonialsSecti
             className='absolute bottom-40 left-1/4 w-2 h-2 bg-blue-400 rounded-full opacity-60'          />
 
           />
-
 
         </div>
       </section>
@@ -338,11 +336,11 @@ function HomePage() {
             animate={{ opacity: is_visible ? 1 : 0, coordinate_y: is_visible ? 0 : 30 }}
             transition={{ duration: 0.8 }}
             className='mb - 8'        {/* Animated Background */}
-        <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 950">;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;
-          <div className="absolute inset - 0 bg-[radial - gradient (circle_at_80%_20%, rgba (168, 85, 247, 0.1), transparent_50%)]" />;
+        <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to-slate-950">;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_50%_50%, rgba (59, 130, 246, 0.1), transparent_50%)]" />;
+          <div className="absolute inset-0 bg-[radial-gradient (circle_at_80%_20%, rgba (168, 85, 247, 0.1), transparent_50%)]" />;
         </div>;
-        <div className="relative z - 10 text - center max - w-6xl mx - auto">;
+        <div className="relative z - 10 text - center max-w-6xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             animate={{ opacity: is_visible ? 1 : 0, coordinate_y: is_visible ? 0 : 30 }}
@@ -355,10 +353,10 @@ function HomePage() {
             <p className='text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed'>;
               Leading - edge technology solutions and autonomous innovation;
               platform            </p>          >;
-            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text - transparent mb - 6">;
+            <h1 className="text - 5xl md:text - 7xl font - bold bg - gradient - to - r from - white via - blue - 100 to - cyan - 100 bg - clip - text text-transparent mb-6">;
               Zion Tech Group;
             </h1>;
-            <p className="text - xl md:text - 2xl text - white / 80 max - w-3xl mx - auto leading - relaxed">;
+            <p className="text - xl md:text - 2xl text - white / 80 max - w-3xl mx-auto leading-relaxed">;
               Leading - edge technology solutions and autonomous innovation platform;
             </p>;
           </motion.div>;
@@ -384,20 +382,20 @@ function HomePage() {
               <a;
                 href='mailto:kleber@ziontechgroup.com';
                 className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'              >          >;
-            <p className="text - lg text - white / 70 max - w-2xl mx - auto mb - 8">;
+            <p className="text - lg text - white / 70 max - w-2xl mx-auto mb-8">;
               Empowering businesses with cutting - edge AI, quantum computing, cybersecurity, and digital transformation solutions that drive innovation and growth.;
             </p>;
-            <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
+            <div className="flex flex - col sm:flex - row gap-4 justify-center">;
               <a;
                 href="#services";
-                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2";
+                className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify-center gap-2";
               >;
                 Explore Services;
-                <ArrowRight className="w - 5 h - 5" />;
+                <ArrowRight className="w-5 h-5" />;
               </a>;
               <a;
                 href="mailto:kleber@ziontechgroup.com";
-                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10";
+                className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg-white / 5 hover:bg-white / 10";
               >;
                 Schedule Consultation;
               </a>;
@@ -422,24 +420,24 @@ function HomePage() {
             className='absolute bottom - 40 left - 1/4 w - 2 h - 2 bg - blue - 400 rounded - full opacity - 60'          />          <motion.div;
             animate={{ coordinate_y: [0, -20, 0] }}
             transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top - 20 left - 20 w - 2 h - 2 bg - cyan - 400 rounded - full opacity - 60";
+            className="absolute top - 20 left - 20 w - 2 h - 2 bg - cyan - 400 rounded-full opacity-60";
           />;
           <motion.div;
             animate={{ coordinate_y: [0, 20, 0] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top - 40 right - 20 w - 3 h - 3 bg - purple - 400 rounded - full opacity - 60";
+            className="absolute top - 40 right - 20 w - 3 h - 3 bg - purple - 400 rounded-full opacity-60";
           />;
           <motion.div;
             animate={{ coordinate_y: [0, -15, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute bottom - 40 left - 1/4 w - 2 h - 2 bg - blue - 400 rounded - full opacity - 60";
+            className="absolute bottom - 40 left - 1/4 w - 2 h - 2 bg - blue - 400 rounded-full opacity-60";
           />;
         </div>;
       </section>;
       {/* Features Section */}
       <section className='py - 20 px - 6'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 20 px - 6">;
-        <div className="max - w-7xl mx - auto">;
+        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py-20 px-6">;
+        <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -456,14 +454,14 @@ function HomePage() {
             </p>;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'>            {services.map ((service, index) => (          >;
-            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
+            <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip-text text-transparent">;
               Revolutionary Technology Solutions;
             </h2>;
-            <p className="text - xl text - white / 70 max - w-3xl mx - auto">;
+            <p className="text - xl text - white / 70 max-w-3xl mx-auto">;
               Discover our cutting - edge services that are transforming industries and driving the future of technology;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8">;
             {services.map ((service, index) => (
               <motion.div;
                 key={service.title}
@@ -508,11 +506,8 @@ function HomePage() {
       {/* Enhanced Services Showcase */}
       <div id='services'>        <EnhancedServicesShowcase />
 
-
-
         <EnhancedServicesShowcase />
       </div>
-
 
       {/* Enhanced Testimonials Section */}
       <EnhancedTestimonialsSection />;
@@ -590,7 +585,6 @@ function HomePage() {
       <EnhancedFooter />
     </div>
 
-
             className='text-center mb-16'>;
             <h2 className='text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent'>;
               Ready to Get Started?;
@@ -612,8 +606,8 @@ and digital transformation solutions that drive innovation and growth. </p> <div
   /* Enhanced Testimonials Section */ ;
       {/* Contact Form Section */}
       <section className='py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10'>;
-        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 20 px - 6 bg - gradient - to - r from - white / 5 to - white / 10">;
-        <div className="max - w-7xl mx - auto">;
+        <div className='max - w-7xl mx - auto'>          <motion.div      <section className="py - 20 px - 6 bg - gradient - to - r from-white / 5 to-white / 10">;
+        <div className="max-w-7xl mx-auto">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -627,10 +621,10 @@ and digital transformation solutions that drive innovation and growth. </p> <div
             <p className='text - xl text - white / 70 max - w-3xl mx - auto'>;
               Let's discuss your project and explore how our cutting - edge;
               technology solutions can transform your business            </p>          >;
-            <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent">;
+            <h2 className="text - 4xl md: text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip-text text-transparent">;
               Ready to Get Started?;
             </h2>;
-            <p className="text - xl text - white / 70 max - w-3xl mx - auto">;
+            <p className="text - xl text - white / 70 max-w-3xl mx-auto">;
               Let's discuss your project and explore how our cutting - edge technology solutions can transform your business;
             </p>;
           </motion.div>;
@@ -640,8 +634,8 @@ and digital transformation solutions that drive innovation and growth. </p> <div
       <EnhancedFooter />;
     </div>);
 ;
-and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex - col sm:flex - row gap - 4 justify - center" > <a href="#services" className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify - center gap - 2" > Explore Services <ArrowRight className="w - 5 h - 5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg - white / 5 hover:bg - white / 10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip - text text - transparent" > Revolutionary Technology Solutions </h2> <p className="text - xl text - white / 70 max - w-3xl mx - auto" > Discover our cutting - edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) );
-}</div> </div> </section> > <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items - center justify - center" > <stat.icon className="w - 8 h - 8 text - white" /> </div> </motion.div>) );
+and digital transformation solutions that drive innovation and growth. </p> <div className="flex flex - col sm:flex - row gap-4 justify-center" > <a href="#services" className="px - 8 py - 4 bg - gradient - to - r from - blue - 600 to - cyan - 600 hover:from - blue - 700 hover:to - cyan - 700 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 hover:shadow - 2xl flex items - center justify-center gap-2" > Explore Services <ArrowRight className="w-5 h-5" /> </a> <a href="mailto:kleber@ziontechgroup.com" className="px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 300 transform hover:scale - 105 backdrop - blur - sm bg-white / 5 hover:bg-white / 10" > Schedule Consultation </a> </div> </motion.div> </div> /> </div> </section> > <h2 className="text - 4xl md:text - 5xl font - bold mb - 6 bg - gradient - to - r from - white to - blue - 100 bg - clip-text text-transparent" > Revolutionary Technology Solutions </h2> <p className="text - xl text - white / 70 max-w-3xl mx-auto" > Discover our cutting - edge services that are transforming industries and driving the future of technology </p> </motion.div> </div> </div> </motion.div>) );
+}</div> </div> </section> > <div className="w - 16 h - 16 rounded - full bg - gradient - to - br from - cyan - 500 to - blue - 500 p - 4 mx - auto mb - 4 flex items-center justify-center" > <stat.icon className="w - 8 h-8 text-white" /> </div> </motion.div>) );
 }</div> </div> </section> <EnhancedServicesShowcase /> </div> {
   /* Enhanced Testimonials Section */
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
@@ -654,6 +648,4 @@ and digital transformation solutions that drive innovation and growth. </p> <div
   /* Enhanced Testimonials Section */ 
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>) }
 }<EnhancedTestimonialsSection /> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Latest Autonomous Updates </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Stay updated with our latest innovations and autonomous system developments </p> </motion.div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" > <a href="/reports/updates/update-2025-08-15-0508" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0508</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0507" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0507</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> <a href="/reports/updates/update-2025-08-15-0457" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105" > <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-500/0 via-cyan-400/10 to-fuchsia-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100" /> <h3 className="text-lg font-semibold text-white" >Autonomous Update — 2025: 08: 15: 0457</h3> <p className="mt-1 text-sm text-white/75" >Freshly published by autonomous agents.</p> <div className="mt-3 inline-flex items-center gap-1 text-xs text-cyan-300/90 group-hover:text-cyan-200 transition-colors duration-300" > Open <span aria-hidden>→</span> </div> </a> </div> </div> </section> > Ready to Get Started? </h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Let's discuss your project and explore how our cutting-edge technology solutions can transform your business </p> </motion.div> <EnhancedContactForm /> </div> </section> <EnhancedFooter /> </div>)
-
-
 

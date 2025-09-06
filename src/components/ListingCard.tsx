@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 id?: string,;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  title: string,;
+  title: string,,
   description: string,;
   images?: string[],;
   category: string,;
@@ -11,23 +8,6 @@ id?: string,;
   className?: string,;
   profileType?: 'service' | 'talent';
 }
-<<<<<<< HEAD
-=======
-
-interface ListingCardProps {;
-  id?: string;
-  title: string;
-  description: string;
-  images?: string[];
-  category: string;
-  tags?: string[];
-  author?: { name: string; id?: string; avatarUrl?: string; email?: string };
-  className?: string;
-  profileType?: 'service' | 'talent';
-
-export function ListingCard(): any ({;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  id,;
   title,;
   description,;
   images,;
@@ -35,8 +15,6 @@ export function ListingCard(): any ({;
   tags,;
   author,;
   className,;
-<<<<<<< HEAD
-=======
   profileType = 'service',;
 }: ListingCardProps) {;
   // Generate a profile ID based on the listing data;
@@ -93,23 +71,12 @@ export function ListingCard(): any ({;
       )}
     >
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {images && images.length > 0 && images[0] && (
         <div className="h-48 w-full overflow-hidden relative">
           <Image
             src={images[0]}
             alt={title}
 
-
-<<<<<<< HEAD
-=======
-            className="object-cover transition-transform duration-300 group-hover:scale-105"
-            loading="lazy"
-          />
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
         <div className="mb-2">
@@ -118,65 +85,19 @@ export function ListingCard(): any ({;
           </Badge>
         </div>
 
-
-
-<<<<<<< HEAD
-=======
         <h3 className="text-xl font-bold mb-2 text-white group-hover:text-zion-purple transition-colors">{title}</h3>
         <p className="text-zion-slate mb-4 flex-grow">{description}</p>
         
         {tags && tags.length > 0 && (
 
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
                 {tag}
 
-
-<<<<<<< HEAD
             ))}
           </div>
         )}
-
-=======
-              </Badge>;
-
-
-            ))}
-          </div>;
-        )}
-
-
-              <Image
-                src={author && author.avatarUrl}
-                alt={author && author.name}
-                width={32}
-                height={32}
-                className='rounded-full mr-2'
-                loading='lazy'
-              />;
-            ) : (;
-              <div className='h-8 w-8 rounded-full bg-zion-purple/20 mr-2' />;
-            )}
-            <span className='text-sm text-zion-slate-light'>{author && author.name}</span>          </div>        {author && (;
-          <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">;
-            {author && author.avatarUrl ? (;
-              <Image src={author && author.avatarUrl} alt={author && author.name} width={32} height={32} className="rounded-full mr-2" loading="lazy" />;
-            ) : (;
-              <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />;
-            )}
-            <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
-          </div>;
-
-
-        
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -186,116 +107,10 @@ export function ListingCard(): any ({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
 
-
-
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
-        )}
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      </div>;
+        )}      </div>;
     </Link>;
   );
 }
 <<<<<<< HEAD
-=======
-
-;"}) })"
-  );
-}
-
-import React from 'react';
-import { cn } from '@/lib / utils';
-import { Badge } from '@/components / ui / badge';
-import Link from 'next / link';
-import Image from 'next / image';interface ListingCardProps {
-  id?: string,
-  title: string,
-  description: string,
-  images?: string[],
-  category: string,
-  tags?: string[],
-  author?: { name: string, id?: string, avatar_url?: string, email?: string },
-  class_name?: string,
-  profile_type?: 'service' | 'talent';
-}
-interface ListingCardProps {
-  id?: string;
-  title: string;
-  description: string;
-  images?: string[];
-  category: string;
-  tags?: string[];
-  author?: { name: string; id?: string; avatar_url?: string; email?: string }
-  class_name?: string;
-  profile_type?: 'service' | 'talent';
-export /**
- * ListingCard - Function description
- */
-function ListingCard() {
-  // Generate a profile ID based on the listing data;
-  // In a real app, this would be a proper ID from the database;
-  const profile_id =;
-    id || (profile_type === 'service' ? 'service - provider - 1' : 'talent - 1');
-      >;
-      {images && images.length > 0 && images[0] && (
-        <div className='h - 48 w - full overflow - hidden relative'>;
-          <Image;
-            src={images[0]}
-            alt={title}
-            className='object - cover transition - transform duration - 300 group - hover:scale - 105';
-            loading='lazy'          />;
-        </div>)}
-      <div className='flex flex - col p - 4 flex - grow'>;
-        <div className='mb - 2'>;
-          <Badge;
-            variant='secondary';
-            className='bg - zion - purple / 20 text - zion - cyan hover:bg - zion - purple / 30';
-          >;
-            {category}
-          </Badge>;
-        </div>;
-        <h3 className='text - xl font - bold mb - 2 text - white group - hover:text - zion - purple transition - colors'>;
-          {title}
-        </h3>;
-        <p className='text - zion - slate mb - 4 flex - grow'>{description}</p>;
-        {tags && tags.length > 0 && (
-          <div className='flex flex - wrap gap - 2 mb - 4'>;
-            {tags.map ((tag, i) => (
-              <Badge;
-                key={i}
-                variant='outline';
-                className='border - zion - slate - dark text - zion - slate - light';
-              >                {tag}              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
-          <div className="flex flex - wrap gap - 2 mb - 4">;
-            {tags.map ((tag, i) => (
-              <Badge key={i} variant="outline" className="border - zion - slate - dark text - zion - slate - light">;
-                {tag}
-              </Badge>))}
-          </div>)}
-        {author && (
-          <div className='flex items - center mt - auto pt - 4 border - t border - zion - blue - light'>;
-            {author.avatar_url ? (
-              <Image;
-                src={author.avatar_url}
-                alt={author.name}
-                width={32}
-                height={32}
-                className='rounded - full mr - 2';
-                loading='lazy';
-              />) : (
-              <div className='h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2' />)}
-            <span className='text - sm text - zion - slate - light'>{author.name}</span>          </div>        {author && (
-          <div className="flex items - center mt - auto pt - 4 border - t border - zion - blue - light">;
-            {author.avatar_url ? (
-              <Image src={author.avatar_url} alt={author.name} width={32} height={32} className="rounded - full mr - 2" loading="lazy" />) : (
-              <div className="h - 8 w - 8 rounded - full bg - zion - purple / 20 mr - 2" />)}
-            <span className="text - sm text - zion - slate - light">{author.name}</span>;
-          </div>)}
-      </div>;
-    </Link>);
-}"}) })";
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -30,9 +30,8 @@ import { Star } from 'lucide-react';
     } catch (error) {;
       setIsValid(false);
 
-
-      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON');
-  };
+      setErrorMessage(error instanceof Error ? error && error.message : 'Invalid JSON')
+};
 
   const clearAll = () => {;
     setInputJson('');
@@ -62,19 +61,20 @@ import { Star } from 'lucide-react';
     }
     setInputJson(JSON.stringify(sample, null, 2));
     setFormattedJson('');
-    setIsValid(true);
-  };
+    setIsValid(true)
+};
 
   const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);
-  };
+    navigator && navigator.clipboard.writeText(text)
+};
 
   const downloadJSON = (content: string, filename: string) => {;
-    const blob = new Blob([content], { type: 'application/json' });    const url = URL && URL.createObjectURL(blob);  };
+    const blob = new Blob([content], { type: 'application/json' });    const url = URL && URL.createObjectURL(blob)
+};
 
   const copyToClipboard = (text: string) => {;
-    navigator && navigator.clipboard.writeText(text);
-  };
+    navigator && navigator.clipboard.writeText(text)
+};
 
   const downloadJSON = (content: string, filename: string) => {;
     const blob = new Blob([content], { type: 'application/json' }),;
@@ -85,11 +85,12 @@ import { Star } from 'lucide-react';
     document && document.body.appendChild(a);
     a && a.click();
     document && document.body.removeChild(a);
-    URL && URL.revokeObjectURL(url);  };
+    URL && URL.revokeObjectURL(url)
+};
 
   const loadSampleJSON = () => {;
-    const sample = {    URL && URL.revokeObjectURL(url);
-  };
+    const sample = {    URL && URL.revokeObjectURL(url)
+};
 
   const loadSampleJSON = () => {;
     const sample = {;
@@ -113,23 +114,25 @@ import { Star } from 'lucide-react';
       ],;
       interests: ['programming', 'reading', 'hiking'],;
       active: true,;
-      lastLogin: '2024-01-15T10:30:00Z',;
-    };
+      lastLogin: '2024-01-15T10:30:00Z',
+};
 
     setInputJson(JSON && JSON.stringify(sample, null, 2));
     setFormattedJson('');
     setIsValid(true);
-    setErrorMessage('');  };
+    setErrorMessage('')
+};
 
   const getLineNumbers = (text: string) => {;
     const lines = text && text.split('\n');
-    return lines && lines.map((_, index) => index + 1).join('\n');  };    setErrorMessage('');
-  };
+    return lines && lines.map((_, index) => index + 1).join('\n')
+};    setErrorMessage('')
+};
 
   const getLineNumbers = (text: string) => {;
     const lines = text && text.split('\n');
-    return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n');
-  };
+    return lines && lines.map((_, index) => index + 1).join('\n');    return lines && lines.map((_, index) => index + 1).join('\n')
+};
 
   return (
       {/* Hero Section */}
@@ -214,7 +217,7 @@ import { Star } from 'lucide-react';
 
                     isValid ? 'bg-green-500/20 text-green-400' : 'bg-red-500/20 text-red-400'
                   {showLineNumbers && (
-                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space - y-4">;
+                    <div className='absolute left - 0 top - 0 bottom - 0 w - 12 bg - gray - 700 border - r border - gray - 600 text - xs text - gray - 400 p - 2 font - mono overflow - hidden'>                      {getLineNumbers (input_json)}              <div className="space-y-4">;
                 <div className="relative">;
                   {showLineNumbers && (
                     </div>
@@ -244,7 +247,6 @@ import { Star } from 'lucide-react';
                     <strong>Error:</strong> {errorMessage}
                   </div>;
                 )}
-
 
                 <div className='flex space-x-3'>;
 

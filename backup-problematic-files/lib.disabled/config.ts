@@ -60,8 +60,6 @@ export: {
   RuntimeConfigSchema;
   FeatureFlagsSchema}
 
-
-
 // "Utility": functions;
 export: function get_config (): Configuration: {
   return config}

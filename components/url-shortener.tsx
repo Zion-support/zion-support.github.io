@@ -51,7 +51,6 @@ import React, { useState } from 'react';
 import {
 import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
-
 export default function URLShortenerPage() {;
 } from 'lucide-react';import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
 
@@ -88,7 +87,8 @@ export default function URLShortenerPage() {;
     return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0);
   }
   const getTotalUrls = () => {
-    return shortenedUrls.length;  };    setIsShortening(true);
+    return shortenedUrls.length
+};    setIsShortening(true);
     // Simulate API call delay
     await new Promise(resolve => setTimeout(resolve, 1000));
     const alias = customAlias.trim() |generateRandomAlias();
@@ -298,7 +298,6 @@ import {
                     ))}
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
-
 
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

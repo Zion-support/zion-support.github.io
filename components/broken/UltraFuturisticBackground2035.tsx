@@ -129,7 +129,8 @@ if ( {) {
           drawEnergyParticle(ctx, particle);
           }
         }
-      });    };            ctx && ctx.stroke();
+      })
+};            ctx && ctx.stroke();
           }
         }
     window.addEventListener('resize', handleResize);
@@ -219,7 +220,6 @@ if ( {) {
 
         />;
 
-
         {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>;
           <motion&& motion.div
@@ -238,7 +238,6 @@ if ( {) {
 
             duration: 8,
             repeat: Infinity,
-
 
             }}
             transition={{

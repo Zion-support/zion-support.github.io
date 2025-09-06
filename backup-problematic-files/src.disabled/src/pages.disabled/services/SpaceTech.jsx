@@ -6,6 +6,6 @@ const SpaceTech = ({ className }) => {
       <h1>SpaceTech</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

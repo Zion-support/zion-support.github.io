@@ -30,7 +30,6 @@ export default defineConfig({
     terserOptions: {
       compress: {
         drop_console: true,
-<<<<<<< HEAD
         drop_debugger: true
       }
     }
@@ -39,16 +38,3 @@ export default defineConfig({
     include: ['react', 'react-dom', 'framer-motion', 'lucide-react']
   }
 });
-<<<<<<< HEAD
-=======
-=======
-        drop_debugger: true,
-      },
-    },
-  },
-  optimizeDeps: {
-    include: ["react", "react-dom", "framer-motion", "lucide-react"],
-  },
-});
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

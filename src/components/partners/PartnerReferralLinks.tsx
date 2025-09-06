@@ -49,11 +49,11 @@ export function PartnerReferralLinks() {;
 
   const handleCopyLink = (link: string) => {;
     navigator && navigator.clipboard.writeText(link);    toast({;
-      title: 'Link copied!',;
-      description: 'The referral link has been copied to your clipboard',;
+      title: 'Link copied!',,
+  description: 'The referral link has been copied to your clipboard',;
       variant: 'default',;
-    });
-  };
+    })
+};
 
   const handleGenerateLink = () => {;
     if (baseLink) {;
@@ -71,8 +71,8 @@ export function PartnerReferralLinks() {;
 
       const newLink = {;
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ''}`,;
-        link: url && url.toString(),;
-      };
+        link: url && url.toString(),
+};
 
       setGeneratedLinks(prev => [...prev, newLink]);
       setIsDialogOpen(false);
@@ -96,8 +96,8 @@ export function PartnerReferralLinks() {;
     link && link.style.visibility = 'hidden';
     document && document.body.appendChild(link);
     link && link.click();
-    document && document.body.removeChild(link);
-  };
+    document && document.body.removeChild(link)
+};
 
   return (
 
@@ -113,7 +113,6 @@ import { Input } from "@/components/ui/input",
 
 import { Copy, Download, Link, Plus } from 'lucide-react'
 
-
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -125,48 +124,10 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { Label } from "@/components/ui/label",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 
-<<<<<<< HEAD
-import { Copy, Download, Link, Plus } from 'lucide-react'
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
-export function PartnerReferralLinks() {
-  const { referralCode, getReferralLink, copyReferralLink, shareOnSocialMedia } = useReferrals(),
-  const [isDialogOpen, setIsDialogOpen] = useState(false),
-  const [selectedCampaign, setSelectedCampaign] = useState<string>("default"),
-  const [customParam, setCustomParam] = useState<string>(""),
-  const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
-  // Get the base referral link
-  const baseLink = getReferralLink(),
-  
-  const handleCopyLink = (link: string) => {
-    navigator.clipboard.writeText(link),
-    toast({
-      title: "Link copied!",
-      description: "The referral link has been copied to your clipboard",
-      variant: "default"
-    })
-  },
-  
-  const handleGenerateLink = () => {
-    if (baseLink) {
-      const url = new URL(baseLink),
-      
-      // Add custom campaign parameter if selected
-      if (selectedCampaign !== "default") {
-        url.searchParams.append("campaign", selectedCampaign)
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      }
+import { Copy, Download, Link, Plus } from 'lucide-react'      }
       
       // Add custom parameter if provided
       if (customParam) {
-<<<<<<< HEAD
         name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
         link: url.toString()
       },
@@ -198,23 +159,13 @@ export function PartnerReferralLinks() {
     link.click(),
     document.body.removeChild(link)
   },
-=======
-
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
         <CardHeader>
           <CardTitle className="flex items-center justify-between">
             <span>Your Referral Link</span>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <Button 
               variant="outline" 
               size="sm" 
@@ -239,8 +190,8 @@ export function PartnerReferralLinks() {;
   const handleCopyLink = (link: string) => {;
     navigator.clipboard.writeText(link),;
     toast({;
-      title: "Link copied!",;
-      description: "The referral link has been copied to your clipboard",;
+      title: "Link copied!",,
+  description: "The referral link has been copied to your clipboard",;
       variant: "default";
     });
   },;
@@ -283,38 +234,23 @@ export function PartnerReferralLinks() {;
     link.style.visibility = 'hidden',;
     document.body.appendChild(link),;
     link.click();
-    document.body.removeChild(link);
-  };
+    document.body.removeChild(link)
+};
   return (;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
         <CardHeader>;
-<<<<<<< HEAD
-=======
-          <CardTitle className="flex items-center justify-between">;
-            <span>Your Referral Link</span>;
-            <Button;
-              variant='outline';
-              size='sm';
-              on_click={handleDownloadLinks}
-              className='flex items - center gap - 2'            >;
-              <Download className='h - 4 w - 4' />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              Export Links;
             </Button>;
           </CardTitle>;
           <CardDescription>Share this link with your audience to earn rewards</CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
-=======
 
           <div className='flex space - x-2'>;
             <Input value={base_link} read_only className='font - mono text - sm' />;
             <Button variant='outline' on_click={() => handleCopyLink (base_link)}>;
               <Copy className='h - 4 w - 4' />;
               <span className='sr - only'>Copy</span>            </Button>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>;
         </CardContent>;
       </Card>;
@@ -337,40 +273,6 @@ export function PartnerReferralLinks() {;
             <DialogHeader>;
               <DialogTitle > Create Custom Campaign Link</DialogTitle>;
 
-<<<<<<< HEAD
-=======
-              <DialogDescription>;
-                Generate a trackable link for specific marketing campaigns;
-              </DialogDescription>;
-            </DialogHeader>;
-
-            <div className='grid gap - 4 py - 4'>;
-              <div className='grid gap - 2'>;
-                <Label html_for='campaign'>Campaign Type</Label>;
-                <Select;
-                  value={selected_campaign}
-                  onValueChange={setSelectedCampaign}                >;
-
-                  <SelectTrigger id='campaign'>;
-                    <SelectValue placeholder='Select campaign type' />;
-                  </SelectTrigger>;
-                  <SelectContent>;
-                    <SelectItem value='default'>General (Default)</SelectItem>;
-                    <SelectItem value='youtube'>YouTube</SelectItem>;
-                    <SelectItem value='newsletter'>Newsletter</SelectItem>;
-                    <SelectItem value='blog'>Blog</SelectItem>;
-                    <SelectItem value='podcast'>Podcast</SelectItem>;
-                    <SelectItem value='social'>Social Media</SelectItem>;
-                  </SelectContent>;
-                </Select>;
-              </div>;
-
-      <div className="flex justify-between items-center">
-        <h3 className="text-lg font-semibold text-white">Custom Campaign Links</h3>
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
           <DialogTrigger asChild>
             <Button variant="outline" size="sm" className="flex items-center gap-2">
               <Plus className="h-4 w-4" />
@@ -384,10 +286,7 @@ export function PartnerReferralLinks() {;
                 Generate a trackable link for specific marketing campaigns
               </DialogDescription>
             </DialogHeader>
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
             <div className="grid gap-4 py-4">
               <div className="grid gap-2">
                 <Label htmlFor="campaign">Campaign Type</Label>
@@ -409,45 +308,25 @@ export function PartnerReferralLinks() {;
                   </SelectContent>
                 </Select>
               </div>
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <div className="grid gap-2">
                 <Label htmlFor="custom">Custom Parameter (Optional)</Label>
                 <Input 
                   id="custom" 
                   placeholder="spring_campaign, video_123, etc." 
                   value={customParam}
-<<<<<<< HEAD
                   onChange={e => setCustomParam(e && e.target.value)}                />;
               </div>;
             </div>;
             <DialogFooter>;
               <Button
                 type='button'
-                variant='secondary'
-=======
-                  onChange={(e) => setCustomParam(e.target.value)}
-                />
-              </div>
-            </div>
-            <DialogFooter>
-              <Button 
-                type="button" 
-                variant="secondary" 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                onClick={() => setIsDialogOpen(false)}
+                variant='secondary'                onClick={() => setIsDialogOpen(false)}
               >
                 Cancel
               </Button>
-<<<<<<< HEAD
-=======
               <Button 
                 type="button" 
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
               >
                 Cancel
@@ -455,20 +334,13 @@ export function PartnerReferralLinks() {;
               <Button
                 type='button'
                 onClick={handleGenerateLink}
-<<<<<<< HEAD
                 className='bg-zion-purple hover:bg-zion-purple-dark'              >
                 Generate Link
               </Button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
-      </div>
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                    <span>{item.name || 'Campaign Link'}</span>                  </div>
-
+      </div>                    <span>{item.name || 'Campaign Link'}</span>                  </div>
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
@@ -481,62 +353,15 @@ export function PartnerReferralLinks() {;
                     <span>{item.name || "Campaign Link"}</span>
                   </div>
 
-
-
                 </CardTitle>
               </CardHeader>
-<<<<<<< HEAD
               <CardContent className="pb-4">
                 <div className="flex space-x-2">
                   <Input
                     value={item.link}
                     readOnly
                     className="font-mono text-xs"
-                  />
-=======
-              <CardContent className='pb-4'>
-                <div className='flex space-x-2'>
-                className='bg-zion-purple hover:bg-zion-purple-dark'>;
-                Generate Link;
-              </Button>;
-            </DialogFooter>;
-          </DialogContent>;
-        </Dialog>;
-      </div>;
-
-      <div className='grid gap-4'>;
-        {generatedLinks && generatedLinks.length > 0 ? (;
-          generatedLinks && generatedLinks.map((item, index) => (;
-            <Card
-              key={index}
-              className='bg-zion-blue-dark border-zion-blue-light'>;
-              <CardHeader className='pb-2'>;
-                <CardTitle className='text-base flex items-center justify-between'>;
-                  <div className='flex items-center gap-2'>;
-                    <Link className='h-4 w-4 text-zion-purple' />;
-                    <span>{item && item.name || 'Campaign Link'}</span>                  </div>;
-                </CardTitle>;
-              </CardHeader>;
-              <CardContent className='pb-4'>;
-                <div className='flex space-x-2'>;
-                  <Input
-                    value={item.link}
-                    readOnly
-
-                    className="font-mono text-xs"
-                  />
-
-                  <Button 
-                    variant="outline" 
-                    size="sm" 
-                    onClick={() => handleCopyLink(item.link)}
-                  >
-                    <Copy className="h-4 w-4" />
-                    <span className="sr-only">Copy</span>
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                  </Button>
+                  />                  </Button>
                 </div>
               </CardContent>
             </Card>
@@ -546,18 +371,7 @@ export function PartnerReferralLinks() {;
             <CardContent className="flex flex-col items-center justify-center p-6">
               <p className="text-zion-slate-light text-center mb-4">
                 Create custom campaign links to track different marketing efforts
-              </p>
-<<<<<<< HEAD
-=======
-
-              <Button 
-                variant="outline"
-                onClick={() => setIsDialogOpen(true)}
-                className="flex items-center gap-2";
-              >;
-                <Plus className="h-4 w-4" />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                Create First Link;
+              </p>                Create First Link;
               </Button>;
             </CardContent>;
           </Card>;
@@ -576,7 +390,7 @@ export function PartnerReferralLinks() {;
   customParam ? `-$ {;
   customParam ;
 }`: "" ;
-}`;
+}`
 };
 
 };
@@ -584,7 +398,7 @@ export function PartnerReferralLinks() {;
 link && link.style.visibility = 'hidden';
 document && document.body.appendChild (link);
 link && link.click ();
-document && document.body.removeChild (link);
+document && document.body.removeChild (link)
 };";
   baseLink ";
 }readOnly className="font-mono text-sm"/> <Copy className="h-4 w-4"/> <span className="sr-only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify-between items-center"> <DialogTrigger asChild> <Button variant=" outline"size=" sm"className="flex items-center gap-2"> <Plus className="h-4 w-4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max-w-md bg-zion-blue border-zion-blue-light"> <DialogHeader> <DialogTitle>Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap-4 py-4"> <div className="grid gap-2"> <Label htmlFor=" campaign">Campaign Type</Label> <Selectvalue= {
@@ -614,57 +428,7 @@ document && document.body.removeChild (link);
                 type='button';
                 variant='secondary';
                 on_click={() => setIsDialogOpen (false)}
-<<<<<<< HEAD
               <Button 
                 variant="outline"
                 onClick={() => setIsDialogOpen(true)}
                 className="flex items-center gap-2";
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              >;
-                <Plus className="h-4 w-4" />;
-                Create First Link;
-              </Button>;
-            </CardContent>;
-          </Card>;
-        )}
-      </div>;
-    </div>;
-  );
-}
-<<<<<<< HEAD
-=======
-}const new_link = {
-  name: `$ {
-  selected_campaign;
-}$ {
-  custom_param ? `-$ {
-  custom_param;
-}`: "";
-}`;
-}
-}
-...generated_links ];
-link.style.visibility = 'hidden';
-document.body.append_child (link);
-link.click ();
-document.body.remove_child (link);
-}";
-  base_link ";
-}read_only className="font - mono text - sm"/> <Copy className="h - 4 w - 4"/> <span className="sr - only">Copy</span> </Button> </div> </CardContent> </Card> <div className="flex justify - between items - center"> <DialogTrigger as_child> <Button variant=" outline"size=" sm"className="flex items - center gap - 2"> <Plus className="h - 4 w - 4"/> Create New Link </Button> </DialogTrigger> <DialogContent className="sm:max - w-md bg - zion - blue border - zion - blue - light"> <DialogHeader> <DialogTitle > Create Custom Campaign Link</DialogTitle> <DialogDescription> Generate a trackable link for specific marketing campaigns </DialogDescription> </DialogHeader> <div className="grid gap - 4 py - 4"> <div className="grid gap - 2"> <Label html_for=" campaign">Campaign Type</Label> <Select value= {
-  selected_campaign;
-}onValueChange= {
-  setSelectedCampaign ";
-}> <SelectTrigger id=" campaign"> <SelectValue placeholder=" Select campaign type"/> </SelectTrigger> <SelectContent> <SelectItem value=" default">General (Default) </SelectItem> <SelectItem value=" youtube">YouTube</SelectItem> <SelectItem value=" newsletter">Newsletter</SelectItem> <SelectItem value=" blog">Blog</SelectItem> <SelectItem value=" podcast">Podcast</SelectItem> <SelectItem value=" social">Social Media</SelectItem> </SelectContent> </Select> </div> <div className="grid gap - 2"> <Label html_for=" custom">Custom Parameter (Optional) </Label> <Input /> </div> </div> <DialogFooter> <Button > Cancel </Button> <Button className="bg - zion - purple hover:bg - zion - purple - dark"> Generate Link </Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className="grid gap - 4"> {
-  generated_links.length > 0 ? (generated_links.map ( (item, index) => (<Card key= {
-  index ";
-}className="bg - zion - blue - dark border - zion - blue - light"> <CardHeader className="pb - 2"> <CardTitle className="text - base flex items - center justify - between"> <div className="flex items - center gap - 2"> </div> </CardTitle> </CardHeader> <CardContent className="pb - 4"> <div className="flex space - x-2"> <Input value= {
-  item.link ";
-}read_only className="font - mono text - xs"/> <Button > <Copy className="h - 4 w - 4"/> <span className="sr - only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light"> <CardContent className="flex flex - col items - center justify - center p - 6"> <p className="text - zion - slate - light text - center mb - 4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items - center gap - 2"> <Plus className="h - 4 w - 4" /> Create First Link </Button> </CardContent> </Card>);
-}</div> </div>);
-}'"}
-      </div>;
-    </div>;
-  );
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -77,7 +77,7 @@ const "EmptyState": Reac t.FC<EmptyStateProps> = ({
   );
 }
     </div>
-  );
+  )
 };
 ';
 // Default empty state icon component';';
@@ -87,7 +87,7 @@ export const EmptyStateIcon: Reac t.FC<{ className?: string }> = ({ className = 
       )}
     </div>;
   );
-    );
+    )
 };
 ;
 // Default empty state icon component;

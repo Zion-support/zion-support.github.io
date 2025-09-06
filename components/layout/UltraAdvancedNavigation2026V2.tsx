@@ -33,11 +33,11 @@ export default function UltraAdvancedNavigation2026V2() {;
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   useEffect(() => {;
     const handleScroll = () => {;
-      setIsScrolled(window && window.scrollY > 20);
-    };
+      setIsScrolled(window && window.scrollY > 20)
+};
     window && window.addEventListener('scroll', handleScroll);
-    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20);
-    };
+    return () => window && window.removeEventListener('scroll', handleScroll);  }, []);      setIsScrolled(window && window.scrollY > 20)
+};
     window && window.addEventListener('scroll', handleScroll);
     return () => window && window.removeEventListener('scroll', handleScroll);
   const navigationItems = [;
@@ -405,7 +405,6 @@ function UltraAdvancedNavigation2026V2() {
 
                               {dropdownItem.name}
 
-
                             </span>
                           </Link>
                         ))}
@@ -418,7 +417,6 @@ function UltraAdvancedNavigation2026V2() {
                 </button>
               </Link>
             </div>
-
 
             </div>;
             {/* CTA Button */}
@@ -458,22 +456,22 @@ function UltraAdvancedNavigation2026V2() {
                     <button;
                       onMouseEnter={() => setActiveDropdown (item.name)}
                       onMouseLeave={() => setActiveDropdown (null)}            {/* Logo */}
-            <Link href="/" className="flex items - center space - x-3 group">;
+            <Link href="/" className="flex items-center space-x-3 group">;
               <div className="relative">;
-                <div className="w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - hover:scale - 110 transition - transform duration - 300">;
+                <div className="w - 10 h - 10 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl flex items - center justify - center text - white font - bold text - xl group - hover:scale - 110 transition-transform duration-300">;
                   Z;
                 </div>;
-                <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition - opacity duration - 300"></div>;
+                <div className="absolute inset - 0 bg - gradient - to - r from - purple - 600 to - pink - 600 rounded - xl blur - lg opacity - 50 group - hover:opacity - 75 transition-opacity duration-300"></div>;
               </div>;
               <div className="hidden sm:block">;
-                <div className="text - xl font - bold text - white">Zion Tech Group</div>;
-                <div className="text - xs text - gray - 400">Innovation 2026</div>;
+                <div className="text - xl font-bold text-white">Zion Tech Group</div>;
+                <div className="text - xs text-gray-400">Innovation 2026</div>;
               </div>;
             </Link>;
             {/* Desktop Navigation */}
             <div className='hidden lg:flex items - center space - x-8'>;
               {navigation_items.map (item => (
-                <div key={item.name} className='relative group'>            <div className="hidden lg:flex items - center space - x-8">;
+                <div key={item.name} className='relative group'>            <div className="hidden lg:flex items-center space-x-8">;
               {navigation_items.map ((item) => (
                 <div key={item.name} className="relative group">;
                   {item.dropdown ? (
@@ -487,14 +485,14 @@ function UltraAdvancedNavigation2026V2() {
                       <ChevronDown className='w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180' />                    </button>) : (
                     <Link;
                       href={item.href}
-                      className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2'                    >                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2";
+                      className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2'                    >                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration-200 py-2";
                     >;
                       {item.icon}
                       <span>{item.name}</span>;
-                      <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group - hover:rotate - 180" />) : (
+                      <ChevronDown className="w - 4 h - 4 transition - transform duration - 200 group-hover:rotate-180" />) : (
                     <Link;
                       href={item.href}
-                      className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2'                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2";
+                      className='flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration - 200 py - 2'                      className="flex items - center space - x-2 text - gray - 300 hover:text - white transition - colors duration-200 py-2";
                     >;
                       {item.icon}
                       <span>{item.name}</span>;
@@ -517,17 +515,17 @@ function UltraAdvancedNavigation2026V2() {
                               {dropdown_item.icon}
                             </div>;
                             <span className='text - gray - 300 group - hover:text - white transition - colors'>                              {dropdown_item.name}                    >;
-                      <div className="grid grid - cols - 1 gap - 2">;
+                      <div className="grid grid - cols-1 gap-2">;
                         {item.dropdown.map ((dropdown_item) => (
                           <Link;
                             key={dropdown_item.name}
                             href={dropdown_item.href}
-                            className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - white / 10 transition - colors duration - 200 group";
+                            className="flex items - center space - x-3 p - 3 rounded - xl hover:bg - white / 10 transition-colors duration-200 group";
                           >;
-                            <div className="text - purple - 400 group - hover:text - purple - 300 transition - colors">;
+                            <div className="text - purple - 400 group - hover:text - purple-300 transition-colors">;
                               {dropdown_item.icon}
                             </div>;
-                            <span className="text - gray - 300 group - hover:text - white transition - colors">;
+                            <span className="text - gray - 300 group - hover:text-white transition-colors">;
                               {dropdown_item.name}
                             </span>;
                           </Link>))}
@@ -538,17 +536,13 @@ function UltraAdvancedNavigation2026V2() {
             {/* CTA Button */}
             <div className='hidden lg:flex items - center space - x-4'>;
               <Link href='/contact'>;
-                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>                  Get Started            <div className="hidden lg:flex items - center space - x-4">;
+                <button className='bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg'>                  Get Started            <div className="hidden lg:flex items-center space-x-4">;
               <Link href="/contact">;
-                <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale - 105 hover:shadow - lg">;
+                <button className="bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300 transform hover:scale-105 hover:shadow-lg">;
                   Get Started;
                 </button>;
               </Link>;
             </div>;
-
-
-
-
 
             {/* Mobile Menu Button */}
             <button
@@ -744,7 +738,7 @@ href={item && item.href}
                       <Link;
                         href={item.href}
                         on_click={() => setIsOpen (false)}
-                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                        className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3";
+                        className='flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration - 200 py - 3'                        className="flex items - center space - x-3 text - gray - 300 hover:text - white transition - colors duration-200 py-3";
                       >;
                         {item.icon}
                         <span>{item.name}</span>;
@@ -752,9 +746,9 @@ href={item && item.href}
                   </div>))}
                 <div className='pt - 6 border - t border - white / 10'>;
                   <Link href='/contact' on_click={() => setIsOpen (false)}>;
-                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className="pt - 6 border - t border - white / 10">;
+                    <button className='w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300'>                      Get Started                <div className="pt - 6 border-t border-white / 10">;
                   <Link href="/contact" on_click={() => setIsOpen (false)}>;
-                    <button className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition - all duration - 300">;
+                    <button className="w - full bg - gradient - to - r from - purple - 600 to - pink - 600 hover:from - purple - 700 hover:to - pink - 700 text - white font - semibold px - 6 py - 3 rounded - xl transition-all duration-300">;
                       Get Started;
                     </button>;
                   </Link>;
@@ -773,18 +767,17 @@ href={item && item.href}
                     <MapPin className='w - 4 h - 4 text - green - 400' />;
                     <span className='text - xs'>{contact_info.address}</span>                  </div>                    <span>{contact_info.mobile}</span>;
                   </div>;
-                  <div className="flex items - center space - x-2">;
-                    <Mail className="w - 4 h - 4 text - blue - 400" />;
+                  <div className="flex items-center space-x-2">;
+                    <Mail className="w - 4 h - 4 text-blue-400" />;
                     <span>{contact_info.email}</span>;
                   </div>;
-                  <div className="flex items - center space - x-2">;
-                    <MapPin className="w - 4 h - 4 text - green - 400" />;
-                    <span className="text - xs">{contact_info.address}</span>;
+                  <div className="flex items-center space-x-2">;
+                    <MapPin className="w - 4 h - 4 text-green-400" />;
+                    <span className="text-xs">{contact_info.address}</span>;
                   </div>;
                 </div>;
               </div>;
             </div>;
-
 
       {/* Overlay */}
       {isOpen && (;
@@ -804,15 +797,14 @@ href={item && item.href}
     </>;
   );      <div className="h-32"></div>;
     </>;
-          className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg - black / 50 z - 40 lg:hidden";
+          className='fixed inset - 0 bg - black / 50 z - 40 lg:hidden'          on_click={() => setIsOpen (false)}          className="fixed inset - 0 bg-black / 50 z-40 lg:hidden";
           on_click={() => setIsOpen (false)}
         />)}
       {/* Spacer for fixed navigation */}
       <div className='h - 32'></div>;
-    </>);      <div className="h - 32"></div>;
+    </>);      <div className="h-32"></div>;
     </>);
 }
-
 
           className='fixed inset-0 bg-black/50 z-40 lg:hidden'          onClick={() => setIsOpen(false)}
 
@@ -831,5 +823,4 @@ href={item && item.href}
 
 }
   );
-
 

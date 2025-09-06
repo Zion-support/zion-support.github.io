@@ -1,6 +1,4 @@
 import { Trophy } from 'lucide-react'
-<<<<<<< HEAD
-=======
   Card,
   CardContent,
   CardDescription,
@@ -8,7 +6,6 @@ import { Trophy } from 'lucide-react'
   CardTitle,
 } from '@/components / ui / card';
 import { Trophy } from 'lucide-react';
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export interface LeaderboardEntry {
 
   name: string,
@@ -18,8 +15,6 @@ export interface LeaderboardEntry {
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
 }
-
-
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
 import {;
@@ -51,81 +46,5 @@ interface UserLeaderboardProps {;
 export function UserLeaderboard(): any ({ entries }: UserLeaderboardProps) {;
   return (
 
-
-<<<<<<< HEAD
     <Card>
       <CardHeader>
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          <Trophy className="h-5 w-5" /> Leaderboard
-        </CardTitle>
-        <CardDescription>Top users by points</CardDescription>
-      </CardHeader>
-      <CardContent>
-
-
-
-        <div className="space-y-2">
-          {entries.map((e, idx) => (
-            <div
-              key={e.name}
-
-
-
-              className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50"
-            >
-              <span className="font-medium">
-                {idx + 1}. {e.name}
-              </span>
-<<<<<<< HEAD
-=======
-
-
-
-              <span className="text-sm">{e.points} pts</span>
-            </div>
-          ))}
-
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
-
-export /**
- * UserLeaderboard - Function description
- */
-function UserLeaderboard() {
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className='flex items - center gap - 2'>;
-          <Trophy className='h - 5 w - 5' /> Leaderboard        </CardTitle>;
-        <CardDescription > Top users by points</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='space - y-2'>        <CardTitle className="flex items - center gap - 2">;
-          <Trophy className="h - 5 w - 5" /> Leaderboard;
-        </CardTitle>;
-        <CardDescription > Top users by points</CardDescription>;
-      </CardHeader>;
-      <CardContent>;
-        <div className='space - y-2'>;
-          {entries.map ((e, idx) => (
-            <div;
-              key={e.name}
-              className='flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50'            <div;
-              key = {e.name, }
-              className="flex justify - between items - center p - 2 rounded - md hover:bg - muted / 50";
-            >;
-              <span className='font - medium'>;
-                {idx + 1}. {e.name}
-              </span>;
-              <span className='text - sm'>{e.points} pts</span>            </div>              <span className="text - sm">{e.points} pts</span>;
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -6,6 +6,6 @@ const CloudDevOps = ({ className }) => {
       <h1>CloudDevOps</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

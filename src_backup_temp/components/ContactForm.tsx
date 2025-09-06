@@ -50,8 +50,8 @@ export const "ContactForm": "React.FC = () => {';';';
   const handleInputChange = ("props": "any) => {;
     const { name", value } = e.target;
     setFormData(prev => ({;
-      ...prev, [name]: "value"}));
-  };
+      ...prev, [name]: "value"}))
+};
   const handleSubmit = async ("e": "React.FormEvent) => {;
     timeline: ''}
     );';';';
@@ -61,8 +61,8 @@ export const "ContactForm": "React.FC = () => {';';';
   const handleInputChange = (props: any) => {
     const { name, value } = e.target;
     setFormData(prev => ({
-      ...prev, [name]: value}));
-  };
+      ...prev, [name]: value}))
+};
   const handleSubmit = async (e: Reac t.FormEvent) => {';
     e.preventDefault();';';
     setIsSubmitting(true);';';';
@@ -87,8 +87,8 @@ export const "ContactForm": "React.FC = () => {';';';
       setSubmitStatus('error');';
     } finally {';';
       setIsSubmitting(false);';';';
-    }';';';';
-  };';';';';';
+    }';';';'
+};';';';';';
   const services = [',',';';';';
     'AI & Machine Learning', 'Cloud & DevOps',',',';';';';
     'Enterprise Security', 'Digital Transformation',',',';';';';
@@ -150,8 +150,8 @@ export const "ContactForm": "React.FC = () => {';';';
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);';
-    }';';
-  };';';';
+    }';'
+};';';';
   const services = [',',';';
     'AI & Machine Learning', 'Cloud & DevOps',',',';';
     'Enterprise Security', 'Digital Transformation',',',';';
@@ -651,7 +651,7 @@ export const "ContactForm": "React.FC = () => {';';';
         </form>';';
       </div>';';';
     </div>';';';';
-  );';';';';';
+  );';';';';'
 };"';';';';
 </motion>
 </textarea>
@@ -664,13 +664,13 @@ export const "ContactForm": "React.FC = () => {';';';
         </form>
       </div>';
     </div>';';
-  );';';';
+  );';';'
 };";
 </motion>;
 </textarea>;
 </motion>;
 </any>;
-</any>;
+</any>
 };"';';';';
 </motion>
 </textarea>

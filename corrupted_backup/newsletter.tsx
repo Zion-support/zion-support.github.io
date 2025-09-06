@@ -32,8 +32,8 @@ export default function NewsletterPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle subscription logic here
-    setIsSubscribed(true);
-  };
+    setIsSubscribed(true)
+};
 
   return (
     <>

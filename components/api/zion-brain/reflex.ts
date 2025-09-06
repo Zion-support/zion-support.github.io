@@ -26,7 +26,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const state = readState<{ metrics?: unknown }>();
     return res.status(200).json({ metrics: state.metrics |{} })
 
-
   }
 
   if (req && req.method === 'POST') {
@@ -56,7 +55,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' });
 
   return res && res.status(405).json({ error: 'Method not allowed' });
-
 
 }
 }
@@ -142,7 +140,6 @@ return res.status (405).json ({ error: 'Method not allowed' });
       return res.status (500).json ({ error: 'Reflex failure' });
   }
   return res.status (405).json ({ error: 'Method not allowed' });
-
 
   return res.status(405).json({ error: 'Method not allowed' });
 

@@ -19,7 +19,6 @@ import {
 export default function SEOAnalyzerToolPage() {;
 } from 'lucide-react';
 
-
 export default function SEOAnalyzerToolPage() {;
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [analysisResults, setAnalysisResults] = useState(null);
@@ -53,32 +52,32 @@ export default function SEOAnalyzerToolPage() {;
   ];
   const features = [;
     {;
-      icon: <Search className='w-8 h-8 text-white' />,;
-      description:;
+      icon: <Search className='w-8 h-8 text-white' />,,
+  description:;
         'Deep analysis of on-page SEO factors, technical issues, and content optimization opportunities.',;
       color: 'bg-gradient-to-br from-green-500 to-emerald-600',;
       gradient: 'from-green-400 to-emerald-500',;
     },;
     {;
       icon: <Target className='w-8 h-8 text-white' />,;
-      title: 'Keyword Research',;
-      description:;
+      title: 'Keyword Research',,
+  description:;
         'Discover high-value keywords and analyze search intent to optimize your content strategy.',;
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',;
       gradient: 'from-blue-400 to-cyan-500',;
     },;
     {;
       icon: <BarChart3 className='w-8 h-8 text-white' />,;
-      title: 'Competitive Analysis',;
-      description:;
+      title: 'Competitive Analysis',,
+  description:;
         "Analyze your competitors' SEO strategies and identify opportunities to outperform them.",;
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',;
       gradient: 'from-purple-400 to-indigo-500',;
     },;
     {;
       icon: <Zap className='w-8 h-8 text-white' />,;
-      title: 'AI-Powered Insights',;
-      description:;
+      title: 'AI-Powered Insights',,
+  description:;
         'Get intelligent recommendations and actionable insights to improve your search rankings.',;
       color: 'bg-gradient-to-br from-orange-500 to-red-600',;
       gradient: 'from-orange-400 to-red-500',;
@@ -97,24 +96,24 @@ export default function SEOAnalyzerToolPage() {;
       ],;
       icon: '📝',;
       color: 'text-green-400',      icon: '📝',;
-      color: 'text-green-400';
-    };
+      color: 'text-green-400'
+};
     {;
       category: 'Technical SEO',;
       factors: [;
         'Page load speedMobile responsivenessXML sitemapRobots && sitemapRobots.txt configurationSSL certificateCore Web Vitals';
       ];
       icon: '⚙️',;
-      color: 'text-blue-400';
-    };
+      color: 'text-blue-400'
+};
     {;
       category: 'Content SEO',;
       factors: [;
         'Keyword densityContent relevanceReadability scoresContent freshnessMultimedia optimizationSchema markup';
       ],;
       icon: '📊',;
-      color: 'text-purple-400';
-    };
+      color: 'text-purple-400'
+};
     {;
       category: 'Local SEO',;
       factors: [;
@@ -265,8 +264,8 @@ export default function SEOAnalyzerToolPage() {;
           'Improve page load speed by optimizing images',;
           'Add more relevant internal links to improve site structure',;
           'Implement schema markup for rich snippets',;
-        ],;
-        keywords: [;
+        ],,
+  keywords: [;
           {;
             keyword: 'website optimization',;
             volume: '12K',;
@@ -281,10 +280,11 @@ export default function SEOAnalyzerToolPage() {;
         ],;
       });
       setIsAnalyzing(false);
-    }, 4000);  };        recommendations: [
+    }, 4000)
+};        recommendations: [
           'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing imagesAdd more relevant internal links to improve site structureImplement schema markup for rich snippets'
-        ];
-        keywords: [
+        ],
+  keywords: [
           { keyword: 'website optimization', volume: '12K', difficulty: 'medium' }
           { keyword: 'SEO tools', volume: '8K', difficulty: 'low' }
         ];
@@ -293,9 +293,9 @@ export default function SEOAnalyzerToolPage() {;
       });
       setIsAnalyzing(false);
 
-    }, 4000);  };
-
-  };
+    }, 4000)
+}
+};
 
   return (
   return (
@@ -400,18 +400,11 @@ export default function SEOAnalyzerToolPage() {;
               </Card>
             ))}
 
-
-
-
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
-
 
               Comprehensive SEO Analysis
             </h2>
@@ -527,25 +520,25 @@ export default function SEOAnalyzerToolPage() {;
                     >;
                       <CheckCircle className='w - 4 h - 4 text - green - 400 mr - 3 flex - shrink - 0' />                      {factor}              Comprehensive SEO Analysis;
             </h2>;
-            <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+            <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
               We analyze every aspect of your website's SEO to provide actionable insights and recommendations.;
             </p>;
           </div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols-2 gap-8">;
             {seo_factors.map ((category, index) => (
               <Card;
                 key={index}
-                className="card - hover border - gradient - green";
+                className="card - hover border-gradient-green";
                 style={{ animation_delay: `${index * 0.1}s` }}
               >;
-                <div className="flex items - center mb - 6">;
-                  <div className="text - 3xl mr - 4">{category.icon}</div>;
+                <div className="flex items-center mb-6">;
+                  <div className="text-3xl mr-4">{category.icon}</div>;
                   <h3 className={`text - xl font - bold ${category.color}`}>{category.category}</h3>;
                 </div>;
-                <ul className="space - y-3">;
+                <ul className="space-y-3">;
                   {category.factors.map ((factor, factor_index) => (
-                    <li key={factor_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 3 flex - shrink - 0" />;
+                    <li key={factor_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 4 h - 4 text - green - 400 mr - 3 flex-shrink-0" />;
                       {factor}
                     </li>))}
                 </ul>;
@@ -690,8 +683,6 @@ export default function SEOAnalyzerToolPage() {;
 
                       </div>
 
-
-
                     </div>
                   ))}
                 </div>
@@ -783,13 +774,13 @@ export default function SEOAnalyzerToolPage() {;
                 <div className='w - 32 h - 32 mx - auto mb - 6'>;
                   <svg;
                     className='w - full h - full transform -rotate - 90';
-                    view_box='0 0 36 36';
+                    viewBox='0 0 36 36';
                   >;
                     <path;
                       d='M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831';
                       fill='none';
                       stroke='current_color';
-                      stroke_width='2';
+                      strokeWidth='2';
                       stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
                       className='text - green - 500';
                     />;
@@ -829,48 +820,48 @@ export default function SEOAnalyzerToolPage() {;
                       {analysis_results.mobile_score}/100;
                     </span>                  </div>                SEO Analysis Results;
               </h2>;
-              <p className="text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed">;
+              <p className="text - responsive - md text - gray - 400 max - w-4xl mx-auto leading-relaxed">;
                 Here's a sample analysis of a website. Get comprehensive insights for your own website.;
               </p>;
             </div>;
-            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8">;
+            <div className="grid grid - cols - 1 lg:grid - cols - 3 gap-8 mb-8">;
               {/* Overall Score */}
-              <Card className="border - gradient - green text - center">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Overall SEO Score</h3>;
-                <div className="text - 6xl font - bold text - green - 400 mb - 4">{analysis_results.overall_score}/100</div>;
-                <div className="w - 32 h - 32 mx - auto mb - 6">;
-                  <svg className="w - full h - full transform -rotate - 90" view_box="0 0 36 36">;
+              <Card className="border - gradient-green text-center">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Overall SEO Score</h3>;
+                <div className="text - 6xl font - bold text - green-400 mb-4">{analysis_results.overall_score}/100</div>;
+                <div className="w - 32 h - 32 mx-auto mb-6">;
+                  <svg className="w - full h-full transform -rotate-90" viewBox="0 0 36 36">;
                     <path;
                       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831";
                       fill="none";
                       stroke="current_color";
-                      stroke_width="2";
+                      strokeWidth="2";
                       stroke_dasharray={`${(analysis_results.overall_score / 100) * 100}, 100`}
-                      className="text - green - 500";
+                      className="text-green-500";
                     />;
                   </svg>;
                 </div>;
-                <p className="text - gray - 400">Good SEO foundation with room for improvement</p>;
+                <p className="text-gray-400">Good SEO foundation with room for improvement</p>;
               </Card>;
               {/* Detailed Scores */}
-              <Card className="border - gradient - green">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Detailed Scores</h3>;
-                <div className="space - y-4">;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">On - Page SEO</span>;
-                    <span className="font - bold text - green - 400">{analysis_results.onPageScore}/100</span>;
+              <Card className="border-gradient-green">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Detailed Scores</h3>;
+                <div className="space-y-4">;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">On - Page SEO</span>;
+                    <span className="font - bold text-green-400">{analysis_results.onPageScore}/100</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Technical SEO</span>;
-                    <span className="font - bold text - orange - 400">{analysis_results.technical_score}/100</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Technical SEO</span>;
+                    <span className="font - bold text-orange-400">{analysis_results.technical_score}/100</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Content SEO</span>;
-                    <span className="font - bold text - blue - 400">{analysis_results.content_score}/100</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Content SEO</span>;
+                    <span className="font - bold text-blue-400">{analysis_results.content_score}/100</span>;
                   </div>;
-                  <div className="flex justify - between items - center">;
-                    <span className="text - gray - 400">Mobile SEO</span>;
-                    <span className="font - bold text - green - 400">{analysis_results.mobile_score}/100</span>;
+                  <div className="flex justify-between items-center">;
+                    <span className="text-gray-400">Mobile SEO</span>;
+                    <span className="font - bold text-green-400">{analysis_results.mobile_score}/100</span>;
                   </div>;
                 </div>;
               </Card>;
@@ -891,14 +882,14 @@ export default function SEOAnalyzerToolPage() {;
                         <div className='text - xs text - gray - 500 mt - 1'>;
                           Priority: {issue.priority}
                         </div>                      </div>                  {analysis_results.issues.map ((issue, index) => (
-                    <div key={index} className="flex items - start space - x-3">;
+                    <div key={index} className="flex items-start space-x-3">;
                       {issue.type === 'error' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex - shrink - 0" />) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex - shrink - 0" />) : (
-                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex - shrink - 0" />)}
+                        <AlertTriangle className="w - 5 h - 5 text - red - 400 mt - 1 flex-shrink-0" />) : issue.type === 'warning' ? (
+                        <AlertTriangle className="w - 5 h - 5 text - yellow - 400 mt - 1 flex-shrink-0" />) : (
+                        <CheckCircle className="w - 5 h - 5 text - blue - 400 mt - 1 flex-shrink-0" />)}
                       <div>;
-                        <span className="text - gray - 300">{issue.message}</span>;
-                        <div className="text - xs text - gray - 500 mt - 1">Priority: {issue.priority}</div>;
+                        <span className="text-gray-300">{issue.message}</span>;
+                        <div className="text - xs text - gray-500 mt-1">Priority: {issue.priority}</div>;
                       </div>;
                     </div>))}
                 </div>;
@@ -914,14 +905,14 @@ export default function SEOAnalyzerToolPage() {;
                   {analysis_results.recommendations.map ((rec, index) => (
                     <div key={index} className='flex items - start space - x-3'>;
                       <CheckCircle className='w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0' />;
-                      <span className='text - gray - 300'>{rec}</span>                    </div>            <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-              <Card className="border - gradient - green">;
-                <h3 className="text - 2xl font - bold mb - 6 text - white">Optimization Recommendations</h3>;
-                <div className="space - y-3">;
+                      <span className='text - gray - 300'>{rec}</span>                    </div>            <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
+              <Card className="border-gradient-green">;
+                <h3 className="text - 2xl font - bold mb-6 text-white">Optimization Recommendations</h3>;
+                <div className="space-y-3">;
                   {analysis_results.recommendations.map ((rec, index) => (
-                    <div key={index} className="flex items - start space - x-3">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex - shrink - 0" />;
-                      <span className="text - gray - 300">{rec}</span>))}
+                    <div key={index} className="flex items-start space-x-3">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mt - 1 flex-shrink-0" />;
+                      <span className="text-gray-300">{rec}</span>))}
                 </div>;
               </Card>;
               <Card className='border - gradient - green'>;
@@ -953,8 +944,8 @@ export default function SEOAnalyzerToolPage() {;
                                 ? 'bg - yellow - 500 / 20 text - yellow - 400';
                                 : 'bg - red - 500 / 20 text - red - 400';
                           }`}
-                        >                          {keyword.difficulty}                      <div className="flex justify - between items - center">;
-                        <span className="text - sm text - gray - 400">Difficulty: {keyword.difficulty}</span>;
+                        >                          {keyword.difficulty}                      <div className="flex justify-between items-center">;
+                        <span className="text - sm text-gray-400">Difficulty: {keyword.difficulty}</span>;
                         <span className={`px - 2 py - 1 rounded text - xs ${
                           keyword.difficulty === 'low' ? 'bg - green - 500 / 20 text - green - 400' :;
                           keyword.difficulty === 'medium' ? 'bg - yellow - 500 / 20 text - yellow - 400' :;
@@ -1022,7 +1013,6 @@ export default function SEOAnalyzerToolPage() {;
           </div>
         </div>
       </section>
-
 
               </Card>
                   className={`w-full ${plan && plan.popular ? 'bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700' : 'bg-gray-700 hover:bg-gray-600'} text-white`}>;

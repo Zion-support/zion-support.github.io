@@ -120,9 +120,7 @@ import {
 interface NavigationItem {
   name: string;
 
-
   href: string;  icon?: React.ReactNode;import { ;
-
 
   Menu, ChevronDown, X, Phone, Mail, MapPin, ArrowRight;
   Brain, Rocket, Shield, Zap, Target, Atom, BookOpen;
@@ -287,7 +285,7 @@ const navigation_items: NavigationItem[] = [;
   {
     name: 'All Services',
     href: '/comprehensive - services - showcase - 2025',
-    icon: <Globe className="w - 5 h - 5" />,
+    icon: <Globe className="w-5 h-5" />,
     description: 'Complete portfolio of all technology services',
     badge: 'Showcase',
     featured: true,
@@ -383,7 +381,7 @@ const navigation_items: NavigationItem[] = [;
       { name: 'Advanced AI Automation', href: '/advanced-ai-automation-services', description: 'AI automation for development, testing, DevOps, security, and data' }
     ]
     href: '/ai - services',
-    icon: <Brain className="w - 5 h - 5" />,
+    icon: <Brain className="w-5 h-5" />,
     badge: 'New',
     featured: true,
     children: [;
@@ -507,7 +505,7 @@ const navigation_items: NavigationItem[] = [;
       { name: 'Invoice Studio', href: '/invoice-studio', description: 'Instant branded invoices and payments' }
     ]
     href: '/micro - saas',
-    icon: <Rocket className="w - 5 h - 5" />,
+    icon: <Rocket className="w-5 h-5" />,
     badge: 'Hot',
     featured: true,
     children: [;
@@ -616,7 +614,7 @@ const navigation_items: NavigationItem[] = [;
       { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology', description: 'Revolutionary space AI' }
     ]
     href: '/quantum - services',
-    icon: <Atom className="w - 5 h - 5" />,
+    icon: <Atom className="w-5 h-5" />,
     badge: 'Hot',
     featured: true,
     children: [;
@@ -784,7 +782,7 @@ const navigation_items: NavigationItem[] = [;
     description: 'Documentation, support, and learning resources'
     children: [
     href: '/enterprise - it',
-    icon: <Shield className="w - 5 h - 5" />,
+    icon: <Shield className="w-5 h-5" />,
     badge: 'Enterprise',
     featured: true,
     children: [;
@@ -926,10 +924,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     closeDropdowns()
   };
 
-
-
             {/* Desktop Navigation */}  };
-
 
   return (
     <nav aria-label="Primary" className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -1018,7 +1013,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         exit={{ opacity: 0, y: 10, scale: 0.95 }}
                         transition={{ duration: 0.2 }}
                         className='absolute top-full left-0 mt-2 w-80 bg-gray-900/95 backdrop-blur-xl border border-gray-800/50 rounded-2xl shadow-2xl shadow-black/50 overflow-hidden'
-
 
                   {/* Dropdown Menu */}
                   <AnimatePresence>;
@@ -1293,9 +1287,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                         }`} />;
                       </button>;
 
-
-
-
                       {/* Mobile Dropdown */}
                       <AnimatePresence>;
                         {activeDropdown === item && item.name && (;
@@ -1316,9 +1307,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                                   <div className="text-sm opacity-75 mt-1">{child && child.description}</div>;
                                 )}
 
-
-
-
                               </Link>
                               </Link>;
                             ))}
@@ -1327,8 +1315,6 @@ const UltraFuturisticNavigation2035: React.FC = () => {
                       </AnimatePresence>;
                     </div>;
                   ))}
-
-
 
                           key={action.name}
                           href={action.href}
@@ -1384,7 +1370,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 }
 ;
 }, []);
-</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip - text text - transparent" > Zion Tech Group </div> <div className="text - xs text - gray - 400" >Revolutionary Technology</div> </div> </a> > {
+</div> <div> <div className="text - xl font - bold bg - gradient - to - r from - cyan - 400 to - blue - 500 bg - clip-text text-transparent" > Zion Tech Group </div> <div className="text - xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
   item.icon;
 }<span> {
   item.name;
@@ -1415,7 +1401,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
 }on_click= {
   close_dropdowns;
 }>);
-}</div> <ArrowRight className="w - 4 h - 4 opacity - 50" /> </a>) );
+}</div> <ArrowRight className="w - 4 h-4 opacity-50" /> </a>) );
 }</div> </div> </motion.div>);
 }</AnimatePresence> </div>) );
 }</div> <Link key= {

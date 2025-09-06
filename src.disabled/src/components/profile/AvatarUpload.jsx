@@ -1,13 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
-=======
-import React,{ useState } from \'react\'; import { useState } from \'react\'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset=\"avatar_preset\" onUpload={handleUpload}> Upload Avatar; ></div> ) : (\"; <p className=\"text-sm text-gray-500\"> Image upload feature is currently unavailable.></div> )} ></div> );} \'"
-const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
-import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
-=======
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -31,6 +22,6 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React,{ useState } from \'react\'; import { useState } from \'react\'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset=\"avatar_preset\" onUpload={handleUpload}> Upload Avatar; ></div> ) : (\"; <p className=\"text-sm text-gray-500\"> Image upload feature is currently unavailable.></div> )} ></div> );} \'"
-const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return; }; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
+const React,{ useState } from "react"; import { useState } from "react"; export default function Page() { return
+}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} """""
 import _React,{ useState } from 'react'; import { useState } from 'react'; export default function Page() {}; return null} )} {}; <CldUploadButton uploadPreset="avatar_preset" onUpload={handleUpload}> Upload Avatar; ></div> ) : ("; <p className="text-sm text-gray-500"> Image upload feature is currently unavailable.></div> )} ></div> );} '"
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6

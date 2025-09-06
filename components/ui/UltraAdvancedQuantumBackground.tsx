@@ -112,7 +112,6 @@ if (return) {
       }
         if (!ctx) return;
 
-
         if (!ctx) return;
         ctx && ctx.save();
         ctx && ctx.globalAlpha = this && this.life / this && this.maxLife;
@@ -242,13 +241,13 @@ if (return) {
             ctx.moveTo(p1.x, p1.y);
             ctx.lineTo(p2.x, p2.y);
 
-
           }
         }
       }
 
       ctx && ctx.restore();
-      animationFrameId = requestAnimationFrame(animate);    };      animationFrameId = requestAnimationFrame(animate);
+      animationFrameId = requestAnimationFrame(animate)
+};      animationFrameId = requestAnimationFrame(animate);
       for (let i = 0; i < particles.length; i += 2) {        if (i + 1 < particles.length) {      for (let i = 0, i < particles.length, i += 2) {
         if (i + 1 < particles.length) {
           const p1 = particles[i];
@@ -369,17 +368,13 @@ if (return) {
 }
 export default UltraAdvancedQuantumBackground;  )
 }
-export default UltraAdvancedQuantumBackground;
-
+export default UltraAdvancedQuantumBackground
 };
 
-export default UltraAdvancedQuantumBackground;  );
+export default UltraAdvancedQuantumBackground;  )
 };
 
-
-export default UltraAdvancedQuantumBackground;
-
-
+export default UltraAdvancedQuantumBackground
 };
 
 export default UltraAdvancedQuantumBackground;            ease: "linear",;

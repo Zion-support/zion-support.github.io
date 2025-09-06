@@ -107,7 +107,6 @@ import Head from 'next/head';
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Choose the perfect plan for your business needs
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
             </p>
           </div>
 

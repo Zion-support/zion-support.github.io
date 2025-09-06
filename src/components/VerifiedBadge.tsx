@@ -21,104 +21,22 @@ export function VerifiedBadge({
     sm: 'h-3.5 w-3.5'
     md: 'h-4 w-4'
     lg: 'h-5 w-5'
-<<<<<<< HEAD
   }
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip'
 interface VerifiedBadgeProps {
 
-
   return (
     <TooltipProvider>
       <Tooltip>
-        <TooltipTrigger asChild>
-=======
-import React from 'react';
-import { CheckCircle } from 'lucide-react';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components / ui / tooltip';
-interface VerifiedBadgeProps {
-  verified: boolean;
-  size?: 'sm' | 'md' | 'lg';
-  /** Optional tooltip label to display */;
-  label?: string;
-export /**
- * VerifiedBadge - Function description
- */
-function VerifiedBadge() {
-  // Check condition
-if (return null) {
-  $2
-}
-  const size_classes = {
-    sm: 'h - 3.5 w - 3.5',
-    md: 'h - 4 w - 4',
-    lg: 'h - 5 w - 5',
-  }
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components / ui / tooltip';
-interface VerifiedBadgeProps {
-
-  verified: boolean,
-  }
-
-
-interface VerifiedBadgeProps {
-  verified: boolean;
-
-  size?: 'sm' | 'md' | 'lg';
-  /** Optional tooltip label to display */;
-  label?: string;
-}
-export /**
- * VerifiedBadge - Function description
- */
-function VerifiedBadge() {
-  // Check condition
-if (return null) {
-  $2
-}
-  const size_classes = {
-    sm: 'h - 3.5 w - 3.5',
-    md: 'h - 4 w - 4',
-    lg: 'h - 5 w - 5';
-  }
-
-
-
-
-export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {
-  if (!verified) return null,
-  
-  const sizeClasses = {
-    sm: 'h-3.5 w-3.5',
-    md: 'h-4 w-4',
-    lg: 'h-5 w-5'
-  },
-  
-
-
-  return (
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
+        <TooltipTrigger asChild>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
         <TooltipContent>
           <p>{label}</p>
         </TooltipContent>
-<<<<<<< HEAD
-=======
-
-
 
       </Tooltip>
     </TooltipProvider>
-
 
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
@@ -144,8 +62,8 @@ export function VerifiedBadge(): any ({;
   const sizeClasses = {;
     sm: 'h-3 && 3.5 w-3 && 3.5',;
     md: 'h-4 w-4',;
-    lg: 'h-5 w-5',;
-  };
+    lg: 'h-5 w-5',
+};
 
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
@@ -156,7 +74,6 @@ interface VerifiedBadgeProps {;
   size?: 'sm' | 'md' | 'lg';
   /** Optional tooltip label to display */;
   label?: string;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 }
 
 export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified talent' }: VerifiedBadgeProps) {;
@@ -165,8 +82,8 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
   const sizeClasses = {;
     sm: 'h-3 && 3.5 w-3 && 3.5',;
     md: 'h-4 w-4',;
-    lg: 'h-5 w-5';
-  };
+    lg: 'h-5 w-5'
+};
 
   return (
     <TooltipProvider>;
@@ -177,7 +94,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
     <TooltipProvider>;
       <Tooltip>;
         <TooltipTrigger as_child>;
-          <span className='inline - flex text - blue - 500'>            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />          <span className="inline - flex text - blue - 500">;
+          <span className='inline - flex text - blue - 500'>            <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />          <span className="inline - flex text - blue-500">;
             <CheckCircle className={`${size_classes[size]} fill - blue - 100`} />;
           </span>;
         </TooltipTrigger>;
@@ -190,8 +107,4 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 }
 
     </TooltipProvider>);
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

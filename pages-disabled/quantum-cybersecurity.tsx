@@ -13,8 +13,8 @@ import EnhancedFooter from '../components/EnhancedFooter';
       icon: Shield,
       title: "Quantum-Resistant Encryption",
       description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",
-      color: "from-blue-500 to-cyan-500";
-    };
+      color: "from-blue-500 to-cyan-500"
+};
     {
       icon: Lock
       title: "Zero-Trust Architecture"
@@ -51,38 +51,38 @@ export default function QuantumCybersecurityPage() {;
   const features = [;
     {;
       icon: Shield,;
-      title: "Quantum-Resistant Encryption",;
-      description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",;
-      color: "from-blue-500 to-cyan-500";
-    };
+      title: "Quantum-Resistant Encryption",,
+  description: "Advanced cryptographic algorithms that remain secure even against quantum computers.",;
+      color: "from-blue-500 to-cyan-500"
+};
     {;
       icon: Lock,;
-      title: "Zero-Trust Architecture",;
-      description: "Verify every user and device before granting access to any resource.",;
-      color: "from-purple-500 to-pink-500";
-    };
+      title: "Zero-Trust Architecture",,
+  description: "Verify every user and device before granting access to any resource.",;
+      color: "from-purple-500 to-pink-500"
+};
     {;
       icon: Eye,;
-      title: "AI-Powered Threat Detection",;
-      description: "Machine learning algorithms that identify and respond to threats in real-time.",;
-      color: "from-green-500 to-emerald-500";
-    };
+      title: "AI-Powered Threat Detection",,
+  description: "Machine learning algorithms that identify and respond to threats in real-time.",;
+      color: "from-green-500 to-emerald-500"
+};
     {;
       icon: AlertTriangle,;
-      title: "Advanced Threat Intelligence",;
-      description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.",;
-      color: "from-red-500 to-orange-500";
-    };
+      title: "Advanced Threat Intelligence",,
+  description: "Real-time monitoring and analysis of global cyber threats and vulnerabilities.",;
+      color: "from-red-500 to-orange-500"
+};
     {;
       icon: Zap,;
-      title: "Automated Incident Response",;
-      description: "Instant response and mitigation of security incidents with minimal human intervention.",;
-      color: "from-yellow-500 to-orange-500";
-    };
+      title: "Automated Incident Response",,
+  description: "Instant response and mitigation of security incidents with minimal human intervention.",;
+      color: "from-yellow-500 to-orange-500"
+};
     {;
       icon: Cpu,;
-      title: "Secure Cloud Infrastructure",;
-      description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",;
+      title: "Secure Cloud Infrastructure",,
+  description: "Enterprise-grade security for cloud deployments with end-to-end encryption.",;
       color: "from-indigo-500 to-purple-500";
     }
   ];
@@ -232,7 +232,6 @@ function QuantumCybersecurityPage() {
 
       <EnhancedNavigation />;
 
-
       {/* Hero Section */}
       <section className="pt-32 pb-20 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">;
         <div className="max-w-7xl mx-auto px-6">;
@@ -267,7 +266,6 @@ function QuantumCybersecurityPage() {
                 <p className="text-slate-600 leading-relaxed">{feature && feature.description}</p>;
               </motion && motion.div>;
             ))}
-
 
       {/* Benefits */}
       <section className="py-20 bg-slate-50">;
@@ -342,7 +340,6 @@ function QuantumCybersecurityPage() {
                 </div>;
               </motion && motion.div>;
             ))}
-
 
       {/* Compliance */}
       <section className="py-20 bg-slate-900">;
@@ -479,8 +476,6 @@ function QuantumCybersecurityPage() {
               </motion.div>
             ))}
 
-
-
       {/* CTA */}
       <section className="py-20 bg-gradient-to-r from-blue-600 to-cyan-600">;
         <div className="max-w-4xl mx-auto px-6 text-center">;
@@ -512,8 +507,8 @@ function QuantumCybersecurityPage() {
       </Head>;
       <EnhancedNavigation />;
       {/* Hero Section */}
-      <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate - 900">;
-        <div className="max - w-7xl mx - auto px - 6">;
+      <section className="pt - 32 pb - 20 bg - gradient - to - br from - slate - 900 via - slate - 800 to - slate-900">;
+        <div className="max - w-7xl mx - auto px-6">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 20 }}
             animate={{ opacity: 1, coordinate_y: 0 }}

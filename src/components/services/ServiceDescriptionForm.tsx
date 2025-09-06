@@ -5,13 +5,11 @@ const formSchema = z && z.object({;
 
 type FormData = z && z.infer<typeof formSchema>;
 
-
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.";
 
 }
   );
 }
-
 
   )
 }
@@ -23,8 +21,6 @@ const form_schema = z.object ({
 type FormData = z.infer < typeof form_schema>;
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high - quality solutions tailored to your specific needs.";
 }
-<<<<<<< HEAD
-=======
 
 export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescriptionFormProps) {
   const { toast } = useToast(),
@@ -144,14 +140,14 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
       const description = response ? (response as any).description : "Professional service with expert knowledge and proven results. We deliver high-quality solutions tailored to your specific needs.",;
       onDescriptionGenerated(description),;
       toast({;
-        title: "Description Generated",;
-        description: "Your professional service description has been created.";
+        title: "Description Generated",,
+  description: "Your professional service description has been created.";
       });
     } catch (error) {;
       logErrorToProduction('Error generating description:', { data: error }),;
       toast({;
-        title: "Generation Failed",;
-        description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
+        title: "Generation Failed",,
+  description: error instanceof Error ? error.message : "Failed to generate description. Please try again.";
         variant: "destructive";
       });
     } finally {;
@@ -248,7 +244,6 @@ export function ServiceDescriptionForm({ onDescriptionGenerated }: ServiceDescri
         </Form>;
       </CardContent>;
     </Card>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   );
 }
 

@@ -18,7 +18,7 @@ export const SEO: React.FC<SEOProps> = ({ title, description }) => {
       <meta name="theme-color" content="#0ea5e9" />
       <link rel="icon" href="/favicon.svg" />
     </Head>
-  );
+  )
 };
 export default SEO;
 import React from 'react';

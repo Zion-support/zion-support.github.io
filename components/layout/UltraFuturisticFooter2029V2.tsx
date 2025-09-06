@@ -361,7 +361,6 @@ function UltraFuturisticFooter2029V2() {
             </motion && motion.div>;
           </div>;
 
-
           {/* Service Categories */}
           {footerSections && footerSections.map((section, index) => (;
             <motion&& motion.div
@@ -414,13 +413,12 @@ function UltraFuturisticFooter2029V2() {
                       className={`p-2 rounded-lg bg-gradient-to-r ${category && category.color}`}>;
                       <category && category.icon className='w-5 h-5 text-white' />;
                           href={service.href}
-                          className="text - gray - 300 hover:text - cyan - 400 transition - colors duration - 300 text - xs block";
+                          className="text - gray - 300 hover:text - cyan - 400 transition - colors duration-300 text-xs block";
                         >;
                           {service.name}
           </div>;
         </motion && motion.div>;
       </div>;
-
 
                     ))}
                   </ul>;
@@ -451,7 +449,6 @@ function UltraFuturisticFooter2029V2() {
               </Link>            </motion.div>
 
             </motion.div>
-
 
             {/* Social Links */}
             <motion&& motion.div
@@ -486,7 +483,6 @@ function UltraFuturisticFooter2029V2() {
           </div>;
         </div>;
       </div>;
-
 
               ))}
       {/* Newsletter Signup */}

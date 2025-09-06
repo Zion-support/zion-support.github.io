@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 export type ProjectStatus = 'InProgress' | 'Completed';
-export type Project = {
-=======
-export interface Review {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  id: string;
+export type Project = {  id: string;
   userId: string;
   serviceId: string;
   rating: number;
@@ -12,7 +7,6 @@ export interface Review {
   createdAt: Date;
   updatedAt: Date;
 }
-<<<<<<< HEAD
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
   communication?: number; // 1-5 optional
@@ -24,7 +18,7 @@ export type ReviewCategoryScores = {
   talentSlug: string, // slug from TALENT_PROFILES;
   title: string;
   status: ProjectStatus,;
-  completedAt?: string, // ISO string;
+  completedAt?: string, // ISO string
 };
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
@@ -36,9 +30,6 @@ export type Review = {
   id: string;
   projectId: string;
   fromRole: ReviewRole;
-
-
-
 
   fromId: string, // clientId or talentSlug depending on fromRole;
   toRole: ReviewRole, // opposite of fromRole;
@@ -53,7 +44,6 @@ export type Review = {
   removed?: boolean,;
   createdAt: string, // ISO;
 },;
-
 
 export type ReviewsSummary = {
   averageRating: number;
@@ -103,17 +93,3 @@ export type ReviewsSummary = {
 
 }
 };
-=======
-
-export interface ReviewSummary {
-  averageRating: number;
-  totalReviews: number;
-  ratingDistribution: {
-    1: number;
-    2: number;
-    3: number;
-    4: number;
-    5: number;
-  };
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

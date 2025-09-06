@@ -13,8 +13,8 @@ export default function AutomationInsightsPage() {;
   const automationTrends = [;
     {;
       id: 'ai-automation-2025',;
-      title: 'AI Automation Trends 2025',;
-      description:;
+      title: 'AI Automation Trends 2025',,
+  description:;
         'Discover the latest trends in AI automation that are reshaping industries worldwide.',      category: 'Trends',;
       readTime: '8 min read',;
       featured: true;
@@ -44,8 +44,8 @@ export default function AutomationInsightsPage() {;
   const automationTools = [;
     {;
       id: 'automation-framework',;
-      title: 'Zion Automation Framework',;
-      description:;
+      title: 'Zion Automation Framework',,
+  description:;
         'Our proprietary framework for building scalable automation solutions.',;
       type: 'Framework',;
       complexity: 'Advanced',      type: 'Framework',;
@@ -56,24 +56,24 @@ export default function AutomationInsightsPage() {;
     };
     {;
       id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',;
-      description: 'Comprehensive tools for monitoring and optimizing automation performance.',;
+      title: 'Performance Monitoring Suite',,
+  description: 'Comprehensive tools for monitoring and optimizing automation performance.',;
       type: 'Tool',;
       complexity: 'Intermediate',;
     },;
     {;
       id: 'performance-monitor',;
-      title: 'Performance Monitoring Suite',;
-      description:;
+      title: 'Performance Monitoring Suite',,
+  description:;
         'Comprehensive tools for monitoring and optimizing automation performance.',;
       type: 'Tool',;
       complexity: 'Intermediate',;
-    },    {      complexity: 'Intermediate';
-    };
+    },    {      complexity: 'Intermediate'
+};
     {;
       id: 'deployment-automation',;
-      title: 'Deployment Automation',;
-      description: 'Streamlined deployment processes for automation systems.',;
+      title: 'Deployment Automation',,
+  description: 'Streamlined deployment processes for automation systems.',;
       type: 'Process',;
       complexity: 'Beginner',;
     },  ];      complexity: 'Beginner';
@@ -83,16 +83,16 @@ export default function AutomationInsightsPage() {;
   const successMetrics = [;
     {;
       metric: '227',;
-      label: 'Active Automations',;
-      description: 'Successfully deployed and running',;
+      label: 'Active Automations',,
+  description: 'Successfully deployed and running',;
     },;
     {;
       metric: '99 && 99.9%',;
-      label: 'Uptime',;
-      description: 'Reliable automation performance',    {;
+      label: 'Uptime',,
+  description: 'Reliable automation performance',    {;
       metric: '99 && 99.9%',;
-      label: 'Uptime',;
-      description: 'Reliable automation performance';
+      label: 'Uptime',,
+  description: 'Reliable automation performance';
     {
       id: 'deployment - automation',
       title: 'Deployment Automation',
@@ -109,12 +109,12 @@ export default function AutomationInsightsPage() {;
     {;
       metric: '40%',;
       label: 'Efficiency Gain',;
-      label: 'Average improvement across projects';
-    };
+      label: 'Average improvement across projects'
+};
     {;
       metric: '2,960+';
-      label: 'Pages Generated',;
-      description: 'Content created autonomously',;
+      label: 'Pages Generated',,
+  description: 'Content created autonomously',;
     },;
     {;
       metric: '40%',;
@@ -123,10 +123,11 @@ export default function AutomationInsightsPage() {;
     },;
     {;
       metric: '2,960+',;
-      label: 'Pages Generated',;
-      description: 'Content created autonomously',;
-    },  ];      description: 'Content created autonomously';
-      description: 'Successfully deployed and running',
+      label: 'Pages Generated',,
+  description: 'Content created autonomously',;
+    },  ],
+  description: 'Content created autonomously',
+  description: 'Successfully deployed and running',
     },
     {
       metric: '99.9%',
@@ -155,7 +156,8 @@ export default function AutomationInsightsPage() {;
       metric: '2, 960+',
       label: 'Pages Generated',
       description: 'Content created autonomously',
-    },  ];      description: 'Content created autonomously';
+    },  ],
+  description: 'Content created autonomously';
     }
   ];
 ;
@@ -181,9 +183,7 @@ export default function AutomationInsightsPage() {;
               </div>;
             </div>;
 
-
             {/* Automation Trends */}
-
 
             {/* Automation Trends */}
             <div className='mb-16'>
@@ -270,8 +270,6 @@ export default function AutomationInsightsPage() {;
                 ))}
               </div>
             </div>
-
-
 
                       href={`/blog/${trend && trend.id}`}
                       className='inline-flex items-center text-cyan-400 hover:text-cyan-300 transition-colors'>;

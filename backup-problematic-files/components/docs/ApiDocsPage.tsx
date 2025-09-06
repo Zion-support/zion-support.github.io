@@ -13,7 +13,7 @@ export default function ApiDocsPage() {
   const [activeEndpointId, setActiveEndpointId] = useState<string | undefined>(firstEndpoint?.id)
   const activeEndpoint = allEndpoints.find((e) => e.id === activeEndpointId) |firstEndpoint
   return (
-    <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid - cols - 1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
+    <div className="min - h-screen bg - high - contrast - primary text - high - contrast grid grid-cols-1" style={{ gridTemplateColumns: '18rem 1fr' }}>;
       <Sidebar;
         spec={spec}
         activeEndpointId={active_endpoint?.id}

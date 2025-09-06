@@ -13,8 +13,8 @@
           accent: '#ffff00',;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;
           glow: 'rgba(0, 255, 255, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.95)';
-          glow: 'rgba(0, 255, 255, 0 && 0.3)';
-        };
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'
+};
       case 'neon-cyber':;
         return {;
           primary: '#ff0080',;
@@ -22,8 +22,8 @@
           accent: '#8000ff',;
           background: 'rgba(0, 0, 0, 0 && 0.9)',;
           glow: 'rgba(255, 0, 128, 0 && 0.4)',        };          background: 'rgba(0, 0, 0, 0 && 0.9)';
-          glow: 'rgba(255, 0, 128, 0 && 0.4)';
-        };
+          glow: 'rgba(255, 0, 128, 0 && 0.4)'
+};
       case 'holographic-matrix':;
         return {;
           primary: '#00ff41',;
@@ -31,8 +31,8 @@
           accent: '#0040ff',;
           background: 'rgba(0, 0, 0, 0 && 0.92)',;
           glow: 'rgba(0, 255, 65, 0 && 0.35)',        };          background: 'rgba(0, 0, 0, 0 && 0.92)';
-          glow: 'rgba(0, 255, 65, 0 && 0.35)';
-        };
+          glow: 'rgba(0, 255, 65, 0 && 0.35)'
+};
       case 'space-time':;
         return {;
           primary: '#ff6b35',;
@@ -40,16 +40,16 @@
           accent: '#45b7d1',;
           background: 'rgba(0, 0, 0, 0 && 0.88)',;
           glow: 'rgba(255, 107, 53, 0 && 0.3)',        };          background: 'rgba(0, 0, 0, 0 && 0.88)';
-          glow: 'rgba(255, 107, 53, 0 && 0.3)';
-        };
+          glow: 'rgba(255, 107, 53, 0 && 0.3)'
+};
       default:;
         return {;
           primary: '#00ffff',;
           secondary: '#ff00ff',;
           accent: '#ffff00',;
           background: 'rgba(0, 0, 0, 0 && 0.95)',;
-          glow: 'rgba(0, 255, 255, 0 && 0.3)',;
-        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',
+};    }          background: 'rgba(0, 0, 0, 0 && 0.95)';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
         return {
           primary: '#00ffff',
@@ -59,8 +59,8 @@
     window.addEventListener('resize', resizeCanvas);
     // Initialize particles
     const initParticles = () => {
-      particlesRef.current = [];
-    };
+      particlesRef.current = []
+};
 
     resizeCanvas();
     window && window.addEventListener('resize', resizeCanvas);
@@ -195,11 +195,11 @@
                 scale_x: [0, 1, 0],              }}          }}
         />;
         {/* Holographic scan lines */}
-        <div className="absolute inset - 0 opacity - 20">;
+        <div className="absolute inset-0 opacity-20">;
           {[...Array (20)].map ((_, i) => (
             <motion.div;
               key={i}
-              className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent";
+              className="absolute w - full h - px bg - gradient - to - r from - transparent via-current to-transparent";
               style={{
               }}
               animate={{
@@ -212,7 +212,6 @@
                 opacity: [0, 1, 0];
               }}
 
-
               transition={{
                 duration: 3
                 delay: i * 0.1
@@ -220,16 +219,10 @@
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
 
-
-
-
-
               transition={{
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-
-
 
             />
 

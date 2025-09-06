@@ -14,14 +14,14 @@ export interface ContentGenerationResponse {;
   readabilityScore:number,;
   suggestions:string[],;
   metadata:{;
-    title:string,;
-    description:string,;
+    title:string,,
+  description:string,;
     tags:string[];
   },;}
 ;
 export interface ContentTemplate {;
   id:string,;
-  name:string,;
+  name:string,,
   description:string,;
   type:string,;
   preview:string,;
@@ -62,32 +62,32 @@ export class AIContentGeneratorService {;
     return [;
       {;
         id:'blog-post-starter',;
-        name:'Blog Post Starter',;
-        description:'Professional blog post template with SEO optimization',;
+        name:'Blog Post Starter',,
+  description:'Professional blog post template with SEO optimization',;
         type:'blog-post',;
         preview:'Create engaging blog posts that rank well in search engines...',;
         price:29;
       },;
       {;
         id:'social-media-campaign',;
-        name:'Social Media Campaign',;
-        description:'Complete social media content strategy and posts',;
+        name:'Social Media Campaign',,
+  description:'Complete social media content strategy and posts',;
         type:'social-media',;
         preview:'Engage your audience with compelling social media content...',;
         price:49;
       },;
       {;
         id:'email-sequence',;
-        name:'Email Sequence',;
-        description:'Convert prospects with persuasive email sequences',;
+        name:'Email Sequence',,
+  description:'Convert prospects with persuasive email sequences',;
         type:'email',;
         preview:'Build relationships and drive sales with email automation...',;
         price:39;
       },;
       {;
         id:'landing-page-copy',;
-        name:'Landing Page Copy',;
-        description:'High-converting landing page content',;
+        name:'Landing Page Copy',,
+  description:'High-converting landing page content',;
         type:'landing-page',;
         preview:'Turn visitors into customers with compelling copy...',;
         price:59;
@@ -120,8 +120,8 @@ ${request.topic} represents a significant opportunity for organizations looking 
         'Optimize for target keywords';
       ],;
       metadata:{;
-        title:`${request.topic} - Complete Guide`,;
-        description:`Learn everything about ${request.topic} and how to implement it effectively.`,;
+        title:`${request.topic} - Complete Guide`,,
+  description:`Learn everything about ${request.topic} and how to implement it effectively.`,;
         tags:[request.topic, request.type, 'guidetutorial'];
       }
     },;

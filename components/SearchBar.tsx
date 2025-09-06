@@ -1,55 +1,17 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface SearchResult {
-  title: string;
+  title: string,
   description: string;
   url: string;
   type: 'service' | 'page' | 'category';
 }
-<<<<<<< HEAD
 const SearchBar: React.FC = () => {
 interface SearchResult {;
   title: string, description: string,;
   url: string, type: 'service' | 'page' | 'category',;
-}
-=======
-
-const SearchBar: React.FC = () => {
-  const [query, setQuery] = useState('');
-  const [results, setResults] = useState<SearchResult[]>([]);
-  const [isOpen, setIsOpen] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
-  const searchRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null);
-
-  // Mock search data - in a real app, this would come from an API
-  const searchData: SearchResult[] = [
-    {
-      title: 'Micro SaaS Products',
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
-      url: '/micro-saas',
-      type: 'category',
-    },
-    {
-      title: 'AI Services',
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
-      url: '/ai-services',
-      type: 'category',
-    },
-    {
-      title: 'IT Services',
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
-      url: '/it-services',
-      type: 'category',
-    },
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    {
+}    {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
       url: '/services',
@@ -88,19 +50,19 @@ const SearchBar: React.FC = () => {
 
     setResults(filteredResults);
     setIsOpen(true);
-    setIsLoading(false);
-  };
+    setIsLoading(false)
+};
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setQuery(value);
-    handleSearch(value);
-  };
+    handleSearch(value)
+};
 
   const handleResultClick = () => {
     setIsOpen(false);
-    setQuery('');
-  };
+    setQuery('')
+};
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
@@ -193,24 +155,10 @@ const SearchBar: React.FC = () => {
         </div>
       )}
     </div>
-  );
+  )
 };
 
-export default SearchBar;
-=======
-interface SearchResult {
-  title: string, description: string
-  url: string, type: 'service' | 'page' | 'category'
-=======
-import React, { useState } from 'react';
-import { Search, X } from 'lucide-react';
-
-interface SearchBarProps {
-  onSearch?: (query: string) => void;
-  placeholder?: string;
-  className?: string;
->>>>>>> main
-}
+export default SearchBar;}
 
 const SearchBar: React.FC<SearchBarProps> = ({
   onSearch,
@@ -224,7 +172,6 @@ const SearchBar: React.FC<SearchBarProps> = ({
     if (onSearch && query.trim()) {
       onSearch(query.trim());
     }
-<<<<<<< HEAD
     {
       title: 'Contact Us'
       description: 'Get in touch with our experts for consultation and quotes'
@@ -242,44 +189,3 @@ const SearchBar: React.FC<SearchBarProps> = ({
     setResults(filteredResults);
     setIsOpen(true);
     setIsLoading(false);
-<<<<<<< HEAD
-=======
->>>>>>> 64688f2771e1ea38304c61327e4b4822aadcff43
-=======
-  };
-
-  const handleClear = () => {
-    setQuery('');
-  };
-
-  return (
-    <div className={'relative ' + className}>
-      <form onSubmit={handleSubmit} className="relative">
-        <div className="relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4" />
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            onFocus={() => {}}
-            placeholder={placeholder}
-            className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-          />
-          {query && (
-            <button
-              type="button"
-              onClick={handleClear}
-              className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600"
-            >
-              <X className="w-4 h-4" />
-            </button>
-          )}
-        </div>
-      </form>
-    </div>
-  );
-};
-
-export default SearchBar;
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

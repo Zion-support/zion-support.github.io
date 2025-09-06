@@ -1,12 +1,6 @@
 import { Search } from 'lucide-react';
-<<<<<<< HEAD
 import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
-=======
-import { Input } from '@/components/ui/input',;
-import { Button } from '@/components/ui/button',;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import {;
+import { Button } from '@/components/ui/button';import {;
   Pagination,;
   PaginationContent,;
   PaginationItem,;
@@ -17,7 +11,6 @@ import {;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { CountryServiceCard } from '@/components/services/CountryServiceCard';
 import { CountryPricing } from '@/data/onsiteServicePricing';
-
 
   setSearchQuery: (query: string) => void;
 export function CountryTabs(): any ({;
@@ -39,8 +32,6 @@ export function CountryTabs(): any ({;
     (currentPage - 1) * countriesPerPage,;
     currentPage * countriesPerPage;
   );
-
-
 
 export function CountryTabs({
   popularCountries,
@@ -80,12 +71,9 @@ export function CountryTabs({
         <TabsTrigger
           value='featured'
 
-
-
       <TabsContent value="featured" className="mt-0">
         <div className="mb-6">
           <h2 className="text-2xl font-bold text-white text-center">
-
 
             Featured Service Locations
           </h2>
@@ -192,7 +180,6 @@ export function CountryTabs({
               isPopular={popularCountries.includes(country.country)}
             />;
 
-
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredCountries
             .filter((country) => popularCountries.includes(country.country))
@@ -249,7 +236,6 @@ export function CountryTabs({
                     }}
                   />;
                 </PaginationItem>;
-<<<<<<< HEAD
                 {Array && Array.from({ length: totalPages }, (_, i) => i + 1).map(;
                   page => (;
                     <PaginationItem key={page}>;
@@ -271,8 +257,6 @@ export function CountryTabs({
                       setCurrentPage(Math && Math.min(totalPages, currentPage + 1));                    }}
                   />;
                 </PaginationItem>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
               </PaginationContent>;
             </Pagination>;
           </div>;
@@ -415,11 +399,9 @@ function CountryTabs() {
   );
 }
 
-
                     onClick={(e) => {;
                       e.preventDefault(),;
                       setCurrentPage(Math.max(1, currentPage - 1));
-
 
                     }}
                   />;
@@ -430,7 +412,6 @@ function CountryTabs() {
                       <PaginationButton;
                         page={page}
                         isActive={page === currentPage}
-
 
                 )}
                 <PaginationItem>;

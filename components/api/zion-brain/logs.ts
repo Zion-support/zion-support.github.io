@@ -91,10 +91,7 @@ return res.status (200).json ({ entries: entries.slice (-200), by_module, by_typ
   const byType: Record<string, number> = {};
 }
 
-
   const byModule: Record<string, number> = {};
-
-
 
   const byModule: Record<string, number> = {};
 

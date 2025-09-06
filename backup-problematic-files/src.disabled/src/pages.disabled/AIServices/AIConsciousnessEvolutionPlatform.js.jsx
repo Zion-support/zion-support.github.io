@@ -6,6 +6,6 @@ const AIConsciousnessEvolutionPlatform.js = ({ className }) => {
       <h1>AIConsciousnessEvolutionPlatform.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

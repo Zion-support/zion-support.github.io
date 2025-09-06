@@ -3,7 +3,7 @@ export interface InnovativeITService2024 {
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   rating: number;
@@ -31,8 +31,8 @@ export interface InnovativeITService2024 {
     mobile: string;
     email: string;
     address: string;
-    website: string;
-  };
+    website: string
+};
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;

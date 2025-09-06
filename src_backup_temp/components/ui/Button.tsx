@@ -117,7 +117,7 @@ export const Button: React.FC<ButtonProps> = ({';';';
     >';
       {children}';';
     </button>';';';
-  );';';';';
+  );';';';'
 };';';';';';
 export default Button;"';';';';';
 </ButtonProps>;';;';
@@ -125,7 +125,7 @@ export default Button;"';';';';';
     >
       {children}
     </button>';
-  );';';
+  );';'
 };';';';
 export default Button;";
 </ButtonProps>;

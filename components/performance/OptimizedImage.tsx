@@ -1,12 +1,5 @@
-<<<<<<< HEAD
 import Image from 'next / image';
-;
-=======
-import React from 'react';
-import Image from 'next/image';
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-interface OptimizedImageProps {
+;interface OptimizedImageProps {
   src: string;
   alt: string;
   width: number;
@@ -16,11 +9,8 @@ interface OptimizedImageProps {
   quality?: number;
   sizes?: string;
 }
-<<<<<<< HEAD
-=======
 
 const OptimizedImage: React.FC<OptimizedImageProps> = ({
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   src,
   alt,
   width,
@@ -30,7 +20,6 @@ const OptimizedImage: React.FC<OptimizedImageProps> = ({
   quality = 75,
   sizes = '100vw'
 }) => {
-<<<<<<< HEAD
   // Check condition
 if ( {) {
   $2
@@ -44,18 +33,12 @@ if ( {) {
         priority={priority}
         sizes={sizes}
         quality={quality}
-        style={style}
-=======
-  return (
-    <Image
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      src={src}
+        style={style}      src={src}
       alt={alt}
       width={width}
       height={height}
       className={className}
       priority={priority}
-<<<<<<< HEAD
       sizes={sizes}
   );
 }
@@ -67,12 +50,3 @@ quality={quality}
       style={style}
   );
 }
-=======
-      quality={quality}
-      sizes={sizes}
-    />
-  );
-};
-
-export default OptimizedImage;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

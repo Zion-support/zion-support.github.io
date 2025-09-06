@@ -39,7 +39,7 @@ const ModernLayout = ({;
         <link rel="icon" type="image / png" sizes="16x16" href="/favicon - 16x16.png" />;
         <link rel="manifest" href="/site.webmanifest" />;
       </Head>;
-      <div className="min - h-screen bg - white text - gray - 900">;
+      <div className="min - h-screen bg - white text-gray-900">;
         {children}
       </div>;
 </>),

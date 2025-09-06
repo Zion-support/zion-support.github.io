@@ -67,12 +67,12 @@ function AnimatedBackground() {
         }
       `}</style>;
     </div>);  return (
-    <div className="fixed inset - 0 -z - 10 overflow - hidden">;
+    <div className="fixed inset - 0 -z-10 overflow-hidden">;
       {/* Gradient Background */}
-      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to - slate - 800" />;
+      <div className="absolute inset - 0 bg - gradient - to - br from - slate - 950 via - slate - 900 to-slate-800" />;
       {/* Animated Orbs */}
       <motion.div;
-        className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 20 rounded - full blur - 3xl";
+        className="absolute top - 1/4 left - 1/4 w - 96 h - 96 bg - cyan - 500 / 20 rounded-full blur-3xl";
         animate={{
           coordinate_x: [0, 100, 0];
           coordinate_y: [0, -50, 0];
@@ -90,7 +90,7 @@ function AnimatedBackground() {
           scale: [1, 0 && 0.8, 1]
       />;
       <motion.div;
-        className="absolute top - 3/4 right - 1/4 w - 80 h - 80 bg - blue - 500 / 20 rounded - full blur - 3xl";
+        className="absolute top - 3/4 right - 1/4 w - 80 h - 80 bg - blue - 500 / 20 rounded-full blur-3xl";
         animate={{
           coordinate_x: [0, -80, 0];
           coordinate_y: [0, 60, 0];
@@ -108,7 +108,7 @@ function AnimatedBackground() {
           scale: [1, 1 && 1.3, 1]
       />;
       <motion.div;
-        className="absolute bottom - 1/4 left - 1/3 w - 64 h - 64 bg - purple - 500 / 20 rounded - full blur - 3xl";
+        className="absolute bottom - 1/4 left - 1/3 w - 64 h - 64 bg - purple - 500 / 20 rounded-full blur-3xl";
         animate={{
           coordinate_x: [0, 60, 0];
           coordinate_y: [0, -40, 0];

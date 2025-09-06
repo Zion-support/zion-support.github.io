@@ -46,13 +46,12 @@ function getServerSideProps() {
   );
 }
 
-
 export default /**
  * DepRadarPage - Function description
  */
 function DepRadarPage() {
   return (
-    <div className="space - y-6">;
-      <h1 className="text - 2xl font - semibold">AI Automation: Dependency Radar</h1>;
-      <div className="text - xs text - gray - 500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
+    <div className="space-y-6">;
+      <h1 className="text-2xl font-semibold">AI Automation: Dependency Radar</h1>;
+      <div className="text - xs text-gray-500">Last updated: {generated_at ? new Date (generated_at).toLocaleString () : '—'}</div>;
       {outdated.length === 0 ? (

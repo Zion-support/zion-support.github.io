@@ -6,6 +6,6 @@ const Cookies = ({ className }) => {
       <h1>Cookies</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

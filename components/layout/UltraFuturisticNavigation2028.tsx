@@ -123,16 +123,16 @@ import {
       { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized learning with AI', price: '$1,499/month' };
       { name: 'AI Content Creation Suite', href: '/ai-content-creation-suite', description: 'Unlimited AI content creation', price: '$1,299/month' };
       { name: 'AI Legal Research Platform', href: '/ai-legal-research-platform', description: 'Intelligent legal research', price: '$2,999/month' }
-    ];
-  };
+    ]
+};
       { name: 'Smart Traffic Management System', href: '/smart-traffic-management', description: 'AI traffic optimization', price: '$4,999/month' };
       { name: 'Electric Vehicle Charging Network', href: '/ev-charging-network', description: 'Smart EV infrastructure', price: '$2,999/month' };
       { name: 'Mobility as a Service Platform', href: '/mobility-as-a-service', description: 'Integrated mobility solutions', price: '$1,999/month' }
-    ];
-  };
+    ]
+};
 
-    ];
-  };
+    ]
+};
 const companyLinks = [
   { name: '🏠 Home', href: '/', icon: Home }
   { name: '🚀 2028 Services', href: '/2028-services-showcase', icon: Rocket }
@@ -145,26 +145,26 @@ const companyLinks = [
     services: [;
       {;
         name: 'Carbon Footprint Tracking',;
-        href: '/carbon-footprint-tracking',;
-        description: 'Monitor environmental impact',;
+        href: '/carbon-footprint-tracking',,
+  description: 'Monitor environmental impact',;
         price: '$1,499/month',;
       },;
       {;
         name: 'Renewable Energy Management',;
-        href: '/renewable-energy-management',;
-        description: 'Optimize green energy',;
+        href: '/renewable-energy-management',,
+  description: 'Optimize green energy',;
         price: '$2,999/month',;
       },;
       {;
         name: 'Waste Management AI',;
-        href: '/waste-management-ai',;
-        description: 'Intelligent waste optimization',;
+        href: '/waste-management-ai',,
+  description: 'Intelligent waste optimization',;
         price: '$1,999/month',;
       },;
       {;
         name: 'Sustainable Supply Chain',;
-        href: '/sustainable-supply-chain',;
-        description: 'Green supply chain solutions',;
+        href: '/sustainable-supply-chain',,
+  description: 'Green supply chain solutions',;
         price: '$3,999/month',;
       },;
     ],;
@@ -208,8 +208,8 @@ const companyLinks = [;
   const [searchQuery, setSearchQuery] = useState('');
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-    setActiveCategory(null);
-  };
+    setActiveCategory(null)
+};
   const filteredServices = serviceCategories && serviceCategories.flatMap(category =>;
     category && category.services.filter(;
       service =>;
@@ -435,7 +435,6 @@ const companyLinks = [;
                           href={service && service.href}
                           onClick={closeMenu}
 
-
                         </Link>
 
                       ))}
@@ -475,7 +474,6 @@ const companyLinks = [;
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>
 
-
                   ))}
               {/* Mobile CTA */}
               <div className='pt-4 border-t border-purple-500/30'>;
@@ -487,7 +485,6 @@ const companyLinks = [;
                   onClick={closeMenu}
                   className="block w-full text-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">;
       </AnimatePresence>;
-
 
       {/* Search Results Dropdown */}
       {searchQuery && filteredServices.length > 0 && (
@@ -524,7 +521,6 @@ const companyLinks = [;
                     <span className="text-xs text-purple-400 font-medium">{service.price}</span>
                   </div>
                     </span>                  </div>
-
 
                 </Link>
       {/* Search Results Dropdown */}
@@ -595,14 +591,14 @@ const companyLinks = [;
                     </span>                  </div>                <Link;
                   key={service.name}
                   href={service.href}
-                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple - 900 / 40 transition - colors";
+                  className="block p - 3 rounded - lg bg - purple - 900 / 20 hover:bg - purple-900 / 40 transition-colors";
                 >;
-                  <div className="flex items - center justify - between">;
+                  <div className="flex items-center justify-between">;
                     <div>;
-                      <h4 className="text - sm font - medium text - white">{service.name}</h4>;
-                      <p className="text - xs text - purple - 300">{service.description}</p>;
+                      <h4 className="text - sm font-medium text-white">{service.name}</h4>;
+                      <p className="text - xs text-purple-300">{service.description}</p>;
                     </div>;
-                    <span className="text - xs text - purple - 400 font - medium">{service.price}</span>;
+                    <span className="text - xs text - purple-400 font-medium">{service.price}</span>;
                   </div>;
                 </Link>))}
             </div>;

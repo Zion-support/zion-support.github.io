@@ -26,9 +26,6 @@ export default async function handler(
       .eq('user_id', userId)
       .eq('read_status', false);
 
-
-
-
     if (error) return res && res.status(200).json({ ok: true });
 
     return res && res.status(200).json({ ok: true });

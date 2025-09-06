@@ -24,6 +24,6 @@ const ContentGenerator = ({ className }) => {
       <h1>ContentGenerator</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

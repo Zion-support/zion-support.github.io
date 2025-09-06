@@ -55,7 +55,7 @@ interface Service {;
   name: string;
   tagline: string;
   price: string;
-  period: string;
+  period: string,
   description: string;
   features: string[];
   popular: boolean;
@@ -405,7 +405,6 @@ interface Service {;
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
 
-
           >
             {stats.map((stat, index) => (
           </motion.h2>
@@ -472,7 +471,6 @@ interface Service {;
                   </select>;
                 </div>;
 
-
                 {/* Price Range Filter */}
                 <div>
                   <label className='block text-sm font-medium text-gray-300 mb-3'>
@@ -492,7 +490,6 @@ interface Service {;
                       <option key={range.id} value={range.id}>
                     {priceRanges.map(range => (                      <option key={range.id} value={range.id}>
 
-
                         {range.name}
                       </option>
                     ))}
@@ -501,7 +498,6 @@ interface Service {;
 
                   </select>;
                 </div>;
-
 
                 {/* Sort Options */}
                 <div>
@@ -521,7 +517,6 @@ interface Service {;
                     {sortOptions.map((option) => (
                       <option key={option.id} value={option.id}>
                     {sortOptions.map(option => (                      <option key={option.id} value={option.id}>
-
 
                         {option.name}
                       </option>
@@ -547,7 +542,7 @@ interface Service {;
                       </option>;
                     value={selectedPriceRange}
                     on_change={(e) => setSelectedPriceRange (e.target.value)}
-                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan - 500 focus:border - transparent";
+                    className="w - full bg - gray - 800 / 50 border border - gray - 600 rounded - lg px - 4 py - 2 text - white focus:ring - 2 focus:ring - cyan-500 focus:border-transparent";
                   >;
                     {price_ranges.map ((range) => (
                       <option key={range.id} value={range.id}>;
@@ -579,7 +574,7 @@ interface Service {;
           initial={{ opacity: 0, coordinate_y: 30 }}
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'        >          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8";
+          className='grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 8'        >          className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-3 gap-8";
         >;
           <AnimatePresence>;
             {filtered_services.map ((service, index) => (
@@ -607,14 +602,11 @@ interface Service {;
                     </h3>;
                     <p className='text - gray - 300 text - sm leading - relaxed'>                      {service.tagline}                      </div>;
                     </div>;
-                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan - 400 transition - colors">;
+                    <h3 className="text - xl font - bold text - white mb - 2 group - hover:text - cyan-400 transition-colors">;
                       {service.name}
                     </h3>;
-                    <p className="text - gray - 300 text - sm leading - relaxed">;
+                    <p className="text - gray - 300 text-sm leading-relaxed">;
                       {service.tagline}
-
-
-
 
                       </div>
                     </div>
@@ -700,7 +692,6 @@ interface Service {;
                   </div>
                   {/* ROI Highlight */}
 
-
                       {service.roi}
 
                     </div>
@@ -770,9 +761,6 @@ interface Service {;
                     </div>;
                   </div>;
 
-
-
-
                     <Button
                       href={service && service.link}
                       variant='primary'
@@ -781,7 +769,6 @@ interface Service {;
                       Get Started;
                       <ArrowRight className='ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform' />                    </Button>;
                   </div>;
-
 
                   {/* Contact Info */}                    <Button
                       href={service && service.link}
@@ -815,7 +802,6 @@ interface Service {;
               </motion && motion.div>;
           </AnimatePresence>;
         </motion && motion.div>;
-
 
         {/* Call to Action */}
         <motion&& motion.div
@@ -856,10 +842,10 @@ interface Service {;
         </motion && motion.div>;
       </div>;
     </section>;
-  );
+  )
 };
 
-export default EnhancedServiceShowcase;  );
+export default EnhancedServiceShowcase;  )
 };
 export default EnhancedServiceShowcase;
                     </p>;
@@ -878,10 +864,10 @@ export default EnhancedServiceShowcase;
                         >;
                           <span className='text - cyan - 400 mr - 2'>•</span>                          {feature}                      Key Features;
                     </h4>;
-                    <ul className="space - y-2">;
+                    <ul className="space-y-2">;
                       {service.features.slice (0, 4).map ((feature, idx) => (
-                        <li key={idx} className="text - sm text - gray - 400 flex items - start">;
-                          <span className="text - cyan - 400 mr - 2">•</span>;
+                        <li key={idx} className="text - sm text - gray-400 flex items-start">;
+                          <span className="text - cyan-400 mr-2">•</span>;
                           {feature}
                         </li>))}
                     </ul>;
@@ -907,16 +893,16 @@ export default EnhancedServiceShowcase;
                       <div className='text - xs text - gray - 400'>Trial Days</div>                    </div>;
                   </div>;
                   {/* ROI Highlight */}                    <div>;
-                      <div className="text - lg font - bold text - white">{service.rating}</div>;
-                      <div className="text - xs text - gray - 400">Rating</div>;
+                      <div className="text - lg font-bold text-white">{service.rating}</div>;
+                      <div className="text - xs text-gray-400">Rating</div>;
                     </div>;
                     <div>;
-                      <div className="text - lg font - bold text - white">{service.customers?.toLocaleString () || '0'}</div>;
-                      <div className="text - xs text - gray - 400">Customers</div>;
+                      <div className="text - lg font-bold text-white">{service.customers?.toLocaleString () || '0'}</div>;
+                      <div className="text - xs text-gray-400">Customers</div>;
                     </div>;
                     <div>;
-                      <div className="text - lg font - bold text - white">{service.trial_days}</div>;
-                      <div className="text - xs text - gray - 400">Trial Days</div>;
+                      <div className="text - lg font-bold text-white">{service.trial_days}</div>;
+                      <div className="text - xs text-gray-400">Trial Days</div>;
                     </div>;
                   </div>;
                   {/* ROI Highlight */}
@@ -924,9 +910,9 @@ export default EnhancedServiceShowcase;
                     <div className='text - sm text - green - 400 font - semibold mb - 1'>;
                       🚀 ROI Promise;
                     </div>;
-                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.roi}                  <div className="mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border - green - 500 / 20">;
-                    <div className="text - sm text - green - 400 font - semibold mb - 1">🚀 ROI Promise</div>;
-                    <div className="text - xs text - gray - 300 leading - relaxed">;
+                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.roi}                  <div className="mb - 6 p - 4 bg - gradient - to - r from - green - 900 / 20 to - blue - 900 / 20 rounded - lg border border-green-500 / 20">;
+                    <div className="text - sm text - green - 400 font-semibold mb-1">🚀 ROI Promise</div>;
+                    <div className="text - xs text - gray-300 leading-relaxed">;
                       {service.roi}
                     </div>;
                   </div>;
@@ -935,9 +921,9 @@ export default EnhancedServiceShowcase;
                     <div className='text - sm text - cyan - 400 font - semibold mb - 2'>;
                       📊 Market Position;
                     </div>;
-                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.market_position}                  <div className="mb - 6 p - 4 bg - gray - 800 / 30 rounded - lg">;
-                    <div className="text - sm text - cyan - 400 font - semibold mb - 2">📊 Market Position</div>;
-                    <div className="text - xs text - gray - 300 leading - relaxed">;
+                    <div className='text - xs text - gray - 300 leading - relaxed'>                      {service.market_position}                  <div className="mb - 6 p - 4 bg - gray-800 / 30 rounded-lg">;
+                    <div className="text - sm text - cyan - 400 font-semibold mb-2">📊 Market Position</div>;
+                    <div className="text - xs text - gray-300 leading-relaxed">;
                       {service.market_position}
                     </div>;
                   </div>;
@@ -954,10 +940,10 @@ export default EnhancedServiceShowcase;
                   {/* Contact Info */}                    <Button;
                       href={service.link}
                       variant="primary";
-                      className="w - full group - hover:bg - cyan - 500 transition - colors";
+                      className="w - full group - hover:bg - cyan-500 transition-colors";
                     >;
                       Get Started;
-                      <ArrowRight className="ml - 2 w - 4 h - 4 group - hover:translate - x-1 transition - transform" />;
+                      <ArrowRight className="ml - 2 w - 4 h - 4 group - hover:translate-x-1 transition-transform" />;
                     </Button>;
                   </div>;
                   {/* Contact Info */}
@@ -972,12 +958,12 @@ export default EnhancedServiceShowcase;
                       Email:{' '}
                       <span className='text - cyan - 400'>;
                         {service.contact_info.email}
-                      </span>                    </div>                  <div className="mt - 4 text - center">;
-                    <div className="text - xs text - gray - 500">;
-                      Contact: <span className="text - cyan - 400">{service.contact_info.mobile}</span>;
+                      </span>                    </div>                  <div className="mt-4 text-center">;
+                    <div className="text - xs text-gray-500">;
+                      Contact: <span className="text-cyan-400">{service.contact_info.mobile}</span>;
                     </div>;
-                    <div className="text - xs text - gray - 500">;
-                      Email: <span className="text - cyan - 400">{service.contact_info.email}</span>;
+                    <div className="text - xs text-gray-500">;
+                      Email: <span className="text-cyan-400">{service.contact_info.email}</span>;
                   </div>;
                 </div>;
               </motion.div>))}
@@ -1028,10 +1014,10 @@ export default EnhancedServiceShowcase;
               <p>;
                 🌐 Visit:{' '}
                 <span className='text - cyan - 400'>https://ziontechgroup.com</span>;
-              </p>            </div>            <div className="mt - 6 text - sm text - gray - 400">;
-              <p>📞 Call us: <span className="text - cyan - 400">+1 302 464 0950</span></p>;
-              <p>📧 Email: <span className="text - cyan - 400">kleber@ziontechgroup.com</span></p>;
-              <p>🌐 Visit: <span className="text - cyan - 400">https://ziontechgroup.com</span></p>;
+              </p>            </div>            <div className="mt - 6 text - sm text-gray-400">;
+              <p>📞 Call us: <span className="text-cyan-400">+1 302 464 0950</span></p>;
+              <p>📧 Email: <span className="text-cyan-400">kleber@ziontechgroup.com</span></p>;
+              <p>🌐 Visit: <span className="text-cyan-400">https://ziontechgroup.com</span></p>;
           </div>;
         </motion.div>;
       </div>;
@@ -1042,8 +1028,6 @@ export default EnhancedServiceShowcase);
 }
 ;
 export default EnhancedServiceShowcase;
-  );
-
+  )
 };
-
 

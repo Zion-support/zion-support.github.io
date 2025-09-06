@@ -32,8 +32,8 @@ const contactInfo = {;
 ;
 const serviceCategories = [;
   {;
-    id:'financial-technology',;
-    description:'Innovative fintech, DeFi, and financial services',;
+    id:'financial-technology',,
+  description:'Innovative fintech, DeFi, and financial services',;
     icon:TrendingUp,;
     color:'from-green-500 to-emerald-500',;
     services:[...innovativeFinancialServices2025],;
@@ -41,8 +41,8 @@ const serviceCategories = [;
     badge:'New';
   },;
   {;
-    id:'healthcare-biotech',;
-    description:'AI-powered healthcare and biotechnology solutions',;
+    id:'healthcare-biotech',,
+  description:'AI-powered healthcare and biotechnology solutions',;
     icon:Stethoscope,;
     color:'from-blue-500 to-indigo-500',;
     services:[...innovativeHealthcareServices2025],;
@@ -50,8 +50,8 @@ const serviceCategories = [;
     badge:'Hot';
   },;
   {;
-    id:'education-technology',;
-    description:'AI-powered learning and educational innovation',;
+    id:'education-technology',,
+  description:'AI-powered learning and educational innovation',;
     icon:GraduationCap,;
     color:'from-purple-500 to-pink-500',;
     services:[...innovativeEducationServices2025],;
@@ -59,8 +59,8 @@ const serviceCategories = [;
     badge:'Innovative';
   },;
   {;
-    id:'sustainability-green-tech',;
-    description:'Environmental technology and sustainability solutions',;
+    id:'sustainability-green-tech',,
+  description:'Environmental technology and sustainability solutions',;
     icon:Leaf,;
     color:'from-emerald-500 to-teal-500',;
     services:[...innovativeSustainabilityServices2025],;
@@ -68,8 +68,8 @@ const serviceCategories = [;
     badge:'Eco-Friendly';
   },;
   {;
-    id:'logistics-supply-chain',;
-    description:'Autonomous logistics and supply chain optimization',;
+    id:'logistics-supply-chain',,
+  description:'Autonomous logistics and supply chain optimization',;
     icon:Truck,;
     color:'from-orange-500 to-red-500',;
     services:[...innovativeLogisticsServices2025],;
@@ -77,8 +77,8 @@ const serviceCategories = [;
     badge:'Autonomous';
   },;
   {;
-    id:'ai-consciousness',;
-    description:'Revolutionary AI consciousness and emotional intelligence platforms',;
+    id:'ai-consciousness',,
+  description:'Revolutionary AI consciousness and emotional intelligence platforms',;
     icon:Brain,;
     color:'from-violet-500 to-purple-500',;
     services:[...innovativeAIServices2025],;
@@ -86,8 +86,8 @@ const serviceCategories = [;
     badge:'Revolutionary';
   },;
   {;
-    id:'quantum-emerging',;
-    description:'Quantum computing, DNA computing, and beyond',;
+    id:'quantum-emerging',,
+  description:'Quantum computing, DNA computing, and beyond',;
     icon:Atom,;
     color:'from-indigo-500 to-blue-500',;
     services:[...emergingTechServices2025],;
@@ -95,8 +95,8 @@ const serviceCategories = [;
     badge:'Quantum';
   },;
   {;
-    id:'enterprise-it',;
-    description:'Autonomous operations and zero-trust security',;
+    id:'enterprise-it',,
+  description:'Autonomous operations and zero-trust security',;
     icon:Shield,;
     color:'from-blue-500 to-cyan-500',;
     services:[...innovativeITServices2025],;
@@ -104,8 +104,8 @@ const serviceCategories = [;
     badge:'Enterprise';
   },;
   {;
-    id:'micro-saas',;
-    description:'Innovative solutions for every business need',;
+    id:'micro-saas',,
+  description:'Innovative solutions for every business need',;
     icon:Target,;
     color:'from-teal-500 to-green-500',;
     services:[...realMicroSaasServices2025],;

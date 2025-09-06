@@ -1,6 +1,6 @@
+}
 };
-};
-};
+}
 };
 ;
 ,;
@@ -15,7 +15,6 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 }
 },
 
-
 export const messageChannelHandler = {
   sendMessage: (message: string) => {},
   receiveMessage: (callback: (message: string) => void) => {},
@@ -23,7 +22,7 @@ export const messageChannelHandler = {
   receiveMessage: (callback: any) => {},
 type MessageHandler = {
   sendMessage: (message: unknown) => void;
-  receiveMessage: (callback: (message: unknown) => void) => void;
+  receiveMessage: (callback: (message: unknown) => void) => void
 };
 export const messageChannelHandler: MessageHandler = {
   sendMessage: (_message) => {
@@ -32,9 +31,9 @@ export const messageChannelHandler: MessageHandler = {
   receiveMessage: (_callback) => {
     // No-op: placeholder for message listener registration
   }
+}
 };
-};
-};
+}
 };
 ,
 // Message channel handler for real-time communication
@@ -82,9 +81,6 @@ if ( {) {
   }
 }
 export default MessageChannelHandler;
-
-
-
 
 }}}};
 ;

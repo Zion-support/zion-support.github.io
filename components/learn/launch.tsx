@@ -1,6 +1,5 @@
-import { GetServerSideProps } from 'next';
-
-  };      permanent: false}}
+import { GetServerSideProps } from 'next'
+};      permanent: false}}
 
 export default function LaunchRedirect() {;
   return null;
@@ -15,7 +14,6 @@ export default /**
  * LaunchRedirect - Function description
  */
 function LaunchRedirect() {
-
 
 }
 ;

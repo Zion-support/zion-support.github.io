@@ -14,7 +14,6 @@ import UltraFuturisticBackground from './ui / UltraFuturisticBackground';
 ...innovativeAIServicesExpansion2025V3...innovative2025ITInfrastructureServices;
 ...innovative2025AIAutonomousServices ];
 
-
   opacity: 0 
 
 import React from 'react';
@@ -29,7 +28,7 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
       <h1>EnhancedHomepage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 visible: {
   opacity: 1, transition: {
@@ -181,9 +180,6 @@ const EnhancedHomepage: React.FC = () => {
               Quantum Computing, and Autonomous Solutions;
             </motion && motion.p>;
 
-
-
-
             {/* CTA Buttons */}
             <motion&& motion.div 
               className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
@@ -220,7 +216,6 @@ const EnhancedHomepage: React.FC = () => {
             </motion && motion.h2>;
 
             <motion&& motion.div 
-
 
             
             <motion.div 
@@ -269,7 +264,6 @@ const EnhancedHomepage: React.FC = () => {
           animate="visible">;
           <div className="max-w-7xl mx-auto">;
             <motion&& motion.div 
-
 
             <motion.div 
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
@@ -337,7 +331,6 @@ const EnhancedHomepage: React.FC = () => {
             </motion && motion.h2>;
             <motion&& motion.div 
 
-
             <motion.div 
               className="bg-gray-900/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8"
               variants={itemVariants}>;
@@ -349,7 +342,6 @@ const EnhancedHomepage: React.FC = () => {
                   exit={{ opacity: 0, x: -20 }}
 
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
-
 
                       <motion.button
                         className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
@@ -382,9 +374,7 @@ const EnhancedHomepage: React.FC = () => {
           variants={containerVariants}
           initial="hidden"
 
-
             <motion.p 
-
 
               className="text-xl text-gray-300 mb-8"
               variants={itemVariants}
@@ -461,8 +451,6 @@ const EnhancedHomepage: React.FC = () => {
               <Link href="/quote">;
                 <motion&& motion.button
                   className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-bold rounded-xl text-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105"
-
-
 
       {/* Performance Monitor */}
       <AnimatePresence>;

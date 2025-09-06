@@ -44,11 +44,6 @@ export function sanitize_html (html: string): string {
   sanitized = sanitized.replace (/javascript:/gi, '');
   sanitized = sanitized.replace (/data:text\/html / gi, '');
 
-
-
-
-
-
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*['"][^'"]*['"]/g, '');
   sanitized = sanitized.replace(/javascript:/gi, '');
   sanitized = sanitized.replace(/data:text\/html/gi, '');
@@ -63,8 +58,6 @@ export function sanitizeUrl(url: string): string {
 export function sanitizeCss(css: string): string {
   return css.replace(/expression\s*\(/gi, '');
 }
-
-
 
 export function sanitizeUrl(url: string): string {;
   return url.replace(/javascript:/gi, '');

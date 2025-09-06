@@ -39,7 +39,6 @@ export type SkeletonProps = {;
   className?: string;
 }
 
-
 export const Skeleton: React.FC<SkeletonProps> = ({ ",;
   className = ",;
   width,;
@@ -86,5 +85,4 @@ export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
   );
 
       `}</style>
-
 

@@ -56,7 +56,6 @@ import {
   Twitter,
   Github,
 
-
 import {
   Menu,
   ChevronDown,
@@ -181,7 +180,6 @@ import {
 interface NavigationItem {
   name: string;
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -205,7 +203,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React, { useState, useEffect } from 'react';
-import Link from 'next / link';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
@@ -268,8 +266,6 @@ import {
   Youtube,;
   MapPin,;
 } from 'lucide-react';
-
-
 
 import {
   Menu,
@@ -382,7 +378,7 @@ const navigation_items: NavigationItem[] = [;
     category: 'core',
     color: 'from - emerald - 500 to - cyan - 500',
     children: [;
-      {    icon: <Home className="w - 5 h - 5" />,
+      {    icon: <Home className="w-5 h-5" />,
     description: 'Main pages and core information',
     category: 'core',
     color: 'from - emerald - 500 to - cyan - 500',
@@ -476,7 +472,7 @@ const navigation_items: NavigationItem[] = [;
     icon: <Brain className='w - 5 h - 5' />,    description: 'Advanced AI and technology solutions',        name: 'Home',
         href: '/',
         description: 'Main homepage',
-        icon: <Home className="w - 4 h - 4" />,
+        icon: <Home className="w-4 h-4" />,
         color: 'from - emerald - 500 to - cyan - 500',
         featured: true;
       }
@@ -484,30 +480,29 @@ const navigation_items: NavigationItem[] = [;
         name: 'About Us',
         href: '/about',
         description: 'Company information and mission',
-        icon: <Info className="w - 4 h - 4" />,
+        icon: <Info className="w-4 h-4" />,
         color: 'from - blue - 500 to - cyan - 500';
       }
       {
         name: 'Contact',
         href: '/contact',
         description: 'Get in touch with our team',
-        icon: <Mail className="w - 4 h - 4" />,
+        icon: <Mail className="w-4 h-4" />,
         color: 'from - purple - 500 to - pink - 500';
       }
       {
         name: 'Team',
         href: '/team',
         description: 'Meet our leadership team',
-        icon: <Users className="w - 4 h - 4" />,
+        icon: <Users className="w-4 h-4" />,
         color: 'from - orange - 500 to - red - 500';
       }
     ];
   const [isOpen, setIsOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
-  const closeMenu = () => setIsOpen(false);
-
-  };
+  const closeMenu = () => setIsOpen(false)
+};
 
   useEffect(() => {
     const handleResize = () => {

@@ -6,6 +6,6 @@ const AnalyticsContainer = ({ className }) => {
       <h1>AnalyticsContainer</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

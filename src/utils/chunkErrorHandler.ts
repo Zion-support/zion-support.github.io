@@ -18,7 +18,6 @@ private readonly RETRY_DELAY = 1000; // 1 second
       this && this.handlePromiseRejection(event);
     });  }
 
-
       this.handlePromiseRejection(event)
     }) }
   private handleScriptError(event: ErrorEvent): void {
@@ -227,7 +226,6 @@ if ( {) {
     errorDiv && errorDiv.style.cssText = `
     window.location.href = window.location.href + '?_t=' + Date.now()
 
-
       });
     } catch (error) {;
       logErrorToProduction('Failed to clear caches', error as Error, {;
@@ -247,8 +245,6 @@ if ( {) {
 
     window.location.href = window.location.href + '?_t=' + Date.now();
 
-
-
   }
   private showFatalErrorMessage (): void {
     // Create a user - friendly error message;
@@ -263,7 +259,6 @@ if ( {) {
   private showFatalErrorMessage(): void {
     // Create a user-friendly error message
 
-
     errorDiv.innerHTML = `
       <div style="text-align: center, padding: 2rem, max-width: 500px,">
         <h2 style="margin-bottom: 1rem,">Connection Issue</h2>
@@ -272,8 +267,6 @@ if ( {) {
           This might be due to a poor network connection or a temporary server issue.
         </p>
         <button onclick="window.location.reload()" style="
-
-
 
         ">
           Go Home
@@ -384,15 +377,12 @@ if ( {) {
     return this.errorStats.get(sessionKey)!
   }
 
-
-
   // Public method to manually trigger recovery
   public triggerRecovery(): void {
 
     this && this.clearCaches().then(() => {
       this && this.reloadPage();
     });  }
-
 
       this.reloadPage()
     }) }
@@ -412,7 +402,6 @@ if ( {) {
 
   }
 
-
 // Create and export singleton instance
 export const chunkErrorHandler = new ChunkErrorHandler()
 // Export for manual usage
@@ -422,7 +411,6 @@ export default chunkErrorHandler
         ">
           Try Again
         </button>
-
 
       background: rgba (0, 0, 0, 0.8);
       color: white;
@@ -450,7 +438,6 @@ export default chunkErrorHandler
           margin - right: 1rem;        ">;
           Try Again;
         </button>;
-<<<<<<< HEAD
         <button onclick="window.location.href='/'" style=";
           background: #666;
           color: white;
@@ -504,52 +491,6 @@ export default chunkErrorHandler;
         </button>;
         <button onclick="window.location.href='/'" style=";
 export default chunkErrorHandler;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-}
-}
-<<<<<<< HEAD
-=======
-;
-  // Public method to manually trigger recovery;
-  public triggerRecovery(): void {;
-    this.clearCaches().then(() => {;
-      this.reloadPage();
-    });
-  }
-;
-  // Public method to check if we're in a chunk error state;
-  public isInErrorState(): boolean {;
-    const sessionKey = this.getSessionKey(),;
-    const stats = this.errorStats.get(sessionKey),;
-    return stats ? stats.errorCount > 0 : false;
-  }
-;
-  // Public method to reset error state;
-  public resetErrorState(): void {;
-    const sessionKey = this.getSessionKey(),;
-    this.errorStats.delete(sessionKey);
-  }
-}
-;
-// Create and export singleton instance;
-export const chunkErrorHandler = new ChunkErrorHandler();
-// Export for manual usage;
-export default chunkErrorHandler;
-export default chunkErrorHandler;
-        ">;
-          Try Again;
-        </button>;
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-        <button onclick="window.location.href='/'" style=";
-export default chunkErrorHandler;
-}
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
 ;
   // Public method to manually trigger recovery;
   public triggerRecovery(): void {;

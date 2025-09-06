@@ -6,28 +6,28 @@ import {Shield,, Users,, FileText,, Globe,, Database,, CheckCircle,, ArrowRight}
 const features = [;
   {}
     icon: Shield,;
-    title: 'Cybersecurity & Compliance,',;
-    description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',;
+    title: 'Cybersecurity & Compliance,',,
+  description: 'FISMA, FedRAMP, and other government security standards compliance solutions.',;
   },;
   {}
     icon: Users,;
-    title: 'Citizen Services,',;
-    description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',;
+    title: 'Citizen Services,',,
+  description: 'Digital platforms for citizen engagement, service delivery, and government transparency.',;
   },;
   {}
     icon: FileText,;
-    title: 'Document Management,',;
-    description: 'Secure document management and workflow systems for government operations.'',;
+    title: 'Document Management,',,
+  description: 'Secure document management and workflow systems for government operations.'',;
   },;
   {}
     icon: Globe,;
-    title: 'Open Data Platforms,',;
-    description: 'Public data portals and open government initiatives for transparency and accountability.'',;
+    title: 'Open Data Platforms,',,
+  description: 'Public data portals and open government initiatives for transparency and accountability.'',;
   },;
   {}
     icon: Database,;
-    title: 'Data Analytics,',;
-    description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',;
+    title: 'Data Analytics,',,
+  description: 'Government data analytics and business intelligence for informed decision making.'', import Layout from '../../components/Layout',;
 import { Building2, Shield, Users, FileText, CheckCircle, ArrowRight } from 'lucide-react';
 import React from 'react';
 import Head from 'next/head';
@@ -65,33 +65,33 @@ const features = [
 const features = [;
   {;
     icon: Building2,;
-    title: 'Digital Government Services',;
-    description: 'Citizen-facing digital services and online portals';
+    title: 'Digital Government Services',,
+  description: 'Citizen-facing digital services and online portals';
   },;
   {;
     icon: Shield,;
-    title: 'Security & Compliance',;
-    description: 'Government-grade security and regulatory compliance';
+    title: 'Security & Compliance',,
+  description: 'Government-grade security and regulatory compliance';
   },;
   {;
     icon: Users,;
-    title: 'Citizen Engagement',;
-    description: 'Platforms for citizen participation and feedback';
+    title: 'Citizen Engagement',,
+  description: 'Platforms for citizen participation and feedback';
   },;
   {;
     icon: FileText,;
-    title: 'Document Management',;
-    description: 'Secure document storage and management systems';
+    title: 'Document Management',,
+  description: 'Secure document storage and management systems';
   },;
   {;
     icon: CheckCircle,;
-    title: 'Workflow Automation',;
-    description: 'Automated government processes and approvals';
+    title: 'Workflow Automation',,
+  description: 'Automated government processes and approvals';
   },;
   {;
     icon: ArrowRight,;
-    title: 'Data Analytics',;
-    description: 'Government data analysis and reporting tools';
+    title: 'Data Analytics',,
+  description: 'Government data analysis and reporting tools';
   }
 ;];
 const solutions = [;
@@ -173,13 +173,13 @@ const benefits = [;
       <div className="min-h-screen bg-white">;
         {/* Hero Section */}
     icon: CheckCircle,;
-    title: 'Workflow Automation',;
-    description: 'Automated government processes and approvals';
+    title: 'Workflow Automation',,
+  description: 'Automated government processes and approvals';
   },;
   {;
     icon: ArrowRight,;
-    title: 'Data Analytics',;
-    description: 'Government data analysis and reporting tools';
+    title: 'Data Analytics',,
+  description: 'Government data analysis and reporting tools';
   }
 ;];
 const solutions = [;

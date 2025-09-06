@@ -25,7 +25,7 @@ import { AIMilestoneGenerator } from './AIMilestoneGenerator',;
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator',;
 ;
 const formSchema = z.object({;
-  title:z.string().min(1, 'Title is required'),;
+  title:z.string().min(1, 'Title is required'),,
   description:z.string().optional(),;
   due_date:z.date().optional(),;
   amount:z.coerce.number().min(0, 'Amount must be greater than or equal to 0')}),;
@@ -54,8 +54,8 @@ export function AddMilestoneForm({;
   const form = useForm<MilestoneFormValues>({;
     resolver:zodResolver(formSchema),;
     defaultValues:{;
-      title:'',;
-      description:'',;
+      title:'',,
+  description:'',;
       amount:0}}),;
 ;
   const handleSubmit = (values:MilestoneFormValues) => {;
@@ -69,8 +69,8 @@ export function AddMilestoneForm({;
       const milestone = milestones[0],;
       if (milestone) {;
         onSubmit({;
-          title:milestone.title,;
-          description:milestone.description,;
+          title:milestone.title,,
+  description:milestone.description,;
           due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
           amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
         }),;
@@ -81,8 +81,8 @@ export function AddMilestoneForm({;
     // If there are multiple milestones, submit them one by one;
     milestones.forEach(milestone => {;
       onSubmit({;
-        title:milestone.title,;
-        description:milestone.description,;
+        title:milestone.title,,
+  description:milestone.description,;
         due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
         amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
       }),;
@@ -91,8 +91,8 @@ export function AddMilestoneForm({;
 ;
   const handleAddMilestone = (milestone:GeneratedMilestone) => {;
     onSubmit({;
-      title:milestone.title,;
-      description:milestone.description,;
+      title:milestone.title,,
+  description:milestone.description,;
       due_date:milestone.dueDate ? new Date(milestone.dueDate) :undefined,;
       amount:milestone.estimatedHours * 10, // Convert hours to a default payment amount;
     }),;

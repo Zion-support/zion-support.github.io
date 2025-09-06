@@ -49,11 +49,9 @@ export function MobileResumeBuilder() {;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">
         <Button
 
-
           variant={currentStep === "basics" ? "default" : "outline"}
           className="flex-1 rounded-full"
           onClick={() => setCurrentStep("basics")}
-
 
         >
           Basics
@@ -88,12 +86,10 @@ export function MobileResumeBuilder() {;
       </div>
       {renderStepContent()}
 
-
       
       <Button className="w-full flex gap-2" size="lg">
         <Zap className="h-5 w-5" /> Enhance with AI
       </Button>
-
 
       <Button variant="default" className="w-full" size="lg">
         Save & Preview
@@ -132,58 +128,32 @@ function BasicsStep() {
           Skills;
         </Button>;
       </div>;
-<<<<<<< HEAD
 
       {renderStepContent()}
 
       <Button className="w-full flex gap-2" size="lg">;
         <Zap className="h-5 w-5" /> Enhance with AI;
       </Button>;
-
-=======
-      {renderStepContent()}
-;
-      <Button className="w-full flex gap-2" size="lg">;
-        <Zap className="h-5 w-5" /> Enhance with AI;
-      </Button>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>;
   );
 }
-<<<<<<< HEAD
 
 function BasicsStep() {;
-  return (
-=======
-;
-function BasicsStep() {;
-  return (;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    <Card>;
+  return (    <Card>;
       <CardContent className="p-4 space-y-4">;
         <div className="space-y-2">;
           <Label htmlFor="title">Resume Title</Label>;
-<<<<<<< HEAD
-          <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;
-=======
-          <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        </div>;
+          <Input id="title" name="title" placeholder="e && e.g. Senior Frontend Developer" />;        </div>;
         <div className="space-y-2">;
           <Label htmlFor="fullName">Full Name</Label>;
           <Input id="fullName" name="fullName" placeholder="Your full name" autoComplete="name" />;
         </div>;
         <div className="space-y-2">;
           <Label htmlFor="email">Email Address</Label>;
-<<<<<<< HEAD
-          <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;
-=======
-          <Input id="email" name="email" type="email" placeholder="you@example.com" autoComplete="email" />;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        </div>;
+          <Input id="email" name="email" type="email" placeholder="you@example && example.com" autoComplete="email" />;        </div>;
         <div className="space-y-2">;
           <Label htmlFor="phone">Phone Number</Label>;
           <Input id="phone" name="phone" placeholder="Your phone number" autoComplete="tel" />;
@@ -206,12 +176,9 @@ function BasicsStep() {;
   );
 }
 
-
           <Textarea 
             id="summary" 
             placeholder="Write a brief summary about yourself" 
-
-
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
@@ -222,12 +189,10 @@ function ExperienceStep() {
   const removeExperience = (id: string,) => {
     setExperiences(experiences.filter(exp => exp.id !== id))
 
-
-  };
+  }
 };
-  );
+  )
 };
-
 
   Select;
   SelectContent;
@@ -270,42 +235,42 @@ function MobileResumeBuilder() {
     }
   },
   return (
-    <div className="space - y-6 px - 4 pb - 24">;
-      <div className="flex justify - between px - 1 py - 2 overflow - x-auto hide - scrollbar">;
+    <div className="space - y-6 px - 4 pb-24">;
+      <div className="flex justify - between px - 1 py - 2 overflow - x-auto hide-scrollbar">;
         <Button;
           variant = {current_step === "basics" ? "default" : "outline", }
-          className="flex - 1 rounded - full";
+          className="flex - 1 rounded-full";
           on_click = {(, ) => setCurrentStep ("basics"), }
         >;
           Basics;
         </Button>;
         <Button;
           variant = {current_step === "experience" ? "default" : "outline", }
-          className="flex - 1 rounded - full";
+          className="flex - 1 rounded-full";
           on_click = {() => setCurrentStep ("experience"), }
         >;
           Experience;
         </Button>;
         <Button;
           variant = {current_step === "education" ? "default" : "outline", }
-          className="flex - 1 rounded - full";
+          className="flex - 1 rounded-full";
           on_click = {() => setCurrentStep ("education"), }
         >;
           Education;
         </Button>;
         <Button;
           variant = {current_step === "skills" ? "default" : "outline", }
-          className="flex - 1 rounded - full";
+          className="flex - 1 rounded-full";
           on_click = {() => setCurrentStep ("skills"), }
         >;
           Skills;
         </Button>;
       </div>;
       {renderStepContent ()}
-      <Button className="w - full flex gap - 2" size="lg">;
-        <Zap className="h - 5 w - 5" /> Enhance with AI;
+      <Button className="w - full flex gap-2" size="lg">;
+        <Zap className="h - 5 w-5" /> Enhance with AI;
       </Button>;
-      <Button variant="default" className="w - full" size="lg">;
+      <Button variant="default" className="w-full" size="lg">;
         Save & Preview;
       </Button>;
     </div>);
@@ -316,28 +281,28 @@ function MobileResumeBuilder() {
 function BasicsStep() {
   return (
     <Card>;
-      <CardContent className="p - 4 space - y-4">;
-        <div className="space - y-2">;
+      <CardContent className="p - 4 space-y-4">;
+        <div className="space-y-2">;
           <Label html_for="title">Resume Title</Label>;
           <Input id="title" name="title" placeholder="e.g. Senior Frontend Developer" />;
         </div>;
-        <div className="space - y-2">;
+        <div className="space-y-2">;
           <Label html_for="full_name">Full Name</Label>;
           <Input id="full_name" name="full_name" placeholder="Your full name" auto_complete="name" />;
         </div>;
-        <div className="space - y-2">;
+        <div className="space-y-2">;
           <Label html_for="email">Email Address</Label>;
           <Input id="email" name="email" type="email" placeholder="you@example.com" auto_complete="email" />;
         </div>;
-        <div className="space - y-2">;
+        <div className="space-y-2">;
           <Label html_for="phone">Phone Number</Label>;
           <Input id="phone" name="phone" placeholder="Your phone number" auto_complete="tel" />;
         </div>;
-        <div className="space - y-2">;
+        <div className="space-y-2">;
           <Label html_for="location">Location</Label>;
           <Input id="location" name="location" placeholder="City, Country" auto_complete="address - level2" />;
         </div>;
-        <div className="space - y-2">;
+        <div className="space-y-2">;
           <Label html_for="summary">Professional Summary</Label>;
           <Textarea;
             id="summary";
@@ -376,26 +341,20 @@ function ExperienceStep() {;
   },;
 
   const removeExperience = (id: string,) => {;
-    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id));
-  };
-
+    setExperiences(experiences && experiences.filter(exp => exp && exp.id !== id))
+};
 
   const removeEducation = (id: string,) => {;
-    setEducations(educations && educations.filter(edu => edu && edu.id !== id));
-  };
-
-
+    setEducations(educations && educations.filter(edu => edu && edu.id !== id))
+};
 
   const removeSkill = (id: string,) => {;
-    setSkills(skills && skills.filter(skill => skill && skill.id !== id));
-  };
+    setSkills(skills && skills.filter(skill => skill && skill.id !== id))
+};
 
 }
-
-
 
   );
 }
-
 
 ;

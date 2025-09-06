@@ -83,7 +83,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   if (!isOpen) return null;
   return (
 
-
             Cancel;
           </button>;
         </div>;
@@ -147,7 +146,6 @@ function ModalInner({ isOpen, onClose, onLoggedIn }: Web3LoginModalProps) {
   )
 }
 
-
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;
   return <ModalInner {...props} />;        </div>
@@ -168,7 +166,6 @@ export default function Web3LoginModal(props: Web3LoginModalProps) {;
     </div>
   )
 }
-
 
 export default function Web3LoginModal(props: Web3LoginModalProps) {;
   if (!isClient) return null;

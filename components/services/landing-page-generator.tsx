@@ -1,10 +1,10 @@
-import Link from 'next / link';
+import Link from 'next/link';
 export default /**
  * Placeholder - Function description
  */
 function Placeholder() {
   return (
-    <main className="min - h-screen p - 8">;
+    <main className="min-h-screen p-8">;
       <Head>;
         <title > Services • Landing - page - generator - Placeholder</title>;
         <meta name="robots" content="noindex" />;

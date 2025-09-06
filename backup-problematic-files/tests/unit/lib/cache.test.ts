@@ -1,7 +1,7 @@
 // Cache.test utility
 export const Cache.test = () => {
   // Implementation here
-  return null;
+  return null
 };
 
 interface Cache.testProps {

@@ -2,10 +2,8 @@
 
 const ScrollToTop: React.FC = () => {
 
-
 export default function ScrollToTop() {;
   const [isVisible, setIsVisible] = useState(false);
-
 
 const ScrollToTop: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,8 +15,8 @@ const ScrollToTop: React.FC = () => {
         setIsVisible(false)
       }
       behavior: 'smooth'
-    });
-    };
+    })
+};
 
     window.addEventListener('scroll', toggleVisibility);
 
@@ -29,8 +27,8 @@ const ScrollToTop: React.FC = () => {
       top: 0
 
       behavior: 'smooth'
-    });
-    };
+    })
+};
 
     window && window.addEventListener('scroll', toggleVisibility);
     return () => window && window.removeEventListener('scroll', toggleVisibility);  }, []);        setIsVisible(true);
@@ -47,8 +45,8 @@ const ScrollToTop: React.FC = () => {
     window && window.scrollTo({;
       top: 0,;
       behavior: 'smooth',;
-    });  };      behavior: 'smooth'});
-
+    })
+};      behavior: 'smooth'});
 
       behavior: 'smooth'})
   };
@@ -67,7 +65,8 @@ const ScrollToTop: React.FC = () => {
     </button>
   );
 }
-    });  };      behavior: 'smooth'})
+    })
+};      behavior: 'smooth'})
   }
   return (
     <>
@@ -172,25 +171,25 @@ if ( {) {
             className='w - 6 h - 6 transform group - hover:-translate - y-1 transition - transform duration - 300';
             fill='none';
             stroke='current_color';
-            view_box='0 0 24 24';
+            viewBox='0 0 24 24';
             xmlns='http://www.w3.org / 2000 / svg';
           >;
             <path;
-              stroke_linecap='round';
-              stroke_linejoin='round';
-              stroke_width={2}
+              strokeLinecap='round';
+              strokeLinejoin='round';
+              strokeWidth={2}
               d='M5 10l7 - 7m0 0l7 7m - 7-7v18'            />        >;
           <svg;
-            className="w - 6 h - 6 transform group - hover:-translate - y-1 transition - transform duration - 300";
+            className="w - 6 h - 6 transform group - hover:-translate - y-1 transition-transform duration-300";
             fill="none";
             stroke="current_color";
-            view_box="0 0 24 24";
+            viewBox="0 0 24 24";
             xmlns="http://www.w3.org / 2000 / svg";
           >;
             <path;
-              stroke_linecap="round";
-              stroke_linejoin="round";
-              stroke_width={2}
+              strokeLinecap="round";
+              strokeLinejoin="round";
+              strokeWidth={2}
               d="M5 10l7 - 7m0 0l7 7m - 7-7v18";
             />;
           </svg>;

@@ -22,7 +22,7 @@ export const useToast = () => {
   if (!context) {
     throw new Error('useToast must be used within a ToastProvider');
   }
-  return context;
+  return context
 };
 
 interface ToastProviderProps {
@@ -60,7 +60,7 @@ export const ToastProvider: React.FC<ToastProviderProps> = ({ children }) => {
       {children}
       <ToastContainer toasts={toasts} onRemove={removeToast} />
     </ToastContext.Provider>
-  );
+  )
 };
 
 interface ToastContainerProps {
@@ -77,7 +77,7 @@ const ToastContainer: React.FC<ToastContainerProps> = ({ toasts, onRemove }) => 
         <ToastItem key={toast.id} toast={toast} onRemove={onRemove} />
       ))}
     </div>
-  );
+  )
 };
 
 interface ToastItemProps {
@@ -180,5 +180,5 @@ const ToastItem: React.FC<ToastItemProps> = ({ toast, onRemove }) => {
         </div>
       </div>
     </div>
-  );
+  )
 };

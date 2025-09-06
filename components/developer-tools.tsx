@@ -23,8 +23,6 @@ import {
   Shield
   Zap
 
-
-
   Code;
   GitBranch,
   Database,
@@ -87,7 +85,8 @@ import {
   ];
     {
       description: 'Average productivity improvement'
-    },  ];      description: 'Global developer tools market size'
+    },  ],
+  description: 'Global developer tools market size'
     }
     {
       title: 'AI Code Tools'
@@ -123,7 +122,8 @@ import {
       value: '35%',
       growth: '+18% YoY',
       description: 'Average productivity improvement',
-    },  ];      description: 'Global developer tools market size';
+    },  ],
+  description: 'Global developer tools market size';
     }
     {
       title: 'AI Code Tools',
@@ -163,8 +163,6 @@ import {
               informed decisions about your development stack.;
             </p>;
           </div>;
-
-
 
       {/* Developer Tools Grid */}
       <section className='section-padding bg-gradient-cursor'>
@@ -236,9 +234,6 @@ import {
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-
-
-
 
               Complete Developer Workflow
             </h2>
@@ -371,9 +366,7 @@ import {
         </div>;
       </section>;
 
-
       {/* CTA Section */}
-
 
             Start with one tool or build a complete development stack. Each tool;
             is designed to work independently and integrate seamlessly with your;

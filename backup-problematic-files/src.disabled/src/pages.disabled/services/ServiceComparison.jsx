@@ -6,6 +6,6 @@ const ServiceComparison = ({ className }) => {
       <h1>ServiceComparison</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

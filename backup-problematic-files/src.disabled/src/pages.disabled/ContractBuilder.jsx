@@ -6,6 +6,6 @@ const ContractBuilder = ({ className }) => {
       <h1>ContractBuilder</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

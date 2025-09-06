@@ -2,8 +2,6 @@ summary: string | undefined;
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined
-<<<<<<< HEAD
-
 
 export function TalentCardContent(): any ({;
   summary,;
@@ -90,19 +88,17 @@ function TalentCardContent() {
         </div>)}
       {/* Short bio or summary - longer on hover for desktop */}
       <div;
-        className="overflow - hidden transition - all duration - 300";
+        className="overflow - hidden transition - all duration-300";
         style={{ max_height: is_hovering ? '8rem' : '3rem' }}
         onMouseEnter = {() => setIsHovering (true), }
         onMouseLeave = {() => setIsHovering (false), }
       >;
         <p className='text - zion - slate mb - 4'>{summary || bio}</p>;
       </div>;
-        <p className="text - zion - slate mb - 4">;
+        <p className="text - zion - slate mb-4">;
           {summary || bio}
         </p>;
       </div>;
       <TalentCardSkills skills={skills} />;
     </div>);
 }
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

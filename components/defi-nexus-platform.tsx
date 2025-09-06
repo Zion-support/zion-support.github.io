@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 
 import {
 
-
   TrendingUp,
   Brain,
   Shield,
@@ -24,7 +23,6 @@ import {
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
 
-
   TrendingUp,
   Brain,
   Shield,
@@ -44,7 +42,6 @@ import Layout from '../components/layout/Layout';import {
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';import {
   TrendingUp, Brain, Shield, Zap, Target, ;
-
 
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin
@@ -139,7 +136,6 @@ const pricingPlans = [
 import React from 'react';
 import Head from 'next / head';
 import { motion } from 'framer-motion';
-
 
   BarChart3, Cpu, Globe, Users, Award;
   CheckCircle, ArrowRight, Star, Phone, Mail, MapPin;
@@ -260,7 +256,6 @@ export default function DeFiNexusPlatform() {;
         />;
       </Head>;
 
-
         {/* Background Elements */}
         <div className='absolute inset-0 overflow-hidden pointer-events-none'>;
           <div className='absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-green-500/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse'></div>;
@@ -349,7 +344,6 @@ export default function DeFiNexusPlatform() {;
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.8, delay: index * 0 && 0.1 }}
                 viewport={{ once: true }}
-
 
               >
                 <div className='w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mb-4'>
@@ -459,11 +453,6 @@ export default function DeFiNexusPlatform() {;
 
                       {feature}
 
-
-
-
-
-
                     </li>
                   ))}
                 </ul>
@@ -546,8 +535,6 @@ export default function DeFiNexusPlatform() {;
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.;
             </p>;
           </motion && motion.div>;
-
-
 
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -665,17 +652,17 @@ export default function DeFiNexusPlatform() {;
                       className='flex items - center text - gray - 300';
                     >;
                       <CheckCircle className='w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0' />                      {feature}                    ${plan.price}
-                    <span className="text - lg text - gray - 400 font - normal">/{plan.period}</span>;
+                    <span className="text - lg text - gray-400 font-normal">/{plan.period}</span>;
                   </div>;
                 </div>;
-                <ul className="space - y-4 mb - 8">;
+                <ul className="space-y-4 mb-8">;
                   {plan.features.map ((feature, feature_index) => (
-                    <li key={feature_index} className="flex items - center text - gray - 300">;
-                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex - shrink - 0" />;
+                    <li key={feature_index} className="flex items - center text-gray-300">;
+                      <CheckCircle className="w - 5 h - 5 text - green - 400 mr - 3 flex-shrink-0" />;
                       {feature}
                     </li>))}
                 </ul>;
-                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300">;
+                <button className='w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition - all duration - 300'>                  Get Started                <button className="w - full bg - gradient - to - r from - green - 500 to - emerald - 500 text - white font - semibold py - 3 px - 6 rounded - xl hover:from - green - 600 hover:to - emerald - 600 transition-all duration-300">;
                   Get Started;
                 </button>;
               </motion.div>))}
@@ -687,8 +674,8 @@ export default function DeFiNexusPlatform() {;
         id='contact';
         className='py - 20 bg - gradient - to - b from - slate - 900 to - black';
       >;
-        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate - 900 to - black">;
-        <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
+        <div className='max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8'>          <motion.div      <section id="contact" className="py - 20 bg - gradient - to - b from - slate-900 to-black">;
+        <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
           <motion.div;
             initial={{ opacity: 0, coordinate_y: 30 }}
             whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -705,14 +692,14 @@ export default function DeFiNexusPlatform() {;
             </p>;
           </motion.div>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div          >;
-            <h2 className="text - 3xl md:text - 5xl font - bold text - white mb - 6">;
+            <h2 className="text - 3xl md:text - 5xl font - bold text-white mb-6">;
               Ready to Transform DeFi?;
             </h2>;
-            <p className="text - xl text - gray - 300 max - w-3xl mx - auto">;
+            <p className="text - xl text - gray - 300 max-w-3xl mx-auto">;
               Contact our team to learn more about how DeFi Nexus Platform can revolutionize your decentralized finance experience.;
             </p>;
           </motion.div>;
-          <div className="grid grid - cols - 1 md:grid - cols - 3 gap - 8">;
+          <div className="grid grid - cols - 1 md:grid - cols-3 gap-8">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -725,11 +712,11 @@ export default function DeFiNexusPlatform() {;
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Phone</h3>;
               <p className='text - gray - 300'>{contact_info.mobile}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Phone className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Phone className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Phone</h3>;
-              <p className="text - gray - 300">{contact_info.mobile}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Phone</h3>;
+              <p className="text-gray-300">{contact_info.mobile}</p>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -743,11 +730,11 @@ export default function DeFiNexusPlatform() {;
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Email</h3>;
               <p className='text - gray - 300'>{contact_info.email}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <Mail className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <Mail className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Email</h3>;
-              <p className="text - gray - 300">{contact_info.email}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Email</h3>;
+              <p className="text-gray-300">{contact_info.email}</p>;
             </motion.div>;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
@@ -761,11 +748,11 @@ export default function DeFiNexusPlatform() {;
               </div>;
               <h3 className='text - xl font - semibold text - white mb - 2'>Address</h3>;
               <p className='text - gray - 300'>{contact_info.address}</p>            </motion.div>            >;
-              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx - auto mb - 4">;
-                <MapPin className="w - 8 h - 8 text - white" />;
+              <div className="w - 16 h - 16 bg - gradient - to - r from - green - 500 to - emerald - 500 rounded - 2xl flex items - center justify - center mx-auto mb-4">;
+                <MapPin className="w - 8 h-8 text-white" />;
               </div>;
-              <h3 className="text - xl font - semibold text - white mb - 2">Address</h3>;
-              <p className="text - gray - 300">{contact_info.address}</p>;
+              <h3 className="text - xl font - semibold text-white mb-2">Address</h3>;
+              <p className="text-gray-300">{contact_info.address}</p>;
             </motion.div>;
           </div>;
         </div>;

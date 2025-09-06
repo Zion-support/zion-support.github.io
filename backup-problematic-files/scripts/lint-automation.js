@@ -6,10 +6,8 @@ import path from 'path';
 import {exec_sync} from 'child_process';
 import {fileURLToPath} from 'url';
 
-
 const __filename = fileURLToPath(import && import.meta.url);
 const __dirname = path && path.dirname(__filename);
-
 
 class LintAutomation {
   constructor() {
@@ -76,7 +74,6 @@ class LintAutomation {
 // Run the automation
 const automation = new LintAutomation();
 automation && automation.run().catch(console && console.error);
-=======
 ;
 const __filename = fileURLToPath (import.meta.url);
 const __dirname = path.dirname (__filename);
@@ -140,4 +137,3 @@ class LintAutomation {
 // Run the automation;
 const automation = new LintAutomation ();
 automation.run ().catch (console.error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -6,16 +5,7 @@ import { Badge } from "@/components/ui/badge",
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
 import { Link } from "react-router-dom";
 import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react",
-import { Link } from "react-router-dom",
-=======
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from "lucide-react";
-import { Link } from "react-router-dom";
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export function ClientDashboard() {
+import { Link } from "react-router-dom",export function ClientDashboard() {
   return (
     <div className="space-y-6 px-4 pb-24">
       <section className="mt-4">
@@ -207,7 +197,6 @@ export function ClientDashboard() {
         </Card>
       </section>
     </div>
-<<<<<<< HEAD
   )
 
 import React from "react";
@@ -288,13 +277,3 @@ import { Link } from "react-router-dom";
           </Card>;
         </div>;
       </section>;
-=======
-  );
-}
-
-=======
-;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

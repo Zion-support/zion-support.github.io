@@ -1,22 +1,9 @@
-<<<<<<< HEAD
 
 interface ApplicationRowProps {
   application: JobApplication
   processingId: string | null
   onViewApplication: (applicationId: string) => Promise<void>
   onStatusChange: (
-
-=======
-interface ApplicationRowProps {
-  application: JobApplication;
-  processing_id: string | null;
-  onViewApplication: (application_id: string) => Promise < void>;
-  onStatusChange: (
-
-
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export function ApplicationRow({
 
   application
@@ -26,7 +13,6 @@ export function ApplicationRow({
   onViewScore
 }: ApplicationRowProps) {
   const [avatarError, setAvatarError] = useState(false)
-
 
 import { formatDistanceToNow } from 'date-fns';
 import { Calendar, User, FileText, BarChart } from 'lucide-react';
@@ -40,11 +26,6 @@ import { ApplicationActions } from './ApplicationActions';
 import Image from 'next/image'; // Import next/image;
 import React, { useState } from 'react'; // Import useState;
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 interface ApplicationRowProps {;
   application: JobApplication;
   processingId: string | null;
@@ -72,90 +53,28 @@ export function ApplicationRow(): any ({;
   const [avatarError, setAvatarError] = useState(false);
   const talentName = application && application.talent_profile?.full_name || 'Unknown';
 
-<<<<<<< HEAD
-
   const talentName = application.talent_profile?.full_name || 'Unknown'
 
   return (
   const talentName = application.talent_profile?.full_name |'Unknown'
 
-  const talentName = application.talent_profile?.full_name || 'Unknown'
-=======
-  return (
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    <TableRow key={application.id}>
+  const talentName = application.talent_profile?.full_name || 'Unknown'    <TableRow key={application.id}>
       <TableCell>
         <div className="flex items-center gap-3">
           <AvatarPrimitive className="h-9 w-9"> {/* Using renamed AvatarPrimitive */}
             {application.talent_profile?.profile_picture_url && !avatarError ? (
-              <Image
-<<<<<<< HEAD
-=======
-
-
-                src={application.talent_profile.profile_picture_url} 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                alt={talentName}
-                width={36} // Corresponds to h-9 w-9 (9 * 4px = 36px)
-                height={36} // Corresponds to h-9 w-9
-                className="rounded-full object-cover" // Ensure rounded and object-cover
-                onError={() => setAvatarError(true)}
-<<<<<<< HEAD
-            ) : (
-              <User className="h-5 w-5 text-gray-400" />
-            )}
-          </AvatarPrimitive>
-          <div>
-=======
-                priority={false}
-              />
-
-
-            ) : (
-              <User className="h-5 w-5 text-gray-400" />
-            )}
-
-
-            <div className="font-medium">
-              {talentName}
-            </div>
-            <div className="text-xs text-muted-foreground">
-              {application.talent_profile?.professional_title || "Talent"}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            </div>
-          </div>
-        </div>
-      </TableCell>
-      <TableCell>
-<<<<<<< HEAD
-=======
-
-
-        <div className="flex items-center gap-1">
-          <Calendar className="h-4 w-4 text-muted-foreground" />
-          <span>{formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}</span>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        </div>
+              <Image        </div>
       </TableCell>
       <TableCell>
         <StatusBadge status={application.status} />
       </TableCell>
       <TableCell>
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <Button 
           variant="ghost" 
           size="sm" 
           onClick={() => onViewScore(application)}
           className="flex items-center gap-1"
         >
           <BarChart className="h-4 w-4 mr-1" />
-
 
           <ScoreBadge application={application} />
         </Button>
@@ -293,8 +212,6 @@ export function ApplicationRow({;
         </div>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-=======
 
         <div className='flex items - center gap - 1'>;
           <Calendar className='h - 4 w - 4 text - muted - foreground' />;
@@ -318,28 +235,15 @@ export function ApplicationRow({;
           className='flex items - center gap - 1'        >;
           <BarChart className='h - 4 w - 4 mr - 1' />;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           <ScoreBadge application={application} />;
         </Button>;
       </TableCell>;
       <TableCell>;
-<<<<<<< HEAD
-=======
-
-              href={application && application.resume.file_url || '#'}
-
-              target='_blank'
-              rel='noopener noreferrer'>;
-              <FileText className='h-4 w-4 mr-1' /> View;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            </a>;
           </Button>;
         ) : (;
           <span className="text-muted-foreground text-sm">No resume</span>;
         )}
       </TableCell>;
-<<<<<<< HEAD
-=======
       <TableCell className='text-right'>;
         <ApplicationActions
           application = {application,}
@@ -376,4 +280,3 @@ export function ApplicationRow({;
     </TableRow>);
 }
 ;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

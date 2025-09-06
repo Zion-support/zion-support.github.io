@@ -5,7 +5,7 @@ messages: [ {
 // Create utility
 export const Create = () => {
   // Implementation here
-  return null;
+  return null
 };
 {
   role: 'user', content: prompt 
@@ -72,16 +72,10 @@ export default async function handler(
   };
 }
 
-
-
-
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { name, email, budget, timeline, description, talentSlug } = req.body |{}
   if (!name |!email |!description) return res.status(400).json({ error: 'Missing required fields' });
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
-
-
-
 
   const normalizedBudget = String(budget ?? '').replace(/[^0-9.\-]/g, '');
   const ai = await summarizeWithOpenAI(String(description));
@@ -138,8 +132,8 @@ function handler() {
     name;
     email;
     budget: normalizedBudget;
-    timeline: String(timeline |'');
-    description: String(description);
+    timeline: String(timeline |''),
+  description: String(description);
   requests.push(record);
   await saveRequests(requests);
 
@@ -161,8 +155,8 @@ function handler() {
     name;
     email;
     budget: normalized_budget;
-    timeline: String (timeline || '');
-    description: String (description);
+    timeline: String (timeline || ''),
+  description: String (description);
     talent_slug: talent_slug || null;
     ai_summary: ai.summary;
     ai_type: ai.type;

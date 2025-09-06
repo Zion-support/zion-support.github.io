@@ -31,13 +31,13 @@ const services = [
       'Smart contract development,',
       'Cryptocurrency integration',',
       'Decentralized finance (DeFi)',',
-    title: 'Blockchain Solutions,',;
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',;
+    title: 'Blockchain Solutions,',,
+  description: 'Secure, transparent, and efficient blockchain implementations for financial services.',',;
 import Layout from '../../components/Layout';
 const services = [;
   {;
-    title: 'Blockchain Solutions',;
-    description: 'Secure, transparent, and efficient blockchain implementations for financial services.',;
+    title: 'Blockchain Solutions',,
+  description: 'Secure, transparent, and efficient blockchain implementations for financial services.',;
     icon: Shield,;
     features: [,;
       'Smart contract development,',;
@@ -47,8 +47,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'AI Trading Algorithms,',;
-    description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',;
+    title: 'AI Trading Algorithms,',,
+  description: 'Advanced machine learning algorithms for automated trading and investment strategies.,',;
     icon: Brain,;
     features: [,;
       'Algorithmic trading systems,',;
@@ -58,8 +58,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Digital Payment Systems,',;
-    description: 'Secure, scalable payment processing solutions for modern financial transactions.',',;
+    title: 'Digital Payment Systems,',,
+  description: 'Secure, scalable payment processing solutions for modern financial transactions.',',;
     icon: CreditCard,;
     features: [,;
       'Payment gateway integration,',;
@@ -69,8 +69,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Risk Management AI,',;
-    description: 'AI-powered risk assessment and management tools for financial institutions.,',;
+    title: 'Risk Management AI,',,
+  description: 'AI-powered risk assessment and management tools for financial institutions.,',;
     icon: TrendingUp,;
     features: [,;
       'Credit risk analysis,',;
@@ -80,8 +80,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Fraud Detection Systems,',;
-    description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',;
+    title: 'Fraud Detection Systems,',,
+  description: 'Real-time fraud detection and prevention using advanced AI and machine learning.,',;
     icon: Lock,;
     features: [,;
       'Real-time transaction monitoring,',;
@@ -91,8 +91,8 @@ const services = [;
     ];
   },;
   {}
-    title: 'Regulatory Compliance Tools,',;
-    description: 'Automated compliance monitoring and reporting for financial regulations.,',;
+    title: 'Regulatory Compliance Tools,',,
+  description: 'Automated compliance monitoring and reporting for financial regulations.,',;
     icon: FileText,;
     features: [,;
       'KYC/AML automation,',;
@@ -104,29 +104,29 @@ const services = [;
 ;];
 const benefits = [;
   {}
-    title: 'Enhanced Security,',;
-    description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
+    title: 'Enhanced Security,',,
+  description: 'Bank-grade security measures protect sensitive financial data and transactions.,',;
     icon: Shield;
 ];
 const benefits = [;
   {;
-    title: 'Enhanced Security',;
-    description: 'Bank-grade security measures protect sensitive financial data and transactions.',;
+    title: 'Enhanced Security',,
+  description: 'Bank-grade security measures protect sensitive financial data and transactions.',;
     icon: Shield;
   },;
   {}
-    title: 'Improved Efficiency,',;
-    description: 'Automated processes reduce manual work and increase operational efficiency.,',;
+    title: 'Improved Efficiency,',,
+  description: 'Automated processes reduce manual work and increase operational efficiency.,',;
     icon: BarChart3,;
   },;
   {}
-    title: 'Better Risk Management,',;
-    description: 'AI-powered risk assessment helps make informed financial decisions.,',;
+    title: 'Better Risk Management,',,
+  description: 'AI-powered risk assessment helps make informed financial decisions.,',;
     icon: TrendingUp,;
   },;
   {}
-    title: 'Regulatory Compliance,',;
-    description: 'Built-in compliance tools ensure adherence to financial regulations.,',;
+    title: 'Regulatory Compliance,',,
+  description: 'Built-in compliance tools ensure adherence to financial regulations.,',;
     icon: FileText,;
   }
 ;];
@@ -460,6 +460,6 @@ export default function FinancePage() {;
         </section>
       </div>
     </Layout>
-  );
+  )
 };
 

@@ -10,8 +10,6 @@ document.querySelectorAll('.example').forEach((btn) => {
     document.getElementById('prompt').value = btn.dataset.text |''
   })
 
-
-
 document && document.querySelectorAll('.example').forEach((btn) => {
   btn && btn.addEventListener('click', () => {
     document && document.getElementById('prompt').value = btn && btn.dataset.text || ''
@@ -62,9 +60,6 @@ document.getElementById('viewNotifications').addEventListener('click', async () 
   const data = await res.json(),
   document.getElementById('result').textContent = JSON.stringify(data.items || [], null, 2)
 }),
-
-
-
 
 document && document.getElementById('askBtn').addEventListener('click', async () => {
   const prompt = document && document.getElementById('prompt').value && value.trim(),

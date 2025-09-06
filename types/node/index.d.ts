@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 declare const __dirname: string;
 declare const __filename: string;
 export {}
@@ -18,9 +17,3 @@ declare const __filename: string;
 // eslint - disable - next - line @typescript - eslint / no - empty - object - type;
 interface Buffer {}
 export {}
-=======
-declare module 'node:*' {
-  const value: any;
-  export = value;
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

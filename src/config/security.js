@@ -1,19 +1,6 @@
-<<<<<<< HEAD
 // Security Configuration;
 export const security_config = {
-  // Content Security Policy;
-=======
-<<<<<<< HEAD
-// Security Configuration;
-export const security_config = {
-  // Content Security Policy;
-=======
-// Security Configuration
-export const securityConfig = {
-  // Content Security Policy
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
-  csp: {
+  // Content Security Policy;  csp: {
     directives: {
 
       defaultSrc: ["'self'"],
@@ -26,10 +13,6 @@ export const securityConfig = {
       objectSrc: ["'none'"],
       baseUri: ["'self'"],
       formAction: ["'self'"],
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> main
       upgradeInsecureRequests: [],
     },
   },
@@ -50,55 +33,3 @@ export const securityConfig = {
 };
 
 export default securityConfig;
-<<<<<<< HEAD
-=======
-=======
-
-      upgradeInsecureRequests: []
-    }
-  }
-  // Security Headers
-  headers: {
-    'X-Frame-Options': 'DENY'
-    'X-Content-Type-Options': 'nosniff'
-    'Referrer-Policy': 'strict-origin-when-cross-origin'
-    'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-  }
-  // Rate Limiting
-  rateLimit: {
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100 // limit each IP to 100 requests per windowMs
-      default_src: ["'self'"],
-      style_src: ["'self'", "'unsafe - inline'", "https://fonts.googleapis.com"],
-      font_src: ["'self'", "https://fonts.gstatic.com"],
-      img_src: ["'self'", "data:", "https:"],
-      script_src: ["'self'"],
-      connect_src: ["'self'"],
-      frame_src: ["'none'"],
-      object_src: ["'none'"],
-      base_uri: ["'self'"],
-      form_action: ["'self'"],
-      upgradeInsecureRequests: [];
-    }
-  },
-  // Security Headers;
-  headers: {
-    'X - Frame - Options': 'DENY',
-    'X - Content - Type - Options': 'nosniff',
-    'Referrer - Policy': 'strict - origin - when - cross - origin',
-    'Permissions - Policy': 'camera=(), microphone=(), geolocation=()';
-  },
-  // Rate Limiting;
-  rate_limit: {
-    window_ms: 15 * 60 * 1000, // 15 minutes;
-    max: 100 // limit each IP to 100 requests per window_ms;
-  }
-<<<<<<< HEAD
-}
-export default security_config;
-=======
-};
-export default securityConfig;
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -1,59 +1,24 @@
-<<<<<<< HEAD
-=======
 import * as React from "react"
 import * as RadioGroupPrimitive from "@radix-ui/react-radio-group"
 import { Circle } from 'lucide-react'
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
 const RadioGroup = React.forwardRef<
   React.ElementRef<typeof RadioGroupPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Root>
 >(({ className, ...props }, ref) => {
-<<<<<<< HEAD
-=======
-
-import * as React from &quot;react & quot;
-import * as RadioGroupPrimitive from &quot;@radix - ui / react - radio - group & quot;
-import { Circle } from 'lucide-react';
-import { cn } from &quot;@/lib / utils & quot;
-;
-const RadioGroup = React.forward_ref<;
-  React.ElementRef < typeof RadioGroupPrimitive.Root>,
-  React.ComponentPropsWithoutRef < typeof RadioGroupPrimitive.Root>;
->(({ class_name, ...props }, ref) => {
-
-  return (
-    <RadioGroupPrimitive.Root;
-      className={cn (&quot;grid gap - 2&quot;, class_name)}
-  return (
-    <RadioGroupPrimitive.Root
-
-      className={cn("grid gap-2", className)}
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      {...props}
       ref={ref}
     />;
   );
 });
 
-
-
   React.ElementRef<typeof RadioGroupPrimitive.Item>,;
-<<<<<<< HEAD
 RadioGroup.displayName = RadioGroupPrimitive.Root.displayName;
 const RadioGroupItem = React.forwardRef<;
-  React.ElementRef<typeof RadioGroupPrimitive.Item>,;
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
+  React.ElementRef<typeof RadioGroupPrimitive.Item>,;  React.ComponentPropsWithoutRef<typeof RadioGroupPrimitive.Item>;
 >(({ className, ...props }, ref) => {;
   return (;
     <RadioGroupPrimitive.Item;
       ref={ref}
-
 
         className
       )}
@@ -66,8 +31,6 @@ const RadioGroupItem = React.forwardRef<;
   )
 })
 RadioGroupItem.displayName = RadioGroupPrimitive.Item.displayName
-<<<<<<< HEAD
-=======
 
 RadioGroup.display_name = RadioGroupPrimitive.Root.display_name;
 const RadioGroupItem = React.forward_ref<;
@@ -89,17 +52,8 @@ className={cn (
 });
 RadioGroupItem.display_name = RadioGroupPrimitive.Item.display_name;
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 export { RadioGroup, RadioGroupItem }
-
 
 export { RadioGroup, RadioGroupItem }
 ;
 <<<<<<< HEAD
-=======
-
-export { RadioGroup, RadioGroupItem };
-
-export { RadioGroup, RadioGroupItem }
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

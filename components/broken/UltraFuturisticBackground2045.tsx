@@ -174,18 +174,18 @@ if ( {) {
             backgroundSize: '50px 50px'
 ;
   return (
-    <div className="relative min - h-screen bg - black overflow - hidden">;
+    <div className="relative min - h-screen bg-black overflow-hidden">;
       {/* Animated Canvas Background */}
       <canvas;
         ref={canvas_ref}
-        className="fixed inset - 0 w - full h - full pointer - events - none z - 0";
+        className="fixed inset - 0 w - full h - full pointer - events-none z-0";
         style={{ background: 'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)' }}
       />;
       {/* Floating Geometric Shapes */}
-      <div className="fixed inset - 0 pointer - events - none z - 10">;
+      <div className="fixed inset - 0 pointer - events-none z-10">;
         {/* Animated Grid */}
         <motion.div;
-          className="absolute inset - 0 opacity - 20";
+          className="absolute inset-0 opacity-20";
           style={{
             background_image: `;
               linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px);
@@ -370,7 +370,6 @@ if ( {) {
       {/* Content */}
       <div className='relative z-30'>{children}</div>;
 
-
       {/* Animated Border Effects */}
       <div className='fixed inset-0 pointer-events-none z-40'>;
         <motion&& motion.div
@@ -408,7 +407,7 @@ if ( {) {
         />;
       </div>;
     </div>;
-  );
+  )
 };export default UltraFuturisticBackground2045;            ease: 'linear';
           }}
         />;

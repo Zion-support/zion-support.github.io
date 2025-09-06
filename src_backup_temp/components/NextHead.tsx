@@ -101,7 +101,7 @@ const "NextHead": Reac t.FC<NextHeadProps> = ({
       {/* Custom children */}
       {children}
     </Head>;
-  );
+  )
 };
 export default NextHead;';
 </NextHeadProps>;';;';

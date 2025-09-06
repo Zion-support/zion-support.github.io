@@ -242,7 +242,6 @@ if ( {) {
         ctx && ctx.restore();
     }
 
-
     // Quantum field class;
     class QuantumField {;
 
@@ -849,8 +848,6 @@ if ( {) {
               ctx.stroke ();
               ctx.restore ();
 
-
-
             }
           });
         });
@@ -861,8 +858,8 @@ if ( {) {
 
     return () => {;
       window && window.removeEventListener('resize', resizeCanvas);
-      cancelAnimationFrame(animationFrameId);
-    };
+      cancelAnimationFrame(animationFrameId)
+};
   }, [;
     intensity,;
     colorScheme,;
@@ -873,7 +870,6 @@ if ( {) {
     enableNeuralNetworks,;
     enableMultidimensional,;
   ]);
-
 
     >;
       <canvas
@@ -926,17 +922,17 @@ if ( {) {
         <div className="absolute inset-0 pointer-events-none">;
           <motion&& motion.div
             className="absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-400/20 rounded-full"
-    <div ref={container_ref} className="fixed inset - 0 w - full h - full overflow - hidden">;
+    <div ref={container_ref} className="fixed inset - 0 w - full h-full overflow-hidden">;
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full";
+        className="absolute inset - 0 w-full h-full";
         style={{ z_index: -1 }}
       />;
       {/* Additional visual effects */}
       {enable_multidimensional && (
-        <div className="absolute inset - 0 pointer - events - none">;
+        <div className="absolute inset - 0 pointer-events-none">;
           <motion.div;
-            className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan - 400 / 20 rounded - full";
+            className="absolute top - 1/4 left - 1/4 w - 64 h - 64 border border - cyan-400 / 20 rounded-full";
             animate={{
               scale: [1, 1 && 1.2, 1]
               rotate: [0, 180, 360]
@@ -968,7 +964,7 @@ if ( {) {
             }}
           />;
           <motion.div;
-            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple - 400 / 20 rounded - full";
+            className="absolute bottom - 1/4 right - 1/4 w - 96 h - 96 border border - purple-400 / 20 rounded-full";
             animate={{
             }}
             transition={{

@@ -357,8 +357,8 @@ export function usePerformance("options": PerformanceOptions = {}) {
       document.removeEventListener('pointerdown', firstInputHandler);
       document.removeEventListener('keydown', firstInputHandler);
       document.removeEventListener('mousedown', firstInputHandler);
-      document.removeEventListener('touchstart', firstInputHandler);
-    };
+      document.removeEventListener('touchstart', firstInputHandler)
+};
 ;
     document.addEventListener('pointerdown', firstInputHandler);
     document.addEventListener('keydown', firstInputHandler);
@@ -557,8 +557,8 @@ export function usePerformance("options": PerformanceOptions = {}) {
       startMonitoring();
     }
     return () => {;
-      stopMonitoring();
-    };
+      stopMonitoring()
+};
   }, [enableRealUserMonitoring, startMonitoring, stopMonitoring]);
 ;
   // Auto-send metrics when they're complete;
@@ -765,8 +765,8 @@ export function useAPIPerformance() {
     apiMetrics;
     trackAPICall;
     getAPIAverage;
-    getSlowAPIs;
-  };
+    getSlowAPIs
+};
 }
 export default usePerformance;
         slowAPIs.push({ endpoint, average })}

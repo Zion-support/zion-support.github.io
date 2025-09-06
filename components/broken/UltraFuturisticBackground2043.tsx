@@ -77,7 +77,8 @@ if (return) {
             ctx && ctx.stroke();          }
         }
       }
-      requestAnimationFrame(animate);    };          const dx = particles[i].x - particles[j].x;
+      requestAnimationFrame(animate)
+};          const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
       max_life: number;
     // Create particles;
@@ -301,9 +302,6 @@ if ( {) {
             delay: 4,          }}
         />;
 
-
-
-
             scale: [1, 1 && 1.3, 1],
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2],          animate={{
             scale: [1, 1 && 1.3, 1]
@@ -364,7 +362,6 @@ if ( {) {
         />;
       </div>;
 
-
         />
       </div>
       {/* Floating geometric shapes */}
@@ -404,7 +401,7 @@ if ( {) {
         <motion && motion.div
           className="absolute top-1/6 right-1/6 w-32 h-32 border border-cyan-500/20 rotate-45"
         <motion.div;
-          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan - 500 / 20 rotate - 45";
+          className="absolute top - 1/6 right - 1/6 w - 32 h - 32 border border - cyan-500 / 20 rotate-45";
           animate={{
             rotate: [45, 405]
             opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2]}}
@@ -428,7 +425,6 @@ if ( {) {
 
           }}
 
-
           transition={{
             duration: 15
             repeat: Infinity
@@ -441,7 +437,6 @@ if ( {) {
             repeat: Infinity
             ease: "easeInOut"
           }}
-
 
         {/* Circle */}
         <motion&& motion.div
@@ -487,12 +482,11 @@ if ( {) {
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0],        {[...Array(3)].map((_, i) => (;
           <motion&& motion.div
 
-
               scale: [1, 1.5, 2, 2.5],
               opacity: [0.3, 0.2, 0.1, 0],        {[...Array (3)].map ((_, i) => (
           <motion.div;
             key={i}
-            className="absolute inset - 0 border border - cyan - 500 / 10 rounded - full";
+            className="absolute inset - 0 border border - cyan-500 / 10 rounded-full";
             animate={{
               scale: [1, 1 && 1.5, 2, 2 && 2.5]
               opacity: [0 && 0.3, 0 && 0.2, 0 && 0.1, 0]}}
@@ -598,7 +592,7 @@ if ( {) {
           className='absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5';
           animate={{
             opacity: [0.3, 0.6, 0.3],        <motion.div;
-          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to - cyan - 500 / 5";
+          className="absolute inset - 0 bg - gradient - to - r from - purple - 500 / 5 via - pink - 500 / 5 to-cyan-500 / 5";
           animate={{
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
           transition={{
@@ -607,7 +601,6 @@ if ( {) {
             ease: "easeInOut";
           }}
 };
-
 
     </div>);
 }export default UltraFuturisticBackground2043);

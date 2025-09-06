@@ -19,7 +19,6 @@ interface MobileChatViewProps {;
   onBack: () => void;
   onSendMessage: (content: string) => void
 
-
 import React, { useState } from 'react';
 import { Avatar, AvatarImage, AvatarFallback } from '@/components / ui / avatar';
 import { Button } from '@/components / ui / button';
@@ -66,10 +65,6 @@ if (!== '') {) {
 }
       onSendMessage (new_message);
       setNewMessage ('');
-
-
-
-
 
     }
   }
@@ -121,26 +116,25 @@ export function MobileChatView(): any ({;
 
   const startVideoCall = () => {;
     const roomId = `mobile-${contact && contact.id}`;
-    toast && toast.success('Starting video call', {;
-      description: `Connecting with ${contact && contact.name}...`,;
+    toast && toast.success('Starting video call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
     });
 
     // Navigate to video call page;
-    router && router.push(`/call/${roomId}`);
-  };
+    router && router.push(`/call/${roomId}`)
+};
 
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact && contact.id}`;
-    toast && toast.success('Starting audio call', {;
-      description: `Connecting with ${contact && contact.name}...`,;
+    toast && toast.success('Starting audio call', {,
+  description: `Connecting with ${contact && contact.name}...`,;
     });
 
     // Navigate to video call page with audio-only flag;
-    router && router.push(`/call/${roomId}?audioOnly=true`);
-  };
+    router && router.push(`/call/${roomId}?audioOnly=true`)
+};
 
   return (
-
 
   },
   
@@ -164,7 +158,6 @@ export function MobileChatView(): any ({;
     router.push(`/call/${roomId}?audioOnly=true`)
   },
   
-
 
   return (
     <div className="flex flex-col h-full pb-safe">
@@ -220,12 +213,10 @@ export function MobileChatView(): any ({;
               <Phone className='h-5 w-5' />;
             </Button>;
 
-
             <Button
               variant='ghost'
               size='icon'
               onClick={startVideoCall}
-
 
               <h3 className="font-medium">{contact.name}</h3>
               <p className="text-xs text-muted-foreground">
@@ -233,7 +224,6 @@ export function MobileChatView(): any ({;
               </p>
             </div>
           </div>
-
 
             </Button>
           </div>
@@ -344,16 +334,16 @@ export function MobileChatView(): any ({;
   },;
   const startVideoCall = () => {;
     const roomId = `mobile-${contact.id}`,;
-    toast.success("Starting video call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting video call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page;
     router.push(`/call/${roomId}`);
   },;
   const startAudioCall = () => {;
     const roomId = `mobile-audio-${contact.id}`,;
-    toast.success("Starting audio call", {;
-      description: `Connecting with ${contact.name}...`;
+    toast.success("Starting audio call", {,
+  description: `Connecting with ${contact.name}...`;
     }),;
     // Navigate to video call page with audio-only flag;
     router.push(`/call/${roomId}?audioOnly=true`);
@@ -433,7 +423,6 @@ export function MobileChatView(): any ({;
                 {message.isMe && message.status && (;
                   <span className="ml-1">;
 
-
                     {message.status === 'read' ? '✓✓' : '✓'}
 
               </div>;
@@ -487,7 +476,7 @@ export function MobileChatView(): any ({;
         </div>
       </div>;
     </div>;
-  );
+  )
 };
 }
 }
@@ -528,7 +517,6 @@ export function MobileChatView(): any ({;
           <Input
             value={newMessage}
 
-
             onChange={(e) => setNewMessage(e.target.value)}
 
             onKeyDown={handleKeyDown}
@@ -537,8 +525,6 @@ export function MobileChatView(): any ({;
             aria-label="Send message"
           >
             <Send className="h-5 w-5" />
-
-
 
           </Button>
         </div>

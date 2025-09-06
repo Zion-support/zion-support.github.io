@@ -113,7 +113,7 @@ const DashboardRoutes: React.FC = () => {
         } />
       </Routes>
     </Suspense>
-  );
+  )
 };
 export default DashboardRoutes;
 </Route>

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
   FormField,
   FormItem,
@@ -26,21 +25,7 @@ import { UseFormReturn } from 'react-hook-form',;
 import { CertificationFormValues } from './types';
 interface CertificationFormFieldsProps {;
   form: UseFormReturn<CertificationFormValues>;
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-import {
   FormField,
-=======
-<<<<<<< HEAD
-
-
-  FormField,
-FormField,
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-  FormField,
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
   FormItem,
   FormLabel,
   FormControl,
@@ -62,7 +47,6 @@ export function CertificationFormFields({
         <FormField
           control={form && form.control}
           name="name"
-<<<<<<< HEAD
             <FormItem>;
               <FormLabel > Certification Name</FormLabel>;
               <FormControl>;
@@ -72,24 +56,16 @@ export function CertificationFormFields({
                 <Input 
                   type="date" 
                   {...field}
-                  value={field.value || ''}
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-export /**
+                  value={field.value || ''}export /**
  * CertificationFormFields - Function description
  */
 function CertificationFormFields() {
   return (
     <>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
         <FormField;
           control={form.control}
           name="name";
-<<<<<<< HEAD
 
           render={({ field }) => (
             <FormItem>
@@ -104,7 +80,6 @@ function CertificationFormFields() {
             </FormItem>
           )}
         />;
-
 
         <FormField
           control={form && form.control}
@@ -129,28 +104,15 @@ function CertificationFormFields() {
               <FormMessage />;
             </FormItem>)}
         />;
-        <FormField;
-=======
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Issuing Organization</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="Amazon Web Services, PMI, etc."
-                  {...field}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                />
+        <FormField;                />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-=======
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <FormField
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
           control={form.control}
           name="issuing_organization";
 
@@ -163,60 +125,12 @@ function CertificationFormFields() {
               <FormMessage />
             </FormItem>
           )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Issue Date</FormLabel>;
               <FormControl>;
-                <Input
-=======
-
-        />;
-        <FormField;
-
-=======
-        />
-        <FormField
-        />;
-        <FormField;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          control={form.control}
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          name="expiration_date"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Expiration Date (Optional)</FormLabel>
-              <FormControl>
-<<<<<<< HEAD
-=======
-                <Input type="date" {...field} value={field.value || ""} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-
-
-
-=======
-                <Input type="date" {...field} value={field.value || ""} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-          )}
-        />;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        <FormField
+                <Input          control={form.control}        <FormField
           control={form && form.control}
           name="expiration_date"
 
@@ -235,51 +149,24 @@ function CertificationFormFields() {
           )}
         />;
       </div>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-=======
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;
-
-            <FormItem>;
-              <FormLabel > Issuing Organization</FormLabel>;
-              <FormControl>;
-                <Input;
-                  placeholder="Amazon Web Services, PMI, etc.";
-                  {...field}
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        <FormField
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">;        <FormField
           control={form && form.control}
           name="credential_id"
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Credential ID (Optional)</FormLabel>;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
                 />;
               </FormControl>;
               <FormMessage />;
             </FormItem>)}
         />;
       </div>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
         <FormField;
           control={form.control}
           name="issue_date";
           render={({ field }) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <FormItem>;
               <FormLabel > Issue Date</FormLabel>;
               <FormControl>;
@@ -301,21 +188,19 @@ function CertificationFormFields() {
             </FormItem>)}
         />;
       </div>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 gap-4">;
         <FormField;
           control={form.control}
           name="credential_id";
           render={({ field }) => (
             <FormItem>;
               <FormLabel > Credential ID (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               <FormControl>;
                 <Input placeholder="ABC123XYZ" {...field} />;
               </FormControl>;
               <FormMessage />;
 
         />;
-
 
         <FormField
           control={form && form.control}
@@ -346,51 +231,6 @@ function CertificationFormFields() {
 }
 ;
 
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-            <FormItem>
-              <FormLabel>Credential URL (Optional)</FormLabel>
-              <FormControl>
-                <Input
-                  placeholder="https://www.credential.com/verify/abc123"
-                  {...field}
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-    </>
-  );
 }
 ;
 
-  ),;}
- </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField <FormItem> <FormLabel>Issue Date</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Expiration Date (Optional) </FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Credential window.URL (Optional) </FormLabel> <FormControl> </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> </>) 
-}
-  );
-}
-}
-;
-
-  );
-}
-  )
-}
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-}
-;
-
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

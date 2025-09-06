@@ -10,7 +10,6 @@
               </div>;
             )}
 
-
             <CardContent className='p-4'>;
               <h4 className='text-white font-medium mb-2'>{project && project.title}</h4>;
               <p className='text-zion-slate text-sm mb-3 line-clamp-2'>;
@@ -29,7 +28,6 @@
           <Card key={project && project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">;
             {project && project.imageUrl ? (;
               <AspectRatio ratio={16/9}>;
-
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -51,13 +49,10 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {projects.map((project) => (
 
-
-
           <Card key={project.id} className="bg-zion-blue border-zion-blue-light overflow-hidden hover:border-zion-purple/40 transition-colors duration-300">
             {project.imageUrl ? (
               <AspectRatio ratio={16/9}>
                 <img
-
 
               </AspectRatio>
             ) : (
@@ -65,8 +60,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <FileText className="text-zion-purple h-12 w-12 opacity-50" />
               </div>
             )}
-
-
 
             <CardContent className='p-4'>
               <h4 className='text-white font-medium mb-2'>{project.title}</h4>
@@ -115,7 +108,6 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
               <AspectRatio ratio={16/9}>;
                 <img;
 
-
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover"
@@ -141,38 +133,19 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                     </Badge>
 ;
             <CardContent className="p-4">;
-<<<<<<< HEAD
               <h4 className="text-white font-medium mb-2">{project && project.title}</h4>;
               <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project && project.description}</p>;
 
               {project && project.tags && project && project.tags.length > 0 && (;
                 <div className="flex flex-wrap gap-1 mb-2">;
-                  {project && project.tags.map((tag, i) => (;
-=======
-              <h4 className="text-white font-medium mb-2">{project.title}</h4>;
-              <p className="text-zion-slate text-sm mb-3 line-clamp-2">{project.description}</p>;
-              {project.tags && project.tags.length > 0 && (;
-                <div className="flex flex-wrap gap-1 mb-2">;
-                  {project.tags.map((tag, i) => (;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
+                  {project && project.tags.map((tag, i) => (;                    <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">;
                       {tag}
                     </Badge>;
 
-
-
-
                   ))}
-<<<<<<< HEAD
-                </div>;
-=======
-                </div>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              )}
+                </div>;              )}
 
               
-
-
 
               <div className='text-xs text-zion-slate-light mt-2'>                {project.date}              
 
@@ -184,15 +157,13 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
         ))}
       </div>
 
-
     </div>;
-  );
+  )
 };
 }
 }
 }
 }
-
 
 }
 
@@ -218,11 +189,11 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
           <Card;
             key={project.id}
             className='bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300';
-          >    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
-      <h3 className="text - xl font - bold text - white mb - 4">Projects</h3>;
-      <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 4">;
+          >    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb-8">;
+      <h3 className="text - xl font - bold text - white mb-4">Projects</h3>;
+      <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap-4">;
         {projects.map ((project, ) => (
-          <Card key={project.id} className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300">;
+          <Card key={project.id} className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration-300">;
             {project.image_url ? (
               <AspectRatio ratio={16 / 9}>;
                 <img;
@@ -246,33 +217,33 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {;
                       key={i}
                       variant='outline';
                       className='text - xs border - zion - slate - dark text - zion - slate - light';
-                    >                      {tag}                    <Badge key={i} variant="outline" className="text - xs border - zion - slate - dark text - zion - slate - light">;
+                    >                      {tag}                    <Badge key={i} variant="outline" className="text - xs border - zion - slate - dark text - zion - slate-light">;
         {projects.map ((project) => (
-          <Card key={project.id} className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration - 300">;
+          <Card key={project.id} className="bg - zion - blue border - zion - blue - light overflow - hidden hover:border - zion - purple / 40 transition - colors duration-300">;
             {project.image_url ? (
               <AspectRatio ratio={16 / 9}>;
                 <img;
                   src={project.image_url}
                   alt={project.title}
-                  className="w - full h - full object - cover";
+                  className="w - full h - full object-cover";
                   loading="lazy";
                 />;
               </AspectRatio>) : (
-              <div className="h - 40 w - full flex items - center justify - center bg - zion - blue">;
-                <FileText className="text - zion - purple h - 12 w - 12 opacity - 50" />;
+              <div className="h - 40 w - full flex items - center justify - center bg - zion-blue">;
+                <FileText className="text - zion - purple h - 12 w - 12 opacity-50" />;
               </div>)}
-            <CardContent className="p - 4">;
-              <h4 className="text - white font - medium mb - 2">{project.title}</h4>;
-              <p className="text - zion - slate text - sm mb - 3 line - clamp - 2">{project.description}</p>;
+            <CardContent className="p-4">;
+              <h4 className="text - white font - medium mb-2">{project.title}</h4>;
+              <p className="text - zion - slate text - sm mb - 3 line - clamp-2">{project.description}</p>;
               {project.tags && project.tags.length > 0 && (
-                <div className="flex flex - wrap gap - 1 mb - 2">;
+                <div className="flex flex - wrap gap - 1 mb-2">;
                   {project.tags.map ((tag, i) => (
-                    <Badge key={i} variant="outline" className="text - xs border - zion - slate - dark text - zion - slate - light">;
+                    <Badge key={i} variant="outline" className="text - xs border - zion - slate - dark text - zion - slate-light">;
                       {tag}
                     </Badge>))}
                 </div>)}
               <div className='text - xs text - zion - slate - light mt - 2'>                {project.date}
-              <div className="text - xs text - zion - slate - light mt - 2">;
+              <div className="text - xs text - zion - slate - light mt-2">;
                 {project.date}
               </div>;
             </CardContent>;

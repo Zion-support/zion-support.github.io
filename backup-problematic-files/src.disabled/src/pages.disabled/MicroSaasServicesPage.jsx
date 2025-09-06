@@ -6,6 +6,6 @@ const MicroSaasServicesPage = ({ className }) => {
       <h1>MicroSaasServicesPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

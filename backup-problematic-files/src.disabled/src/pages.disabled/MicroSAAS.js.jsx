@@ -6,6 +6,6 @@ const MicroSAAS.js = ({ className }) => {
       <h1>MicroSAAS.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

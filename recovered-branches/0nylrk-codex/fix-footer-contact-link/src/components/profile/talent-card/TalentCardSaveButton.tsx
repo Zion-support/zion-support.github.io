@@ -73,8 +73,8 @@ export function TalentCardSaveButton({;
     e.stopPropagation(),;
     if (!isAuthenticated) {;
       toast({;
-        title: "Authentication required",;
-        description: "Please log in to save talents to your favorites",;
+        title: "Authentication required",,
+  description: "Please log in to save talents to your favorites",;
         variant: "destructive";
     setLocalIsSaved(!localIsSaved);
     if (onToggleSave) {;
@@ -109,16 +109,15 @@ export function TalentCardSaveButton({;
     </button>;
   );
 
-
 ;
     toast({;
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites",;
-      description: localIsSaved;
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",,
+  description: localIsSaved;
         ? `${profileName} has been removed from your favorites`;
         : `${profileName} has been added to your favorites`,;
       variant: "default";
-    });
-  };
+    })
+};
   return (;
     <button;
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors";
@@ -133,8 +132,6 @@ export function TalentCardSaveButton({;
       />;
     </button>;
   );
-
-
 
 }
 import React from './react';

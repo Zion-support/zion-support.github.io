@@ -31,7 +31,6 @@ export default function AISeosuitePage() {
     {
       icon: <Search className='w-8 h-8 text-white' />,
 
-
 export default function AISeosuitePage() {
   const features = [
 } from 'lucide-react';
@@ -96,13 +95,13 @@ export default function AISeosuitePage() {
     {;
       category: 'On-Page SEO',;
       icon: <Target className="w-6 h-6 text-green-400" />,;
-      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization'];
-    };
+      tools: ['Content optimizationMeta tag generatorSchema markup builderInternal linking suggestionsImage optimization']
+};
     {;
       category: 'Technical SEO',;
       icon: <Settings className="w-6 h-6 text-purple-400" />,;
-      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator'];
-    };
+      tools: ['Site audit toolPage speed analyzerMobile optimizationCore Web VitalsXML sitemap generator']
+};
     {;
       category: 'Analytics & Reporting',;
       icon: <BarChart3 className="w-6 h-6 text-orange-400" />,;
@@ -198,10 +197,10 @@ export default function AISeosuitePage() {
                     {feature.icon}
                   </div>;
                 </div>;
-                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition - colors duration - 300">;
+                <h3 className="text - xl font - bold mb - 4 text - white group - hover:text - blue - 400 transition-colors duration-300">;
                   {feature.title}
                 </h3>;
-                <p className="text - gray - 400 leading - relaxed">;
+                <p className="text - gray-400 leading-relaxed">;
                   {feature.description}
             ))}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -276,10 +275,6 @@ export default function AISeosuitePage() {
                 <p className="text-gray-400 text-sm">{metric && metric.description}</p>;
               </Card>;
             ))}
-
-
-
-
 
       {/* Use Cases Section */}
 
@@ -368,7 +363,6 @@ export default function AISeosuitePage() {
               <Card
                 key={index}
 
-
                 <div className='text-center mb-8'>;
                   <h3 className='text-2xl font-bold text-white mb-2'>;
                     {plan && plan.name}
@@ -412,7 +406,6 @@ export default function AISeosuitePage() {
                   <ArrowRight className="w-5 h-5 ml-2" />;
                 </Button>;
               </Card>;
-
 
                     </li>
                   ))}
@@ -516,7 +509,6 @@ export default function AISeosuitePage() {
               href="#demo"
               variant="outline"
               size="lg"
-
 
               Watch Demo;
             </Button>;

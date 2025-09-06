@@ -6,6 +6,6 @@ const AdvancedAnalytics.js = ({ className }) => {
       <h1>AdvancedAnalytics.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

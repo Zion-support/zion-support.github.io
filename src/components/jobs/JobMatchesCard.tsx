@@ -1,6 +1,4 @@
 interface JobMatchCardProps {
-<<<<<<< HEAD
-=======
 import { useState } from 'react';
 import {;
   Card,;
@@ -16,7 +14,6 @@ import { DollarSign, Calendar, CheckCircle, XCircle } from 'lucide-react';
 import { format } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 interface JobMatchCardProps {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   match: JobMatch;
   onApply: (matchId: string, jobId: string) => void;
   onDecline: (matchId: string) => void;
@@ -30,26 +27,10 @@ export function JobMatchesCard(): any ({;
 }: JobMatchCardProps) {;
   const job = match && match.job;
 
-<<<<<<< HEAD
-=======
-
-  return (
-    <Card className='overflow-hidden border-l-4 border-l-blue-500'>;
-      <CardHeader className='p-4 pb-2'>;
-        <div className='flex justify-between items-start'>;
-
-
-
-}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-export function JobMatchesCard({ match, onApply, onDecline, showApplied = false }: JobMatchCardProps) {
   const job = match.job,
   
   if (!job) return null,
   
-
 
   return (
     <Card className="overflow-hidden border-l-4 border-l-blue-500">
@@ -141,17 +122,12 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
               {match.matched_skills.length > 5 && (
                 <Badge variant="secondary" className="text-xs">
 
-
                   +{match.matched_skills.length - 5}
                 </Badge>
               )}
             </div>;
           </div>;
         )}
-
-
-
-
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>
           <div className='flex items-center text-sm'>
@@ -164,11 +140,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             <DollarSign className="h-4 w-4 mr-1 text-muted-foreground" />
             ${job.budget.min} - ${job.budget.max}
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
           <div className='flex items-center text-sm'>
             <Calendar className='h-4 w-4 mr-1 text-muted-foreground' />
@@ -177,12 +148,10 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
         </div>
       </CardContent>
 
-
       <CardFooter className="p-4 pt-0">
         {match.status === 'applied' || showApplied ? (
           <div className="w-full flex items-center justify-center p-2 bg-green-50 text-green-700 rounded-md">
             <CheckCircle className="h-4 w-4 mr-2" />
-
 
             Applied
           </div>
@@ -192,7 +161,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
             Declined
           </div>
         ) : (
-
 
         <div className='grid grid-cols-2 gap-2 mb-2 mt-3'>;
           <div className='flex items-center text-sm'>;
@@ -234,17 +202,14 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
           </div>;
         )}
 
-
           <div className="flex gap-2 w-full">
             <Button 
               className="flex-1" 
-
 
               onClick={() => onApply(match.id, job.id)}
             >
               Apply Now
             </Button>
-
 
             <Button 
               variant="outline" 
@@ -260,9 +225,6 @@ export function JobMatchesCard({ match, onApply, onDecline, showApplied = false 
   );
 
 }
-
-
-
 
 import { useState } from 'react';
 import {
@@ -369,6 +331,3 @@ if (return null) {
     </Card>);
 }
 <<<<<<< HEAD
-=======
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

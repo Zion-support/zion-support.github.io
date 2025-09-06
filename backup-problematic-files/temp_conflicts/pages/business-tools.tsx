@@ -10,8 +10,8 @@ export default function BusinessToolsPage() {;
       category:'Project Management',;
       tools:[;
         {;
-          name:'Notion',;
-          description:'All-in-one workspace for notes, docs, projects, and team collaboration.',;
+          name:'Notion',,
+  description:'All-in-one workspace for notes, docs, projects, and team collaboration.',;
           features:['TemplatesDatabase views', 'Real-time editingIntegrations', 'Team spaces'],;
           pricing:'Free - $8/month',;
           website:'https://notion.so',;
@@ -20,8 +20,8 @@ export default function BusinessToolsPage() {;
           popular:true;
         },;
         {;
-          name:'Asana',;
-          description:'Work management platform for teams to organize, track, and manage their work.',;
+          name:'Asana',,
+  description:'Work management platform for teams to organize, track, and manage their work.',;
           features:['Task managementProject timelines', 'Team collaborationWorkflow automation', 'Reporting'],;
           pricing:'Free - $10.99/month',;
           website:'https://asana.com',;
@@ -29,8 +29,8 @@ export default function BusinessToolsPage() {;
           color:'bg-gradient-to-br from-pink-500 to-red-600';
         },;
         {;
-          name:'Monday.com',;
-          description:'Visual project management platform with customizable workflows and automation.',;
+          name:'Monday.com',,
+  description:'Visual project management platform with customizable workflows and automation.',;
           features:['Visual boardsAutomation', 'Time trackingIntegrations', 'Analytics'],;
           pricing:'$8/month - $16/month',;
           website:'https://monday.com',;
@@ -43,8 +43,8 @@ export default function BusinessToolsPage() {;
       category:'Communication & Collaboration',;
       tools:[;
         {;
-          name:'Slack',;
-          description:'Team communication platform for modern businesses with channels and integrations.',;
+          name:'Slack',,
+  description:'Team communication platform for modern businesses with channels and integrations.',;
           features:['ChannelsDirect messages', 'File sharingIntegrations', 'Search'],;
           pricing:'Free - $7.25/month',;
           website:'https://slack.com',;
@@ -53,8 +53,8 @@ export default function BusinessToolsPage() {;
           popular:true;
         },;
         {;
-          name:'Microsoft Teams',;
-          description:'Unified communication platform with chat, video meetings, and file collaboration.',;
+          name:'Microsoft Teams',,
+  description:'Unified communication platform with chat, video meetings, and file collaboration.',;
           features:['ChatVideo meetings', 'File sharingOffice integration', 'Security'],;
           pricing:'Free - $6/month',;
           website:'https://teams.microsoft.com',;
@@ -62,8 +62,8 @@ export default function BusinessToolsPage() {;
           color:'bg-gradient-to-br from-blue-500 to-indigo-600';
         },;
         {;
-          name:'Zoom',;
-          description:'Video conferencing platform for meetings, webinars, and team collaboration.',;
+          name:'Zoom',,
+  description:'Video conferencing platform for meetings, webinars, and team collaboration.',;
           features:['HD videoScreen sharing', 'RecordingWebinars', 'Breakout rooms'],;
           pricing:'Free - $14.99/month',;
           website:'https://zoom.us',;
@@ -76,8 +76,8 @@ export default function BusinessToolsPage() {;
       category:'Marketing & Sales',;
       tools:[;
         {;
-          name:'HubSpot',;
-          description:'All-in-one inbound marketing, sales, and customer service platform.',;
+          name:'HubSpot',,
+  description:'All-in-one inbound marketing, sales, and customer service platform.',;
           features:['CRMEmail marketing', 'Lead generationAnalytics', 'Automation'],;
           pricing:'Free - $45/month',;
           website:'https://hubspot.com',;
@@ -86,8 +86,8 @@ export default function BusinessToolsPage() {;
           popular:true;
         },;
         {;
-          name:'Mailchimp',;
-          description:'Email marketing platform for growing businesses and creators.',;
+          name:'Mailchimp',,
+  description:'Email marketing platform for growing businesses and creators.',;
           features:['Email templatesAutomation', 'AnalyticsAudience segmentation', 'A/B testing'],;
           pricing:'Free - $13/month',;
           website:'https://mailchimp.com',;
@@ -95,8 +95,8 @@ export default function BusinessToolsPage() {;
           color:'bg-gradient-to-br from-yellow-500 to-orange-600';
         },;
         {;
-          name:'Salesforce',;
-          description:'Customer relationship management platform for sales, service, and marketing.',;
+          name:'Salesforce',,
+  description:'Customer relationship management platform for sales, service, and marketing.',;
           features:['Sales CRMService cloud', 'Marketing automationAnalytics', 'AppExchange'],;
           pricing:'$25/month - $300/month',;
           website:'https://salesforce.com',;
@@ -109,8 +109,8 @@ export default function BusinessToolsPage() {;
       category:'Finance & Accounting',;
       tools:[;
         {;
-          name:'QuickBooks',;
-          description:'Small business accounting software for invoicing, expenses, and financial reporting.',;
+          name:'QuickBooks',,
+  description:'Small business accounting software for invoicing, expenses, and financial reporting.',;
           features:['InvoicingExpense tracking', 'Financial reportsTax preparation', 'Bank integration'],;
           pricing:'$30/month - $200/month',;
           website:'https://quickbooks.intuit.com',;
@@ -119,16 +119,16 @@ export default function BusinessToolsPage() {;
           popular:true;
         },;
         {;
-          name:'Stripe',;
-          description:'Payment processing platform for internet businesses.',;
+          name:'Stripe',,
+  description:'Payment processing platform for internet businesses.',;
           features:['Global paymentsSubscription billing', 'Fraud preventionDeveloper APIs', 'Analytics'],;
           website:'https://stripe.com',;
           icon:<CreditCard className="w-6 h-6" />,;
           color:'bg-gradient-to-br from-purple-500 to-blue-600';
         },;
         {;
-          name:'Xero',;
-          description:'Cloud-based accounting software for small businesses and accountants.',;
+          name:'Xero',,
+  description:'Cloud-based accounting software for small businesses and accountants.',;
           features:['Bank reconciliationInvoicing', 'Expense claimsMulti-currency', 'Payroll'],;
           pricing:'$13/month - $70/month',;
           website:'https://xero.com',;
@@ -141,8 +141,8 @@ export default function BusinessToolsPage() {;
       category:'Design & Creative',;
       tools:[;
         {;
-          name:'Figma',;
-          description:'Collaborative interface design tool for teams building digital products.',;
+          name:'Figma',,
+  description:'Collaborative interface design tool for teams building digital products.',;
           features:['Real-time collaborationDesign systems', 'PrototypingDeveloper handoff', 'Plugins'],;
           pricing:'Free - $12/month',;
           website:'https://figma.com',;
@@ -151,8 +151,8 @@ export default function BusinessToolsPage() {;
           popular:true;
         },;
         {;
-          name:'Canva',;
-          description:'Create professional designs with drag-and-drop simplicity.',;
+          name:'Canva',,
+  description:'Create professional designs with drag-and-drop simplicity.',;
           features:['Templates libraryStock photos', 'Brand kitTeam collaboration', 'Video editing'],;
           pricing:'Free - $12.99/month',;
           website:'https://canva.com',;
@@ -160,8 +160,8 @@ export default function BusinessToolsPage() {;
           color:'bg-gradient-to-br from-blue-500 to-cyan-600';
         },;
         {;
-          name:'Adobe Creative Cloud',;
-          description:'Complete creative software suite for design, photography, and video.',;
+          name:'Adobe Creative Cloud',,
+  description:'Complete creative software suite for design, photography, and video.',;
           features:['PhotoshopIllustrator', 'InDesignPremiere Pro', 'After Effects'],;
           pricing:'$52.99/month',;
           website:'https://adobe.com/creativecloud',;
@@ -174,8 +174,8 @@ export default function BusinessToolsPage() {;
       category:'Analytics & Business Intelligence',;
       tools:[;
         {;
-          name:'Google Analytics',;
-          description:'Free web analytics service that tracks and reports website traffic.',;
+          name:'Google Analytics',,
+  description:'Free web analytics service that tracks and reports website traffic.',;
           features:['Real-time dataAudience insights', 'Conversion trackingE-commerce', 'Goals'],;
           pricing:'Free',;
           website:'https://analytics.google.com',;
@@ -184,8 +184,8 @@ export default function BusinessToolsPage() {;
           popular:true;
         },;
         {;
-          name:'Tableau',;
-          description:'Data visualization and business intelligence platform for analytics.',;
+          name:'Tableau',,
+  description:'Data visualization and business intelligence platform for analytics.',;
           features:['Interactive dashboardsData blending', 'Real-time analyticsMobile support', 'Collaboration'],;
           pricing:'$70/month - $35/month',;
           website:'https://tableau.com',;
@@ -193,8 +193,8 @@ export default function BusinessToolsPage() {;
           color:'bg-gradient-to-br from-blue-500 to-indigo-600';
         },;
         {;
-          name:'Mixpanel',;
-          description:'Product analytics platform for understanding user behavior and product usage.',;
+          name:'Mixpanel',,
+  description:'Product analytics platform for understanding user behavior and product usage.',;
           features:['Event trackingFunnel analysis', 'Cohort analysisA/B testing', 'Real-time data'],;
           pricing:'Free - $25/month',;
           website:'https://mixpanel.com',;
@@ -207,46 +207,46 @@ export default function BusinessToolsPage() {;
 ;
   const businessInsights = [;
     {;
-      title:'Remote Work Tools',;
-      description:'Essential tools for distributed teams and hybrid work environments.',;
+      title:'Remote Work Tools',,
+  description:'Essential tools for distributed teams and hybrid work environments.',;
       color:'text-green-400';
     },;
     {;
-      title:'AI-Powered Solutions',;
-      description:'Business tools leveraging AI for automation and intelligent insights.',;
+      title:'AI-Powered Solutions',,
+  description:'Business tools leveraging AI for automation and intelligent insights.',;
       color:'text-blue-400';
     },;
     {;
-      title:'Cloud-Native Platforms',;
-      description:'Business applications built for scalability and global accessibility.',;
+      title:'Cloud-Native Platforms',,
+  description:'Business applications built for scalability and global accessibility.',;
       color:'text-cyan-400';
     },;
     {;
-      title:'Security & Compliance',;
-      description:'Tools ensuring data protection and regulatory compliance.',;
+      title:'Security & Compliance',,
+  description:'Tools ensuring data protection and regulatory compliance.',;
       color:'text-orange-400';
     }
   ],;
 ;
   const productivityTips = [;
     {;
-      title:'Start with Free Tiers',;
-      description:'Most tools offer free versions to test before committing to paid plans.',;
+      title:'Start with Free Tiers',,
+  description:'Most tools offer free versions to test before committing to paid plans.',;
       icon:<CheckCircle className="w-6 h-6 text-green-400" />;
     },;
     {;
-      title:'Focus on Integration',;
-      description:'Choose tools that work well together to avoid data silos and manual work.',;
+      title:'Focus on Integration',,
+  description:'Choose tools that work well together to avoid data silos and manual work.',;
       icon:<Cog className="w-6 h-6 text-blue-400" />;
     },;
     {;
-      title:'Measure ROI',;
-      description:'Track how each tool improves your team\'s productivity and business outcomes.',;
+      title:'Measure ROI',,
+  description:'Track how each tool improves your team\'s productivity and business outcomes.',;
       icon:<ChartBar className="w-6 h-6 text-purple-400" />;
     },;
     {;
-              title:'Train Your Team',;
-        description:'Invest in proper training to maximize the value of your chosen tools.',;
+              title:'Train Your Team',,
+  description:'Invest in proper training to maximize the value of your chosen tools.',;
         icon:<Users className="w-6 h-6 text-orange-400" />;
     }
   ],;

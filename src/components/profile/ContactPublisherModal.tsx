@@ -7,7 +7,6 @@ import {
   DialogHeader,;
   DialogTitle;
 
-
 } from '@/components/ui/dialog'; import { Button } from '@/components/ui/button'; import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
   Dialog
@@ -171,31 +170,23 @@ if ( {) {
 import React from 'react';
 import FocusLock from 'react-focus-lock';
 
-
 import api from '@/services/apiClient';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
 import { LoginModal } from '@/components/auth/LoginModal';
 
-
   publisherEmail?: string;
   productId?: string;
 }
-
-
 
     }
     const values = form && form.getValues();
     setIsSubmitting(true);
     setError(null);
 
-
       setIsSubmitting(false);
     }
   };
-
-
-
 
   return (
     <>;
@@ -287,7 +278,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
     }
   };
 
-
   return (
     <>
     <Dialog open={isOpen} onOpenChange={onClose}>
@@ -298,8 +288,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
           onKeyDown={handleKeyDown}
           aria-modal="true"
-
-
 
           aria-labelledby="contact-publisher-title"
         >
@@ -316,7 +304,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
             <a href={`mailto:${publisherEmail}`} className="text-zion-cyan hover:underline truncate block">
               {publisherEmail}
 
-
             </Link>
           </div>
         )}
@@ -327,7 +314,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
               name="subject"
               render={({ field }: { field: any }) => (
                 <FormItem>
-
 
                   <FormLabel>Subject</FormLabel>
                   <FormControl>
@@ -341,8 +327,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
                 </FormItem>
               )}
 
-
-
             />;
             <FormField
               control = {form.control,}
@@ -350,7 +334,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
               render={({ field }: { field: any }) => (
                 <FormItem>
-
 
                   <FormLabel>Message</FormLabel>
                   <FormControl>
@@ -370,33 +353,32 @@ import { LoginModal } from '@/components/auth/LoginModal';
 
     </>;
   ) </>;
-  );
+  )
 };
-
 
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />    <Dialog open={is_open} onOpenChange={on_close}>;
       <FocusLock disabled={!is_open} return_focus>;
         <DialogContent;
-          className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max - w-md";
+          className="bg - zion - blue - dark border border - zion - blue - light text - white sm:max-w-md";
           onKeyDown = {handleKeyDown, }          aria - modal="true";
           aria - labelledby="contact - publisher - title";
         >;
           <DialogHeader>;
-            <DialogTitle id="contact - publisher - title" className="text - xl font - bold text - white flex items - center gap - 2">;
-              <Mail className="h - 5 w - 5 text - zion - cyan" />;
+            <DialogTitle id="contact - publisher - title" className="text - xl font - bold text - white flex items - center gap-2">;
+              <Mail className="h - 5 w - 5 text - zion-cyan" />;
               Contact Publisher;
             </DialogTitle>;
           </DialogHeader>;
-          {error && <p className="text - red - 500 mb - 2">{error}</p>}
+          {error && <p className="text - red - 500 mb-2">{error}</p>}
           {publisher_email && (
-            <div className="mb - 4 text - zion - slate - light">;
+            <div className="mb - 4 text - zion - slate-light">;
             <span className="block">Email:</span>;
-            <a href={`mailto:${publisher_email}`} className="text - zion - cyan hover:underline truncate block">;
+            <a href={`mailto:${publisher_email}`} className="text - zion-cyan hover:underline truncate block">;
               {publisher_email}
             </a>;
           </div>)}
         <Form {...form}>;
-          <form on_submit={(e, ) => e.prevent_default ()} className="space - y-4">;
+          <form on_submit={(e, ) => e.prevent_default ()} className="space-y-4">;
             <FormField;
               control = {form.control, }
               name="subject";
@@ -405,11 +387,11 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <FormControl>;
                     <Input;
                       placeholder="Subject";
-                      className="bg - zion - blue border - zion - blue - light text - white";
+                      className="bg - zion - blue border - zion - blue - light text-white";
                       {...field}
                     />;
                   </FormControl>;
-                  <FormMessage className="text - red - 500" />;
+                  <FormMessage className="text - red-500" />;
                 </FormItem>)}
             />;
             <FormField;
@@ -420,18 +402,18 @@ import { LoginModal } from '@/components/auth/LoginModal';
                   <FormControl>;
                     <Textarea;
                       placeholder={`Message to ${publisher_name}...`}
-                      className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
+                      className="bg - zion - blue border - zion - blue - light text - white min-h-[120px]";
                       {...field}
                     />;
                   </FormControl>;
-                  <FormMessage className="text - red - 500" />;
+                  <FormMessage className="text - red-500" />;
                 </FormItem>)}
             />;
             <Button;
               on_click = {handle_send, }
-              className="w - full";
+              className="w-full";
               disabled = {!form.form_state.is_valid || is_submitting, }            >;
-              <SendIcon className="mr - 2" />;
+              <SendIcon className="mr-2" />;
               {is_submitting ? 'Sending...' : 'Send Message'}
             </Button>;
           </form>;
@@ -439,7 +421,6 @@ import { LoginModal } from '@/components/auth/LoginModal';
         </DialogContent>;
       </FocusLock>;
     </Dialog>;
-
 
     <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>) </>);

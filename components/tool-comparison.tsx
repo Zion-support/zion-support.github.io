@@ -26,8 +26,6 @@ import {
   DollarSign
   Users
 
-
-
   Search;
   Filter,
   TrendingUp,
@@ -196,7 +194,7 @@ function ToolComparisonPage() {
       ]
       icon: <Globe className='w-6 h-6' />
       website: 'https://chat.openai.com',
-      icon: <Brain className="w - 6 h - 6" />,
+      icon: <Brain className="w-6 h-6" />,
       color: 'text - green - 400';
     }
     {
@@ -206,7 +204,7 @@ function ToolComparisonPage() {
       rating: 4.7,
       users: '1M+',
       website: 'https://midjourney.com',
-      icon: <Zap className="w - 6 h - 6" />,
+      icon: <Zap className="w-6 h-6" />,
       color: 'text - purple - 400';
     }
     {
@@ -216,7 +214,7 @@ function ToolComparisonPage() {
       rating: 4.6,
       users: '100K+',
       website: 'https://jasper.ai',
-      icon: <Brain className="w - 6 h - 6" />,
+      icon: <Brain className="w-6 h-6" />,
       color: 'text - blue - 400';
     }
     // SaaS Tools;
@@ -232,7 +230,7 @@ function ToolComparisonPage() {
       rating: 4.7,
       users: '20M+',
       website: 'https://stripe.com',
-      icon: <DollarSign className="w - 6 h - 6" />,
+      icon: <DollarSign className="w-6 h-6" />,
       color: 'text - blue - 400';
     }
     // Startup Tools;
@@ -243,7 +241,7 @@ function ToolComparisonPage() {
       rating: 4.7,
       users: '135K+',
       website: 'https://hubspot.com',
-      icon: <TrendingUp className="w - 6 h - 6" />,
+      icon: <TrendingUp className="w-6 h-6" />,
       color: 'text - orange - 400';
     }
     {
@@ -253,7 +251,7 @@ function ToolComparisonPage() {
       rating: 4.5,
       users: '12M+',
       website: 'https://mailchimp.com',
-      icon: <Users className="w - 6 h - 6" />,
+      icon: <Users className="w-6 h-6" />,
       color: 'text - yellow - 400';
     }
     {
@@ -292,8 +290,8 @@ function ToolComparisonPage() {
       cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],;
       website: 'https://chat && chat.openai.com',;
       icon: <Brain className="w-6 h-6" />,;
-      color: 'text-green-400';
-    };
+      color: 'text-green-400'
+};
     {;
       name: 'Midjourney',;
       category: 'AI Art',;
@@ -320,8 +318,8 @@ function ToolComparisonPage() {
       cons: ['Discord-only interfaceLimited customizationMonthly subscription'],;
       website: 'https://midjourney && midjourney.com',;
       icon: <Zap className="w-6 h-6" />,;
-      color: 'text-purple-400';
-    };
+      color: 'text-purple-400'
+};
     {;
       name: 'Jasper',;
       category: 'AI Writing',;
@@ -344,8 +342,8 @@ function ToolComparisonPage() {
       cons: ['ExpensiveLimited free trialCan be repetitive'],;
       website: 'https://jasper && jasper.ai',;
       icon: <Brain className="w-6 h-6" />,;
-      color: 'text-blue-400';
-    };
+      color: 'text-blue-400'
+};
     // SaaS Tools;
     {;
       name: 'Zapier',;
@@ -368,8 +366,8 @@ function ToolComparisonPage() {
       cons: ['Can get expensiveLimited customization'],;
       website: 'https://zapier && zapier.com',;
       icon: <Zap className="w-6 h-6" />,;
-      color: 'text-orange-400';
-    };
+      color: 'text-orange-400'
+};
       name: 'Notion',;
       category: 'Productivity',;
       pricing: 'Free - $8/month',;
@@ -390,8 +388,8 @@ function ToolComparisonPage() {
       cons: ['Learning curveLimited offline accessCan be overwhelming'],;
       website: 'https://notion && notion.so',;
       icon: <Globe className="w-6 h-6" />,;
-      color: 'text-gray-400';
-    };
+      color: 'text-gray-400'
+};
       name: 'Stripe',;
       category: 'Payments',;
       pricing: '2 && 2.9% + 30¢ per transaction',;
@@ -417,8 +415,8 @@ function ToolComparisonPage() {
       cons: ['Higher fees than some alternativesComplex for beginnersStrict requirements'],;
       website: 'https://stripe && stripe.com',;
       icon: <DollarSign className="w-6 h-6" />,;
-      color: 'text-blue-400';
-    };
+      color: 'text-blue-400'
+};
     // Startup Tools;
     {;
       name: 'HubSpot',;
@@ -446,8 +444,8 @@ function ToolComparisonPage() {
       cons: ['Can get expensiveComplex for small teamsLimited customization'],;
       website: 'https://hubspot && hubspot.com',;
       icon: <TrendingUp className="w-6 h-6" />,;
-      color: 'text-orange-400';
-    };
+      color: 'text-orange-400'
+};
     {;
       name: 'Mailchimp',;
       category: 'Email Marketing',;
@@ -465,8 +463,8 @@ function ToolComparisonPage() {
       cons: ['Limited free featuresBasic automationCan be expensive'],;
       website: 'https://mailchimp && mailchimp.com',;
       icon: <Users className="w-6 h-6" />,;
-      color: 'text-yellow-400';
-    };
+      color: 'text-yellow-400'
+};
     {;
       name: 'Calendly',;
       category: 'Productivity',;
@@ -602,7 +600,6 @@ function ToolComparisonPage() {
             <div className='flex items-center space-x-2'>;
               <Filter className='w-5 h-5 text-gray-400' />;
             </div>
-
 
             {/* Sort */}
             <div className='flex items-center space-x-2'>
@@ -785,9 +782,6 @@ function ToolComparisonPage() {
                 <div className="flex items-center justify-between">
                   <span className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}>
 
-
-
-
                 <div className='flex items-center justify-between'>
                   <span
                     className={`text-sm font-medium ${getPricingColor(tool.pricing)}`}
@@ -799,7 +793,6 @@ function ToolComparisonPage() {
                   <Button
                     href={tool.website}
 
-
                 </div>
               </Card>
             ))}
@@ -808,9 +801,7 @@ function ToolComparisonPage() {
         </div>;
       </section>;
 
-
       {/* CTA Section */}
-
 
       {/* CTA Section */}
       <section className='py-24 bg-gradient-to-r from-purple-600 to-purple-700 relative overflow-hidden'>

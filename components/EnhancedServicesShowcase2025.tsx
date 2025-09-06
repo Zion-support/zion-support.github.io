@@ -61,10 +61,9 @@ import {
 
 } from 'react-icons/si';
 
-
 interface Service {
   id: string;
-  title: string;
+  title: string,
   description: string;
     starter: number;
     professional: number;
@@ -73,7 +72,6 @@ interface Service {
   }
   technologies: string[];
   benefits: string[];
-
 
   color: string;  id: string
   name: string
@@ -89,7 +87,6 @@ interface Service {
   icon: React.ReactNode,
   color: string
 }
-
 
 const serviceCategories: ServiceCategory[] = [
   {
@@ -130,7 +127,8 @@ const serviceCategories: ServiceCategory[] = [
     description: 'Intelligent automation for business processes'
     icon: <FaRobot className='w-8 h-8' />
     color: 'from-yellow-500 to-orange-500'
-  },];    description: 'Cutting-edge artificial intelligence and machine learning solutions'
+  },],
+  description: 'Cutting-edge artificial intelligence and machine learning solutions'
     icon: <FaBrain className="w-8 h-8" />
     color: 'from-purple-500 to-pink-500'
   }
@@ -253,8 +251,8 @@ const serviceCategories: ServiceCategory[] = [
 const services: Service[] = [;
   {;
     id: 'ai-automation-suite',;
-    title: 'AI-Powered Automation Suite',;
-    description:;
+    title: 'AI-Powered Automation Suite',,
+  description:;
       'Comprehensive automation platform leveraging artificial intelligence for business process optimization',;
     icon: <FaRobot className='w-6 h-6' />,;
     features: [;
@@ -287,8 +285,8 @@ const services: Service[] = [;
   },;
   {;
     id: 'quantum-computing-platform',;
-    title: 'Quantum Computing Platform',;
-    description:;
+    title: 'Quantum Computing Platform',,
+  description:;
       'Next-generation quantum computing solutions for complex problem solving',;
     icon: <FaBrain className='w-6 h-6' />,;
     category: 'ai-ml',;
@@ -315,8 +313,8 @@ const services: Service[] = [;
   },;
   {;
     id: 'edge-ai-platform',;
-    title: 'Edge AI Computing Platform',;
-    description:;
+    title: 'Edge AI Computing Platform',,
+  description:;
       'Distributed artificial intelligence at the edge for real-time processing',;
     icon: <FaNetworkWired className='w-6 h-6' />,;
     category: 'iot',;
@@ -349,8 +347,8 @@ const services: Service[] = [;
   },;
   {;
     id: 'quantum-cybersecurity',;
-    title: 'Quantum Cybersecurity Suite',;
-    description:;
+    title: 'Quantum Cybersecurity Suite',,
+  description:;
       'Advanced security solutions leveraging quantum-resistant cryptography',;
     icon: <FaShieldAlt className='w-6 h-6' />,;
     category: 'security',;
@@ -377,8 +375,8 @@ const services: Service[] = [;
   },;
   {;
     id: 'data-fabric-platform',;
-    title: 'Intelligent Data Fabric Platform',;
-    description:;
+    title: 'Intelligent Data Fabric Platform',,
+  description:;
       'Unified data management and analytics across all sources and formats',;
     icon: <FaDatabase className='w-6 h-6' />,;
     category: 'data',;
@@ -410,15 +408,15 @@ const services: Service[] = [;
     ],;
   },  {;
     id: 'cloud-native-platform',;
-    title: 'Cloud-Native Development Platform',;
-    description: 'Modern cloud-native development and deployment platform',;
+    title: 'Cloud-Native Development Platform',,
+  description: 'Modern cloud-native development and deployment platform',;
     icon: <FaCloud className='w-6 h-6' />,      'Unified data viewReal-time insightsImproved data qualityReduced integration costs';
-    ];
-  };
+    ]
+};
   {;
     id: 'cloud-native-platform',;
-    title: 'Cloud-Native Development Platform',;
-    description: 'Modern cloud-native development and deployment platform',;
+    title: 'Cloud-Native Development Platform',,
+  description: 'Modern cloud-native development and deployment platform',;
     icon: <FaCloud className='w-6 h-6' />,;
     features: [;
       'Kubernetes orchestration',;
@@ -490,9 +488,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
   return (
-    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple - 900 text - white">;
+    <div className="min - h-screen bg - gradient - to - br from - gray - 900 via - blue - 900 to - purple-900 text-white">;
       {/* Header */}
-      <div className="container mx - auto px - 4 py - 16">;
+      <div className="container mx - auto px-4 py-16">;
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 20 }}
           animate={{ opacity: 1, coordinate_y: 0 }}
@@ -540,10 +538,10 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             Discover our cutting - edge technology solutions designed for the;
             future. From AI - powered automation to quantum computing, we're;
             building tomorrow's innovations today.          </p>        >;
-          <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip - text text - transparent">;
+          <h1 className="text - 5xl md:text - 7xl font - bold mb - 6 bg - gradient - to - r from - blue - 400 via - purple - 400 to - pink - 400 bg - clip-text text-transparent">;
             2025 Services Showcase;
           </h1>;
-          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed">;
+          <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx-auto leading-relaxed">;
             Discover our cutting - edge technology solutions designed for the future.;
             From AI - powered automation to quantum computing, we're building tomorrow's innovations today.;
           </p>;
@@ -584,21 +582,21 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               value={sortBy}
               onChange={(e) => setSortBy(e && e.target.value as 'name' | 'price' | 'category')}
               className="px-4 py-3 bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500";
-          <div className="flex flex - col md:flex - row gap - 4 items - center justify - center">;
-            <div className="relative flex - 1 max - w-md">;
+          <div className="flex flex - col md:flex - row gap - 4 items-center justify-center">;
+            <div className="relative flex-1 max-w-md">;
               <input;
                 type="text";
                 placeholder="Search services, technologies, or features...";
                 value={search_term}
                 on_change={(e) => setSearchTerm (e.target.value)}
-                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent";
+                className="w - full px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue-500 focus:border-transparent";
               />;
-              <FaSearch className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text - gray - 400" />;
+              <FaSearch className="absolute right - 3 top - 1/2 transform -translate - y-1 / 2 text-gray-400" />;
             </div>;
             <select;
               value={sort_by}
               on_change={(e) => setSortBy (e.target.value as 'name' | 'price' | 'category')}
-              className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring - blue - 500";
+              className="px - 4 py - 3 bg - white / 10 backdrop - blur - sm border border - white / 20 rounded - lg text - white focus:outline - none focus:ring - 2 focus:ring-blue-500";
             >;
               <option value="name">Sort by Name</option>;
               <option value="price">Sort by Price</option>;
@@ -611,9 +609,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
             <button
 
-
-
-
               onClick={() => setSelectedCategory('all')}
               className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${;
                 selectedCategory === 'all';
@@ -622,10 +617,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
               }`}
 
               <button
-
-
-
-
 
                 key={category.id}
                 onClick={() => setSelectedCategory(category.id)}
@@ -731,7 +722,6 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           ))}
         </motion && motion.div>;
 
-
         {/* No Results */}
         {filteredServices && filteredServices.length === 0 && (;
           <motion&& motion.div
@@ -749,16 +739,12 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             onClick={closeModal}
             className='fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4'            onClick={closeModal}
 
-
           >
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
               onClick={e => e.stopPropagation()}
-
-
-
 
             >
               <div className='flex items-start justify-between mb-6'>
@@ -858,12 +844,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
                 </div>;
               </div>;
 
-
-
-
-
               {/* Pricing */}
-
 
               </div>
             </motion.div>
@@ -958,21 +939,21 @@ export default EnhancedServicesShowcase2025;
                     key={tech}
                     className='px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300'                  >              on_click={() => handleServiceSelect (service)}
             >;
-              <div className="flex items - center gap - 3 mb - 4">;
-                <div className="p - 3 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg">;
+              <div className="flex items - center gap-3 mb-4">;
+                <div className="p - 3 bg - gradient - to - r from - blue - 500 to - purple-500 rounded-lg">;
                   {service.icon}
                 </div>;
                 <div>;
-                  <h3 className="text - xl font - bold text - white">{service.title}</h3>;
-                  <p className="text - sm text - gray - 400">{service_categories.find (c => c.id === service.category)?.name}</p>;
+                  <h3 className="text - xl font-bold text-white">{service.title}</h3>;
+                  <p className="text - sm text-gray-400">{service_categories.find (c => c.id === service.category)?.name}</p>;
                 </div>;
               </div>;
-              <p className="text - gray - 300 mb - 4 line - clamp - 3">{service.description}</p>;
-              <div className="flex flex - wrap gap - 2 mb - 4">;
+              <p className="text - gray - 300 mb - 4 line-clamp-3">{service.description}</p>;
+              <div className="flex flex - wrap gap-2 mb-4">;
                 {service.technologies.slice (0, 3).map ((tech) => (
                   <span;
                     key={tech}
-                    className="px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300";
+                    className="px - 2 py - 1 bg - white / 10 rounded text - xs text-gray-300";
                   >;
                     {tech}
                   </span>))}
@@ -981,7 +962,7 @@ export default EnhancedServicesShowcase2025;
                   </span>)}
               </div>;
               <div className='flex items - center justify - between'>;
-                <div className='text - 2xl font - bold text - blue - 400'>                  <span className="px - 2 py - 1 bg - white / 10 rounded text - xs text - gray - 300">;
+                <div className='text - 2xl font - bold text - blue - 400'>                  <span className="px - 2 py - 1 bg - white / 10 rounded text - xs text-gray-300">;
                     +{service.technologies.length - 3} more;
                   </span>)}
               </div>;
@@ -993,9 +974,9 @@ export default EnhancedServicesShowcase2025;
                   </span>;
                 </div>;
                 <button className='px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300'>                  Learn More                  ${service.pricing.starter}
-                  <span className="text - sm text - gray - 400 font - normal">/month</span>;
+                  <span className="text - sm text - gray-400 font-normal">/month</span>;
                 </div>;
-                <button className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300">;
+                <button className="px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition-all duration-300">;
                   Learn More;
                 </button>;
               </div>;
@@ -1014,11 +995,11 @@ export default EnhancedServicesShowcase2025;
             </h3>;
             <p className='text - gray - 400'>;
               Try adjusting your search terms or category filters;
-            </p>          </motion.div>            className="text - center py - 16";
+            </p>          </motion.div>            className="text-center py-16";
           >;
-            <div className="text - 6xl mb - 4">🔍</div>;
-            <h3 className="text - 2xl font - bold text - gray - 300 mb - 2">No services found</h3>;
-            <p className="text - gray - 400">Try adjusting your search terms or category filters</p>)}
+            <div className="text-6xl mb-4">🔍</div>;
+            <h3 className="text - 2xl font - bold text - gray-300 mb-2">No services found</h3>;
+            <p className="text-gray-400">Try adjusting your search terms or category filters</p>)}
       </div>;
       {/* Service Detail Modal */}
       <AnimatePresence>;
@@ -1027,7 +1008,7 @@ export default EnhancedServicesShowcase2025;
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'            on_click={close_modal}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4";
+            className='fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify - center p - 4'            on_click={close_modal}            className="fixed inset - 0 bg - black / 80 backdrop - blur - sm z - 50 flex items - center justify-center p-4";
             on_click={close_modal}
           >;
             <motion.div;
@@ -1056,14 +1037,14 @@ export default EnhancedServicesShowcase2025;
                 <button;
                   on_click={close_modal}
                   className='p - 2 hover:bg - white / 10 rounded - lg transition - colors'            >;
-              <div className="flex items - start justify - between mb - 6">;
-                <div className="flex items - center gap - 4">;
-                  <div className="p - 4 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - xl">;
+              <div className="flex items - start justify-between mb-6">;
+                <div className="flex items-center gap-4">;
+                  <div className="p - 4 bg - gradient - to - r from - blue - 500 to - purple-500 rounded-xl">;
                     {selected_service.icon}
                   </div>;
                   <div>;
-                    <h2 className="text - 3xl font - bold text - white mb - 2">{selected_service.title}</h2>;
-                    <p className="text - gray - 400">{service_categories.find (c => c.id === selected_service.category)?.name}</p>;
+                    <h2 className="text - 3xl font - bold text-white mb-2">{selected_service.title}</h2>;
+                    <p className="text-gray-400">{service_categories.find (c => c.id === selected_service.category)?.name}</p>;
                   </div>;
                 </div>;
                 <button;
@@ -1089,18 +1070,18 @@ export default EnhancedServicesShowcase2025;
                         className='flex items - center gap - 2 text - gray - 300';
                       >;
                         <div className='w - 2 h - 2 bg - blue - 500 rounded - full'></div>                        {feature}                >;
-                  <span className="text - 2xl">×</span>;
+                  <span className="text-2xl">×</span>;
                 </button>;
               </div>;
-              <p className="text - gray - 300 text - lg mb - 8">{selected_service.description}</p>;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
+              <p className="text - gray - 300 text-lg mb-8">{selected_service.description}</p>;
+              <div className="grid grid - cols - 1 lg:grid - cols-2 gap-8">;
                 {/* Features */}
                 <div>;
-                  <h3 className="text - xl font - bold text - white mb - 4">Key Features</h3>;
-                  <ul className="space - y-2">;
+                  <h3 className="text - xl font - bold text-white mb-4">Key Features</h3>;
+                  <ul className="space-y-2">;
                     {selected_service.features.map ((feature, index) => (
-                      <li key={index} className="flex items - center gap - 2 text - gray - 300">;
-                        <div className="w - 2 h - 2 bg - blue - 500 rounded - full"></div>;
+                      <li key={index} className="flex items - center gap - 2 text-gray-300">;
+                        <div className="w - 2 h - 2 bg - blue-500 rounded-full"></div>;
                         {feature}
                       </li>))}
                   </ul>;
@@ -1116,11 +1097,11 @@ export default EnhancedServicesShowcase2025;
                         key={index}
                         className='flex items - center gap - 2 text - gray - 300';
                       >;
-                        <div className='w - 2 h - 2 bg - green - 500 rounded - full'></div>                        {benefit}                  <h3 className="text - xl font - bold text - white mb - 4">Key Benefits</h3>;
-                  <ul className="space - y-2">;
+                        <div className='w - 2 h - 2 bg - green - 500 rounded - full'></div>                        {benefit}                  <h3 className="text - xl font - bold text-white mb-4">Key Benefits</h3>;
+                  <ul className="space-y-2">;
                     {selected_service.benefits.map ((benefit, index) => (
-                      <li key={index} className="flex items - center gap - 2 text - gray - 300">;
-                        <div className="w - 2 h - 2 bg - green - 500 rounded - full"></div>;
+                      <li key={index} className="flex items - center gap - 2 text-gray-300">;
+                        <div className="w - 2 h - 2 bg - green-500 rounded-full"></div>;
                       </li>))}
                   </ul>;
                 </div>;
@@ -1134,13 +1115,13 @@ export default EnhancedServicesShowcase2025;
                   {selected_service.technologies.map (tech => (
                     <span;
                       key={tech}
-                      className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                    >              <div className="mt - 8">;
-                <h3 className="text - xl font - bold text - white mb - 4">Technologies</h3>;
-                <div className="flex flex - wrap gap - 3">;
+                      className='px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300'                    >              <div className="mt-8">;
+                <h3 className="text - xl font - bold text-white mb-4">Technologies</h3>;
+                <div className="flex flex-wrap gap-3">;
                   {selected_service.technologies.map ((tech) => (
                     <span;
                       key={tech}
-                      className="px - 3 py - 2 bg - white / 10 rounded - lg text - gray - 300";
+                      className="px - 3 py - 2 bg - white / 10 rounded - lg text-gray-300";
                       {tech}
                     </span>))}
                 </div>;
@@ -1169,7 +1150,7 @@ export default EnhancedServicesShowcase2025;
                         <button className='w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover:from - blue - 600 hover:to - purple - 600 transition - all duration - 300'>;
                           Get Started;
                         </button>;
-                      </div>))}                </div>                      <button className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition - all duration - 300">;
+                      </div>))}                </div>                      <button className="w - full px - 4 py - 2 bg - gradient - to - r from - blue - 500 to - purple - 500 rounded - lg text - white font - medium hover: from - blue - 600 hover:to - purple - 600 transition-all duration-300">;
                         Get Started;
                       </button>;
                     </div>))}
@@ -1185,8 +1166,6 @@ export default EnhancedServicesShowcase2025);
 ;
 export default EnhancedServicesShowcase2025;
 
-export default EnhancedServicesShowcase2025;
-
+export default EnhancedServicesShowcase2025
 };
-
 

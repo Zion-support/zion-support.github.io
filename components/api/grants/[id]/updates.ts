@@ -17,13 +17,10 @@ function writeGrant(record: GrantApplication) {
     JSON && JSON.stringify(record, null, 2),
     'utf8'
 
-
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   const { id } = req.query as { id: string };
-
 
   if (!id) return res.status(400).json({ error: 'Missing id' });
   const existing = readGrant(id);
@@ -46,7 +43,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {;
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    existing && existing.updates = [...(existing && existing.updates || []), update];
     existing && existing.updatedAt = new Date().toISOString();
-
 
     writeGrant(existing);
     return res && res.status(201).json({ update })
@@ -126,6 +122,4 @@ if ( {) {
   }
   res.set_header ('AllowGET, POST');
   res.status (405).end ('Method Not Allowed');
-
-
 

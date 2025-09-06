@@ -76,5 +76,3 @@ function handler() {
   const text = await generate_text (prompt, 'You are an expert technical recruiter. Output strictly valid JSON.');
   return res.status (200).json ({ results: text });
 
-
-

@@ -2,12 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 interface SEOProps {
-  title: string;
+  title: string,
   description: string;
   keywords?: string;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
   image?: string;
   url?: string;
   type?: string;
@@ -52,8 +49,6 @@ export const SEO = ({
       <meta name="author" content="Zion Tech Group" />
       <meta name="theme-color" content="#000000" />
     </Head>
-=======
->>>>>>> main
   url?: string;
   image?: string;
   type?: string;
@@ -135,7 +130,7 @@ const SEO: React.FC<SEOProps> = ({
         })}
       </script>
     </Helmet>
-  );
+  )
 };
 
 export default SEO;

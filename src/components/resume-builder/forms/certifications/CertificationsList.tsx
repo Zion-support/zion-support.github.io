@@ -46,7 +46,6 @@ interface CertificationsListProps {
   }
   return (
 
-
                 <Button
                   variant='ghost'
                   size='icon'
@@ -76,14 +75,8 @@ interface CertificationsListProps {
                 >
 
                   View credential
-<<<<<<< HEAD
                 </a>;
-              </p>;
-=======
-                </Link>
-              </p>
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-            )}
+              </p>;            )}
           </CardContent>;
         </Card>;
       ))}
@@ -134,9 +127,9 @@ if ( {) {
                       ? cert.expiration_date;
                       : format (cert.expiration_date, 'MMM yyyy')}
               <div>;
-                <h4 className="font - medium">{cert.name}</h4>;
-                <p className="text - sm text - muted - foreground">{cert.issuing_organization}</p>;
-                <p className="text - xs text - muted - foreground mt - 1">;
+                <h4 className="font-medium">{cert.name}</h4>;
+                <p className="text - sm text - muted-foreground">{cert.issuing_organization}</p>;
+                <p className="text - xs text - muted - foreground mt-1">;
                   Issued: {cert.issue_date ? (typeof cert.issue_date === 'string';
                     ? cert.issue_date;
                     : format (cert.issue_date, 'MMM yyyy')) : 'N / A'}
@@ -167,7 +160,7 @@ if ( {) {
                   <Trash2 className='h - 4 w - 4' />                </Button>;
               </div>;
             </div>;
-            {cert.credential_url && (                  <Trash2 className="h - 4 w - 4" />;
+            {cert.credential_url && (                  <Trash2 className="h - 4 w-4" />;
                 </Button>;
               </div>;
             </div>;
@@ -177,12 +170,12 @@ if ( {) {
                   href={cert.credential_url}
                   target='_blank';
                   rel='noopener noreferrer';
-                  className='text - primary hover:underline'                >              <p className="text - xs mt - 2">;
+                  className='text - primary hover:underline'                >              <p className="text - xs mt-2">;
                 <a;
                   href = {cert.credential_url, }
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="text - primary hover:underline";
+                  className="text-primary hover:underline";
                   View credential;
                 </a>;
               </p>)}

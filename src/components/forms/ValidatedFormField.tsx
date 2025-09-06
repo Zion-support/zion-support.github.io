@@ -19,18 +19,12 @@ import { cn } from '@/lib/utils';
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-<<<<<<< HEAD
 import { CheckCircle, AlertCircle, Eye, EyeOff } from 'lucide-react'
 import { Button } from '@/components/ui/button';
-interface ValidationRule {
-=======
-interface ValidationRule {;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  required?: boolean;
+interface ValidationRule {  required?: boolean;
   minLength?: number;
   maxLength?: number;
   pattern?: RegExp;
-
 
   name: string
   label: string
@@ -52,7 +46,6 @@ interface ValidationRule {;
   className?: string
   disabled?: boolean
   showValidIcon?: boolean
-
 
   debounceMs?: number
 export function ValidatedFormField({
@@ -95,8 +88,6 @@ export function ValidatedFormField({
       setValidationState(error ? 'invalid' : 'valid')
     }, debounceMs)
     setDebounceTimer(timer)
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect } from 'react';
 import {
   FormField,
@@ -223,7 +214,6 @@ if ( {) {
       return validation.custom (value);
     }
     return null;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   }
   const getValidationIcon = () =>: any {
     // Check condition
@@ -260,8 +250,6 @@ if (return '') {
   const render_field = () =>: any {
     const base_classes = cn (getFieldClasses (), class_name);
     switch (type) {
-
-
 
 import React, { useState, useEffect } from 'react';
 
@@ -345,8 +333,8 @@ export function ValidatedFormField(): any ({;
     setDebounceTimer(timer);
 
     return () => {;
-      if (timer) clearTimeout(timer);
-    };
+      if (timer) clearTimeout(timer)
+};
   }, [fieldValue, isTouched, debounceMs]);
 
   const validateField = (value: any): string | null => {;
@@ -375,15 +363,10 @@ export function ValidatedFormField(): any ({;
       return validation && validation.custom(value);
     }
 
-
     return null
   },
 
-
-
-
   const getValidationIcon = () => {
-
 
     switch (type) {
       case 'textarea':
@@ -391,16 +374,6 @@ export function ValidatedFormField(): any ({;
           <div className='relative'>;
             <Textarea
 
-
-<<<<<<< HEAD
-=======
-              disabled={disabled}
-              className={baseClasses}
-              rows={4}
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              {...form.register(name)}
             />
             <div className='absolute top-2 right-2'>{getValidationIcon()}</div>
           </div>
@@ -412,7 +385,6 @@ export function ValidatedFormField(): any ({;
         );
 
         ),
-
 
       case 'select':;
         return (
@@ -426,29 +398,11 @@ export function ValidatedFormField(): any ({;
                 {options.map((option) => (
                   <SelectItem key={option.value} value={option.value}>
 
-
                     {option.label}
                   </SelectItem>
                 ))}
 
-
-<<<<<<< HEAD
-      case 'checkbox':
-=======
-        ),
-
-
-
-      case 'checkbox':
-              </SelectContent>;
-            </Select>;
-            <div className='absolute top-2 right-8'>{getValidationIcon()}</div>;
-          </div>;
-        );
-
-      case 'checkbox':;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        return (
+      case 'checkbox':        return (
           <div className='flex items-center space-x-2'>;
             <Checkbox
               id={name}
@@ -459,38 +413,20 @@ export function ValidatedFormField(): any ({;
             <label
               htmlFor={name}
 
-
               className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
-
 
               {label}
             </label>;
             {getValidationIcon()}
 
-
-<<<<<<< HEAD
-      case 'password':
-=======
-        ),
-
-
-
-      case 'password':
-          </div>;
-        );
-
-      case 'password':;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        return (
+      case 'password':        return (
           <div className='relative'>;
             <Input
-
 
               type={showPassword ? 'text' : 'password'}
               disabled={disabled}
               className={cn(baseClasses, 'pr-20')}
-
 
               {...form.register(name)}
             />
@@ -498,8 +434,6 @@ export function ValidatedFormField(): any ({;
               {getValidationIcon()}
               <Button
 
-<<<<<<< HEAD
-=======
                 type="button"
                 variant="ghost"
                 size="sm"
@@ -508,230 +442,18 @@ export function ValidatedFormField(): any ({;
                 aria-label={showPassword ? 'Hide password' : 'Show password'}
               >
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
                 {showPassword ? (
                   <EyeOff className="h-4 w-4" />
                 ) : (
                   <Eye className="h-4 w-4" />
                 )}
 
-
-<<<<<<< HEAD
-      default:
-=======
-        ),
-
-
-
-      default:
-              </Button>;
-            </div>;
-          </div>;
-        );
-
-      default:;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-        return (
+      default:        return (
           <div className='relative'>;
-            <Input
-<<<<<<< HEAD
-=======
-
-
-              type={type}
-              disabled={disabled}
-              className={baseClasses}
-              {...form.register(name)}
-            />
-            <div className="absolute inset-y-0 right-0 flex items-center pr-3">
-              {getValidationIcon()}
-
-            </div>;
-          </div>;
-        );
-    }
-  };
-
-  if (type === 'checkbox') {;
-
-    return (;
-      <FormField;
-        control={form.control}
-        name={name}
-        render={() => (
-          <FormItem className="flex flex-row items-start space-x-3 space-y-0">
-            <FormControl>
-              {renderField()}
-            </FormControl>
-            {(fieldError || description) && (
-              <div className="space-y-1">
-                {fieldError && (
-                  <FormMessage className="text-sm text-red-500">
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                    {fieldError.message}
-                  </FormMessage>
-                )}
-                {description && !fieldError && (
-
-<<<<<<< HEAD
-=======
-                  <p className="text-sm text-muted-foreground">{description}</p>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                )}
-              </div>;
-            )}
-          </FormItem>;
-        )}
-
-      case 'textarea':;
-        return (
-          <div className='relative'>;
-            <Textarea;
-              disabled = {disabled, }
-              class_name = {base_classes, }
-              rows = {4, }
-              {...form.register (name)}
-            />;
-            <div className='absolute top - 2 right - 2'>{getValidationIcon ()}</div>;
-          </div>);
-      case 'select':;
-        return (
-          <div className='relative'>;
-            <Select;
-              onValueChange={value => form.set_value (name, value)}
-              disabled={disabled}
-            >              <SelectTrigger className={base_classes}>;
-                <SelectValue placeholder={placeholder} />;
-              </SelectTrigger>;
-              <SelectContent>;
-                {options.map (option => (                  <SelectItem key={option.value} value={option.value}>;
-                    {option.label}
-                  </SelectItem>))}
-              </SelectContent>;
-            </Select>;
-            <div className='absolute top - 2 right - 8'>{getValidationIcon ()}</div>;
-          </div>);
-      case 'checkbox':;
-        return (
-          <div className='flex items - center space - x-2'>;
-            <Checkbox;
-              id={name}
-              checked={field_value}
-              onCheckedChange={checked => form.set_value (name, checked)}
-              disabled={disabled}
-            />;
-            <label;
-              html_for={name}
-              className='text - sm font - medium leading - none peer - disabled:cursor - not - allowed peer - disabled:opacity - 70'            >;
-              {label}
-            </label>;
-            {getValidationIcon ()}
-          </div>);
-      case 'password':;
-        return (
-          <div className='relative'>;
-            <Input;
-              type = {show_password ? 'text' : 'password', }
-              disabled = {disabled, }
-              class_name = {cn (base_classes, 'pr - 20'), }
-              {...form.register (name)}
-            />;
-            <div className='absolute inset - y-0 right - 0 flex items - center gap - 1 pr - 3'>;
-              {getValidationIcon ()}
-              <Button;
-                type='button';
-                variant='ghost';
-                size='sm';
-                className='h - 7 w - 7 p - 0';
-                on_click={() => setShowPassword (!show_password)}
-                aria - label={show_password ? 'Hide password' : 'Show password'}              >;
-                {show_password ? (
-                  <EyeOff className='h - 4 w - 4' />) : (
-                  <Eye className='h - 4 w - 4' />)}
-              </Button>;
-            </div>;
-          </div>);
-      default:;
-        return (
-          <div className='relative'>;
-            <Input;
-              type = {type, }
-              disabled = {disabled, }
-              class_name = {base_classes, }
-              {...form.register (name)}
-            />;
-            <div className='absolute inset - y-0 right - 0 flex items - center pr - 3'>;
-              {getValidationIcon ()}
-            </div>;
-          </div>);
-    }
-  }
-  // Check condition
-if ( {) {
-  $2
-}
-        render={() => (
-          <FormItem className='flex flex - row items - start space - x-3 space - y-0'>;
-            <FormControl>{render_field ()}</FormControl>            {(field_error || description) && (
-              <div className='space - y-1'>;
-                {field_error && (
-                  <FormMessage className='text - sm text - red - 500'>;
-                    {field_error.message}
-                  </FormMessage>)}
-                {description && !field_error && (
-                  <p className='text - sm text - muted - foreground'>{description}</p>)}
-              </div>)}
-          </FormItem>)}
-      />);
-
-  }
-      render={() => (
-        <FormItem>;
-          <FormLabel className='text - sm font - medium'>;
-            {label}
-            {validation.required && (
-<<<<<<< HEAD
-=======
-
-
-
-      />;
-    );
-  }
-
-
-      render={() => (;
-        <FormItem>;
-          <FormLabel className='text-sm font-medium'>;
-            {label}
-
-            {validation.required && <span className="text-red-500 ml-1">*</span>}
-          </FormLabel>
-          <FormControl>
-            {renderField()}
-          </FormControl>
-          {(fieldError || description) && (
-            <div className="space-y-1">
-              {fieldError && (
-                <FormMessage className="text-sm text-red-500 flex items-center gap-1">
-                  <AlertCircle className="h-3 w-3" />
-
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                  {fieldError.message}
+            <Input                  {fieldError.message}
                 </FormMessage>
               )}
               {description && !fieldError && (
-<<<<<<< HEAD
-=======
-
-                <p className="text-sm text-muted-foreground">{description}</p>
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              )}
             </div>;
           )}
         </FormItem>;
@@ -803,11 +525,9 @@ export const common_validations = {
   }}
     }
 
-
   }},
     };
   }};
-
 
     />;
   );
@@ -818,7 +538,7 @@ export const validationPatterns = {;
   phone: /^[\+]?[1-9][\d]{0,15}$/,;
   url: /^https?:\/\/.+/,;
   strongPassword:;
-    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,;
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8}$/,
 };
 
 // Pre-configured validation rules;
@@ -837,8 +557,6 @@ export const commonValidations = {;
   password: {;
     required: true,;
     minLength: 8,;
-<<<<<<< HEAD
-=======
     custom: (value: string,) => {;
       if (value && !validationPatterns && validationPatterns.strongPassword.test(value)) {;
         return 'Password must contain at least 8 characters with uppercase, lowercase, number, and special character';
@@ -854,9 +572,6 @@ export const commonValidations = {;
       }
       return null;
 
-
-
   }},
     }
   }};
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

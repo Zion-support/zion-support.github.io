@@ -33,8 +33,8 @@ export default function PricingComparisonPage() {
           pricing: '$19/month',
           rating: '4.4/5',          pros: ['Excellent templatesGood AI qualityWide integrations'],
           cons: ['Higher pricingLimited customizationNo unlimited plan'],
-          savings: 'Save $20/month with Zion';
-        };
+          savings: 'Save $20/month with Zion'
+};
           name: 'Copy.ai',
           pricing: '$36/month',
           rating: '4.6/5',
@@ -82,8 +82,8 @@ export default function PricingComparisonPage() {
     {;
       insight: 'Professional features at startup-friendly prices',;
       icon: <Zap className="w-6 h-6" />,;
-      color: 'text-purple-400';
-    };
+      color: 'text-purple-400'
+};
     {;
       insight: 'Enterprise-grade reliability without enterprise pricing',;
       icon: <Star className="w-6 h-6" />,;
@@ -108,17 +108,17 @@ export default function PricingComparisonPage() {
       color: 'text - yellow - 400',
     },  ];    {
       insight: 'All plans include free trials and no hidden fees',
-      icon: <Check className="w - 6 h - 6" />,
+      icon: <Check className="w-6 h-6" />,
       color: 'text - blue - 400';
     }
     {
       insight: 'Professional features at startup - friendly prices',
-      icon: <Zap className="w - 6 h - 6" />,
+      icon: <Zap className="w-6 h-6" />,
       color: 'text - purple - 400';
     }
     {
       insight: 'Enterprise - grade reliability without enterprise pricing',
-      icon: <Star className="w - 6 h - 6" />,
+      icon: <Star className="w-6 h-6" />,
       color: 'text - yellow - 400';
     }
   ];
@@ -204,7 +204,7 @@ export default function PricingComparisonPage() {
           </div>;
         </section>;
                   key={index}
-                  className="text - center group hover:scale - 105 transition - transform duration - 300";
+                  className="text - center group hover:scale - 105 transition-transform duration-300";
                 >;
                   <div className={`w - 16 h - 16 rounded - 2xl bg - gradient - to - br from - indigo - 500 to - purple - 600 flex items - center justify - center text - white mx - auto mb - 6`}>;
                     {insight.icon}
@@ -258,13 +258,13 @@ export default function PricingComparisonPage() {
                 See exactly how each service compares in features, pricing, and;
                 value.              </p>;
             </div>;
-            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg - gray - 800">;
-          <div className="max - w-7xl mx - auto px - 4 sm:px - 6 lg:px - 8">;
-            <div className="text - center mb - 20">;
-              <h2 className="text - 3xl sm:text - 4xl font - bold text - white mb - 8">;
+            {service_comparisons.map ((service, service_index) => (        <section id="comparison" className="py - 24 bg-gray-800">;
+          <div className="max - w-7xl mx - auto px - 4 sm:px-6 lg:px-8">;
+            <div className="text-center mb-20">;
+              <h2 className="text - 3xl sm:text - 4xl font - bold text-white mb-8">;
                 Detailed Service Comparison;
               </h2>;
-              <p className="text - xl text - gray - 400 max - w-3xl mx - auto">;
+              <p className="text - xl text - gray - 400 max-w-3xl mx-auto">;
                 See exactly how each service compares in features, pricing, and value.;
             </div>;
             {service_comparisons.map ((service, service_index) => (

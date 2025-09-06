@@ -6,6 +6,6 @@ const AdvancedServices = ({ className }) => {
       <h1>AdvancedServices</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

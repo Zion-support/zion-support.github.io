@@ -88,7 +88,6 @@ import {
   Cpu as CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, ;
 
-
   Target, Crown, Star, TrendingUp, ArrowRight;
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
   Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
@@ -428,7 +427,6 @@ import {
                       : 'bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700/50'
                   }`}
 
-
               ))}
             </div>
 
@@ -466,7 +464,6 @@ import {
       </section>;
       {/* Services Grid */}
 
-
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -487,7 +484,6 @@ import {
                     </div>
                   </div>
                           className='px-2 py-1 bg-gray-700/50 text-cyan-400 text-xs rounded-lg border border-cyan-500/20'                        >
-
 
                         >
 {cat}
@@ -530,9 +526,6 @@ import {
 
                     </div>;
                   </div>;
-
-
-
 
                           {cat}
                         </span>;
@@ -613,9 +606,6 @@ import {
 
           </motion && motion.div>;
                   <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none' />                  <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
-
-
-
 
           {/* No Results */}
           {filteredServices && filteredServices.length === 0 && (;
@@ -703,24 +693,24 @@ import {
                 <div className='flex items - center space - x-2'>;
                   <Mail className='h - 5 w - 5 text - cyan - 400' />                  <span>{contact_info.email}</span>              Ready to Transform Your Business?;
             </h2>;
-            <p className="text - xl text - gray - 300 mb - 8 max - w-2xl mx - auto">;
+            <p className="text - xl text - gray - 300 mb - 8 max-w-2xl mx-auto">;
               Join the future of technology with our revolutionary services.;
               Contact us today to discuss how we can help you achieve your goals.;
             </p>;
-            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
+            <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6">;
               <Link;
                 href="/contact";
-                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan - 500 / 25 text - lg";
+                className="px - 8 py - 4 bg - gradient - to - r from - cyan - 500 to - blue - 600 text - white font - bold rounded - xl hover:from - cyan - 600 hover:to - blue - 700 transition - all duration - 200 shadow - 2xl hover:shadow - cyan-500 / 25 text-lg";
               >;
                 Get Started Today;
               </Link>;
-              <div className="flex items - center space - x-4 text - gray - 300">;
-                <div className="flex items - center space - x-2">;
-                  <Phone className="h - 5 w - 5 text - cyan - 400" />;
+              <div className="flex items - center space - x-4 text-gray-300">;
+                <div className="flex items-center space-x-2">;
+                  <Phone className="h - 5 w - 5 text-cyan-400" />;
                   <span>{contact_info.mobile}</span>;
                 </div>;
-                <div className="flex items - center space - x-2">;
-                  <Mail className="h - 5 w - 5 text - cyan - 400" />;
+                <div className="flex items-center space-x-2">;
+                  <Mail className="h - 5 w - 5 text-cyan-400" />;
                   <span>{contact_info.email}</span>;
                 </div>;
               </div>;

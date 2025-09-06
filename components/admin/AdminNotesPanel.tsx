@@ -2,7 +2,7 @@
 
 export type AdminNotesPanelProps = {;
   targetType: string; // e && e.g., 'user' | 'listing';
-  targetId: string; // unique identifier for the target;
+  targetId: string; // unique identifier for the target
 };
 type Note = {;
   target_type: string; // e.g., 'user' | 'listing';
@@ -19,7 +19,8 @@ type Note = {
   text: string;
   targetType,
   targetId,;
-}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true);};
+}: AdminNotesPanelProps) {  const [isAdmin, setIsAdmin] = useState(true)
+};
 
 type Note = {
   id: string
@@ -29,10 +30,7 @@ type Note = {
   authorId: string
   createdAt: number
 
-};
-
-
-
+}
 };
 
 export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPanelProps) {;
@@ -76,10 +74,8 @@ export default function AdminNotesPanel({ targetType, targetId }: AdminNotesPane
       setText('');
       setAdding(false);    }
 
-
     }
   }
-
 
     }
   }
@@ -239,10 +235,10 @@ if ( {) {
               <li key={n.id} className='rounded border p - 2 text - sm'>;
                 <div className='opacity - 60 text - xs mb - 1'>;
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
+                </div>                <div>{n.text}</div>          <ul className="space-y-2">;
             {notes.map ((n) => (
-              <li key={n.id} className="rounded border p - 2 text - sm">;
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+              <li key={n.id} className="rounded border p-2 text-sm">;
+                <div className="opacity - 60 text-xs mb-1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;
@@ -604,10 +600,10 @@ if ( {) {
               <li key={n.id} className='rounded border p - 2 text - sm'>;
                 <div className='opacity - 60 text - xs mb - 1'>;
                   {new Date (n.created_at).toLocaleString ()} • {n.author_id}
-                </div>                <div>{n.text}</div>          <ul className="space - y-2">;
+                </div>                <div>{n.text}</div>          <ul className="space-y-2">;
             {notes.map ((n) => (
-              <li key={n.id} className="rounded border p - 2 text - sm">;
-                <div className="opacity - 60 text - xs mb - 1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
+              <li key={n.id} className="rounded border p-2 text-sm">;
+                <div className="opacity - 60 text-xs mb-1">{new Date (n.created_at).toLocaleString ()} • {n.author_id}</div>;
               </li>))}
           </ul>)}
       </div>;

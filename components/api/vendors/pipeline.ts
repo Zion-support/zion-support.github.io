@@ -26,4 +26,3 @@ function handler() {
   res.status (200).json ({ items });
   res.status (200).json ({ items });
 
-

@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 
 "use client",
 import { create_context, useContext, useEffect, useState  } from './react';,
@@ -28,17 +26,7 @@ function ThemeProvider() {
     // Only access local_storage on the client side;
     // Check condition
 if ( {) {
-  $2
-=======
-<<<<<<< HEAD
-"use client";
-import { createContext, useContext, useEffect, useState } from "react";
-type Theme = "dark" | "light" | "system";
-type ThemeProviderProps = {children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-}
+  $2}
       const stored_theme = local_storage.get_item (storage_key) as Theme,
       // Check condition
 if ( {) {
@@ -88,7 +76,6 @@ if ( {) {
   }
   return (
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
     <ThemeProviderContext.Provider {...props} value={value}>;
       {children}
     </ThemeProviderContext.Provider>);
@@ -99,18 +86,9 @@ export const use_theme = () =>: any {
     throw new Error ("use_theme must be used within a ThemeProvider")) {
   $2
 }
-<<<<<<< HEAD
-=======
-
 
   return context;
-}
-=======
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-"use client",;
+}"use client",;
 import { createContext, useContext, useEffect, useState } from "react",;
 type Theme = "dark" | "light" | "system",;
 type ThemeProviderProps = {;
@@ -183,9 +161,6 @@ export const useTheme = () => {;
   const context = useContext(ThemeProviderContext),;
   if (context === undefined);
     throw new Error("useTheme must be used within a ThemeProvider");
-  return context;
+  return context
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

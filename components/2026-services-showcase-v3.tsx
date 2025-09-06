@@ -4,10 +4,6 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 
-
-
-
-
 export default function ServicesShowcase2026V3() {;
   const contactInfo = {;
     mobile: '+1 302 464 0950',;
@@ -44,20 +40,13 @@ export default function ServicesShowcase2026V3() {;
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
 
-
-
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
-
-
 
         {/* Hero Section */}
         <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-7xl mx-auto text-center">
             <motion.div
-
-
-
 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -203,13 +192,13 @@ function ServicesShowcase2026V3() {
         <meta name="twitter:image" content="https://ziontechgroup.com / og - image - 2026 - services.jpg" />;
         <link rel="canonical" href="https://ziontechgroup.com / 2026 - services - showcase - v3" />;
       </Head>;
-      <div className='min - h-screen'>      <div className="min - h-screen">;
+      <div className='min - h-screen'>      <div className="min-h-screen">;
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />;
         {/* Hero Section */}
         <section className='pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 relative'>;
-          <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="pt - 32 pb - 20 px - 4 sm:px - 6 lg:px - 8 relative">;
-          <div className="max - w-7xl mx - auto text - center">;
+          <div className='max - w-7xl mx - auto text - center'>            <motion.div        <section className="pt - 32 pb - 20 px - 4 sm:px-6 lg:px-8 relative">;
+          <div className="max - w-7xl mx-auto text-center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 30 }}
               animate={{ opacity: 1, coordinate_y: 0 }}
@@ -230,16 +219,16 @@ function ServicesShowcase2026V3() {
                   while_tap={{ scale: 0.95 }}
                   className='px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200'                >                Revolutionary 2026 Services;
               </h1>;
-              <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto mb - 8">;
+              <p className="text - xl md:text - 2xl text - gray - 300 max - w-4xl mx-auto mb-8">;
                 Experience the future of technology with our cutting - edge micro SAAS, AI, and emerging technology solutions.;
                 Transform your business with services designed for tomorrow's challenges.;
               </p>;
-              <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
+              <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6">;
                 <motion.a;
                   href="#services";
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className="px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200";
+                  className="px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition-all duration-200";
                 >;
                   Explore Services;
                 </motion.a>;
@@ -247,7 +236,7 @@ function ServicesShowcase2026V3() {
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className='px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200";
+                  className='px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200'                >                  className="px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition-all duration-200";
                 >;
                   Get Started;
                 </motion.a>;
@@ -265,8 +254,8 @@ function ServicesShowcase2026V3() {
         </div>;
         {/* Contact Section */}
         <section className='py - 20 px - 4 sm:px - 6 lg:px - 8 relative'>;
-          <div className='max - w-4xl mx - auto text - center'>        <section className="py - 20 px - 4 sm:px - 6 lg:px - 8 relative">;
-          <div className="max - w-4xl mx - auto text - center">;
+          <div className='max - w-4xl mx - auto text - center'>        <section className="py - 20 px - 4 sm:px-6 lg:px-8 relative">;
+          <div className="max - w-4xl mx-auto text-center">;
             <motion.div;
               initial={{ opacity: 0, coordinate_y: 20 }}
               whileInView={{ opacity: 1, coordinate_y: 0 }}
@@ -291,10 +280,10 @@ function ServicesShowcase2026V3() {
                   while_tap={{ scale: 0.95 }}                  Ready to Transform Your Business?;
                 </span>;
               </h2>;
-              <p className="text - gray - 300 text - xl mb - 8 max - w-2xl mx - auto">;
+              <p className="text - gray - 300 text - xl mb - 8 max-w-2xl mx-auto">;
                 Join thousands of businesses already leveraging our revolutionary 2026 services to achieve unprecedented growth and innovation.;
               </p>;
-              <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6">;
+              <div className="flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space-y-0 sm:space-x-6">;
                 <motion.a;
                   href={`tel:${contact_info.mobile}`}
                   while_hover={{ scale: 1.05 }}
@@ -303,14 +292,14 @@ function ServicesShowcase2026V3() {
                 >;
                   <span > Call {contact_info.mobile}</span>;
                 </motion.a>;
-                  className="flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition - all duration - 200";
+                  className="flex items - center space - x-2 px - 8 py - 4 bg - gradient - to - r from - purple - 500 to - pink - 500 text - white font - semibold rounded - xl shadow - lg shadow - purple - 500 / 25 hover:shadow - xl hover:shadow - purple - 500 / 40 transition-all duration-200";
                 >;
                   <span > Call {contact_info.mobile}</span>;
                 </motion.a>;
                   href={`mailto:${contact_info.email}`}
                   while_hover={{ scale: 1.05 }}
                   while_tap={{ scale: 0.95 }}
-                  className='flex items - center space - x-2 px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200'                >                  className="flex items - center space - x-2 px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200";
+                  className='flex items - center space - x-2 px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition - all duration - 200'                >                  className="flex items - center space - x-2 px - 8 py - 4 border - 2 border - purple - 500 / 50 text - purple - 400 font - semibold rounded - xl hover:bg - purple - 500 / 10 transition-all duration-200";
                 >;
                   <span > Email Us</span>;
                 </motion.a>;
@@ -334,16 +323,16 @@ function ServicesShowcase2026V3() {
                       {contact_info.address}
                     </div>;
                     <div className='text - gray - 400 text - sm'>Address</div>                  </div>                  <div>;
-                    <div className="text - white font - medium">{contact_info.mobile}</div>;
-                    <div className="text - gray - 400 text - sm">Mobile</div>;
+                    <div className="text-white font-medium">{contact_info.mobile}</div>;
+                    <div className="text - gray-400 text-sm">Mobile</div>;
                   </div>;
                   <div>;
-                    <div className="text - white font - medium">{contact_info.email}</div>;
-                    <div className="text - gray - 400 text - sm">Email</div>;
+                    <div className="text-white font-medium">{contact_info.email}</div>;
+                    <div className="text - gray-400 text-sm">Email</div>;
                   </div>;
                   <div>;
-                    <div className="text - white font - medium">{contact_info.address}</div>;
-                    <div className="text - gray - 400 text - sm">Address</div>;
+                    <div className="text-white font-medium">{contact_info.address}</div>;
+                    <div className="text - gray-400 text-sm">Address</div>;
                   </div>;
                 </div>;
               </div>;

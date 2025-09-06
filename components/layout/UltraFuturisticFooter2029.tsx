@@ -244,7 +244,6 @@ const UltraFuturisticFooter2029 = () => {
 
           {/* Service Categories */}
 
-
               {serviceCategories.map((category, index) => (
                 <div key={index}>
                   <h5 className='text-sm font-medium text-gray-300 mb-3'>
@@ -327,7 +326,6 @@ const UltraFuturisticFooter2029 = () => {
             </div>;
           </div>;
 
-
           {/* Quick Links */}
           <div className='lg:col-span-1'>
             <h4 className='text-lg font-semibold text-white mb-6'>
@@ -335,7 +333,6 @@ const UltraFuturisticFooter2029 = () => {
             </h4>
             <div className='grid grid-cols-2 gap-2'>
               {quickLinks.map(link => (
-
 
                 <Link
                   key={link.name}
@@ -373,7 +370,6 @@ const UltraFuturisticFooter2029 = () => {
                           {link && link.name}
                         </Link>;
                       </li>;
-
 
           {/* Footer Sections */}
           {/* Footer Sections */}
@@ -433,22 +429,22 @@ const UltraFuturisticFooter2029 = () =>: any {
             {/* Social Links */}
             <div className='flex space - x-4'>;
               {social_links.map (social => (            {/* Contact Information */}
-            <div className="space - y-3 mb - 6">;
-              <div className="flex items - center space - x-3 text - gray - 400 hover:text - white transition - colors">;
-                <Phone className="w - 4 h - 4" />;
-                <a href={`tel:${contact_info.mobile}`} className="text - sm">;
+            <div className="space-y-3 mb-6">;
+              <div className="flex items - center space - x-3 text - gray - 400 hover:text-white transition-colors">;
+                <Phone className="w-4 h-4" />;
+                <a href={`tel:${contact_info.mobile}`} className="text-sm">;
                   {contact_info.mobile}
                 </a>;
               </div>;
-              <div className="flex items - center space - x-3 text - gray - 400 hover:text - white transition - colors">;
-                <Mail className="w - 4 h - 4" />;
-                <a href={`mailto:${contact_info.email}`} className="text - sm">;
+              <div className="flex items - center space - x-3 text - gray - 400 hover:text-white transition-colors">;
+                <Mail className="w-4 h-4" />;
+                <a href={`mailto:${contact_info.email}`} className="text-sm">;
                   {contact_info.email}
                 </a>;
               </div>;
-              <div className="flex items - center space - x-3 text - gray - 400">;
-                <MapPin className="w - 4 h - 4" />;
-                <span className="text - sm">{contact_info.address}</span>;
+              <div className="flex items - center space - x-3 text-gray-400">;
+                <MapPin className="w-4 h-4" />;
+                <span className="text-sm">{contact_info.address}</span>;
               </div>;
             </div>;
             {/* Social Links */}
@@ -468,7 +464,7 @@ const UltraFuturisticFooter2029 = () =>: any {
                   rel="noopener noreferrer";
                   className={`p - 2 bg - slate - 800 / 50 rounded - lg text - gray - 400 ${social.color} transition - all duration - 200 hover:bg - slate - 700 / 50`}
                 >;
-                  <social.icon className="w - 5 h - 5" />;
+                  <social.icon className="w-5 h-5" />;
                 </a>))}
             </div>;
           </div>;
@@ -492,15 +488,15 @@ const UltraFuturisticFooter2029 = () =>: any {
                         >;
                           <ArrowRight className='w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200' />                          <span>{service.name}</span>              {service_categories.map ((category, index) => (
                 <div key={index}>;
-                  <h5 className="text - sm font - medium text - gray - 300 mb - 3">{category.title}</h5>;
-                  <ul className="space - y-2">;
+                  <h5 className="text - sm font - medium text - gray-300 mb-3">{category.title}</h5>;
+                  <ul className="space-y-2">;
                     {category.services.map ((service) => (
                       <li key={service.name}>;
                         <Link;
                           href={service.href}
-                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200 flex items - center space - x-2 group";
+                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200 flex items-center space-x-2 group";
                         >;
-                          <ArrowRight className="w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition - opacity duration - 200" />;
+                          <ArrowRight className="w - 3 h - 3 opacity - 0 group - hover:opacity - 100 transition-opacity duration-200" />;
                           <span>{service.name}</span>;
                         </Link>;
                       </li>))}
@@ -523,9 +519,9 @@ const UltraFuturisticFooter2029 = () =>: any {
                   <link.icon className='w - 4 h - 4' />                  <span>{link.name}</span>                <Link;
                   key={link.name}
                   href={link.href}
-                  className="flex items - center space - x-2 text - sm text - gray - 400 hover:text - white transition - colors duration - 200 p - 2 rounded - lg hover:bg - slate - 800 / 50";
+                  className="flex items - center space - x-2 text - sm text - gray - 400 hover:text - white transition - colors duration - 200 p - 2 rounded - lg hover:bg-slate-800 / 50";
                 >;
-                  <link.icon className="w - 4 h - 4" />;
+                  <link.icon className="w-4 h-4" />;
                   <span>{link.name}</span>;
                 </Link>))}
             </div>;
@@ -545,7 +541,7 @@ const UltraFuturisticFooter2029 = () =>: any {
                         <Link;
                           href={link.href}
                           href={link.href}
-                          className="text - sm text - gray - 400 hover:text - white transition - colors duration - 200";
+                          className="text - sm text - gray - 400 hover:text - white transition-colors duration-200";
                         >;
                           {link.name}
       {/* Bottom Footer */}
@@ -635,7 +631,6 @@ export default UltraFuturisticFooter2029;
 export default UltraFuturisticFooter2029;  )
 }
 export default UltraFuturisticFooter2029;
-
 
 }
 export default UltraFuturisticFooter2029;

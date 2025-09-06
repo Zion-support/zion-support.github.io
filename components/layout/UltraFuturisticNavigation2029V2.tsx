@@ -293,9 +293,6 @@ export default function UltraFuturisticNavigation2029V2() {
                 </div>
               </div>
 
-
-
-
               {/* Contact Info */}
               <div className='pt-4 border-t border-gray-700'>
                 <h3 className='text-sm font-medium text-gray-400 mb-3 px-4'>
@@ -327,7 +324,6 @@ export default function UltraFuturisticNavigation2029V2() {
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
-
 
           >
             <div className='max-w-7xl mx-auto px-4 py-8'>
@@ -421,20 +417,20 @@ export default function UltraFuturisticNavigation2029V2() {
                           key={service.name}
                           href={service.href}
                           className='block p - 3 rounded - lg bg - gray - 800 / 50 hover:bg - gray - 800 / 70 transition - colors duration - 300 group'          >;
-            <div className="max - w-7xl mx - auto px - 4 py - 8">;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols - 3 gap - 8">;
+            <div className="max - w-7xl mx - auto px-4 py-8">;
+              <div className="grid grid - cols - 1 lg:grid - cols - 2 xl:grid - cols-3 gap-8">;
                 {service_categories.map ((category) => (
-                  <div key={category.title} className="space - y-4">;
-                    <div className="flex items - center space - x-3">;
+                  <div key={category.title} className="space-y-4">;
+                    <div className="flex items-center space-x-3">;
                       <div className={`p - 2 rounded - lg bg - gradient - to - r ${category.color}`}>;
-                        <category.icon className="w - 5 h - 5 text - white" />;
+                        <category.icon className="w - 5 h-5 text-white" />;
                       </div>;
                       <div>;
-                        <h3 className="text - lg font - semibold text - white">{category.title}</h3>;
-                        <p className="text - sm text - gray - 400">{category.description}</p>;
+                        <h3 className="text - lg font-semibold text-white">{category.title}</h3>;
+                        <p className="text - sm text-gray-400">{category.description}</p>;
                       </div>;
                     </div>;
-                    <div className="space - y-3">;
+                    <div className="space-y-3">;
                       {category.services.map ((service, index) => (
                         <Link;
                           key={service.name}
@@ -453,14 +449,14 @@ export default function UltraFuturisticNavigation2029V2() {
                             <span className='text - sm font - semibold text - cyan - 400'>;
                               {service.price}
                             </span>                          </div>                        >;
-                          <div className="flex justify - between items - start">;
+                          <div className="flex justify-between items-start">;
                             <div>;
-                              <h4 className="font - medium text - white group - hover:text - cyan - 400 transition - colors duration - 300">;
+                              <h4 className="font - medium text - white group - hover:text - cyan - 400 transition-colors duration-300">;
                                 {service.name}
                               </h4>;
-                              <p className="text - sm text - gray - 400 mt - 1">{service.description}</p>;
+                              <p className="text - sm text - gray-400 mt-1">{service.description}</p>;
                             </div>;
-                            <span className="text - sm font - semibold text - cyan - 400">{service.price}</span>;
+                            <span className="text - sm font - semibold text-cyan-400">{service.price}</span>;
                           </div>;
                         </Link>))}
                     </div>;

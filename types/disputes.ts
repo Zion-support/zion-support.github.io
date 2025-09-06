@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type DisputeReason =
   | 'Scope Disagreement'
   | 'Quality Issues'
@@ -11,21 +10,16 @@ export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
 
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
 
-
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
   | 'Delivery Delay';
   | 'Payment Issue';
   | 'Communication Breakdown';
-export type DisputeAttachment = {
-=======
-export interface Dispute {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-  id: string;
+export type DisputeAttachment = {  id: string;
   orderId: string;
   userId: string;
-  reason: string;
+  reason: string,
   description: string;
   status: 'open' | 'in_progress' | 'resolved' | 'closed';
   createdAt: Date;
@@ -34,17 +28,6 @@ export interface Dispute {
   resolvedAt?: Date;
 }
 
-<<<<<<< HEAD
-
   role: 'admin' | 'client' | 'talent';
 }
 };
-=======
-export interface DisputeResolution {
-  disputeId: string;
-  resolution: string;
-  resolvedBy: string;
-  resolvedAt: Date;
-  refundAmount?: number;
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

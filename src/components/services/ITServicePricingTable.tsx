@@ -38,23 +38,11 @@ export function ITServicePricingTable() {;
       if (a[sortConfig && sortConfig.key] < b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? -1 : 1;
       }
-<<<<<<< HEAD
       if (a[sortConfig && sortConfig.key] > b[sortConfig && sortConfig.key]) {;
         return sortConfig && sortConfig.direction === 'ascending' ? 1 : -1;
       }
       return 0;
     });
-=======
-      if (a[sortConfig.key] > b[sortConfig.key]) {
-        return sortConfig.direction === "ascending" ? 1 : -1
-      }
-      return 0
-    }),
-    
-    return filteredData
-  }, [onsiteServicePricing, searchQuery, sortConfig]),
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
@@ -71,11 +59,10 @@ export function ITServicePricingTable() {;
         sortConfig && sortConfig.key === key && sortConfig && sortConfig.direction === 'ascending';
           ? 'descending';
           : 'ascending',;
-    });
-  };
+    })
+};
 
   return (
-
 
         return sortConfig.direction === "ascending" ? -1 : 1
       }
@@ -96,10 +83,6 @@ export function ITServicePricingTable() {;
           ? "descending" 
           : "ascending"})
   },
-
-
-
-
 
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">

@@ -52,8 +52,8 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
   async function onSubmit(values:z.infer<typeof formSchema>) {;
     if (!userDetails?.id) {;
       toast({;
-        title:"Authentication required",;
-        description:"Please log in to schedule an interview",;
+        title:"Authentication required",,
+  description:"Please log in to schedule an interview",;
         variant:"destructive"}),;
       return,;
     }
@@ -81,14 +81,14 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
       }),;
 ;
       toast({;
-        title:"Interview requested",;
-        description:`Your interview request with ${talent.full_name} has been sent.`}),;
+        title:"Interview requested",,
+  description:`Your interview request with ${talent.full_name} has been sent.`}),;
       onClose(),;
     } catch (error) {;
       console.error("Failed to schedule interview:", error),;
       toast({;
-        title:"Failed to schedule interview",;
-        description:"An error occurred while scheduling the interview. Please try again.",;
+        title:"Failed to schedule interview",,
+  description:"An error occurred while scheduling the interview. Please try again.",;
         variant:"destructive"}),;
     } finally {;
       setIsSubmitting(false),;
@@ -155,7 +155,6 @@ export function InterviewRequestForm({ talent, onClose, userDetails } InterviewR
                         ) :(;
                           <span>Pick a date</span>;
                         )}
-=======
                       <Button;
                         variant="outline";
                         className={cn(;

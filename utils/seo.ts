@@ -14,7 +14,7 @@ export const generateMetadata = (title: string, description: string) => {
       title: `${title} - Zion Tech Group`,
       description,
     },
-  };
+  }
 };
 
 export const generateStructuredData = () => {
@@ -31,5 +31,5 @@ export const generateStructuredData = () => {
       "contactType": "customer service",
       "email": "contact@ziontechgroup.com"
     }
-  };
+  }
 };

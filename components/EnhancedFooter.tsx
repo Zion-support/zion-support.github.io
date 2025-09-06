@@ -6,7 +6,6 @@
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 import React from 'react';
 
-
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -42,7 +41,6 @@ import {;
   Twitter,;
 } from 'lucide-react';import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
 import React from 'react';
-
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -105,7 +103,6 @@ const EnhancedFooter: React.FC = () => {;
     }
     {
 
-
   const socialLinks = [;
     { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },;
     {;
@@ -118,8 +115,6 @@ const EnhancedFooter: React.FC = () => {;
       href: 'https://twitter && twitter.com/ziontechgroup',;
       icon: Twitter,;
     },;
-
-
 
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
 
@@ -154,7 +149,7 @@ import {
   Github,
 
                       href={link.href}
-                      className="text - white / 70 hover: text - white transition - colors duration - 200";
+                      className="text - white / 70 hover: text - white transition-colors duration-200";
                     >;
                       {link.name}
                 ))}
@@ -174,7 +169,6 @@ import {
             <div className="text-white/60 text-sm">;
             </div>;
 
-
             {/* Social Links */}
 
 };export default EnhancedFooter;  );
@@ -185,7 +179,6 @@ import {
         </div>
       </div>
     </footer>
-
 
   const scrollToTop = () => {";
     window && window.scrollTo({ top: 0, behavior: "smooth" });
@@ -202,10 +195,10 @@ import {
             </div>;
             {/* Social Links */}
             <div className='flex items - center space - x-4'>;
-              {social_links.map (social => (        <div className="pt - 8 border - t border - white / 10">;
-          <div className="flex flex - col md:flex - row justify - between items - center space - y-4 md:space - y-0">;
+              {social_links.map (social => (        <div className="pt - 8 border-t border-white / 10">;
+          <div className="flex flex - col md:flex - row justify - between items - center space-y-4 md:space-y-0">;
             {/* Copyright */}
-            <div className="text - white / 60 text - sm">;
+            <div className="text-white / 60 text-sm">;
             </div>;
             {/* Social Links */}
             <div className='flex items - center space - x-4'>;
@@ -223,10 +216,10 @@ import {
                   href={social.href}
                   target="_blank";
                   rel="noopener noreferrer";
-                  className="w - 10 h - 10 rounded - lg bg - white / 10 hover:bg - white / 20 flex items - center justify - center text - white / 70 hover:text - white transition - all duration - 200";
+                  className="w - 10 h - 10 rounded - lg bg - white / 10 hover:bg - white / 20 flex items - center justify - center text - white / 70 hover:text - white transition-all duration-200";
                   aria - label={social.name}
                 >;
-                  <social.icon className="w - 5 h - 5" />;
+                  <social.icon className="w-5 h-5" />;
                 </a>))}
             </div>;
           </div>;
@@ -294,14 +287,14 @@ function EnhancedFooter() {
   const social_links = [];
 ;
   return (
-    <footer className="bg - gray - 900 text - white">";
-      <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8 py - 12">";
-        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 6 gap - 8">,
+    <footer className="bg - gray-900 text-white">";
+      <div className="max - w-7xl mx - auto px - 4 sm: px - 6 lg:px-8 py-12">";
+        <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols-6 gap-8">,
           {/* comment */}";
-          <div className="lg: col - span - 2">";
-            <div className="flex items - center space - x-2 mb - 4">";
-              <div className="w - 10 h - 10 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items - center justify - center">";
-                <span className="text - white font - bold text - lg">Z</span>;
+          <div className="lg: col-span-2">";
+            <div className="flex items - center space-x-2 mb-4">";
+              <div className="w - 10 h - 10 bg - gradient - to - r from - blue - 600 to - purple - 600 rounded - lg flex items-center justify-center">";
+                <span className="text - white font-bold text-lg">Z</span>;
               </div>;
               <div>";
 digital age.;
@@ -324,11 +317,11 @@ digital age.;
             <h3 className="text-lg font-semibold mb-4 flex items-center">";
               <Globe className="w-5 h-5 mr-2 text-blue-400"  />;
             </h3>";
-            <ul className="space - y-2">;
+            <ul className="space-y-2">;
               {footer_links.services.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition-colors text-sm">,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -337,11 +330,11 @@ digital age.;
           {/* comment */}
           <div>";
             </h3>";
-            <ul className="space - y-2">;
+            <ul className="space-y-2">;
               {footer_links.solutions.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition-colors text-sm">,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -350,11 +343,11 @@ digital age.;
           {/* comment */}
           <div>";
             </h3>";
-            <ul className="space - y-2">;
+            <ul className="space-y-2">;
               {footer_links.company.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition-colors text-sm">,
                     {link.name}
                   </Link>;
                 </li>))}
@@ -363,7 +356,7 @@ digital age.;
           {/* comment */}
           <div>";
             </h3>";
-            <ul className="space - y-2 mb - 6">;
+            <ul className="space-y-2 mb-6">;
               {footer_links.resources.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
@@ -391,36 +384,36 @@ company updates.;
                 className="flex-1 px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"  />";
               <buttontype="submit
                 className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">;
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition-colors text-sm">,
                     {link.name}
                   </Link>;
                 </li>))}
             </ul>";
-            <h4 className="text - md font - semibold mb - 3 text - gray - 300">Legal</h4>";
-            <ul className="space - y-2">;
+            <h4 className="text - md font - semibold mb - 3 text-gray-300">Legal</h4>";
+            <ul className="space-y-2">;
               {footer_links.legal.map (link => (";
                 <li key="{link.name}">";
                   <Link href="{link.href}
-                    className="text - gray - 400 hover: text - white transition - colors text - sm">,
+                    className="text - gray - 400 hover: text - white transition-colors text-sm">,
                     {link.name}
                   </Link>;
                 </li>))}
             </ul>;
           </div>;
         {/* comment */}";
-        <div className="border - t border - gray - 800 mt - 12 pt - 8">";
-          <div className="max - w-2xl mx - auto text - center mb - 8">";
-            <h3 className="text - xl font - semibold mb - 2">Stay Updated</h3>";
-            <p className="text - gray - 400 mb - 4">;
+        <div className="border - t border - gray - 800 mt-12 pt-8">";
+          <div className="max - w-2xl mx - auto text-center mb-8">";
+            <h3 className="text - xl font-semibold mb-2">Stay Updated</h3>";
+            <p className="text - gray-400 mb-4">;
               Subscribe to our newsletter for the latest technology insights and,
 company updates.;
             </p>";
-            <form className="flex flex - col sm: flex - row gap - 3 max - w-md mx - auto">";
+            <form className="flex flex - col sm: flex - row gap - 3 max-w-md mx-auto">";
               <input type="email;
                 placeholder="Enter your email;
-                className="flex - 1 px - 4 py - 2 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue - 500 focus:border - transparent"  />";
+                className="flex - 1 px - 4 py - 2 bg - gray - 800 border border - gray - 700 rounded - lg text - white placeholder - gray - 400 focus:outline - none focus:ring - 2 focus:ring - blue-500 focus:border-transparent"  />";
               <button type="submit;
-                className="bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - semibold hover:bg - blue - 700 transition - colors">;
+                className="bg - blue - 600 text - white px - 6 py - 2 rounded - lg font - semibold hover:bg - blue-700 transition-colors">;
                 Subscribe,
               </button>;
             </form>;
@@ -450,34 +443,33 @@ company updates.;
     </footer>,;
   )}"';
 
-        <div className="border - t border - gray - 800 pt - 8">";
-          <div className="flex flex - col md: flex - row justify - between items - center">";
-            <div className="text - gray - 400 text - sm mb - 4 md:mb - 0">,
+        <div className="border - t border - gray-800 pt-8">";
+          <div className="flex flex - col md: flex - row justify-between items-center">";
+            <div className="text - gray - 400 text - sm mb-4 md:mb-0">,
               © {current_year} Zion Tech Group. All rights reserved.;
             </div>";
-            <div className="flex items - center space - x-6">";
-              <div className="flex items - center space - x-4">;
+            <div className="flex items-center space-x-6">";
+              <div className="flex items-center space-x-4">;
                 {social_links.map (social => (";
                   <a key="{social.name}
                     href="{social.href}
                     target="_blank;
                     rel="noopener noreferrer;
-                    className="text - gray - 400 hover: text - white transition - colors"">;
+                    className="text - gray - 400 hover: text-white transition-colors"">;
                     aria - label="{social.name}">";
-                    <social.icon className="w - 5 h - 5" />;
+                    <social.icon className="w-5 h-5" />;
                   </a>))}
               </div>;
       {/* comment */}";
       <button on_click="{scrollToTop}
-        className="fixed bottom - 8 right - 8 bg - blue - 600 hover: bg - blue - 700 text - white p - 3 rounded - full shadow - lg transition - colors z - 50;
-        aria - label="Scroll to top">";
-        <ArrowUp className="w - 5 h - 5"  />;
+        className="fixed bottom - 8 right - 8 bg - blue - 600 hover: bg - blue - 700 text - white p - 3 rounded - full shadow - lg transition - colors z-50;
+        aria-label="Scroll to top">";
+        <ArrowUp className="w-5 h-5"  />;
       </button>,
     </footer>,
   )}"';
-  );
+  )
 };export default EnhancedFooter;  )
 
 };
-
 

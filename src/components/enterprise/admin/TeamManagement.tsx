@@ -1,4 +1,3 @@
-<<<<<<< HEAD
   // Mock team members data
   const teamMembers = [
     {
@@ -30,28 +29,20 @@
       status: "active",
       lastActive: "3 days ago"}],
 
-  const handleAddMember = () => {
-=======
-const handleAddMember = () => {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    // In a real app, this would make an API call to add the member
+  const handleAddMember = () => {    // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
-
 
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
 
-
       return
     }
     toast({
 
-
       title: 'Invitation sent',
       description: `An invitation has been sent to ${newMemberEmail}`,
-
 
     })
     setNewMemberEmail('')
@@ -70,8 +61,6 @@ const handleAddMember = () => {
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
-<<<<<<< HEAD
-=======
   Table,
   TableBody,
   TableCell,
@@ -176,8 +165,6 @@ if ( {) {
     });
   }
 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         title: "Email required",
         description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
@@ -206,9 +193,6 @@ if ( {) {
       title: "Invitation resent",
       description: `A new invitation has been sent to ${memberEmail}`})
   },
-
-
-
 
   return (
     <div className="space-y-6">
@@ -268,7 +252,6 @@ if ( {) {
           </DialogContent>
         </Dialog>
       </div>
-
 
       <div className="rounded-md border">
 
@@ -412,37 +395,37 @@ export function TeamManagement() {;
     // In a real app, this would make an API call to add the member;
     if (!newMemberEmail) {;
       toast({;
-        title: 'Email required',;
-        description: 'Please enter an email address for the new team member.',;
+        title: 'Email required',,
+  description: 'Please enter an email address for the new team member.',;
         variant: 'destructive',;
       });
       return;
     }
 
     toast({;
-      title: 'Invitation sent',;
-      description: `An invitation has been sent to ${newMemberEmail}`,;
+      title: 'Invitation sent',,
+  description: `An invitation has been sent to ${newMemberEmail}`,;
     });
 
     setNewMemberEmail('');
-    setIsAddingMember(false);
-  };
+    setIsAddingMember(false)
+};
 
   const handleRemoveMember = (_memberId: number,) => {;
     // In a real app, this would make an API call to remove the member;
     toast({;
-      title: 'Team member removed',;
-      description: 'The team member has been removed from your workspace.',;
-    });
-  };
+      title: 'Team member removed',,
+  description: 'The team member has been removed from your workspace.',;
+    })
+};
 
   const handleResendInvite = (memberEmail: string,) => {;
     // In a real app, this would make an API call to resend the invitation;
     toast({;
-      title: 'Invitation resent',;
-      description: `A new invitation has been sent to ${memberEmail}`,;
-    });
-  };
+      title: 'Invitation resent',,
+  description: `A new invitation has been sent to ${memberEmail}`,;
+    })
+};
 
   return (
 
@@ -577,81 +560,9 @@ export function TeamManagement() {;
                   </div>;
                 </TableCell>;
 
-
-
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
 <<<<<<< HEAD
-=======
-
-
-
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>;
-  );
-
-
-
-                <TableCell>{member.role}</TableCell>;
-                <TableCell>;
-                  <Badge;
-                    variant={member.status === 'active' ? 'default' : 'outline'}                  >;
-                    {member.status}
-                  </Badge>;
-                </TableCell>;
-                <TableCell>{member.last_active}</TableCell>;
-                <TableCell className='text - right'>;
-                  <div className='flex justify - end gap - 2'>;
-                    {member.status === 'pending' ? (
-                      <Button;
-                        variant='ghost';
-                        size='sm';
-                        on_click={() => handleResendInvite (member.email)}                      >;
-                        <Mail className='h - 4 w - 4 mr - 1' />;
-                        Resend;
-                      </Button>) : (
-                      <Button;
-                        variant='ghost';
-                        size='sm';
-                        className='text - destructive hover:text - destructive';
-                        on_click={() => handleRemoveMember (member.id)}                      >;
-                        <Trash className='h - 4 w - 4' />;
-                      </Button>)}
-                  </div>;
-                </TableCell>;
-              </TableRow>))}
-          </TableBody>;
-        </Table>;
-      </div>;
-    </div>);
-  //In a real app, this would make an API call to remove the member toast ({
-}
-  //In a real app, this would make an API call to resend the invitation toast ({
-}";
-  handleAddMember ";
-}>Send Invitation</Button> </DialogFooter> </DialogContent> </Dialog> </div> <div className=" rounded - md border"> <Table> <TableHeader> <TableRow> <TableHead > Name</TableHead> <TableHead > Role</TableHead> <TableHead > Status</TableHead> <TableHead > Last Active</TableHead> <TableHead className=" text - right">Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
-  team_members.map ( (member) => (<TableRow key= {
-  member.id ";
-}> <TableCell> .join ("");
-}</span> </div> <div> </div> </div> </div> </TableCell> <TableCell> {
-  member.role;
-}</TableCell> <TableCell> <Badge > {
-  member.status;
-}</Badge> </TableCell> <TableCell> {
-  member.last_active ";
-}</TableCell> <TableCell className="text - right"> on_click={
-  () => handleResendInvite (member.email) ";
-}> <Mail className="h - 4 w - 4 mr - 1"/> Resend </Button> className="text - destructive hover:text - destructive"on_click={
-  () => handleRemoveMember (member.id) ";
-}> <Trash className="h - 4 w - 4" /> </Button>);
-}</div> </TableCell> </TableRow>) );
-}</TableBody> </Table> </div> </div>);
-}'"}
-}
-;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

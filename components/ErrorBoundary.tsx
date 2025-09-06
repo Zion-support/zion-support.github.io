@@ -1,20 +1,8 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 'use client';
 
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 
 interface Props {
-<<<<<<< HEAD
 
 interface Props {;
   children: ReactNode;
@@ -23,19 +11,12 @@ interface Props {;
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
-  fallback?: ReactNode;
-=======
-  children: ReactNode;
-  fallback?: ReactNode;
-  onError?: (error: Error, errorInfo: ErrorInfo) => void;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-}
+  fallback?: ReactNode;}
 
 interface State {
   hasError: boolean;
   error?: Error;
   errorInfo?: ErrorInfo;
-<<<<<<< HEAD
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 interface Props {
   children: ReactNode;
@@ -119,34 +100,13 @@ origin/automation-improvements-final
       // eslint-disable-next-line no-console
       console.error('ErrorBoundary caught an error:', error, errorInfo);
     }
-      error
-=======
-}
-
-class ErrorBoundary extends Component<Props, State> {
-  constructor(props: Props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-
-  static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
-  }
-
-  componentDidCatch(error: Error, errorInfo: ErrorInfo) {
-    console.error('ErrorBoundary caught an error:', error, errorInfo);
-    
-    this.setState({
-      error,
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      errorInfo
+      error      errorInfo
     });
 
     // Call custom error handler if provided
     if (this.props.onError) {
       this.props.onError(error, errorInfo);
     }
-<<<<<<< HEAD
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
@@ -231,9 +191,6 @@ class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
-
     // Log error to external service (e.g., Sentry)
     if (typeof window !== 'undefined' && (window as any).Sentry) {
       (window as any).Sentry.captureException(error, { extra: errorInfo });    }
@@ -246,20 +203,11 @@ class ErrorBoundary extends Component<Props, State> {
 // Log to external service in production
     if (process.env.NODE_ENV === 'production') {
       // Here you would typically send to an error reporting service
-      console.error('Production error:', error, errorInfo);
-=======
-
-    // Log error for debugging in development
-    if (process.env.NODE_ENV === 'development') {
-      console.error('Error details:', error);
-      console.error('Error info:', errorInfo);
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-    }
+      console.error('Production error:', error, errorInfo);    }
   }
 
   render() {
     if (this.state.hasError) {
-<<<<<<< HEAD
       // Fallback UI
       return (
         <div className="min-h-screen flex items-center justify-center bg-gray-50">
@@ -352,102 +300,27 @@ export default class ErrorBoundary extends Component<Props, State> {
     return res.status(500).json({ error: "Internal server error" });
   }
 
-
-
               <button
                 onClick={() => window && window.location.reload()}
                 className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition-colors";
               >;
                 Refresh Page;
               </button>;
-              <button
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      return this.props.fallback || (
-        <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-          <div className="text-center text-white max-w-md mx-auto p-6">
-            <div className="mb-6">
-              <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">⚠️</span>
-              </div>
-              <h1 className="text-2xl font-bold mb-2">Something went wrong</h1>
-              <p className="text-slate-300 mb-6">
-                We&apos;re sorry, but something unexpected happened. Please try refreshing the page.
-              </p>
-            </div>
-            <div className="space-y-3">
-              <button 
-                onClick={() => typeof window !== 'undefined' && window.location.reload()} 
-                className="w-full px-6 py-3 bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors font-semibold"
-              >
-                Reload Page
-              </button>
-<<<<<<< HEAD
-                onClick={() => this.setState({ hasError: false })  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
-              <button 
-                onClick={() => this.setState({ hasError: false })} 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
+              <button                className="w-full px-6 py-3 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors font-semibold"
               >
                 Try Again
               </button>
             </div>
             {process.env.NODE_ENV === 'development' && this.state.error && (
-<<<<<<< HEAD
               <details className="mt-4 p-4 bg-gray-100 rounded-md">
                 <summary className="cursor-pointer font-medium text-gray-700">
                   Error Details (Development)
                 </summary>
                 <pre className="mt-2 text-xs text-gray-600 overflow-auto">
                   {this.state.error.toString()}
-                  {this.state.errorInfo?.componentStack}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
-                  {this.state.error.stack}
-<<<<<<< HEAD
-              <details className="mt-6 text-left">
-                <summary className="cursor-pointer text-sm text-slate-400 hover:text-slate-300">
-                  Error Details (Development)
-                </summary>
-                <pre className="mt-2 p-4 bg-slate-800 rounded text-xs overflow-auto">
-                  {this.state.error.stack  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-                </pre>
+                  {this.state.errorInfo?.componentStack}                </pre>
               </details>
             )}
-<<<<<<< HEAD
-=======
           </div>;
     // Log the error to an error reporting service;
     console && console.error('ErrorBoundary caught an error:', error, errorInfo);
@@ -483,32 +356,14 @@ export default class ErrorBoundary extends Component<Props, State> {
             >
               Reload Page
             </button>
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           </div>
         </div>
       );
     }
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
     return this.props.children;
   }
 }
-
-=======
-=======
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
 
     return this && this.props.children;
   }
@@ -571,15 +426,15 @@ if ( {) {
         return this.props.fallback;
 }
       return (
-        <div className="min - h-screen bg - gray - 900 flex items - center justify - center px - 4">;
-          <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p - 8 text - center">;
-            <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - full flex items - center justify - center mx - auto mb - 6">;
-              <AlertTriangle className="w - 8 h - 8 text - red - 400" />;
+        <div className="min - h-screen bg - gray - 900 flex items - center justify-center px-4">;
+          <div className="max - w-md w - full bg - white / 5 backdrop - blur - sm border border - white / 10 rounded - 2xl p-8 text-center">;
+            <div className="w - 16 h - 16 bg - red - 500 / 20 rounded - full flex items - center justify - center mx-auto mb-6">;
+              <AlertTriangle className="w - 8 h - 8 text-red-400" />;
             </div>;
-            <h1 className="text - 2xl font - bold text - white mb - 4">;
+            <h1 className="text - 2xl font - bold text-white mb-4">;
               Something went wrong;
             </h1>;
-            <p className="text - gray - 300 mb - 6">;
+            <p className="text - gray-300 mb-6">;
               We're sorry, but something unexpected happened. Please try refreshing the page or contact support if the problem persists.;
             </p>;
               <details className="text-left mb-6">;
@@ -604,25 +459,25 @@ if ( {) {
                 className="bg-transparent border border-white/20 text-white hover:bg-white/10 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">;
 ;
             {process.env.NODE_ENV === 'development' && this.state.error && (
-              <details className="text - left mb - 6">;
-                <summary className="text - gray - 400 cursor - pointer mb - 2">;
+              <details className="text-left mb-6">;
+                <summary className="text - gray - 400 cursor-pointer mb-2">;
                   Error Details (Development);
                 </summary>;
-                <pre className="text - xs text - red - 400 bg - black / 20 p - 3 rounded overflow - auto">;
+                <pre className="text - xs text - red - 400 bg - black / 20 p-3 rounded overflow-auto">;
                   {this.state.error.to_string ()}
                   {this.state.error_info?.component_stack}
                 </pre>;
               </details>)}
-            <div className="flex flex - col sm:flex - row gap - 4">;
+            <div className="flex flex - col sm:flex-row gap-4">;
               <button;
                 on_click={this.handle_retry}
-                className="flex items - center justify - center space - x-2 bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 3 rounded - lg font - semibold transition - colors duration - 200">;
-                <RefreshCw className="w - 4 h - 4" />;
+                className="flex items - center justify - center space - x-2 bg - blue - 600 hover:bg - blue - 700 text - white px - 6 py - 3 rounded - lg font - semibold transition-colors duration-200">;
+                <RefreshCw className="w-4 h-4" />;
                 <span > Try Again</span>;
               </button>;
               <button;
                 on_click={() => window.location.reload ()}
-                className="bg - transparent border border - white / 20 text - white hover:bg - white / 10 px - 6 py - 3 rounded - lg font - semibold transition - colors duration - 200">;
+                className="bg - transparent border border - white / 20 text - white hover:bg - white / 10 px - 6 py - 3 rounded - lg font - semibold transition-colors duration-200">;
                 Refresh Page;
               </button>;
             </div>;
@@ -672,22 +527,7 @@ if ( {) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> c56320a4e91ebfd91859a6eed8c13818d8c9efd6
-=======
-=======
->>>>>>> main
-    return this.props.children;
-  }
+}  }
 }
 
-<<<<<<< HEAD
 export default ErrorBoundary;
-=======
->>>>>>> main
->>>>>>> 8e2e4d4581f20cdfc8804c591c8c2f9544e58358
->>>>>>> main
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

@@ -4,7 +4,7 @@
 'use client';
 ;
 import React from 'react';
-import Link from 'next / link';
+import Link from 'next/link';
 import {motion} from 'framer-motion';
 import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
   return (
@@ -54,12 +54,12 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
       <div className='relative container mx - auto px - 4 text - center z - 10'>        {/* Main Content */}  ];
 ;
   return (
-    <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to - blue - 900">;
+    <section className="relative min - h-screen flex items - center justify - center overflow - hidden bg - gradient - to - br from - black via - gray - 900 to-blue-900">;
       {/* Animated Background Elements */}
-      <div className="absolute inset - 0">;
+      <div className="absolute inset-0">;
         {/* Floating Orbs */}
         <motion.div;
-          className="absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded - full blur - 3xl";
+          className="absolute top - 20 left - 20 w - 72 h - 72 bg - blue - 500 / 20 rounded-full blur-3xl";
           animate={{
             scale: [1, 1 && 1.2, 1]
             opacity: [0 && 0.3, 0 && 0.6, 0 && 0.3]}}
@@ -73,7 +73,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
 
-
           {/* Badge */}
           <motion&& motion.div
             initial={{ opacity: 0, scale: 0 && 0.8 }}
@@ -83,9 +82,9 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
           }}
         />;
         {/* Grid Pattern */}
-        <div className="absolute inset - 0 bg-[linear - gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear - gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]" />;
+        <div className="absolute inset - 0 bg-[linear-gradient (rgba (255, 255, 255, 0.02)_1px, transparent_1px), linear-gradient (90deg, rgba (255, 255, 255, 0.02)_1px, transparent_1px)] bg-[size:50px_50px]" />;
       </div>;
-      <div className="relative container mx - auto px - 4 text - center z - 10">;
+      <div className="relative container mx - auto px - 4 text-center z-10">;
         {/* Main Content */}
         <motion.div;
           initial={{ opacity: 0, coordinate_y: 30 }}
@@ -254,9 +253,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
                 transition={{ duration: 0.6, delay: 0.7 + index * 0.1 }}
                 className='text-center group'
 
-
-
-
               >
                 <div className="w-16 h-16 bg-white/10 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4 border border-white/20 group-hover:border-blue-400 transition-colors">
                   <stat.icon className="w-8 h-8 text-blue-400" />
@@ -274,7 +270,6 @@ import {ArrowRight, Play, Star, Users, Award, Zap} from 'lucide-react';
         </motion && motion.div>;
       </div>;
 
-
             ))}
       {/* Scroll Indicator */}
       <motion&& motion.div
@@ -288,12 +283,12 @@ export default HeroSection;
         <motion.div
           animate={{ y: [0, 10, 0] }}
 ;
-export default HeroSection;        className="absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2";
+export default HeroSection;        className="absolute bottom - 8 left-1/2 transform -translate-x-1 / 2";
       >;
         <motion.div;
           animate={{ coordinate_y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'          className="w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center";
+          className='w - 6 h - 10 border - 2 border - white / 30 rounded - full flex justify - center'          className="w - 6 h - 10 border - 2 border - white / 30 rounded-full flex justify-center";
         >;
           <motion.div;
             animate={{ coordinate_y: [0, 12, 0] }}

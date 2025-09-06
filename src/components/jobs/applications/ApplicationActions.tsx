@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 return (
     <div className='flex items-center justify-end gap-2'>;
       <Button
@@ -49,7 +47,6 @@ return (
             onClick={() => onStatusChange(application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
 
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import Link from "next/link",
 import { 
   DropdownMenu,
@@ -121,24 +118,14 @@ export function ApplicationActions({
             className="text-red-600"
           >
 
-
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-<<<<<<< HEAD
-=======
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-      
 
       
       
-<<<<<<< HEAD
-=======
 
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       <Button 
         variant="default" 
         size="sm"
@@ -168,7 +155,7 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
 
-import Link from 'next / link';
+import Link from 'next/link';
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -222,42 +209,18 @@ export function ApplicationActions({;
             Shortlist;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-<<<<<<< HEAD
-=======
-            onClick={() => onStatusChange(application.id, "interview")}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          >;
             Schedule Interview;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-<<<<<<< HEAD
-=======
             onClick={() => onStatusChange(application.id, "hired")}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
           >;
             Hire;
           </DropdownMenuItem>;
           <DropdownMenuItem;
-<<<<<<< HEAD
-=======
-            on_click={() => onStatusChange (application.id, 'rejected')}
-            className='text - red - 600'          >            on_click={() => onStatusChange (application.id, "hired")}
-          >;
-            Hire;
-          </DropdownMenuItem>;
-          <DropdownMenuItem;
-            on_click={() => onStatusChange (application.id, "rejected")}
-            className="text - red - 600";
-
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
-          >;
             Reject;
           </DropdownMenuItem>;
         </DropdownMenuContent>;
       </DropdownMenu>;
-<<<<<<< HEAD
-=======
-
 
   );
 }
@@ -272,4 +235,3 @@ export function ApplicationActions({;
       </Button>;
     </div>);
 }
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

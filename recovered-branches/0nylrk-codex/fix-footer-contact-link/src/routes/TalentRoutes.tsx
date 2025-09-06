@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Route, Routes } from "react-router-dom",
 import { ProtectedRoute } from "../components/ProtectedRoute",
 import TalentDirectory from "../pages/TalentDirectory",
@@ -12,23 +11,8 @@ import CreateTalentProfile from "../pages/CreateTalentProfile",
 import ProfilePage from "../pages/ProfilePage",
 const TalentRoutes = () => {
   return (
-    <Routes>
-=======
-import { Route, Routes } from "react-router-dom";
-import { ProtectedRoute } from "../components/ProtectedRoute";
-import TalentDirectory from "../pages/TalentDirectory";
-import TalentsPage from "../pages/TalentsPage";
-import TalentProfilePage from "../pages/TalentProfilePage";
-import SavedTalentsPage from "../pages/SavedTalentsPage";
-import CreateTalentProfile from "../pages/CreateTalentProfile";
-import ProfilePage from "../pages/ProfilePage";
-const TalentRoutes = () => {
-=======
-const TalentRoutes = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-  return (
+    <Routes>  return (
     <Routes>;
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       {/* Talent Routes */}
       <Route path="/talent" element={<TalentDirectory />} />
       <Route path="/talents" element={<TalentsPage />} />
@@ -51,27 +35,14 @@ const TalentRoutes = () => {;
       />
       <Route path="/profile/:id" element={<ProfilePage />} />
     </Routes>
-  );
+  )
 };
-
-
-<<<<<<< HEAD
-
 
 const TalentRoutes = () => {
 const TalentRoutes = () => {;
   return (
     <Routes>;
       {/* Talent Routes */}
-
-=======
-=======
-=======
-};
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 import { Route, Routes } from './react-router-dom';
 import { ProtectedRoute } from '../components / ProtectedRoute';
 import TalentDirectory from "../pages / TalentDirectory";
@@ -108,35 +79,4 @@ const TalentRoutes = () =>: any {
 }
 ;
 export default TalentRoutes;
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 ;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  ),;
-},;
-;export default TalentRoutes,
- const TalentRoutes = () => {
-  return (<Routes> {
-  /* Talent Routes */ 
-}<Route path="/talent" element= {
-  <TalentDirectory /> 
-}/> <Route path="/talents" element= {
-  <TalentsPage /> 
-}/> <Route path="/talent/:id" element= {
-  <TalentProfilePage /> 
-}/> <Route path="/saved-talents" element= {
-  <ProtectedRoute> 
-}/> <Route <CreateTalentProfile /> </ProtectedRoute> 
-}/> </Routes>) 
-};
-export default TalentRoutes;
-  );
-},;
-export default TalentRoutes;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

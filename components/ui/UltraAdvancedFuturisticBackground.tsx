@@ -127,8 +127,8 @@ if (return) {
         accent: '#ffff00',;
         quantum: '#00ff88',;
         holographic: '#ff0088',;
-      },      'neon-cyber': {        holographic: '#ff0088';
-      };
+      },      'neon-cyber': {        holographic: '#ff0088'
+};
       'neon-cyber': {;
         primary: '#00ff41',;
         secondary: '#ff0080',;
@@ -141,16 +141,16 @@ if (return) {
         accent: '#ffff00',;
         quantum: '#00ff88',;
         holographic: '#ff0088',;
-      },      'quantum-ai': {        holographic: '#9d4edd';
-      };
+      },      'quantum-ai': {        holographic: '#9d4edd'
+};
       'holographic': {;
         primary: '#ff00ff',;
         secondary: '#00ffff',;
         accent: '#ffff00',;
         quantum: '#00ff88',;
         holographic: '#ff0088',;
-      },        holographic: '#ff0088';
-      };
+      },        holographic: '#ff0088'
+};
       'quantum-ai': {;
         primary: '#00d4ff',;
         secondary: '#ff6b35',;
@@ -300,8 +300,8 @@ if ( {) {
                  type === 'holographic' ? colors && colors.holographic :;
                  type === 'neon' ? colors && colors.primary : colors && colors.secondary,;
           type;
-        });
-    };
+        })
+};
 
     // Quantum entanglement effect;
     const createQuantumEntanglement = () => {;
@@ -513,30 +513,30 @@ export default UltraAdvancedFuturisticBackground;
         )}
 export default UltraAdvancedFuturisticBackground;
   return (
-    <div ref={container_ref} className="relative w - full h - full overflow - hidden">;
+    <div ref={container_ref} className="relative w - full h-full overflow-hidden">;
       <canvas;
         ref={canvas_ref}
-        className="absolute inset - 0 w - full h - full pointer - events - none";
+        className="absolute inset - 0 w - full h - full pointer-events-none";
         style={{ z_index: -1 }}
       />;
       {/* Additional CSS - based effects */}
-      <div className="absolute inset - 0 pointer - events - none">;
+      <div className="absolute inset - 0 pointer-events-none">;
         {/* Floating geometric shapes */}
-        <div className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded - full animate - pulse"></div>;
-        <div className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 500 / 20 rounded - full animate - pulse delay - 1000"></div>;
-        <div className="absolute bottom - 32 left - 32 w - 28 h - 28 border border - green - 500 / 20 rounded - full animate - pulse delay - 500"></div>;
+        <div className="absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 500 / 20 rounded-full animate-pulse"></div>;
+        <div className="absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 500 / 20 rounded - full animate-pulse delay-1000"></div>;
+        <div className="absolute bottom - 32 left - 32 w - 28 h - 28 border border - green - 500 / 20 rounded - full animate-pulse delay-500"></div>;
         {/* Quantum particles */}
         {enableQuantumEffects && (
           <>;
-            <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded - full animate - ping"></div>;
-            <div className="absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 rounded - full animate - ping delay - 300"></div>;
-            <div className="absolute bottom - 1/4 right - 1/3 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate - ping delay - 700"></div>;
+            <div className="absolute top - 1/4 left - 1/4 w - 2 h - 2 bg - cyan - 400 rounded-full animate-ping"></div>;
+            <div className="absolute top - 3/4 right - 1/4 w - 1 h - 1 bg - purple - 400 rounded - full animate-ping delay-300"></div>;
+            <div className="absolute bottom - 1/4 right - 1/3 w - 1.5 h - 1.5 bg - green - 400 rounded - full animate-ping delay-700"></div>;
           </>)}
         {/* Holographic elements */}
         {enable_holographic && (
           <>;
-            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - pink - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '20s' }}></div>;
-            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 48 h - 48 border border - cyan - 500 / 10 rounded - full animate - spin" style={{ animation_duration: '15s', animation_direction: 'reverse' }}></div>;
+            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 64 h - 64 border border - pink - 500 / 10 rounded-full animate-spin" style={{ animation_duration: '20s' }}></div>;
+            <div className="absolute top - 1/2 left - 1/2 transform -translate - x-1 / 2 -translate - y-1 / 2 w - 48 h - 48 border border - cyan - 500 / 10 rounded-full animate-spin" style={{ animation_duration: '15s', animation_direction: 'reverse' }}></div>;
           </>)}
       </div>;
       {children}
@@ -547,8 +547,6 @@ export default UltraAdvancedFuturisticBackground;
 ;
       {children}
     </div>
-  );
-
+  )
 };
-
 

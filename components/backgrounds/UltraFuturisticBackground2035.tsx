@@ -1,6 +1,5 @@
 
 
-
   const canvasRef = useRef<HTMLCanvasElement>(null);
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -304,7 +303,6 @@ if ( {) {
               repeat: Infinity,
               delay: Math.random() * 2,
 
-
           />
           />;
         ))}
@@ -369,7 +367,7 @@ if ( {) {
           className='absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan - 500 / 50 to - transparent';
           animate={{
             scale_x: [0, 1, 0],
-            opacity: [0, 1, 0],          className="absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan - 500 / 50 to - transparent";
+            opacity: [0, 1, 0],          className="absolute top - 1/2 left - 0 w - full h - px bg - gradient - to - r from - transparent via - cyan-500 / 50 to-transparent";
           animate={{
             scale_x: [0, 1, 0];
             opacity: [0, 1, 0];
@@ -385,7 +383,6 @@ if ( {) {
             ease: 'easeInOut',          }}
 
         />;
-
 
         {/* Quantum Dots */}
         {[...Array(15)].map((_, i) => (;
@@ -516,7 +513,6 @@ if ( {) {
         {/* Holographic Effects */}
         <div className='absolute inset-0'>
 
-
           <motion.div
             className='absolute top-1/4 left-1/4 w-64 h-64 border border-cyan-500/30 rounded-full'
                 delay: i * 0.5,
@@ -576,7 +572,6 @@ if ( {) {
               }}
               animate={{
 
-
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
@@ -585,11 +580,7 @@ if ( {) {
 
               }}
 
-
-
               }}
-
-
 
             />
           ))}
