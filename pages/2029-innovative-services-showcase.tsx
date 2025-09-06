@@ -70,7 +70,7 @@ export default function InnovativeServicesShowcase2029() {
                 2029 Innovative Services
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-4xl mx-auto">
-                Experience the future of technology with our revolutionary AI autonomous ecosystems, 
+                Experience the future of technology with our revolutionary AI autonomous ecosystems,
                 emerging tech breakthroughs, and practical business solutions that will transform your business.
               </p>
               <div className="flex flex-wrap justify-center gap-4">

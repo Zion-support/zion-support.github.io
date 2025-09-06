@@ -208,5 +208,5 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
         </div>
       </form>
     </Form>
-  )
+  );
 }

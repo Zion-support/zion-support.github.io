@@ -42,7 +42,6 @@ export function LoginForm() {
       email: "",
       password: "",
       rememberMe: false}}),
-
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return;
 
@@ -64,7 +63,7 @@ export function LoginForm() {
         fireEvent('login', { method: 'email' })
       }
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -116,7 +115,7 @@ export function LoginForm() {
           const firstError = Object.keys(errors)[0] as keyof LoginFormValues;
           if (firstError) {
             form.setFocus(firstError)
-          }
+          };
         })}
         className="space-y-6"
       >
@@ -249,5 +248,5 @@ export function LoginForm() {
         </p>
       </form>
     </Form>
-  )
+  );
 }

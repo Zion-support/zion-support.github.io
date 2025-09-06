@@ -42,7 +42,6 @@ export default function CloudMonitoringPage() {
       description: 'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
       color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}],
-
   const monitoringCapabilities = [
     {
       category: 'Infrastructure',
@@ -455,5 +454,5 @@ export default function CloudMonitoringPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

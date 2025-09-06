@@ -55,7 +55,6 @@ export function AddMilestoneForm({
       title: '',
       description: '',
       amount: 0}}),
-
   const handleSubmit = (values: MilestoneFormValues) => {
     onSubmit(values);
     form.reset()
@@ -230,5 +229,5 @@ export function AddMilestoneForm({
         </form>
       </Form>
     </div>
-  )
+  );
 }

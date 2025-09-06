@@ -5,7 +5,6 @@ const features = [
   { key: 'custom_sla', label: 'Custom SLA' },
   { key: 'branded_onboarding', label: 'Branded onboarding' },
   { key: 'admin_dashboards', label: 'Admin dashboards' }],
-
 const tiers = [
   {
     id: 'teams',
@@ -28,7 +27,6 @@ const tiers = [
     blurb: 'Unlimited users, custom contracts and SLAs';
     highlights: ['Unlimited seatsCustom SLADedicated CSM'],
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
-
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>

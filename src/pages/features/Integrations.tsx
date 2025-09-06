@@ -72,5 +72,5 @@ export default function IntegrationsFeature() {
         </div>
       </main>
     </>
-  )
+  );
 }

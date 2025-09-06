@@ -7,5 +7,5 @@ export default function ReportProblemButton({ projectId, entityType, entityId }:
         Report a Problem
       </a>
     </Link>
-  )
+  );
 }

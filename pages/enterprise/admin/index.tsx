@@ -1,9 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import Link from 'next/link';
 type Member = { id: string, name: string, email: string, role: 'admin' | 'manager' | 'recruiter' | 'viewer' },
-
 type Usage = { monthlyJobPosts: number, budgetCapUsd: number },
-
 type Invoice = { id: string, number: string, amountUsd: number, periodStartIso: string, periodEndIso: string, status: string },
 
 const COMPANY_ID = 'cmp_acme';

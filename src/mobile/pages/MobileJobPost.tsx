@@ -102,7 +102,7 @@ export function MobileJobPost() {
       
       <BottomNavigation />
     </div>
-  )
+  );
 }
 
 function DetailsStep() {
@@ -158,7 +158,7 @@ function DetailsStep() {
         />
       </div>
     </div>
-  )
+  );
 }
 
 function RequirementsStep() {
@@ -339,7 +339,7 @@ function BudgetStep() {
         />
       </div>
     </div>
-  )
+  );
 }
 
 function PreviewStep() {
@@ -382,5 +382,5 @@ function PreviewStep() {
       
       <Button variant="outline" className="w-full">Edit Job Post</Button>
     </div>
-  )
+  );
 }

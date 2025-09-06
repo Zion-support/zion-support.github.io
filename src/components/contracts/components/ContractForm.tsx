@@ -163,5 +163,5 @@ export function ContractForm({
         </Button>
       </DialogFooter>
     </>
-  )
+  );
 }

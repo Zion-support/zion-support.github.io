@@ -453,5 +453,5 @@ export default function AIBusinessToolsPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

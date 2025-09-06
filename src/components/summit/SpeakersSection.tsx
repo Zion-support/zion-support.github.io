@@ -16,7 +16,6 @@ const speakers: Speaker[] = [
     avatar: 'https://placehold.co/100x100',
     twitter: '#',
     linkedin: '#'}],
-
 export function SpeakersSection() {
   return (
     <section className="py-12 bg-zion-blue-dark text-white" id="speakers">
@@ -66,5 +65,5 @@ export function SpeakersSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

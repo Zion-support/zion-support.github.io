@@ -73,7 +73,6 @@ export function TalentRegistrationForm() {
       hourlyRate: "",
       availability: "available",
       enhancedProfile: true}}),
-
   // Handle adding skill tags
   const handleAddSkill = () => {
     const skillInput = form.getValues("skills");
@@ -245,7 +244,7 @@ export function TalentRegistrationForm() {
         title: "Skills required",
         description: "Please add at least one skill to your profile.",
         variant: "destructive"}),
-      return
+      return;
     }
 
     setIsSubmitting(true);
@@ -313,7 +312,6 @@ export function TalentRegistrationForm() {
         toast({
           title: "Profile Created Successfully",
           description: "Your talent profile has been published and is now visible in the directory."}),
-        
         // Send notification email if we have user email
         if (userEmail && values.enhancedProfile && user?.id) {
           sendEnhancementNotification(user.id, userEmail)
@@ -348,7 +346,7 @@ export function TalentRegistrationForm() {
         title: "Error Creating Profile",
         description: error.message || "There was an error creating your profile. Please try again.",
         variant: "destructive"}),
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
 
@@ -771,5 +769,5 @@ export function TalentRegistrationForm() {
         </Form>
       </Card>
     </div>
-  )
+  );
 }

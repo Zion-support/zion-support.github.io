@@ -24,7 +24,7 @@ export function ModeToggle() {
     if (!isClient) return 'light', // Default for SSR
     
     if (theme === "system") {
-      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
     }
     return theme
   })();
@@ -37,7 +37,6 @@ export function ModeToggle() {
       const newTheme = isDarkMode ? "light" : "dark";
 
       logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
-
       // Apply the new theme via ThemeProvider
       toggleTheme();
 
@@ -115,7 +114,7 @@ export function ModeToggle() {
             <div className={`absolute -bottom-0.5 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full transition-all duration-300 ${
               isDarkMode 
                 ? 'bg-yellow-400 shadow-sm shadow-yellow-400/50' 
-                : 'bg-slate-600 dark:bg-slate-400'
+                : 'bg-slate-600 dark:bg-slate-400';
             } opacity-70 group-hover:opacity-100`} />
             
             <span className="sr-only">
@@ -134,5 +133,5 @@ export function ModeToggle() {
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
-  )
+  );
 }

@@ -456,5 +456,5 @@ export default function UltraFuturisticNavigation2028() {
         </div>
       )}
     </nav>
-  )
+  );
 }

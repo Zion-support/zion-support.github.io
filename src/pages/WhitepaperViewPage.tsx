@@ -47,7 +47,6 @@ const WhitepaperViewPage: React.FC = () => {
       try {
         const { data: responseData, error: funcError } = await supabase.functions.invoke('get-shared-whitepaper', {
           body: { id }}),
-
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
         if (responseData && (responseData as any).error) throw new Error((responseData as any).error);
         if (!responseData || !(responseData as any).whitepaper_data) {
@@ -57,7 +56,7 @@ const WhitepaperViewPage: React.FC = () => {
         setSharedData(responseData as SharedWhitepaper)
 
       } catch (e: any) {
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),
+        logErrorToProduction('Error fetching shared whitepaper:', { data: e }),
         setError(e.message || 'An unexpected error occurred.')
       } finally {
         setLoading(false)
@@ -102,13 +101,12 @@ const WhitepaperViewPage: React.FC = () => {
           <Link href="/"><ArrowLeft className="mr-2 h-4 w-4" /> Back to Home</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   const { whitepaper_data: whitepaper } = sharedData,
-
   return (
-    <div className="container mx-auto p-4 md:p-8 bg-gray-50 min-h-screen">
+    <div className="container mx-auto p-4 md: p-8 bg-gray-50 min-h-screen">
         <div className="mb-6 flex justify-between items-center">
             <Button asChild variant="outline">
                  <Link href={isAdmin ? "/admin/whitepaper-generator" : "/"}> {/* Sensible back link */}

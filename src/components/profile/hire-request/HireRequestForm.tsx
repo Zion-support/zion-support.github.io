@@ -71,5 +71,5 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
         </DialogFooter>
       </form>
     </Form>
-  )
+  );
 }

@@ -412,5 +412,5 @@ export default function InnovativeServicesShowcase() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

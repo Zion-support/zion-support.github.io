@@ -103,7 +103,6 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       toast({
         title: "Application sent",
         description: `Your application for "${job.title}" has been sent.`}),
-      
       onClose()
     } catch (error) {
       logErrorToProduction('Failed to send application:', { data: error }),
@@ -113,7 +112,7 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         variant: "destructive"
       })
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -172,5 +171,5 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
         </Button>
       </div>
     </>
-  )
+  );
 }

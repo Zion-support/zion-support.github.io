@@ -196,7 +196,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Category</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Category">Category</label>
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
@@ -212,7 +212,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Price Range</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Price Range">Price Range</label>
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
@@ -228,7 +228,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
 
                 {/* Sort Options */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">Sort By</label>
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-Sort By">Sort By</label>
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}

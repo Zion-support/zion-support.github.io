@@ -11,7 +11,6 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;

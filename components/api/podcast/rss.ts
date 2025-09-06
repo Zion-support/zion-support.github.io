@@ -30,7 +30,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       <guid isPermaLink="false">${e.id}</guid>
       <pubDate>${pubDate}</pubDate>
       <enclosure url="${audioUrl}" length="0" type="audio/mpeg" />
-    </item>`
+    </item>`;
     })
     .join('\n');
 

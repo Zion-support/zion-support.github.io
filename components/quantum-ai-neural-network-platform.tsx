@@ -61,7 +61,7 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
-              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power, 
+              Experience the future of AI with quantum-powered neural networks that deliver exponential computational power,
               quantum advantage, and unprecedented learning capabilities.
             </p>
             

@@ -6,7 +6,6 @@ import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
 type Props = { topic: string, posts: BlogPost[] },
-
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
   return (
     <div>

@@ -98,7 +98,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       opacity: number,
       life: number,
       maxLife: number,
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -155,7 +154,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       p1: Particle,
       p2: Particle,
       opacity: number,
-
       constructor(p1: Particle, p2: Particle) {
         this.p1 = p1;
         this.p2 = p2;
@@ -183,7 +181,6 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     let particles: Particle[] = [],
     let connections: Connection[] = [],
-
     // Initialize particles
     for (let i = 0, i < settings.particleCount, i++) {
       particles.push(new Particle())

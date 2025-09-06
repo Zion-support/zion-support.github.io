@@ -220,7 +220,7 @@ export default function ProfileDetail() {
                 id: profileData?.id || '',
                 full_name: profileData?.full_name || '',
                 professional_title: profileData?.professional_title || '',
-                hourly_rate: profileData?.hourly_rate || 0
+                hourly_rate: profileData?.hourly_rate || 0;
               }}
             />
             {/* Contact Information */}
@@ -299,5 +299,5 @@ export default function ProfileDetail() {
         </div>
       </div>
     </>
-  )
+  );
 }

@@ -55,7 +55,7 @@ const EnhancedFooter = () => {
         </div>
       </div>
     </footer>
-  )
+  );
 },
 
 export default EnhancedFooter;

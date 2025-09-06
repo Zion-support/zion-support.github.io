@@ -46,7 +46,6 @@ export default function UpdatePassword() {
     defaultValues: {
       password: "",
       confirmPassword: ""}}),
-
   useEffect(() => {
     // Extract access token from URL hash on the client
     const hash = typeof window !== 'undefined' ? window.location.hash : "";
@@ -76,11 +75,9 @@ export default function UpdatePassword() {
       await supabase.auth.setSession({
         access_token: accessToken,
         refresh_token: ''}),
-
       // Update the password
       const { error } = await supabase.auth.updateUser({
         password: data.password}),
-
       if (error) {
         toast({
           title: "Password update failed",
@@ -95,7 +92,6 @@ export default function UpdatePassword() {
       toast({
         title: "Password updated successfully",
         description: "You can now log in with your new password."}),
-
       // Clean auth state and redirect after a delay
       cleanupAuthState();
       setTimeout(() => {
@@ -246,5 +242,5 @@ export default function UpdatePassword() {
         </div>
       </div>
     </>
-  )
+  );
 }

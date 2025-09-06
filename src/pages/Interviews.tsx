@@ -31,7 +31,7 @@ function InterviewsContent() {
     .filter((interview) => {
       const interviewDate = parseISO(interview.scheduled_date);
       return isAfter(interviewDate, now) && 
-        ['confirmedrequested'].includes(interview.status)
+        ['confirmedrequested'].includes(interview.status);
     })
     .sort((a, b) => 
       parseISO(a.scheduled_date).getTime() - parseISO(b.scheduled_date).getTime()
@@ -77,7 +77,7 @@ function InterviewsContent() {
             <Calendar className="h-5 w-5 mr-2" />
             {format(parseISO(date), 'EEEE, MMMM d, yyyy')}
           </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-4">
             {interviews.map((interview) => (
               <InterviewCard 
                 key={interview.id} 
@@ -178,7 +178,7 @@ function InterviewsContent() {
         </Tabs>
       </main>
     </>
-  )
+  );
 }
 
 export default function Interviews() {
@@ -186,5 +186,5 @@ export default function Interviews() {
     <ProtectedRoute>
       <InterviewsContent />
     </ProtectedRoute>
-  )
+  );
 }

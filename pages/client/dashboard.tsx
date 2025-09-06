@@ -1,7 +1,6 @@
 import useSWR from 'swr';
 import Link from 'next/link';
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
-
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 

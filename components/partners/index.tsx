@@ -38,16 +38,16 @@ export default function Partners() {
         <div className="grid md:grid-cols-2 gap-8">
           <form onSubmit={submit} className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-xl font-medium mb-4">Partner Registration</h2>
-            <label className="block text-sm mb-2">Name</label>
+            <label className="block text-sm mb-2" htmlFor="input-Name">Name</label>
             <input className="w-full border rounded px-3 py-2 mb-4" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
-            <label className="block text-sm mb-2">Entity Type</label>
+            <label className="block text-sm mb-2" htmlFor="input-Entity Type">Entity Type</label>
             <input className="w-full border rounded px-3 py-2 mb-4" value={form.entityType} onChange={(e) => setForm({ ...form, entityType: e.target.value })} required />
-            <label className="block text-sm mb-2">Point of Contact</label>
+            <label className="block text-sm mb-2" htmlFor="input-Point of Contact">Point of Contact</label>
             <div className="grid grid-cols-2 gap-3 mb-4">
               <input placeholder="Name" className="border rounded px-3 py-2" value={form.pocName} onChange={(e) => setForm({ ...form, pocName: e.target.value })} required />
               <input placeholder="Email" type="email" className="border rounded px-3 py-2" value={form.pocEmail} onChange={(e) => setForm({ ...form, pocEmail: e.target.value })} required />
             </div>
-            <label className="block text-sm mb-2">Use Case</label>
+            <label className="block text-sm mb-2" htmlFor="input-Use Case">Use Case</label>
             <select className="w-full border rounded px-3 py-2 mb-6" value={form.useCaseType} onChange={(e) => setForm({ ...form, useCaseType: e.target.value })}>
               <option>Education Partnership</option>
               <option>Workforce Development</option>
@@ -90,5 +90,5 @@ export default function Partners() {
         )}
       </div>
     </div>
-  )
+  );
 }

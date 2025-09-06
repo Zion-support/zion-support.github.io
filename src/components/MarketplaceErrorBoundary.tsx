@@ -63,18 +63,17 @@ function MarketplaceErrorFallback({ error, resetErrorBoundary }: MarketplaceErro
         </div>
       </div>
     </div>
-  )
+  );
 }
 
 interface MarketplaceErrorBoundaryProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryProps) {
   const handleError = (error: Error, errorInfo: React.ErrorInfo) => {
     // Log boundary errors to Sentry
     logErrorToProduction('MarketplaceErrorBoundary caught an error:', error, { componentStack: errorInfo.componentStack }),
-    
     Sentry.withScope((scope) => {
       scope.setTag('errorBoundarymarketplace');
       scope.setContext('errorInfo', {
@@ -91,5 +90,5 @@ export function MarketplaceErrorBoundary({ children }: MarketplaceErrorBoundaryP
     >
       {children}
     </ErrorBoundary>
-  )
+  );
 } 

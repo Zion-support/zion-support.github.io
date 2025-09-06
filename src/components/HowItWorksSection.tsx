@@ -26,7 +26,6 @@ const getSteps = (t: any) => [
     title: t('how_it_works.done'),
     description: t('how_it_works.done_desc'),
     icon: Check}],
-
 export function HowItWorksSection({ className, style }: HowItWorksSectionProps) {
   const { t } = useTranslation();
   const steps = getSteps(t);
@@ -50,7 +49,7 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
               <div 
                 key={step.title}
                 className={`flex flex-col md:flex-row items-center ${
-                  index % 2 === 0 ? "md:flex-row-reverse" : ""
+                  index % 2 === 0 ? "md:flex-row-reverse" : "";
                 } relative`}
               >
                 <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
@@ -80,5 +79,5 @@ export function HowItWorksSection({ className, style }: HowItWorksSectionProps) 
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -100,7 +100,7 @@ export function ResumeWizard() {
         onCancel={() => setShowNewResumeForm(false)}
         isLoading={isLoading}
       />
-    )
+    );
   }
   
   return (
@@ -147,5 +147,5 @@ export function ResumeWizard() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

@@ -17,7 +17,6 @@ const initialProject: BookProject = {
     uiScreens: [],
     quoteCallouts: [
       { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}},
-
 function fileToBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -239,7 +238,7 @@ export default function BookBuilder() {
         <h2 className="font-semibold">Quote Callouts</h2>
         <div className="space-y-2">
           {project.visuals.quoteCallouts.map((q, i) => (
-            <div key={i} className="grid grid-cols-1 md:grid-cols-3 gap-2">
+            <div key={i} className="grid grid-cols-1 md: grid-cols-3 gap-2">
               <input
                 className="border rounded px-2 py-1"
                 value={q.text}
@@ -265,5 +264,5 @@ export default function BookBuilder() {
         </div>
       </section>
     </div>
-  )
+  );
 }

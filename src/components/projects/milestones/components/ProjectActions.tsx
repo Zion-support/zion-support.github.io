@@ -40,5 +40,5 @@ export function ProjectActions({
         </Button>
       )}
     </div>
-  )
+  );
 }

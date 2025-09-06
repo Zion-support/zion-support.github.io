@@ -26,7 +26,6 @@ const getBenefits = (t: any) => [
     title: t('benefits.cost_reduction'),
     description: t('benefits.cost_reduction_desc'),
     icon: <TrendingDown className="w-8 h-8" />}],
-
 export function BenefitsSection({ className, style }: BenefitsSectionProps) {
   const { t } = useTranslation();
   const benefits = getBenefits(t);
@@ -54,5 +53,5 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
       </div>
     </section>
-  )
+  );
 }

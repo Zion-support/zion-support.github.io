@@ -30,7 +30,6 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
           .select("*")
           .eq("client_id", user.id)
           .order("created_at", { ascending: false }),
-
         if (filter) {
           query = query.eq("status", filter)
         }
@@ -58,19 +57,17 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
   }
 
   if (jobs.length === 0) {
-    return (
-      <div className="text-center p-8 border rounded-md bg-muted/20">
+    return(<div className="text-center p-8 border rounded-md bg-muted/20">
         <p className="text-lg text-muted-foreground">
           {filter 
             ? `No jobs with status "${filter}" found.` 
-            : "You haven't posted any jobs yet."
-          }
+            : "You haven't posted any jobs yet.", }
         </p>
         <Button asChild className="mt-4">
           <Link href="/post-job">Post Your First Job</Link>
         </Button>
       </div>
-    )
+    );
   }
 
   const getStatusColor = (status: JobStatus) => {
@@ -93,7 +90,7 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         <Card 
           key={job.id} 
           className={`overflow-hidden cursor-pointer transition-shadow hover:shadow-md ${
-            onSelectJob ? "cursor-pointer" : ""
+            onSelectJob ? "cursor-pointer" : "";
           }`}
           onClick={() => onSelectJob?.(job.id, job.title)}
         >
@@ -153,5 +150,5 @@ export function JobsList({ filter, onSelectJob }: JobsListProps) {
         </Card>
       ))}
     </div>
-  )
+  );
 }

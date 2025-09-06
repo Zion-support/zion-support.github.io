@@ -59,7 +59,6 @@ export default function UltraQuantumHolographicBackground({
 
   const colors = colorSchemes[colorScheme];
   const intensityMultiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity],
-
   useEffect(() => {
     const updateDimensions = () => {
       setDimensions({
@@ -96,7 +95,6 @@ export default function UltraQuantumHolographicBackground({
       life: number,
       maxLife: number,
       type: 'quantum' | 'holographic' | 'energy' | 'matrix',
-
       constructor() {
         this.x = Math.random() * dimensions.width;
         this.y = Math.random() * dimensions.height;
@@ -305,7 +303,7 @@ export default function UltraQuantumHolographicBackground({
         className="fixed inset-0 w-full h-full pointer-events-none z-0"
         style={{
           background: colors.background,
-          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`
+          filter: `blur(${intensity === 'ultra' ? '0.5px' : '0px'})`;
         }}
       />
 

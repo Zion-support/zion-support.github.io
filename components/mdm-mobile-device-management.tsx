@@ -49,6 +49,6 @@ export default function MDMPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

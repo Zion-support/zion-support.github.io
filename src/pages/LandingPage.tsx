@@ -18,6 +18,7 @@ import { SocialShareSection } from "@/components/SocialShareSection";
 import { useTranslation } from "react-i18next";
 import { useLanguage } from "@/context/LanguageContext";
 import { ArrowRight, Users, Zap, Settings, Search, MessageSquare, Sparkles, BarChart3, Smartphone } from 'lucide-react'
+import { Zap } from 'lucide-react';
 
 export default function LandingPage() {
   const { t } = useTranslation();
@@ -126,5 +127,5 @@ export default function LandingPage() {
       <WaitlistSection />
       <FloatingCTA />
     </div>
-  )
+  );
 }

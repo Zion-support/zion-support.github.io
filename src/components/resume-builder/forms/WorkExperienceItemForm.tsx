@@ -140,7 +140,9 @@ export function WorkExperienceItemForm({
                       onCheckedChange={field.onChange}
                       id="current-position"
                     />
-                    <label htmlFor="current-position" className="text-sm text-muted-foreground">
+                    <label htmlFor="current-position" className="text-sm text-muted-foreground" htmlFor="input-
+                      I currently work here
+                    ">
                       I currently work here
                     </label>
                   </div>
@@ -251,7 +253,7 @@ export function WorkExperienceItemForm({
                       options={{
                         enhancementType: "work-description",
                         content: field.value || "",
-                        context: `${watchRoleTitle} at ${watchCompanyName}`
+                        context: `${watchRoleTitle} at ${watchCompanyName}`;
                       }}
                       onEnhanced={(content) => form.setValue("description", content, { shouldDirty: true })}
                       buttonText="Enhance with AI"
@@ -309,5 +311,5 @@ export function WorkExperienceItemForm({
         initialContent={form.getValues("description") || ""}
       />
     </>
-  )
+  );
 }

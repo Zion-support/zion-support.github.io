@@ -341,7 +341,7 @@ export default function Revolutionary2027ServicesShowcase() {
                         {/* Action Buttons */}
                         <div className="flex gap-2">
                           <a 
-                            href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover:from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
+                            href={service.link} className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-sm py-2 hover: from-cyan-600 hover:to-blue-700 transform hover:scale-105 transition-all duration-300">
                             <ArrowRight className="w-4 h-4 mr-1" />
                             Learn More
                           </a>

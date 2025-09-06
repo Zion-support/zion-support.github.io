@@ -74,7 +74,6 @@ const socialLinks = [
   { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: Linkedin },
   { name: 'Instagram', href: 'https://www.instagram.com/ziontechgroup', icon: Instagram },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Globe }],
-
 export default function EnhancedFooter() {
   const currentYear = new Date().getFullYear();
 >>>>>>> pr-11992
@@ -389,25 +388,6 @@ export default function EnhancedFooter() {
                 </span>
               </div>
             </div>
-<<<<<<< HEAD
-          </div>
-        </div>
-        {/* Bottom Section */}
-        <div className="border-t border-gray-700 mt-8 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-300 text-sm">
-              &copy; {currentYear} Zion Tech Group. All rights reserved.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-300 hover:text-blue-400 text-sm">
-=======
-            
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <a href="/terms" className="hover: text-cyan-400 transition-colors duration-200">
-                Terms of Service
-              </a>
-              <a href="/privacy" className="hover:text-cyan-400 transition-colors duration-200">
->>>>>>> pr-11992
                 Privacy Policy
               </Link>
               <Link href="/terms" className="text-gray-300 hover:text-blue-400 text-sm">
@@ -421,12 +401,3 @@ export default function EnhancedFooter() {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-  );
-};
-
-export default EnhancedFooter;
-=======
-  )
-}
->>>>>>> pr-11992

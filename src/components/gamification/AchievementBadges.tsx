@@ -32,5 +32,5 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
         ))}
       </CardContent>
     </Card>
-  )
+  );
 }

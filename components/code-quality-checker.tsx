@@ -34,7 +34,6 @@ export default function CodeQualityCheckerPage() {
       description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.';
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'}],
-
   const supportedLanguages = [
     { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checksReact best practices'] },
     { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hintsSecurity scanning'] },
@@ -130,8 +129,7 @@ export default function CodeQualityCheckerPage() {
             Code Quality Checker
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, 
-            security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
+            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages, security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.
           </p>
           
           {/* Code Input Form */}
@@ -448,5 +446,5 @@ export default function CodeQualityCheckerPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

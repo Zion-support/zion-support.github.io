@@ -15,7 +15,6 @@ export function PartnerReferralLinks() {
   const [selectedCampaign, setSelectedCampaign] = useState<string>("default");
   const [customParam, setCustomParam] = useState<string>("");
   const [generatedLinks, setGeneratedLinks] = useState<{name: string, link: string}[]>([]),
-  
   // Get the base referral link
   const baseLink = getReferralLink();
   
@@ -224,5 +223,5 @@ export function PartnerReferralLinks() {
         )}
       </div>
     </div>
-  )
+  );
 }

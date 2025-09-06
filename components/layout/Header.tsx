@@ -27,18 +27,6 @@ const Header: React.FC = () => {
   const navigationItems = [
     { name: 'Home', href: '/' },
     { name: 'Services', href: '/services' },
-<<<<<<< HEAD
-    { name: 'Solutions', href: '/solutions' },
-    { name: 'About', href: '/about' },
-    { name: 'Careers', href: '/careers' },
-    { name: 'Contact', href: '/contact' },
-  ];
-=======
-    { name: 'Resources', href: '/resources' },
-    { name: 'Case Studies', href: '/case-studies' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Contact', href: '/contact' }],
->>>>>>> pr-11992
 
   return (
     <header className="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800">

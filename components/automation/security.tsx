@@ -10,7 +10,6 @@ interface AuditReport {
 }
 
 type Props = { report: AuditReport },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsecurity-audit.json');
@@ -37,5 +36,5 @@ export default function SecurityAudit({ report }: Props) {
 {JSON.stringify(report, null, 2)}
       </pre>
     </div>
-  )
+  );
 }

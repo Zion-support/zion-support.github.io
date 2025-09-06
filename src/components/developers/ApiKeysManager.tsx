@@ -67,7 +67,6 @@ export function ApiKeysManager() {
     { value: 'talent:read', label: 'Read Talent', description: 'Access to view talent profiles' },
     { value: 'quotes:write', label: 'Write Quotes', description: 'Create and manage quotes' },
     { value: 'webhooks:manage', label: 'Manage Webhooks', description: 'Set up and manage webhook endpoints' }],
-
   // Toggle a scope selection
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev => 
@@ -347,5 +346,5 @@ export function ApiKeysManager() {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  );
 }

@@ -87,7 +87,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
             </span>
           </h2>
           <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-            Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness, 
+            Discover our cutting-edge portfolio of 500+ innovative services spanning AI consciousness,
             quantum computing, synthetic biology, and beyond. Each service delivers measurable ROI 
             and transforms your business into a future-ready powerhouse.
           </p>
@@ -322,7 +322,7 @@ const Enhanced2027ServicesShowcase: React.FC = () => {
                         </div>
                         <Link
                           href={service.link}
-                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
+                          className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-xl hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-cyan-500/25"
                         >
                           <span>Learn More</span>
                           <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />

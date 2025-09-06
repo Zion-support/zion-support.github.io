@@ -118,5 +118,5 @@ export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
         </AlertDialogContent>
       </AlertDialog>
     </Card>
-  )
+  );
 }

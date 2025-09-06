@@ -47,7 +47,6 @@ const defaultContent = {
     icon: <RefreshCw className="w-16 h-16 text-blue-400 animate-spin" />,
     title: 'Loading...',
     description: 'We\'re fetching the latest data for you. This should only take a moment.'}},
-
 export function EmptyState({
   type;
   title;
@@ -93,7 +92,7 @@ export function EmptyState({
       )}
       
       {type === 'network' && (
-        <div className="mt-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className="mt-4 text-sm text-gray-500 dark: text-gray-400">
           <p>
             {t('general.check_status_page')}
             {" "}
@@ -120,8 +119,8 @@ export function ProductsEmptyState({
 }) {
   const action = onAddProduct
     ? { 
-        label: isAuthenticated ? 'Add Product' : 'Login to Add Product', 
-        onClick: onAddProduct 
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
+        onClick: onAddProduct ;
       }
     : onRetry
     ? { label: 'Try Again', onClick: onRetry }
@@ -182,7 +181,7 @@ export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
       type="network"
       action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
     />
-  )
+  );
 }
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
@@ -191,5 +190,5 @@ export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
       type="error"
       action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
     />
-  )
+  );
 } 

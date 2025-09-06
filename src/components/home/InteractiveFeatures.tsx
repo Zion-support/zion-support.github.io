@@ -41,7 +41,6 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
         "Access cutting-edge technology with flexible options to buy, rent or lease the gear you need.";
       icon: <Settings className="h-8 w-8 text-amber-700" />,
       link: "/equipment"}],
-
   const handleToggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index))
   };
@@ -64,7 +63,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
               onMouseEnter={() => setOpenIndex(index)}
               onMouseLeave={() => setOpenIndex(null)}
               onClick={() => handleToggle(index)}
-              className="cursor-pointer overflow-hidden transition-all duration-300 hover:shadow-lg"
+              className="cursor-pointer overflow-hidden transition-all duration-300 hover: shadow-lg"
             >
               <CardHeader className="flex flex-row items-start space-x-3">
                 {feature.icon}
@@ -95,7 +94,7 @@ export function InteractiveFeatures({ className, style }: InteractiveFeaturesPro
         </div>
       </div>
     </section>
-  )
+  );
 }
 
 export default InteractiveFeatures;

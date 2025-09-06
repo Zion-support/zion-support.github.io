@@ -5,5 +5,5 @@ export default function VerifyEmailPage() {
       <h1 className="text-2xl font-semibold">Verify Email</h1>
       <p className="mt-2 text-gray-600 dark: text-gray-300">Please verify your email to continue.</p>
     </div>
-  )
+  );
 }

@@ -87,8 +87,7 @@ export default function CloudNativeAutomation() {
                 <p className='text-white/90 mb-4'>
                   We leverage Docker containers and Kubernetes orchestration to
                   create a flexible, portable automation environment. This
-                  approach provides several key benefits:
-                </p>
+                  approach provides several key benefits: </p>
                 <ul className='space-y-2 text-white/80 mb-6'>
                   <li>
                     • Consistent runtime environments across development;

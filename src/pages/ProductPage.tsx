@@ -48,11 +48,11 @@ export default function ProductPage() {
   }, [id]), // id is now from router.query
 
   if (!product && !id) { // If no id from router yet, it might still be loading
-    return <div className="p-6 text-white">Loading product details...</div>
+    return <div className="p-6 text-white">Loading product details...</div>;
   }
 
   if (!product) {
-    return <div className="p-6 text-white">Product not found</div>
+    return <div className="p-6 text-white">Product not found</div>;
   }
 
   const inCart = items.some(i => i.id === product.id);
@@ -92,5 +92,5 @@ export default function ProductPage() {
         </Button>
       </div>
     </>
-  )
+  );
 }

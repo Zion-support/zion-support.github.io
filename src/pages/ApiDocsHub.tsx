@@ -35,7 +35,6 @@ export function ApiDocsHub() {
       icon: AlertCircle,
       path: "/developers/docs/errors",
       color: "from-red-500 to-rose-500"}],
-
   return (
     <ApiDocsLayout>
       <div className="max-w-4xl">
@@ -79,7 +78,7 @@ export function ApiDocsHub() {
         </div>
       </div>
     </ApiDocsLayout>
-  )
+  );
 }
 
 export default ApiDocsHub;

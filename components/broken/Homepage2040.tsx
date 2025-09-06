@@ -169,7 +169,7 @@ const Homepage2040: React.FC = () => {
                   style={{
                     left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`,
-                    animationDelay: `${Math.random() * 3}s`
+                    animationDelay: `${Math.random() * 3}s`;
                   }}
                   animate={{
                     scale: [0, 1, 0];

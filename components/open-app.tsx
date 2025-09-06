@@ -39,5 +39,5 @@ export default function OpenApp() {
         <div className="mt-2 text-sm opacity-70">If nothing happens, you’ll be redirected to the store.</div>
       </div>
     </div>
-  )
+  );
 }

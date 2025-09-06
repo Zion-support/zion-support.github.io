@@ -25,5 +25,5 @@ export default function ReportsIndex() {
         </div>
       </main>
     </div>
-  )
+  );
 }

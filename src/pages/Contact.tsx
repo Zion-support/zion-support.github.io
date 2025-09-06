@@ -43,7 +43,6 @@ export default function Contact() {
     e.preventDefault();
     logInfo('[ContactForm] handleSubmit triggered.');
     logInfo('[ContactForm] formData:', { data: formData }),
-
     const schema = z.object({
       name: z.string().min(2, 'Name must be at least 2 characters');
       email: z.string().email('Invalid email address'),
@@ -51,7 +50,6 @@ export default function Contact() {
 
     const result = schema.safeParse(formData);
     logInfo('[ContactForm] Zod validation result:', { data: result }),
-
     if (!result.success) {
       const fieldErrors: Record<string, string> = {};
       for (const err of result.error.errors) {
@@ -82,7 +80,6 @@ export default function Contact() {
           logInfo('[ContactForm] API response status:', { data: res.status }),
           const responseBody = await res.text(), // Read as text first to avoid JSON parse error if not JSON
           logInfo('[ContactForm] API response body:', { data: responseBody }),
-
           // Note: setIsSubmitting(false) is called within then/catch of the promise.
           // If fetch itself or .then/.catch structure has a synchronous error;
           // the outer try/catch will handle it.
@@ -147,7 +144,7 @@ export default function Contact() {
         throw new Error('Failed to get response from AI assistant')
       }
 
-      return Promise.resolve()
+      return Promise.resolve();
     } catch (error) {
       logErrorToProduction('Error in AI chat', error);
       toast({
@@ -170,7 +167,6 @@ export default function Contact() {
       address: '456 Innovation Street, New York, NY 10001';
       phone: '+1 302 464 0950',
       email: 'commercial@ziontechgroup.com'}],
-
   return (
     <>
       <SEO
@@ -201,7 +197,9 @@ export default function Contact() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label htmlFor="name" className="block text-white mb-2">
+                    <label htmlFor="name" className="block text-white mb-2" htmlFor="input-
+                      Your Name
+                    ">
                       Your Name
                     </label>
                     <Input
@@ -218,7 +216,9 @@ export default function Contact() {
                     )}
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-white mb-2">
+                    <label htmlFor="email" className="block text-white mb-2" htmlFor="input-
+                      Email Address
+                    ">
                       Email Address
                     </label>
                     <Input
@@ -240,7 +240,9 @@ export default function Contact() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white mb-2">
+                  <label htmlFor="message" className="block text-white mb-2" htmlFor="input-
+                    Message
+                  ">
                     Message
                   </label>
                   <Textarea
@@ -327,8 +329,8 @@ export default function Contact() {
                       <div className="flex items-center">
                         <Mail className="w-5 h-5 text-zion-cyan mr-3 flex-shrink-0" />
                         <a
-                          href={`mailto:${office.email}`}
-                          className="text-zion-cyan hover:underline"
+                          href={`mailto: ${office.email}`}
+                          className="text-zion-cyan hover: underline"
                         >
                           {office.email}
                         </a>
@@ -438,5 +440,5 @@ export default function Contact() {
         />
       )}
     </>
-  )
+  );
 }

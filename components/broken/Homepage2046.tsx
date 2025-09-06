@@ -131,7 +131,7 @@ const Homepage2046: React.FC = () => {
   }, []);
 
   if (isLoading) {
-    return <QuantumLoadingFallback />
+    return <QuantumLoadingFallback />;
   }
 
   const allServices = [
@@ -203,7 +203,7 @@ const Homepage2046: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >
-                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>, 
+                Revolutionary <span className="text-cyan-400 font-semibold">Quantum AI</span>,
                 <span className="text-purple-400 font-semibold"> Neural Interfaces</span>, and 
                 <span className="text-cyan-400 font-semibold"> Space Technology</span> Solutions
               </motion.p>

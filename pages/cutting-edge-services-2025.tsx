@@ -86,7 +86,7 @@ export default function CuttingEdgeServices2025() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-              Experience the future of technology with our revolutionary services that combine AI consciousness, 
+              Experience the future of technology with our revolutionary services that combine AI consciousness,
               quantum computing, enterprise IT, and innovative micro SAAS solutions.
             </p>
             

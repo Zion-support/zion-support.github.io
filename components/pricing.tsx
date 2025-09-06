@@ -412,5 +412,5 @@ export default function PricingPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  )
+  );
 }

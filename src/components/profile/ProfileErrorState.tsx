@@ -19,5 +19,5 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
-  )
+  );
 }

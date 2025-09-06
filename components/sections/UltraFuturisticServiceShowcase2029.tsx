@@ -20,9 +20,7 @@ interface UltraFuturisticServiceShowcase2029Props {
 }
 
 export default function UltraFuturisticServiceShowcase2029({ 
-  services, 
-  title = "2029 Cutting-Edge Services", 
-  subtitle = "Experience the future of technology with our revolutionary solutions" 
+  services, title = "2029 Cutting-Edge Services", subtitle = "Experience the future of technology with our revolutionary solutions" 
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black">
@@ -103,5 +101,5 @@ export default function UltraFuturisticServiceShowcase2029({
         </motion.div>
       </div>
     </section>
-  )
+  );
 }

@@ -81,7 +81,7 @@ export function Steps({ currentStep, className, children }: StepsProps) {
           if (index === currentStep) status = "current";
           
           return React.cloneElement(child as React.ReactElement<StepProps>, {
-            status})
+            status});
         })}
       </ol>
       
@@ -95,5 +95,5 @@ export function Steps({ currentStep, className, children }: StepsProps) {
         </div>
       </div>
     </div>
-  )
+  );
 }

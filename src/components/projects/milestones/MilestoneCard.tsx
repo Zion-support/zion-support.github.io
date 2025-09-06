@@ -44,7 +44,7 @@ export function MilestoneCard({
       case 'rejected':
         return 'bg-red-500';
       default: return 'bg-gray-500'
-    }
+    };
   }
   
   return (
@@ -113,5 +113,5 @@ export function MilestoneCard({
         </div>
       </CardFooter>
     </Card>
-  )
+  );
 }

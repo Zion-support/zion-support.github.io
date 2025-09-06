@@ -38,6 +38,9 @@ import { toast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
 import { AlertCircle, Calendar, CheckCircle2, Clock, FileText, Layers, MessageSquare, Video, User, XCircle } from 'lucide-react'
+import { Badge } from '@/components/ui/badge';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Star, Calendar } from 'lucide-react';
 
 function ProjectDetailsContent() {
   const router = useRouter();
@@ -146,7 +149,6 @@ function ProjectDetailsContent() {
       setProject({
         ...project;
         status: newStatus}),
-      
       // If offer was accepted, show a special toast
       if (newStatus === "offer_accepted") {
         toast({
@@ -184,7 +186,7 @@ function ProjectDetailsContent() {
           </div>
         </div>
       </div>
-    )
+    );
   }
   
   if (!project) {
@@ -203,7 +205,7 @@ function ProjectDetailsContent() {
           </CardContent>
         </Card>
       </div>
-    )
+    );
   }
   
   // Check if user is either the client or the talent
@@ -660,7 +662,7 @@ function ProjectDetailsContent() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export default function ProjectDetails() {
@@ -668,5 +670,5 @@ export default function ProjectDetails() {
     <ProtectedRoute>
       <ProjectDetailsContent />
     </ProtectedRoute>
-  )
+  );
 }

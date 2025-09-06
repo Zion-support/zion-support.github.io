@@ -12,7 +12,7 @@ interface CertificationsListProps {
 
 export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
   if (certifications.length === 0) {
-    return null
+    return null;
   }
 
   return (
@@ -72,5 +72,5 @@ export function CertificationsList({ certifications, onEdit, onDelete }: Certifi
         </Card>
       ))}
     </div>
-  )
+  );
 }

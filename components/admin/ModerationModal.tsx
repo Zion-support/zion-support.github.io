@@ -54,7 +54,7 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
             </div>
           </div>
           <div>
-            <label className="block text-sm font-medium mb-1">Admin Notes</label>
+            <label className="block text-sm font-medium mb-1" htmlFor="input-Admin Notes">Admin Notes</label>
             <textarea value={adminNotes} onChange={e => setAdminNotes(e.target.value)} rows={3} className="w-full border rounded px-3 py-2 bg-white dark:bg-black" />
           </div>
         </div>
@@ -66,5 +66,5 @@ export default function ModerationModal({ flag, onClose, onAction }: ModerationM
         </div>
       </div>
     </div>
-  )
+  );
 }

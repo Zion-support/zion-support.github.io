@@ -21,7 +21,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     
     case 'dangerous':
       return (
-        <div className="bg-red-50 dark:bg-red-950/20 p-8 rounded-lg text-center">
+        <div className="bg-red-50 dark: bg-red-950/20 p-8 rounded-lg text-center">
           <AlertCircle className="mx-auto h-12 w-12 text-red-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Dangerous Flags</h3>
           <p className="text-muted-foreground">
@@ -32,7 +32,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     
     case 'actioned':
       return (
-        <div className="bg-green-50 dark:bg-green-950/20 p-8 rounded-lg text-center">
+        <div className="bg-green-50 dark: bg-green-950/20 p-8 rounded-lg text-center">
           <CheckCircle className="mx-auto h-12 w-12 text-green-500 mb-4" />
           <h3 className="text-xl font-medium mb-4">Actioned Flags</h3>
           <p className="text-muted-foreground">

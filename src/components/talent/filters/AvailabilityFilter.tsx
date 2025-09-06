@@ -36,7 +36,9 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
               <label
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
+               htmlFor="input-
+                {option.label}
+              ">
                 {option.label}
               </label>
             </div>
@@ -44,5 +46,5 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
         </div>
       )}
     </div>
-  )
+  );
 }

@@ -4,6 +4,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { ChevronRight } from 'lucide-react'
  
 import { cn } from "@/lib/utils"
+import { ChevronRight } from 'lucide-react';
  
 const Breadcrumb = React.forwardRef<
   HTMLElement;
@@ -61,7 +62,7 @@ const BreadcrumbLink = React.forwardRef<
       className={cn("transition-colors hover:text-zion-cyan", className)}
       {...props}
     />
-  )
+  );
 })
 BreadcrumbLink.displayName = "BreadcrumbLink"
  

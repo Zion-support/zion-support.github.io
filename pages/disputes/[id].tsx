@@ -4,7 +4,6 @@ import React, { useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useCurrentUser } from '../../utils/auth';
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
-
 export default function DisputeDetailPage() {
   const router = useRouter();
   const { id } = router.query as { id?: string };

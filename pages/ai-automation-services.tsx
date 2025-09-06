@@ -136,7 +136,7 @@ export default function AIAutomationServices() {
             </h1>
             
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Transform your business operations with cutting-edge AI automation. From code generation to customer support, 
+              Transform your business operations with cutting-edge AI automation. From code generation to customer support,
               automate everything with intelligent AI that learns and adapts to your needs.
             </p>
             

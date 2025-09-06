@@ -34,5 +34,5 @@ export default function EmptyState({ title, description, icon, primaryAction, se
         </div>
       )}
     </div>
-  )
+  );
 }

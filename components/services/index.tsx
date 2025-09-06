@@ -18,6 +18,7 @@ import { realOperationalServices } from '../../data/real-operational-services';
 import { verified2025Additions } from '../../data/verified-2025-additions';
 import { realServicesQ12025 } from '../../data/real-services-q1-2025'
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025'
+import { Star } from 'lucide-react';
 
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
   slug: item.slug,
@@ -27,7 +28,6 @@ const mapLocalToServiceItem = (item: any): ServiceItem => ({
   priceRangeUSD: item.priceRangeUSD,
   categories: [item.category],
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10}),
-
 const ServicesPage: NextPage = () => {
   const [services, setServices] = React.useState<ServiceItem[]>([]);
   const [filtered, setFiltered] = React.useState<ServiceItem[]>([]);
@@ -116,7 +116,7 @@ export default function ServicesIndexPage() {
       </Head>
       <div className="relative">
         <div className="absolute -z-10 -top-40 -left-40 w-96 h-96 rounded-full blur-3xl opacity-40 bg-gradient-to-tr from-cyan-400 via-blue-500 to-purple-500" />
-        <div className="flex flex-col sm:flex-row gap-6">
+        <div className="flex flex-col sm: flex-row gap-6">
           <MarketplaceFilters availableCategories={availableCategories} value={filters} onChange={setFilters} />
           <div className="flex-1">
             <div className="mb-4 flex items-center justify-between">

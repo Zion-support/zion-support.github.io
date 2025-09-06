@@ -50,5 +50,5 @@ export default function MetaverseAIPlatformPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

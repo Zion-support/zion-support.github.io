@@ -30,7 +30,6 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const interviewDate = parseISO(interview.scheduled_date);
   const formattedDate = format(interviewDate, 'EEEE, MMMM d');
   const formattedTime = format(interviewDate, 'h: mm a'),
-
   // Calculate when interview ends
   const endTime = new Date(interviewDate);
   endTime.setMinutes(endTime.getMinutes() + interview.duration_minutes);
@@ -52,7 +51,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true);
     const success = await respondToInterview(interview.id, { 
-      interview_id: interview.id, 
+      interview_id: interview.id,
       status 
     });
     
@@ -273,5 +272,5 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
         </DialogContent>
       </Dialog>
     </Card>
-  )
+  );
 }

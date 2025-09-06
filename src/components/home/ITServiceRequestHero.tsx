@@ -60,7 +60,7 @@ export function ITServiceRequestHero() {
         description: "There was an error submitting your request.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -145,5 +145,5 @@ export function ITServiceRequestHero() {
         </div>
       </div>
     </section>
-  )
+  );
 }

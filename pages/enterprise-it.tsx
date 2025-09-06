@@ -12,7 +12,6 @@ export default function EnterpriseITPage() {
     { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
-
   return (
     <Layout>
       <Head>

@@ -167,7 +167,7 @@ export default function Support() {
               How Can We Help?
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Get the support you need for our AI consciousness, quantum computing, 
+              Get the support you need for our AI consciousness, quantum computing;
               and autonomous systems. Our expert team is here to help 24/7.
             </p>
             
@@ -386,7 +386,7 @@ export default function Support() {
                     placeholder="Search for help topics, questions, or solutions..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
+                    className="w-full pl-12 pr-4 py-3 bg-gray-800/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
                   />
                 </div>
               </div>
@@ -651,7 +651,7 @@ export default function Support() {
               <div className="bg-gradient-to-br from-cyan-500/10 via-purple-500/10 to-pink-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h3 className="text-2xl font-bold mb-4 text-white">Need Immediate Help?</h3>
                 <p className="text-gray-300 mb-6">
-                  For urgent technical issues or critical support needs, 
+                  For urgent technical issues or critical support needs,
                   our team is available around the clock.
                 </p>
                 

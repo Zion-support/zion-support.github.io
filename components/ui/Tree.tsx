@@ -73,7 +73,7 @@ export function Tree({ nodes, onDeploy }: TreeProps) {
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />
       ))}
     </div>
-  )
+  );
 }
 
 export default Tree;

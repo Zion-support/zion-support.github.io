@@ -197,7 +197,7 @@ export function AuthConfigurationError({ onRetry, showSetupButton = true }: Auth
         </div>
       </div>
     </div>
-  )
+  );
 }
 
-export default AuthConfigurationError, 
+export default AuthConfigurationError,

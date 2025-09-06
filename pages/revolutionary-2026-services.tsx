@@ -90,13 +90,13 @@ export default function Revolutionary2026ServicesPage() {
                 </span>
               </h2>
               <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-                We're not just another technology company. We're pioneers in the future of AI, quantum computing, 
+                We're not just another technology company. We're pioneers in the future of AI, quantum computing;
                 and emerging technologies, delivering revolutionary solutions that transform industries.
               </p>
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
               {[
                 {
                   icon: '🧠',

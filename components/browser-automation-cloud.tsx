@@ -35,5 +35,5 @@ export default function BrowserAutomationCloudPage() {
 				</section>
 			</main>
 		</>
-	)
+	);
 }

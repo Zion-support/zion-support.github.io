@@ -156,5 +156,5 @@ export function TalentDashboard() {
         </Card>
       </section>
     </div>
-  )
+  );
 }

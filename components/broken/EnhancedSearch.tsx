@@ -418,7 +418,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
                         <button
                           key={index}
                           onClick={() => setQuery(term)}
-                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover:from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
+                          className="px-3 py-1.5 bg-gradient-to-r from-cyan-500/20 to-blue-500/20 text-cyan-400 text-sm rounded-lg hover: from-cyan-500/30 hover:to-blue-500/30 transition-all duration-300 border border-cyan-400/30"
                         >
                           {term}
                         </button>
@@ -444,7 +444,7 @@ function debounce<T extends (...args: any[]) => any>(
   return (...args: Parameters<T>) => {
     clearTimeout(timeout);
     timeout = setTimeout(() => func(...args), wait)
-  }
+  };
 }
 
 export default EnhancedSearch;

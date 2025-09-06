@@ -51,7 +51,9 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
               <label
                 htmlFor={`skill-${skill}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
+               htmlFor="input-
+                {skill}
+              ">
                 {skill}
               </label>
             </div>
@@ -59,5 +61,5 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         </div>
       )}
     </div>
-  )
+  );
 }

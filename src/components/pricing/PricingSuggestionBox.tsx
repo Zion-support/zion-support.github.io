@@ -34,14 +34,13 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   }
 
   if (!suggestion) {
-    return null
+    return null;
   }
 
   const confidenceColor = {
     High: "bg-green-100 text-green-800",
     Medium: "bg-yellow-100 text-yellow-800",
     Low: "bg-red-100 text-red-800"}[suggestion.confidence],
-
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">
       <CardContent className="p-5 space-y-4">

@@ -19,7 +19,6 @@ export default function FuturisticFooter() {
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
     { name: 'Blog', href: '/blog' }],
-
   const serviceCategories = [
     { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
     { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
@@ -27,12 +26,10 @@ export default function FuturisticFooter() {
     { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
     { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' },
     { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' }],
-
   const socialLinks = [
     { name: 'LinkedIn', href: 'https://www.linkedin.com/company/zion-tech-group', icon: '💼' },
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' },
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }],
-
   return (
     <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       {/* Animated background elements */}
@@ -186,5 +183,5 @@ export default function FuturisticFooter() {
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-  )
+  );
 }

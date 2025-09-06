@@ -21,7 +21,6 @@ interface ApiErrorBoundaryState {
 
 export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorBoundaryState> {
   private retryTimeoutId: NodeJS.Timeout | null = null,
-
   constructor(props: ApiErrorBoundaryProps) {
     super(props);
     this.state = {
@@ -35,7 +34,7 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
   static getDerivedStateFromError(error: Error): Partial<ApiErrorBoundaryState> {
     return {
       hasError: true,
-      error}
+      error};
   }
 
   componentDidCatch(error: Error, errorInfo: any) {
@@ -86,7 +85,6 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
 
   handleRetry = async () => {
     this.setState({ isRetrying: true }),
-
     try {
       // Invalidate all queries to force refetch
       if (this.props.queryClient) {
@@ -200,8 +198,8 @@ export class ApiErrorBoundary extends Component<ApiErrorBoundaryProps, ApiErrorB
       )
     }
 
-    return this.props.children
-  }
+    return this.props.children;
+  };
 }
 
 // Hook for accessing query client in function components

@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Briefcase, Users, Check } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 type UserRole = "talent" | "client" | null;
 
@@ -52,7 +53,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
           className={`cursor-pointer transition-all ${
             selectedRole === 'client' 
               ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
+              : "border-border hover:border-primary/40";
           }`}
           onClick={() => handleSelect('client')}
         >
@@ -73,5 +74,5 @@ export function RolePicker({ onSelect }: RolePickerProps) {
         </Card>
       </div>
     </div>
-  )
+  );
 }

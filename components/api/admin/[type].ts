@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { supabase as client } from '../../../utils/supabase/client';
 import { MOCK_DATA } from '../../../utils/admin/mockData';
 function isSupabaseConfigured() {
-  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co'
+  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co';
 }
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
@@ -65,7 +65,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res.status(200).send(toCsv(data || []))
       }
-      return res.status(200).json({ items: data || [], total: count || 0 })
+      return res.status(200).json({ items: data || [], total: count || 0 });
     } else {
       // fallback
       const all = (MOCK_DATA[type] || []).slice();
@@ -84,7 +84,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const av = (a as any)[params.sort!];
           const bv = (b as any)[params.sort!];
           return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
-        })
+        });
       }
       const total = filtered.length;
       const start = params.page * params.pageSize;
@@ -96,7 +96,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res.status(200).send(toCsv(pageItems))
       }
       return res.status(200).json({ items: pageItems, total })
-    }
+    };
   }
 
   if (req.method === 'PATCH') {
@@ -132,5 +132,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   }
 
-  return res.status(405).json({ error: 'Method not allowed' })
+  return res.status(405).json({ error: 'Method not allowed' });
 }

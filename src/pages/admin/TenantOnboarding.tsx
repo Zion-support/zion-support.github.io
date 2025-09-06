@@ -34,7 +34,7 @@ export default function TenantOnboarding() {
   const isAdmin = user?.role === "admin";
   
   if (!isAdmin) {
-    return // Use router.push('/unauthorized') or redirect in getServerSideProps
+    return // Use router.push('/unauthorized') or redirect in getServerSideProps;
   }
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -109,7 +109,7 @@ export default function TenantOnboarding() {
         description: error.message
       })
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -323,5 +323,5 @@ export default function TenantOnboarding() {
         </div>
       </main>
     </>
-  )
+  );
 }

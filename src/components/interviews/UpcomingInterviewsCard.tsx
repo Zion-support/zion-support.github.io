@@ -66,7 +66,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   if (upcomingInterviews.length === 0) {
@@ -88,7 +88,7 @@ export function UpcomingInterviewsCard() {
           </div>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
@@ -105,7 +105,6 @@ export function UpcomingInterviewsCard() {
             const interviewDate = parseISO(interview.scheduled_date);
             const formattedDate = format(interviewDate, 'EEE, MMM d');
             const formattedTime = format(interviewDate, 'h: mm a'),
-            
             // Determine if interview is happening soon (within 30 minutes)
             const now = new Date();
             const isStartingSoon = 
@@ -144,7 +143,7 @@ export function UpcomingInterviewsCard() {
                   </div>
                 </div>
               </div>
-            )
+            );
           })}
         </div>
         
@@ -157,5 +156,5 @@ export function UpcomingInterviewsCard() {
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

@@ -2,8 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function RAGEvaluationLabPage() {
-	return (
-		<>
+	return(<>
 			<SEO title="RAG Evaluation Lab" description="Measure answer quality, hallucination rate, latency, and cost of your RAG pipelines with production-grade evals and CI gates." />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4">

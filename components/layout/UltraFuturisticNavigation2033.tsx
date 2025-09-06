@@ -313,5 +313,5 @@ export default function UltraFuturisticNavigation2033() {
         </AnimatePresence>
       </nav>
     </>
-  )
+  );
 }

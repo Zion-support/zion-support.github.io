@@ -34,6 +34,5 @@ export function TalentOnboardingSteps() {
       completed: onboardingStatus.matchReceived,
       link: "/talent-dashboard",
       action: "View Matches"}],
-  
-  return <OnboardingTracker steps={steps} />
+  return <OnboardingTracker steps={steps} />;
 }

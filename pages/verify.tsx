@@ -96,7 +96,7 @@ export default function VerifyPage() {
           </div>
         )}
 
-        <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="mb-6 grid grid-cols-1 md: grid-cols-2 gap-4">
           <div>
             <label className="block text-sm font-medium">User ID</label>
             <input className="mt-1 w-full border rounded px-3 py-2" value={userId} onChange={(e) => setUserId(e.target.value)} />
@@ -154,7 +154,7 @@ export default function VerifyPage() {
                         <div className="text-sm font-medium">{k}</div>
                         <div className="text-xs text-gray-500">{hasIt ? 'Uploaded' : 'Missing'}</div>
                       </div>
-                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled:opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
+                      <button disabled={busy} onClick={() => upload(k)} className="text-sm px-3 py-1 rounded bg-gray-900 text-white disabled: opacity-50">{hasIt ? 'Replace' : 'Upload'}</button>
                     </div>
                   )
                 })}

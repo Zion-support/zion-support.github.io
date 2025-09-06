@@ -96,7 +96,7 @@ export default function Services() {
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
-                className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
+                className={`text-5xl md: text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 Our Services
               </h1>
@@ -104,7 +104,7 @@ export default function Services() {
                 350+ Innovative Solutions for Modern Businesses
               </p>
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
-                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products, 
+                From cutting-edge AI services to comprehensive IT solutions and specialized micro SaaS products,
                 we provide everything your business needs to thrive in the digital age.
               </p>
             </div>

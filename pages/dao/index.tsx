@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 
 type Holder = { address: string, amount: string },
-
 type Metrics = {
   updatedAt: number,
   tokenDistribution: { address: string, percent: number }[],

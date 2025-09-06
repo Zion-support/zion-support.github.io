@@ -76,7 +76,7 @@ export default function StudioHostPage() {
         <h2 className="text-xl font-semibold">AI Persona</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium">Voice</label>
+            <label className="block text-sm font-medium" htmlFor="input-Voice">Voice</label>
             <select
               className="mt-1 w-full border rounded p-2"
               value={persona.voice}
@@ -88,11 +88,11 @@ export default function StudioHostPage() {
             </select>
           </div>
           <div>
-            <label className="block text-sm font-medium">Language</label>
+            <label className="block text-sm font-medium" htmlFor="input-Language">Language</label>
             <input className="mt-1 w-full border rounded p-2" value={persona.language} onChange={(e) => setPersona({ ...persona, language: e.target.value })} />
           </div>
           <div>
-            <label className="block text-sm font-medium">Clone Style (optional)</label>
+            <label className="block text-sm font-medium" htmlFor="input-Clone Style (optional)">Clone Style (optional)</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} placeholder="Paste representative writing or notes to clone tone" value={persona.cloneStyleText || ''} onChange={(e) => setPersona({ ...persona, cloneStyleText: e.target.value })} />
           </div>
         </div>
@@ -102,19 +102,19 @@ export default function StudioHostPage() {
         <h2 className="text-xl font-semibold">Episode Generator</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div>
-            <label className="block text-sm font-medium">Invitee Name</label>
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Name">Invitee Name</label>
             <input className="mt-1 w-full border rounded p-2" value={inviteeName} onChange={(e) => setInviteeName(e.target.value)} />
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm font-medium">Invitee Bio</label>
+            <label className="block text-sm font-medium" htmlFor="input-Invitee Bio">Invitee Bio</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={inviteeBio} onChange={(e) => setInviteeBio(e.target.value)} />
           </div>
           <div className="md:col-span-3">
-            <label className="block text-sm font-medium">Topic</label>
+            <label className="block text-sm font-medium" htmlFor="input-Topic">Topic</label>
             <input className="mt-1 w-full border rounded p-2" value={topic} onChange={(e) => setTopic(e.target.value)} />
           </div>
           <div className="md:col-span-3">
-            <label className="block text-sm font-medium">Operator Prompt</label>
+            <label className="block text-sm font-medium" htmlFor="input-Operator Prompt">Operator Prompt</label>
             <textarea className="mt-1 w-full border rounded p-2" rows={3} value={operatorPrompt} onChange={(e) => setOperatorPrompt(e.target.value)} />
           </div>
         </div>
@@ -174,5 +174,5 @@ export default function StudioHostPage() {
         </section>
       )}
     </div>
-  )
+  );
 }

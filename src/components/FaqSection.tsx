@@ -6,6 +6,7 @@ import {
   AccordionItem;
   AccordionTrigger} from "@/components/ui/accordion";
 import { FileText } from 'lucide-react'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const faqs = [
   {
@@ -73,5 +74,5 @@ export function FaqSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

@@ -94,5 +94,5 @@ export function MobileConversationList({
         ))}
       </div>
     </div>
-  )
+  );
 }

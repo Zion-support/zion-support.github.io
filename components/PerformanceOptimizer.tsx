@@ -203,7 +203,6 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
       });
       
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
-      
       return () => {
         window.removeEventListener('load', measurePerformance);
         observer.disconnect()

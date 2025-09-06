@@ -29,7 +29,6 @@ const UltraFuturisticBackground2034: React.FC = () => {
       alpha: number,
       life: number,
       maxLife: number,
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;

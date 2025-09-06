@@ -232,5 +232,5 @@ export function TenantsList() {
         </div>
       )}
     </div>
-  )
+  );
 }

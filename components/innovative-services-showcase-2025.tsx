@@ -436,5 +436,5 @@ export default function InnovativeServicesShowcase2025() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

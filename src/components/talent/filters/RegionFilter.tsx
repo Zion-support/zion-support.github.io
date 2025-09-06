@@ -39,7 +39,9 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
               <label
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-              >
+               htmlFor="input-
+                {region.label}
+              ">
                 {region.label}
               </label>
             </div>
@@ -47,5 +49,5 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
         </div>
       )}
     </div>
-  )
+  );
 }

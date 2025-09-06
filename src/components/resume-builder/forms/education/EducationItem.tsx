@@ -53,5 +53,5 @@ export function EducationItem({ education, onEdit, onDelete }: EducationItemProp
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

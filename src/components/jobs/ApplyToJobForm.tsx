@@ -64,7 +64,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       setError(err.message || "Failed to submit application");
       toast.error("Failed to submit application")
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   };
   
@@ -165,7 +165,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
           variant="outline"
           disabled={isSubmitting}
           onClick={() => {
-            if (onSuccess) onSuccess()
+            if (onSuccess) onSuccess();
           }}
         >
           Cancel
@@ -182,5 +182,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         </Button>
       </div>
     </form>
-  )
+  );
 }

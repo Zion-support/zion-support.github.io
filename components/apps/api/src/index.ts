@@ -26,7 +26,7 @@ await app.register(rateLimit, { global: true, max: 100, timeWindow: '1m' });
 const openai = createOpenAIClient(process.env.OPENAI_API_KEY || '');
 
 function getUserId(req: any): string | null {
-  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null
+  return (req.headers['x-user-id'] as string) || (req.query as any)['user_id'] || null;
 }
 
 app.post('/ai/ask', async (req, reply) => {
@@ -61,7 +61,7 @@ app.get('/talent/search', async (req, reply) => {
   const rows = await withUser(userId, async (client) => {
     const res = await client.query(
       `SELECT id, full_name, country, skills, experience_years FROM talent_profile
-       WHERE ($1::text IS NULL OR country = $1)
+       WHERE ($1: :text IS NULL OR country = $1)
          AND ($2::text IS NULL OR EXISTS (
               SELECT 1 FROM unnest(skills) s WHERE s ILIKE '%' || $2 || '%'
            ))

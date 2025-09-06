@@ -107,5 +107,5 @@ export function TalentCardFooter({ profile, onViewProfile, onRequestHire }: Tale
         userDetails={userProfile}
       />
     </>
-  )
+  );
 }

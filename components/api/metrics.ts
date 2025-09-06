@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function rand(min: number, max: number) {
-  return Math.floor(Math.random() * (max - min + 1)) + min
+  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 function generateSeries(n: number, base: number, volatility = 0.15) {
@@ -12,7 +12,7 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
     last = Math.max(0, Math.round(last + change));
     series.push(last)
   }
-  return series
+  return series;
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

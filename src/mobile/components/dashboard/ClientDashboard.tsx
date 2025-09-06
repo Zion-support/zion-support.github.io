@@ -166,5 +166,5 @@ export function ClientDashboard() {
         </Card>
       </section>
     </div>
-  )
+  );
 }

@@ -156,5 +156,5 @@ export function PartnerResources() {
         </CardContent>
       </Card>
     </div>
-  )
+  );
 }

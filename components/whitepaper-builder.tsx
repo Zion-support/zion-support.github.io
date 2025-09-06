@@ -19,7 +19,7 @@ export default function WhitepaperBuilderPage() {
       </div>
 
       <div className="flex flex-wrap gap-3 items-center">
-        <label className="font-medium">Edition</label>
+        <label className="font-medium" htmlFor="input-Edition">Edition</label>
         <select
           value={edition}
           onChange={(e) => setEdition(e.target.value as WhitepaperEdition)}
@@ -51,5 +51,5 @@ export default function WhitepaperBuilderPage() {
         ))}
       </div>
     </div>
-  )
+  );
 }

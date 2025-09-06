@@ -15,7 +15,6 @@ const variantStyles: Record<NonNullable<EnhancedButtonProps['variant']>, string>
   primary: 'bg-blue-600 hover:bg-blue-700 text-white focus:ring-blue-400',
   secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-900 focus:ring-gray-300 dark:bg-gray-800 dark:hover:bg-gray-700 dark:text-gray-100',
   ghost: 'bg-transparent hover:bg-gray-100 text-gray-900 focus:ring-gray-300 dark:hover:bg-gray-800 dark:text-gray-100'},
-
 export default function EnhancedButton({
   className;
   variant = 'primary';
@@ -28,5 +27,5 @@ export default function EnhancedButton({
       className={clsx(baseStyles, sizeStyles[size], variantStyles[variant], fullWidth && 'w-full', className)}
       {...props}
     />
-  )
+  );
 }

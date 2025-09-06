@@ -221,7 +221,6 @@ export default function PartnerManager() {
         title: status === 'approved' ? "Partner Approved" : "Partner Rejected",
         description: `The partner has been ${status}.`,
         variant: status === 'approved' ? "default" : "destructive"}),
-      
       // Close the dialog if open
       if (isDetailsOpen && selectedPartner?.id === partnerId) {
         setIsDetailsOpen(false)
@@ -254,7 +253,6 @@ export default function PartnerManager() {
         title: "Settings Updated",
         description: "Partner settings have been updated successfully.",
         variant: "default"}),
-      
       setIsSettingsOpen(false)
     } catch (error) {
       logErrorToProduction(error instanceof Error ? error.message : String(error), error instanceof Error ? error : undefined, { message: 'Error updating partner settings' }),
@@ -563,12 +561,14 @@ export default function PartnerManager() {
           {selectedPartner && (
             <div className="space-y-4">
               <div>
-                <label className="text-sm font-medium text-white">Partner Name</label>
+                <label className="text-sm font-medium text-white" htmlFor="input-Partner Name">Partner Name</label>
                 <p className="text-zion-slate-light">{selectedPartner.name}</p>
               </div>
               
               <div>
-                <label className="text-sm font-medium text-white" htmlFor="commission-rate">
+                <label className="text-sm font-medium text-white" htmlFor="commission-rate" htmlFor="input-
+                  Commission Rate (%)
+                ">
                   Commission Rate (%)
                 </label>
                 <Input
@@ -588,7 +588,7 @@ export default function PartnerManager() {
                 <Button variant="outline" onClick={() => setIsSettingsOpen(false)}>
                   Cancel
                 </Button>
-                <Button onClick={handleSaveSettings} className="bg-zion-purple hover:bg-zion-purple-dark">
+                <Button onClick={handleSaveSettings} className="bg-zion-purple hover: bg-zion-purple-dark">
                   Save Changes
                 </Button>
               </DialogFooter>
@@ -637,7 +637,7 @@ function PartnerTable({
           className="border-none bg-transparent text-center"
         />
       </div>
-    )
+    );
   }
   
   return (
@@ -717,5 +717,5 @@ function PartnerTable({
         ))}
       </TableBody>
     </Table>
-  )
+  );
 }

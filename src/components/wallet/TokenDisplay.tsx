@@ -38,5 +38,5 @@ export function TokenDisplay() {
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

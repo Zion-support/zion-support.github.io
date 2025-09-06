@@ -84,7 +84,6 @@ export default function ContractBuilderPage() {
         headers: {
           'Content-Type': 'application/json'};
         body: JSON.stringify(body)}),
-
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
         throw new Error(data?.error || `Request failed: ${res.status}`)

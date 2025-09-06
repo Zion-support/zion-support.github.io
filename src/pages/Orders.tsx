@@ -17,7 +17,6 @@ export default function OrdersPage() {
   const { data: orders, isLoading } = useGetOrdersQuery(user?.id);
 
   const formatDate = (date: string) => new Date(date).toLocaleDateString(),
-
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'in_escrow':
@@ -108,5 +107,5 @@ export default function OrdersPage() {
         </Table>
       )}
     </div>
-  )
+  );
 }

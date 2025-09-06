@@ -148,7 +148,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -223,7 +223,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
                     </div>
                   </div>
                 </motion.div>
-              )
+              );
             })}
           </div>
         </div>
@@ -319,7 +319,7 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
             
             <div className="text-sm text-gray-400">
               <p>Address: 364 E Main St STE 1008, Middletown DE 19709</p>
-              <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover:text-cyan-300">https://ziontechgroup.com</a></p>
+              <p>Website: <a href="https://ziontechgroup.com" className="text-cyan-400 hover: text-cyan-300">https://ziontechgroup.com</a></p>
             </div>
           </motion.div>
         </div>

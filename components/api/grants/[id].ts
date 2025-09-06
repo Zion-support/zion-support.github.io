@@ -10,7 +10,7 @@ function ensureDir() {
 }
 
 function grantPath(id: string) {
-  return path.join(GRANTS_DIR, `${id}.json`)
+  return path.join(GRANTS_DIR, `${id}.json`);
 }
 
 function readGrant(id: string): GrantApplication | null {

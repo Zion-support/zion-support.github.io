@@ -175,8 +175,7 @@ export default function TechnologyInsightsPage() {
                   <div>
                     <h3 className="text-2xl font-bold mb-4 text-cyan-400">Cutting-Edge Research</h3>
                     <p className="text-white/80 mb-6">
-                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, 
-                      AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
+                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems, AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.
                     </p>
                     <ul className="space-y-2 text-white/70">
                       <li>• Advanced AI research and development</li>
@@ -218,5 +217,5 @@ export default function TechnologyInsightsPage() {
         </main>
       </div>
     </>
-  )
+  );
 }

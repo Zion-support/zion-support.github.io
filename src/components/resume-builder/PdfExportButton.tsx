@@ -120,5 +120,5 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
-  )
+  );
 }

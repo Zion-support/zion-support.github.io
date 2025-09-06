@@ -123,7 +123,6 @@ export default function SavedTalentsPage() {
         const { error } = await supabase
           .from('saved_talents')
           .insert([{ user_id: user.id, talent_id: talentId }]),
-  
         if (error) {
           throw error
         }
@@ -199,5 +198,5 @@ export default function SavedTalentsPage() {
         )}
       </div>
     </>
-  )
+  );
 }

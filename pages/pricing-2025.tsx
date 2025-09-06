@@ -78,7 +78,7 @@ export default function Pricing2025() {
               2025 Pricing & Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Transparent pricing for our comprehensive collection of innovative micro SAAS services, 
+              Transparent pricing for our comprehensive collection of innovative micro SAAS services,
               AI solutions, quantum technologies, and revolutionary IT services.
             </p>
             

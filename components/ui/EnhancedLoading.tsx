@@ -10,5 +10,5 @@ export default function EnhancedLoading({ lines = 3 }: EnhancedLoadingProps) {
         <div key={idx} className="skeleton h-4 rounded" />
       ))}
     </div>
-  )
+  );
 }

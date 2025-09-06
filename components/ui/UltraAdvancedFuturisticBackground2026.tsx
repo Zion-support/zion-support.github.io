@@ -38,7 +38,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     let neuralNodes: NeuralNode[] = [],
     let quantumFields: QuantumField[] = [],
     let holographicLayers: HolographicLayer[] = [],
-
     // Set canvas size
     const resizeCanvas = () => {
       if (containerRef.current) {
@@ -62,7 +61,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       alpha: number,
       life: number,
       maxLife: number,
-
       constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
@@ -112,7 +110,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       connections: NeuralNode[],
       activation: number,
       pulse: number,
-
       constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
@@ -160,7 +157,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       radius: number,
       intensity: number,
       phase: number,
-
       constructor(x: number, y: number) {
         this.x = x;
         this.y = y;
@@ -201,7 +197,6 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
       rotation: number,
       alpha: number,
       color: string,
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -289,7 +284,7 @@ const UltraAdvancedFuturisticBackground2026: React.FC<UltraAdvancedFuturisticBac
     if (enableHolographic) {
       for (let i = 0, i < 5, i++) {
         holographicLayers.push(new HolographicLayer())
-      }
+      };
     }
 
     // Animation loop

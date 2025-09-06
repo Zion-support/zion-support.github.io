@@ -43,7 +43,7 @@ export default function JobDetails() {
   };
 
   if (isLoading) {
-    return <JobDetailsSkeleton />
+    return <JobDetailsSkeleton />;
   }
 
   if (error || !job) {
@@ -56,7 +56,7 @@ export default function JobDetails() {
           <Button onClick={() => router.push('/careers')}>View All Jobs</Button>
         </div>
       </>
-    )
+    );
   }
 
   const handleApply = () => {
@@ -202,5 +202,5 @@ export default function JobDetails() {
         />
       )}
     </>
-  )
+  );
 }

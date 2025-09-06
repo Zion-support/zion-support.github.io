@@ -43,7 +43,7 @@ const ContactForm: React.FC = () => {
     } catch (error) {
       setSubmitStatus('error')
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -204,7 +204,9 @@ const ContactForm: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-white font-medium mb-2">
+                    <label htmlFor="name" className="block text-white font-medium mb-2" htmlFor="input-
+                      Full Name *
+                    ">
                       Full Name *
                     </label>
                     <input
@@ -220,7 +222,9 @@ const ContactForm: React.FC = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="email" className="block text-white font-medium mb-2">
+                    <label htmlFor="email" className="block text-white font-medium mb-2" htmlFor="input-
+                      Email Address *
+                    ">
                       Email Address *
                     </label>
                     <input
@@ -238,7 +242,9 @@ const ContactForm: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="company" className="block text-white font-medium mb-2">
+                    <label htmlFor="company" className="block text-white font-medium mb-2" htmlFor="input-
+                      Company
+                    ">
                       Company
                     </label>
                     <input
@@ -253,7 +259,9 @@ const ContactForm: React.FC = () => {
                   </div>
                   
                   <div>
-                    <label htmlFor="phone" className="block text-white font-medium mb-2">
+                    <label htmlFor="phone" className="block text-white font-medium mb-2" htmlFor="input-
+                      Phone Number
+                    ">
                       Phone Number
                     </label>
                     <input
@@ -269,7 +277,9 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="service" className="block text-white font-medium mb-2">
+                  <label htmlFor="service" className="block text-white font-medium mb-2" htmlFor="input-
+                    Service of Interest
+                  ">
                     Service of Interest
                   </label>
                   <select
@@ -289,7 +299,9 @@ const ContactForm: React.FC = () => {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-white font-medium mb-2">
+                  <label htmlFor="message" className="block text-white font-medium mb-2" htmlFor="input-
+                    Message *
+                  ">
                     Message *
                   </label>
                   <textarea

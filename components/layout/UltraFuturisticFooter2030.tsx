@@ -297,5 +297,5 @@ export default function UltraFuturisticFooter2030() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

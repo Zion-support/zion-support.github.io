@@ -52,5 +52,5 @@ export default async function handler(
   } catch (error: any) {
     console.error('Analyze API error', error?.message || error);
     return res.status(500).json({ error: 'Failed to generate analysis' })
-  }
+  };
 }

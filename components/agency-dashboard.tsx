@@ -2,7 +2,6 @@ import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
 type Props = { vendor: Vendor | null },
-
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor);
   const [pkgTitle, setPkgTitle] = useState('');
@@ -50,15 +49,15 @@ export default function AgencyDashboardPage({ vendor }: Props) {
         <h2 className="text-lg font-medium">Profile</h2>
         <form onSubmit={saveProfile} className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div>
-            <label className="block text-sm mb-1">Agency Name</label>
+            <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>
             <input name="name" defaultValue={activeVendor.name} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm mb-1">About</label>
+            <label className="block text-sm mb-1" htmlFor="input-About">About</label>
             <textarea name="about" defaultValue={activeVendor.about || ''} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
-            <label className="block text-sm mb-1">Services Offered</label>
+            <label className="block text-sm mb-1" htmlFor="input-Services Offered">Services Offered</label>
             <input name="servicesOffered" defaultValue={activeVendor.servicesOffered?.join() || ''} className="w-full border rounded px-3 py-2 bg-transparent" />
           </div>
           <div className="md:col-span-2">
@@ -95,7 +94,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
 
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
-  )
+  );
 }
 
 function Pipeline({ vendorId }: { vendorId: string }) {

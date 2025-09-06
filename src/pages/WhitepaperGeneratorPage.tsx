@@ -125,7 +125,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
         return
     }
      if (totalPercentage < 100 && totalPercentage > 0 && processedDistData.length > 0) {
-        setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`)
+        setError(`Warning: Total distribution is ${totalPercentage}%. Consider adjusting to sum to 100%.`);
     } else if (totalPercentage === 0 && processedDistData.length > 0 && distributionData.some(d => d.name && d.percentage)) {
         setError("Distribution percentages are all zero or invalid.");
         setIsLoading(false);
@@ -148,7 +148,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
 
       const { data, error: funcError } = await supabase.functions.invoke('generate-whitepaper', {
         body: apiPayload}),
-
       if (funcError) {
         throw new Error(`Supabase function error: ${funcError.message}`)
       }
@@ -299,7 +298,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
         distributionBreakdown};
       const { data: response, error: funcError } = await supabase.functions.invoke('create-shared-whitepaper', {
         body: whitepaperPayload}),
-
       if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
       if (!response) throw new Error('No response received from create-shared-whitepaper function');
       if ((response as any).error) throw new Error(`Error from create-shared-whitepaper: ${(response as any).error}`),
@@ -328,14 +326,12 @@ const WhitepaperGeneratorPage: React.FC = () => {
     const newPublicStatus = !currentSharedWhitepaperIsPublic;
 
     // For optimistic update: // setCurrentSharedWhitepaperIsPublic(newPublicStatus),
-
     try {
         const { data: response, error: funcError } = await supabase.functions.invoke('set-shared-whitepaper-public-status', {
             body: { whitepaperId: currentSharedWhitepaperId, isPublic: newPublicStatus }}),
         if (funcError) throw new Error(`Supabase function error: ${funcError.message}`),
         if (!response) throw new Error('No response received from set-shared-whitepaper-public-status function');
         if ((response as any).error) throw new Error(`Error from set-shared-whitepaper-public-status: ${(response as any).error}`),
-
         setCurrentSharedWhitepaperIsPublic((response as any).is_public), // Update with actual status from DB
         toast.success(`Whitepaper is now ${(response as any).is_public ? 'public' : 'private'}.`)
 
@@ -397,7 +393,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
         if (notifyError) throw new Error(`Failed to notify counsel: ${notifyError.message}`),
         if (!notifyResponse) throw new Error('No response received from notify-legal-team function');
         if ((notifyResponse as any).error) throw new Error(`Error from notify-legal-team: ${(notifyResponse as any).error}`),
-
         toast.success("Whitepaper submitted to counsel successfully!")
 
     } catch (e: any) {
@@ -432,19 +427,19 @@ const WhitepaperGeneratorPage: React.FC = () => {
         <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
           {/* ... (Input fields remain the same) ... */}
            <div>
-            <label htmlFor="tokenName" className="block text-sm font-medium">Token Name:</label>
+            <label htmlFor="tokenName" className="block text-sm font-medium" htmlFor="input-Token Name:">Token Name:</label>
             <Input id="tokenName" value={tokenName} onChange={(e) => setTokenName(e.target.value)} required />
           </div>
           <div>
-            <label htmlFor="tokenSupply" className="block text-sm font-medium">Token Supply:</label>
+            <label htmlFor="tokenSupply" className="block text-sm font-medium" htmlFor="input-Token Supply:">Token Supply:</label>
             <Input id="tokenSupply" value={tokenSupply} onChange={(e) => setTokenSupply(e.target.value)} required />
           </div>
           <div>
-            <label htmlFor="useCases" className="block text-sm font-medium">Use Cases:</label>
+            <label htmlFor="useCases" className="block text-sm font-medium" htmlFor="input-Use Cases:">Use Cases:</label>
             <textarea id="useCases" value={useCases} onChange={(e) => setUseCases(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
-            <label htmlFor="rewardsLogic" className="block text-sm font-medium">Rewards Logic:</label>
+            <label htmlFor="rewardsLogic" className="block text-sm font-medium" htmlFor="input-Rewards Logic:">Rewards Logic:</label>
             <textarea id="rewardsLogic" value={rewardsLogic} onChange={(e) => setRewardsLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
 
@@ -460,17 +455,17 @@ const WhitepaperGeneratorPage: React.FC = () => {
             ))}
             <Button type="button" onClick={addDistributionItem} variant="outline" className="w-full">Add Distribution Item</Button>
             <div>
-              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium">Additional Distribution Details (Text):</label>
+              <label htmlFor="distributionBreakdownDetails" className="block text-sm font-medium" htmlFor="input-Additional Distribution Details (Text):">Additional Distribution Details (Text):</label>
               <textarea id="distributionBreakdownDetails" value={distributionBreakdown} onChange={(e) => setDistributionBreakdown(e.target.value)} className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={2}/>
             </div>
           </div>
 
           <div>
-            <label htmlFor="governanceLogic" className="block text-sm font-medium">Governance Logic:</label>
+            <label htmlFor="governanceLogic" className="block text-sm font-medium" htmlFor="input-Governance Logic: ">Governance Logic: </label>
             <textarea id="governanceLogic" value={governanceLogic} onChange={(e) => setGovernanceLogic(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           <div>
-            <label htmlFor="legalDisclaimers" className="block text-sm font-medium">Legal Disclaimers:</label>
+            <label htmlFor="legalDisclaimers" className="block text-sm font-medium" htmlFor="input-Legal Disclaimers:">Legal Disclaimers:</label>
             <textarea id="legalDisclaimers" value={legalDisclaimers} onChange={(e) => setLegalDisclaimers(e.target.value)} required className="mt-1 block w-full border-gray-300 rounded-md shadow-sm" rows={3}/>
           </div>
           {/* END OF INPUT FIELDS */}
@@ -493,7 +488,7 @@ const WhitepaperGeneratorPage: React.FC = () => {
           {shareableLink && !isSharing && currentSharedWhitepaperId && (
             <div className="mt-4 p-3 border rounded-md bg-green-50">
               <div className="flex justify-between items-center">
-                <label className="block text-sm font-medium text-green-700">Shareable Link:</label>
+                <label className="block text-sm font-medium text-green-700" htmlFor="input-Shareable Link:">Shareable Link:</label>
                 <Button
                     onClick={handleTogglePublicStatus}
                     variant="outline"

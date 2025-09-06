@@ -49,6 +49,6 @@ export default function IncidentAutomationSuitePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

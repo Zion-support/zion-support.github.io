@@ -51,7 +51,7 @@ const MOCK_SUPPORT_REQUESTS = [
     issue: "API integration documentation is outdated",
     status: "open",
     priority: "low",
-    createdAt: "2023-12-13T16:45:00Z", 
+    createdAt: "2023-12-13T16:45:00Z",
     lastUpdated: "2023-12-13T16:45:00Z",
     category: "api"
   };
@@ -118,7 +118,7 @@ export default function SupportRequests() {
     
     // Apply category filter
     if (categoryFilter && request.category !== categoryFilter) {
-      return false
+      return false;
     }
     
     return true
@@ -297,7 +297,7 @@ export default function SupportRequests() {
                               ? 'destructive' 
                               : request.priority === 'medium' 
                               ? 'default' 
-                              : 'outline'
+                              : 'outline';
                           }>
                             {request.priority}
                           </Badge>
@@ -346,5 +346,5 @@ export default function SupportRequests() {
         </Tabs>
       </div>
     </>
-  )
+  );
 }

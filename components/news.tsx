@@ -557,8 +557,7 @@ export default function News() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12"
           >
-            Stay updated with the latest developments in AI consciousness, quantum computing, 
-            and emerging technologies from Zion Tech Group.
+            Stay updated with the latest developments in AI consciousness, quantum computing, and emerging technologies from Zion Tech Group.
           </motion.p>
           
           {/* Search and Filter */}
@@ -587,7 +586,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white'
+                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white';
                   }`}
                 >
                   {category.name} ({category.count})
@@ -1329,8 +1328,7 @@ export default function News() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information, 
-                please contact our communications team.
+                For press inquiries, media interviews, or additional information, please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <a
@@ -1617,5 +1615,5 @@ export default function News() {
         </main>
       </div>
     </>
-  )
+  );
 }

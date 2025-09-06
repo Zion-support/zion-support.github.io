@@ -84,7 +84,7 @@ export default function SitemapPage() {
               Site Map
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Navigate our comprehensive website and discover all the AI-powered technology solutions, 
+              Navigate our comprehensive website and discover all the AI-powered technology solutions,
               resources, and information available at Zion Tech Group.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

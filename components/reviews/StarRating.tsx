@@ -20,7 +20,7 @@ export const StarRating: React.FC<Props> = ({ value, onChange, size = 24, readOn
           <button
             key={star}
             type="button"
-            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
+            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover: scale-110'}`}
             onMouseEnter={() => !readOnly && setHovered(star)}
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}

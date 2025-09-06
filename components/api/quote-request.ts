@@ -13,7 +13,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const { service, description, timeline, budgetRange, email } = req.body || {};
   if (!service || !description || !email) {
-    return res.status(400).json({ message: 'Missing required fields' })
+    return res.status(400).json({ message: 'Missing required fields' });
   }
 
   try {
@@ -47,9 +47,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       saved = data
     }
 
-    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id })
+    return res.status(200).json({ ok: true, summary: aiSummary, tags: aiTags, id: saved?.id });
   } catch (e: any) {
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' })
-  }
+  };
 }

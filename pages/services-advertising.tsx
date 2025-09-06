@@ -22,7 +22,7 @@ export default function ServicesAdvertisingPage() {
 					<p className="text-slate-300">Generate, schedule, and optimize multi-platform posts with best-time recommendations and analytics.</p>
 					<ul className="list-disc list-inside text-slate-300 space-y-1">
 						<li>Typical SMB budget: $20–$80/mo</li>
-						<li>References: {ext('https://buffer.com/pricing')}, {ext('https://www.hootsuite.com/plans')}</li>
+						<li>References: {ext('https://buffer.com/pricing')}, {ext('https: //www.hootsuite.com/plans')}</li>
 						<li>Try: <a href="/services/ai-social-media-manager" className="text-cyan-400 underline">ziontechgroup.com/services/ai-social-media-manager</a></li>
 					</ul>
 				</section>

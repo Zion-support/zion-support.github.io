@@ -274,7 +274,7 @@ const SolutionsPage: NextPage = () => {
 
                     <Link 
                       href={solution.link}
-                      className="inline-block bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
+                      className="inline-block bg-purple-600 hover: bg-purple-700 text-white px-6 py-2 rounded-lg font-semibold transition-colors w-full text-center"
                     >
                       Learn More
                     </Link>

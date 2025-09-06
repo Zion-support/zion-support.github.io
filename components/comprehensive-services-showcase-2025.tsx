@@ -115,7 +115,7 @@ export default function ComprehensiveServicesShowcase2025() {
           case 'over-500': return price > 500;
           default: return true
         }
-      })
+      });
     }
 
     // Sort services
@@ -511,7 +511,7 @@ export default function ComprehensiveServicesShowcase2025() {
 
                     {/* CTA */}
                     <div className="flex items-center justify-between">
-                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
+                      <button className="bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-medium py-3 px-6 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 group-hover:scale-105">
                         Learn More
                       </button>
                       <div className="text-xs text-gray-500">

@@ -231,5 +231,5 @@ export default function ProjectRoom() {
         </Tabs>
       </main>
     </>
-  )
+  );
 }

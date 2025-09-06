@@ -18,7 +18,6 @@ const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   title: 'Full-Stack Developer',
   badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'],
   testimonial: i % 5 === 0 ? { quote: 'Delivered beyond expectations!', author: 'Happy Client' } : undefined})),
-
 const TalentDirectory: NextPage = () => {
   const [page, setPage] = useState(1);
   const pageSize = 10;
@@ -37,7 +36,7 @@ const TalentDirectory: NextPage = () => {
 
       <h1 className="text-2xl font-semibold">Explore Talent</h1>
 
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid sm: grid-cols-2 lg:grid-cols-3 gap-4">
         {pageItems.map((t) => (
           <article key={t.id} className="border rounded-md p-4 space-y-2">
             <div className="flex items-center justify-between">

@@ -40,5 +40,5 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
       <Clock className="h-3 w-3" />
       <span>{getAvailabilityLabel(availabilityType)}</span>
     </div>
-  )
+  );
 }

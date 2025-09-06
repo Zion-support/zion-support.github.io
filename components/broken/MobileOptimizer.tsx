@@ -168,7 +168,6 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
     document.addEventListener('touchmove', handleTouchMove, { passive: true }),
     document.addEventListener('touchend', handleTouchEnd, { passive: true }),
     document.addEventListener('touchstart', handleLongPress, { passive: true }),
-
     return () => {
       document.removeEventListener('touchstart', handleTouchStart);
       document.removeEventListener('touchmove', handleTouchMove);
@@ -228,7 +227,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
         battery.addEventListener('levelchange', updateBatteryLevel);
         
         return () => battery.removeEventListener('levelchange', updateBatteryLevel)
-      })
+      });
     }
 
     // Monitor network speed
@@ -516,17 +515,17 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
                 <h3 className="text-sm font-medium text-white">Optimizations</h3>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Touch Gestures</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Touch Gestures">Touch Gestures</label>
                   <div className={`w-3 h-3 rounded-full ${enableTouchGestures ? 'bg-green-400' : 'bg-gray-400'}`}></div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Mobile Layout</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Mobile Layout">Mobile Layout</label>
                   <div className={`w-3 h-3 rounded-full ${enableMobileLayout ? 'bg-green-400' : 'bg-gray-400'}`}></div>
                 </div>
                 
                 <div className="flex items-center justify-between">
-                  <label className="text-sm text-gray-300">Performance Mode</label>
+                  <label className="text-sm text-gray-300" htmlFor="input-Performance Mode">Performance Mode</label>
                   <div className={`w-3 h-3 rounded-full ${enablePerformanceMode ? 'bg-green-400' : 'bg-gray-400'}`}></div>
                 </div>
               </div>
@@ -591,7 +590,7 @@ const MobileOptimizer: React.FC<MobileOptimizerProps> = ({
           .mobile-optimized button;
           .mobile-optimized a {
             min-height: 44px,
-            min-width: 44px
+            min-width: 44px;
           }
           
           .mobile-optimized input;

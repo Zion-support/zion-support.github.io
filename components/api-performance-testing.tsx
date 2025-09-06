@@ -35,5 +35,5 @@ export default function ApiPerformanceTestingPage() {
 				</section>
 			</main>
 		</>
-	)
+	);
 }

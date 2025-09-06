@@ -87,7 +87,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   const featuredPosts = posts.filter(post => post.isFeatured);
 
   logInfo('BlogPage filteredPosts:', { data: filteredPosts }),
-  
   return (
     <>
       <SEO
@@ -114,7 +113,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
             return (
             <div className="mb-16">
               <h2 className="text-2xl font-bold text-white mb-6">Featured Article</h2>
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">
                 <div className="aspect-video overflow-hidden rounded-lg">
                   <img
                     src={featuredPost.featuredImage}
@@ -155,7 +154,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                   </div>
                   <Button 
                     asChild
-                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit"
+                    className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple w-fit"
                   >
                     <Link href={`/blog/${featuredPost.slug}`}>
                       Read Article
@@ -251,7 +250,7 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
                     </div>
                   </CardContent>
                   <CardFooter className="p-6 pt-0">
-                    <span className="text-zion-cyan group-hover:text-zion-purple">Read More →</span>
+                    <span className="text-zion-cyan group-hover: text-zion-purple">Read More →</span>
                   </CardFooter>
                   </Link>
                 </Card>
@@ -279,5 +278,5 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
         </div>
       </div>
     </>
-  )
+  );
 }

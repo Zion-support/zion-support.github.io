@@ -43,7 +43,7 @@ export default function UseTokensModal({
         onClose()
       }
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
   }
 
@@ -92,5 +92,5 @@ export default function UseTokensModal({
         </div>
       </div>
     </div>
-  )
+  );
 }

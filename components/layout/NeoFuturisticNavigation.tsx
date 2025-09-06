@@ -85,7 +85,6 @@ export default function NeoFuturisticNavigation() {
 	};
 
 	const isActive = (path: string) => router.pathname === path,
-
 	const serviceCategories = [
 		{
 			name: 'Quantum Computing',
@@ -502,5 +501,5 @@ export default function NeoFuturisticNavigation() {
 				</div>
 			)}
 		</nav>
-	)
+	);
 }

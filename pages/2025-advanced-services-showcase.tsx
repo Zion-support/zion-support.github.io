@@ -111,7 +111,7 @@ export default function AdvancedServicesShowcase2025() {
               2025 Advanced Services Showcase
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions, 
+              Discover our comprehensive collection of cutting-edge micro SAAS services, advanced AI solutions;
               quantum technologies, and revolutionary IT services that are transforming industries worldwide.
             </p>
             
@@ -370,7 +370,7 @@ export default function AdvancedServicesShowcase2025() {
                         href={service.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                        className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-500 hover: from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-4 rounded-xl transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
                       >
                         <ExternalLink className="w-4 h-4" />
                         Learn More

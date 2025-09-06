@@ -90,7 +90,7 @@ const KitPage = () => {
       <div className="p-4 border rounded-lg space-y-2">
         <div className="flex items-center justify-between">
           <h4 className="font-semibold">{title}</h4>
-          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover:bg-gray-200" onClick={onCopy}>Copy</button>
+          <button className="text-sm px-3 py-1 rounded bg-gray-100 hover: bg-gray-200" onClick={onCopy}>Copy</button>
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
@@ -108,7 +108,7 @@ const KitPage = () => {
         <header className="flex items-center justify-between">
           <h1 className="text-2xl font-bold">Media Kit</h1>
           <div className="flex gap-2">
-            <button onClick={onDownloadZip} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">Download all as ZIP</button>
+            <button onClick={onDownloadZip} className="px-4 py-2 rounded bg-blue-600 text-white hover: bg-blue-700">Download all as ZIP</button>
             <button onClick={onGeneratePdf} className="px-4 py-2 rounded bg-gray-900 text-white hover:bg-black">Generate PDF</button>
           </div>
         </header>

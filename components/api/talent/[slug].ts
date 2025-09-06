@@ -17,7 +17,7 @@ function applyTranslations(item: TalentProfile, lang?: string) {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    return res.setHeader('AllowGET').status(405).end('Method Not Allowed')
+    return res.setHeader('AllowGET').status(405).end('Method Not Allowed');
   }
   const { slug, lang } = req.query as { slug: string, lang?: string };
 
@@ -35,5 +35,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ item, translated })
   } catch (e: any) {
     return res.status(500).json({ error: e.message })
-  }
+  };
 }

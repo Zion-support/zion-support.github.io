@@ -12,7 +12,6 @@ export default function QuantumServicesPage() {
     { name: 'Quantum Internet Security', href: '/quantum-internet-security-platform' },
     { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive' },
     { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' }],
-
   return (
     <UltraAdvancedFuturisticBackground colorScheme="quantum" intensity="high">
       <Head>

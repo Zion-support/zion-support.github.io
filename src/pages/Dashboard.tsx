@@ -15,22 +15,17 @@ import Link from 'next/link';
 const CommunityDiscussion = dynamic(() => import("@/components/CommunityDiscussion").then(mod => ({ default: mod.CommunityDiscussion })), {
   loading: () => <div className="h-32 bg-zion-blue-light rounded animate-pulse" />,
   ssr: false}),
-
 const PointsBadge = dynamic(() => import('@/components/loyalty/PointsBadge').then(mod => ({ default: mod.PointsBadge })), {
   loading: () => <span className="text-zion-cyan font-medium">Loading...</span>,
   ssr: false}),
-
 const ApiKeysManager = dynamic(() => import('@/components/developers/ApiKeysManager').then(mod => ({ default: mod.ApiKeysManager })), {
   loading: () => <div className="h-24 bg-zion-blue-light rounded animate-pulse" />,
   ssr: false}),
-
 const NotificationBell = dynamic(() => import("@/components/NotificationBell").then(mod => ({ default: mod.NotificationBell })), {
   loading: () => <Bell size={16} className="text-zion-cyan" />,
   ssr: false}),
-
 const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").then(mod => ({ default: mod.GuidedTour })), {
   ssr: false}),
-
 // Lazy load notification functions
 const loadNotificationFunctions = () => import("@/utils/notifications");
 
@@ -57,7 +52,7 @@ export default function Dashboard() {
           <p className="text-gray-600">Loading dashboard...</p>
         </div>
       </div>
-    )
+    );
   }
 
   // useRequireAuth will handle redirect if user is not authenticated
@@ -69,7 +64,7 @@ export default function Dashboard() {
           <p className="text-gray-600">Redirecting to login...</p>
         </div>
       </div>
-    )
+    );
   }
 
   const handleTestNotification = async () => {
@@ -99,7 +94,7 @@ export default function Dashboard() {
       <Header />
       <div className="min-h-screen bg-zion-blue">
         <div className="container mx-auto px-4 py-8">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg: grid-cols-3 gap-8">
             {/* Left Sidebar - User Profile */}
             <div className="lg:col-span-1">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -215,7 +210,7 @@ export default function Dashboard() {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
-                        }
+                        };
                       }}
                     >
                       <Bell size={16} className="text-yellow-500" />
@@ -371,5 +366,5 @@ export default function Dashboard() {
       </div>
       <GuidedTour role={roleForTour} />
     </>
-  )
+  );
 }

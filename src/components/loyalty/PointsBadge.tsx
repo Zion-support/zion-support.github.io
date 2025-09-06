@@ -126,5 +126,5 @@ export function PointsBadge() {
         <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
       )}
     </TooltipProvider>
-  )
+  );
 }

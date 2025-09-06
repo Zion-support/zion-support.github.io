@@ -81,5 +81,5 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         </div>
       </form>
     </div>
-  )
+  );
 }

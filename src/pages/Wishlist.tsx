@@ -24,7 +24,7 @@ export default function WishlistPage() {
   }, [user, isAuthLoading, router]);
 
   if (isAuthLoading || !user) { // Show loading or null while auth check or redirect happens
-    return null, // Or a loading spinner
+    return null, // Or a loading spinner;
   }
 
   const { items, dispatch } = useCart();
@@ -91,7 +91,7 @@ export default function WishlistPage() {
                     </p>
                   )}
                 </div>
-              ) : null
+              ) : null;
             }
             const item = productMap[fav.item_id];
             return item ? (
@@ -118,10 +118,10 @@ export default function WishlistPage() {
                   </p>
                 )}
               </div>
-            ) : null
+            ) : null;
           })}
         </div>
       )}
     </div>
-  )
+  );
 }

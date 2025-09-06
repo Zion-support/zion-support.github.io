@@ -24,7 +24,7 @@ export default function Revolutionary2030ServicesPage() {
         <link rel="icon" href="/favicon.ico" />
         
         {/* Open Graph */}
-        <meta property="og:title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
+        <meta property="og: title" content="2030 Revolutionary Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future of technology with our revolutionary 2030 services. From AI consciousness and quantum computing to space mining and DNA computing." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/2030-revolutionary-services" />

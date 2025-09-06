@@ -5,7 +5,6 @@ type Entry = { route: string, file: string },
 interface Report { generatedAt: string, totalPages: number, bySection: Record<string, number>, pages: Entry[] }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationcontent-map.json');
@@ -47,5 +46,5 @@ export default function ContentMap({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+  );
 }

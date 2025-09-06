@@ -27,7 +27,6 @@ const services = [
     title: "Equipment Rentals",
     description: "Flexible rental options for temporary projects and scaling requirements",
     icon: <Truck className="h-10 w-10" />}],
-
 export function GlobalServiceSection() {
   return (
     <section className="py-20 bg-zion-blue" id="global-services">
@@ -58,5 +57,5 @@ export function GlobalServiceSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

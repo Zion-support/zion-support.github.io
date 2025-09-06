@@ -192,8 +192,8 @@ const NewsPage: React.FC = () => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', { 
-      year: 'numeric', 
-      month: 'long', 
+      year: 'numeric',
+      month: 'long',
       day: 'numeric' 
     })
   };
@@ -776,7 +776,7 @@ export default function NewsPage() {
                 Media Inquiries
               </h2>
               <p className="text-xl text-gray-300 mb-8">
-                For press inquiries, media interviews, or additional information, 
+                For press inquiries, media interviews, or additional information;
                 please contact our communications team.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -4,5 +4,5 @@ export default function EnhancedCard({ children, className = '' }: { children: R
     <div className={["card-base p-4", className].join(' ')}>
       {children}
     </div>
-  )
+  );
 }

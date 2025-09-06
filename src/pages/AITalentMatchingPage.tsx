@@ -1,6 +1,7 @@
 import React from "react";
 import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
 import { Bot, Users, TrendingUp } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 export default function AITalentMatchingPage() {
   const benefits = [
@@ -16,7 +17,6 @@ export default function AITalentMatchingPage() {
       title: "Scalable Talent Pools",
       description: "Access a global network of vetted professionals ready for your projects.",
       icon: <TrendingUp className="h-8 w-8" />}],
-
   const testimonials = [
     {
       name: "Emily Stone",
@@ -28,7 +28,6 @@ export default function AITalentMatchingPage() {
       role: "Startup Founder",
       text: "The quality of candidates has improved dramatically since using Zion's platform.",
       avatar: "/placeholder.svg"}],
-
   return (
     <ServiceLandingTemplate
       title="AI Talent Matching"
@@ -40,5 +39,5 @@ export default function AITalentMatchingPage() {
       ctaText="Find Your AI Talent"
       ctaLink="/request-quote"
     />
-  )
+  );
 }

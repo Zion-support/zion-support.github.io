@@ -43,50 +43,50 @@ const Homepage2043: React.FC = () => {
 
   const features = [
     { 
-      icon: BrainIcon, 
-      title: "AI Consciousness Evolution", 
-      description: "Next-generation AI consciousness with human-level understanding", 
-      href: "/quantum-neural-consciousness-platform", 
+      icon: BrainIcon,
+      title: "AI Consciousness Evolution",
+      description: "Next-generation AI consciousness with human-level understanding",
+      href: "/quantum-neural-consciousness-platform",
       color: "from-purple-500 to-pink-500",
       gradient: "bg-gradient-to-br from-purple-500/20 to-pink-500/20"
     };
     { 
-      icon: AtomIcon, 
-      title: "Quantum Computing", 
-      description: "Revolutionary quantum computing with consciousness integration", 
-      href: "/quantum-bio-computing-platform", 
+      icon: AtomIcon,
+      title: "Quantum Computing",
+      description: "Revolutionary quantum computing with consciousness integration",
+      href: "/quantum-bio-computing-platform",
       color: "from-blue-500 to-cyan-500",
       gradient: "bg-gradient-to-br from-blue-500/20 to-cyan-500/20"
     };
     { 
-      icon: Shield, 
-      title: "Future Cybersecurity", 
-      description: "Quantum-resistant security with consciousness-based protection", 
-      href: "/quantum-internet-security-gateway", 
+      icon: Shield,
+      title: "Future Cybersecurity",
+      description: "Quantum-resistant security with consciousness-based protection",
+      href: "/quantum-internet-security-gateway",
       color: "from-red-500 to-orange-500",
       gradient: "bg-gradient-to-br from-red-500/20 to-orange-500/20"
     };
     { 
-      icon: Rocket, 
-      title: "Space Technology", 
-      description: "AI-powered space resource intelligence and autonomous mining", 
-      href: "/autonomous-space-mining-ai", 
+      icon: Rocket,
+      title: "Space Technology",
+      description: "AI-powered space resource intelligence and autonomous mining",
+      href: "/autonomous-space-mining-ai",
       color: "from-indigo-500 to-purple-500",
       gradient: "bg-gradient-to-br from-indigo-500/20 to-purple-500/20"
     };
     { 
-      icon: Cpu, 
-      title: "Autonomous Systems", 
-      description: "Fully autonomous AI systems with consciousness", 
-      href: "/autonomous-business-ecosystem-ai", 
+      icon: Cpu,
+      title: "Autonomous Systems",
+      description: "Fully autonomous AI systems with consciousness",
+      href: "/autonomous-business-ecosystem-ai",
       color: "from-emerald-500 to-teal-500",
       gradient: "bg-gradient-to-br from-emerald-500/20 to-teal-500/20"
     };
     { 
-      icon: Database, 
-      title: "Business Intelligence", 
-      description: "Autonomous business intelligence with consciousness insights", 
-      href: "/autonomous-healthcare-ai-ecosystem", 
+      icon: Database,
+      title: "Business Intelligence",
+      description: "Autonomous business intelligence with consciousness insights",
+      href: "/autonomous-healthcare-ai-ecosystem",
       color: "from-yellow-500 to-orange-500",
       gradient: "bg-gradient-to-br from-yellow-500/20 to-orange-500/20"
     }
@@ -222,8 +222,7 @@ const Homepage2043: React.FC = () => {
 
               {/* Enhanced Subtitle */}
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, 
-                and autonomous systems that redefine what's possible in technology.
+                Experience the world's most advanced AI consciousness platforms, quantum computing solutions, and autonomous systems that redefine what's possible in technology.
               </p>
 
               {/* Enhanced CTA Buttons */}

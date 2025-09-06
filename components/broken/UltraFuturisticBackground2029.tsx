@@ -144,7 +144,7 @@ const UltraFuturisticBackground2029: React.FC = () => {
           transition={{
             duration: 20,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: "easeInOut";
           }}
         />
       </div>

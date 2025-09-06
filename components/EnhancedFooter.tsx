@@ -68,7 +68,7 @@ const EnhancedFooter: React.FC = () => {
             <div className="space-y-3">
               <div className="flex items-center space-x-3 text-white/70">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:kleber@ziontechgroup.com" className="hover:text-white transition-colors">
+                <a href="mailto: kleber@ziontechgroup.com" className="hover:text-white transition-colors">
                   kleber@ziontechgroup.com
                 </a>
               </div>
@@ -94,7 +94,7 @@ const EnhancedFooter: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-                      className="text-white/70 hover:text-white transition-colors duration-200"
+                      className="text-white/70 hover: text-white transition-colors duration-200"
                     >
                       {link.name}
                     </Link>

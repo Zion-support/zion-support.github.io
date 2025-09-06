@@ -39,7 +39,6 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
     { icon: <Facebook className="h-4 w-4" />, label: 'Facebook', onClick: shareToFacebook },
     { icon: <Linkedin className="h-4 w-4" />, label: 'LinkedIn', onClick: shareToLinkedIn },
     { icon: <LinkIcon className="h-4 w-4" />, label: 'Copy Link', onClick: copyLink }],
-
   return (
     <div className="mt-12 flex flex-wrap gap-2">
       {buttons.map((btn) => (
@@ -49,5 +48,5 @@ export function SocialShareButtons({ title }: SocialShareButtonsProps) {
         </Button>
       ))}
     </div>
-  )
+  );
 }

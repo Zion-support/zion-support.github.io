@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
-    return res.status(400).json({ error: "Missing required fields" })
+    return res.status(400).json({ error: "Missing required fields" });
   }
   try {
     const { partner, apiKey } = await createPartner({
@@ -28,5 +28,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
   } catch (e) {
     return res.status(500).json({ error: "Failed to create partner" })
-  }
+  };
 }

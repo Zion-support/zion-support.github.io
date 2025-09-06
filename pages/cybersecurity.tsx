@@ -12,7 +12,6 @@ export default function CybersecurityPage() {
     { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
-
   return (
     <Layout>
       <Head>

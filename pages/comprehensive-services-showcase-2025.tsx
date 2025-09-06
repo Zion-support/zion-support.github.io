@@ -137,7 +137,7 @@ export default function ComprehensiveServicesShowcase2025() {
                 <span className="text-white">Showcase 2025</span>
               </h1>
               <p className="text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto mb-8 leading-relaxed">
-                Discover our portfolio of <span className="text-cyan-400 font-semibold">real, innovative micro SAAS services</span>, 
+                Discover our portfolio of <span className="text-cyan-400 font-semibold">real, innovative micro SAAS services</span>;
                 cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with 
                 <span className="text-blue-400 font-semibold"> proven technology</span> that delivers measurable results.
               </p>
@@ -443,7 +443,7 @@ export default function ComprehensiveServicesShowcase2025() {
                       </div>
 
                       {/* CTA and Additional Info */}
-                      <div className="mt-6 flex flex-col lg:flex-row items-center justify-between gap-4">
+                      <div className="mt-6 flex flex-col lg: flex-row items-center justify-between gap-4">
                         <div className="flex items-center gap-4 text-sm text-gray-400">
                           <span>Market: {service.marketSize}</span>
                           <span>Growth: {service.growthRate}</span>

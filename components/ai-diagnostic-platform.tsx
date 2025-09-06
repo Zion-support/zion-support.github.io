@@ -281,5 +281,5 @@ export default function AIDiagnosticPlatform() {
         </div>
       </section>
     </Layout>
-  )
+  );
 }

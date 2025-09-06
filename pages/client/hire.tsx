@@ -21,7 +21,6 @@ export default function ClientHirePage() {
         : termsType === "fixed"
         ? { type: "fixed", fixedAmountUsd }
         : { type: "milestone", milestones: [] },
-
     const res = await fetch("/api/marketplace/offers", {
       method: "POST",
       headers: { "Content-Type": "application/json", "x-demo-user-role": "client", "x-demo-user-id": "client-1" };

@@ -61,9 +61,9 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
         if (Array.isArray(data)) {
           setSuggestions(data.slice(0, 5))
         } else {
-          setSuggestions([])
+          setSuggestions([]);
         }
-        setHighlightedIndex(-1)
+        setHighlightedIndex(-1);
       })
       .catch(() => setSuggestions([]));
     return () => controller.abort()
@@ -118,7 +118,7 @@ export function SearchBar({ value, onChange, onSelectSuggestion, placeholder = '
               setHighlightedIndex(-1)
             }
           }}
-          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder:text-zion-slate"
+          className="pl-10 bg-zion-blue border border-zion-blue-light text-white placeholder: text-zion-slate"
           aria-autocomplete="list"
           aria-activedescendant={highlightedIndex !== -1 ? `suggestion-item-${highlightedIndex}` : undefined}
           autoComplete="search"

@@ -50,7 +50,7 @@ export default function ApiDocsPage() {
         </section>
       </main>
     </div>
-  )
+  );
 }
 
 function ChangelogWidget() {
@@ -79,5 +79,5 @@ function ChangelogWidget() {
       </div>
       <textarea className="w-full h-40 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={content} onChange={(e) => setContent(e.target.value)} placeholder="Add changelog entries here..." />
     </div>
-  )
+  );
 }

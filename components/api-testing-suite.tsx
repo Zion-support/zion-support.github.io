@@ -3,6 +3,8 @@ import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
 import { Code, Zap, Shield, BarChart3, CheckCircle, ArrowRight, Play, AlertTriangle, Clock, Database } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star } from 'lucide-react';
 export default function APITestingSuitePage() {
   const [isTesting, setIsTesting] = useState(false);
   const [testResults, setTestResults] = useState(null);
@@ -34,7 +36,6 @@ export default function APITestingSuitePage() {
       description: '24/7 API monitoring with instant alerts for downtime, errors, and performance issues.';
       color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       gradient: 'from-blue-400 to-cyan-500'}],
-
   const testTypes = [
     {
       name: 'Functional Testing',
@@ -142,8 +143,7 @@ export default function APITestingSuitePage() {
             API Testing Suite
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, 
-            and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
+            Test, monitor, and optimize your APIs with our comprehensive testing suite. Functional, performance, and security testing for REST, GraphQL, and SOAP APIs. Ensure your APIs are reliable, fast, and secure.
           </p>
           
           {/* API Testing Form */}
@@ -464,5 +464,5 @@ export default function APITestingSuitePage() {
         </div>
       </section>
     </>
-  )
+  );
 }

@@ -8,5 +8,5 @@ export default function GlowCard({ title, children }: { title: string, children:
         <div className="text-sm text-gray-300 leading-relaxed">{children}</div>
       </div>
     </div>
-  )
+  );
 }

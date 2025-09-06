@@ -197,7 +197,7 @@ export default function ServicesShowcase2027() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Category Filter */}
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Category</label>
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Category">Category</label>
                 <select
                   value={selectedCategory}
                   onChange={(e) => setSelectedCategory(e.target.value)}
@@ -213,7 +213,7 @@ export default function ServicesShowcase2027() {
 
               {/* Price Range Filter */}
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Price Range</label>
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Price Range">Price Range</label>
                 <select
                   value={selectedPriceRange}
                   onChange={(e) => setSelectedPriceRange(e.target.value)}
@@ -229,7 +229,7 @@ export default function ServicesShowcase2027() {
 
               {/* Sort By */}
               <div>
-                <label className="block text-cyan-400 font-medium mb-2">Sort By</label>
+                <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
                 <select
                   value={sortBy}
                   onChange={(e) => setSortBy(e.target.value)}
@@ -308,7 +308,7 @@ export default function ServicesShowcase2027() {
                     <div className="flex space-x-3">
                       <Link
                         href={service.link}
-                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
+                        className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
                       >
                         Learn More
                       </Link>

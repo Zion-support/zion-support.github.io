@@ -14,7 +14,6 @@ export default function AdminIntegrationsPage() {
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
-
   async function refresh() {
     const [p, s] = await Promise.all([
       fetch('/api/integrations/providers').then(r => r.json());

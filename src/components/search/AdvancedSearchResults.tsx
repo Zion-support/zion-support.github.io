@@ -48,12 +48,10 @@ interface SearchResponse {
 
 // Highlight search terms in text
 const HighlightText: React.FC<{ text: string, searchTerm: string, className?: string }> = ({ 
-  text, 
-  searchTerm, 
-  className = '' 
+  text, searchTerm, className = '' 
 }) => {
   if (!searchTerm.trim()) {
-    return <span className={className}>{text}</span>
+    return <span className={className}>{text}</span>;
   }
 
   const parts = text.split(new RegExp(`(${searchTerm.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'));
@@ -75,8 +73,8 @@ const HighlightText: React.FC<{ text: string, searchTerm: string, className?: st
 
 // Search Result Card Component
 const SearchResultCard: React.FC<{ 
-  result: SearchResult, 
-  searchTerm: string, 
+  result: SearchResult,
+  searchTerm: string,
   viewMode: 'grid' | 'list' 
 }> = ({ result, searchTerm, viewMode }) => {
   const router = useRouter();
@@ -176,8 +174,8 @@ const FilterSidebar: React.FC<{
 
   const handlePriceChange = (values: number[]) => {
     onFiltersChange({ 
-      ...filters, 
-      minPrice: values[0] ?? 0, 
+      ...filters,
+      minPrice: values[0] ?? 0,
       maxPrice: values[1] ?? 10000 
     })
   };
@@ -194,7 +192,9 @@ const FilterSidebar: React.FC<{
                 checked={filters.types.includes(option.id)}
                 onCheckedChange={(checked) => handleTypeChange(option.id, !!checked)}
               />
-              <label htmlFor={option.id} className="text-sm">
+              <label htmlFor={option.id} className="text-sm" htmlFor="input-
+                {option.label}
+              ">
                 {option.label}
               </label>
             </div>
@@ -269,8 +269,8 @@ const FilterSidebar: React.FC<{
 
 // No Results Component
 const NoResultsState: React.FC<{ searchTerm: string, onNewSearch: (term: string) => void }> = ({ 
-  searchTerm, 
-  onNewSearch 
+  searchTerm,
+  onNewSearch ;
 }) => {
   const suggestions = [
     "AI & Machine Learning";
@@ -400,7 +400,6 @@ export const AdvancedSearchResults: React.FC = () => {
 
       const response = await fetch(`/api/search?${params}`);
       const data: SearchResponse = await response.json(),
-
       if (page === 1) {
         setResults(data.results)
       } else {
@@ -412,8 +411,7 @@ export const AdvancedSearchResults: React.FC = () => {
       setHasMore(data.hasMore);
 
       logInfo('Search completed', { 
-        term, 
-        resultCount: data.results.length, 
+        term, resultCount: data.results.length,
         totalCount: data.totalCount 
       })
     } catch (error) {
@@ -593,7 +591,7 @@ export const AdvancedSearchResults: React.FC = () => {
                 {/* Results Grid/List */}
                 <div className={viewMode === 'grid' 
                   ? "grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 mb-6"
-                  : "space-y-4 mb-6"
+                  : "space-y-4 mb-6";
                 }>
                   {results.map((result) => (
                     <SearchResultCard

@@ -59,8 +59,7 @@ export default function About() {
     };
     {
       year: "2024",
-      text:
-        "Expanded into decentralized talent marketplace empowering creators worldwide to launch cutting-edge AI solutions and collaborate."
+      text: "Expanded into decentralized talent marketplace empowering creators worldwide to launch cutting-edge AI solutions and collaborate."
     }
   ];
 
@@ -237,5 +236,5 @@ export default function About() {
         <ContactSection />
       </main>
     </>
-  )
+  );
 }

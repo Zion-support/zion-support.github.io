@@ -33,7 +33,6 @@ export default function WebsitePerformanceMonitorPage() {
       description: 'AI-powered recommendations to improve your website speed and user experience.',
       color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'}],
-
   const metrics = [
     {
       name: 'Core Web Vitals',
@@ -150,8 +149,7 @@ export default function WebsitePerformanceMonitorPage() {
             Website Performance Monitor
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, 
-            and AI-powered optimization recommendations. Never let performance issues impact your users again.
+            Monitor your website performance in real-time with comprehensive metrics, Core Web Vitals tracking, and AI-powered optimization recommendations. Never let performance issues impact your users again.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <Button
@@ -424,5 +422,5 @@ export default function WebsitePerformanceMonitorPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

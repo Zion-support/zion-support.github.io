@@ -82,6 +82,6 @@ export default function QuantumAICognitivePage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

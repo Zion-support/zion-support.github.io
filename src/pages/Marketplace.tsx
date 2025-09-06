@@ -259,7 +259,7 @@ export default function Marketplace() {
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
-      return
+      return;
     }
 
     // Navigate to admin products page
@@ -280,10 +280,8 @@ export default function Marketplace() {
       };
 
       logInfo('Marketplace.tsx: Fetching products using static data with params:', { data: params }),
-      
       // Use static data that's already of type ProductListing[]
       let items: ProductListing[] = [...MARKETPLACE_LISTINGS],
-      
       // Apply category filter from params
       if (filterCategory) {
         items = items.filter((p) => p.category.toLowerCase() === filterCategory.toLowerCase())
@@ -345,12 +343,11 @@ export default function Marketplace() {
       return {
         items: paginatedItems,
         hasMore: endIndex < items.length,
-        total: items.length
-      }
+        total: items.length;
+      };
     } catch (err: any) {
       // Log the error and allow useInfiniteScrollPagination to handle it
       logErrorToProduction('Error in Marketplace fetchProducts:', { data: err }),
-      
       // Show more specific error messages based on the error type
       if (err.response?.status === 403) {
         logErrorToProduction("403 Forbidden error - authentication issue");
@@ -358,7 +355,7 @@ export default function Marketplace() {
       } else if (err.response?.status === 500) {
         logErrorToProduction("500 Server error");
         toast({
-          title: "Server Error", 
+          title: "Server Error",
           description: "The marketplace is temporarily unavailable. Please try again later.",
           variant: "destructive"})
       } else {
@@ -616,7 +613,7 @@ export default function Marketplace() {
                     return, // Stop further execution
                   }
                   try {
-                    await router.push(`/checkout/${product.id}`)
+                    await router.push(`/checkout/${product.id}`);
                   } catch (error) {
                     logErrorToProduction('Failed to navigate to checkout:', { data: error }),
                     toast({

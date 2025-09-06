@@ -195,7 +195,7 @@ export default function ExplorePage() {
               Explore Technology Categories
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive range of cutting-edge technology solutions across AI, 
+              Discover our comprehensive range of cutting-edge technology solutions across AI,
               quantum computing, cybersecurity, space technology, and more
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

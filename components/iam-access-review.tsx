@@ -49,6 +49,6 @@ export default function IAMAccessReviewPage() {
         </div>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }
 

@@ -32,7 +32,6 @@ const UltraFuturisticBackground2046: React.FC = () => {
       life: number,
       maxLife: number,
       type: 'quantum' | 'neural' | 'data' | 'energy',
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -168,7 +167,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
 
       isDead() {
         return this.life <= 0
-      }
+      };
     }
 
     // Initialize particles
@@ -276,7 +275,7 @@ const UltraFuturisticBackground2046: React.FC = () => {
         transition={{
           duration: 10,
           repeat: Infinity,
-          ease: "easeInOut"
+          ease: "easeInOut";
         }}
       />
       

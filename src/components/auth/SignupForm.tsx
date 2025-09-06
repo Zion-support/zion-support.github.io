@@ -114,7 +114,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     if (state?.error) {
-      return <AlertCircle className="h-4 w-4 text-red-500" />
+      return <AlertCircle className="h-4 w-4 text-red-500" />;
     }
     
     return null
@@ -127,7 +127,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     if (!isTouched) return '';
     
     if (state?.isValidating) {
-      return 'border-blue-300 focus:border-blue-500 focus:ring-blue-500/20'
+      return 'border-blue-300 focus: border-blue-500 focus:ring-blue-500/20'
     }
     
     if (state?.isValid && !state?.error) {
@@ -135,7 +135,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
     }
     
     if (state?.error) {
-      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20'
+      return 'border-red-500 focus: border-red-500 focus:ring-red-500/20';
     }
     
     return ''
@@ -181,7 +181,6 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       if (result.error) {
         logErrorToProduction('Signup error:', { data: result.error }),
         fireEvent('signup_error', { message: result.error }),
-        
         // Handle specific error cases with inline field errors
         if (result.error.includes('already registered') || result.error.includes('already exists')) {
           setError('email', { 
@@ -231,7 +230,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         description: errorMessage,
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -329,8 +328,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
           <div className="space-y-2">
             <div className="flex justify-between text-xs">
               <span>Password Strength</span>
-              <span className={cn('font-medium', 
-                passwordStrength.strength >= 4 ? 'text-green-600' :
+              <span className={cn('font-medium', passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -438,5 +436,5 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
         )}
       </Button>
     </form>
-  )
+  );
 }

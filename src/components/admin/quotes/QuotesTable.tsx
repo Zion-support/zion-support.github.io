@@ -166,7 +166,7 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
                             onClick={() => {
                               if (window.confirm('Are you sure you want to delete this quote request? This action cannot be undone.')) {
                                 deleteQuote(quote.id)
-                              }
+                              };
                             }}
                             className="text-red-500"
                           >

@@ -164,7 +164,7 @@ const NeuralFinanceAI: React.FC = () => {
               </h1>
               
               <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction, 
+                Advanced AI-powered financial analysis and trading platform using neural networks for real-time market prediction,
                 risk assessment, and automated portfolio optimization with 94% accuracy.
               </p>
               

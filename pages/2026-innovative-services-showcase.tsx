@@ -178,7 +178,7 @@ export default function Innovative2026ServicesShowcase() {
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
                 Discover the future of technology with our cutting-edge 2026 services. 
-                From AI-powered solutions to quantum computing and emerging technologies, 
+                From AI-powered solutions to quantum computing and emerging technologies,
                 transform your business with next-generation innovation.
               </p>
             </motion.div>
@@ -344,7 +344,7 @@ export default function Innovative2026ServicesShowcase() {
 
                       {/* CTA Button */}
                       <Link href={service.link}>
-                        <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
+                        <button className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover: from-blue-700 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg">
                           <span className="flex items-center justify-center space-x-2">
                             <span>Learn More</span>
                             <ArrowRight className="w-4 h-4" />

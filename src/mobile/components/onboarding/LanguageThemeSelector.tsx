@@ -17,7 +17,6 @@ const languages: Language[] = [
   { code: "fr", name: "Français", flag: "🇫🇷" },
   { code: "de", name: "Deutsch", flag: "🇩🇪" },
   { code: "zh", name: "中文", flag: "🇨🇳" }],
-
 export function LanguageThemeSelector() {
   const { theme, setTheme } = useTheme();
   const [selectedLanguage, setSelectedLanguage] = useState<string>("en");
@@ -79,7 +78,7 @@ export function LanguageThemeSelector() {
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
-                : "border-border hover:border-primary/40"
+                : "border-border hover:border-primary/40";
             }`}
             onClick={() => setTheme('dark')}
           >
@@ -94,5 +93,5 @@ export function LanguageThemeSelector() {
         </div>
       </div>
     </div>
-  )
+  );
 }

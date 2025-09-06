@@ -37,7 +37,7 @@ export default function EquipmentRecommendations() {
           </Button>
         </DialogContent>
       </Dialog>
-    )
+    );
   }
 
   return (
@@ -57,5 +57,5 @@ export default function EquipmentRecommendations() {
         ))}
       </div>
     </div>
-  )
+  );
 }

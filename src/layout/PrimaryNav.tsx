@@ -134,7 +134,7 @@ export function PrimaryNav() {
                   </Link>
                   <Link
                     href="/signup"
-                    className="text-sm hover:text-primary whitespace-nowrap"
+                    className="text-sm hover: text-primary whitespace-nowrap"
                   >
                     {t('auth.signup')}
                   </Link>
@@ -198,5 +198,5 @@ export function PrimaryNav() {
       {isMobile && <MobileBottomNav unreadCount={unreadCount} />}
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
+  );
 }

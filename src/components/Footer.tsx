@@ -4,9 +4,9 @@ import Link from "next/link", // Changed from react-router-dom
 import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
-    return fallback
+    return fallback;
   }
-  return envVar
+  return envVar;
 }
 
 const TWITTER_URL = resolveUrl(
@@ -167,9 +167,9 @@ export function Footer() {
             type="button"
             onClick={() => {
               window.scrollTo({ 
-                top: 0, 
+                top: 0,
                 behavior: 'smooth' 
-              })
+              });
             }}
             className="flex items-center space-x-1 text-foreground/80 hover: text-primary text-sm transition-colors cursor-pointer"
             aria-label="Back to top"
@@ -209,5 +209,5 @@ export function Footer() {
         <FeedbackWidget />
       </div>
     </footer>
-  )
+  );
 }

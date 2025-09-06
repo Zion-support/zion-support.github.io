@@ -190,7 +190,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
                     {p.technologies?.length ? (
                       <div className="mt-1 text-xs flex flex-wrap gap-2">
                         {p.technologies.map((t, tIdx) => (
-                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark:border-gray-700">
+                          <span key={`proj-${idx}-t-${tIdx}`} className="px-2 py-0.5 rounded border border-gray-200 dark: border-gray-700">
                             {t}
                           </span>
                         ))}
@@ -203,7 +203,7 @@ export const ResumePreview = forwardRef<HTMLDivElement, ResumePreviewProps>(
           ) : null}
         </div>
       </div>
-    )
+    );
   }
 );
 

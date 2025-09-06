@@ -24,5 +24,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     appendLog({ module: 'optimizer', type: 'optimize', status: 'error', payload: { error: e?.message || 'unknown' } });
     return res.status(500).json({ error: 'Optimization failure' })
-  }
+  };
 }

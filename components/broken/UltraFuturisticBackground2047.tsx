@@ -10,11 +10,10 @@ const UltraFuturisticBackground2047: React.FC = () => {
   if (!isClient) {
     return (
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
-    )
+    );
   }
 
-  return (
-    <>
+  return(<>
       {/* Background Gradient */}
       <div className="fixed inset-0 w-full h-full pointer-events-none z-0 bg-gradient-to-br from-black via-gray-900 to-black" />
 

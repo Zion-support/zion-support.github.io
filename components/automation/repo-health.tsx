@@ -10,7 +10,6 @@ interface Report {
 }
 
 type Props = { report: Report | null },
-
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationrepo-health.json');
@@ -53,5 +52,5 @@ export default function RepoHealth({ report }: Props) {
         </ul>
       </section>
     </div>
-  )
+  );
 }

@@ -92,7 +92,7 @@ function ReviewsModerationContent() {
         </Card>
       </main>
     </>
-  )
+  );
 }
 
 export default function ReviewsModeration() {
@@ -100,5 +100,5 @@ export default function ReviewsModeration() {
     <ProtectedRoute>
       <ReviewsModerationContent />
     </ProtectedRoute>
-  )
+  );
 }

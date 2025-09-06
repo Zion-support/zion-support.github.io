@@ -50,7 +50,7 @@ export function AIMatchingResults({
           <Skeleton className="h-[120px] w-full" />
         </div>
       </div>
-    )
+    );
   }
   
   if (matches.length === 0) {
@@ -70,7 +70,7 @@ export function AIMatchingResults({
           )}
         </CardContent>
       </Card>
-    )
+    );
   }
   
   return (
@@ -99,12 +99,12 @@ export function AIMatchingResults({
                 return (
                   <Card 
                     key={match.id}
-                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover:border-zion-purple/50 cursor-pointer"
+                    className="bg-zion-blue-dark border-zion-blue-light overflow-hidden transition-all hover: border-zion-purple/50 cursor-pointer"
                     onClick={() => onSelectMatch && onSelectMatch(match)}
                   >
                     <div className="flex">
                       <div className={cn(
-                        "w-2", 
+                        "w-2",
                         match.category.toLowerCase().includes("talent") ? "bg-zion-cyan" : 
                         match.category.toLowerCase().includes("service") ? "bg-zion-purple" : 
                         "bg-green-500"
@@ -152,7 +152,7 @@ export function AIMatchingResults({
                       </div>
                     </div>
                   </Card>
-                )
+                );
               })
             ) : (
               <div className="text-center py-8 text-zion-slate-light">
@@ -163,5 +163,5 @@ export function AIMatchingResults({
         ))}
       </Tabs>
     </div>
-  )
+  );
 }

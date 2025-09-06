@@ -112,7 +112,7 @@ export default function CaseStudyPage() {
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         
         <h2>Solution</h2>
-        <p>We designed and implemented a comprehensive cloud optimization system:</p>
+        <p>We designed and implemented a comprehensive cloud optimization system: </p>
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>

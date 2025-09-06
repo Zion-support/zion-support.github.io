@@ -10,6 +10,7 @@ import {
 import { DisputeForm } from "./DisputeForm";
 import { useRouter } from 'next/router';
 import { ShieldAlert } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogTrigger, DialogFooter } from '@/components/ui/dialog';
 
 interface RaiseDisputeButtonProps {
   projectId: string,
@@ -64,5 +65,5 @@ export function RaiseDisputeButton({
         </DialogContent>
       </Dialog>
     </>
-  )
+  );
 }

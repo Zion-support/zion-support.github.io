@@ -34,10 +34,10 @@ export default function AccountSettings() {
         logInfo('Saved settings', { displayWeb3, didHandle, enableBackup });
         toast.success('Account settings updated successfully')
       } catch (e) {
-        logErrorToProduction('Failed to save settings', { data:  e }),
+        logErrorToProduction('Failed to save settings', { data: e }),
         toast.error('Failed to save settings')
       } finally {
-        setIsSubmitting(false)
+        setIsSubmitting(false);
       }
     }, 1000)
   };
@@ -274,5 +274,5 @@ export default function AccountSettings() {
         </div>
       </main>
     </>
-  )
+  );
 }

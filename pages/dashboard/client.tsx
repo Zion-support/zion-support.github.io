@@ -11,7 +11,6 @@ type StepKey = typeof STEPS[number]['key'];
 
 export default function ClientDashboard() {
   const [completed, setCompleted] = useState<Record<StepKey, boolean>>({ job: false, invite: false, response: false }),
-
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');

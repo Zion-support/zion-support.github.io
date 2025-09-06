@@ -172,7 +172,7 @@ export default function Partners() {
           )}
         </div>
       </div>
-    )
+    );
   }
 
   // Authenticated user view - Partner Dashboard
@@ -232,5 +232,5 @@ export default function Partners() {
         </TabsContent>
       </Tabs>
     </div>
-  )
+  );
 }

@@ -138,7 +138,7 @@ function ClientDashboardContent() {
         </div>
       </main>
     </>
-  )
+  );
 }
 
 export default function ClientDashboard() {
@@ -146,5 +146,5 @@ export default function ClientDashboard() {
     <ProtectedRoute>
       <ClientDashboardContent />
     </ProtectedRoute>
-  )
+  );
 }

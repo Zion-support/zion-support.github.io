@@ -57,9 +57,8 @@ type NotificationContextValue = {
 };
 
 const NotificationContext = createContext<NotificationContextValue>({ notify: () => {} }),
-
 export function useToast() {
-  return useContext(NotificationContext)
+  return useContext(NotificationContext);
 }
 
 export function NotificationProvider({ children }: { children: ReactNode }) {
@@ -91,7 +90,7 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             {onDismiss && (
               <button
                 onClick={() => onDismiss(notification.id)}
-                className="ml-4 text-gray-400 hover:text-gray-600"
+                className="ml-4 text-gray-400 hover: text-gray-600"
               >
                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -100,16 +99,3 @@ export function NotificationProvider({ children }: { children: ReactNode }) {
             )}
           </div>
         </div>
-<<<<<<< HEAD
-      ))}
-    </div>
-  );
-};
-
-export default NotificationSystem;
-=======
-      </div>
-    </NotificationContext.Provider>
-  )
-}
->>>>>>> pr-11992

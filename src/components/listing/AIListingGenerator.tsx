@@ -112,5 +112,5 @@ export function AIListingGenerator({ onApplyGenerated, initialValues = {} }: AIL
         <GeneratedContentDisplay content={generatedContent} onApply={handleApply} />
       )}
     </div>
-  )
+  );
 }

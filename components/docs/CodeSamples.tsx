@@ -8,7 +8,6 @@ const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> 
   { key: 'curl', label: 'cURL' },
   { key: 'javascript', label: 'JavaScript' },
   { key: 'python', label: 'Python' }],
-
 export default function CodeSamples({ samples }: Props) {
   const [active, setActive] = useState<typeof tabs[number]['key']>('curl');
   const sampleMap = Object.fromEntries(samples.map((s) => [s.language, s.code]));
@@ -30,5 +29,5 @@ export default function CodeSamples({ samples }: Props) {
         <code>{sampleMap[active] || ''}</code>
       </pre>
     </div>
-  )
+  );
 }

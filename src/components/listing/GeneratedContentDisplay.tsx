@@ -69,5 +69,5 @@ export function GeneratedContentDisplay({ content, onApply }: GeneratedContentDi
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

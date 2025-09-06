@@ -34,7 +34,6 @@ export default function SEOAnalyzerToolPage() {
       description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
       color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'}],
-
   const seoFactors = [
     {
       category: 'On-Page SEO',
@@ -159,8 +158,7 @@ export default function SEOAnalyzerToolPage() {
             SEO Analyzer Tool
           </h1>
           <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, 
-            keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
+            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
           </p>
           
           {/* URL Input */}
@@ -504,5 +502,5 @@ export default function SEOAnalyzerToolPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

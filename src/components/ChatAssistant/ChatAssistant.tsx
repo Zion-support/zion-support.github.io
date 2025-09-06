@@ -12,6 +12,7 @@ import { ChatInput } from './ChatInput';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Button } from '@/components/ui/button';
 import { X } from 'lucide-react'
+import { Star } from 'lucide-react';
 
 export interface Message {
   id: string,
@@ -300,5 +301,5 @@ export function ChatAssistant({
         </div>
       )}
     </div>
-  )
+  );
 }

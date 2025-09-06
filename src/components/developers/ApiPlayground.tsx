@@ -48,7 +48,6 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
         "Content-Type": "application/json"};
       // Add timeout to prevent hanging
       signal: AbortSignal.timeout(15000)},
-
     if (method !== "GET" && method !== "DELETE") {
       try {
         options.body = JSON.stringify(JSON.parse(body))
@@ -122,7 +121,7 @@ export function ApiPlayground({ method, path, params = [] }: ApiPlaygroundProps)
       </Button>
       {response && <CodeBlock code={response} language="json" />}
     </div>
-  )
+  );
 }
 
 export default ApiPlayground;

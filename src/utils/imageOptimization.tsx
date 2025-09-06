@@ -67,7 +67,7 @@ export function OptimizedImage({
   const getOptimizedSrc = (originalSrc: string) => {
     // If it's already optimized or external, return as-is
     if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {
-      return originalSrc
+      return originalSrc;
     }
     
     // For internal images, Next.js will handle optimization
@@ -95,7 +95,7 @@ export function OptimizedImage({
         <defs>
           <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
             <stop offset="0%" style="stop-color:#f3f4f6,stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#e5e7eb,stop-opacity: 1" />
           </linearGradient>
         </defs>
         <rect width="100%" height="100%" fill="url(#grad)" />
@@ -182,8 +182,8 @@ export function withImageOptimization<P extends { src: string, alt: string }>(
         alt={alt}
         {...(otherProps as any)}
       />
-    )
-  }
+    );
+  };
 }
 
 // Utility to preload critical images

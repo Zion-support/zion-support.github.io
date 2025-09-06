@@ -25,7 +25,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     let particles: Particle[] = [],
     let quantumFields: QuantumField[] = [],
     let neuralNetworks: NeuralNetwork[] = [],
-
     class Particle {
       x: number,
       y: number,
@@ -35,7 +34,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       color: string,
       life: number,
       maxLife: number,
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -81,7 +79,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       intensity: number,
       phase: number,
       color: string,
-
       constructor() {
         this.x = Math.random() * canvas.width;
         this.y = Math.random() * canvas.height;
@@ -111,7 +108,6 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
     class NeuralNetwork {
       nodes: { x: number, y: number, connections: number[] }[],
       connections: { from: number, to: number, weight: number }[],
-
       constructor() {
         this.nodes = [];
         this.connections = [];

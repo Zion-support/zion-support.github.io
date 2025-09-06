@@ -26,7 +26,9 @@ export function MobileFilterBar({
       </Button>
       
       <div className="relative mt-4">
-        <label htmlFor="mobile-talent-search" className="sr-only">
+        <label htmlFor="mobile-talent-search" className="sr-only" htmlFor="input-
+          Search talents
+        ">
           Search talents
         </label>
         <Search className="absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" />
@@ -43,5 +45,5 @@ export function MobileFilterBar({
         </p>
       </div>
     </div>
-  )
+  );
 }

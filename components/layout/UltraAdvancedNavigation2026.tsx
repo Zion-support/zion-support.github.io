@@ -368,7 +368,7 @@ const UltraAdvancedNavigation2026 = () => {
                         <Link
                           key={subItem.name}
                           href={subItem.href}
-                          className="block text-gray-400 hover:text-white transition-colors duration-200 text-sm py-1"
+                          className="block text-gray-400 hover: text-white transition-colors duration-200 text-sm py-1"
                           onClick={() => setIsOpen(false)}
                         >
                           {subItem.name}
@@ -438,7 +438,7 @@ const UltraAdvancedNavigation2026 = () => {
       {/* Spacer for fixed navigation */}
       <div className="h-20"></div>
     </>
-  )
+  );
 }
 
 export default UltraAdvancedNavigation2026;

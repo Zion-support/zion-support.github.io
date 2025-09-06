@@ -306,7 +306,7 @@ export default function ServicesShowcase2028() {
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>
               <p className="text-purple-300 mb-6">
-                Our services target markets with exponential growth potential, 
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300-800% annually.
               </p>
               <div className="text-3xl font-bold text-green-400">500%+</div>

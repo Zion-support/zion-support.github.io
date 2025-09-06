@@ -123,5 +123,5 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
         </div>
       </CardContent>
     </Card>
-  )
+  );
 }

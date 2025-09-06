@@ -43,7 +43,7 @@ export default function BlogPost() {
         return
       } catch (err) {
         logErrorToProduction('Failed to fetch blog post', { data: err }),
-        setError('Failed to load article')
+        setError('Failed to load article');
       }
 
       const currentPost = BLOG_POSTS.find((p) => p.slug === slug);
@@ -80,7 +80,7 @@ export default function BlogPost() {
         <p>Failed to load article.</p>
         <Button onClick={() => router.reload()}>Retry</Button>
       </div>
-    )
+    );
   }
 
   // If post is still null after loading, show not found
@@ -90,7 +90,7 @@ export default function BlogPost() {
         <p>Article not found.</p>
         <Button onClick={() => router.push('/blog')}>Back to Blog</Button>
       </div>
-    )
+    );
   }
 
   // Helper function to get share URL
@@ -121,7 +121,6 @@ export default function BlogPost() {
     author: {
       "@type": "Person";
       name: post.author.name}},
-  
   return (
     <>
       <SEO
@@ -326,5 +325,5 @@ export default function BlogPost() {
         </div>
       </div>
     </>
-  )
+  );
 }

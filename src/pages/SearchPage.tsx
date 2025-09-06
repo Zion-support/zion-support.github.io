@@ -36,7 +36,7 @@ function highlight(text: string, term: string) {
         )
       )}
     </>
-  )
+  );
 }
 
 export default function SearchPage() {
@@ -45,7 +45,6 @@ export default function SearchPage() {
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
-
   // Force re-render and reset state when route changes
   const routeKey = useRouteChange(() => {
     setResults([]);

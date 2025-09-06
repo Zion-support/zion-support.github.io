@@ -63,14 +63,14 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       <div>
-        <label className="block text-sm font-medium mb-2">Overall Rating</label>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
 
       <div>
-        <label className="block text-sm font-medium mb-2">Your Review</label>
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
         <textarea
-          className="w-full rounded-md border border-gray-300 p-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
           value={text}
           onChange={(e) => setText(e.target.value)}
@@ -80,7 +80,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
 
       <div className="flex items-center gap-3">
         <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
-        <label htmlFor="anonymous">Submit anonymously</label>
+        <label htmlFor="anonymous" htmlFor="input-Submit anonymously">Submit anonymously</label>
       </div>
 
       <div className="grid md:grid-cols-2 gap-4">

@@ -56,7 +56,6 @@ export function PaymentButton({
           userId: user?.id,
           successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
-      
       if (error) {
         throw error
       }

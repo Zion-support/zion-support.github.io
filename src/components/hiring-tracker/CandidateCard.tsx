@@ -213,5 +213,5 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
         onConfirm={handleHireConfirmed}
       />
     </>
-  )
+  );
 }

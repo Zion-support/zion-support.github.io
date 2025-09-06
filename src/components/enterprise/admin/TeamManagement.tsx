@@ -55,7 +55,6 @@ export function TeamManagement() {
       role: "Viewer",
       status: "active",
       lastActive: "3 days ago"}],
-
   const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
@@ -215,5 +214,5 @@ export function TeamManagement() {
         </Table>
       </div>
     </div>
-  )
+  );
 }

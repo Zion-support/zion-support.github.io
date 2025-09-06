@@ -61,7 +61,6 @@ export function ServiceProviderRegistrationForm() {
       availability: "available",
       enhancedProfile: false,
       website: ""}}),
-
   // Handle adding service tags
   const handleAddService = () => {
     const serviceInput = form.getValues("services");
@@ -129,7 +128,6 @@ export function ServiceProviderRegistrationForm() {
       // Check if data exists before type assertion
       if (data && typeof data === 'object') {
         setGeneratedContent(data as { summary: string, services: string[] }),
-        
         toast({
           title: "Enhanced Profile Generated",
           description: "AI has created a professional bio and suggested additional services for your profile."})
@@ -292,7 +290,6 @@ export function ServiceProviderRegistrationForm() {
       toast({
         title: "Profile Created Successfully",
         description: "Your service provider profile has been published and is now visible in the directory."}),
-
       // Redirect to service provider dashboard or profile page
       setTimeout(() => {
         router.push('/service-dashboard')
@@ -305,7 +302,7 @@ export function ServiceProviderRegistrationForm() {
         description: error.message || "There was an error creating your profile. Please try again.",
         variant: "destructive"})
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false),
     }
   };
 
@@ -741,5 +738,5 @@ export function ServiceProviderRegistrationForm() {
         </Form>
       </Card>
     </div>
-  )
+  );
 }

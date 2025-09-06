@@ -55,7 +55,7 @@ export default async function handler(
     }
 
     if (text.length > 10000) {
-      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' })
+      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
     }
 
     // Basic statistics

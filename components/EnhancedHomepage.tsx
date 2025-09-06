@@ -182,7 +182,7 @@ const EnhancedHomepage: React.FC = () => {
       <UltraFuturisticBackground variant={colorScheme === 'cyber' ? 'cyberpunk' : colorScheme === 'quantum' ? 'quantum' : colorScheme === 'neon' ? 'neural' : 'holographic'} intensity="high">
         {/* Hero Section */}
         <motion.section 
-          className="relative min-h-screen flex items-center justify-center px-4 lg:px-8 pt-20"
+          className="relative min-h-screen flex items-center justify-center px-4 lg: px-8 pt-20"
           variants={heroVariants}
           initial="hidden"
           animate="visible"
@@ -200,7 +200,7 @@ const EnhancedHomepage: React.FC = () => {
               className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed"
               variants={itemVariants}
             >
-              Pioneering the Future of Technology with Revolutionary AI Consciousness, 
+              Pioneering the Future of Technology with Revolutionary AI Consciousness,
               Quantum Computing, and Autonomous Solutions
             </motion.p>
 
@@ -419,7 +419,7 @@ const EnhancedHomepage: React.FC = () => {
                     
                     <Link href={`/services/${(featuredServices[currentServiceIndex] as any)?.slug || featuredServices[currentServiceIndex]?.id}`}>
                       <motion.button
-                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300"
+                        className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-blue-700 transition-all duration-300"
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >

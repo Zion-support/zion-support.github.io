@@ -26,7 +26,7 @@ const ModernLayout = ({
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         {canonical ? <link rel="canonical" href={canonical} /> : null}
-        <meta property="og:type" content="website" />
+        <meta property="og: type" content="website" />
         <meta property="og:url" content={canonical || "https://ziontechgroup.com"} />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -44,7 +44,7 @@ const ModernLayout = ({
         {children}
       </div>
     </>
-  );
+  ),;
 };
 
 export default ModernLayout;

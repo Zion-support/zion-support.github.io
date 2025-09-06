@@ -63,7 +63,7 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap];
         return (
           <Link key={category.id} href={`/community/category/${category.id}`}>
-            <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
+            <Card className="h-full transition-all hover: shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
                 <div className="p-2 bg-zion-purple/10 rounded-full">
                   <Icon className="h-6 w-6 text-zion-purple" />
@@ -75,7 +75,7 @@ export const ForumCategories = () => {
               </CardContent>
             </Card>
           </Link>
-        )
+        );
       })}
     </div>
   )

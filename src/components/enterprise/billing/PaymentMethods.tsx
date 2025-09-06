@@ -3,6 +3,7 @@ import React from "react";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { CreditCard, Plus, Trash } from 'lucide-react'
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 
 export function PaymentMethods() {
   // Mock payment methods
@@ -36,7 +37,7 @@ export function PaymentMethods() {
           <div 
             key={method.id}
             className={`flex items-center justify-between p-4 rounded-lg border ${
-              method.isDefault ? "bg-muted border-primary" : "border-border"
+              method.isDefault ? "bg-muted border-primary" : "border-border";
             }`}
           >
             <div className="flex items-center space-x-4">
@@ -75,5 +76,5 @@ export function PaymentMethods() {
         </Button>
       </CardFooter>
     </Card>
-  )
+  );
 }

@@ -14,7 +14,6 @@ import { SERVICES } from '@/data/servicesData';
 import { useCurrency } from '@/hooks/useCurrency';
 // Initial services from existing data
 const INITIAL_SERVICES: ProductListing[] = SERVICES,
-
 // Market insights component
 const ServicesMarketInsights = ({ stats }: { stats: any }) => (
   <Card className="bg-gradient-to-r from-green-900/20 to-blue-900/20 border-green-700/30 mb-6">
@@ -85,7 +84,7 @@ const ServiceFilterControls = ({
 const ServiceCard = ({ service, onViewDetails }: { service: ProductListing, onViewDetails: () => void }) => {
   const { formatPrice } = useCurrency();
   return (
-  <Card className="h-full hover:shadow-lg transition-shadow">
+  <Card className="h-full hover: shadow-lg transition-shadow">
     <CardHeader className="pb-3">
       <div className="flex items-start justify-between">
         <div className="flex-1 min-w-0">
@@ -145,7 +144,6 @@ export default function ServicesPage() {
     await new Promise(resolve => setTimeout(resolve, 400));
 
     let allServices: ProductListing[] = [],
-    
     if (page === 1) {
       allServices = [...INITIAL_SERVICES]
     }
@@ -244,7 +242,7 @@ export default function ServicesPage() {
         <p className="text-muted-foreground mb-4">Failed to load services. Please try again.</p>
         <Button onClick={refresh}>Retry</Button>
       </div>
-    )
+    );
   }
 
   return (
@@ -313,5 +311,5 @@ export default function ServicesPage() {
         )}
       </AnimatePresence>
     </div>
-  )
+  );
 }

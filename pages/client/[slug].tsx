@@ -5,7 +5,6 @@ import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
 
 type Props = { clientId: string },
-
 const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null);
   const [reviews, setReviews] = useState<PublicReview[]>([]);

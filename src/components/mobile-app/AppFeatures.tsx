@@ -39,7 +39,7 @@ export const AppFeatures: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
-            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover:border-zion-cyan transition-colors duration-300">
+            <Card key={index} className="bg-zion-blue-dark border-zion-purple/30 hover: border-zion-cyan transition-colors duration-300">
               <CardHeader>
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>

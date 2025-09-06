@@ -128,7 +128,7 @@ const AutonomousBusinessOperationsPlatform = () => {
                 </span>
               </h1>
               <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
-                Transform your business with AI-powered autonomous operations that work 24/7, 
+                Transform your business with AI-powered autonomous operations that work 24/7,
                 making intelligent decisions and optimizing every aspect of your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">

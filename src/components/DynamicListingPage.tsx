@@ -163,13 +163,12 @@ export function DynamicListingPage({
         case "rating":
           return (b.rating || 0) - (a.rating || 0);
         case "newest":
-        default:
-          return (
+        default: return (
             new Date(b.createdAt).getTime() -
             new Date(a.createdAt).getTime()
           )
       }
-    })
+    });
   } catch (error) {
     captureException(error);
     logErrorToProduction('Listing filter error:', { data: error })
@@ -186,7 +185,6 @@ export function DynamicListingPage({
         toast({
           title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`}),
-
         // Store quote data in sessionStorage for the request-quote page
         const quoteData = {
           serviceType: categorySlug,
@@ -195,7 +193,6 @@ export function DynamicListingPage({
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0]}},
-        
         if (typeof window !== 'undefined') {
           sessionStorage.setItem('quoteRequestData', JSON.stringify(quoteData))
         }
@@ -223,7 +220,9 @@ export function DynamicListingPage({
               </h3>
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Categories
+                ">
                   Categories
                 </label>
                 <div className="space-y-2">
@@ -238,7 +237,9 @@ export function DynamicListingPage({
                       <label
                         htmlFor={`cat-${filter.value}`}
                         className="ml-2 text-sm text-zion-slate-light cursor-pointer"
-                      >
+                       htmlFor="input-
+                        {filter.label}
+                      ">
                         {filter.label}
                       </label>
                     </div>
@@ -248,7 +249,9 @@ export function DynamicListingPage({
 
               {brandOptions.length > 0 && (
                 <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                  <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                    Brand
+                  ">
                     Brand
                   </label>
                   <Select
@@ -273,7 +276,9 @@ export function DynamicListingPage({
               )}
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Specifications
+                ">
                   Specifications
                 </label>
                 <Input
@@ -289,7 +294,9 @@ export function DynamicListingPage({
 
               {availabilityOptions.length > 0 && (
                 <div className="mb-6">
-                  <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                  <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                    Availability
+                  ">
                     Availability
                   </label>
                   <Select
@@ -316,7 +323,9 @@ export function DynamicListingPage({
               )}
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Price Range
+                ">
                   Price Range
                 </label>
                 <div className="mt-6 px-2">
@@ -338,7 +347,9 @@ export function DynamicListingPage({
               </div>
 
               <div className="mb-6">
-                <label className="text-sm font-medium text-zion-slate-light block mb-2">
+                <label className="text-sm font-medium text-zion-slate-light block mb-2" htmlFor="input-
+                  Minimum Rating
+                ">
                   Minimum Rating
                 </label>
                 <div className="flex flex-wrap gap-2">
@@ -349,13 +360,13 @@ export function DynamicListingPage({
                       size="sm"
                       onClick={() => {
                         logInfo('Rating selected:', { data: rating }),
-                        setSelectedRating(rating)
+                        setSelectedRating(rating);
                       }}
                       aria-pressed={selectedRating === rating}
                       className={`{
                         selectedRating === rating
                           ? "bg-zion-purple/30 border-zion-purple text-zion-purple"
-                          : "border-zion-blue-light text-zion-slate-light"
+                          : "border-zion-blue-light text-zion-slate-light";
                       } focus-visible:ring-zion-purple`}
                     >
                       {rating === null ? (
@@ -481,7 +492,7 @@ export function DynamicListingPage({
               <div
                 className={
                   view === "grid"
-                    ? "grid grid-cols-1 md:grid-cols-2 gap-6"
+                    ? "grid grid-cols-1 md: grid-cols-2 gap-6"
                     : "flex flex-col gap-6"
                 }
               >

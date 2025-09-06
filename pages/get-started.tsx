@@ -156,7 +156,7 @@ export default function GetStarted() {
               Get Started Today
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">
-              Begin your journey into the future of AI consciousness, quantum computing, 
+              Begin your journey into the future of AI consciousness, quantum computing;
               and autonomous systems. Our expert team will guide you every step of the way.
             </p>
             <div className="flex flex-wrap justify-center gap-6">

@@ -458,7 +458,7 @@ export default function Revolutionary2026Pricing() {
                 </div>
                 <h3 className="text-xl font-bold text-white mb-4">Unmatched Value</h3>
                 <p className="text-gray-300">
-                  Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI, 
+                  Get enterprise-grade technology at competitive prices. Our services deliver 1000%+ ROI,
                   making them the smartest investment for your business.
                 </p>
               </motion.div>

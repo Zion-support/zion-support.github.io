@@ -58,13 +58,13 @@ function convertProductListingToEquipmentDetails(item: ProductListing): Equipmen
     inStock: item.availability === 'In Stock' || !item.availability,
     expectedShipping: item.availability || 'In Stock',
     specifications: (item.specifications || []).map((spec) => ({ 
-      name: spec, 
+      name: spec,
       value: '' 
     }));
     features: item.tags || [],
     warranty: '1 Year Manufacturer Warranty',
-    returnPolicy: '30-day return policy'
-  }
+    returnPolicy: '30-day return policy';
+  };
 }
 
 // Build sample data from the shared equipment listings
@@ -73,7 +73,6 @@ export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
     acc[item.id] = convertProductListingToEquipmentDetails(item);
     return acc
   }, {} as { [key: string]: EquipmentDetails }),
-
 export default function EquipmentDetail() {
   const router = useRouter();
   const { id } = router.query as { id?: string };
@@ -130,8 +129,8 @@ export default function EquipmentDetail() {
               return
             }
           } catch (storageError) {
-            logErrorToProduction('Error reading from sessionStorage:', { data: storageError })
-          }
+            logErrorToProduction('Error reading from sessionStorage:', { data: storageError });
+          };
         }
 
         // If not found anywhere, set error
@@ -343,7 +342,7 @@ export default function EquipmentDetail() {
                           className={`h-4 w-4 ${
                             i < Math.floor(equipment.rating!) 
                               ? 'text-yellow-400 fill-current' 
-                              : 'text-zion-slate-light'
+                              : 'text-zion-slate-light';
                           }`}
                         />
                       ))}
@@ -392,7 +391,7 @@ export default function EquipmentDetail() {
               {/* Add to Cart */}
               <div className="space-y-4 pt-6 border-t border-zion-blue-light">
                 <div className="flex items-center gap-4">
-                  <label className="text-white font-medium">Quantity:</label>
+                  <label className="text-white font-medium" htmlFor="input-Quantity:">Quantity:</label>
                   <div className="flex items-center gap-2">
                     <Button
                       variant="outline"
@@ -465,6 +464,6 @@ export default function EquipmentDetail() {
         </div>
       </div>
     </>
-  )
+  );
 }
 

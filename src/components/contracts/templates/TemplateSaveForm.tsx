@@ -38,7 +38,6 @@ export function TemplateSaveForm({
     defaultValues: {
       title: editTemplate?.title || "",
       isDefault: editTemplate?.is_default || false}}),
-  
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
       return
@@ -118,5 +117,5 @@ export function TemplateSaveForm({
         </div>
       </form>
     </Form>
-  )
+  );
 }

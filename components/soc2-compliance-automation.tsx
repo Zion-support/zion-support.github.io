@@ -2,8 +2,7 @@ import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
 export default function SOC2ComplianceAutomationPage() {
-	return (
-		<>
+	return(<>
 			<SEO title="SOC 2 Compliance Automation" description="Automate evidence collection, controls mapping, and auditor-ready reports. Reduce audit time and ensure continuous compliance." />
 			<section className="relative pt-28 pb-16 md:pt-36 md:pb-24">
 				<div className="container mx-auto px-4">

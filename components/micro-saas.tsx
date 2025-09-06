@@ -3,6 +3,8 @@ import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target } from 'lucide-react';
 import Button from '../components/ui/Button';
 import { Check, Star, Zap, Shield, Users, Globe, TrendingUp, Clock, DollarSign, Target, ArrowRight, BarChart3, Zap as Lightning } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import { Zap, Star, Calendar } from 'lucide-react';
 export default function MicroSaasPage() {
   const [selectedCategory, setSelectedCategory] = useState('All');
   
@@ -1524,13 +1526,13 @@ export default function MicroSaasPage() {
 
         {/* CTA Section */}
         <section className="py-24 bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10" />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+          <div className="absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size: 20px_20px] opacity-10" />
+          <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center relative z-10">
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8">
               Ready to Get Started?
             </h2>
             <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
-              Choose from our portfolio of 20 specialized solutions. All services include comprehensive documentation, 
+              Choose from our portfolio of 20 specialized solutions. All services include comprehensive documentation,
               dedicated support, enterprise-grade reliability, and 14-day free trials. Start with one solution 
               and add more as your business grows.
             </p>
@@ -1778,5 +1780,5 @@ export default function MicroSaasPage() {
         </div>
       </section>
     </>
-  )
+  );
 }

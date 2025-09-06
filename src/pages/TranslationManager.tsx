@@ -78,7 +78,6 @@ export default function TranslationManager() {
     
     const query = searchQuery.toLowerCase().trim();
     const filtered: string[] = [],
-    
     // Search in keys and values
     Object.values(translations).forEach(langTranslations => {
       Object.entries(langTranslations).forEach(([key, value]) => {
@@ -374,5 +373,5 @@ export default function TranslationManager() {
         </Card>
       </main>
     </>
-  )
+  );
 }

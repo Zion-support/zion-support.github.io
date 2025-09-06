@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string },
-
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datasite-map.json');
   let routes: RouteInfo[] = [],
@@ -39,5 +38,5 @@ export default function SiteMapIntelPage({ routes, generatedAt }: { routes: Rout
         </table>
       </div>
     </div>
-  )
+  );
 }

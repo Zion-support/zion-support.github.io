@@ -56,7 +56,6 @@ export function TeamActivity() {
       target: "Monthly spending cap",
       timestamp: new Date(Date.now() - 1000 * 60 * 60 * 24 * 3),
       category: "billing"}],
-
   // Function to format the date in a readable way
   const formatDate = (date: Date) => {
     const now = new Date();
@@ -82,7 +81,6 @@ export function TeamActivity() {
       candidates: { variant: "outline" },
       team: { variant: "secondary" },
       billing: { variant: "destructive" }},
-
     const style = categoryStyles[category] || { variant: "default" as const },
     return <Badge variant={style.variant}>{category}</Badge>
   };
@@ -147,5 +145,5 @@ export function TeamActivity() {
         </Button>
       </div>
     </div>
-  )
+  );
 }

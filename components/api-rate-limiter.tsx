@@ -116,8 +116,7 @@ export default function APIRateLimiterPage() {
             API Rate Limiter
           </h1>
           <p className="text-xl text-green-200 max-w-4xl mx-auto leading-relaxed">
-            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, 
-            and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
+            Protect your APIs from abuse with intelligent rate limiting. Ensure fair usage, prevent DDoS attacks, and maintain optimal performance for all your users with our enterprise-grade rate limiting solution.
           </p>
         </div>
       </section>
@@ -145,7 +144,9 @@ export default function APIRateLimiterPage() {
               <div className="space-y-6">
                 {/* API Endpoint */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Endpoint
+                  ">
                     API Endpoint
                   </label>
                   <input
@@ -159,7 +160,9 @@ export default function APIRateLimiterPage() {
 
                 {/* Rate Limit */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+                    Rate Limit
+                  ">
                     Rate Limit
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -182,7 +185,9 @@ export default function APIRateLimiterPage() {
 
                 {/* Time Window */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-3">
+                  <label className="block text-sm font-medium text-gray-300 mb-3" htmlFor="input-
+                    Time Window
+                  ">
                     Time Window
                   </label>
                   <div className="grid grid-cols-2 gap-3">
@@ -205,7 +210,9 @@ export default function APIRateLimiterPage() {
 
                 {/* API Key Generation */}
                 <div>
-                  <label className="block text-sm font-medium text-gray-300 mb-2">
+                  <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
+                    API Key
+                  ">
                     API Key
                   </label>
                   <div className="flex space-x-2">
@@ -270,7 +277,7 @@ export default function APIRateLimiterPage() {
                     <div
                       key={index}
                       className={`p-4 rounded-lg border ${
-                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10'
+                        result.status === 'success' ? 'border-green-500/30 bg-green-500/10' : 'border-red-500/30 bg-red-500/10';
                       }`}
                     >
                       <div className="flex items-center justify-between mb-2">
@@ -444,7 +451,7 @@ console.log('Rate Limit Info:', {
 }),`)}
                 variant="outline"
                 size="sm"
-                className="mt-4 border-gray-600 text-gray-300 hover:bg-gray-700"
+                className="mt-4 border-gray-600 text-gray-300 hover: bg-gray-700"
               >
                 <Copy className="w-4 h-4 mr-2" />
                 Copy Code

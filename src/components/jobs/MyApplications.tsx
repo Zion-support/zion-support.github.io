@@ -57,7 +57,7 @@ export function MyApplications() {
           </Button>
         </CardContent>
       </Card>
-    )
+    );
   }
   
   return (
@@ -111,5 +111,5 @@ export function MyApplications() {
         </Card>
       ))}
     </div>
-  )
+  );
 }

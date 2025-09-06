@@ -51,11 +51,11 @@ export default function FeedbackModal({
           ))}
         </div>
         <div className="text-sm">
-          <label className="block mb-1">Optional comment</label>
+          <label className="block mb-1" htmlFor="input-Optional comment">Optional comment</label>
           <textarea value={comment} onChange={(e)=>setComment(e.target.value)} className="w-full border rounded p-2" rows={3} />
         </div>
         <div className="text-sm">
-          <label className="block mb-1">Also</label>
+          <label className="block mb-1" htmlFor="input-Also">Also</label>
           <div className="flex gap-3">
             <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='general'} onChange={()=>setKind('general')} />General</label>
             <label className="inline-flex items-center gap-1"><input type="radio" checked={kind==='bug'} onChange={()=>setKind('bug')} />Report a bug</label>
@@ -68,5 +68,5 @@ export default function FeedbackModal({
         </div>
       </div>
     </div>
-  )
+  );
 }

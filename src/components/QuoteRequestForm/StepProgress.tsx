@@ -30,7 +30,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
         <div 
           className="absolute h-full bg-zion-purple transition-all duration-500"
           style={{ 
-            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`
+            width: `${(steps.findIndex(s => s.id === currentStep) / (steps.length - 1)) * 100}%`;
           }}
         />
       </div>

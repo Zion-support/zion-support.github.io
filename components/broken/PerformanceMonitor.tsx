@@ -203,7 +203,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   // Don't render anything in production
   if (process.env.NODE_ENV === 'production') {
-    return null
+    return null;
   }
 
   const performanceScore = getPerformanceScore();

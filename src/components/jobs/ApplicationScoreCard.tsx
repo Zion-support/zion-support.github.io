@@ -78,7 +78,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         }
         
         if (attempts < maxAttempts) {
-          setTimeout(checkScore, 3000)
+          setTimeout(checkScore, 3000);
         } else {
           setIsScoring(false);
           toast.info("Scoring is taking longer than expected. Check back later.")
@@ -221,5 +221,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
         )}
       </CardContent>
     </Card>
-  )
+  );
 }

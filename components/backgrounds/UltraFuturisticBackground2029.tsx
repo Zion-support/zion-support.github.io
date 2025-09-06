@@ -314,7 +314,7 @@ export default function UltraFuturisticBackground2029() {
         transition={{
           duration: 8,
           repeat: Infinity,
-          ease: 'easeInOut'
+          ease: 'easeInOut';
         }}
       />
       

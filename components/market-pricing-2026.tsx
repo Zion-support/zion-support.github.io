@@ -102,7 +102,7 @@ export default function MarketPricing2026() {
                 </span>
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed">
-                Comprehensive pricing analysis and competitive positioning for our revolutionary AI, 
+                Comprehensive pricing analysis and competitive positioning for our revolutionary AI,
                 quantum computing, and emerging technology services
               </p>
               
@@ -140,7 +140,7 @@ export default function MarketPricing2026() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Category Filter */}
                 <div>
-                  <label className="block text-white font-semibold mb-3">Service Category</label>
+                  <label className="block text-white font-semibold mb-3" htmlFor="input-Service Category">Service Category</label>
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
                     {categories.map(category => (
                       <button
@@ -164,7 +164,7 @@ export default function MarketPricing2026() {
 
                 {/* Price Range Filter */}
                 <div>
-                  <label className="block text-white font-semibold mb-3">Price Range</label>
+                  <label className="block text-white font-semibold mb-3" htmlFor="input-Price Range">Price Range</label>
                   <div className="space-y-2">
                     {priceRanges.map(range => (
                       <button
@@ -454,5 +454,5 @@ export default function MarketPricing2026() {
         </section>
       </div>
     </UltraAdvancedFuturisticBackground>
-  )
+  );
 }

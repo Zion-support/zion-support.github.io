@@ -29,7 +29,7 @@ function getPriceValue(price: Service['price']): string {
 	if (typeof price === 'string') {
 		return price
 	}
-	return '99'
+	return '99';
 }
 
 function getAllServices(): Service[] {
@@ -47,7 +47,7 @@ function getAllServices(): Service[] {
 }
 
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+	return value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
 }
 
 function extractServiceSlugFromLink(link: string): string | null {
@@ -60,7 +60,7 @@ function extractServiceSlugFromLink(link: string): string | null {
 		return null
 	} catch {
 		return null
-	}
+	};
 }
 
 export async function getStaticPaths() {
@@ -94,7 +94,7 @@ export async function getStaticPaths() {
 	return {
 		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
 		fallback: false
-	}
+	};
 }
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
@@ -117,12 +117,11 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 	return {
 		props: { service }
-	}
+	};
 }
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
-	return (
-		<Layout>
+	return(<Layout>
 			<Head>
 				<title>{service.name} | Zion Tech Group</title>
 				<meta name="description" content={service.tagline || service.description} />
@@ -277,7 +276,7 @@ const ServiceDetail: NextPage = () => {
       <Head>
         <title>{service.name} - Zion Tech Solutions</title>
       </Head>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md: grid-cols-3 gap-6">
         <div className="md:col-span-2 space-y-4">
           <img src={`https://picsum.photos/seed/${encodeURIComponent(service.slug)}/1200/600`} alt={service.name} className="w-full rounded-lg border border-gray-200 dark:border-gray-800" />
           <div>

@@ -67,5 +67,5 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       </TooltipProvider>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-  )
+  );
 }

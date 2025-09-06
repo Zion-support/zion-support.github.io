@@ -22,7 +22,6 @@ export default function ComposePage() {
     : type === 'apply'
     ? { type: 'application', jobId, jobTitle }
     : { type: 'general' },
-
   const onSend = async () => {
     if (!recipientId && !talentId) return alert('Missing recipient');
     if (!message.trim() && !file && !linkUrl) return;
