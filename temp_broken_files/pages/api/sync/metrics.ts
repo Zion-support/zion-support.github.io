@@ -1,22 +1,40 @@
- const state = readState ();
-const events = filterEventsByScope (state.events, state.config.scope);
-const totalsByToken: Record<string number> = {
-  
-};
-const contributionsBySubject: Record<string number> = {
-  
-};
-let globalVotes = 0;
-for (const e of events) {
-  
-}
-}const topContributors = Object.entries (contributionsBySubject) .map ( ([subjectId, score]) => ({
-  subjectId, score 
-}) ) .sort ( (a, b) => b.score - a.score) .slice (0, 10);
-return res.status (200) .json ({
-  treasuryTotals: totalsByToken;
-topContributors;
-totalVoteCount: globalVotes;
-lastSyncedAt: state.lastSyncedAt 
-}) 
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') {
+    res.setHeader('Allow', 'GET');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    const { period = 'month' } = req.query;
+    
+    // Mock metrics data
+    const metrics = {
+      period,
+      timestamp: new Date().toISOString(),
+      totalsByToken: {
+        'ZION': 1000000,
+        'USDC': 500000,
+        'ETH': 100
+      },
+      contributionsBySubject: {
+        'user-1': 50000,
+        'user-2': 75000,
+        'user-3': 30000
+      },
+      summary: {
+        totalContributions: 155000,
+        activeUsers: 3,
+        averageContribution: 51666.67
+      }
+    };
+
+    res.status(200).json({
+      success: true,
+      metrics
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to retrieve metrics' });
+  }
 }

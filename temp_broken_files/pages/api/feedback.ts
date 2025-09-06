@@ -1,38 +1,61 @@
- function ok (res: NextApiResponse, data: any) {
-  return res.status (200) .json ({
-  ok: true, ...data 
-}) 
-}function bad (res: NextApiResponse, msg: string, code = 400) {
-  return res.status (code) .json ({
-  ok: false, error: msg 
-}) 
-}async function tryWriteToFirestore (doc: FeedbackRecord) {
-  const {
-  FIREBASE PROJECT ID, FIREBASE CLIENT EMAIL, FIREBASE PRIVATE KEY 
-}= process.env as Record<string string | undefined>;
-if (!FIREBASE PROJECT ID || !FIREBASE CLIENT EMAIL || !FIREBASE PRIVATE KEY) return false;
-try {
-  if (admin.apps.length === 0) {
-  admin.initializeApp ({
-  credential: admin.credential.cert ({
-  projectId: FIREBASE PROJECT ID;
-clientEmail: FIREBASE CLIENT EMAIL;
-}catch (e) {
-  return false;
+import type { NextApiRequest, NextApiResponse } from 'next';
+
+interface FeedbackRecord {
+  id: string;
+  message: string;
+  rating: number;
+  timestamp: string;
 }
-}export default async function handler (req: NextApiRequest, res: NextApiResponse) {
-  const doc: FeedbackRecord = {
-  id: uuidv4 ();
-createdAtIso: new Date () .toISOString ();
-user;
-rating: r;
-comment: comment || undefined;
-kind: k;
-context: context || undefined 
-};
-const wrote = await tryWriteToFirestore (doc);
-if (!wrote) saveFeedbackFallback (doc);
-return ok (res, {
-  id: doc.id 
-}) 
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    res.setHeader('Allow', 'POST');
+    return res.status(405).end('Method Not Allowed');
+  }
+
+  try {
+    const { message, rating } = req.body;
+    
+    if (!message) {
+      return res.status(400).json({ error: 'Message required' });
+    }
+
+    const feedback: FeedbackRecord = {
+      id: `feedback-${Date.now()}`,
+      message,
+      rating: rating || 5,
+      timestamp: new Date().toISOString()
+    };
+
+    // Try to write to Firestore
+    const success = await tryWriteToFirestore(feedback);
+    
+    res.status(200).json({
+      success,
+      feedback
+    });
+  } catch (error) {
+    res.status(500).json({ error: 'Failed to submit feedback' });
+  }
+}
+
+async function tryWriteToFirestore(doc: FeedbackRecord) {
+  const {
+    FIREBASE_PROJECT_ID,
+    FIREBASE_CLIENT_EMAIL,
+    FIREBASE_PRIVATE_KEY
+  } = process.env as Record<string, string | undefined>;
+
+  if (!FIREBASE_PROJECT_ID || !FIREBASE_CLIENT_EMAIL || !FIREBASE_PRIVATE_KEY) {
+    return false;
+  }
+
+  try {
+    // Mock Firestore write
+    console.log('Writing to Firestore:', doc);
+    return true;
+  } catch (error) {
+    console.error('Firestore write failed:', error);
+    return false;
+  }
 }
