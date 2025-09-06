@@ -1,12 +1,5 @@
 import React from 'react';
 
-<<<<<<< HEAD
-const About = () => {
-  return (
-    <div>
-      <h1>About</h1>
-      <p>This page is under construction.</p>
-=======
 const About: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 py-20">
@@ -99,7 +92,6 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
     </div>
   );
 };

@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-import Button from './components/Button'
-import Card from './components/Card'
-import ServiceCard from './components/ServiceCard'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import About from './pages/About'
-import Services from './pages/Services'
-import Contact from './pages/Contact'
-=======
 import React, { Suspense, lazy, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
@@ -17,78 +5,25 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import { PerformanceMonitor } from './components/PerformanceMonitor';
 import ErrorBoundary from './components/ErrorBoundary';
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
 
-const Home = () => (
-  <div className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
-    <div className="container mx-auto px-4 py-16">
-      <div className="text-center mb-12">
-        <h1 className="text-6xl font-extrabold mb-4 animate-fade-in">
-          Zion Tech Group
-        </h1>
-        <p className="text-2xl text-gray-300 mb-8 animate-slide-up">
-          Leading AI & Technology Solutions for a Smarter Future
-        </p>
-        <Button variant="primary" size="large" onClick={() => alert('Learn More!')}>
-          Explore Our Services
-        </Button>
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <ServiceCard
-          title="AI Services"
-          description="Transform your business with cutting-edge AI solutions."
-          icon="✨"
-        />
-        <ServiceCard
-          title="Cybersecurity"
-          description="Protect your digital assets with advanced security solutions."
-          icon="🔒"
-        />
-        <ServiceCard
-          title="Cloud Infrastructure"
-          description="Scale your operations with robust cloud solutions."
-          icon="☁️"
-        />
-      </div>
+// Lazy load pages
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Services = lazy(() => import('./pages/Services'));
+const Pricing = lazy(() => import('./pages/Pricing'));
+const Contact = lazy(() => import('./pages/Contact'));
 
-      <div className="mt-16 text-center">
-        <h2 className="text-4xl font-bold mb-8">Why Choose Us?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card title="Innovation" description="Pioneering the next generation of technology." />
-          <Card title="Expertise" description="Team of industry-leading professionals." />
-          <Card title="Reliability" description="Trusted solutions for critical operations." />
-          <Card title="Scalability" description="Solutions designed to grow with you." />
-          <Card title="Security" description="Robust protection for all your data." />
-          <Card title="Support" description="24/7 dedicated customer assistance." />
-        </div>
-      </div>
+// Loading Component
+const LoadingSpinner = () => (
+  <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-black via-gray-900 to-blue-900">
+    <div className="text-center">
+      <div className="w-16 h-16 border-4 border-cyan-500 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+      <p className="text-cyan-400 text-lg font-medium">Loading Zion Tech Group...</p>
     </div>
   </div>
-)
+);
 
-<<<<<<< HEAD
-function App() {
-  return (
-    <Router>
-      <div className="min-h-screen flex flex-col">
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-        </main>
-        <Footer />
-      </div>
-    </Router>
-  )
-}
-
-export default App;
-=======
 const App = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -120,4 +55,3 @@ const App = () => {
 };
 
 export default App;
->>>>>>> cursor/expand-services-advertise-and-build-project-2140
