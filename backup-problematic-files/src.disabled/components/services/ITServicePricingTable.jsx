@@ -6,6 +6,6 @@ const ITServicePricingTable = ({ className }) => {
       <h1>ITServicePricingTable</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

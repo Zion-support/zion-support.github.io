@@ -2,7 +2,7 @@ export type AccessLevel = 'public' | 'private' | 'admin';
 
 export interface SearchResult {
   id: string;
-  title: string;
+  title: string,
   description: string;
   type: string;
   rating?: number;

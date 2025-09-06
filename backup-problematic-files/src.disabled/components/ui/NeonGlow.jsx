@@ -24,6 +24,6 @@ const NeonGlow = ({ className }) => {
       <h1>NeonGlow</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

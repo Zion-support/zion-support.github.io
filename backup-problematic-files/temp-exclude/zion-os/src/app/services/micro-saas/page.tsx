@@ -4,7 +4,7 @@ import { useState } from "react",;
 ;
 interface MicroSAASService {;
   id:string,;
-  name:string,;
+  name:string,,
   description:string,;
   targetMarket:string[],;
   features:string[],;
@@ -19,8 +19,8 @@ interface MicroSAASService {;
 const microSAASServices:MicroSAASService[] = [;
   {;
     id:"marketplace-platform-pro",;
-    name:"Digital Marketplace Platform Pro",;
-    description:"White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;
+    name:"Digital Marketplace Platform Pro",,
+  description:"White-label marketplace solution for jobs, talent, and projects with integrated payment processing, governance, and AI-powered matching.",;
     targetMarket:[;
       "Job boards and recruitment",;
       "Freelance platforms",;
@@ -64,8 +64,8 @@ const microSAASServices:MicroSAASService[] = [;
   },;
   {;
     id:"token-economy-platform",;
-    name:"Token Economy Platform",;
-    description:"Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",;
+    name:"Token Economy Platform",,
+  description:"Complete token system with rewards, governance, and economic incentives for community engagement and loyalty programs.",;
     targetMarket:[;
       "Gaming platforms",;
       "Community platforms",;
@@ -109,8 +109,8 @@ const microSAASServices:MicroSAASService[] = [;
   },;
   {;
     id:"kyc-aml-enterprise",;
-    name:"KYC/AML Verification Enterprise",;
-    description:"Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",;
+    name:"KYC/AML Verification Enterprise",,
+  description:"Comprehensive identity verification and compliance system for financial services and regulated industries with advanced fraud detection.",;
     targetMarket:[;
       "Financial institutions",;
       "Cryptocurrency exchanges",;
@@ -154,8 +154,8 @@ const microSAASServices:MicroSAASService[] = [;
   },;
   {;
     id:"dao-governance-platform",;
-    name:"DAO Governance Platform",;
-    description:"Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;
+    name:"DAO Governance Platform",,
+  description:"Complete DAO platform with proposal creation, voting mechanisms, treasury management, and governance analytics for decentralized organizations.",;
     targetMarket:[;
       "DeFi protocols",;
       "NFT communities",;
@@ -199,8 +199,8 @@ const microSAASServices:MicroSAASService[] = [;
   },;
   {;
     id:"ai-learning-platform",;
-    name:"AI-Powered Learning Platform",;
-    description:"Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",;
+    name:"AI-Powered Learning Platform",,
+  description:"Comprehensive learning management system with AI-powered content creation, assessment, and personalized learning paths.",;
     targetMarket:[;
       "Educational institutions",;
       "Corporate training",;
@@ -244,8 +244,8 @@ const microSAASServices:MicroSAASService[] = [;
   },;
   {;
     id:"incubator-grants-platform",;
-    name:"Incubator & Grants Management Platform",;
-    description:"Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",;
+    name:"Incubator & Grants Management Platform",,
+  description:"Platform for managing startup incubators, grant programs, and funding distribution with transparent governance and impact measurement.",;
     targetMarket:[;
       "Startup incubators",;
       "Government agencies",;

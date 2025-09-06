@@ -139,7 +139,7 @@ onContractGenerated ;
 const [templateManagerOpen,  setTemplateManagerOpen] = useState (false);
 const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
 const handleLoadTemplate = (templateData: ContractFormValues) => {;
-  setFormValues (templateData) ;
+  setFormValues (templateData) 
 };
 const handleContractGenerated = (contract: string) => {;
   if (onContractGenerated) {;

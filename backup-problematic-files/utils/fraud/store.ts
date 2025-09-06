@@ -1,6 +1,6 @@
   id: string;
   type: string;
-  severity: 'low' | 'medium' | 'high' | 'critical';
+  severity: 'low' | 'medium' | 'high' | 'critical',
   description: string;
   source: string;
   timestamp: string;

@@ -24,26 +24,26 @@ import {BarChart3,, TrendingUp,, Database,, Brain} from 'lucide-react';
 export default function DataAnalyticsPage() {;
   const analyticsServices = [;
     {}
-      title: "Business Intelligence",";
-      description: "Transform data into actionable business insights",";
+      title: "Business Intelligence",",
+  description: "Transform data into actionable business insights",";
       icon: BarChart3,;
       features: ["Custom Dashboards", "Real-time Reports", "KPI Tracking"]";
     },;
     {}
-      title: "Predictive Analytics",";
-      description: "Forecast trends and make data-driven decisions",";
+      title: "Predictive Analytics",",
+  description: "Forecast trends and make data-driven decisions",";
       icon: TrendingUp,;
       features: ["Machine Learning Models", "Risk Assessment", "Demand Forecasting"]";
     },;
     {}
-      title: "Data Warehousing",";
-      description: "Centralized data storage and management solutions",";
+      title: "Data Warehousing",",
+  description: "Centralized data storage and management solutions",";
       icon: Database,;
       features: ["ETL Processes", "Data Integration", "Data Quality"]";
     },;
     {}
-      title: "AI-Powered Analytics",";
-      description: "Advanced analytics powered by artificial intelligence",";
+      title: "AI-Powered Analytics",",
+  description: "Advanced analytics powered by artificial intelligence",";
       icon: Brain,;
       features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]";
     }
@@ -141,26 +141,26 @@ import { BarChart3, TrendingUp, Database, Brain } from 'lucide-react';
 export default function DataAnalyticsPage() {;
   const analyticsServices = [;
     {}
-      title: "Business Intelligence",";
-      description: "Transform data into actionable business insights",";
+      title: "Business Intelligence",",
+  description: "Transform data into actionable business insights",";
       icon: BarChart3,;
       features: ["Custom Dashboards", "Real-time Reports", "KPI Tracking"]";
     },;
     {}
-      title: "Predictive Analytics",";
-      description: "Forecast trends and make data-driven decisions",";
+      title: "Predictive Analytics",",
+  description: "Forecast trends and make data-driven decisions",";
       icon: TrendingUp,;
       features: ["Machine Learning Models", "Risk Assessment", "Demand Forecasting"]";
     },;
     {}
-      title: "Data Warehousing",";
-      description: "Centralized data storage and management solutions",";
+      title: "Data Warehousing",",
+  description: "Centralized data storage and management solutions",";
       icon: Database,;
       features: ["ETL Processes", "Data Integration", "Data Quality"]";
     },;
     {}
-      title: "AI-Powered Analytics",";
-      description: "Advanced analytics powered by artificial intelligence",";
+      title: "AI-Powered Analytics",",
+  description: "Advanced analytics powered by artificial intelligence",";
       icon: Brain,;
       features: ["Natural Language Processing", "Pattern Recognition", "Automated Insights"]";
     }

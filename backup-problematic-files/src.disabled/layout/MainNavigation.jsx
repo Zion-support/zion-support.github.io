@@ -24,6 +24,6 @@ const MainNavigation = ({ className }) => {
       <h1>MainNavigation</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

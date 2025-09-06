@@ -3,7 +3,8 @@
 }</button> </form>)
 }
 type Props = {
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {
   projectId: string,
@@ -45,10 +46,11 @@ class ErrorBoundary extends React.Component {
 }
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
-}</button> </form>) ;
+}</button> </form>) 
 };
 type Props = {;
-  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+  initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+};import React, { useState } from 'react';
 import StarRating from './StarRating';
 export type ReviewFormValues = {;
   projectId: string,;
@@ -60,9 +62,9 @@ export type ReviewFormValues = {;
     communication?: number;
     qualityOfWork?: number;
     timeliness?: number;
-    wouldWorkWithAgain?: boolean;
-  };
-  anonymous?: boolean;
+    wouldWorkWithAgain?: boolean
+};
+  anonymous?: boolean
 };
 type Props = {;
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;

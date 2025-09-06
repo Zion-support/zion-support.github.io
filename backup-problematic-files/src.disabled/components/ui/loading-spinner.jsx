@@ -6,6 +6,6 @@ const Loading-spinner = ({ className }) => {
       <h1>Loading-spinner</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

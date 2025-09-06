@@ -6,6 +6,6 @@ const AIAnalyticsDashboard = ({ className }) => {
       <h1>AIAnalyticsDashboard</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

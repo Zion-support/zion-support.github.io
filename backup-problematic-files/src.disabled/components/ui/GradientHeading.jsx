@@ -6,6 +6,6 @@ const GradientHeading = ({ className }) => {
       <h1>GradientHeading</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

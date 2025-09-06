@@ -94,8 +94,8 @@ export function ChatBotPanel() {;
       logErrorToProduction("Error in AI chat", error as Error, { component:'ChatBotPanel' }),;
       toast({;
         variant:"destructive",;
-        title:"Communication Error",;
-        description:"We're having trouble connecting to our support service."}),;
+        title:"Communication Error",,
+  description:"We're having trouble connecting to our support service."}),;
       ;
       setFailedAttempts((prev) => prev + 1),;
       if (failedAttempts >= 2) {;
@@ -191,8 +191,8 @@ export function ChatBotPanel() {;
     ;
     // In a real implementation, this would trigger a live chat request;
     toast({;
-      title:"Support request submitted",;
-      description:"A support agent will be with you shortly."}),;
+      title:"Support request submitted",,
+  description:"A support agent will be with you shortly."}),;
   },;
 ;
   const handleEmailSupport = () => {;
@@ -347,7 +347,7 @@ if (failedAttempts >= 2) {;
 };
 const sendToAIAssistant = async (message: string) => {;
   try {;
-  const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {";"  method: "POST","headers: {";"  "Content-Type" : "application/json" ;
+  const response = await fetch ("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {";"  method: "POST","headers: {";"  "Content-Type" : "application/json" 
 };
 body: JSON.stringify ({;
   ;
@@ -370,7 +370,7 @@ const suggestEscalation = () => {;
   id: `bot-escalation-$ {;
   Date.now () ;
 }`;
-content: //Log this interaction for the support team logSupportEscalation () ;
+content: //Log this interaction for the support team logSupportEscalation () 
 };
 const logSupportEscalation = async () => {;
   try {;
@@ -384,11 +384,11 @@ const handleEscalateToLiveAgent = () => {;
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
   Date.now () ;"}`;'";"content: "I'd like to speak with a human agent",";"sender: "user",
-timestamp: new Date () ;
+timestamp: new Date () 
 };
 timestamp: new Date () ;
 }]);
-//In a real implementation, this would trigger a live chat request ;
+//In a real implementation, this would trigger a live chat request 
 };
 :temp_broken_files/support/ChatBotPanel.tsx
 
@@ -396,10 +396,10 @@ ursor/fix-lint-push-and-merge-to-main-e10e:src/components/support/ChatBotPanel.t
   setMessages ( (prev) => [ ...prev, {;
   id: `user-$ {;
   Date.now () ;"}`;'";"content: "I'd like to email support",";"sender: "user",
-timestamp: new Date () ;
+timestamp: new Date () 
 };
 timestamp: new Date () ;
-}]) ;
+}]) 
 };
 </div>) ;
 }</div> </ScrollArea> key= {;

@@ -24,26 +24,26 @@ import {Eye,, Shield,, Lock,, AlertTriangle} from 'lucide-react';
 export default function CybersecurityPage() {;
   const securityServices = [;
     {}
-      title: "Security Assessment",";
-      description: "Comprehensive security evaluation of your systems",";
+      title: "Security Assessment",",
+  description: "Comprehensive security evaluation of your systems",";
       icon: Eye,;
       features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]";
     },;
     {}
-      title: "Threat Protection",";
-      description: "Advanced threat detection and prevention systems",";
+      title: "Threat Protection",",
+  description: "Advanced threat detection and prevention systems",";
       icon: Shield,;
       features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]";
     },;
     {}
-      title: "Data Encryption",";
-      description: "End-to-end encryption for sensitive data",";
+      title: "Data Encryption",",
+  description: "End-to-end encryption for sensitive data",";
       icon: Lock,;
       features: ["Data at Rest", "Data in Transit", "Key Management"]";
     },;
     {}
-      title: "Compliance",";
-      description: "Ensure compliance with industry standards",";
+      title: "Compliance",",
+  description: "Ensure compliance with industry standards",";
       icon: AlertTriangle,;
       features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
     }
@@ -141,26 +141,26 @@ import { Eye, Shield, Lock, AlertTriangle } from 'lucide-react';
 export default function CybersecurityPage() {;
   const securityServices = [;
     {}
-      title: "Security Assessment",";
-      description: "Comprehensive security evaluation of your systems",";
+      title: "Security Assessment",",
+  description: "Comprehensive security evaluation of your systems",";
       icon: Eye,;
       features: ["Vulnerability Scanning", "Penetration Testing", "Risk Analysis"]";
     },;
     {}
-      title: "Threat Protection",";
-      description: "Advanced threat detection and prevention systems",";
+      title: "Threat Protection",",
+  description: "Advanced threat detection and prevention systems",";
       icon: Shield,;
       features: ["Real-time Monitoring", "AI-Powered Detection", "Incident Response"]";
     },;
     {}
-      title: "Data Encryption",";
-      description: "End-to-end encryption for sensitive data",";
+      title: "Data Encryption",",
+  description: "End-to-end encryption for sensitive data",";
       icon: Lock,;
       features: ["Data at Rest", "Data in Transit", "Key Management"]";
     },;
     {}
-      title: "Compliance",";
-      description: "Ensure compliance with industry standards",";
+      title: "Compliance",",
+  description: "Ensure compliance with industry standards",";
       icon: AlertTriangle,;
       features: ["GDPR", "HIPAA", "SOC 2", "ISO 27001"]";
     }

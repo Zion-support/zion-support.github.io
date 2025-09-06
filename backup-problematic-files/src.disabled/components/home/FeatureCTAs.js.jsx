@@ -6,6 +6,6 @@ const FeatureCTAs.js = ({ className }) => {
       <h1>FeatureCTAs.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

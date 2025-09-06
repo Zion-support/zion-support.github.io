@@ -10,6 +10,6 @@ const TalentDetail.test: React.FC<TalentDetail.testProps> = ({ className }) => {
       <h1>TalentDetail.test</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

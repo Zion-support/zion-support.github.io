@@ -1,6 +1,7 @@
 }}};
 ;
-main();};
+main()
+};
 ;
 ,;
 main(),;
@@ -19,7 +20,7 @@ const getConflictedFiles = () => {,
     return result.trim().split('\n).filter(file => file)
   } catch (error) {,
     return []
-  };
+  }
 };
 ,
 // Resolve conflicts by accepting HEAD version for most files,
@@ -60,7 +61,7 @@ const resolveConflicts = (filePath) => {,
   } catch (error) {,
     console.error(`Error resolving conflicts in ${filePath}:`, error.message),
     return false
-  };
+  }
 };
 ,
 // Main execution,
@@ -81,8 +82,8 @@ const main = () => {,
       resolvedCount++
     } else {,
       failedCount++
-    };
-  };
+    }
+};
   console.log(`\n Resolved: ${resolvedCount} files`),
   console.log(` Failed: ${failedCount} files`),
 ,
@@ -93,8 +94,8 @@ const main = () => {,
       console.log(' Files added to staging area)
     } catch (error) {,
       console.error(' Error adding files:', error.message)
-    };
-  };
+    }
+}
 };
 ,
 main(),

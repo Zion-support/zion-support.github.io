@@ -6,6 +6,6 @@ const Button = ({ className }) => {
       <h1>Button</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

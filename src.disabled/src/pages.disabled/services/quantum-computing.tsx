@@ -10,7 +10,7 @@ const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {
       <h1>Quantum-computing</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 
 export default Quantum-computing;

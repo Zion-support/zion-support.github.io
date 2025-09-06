@@ -24,6 +24,6 @@ const ForumCategoryPage = ({ className }) => {
       <h1>ForumCategoryPage</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

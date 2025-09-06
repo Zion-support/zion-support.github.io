@@ -6,6 +6,6 @@ const ContentQualityDashboard.js = ({ className }) => {
       <h1>ContentQualityDashboard.js</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

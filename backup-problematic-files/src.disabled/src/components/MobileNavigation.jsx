@@ -6,6 +6,6 @@ const MobileNavigation = ({ className }) => {
       <h1>MobileNavigation</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

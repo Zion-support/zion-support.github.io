@@ -6,6 +6,6 @@ const ComprehensiveContact = ({ className }) => {
       <h1>ComprehensiveContact</h1>
       <p>This component is under development.</p>
     </div>
-  );
+  )
 };
 

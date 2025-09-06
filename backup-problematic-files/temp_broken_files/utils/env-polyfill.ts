@@ -80,10 +80,9 @@ export const processEnv = typeof (globalThis as any).process !== 'undefined' ? (
 ;export default safeEnv,
 /** * Environment Polyfill for Browser * * This polyfill ensures that process.env is always available in the browser environment. * It prevents the "Cannot read properties of undefined (reading 'env') " error. */ //Define safe defaults for environment variables //Create a safe process object const createProcessObject = () => ({;
   env: {;
-  ...defaultEnv ;
+  ...defaultEnv 
 };
-versions: {;
-  ;
+versions: {
 };';
 platform: 'browser';';
 arch: 'x64';';
