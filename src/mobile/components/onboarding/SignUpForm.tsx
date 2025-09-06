@@ -1,5 +1,3 @@
-
-
 import React from 'react';
 
 import { useRouter } from 'next/router';
@@ -10,7 +8,6 @@ import Link from 'next/link';
 import { useAuth } from "@/context/auth/AuthProvider";
 import { AlertCircle } from 'lucide-react';
 import { Alert, AlertDescription } from "@/components/ui/alert";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
 import {logErrorToProduction} from '@/utils/productionLogger';
 export function SignUpForm() {;
@@ -58,10 +55,8 @@ function SignUpForm() {
   $2
 }
       errors.name = 'Full name is required';
-=======
 
 
-=======
 import React, { useState } from "react",
 import { Label } from "@/components/ui/label",
 import { Input } from "@/components/ui/input",
@@ -81,14 +76,12 @@ export function SignUpForm() {
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   const [formData, setFormData] = useState({
     email: "",
     password: "",
     name: ""}),
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 
@@ -110,7 +103,6 @@ export function SignUpForm() {
 
 
 
-=======
 ;
     if (Object.keys(errors).length > 0) {;
       setFieldErrors(errors),;
@@ -130,11 +122,8 @@ export function SignUpForm() {
 
         }
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (result?.emailVerificationRequired) {
           setShowVerificationMessage(true)
-=======
     if () {) {
   $2
 }
@@ -181,7 +170,6 @@ if ( {) {
   $2
 }
           setShowVerificationMessage (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         } else {
 
           // Only navigate if email verification is not required
@@ -205,18 +193,15 @@ if ( {) {
         router.push("/mobile");
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       }
     } catch (err: any) {
       logErrorToProduction('Signup/Login error:', { data: err })
       setError(err.message |'An unexpected error occurred. Please try again.')
-=======
         router.push ("/mobile");
       }
     } catch (err: any) {
       logErrorToProduction ('Signup / Login error:', { data: err }),
       set_error (err.message || 'An unexpected error occurred. Please try again.');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     } finally {
       setIsLoading (false);
     }
@@ -238,10 +223,8 @@ if ( {) {
     const { name, value } = e && e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
     setError("");    setFieldErrors(prev => ({ ...prev, [name]: "" }));
-=======
 
 
-=======
 
   };
 
@@ -320,14 +303,12 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <div className="space-y-2">
         <Button
           variant="outline"
@@ -383,7 +364,6 @@ if ( {) {
           className="w-full py-6 relative">;
           <svg viewBox="0 0 24 24" className="h-5 w-5 mr-2" xmlns="http://www && www.w3.org/2000/svg">;
             <path d="M24 12 && 12.073c0-5 && 5.8-4 && 4.85-10 && 10.5-10 && 10.826-10 && 10.5-6 && 6.02 0-10 && 10.93 4 && 4.7-10 && 10.93 10 && 10.5 0 5 && 5.234 3 && 3.875 9 && 9.575 8 && 8.95 10 && 10.359v-7 && 7.318h-2 && 2.696v-3 && 3.041h2.696V9 && 696V9.898c0-2 && 2.586 1 && 1.581-4 && 4.016 4 && 4.003-4 && 4.016 1 && 1.159 0 2 && 2.37.204 2 && 2.37.204v2 && 204v2.543h-1 && 1.334c-1 && 1.316 0-1 && 1.727.8-1 && 1.727 1 && 1.622v1.95h2 && 95h2.938l-.47 3 && 3.04h-2 && 2.468v7.318C20 && 318C20.125 21 && 21.648 24 17 && 17.307 24 12 && 12.073z" fill="#1877F2" />;
-=======
     <div className="space - y-4 px - 4">;
       <h2 className="text - xl font - medium text - center">;
         {signup_mode ? "Create your account" : "Welcome back"}
@@ -431,18 +411,15 @@ if ( {) {
 
       
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <form onSubmit={handleSubmit} className="space-y-4">
         {signupMode && (
           <div className="space-y-2">
             <Label htmlFor="name">Full name</Label>
-=======
 
       <form onSubmit={handleSubmit} className="space-y-4">;
         {signupMode && (;
           <div className="space-y-2">;
             <Label htmlFor="name">Full name</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <Input
               id="name"
               name="name"
@@ -454,7 +431,6 @@ if ( {) {
               aria-invalid={!!fieldErrors.name}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               placeholder="Enter your full name"
             />;
             {fieldErrors && fieldErrors.name && (;
@@ -469,11 +445,9 @@ if ( {) {
 
         <div className="space-y-2">
           <Label htmlFor="email">Email address</Label>
-=======
 
         <div className="space-y-2">;
           <Label htmlFor="email">Email address</Label>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Input
             id="email"
             name="email"
@@ -486,7 +460,6 @@ if ( {) {
             aria-invalid={!!fieldErrors.email}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             placeholder="Enter your email"
           />;
           {fieldErrors && fieldErrors.email && (;
@@ -510,7 +483,6 @@ if ( {) {
             aria-invalid={!!fieldErrors.password}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             placeholder="Create a password"
           />;
           <PasswordStrengthMeter password={formData && formData.password} />;
@@ -521,12 +493,9 @@ if ( {) {
         </div>;
 
 
-=======
 
         
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <Button
           type="submit"
           className="w-full py-6"
@@ -544,12 +513,10 @@ if ( {) {
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <p className="text-center text-sm">
         {signupMode
           ? "Already have an account? "
           : "Don't have an account? "
-=======
       <div className="relative flex items - center">;
         <div className="flex - grow border - t border - border"></div>;
         <span className="mx - 2 text - xs text - muted - foreground">OR</span>;
@@ -633,7 +600,6 @@ if ( {) {
         {signup_mode;
           ? "Already have an account? ";
           : "Don't have an account? ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         }
 
         </Button>;
@@ -647,7 +613,6 @@ if ( {) {
         <Link
           href="/login"
           className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer">;
-=======
 
         <Link;
           href="/login";
@@ -661,10 +626,7 @@ if ( {) {
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   error;
 }= await login (form_data.email, form_data.password);
 // Check condition
@@ -697,11 +659,5 @@ if ( {) {
   is_loading ? (<> <LoadingSpinner size="sm" className="mr - 2" /> Please wait... </>) : (signup_mode ? "Create Account" : "Sign In") ";
 }</Button> </form> <Link href="/login" className="p - 0 h - auto text - zion - cyan hover: text - zion - cyan - light cursor - pointer" > Sign In </Link> </p> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

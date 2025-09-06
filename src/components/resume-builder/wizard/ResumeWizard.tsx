@@ -1,10 +1,4 @@
-
-
-=======
-
-
-  if (isLoading) {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -17,10 +11,8 @@
 
 
   if (error) {
-=======
 
   if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <Alert variant="destructive" className="mb-6">;
         <AlertCircle className="h-4 w-4" />;
@@ -38,14 +30,12 @@
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />
   }
   if (showNewResumeForm) {
-=======
 
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
   }
 
   if (showNewResumeForm) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <CreateResumeForm
         onCreateResume = {handleCreateNewResume,}
@@ -57,11 +47,9 @@
   }
 
 
-=======
 
   
 
-=======
 ;
   if (!resume && !showNewResumeForm) {;
     return <EmptyResumeState onCreateClick={() => setShowNewResumeForm(true)} />;
@@ -79,8 +67,6 @@
   
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6">;
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">;
@@ -107,7 +93,6 @@
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Card>
         <CardContent className="pt-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-6">
@@ -116,19 +101,15 @@
           </div>
 
 
-=======
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-=======
             variant="outline";
             size="sm";
             className="gap-2";
           >;
             <FilePlus className="h-4 w-4" /> ;
-=======
   // Check condition
 if ( {) {
   $2
@@ -179,7 +160,6 @@ if ( {) {
             className="gap - 2";
           >;
             <FilePlus className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             Create New;
           </Button>;
         </div>;
@@ -229,7 +209,6 @@ if ( {) {
 }/> {;
   resume && (<ResumeStepContentactiveTab= {
   activeTab 
-=======
       <Card>;
         <CardContent className="pt - 6">;
           <div className="flex flex - col sm:flex - row justify - between items - start sm:items - center gap - 4 mb - 6">;
@@ -287,17 +266,8 @@ if ( {) {
 }onPrevStep= {
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   prev_step;
 }/>);
 }</Tabs> </CardContent> </Card> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

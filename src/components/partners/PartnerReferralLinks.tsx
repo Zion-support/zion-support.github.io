@@ -1,5 +1,3 @@
-
-
 import { useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {;
@@ -100,16 +98,13 @@ export function PartnerReferralLinks() {;
     link && link.click();
     document && document.body.removeChild(link);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
               className='flex items-center gap-2'>;
               <Download className='h-4 w-4' />;
-=======
     <div className='space - y-6'>;
       <Card className='bg - zion - blue - dark border - zion - blue - light'>;
-=======
 
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
@@ -119,8 +114,6 @@ import { Input } from "@/components/ui/input",
 import { Copy, Download, Link, Plus } from 'lucide-react'
 
 
-=======
-=======
 import { useRef, useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
@@ -171,7 +164,6 @@ export function PartnerReferralLinks() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <Card className="bg-zion-blue-dark border-zion-blue-light">
@@ -252,7 +244,6 @@ export function PartnerReferralLinks() {;
   return (;
     <div className="space-y-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='flex items - center justify - between'>;
             <span > Your Referral Link</span>;
@@ -262,7 +253,6 @@ export function PartnerReferralLinks() {;
               on_click={handleDownloadLinks}
               className='flex items - center gap - 2'            >;
               <Download className='h - 4 w - 4' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
               Export Links;
             </Button>;
           </CardTitle>;
@@ -354,7 +344,6 @@ export function PartnerReferralLinks() {;
                   <SelectTrigger id="campaign">
                     <SelectValue placeholder="Select campaign type" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="default">General (Default)</SelectItem>
@@ -390,11 +379,9 @@ export function PartnerReferralLinks() {;
                 onClick={handleGenerateLink}
                 className="bg-zion-purple hover:bg-zion-purple-dark"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               >
                 Cancel
               </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <Button
                 type='button'
                 onClick={handleGenerateLink}
@@ -402,7 +389,6 @@ export function PartnerReferralLinks() {;
 
                     <span>{item.name || 'Campaign Link'}</span>                  </div>
 
-=======
 
       <div className="grid gap-4">
         {generatedLinks.length > 0 ? (
@@ -417,12 +403,10 @@ export function PartnerReferralLinks() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </CardTitle>
               </CardHeader>
               <CardContent className='pb-4'>
                 <div className='flex space-x-2'>
-=======
                 className='bg-zion-purple hover:bg-zion-purple-dark'>;
                 Generate Link;
               </Button>;
@@ -446,7 +430,6 @@ export function PartnerReferralLinks() {;
               </CardHeader>;
               <CardContent className='pb-4'>;
                 <div className='flex space-x-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <Input
                     value = {item && item.link,}
                     readOnly
@@ -481,7 +464,6 @@ export function PartnerReferralLinks() {;
                 className="flex items-center gap-2";
               >;
                 <Plus className="h-4 w-4" />;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 Create First Link;
               </Button>;
             </CardContent>;
@@ -525,7 +507,6 @@ document && document.body.removeChild (link);
 }</div> </div>) ;
 }'"}
 
-=======
               <div className='grid gap - 2'>;
                 <Label html_for='custom'>Custom Parameter (Optional)</Label>;
                 <Input;
@@ -634,13 +615,7 @@ document.body.remove_child (link);
 }read_only className="font - mono text - xs"/> <Button > <Copy className="h - 4 w - 4"/> <span className="sr - only">Copy</span> </Button> </div> </CardContent> </Card>) ) ) : (<Card className="bg - zion - blue / 20 border - dashed border - zion - blue - light"> <CardContent className="flex flex - col items - center justify - center p - 6"> <p className="text - zion - slate - light text - center mb - 4"> Create custom campaign links to track different marketing efforts </p> <Button className="flex items - center gap - 2"> <Plus className="h - 4 w - 4" /> Create First Link </Button> </CardContent> </Card>);
 }</div> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       </div>;
     </div>;
   );
 }
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

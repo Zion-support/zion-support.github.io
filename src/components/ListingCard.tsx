@@ -1,6 +1,4 @@
-
-
-  id?: string,;
+id?: string,;
   title: string,;
   description: string,;
   images?: string[],;
@@ -41,7 +39,6 @@ export function ListingCard(): any ({;
       >;
       {images && images.length > 0 && images[0] && (;
         <div className='h-48 w-full overflow-hidden relative'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <Image
             src={images[0]}
             alt={title}
@@ -75,7 +72,6 @@ export function ListingCard(): any ({;
             {tags && tags.map((tag, i) => (;
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">;
 
-=======
   const profileId = id || (profileType === 'service' ? 'service-provider-1' : 'talent-1');
 
   return (
@@ -101,7 +97,6 @@ export function ListingCard(): any ({;
           />
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>
       )}
       <div className="flex flex-col p-4 flex-grow">
@@ -120,19 +115,15 @@ export function ListingCard(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="flex flex-wrap gap-2 mb-4">
             {tags.map((tag, i) => (
               <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 {tag}
 
 
               </Badge>;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         )}
@@ -159,14 +150,11 @@ export function ListingCard(): any ({;
             <span className="text-sm text-zion-slate-light">{author && author.name}</span>;
           </div>;
 
-=======
 
         
 
-=======
 
 
-=======
         
         {author && (
           <div className="flex items-center mt-auto pt-4 border-t border-zion-blue-light">
@@ -176,10 +164,8 @@ export function ListingCard(): any ({;
               <div className="h-8 w-8 rounded-full bg-zion-purple/20 mr-2" />
             )}
 
-=======
 
 
-=======
             <span className="text-sm text-zion-slate-light">{author.name}</span>
           </div>
         )}
@@ -187,15 +173,12 @@ export function ListingCard(): any ({;
       </div>;
     </Link>;
   );
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
 ;"}) })"
-=======
   );
 }
 
-=======
 import React from 'react';
 import { cn } from '@/lib / utils';
 import { Badge } from '@/components / ui / badge';
@@ -287,11 +270,4 @@ function ListingCard() {
       </div>;
     </Link>);
 }"}) })";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

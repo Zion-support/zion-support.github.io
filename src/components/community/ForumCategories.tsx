@@ -1,6 +1,4 @@
-
-
-  {
+{
     id: "feedback"
     name: "Feedback & Feature Requests"
     description: "Share your feedback and suggest new features."
@@ -11,14 +9,12 @@
   },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   {
     id: "announcements"
     name: "Announcements"
     description: "Official announcements from the Zion team."
     adminOnly: true
     icon: "Megaphone"
-=======
 const categories: ForumCategoryInfo[] = [;
   {
     id: "getting - hired",
@@ -56,7 +52,6 @@ export const ForumCategories = () =>: any {
 }
 
 
-=======
 
 ],
 
@@ -82,7 +77,6 @@ export const ForumCategories = () => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
               <CardHeader className="flex flex-row items-center gap-4">
@@ -102,13 +96,11 @@ export const ForumCategories = () => {
 export default ForumCategories;
 ;
 
-=======
 import Link from "next/link",;
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
 import { useAuth } from "@/hooks/useAuth",;
 import { MessageSquare, Briefcase, Code, FileText, Megaphone } from 'lucide-react';
 import { ForumCategoryInfo } from "@/types/community",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const categories: ForumCategoryInfo[] = [;
   {;
     id: "getting-hired",;
@@ -190,18 +182,8 @@ export default ForumCategories;
 
 export default ForumCategories;
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 export default ForumCategories;
 ";
   const is_admin = user?.user_type === 'admin' || user?.role === 'admin';
 export default ForumCategories;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

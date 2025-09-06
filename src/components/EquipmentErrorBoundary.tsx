@@ -1,5 +1,3 @@
-
-
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -29,7 +27,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 
   render() {;
     if (this && this.state.hasError) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       return (
 
 
@@ -54,7 +51,6 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
 
 
 }
-=======
                   onClick={() => window && window.location.reload()}
                   variant='default';
                 >                  Refresh Page;
@@ -81,16 +77,13 @@ export class EquipmentErrorBoundary extends React && React.Component<Props, Stat
     return this && this.props.children;
   }      );
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
     return this && this.props.children;
   };
 
 
-=======
   static getDerivedStateFromError (error: Error): State {
     return { has_error: true, error }
   }
@@ -152,7 +145,3 @@ if ( {) {
   }
 
 } ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

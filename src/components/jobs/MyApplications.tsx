@@ -1,12 +1,8 @@
-
-
-      default:
+default:
         return <Badge variant="outline">{status}</Badge>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     }
 
 import {ApplicationStatus} from "@/types/jobs";
-=======
     return (
       <div className="flex justify-center items-center p-8">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
@@ -68,7 +64,6 @@ import { Loader2, MessageSquare, ExternalLink } from 'lucide-react';
 import { formatDistanceToNow } from "date-fns",;
 import Link from "next/link",;
 import { ApplicationStatus } from "@/types/jobs",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 export function MyApplications() {;
   const { applications, isLoading, error } = useJobApplications();
 
@@ -82,7 +77,6 @@ export function MyApplications() {;
   },;
 
   if (isLoading) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="flex justify-center items-center p-8">;
         <Loader2 className="h-8 w-8 animate-spin text-primary" />;
@@ -149,7 +143,6 @@ export function MyApplications() {;
                   variant="outline" 
                   size="sm" 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   className="text-xs"
                   asChild
                 >
@@ -194,15 +187,12 @@ export function MyApplications() {;
                 </Button>;
 
                 <Button
-=======
 
                 
-=======
 
                 <Button 
 
                   variant="default" 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   size="sm"
                   className="text-xs"
                   asChild>;
@@ -220,7 +210,6 @@ export function MyApplications() {;
   );
 }
 
-=======
   },
   // Check condition
 if ( {) {
@@ -304,21 +293,14 @@ if ( {) {
         </Card>))}
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
     </div>;
   );
 }
 ;
 
-=======
     </div>;
   );
 
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

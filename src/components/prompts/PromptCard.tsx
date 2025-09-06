@@ -1,9 +1,7 @@
-
 import { useState } from 'react';
 
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import type { Prompt } from '@/types/prompts';
 
 interface PromptCardProps {;
@@ -40,8 +38,6 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
 
 
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
   );
 }
 
@@ -97,9 +93,4 @@ function PromptCard() {
     </div>);
 }
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

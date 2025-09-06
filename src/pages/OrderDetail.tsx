@@ -1,10 +1,7 @@
-
-
 import Link from 'next/link';
 
 import { useAuth } from '@/hooks/useAuth';
 
-=======
 import React, { useState, useEffect } from 'react';
 import { use_router } from 'next / router';
 import { ArrowLeft, Package, CreditCard, MapPin, Clock, CheckCircle } from 'lucide-react';
@@ -122,7 +119,6 @@ export default function OrderDetail() {;
       status: 'shipped'
       total: 299.99
       items: [
-=======
 ;
 export default /**
  * OrderDetail - Function description
@@ -142,7 +138,6 @@ function OrderDetail() {
       status: 'shipped',
       total: 299.99,
       items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {
           id: '1'
           name: 'Premium Web Development Service'
@@ -215,7 +210,6 @@ export default function OrderDetailPage() {;
 
 
 
-=======
       ],
       shipping_address: {
         name: 'John Doe',
@@ -240,7 +234,6 @@ export default function OrderDetailPage() {;
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className="container mx - auto px - 4 py - 8">;
         <div className="animate - pulse">;
@@ -346,7 +339,6 @@ if ( {) {
             </CardContent>
           </Card>
         </div>
-=======
   // Check condition
 if ( {) {
   $2
@@ -446,7 +438,6 @@ if ( {) {
             </CardContent>;
           </Card>;
         </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         {/* Order Status & Tracking */}
         <div className="space - y-6">;
           <Card>;
@@ -524,7 +515,6 @@ if ( {) {
 
 
 
-=======
                   <div className="flex items - center space - x-3">;
                     <div className="w - 3 h - 3 bg - green - 500 rounded - full"></div>;
                     <span className="text - sm">Delivered</span>;
@@ -553,12 +543,8 @@ if ( {) {
 ;
 }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
-=======
 import Link from 'next/link',;
 import { useRouter } from 'next/router',;
 import { Button } from '@/components/ui/button',;
@@ -629,12 +615,8 @@ export default function OrderDetailPage() {;
         <Skeleton className="h-6 w-full" />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       </div>
     )
   }
 
   return (
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

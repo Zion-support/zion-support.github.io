@@ -1,6 +1,4 @@
-
-
-    }
+}
     setLocalIsSaved(!localIsSaved)
     if (onToggleSave) {
       onToggleSave(profileId, !localIsSaved)
@@ -19,7 +17,6 @@
     })
   }
     >
-=======
   isAuthenticated: boolean;
 export function TalentCardSaveButton(): any ({;
   profileId,;
@@ -63,7 +60,6 @@ export function TalentCardSaveButton(): any ({;
 
 
     >;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <Heart
         className={cn(
           'h-4 w-4 transition-colors'
@@ -77,7 +73,6 @@ export function TalentCardSaveButton(): any ({;
     </button>
   )
 
-=======
 
 }variant: "default" 
 }) 
@@ -86,7 +81,6 @@ export function TalentCardSaveButton(): any ({;
 }";
 };
 
-=======
     
     toast({
       title: localIsSaved ? "Removed from favorites" : "Added to favorites",
@@ -99,8 +93,6 @@ export function TalentCardSaveButton(): any ({;
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib / utils';
@@ -165,10 +157,4 @@ if ( {) {
 }
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

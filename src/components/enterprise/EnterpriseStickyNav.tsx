@@ -1,11 +1,8 @@
-
-
 import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import Link from 'next/link';
 
   const [ open, setOpen ] = useState(false),;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 
 import { useState } from 'react';
@@ -62,18 +59,14 @@ import { Menu } from 'lucide-react'
 import Link from "next/link";
 
 export function EnterpriseStickyNav() {
-=======
                 className='text-sm font-medium hover:text-primary'>;
                 Contact Us;
               </Link>            </li>;
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
 export function EnterpriseStickyNav() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const [open, setOpen] = useState(false);
-=======
 
 
-=======
 import { useState } from "react",
 import { Menu } from 'lucide-react'
 import Link from "next/link",
@@ -81,8 +74,6 @@ export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false),
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <nav className="sticky top-16 z-40 bg-card border-b border-border">;
       <div className="container mx-auto px-4 md:px-6">;
@@ -122,7 +113,6 @@ export function EnterpriseStickyNav() {
             <li>;
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>;
 
-=======
               <Link;
                 href='#contact';
                 className='text - sm font - medium hover:text - primary';
@@ -160,21 +150,13 @@ function EnterpriseStickyNav() {
             <li>;
               <Link href="#contact" className="text - sm font - medium hover:text - primary">Contact Us</Link>;
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
             </li>;
           </ul>;
         </div>;
       </div>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     </nav>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

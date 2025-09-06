@@ -1,6 +1,4 @@
-
-
-  badges: string[]
+badges: string[]
 }
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
@@ -19,7 +17,6 @@ export function PartnerLeaderboard() {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "2"
       rank: 2
@@ -33,7 +30,6 @@ export function PartnerLeaderboard() {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "3"
       rank: 3
@@ -47,7 +43,6 @@ export function PartnerLeaderboard() {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "4"
       rank: 4
@@ -133,10 +128,7 @@ export function PartnerLeaderboard() {;
 
   )
 }
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import { Badge } from '@/components / ui / badge';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components / ui / card';
 import { Star } from 'lucide-react';
@@ -191,15 +183,10 @@ function PartnerLeaderboard() {
       earnings: 2450,
       badges: [];
     }
-=======
 
     },
-=======
-=======
     },
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     {
       id: "5",
       rank: 5,
@@ -209,9 +196,4 @@ function PartnerLeaderboard() {
       earnings: 2175,
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
       badges: ["newcomer"]
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

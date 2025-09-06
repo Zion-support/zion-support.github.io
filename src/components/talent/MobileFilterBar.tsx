@@ -1,5 +1,3 @@
-
-
 interface MobileFilterBarProps {
   searchTerm: string;
   setSearchTerm: (value: string) => void;
@@ -20,7 +18,6 @@ export function MobileFilterBar(): any ({;
   setSearchTerm,;
   setIsMobileFilterOpen,;
 }: MobileFilterBarProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='lg:hidden mb-4 sticky top-0 z-20 bg-zion-blue pt-2 pb-4'>;
       <Button
@@ -31,7 +28,6 @@ export function MobileFilterBar(): any ({;
           Search talents
         </label>
         <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />
-=======
         variant='outline';
         className='w-full flex items-center justify-center gap-2 border-zion-blue-light text-zion-slate-light'      >;
         <Sliders className='h-4 w-4' />;
@@ -43,7 +39,6 @@ export function MobileFilterBar(): any ({;
           Search talents;
         </label>;
         <Search className='absolute left-2 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate' />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <Input
 
 
@@ -55,7 +50,6 @@ export function MobileFilterBar(): any ({;
 };
 }
 
-=======
           id="mobile-talent-search"
           placeholder="Search talents..."
           value={searchTerm}
@@ -77,9 +71,7 @@ export function MobileFilterBar(): any ({;
           aria-describedby='mobile-talent-search-help';
           className='pl-8 bg-zion-blue border-zion-blue-light text-white placeholder:text-zion-slate'        />;
         <p id='mobile-talent-search-help' className='sr-only'>;
-=======
 
-=======
 
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -129,9 +121,6 @@ export function MobileFilterBar({;
 }
 
 
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 import React from 'react';
 import { Button } from '@/components / ui / button';
 import { Search, Sliders } from 'lucide-react';
@@ -171,11 +160,4 @@ function MobileFilterBar() {
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

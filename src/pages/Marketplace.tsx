@@ -1,18 +1,11 @@
-
-
-=======
-
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import ProductCard from '@/components/ProductCard';
 
-=======
 import { use_router } from 'next / router';
 import { useApiErrorHandling } from '@/hooks / useApiErrorHandling';
 import ProductCard from '@/components / ProductCard';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { use_translation } from 'react - i18next';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -26,7 +19,6 @@ import {
   Sparkles
   TrendingUp
   Star
-=======
 import { AuthModal } from '@/components/auth/AuthModal';
 import {
 
@@ -37,7 +29,6 @@ import {
   TrendingUp,;
   Star;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 } from 'lucide-react';
 
 import {;
@@ -91,7 +82,6 @@ export interface MarketplaceProps {;
   setShowRecommended: (show: boolean) => void;
 
   sort_by,
-=======
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   <Card className="bg-gradient-to-r from-blue-900/20 to-purple-900/20 border-blue-700/30 mb-6">
@@ -124,7 +114,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
 
   sortBy,
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   setSortBy,
   filter_category,
   setFilterCategory,
@@ -243,7 +232,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
         value={minRating}
         onChange={e => setMinRating(Number(e && e.target.value))}
         className='bg-background border border-border px-2 py-1 rounded'      >;
-=======
       <Spinner className='absolute right - 4 top - 4 h - 4 w - 4 text - primary' />)}
     <div className='flex items - center gap - 2'>;
       <Filter className='h - 4 w - 4 text - muted - foreground' />;
@@ -328,7 +316,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
 
     <div className='flex items-center gap-2'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <select
 
         value={filterLocation}
@@ -340,7 +327,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
 
         {locations.map(loc => (
           <option key={loc} value={loc}>{loc}</option>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         ))}
 
       </select>;
@@ -377,7 +363,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
     <Button
 
 
-=======
       variant={showRecommended ? "default" : "outline"}
       size="sm"
       onClick={() => setShowRecommended(!showRecommended)}
@@ -392,8 +377,6 @@ const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
   </div>
 ),
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 /**
  * Enhanced Marketplace component with infinite scroll and AI product generation
  * Uses the auto-feed algorithm to continuously generate IT and AI products
@@ -459,7 +442,6 @@ export default function Marketplace() {
   }, [isAuthenticated, user, router, toast]);
   // Fetch function for infinite scroll with AI product generation
   const fetchProducts = useCallback(
-=======
     <div className='flex items - center gap - 2'>;
       <select;
         value={filter_availability}
@@ -552,7 +534,6 @@ if ( {) {
 ;
   // Fetch function for infinite scroll with AI product generation;
   const fetch_products = useCallback (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     async (page: number, limit: number) => {
       await new Promise (resolve => set_timeout (resolve, 200));
       try {
@@ -977,7 +958,6 @@ if ( {) {
     );
   }, []).filter(Boolean) as string[];
 
-=======
         title: "Admin Access Required",
         description: "Only administrators can add products to the marketplace. Please contact an administrator.",
         variant: "destructive"}),
@@ -1240,11 +1220,8 @@ export default function Marketplace() {;
 
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Loading state with skeleton
   if (loading && products.length === 0) {
-=======
 
   // Show scroll to top button;
   const [showScrollTop, setShowScrollTop] = useState(false);
@@ -1257,7 +1234,6 @@ export default function Marketplace() {;
 
   // Loading state with skeleton;
   if (loading && products && products.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className='container py-8' data-testid='marketplace-loading'>;
         <motion&& motion.div
@@ -1312,7 +1288,6 @@ export default function Marketplace() {;
           </p>;
         </motion && motion.div>;
 
-=======
 
           className="text-center mb-8";
         >;
@@ -1389,11 +1364,9 @@ export default function Marketplace() {;
         <p className="text-muted-foreground text-lg">;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {t('marketplace.hero_subtitle')}
         </p>
       </motion.div>
-=======
         animate={{ opacity: 1, y: 0 }}>;
         <h1 className='text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>;
           {t('marketplace && marketplace.hero_title')}
@@ -1403,7 +1376,6 @@ export default function Marketplace() {;
         </p>;
       </motion && motion.div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {/* Market Insights */}
       {marketStats && (;
         <motion&& motion.div
@@ -1422,7 +1394,6 @@ export default function Marketplace() {;
       </motion && motion.div>;
 
 
-=======
         transition={{ delay: 0.3 }}
 
       >;
@@ -1450,8 +1421,6 @@ export default function Marketplace() {;
         />;
       </motion.div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Product Grid */}
       <motion&& motion.div
         className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'
@@ -1476,9 +1445,7 @@ export default function Marketplace() {;
 
               className="relative group"
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               <ProductCard
                 product={{
 
@@ -1783,7 +1750,6 @@ if ( {) {
                   AI {product && product.aiScore}
                 </Badge>;
               )}
-=======
 
                   stock: product.stock,
 
@@ -1803,7 +1769,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Featured Badge */}
               {product && product.featured && (;
                 <Badge className='absolute top-2 left-2 bg-gradient-to-r from-blue-500 to-purple-500 z-10'>;
@@ -1814,7 +1779,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               )}
             </motion && motion.div>;
           ))}
@@ -1824,14 +1788,12 @@ if ( {) {
 
 
         <motion.div
-=======
         </AnimatePresence>;
       </motion && motion.div>;
 
       {/* Loading More Indicator */}
       {(isFetching || loading) && (;
         <motion&& motion.div
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           className='mt-8'
           initial={{ opacity: 0 }}
 
@@ -1839,7 +1801,6 @@ if ( {) {
         >
           <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {Array.from({ length: 4 }).map((_, i) => (              <SkeletonCard key={`loading-${i}`} />
-=======
       {(isFetching || loading) && (;
         <motion.div;
           className="mt-8";
@@ -1852,7 +1813,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </motion && motion.div>;
@@ -1880,7 +1840,6 @@ if ( {) {
       )}
       {/* Scroll to Top Button */}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <AnimatePresence>;
         {showScrollTop && (;
           <motion&& motion.button
@@ -2415,7 +2374,6 @@ import Link from "next/link";
 const Marketplace = () => {;
   return (
 
-=======
 }{
   /* End of Results */ ;
 }{";
@@ -2463,7 +2421,6 @@ import Head from './next / head';
 import Link from './next / link';
 const Marketplace = () =>: any {
   return (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     <>;
       <Head>;
         <title > Marketplace - Zion Tech Group</title>;
@@ -2506,19 +2463,13 @@ const Marketplace = () =>: any {
               </Link>;
             </div>;
 
-=======
 
 
-=======
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
             className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50";
             initial={{ opacity: 0, scale: 0 }}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0 }}
             whileHover={{ scale: 1.1 }}
@@ -2542,7 +2493,6 @@ const Marketplace = () =>: any {
 }
 }
 
-=======
           >;
             <ArrowUp className="h-5 w-5 text-primary-foreground" />;
           </motion.button>;
@@ -2552,7 +2502,3 @@ const Marketplace = () =>: any {
   );
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

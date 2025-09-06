@@ -1,7 +1,4 @@
-
-
-=======
-  const handleApplySuggestion = () =>: any {
+const handleApplySuggestion = () =>: any {
     // Check condition
 if ( {) {
   $2
@@ -19,7 +16,6 @@ if ( {) {
           suggested_max: suggestion.max_rate,
           accepted: true,
         });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
     }
   }
@@ -62,19 +58,14 @@ interface ClientBudgetRecommenderProps {
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           </Button>
         ) : (
-=======
             disabled={!jobTitle || !category}
             className='w-full'>;
             <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
           </Button>;
         ) : (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           <PricingSuggestionBox
-=======
     <div className='space - y-4'>;
       <div>;
         {!suggestion && !is_loading ? (
@@ -87,7 +78,6 @@ interface ClientBudgetRecommenderProps {
             <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
           </Button>) : (
           <PricingSuggestionBox;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             suggestion={suggestion}
             is_loading={is_loading}
             onApplySuggestion={handleApplySuggestion}
@@ -112,11 +102,9 @@ if ( {) {
   trackPricingSuggestion ({
 }
 
-=======
 
 },
 
-=======
             rateType="hourly"
           />
         )}
@@ -127,12 +115,9 @@ if ( {) {
 };
 
 
-=======
 
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 return (<div className="space - y-4" > <div> {";
   !suggestion && !is_loading ? (<Button type="button" variant="outline" on_click={
   generate_suggestion ";
@@ -141,10 +126,3 @@ return (<div className="space - y-4" > <div> {";
 }
 '"  );
 },
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

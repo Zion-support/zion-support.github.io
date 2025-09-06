@@ -1,5 +1,3 @@
-
-
 const AUTO_SERVICE_TITLES = [
   "AI-Powered Customer Support"
   "Cloud Infrastructure Management"
@@ -50,7 +48,6 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'ai-models-apis': {
       title: "AI Models & APIs"
       description: "Access cutting-edge AI models with easy integration"
@@ -60,7 +57,6 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'content-creation': {
       title: "Content Creation"
       description: "Generate high-quality content for your projects"
@@ -70,7 +66,6 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'data-analysis': {
       title: "Data Analysis"
       description: "Extract insights from complex datasets"
@@ -80,7 +75,6 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'computer-vision': {
       title: "Computer Vision"
       description: "Image and video processing solutions"
@@ -90,7 +84,6 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'virtual-assistants': {
       title: "Virtual Assistants"
       description: "Intelligent automation for your workflow"
@@ -100,7 +93,6 @@ function generateInnovationListing (index: number): ProductListing {
     },
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'voice-speech': {
       title: "Voice & Speech"
       description: "Speech recognition and synthesis tools"
@@ -109,23 +101,19 @@ function generateInnovationListing (index: number): ProductListing {
 
     },
 
-=======
     'developer-tools': {
       title: "Developer Tools",
       description: "AI-powered coding assistance and automation",;
       icon: <Code className="w-6 h-6" />;
     };          icon: <Bot className="w-6 h-6" />},
-=======
     },
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     'developer-tools': {
       title: "Developer Tools"
       description: "AI-powered coding assistance and automation"
       icon: <Code className="w-6 h-6" />
 
 
-=======
 
     },
     'business-solutions': {
@@ -242,7 +230,6 @@ function generateInnovationListing (index: number): ProductListing {
   const seoDescription = null;
     category.description || 'Explore listings in this category.'
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <>
       <NextSeo title={seoTitle} description={seoDescription} />
@@ -264,11 +251,9 @@ function generateInnovationListing (index: number): ProductListing {
           
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <div className="text-center mb-12">
             <div className="flex justify-center mb-6">
               <div className="text-zion-cyan p-4 bg-zion-blue-dark rounded-full">
-=======
       title: "Talents",
       description: "Connect with AI experts, developers, and tech specialists";
       icon: <Brain className="w - 6 h - 6" />;
@@ -338,7 +323,6 @@ function generateInnovationListing (index: number): ProductListing {
           <div className="text - center mb - 12">;
             <div className="flex justify - center mb - 6">;
               <div className="text - zion - cyan p - 4 bg - zion - blue - dark rounded - full">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 {category.icon}
               </div>;
             </div>;
@@ -374,7 +358,6 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   const params = router && router.query as { slug?: string };
   const slug = slugProp ?? params && params.slug;
 
-=======
 
               {listings.map((listing) => (
                 <ProductListingCard
@@ -396,7 +379,6 @@ function generateInnovationListing(): any (index: number): ProductListing {;
     'services': {;
       title: "Services",;
       description: "On-demand IT support, consulting, development, and more",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       icon: <Briefcase className="w-6 h-6" />;
     };
     'talents': {;
@@ -492,7 +474,6 @@ function generateInnovationListing(): any (index: number): ProductListing {;
           ) : (;
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">;
               {listings && listings.map((listing,) => (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 <ProductListingCard
                   key = {listing && listing.id,}
                   listing = {listing,}
@@ -502,12 +483,10 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
             </div>;
           )}
 
-=======
 
 
           </div>;
@@ -518,10 +497,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
             </p>;
           </div>;
           {is_loading ? (
@@ -540,14 +516,7 @@ function generateInnovationListing(): any (index: number): ProductListing {;
       </Suspense>;
     </>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
 
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

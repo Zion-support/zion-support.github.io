@@ -1,18 +1,9 @@
-
-
-=======
-
-
-=======
-      
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-      {/* Progress bar */}
+{/* Progress bar */}
       <div className="w-full h-2 bg-zion-blue rounded-full mb-5">
         <div 
           className="h-2 bg-gradient-to-r from-zion-purple to-zion-cyan rounded-full transition-all duration-500 ease-out"
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Steps list */}
       <div className="space-y-3">;
         {steps && steps.map((step,) => (;
@@ -119,17 +110,13 @@ function OnboardingTracker() {
 }"};
 
 
-=======
       </div>;
     </div>;
   );
 
 
-=======
 
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   step.id ";
 }className="flex items - center" > <div className="mr - 3" > {";
   step.completed ? (<CheckCircle className="h - 5 w - 5 text - zion - cyan" /> h - 5 w - 5 text - zion - slate - light"/>);
@@ -140,12 +127,5 @@ function OnboardingTracker() {
 }</div>) );
 }</div> </div>);
 }"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

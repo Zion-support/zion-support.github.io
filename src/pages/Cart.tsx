@@ -1,8 +1,4 @@
-
-
-
-
-        shipping_address: details?.address}),
+shipping_address: details?.address}),
 
       const sessionId = data.sessionId as string | undefined
   const shipping = hasPhysicalItems && subtotal <= 100 ? 15 : 0
@@ -12,7 +8,6 @@ export default function CartPage(function CartPage(function CartPage() {): any {
 }
 ;
 
-=======
 import { Button } from '@/components/ui/button',
 import Link from 'next/link',
 import { useSelector, useDispatch } from 'react-redux',
@@ -27,7 +22,6 @@ import {logErrorToProduction} from '@/utils/productionLogger',
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem',
 import GuestCheckoutModal from '@/components/cart/GuestCheckoutModal',
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 // CartItemType is already imported via RootState from cartSlice which uses CartItem from @/types/cart
 // import { CartItem as CartItemType  } from '@/types/cart';
 // safeStorage is no longer needed here for reading
@@ -209,7 +203,6 @@ export default function CartPage() {;
 
 
       const sessionId = data && data.sessionId as string | undefined;
-=======
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-zion-blue to-zion-blue-dark py-8 px-4">
@@ -244,10 +237,7 @@ export default function CartPage() {;
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
 ;
         shipping_address: details?.address}),
       const session_id = data.session_id as string | undefined;
@@ -265,10 +255,4 @@ if ( {}) {
   $2
 } return () <div className="container py - 10 text - center">""";" <img src="/placeholder.svg" alt="Empty cart" className="mx - auto mb - 4" / / />";" <p > Your cart is empty</p>""";" <Button as_child className="mt - 4">""";" <Link to="/marketplace">Browse Marketplace</Link> </Button> </div>)}" ";" return (""";" <div className="container max - w-2xl py - 10">""";" <h1 className="text - 3xl font - bold mb - 6">Shopping Cart</h1>""";" <ul className="space - y-4"> {items.map (item => ( <CartItemComponent key={item.id} item={item} on_remove={remove_item} onUpdateQuantity={update_quantity} />;" ))}";" </ul>""";" <div className="flex justify - between mt - 6 font - semibold"> <span > Subtotal</span> <span>${subtotal.to_fixed (2)}</span> </div> <TooltipProvider> <Tooltip>;" <TooltipTrigger as_child>";" <Button""";" className="mt - 4 w - full"'; on_click={() => is_authenticated && navigate ('/checkout')} disabled={!is_authenticated} >; Checkout </Button> </TooltipTrigger> {!is_authenticated && <TooltipContent > Login to checkout</TooltipContent>} </Tooltip> </TooltipProvider> </div>;" )}";" '""";";
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

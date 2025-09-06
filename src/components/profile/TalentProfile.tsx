@@ -1,5 +1,3 @@
-
-
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -29,7 +27,6 @@ import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { useAuth } from '@/hooks/useAuth';
 import { Availability } from '@/types/profile';
 interface TalentProfileProps {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   profile: TalentProfileType;
   onRequestHire: () => void;
   onMessageTalent?: () => void
@@ -271,7 +268,6 @@ function TalentProfile() {
                       <MessageSquare className='mr-2 h-5 w-5' />;
                       Message;
                     </Button>;
-=======
 
 import { useAuth } from "@/hooks/useAuth",
 import { Availability } from "@/types/profile",
@@ -326,7 +322,6 @@ export function TalentProfile({
             />;
           </div>;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Hire Now CTA */}
           {isAuthenticated && (
             <div className="bg-zion-purple/10 border border-zion-purple/30 rounded-lg p-6 mb-8">
@@ -357,17 +352,14 @@ export function TalentProfile({
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       Message
                     </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   )}
                 </div>;
               </div>;
             </div>;
           )}
 
-=======
 
 
         </div>;
@@ -377,10 +369,7 @@ export function TalentProfile({
 }
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 </p>;
                 <div className='flex flex - wrap gap - 4 justify - center'>;
                   <Button;
@@ -406,10 +395,4 @@ export function TalentProfile({
       </div>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

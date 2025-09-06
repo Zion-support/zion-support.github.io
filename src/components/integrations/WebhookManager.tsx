@@ -1,6 +1,4 @@
-
-
-    webhooks,
+webhooks,
     loading,
     error,
 
@@ -113,7 +111,6 @@ export function WebhookManager() {;
   ) => {;
     await testWebhook(webhookId, eventType);
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
 
     <div className='space - y-8'>;
@@ -180,7 +177,6 @@ export function WebhookManager() {;
                 value={newWebhook.name}
                 onChange={e =>
                   setNewWebhook({ ...newWebhook, name: e.target.value })
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 }
 
               />;
@@ -220,7 +216,6 @@ export function WebhookManager() {;
 
 
 
-=======
             
             <div className="space-y-2">
               <Label htmlFor="webhook-url">URL</Label>
@@ -354,7 +349,6 @@ export function WebhookManager() {;
               ))}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </SelectTrigger>
                 <SelectContent>
                   {eventOptions.map(option => (
@@ -630,7 +624,6 @@ export function WebhookManager() {;
                           size='sm'
 
 
-=======
           
           <div className="space-y-2">
             <Label htmlFor="webhook-secret">Secret (optional)</Label>
@@ -659,7 +652,6 @@ export function WebhookManager() {;
                         >;
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                           {webhook.is_active ? 'Disable' : 'Enable'}
                         </Button>
                       </div>
@@ -674,7 +666,6 @@ export function WebhookManager() {;
                             toggleWebhook(webhook && webhook.id, !webhook && webhook.is_active);
                           }                        >;
                           {webhook && webhook.is_active ? 'Disable' : 'Enable'}
-=======
                       </CardDescription>;
                     </div>;
                     <div className='flex items - center'>;
@@ -730,7 +721,6 @@ export function WebhookManager() {;
                   <Select
                     onValueChange={value =>;
                       handleTestWebhook(webhook && webhook.id, value as WebhookEventType);
-=======
                 <CardFooter className='flex justify - between pt - 2'>;
                   <Button;
                     variant='outline';
@@ -742,7 +732,6 @@ export function WebhookManager() {;
                   <Select;
                     onValueChange={value =>;
                       handleTestWebhook (webhook.id, value as WebhookEventType);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     }                  >;
                     <SelectTrigger className='w-[180px]'>;
                       <SelectValue placeholder='Test webhook' />;
@@ -758,12 +747,10 @@ export function WebhookManager() {;
                   </Button>;
                   <Select
                     onValueChange={(value) => handleTestWebhook(webhook && webhook.id, value as WebhookEventType)}
-=======
                       {webhook.event_types.map ((event: WebhookEventType) => (                        <SelectItem key={event} value={event}>;
                           Test{' '}
                           {event_options.find (e => e.value === event)?.label ||;
                             event}
-=======
 
                       <Label className="text-sm">Events</Label>
                       <div className="flex flex-wrap gap-2 mt-1">
@@ -787,7 +774,6 @@ export function WebhookManager() {;
                   <Button
 
 
-=======
                     variant="outline"
                     size="sm"
                     onClick={() => deleteWebhook(webhook.id)}
@@ -805,17 +791,14 @@ export function WebhookManager() {;
                       {webhook.event_types.map((event: WebhookEventType) => (
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         <SelectItem key={event} value={event}>
                           Test {eventOptions.find(e => e.value === event)?.label || event}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         </SelectItem>;
                   >;
                     <Trash className="h - 4 w - 4 mr - 2" /> Delete;
                   </Button>;
                   <Select;
                     onValueChange={(value) => handleTestWebhook (webhook.id, value as WebhookEventType)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                   >;
                     <SelectTrigger className="w-[180px]">;
                       <SelectValue placeholder="Test webhook" />;
@@ -835,7 +818,6 @@ export function WebhookManager() {;
               <div className='space-y-2'>
                 <div className='flex justify-between'>
                   <span className='font-medium'>Status:</span>
-=======
 
         {testResult && (;
           <Card className='mt-4 border-blue-200'>;
@@ -846,7 +828,6 @@ export function WebhookManager() {;
               <div className='space-y-2'>;
                 <div className='flex justify-between'>;
                   <span className='font-medium'>Status:</span>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <span
                     className={
                       testResult && testResult.status>= 200 && testResult && testResult.status < 300;
@@ -856,7 +837,6 @@ export function WebhookManager() {;
 
 
 
-=======
 ;
         {testResult && (;
           <Card className="mt-4 border-blue-200">;
@@ -878,8 +858,6 @@ export function WebhookManager() {;
 
 
                     {testResult.responseBody || '<empty>'}
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </pre>
                 </div>
               </div>
@@ -1046,15 +1024,11 @@ newWebhook.secret |undefined);"
 }</div> </div>)
 }'"}
 }
-=======
 
 
-=======
 
 ;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
                       <SelectItem value="test_event">Test (generic)</SelectItem>;
                       {webhook.event_types.map (event => (
                         <SelectItem key={event} value={event}>;
@@ -1100,7 +1074,3 @@ event_types: [...new_webhook.event_types, new_webhook.selected_event];
 }
 
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

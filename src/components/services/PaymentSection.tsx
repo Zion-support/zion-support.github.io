@@ -1,5 +1,3 @@
-
-
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
 
@@ -13,7 +11,6 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       description:
         "You'll be redirected to our secure payment portal momentarily."
     })
-=======
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from '@/components / transactions / PaymentButton';
 import { CountryPricing } from '@/data / onsiteServicePricing';
@@ -31,7 +28,6 @@ function PaymentSection() {
       description:;
         "You'll be redirected to our secure payment portal momentarily.",
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 
@@ -51,7 +47,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
         "You'll be redirected to our secure payment portal momentarily.",;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -65,12 +60,7 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 
 }"}
 
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <div className='text - center'>;
       <p className='text - zion - slate - light mb - 2'>Selected Country</p>;
       <h4 className='text - xl font - bold text - white mb - 2 flex items - center justify - center'>;
@@ -97,7 +87,3 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
   )
 }
 ;
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,6 +1,4 @@
-
-
-                passwordStrength.strength >= 4 ? 'text-green-600' :
+passwordStrength.strength >= 4 ? 'text-green-600' :
                 passwordStrength.strength >= 3 ? 'text-blue-600' :
                 passwordStrength.strength >= 2 ? 'text-yellow-600' : 'text-red-600'
               )}>
@@ -79,13 +77,10 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
 
       setError('root', { message: errorMessage }),;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
-=======
 
 
-=======
   path: ["confirm_password"]}),
 type SignupFormData = z.infer < typeof signup_schema>;
         setFieldStates (prev => ({
@@ -113,9 +108,6 @@ type SignupFormData = z.infer < typeof signup_schema>;
       set_error ('root', { message: error_message }),
               <span className={cn ('font - medium', password_strength.strength >= 4 ? 'text - green - 600' :}
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
       </div>;
       {/* Confirm Password Field */}
@@ -185,6 +177,3 @@ type SignupFormData = z.infer < typeof signup_schema>;
   );
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

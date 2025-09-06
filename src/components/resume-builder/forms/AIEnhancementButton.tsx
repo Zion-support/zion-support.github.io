@@ -1,8 +1,3 @@
-
-
-
-
-
 export function AIEnhancementButton({
   currentContent,
   enhancementType,
@@ -24,7 +19,6 @@ export function AIEnhancementButton({
     )
     if (enhancedContent) {
       onEnhanced(enhancedContent)
-=======
 interface AIEnhancementButtonProps {;
   currentContent: string;
   enhancementType:;
@@ -54,7 +48,6 @@ export function AIEnhancementButton(): any ({;
     }
 
 
-=======
 import { Button } from '@/components / ui / button';
 import { Sparkles, Loader2 } from 'lucide-react';
 import { useResumeEnhancer } from '@/hooks / useResumeEnhancer';
@@ -93,23 +86,16 @@ if ( {) {
   $2
 }
       on_enhanced (enhanced_content);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
   }
 
 
-=======
 
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
   },
   
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 
@@ -124,7 +110,6 @@ if ( {) {
 
 
         <Sparkles className="h-3 w-3" />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       )}
 
       <span className="text-xs">{buttonText}</span>;
@@ -132,7 +117,6 @@ if ( {) {
   );
 }
 
-=======
     <Button;
       type="button";
       variant="ghost";
@@ -154,16 +138,9 @@ if ( {) {
       <span className="text - xs">{button_text}</span>;
     </Button>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
   )
 }
 ;
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

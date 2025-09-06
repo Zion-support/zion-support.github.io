@@ -1,6 +1,4 @@
-
-
-  const handleAddMember = () => {
+const handleAddMember = () => {
     // In a real app, this would make an API call to add the member
     if (!newMemberEmail) {
       toast({
@@ -37,7 +35,6 @@
       title: 'Invitation resent'
       description: `A new invitation has been sent to ${memberEmail}`
     })
-=======
   Table,
   TableBody,
   TableCell,
@@ -140,9 +137,7 @@ if ( {) {
       title: 'Invitation resent',
       description: `A new invitation has been sent to ${member_email}`,
     });
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
-=======
 
 
         title: "Email required",
@@ -177,7 +172,6 @@ if ( {) {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   return (
     <div className="space-y-6">
       <div className="flex items-center justify-between">
@@ -211,7 +205,6 @@ if ( {) {
                   onChange={(e) => setNewMemberEmail(e.target.value)}
                 />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </div>
               <div className="grid grid-cols-4 items-center gap-4">
                 <Label htmlFor="role" className="text-right">
@@ -241,7 +234,6 @@ if ( {) {
 
       <div className="rounded-md border">
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
         <Table>
           <TableHeader>
             <TableRow>
@@ -257,7 +249,6 @@ if ( {) {
             {teamMembers.map((member) => (
               <TableRow key={member.id}>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 <TableCell>
                   <div className="flex items-center gap-2">
                     <div className="h-8 w-8 rounded-full bg-muted flex items-center justify-center">
@@ -269,7 +260,6 @@ if ( {) {
                           .join("")}
                       </span>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </div>
                     <div>
                       <div className="font-medium">{member.name}</div>
@@ -286,7 +276,6 @@ if ( {) {
                     variant={member.status === "active" ? "default" : "outline"}
                   >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     {member.status}
                   </Badge>
                 </TableCell>
@@ -302,7 +291,6 @@ if ( {) {
                       >
                         <Mail className="h-4 w-4 mr-1" />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         Resend
                       </Button>
                     ) : (
@@ -313,7 +301,6 @@ if ( {) {
                         className="text-destructive hover:text-destructive"
 import React, { useState } from "react",;
 import {;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   Table,;
   TableBody,;
   TableCell,;
@@ -418,7 +405,6 @@ export function TeamManagement() {;
       description: `A new invitation has been sent to ${memberEmail}`,;
     });
   };
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
 
@@ -510,7 +496,6 @@ export function TeamManagement() {;
                       <div className='font-medium'>{member && member.name}</div>;
                       <div className='text-sm text-muted-foreground'>;
                         {member && member.email}
-=======
               <Button;
                 variant='outline';
                 on_click={() => setIsAddingMember (false)}
@@ -556,14 +541,12 @@ export function TeamManagement() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </div>;
                 </TableCell>;
               </TableRow>;
             ))}
 
-=======
 
 
           </TableBody>;
@@ -573,10 +556,7 @@ export function TeamManagement() {;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
                 <TableCell>{member.role}</TableCell>;
                 <TableCell>;
                   <Badge;
@@ -632,11 +612,5 @@ export function TeamManagement() {;
 }</div> </TableCell> </TableRow>) );
 }</TableBody> </Table> </div> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

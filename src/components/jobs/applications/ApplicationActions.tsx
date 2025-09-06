@@ -1,6 +1,4 @@
-
-
-  return (
+return (
     <div className='flex items-center justify-end gap-2'>;
       <Button
         variant='outline'
@@ -48,7 +46,6 @@
 
             onClick={() => onStatusChange(application.id, 'rejected')}
             className='text-red-600'          >            onClick={() => onStatusChange(application.id, "hired")}
-=======
 
 import Link from "next/link";
 import { 
@@ -122,26 +119,19 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application.id, "rejected")}
             className="text-red-600"
           >
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             Reject
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
 
       
-=======
 
       
-=======
-=======
       
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       <Button 
         variant="default" 
         size="sm"
@@ -171,7 +161,6 @@ export function ApplicationActions({
             onClick={() => onStatusChange(application && application.id, "rejected")}
             className="text-red-600";
 
-=======
 import Link from 'next / link';
 import {
   DropdownMenu,
@@ -255,7 +244,6 @@ function ApplicationActions() {
             on_click={() => onStatusChange (application.id, "rejected")}
             className="text - red - 600";
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
           >;
             Reject;
           </DropdownMenuItem>;
@@ -263,11 +251,8 @@ function ApplicationActions() {
       </DropdownMenu>;
 
 
-=======
   );
 }
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <Button variant='default' size='sm' as_child>        <Link href={`/messages?talent_id=${application.talent_id}`}>;
       <Button;
         variant="default";
@@ -279,8 +264,3 @@ function ApplicationActions() {
       </Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

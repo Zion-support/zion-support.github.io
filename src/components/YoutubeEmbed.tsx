@@ -1,12 +1,7 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-          <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+<div className="absolute inset-0 flex items-center justify-center bg-black/30">
             <Loader2 className="h-8 w-8 animate-spin text-white" />
           </div>
         </>
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       )}
       <iframe
         className={`absolute inset-0 w-full h-full ${loaded ? 'visible' : 'invisible'}`}
@@ -21,11 +16,9 @@
       />
     </div>
 
-=======
 
 ;
 
-=======
         loading="lazy";
         onLoad={() => setLoaded(true)}
 
@@ -40,7 +33,6 @@
   );
 }
 
-=======
 interface YoutubeEmbedProps {
   video_id: string;
   title: string;
@@ -86,10 +78,4 @@ function YoutubeEmbed() {
       />;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

@@ -1,5 +1,3 @@
-
-
 // Mock Sentry instance with all common methods
 const mockSentry = {
   // Core Sentry methods
@@ -66,7 +64,6 @@ const mockSentry = {
   // Integrations
   Integrations: {
     BrowserTracing: class BrowserTracing {
-=======
 
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
@@ -121,8 +118,6 @@ const mockSentry = {;
   Integrations: {;
     BrowserTracing: class BrowserTracing {;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       constructor() {}
     }
     Http: class Http {
@@ -150,7 +145,6 @@ const mockSentry = {;
 
 
   // Constants
-=======
 // Mock implementation for Sentry to prevent Node.js module import issues during build;
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules;
 const noop = () =>: any {}
@@ -234,7 +228,6 @@ const mock_sentry = {
   create_transport: noop_return,
   SDK_VERSION: '7.0.0 - mock',
   // Constants;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   Severity: {
     Fatal: 'fatal'
     Error: 'error'
@@ -283,21 +276,17 @@ export { mockSentry as Sentry }
 // All exports are already defined above
 
 
-=======
 
   // Browser-specific methods
 
   onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
   
 
-=======
 
 // Additional exports for compatibility;
 export { mockSentry as Sentry };
 // All exports are already defined above;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
 // Mock scope;
 const mock_scope = {
   set_user: noop,
@@ -379,8 +368,3 @@ export const Severity = mock_sentry.Severity;
 // Additional exports for compatibility;
 export { mock_sentry as Sentry }
 // All exports are already defined above;
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

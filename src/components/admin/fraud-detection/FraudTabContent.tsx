@@ -1,12 +1,9 @@
-
-
 import React from 'react';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
 interface FraudTabContentProps {
   tab_value: string;
 export const FraudTabContent: React.FC < FraudTabContentProps> = ({
   tab_value,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 }) => {
 
         <div className='bg - amber - 50 dark:bg - amber - 950 / 20 p - 8 rounded - lg text - center'>;
@@ -18,11 +15,9 @@ export const FraudTabContent: React.FC < FraudTabContentProps> = ({
         </div>);
     case 'dangerous':;
 
-=======
   switch (tabValue) {    case 'pending':
 
 
-=======
 interface FraudTabContentProps {
   tabValue: string;
 
@@ -38,7 +33,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     case 'pending':
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       return (
         <div className="bg-amber-50 dark: bg-amber-950/20 p-8 rounded-lg text-center">
           <AlertTriangle className="mx-auto h-12 w-12 text-amber-500 mb-4" />
@@ -62,9 +56,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
       ),
     
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
     case 'actioned':
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       return (
         <div className='bg - red - 50 dark:bg - red - 950 / 20 p - 8 rounded - lg text - center'>;
           <AlertCircle className='mx - auto h - 12 w - 12 text - red - 500 mb - 4' />;
@@ -77,14 +69,12 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
     case 'actioned':;
       return (
 
-=======
 
       return null;
   };
 };
 }
 
-=======
       ),
     
     default:
@@ -137,9 +127,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
 
 }
 
-=======
 
-=======
         <div className='bg - green - 50 dark:bg - green - 950 / 20 p - 8 rounded - lg text - center'>;
           <CheckCircle className='mx - auto h - 12 w - 12 text - green - 500 mb - 4' />;
           <h3 className='text - xl font - medium mb - 4'>Actioned Flags</h3>;
@@ -151,12 +139,6 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
       return null;
   }
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
   }
 };
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

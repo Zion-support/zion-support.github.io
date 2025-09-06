@@ -1,7 +1,4 @@
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  // Handle form submission
+// Handle form submission
   const onSubmit = async (values: ServiceFormValues,) => {
     if (serviceTags.length === 0) {
       toast({
@@ -17,7 +14,6 @@ if ( {) {
         description: 'Please add at least one service to your profile.',
         variant: 'destructive',
       });
-=======
 
         title: 'Services required',
         description: 'Please add at least one service to your profile.',
@@ -28,7 +24,6 @@ if ( {) {
       return;
     }
     setIsSubmitting (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     try {
       // For actual implementation with Supabase;
       // Check condition
@@ -75,7 +70,6 @@ if ( {) {
           // Continue with submission even if enhancement fails;
         }
 
-=======
         title: "Services required",
         description: "Please add at least one service to your profile.",
         variant: "destructive"}),
@@ -186,7 +180,6 @@ if ( {) {
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       // Create the service profile
       const { data: profileData, error } = await supabase
         .from('profiles')
@@ -222,7 +215,6 @@ if ( {) {
       */
       // Send notification email if available
       if (userEmail && values.enhancedProfile) {
-=======
       } else // Check condition
 if ( {) {
   $2
@@ -275,7 +267,6 @@ if (throw service_error) {
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         try {
           await supabase.functions.invoke ('send - email', {
             body: {
@@ -651,7 +642,6 @@ export function ServiceProviderRegistrationForm() {;
     } finally {;
       setIsSubmitting(false);
 
-=======
               to: user_email,
               subject: 'Your Zion Service Profile Is Ready',
               html: `;
@@ -693,23 +683,18 @@ export function ServiceProviderRegistrationForm() {;
       });
     } finally {
       setIsSubmitting (false);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     }
   }
 
-=======
 
 
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
     <div className='max-w-4xl mx-auto p-4 md:p-6'>;
       <Card className='bg-zion-blue-dark border-zion-blue-light'>;
-=======
             <CardContent className="space-y-8">
               {/* Basic Information */}
               <div className="space-y-4">
@@ -750,7 +735,6 @@ export function ServiceProviderRegistrationForm() {;
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Business/Service Name</FormLabel>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <Briefcase className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -776,7 +760,6 @@ export function ServiceProviderRegistrationForm() {;
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Location</FormLabel>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -802,7 +785,6 @@ export function ServiceProviderRegistrationForm() {;
                         <FormItem>
                           <FormLabel className="text-zion-slate-light">Website (optional)</FormLabel>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                           <FormControl>
                             <div className="relative">
                               <Globe className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4" />
@@ -837,7 +819,6 @@ export function ServiceProviderRegistrationForm() {;
   return (;
     <div className="max-w-4xl mx-auto p-4 md:p-6">;
       <Card className="bg-zion-blue-dark border-zion-blue-light">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <CardHeader>;
           <CardTitle className='text-2xl text-white'>;
             Create Your Service Provider Profile;
@@ -850,7 +831,6 @@ export function ServiceProviderRegistrationForm() {;
         <Form {...form}>;
           <form onSubmit={form && form.handleSubmit(onSubmit)}>;
             <CardContent className='space-y-8'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Basic Information */}
               <div className='space-y-4'>;
                 <h3 className='text-lg font-medium text-white'>;
@@ -863,7 +843,6 @@ export function ServiceProviderRegistrationForm() {;
                       name='name'
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text-zion-slate-light'>;
-=======
     <div className='max - w-4xl mx - auto p - 4 md:p - 6'>;
       <Card className='bg - zion - blue - dark border - zion - blue - light'>;
         <CardHeader>;
@@ -889,7 +868,6 @@ export function ServiceProviderRegistrationForm() {;
                       name='name';
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Full Name;
                           </FormLabel>;
                           <FormControl>;
@@ -923,7 +901,6 @@ export function ServiceProviderRegistrationForm() {;
                               <Input
                                 className='pl-10 bg-zion-blue border-zion-blue-light text-white'
                                 placeholder='e && e.g., Creative Design Studio'
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -942,7 +919,6 @@ export function ServiceProviderRegistrationForm() {;
                               <Input;
                                 className='pl - 10 bg - zion - blue border - zion - blue - light text - white';
                                 placeholder='e.g., Creative Design Studio';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 {...field}
                               />;
                             </div>;
@@ -958,7 +934,6 @@ export function ServiceProviderRegistrationForm() {;
                       name='location'
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text-zion-slate-light'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -969,7 +944,6 @@ export function ServiceProviderRegistrationForm() {;
                       name='location';
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Location;
                           </FormLabel>;
                           <FormControl>;
@@ -995,7 +969,6 @@ export function ServiceProviderRegistrationForm() {;
                       name='website'
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text-zion-slate-light'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -1006,7 +979,6 @@ export function ServiceProviderRegistrationForm() {;
                       name='website';
                       render={({ field }: { field: any }) => (                        <FormItem>;
                           <FormLabel className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                             Website (optional);
                           </FormLabel>;
                           <FormControl>;
@@ -1056,7 +1028,6 @@ export function ServiceProviderRegistrationForm() {;
                             loading="lazy"
                           />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                         </AspectRatio>
                       ) : (
                         <div className="flex items-center justify-center h-full">
@@ -1076,8 +1047,6 @@ export function ServiceProviderRegistrationForm() {;
                         onChange={handleAvatarUpload}
                       />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </label>
                   </div>
                   <p className='text-sm text-zion-slate'>
@@ -1091,7 +1060,6 @@ export function ServiceProviderRegistrationForm() {;
                     </label>;
                   </div>;
                   <p className='text-sm text-zion-slate'>;
-=======
                           <FormMessage className='text - red - 400' />;
                         </FormItem>)}
                     />;
@@ -1140,7 +1108,6 @@ export function ServiceProviderRegistrationForm() {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Bio Section */}
               <div className='space-y-4'>;
                 <h3 className='text-lg font-medium text-white'>;
@@ -1157,7 +1124,6 @@ export function ServiceProviderRegistrationForm() {;
 
 
                       <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         <Textarea
                           className='h-32 min-h-[128px] bg-zion-blue border-zion-blue-light text-white'
                           placeholder='Describe your services, expertise, and what sets you apart from others...'
@@ -1185,7 +1151,6 @@ export function ServiceProviderRegistrationForm() {;
                           <Sparkles className='w-4 h-4 mr-2 text-zion-purple' />                          AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className='text-zion-slate-light'>;
-=======
               <Separator className='bg - zion - blue - light / 50' />;
               {/* Bio Section */}
               <div className='space - y-4'>;
@@ -1223,7 +1188,6 @@ export function ServiceProviderRegistrationForm() {;
                           <Sparkles className='w - 4 h - 4 mr - 2 text - zion - purple' />                          AI Profile Enhancement;
                         </FormLabel>;
                         <FormDescription className='text - zion - slate - light'>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                           Let AI help optimize your service description for;
                           better visibility and client engagement;
                         </FormDescription>;
@@ -1247,7 +1211,6 @@ export function ServiceProviderRegistrationForm() {;
                         : 'Generate Enhanced Profile'}
                     </Button>;
                   </div>;
-=======
 
 
                         </FormLabel>
@@ -1264,7 +1227,6 @@ export function ServiceProviderRegistrationForm() {;
                           className="data-[state=checked]:bg-zion-purple"
                         />
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </FormControl>
                     </FormItem>
                   )}
@@ -1273,7 +1235,6 @@ export function ServiceProviderRegistrationForm() {;
 
                     </Button>
                   </div>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 )}
                 {/* Generated Content Display */}
                 {generatedContent && (;
@@ -1298,7 +1259,6 @@ export function ServiceProviderRegistrationForm() {;
                     <div className="space-y-4">
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                       <div>
                         <h5 className='text-zion-slate-light text-sm mb-1'>
                           Professional Summary
@@ -1342,7 +1302,6 @@ export function ServiceProviderRegistrationForm() {;
                               )}
                             </div>                          </div>;
                         )}
-=======
 
                       
                       {generatedContent.services && generatedContent.services.length > 0 && (
@@ -1360,7 +1319,6 @@ export function ServiceProviderRegistrationForm() {;
                           </div>;
                         </div>;
                       )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     </div>;
                   </div>;
                 )}
@@ -1370,13 +1328,10 @@ export function ServiceProviderRegistrationForm() {;
               <Separator className='bg-zion-blue-light/50' />;
 
 
-=======
 
               <Separator className="bg-zion-blue-light/50" />
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               {/* Services and Availability */}
               <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>;
                 {/* Services Section */}
@@ -1396,7 +1351,6 @@ export function ServiceProviderRegistrationForm() {;
 
 
                           <FormControl>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <Input
                               className='flex-1 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='Add a service...'
@@ -1443,7 +1397,6 @@ export function ServiceProviderRegistrationForm() {;
                     name='hourlyRate'
                     render={({ field }: { field: any }) => (                      <FormItem>;
                         <FormLabel className='text-zion-slate-light'>;
-=======
                         <Switch;
                           aria - label='AI profile enhancement';
                           checked={field.value}
@@ -1566,7 +1519,6 @@ export function ServiceProviderRegistrationForm() {;
                       <p className='text - zion - slate text - sm italic'>;
                         No services added yet;
                       </p>)}
-=======
 
                             type="button"
                             variant="outline"
@@ -1574,7 +1526,6 @@ export function ServiceProviderRegistrationForm() {;
                             onClick={handleAddService}
                           >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                             Add
                           </Button>
                         </div>
@@ -1594,7 +1545,6 @@ export function ServiceProviderRegistrationForm() {;
 
                       <p className="text-zion-slate text-sm italic">No services added yet</p>
                     )}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   </div>;
                 </div>;
                 {/* Pricing and Availability Section */}
@@ -1614,18 +1564,15 @@ export function ServiceProviderRegistrationForm() {;
                         <FormControl>
                           <div className="relative">
                             <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                             <Input
                               className='pl-8 bg-zion-blue border-zion-blue-light text-white'
                               placeholder='e && e.g., 85'
-=======
                             <span className='absolute left - 3 top - 1/2 transform -translate - y-1 / 2 text - zion - slate'>;
                               $;
                             </span>;
                             <Input;
                               className='pl - 8 bg - zion - blue border - zion - blue - light text - white';
                               placeholder='e.g., 85';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                               {...field}
                             />;
                           </div>;
@@ -1691,15 +1638,12 @@ export function ServiceProviderRegistrationForm() {;
                                 htmlFor='unavailable'
                                 className='text-white flex items-center gap-2'>;
                                 <div className='h-2 w-2 rounded-full bg-red-500'></div>;
-=======
                         <FormDescription className='text - zion - slate'>;
                           Your base hourly or project rate;
                         </FormDescription>;
                         <FormMessage className='text - red - 400' />;
                       </FormItem>)}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   />;
                   <FormField;
                     control={form.control}
@@ -1760,10 +1704,8 @@ export function ServiceProviderRegistrationForm() {;
                         </FormControl>
                         <FormMessage className="text-red-400" />
                       </FormItem>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
 
-=======
                         <FormMessage className='text - red - 400' />;
                       </FormItem>)}
 
@@ -1793,8 +1735,6 @@ export function ServiceProviderRegistrationForm() {;
                 >
                   {isSubmitting ? "Creating Profile..." : "Create Service Profile"}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 </Button>
               </div>
             </CardFooter>
@@ -1956,13 +1896,9 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) "
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>)
 }'"}
-=======
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   provider_data: {
   name: values.name, title: values.title, bio: values.bio,  services: service_tags, location: values.location;
 });
@@ -2036,11 +1972,4 @@ max - w-4xl mx - auto p - 4 md:p - 6"> <Card className=" bg - zion - blue - dark
 }/> <FormField <FormControl> <div className=" space - y-2"> <div className=" flex items - center space - x-2"> <input /> <label html_for=" available"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - green - 500"></div> Available for Work </label> </div> <div className=" flex items - center space - x-2"> <input /> <label html_for=" limited"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - yellow - 500"></div> Limited Availability </label> </div> <div className=" flex items - center space - x-2"> <input /> <label html_for=" unavailable"className=" text - white flex items - center gap - 2"> <div className=" h - 2 w - 2 rounded - full bg - red - 500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text - red - 400"/> </FormItem>) ";
 }/> </div> </div> </CardContent> <CardFooter className=" border - t border - zion - blue - light pt - 6"> <div className=" flex flex - col sm:flex - row gap - 4 w - full sm:justify - between"> <Button type=" button"variant=" outline"className=" border - zion - blue - light text - zion - slate - light hover:bg - zion - blue - light hover:text - white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

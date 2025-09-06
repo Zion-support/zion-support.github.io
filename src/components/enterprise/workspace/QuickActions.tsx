@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -80,7 +78,6 @@ import { Calendar } from 'lucide-react';
 
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           {actions.map(action => (
 
             <Button 
@@ -98,7 +95,6 @@ import { Calendar } from 'lucide-react';
 
             <Button 
 
-=======
                 <span className="mt-1 text-xs text-muted-foreground">{action.description}</span>
               </div>
             </Button>
@@ -149,8 +145,6 @@ export function QuickActions() {;
             <Button;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               key={action.id}
               variant="outline"
               className={`h-auto justify-start p-4 ${action.color}`}
@@ -181,10 +175,8 @@ export function QuickActions() {;
                 <span className="mt-1 text-xs text-muted-foreground">{action && action.description}</span>;
               </div>;
             </Button>;
-=======
 
 
-=======
               <div className='flex flex-col items-start text-left'>
                 <div className='flex items-center'>
                   {action.icon}
@@ -197,7 +189,6 @@ export function QuickActions() {;
               </div>
 
             </Button>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           ))}
         </div>;
       </CardContent>;
@@ -208,7 +199,6 @@ export function QuickActions() {;
   );
 }
 
-=======
                 </span>              </div>;
                 <span className="mt - 1 text - xs text - muted - foreground">{action.description}</span>;
           {actions.map (action => (
@@ -229,10 +219,5 @@ export function QuickActions() {;
       </CardContent>;
     </Card>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

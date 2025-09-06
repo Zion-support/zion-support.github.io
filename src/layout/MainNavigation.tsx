@@ -1,5 +1,3 @@
-
-
 interface MainNavigationProps {
   isAdmin?: boolean
   unreadCount?: number
@@ -224,10 +222,8 @@ export function MainNavigation(): any ({;
         className={cn('navbar', className)}
         role='navigation'
         aria-label='Main navigation'>;
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <div
           id='main-navbar-collapse'
           className={cn(
@@ -249,7 +245,6 @@ export function MainNavigation(): any ({;
                       : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
                   )}                >
 
-=======
                     "nav-link",
                     "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     link.matches(router.pathname)
@@ -260,11 +255,9 @@ export function MainNavigation(): any ({;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   {link.name}
                 </Link>
               </li>
-=======
                   className={cn(;
                     'nav-link',;
                     'inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary',;
@@ -275,7 +268,6 @@ export function MainNavigation(): any ({;
                   {link && link.name}
                 </Link>;
               </li>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             ))}
 
                   className={cn(;
@@ -904,19 +896,16 @@ export default function Page() {; []);
                           {link.name}'`;
                           <ChevronDown className={`w-4 h-4 transition-transform ${activeDropdown === link.key ? 'rotate-180' : ''}`}  />                        </button>;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                         {activeDropdown === link.key && (;"
                           <div className="ml-4 mt-2 space-y-1">
                             {link.children.map((child: unknown (
                               <Link
-=======
                           {link.name}'`;
                           <ChevronDown className={`w - 4 h - 4 transition - transform ${active_dropdown === link.key ? 'rotate - 180' : ''}`}  />                        </button>;
                         {active_dropdown === link.key && (";
                           <div className="ml - 4 mt - 2 space - y-1">;
                             {link.children.map ((child: unknown (
                               <Link;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                                 key={child.key}
                                 to={child.href}`;
                                 className={`block px - 4 py - 2 text - sm text - zion - slate - light hover:text - white hover:bg - white / 10 rounded - md transition - colors ${is_active (child) ? 'text - zion - cyan bg - zion - cyan / 10' : ''`;
@@ -1001,7 +990,6 @@ export default function Page() {; []);
 }`}
                         onClick={: unknown setIsMobileMenuOpen(false)}
 
-=======
                       <span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">
                   >;
                     <ShoppingCart className="w-4 h-4 mr-1" />;
@@ -1013,7 +1001,6 @@ export default function Page() {; []);
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                     )}
                   </Link>
                 </HoverCardTrigger>
@@ -1035,7 +1022,6 @@ export default function Page() {; []);
                         {link && link.name}
                       </Link>;
                     )}
-=======
                                 on_click={: unknown setIsMobileMenuOpen (false)}
                                 {child.name}
                               </Link>))}
@@ -1068,25 +1054,14 @@ export default function Page() {; []);
       </nav>;
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>));
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 ;
 }
 
-=======
   )
 }
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

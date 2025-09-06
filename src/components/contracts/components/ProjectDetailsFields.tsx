@@ -1,6 +1,3 @@
-
-
-
 import { format } from "date-fns";
 import { CalendarIcon } from 'lucide-react';
 import { UseFormReturn, ControllerRenderProps } from "react-hook-form";
@@ -20,9 +17,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>;
-=======
 
-=======
 interface ProjectDetailsFieldsProps {
   form: UseFormReturn<ContractFormValues>;
 
@@ -43,11 +38,9 @@ import { ContractFormValues } from "./ContractForm";
 interface ProjectDetailsFieldsProps {;
 
   form: UseFormReturn<ContractFormValues>;  form: UseFormReturn<ContractFormValues>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <>;
       <FormField
@@ -62,7 +55,6 @@ export function ProjectDetailsFields(): any ({ form }: ProjectDetailsFieldsProps
         name="projectName"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (
 
-=======
 
 
 import { Input } from "@/components/ui/input",
@@ -104,7 +96,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <FormItem>
             <FormLabel>Project Name</FormLabel>
             <FormControl>
@@ -126,7 +117,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> },) => (;
         name="projectName";
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "projectName"> }) => (;
-=======
 
             </FormControl>
             <FormMessage />
@@ -251,27 +241,23 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       ) : (;
                         <span>Pick a date</span>;
 
-=======
       
       <FormField
         control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues, "scopeSummary"> }) => (
-=======
       <FormField;
         control={form.control}
         name="scopeSummary"
         render={({ field }: { field: ControllerRenderProps<ContractFormValues "scopeSummary"> }) => (
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           <FormItem>
             <FormLabel>Scope Summary</FormLabel>
             <FormControl>
               <Textarea
 
 
-=======
           field: ControllerRenderProps < ContractFormValues, 'scope_summary'>;
         }) => (          <FormItem>;
             <FormLabel > Scope Summary</FormLabel>;
@@ -319,7 +305,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -335,7 +320,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     mode="single"
       />;
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         <FormField;
           control = {form.control, }
           name="start_date";
@@ -383,7 +367,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
           control = {form && form.control,}
           name="endDate"
           render={({ field }: { field: ControllerRenderProps<ContractFormValues, "endDate"> },) => (;
-=======
                       {field.value ? (;
                         format(field.value, "PPP");
                       ) : (;
@@ -397,7 +380,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                   <Calendar
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     initialFocus
                   />
                 </PopoverContent>
@@ -416,7 +398,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                       className={`w-full pl-3 text-left font-normal ${!field.value && "text-muted-foreground"}`}
                     >
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
@@ -443,7 +424,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
             </FormItem>
           name="endDate";
           render={({ field }: { field: ControllerRenderProps<ContractFormValues "endDate"> }) => (;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             <FormItem className="flex flex-col">;
               <Popover>;
                 <PopoverTrigger asChild>;
@@ -491,7 +471,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                         format(field.value, "PPP")
                       ) : (
                         <span>Pick a date</span>
-=======
                     selected={field && field.value || undefined}
                     onSelect={field && field.onChange}
                     disabled={date => date < form && form.getValues('startDate')}                    initialFocus                    mode="single";
@@ -505,7 +484,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                         <span>Pick a date</span>;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />;
                     </Button>;
@@ -516,7 +494,6 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
                     mode="single"
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   />;
                 </PopoverContent>;
               </Popover>;
@@ -526,9 +503,4 @@ export function ProjectDetailsFields({ form }: ProjectDetailsFieldsProps) {;
               <FormMessage />;
 
 
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

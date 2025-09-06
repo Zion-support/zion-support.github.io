@@ -1,6 +1,3 @@
-
-
-
 import { ArrowLeft, Calendar, Clock, ChevronLeft, ChevronRight, Share2, Facebook, Twitter, Linkedin } from 'lucide-react'
 import type { BlogPost as BlogPostType } from "@/types/blog",
 import { Separator } from "@/components/ui/separator";
@@ -13,11 +10,9 @@ import { BLOG_POSTS } from "@/data/blog-posts";
 import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout';
 import { fetchWithRetry } from '@/utils/fetchWithRetry';
 export default function BlogPost() {;
-=======
 
 import { BLOG_POSTS } from "@/data/blog-posts"
 
-=======
 import { useState, useEffect } from "react",
 import { useRouter } from 'next/router',
 import Link from 'next/link',
@@ -36,9 +31,7 @@ import { useSkeletonTimeout } from '@/hooks/useSkeletonTimeout',
 import { fetchWithRetry } from '@/utils/fetchWithRetry',
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 export default function BlogPost() {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
 import { useState, useEffect } from 'react';
@@ -137,7 +130,6 @@ function BlogPost() {
         ).slice(0, 3)
         setRelatedPosts(related) } else {
         router.replace('/blog')
-=======
       const current_post = BLOG_POSTS.find (p => p.slug === slug);      // Check condition
 if ( {) {
   $2
@@ -150,7 +142,6 @@ if ( {) {
               p.tags.some (tag => current_post.tags.includes (tag)))).slice (0, 3);
         setRelatedPosts (related) } else {
         router.replace ('/blog');
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       }
       setIsLoading (false);
     }
@@ -158,7 +149,6 @@ if ( {) {
     fetchPost()
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [slug, router])
-=======
       setIsLoading(true),
       setError(null),
       try {
@@ -252,13 +242,10 @@ export default function BlogPost() {;
       </div>
     )
   }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (!post && (error |timedOut)) {
-=======
   if () {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
       <div className='min - h-screen bg - zion - blue text - white p - 8 flex flex - col justify - center items - center space - y-4'>;
         <p > Failed to load article.</p>;
@@ -288,7 +275,6 @@ if ( {) {
     if (!post) return ''
     const url = encodeURIComponent(window.location.href)
     const title = encodeURIComponent(post.title)
-=======
   // Helper function to get share URL;
   const getShareUrl = (platform: string) =>: any {
     // Check condition
@@ -297,7 +283,6 @@ if (return '') {
 }
     const url = encodeURIComponent (window.location.href);
     const title = encodeURIComponent (post.title);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     switch (platform) {
       case 'facebook':        return `https://www.facebook.com / sharer / sharer.php?u=${url}`;
     switch (platform) {
@@ -324,7 +309,6 @@ if (return '') {
       name: post.author.name
     }
   }
-=======
   const router = useRouter(),;
   const { slug } = router && router.query as { slug: string },;
   const [post, setPost] = useState<BlogPostType | null>(null),;
@@ -399,12 +383,9 @@ if (return '') {
     );
   }
 
-=======
 
 
-=======
 ;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   // Helper function to get share URL;
   const getShareUrl = (platform: string) => {;
     if (!post) return '';
@@ -435,7 +416,6 @@ if (return '') {
       <JsonLd data={articleLd} />
       <div className="min-h-screen bg-zion-blue pt-12 pb-20 px-4">
         <div className="container mx-auto">
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Back to blog button */}
           <div className='mb-8'>;
             <Button
@@ -465,12 +445,9 @@ if (return '') {
             </Button>;
           </div>;
 
-=======
 
           
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Article header */}
           <div className='mb - 8 max - w-4xl mx - auto'>;
             <span className='text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 4'>;
@@ -572,7 +549,6 @@ if (return '') {
                     </div>;
                   )}
 
-=======
             </h1>;
             <p className='text - xl text - zion - slate - light mb - 8'>{post.excerpt}</p>;
             {/* Author and metadata */}
@@ -651,7 +627,6 @@ if (return '') {
                 alt={post && post.featuredImageAlt || post && post.title}
                 className='object-cover w-full h-full'
                 fallbackSrc='/images/blog-placeholder && placeholder.svg'              />;
-=======
             </h1>
 
             <p className="text-xl text-zion-slate-light mb-8">
@@ -741,7 +716,6 @@ if (return '') {
               <ReactMarkdown>{post && post.content}</ReactMarkdown>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Tags */}
 
             <div className="flex flex-wrap gap-2 mt-12">
@@ -752,7 +726,6 @@ if (return '') {
                 >
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   #{tag}
                 </span>;
               ))}
@@ -793,14 +766,12 @@ if (return '') {
                         </h4>;
                       </div>;
                     </Link>;
-=======
             </div>
 
             
             <Separator className="my-12 bg-zion-blue-light" />
             
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             {/* Related articles */}
             {relatedPosts.length > 0 && (
               <div className="mt-12">
@@ -825,10 +796,8 @@ if (return '') {
                         <span className="text-xs text-zion-cyan">{relatedPost.category}</span>
                         <h4 className="text-white font-bold mt-1 line-clamp-2">{relatedPost.title}</h4>
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                       </div>
                     </Link>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
                 </div>;
               </div>;
@@ -859,16 +828,12 @@ if (return '') {
 
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </p>
             </div>
-=======
                 to accelerate your projects.;
               </p>;
             </div>;
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             {/* Navigation */}
             <div className='flex justify-between items-center mt-12'>;
               <Button
@@ -954,14 +919,12 @@ if (return '') {
               >;
                 <Link href='/blog'>;
                   <ChevronLeft className='mr - 2 h - 4 w - 4' />;
-=======
 
   );
 };
 };
 };
 
-=======
                 <Link href="/talent" className="text-zion-cyan underline">talent</Link> to accelerate your projects.;
               </p>;
             </div>;
@@ -1080,7 +1043,6 @@ export default function Page() {;
               {blogPost && blogPost.featured && (<span className="px-4 py-2 bg-yellow-500 / 20 text-yellow-400 text-sm rounded-full font -medium">;
                   Featured Article;
 
-=======
             <div className="flex items - center space - x - 3 mb - 6">;
               <span className="px - 4 py - 2 bg - cyan - 500 / 20 text - cyan - 400 text - sm rounded - full font - medium flex items - center space - x - 2">;
                 {React.create_element (getCategoryIcon (blog_post.category) , {
@@ -1090,7 +1052,6 @@ export default function Page() {;
               </span>;
               {blog_post.featured && (<span className="px - 4 py - 2 bg - yellow - 500 / 20 text - yellow - 400 text - sm rounded - full font -medium">;
                   Featured Article;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 </span>) }
             </div>;
             {/* Title */}
@@ -1156,7 +1117,6 @@ export default function Page() {;
             <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">;
               {blogPost && blogPost.title}
             </h1>;
-=======
 
 
             {/* Excerpt */}
@@ -1193,7 +1153,6 @@ export default function Page() {;
               <div className="flex flex - wrap gap-2">;
                 {blogPost && blogPost.tags.map(tag => (<span
 
-=======
               <div;
                 className="text - gray - 300 leading -relaxed";
                 // TODO: Sanitize content before using dangerouslySetInnerHTML={{ __html: blog_post.content }}
@@ -1211,7 +1170,6 @@ export default function Page() {;
               <span className="text - white font -medium">Tags:</span>;
               <div className="flex flex - wrap gap - 2">;
                 {blog_post.tags.map (tag => (<span;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                     key={tag}
                     className="px - 3 py - 1 bg - slate - 700 / 50 text - cyan - 400 text - sm rounded - full border border - slate - 600 / 50 hover:border - cyan - 400 / 50 transition - all duration -200">;
                     {tag}
@@ -1335,7 +1293,6 @@ export default function Page() {;
                 </div>;
               </div>;
             </motion && motion.div>;
-=======
 
           </div>;
         </div>;
@@ -1471,16 +1428,7 @@ function BlogPost() {return (";
 }
 }
 
-=======
 
 
-=======
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 ;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

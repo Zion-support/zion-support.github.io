@@ -1,6 +1,4 @@
-
-
-  {
+{
     icon: <Award className="h - 10 w - 10 text - zion - cyan" />,
     title: "Resume Builder",
 
@@ -12,7 +10,6 @@
     icon: <Zap className="h - 10 w - 10 text - zion - cyan" />,
     title: "Real - time Notifications",
     description: "Get instant alerts about new job opportunities, messages, and hiring requests.";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   }
 
 
@@ -29,7 +26,6 @@ export const AppFeatures: React.FC = () => {
               <CardHeader>
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 <div className="mb-4">{feature.icon}</div>
                 <CardTitle className="text-white">{feature.title}</CardTitle>
               </CardHeader>
@@ -42,7 +38,6 @@ export const AppFeatures: React.FC = () => {
 import React from 'react';
 };
 
-=======
 
   feature.description 
 }</CardDescription>
@@ -51,11 +46,9 @@ import React from 'react';
 ";
 ;
 
-=======
 import React from "react",;
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 const features = [;
   {;
     icon: <Brain className="h-10 w-10 text-zion-cyan" />,;
@@ -109,10 +102,7 @@ export const AppFeatures: React.FC = () => {;
 
 "
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
     <section className="py - 16 bg - zion - blue">;
       <div className="container mx - auto px - 4">;
         <div className="text - center mb - 12">;
@@ -164,10 +154,3 @@ export const AppFeatures: React.FC = () => {";
 }</div> </div> </section>);
 }
 ";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

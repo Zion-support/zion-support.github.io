@@ -1,5 +1,3 @@
-
-
 interface SuggestedJobsProps {
   talent_id?: string;
 }
@@ -29,10 +27,8 @@ function SuggestedJobs() {
 
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
-=======
   const { user } = useAuth()
   const currentTalentId = talentId || user?.id
-=======
   const { user } = useAuth(),
   const currentTalentId = talentId || user?.id,
 
@@ -46,15 +42,11 @@ function SuggestedJobs() {
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (isLoading) {
-=======
   // Check condition
 if ( {) {
   $2
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
     return (
 
 
@@ -64,21 +56,18 @@ import { Loader2 } from 'lucide-react'import { Badge } from "@/components/ui/bad
 import { useJobSuggestions } from "@/hooks/useJobSuggestions";
 import { JobMatchesCard } from "./JobMatchesCard";
 import { NoJobsCard } from "./NoJobsCard";
-=======
       <div className="flex items-center justify-center p-6">
         <Loader2 className="w-6 h-6 animate-spin text-primary" />
       </div>
     )
 
 
-=======
 import { useAuth } from "@/hooks/useAuth",;
 import { Loader2 } from 'lucide-react';
 import { Badge } from "@/components/ui/badge",;
 import { useJobSuggestions } from "@/hooks/useJobSuggestions",;
 import { JobMatchesCard } from "./JobMatchesCard",;
 import { NoJobsCard } from "./NoJobsCard",;
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface SuggestedJobsProps {;
   talentId?: string;
 }
@@ -117,10 +106,8 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className="space-y-6">;
       {/* New Matches Section */}
@@ -143,12 +130,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
               />;
-=======
 
 
-=======
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid gap-4 md:grid-cols-2">
             {newMatches.map(match => (
               <JobMatchesCard 
@@ -156,9 +140,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </div>;
@@ -167,13 +149,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 ;
 
-=======
       
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Previously Viewed Section */}
       {viewedMatches.length > 0 && (
         <div className="space-y-4">
@@ -198,12 +176,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
               />;
-=======
 
 
-=======
           
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
           <div className="grid gap-4 md:grid-cols-2">
             {viewedMatches.map(match => (
               <JobMatchesCard 
@@ -211,9 +186,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
                 match={match} 
                 onApply={handleApply} 
                 onDecline={handleDecline} 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
               />
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </div>;
@@ -222,13 +195,9 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 ;
 
-=======
       
-=======
 ;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Applied Jobs Section */}
       {appliedMatches.length > 0 && (
         <div className="space-y-4">
@@ -241,7 +210,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
                 key = {match.id,}
-=======
 
       {/* Applied Jobs Section */}
       {appliedMatches && appliedMatches.length > 0 && (;
@@ -254,7 +222,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
             {appliedMatches && appliedMatches.map(match => (;
               <JobMatchesCard
                 key = {match && match.id,}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 match = {match,}
                 onApply = {handleApply,}
                 onDecline = {handleDecline,}
@@ -264,7 +231,6 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             ))}
           </div>;
         </div>;
@@ -274,10 +240,7 @@ export function SuggestedJobs(): any ({ talentId }: SuggestedJobsProps) {;
   );
 
 
-=======
 
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
   // Check condition
 if ( {) {
   $2
@@ -397,11 +360,5 @@ if ( {) {
 }</div> </div>);
 }</div>);
 }'"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 }
 ;
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

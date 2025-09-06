@@ -1,6 +1,3 @@
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 }
 
 
@@ -74,7 +71,6 @@ export default FilterSidebar;
         </div>
 
 
-=======
   filters: FilterGroup[];
   selected_filters: Record < string, any>;
   onFilterChange: key: string, value: string, checked: boolean void;
@@ -112,18 +108,13 @@ function FilterSidebar() {
               </div>;
             </div>))}
         </div>;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       </div>;
     </>)}
 '"`;
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-=======
 import React from 'react',;
 interface FilterSidebarProps {;
   className?: string,;
@@ -141,7 +132,3 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({;
   );
 };
 export default FilterSidebar;
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
