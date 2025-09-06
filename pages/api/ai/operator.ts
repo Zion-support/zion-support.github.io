@@ -1,10 +1,10 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import OpenAI from 'openai',
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 // In-memory simple rate limiter (per IP)
-const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000, // 5 minutes
-const RATE_LIMIT_MAX_REQUESTS = 15,
+const RATE_LIMIT_WINDOW_MS = 5 * 60 * 1000; // 5 minutes
+const RATE_LIMIT_MAX_REQUESTS = 15;
 
 const ipToRequests: Record<string, { timestamps: number[] }> = {},
 

@@ -1,17 +1,17 @@
-import type { NextApiRequest, NextApiResponse } from 'next',
-import { v4 as uuidv4 } from 'uuid',
-import { readJsonFile, writeJsonFile } from '../../utils/db',
-import type { Application } from '../../utils/types',
-import { rateLimit } from '../../utils/rateLimit',
-const FILE = 'applications.json',
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { v4 as uuidv4 } from 'uuid';
+import { readJsonFile, writeJsonFile } from '../../utils/db';
+import type { Application } from '../../utils/types';
+import { rateLimit } from '../../utils/rateLimit';
+const FILE = 'applications.json';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!rateLimit(req, res)) return,
+  if (!rateLimit(req, res)) return;
 
   if (req.method === 'GET') {
-    const { jobId, talentSlug } = req.query,
-    let apps = readJsonFile<Application[]>(FILE, []),
-    if (jobId) apps = apps.filter((a) => a.jobId === String(jobId)),
+    const { jobId, talentSlug } = req.query;
+    let apps = readJsonFile<Application[]>(FILE, []);
+    if (jobId) apps = apps.filter((a) => a.jobId === String(jobId));
     if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug)),
     res.status(200).json({ applications: apps }),
     return
