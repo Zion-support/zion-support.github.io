@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import typescript from '@typescript-eslint/eslint-plugin';
@@ -6,16 +7,20 @@ import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import nextPlugin from '@next/eslint-plugin-next';
 import globals from 'globals';
+=======
+const { FlatCompat } = require('@eslint/eslintrc');
+const js = require('@eslint/js');
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 
 const compat = new FlatCompat({
-  baseDirectory: import.meta.dirname,
+  baseDirectory: __dirname,
   recommendedConfig: js.configs.recommended,
-  allConfig: js.configs.all,
 });
 
-export default [
+module.exports = [
   ...compat.extends('next/core-web-vitals'),
   {
+<<<<<<< HEAD
     ignores: [
       'node_modules/**',
       'dist/**',
@@ -140,15 +145,28 @@ export default [
   {
     files: ['**/*.js'],
     languageOptions: {
+=======
+    rules: {
+      'no-unused-vars': 'warn',
+      'no-console': 'warn',
+      'prefer-const': 'warn'
+    },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
       globals: {
+        window: 'readonly',
+        document: 'readonly',
         console: 'readonly',
         process: 'readonly',
         Buffer: 'readonly',
+        global: 'readonly',
         __dirname: 'readonly',
         __filename: 'readonly',
-        global: 'readonly',
         module: 'readonly',
         require: 'readonly',
+<<<<<<< HEAD
         exports: 'readonly',
       },
     },
@@ -156,4 +174,10 @@ export default [
       'no-console': 'off',
     },
   },
+=======
+        exports: 'readonly'
+      }
+    }
+  }
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 ];

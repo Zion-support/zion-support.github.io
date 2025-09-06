@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 export type ProjectStatus = 'InProgress' | 'Completed';
 export type Project = {
-=======
-export interface Review {
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   id: string;
   userId: string;
   serviceId: string;
@@ -12,7 +8,6 @@ export interface Review {
   createdAt: Date;
   updatedAt: Date;
 }
-<<<<<<< HEAD
 export type ReviewRole = 'client' | 'talent';
 export type ReviewCategoryScores = {
   communication?: number; // 1-5 optional
@@ -103,17 +98,3 @@ export type ReviewsSummary = {
 
 }
 };
-=======
-
-export interface ReviewSummary {
-  averageRating: number;
-  totalReviews: number;
-  ratingDistribution: {
-    1: number;
-    2: number;
-    3: number;
-    4: number;
-    5: number;
-  };
-}
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d

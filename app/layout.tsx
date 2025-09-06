@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import './global-styles.css';
@@ -109,13 +110,16 @@ function Footer() {
   );
 }
 
+=======
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: React.ReactNode
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className="min-h-screen bg-gray-50">
         <Header />
         <main>
@@ -125,4 +129,9 @@ export default function RootLayout({
       </body>
     </html>
   );
+=======
+      <body>{children}</body>
+    </html>
+  )
+>>>>>>> e69e89595790a81610b7c67a3a58ff639695f186
 }
