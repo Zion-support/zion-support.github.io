@@ -22,9 +22,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           source: source || 'zion-global-2025',
           created_at: new Date().toISOString()}])
       .select('*')
-      .single(),
+      .single();
+    
     if (error) {
-      return res.status(500).json({ error: error.message })
+      return res.status(500).json({ error: error.message });
     }
 
     return res.status(200).json({ ok: true, registration: data })
