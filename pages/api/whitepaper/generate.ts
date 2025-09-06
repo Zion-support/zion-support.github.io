@@ -19,14 +19,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const userPrompt = `${operatorPrompt || ''}\n\nToken: ${tokenName}\nTotal Supply: ${tokenSupply}\nUse Cases: ${useCases}\nRewards: ${rewardsLogic}\nDistribution (percent):\n${distLines}\nGovernance: ${governance}\nJurisdiction: ${jurisdiction}\nLegal Review Toggle: ${!!legalReview}`;
 
   try {
-    let markdown: string,
+    let markdown: string;
     if (client) {
       const completion = await client.responses.create({
         model: 'gpt-4.1-mini',
         input: [
-          { role: 'system', content: sysPrompt };
-          { role: 'user', content: userPrompt }];
-        temperature: 0.3} as any);
+          { role: 'system', content: sysPrompt },
+          { role: 'user', content: userPrompt }
+        ],
+        temperature: 0.3
+      } as any);
       const content = (completion as any)?.output_text || '';
       markdown = content.trim()
     } else {

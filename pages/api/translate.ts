@@ -23,8 +23,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: system };
-          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }];
+          { role: 'system', content: system },
+          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
+        ],
         temperature: 0.2
       });
       const translated = completion.choices?.[0]?.message?.content?.trim() || '';

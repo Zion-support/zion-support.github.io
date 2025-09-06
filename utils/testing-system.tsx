@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-}};
-=======
+// Testing system utilities
+export const testingSystem = {
+  // Add testing utilities here
 };
-};
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from 'react';
 import { Rocket, CheckCircle, Clock, AlertCircle, XCircle } from 'lucide-react';
 
 const getStatusColor = (status: string) => {
@@ -12,13 +13,13 @@ const getStatusColor = (status: string) => {
       return 'text-red-400';
     case 'stopped':
       return 'text-gray-400';
-    default: return 'text-gray-400',
+    default: return 'text-gray-400';
   }
 };
 
 export default function DeploymentsPage() {
   const deployments = []; // This should be populated from your data source
-  const filter = 'all'; // This should be managed with state
+  const [filter, setFilter] = useState('all');
   
   const filteredDeployments = deployments.filter(deployment => filter === 'all' || deployment.status === filter);
   const getStatusCount = (status: string) => {
@@ -35,7 +36,7 @@ export default function DeploymentsPage() {
         return <XCircle className="w-4 h-4 text-red-400" />;
       case 'stopped':
         return <AlertCircle className="w-4 h-4 text-gray-400" />;
-      default: return <AlertCircle className="w-4 h-4 text-gray-400" />,
+      default: return <AlertCircle className="w-4 h-4 text-gray-400" />;
     }
   };
 
@@ -127,7 +128,7 @@ export default function DeploymentsPage() {
           { key: 'all', label: 'All Deployments', count: deployments.length },
           { key: 'pending', label: 'Pending', count: getStatusCount('pending') },
           { key: 'deploying', label: 'Deploying', count: getStatusCount('deploying') },
-          { key: 'completed', label: 'Completed', count: getStatusCount('completed') };
+          { key: 'completed', label: 'Completed', count: getStatusCount('completed') },
           { key: 'failed', label: 'Failed', count: getStatusCount('failed') }
         ].map(({ key, label, count }) => (
           <button

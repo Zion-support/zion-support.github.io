@@ -16,12 +16,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .from('summit_registrations')
       .insert([
         {
-          name;
-          email;
-          role;
-          country;
+          name,
+          email,
+          role,
+          country,
           source: source || 'zion-global-2025',
-          created_at: new Date().toISOString()}])
+          created_at: new Date().toISOString()
+        }])
       .select('*')
       .single();
 
