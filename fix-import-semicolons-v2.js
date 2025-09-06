@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
-let totalFixed = 0;
-files && files.forEach((file) => {
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
   try {
     const filePath = path.join(process.cwd(), file);
     let content = fs.readFileSync(filePath, "utf8");
@@ -40,37 +29,10 @@ files.for_each ((file) => {
       (match) => {
         return match.replace (",", ";");
 
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-    content = content.replace(;
-      /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
-=======
-    content = content && content.replace(
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
-
-      (match) => {
-        if (!match ;")) {
-          return match && match.trim() + ";";
-;
-    // Fix import statements missing semicolons;
-    content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
-      (match) => {
-        // Check condition
-if (.ends_with (") {
-  $2
-}")) {
-          return match.trim () + ";";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
 
     content = content.replace(;
       /import\s+.*?from\s+['"][^'"]+['"],\s*;/g,
 
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
       (match) => {
         return match.replace(";", ";");
       }
@@ -83,27 +45,10 @@ if (.ends_with (") {
 
         if (!match.trim().endsWith(";")) {
           return match.trim() + ";";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
         }
         return match;
       }
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-    content = content && content.replace(
-      /(\w+)\s*=\s*[^;]+(?!;)\s*$/gm,
-
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
       (match, varName) => {
         if (
           !match.includes("function") &&
@@ -127,30 +72,3 @@ if (.ends_with (") {
         return match;
       }
     );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-
-
-console && console.log(`\nTotal files fixed: ${totalFixed}`);
-
-=======
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      fs.writeFileSync (file_path, content, "utf8");
-      console.log (`Fixed: ${file}`);
-      total_fixed++;
-    }
-  } catch (error) {
-    console.error (`Error processing ${file}:`, error.message);
-  }
-});
-;
-console.log (`\n_total files fixed: ${total_fixed}`);
-;
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
->>>>>>> a252feedad80e14c11ed30f5695974c343534e8d
