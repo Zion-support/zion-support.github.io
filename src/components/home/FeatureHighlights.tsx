@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Check } from 'lucide-react';
-import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from 'lucide-react'
+import {cn} from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties
@@ -25,7 +17,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution";
+        "Secure payment protection and dispute resolution",
         "Post jobs and receive AI-matched applicants"
       ]
     };
@@ -36,7 +28,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on-time disbursements";
         "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects";
+        "Access to enterprise clients and high-value projects",
         "Professional development resources and community support"
       ]
     };
@@ -47,7 +39,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems";
+        "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
       ]
     }
@@ -70,16 +62,11 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                 <h3 className="text-xl font-bold text-white mb-4">{category.title}</h3>
                 <ul className="space-y-3">
                   {category.features.map((feature, idx) => (
-<<<<<<< HEAD
-                    <li key={idx} className='flex items-start'>
-                      <Check className='h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0' />
-                      <span className='text-zion-slate-light'>{feature}</span>
-=======
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Check } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {Card, CardContent} from "@/components/ui/card";
+import {Check} from 'lucide-react'
+import {cn} from "@/lib/utils";
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties
@@ -94,7 +81,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Verified profiles with skills validation and credential checking";
         "Transparent pricing and no hidden fees";
         "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution";
+        "Secure payment protection and dispute resolution",
         "Post jobs and receive AI-matched applicants"
       ]
     };
@@ -105,7 +92,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Get matched with relevant projects that fit your expertise";
         "Secure payment processing with on-time disbursements";
         "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects";
+        "Access to enterprise clients and high-value projects",
         "Professional development resources and community support"
       ]
     };
@@ -116,7 +103,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Dedicated account management and priority support";
         "Custom talent pools and preferred provider networks";
         "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems";
+        "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"
       ]
     }
@@ -143,12 +130,9 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <li key={idx} className="flex items-start">
                       <Check className="h-5 w-5 text-zion-cyan mr-2 mt-0.5 flex-shrink-0" />
                       <span className="text-zion-slate-light">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </li>
                   ))}
                 </ul>
@@ -159,11 +143,5 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

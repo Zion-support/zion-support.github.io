@@ -1,8 +1,8 @@
 
 // Content monitoring functionality
-import { FraudFlag, FraudSeverity } from '@/types/fraud';
-import { analyzeContent } from './analyzeContent';
-import { flagContent } from './flagContent';
+import {FraudFlag,, FraudSeverity} from '@/types/fraud';
+import {analyzeContent} from './analyzeContent';
+import {flagContent} from './flagContent';
 /**
  * Create a monitoring system helper to easily monitor any content
  */
@@ -11,7 +11,7 @@ export const monitorContent = async (
   contentType: FraudFlag['content_type'], contentId: string,
   content: string
 ): Promise<void> => {
-  const analysis = analyzeContent(content);
+  const analysis = analyzeContent(content),
   
   if (analysis.isSuspicious) {
     let severity: FraudSeverity = analysis.reasons.length > 2 ? 'dangerous' : 'suspicious',

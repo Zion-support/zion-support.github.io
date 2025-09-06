@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const filteredServices = innovative2025MicroSaasExpansionV3.filter (service => selectedCategory === 'all' || service.category.includes (selectedCategory) );
 const containerVariants = {
   hidden: {
@@ -8,21 +6,17 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight, Check, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, CheckCircle, ExternalLink} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import {innovative2025MicroSaasExpansionV3} from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' },
@@ -166,20 +160,15 @@ export default function Pricing2025() {
                   </div>
                 )}
 
-<<<<<<< HEAD
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Need Enterprise Solutions? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > We offer custom enterprise solutions, volume discounts, and dedicated support for organizations requiring multiple services or specialized implementations. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options." className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Contact Enterprise Sales <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Frequently Asked Questions </h2> </motion.div> </motion.div>) ) 
 }</div> </div> </section> <EnhancedFooter /> </div>) 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, Check, Star, Users, Zap, Shield, Globe, 
-  TrendingUp, Award, Clock, CheckCircle, ExternalLink
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight, Check, Star, Users, Zap, Shield, Globe, TrendingUp, Award, Clock, CheckCircle, ExternalLink} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
-import { innovative2025MicroSaasExpansionV3 } from '../data/2025-innovative-micro-saas-expansion-v3';
+import {innovative2025MicroSaasExpansionV3} from '../data/2025-innovative-micro-saas-expansion-v3';
 export default function Pricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'annual'>('monthly');
@@ -326,8 +315,7 @@ export default function Pricing2025() {
                   </div>
                 )}
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {/* Service Header */}
                 <div className="text-center mb-8">
                   <div className={`w-20 h-20 rounded-2xl bg-gradient-to-br ${service.color} p-5 mx-auto mb-4 flex items-center justify-center text-3xl`}>
@@ -565,9 +553,6 @@ export default function Pricing2025() {
       <EnhancedFooter />
     </div>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

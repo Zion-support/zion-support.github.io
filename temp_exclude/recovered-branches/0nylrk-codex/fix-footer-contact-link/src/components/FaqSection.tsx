@@ -1,11 +1,7 @@
 
-import { GradientHeading } from "./GradientHeading";
-import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger} from "@/components/ui/accordion";
-import { FileText } from "lucide-react";
+import {GradientHeading} from "./GradientHeading";
+import {Accordion,, AccordionContent,, AccordionItem,, AccordionTrigger} from "@/components/ui/accordion";
+import {FileText} from "lucide-react";
 const faqs = [
   {
     question: "How do I publish my AI product or service on Zion?",

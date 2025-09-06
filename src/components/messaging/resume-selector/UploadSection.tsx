@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Upload, FileText } from 'lucide-react'
+import {Button} from "@/components/ui/button";
+import {Upload, FileText} from 'lucide-react'
 
 interface UploadSectionProps {
   customFile: File | null,
@@ -23,15 +19,10 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
         <Button variant="outline" className="relative">
           Browse Files
           <input
-<<<<<<< HEAD
-            type='file'
-            className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
-            accept='.pdf'
-=======
 
 import React from 'react';
-import { Button } from "@/components/ui/button";
-import { Upload, FileText } from 'lucide-react'
+import {Button} from "@/components/ui/button";
+import {Upload, FileText} from 'lucide-react'
 
 interface UploadSectionProps {
   customFile: File | null,
@@ -52,22 +43,14 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             type="file"
             className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
             accept=".pdf"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             onChange={onFileUpload}
           />
         </Button>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
@@ -75,11 +58,6 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
               <FileText className="h-4 w-4 mr-2 text-zion-cyan" />
               <span className="text-white">{customFile.name}</span>
             </div>
-<<<<<<< HEAD
-            <span className='text-xs text-zion-slate'>
-              {Math.round(customFile.size / 1024)} KB
-            </span>
-=======
       
       {customFile && (
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
@@ -89,20 +67,11 @@ export function UploadSection({ customFile, onFileUpload }: UploadSectionProps) 
               <span className="text-white">{customFile.name}</span>
             </div>
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <span className="text-xs text-zion-slate">{Math.round(customFile.size / 1024)} KB</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

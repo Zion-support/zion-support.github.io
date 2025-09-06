@@ -1,21 +1,7 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
-import { motion } from 'framer-motion';
-import {
-  Eye, 
-  Ear, 
-  Hand, 
-  Brain, 
-  CheckCircle, 
-  AlertTriangle,
-  Globe,
-  Users,
-  Award,
-  Target,
-  Heart,
-  FileText,
-  Settings
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Eye,, Ear,, Hand,, Brain,, CheckCircle,, AlertTriangle,, Globe,, Users,, Award,, Target,, Heart,, FileText,, Settings} from 'lucide-react';
 
 const accessibilityFeatures = [
   {

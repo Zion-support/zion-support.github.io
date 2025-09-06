@@ -1,5 +1,5 @@
 
-import { jsPDF } from 'jspdf';
+import {jsPDF} from 'jspdf';
 export interface FontConfig {
   regular: ArrayBuffer, bold?: ArrayBuffer,
   italic?: ArrayBuffer;
@@ -12,7 +12,7 @@ export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto';
  * Loads and registers custom fonts for PDF documents
  */
 export async function loadCustomFonts(doc: jsPDF, fontFamily: FontFamily = 'default'): Promise<void> {
-  if (fontFamily === 'default') return;
+  if (fontFamily === 'default') return,
   
   try {
     // Font loading logic would go here

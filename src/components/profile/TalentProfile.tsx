@@ -1,37 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Handshake, MessageSquare, Star } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-
-import { HireNowCTA } from './HireNowCTA';
-import { ProfileHero } from './ProfileHero';
-import { ProfileSkills } from './ProfileSkills';
-import { ProfileExperience } from './ProfileExperience';
-import { ProfileProjects } from './ProfileProjects';
-import { ProfileAvailability } from './ProfileAvailability';
-import { ProfileContact } from './ProfileContact';
-import { ProfileRatings } from './ProfileRatings';
-import { TalentProfile as TalentProfileType } from '@/types/talent';
-import { useAuth } from '@/hooks/useAuth';
-import { Availability } from '@/types/profile';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Handshake, MessageSquare, Star } from 'lucide-react'
-import { Button } from "@/components/ui/button";
-import { HireNowCTA } from "./HireNowCTA";
-import { ProfileHero } from "./ProfileHero";
-import { ProfileSkills } from "./ProfileSkills";
-import { ProfileExperience } from "./ProfileExperience";
-import { ProfileProjects } from "./ProfileProjects";
-import { ProfileAvailability } from "./ProfileAvailability";
-import { ProfileContact } from "./ProfileContact";
-import { ProfileRatings } from "./ProfileRatings";
-import { TalentProfile as TalentProfileType } from "@/types/talent";
-import { useAuth } from "@/hooks/useAuth";
-import { Availability } from "@/types/profile";
+import {Handshake, MessageSquare, Star} from 'lucide-react'
+import {Button} from "@/components/ui/button";
+import {HireNowCTA} from "./HireNowCTA";
+import {ProfileHero} from "./ProfileHero";
+import {ProfileSkills} from "./ProfileSkills";
+import {ProfileExperience} from "./ProfileExperience";
+import {ProfileProjects} from "./ProfileProjects";
+import {ProfileAvailability} from "./ProfileAvailability";
+import {ProfileContact} from "./ProfileContact";
+import {ProfileRatings} from "./ProfileRatings";
+import {TalentProfile, as, TalentProfileType} from "@/types/talent";
+import {useAuth} from "@/hooks/useAuth";
+import {Availability} from "@/types/profile";
 interface TalentProfileProps {
   profile: TalentProfileType,
   onRequestHire: () => void,
@@ -48,7 +29,7 @@ export function TalentProfile({
   // Create proper availability object from talent profile
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' : 
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable';
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
     message: `${profile.professional_title} with ${profile.years_experience} years of experience`
   };
   
@@ -156,15 +137,5 @@ export function TalentProfile({
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-  
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

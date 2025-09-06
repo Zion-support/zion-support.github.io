@@ -1,24 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const ReleaseNotesAgent: NextPage = () => {
   return (
     <div>
       <Head>
         <title>AI Release Notes Agent</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content='Daily AI-generated release notes.' />
-=======
         <meta name="description" content="Daily AI-generated release notes." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Release Notes Agent</h1>
@@ -29,9 +21,7 @@ const ReleaseNotesAgent: NextPage = () => {
   )
 };
 
-<<<<<<< HEAD
 export default ReleaseNotesAgent;
-=======
         <meta name="description" content="Daily AI-generated release notes." />
       </Head>
       <main className="space-y-4">
@@ -44,7 +34,5 @@ export default ReleaseNotesAgent;
 };
 
 export default ReleaseNotesAgent;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default ReleaseNotesAgent;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

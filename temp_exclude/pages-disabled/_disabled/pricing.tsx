@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Check,, X,, Star,, Zap,, Shield,, Users,, ArrowRight} from 'lucide-react';
 const plans = [
   {
     name: "Starter",
@@ -298,7 +298,7 @@ export default function PricingPage() {
             <p className="text-xl text-blue-100 mb-8">
               Contact our team to discuss your needs and find the perfect plan
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
@@ -317,5 +317,5 @@ export default function PricingPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

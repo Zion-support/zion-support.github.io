@@ -1,35 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useState } from 'react';
-import { cn } from '@/lib/utils';
-import { useAuth } from '@/hooks/useAuth';
-import { useTranslation } from 'react-i18next';
-import { useFavorites } from '@/hooks/useFavorites';
-import { useCart } from '@/context/CartContext';
-import {
-  Heart,
-  MessageSquare,
-  CreditCard,
-  ShoppingCart,
-  Wallet,;
-} from 'lucide-react';
-=======
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useTranslation } from "react-i18next";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
-import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';
+import {useRouter} from "next/router";
+import {useState} from "react";
+import {cn} from "@/lib/utils";
+import {useAuth} from "@/hooks/useAuth";
+import {useTranslation} from "react-i18next";
+import {useFavorites} from "@/hooks/useFavorites";
+import {useCart} from "@/context/CartContext";
+import {Heart, MessageSquare, CreditCard, ShoppingCart, Wallet} from 'lucide-react'
+import {LanguageSelector} from '@/components/header/LanguageSelector';
+import {HoverCard, HoverCardTrigger, HoverCardContent} from '@/components/ui/hover-card';
+import {MiniCartPreview} from '@/components/cart/MiniCartPreview';
+import {LoginModal} from '@/components/auth/LoginModal';
 interface MainNavigationProps {
   isAdmin?: boolean;
   unreadCount?: number;
@@ -50,7 +31,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
   const handleCartClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
       e.preventDefault();
-      setLoginOpen(true);
+      setLoginOpen(true),
       return
     }
     setIsMobileMenuOpen(false)
@@ -144,7 +125,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
                     "nav-link";
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     link.matches(router.pathname)
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
@@ -164,7 +145,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
                     "nav-link";
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/wishlist"
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
@@ -189,7 +170,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
                     "nav-link";
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/wallet"
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
@@ -209,7 +190,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
                     "nav-link";
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/messages"
                       ? "bg-zion-purple/20 text-zion-cyan"
                       : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan"
@@ -234,7 +215,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
-                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
                       router.pathname.startsWith('/cart')
                         ? 'bg-zion-purple/20 text-zion-cyan'
                         : 'text-white hover:bg-zion-purple/10 hover:text-zion-cyan'
@@ -262,30 +243,6 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className }: 
       </nav>
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
-<<<<<<< HEAD
-  );
-=======
 
-<<<<<<< HEAD
-
-      matches: (path: string) => path === '/'
-    };
-
-                    "nav-link";
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
-<<<<<<< HEAD
-
-                  className={cn(
-
-                    "nav-link",
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
-
-                    router.pathname === "/wishlist"
-
-<<<<<<< HEAD
-                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

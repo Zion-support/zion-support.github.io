@@ -1,5 +1,5 @@
 
-import { supabase } from '@/integrations/supabase/client';
+import {supabase} from '@/integrations/supabase/client';
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
@@ -35,7 +35,7 @@ async function createAnalyticsTables() {
 
         CREATE INDEX IF NOT EXISTS analytics_events_event_type_idx ON public.analytics_events(event_type);
         CREATE INDEX IF NOT EXISTS analytics_events_user_id_idx ON public.analytics_events(user_id);
-        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at);
+        CREATE INDEX IF NOT EXISTS analytics_events_created_at_idx ON public.analytics_events(created_at),
         
         -- View for daily page views
         CREATE OR REPLACE VIEW public.daily_page_views

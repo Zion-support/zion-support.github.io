@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { QrCodeIcon } from 'lucide-react';
-import { AppStoreButtons } from './AppStoreButtons';
-import { logInfo } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { QrCodeIcon } from 'lucide-react'
-import { AppStoreButtons } from "./AppStoreButtons";
-import { logInfo } from '@/utils/productionLogger';
+import {QrCodeIcon} from 'lucide-react'
+import {AppStoreButtons} from "./AppStoreButtons";
+import {logInfo} from '@/utils/productionLogger';
 export const DownloadSection: React.FC = () => {
 
   // These would typically come from environment variables or a config
@@ -55,14 +47,4 @@ export const DownloadSection: React.FC = () => {
     </section>
   )
 };
-<<<<<<< HEAD
-"
-=======
 
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

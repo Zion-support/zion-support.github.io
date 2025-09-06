@@ -1,27 +1,19 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const LanguageSync: NextPage = () => {
   return (
     <div>
       <Head>
         <title>Global Language Sync Agent</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='AI-powered translation backfill for locale files.'
         />
-=======
         <meta name="description" content="AI-powered translation backfill for locale files." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">Global Language Sync Agent</h1>
@@ -37,9 +29,7 @@ const LanguageSync: NextPage = () => {
   )
 };
 
-<<<<<<< HEAD
 export default LanguageSync;
-=======
         <meta name="description" content="AI-powered translation backfill for locale files." />
       </Head>
       <main className="space-y-4">
@@ -57,7 +47,5 @@ export default LanguageSync;
 };
 
 export default LanguageSync;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default LanguageSync;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

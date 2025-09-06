@@ -1,12 +1,5 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function OffworldConsole() {
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
@@ -17,83 +10,34 @@ export default function OffworldConsole() {
 
   async function sendChat() {
     setStatus('Sending chat...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const res = await fetch('/api/offworld/orbit?action=chat', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ from: 'anon', text: chat }),
-    });
-    setStatus(res.ok ? 'Chat sent' : 'Chat failed');
-=======
     const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
     setStatus(res.ok ? 'Chat sent' : 'Chat failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function castVote() {
     setStatus('Recording vote...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const res = await fetch('/api/offworld/orbit?action=vote', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }),
-    });
-    setStatus(res.ok ? 'Vote recorded' : 'Vote failed');
-=======
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function syncProfile() {
     setStatus('Pinning profile...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const res = await fetch('/api/offworld/ipfs?action=json', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({
-        profile: { name, skills: skills.split(',').map(s => s.trim()) },
-      }),
-    });
-    const data = await res.json();
-    setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');
-=======
     const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const res = await fetch('/api/offworld/ipfs?action=broadcast', {
-      method: 'POST',
-      headers: { 'content-type': 'application/json' },
-      body: JSON.stringify({ message: 'We build beyond platforms.' }),
-    });
-    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed');
-=======
     const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
@@ -135,8 +79,6 @@ export default function OffworldConsole() {
       {status && <p className="text-sm text-gray-700">{status}</p>}
     </div>
   );
-<<<<<<< HEAD
-=======
     const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
     setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
   }
@@ -181,7 +123,4 @@ export default function OffworldConsole() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

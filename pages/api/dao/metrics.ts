@@ -4,7 +4,7 @@ import path from 'path';
 const configPath = path.join(process.cwd(), 'datadaoconfig.json');
 const cachePath = path.join(process.cwd(), 'datadaometrics.json');
 async function fetchJson(url: string) {
-  const resp = await fetch(url);
+  const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json()
 }
@@ -22,7 +22,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
     const now = Date.now();
-    const oneWeekMs = 7 * 24 * 60 * 60 * 1000;
+    const oneWeekMs = 7 * 24 * 60 * 60 * 1000,
     if (cache.updatedAt && now - cache.updatedAt < oneWeekMs) {
       return res.status(200).json({ ...cache, cached: true })
     }
@@ -55,7 +55,7 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
     }));
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
-    const activeProposals: any[] = [];
+    const activeProposals: any[] = [],
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
     const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
     const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0;

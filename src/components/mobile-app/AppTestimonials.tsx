@@ -1,14 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Star } from 'lucide-react';
-import { Card, CardContent, CardFooter } from '@/components/ui/card';
-=======
 
 import React from "react";
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Star} from 'lucide-react'
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
 const testimonials = [
   {
@@ -30,14 +23,10 @@ const testimonials = [
     role: "Full Stack Developer",
     text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.",
     rating: 4,
-<<<<<<< HEAD
-    avatar: '/placeholder.svg',
-  },
-=======
 
 import React from "react";
-import { Star } from 'lucide-react'
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import {Star} from 'lucide-react'
+import {Card, CardContent, CardFooter} from "@/components/ui/card";
 
 const testimonials = [
   {
@@ -61,34 +50,18 @@ const testimonials = [
     rating: 4,
     avatar: "/placeholder.svg"
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     avatar: "/placeholder.svg"
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 export const AppTestimonials: React.FC = () => {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <section className='py-16 bg-zion-blue'>
-      <div className='container mx-auto px-4'>
-        <div className='text-center mb-12'>
-          <h2 className='text-3xl md:text-4xl font-bold mb-4'>
-            What Our Users Say
-          </h2>
-          <p className='text-lg text-gray-300 max-w-2xl mx-auto'>
-            Join thousands of satisfied users who have transformed their tech
-            careers with the Zion mobile app.
-=======
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">What Our Users Say</h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Join thousands of satisfied users who have transformed their tech careers with the Zion mobile app.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </p>
         </div>
         
@@ -112,12 +85,6 @@ export const AppTestimonials: React.FC = () => {
                     <img src={testimonial.avatar} alt={testimonial.name} className="h-full w-full object-cover" loading="lazy" />
                   </div>
                   <div>
-<<<<<<< HEAD
-                    <p className='font-semibold text-white'>
-                      {testimonial.name}
-                    </p>
-                    <p className='text-sm text-gray-400'>{testimonial.role}</p>
-=======
     <section className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
@@ -149,11 +116,8 @@ export const AppTestimonials: React.FC = () => {
                   <div>
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <p className="font-semibold text-white">{testimonial.name}</p>
                     <p className="text-sm text-gray-400">{testimonial.role}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </CardFooter>
@@ -162,36 +126,9 @@ export const AppTestimonials: React.FC = () => {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-{";
-  name: "Sarah Williams";";
-role: "Tech Recruiter";";
-text: "As a recruiter, this app has saved me countless hours. The talent quality is exceptional and the mobile interface is intuitive.";
-rating: 5;";
-avatar: "/placeholder.svg" ;
-};
-{";
-  name: "Michael Chen";";
-role: "Full Stack Developer";";
-text: "I love being able to check job matches and respond to clients while on the go. The notification system is particularly useful.";
-rating: 4;";
-avatar: "/placeholder.svg" ;
-}];
-export const AppTestimonials: React.FC = () => {";
-  return (<section className="py-16 bg-zion-blue" > <div className="container mx-auto px-4" > <div className="text-center mb-12" > <h2 className="text-3xl md:text-4xl font-bold mb-4" >What Our Users Say</h2> <p className="text-lg text-gray-300 max-w-2xl mx-auto" > ;
-}</div> </div> </section>) ;
-};
-'"
-=======
   )
 
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

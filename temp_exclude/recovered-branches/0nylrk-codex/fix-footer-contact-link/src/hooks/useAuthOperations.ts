@@ -1,10 +1,10 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import {useState,, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
 import type { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
-import { cleanupAuthState } from "@/utils/authUtils";
+import {toast} from "@/hooks/use-toast";
+import {trackReferral,, checkUrlForReferralCode} from "@/utils/referralUtils";
+import {cleanupAuthState} from "@/utils/authUtils";
 export function useAuthOperations(
   setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
@@ -110,7 +110,7 @@ export function useAuthOperations(
   };
 
   const resetPassword = async (email: string) => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`});
@@ -138,7 +138,7 @@ export function useAuthOperations(
   };
 
   const updateProfile = async (profileData: Partial<UserProfile>) => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       if (!profileData || !profileData.id) {
         throw new Error("Profile data or user ID is missing.")

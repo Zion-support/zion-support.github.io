@@ -26,7 +26,7 @@ declare module 'react-day-picker' {
 }
 declare module 'sonner';
 declare module 'lucide-react' {
-  import { FC, SVGProps } from 'react';
+  import {FC,, SVGProps} from 'react';
   export type LucideProps = SVGProps<SVGSVGElement>;
   export type LucideIcon = FC<LucideProps>;
 
@@ -201,7 +201,7 @@ declare module 'react-hook-form' {
 
   export interface ControllerProps<
     TFieldValues extends FieldValues = FieldValues;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>;
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
     name: TName
     control?: Control<TFieldValues>
@@ -221,7 +221,7 @@ declare module 'react-hook-form' {
 
   export const FormProvider: ComponentType<FormProviderProps<any>>
   export function useFormContext<
-    TFieldValues extends FieldValues = FieldValues;
+    TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>
 }
 declare module 'react-i18next';

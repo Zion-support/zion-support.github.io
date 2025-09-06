@@ -1,27 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ShoppingCart, 
-  Shield, 
-  Brain, 
-  Database, 
-  Users, 
-  ArrowRight, 
-  CheckCircle,
-  Smartphone,
-  Activity,
-  Lock,
-  Cloud,
-  BarChart3,
-  Zap,
-  Award,
-  Clock,
-  CreditCard,
-  Package,
-  Store,
-  TrendingUp
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ShoppingCart,, Shield,, Brain,, Database,, Users,, ArrowRight,, CheckCircle,, Smartphone,, Activity,, Lock,, Cloud,, BarChart3,, Zap,, Award,, Clock,, CreditCard,, Package,, Store,, TrendingUp} from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const solutions = [
@@ -478,7 +458,7 @@ export default function RetailSolutionsPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Retail?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -498,5 +478,5 @@ export default function RetailSolutionsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

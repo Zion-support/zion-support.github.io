@@ -1,34 +1,18 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  RefreshCw,
-  Zap,
-  Bot,
-  Workflow,
-  ArrowRight,
-  Check,
-  BarChart3,;
-} from 'lucide-react';
-=======
-import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
+import {RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3,} from 'lucide-react';
+import {RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3} from 'lucide-react';
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3 } from 'lucide-react';
+import {RefreshCw, Zap, Bot, Workflow, ArrowRight, Check, BarChart3} from 'lucide-react';
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function AutomationPage() {
   const features = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Workflow className='w-8 h-8 text-white' />,
-=======
       icon: <Workflow className="w-8 h-8 text-white" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       title: 'Workflow Automation',
       description: 'Create complex workflows with drag-and-drop interface'
     };
@@ -50,14 +34,12 @@ export default function AutomationPage() {
   ];
 
   const benefits = [
-<<<<<<< HEAD
     'Reduce manual tasks by 80%',
     'Improve process accuracy',
     'Scale operations efficiently',
     '24/7 automated operations',
     'Real-time monitoring',
     'Custom integration support',
-=======
       icon: <Workflow className="w-8 h-8 text-white" />,
       title: 'Workflow Automation',
       description: 'Create complex workflows with drag-and-drop interface'
@@ -81,25 +63,20 @@ export default function AutomationPage() {
 
   const benefits = [
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     'Reduce manual tasks by 80%Improve process accuracyScale operations efficiently24/7 automated operationsReal-time monitoringCustom integration support'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
     <>
       <Head>
         <title>Automation Hub - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='AI-powered workflow automation platform that streamlines your business processes and increases efficiency.'
         />
-=======
         <meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <div className="min-h-screen bg-black">
@@ -132,11 +109,9 @@ export default function AutomationPage() {
                 <ArrowRight className="w-5 h-5 ml-2" />
               </a>
               <a
-<<<<<<< HEAD
                 href='/contact'
                 className='border-white/20 hover:border-white/40'
               >
-=======
         <meta name="description" content="AI-powered workflow automation platform that streamlines your business processes and increases efficiency." />
       </Head>
 
@@ -171,10 +146,8 @@ export default function AutomationPage() {
               </a>
               <a
                 href="/contact" className="border-white/20 hover:border-white/40">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 href="/contact" className="border-white/20 hover:border-white/40">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 View Demo
               </a>
             </div>
@@ -182,8 +155,6 @@ export default function AutomationPage() {
         </section>
 
         {/* Features Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-24'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='text-center mb-20'>
@@ -191,7 +162,6 @@ export default function AutomationPage() {
                 Automation Features
               </h2>
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-=======
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -199,8 +169,6 @@ export default function AutomationPage() {
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-24">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
@@ -208,17 +176,14 @@ export default function AutomationPage() {
                 Automation Features
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Powerful tools to automate any business process
               </p>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {features.map((feature, index) => (
                 <div
                   key={index} className="p-8 bg-gray-900/50 rounded-2xl border border-gray-800 hover:border-blue-500/30 hover:bg-gray-900/80 transition-all duration-300">
@@ -228,9 +193,7 @@ export default function AutomationPage() {
                   <h3 className="text-xl font-bold text-white mb-4">
                     {feature.title}
                   </h3>
-<<<<<<< HEAD
                   <p className='text-gray-400 leading-relaxed'>
-=======
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {features.map((feature, index) => (
                 <div
@@ -242,10 +205,8 @@ export default function AutomationPage() {
                     {feature.title}
                   </h3>
                   <p className="text-gray-400 leading-relaxed">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-gray-400 leading-relaxed">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     {feature.description}
                   </p>
                 </div>
@@ -255,16 +216,13 @@ export default function AutomationPage() {
         </section>
 
         {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-24 bg-gray-900'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-16 items-center'>
-=======
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <div>
                 <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8">
                   Transform Your Business with Automation
@@ -275,9 +233,7 @@ export default function AutomationPage() {
                       <div className="w-6 h-6 rounded-full bg-blue-500/20 flex items-center justify-center mr-4 mt-1">
                         <Check className="w-4 h-4 text-blue-500" />
                       </div>
-<<<<<<< HEAD
                       <span className='text-gray-300 text-lg'>{benefit}</span>
-=======
         <section className="py-24 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -292,39 +248,32 @@ export default function AutomationPage() {
                         <Check className="w-4 h-4 text-blue-500" />
                       </div>
                       <span className="text-gray-300 text-lg">{benefit}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <span className="text-gray-300 text-lg">{benefit}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   ))}
                 </div>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <div className='relative'>
                 <div className='bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20'>
                   <div className='text-center'>
                     <RefreshCw className='w-24 h-24 mx-auto mb-6 text-blue-400' />
                     <h3 className='text-2xl font-bold text-white mb-4'>
-=======
               
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
                   <div className="text-center">
                     <RefreshCw className="w-24 h-24 mx-auto mb-6 text-blue-400" />
                     <h3 className="text-2xl font-bold text-white mb-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       Smart Workflows
                     </h3>
                     <p className="text-gray-300 mb-6">
                       Create intelligent automation workflows that adapt to your business needs
                     </p>
-<<<<<<< HEAD
                     <div className='inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm'>
                       <Zap className='w-4 h-4 mr-2' />
-=======
               
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-3xl p-8 border border-blue-500/20">
@@ -338,11 +287,9 @@ export default function AutomationPage() {
                     </p>
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
                       <Zap className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="inline-flex items-center px-4 py-2 rounded-full bg-blue-500/20 text-blue-400 text-sm">
                       <Zap className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       AI-powered optimization
                     </div>
                   </div>
@@ -353,16 +300,13 @@ export default function AutomationPage() {
         </section>
 
         {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-24 bg-gradient-to-r from-blue-600 to-blue-700'>
-          <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
+          <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>
             <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-=======
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Automate Your Workflows?
             </h2>
             <p className="text-xl text-blue-100 mb-8">
@@ -374,11 +318,9 @@ export default function AutomationPage() {
                 Start Free Trial
               </a>
               <a
-<<<<<<< HEAD
                 href='/contact'
                 className='border-white text-white hover:bg-white hover:text-blue-600'
               >
-=======
         <section className="py-24 bg-gradient-to-r from-blue-600 to-blue-700">
           <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -394,10 +336,8 @@ export default function AutomationPage() {
               </a>
               <a
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 href="/contact" className="border-white text-white hover:bg-white hover:text-blue-600">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Schedule Demo
               </a>
             </div>
@@ -405,14 +345,9 @@ export default function AutomationPage() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

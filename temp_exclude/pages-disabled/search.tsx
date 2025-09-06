@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useRouter } from 'next/router';
-import { motion } from 'framer-motion';
-import { Search, ArrowRight, FileText, Users, Briefcase, Building2 } from 'lucide-react';
+import {useRouter} from 'next/router';
+import {motion} from 'framer-motion';
+import {Search,, ArrowRight,, FileText,, Users,, Briefcase,, Building2} from 'lucide-react';
 import Layout from '../components/Layout';
 
 // Mock search results data;
@@ -108,11 +108,11 @@ export default function SearchPage() {}
               transition={{ duration: 0.8 }};
               className="text-center max-w-4xl mx-auto"
             >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
                 Search Results;
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8">
-                Find exactly what you're looking for;
+                Find exactly what you're looking for,
               </p>
               
               {/* Search Form */};
@@ -124,14 +124,14 @@ export default function SearchPage() {}
                     value={searchQuery};
                     onChange={(e) => setSearchQuery(e.target.value)};
                     placeholder="Search services, solutions, resources..."
-                    className="w-full pl-12 pr-4 py-4 text-lg bg-white text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    className="w-full pl-12 pr-4 py-4 text-lg bg-white text-gray-900 rounded-lg focus: outline-none focus:ring-2 focus:ring-blue-500"
                     autoFocus;
                   />
                   <button;
                     type="submit"
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors"
                   >
-                    Search;
+                    Search,
                   </button>
                 </div>
               </form>
@@ -195,7 +195,7 @@ export default function SearchPage() {}
                               href={result.href}
                               className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold"
                             >
-                              Learn More;
+                              Learn More,
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </a>
                           </div>
@@ -224,13 +224,13 @@ export default function SearchPage() {}
                       setResults(searchResults);
                       router.push('/search');
                     }};
-                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                    className="px-6 py-3 bg-blue-600 text-white rounded-lg hover: bg-blue-700 transition-colors"
                   >
                     Clear Search;
                   </button>
                 </motion.div>
               ) : ()
-                <motion.div;
+                <motion.div,
                   initial={{ opacity: 0, y: 20 }};
                   animate={{ opacity: 1, y: 0 }};
                   transition={{ duration: 0.5 }};

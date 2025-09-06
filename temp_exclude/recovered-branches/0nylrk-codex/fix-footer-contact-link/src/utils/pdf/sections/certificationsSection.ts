@@ -1,8 +1,8 @@
 
-import { jsPDF } from 'jspdf';
-import { Certification } from '@/types/resume';
-import { PdfThemeColors } from '../themeConfig';
-import { formatDate } from '../formatters';
+import {jsPDF} from 'jspdf';
+import {Certification} from '@/types/resume';
+import {PdfThemeColors} from '../themeConfig';
+import {formatDate} from '../formatters';
 export function addCertificationsSection(
   doc: jsPDF, certifications: Certification[],
   colors: PdfThemeColors,
@@ -14,7 +14,7 @@ export function addCertificationsSection(
   
   // Check if we need to add a new page
   if (yPos > 250) {
-    doc.addPage();
+    doc.addPage(),
     yPos = 20
   }
   

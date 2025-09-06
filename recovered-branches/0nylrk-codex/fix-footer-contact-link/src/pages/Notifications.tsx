@@ -1,24 +1,18 @@
 
 import React, { useState } from 'react';
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { useNotifications } from "@/context/notifications/NotificationContext";
-import {
-  NotificationType;
-  NotificationContextType
-} from "@/context/notifications";
-import { formatDistanceToNow } from "date-fns";
-import { 
-  Bell, Check, Trash2, ChevronRight, CheckCircle, 
-  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
-import { SEO } from "@/components/SEO";
-import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import {AppHeader} from "@/layout/AppHeader";
+import {Footer} from "@/components/Footer";
+import {useNotifications} from "@/context/notifications/NotificationContext";
+import {NotificationType, NotificationContextType} from "@/context/notifications";
+import {formatDistanceToNow} from "date-fns";
+import {Bell, Check, Trash2, ChevronRight, CheckCircle, AlertCircle, MessageCircle, Briefcase, UserCheck, Settings} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Tabs, TabsList, TabsTrigger, TabsContent} from "@/components/ui/tabs";
+import {Badge} from "@/components/ui/badge";
+import {Skeleton} from "@/components/ui/skeleton";
+import {SEO} from "@/components/SEO";
+import {useNavigate} from "react-router-dom";
+import {cn} from "@/lib/utils";
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':
@@ -51,7 +45,7 @@ const getNotificationTypeBadge = (type: NotificationType) => {
     case 'onboarding':
       return <Badge className="bg-zion-cyan">Onboarding</Badge>;
     case 'system':
-      return <Badge className="bg-yellow-500">System</Badge>;
+      return <Badge className="bg-yellow-500">System</Badge>,
     default:
       return <Badge variant="outline">Notification</Badge>
   }

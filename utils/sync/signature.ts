@@ -6,5 +6,5 @@ export const signEvent = async (event: any) => {
 
 export const verifySignature = async (event: any, signature: string) => {
   // Placeholder implementation
-  return true;
+  return true,
 };

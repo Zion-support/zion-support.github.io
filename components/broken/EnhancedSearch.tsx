@@ -1,29 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- //Mock search results - in real app, this would come from API const mockSearchResults: SearchResult[] = [ {
-  
-}];
-setIsSearching (true);
-//Simulate API call delay setTimeout ( () => {
-  const filteredResults = mockSearchResults.filter (result => {
-  const matchesQuery = result.name.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || result.category.toLowerCase () .includes (searchQuery.toLowerCase () );
-const matchesFilters = selectedFilters.length === 0 || selectedFilters.some (filter => result.category.toLowerCase () .includes (filter.toLowerCase () ) || result.type.toLowerCase () .includes (filter.toLowerCase () ) );
-setResults (sortedResults);
-setShowResults (true);
-setIsSearching (false) 
-}, 300) 
-}, 300);
-[selectedFilters]);
-[selectedFilters]);
-//Close search on outside click useEffect ( () => {
-  const handleClickOutside = (event: MouseEvent) => {
-  if (searchRef.current && !searchRef.current.contains (event.target as Node) ) {
-  
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket} from 'lucide-react';
 
 interface SearchResult {
   id: string,
@@ -52,7 +29,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
   placeholder = "Search revolutionary services...";
-  className = "";
+  className = "",
   showFilters = true
 }) => {
   const [query, setQuery] = useState('');
@@ -115,7 +92,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
           setResults([]);
-          setShowResults(false);
+          setShowResults(false),
           return
         }
 
@@ -160,7 +137,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     setQuery(value);
     
     if (value.trim().length === 0) {
-      setShowResults(false);
+      setShowResults(false),
       setResults([])
     }
   }, [suggestions, selectedIndex, query, handleSearch]);
@@ -178,14 +155,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     e.preventDefault();
     if (query.trim()) {
       onSearch(query);
-      addToSearchHistory(query);
+      addToSearchHistory(query),
       setShowResults(false)
     }
   }, [router, handleSearch]);
 
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
-    router.push(action);
+    router.push(action),
     setIsOpen(false)
   }, [router]);
 
@@ -220,7 +197,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
-    setShowResults(false);
+    setShowResults(false),
     setQuery('')
   };
 
@@ -457,14 +434,9 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
-// Debounce utility function function debounce<T extends (...args: unknown[]) => any> (func: T;
-wait: number 
-}export default EnhancedSearch;
-=======
 import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket } from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, X, Filter, TrendingUp, Clock, Star, Zap, Brain, Atom, Shield, Rocket} from 'lucide-react';
 
 interface SearchResult {
   id: string,
@@ -493,7 +465,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   onSearch;
   onResultSelect;
   placeholder = "Search revolutionary services...";
-  className = "";
+  className = "",
   showFilters = true
 }) => {
   const [query, setQuery] = useState('');
@@ -556,7 +528,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
       () => debounce((searchQuery: string) => {
         if (searchQuery.trim().length < 2) {
           setResults([]);
-          setShowResults(false);
+          setShowResults(false),
           return
         }
 
@@ -601,7 +573,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     setQuery(value);
     
     if (value.trim().length === 0) {
-      setShowResults(false);
+      setShowResults(false),
       setResults([])
     }
   }, [suggestions, selectedIndex, query, handleSearch]);
@@ -619,14 +591,14 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     e.preventDefault();
     if (query.trim()) {
       onSearch(query);
-      addToSearchHistory(query);
+      addToSearchHistory(query),
       setShowResults(false)
     }
   }, [router, handleSearch]);
 
   // Handle quick action click
   const handleQuickAction = useCallback((action: string) => {
-    router.push(action);
+    router.push(action),
     setIsOpen(false)
   }, [router]);
 
@@ -661,7 +633,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   // Handle result selection
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result);
-    setShowResults(false);
+    setShowResults(false),
     setQuery('')
   };
 
@@ -898,8 +870,6 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     </div>
   )
 };
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 // Debounce utility function
 function debounce<T extends (...args: any[]) => any>(
@@ -908,14 +878,9 @@ function debounce<T extends (...args: any[]) => any>(
 ): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
-    clearTimeout(timeout);
+    clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)
   };
 }
 
-<<<<<<< HEAD
 export default EnhancedSearch;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-export default EnhancedSearch;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

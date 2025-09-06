@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import { },
   {
   Atom, 
@@ -92,13 +92,13 @@ export default function QuantumComputingPage() {},
               className="text-center"
             >
               <Atom className="w-16 h-16 mx-auto mb-6 text-purple-400" />
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Quantum Computing;
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">
+                Quantum Computing,
                 <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent">
                   {' '}Solutions;
                 </span>
               </h1>
-              <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+              <p className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
                 Harness the power of quantum mechanics to solve complex problems that are impossible for classical computers. 
                 Our quantum computing services deliver exponential speedup and revolutionary capabilities.
               </p>
@@ -107,7 +107,7 @@ export default function QuantumComputingPage() {},
                   Get Quantum Consultation;
                 </Link>
                 <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                  View All Services;
+                  View All Services,
                 </Link>
               </div>
             </motion.div>
@@ -129,8 +129,8 @@ export default function QuantumComputingPage() {},
               viewport={{ once: true }},
   {
             >
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                Quantum Computing Services;
+              <h2 className="text-3xl sm: text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Quantum Computing Services,
               </h2>
               <p className="text-lg sm:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
                 We provide comprehensive quantum computing solutions including algorithm development, 
@@ -246,7 +246,7 @@ export default function QuantumComputingPage() {},
               viewport={{ once: true }},
   {
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Go Quantum?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -266,6 +266,6 @@ export default function QuantumComputingPage() {},
         </section>
       </div>
     </Layout>
-  );
+  ),
 },
   {

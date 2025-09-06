@@ -1,17 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type MilestoneStatus = | 'Pending' | 'In Progress' | 'Submitted' | 'Approved' | 'Paid';
-export type ProjectParticipantRole = 'client' | 'talent';
-
-export type ProjectParticipants = {
-  clientUserId: string;
-  talentUserId: string;
-};
-
-export type Project = {
-=======
 export interface Milestone {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   id: string;
   title: string;
   description?: string;
@@ -20,19 +7,9 @@ export interface Milestone {
   status: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
-<<<<<<< HEAD
-export function isMilestoneStatus(value: string): value is MilestoneStatus {
-  return (
-    value === 'Pending' ||
-    value === 'In Progress' ||
-    value === 'Submitted' ||
-    value === 'Approved' ||
-    value === 'Paid'
-  );
-=======
 // Milestone type definitions
 export interface Milestone {
   id: string;
@@ -52,7 +29,7 @@ export interface Milestone {
     id: string;
     name: string;
     url: string;
-    uploadedAt: string;
+    uploadedAt: string,
   }>;
 }
 
@@ -70,14 +47,14 @@ export interface MilestoneSubmission {
   notes?: string;
   attachments?: Array<{
     name: string;
-    url: string;
+    url: string,
   }>;
 }
 
 export interface MilestoneApproval {
   milestoneId: string;
   approved: boolean;
-  notes?: string;
+  notes?: string,
 }
 
 export interface MilestonePayment {
@@ -85,7 +62,7 @@ export interface MilestonePayment {
   amount: number;
   paymentMethod: string;
   transactionId?: string;
-  notes?: string;
+  notes?: string,
 }
 
 export interface MilestoneStats {
@@ -99,7 +76,7 @@ export interface MilestoneStats {
   paid: number;
   totalAmount: number;
   completedAmount: number;
-  pendingAmount: number;
+  pendingAmount: number,
 }
 
 export interface MilestoneTimeline {
@@ -108,7 +85,7 @@ export interface MilestoneTimeline {
   action: 'created' | 'updated' | 'submitted' | 'approved' | 'rejected' | 'paid';
   timestamp: string;
   userId: string;
-  notes?: string;
+  notes?: string,
 }
 
 export interface MilestoneTemplate {
@@ -119,10 +96,10 @@ export interface MilestoneTemplate {
     title: string;
     description?: string;
     amount: number;
-    dueDate?: string;
+    dueDate?: string,
   }>;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 export interface MilestoneFilter {
@@ -136,41 +113,41 @@ export interface MilestoneFilter {
 
 export interface MilestoneSort {
   field: 'title' | 'amount' | 'dueDate' | 'status' | 'createdAt' | 'updatedAt';
-  direction: 'asc' | 'desc';
+  direction: 'asc' | 'desc',
 }
 
 export interface MilestoneSearch {
   query: string;
-  fields?: Array<'title' | 'description' | 'notes'>;
+  fields?: Array<'title' | 'description' | 'notes'>,
 }
 
 export interface MilestoneBulkUpdate {
   milestoneIds: string[];
-  updates: MilestoneUpdate;
+  updates: MilestoneUpdate,
 }
 
 export interface MilestoneBulkAction {
   milestoneIds: string[];
   action: 'approve' | 'reject' | 'pay' | 'delete';
-  notes?: string;
+  notes?: string,
 }
 
 export interface MilestoneExport {
   format: 'csv' | 'json' | 'pdf';
   filters?: MilestoneFilter;
   sort?: MilestoneSort;
-  includeTimeline?: boolean;
+  includeTimeline?: boolean,
 }
 
 export interface MilestoneReport {
   projectId: string;
   period: {
     start: string;
-    end: string;
+    end: string,
   };
   stats: MilestoneStats;
   milestones: Milestone[];
-  timeline: MilestoneTimeline[];
+  timeline: MilestoneTimeline[],
 }
 
 export interface MilestoneNotification {
@@ -180,7 +157,7 @@ export interface MilestoneNotification {
   type: 'due_soon' | 'overdue' | 'submitted' | 'approved' | 'rejected' | 'paid';
   message: string;
   read: boolean;
-  createdAt: string;
+  createdAt: string,
 }
 
 export interface MilestoneComment {
@@ -191,7 +168,7 @@ export interface MilestoneComment {
   createdAt: string;
   updatedAt: string;
   parentId?: string;
-  replies?: MilestoneComment[];
+  replies?: MilestoneComment[],
 }
 
 export interface MilestoneFile {
@@ -202,7 +179,7 @@ export interface MilestoneFile {
   size: number;
   type: string;
   uploadedBy: string;
-  uploadedAt: string;
+  uploadedAt: string,
 }
 
 export interface MilestoneStatusTransition {
@@ -213,7 +190,7 @@ export interface MilestoneStatusTransition {
   conditions?: Array<{
     field: string;
     operator: 'equals' | 'not_equals' | 'greater_than' | 'less_than';
-    value: any;
+    value: any,
   }>;
 }
 
@@ -284,20 +261,20 @@ export const MILESTONE_STATUS_COLORS: Record<Milestone['status'], string> = {
 
 export function isValidStatusTransition(from: Milestone['status'], to: Milestone['status']): boolean {
   const transition = MILESTONE_STATUS_TRANSITIONS.find(t => t.from === from && t.to === to);
-  return transition ? transition.allowed : false;
+  return transition ? transition.allowed : false,
 }
 
 export function getStatusLabel(status: Milestone['status']): string {
-  return MILESTONE_STATUS_LABELS[status] || status;
+  return MILESTONE_STATUS_LABELS[status] || status,
 }
 
 export function getStatusColor(status: Milestone['status']): string {
-  return MILESTONE_STATUS_COLORS[status] || '#6B7280';
+  return MILESTONE_STATUS_COLORS[status] || '#6B7280',
 }
 
 export function isOverdue(milestone: Milestone): boolean {
   if (!milestone.dueDate || milestone.status === 'COMPLETED' || milestone.status === 'PAID') {
-    return false;
+    return false,
   }
   return new Date(milestone.dueDate) < new Date();
 }
@@ -307,12 +284,12 @@ export function getDaysUntilDue(milestone: Milestone): number | null {
   const dueDate = new Date(milestone.dueDate);
   const now = new Date();
   const diffTime = dueDate.getTime() - now.getTime();
-  return Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return Math.ceil(diffTime / (1000 * 60 * 60 * 24)),
 }
 
 export function isDueSoon(milestone: Milestone, daysThreshold: number = 3): boolean {
   const daysUntilDue = getDaysUntilDue(milestone);
-  return daysUntilDue !== null && daysUntilDue <= daysThreshold && daysUntilDue >= 0;
+  return daysUntilDue !== null && daysUntilDue <= daysThreshold && daysUntilDue >= 0,
 }
 
 export function calculateMilestoneProgress(milestone: Milestone): number {
@@ -331,7 +308,7 @@ export function calculateMilestoneProgress(milestone: Milestone): number {
     case 'OVERDUE':
       return 25;
     default:
-      return 0;
+      return 0,
   }
 }
 
@@ -419,15 +396,13 @@ export function createMilestoneFile(
     uploadedAt: new Date().toISOString()
   };
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export interface MilestoneAttachment {
   id: string;
   name: string;
   url: string;
   type: string;
   size: number;
-  uploadedAt: string;
+  uploadedAt: string,
 }
 
 export interface CreateMilestoneRequest {
@@ -435,7 +410,7 @@ export interface CreateMilestoneRequest {
   description?: string;
   dueDate: string;
   amountUsd: number;
-  attachments?: MilestoneAttachment[];
+  attachments?: MilestoneAttachment[],
 }
 
 export interface UpdateMilestoneRequest {
@@ -446,4 +421,3 @@ export interface UpdateMilestoneRequest {
   status?: 'pending' | 'completed' | 'cancelled';
   attachments?: MilestoneAttachment[];
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

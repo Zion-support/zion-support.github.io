@@ -1,30 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-'use client';
-
-import React, {
-  Suspense,
-  lazy,
-  useState,
-  useEffect,
-  ComponentType,;
-} from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { cn } from '@/lib/utils';
-import { logErrorToProduction } from '@/utils/productionLogger';
-=======
 'use client'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { Suspense, lazy, useState, useEffect, ComponentType } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
-import { cn } from '@/lib/utils'
+import {motion, AnimatePresence} from 'framer-motion'
+import {Loader2, AlertTriangle, Wifi, WifiOff, RefreshCw} from 'lucide-react'
+import {Button} from '@/components/ui/button'
+import {Card, CardContent} from '@/components/ui/card'
+import {cn} from '@/lib/utils'
 import {logErrorToProduction} from '@/utils/productionLogger';
 interface LoadingState {
   isLoading: boolean
@@ -165,7 +146,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   maxRetries = 3;
   prefetch = false;
   className;
-  children;
+  children,
   ...props
 }) => {
   const [loadingState, setLoadingState] = useState<LoadingState>({
@@ -341,7 +322,7 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //       <div className="w-full h-64 bg-muted animate-pulse rounded-lg flex items-center justify-center">
 //         <span className="text-muted-foreground">Loading chart...</span>
 //       </div>
-//     );
+//     ),
 //     prefetch: true
 //   }
 // )
@@ -357,15 +338,5 @@ export const createDynamicComponent = <T extends ComponentType<any>>(
 //   }
 // )
 
-<<<<<<< HEAD
-export default DynamicComponentLoader;
-=======
 
-<<<<<<< HEAD
-      setLoadingState(prev => ({
-        ...prev;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default DynamicComponentLoader 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

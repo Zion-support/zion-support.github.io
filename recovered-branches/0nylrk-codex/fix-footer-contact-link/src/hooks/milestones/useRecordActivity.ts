@@ -1,18 +1,18 @@
 
-import { useAuth } from '@/hooks/useAuth';
-import { supabase } from '@/integrations/supabase/client';
-import { MilestoneActivity } from './types';
+import {useAuth} from '@/hooks/useAuth';
+import {supabase} from '@/integrations/supabase/client';
+import {MilestoneActivity} from './types';
 export const useRecordActivity = () => {
   const { user } = useAuth();
   
   const recordMilestoneActivity = async (
-    milestoneId: string;
+    milestoneId: string,
     action: string, 
     previousStatus: string | null, 
     newStatus: string;
     comment?: string
   ) => {
-    if (!user) return null;
+    if (!user) return null,
     
     try {
       const { data, error } = await supabase
@@ -22,7 +22,7 @@ export const useRecordActivity = () => {
           user_id: user.id;
           action;
           previous_status: previousStatus;
-          new_status: newStatus;
+          new_status: newStatus,
           comment})
         .select(`
           *;

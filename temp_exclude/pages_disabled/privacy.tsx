@@ -1,7 +1,7 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { Shield, Lock, Eye, Database, Mail, Phone, MapPin } from 'lucide-react';
+import {Shield,, Lock,, Eye,, Database,, Mail,, Phone,, MapPin} from 'lucide-react';
 import Layout from './components/Layout';
 
 export default function PrivacyPage() {
@@ -122,8 +122,7 @@ export default function PrivacyPage() {
 
                 <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
                 <p className="text-gray-700 mb-6">
-                  If you have any questions about this privacy policy, please contact us:
-                </p>
+                  If you have any questions about this privacy policy, please contact us: </p>
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <div className="flex items-center mb-4">
                     <Mail className="w-5 h-5 mr-3 text-blue-600" />
@@ -147,5 +146,5 @@ export default function PrivacyPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

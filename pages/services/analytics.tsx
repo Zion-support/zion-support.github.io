@@ -1,27 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  BarChart3,
-  Database,
-  Zap,
-  Shield,
-  Rocket,
-  Cpu,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
-=======
-import { 
-  BarChart3, Database, Zap, Shield, Rocket, Cpu, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {BarChart3, Database, Zap, Shield, Rocket, Cpu, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp,, import, {, BarChart3, Database, Zap, Shield, Rocket, Cpu, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AnalyticsServicesPage() {
@@ -71,7 +51,6 @@ export default function AnalyticsServicesPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Data Analytics Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services.'
@@ -88,11 +67,7 @@ export default function AnalyticsServicesPage() {
           rel='canonical'
           href='https://ziontechgroup.com/services/analytics'
         />
-=======
-import { 
-  BarChart3, Database, Zap, Shield, Rocket, Cpu, 
-  ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+import {BarChart3, Database, Zap, Shield, Rocket, Cpu, ArrowRight, CheckCircle, Star, Users, Clock, TrendingUp} from 'lucide-react';
 import EnhancedNavigation from '../../components/EnhancedNavigation';
 import EnhancedFooter from '../../components/EnhancedFooter';
 export default function AnalyticsServicesPage() {
@@ -142,52 +117,38 @@ export default function AnalyticsServicesPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Data Analytics Services - Zion Tech Group</title>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Advanced data analytics solutions from Zion Tech Group. Big data processing, business intelligence, predictive analytics, and data strategy services." />
         <meta property="og:title" content="Data Analytics Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced data analytics solutions for data-driven decision making." />
         <link rel="canonical" href="https://ziontechgroup.com/services/analytics" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
-=======
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-8'
-=======
             className="mb-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
               Data Analytics
             </h1>
-<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Transform raw data into actionable insights that drive business
               growth
-=======
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-indigo-400 bg-clip-text text-transparent mb-6">
@@ -195,11 +156,9 @@ export default function AnalyticsServicesPage() {
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Transform raw data into actionable insights that drive business growth
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Transform raw data into actionable insights that drive business growth
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </motion.div>
 
@@ -207,12 +166,9 @@ export default function AnalyticsServicesPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-12'
-=======
             className="mb-12"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               From big data processing to predictive analytics, we help businesses harness the power 
@@ -220,9 +176,7 @@ export default function AnalyticsServicesPage() {
             </p>
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Data Consultation
-<<<<<<< HEAD
               <ArrowRight className='w-5 h-5' />
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
@@ -232,31 +186,24 @@ export default function AnalyticsServicesPage() {
             <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2 mx-auto">
               Data Consultation
               <ArrowRight className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <ArrowRight className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </button>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-=======
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -264,22 +211,17 @@ export default function AnalyticsServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center'
-=======
                 className="text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-purple-400" />
                 </div>
-<<<<<<< HEAD
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>
-=======
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -287,11 +229,9 @@ export default function AnalyticsServicesPage() {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
@@ -299,29 +239,21 @@ export default function AnalyticsServicesPage() {
       </section>
 
       {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
             <p className="text-xl text-white/70 max-w-3xl mx-auto">
@@ -329,9 +261,7 @@ export default function AnalyticsServicesPage() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-white mb-6">Data Analytics Services</h2>
@@ -341,10 +271,8 @@ export default function AnalyticsServicesPage() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -352,17 +280,13 @@ export default function AnalyticsServicesPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300'
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-2xl font-bold text-white mb-4'>
                   {service.title}
                 </h3>
@@ -374,45 +298,35 @@ export default function AnalyticsServicesPage() {
                       className='flex items-center text-white/80'
                     >
                       <CheckCircle className='w-5 h-5 text-purple-400 mr-3 flex-shrink-0' />
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl p-8 hover:border-purple-500/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-br ${service.color} rounded-2xl flex items-center justify-center mb-6`}>
                   <service.icon className="w-8 h-8 text-white" />
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <h3 className="text-2xl font-bold text-white mb-4">{service.title}</h3>
                 <p className="text-white/70 mb-6">{service.description}</p>
                 <ul className="space-y-3 mb-6">
                   {service.features.map((feature) => (
                     <li key={feature} className="flex items-center text-white/80">
                       <CheckCircle className="w-5 h-5 text-purple-400 mr-3 flex-shrink-0" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       {feature}
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div className='flex items-center justify-between'>
                   <span className='text-2xl font-bold text-purple-400'>
                     {service.price}
                   </span>
                   <button className='px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105'>
-=======
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex items-center justify-between">
                   <span className="text-2xl font-bold text-purple-400">{service.price}</span>
                   <button className="px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-white transition-all duration-300 transform hover:scale-105">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     Get Started
                   </button>
                 </div>
@@ -423,30 +337,22 @@ export default function AnalyticsServicesPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className='text-4xl font-bold text-white mb-6'>
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Unlock Your Data's Potential?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -456,9 +362,7 @@ export default function AnalyticsServicesPage() {
               <button className="px-8 py-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Data Assessment
               </button>
-<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Unlock Your Data's Potential?
             </h2>
@@ -470,10 +374,8 @@ export default function AnalyticsServicesPage() {
                 Data Assessment
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 View Demos
               </button>
             </div>
@@ -483,9 +385,7 @@ export default function AnalyticsServicesPage() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+  ),
 
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) ) 
 }</div> </div> </section> <motion.div initial= {
@@ -505,11 +405,8 @@ export default function AnalyticsServicesPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your Data's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

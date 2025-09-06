@@ -16,8 +16,7 @@ export interface AIFuturisticService {
   integrations: string[], useCases: string[],
   roi: string, competitors: string[],
   marketSize: string, growthRate: string,
-  variant:
-  'default' |
+  variant: 'default' |
   'holographic' |
   'quantum' |
   'cyberpunk' |
@@ -38,7 +37,7 @@ export interface AIFuturisticService {
   'ai-futuristic' |
   'quantum-entanglement' |
   'holographic-matrix' |
-  'neural-quantum-cyberpunk';
+  'neural-quantum-cyberpunk',
   contactInfo: {
     mobile: string, email: string,
     address: string,
@@ -46,7 +45,7 @@ export interface AIFuturisticService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const aiFuturisticServices: AIFuturisticService[] = [// AI-Powered Quantum Blockchain Analytics
+reviews: number,export const aiFuturisticServices: AIFuturisticService[] = [// AI-Powered Quantum Blockchain Analytics
   {
     id:,
   ai-powered-quantum-blockchain-analytics',

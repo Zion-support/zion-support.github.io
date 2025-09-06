@@ -34,9 +34,4 @@ export const optimizeBundleSize = () => {
   
   return { loadComponent };
 };
-<<<<<<< HEAD
-    link.rel = 'preload';
-    link.href = resource, link.as = resource.endsWith('.css') ? 'style' : 'font';
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

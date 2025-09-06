@@ -1,20 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function QuantumCybersecurityPlatform() {
   return (
     <>
       <Head>
         <title>Quantum Cybersecurity Platform | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Next-gen quantum-resistant cybersecurity solutions for enterprise workloads.'
@@ -23,10 +16,9 @@ export default function QuantumCybersecurityPlatform() {
           rel='canonical'
           href='https://ziontechgroup.com/quantum-cybersecurity-platform'
         />
-=======
         <meta name="description" content="Next-gen quantum-resistant cybersecurity solutions for enterprise workloads." />
         <link rel="canonical" href="https://ziontechgroup.com/quantum-cybersecurity-platform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8 bg-black text-white">
         <div className="max-w-6xl mx-auto space-y-10">
@@ -41,7 +33,6 @@ export default function QuantumCybersecurityPlatform() {
               <div key={f} className="p-6 rounded-2xl bg-black/40 border border-gray-700/60 text-gray-200">{f}</div>
             ))}
           </section>
-<<<<<<< HEAD
           <div className='text-center'>
             <Button
               href='/contact'
@@ -49,7 +40,6 @@ export default function QuantumCybersecurityPlatform() {
             >
               Contact Security Team
             </Button>
-=======
         <meta name="description" content="Next-gen quantum-resistant cybersecurity solutions for enterprise workloads." />
         <link rel="canonical" href="https://ziontechgroup.com/quantum-cybersecurity-platform" />
       </Head>
@@ -68,23 +58,16 @@ export default function QuantumCybersecurityPlatform() {
           </section>
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Contact Security Team</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

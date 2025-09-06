@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect, FormEvent, KeyboardEvent } from 'react';
-import { Button } from "@/components/ui/button";
-import { Send } from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Send} from "lucide-react";
 interface ChatInputProps {
   onSend: (message: string) => void,
   disabled?: boolean
@@ -18,7 +18,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (message.trim() && !disabled) {
-      onSend(message);
+      onSend(message),
       setMessage('')
     }
   };
@@ -27,7 +27,7 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault();
       if (message.trim() && !disabled) {
-        onSend(message);
+        onSend(message),
         setMessage('')
       }
     }

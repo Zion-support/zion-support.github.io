@@ -1,11 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page() {
-=======
 import SEO from '../components/SEO';
 export default function AIHealthcareDiagnosticsPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="AI Healthcare Diagnostics | Zion Tech Group" description="AI-powered medical diagnostics" />
@@ -14,9 +11,7 @@ export default function AIHealthcareDiagnosticsPage() {
         <p className="text-gray-300">Diagnostics and patient care optimization with AI. Details coming soon.</p>
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
 import SEO from '../components/SEO';
 export default function AIHealthcareDiagnosticsPage() {
   return (
@@ -29,8 +24,6 @@ export default function AIHealthcareDiagnosticsPage() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

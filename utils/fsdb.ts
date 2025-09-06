@@ -1,7 +1,7 @@
 // Mock file system database utility
 export function readJson<T>(filePath: string, defaultValue: T): T {
   try {
-    const fs = require('fs');
+    const fs = require('fs'),
     if (fs.existsSync(filePath)) {
       const content = fs.readFileSync(filePath, 'utf8');
       return JSON.parse(content);
@@ -16,7 +16,7 @@ export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fs = require('fs');
     const path = require('path');
-    const dir = path.dirname(filePath);
+    const dir = path.dirname(filePath),
     if (!fs.existsSync(dir)) {
       fs.mkdirSync(dir, { recursive: true });
     }

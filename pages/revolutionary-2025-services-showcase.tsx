@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const filteredServices = allServices.filter (service => {
   const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || const sortedServices = [...filteredServices].sort ( (a, b) => {
   switch (sortBy) {
@@ -36,25 +34,16 @@ case 'customers': return (<> <Head> <title>Revolutionary 2025 Services Showcase 
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight;
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code;
-  Phone, Mail, MapPin, ExternalLink, ChevronDown;
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Filter, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Brain, Rocket, Dna, Globe, Shield, Wifi, Package, Bot, Car, Building2, Monitor, Cpu, Zap, Atom, Database, Cloud, Lock, Code, Phone, Mail, MapPin, ExternalLink, ChevronDown, Award, Target, Zap, as, ZapIcon, Globe, as, GlobeIcon} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-b76c
 
 // Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+import {revolutionary2025Services} from '../data/revolutionary-2025-innovative-services';
+import {revolutionary2025ITServices} from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
 
 const contactInfo = {
@@ -157,26 +146,16 @@ const serviceCategories = [
   }
 ];
 
-<<<<<<< HEAD
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of companies already leveraging our revolutionary services to achieve unprecedented growth and innovation. </p> Call Now → </Link> </div> Send Email → </Link> </div> Get Directions → </Link> </div> </div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <Link href="/contact" > <button className="bg-gradient-to-r from-purple-500 to-blue-600 hover:from-purple-600 hover:to-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105" > Start Your Transformation </button> </Link> 
-=======
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Search, Filter, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight;
-  Brain, Rocket, Dna, Globe, Shield, Wifi, 
-  Package, Bot, Car, Building2, Monitor, Cpu, 
-  Zap, Atom, Database, Cloud, Lock, Code;
-  Phone, Mail, MapPin, ExternalLink, ChevronDown;
-  Award, Target, Zap as ZapIcon, Globe as GlobeIcon
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Filter, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Brain, Rocket, Dna, Globe, Shield, Wifi, Package, Bot, Car, Building2, Monitor, Cpu, Zap, Atom, Database, Cloud, Lock, Code, Phone, Mail, MapPin, ExternalLink, ChevronDown, Award, Target, Zap, as, ZapIcon, Globe, as, GlobeIcon} from 'lucide-react';
 
 // Import the new revolutionary services
-import { revolutionary2025Services } from '../data/revolutionary-2025-innovative-services';
-import { revolutionary2025ITServices } from '../data/revolutionary-2025-it-infrastructure';
+import {revolutionary2025Services} from '../data/revolutionary-2025-innovative-services';
+import {revolutionary2025ITServices} from '../data/revolutionary-2025-it-infrastructure';
 const allServices = [...revolutionary2025Services, ...revolutionary2025ITServices];
 
 const contactInfo = {
@@ -279,8 +258,7 @@ const serviceCategories = [
   }
 ];
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Revolutionary2025ServicesShowcase() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -761,9 +739,6 @@ export default function Revolutionary2025ServicesShowcase() {
       </div>
     </>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

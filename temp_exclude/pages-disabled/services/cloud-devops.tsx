@@ -1,23 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Cloud, 
-  Server, 
-  Database, 
-  Shield, 
-  Zap, 
-  ArrowRight, 
-  CheckCircle,
-  Code,
-  GitBranch,
-  Container,
-  Monitor,
-  Settings,
-  Users,
-  Clock,
-  Award
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Cloud,, Server,, Database,, Shield,, Zap,, ArrowRight,, CheckCircle,, Code,, GitBranch,, Container,, Monitor,, Settings,, Users,, Clock,, Award} from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const services = [
@@ -397,7 +381,7 @@ export default function CloudDevOpsPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Infrastructure?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -417,5 +401,5 @@ export default function CloudDevOpsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

@@ -49,7 +49,7 @@ export interface MarketResearchResponse {
       
     trends?: MarketTrend[];
     competitors?: CompetitorAnalysis[];
-    segments?: MarketSegment[];
+    segments?: MarketSegment[],
     report?: MarketReport
   
     },
@@ -62,7 +62,7 @@ export class AIMarketResearchService {
   private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 

@@ -1,13 +1,13 @@
 
-import { useState } from 'react';
-import { useMessaging } from '@/context/MessagingContext';
-import { MainNavigation } from './MainNavigation';
-import { Logo } from '@/components/header/Logo';
-import { ModeToggle } from '@/components/ModeToggle';
-import { Menu, X } from 'lucide-react';
-import { MobileMenu } from '@/components/header/MobileMenu';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { MobileBottomNav } from '@/components/header/MobileBottomNav';
+import {useState} from 'react';
+import {useMessaging} from '@/context/MessagingContext';
+import {MainNavigation} from './MainNavigation';
+import {Logo} from '@/components/header/Logo';
+import {ModeToggle} from '@/components/ModeToggle';
+import {Menu, X} from 'lucide-react';
+import {MobileMenu} from '@/components/header/MobileMenu';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {MobileBottomNav} from '@/components/header/MobileBottomNav';
 export function AppHeader() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isMobile = useIsMobile();

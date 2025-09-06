@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { Check, X, Star, Zap, Shield, Users, ArrowRight } from 'lucide-react;
+import {motion} from 'framer-motion'
+import {Check,, X,, Star,, Zap,, Shield,, Users,, ArrowRight} from 'lucide-react;
 const plans = []
   {'}
     name: "Starter",
@@ -40,7 +40,7 @@ const plans = []
       "Training sessions"];
     ],
     limitations: []
-      "Limited to 2 custom models"];
+      "Limited to 2 custom models"],
     ],
     popular: true,
     cta: "Most Popular"
@@ -168,9 +168,9 @@ export default function PricingPage() {}
 </div>"
           <div className="max-w-7xl mx-auto">"
 </div>"
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md: grid-cols-3 gap-8">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={index};
                   className={`relative bg-white rounded-2xl shadow-lg overflow-hidden ${`}
                     plan.popular ? 'ring-2 ring-blue-500 scale-105' : '''
@@ -253,9 +253,9 @@ export default function PricingPage() {}
               </p>
             </div>
 "
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6">"
 </div>
-                <motion.div;
+                <motion.div,
                   key={index};
                   className="bg-gray-50 rounded-lg p-6 hover:shadow-lg transition-shadow"
                   whileHover={{ y: -2 }};
@@ -326,7 +326,7 @@ export default function PricingPage() {}
             <p className="text-xl text-blue-100 mb-8">"
 </p>
             </p>"
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">"
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">"
 </div>
               <Link;"
                 href="/contact"
@@ -336,7 +336,7 @@ export default function PricingPage() {}
                 <ArrowRight className="w-4 h-4" />"
 </ArrowRight>
               </Link>
-              <Link;"
+              <Link,"
                 href="/contact"
                 className="inline-flex items-center gap-2 border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors"
               >

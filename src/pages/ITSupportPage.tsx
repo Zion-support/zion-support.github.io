@@ -1,34 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { ServiceLandingTemplate } from '@/components/services/ServiceLandingTemplate';
-import { Phone, ShieldCheck, Clock } from 'lucide-react';
-=======
 import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+import {ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate";
+import {Phone, ShieldCheck, Clock} from 'lucide-react'
 import React from "react";
-import { ServiceLandingTemplate } from "@/components/services/ServiceLandingTemplate";
-import { Phone, ShieldCheck, Clock } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {ServiceLandingTemplate} from "@/components/services/ServiceLandingTemplate";
+import {Phone, ShieldCheck, Clock} from 'lucide-react'
 
 export default function ITSupportPage() {
   const benefits = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      title: '24/7 Assistance',
-      description:
-        'Our experts are available around the clock to keep your systems running.',
-      icon: <Clock className='h-8 w-8' />,
-    },
-=======
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
       icon: <Clock className="h-8 w-8" />},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       title: "Certified Professionals",
       description: "Work with seasoned technicians experienced in modern IT infrastructures.",
@@ -60,8 +42,6 @@ export default function ITSupportPage() {
       ctaLink="/request-quote"
     />
   );
-<<<<<<< HEAD
-=======
       title: "24/7 Assistance",
       description: "Our experts are available around the clock to keep your systems running.",
       icon: <Clock className = "h-8 w-8" />},
@@ -99,7 +79,4 @@ export default function ITSupportPage() {
     />
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

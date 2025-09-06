@@ -1,42 +1,21 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useToast } from '@/hooks/use-toast';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { GradientHeading } from '@/components/GradientHeading';
-import { StepProgress } from '@/components/QuoteRequestForm/StepProgress';
-import { ServiceTypeStep } from '@/components/QuoteRequestForm/ServiceTypeStep';
-import { ProjectDetailsStep } from '@/components/QuoteRequestForm/ProjectDetailsStep';
-import { TimelineStep } from '@/components/QuoteRequestForm/TimelineStep';
-import { BudgetStep } from '@/components/QuoteRequestForm/BudgetStep';
-import { SummaryStep } from '@/components/QuoteRequestForm/SummaryStep';
-import { AutoFillModal } from '@/components/QuoteRequestForm/AutoFillModal';
-import { QuoteFormData } from '@/types/quotes';
-import { Sparkles, Loader2 } from 'lucide-react';
-import { z } from 'zod';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
-import { useToast } from "@/hooks/use-toast";
-import { useRouter } from 'next/router';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { GradientHeading } from "@/components/GradientHeading";
-import { StepProgress } from "@/components/QuoteRequestForm/StepProgress";
-import { ServiceTypeStep } from "@/components/QuoteRequestForm/ServiceTypeStep";
-import { ProjectDetailsStep } from "@/components/QuoteRequestForm/ProjectDetailsStep";
-import { TimelineStep } from "@/components/QuoteRequestForm/TimelineStep";
-import { BudgetStep } from "@/components/QuoteRequestForm/BudgetStep";
-import { SummaryStep } from "@/components/QuoteRequestForm/SummaryStep";
-import { AutoFillModal } from "@/components/QuoteRequestForm/AutoFillModal";
-import { QuoteFormData } from "@/types/quotes";
-import { Sparkles, Loader2 } from 'lucide-react'
-import { z } from "zod";
+import {useState} from "react";
+import {logDebug, logErrorToProduction} from '@/utils/productionLogger';
+import {useToast} from "@/hooks/use-toast";
+import {useRouter} from 'next/router';
+import {Button} from "@/components/ui/button";
+import {Card, CardContent} from "@/components/ui/card";
+import {GradientHeading} from "@/components/GradientHeading";
+import {StepProgress} from "@/components/QuoteRequestForm/StepProgress";
+import {ServiceTypeStep} from "@/components/QuoteRequestForm/ServiceTypeStep";
+import {ProjectDetailsStep} from "@/components/QuoteRequestForm/ProjectDetailsStep";
+import {TimelineStep} from "@/components/QuoteRequestForm/TimelineStep";
+import {BudgetStep} from "@/components/QuoteRequestForm/BudgetStep";
+import {SummaryStep} from "@/components/QuoteRequestForm/SummaryStep";
+import {AutoFillModal} from "@/components/QuoteRequestForm/AutoFillModal";
+import {QuoteFormData} from "@/types/quotes";
+import {Sparkles, Loader2} from 'lucide-react'
+import {z} from "zod";
 export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
 
 const serviceStepSchema = z.object({
@@ -73,7 +52,7 @@ export function QuoteRequestForm() {
   
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       ...data
     }))
   };
@@ -150,7 +129,7 @@ export function QuoteRequestForm() {
   };
 
   const handleAutoFill = async (description: string) => {
-    setAutoFillLoading(true);
+    setAutoFillLoading(true),
     try {
       const res = await fetch("/api/openai/match", {
         method: "POST",
@@ -268,85 +247,5 @@ export function QuoteRequestForm() {
       />
     </div>
   );
-<<<<<<< HEAD
-const [autoFillLoading, setAutoFillLoading] = useState (false);
-const [autoFillOpen, setAutoFillOpen] = useState (false);
-}setCurrentStep ("details");
-break;";
-}case "details" : setCurrentStep ("timeline");
-break;";
-case "timeline" : setCurrentStep ("budget");
-break;";
-case "budget" : setCurrentStep ("summary");
-break;
 
-};";
-case "timeline": setCurrentStep ("details");
-break;";
-case "budget": setCurrentStep ("timeline");
-break;";
-case "summary": setCurrentStep ("budget");
-break;
-
-};
-const handleSubmit = async () => {;
-  setIsSubmitting (true);
-try {";
-  //In a real application,  you would send the data to your backend logDebug ("Submitting form data:", {;
-  data: formData ;
-});
-}finally {;
-  setIsSubmitting (false) ;
-
-};
-const handleAutoFill = async (description: string) => {;
-  setAutoFillLoading (true);
-try {;
-  updateFormData ({;
-  projectDescription: description;
-serviceType: category;
-serviceCategory: category;
-specificItem: itemId ? {";
-  id: itemId,  title: "AI Selected Item", category ;
-}: formData.specificItem;
-timeline: timeline || formData.timeline;
-}finally {;
-  setAutoFillLoading (false) ;
-
-};
-const renderStepContent = () => {;
-  switch (currentStep) {;
-  default: return null;
-
-};";
-<GradientHeading>Request a Quote</GradientHeading> <p className="text-zion-slate-light mt-4" > Tell us about your project and we'll create a customized quote for you </p> <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20" > <Sparkles className="h-4 w-4 text-zion-cyan mr-1" /> <span className="text-sm text-white" >AI-powered matching</span> </div> <Button) ";
-}Auto Fill with AI </Button> </div> <Button variant="outline" onClick={;
-  handleBack ";
-}className="border-zion-purple text-zion-cyan hover:bg-zion-purple/10" > Back </Button>) ;
-}<Button onClick={;
-  handleNext ";
-}className="ml-auto bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > Continue </Button>) : (<Button </Button>) ;
-}</div> </CardContent> </Card> </div> <AutoFillModal open= {;
-  autoFillOpen ;
-}onOpenChange= {;
-  setAutoFillOpen ;
-}onSubmit= {;
-  handleAutoFill ;
-}loading= {;
-  autoFillLoading ;
-}/> </div>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-
-  
-  const updateFormData = (data: Partial<QuoteFormData>) => {
-    setFormData(prev => ({
-      ...prev;
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

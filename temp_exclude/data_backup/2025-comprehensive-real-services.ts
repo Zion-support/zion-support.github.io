@@ -18,7 +18,7 @@ export interface ComprehensiveService {
   setupTime: string, competitors: string[],
   roi: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const comprehensiveRealServices: ComprehensiveService[] = [// AI & Machine Learning Services
+reviews: number,export const comprehensiveRealServices: ComprehensiveService[] = [// AI & Machine Learning Services
   {
     id:,
   ai-content-factory-pro',

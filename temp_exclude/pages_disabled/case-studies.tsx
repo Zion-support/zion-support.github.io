@@ -1,26 +1,8 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  ArrowRight, 
-  ExternalLink, 
-  Calendar, 
-  User, 
-  Building,
-  TrendingUp,
-  CheckCircle,
-  Users,
-  Building,
-  TrendingUp,
-  Award,
-  Clock,
-  Target,
-  Zap,
-  Shield,
-  Cloud,
-  Brain
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight,, ExternalLink,, Calendar,, User,, Building,, TrendingUp,, CheckCircle,, Users,, Building,, TrendingUp,, Award,, Clock,, Target,, Zap,, Shield,, Cloud,, Brain} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const caseStudies = [
@@ -611,14 +593,14 @@ export default function CaseStudiesPage() {
 
                       <Link
                         href={`/case-studies/${caseStudy.id}`}
-                        className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium group-hover:translate-x-1 transition-transform"
+                        className="inline-flex items-center text-blue-600 hover: text-blue-800 font-medium group-hover:translate-x-1 transition-transform"
                       >
                         Read Full Case Study
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
                   </motion.div>
-                );
+                ),
               })}
             </div>
 
@@ -643,7 +625,7 @@ export default function CaseStudiesPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Write Your Success Story?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -668,5 +650,5 @@ export default function CaseStudiesPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Performance monitoring utility
-export class PerformanceMonitor {
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
 
 class PerformanceMonitor {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   constructor() {
     this.metrics = {
       bundleSize: 0,
@@ -35,9 +29,6 @@ class PerformanceMonitor {
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
 
-<<<<<<< HEAD
-export const performanceMonitor = new PerformanceMonitor();
-=======
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -69,8 +60,6 @@ class PerformanceMonitor {
     this.metrics.memoryUsage = usage.heapUsed / 1024 / 1024; // MB
   }
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   generateReport() {
     const report = {
       timestamp: this.metrics.timestamp,
@@ -97,7 +86,3 @@ const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), 'performance-report.json');
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
 console.log('Performance report generated:', reportPath);
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
-import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+import {ensureDisputeUploadDir, getDisputeById, upsertDispute} from '../../../../utils/fsdb';
+import {parseUserFromRequest, ensureInvolvedOrAdmin} from '../../../../utils/auth';
 export const config = {
   api: { bodyParser: { sizeLimit: '20mb' } }};
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -17,7 +17,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
     }
 
-    const { files } = req.body || {} as { files: { fileName: string; mimeType: string, base64: string }[] };
+    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] };
     if (!Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files provided' });
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
@@ -46,10 +46,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 }
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
-  const fs = await import('fs');
+  const fs = await import('fs'),
   await new Promise<void>((resolve, reject) => {
     fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
-      if (err) return reject(err);
+      if (err) return reject(err),
       fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
     })
   })

@@ -1,13 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -15,13 +12,11 @@ export default function ITServices() {
   
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
-<<<<<<< HEAD
     return () => clearTimeout(timer);
-=======
 import Link from 'next/link';
 import Head from 'next/head';
-import { useState, useEffect } from 'react';
-import { ContactInfo } from '../types';
+import {useState, useEffect} from 'react';
+import {ContactInfo} from '../types';
 import ErrorBoundary from '../components/ErrorBoundary';
 export default function ITServices() {
   const [isLoaded, setIsLoaded] = useState(false);
@@ -30,25 +25,18 @@ export default function ITServices() {
   useEffect(() => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return () => clearTimeout(timer)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const contact: ContactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     site: 'https://ziontechgroup.com',
-=======
     site: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     site: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const categories = [
@@ -58,28 +46,20 @@ export default function ITServices() {
     { id: 'devops', name: 'DevOps & Automation', count: 15 },
     { id: 'blockchain', name: 'Blockchain & Web3', count: 15 },
     { id: 'quantum', name: 'Quantum Computing', count: 10 },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 },
-=======
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'enterprise', name: 'Enterprise Solutions', count: 15 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const services = [
     {
       id: 1,
       name: 'Quantum Computing Consulting',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
-=======
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
       price: 'Custom Pricing',
@@ -216,11 +196,9 @@ export default function ITServices() {
       <ErrorBoundary level="page">
         <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
           {/* Hero Section */}
-<<<<<<< HEAD
           <section className='py-20 px-4 text-center' role='banner'>
             <div className='max-w-4xl mx-auto'>
               <h1
-=======
       description: 'Expert guidance on quantum computing implementation and optimization for enterprise applications.',
       category: 'quantum',
       features: ['Quantum Algorithm DesignHardware SelectionPerformance OptimizationSecurity Implementation'],
@@ -361,18 +339,14 @@ export default function ITServices() {
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-20 px-4 text-center" role="banner">
             <div className="max-w-4xl mx-auto">
               <h1 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 className={`text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
                 IT Services
               </h1>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <p
                 className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
               >
@@ -385,45 +359,33 @@ export default function ITServices() {
                 From cloud infrastructure to quantum computing, we provide
                 cutting-edge technology solutions that scale with your business
                 and drive innovation.
-=======
               <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 100+ Comprehensive IT Solutions
               </p>
-=======
               <p className={`text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 100+ Comprehensive IT Solutions
               </p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <p className={`text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
                 Transform your business with our enterprise-grade IT services. From cloud infrastructure 
                 to quantum computing, we provide cutting-edge technology solutions that scale with your 
                 business and drive innovation.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </div>
           </section>
 
           {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-8 px-4'>
             <div className='max-w-6xl mx-auto'>
               <div className='flex flex-wrap justify-center gap-4 mb-8'>
                 {categories.map(category => (
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <section className="py-8 px-4">
             <div className="max-w-6xl mx-auto">
               <div className="flex flex-wrap justify-center gap-4 mb-8">
                 {categories.map((category) => (
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     key={category.id}
                     onClick={() => setSelectedCategory(category.id)}
@@ -441,38 +403,30 @@ export default function ITServices() {
           </section>
 
           {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-16 px-4' role='main'>
             <div className='max-w-7xl mx-auto'>
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8'>
                 {filteredServices.map((service, index) => (
                   <div
-=======
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <div 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-16 px-4" role="main">
             <div className="max-w-7xl mx-auto">
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {filteredServices.map((service, index) => (
                   <div 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     key={service.id}
                     className={`p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 ${isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
                     style={{ transitionDelay: `${index * 100}ms` }}
                   >
                     {service.popular && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full'>
-=======
                       <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         Popular
                       </div>
                     )}
@@ -484,10 +438,8 @@ export default function ITServices() {
                       <h4 className="text-sm font-semibold text-green-400 mb-2">Key Features:</h4>
                       <ul className="text-slate-400 text-sm space-y-1">
                         {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                           <li key={featureIndex} className='flex items-center'>
                             <span className='w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0'></span>
-=======
                       <div className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold px-2 py-1 rounded-full">
                         Popular
                       </div>
@@ -502,19 +454,15 @@ export default function ITServices() {
                         {service.features.map((feature, featureIndex) => (
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <li key={featureIndex} className="flex items-center">
                             <span className="w-1.5 h-1.5 bg-green-400 rounded-full mr-2 flex-shrink-0"></span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             {feature}
                           </li>
                         ))}
                       </ul>
                     </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='mb-4'>
                       <h4 className='text-sm font-semibold text-blue-400 mb-2'>
                         Benefits:
@@ -525,27 +473,22 @@ export default function ITServices() {
                             key={benefitIndex}
                             className='text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded'
                           >
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
                       <div className="flex flex-wrap gap-1">
                         {service.benefits.map((benefit, benefitIndex) => (
                           <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="mb-4">
                       <h4 className="text-sm font-semibold text-blue-400 mb-2">Benefits:</h4>
                       <div className="flex flex-wrap gap-1">
                         {service.benefits.map((benefit, benefitIndex) => (
                           <span key={benefitIndex} className="text-xs bg-slate-800 text-slate-300 px-2 py-1 rounded">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             {benefit}
                           </span>
                         ))}
                       </div>
                     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                     <div className='flex items-center justify-between mb-4'>
                       <span className='text-2xl font-bold text-green-400'>
@@ -557,7 +500,6 @@ export default function ITServices() {
                     </div>
 
                     <button className='w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'>
-=======
                     
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -565,8 +507,6 @@ export default function ITServices() {
                     </div>
                     
                     <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     
                     <div className="flex items-center justify-between mb-4">
                       <span className="text-2xl font-bold text-green-400">{service.price}</span>
@@ -574,7 +514,7 @@ export default function ITServices() {
                     </div>
                     
                     <button className="w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       Learn More
                     </button>
                   </div>
@@ -584,16 +524,13 @@ export default function ITServices() {
           </section>
 
           {/* Technology Stack Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-16 px-4 bg-slate-900/40'>
             <div className='max-w-6xl mx-auto'>
               <h2 className='text-3xl md:text-4xl font-bold text-center mb-12'>
-=======
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Our Technology Stack
               </h2>
               
@@ -635,12 +572,10 @@ export default function ITServices() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
                     </svg>
                   </div>
-<<<<<<< HEAD
                   <h3 className='text-xl font-bold mb-2'>Blockchain</h3>
                   <p className='text-slate-400'>
                     Smart contracts and decentralized applications
                   </p>
-=======
           <section className="py-16 px-4 bg-slate-900/40">
             <div className="max-w-6xl mx-auto">
               <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
@@ -687,27 +622,22 @@ export default function ITServices() {
                   </div>
                   <h3 className="text-xl font-bold mb-2">Blockchain</h3>
                   <p className="text-slate-400">Smart contracts and decentralized applications</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <h3 className="text-xl font-bold mb-2">Blockchain</h3>
                   <p className="text-slate-400">Smart contracts and decentralized applications</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </div>
           </section>
 
           {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-16 px-4'>
             <div className='max-w-4xl mx-auto text-center'>
               <h2 className='text-3xl md:text-4xl font-bold mb-8'>
-=======
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your IT Infrastructure?
               </h2>
               <p className="text-lg text-slate-300 mb-8">
@@ -728,11 +658,9 @@ export default function ITServices() {
                 >
                   Call {contact.phone}
                 </a>
-<<<<<<< HEAD
                 <a
                   href={`mailto:${contact.email}`}
                   className='px-8 py-3 bg-slate-800 hover:bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors'
-=======
           <section className="py-16 px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl md:text-4xl font-bold mb-8">
@@ -759,18 +687,14 @@ export default function ITServices() {
                 <a 
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <a 
                   href={`mailto:${contact.email}`} 
                   className="px-8 py-3 bg-slate-800 hover: bg-slate-700 border border-white/10 rounded-lg font-semibold transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   Email Us
                 </a>
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </motion.div>
           </div>
         </section>
@@ -884,7 +808,7 @@ export default function ITServices() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Enhance Your IT Infrastructure?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -910,21 +834,16 @@ export default function ITServices() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 
-=======
             </div>
-=======
             </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </section>
         </main>
       </ErrorBoundary>
     </>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

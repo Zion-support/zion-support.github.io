@@ -1,28 +1,23 @@
 import useSWR from 'swr';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-const fetcher = (url: string) => fetch(url).then(r => r.json());
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
 
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
   if (error) return <div className='text-red-600'>Failed to load</div>;
-=======
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
   if (error) return <div className="text-red-600">Failed to load</div>;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 const fetcher = (url: string) => fetch(url).then((r) => r.json()),
 export default function ClientDashboard() {
   const { data, error, mutate } = useSWR('/api/jobs', fetcher);
 
   if (error) return <div className="text-red-600">Failed to load</div>;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   if (!data) return <div>Loading…</div>;
 
   const jobs = data.jobs as any[];
@@ -31,15 +26,12 @@ export default function ClientDashboard() {
     await fetch(`/api/jobs/${id}`, {
       method: 'PATCH',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
       body: JSON.stringify({ status: 'Closed' }),
     });
     mutate();
-=======
       body: JSON.stringify({ status: 'Closed' })}),
     mutate()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
@@ -59,14 +51,12 @@ export default function ClientDashboard() {
                 {job.requiredSkills?.length > 0 && (
                   <div className="mt-2 flex flex-wrap gap-2">
                     {job.requiredSkills.map((s: string) => (
-<<<<<<< HEAD
                       <span
                         key={s}
                         className='px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800'
                       >
                         {s}
                       </span>
-=======
       body: JSON.stringify({ status: 'Closed' })}),
     mutate()
   }
@@ -89,16 +79,12 @@ export default function ClientDashboard() {
                   <div className="mt-2 flex flex-wrap gap-2">
                     {job.requiredSkills.map((s: string) => (
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <span key={s} className="px-2 py-0.5 text-xs rounded bg-gray-100 dark:bg-gray-800">{s}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     ))}
                   </div>
                 )}
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='flex gap-2'>
                 <Link href={`/client/jobs/${job.id}/applicants`}>
                   <a className='px-2 py-1 text-sm border rounded'>
@@ -114,31 +100,21 @@ export default function ClientDashboard() {
                 >
                   Close Job
                 </button>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <div className="flex gap-2">
                 <Link href={`/client/jobs/${job.id}/applicants`}><a className="px-2 py-1 text-sm border rounded">View Applicants</a></Link>
                 <Link href={`/client/jobs/${job.id}/edit`}><a className="px-2 py-1 text-sm border rounded">Edit Job</a></Link>
                 <button className="px-2 py-1 text-sm border rounded" onClick={() => closeJob(job.id)}>Close Job</button>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

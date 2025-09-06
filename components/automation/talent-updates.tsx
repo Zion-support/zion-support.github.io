@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- </div>) ) 
-}</div> </div>) 
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import fs from 'fs';
 import path from 'path';
-import { TALENT_PROFILES } from '../../data/talent';
+import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string },
 export async function getServerSideProps() {
   const file = path.join(process.cwd(), 'datatalent_ai.json');
   let generatedAt = '';
-<<<<<<< HEAD
-  let summaries: TalentSummary[] = [];
-=======
   let summaries: TalentSummary[] = [],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   try {
     const raw = fs.readFileSync(file, 'utf-8');
     const json = JSON.parse(raw);
@@ -43,9 +32,4 @@ export default function TalentUpdatesPage({ generatedAt, summaries }: { generate
       </div>
     </div>
   );
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

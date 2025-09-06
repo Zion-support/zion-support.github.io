@@ -68,7 +68,7 @@ export default function AIAutonomousBusinessOperations() {
 					<div className="text-center">
 						<a 
 							href="/contact" 
-							className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
+							className="inline-block px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 text-white font-semibold rounded-lg transition-all duration-300"
 						>
 							Get Started
 						</a>
@@ -76,5 +76,5 @@ export default function AIAutonomousBusinessOperations() {
 				</div>
 			</div>
 		</UltraFuturisticBackground>
-	);
+	),
 }

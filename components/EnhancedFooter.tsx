@@ -1,26 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Brain,
-  Mail,
-  Phone,
-  MapPin,
-  Globe,
-  Github,
-  Linkedin,
-  Twitter,;
-} from 'lucide-react';
-=======
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter} from 'lucide-react';
+import {Brain, Mail, Phone, MapPin, Globe, Github, Linkedin, Twitter} from 'lucide-react';
 
 const EnhancedFooter: React.FC = () => {
-  const currentYear = new Date().getFullYear();
+  const currentYear = new Date().getFullYear(),
 
   const footerSections = [
     {
@@ -30,24 +14,12 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
         { name: 'Edge Computing', href: '/edge-computing-orchestration' },
         { name: 'Space Technology', href: '/space-technology' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-        {
-          name: 'View All Services',
-          href: '/comprehensive-2025-services-showcase',
-        },
-      ],
-    },
-=======
         { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
       ]
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         { name: 'View All Services', href: '/comprehensive-2025-services-showcase' }
       ]
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       title: 'Company',
       links: [
@@ -55,21 +27,12 @@ const EnhancedFooter: React.FC = () => {
         { name: 'Our Work', href: '/portfolio' },
         { name: 'Blog & Insights', href: '/blog' },
         { name: 'Careers', href: '/careers' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-        { name: 'Contact', href: '/contact' },
-      ],
-    },
-=======
         { name: 'Contact', href: '/contact' }
       ]
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         { name: 'Contact', href: '/contact' }
       ]
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     {
       title: 'Resources',
       links: [
@@ -77,41 +40,18 @@ const EnhancedFooter: React.FC = () => {
         { name: 'API Reference', href: '/api' },
         { name: 'Support Center', href: '/support' },
         { name: 'Privacy Policy', href: '/privacy' },
-<<<<<<< HEAD
-<<<<<<< HEAD
-        { name: 'Terms of Service', href: '/terms' },
-      ],
-    },
-=======
         { name: 'Terms of Service', href: '/terms' }
       ]
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         { name: 'Terms of Service', href: '/terms' }
       ]
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const socialLinks = [
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
-<<<<<<< HEAD
-<<<<<<< HEAD
-    {
-      name: 'LinkedIn',
-      href: 'https://linkedin.com/company/ziontechgroup',
-      icon: Linkedin,
-    },
-    {
-      name: 'Twitter',
-      href: 'https://twitter.com/ziontechgroup',
-      icon: Twitter,
-    },
-=======
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
@@ -148,10 +88,6 @@ const EnhancedFooter: React.FC = () => {
                   +1 (302) 464-0950
                 </a>
               </div>
-<<<<<<< HEAD
-              <div className='flex items-center space-x-3 text-white/70'>
-                <MapPin className='w-4 h-4' />
-=======
     { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
     { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
   ];
@@ -192,23 +128,15 @@ const EnhancedFooter: React.FC = () => {
               </div>
               <div className="flex items-center space-x-3 text-white/70">
                 <MapPin className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex items-center space-x-3 text-white/70">
                 <MapPin className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <span>Global Operations</span>
               </div>
             </div>
           </div>
 
           {/* Footer Sections */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-          {footerSections.map(section => (
-=======
           {footerSections.map((section) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
               <ul className="space-y-2">
@@ -216,9 +144,6 @@ const EnhancedFooter: React.FC = () => {
                   <li key={link.name}>
                     <Link
                       href={link.href}
-<<<<<<< HEAD
-                      className='text-white/70 hover:text-white transition-colors duration-200'
-=======
           {footerSections.map((section) => (
             <div key={section.title}>
               <h3 className="text-white font-semibold mb-4">{section.title}</h3>
@@ -228,10 +153,7 @@ const EnhancedFooter: React.FC = () => {
                     <Link
                       href={link.href}
                       className="text-white/70 hover: text-white transition-colors duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       className="text-white/70 hover: text-white transition-colors duration-200"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     >
                       {link.name}
                     </Link>
@@ -243,36 +165,20 @@ const EnhancedFooter: React.FC = () => {
         </div>
 
         {/* Bottom Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <div className='pt-8 border-t border-white/10'>
-          <div className='flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0'>
-            {/* Copyright */}
-            <div className='text-white/60 text-sm'>
-=======
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-white/60 text-sm">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             {/* Copyright */}
             <div className="text-white/60 text-sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               © {currentYear} Zion Tech Group. All rights reserved.
             </div>
 
             {/* Social Links */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='flex items-center space-x-4'>
-              {socialLinks.map(social => (
-=======
             <div className="flex items-center space-x-4">
               {socialLinks.map((social) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <a
                   key={social.name}
                   href={social.href}
@@ -281,9 +187,6 @@ const EnhancedFooter: React.FC = () => {
                   className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center text-white/70 hover:text-white transition-all duration-200"
                   aria-label={social.name}
                 >
-<<<<<<< HEAD
-                  <social.icon className='w-5 h-5' />
-=======
             <div className="flex items-center space-x-4">
               {socialLinks.map((social) => (
                 <a
@@ -295,10 +198,7 @@ const EnhancedFooter: React.FC = () => {
                   aria-label={social.name}
                 >
                   <social.icon className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <social.icon className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </a>
               ))}
             </div>
@@ -306,18 +206,10 @@ const EnhancedFooter: React.FC = () => {
         </div>
       </div>
     </footer>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-=======
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default EnhancedFooter;

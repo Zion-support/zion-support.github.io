@@ -35,7 +35,7 @@ class UrlShortenerService {
   private clicks: Map<string, ClickEvent[]> = new Map();
 
   async createShortUrl(request: CreateShortUrlRequest): Promise<ShortUrl> {
-    const shortCode = request.customCode || this.generateShortCode();
+    const shortCode = request.customCode || this.generateShortCode(),
     
     if (this.urls.has(shortCode)) {
       throw new Error('Short code already exists')
@@ -68,7 +68,7 @@ class UrlShortenerService {
     if (!url || !url.isActive) return null;
     
     if (url.expiresAt && url.expiresAt < new Date()) {
-      url.isActive = false;
+      url.isActive = false,
       return null
     }
 
@@ -155,7 +155,7 @@ class UrlShortenerService {
 
   async importData(data: any): Promise<void> {
     this.urls = new Map(data.urls);
-    this.analytics = new Map(data.analytics);
+    this.analytics = new Map(data.analytics),
     this.clicks = new Map(data.clicks)
   }
 }

@@ -1,24 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { TUTORIALS } from '@/data/tutorials';
-import { SEO } from '@/components/SEO';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react';
-import ReactMarkdown from 'react-markdown';
-import type { Tutorial as TutorialType } from '@/types/tutorial';
-
-=======
 import Link from "next/link";
-import { useRouter } from "next/router";
-import { TUTORIALS } from "@/data/tutorials";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { ArrowLeft } from 'lucide-react'
+import {useRouter} from "next/router";
+import {TUTORIALS} from "@/data/tutorials";
+import {SEO} from "@/components/SEO";
+import {Button} from "@/components/ui/button";
+import {ArrowLeft} from 'lucide-react'
 import ReactMarkdown from "react-markdown";
 import type { Tutorial as TutorialType } from "@/types/tutorial";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface TutorialPageProps {
   tutorial?: TutorialType
 }
@@ -63,13 +50,5 @@ export default function Tutorial({ tutorial: initialTutorial }: TutorialPageProp
       </div>
     </>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  const slug = router.query.slug as string | undefined;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

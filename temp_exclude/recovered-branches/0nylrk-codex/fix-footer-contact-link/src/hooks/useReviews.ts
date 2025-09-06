@@ -1,9 +1,9 @@
 
-import { useState } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { Review, ReviewReport } from "@/types/reviews";
-import { toast } from "@/hooks/use-toast";
+import {useState} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Review,, ReviewReport} from "@/types/reviews";
+import {toast} from "@/hooks/use-toast";
 export function useReviews(projectId?: string) {
   const { user } = useAuth();
   const [isLoading, setIsLoading] = useState(false);
@@ -15,7 +15,7 @@ export function useReviews(projectId?: string) {
   const fetchProjectReviews = async (projectId: string) => {
     if (!projectId) return;
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data, error } = await supabase
@@ -59,7 +59,7 @@ export function useReviews(projectId?: string) {
   const fetchUserReviews = async (userId: string) => {
     if (!userId) return;
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const { data, error } = await supabase
@@ -145,7 +145,7 @@ export function useReviews(projectId?: string) {
   const updateReview = async (reviewId: string, updates: Partial<Review>) => {
     if (!user) return false;
     
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     
     try {
       const { error } = await supabase
@@ -179,7 +179,7 @@ export function useReviews(projectId?: string) {
   
   // Report a review
   const reportReview = async (reviewId: string, reason: string) => {
-    if (!user) return false;
+    if (!user) return false,
     
     try {
       const { error } = await supabase

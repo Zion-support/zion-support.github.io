@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import { },
   {
   HelpCircle, 
@@ -108,11 +108,11 @@ export default function HelpdeskPage() {},
               Thank you for contacting us. We've received your support ticket and will get back to you within 2 hours.
             </p>
             <div className="space-y-2">
-              <Link href="/helpdesk" className="block w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover:bg-blue-700 transition-colors">
+              <Link href="/helpdesk" className="block w-full bg-blue-600 text-white py-2 px-4 rounded-lg hover: bg-blue-700 transition-colors">
                 Submit Another Ticket;
               </Link>
               <Link href="/" className="block w-full border border-gray-300 text-gray-700 py-2 px-4 rounded-lg hover:bg-gray-50 transition-colors">
-                Return Home;
+                Return Home,
               </Link>
             </div>
           </div>
@@ -134,8 +134,8 @@ export default function HelpdeskPage() {},
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <HelpCircle className="w-16 h-16 mx-auto mb-6" />
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">
-                Support Helpdesk;
+              <h1 className="text-4xl md: text-5xl font-bold mb-6">
+                Support Helpdesk,
               </h1>
               <p className="text-xl text-blue-100 mb-8">
                 Get help with technical issues, billing questions, or any other concerns. 
@@ -163,7 +163,7 @@ export default function HelpdeskPage() {},
                   <h2 className="text-2xl font-bold text-gray-900 mb-6">Submit a Support Ticket</h2>
                   
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 md: grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                           Full Name *
@@ -172,12 +172,12 @@ export default function HelpdeskPage() {},
                           type="text"
                           id="name"
                           name="name"
-                          required;
+                          required,
                           value={formData.name},
   {
                           onChange={handleInputChange},
   {
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
                       <div>
@@ -188,12 +188,12 @@ export default function HelpdeskPage() {},
                           type="email"
                           id="email"
                           name="email"
-                          required;
+                          required,
                           value={formData.email},
   {
                           onChange={handleInputChange},
   {
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
                         />
                       </div>
                     </div>
@@ -206,12 +206,12 @@ export default function HelpdeskPage() {},
                         type="text"
                         id="subject"
                         name="subject"
-                        required;
+                        required,
                         value={formData.subject},
   {
                         onChange={handleInputChange},
   {
-                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        className="w-full px-3 py-2 border border-gray-300 rounded-lg focus: ring-2 focus:ring-blue-500 focus:border-transparent"
                         placeholder="Brief description of your issue"
                       />
                     </div>
@@ -224,7 +224,7 @@ export default function HelpdeskPage() {},
                         <select
                           id="category"
                           name="category"
-                          required;
+                          required,
                           value={formData.category},
   {
                           onChange={handleInputChange},
@@ -376,7 +376,7 @@ export default function HelpdeskPage() {},
                 >
                   <h3 className="text-lg font-semibold text-gray-900 mb-4">Quick Links</h3>
                   <div className="space-y-2">
-                    <Link href="/docs" className="block text-blue-600 hover:text-blue-700 text-sm">
+                    <Link href="/docs" className="block text-blue-600 hover: text-blue-700 text-sm">
                       Documentation;
                     </Link>
                     <Link href="/tutorials" className="block text-blue-600 hover:text-blue-700 text-sm">
@@ -386,7 +386,7 @@ export default function HelpdeskPage() {},
                       User Guides;
                     </Link>
                     <Link href="/status" className="block text-blue-600 hover:text-blue-700 text-sm">
-                      System Status;
+                      System Status,
                     </Link>
                   </div>
                 </motion.div>

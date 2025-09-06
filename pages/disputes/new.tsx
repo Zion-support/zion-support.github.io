@@ -1,12 +1,9 @@
-import { useRouter } from 'next/router';
+import {useRouter} from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-import { useCurrentUser } from '../../utils/auth';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import {useCurrentUser} from '../../utils/auth';
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
 
@@ -14,7 +11,6 @@ type ReasonType = typeof REASONS[number];
 
 export default function NewDisputePage() {
   const router = useRouter();
-<<<<<<< HEAD
   const {
     projectId: qProjectId,
     entityType,
@@ -22,7 +18,6 @@ export default function NewDisputePage() {
     talentId,
     clientId,
   } = router.query as Record<string, string>;
-=======
 const REASONS = [
   'Scope DisagreementQuality IssuesDelivery DelayPayment IssueCommunication BreakdownOther'] as const;
 
@@ -31,10 +26,8 @@ type ReasonType = typeof REASONS[number];
 export default function NewDisputePage() {
   const router = useRouter();
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const { projectId: qProjectId, entityType, entityId, talentId, clientId } = router.query as Record<string, string>;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const user = useCurrentUser();
 
   const [projectId, setProjectId] = useState(qProjectId || '');
@@ -43,8 +36,6 @@ export default function NewDisputePage() {
   const [description, setDescription] = useState('');
   const [files, setFiles] = useState<File[]>([]);
   const [talentUserId, setTalentUserId] = useState(talentId || '');
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [clientUserId, setClientUserId] = useState(
     clientId || (user.role === 'client' ? user.id : '')
   );
@@ -52,41 +43,31 @@ export default function NewDisputePage() {
 
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId);
-=======
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [clientUserId, setClientUserId] = useState(clientId || (user.role === 'client' ? user.id : ''));
   const [submitting, setSubmitting] = useState(false);
 
   useEffect(() => {
     if (qProjectId) setProjectId(qProjectId)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [qProjectId]);
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (!projectId || !description || !clientUserId || !talentUserId)
       return alert('Please fill required fields');
-=======
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     if (!projectId || !description || !clientUserId || !talentUserId) return alert('Please fill required fields');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-    setSubmitting(true);
+ursor/integrate-build-improve-and-re-verify-b76c
+    setSubmitting(true),
     try {
       const res = await fetch('/api/disputes', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({
           projectId,
           entityType,
@@ -98,56 +79,43 @@ export default function NewDisputePage() {
           description,
         }),
       });
-=======
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })});
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         body: JSON.stringify({ projectId, entityType, entityId, clientUserId, talentUserId, reason, reasonDetails, description })});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       if (!res.ok) throw new Error('Failed to create');
       const { dispute } = await res.json();
 
       if (files.length > 0) {
         const filePayload = await Promise.all(
-<<<<<<< HEAD
-<<<<<<< HEAD
           files.map(async f => ({
             fileName: f.name,
             mimeType: f.type,
             base64: await toBase64(f),
           }))
-=======
           files.map(async (f) => ({
             fileName: f.name,
             mimeType: f.type,
             base64: await toBase64(f)}))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           files.map(async (f) => ({
             fileName: f.name,
             mimeType: f.type,
             base64: await toBase64(f)}))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         );
         await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
           body: JSON.stringify({ files: filePayload }),
         });
-=======
           body: JSON.stringify({ files: filePayload })})
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
 
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`)
     } catch (e: any) {
       alert(e.message || 'Error')
     } finally {
-<<<<<<< HEAD
       setSubmitting(false);
-=======
           body: JSON.stringify({ files: filePayload })})
       }
 
@@ -156,25 +124,20 @@ export default function NewDisputePage() {
       alert(e.message || 'Error')
     } finally {
       setSubmitting(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setSubmitting(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='max-w-2xl mx-auto'>
         <h1 className='text-2xl font-semibold mb-4'>Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className='space-y-4'>
-=======
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <div>
             <label className="block text-sm font-medium">Project ID</label>
             <input value={projectId} onChange={e => setProjectId(e.target.value)} required className="mt-1 w-full border rounded px-3 py-2 bg-white dark:bg-black" />
@@ -207,7 +170,6 @@ export default function NewDisputePage() {
             <label className="block text-sm font-medium">Attachments</label>
             <input type="file" multiple onChange={e => setFiles(Array.from(e.target.files || []))} className="mt-1" />
           </div>
-<<<<<<< HEAD
           <div className='pt-2'>
             <button
               disabled={submitting}
@@ -215,7 +177,6 @@ export default function NewDisputePage() {
             >
               {submitting ? 'Submitting...' : 'Submit Dispute'}
             </button>
-=======
       <div className="max-w-2xl mx-auto">
         <h1 className="text-2xl font-semibold mb-4">Raise a Dispute</h1>
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -253,43 +214,31 @@ export default function NewDisputePage() {
           </div>
           <div className="pt-2">
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="pt-2">
             <button disabled={submitting} className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 disabled:opacity-50">{submitting ? 'Submitting...' : 'Submit Dispute'}</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </form>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
     reader.onload = () => resolve(String(reader.result));
     reader.onerror = reject;
-<<<<<<< HEAD
-<<<<<<< HEAD
     reader.readAsDataURL(file);
   });
-=======
     reader.readAsDataURL(file)
   })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     reader.readAsDataURL(file)
   })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

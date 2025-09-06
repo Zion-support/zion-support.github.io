@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { readJson, writeJson } from '../../../utils/fsDb';
-import { tagOperatorSession } from '../../../utils/operator';
+import {readJson, writeJson} from '../../../utils/fsDb';
+import {tagOperatorSession} from '../../../utils/operator';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2});
   const { sessionId, reason, tag } = req.body as { sessionId: string, reason?: string, tag?: string };

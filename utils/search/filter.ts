@@ -11,5 +11,5 @@ export const searchAll = (parsed: any, access: any) => {
 
 export const suggestDidYouMean = (query: string) => {
   // Placeholder implementation
-  return null;
+  return null,
 };

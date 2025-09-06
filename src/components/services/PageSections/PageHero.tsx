@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from '@/components/GradientHeading';
-import { Clock, Map, DollarSign } from 'lucide-react';
-=======
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from 'lucide-react'
 
 export function PageHero() {
   return (
@@ -37,18 +31,9 @@ export function PageHero() {
           <div className="bg-zion-purple/20 p-3 rounded-full mb-4">
             <DollarSign className="h-8 w-8 text-zion-cyan" />
           </div>
-<<<<<<< HEAD
-          <h3 className='text-xl font-bold text-white mb-2'>
-            Transparent Pricing
-          </h3>
-          <p className='text-zion-slate-light'>
-            Clear per-incident pricing includes transportation and first hour
-            onsite
-          </p>
-=======
 
-import { GradientHeading } from "@/components/GradientHeading";
-import { Clock, Map, DollarSign } from 'lucide-react'
+import {GradientHeading} from "@/components/GradientHeading";
+import {Clock, Map, DollarSign} from 'lucide-react'
 
 export function PageHero() {
   return (
@@ -81,20 +66,11 @@ export function PageHero() {
           </div>
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <h3 className="text-xl font-bold text-white mb-2">Transparent Pricing</h3>
           <p className="text-zion-slate-light">Clear per-incident pricing includes transportation and first hour onsite</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </div>
     </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

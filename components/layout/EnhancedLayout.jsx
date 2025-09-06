@@ -1,11 +1,6 @@
 import React from 'react';
 import EnhancedNavigation from './EnhancedNavigation';
 import EnhancedFooter from './EnhancedFooter';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const EnhancedLayout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -18,9 +13,6 @@ const EnhancedLayout = ({ children }) => {
   );
 },
 
-<<<<<<< HEAD
-export default EnhancedLayout;
-=======
 const EnhancedLayout = ({ children }) => {
   return (
     <div className="min-h-screen flex flex-col">
@@ -34,7 +26,4 @@ const EnhancedLayout = ({ children }) => {
 },
 
 export default EnhancedLayout;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default EnhancedLayout;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

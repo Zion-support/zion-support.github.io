@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
 import Head from 'next/head';
-import { GetStaticPaths, GetStaticProps } from 'next';
+import {GetStaticPaths, GetStaticProps} from 'next';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 
 type Service = typeof enhancedRealMicroSaasServices[number];
 
@@ -16,12 +16,12 @@ export default function ServicePage({ service }: { service: Service }) {
         <div className="text-center text-white">
           <h1 className="text-2xl font-bold mb-4">Service Not Found</h1>
           <p className="text-slate-300 mb-6">The service you're looking for doesn't exist.</p>
-          <Button href="/services" className="bg-blue-600 hover:bg-blue-700">
+          <Button href="/services" className="bg-blue-600 hover: bg-blue-700">
             View All Services
           </Button>
         </div>
       </div>
-    );
+    ),
   }
 
   return (
@@ -112,7 +112,7 @@ export default function ServicePage({ service }: { service: Service }) {
               </Button>
               <Button 
                 href={`mailto:kleber@ziontechgroup.com`}
-                className="bg-blue-600 hover:bg-blue-700 flex items-center gap-2"
+                className="bg-blue-600 hover: bg-blue-700 flex items-center gap-2"
               >
                 <Mail className="w-4 h-4" />
                 Email Us
@@ -122,11 +122,11 @@ export default function ServicePage({ service }: { service: Service }) {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
+  ),
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const services = enhancedRealMicroSaasServices;
+  const services = enhancedRealMicroSaasServices,
   const paths = services.map((service) => ({
     params: { slug: service.id }
   }));

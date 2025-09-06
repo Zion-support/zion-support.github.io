@@ -1,43 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Server, 
-  Shield, 
-  Cloud, 
-  Database, 
-  Network, 
-  Monitor, 
-  Settings, 
-  CheckCircle, 
-  ArrowRight, 
-  Clock, 
-  Award, 
-  Star, 
-  Zap, 
-  TrendingUp, 
-  Users, 
-  Lock, 
-  Globe,
-  Cpu as CpuIcon,
-  HardDrive,
-  Wifi,
-  Smartphone,
-  Laptop,
-  Building,
-  BarChart3,
-  Code,
-  Sprout,
-  Eye,
-  Bot,
-  Search,
-  ShoppingCart,
-  BookOpen,
-  Brain,
-  DollarSign,
-  Rocket
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Server,, Shield,, Cloud,, Database,, Network,, Monitor,, Settings,, CheckCircle,, ArrowRight,, Clock,, Award,, Star,, Zap,, TrendingUp,, Users,, Lock,, Globe,, Cpu, as, CpuIcon,, HardDrive,, Wifi,, Smartphone,, Laptop,, Building,, BarChart3,, Code,, Sprout,, Eye,, Bot,, Search,, ShoppingCart,, BookOpen,, Brain,, DollarSign,, Rocket} from 'lucide-react';
 
 const itServices = [{
     title: 'Cloud Infrastructure Management',

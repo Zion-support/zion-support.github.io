@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
-import { signPayload } from "../../../utils/sync/signature";
+import {readState, writeState, upsertEvent} from "../../../utils/sync/storage";
+import {signPayload} from "../../../utils/sync/signature";
 import axios from "axios";
-import { v4 as uuidv4 } from "uuid";
-import { nextVersionFor } from "../../../utils/sync/versioning";
+import {v4, as, uuidv4} from "uuid";
+import {nextVersionFor} from "../../../utils/sync/versioning";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status($1).json({$2});
   const state = readState();
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const version = nextVersionFor(state, txId);
   const event = {
-    eventId: uuidv4();
+    eventId: uuidv4(),
     type: "token_transfer" as const,
     payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() },
     originInstanceId: state.config.instanceId,

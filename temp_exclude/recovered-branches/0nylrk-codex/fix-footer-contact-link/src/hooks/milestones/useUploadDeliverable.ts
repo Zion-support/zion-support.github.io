@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { useAuth } from '@/hooks/useAuth';
-import { toast } from 'sonner';
-import { useRecordActivity } from './useRecordActivity';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {useAuth} from '@/hooks/useAuth';
+import {toast} from 'sonner';
+import {useRecordActivity} from './useRecordActivity';
 export const useUploadDeliverable = () => {
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,7 +13,7 @@ export const useUploadDeliverable = () => {
     if (!user || !projectId) return null;
     
     try {
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       
       // Get the current milestone
       const { data: milestone, error: fetchError } = await supabase

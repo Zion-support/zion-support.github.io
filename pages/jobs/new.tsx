@@ -1,15 +1,10 @@
-import { useState } from 'react';
+import {useState} from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
-import { useToast } from '../../components/ui/NotificationSystem';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import {useToast} from '../../components/ui/NotificationSystem';
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function NewJobPage() {
   const { notify } = useToast();
   const [loading, setLoading] = useState(false);
@@ -18,15 +13,12 @@ export default function NewJobPage() {
     e.preventDefault();
     setLoading(true);
     setTimeout(() => {
-      setLoading(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
+      setLoading(false),
       notify('Job posted! Invite talent to get responses.', 'success');
     }, 800);
-=======
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -36,7 +28,6 @@ export default function NewJobPage() {
         {loading ? (
           <EnhancedLoading lines={6} />
         ) : (
-<<<<<<< HEAD
           <form onSubmit={onSubmit} className='space-y-3'>
             <input
               className='w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm'
@@ -55,7 +46,6 @@ export default function NewJobPage() {
             <EnhancedButton type='submit' variant='primary'>
               Publish
             </EnhancedButton>
-=======
       notify('Job posted! Invite talent to get responses.success')
     }, 800)
   };
@@ -67,29 +57,20 @@ export default function NewJobPage() {
         {loading ? (
           <EnhancedLoading lines={6} />
         ) : (
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <form onSubmit={onSubmit} className="space-y-3">
             <input className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" placeholder="Job title" required />
             <input className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" placeholder="Location (Remote)" />
             <textarea className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm" rows={5} placeholder="Job description" />
             <EnhancedButton type="submit" variant="primary">Publish</EnhancedButton>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </form>
         )}
       </EnhancedCard>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,10 +1,5 @@
 const path = require('path');
 const { spawnSync } = require('child_process');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
@@ -25,10 +20,6 @@ exports.handler = async () => {
   logStep('routes:generate', () => runNode('automation/routes-map-generator.cjs')),
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
 
-<<<<<<< HEAD
-  return { statusCode: 200, body: logs.join('\n') };
-};
-=======
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
@@ -51,8 +42,5 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return { statusCode: 200, body: logs.join('\n') }
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

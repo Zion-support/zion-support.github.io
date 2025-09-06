@@ -78,7 +78,7 @@ export default function CookiesPage() {
   });
 
   const handleCookieToggle = (type: keyof typeof cookieSettings) => {
-    if (type === 'essential') return; // Essential cookies cannot be disabled
+    if (type === 'essential') return, // Essential cookies cannot be disabled
     setCookieSettings(prev => ({
       ...prev,
       [type]: !prev[type]
@@ -340,7 +340,7 @@ export default function CookiesPage() {
                 If you have any questions about our use of cookies or this policy, 
                 please don't hesitate to contact us.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
@@ -360,9 +360,9 @@ export default function CookiesPage() {
       </div>
     </MainLayout>
 import React from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Cookie, Settings, Shield, Eye, Database, Mail, Phone } from 'lucide-react';
+import Head from 'next/head',
+import {motion} from 'framer-motion';
+import {Cookie,, Settings,, Shield,, Eye,, Database,, Mail,, Phone} from 'lucide-react';
 export default function CookiesPage() {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -588,8 +588,7 @@ export default function CookiesPage() {
                 </h2>
                 <div className="bg-gray-50 rounded-lg p-6">
                   <p className="text-gray-600 mb-4">
-                    If you have any questions about our use of cookies, please contact us:
-                  </p>
+                    If you have any questions about our use of cookies, please contact us: </p>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <Mail className="w-5 h-5 text-blue-600" />
@@ -607,5 +606,5 @@ export default function CookiesPage() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

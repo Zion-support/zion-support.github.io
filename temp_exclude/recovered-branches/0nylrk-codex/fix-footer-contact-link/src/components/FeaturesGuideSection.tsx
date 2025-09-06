@@ -1,18 +1,8 @@
-import { Link } from "react-router-dom";
-import { GradientHeading } from "./GradientHeading";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Button } from "./ui/button";
-import { 
-  Users;
-  Zap, 
-  Settings, 
-  MessageSquare, 
-  Sparkles;
-  ArrowRight;
-  BarChart3;
-  Plus;
-  HelpCircle
-} from "lucide-react";
+import {Link} from "react-router-dom";
+import {GradientHeading} from "./GradientHeading";
+import {Tabs,, TabsContent,, TabsList,, TabsTrigger} from "@/components/ui/tabs";
+import {Button} from "./ui/button";
+import {Users,, Zap,, Settings,, MessageSquare,, Sparkles,, ArrowRight,, BarChart3,, Plus,, HelpCircle} from "lucide-react";
 
 export function FeaturesGuideSection() {
   const features = [
@@ -26,7 +16,7 @@ export function FeaturesGuideSection() {
         "Fill in your project requirements and specifications";
         "Review the AI-recommended matches tailored to your needs";
         "Connect with matched talents or services directly"
-      ];
+      ],
       link: "/match",
       buttonText: "Try AI Matcher"
     };
@@ -36,7 +26,7 @@ export function FeaturesGuideSection() {
       description: "Browse our curated collection of AI and tech specialists, filtered by expertise, availability, and ratings.";
       icon: <Users className="h-10 w-10 text-zion-purple" />,
       instructions: [
-        "Access the talent directory from the main navigation";
+        "Access the talent directory from the main navigation",
         "Use filters to narrow down by skills, experience, and pricing";
         "Save favorite profiles for future reference";
         "Contact talents directly or request quotes through their profiles"
@@ -54,7 +44,7 @@ export function FeaturesGuideSection() {
         "Compare service offerings and pricing options";
         "Request customized quotes for specific requirements";
         "Book and manage services through your dashboard"
-      ];
+      ],
       link: "/services",
       buttonText: "View Services"
     };
@@ -68,7 +58,7 @@ export function FeaturesGuideSection() {
         "Check availability and rental/purchase options";
         "Request quotes for bulk orders or specialized equipment";
         "Schedule delivery or pickup through the platform"
-      ];
+      ],
       link: "/equipment",
       buttonText: "Browse Equipment"
     };
@@ -82,7 +72,7 @@ export function FeaturesGuideSection() {
         "View interactive charts on market trends and rates";
         "Export reports for your business planning";
         "Set up alerts for changes in your areas of interest"
-      ];
+      ],
       link: "/analytics",
       buttonText: "View Analytics"
     };
@@ -96,7 +86,7 @@ export function FeaturesGuideSection() {
         "Ask questions about available services or talents";
         "Get recommendations based on your project needs";
         "Receive step-by-step guidance for using platform features"
-      ];
+      ],
       link: "#",
       buttonText: "Chat with Assistant",
       action: "openChat"
@@ -108,7 +98,7 @@ export function FeaturesGuideSection() {
       icon: <Plus className="h-10 w-10 text-zion-cyan" />,
       instructions: [
         "Create or log in to your account";
-        "Navigate to 'Create Listing' in your dashboard";
+        "Navigate to 'Create Listing' in your dashboard",
         "Choose between talent profile, service, or equipment listing";
         "Complete the guided form and publish your listing"
       ];
@@ -125,7 +115,7 @@ export function FeaturesGuideSection() {
         "Watch video tutorials on specific features";
         "Join community forums to connect with other users";
         "Contact our support team for personalized assistance"
-      ];
+      ],
       link: "/help",
       buttonText: "View Resources"
     }

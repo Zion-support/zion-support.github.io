@@ -1,16 +1,7 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion, AnimatePresence } from 'framer-motion'
-import {
-  ChevronDown, 
-  ChevronUp, 
-  HelpCircle,
-  Search,
-  Filter,
-  MessageCircle,
-  Phone,
-  Mail
-} from 'lucide-react'
+import {motion,, AnimatePresence} from 'framer-motion'
+import {ChevronDown,, ChevronUp,, HelpCircle,, Search,, Filter,, MessageCircle,, Phone,, Mail} from 'lucide-react'
 
 const faqCategories = [
   { id: 'general', name: 'General Questions', count: 15 },

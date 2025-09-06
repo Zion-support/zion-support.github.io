@@ -1,22 +1,17 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-=======
-import { useState } from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useRouter } from 'next/router';
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { useResume } from "@/hooks/useResume";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { AlertCircle, FileText, Loader2 } from 'lucide-react'
-import { formatDistanceToNow } from "date-fns";
-import { Job } from "@/types/jobs";
-import { toast } from "sonner";
+import {useState} from "react";
+import {useRouter} from 'next/router';
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {useResume} from "@/hooks/useResume";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Alert, AlertDescription} from "@/components/ui/alert";
+import {AlertCircle, FileText, Loader2} from 'lucide-react'
+import {formatDistanceToNow} from "date-fns";
+import {Job} from "@/types/jobs";
+import {toast} from "sonner";
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
@@ -38,7 +33,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     e.preventDefault();
     
     if (!user) {
-      toast.error("You must be logged in to apply");
+      toast.error("You must be logged in to apply"),
       router.push(`/login?returnTo=${encodeURIComponent(`/jobs/${job.id}`)}`);
       return
     }
@@ -66,7 +61,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         }
       }
     } catch (err: any) {
-      setError(err.message || "Failed to submit application");
+      setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
     } finally {
       setIsSubmitting(false);
@@ -188,37 +183,5 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       </div>
     </form>
   );
-<<<<<<< HEAD
-  ;
-}setError (null);
-if (success) {;
-  if (onSuccess) {;
-  ;
-}finally {;
-  setIsSubmitting (false) ;
 
-};
-handleSubmit ;
-}className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {;
-  error ;
-}</AlertDescription> </Alert>) ";
-}<div className="space-y-4" > <div> <Label htmlFor="coverLetter" >Cover Letter</Label> <Textarea className="mt-1" /> <p className="text-xs text-muted-foreground mt-1" > Provide a brief introduction and highlight your relevant skills and experience. </p> </div> <div> <div className="flex items-center gap-2 mt-2"> <Loader2 className="h-4 w-4 animate-spin" /> <span>Loading your resumes...</span> </div>) : resumes && resumes.length > 0 ? (<Select value= {;
-  selectedResumeId ;
-}onValueChange= {;
-  setSelectedResumeId ";
-}> <SelectTrigger className="mt-1" > <SelectValue placeholder="Select a resume" /> </SelectTrigger> <SelectContent> </SelectItem>) ;
-}return null;
-}) ;
-}</SelectContent> </Select> > Create Resume </Button> </div>) ";
-}</div> <div> <Label htmlFor="cvUpload" >Or Upload CV (PDF) </Label> <input /> </div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") ;
-}</Button> </div> </form>) ;
-}"
-=======
-
-<<<<<<< HEAD
-    
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

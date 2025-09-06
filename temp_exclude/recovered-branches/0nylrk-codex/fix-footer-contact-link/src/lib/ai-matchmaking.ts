@@ -59,7 +59,7 @@ export async function findMatches(
     
     // Sort by simulated relevance (random for now)
     const matches: MatchResult[] = filteredItems.map(item => ({
-      item;
+      item,
       score: Math.floor(Math.random() * 40) + 60, // Random score between 60 and 99
       matchedSkills: item.skills?.slice(0, 2) || [];
       reason: `This ${item.category.split(' - ')[0].toLowerCase()} matches your needs based on the provided description.`

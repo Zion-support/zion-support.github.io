@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Mail, CheckCircle, ArrowRight, Users, Calendar, FileText, Video, Globe, Shield, Zap, BarChart3 } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Mail,, CheckCircle,, ArrowRight,, Users,, Calendar,, FileText,, Video,, Globe,, Shield,, Zap,, BarChart3} from 'lucide-react';
 
 const newsletterFeatures = [
   {
@@ -154,7 +154,7 @@ export default function NewsletterPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Get Started?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -180,5 +180,5 @@ export default function NewsletterPage() {
         </section>
       </div>
     </>
-  );
+  ),
 }

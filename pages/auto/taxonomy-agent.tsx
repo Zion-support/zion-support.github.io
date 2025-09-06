@@ -1,24 +1,16 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const TaxonomyAgent: NextPage = () => {
   return (
     <div>
       <Head>
         <title>AI Taxonomy Tagger Agent</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content='Daily AI-generated page tags.' />
-=======
         <meta name="description" content="Daily AI-generated page tags." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <main className="space-y-4">
         <h1 className="text-2xl font-bold">AI Taxonomy Tagger Agent</h1>
@@ -29,9 +21,7 @@ const TaxonomyAgent: NextPage = () => {
   )
 };
 
-<<<<<<< HEAD
 export default TaxonomyAgent;
-=======
         <meta name="description" content="Daily AI-generated page tags." />
       </Head>
       <main className="space-y-4">
@@ -44,7 +34,5 @@ export default TaxonomyAgent;
 };
 
 export default TaxonomyAgent;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default TaxonomyAgent;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

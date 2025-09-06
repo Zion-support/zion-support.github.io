@@ -1,17 +1,6 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import {
-  Users, 
-  Target, 
-  Award, 
-  Globe, 
-  Heart, 
-  Lightbulb,
-  Shield,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Users,, Target,, Award,, Globe,, Heart,, Lightbulb,, Shield,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const values = [
@@ -420,7 +409,7 @@ export default function CompanyPage() {
               <div className="flex flex-wrap justify-center gap-4">
                 <a
     href="/contact"
-                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center space-x-2"
+                  className="bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover: bg-blue-700 transition-colors flex items-center space-x-2"
                 >
                   <span>Get Started Today</span>
                   <ArrowRight className="w-5 h-5" />
@@ -437,5 +426,5 @@ export default function CompanyPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

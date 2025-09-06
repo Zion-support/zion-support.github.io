@@ -1,22 +1,9 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../components/Layout';
-import { 
-  Phone, 
-  Mail, 
-  MessageSquare, 
-  Clock, 
-  CheckCircle, 
-  ArrowRight,
-  HelpCircle,
-  BookOpen,
-  FileText,
-  Users,
-  Zap,
-  Shield
-} from 'lucide-react';
+import {Phone,, Mail,, MessageSquare,, Clock,, CheckCircle,, ArrowRight,, HelpCircle,, BookOpen,, FileText,, Users,, Zap,, Shield} from 'lucide-react';
 
 const supportChannels = [
   {
@@ -306,7 +293,7 @@ export default function SupportPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Still Need Help?</h2>
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">Still Need Help?</h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
                 Our expert team is ready to assist you with any questions or issues you may have.
               </p>
@@ -329,5 +316,5 @@ export default function SupportPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

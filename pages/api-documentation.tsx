@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function APIDocumentationPage() {
   return (
@@ -11,7 +9,7 @@ export default function APIDocumentationPage() {
         <title>API Documentation | Zion Tech Group</title>
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/api-documentation'
+          href='https: //ziontechgroup.com/api-documentation'
         />
       </Head>
       <section className='container mx-auto px-4 py-24'>
@@ -21,12 +19,10 @@ export default function APIDocumentationPage() {
         <p className='text-gray-300'>REST and SDK references. Coming soon.</p>
       </section>
     </Layout>
-  );
-=======
+  ),
 export default function APIDocumentationPage() {
-=======
 export default function APIDocumentationPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<Layout>
 			<Head>
@@ -40,7 +36,4 @@ export default function APIDocumentationPage() {
 		</Layout>
 	)
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

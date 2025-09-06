@@ -1,9 +1,9 @@
 
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { ChevronLeft, Bell, Settings } from "lucide-react";
-import { cn } from "@/lib/utils";
-import { Button } from "@/components/ui/button";
+import {useNavigate} from "react-router-dom";
+import {ChevronLeft,, Bell,, Settings} from "lucide-react";
+import {cn} from "@/lib/utils";
+import {Button} from "@/components/ui/button";
 interface MobileHeaderProps {
   title: string,
   showBack?: boolean;

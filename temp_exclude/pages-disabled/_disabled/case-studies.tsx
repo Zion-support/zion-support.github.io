@@ -1,23 +1,8 @@
 import React, { useState } from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  BarChart3, 
-  Search, 
-  Filter,
-  ArrowRight,
-  ExternalLink,
-  Clock,
-  User,
-  Star,
-  Users,
-  Globe,
-  Shield,
-  Zap,
-  Award,
-  ChevronRight
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {BarChart3,, Search,, Filter,, ArrowRight,, ExternalLink,, Clock,, User,, Star,, Users,, Globe,, Shield,, Zap,, Award,, ChevronRight} from 'lucide-react';
 
 const caseStudyCategories = [
   { name: "All", count: 25, active: true },

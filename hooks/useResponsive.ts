@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
+import {useState, useEffect} from 'react';
 
 interface ResponsiveState {
   isMobile: boolean;
   isTablet: boolean;
   isDesktop: boolean;
   width: number;
-  height: number;
+  height: number,
 }
 
 const useResponsive = (): ResponsiveState => {

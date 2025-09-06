@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { useTheme } from '@/hooks/useTheme';
-import { Moon, Sun, Check } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-=======
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "@/hooks/useTheme";
-import { Moon, Sun, Check } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
 
 interface Language {
   code: string,
@@ -53,15 +44,12 @@ export function LanguageThemeSelector() {
                   <span>{language.name}</span>
                 </div>
                 {selectedLanguage === language.code && (
-<<<<<<< HEAD
-                  <Check className='h-4 w-4 text-primary' />
-=======
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "@/hooks/useTheme";
-import { Moon, Sun, Check } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {useTheme} from "@/hooks/useTheme";
+import {Moon, Sun, Check} from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
 
 interface Language {
   code: string,
@@ -105,10 +93,7 @@ export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(
                 </div>
                 {selectedLanguage === language.code && (
                   <Check className="h-4 w-4 text-primary" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Check className="h-4 w-4 text-primary" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 )}
               </CardContent>
             </Card>
@@ -116,24 +101,12 @@ export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className='space-y-2'>
-        <h2 className='text-xl font-medium'>Choose theme</h2>
-        <p className='text-muted-foreground'>
-          Select your preferred appearance
-        </p>
-
-        <div className='flex gap-3 mt-4'>
-          <Card
-=======
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
         
         <div className="flex gap-3 mt-4">
           <Card 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'light' 
                 ? "border-primary bg-primary/5" 
@@ -154,7 +127,7 @@ export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(
             className={`flex-1 cursor-pointer transition-all ${
               theme === 'dark' 
                 ? "border-primary bg-primary/5" 
-                : "border-border hover:border-primary/40";
+                : "border-border hover: border-primary/40",
             }`}
             onClick={() => setTheme('dark')}
           >
@@ -162,9 +135,6 @@ export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(
               <Moon className="h-8 w-8 mb-2" />
               <span>Dark</span>
               {theme === 'dark' && (
-<<<<<<< HEAD
-                <Check className='h-4 w-4 text-primary mt-2' />
-=======
       <div className="space-y-2">
         <h2 className="text-xl font-medium">Choose theme</h2>
         <p className="text-muted-foreground">Select your preferred appearance</p>
@@ -200,10 +170,7 @@ export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(
               <span>Dark</span>
               {theme === 'dark' && (
                 <Check className="h-4 w-4 text-primary mt-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Check className="h-4 w-4 text-primary mt-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               )}
             </CardContent>
           </Card>
@@ -211,11 +178,5 @@ export function LanguageThemeSelector() { const { theme, setTheme  } = useTheme(
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

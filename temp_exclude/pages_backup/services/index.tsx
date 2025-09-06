@@ -249,8 +249,8 @@ const ServicesIndex: NextPage = () => {
 =======
 =======
 =======
-import { motion } from 'framer-motion';
-import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Brain,, Network,, Cloud,, Shield,, Zap,, Target,, Users,, BarChart3,, ArrowRight,, CheckCircle,, Star,, Award,, Clock,, Globe} from 'lucide-react';
 
 const services = [
   {
@@ -581,7 +581,7 @@ export default function ServicesIndex() {
           <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Business?</h2>
           <p className="text-xl mb-8">Let's discuss how our technology solutions can accelerate your growth</p>
           <div className="flex justify-center gap-4">
-            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+            <Link href="/contact" className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover: bg-gray-100 transition-colors">
               Get Started Today
             </Link>
             <Link href="/about" className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
@@ -595,7 +595,7 @@ export default function ServicesIndex() {
 <<<<<<< HEAD
       </main>
     </div>
-  );
+  ),
 };
 <<<<<<< HEAD
 export default ServicesIndex;

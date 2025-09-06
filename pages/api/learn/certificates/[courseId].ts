@@ -19,12 +19,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
     const course = courses.find((c: any) => c.id === courseId);
-    const user = users[userId];
+    const user = users[userId],
     if (!course) return res.status($1).json({$2});
     if (!user) return res.status($1).json({$2});
+<<<<<<< HEAD
     res.setHeader('Content-Type', 'application/pdf');
     res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
+=======
+    res.setHeader('Content-Typeapplication/pdf');
+    res.setHeader('Content-Disposition', `attachment, filename="${courseId}-certificate.pdf"`);
+    const doc = new PDFDocument({ size: 'A4', margin: 50 }),
+>>>>>>> cursor/fix-lint-push-and-merge-to-main-6efb
     // Pipe to response
     // @ts-ignore
     doc.pipe(res);

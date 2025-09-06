@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useCallback, ReactNode } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import {AnimatePresence, motion} from 'framer-motion';
 
-export type Toast = { id: string; message: string; tone?: 'default' | 'success' | 'error' };
+export type Toast = { id: string; message: string, tone?: 'default' | 'success' | 'error' };
 
 type NotificationContextValue = {
   notify: (message: string, tone?: 'default' | 'success' | 'error') => void;
@@ -18,7 +18,7 @@ export const useNotifications = () => {
 };
 
 type NotificationProviderProps = {
-  children: ReactNode;
+  children: ReactNode,
 };
 
 export const NotificationProvider: React.FC<NotificationProviderProps> = ({ children }) => {
@@ -37,7 +37,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
   }, []);
 
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(toast => toast.id !== id));
+    setToasts(prev => prev.filter(toast => toast.id !== id)),
   }, []);
 
   return (
@@ -50,7 +50,7 @@ export const NotificationProvider: React.FC<NotificationProviderProps> = ({ chil
 
 type NotificationContainerProps = {
   toasts: Toast[];
-  onRemove: (id: string) => void;
+  onRemove: (id: string) => void,
 };
 
 const NotificationContainer: React.FC<NotificationContainerProps> = ({ toasts, onRemove }) => {

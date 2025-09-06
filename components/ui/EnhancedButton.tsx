@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from "react";
-import clsx from "clsx";
-=======
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -10,7 +5,6 @@ export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> 
   size?: 'sm' | 'md' | 'lg';
   fullWidth?: boolean
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const baseStyles = 'inline-flex items-center justify-center font-semibold rounded-md transition focus: outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px]',
 const sizeStyles: Record<NonNullable<EnhancedButtonProps['size']>, string> = {
@@ -34,8 +28,6 @@ export default function EnhancedButton({
       {...props}
     />
   );
-<<<<<<< HEAD
-=======
 import React from 'react';
 import clsx from 'clsx';
 export type EnhancedButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement> & {
@@ -67,7 +59,4 @@ export default function EnhancedButton({
     />
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

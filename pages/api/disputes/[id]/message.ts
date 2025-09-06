@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
-import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+import {getDisputeById, upsertDispute} from '../../../../utils/fsdb';
+import {parseUserFromRequest, ensureInvolvedOrAdmin} from '../../../../utils/auth';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query;
   if (typeof id !== 'string') return res.status($1).json({$2});

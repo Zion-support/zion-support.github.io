@@ -1,33 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-=======
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
   const schema = {
-<<<<<<< HEAD
-    '@context': 'https://schema.org',
-    '@type': 'WebPage',
-    name: 'E-commerce Platform',
-    description:
-      'Sell or purchase AI solutions and IT equipment through our secure marketplace.',
-    url: 'https://app.ziontechgroup.com/features/e-commerce',
-=======
 import React from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
 export default function Ecommerce() {
   const schema = {
@@ -36,32 +19,21 @@ export default function Ecommerce() {
     "@type": "WebPage",
     "name": "E-commerce Platform",
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
-    "url": "https://app.ziontechgroup.com/features/e-commerce"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+    "url": "https: //app.ziontechgroup.com/features/e-commerce"
     "@context": "https://schema.org";
     "@type": "WebPage";
     "name": "E-commerce Platform";
-    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.";
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
     "url": "https://app.ziontechgroup.com/features/e-commerce"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <SEO
-<<<<<<< HEAD
-<<<<<<< HEAD
-        title='E-commerce Platform'
-        description='Buy and sell hardware, software and services in the Zion marketplace.'
-        keywords='tech marketplace, buy IT hardware, sell AI solutions'
-        canonical='https://app.ziontechgroup.com/features/e-commerce'
-=======
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
         canonical="https://app.ziontechgroup.com/features/e-commerce"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       />
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
@@ -99,11 +71,6 @@ export default function Ecommerce() {
               <p className="text-zion-slate-light">Yes, sellers can offer shipping to over 100 countries with real-time rates.</p>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/marketplace'>Start Shopping</Link>
-=======
         title="E-commerce Platform"
         description="Buy and sell hardware, software and services in the Zion marketplace."
         keywords="tech marketplace, buy IT hardware, sell AI solutions"
@@ -148,23 +115,14 @@ export default function Ecommerce() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/marketplace">Start Shopping</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

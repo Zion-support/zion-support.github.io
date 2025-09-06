@@ -1,16 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-=======
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import {GetServerSideProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', []);
   return { props: { initialRequests: requests } }
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export default function SupportRequests({ initialRequests }: { initialRequests: any[] }) {
   const [requests, setRequests] = useState(initialRequests);
@@ -38,7 +35,6 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
             )}
           </div>
-<<<<<<< HEAD
           <div className="bg-white rounded-lg shadow p-4">
             <h3 className="text-sm font-medium text-gray-500">Open</h3>
             <p className="text-2xl font-bold text-red-600">{openRequests.length}</p>
@@ -181,10 +177,9 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
       </main>
     </>
   );
-=======
-import { GetServerSideProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import {GetServerSideProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
 export const getServerSideProps: GetServerSideProps = async () => {
   const requests = readJson<any[]>('support/requests.json', []);
   return { props: { initialRequests: requests } }
@@ -216,15 +211,11 @@ export default function SupportRequests({ initialRequests }: { initialRequests: 
               <button onClick={() => resolve(r.id)} className="enhanced-button enhanced-button-primary">Mark Resolved</button>
             )}
           </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         ))}
       </div>
     </div>
   )
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

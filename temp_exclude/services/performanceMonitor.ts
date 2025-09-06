@@ -36,7 +36,7 @@ export class PerformanceMonitorService {
   private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -155,7 +155,7 @@ export class PerformanceMonitorService {
 
   private generateMockMetrics(url: string): PerformanceMetrics {
     return {
-      url;
+      url,
       timestamp: new Date(), loadTime: Math.random() * 2000 + 500,
       firstContentfulPaint: Math.random() * 1500 + 300, largestContentfulPaint: Math.random() * 2500 + 800,
       cumulativeLayoutShift: Math.random() * 0.1, firstInputDelay: Math.random() * 100 + 20,
@@ -167,7 +167,7 @@ export class PerformanceMonitorService {
   }
 
   private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
-    const data: PerformanceMetrics[] = []; const now = new Date(),
+    const data: PerformanceMetrics[] = [], const now = new Date(),
 
     for (let i = days - 1, i >= 0, i--) {
       const date = new Date(now);
@@ -232,7 +232,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
     name: 'Enterprise', price: 149,
     period: '/month',
     features: [
-      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support';
+      'Monitor unlimited URLsReal-time monitoringAll performance metricsMultiple notification channels1-year data retentionCustom dashboardsWhite-label reportingPriority support',
       'SLA guarantee'
     ]
   }

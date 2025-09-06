@@ -1,7 +1,7 @@
 
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
-import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",
-import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1', const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
+import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
+import {createClient} from 'https: //esm.sh/@supabase/supabase-js@2.7.1', const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type'};
@@ -59,9 +59,8 @@ serve(async (req) => {
             Skills: ${talentData.skills.join()}
             Location: ${talentData.location || 'Not specified'}
             
-            Return the result as a JSON object with these keys: 
-            {
-              "summary": "The professional summary text (100-150 words)";
+            Return the result as a JSON object with these keys: {
+              "summary": "The professional summary text (100-150 words)",
               "categorizedSkills": {
                 "programming": ["skill1", "skill2"];
                 "devops": ["skill1", "skill2"];

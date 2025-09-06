@@ -1,4 +1,4 @@
-import { defineConfig, splitVendorChunkPlugin } from 'vite';
+import {defineConfig, splitVendorChunkPlugin} from 'vite';
 import react from '@vitejs/plugin-react';
 import path from 'node: path',
 export default defineConfig({
@@ -44,7 +44,7 @@ export default defineConfig({
           if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
           if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
           if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
-          return 'assets/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]',
         }
       }
     },

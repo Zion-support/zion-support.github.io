@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { GetServerSideProps } from 'next';
+import {useState, useEffect} from 'react';
+import {GetServerSideProps} from 'next';
 import fs from 'fs';
 import path from 'path';
 import Card from '../../components/ui/Card';
 import Button from '../../components/ui/Button';
-import { AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw } from 'lucide-react';
-import { logErrorToProduction } from '@/utils/productionLogger';
+import {AlertTriangle, Info, AlertCircle, XCircle, Search, Download, RefreshCw} from 'lucide-react';
+import {logErrorToProduction} from '@/utils/productionLogger';
 
 
 interface LogEntry {
@@ -13,7 +13,7 @@ interface LogEntry {
   timestamp: string;
   level: 'debug' | 'info' | 'warn' | 'error' | 'critical';
   message: string;
-  category: string;
+  category: string,
   context?: Record<string, unknown>;
   stack?: string;
   url?: string;
@@ -27,7 +27,7 @@ interface LogEntry {
     name: string;
     message: string;
     stack?: string;
-    cause?: unknown;
+    cause?: unknown,
   };
   performance?: {
     memory?: number;
@@ -41,7 +41,7 @@ interface LogsPageProps {
   errorCount: number;
   warningCount: number;
   totalCount: number;
-  lastUpdated: string;
+  lastUpdated: string,
 }
 
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
@@ -56,8 +56,7 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
       return <AlertCircle className="h-4 w-4 text-red-500" />;
     case 'critical':
       return <XCircle className="h-4 w-4 text-red-700" />;
-    default:
-      return <Info className="h-4 w-4 text-gray-500" />;
+    default: return <Info className="h-4 w-4 text-gray-500" />,
   }
 };
 
@@ -135,7 +134,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
 
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
-    const dataUri = 'data:application/json;charset=utf-8,'+ encodeURIComponent(dataStr);
+    const dataUri = 'data: application/json,charset=utf-8,'+ encodeURIComponent(dataStr);
     
     const exportFileDefaultName = `logs-${new Date().toISOString().slice(0, 10)}.json`;
     
@@ -146,7 +145,7 @@ export default function LogsPage({ logs: initialLogs, errorCount, warningCount, 
   };
 
   const formatTimestamp = (timestamp: string) => {
-    return new Date(timestamp).toLocaleString();
+    return new Date(timestamp).toLocaleString(),
   };
 
   const formatPerformance = (performance?: LogEntry['performance']) => {
@@ -380,7 +379,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
     // Read all log files
     if (fs.existsSync(logsDir)) {
       const files = fs.readdirSync(logsDir);
-      const logFiles = files.filter(file => file.endsWith('.log'));
+      const logFiles = files.filter(file => file.endsWith('.log')),
 
       for (const file of logFiles) {
         try {

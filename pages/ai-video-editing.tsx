@@ -1,53 +1,35 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Phone,
-  Mail,
-  MapPin,
-  Check,
-  ArrowRight,
-  Star,
-  Film,;
-} from 'lucide-react';
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Film,} from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Film} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-b76c
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIVideoEditingPage() {
-<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s =>
     s.link.endsWith('/ai-video-editing')
   );
-=======
-import { Phone, Mail, MapPin, Check, ArrowRight, Star, Film } from 'lucide-react';
+import {Phone, Mail, MapPin, Check, ArrowRight, Star, Film} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
 export default function AIVideoEditingPage() {
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-video-editing'));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   if (!service) return null;
 
   return (
     <Layout>
       <Head>
         <title>{service.name} - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content={service.description} />
         <link
           rel='canonical'
           href='https://ziontechgroup.com/ai-video-editing'
         />
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/ai-video-editing" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
@@ -73,7 +55,6 @@ export default function AIVideoEditingPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-<<<<<<< HEAD
               <a
                 href='/contact'
                 className='w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2'
@@ -94,7 +75,6 @@ export default function AIVideoEditingPage() {
                   <MapPin />
                   <span>{service.contactInfo.address}</span>
                 </div>
-=======
         <meta name="description" content={service.description} />
         <link rel="canonical" href="https://ziontechgroup.com/ai-video-editing" />
       </Head>
@@ -122,31 +102,22 @@ export default function AIVideoEditingPage() {
                 </div>
                 <div className="flex items-center text-yellow-400 w-4 h-4 mr-1"><Star />{service.rating.toFixed(1)}</div>
               </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <a href="/contact" className="w-full px-6 py-3 bg-gradient-to-r from-cyan-600 to-blue-700 hover:from-cyan-700 hover:to-blue-800 text-white font-semibold rounded-lg transition-all duration-200 w-5 h-5 ml-2">Create Your First Cut<ArrowRight /></a>
               <div className="mt-6 space-y-3 text-sm text-slate-300">
                 <div className="flex items-center space-x-2 w-4 h-4 text-amber-400"><Phone /><span>{service.contactInfo.mobile}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-purple-400"><Mail /><span>{service.contactInfo.email}</span></div>
                 <div className="flex items-center space-x-2 w-4 h-4 text-green-400 text-xs"><MapPin /><span >{service.contactInfo.address}</span></div>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

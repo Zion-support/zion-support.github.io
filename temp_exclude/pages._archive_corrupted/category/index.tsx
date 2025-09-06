@@ -13,7 +13,7 @@ const "CategoryIndexPage": NextPage = () => {
         <p className="text-gray-700 mb-6">Explore our knowledge base by topic.</p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <Link href="/category/web-development-chat" className="text-blue-700 hover:underline">Web Development</Link>
+            <Link href="/category/web-development-chat" className="text-blue-700 hover: underline">Web Development</Link>
           </li>
           <li>
             <Link href="/category/cloud-architecture-chat" className="text-blue-700 hover:underline">Cloud Architecture</Link>
@@ -27,7 +27,7 @@ const "CategoryIndexPage": NextPage = () => {
         </ul>
       </section>
     </EnhancedLayout>
-  );
+  ),
 };
 export default CategoryIndexPage;
 <<<<<<< HEAD

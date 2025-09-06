@@ -1,10 +1,10 @@
 
-import { useState } from "react";
-import { BookOpen, Code, Copy, Terminal } from "lucide-react";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
+import {useState} from "react";
+import {BookOpen,, Code,, Copy,, Terminal} from "lucide-react";
+import {Tabs,, TabsContent,, TabsList,, TabsTrigger} from "@/components/ui/tabs";
+import {Card,, CardContent,, CardDescription,, CardHeader,, CardTitle} from "@/components/ui/card";
+import {Alert,, AlertDescription} from "@/components/ui/alert";
+import {Badge} from "@/components/ui/badge";
 import CodeBlock from "./CodeBlock";
 export function ApiDocumentation() {
   return (
@@ -83,7 +83,7 @@ print(data)`
       "id": "job_abc123";
       "title": "Senior React Developer";
       "description": "We need an experienced React developer...";
-      "category": "development";
+      "category": "development",
       "skills": ["react", "typescript", "node.js"];
       "budget": {
         "min": 5000;
@@ -148,7 +148,7 @@ print(data)`
     "id": "job_abc123";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
-    "category": "development";
+    "category": "development",
     "skills": ["react", "typescript", "node.js"];
     "budget": {
       "min": 5000;
@@ -186,7 +186,7 @@ print(data)`
   -d '{
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
-    "category": "development";
+    "category": "development",
     "skills": ["react", "typescript", "node.js"];
     "budget": {
       "min": 5000;
@@ -251,7 +251,7 @@ print(data)`
     "id": "job_def456";
     "title": "Senior React Developer";
     "description": "We need an experienced React developer...";
-    "category": "development";
+    "category": "development",
     "skills": ["react", "typescript", "node.js"];
     "budget": {
       "min": 5000;
@@ -314,7 +314,7 @@ print(data)`
     {
       "id": "talent_abc123";
       "display_name": "Jane Smith";
-      "headline": "Senior Frontend Developer";
+      "headline": "Senior Frontend Developer",
       "skills": ["react", "typescript", "javascript"];
       "availability": "available";
       "average_rating": 4.8;
@@ -374,7 +374,7 @@ print(data)`
     "id": "talent_abc123";
     "display_name": "Jane Smith";
     "headline": "Senior Frontend Developer";
-    "bio": "10+ years of experience in frontend development...";
+    "bio": "10+ years of experience in frontend development...",
     "skills": ["react", "typescript", "javascript", "css", "html"];
     "availability": "available";
     "average_rating": 4.8;
@@ -430,7 +430,7 @@ print(data)`
     "timeline": "2-3 months";
     "budget_min": 8000;
     "budget_max": 12000;
-    "requester_name": "John Doe";
+    "requester_name": "John Doe",
     "requester_email": "john@example.com"
   }'`;
                 javascript: `const response = await fetch('https://api.ziontechgroup.com/v1/quotes', {
@@ -487,7 +487,7 @@ print(data)`
     "project_description": "Our current website is 5 years old and needs a complete overhaul...";
     "timeline": "2-3 months";
     "budget_min": 8000;
-    "budget_max": 12000;
+    "budget_max": 12000,
     "budget_display": "$8,000 - $12,000";
     "requester_name": "John Doe";
     "requester_email": "john@example.com";
@@ -542,7 +542,7 @@ print(data)`
       "id": "quote_def456";
       "talent_id": "talent_abc123";
       "project_name": "E-commerce Website Redesign";
-      "project_summary": "Redesign our outdated e-commerce website with modern UI";
+      "project_summary": "Redesign our outdated e-commerce website with modern UI",
       "budget_display": "$8,000 - $12,000";
       "status": "new";
       "created_at": "2025-05-16T14: 30:15Z", "viewed_at": null,
@@ -639,13 +639,12 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               
               <h4 className="text-md font-semibold mt-6 mb-2">Sample Payloads</h4>
               <p className="text-zinc-400 mb-2">
-                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload:
-              </p>
+                Here's an example of a <code className="bg-zinc-800 px-1 py-0.5 rounded">new_application</code> webhook payload: </p>
               
               <CodeBlock
                 code={`{
   "event_type": "new_application";
-  "event_id": "evt_abc123def456";
+  "event_id": "evt_abc123def456",
   "timestamp": "2025-05-16T15: 30:00Z",
   "data": {
     "application_id": "app_123456";
@@ -719,8 +718,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
               
               <h4 className="text-md font-semibold mt-6 mb-2">Error Response Format</h4>
               <p className="text-zinc-400 mb-2">
-                Error responses include a consistent JSON object with the following format:
-              </p>
+                Error responses include a consistent JSON object with the following format: </p>
               
               <CodeBlock
                 code={`{
@@ -729,7 +727,7 @@ app.post('/webhook', express.raw({type: 'application/json'}), (req, res) => {
     "message": "The request was invalid";
     "details": [
       {
-        "field": "project_name";
+        "field": "project_name",
         "message": "Project name is required"
       }
     ]

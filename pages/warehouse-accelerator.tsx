@@ -1,7 +1,5 @@
 import React from 'react';
 import SEO from '../components/SEO';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function WarehouseAcceleratorPage() {
   return (
@@ -38,11 +36,9 @@ export default function WarehouseAcceleratorPage() {
       </section>
     </>
   );
-=======
 export default function WarehouseAcceleratorPage() {
-=======
 export default function WarehouseAcceleratorPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Warehouse Accelerator" description="Faster time-to-value for your modern data warehouse." canonical="/warehouse-accelerator" />
@@ -58,9 +54,6 @@ export default function WarehouseAcceleratorPage() {
 			</section>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

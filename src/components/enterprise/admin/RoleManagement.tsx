@@ -1,26 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-=======
 
 import React from "react";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { Switch } from "@/components/ui/switch";
-import { toast } from "@/hooks/use-toast";
-import { InfoIcon } from 'lucide-react'
-import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from "@/components/ui/tooltip";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {Switch} from "@/components/ui/switch";
+import {toast} from "@/hooks/use-toast";
+import {InfoIcon} from 'lucide-react'
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/components/ui/tooltip";
 
 export function RoleManagement() {
   // Mock team members data
@@ -257,11 +242,6 @@ export function RoleManagement() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

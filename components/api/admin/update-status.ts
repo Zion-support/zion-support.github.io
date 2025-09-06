@@ -1,12 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { isInternalAgentRequest } from '../../../utils/adminAuth';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {isInternalAgentRequest} from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
@@ -27,9 +22,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ...body;
     updatedAt: new Date().toISOString()};
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
-<<<<<<< HEAD
-  res.status(200).json({ ok: true });
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
@@ -52,8 +44,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(statusPath, JSON.stringify(merged, null, 2));
   res.status(200).json({ ok: true })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   res.status(200).json({ ok: true })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

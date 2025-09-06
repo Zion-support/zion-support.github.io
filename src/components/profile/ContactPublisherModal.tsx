@@ -1,77 +1,34 @@
 import React from 'react';
 import FocusLock from 'react-focus-lock';
-import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,;
-} from '@/components/ui/dialog';
-=======
+import {Dialog, DialogContent, DialogHeader, DialogTitle} from '@/components/ui/dialog',
 
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle} from '@/components/ui/dialog',
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   Dialog;
   DialogContent;
   DialogHeader;
   DialogTitle} from '@/components/ui/dialog';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Textarea} from '@/components/ui/textarea';
+import {Form, FormField, FormItem, FormLabel, FormControl, FormMessage} from '@/components/ui/form',
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  Form,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-<<<<<<< HEAD
-  FormMessage,;
-} from '@/components/ui/form';
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import {useForm, type, Resolver} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react';
-=======
-  FormMessage} from '@/components/ui/form',
-
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
-import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+import {SendIcon, Mail} from 'lucide-react'
   Form;
   FormField;
   FormItem;
   FormLabel;
   FormControl;
   FormMessage} from '@/components/ui/form';
-import { useForm, type Resolver } from 'react-hook-form';
-import { yupResolver } from '@hookform/resolvers/yup';
+import {useForm, type, Resolver} from 'react-hook-form';
+import {yupResolver} from '@hookform/resolvers/yup';
 import * as yup from 'yup';
-import { SendIcon, Mail } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {SendIcon, Mail} from 'lucide-react'
 import api from '@/services/apiClient';
-import { toast } from '@/hooks/use-toast';
-import { useAuth } from '@/hooks/useAuth';
-import { LoginModal } from '@/components/auth/LoginModal';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {toast} from '@/hooks/use-toast';
+import {useAuth} from '@/hooks/useAuth';
+import {LoginModal} from '@/components/auth/LoginModal';
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
@@ -81,10 +38,6 @@ interface ContactPublisherModalProps {
 }
 
 type FormValues = {
-<<<<<<< HEAD
-  subject: string;
-  message: string;
-=======
 interface ContactPublisherModalProps {
   isOpen: boolean,
   onClose: () => void,
@@ -96,11 +49,8 @@ interface ContactPublisherModalProps {
 type FormValues = {
   subject: string,
   message: string
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   subject: string,
   message: string
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 const schema: yup.ObjectSchema<FormValues> = yup
@@ -108,12 +58,7 @@ const schema: yup.ObjectSchema<FormValues> = yup
     subject: yup
       .string()
       .min(5, 'Subject must be at least 5 characters')
-<<<<<<< HEAD
-<<<<<<< HEAD
-      .required('Subject is required'),
-=======
       .required('Subject is required');
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     message: yup
       .string()
       .min(20, 'Message must be at least 20 characters')
@@ -121,8 +66,6 @@ const schema: yup.ObjectSchema<FormValues> = yup
   .required();
 
 export function ContactPublisherModal({
-<<<<<<< HEAD
-=======
       .required('Subject is required');
     message: yup
       .string()
@@ -132,79 +75,50 @@ export function ContactPublisherModal({
 
 export function ContactPublisherModal({
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   isOpen,
   onClose,
   publisherName,
   publisherEmail,
-<<<<<<< HEAD
-  productId,
-}: ContactPublisherModalProps) {
-=======
   isOpen;
   onClose;
   publisherName;
   publisherEmail;
   productId}: ContactPublisherModalProps) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const { user } = useAuth();
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [error, setError] = React.useState<string | null>(null);
   const [loginOpen, setLoginOpen] = React.useState(false);
-=======
   productId}: ContactPublisherModalProps) { const { user  } = useAuth(),
   const [ isSubmitting, setIsSubmitting ] = React.useState(false),
   const [ error, setError ] = React.useState<string | null>(null),
   const [ loginOpen, setLoginOpen ] = React.useState(false),
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 
   const form = useForm<FormValues>({
     resolver: yupResolver(schema) as Resolver<FormValues>,
     mode: 'onChange',
-<<<<<<< HEAD
-<<<<<<< HEAD
-    defaultValues: { subject: '', message: '' },
-  });
-
-  const handleSend = async () => {
-    if (!user) {
-      setLoginOpen(true);
-      return;
-=======
     defaultValues: { subject: '', message: '' }});
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true);
       return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     defaultValues: { subject: '', message: '' }}),
   const handleSend = async () => {
     if (!user) {
       setLoginOpen(true);
       return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
     const values = form.getValues();
     setIsSubmitting(true);
     setError(null);
     try {
       await api.post('/api/messages', {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        productId,
-=======
         productId;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         subject: values.subject,
         body: values.message,
         fromUser: user.id}),
       toast.success('Message sent');
       form.reset();
-<<<<<<< HEAD
-      onClose();
-=======
         productId;
         subject: values.subject,
         body: values.message,
@@ -212,10 +126,7 @@ export function ContactPublisherModal({
       toast.success('Message sent');
       form.reset();
       onClose()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       onClose()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     } finally {
       setIsSubmitting(false);
     }
@@ -223,13 +134,8 @@ export function ContactPublisherModal({
 
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
-      e.stopPropagation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-      onClose();
-=======
+      e.stopPropagation(),
       onClose()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -310,8 +216,6 @@ export function ContactPublisherModal({
     <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-<<<<<<< HEAD
-=======
       onClose()
     }
   };
@@ -395,7 +299,4 @@ export function ContactPublisherModal({
     </>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

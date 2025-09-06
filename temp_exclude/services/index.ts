@@ -70,7 +70,7 @@ export const SERVICES_METADATA = {
     icon: '🔗', category: 'UTILITIES',
     features: [
       'Custom short codesClick trackingAnalytics dashboardExpiration datesQR code generation'
-    ];
+    ],
     pricing: 'Free',
     apiEndpoint: '/api/url-shortener'
   
@@ -80,7 +80,7 @@ export const SERVICES_METADATA = {
     icon: '🔐', category: 'UTILITIES',
     features: [
       'Multiple generation modesStrength analysisCustom character setsPassword historySecurity recommendations'
-    ];
+    ],
     pricing: 'Free',
     apiEndpoint: '/api/password-generator'
   };
@@ -90,7 +90,7 @@ export const SERVICES_METADATA = {
     icon: '📱', category: 'UTILITIES',
     features: [
       'Multiple QR code typesCustom stylingLogo integrationError correctionTemplate library'
-    ];
+    ],
     pricing: 'Free',
     apiEndpoint: '/api/qr-code-generator'
   
@@ -100,7 +100,7 @@ export const SERVICES_METADATA = {
     icon: '🔄', category: 'MEDIA',
     features: [
       'Multiple file formatsBatch conversionQuality settingsMetadata preservationCloud processing'
-    ];
+    ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
     apiEndpoint: '/api/file-converter'
   };
@@ -109,7 +109,7 @@ export const SERVICES_METADATA = {
     icon: '📊', category: 'ANALYSIS',
     features: [
       'Readability metricsSentiment analysisKeyword extractionEntity recognitionLanguage detection'
-    ];
+    ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'
   }

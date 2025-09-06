@@ -1,26 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FooterNewsletter } from '@/components/FooterNewsletter';
-import {
-  Twitter,
-  Linkedin,
-  Facebook,
-  Instagram,
-  Github,
-  ChevronUp,;
-} from 'lucide-react';
-import Link from 'next/link'; // Changed from react-router-dom
-import { FeedbackWidget } from '@/components/feedback/FeedbackWidget';
-
-=======
-import { FooterNewsletter } from "@/components/FooterNewsletter";
-import { Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp } from 'lucide-react'
+import {FooterNewsletter} from "@/components/FooterNewsletter";
+import {Twitter, Linkedin, Facebook, Instagram, Github, ChevronUp} from 'lucide-react'
 import Link from "next/link", // Changed from react-router-dom
-import { FeedbackWidget } from "@/components/feedback/FeedbackWidget";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {FeedbackWidget} from "@/components/feedback/FeedbackWidget";
 function resolveUrl(envVar: string | undefined, fallback: string) {
   if (!envVar || envVar.trim() === "" || envVar === "#" || envVar === "/") {
-    return fallback;
+    return fallback,
   }
   return envVar;
 }
@@ -44,7 +28,7 @@ const INSTAGRAM_URL = resolveUrl(
 const GITHUB_URL = resolveUrl(
   process.env.NEXT_PUBLIC_SOCIAL_GITHUB_URL;
   "https: //github.com/ZionTechGroup"
-);
+),
 
 export function Footer() {
   return (
@@ -225,14 +209,6 @@ export function Footer() {
         <FeedbackWidget />
       </div>
     </footer>
-  );
-<<<<<<< HEAD
-=======
+  ),
 
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

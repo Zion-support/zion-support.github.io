@@ -1,9 +1,6 @@
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Reports() {
   return (
     <div className="space-y-6">
@@ -30,9 +27,7 @@ export default function Reports() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-=======
+  ),
 export default function Reports() {
   return (
     <div className="space-y-6">
@@ -61,8 +56,6 @@ export default function Reports() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

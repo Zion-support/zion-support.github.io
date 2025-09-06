@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import { ensureAdminFromApi } from '../../../../utils/auth';
+import {ensureAdminFromApi} from '../../../../utils/auth';
 type EventRow = {
   name: string,
   page?: string;
   userType?: string;
   properties?: Record<string, any>;
-  at: string;
+  at: string,
 };
 const LOG_FILE = path.join(process.cwd(), 'dataanalyticsevents.log.jsonl');
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
@@ -24,7 +24,7 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
         if (!obj.at) continue;
         const t = new Date(obj.at);
         if (start && t < start) continue;
-        if (end && t > end) continue;
+        if (end && t > end) continue,
         rows.push(obj)
       } catch {}
     }

@@ -1,46 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- featured: true 
-};
-{
-  title: 'Cybersecurity Partnership with Global Tech Leaders';
-excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
-author: 'Partnerships Team';
-date: '2025-01-10';
-const [searchQuery, setSearchQuery] = useState ('');
-const [selectedCategory, setSelectedCategory] = useState ('all');
-const [selectedYear, setSelectedYear] = useState ('all');
-const categories = [ {
-  id: 'all', name: 'All News', icon: Newspaper, count: 45 
-};
-{
-  id: 'ai', name: 'AI & Technology', icon: Brain, count: 18 
-};
-{
-  id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 
-};
-{
-  id: 'space', name: 'Space Technology', icon: Rocket, count: 8 
-};
-{
-  id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 
-}];
-const years = [ {
-  id: 'all', name: 'All Years' 
-};
-{
-  id: '2025', name: '2025' 
-};
-{
-  id: '2024', name: '2024' 
-};
-{
-  id: '2023', name: '2023' 
-}];
-TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
-Clock, BookOpen, Video, Podcast, FileText, Search 
-}from 'lucide-react';
-=======
 import React from 'react';
   const featuredNews = [
     {
@@ -94,7 +51,6 @@ import React from 'react';
   TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
   Clock, BookOpen, Video, Podcast, FileText, Search
 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import Link from 'next/link';
   return (
     <UltraFuturisticBackground>
@@ -415,12 +371,8 @@ export default function NewsPage() {
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, Calendar, Clock, User, Tag, 
-  ArrowRight, ExternalLink, TrendingUp, 
-  BookOpen, Globe, Video
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Search, Calendar, Clock, User, Tag, ArrowRight, ExternalLink, TrendingUp, BookOpen, Globe, Video} from 'lucide-react';
 import Link from 'next/link';
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -630,7 +582,7 @@ export default function News() {
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
                       ? 'bg-gradient-to-r from-cyan-500 to-blue-600 text-white'
-                      : 'bg-white/10 text-gray-300 hover:bg-white/20 hover:text-white';
+                      : 'bg-white/10 text-gray-300 hover: bg-white/20 hover:text-white',
                   }`}
                 >
                   {category.name} ({category.count})
@@ -642,7 +594,7 @@ export default function News() {
       </section>
 
       {/* Featured News Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
     'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services';
@@ -650,7 +602,7 @@ export default function News() {
   ];
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -983,58 +935,6 @@ export default function News() {
         </div>
       </section>
 
-<<<<<<< HEAD
-}> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent" > Get in Touch </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Have questions about our news or want to learn more about our latest developments? Contact our team. </p> <span>Contact Us</span> <ArrowRight className="w-5 h-5" /> </a> <a href="/about" className="border border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-8 py-3 rounded-lg font-semibold transition-all duration-300" > About Zion Tech Group </a> </div> </motion.div> </div> </section> </div>) 
-}title: "Partnership with TechCorp Announced for Cloud Infrastructure";
-excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
-date: "2025-01-18";
-category: "Partnerships";
-author: "Sarah Chen";
-readTime: "2 min read";
-image: "🤝" 
-};
-};
-{
-  id: 6;
-title: "Annual Sustainability Report Published";
-excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development.";
-date: "2025-01-14";
-category: "Sustainability";
-author: "Lisa Park";
-readTime: "6 min read";
-image: "🌱" 
-};
-{
-  id: 7;
-title: "Customer Success Story: Retail Automation";
-excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems.";
-date: "2025-01-13";
-category: "Case Studies";
-author: "Alex Thompson";
-readTime: "4 min read";
-image: "📊" 
-};
-{
-  id: 8;
-title: "New Research Paper on Autonomous Systems";
-excerpt: "Published in leading AI journal, our research explores the future of self-managing technology infrastructure.";
-date: "2025-01-12";
-category: "Research";
-author: "Prof. Maria Garcia";
-readTime: "7 min read";
-image: "📚" 
-}];
-min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <section className=" text-center mb-16"> <h1 className=" text-5xl font-extrabold mb-6 bg-gradient-to-r from-cyan-400 to-fuchsia-400 bg-clip-text text-transparent"> Latest News </h1> > {
-  category 
-}</button>) ) 
-}</div> <span>•</span> <span> {
-  article.date 
-}</span> <span>•</span> <span> {
-  article.readTime 
-}</span> </div> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read Full Article </button> </div> </div> </div>) ) 
-}</div> <button className=" w-full px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200"> Read More </button> </article>) ) 
-}</div> Get the latest news and updates delivered directly to your inbox. Never miss an important announcement. </p> <input type=" email"placeholder=" Enter your email"className=" flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-cyan-400/50"/> <button className=" px-6 py-3 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover:from-cyan-500 hover:to-fuchsia-500 transition-all duration-200" > Subscribe </button> </div> </div> </div> </section> </main> </div> </>) 
-=======
 import React from 'react';
   const featuredNews = [
     {
@@ -1408,12 +1308,8 @@ export default function NewsPage() {
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white"
                       : "bg-gray-800/50 text-gray-300 hover:bg-gray-700/50 border border-gray-700 hover:border-gray-600"
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  Search, Calendar, Clock, User, Tag, 
-  ArrowRight, ExternalLink, TrendingUp, 
-  BookOpen, Globe, Video
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Search, Calendar, Clock, User, Tag, ArrowRight, ExternalLink, TrendingUp, BookOpen, Globe, Video} from 'lucide-react';
 import Link from 'next/link';
 export default function News() {
   const [searchTerm, setSearchTerm] = useState('');
@@ -1635,7 +1531,7 @@ export default function News() {
       </section>
 
       {/* Featured News Section */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8">
+      <section className="py-20 px-4 sm: px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <motion.h2 
     'All NewsCompany NewsPartnershipsAI & EthicsQuantum TechnologySpace TechnologyMicro SAASIT Services';
@@ -1643,7 +1539,7 @@ export default function News() {
   ];
 
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
       year: 'numeric',
       month: 'long',
@@ -1976,8 +1872,6 @@ export default function News() {
         </div>
       </section>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {/* Latest News Section */}
       <section className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
@@ -2654,9 +2548,5 @@ export default function News() {
         </main>
       </div>
     </>
-  );
+  ),
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

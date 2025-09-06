@@ -1,40 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Calendar, RefreshCw } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Input } from '@/components/ui/input';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,;
-} from '@/components/ui/popover';
-import { Button } from '@/components/ui/button';
-import { Calendar as CalendarComponent } from '@/components/ui/calendar';
-import { format } from 'date-fns';
-import type { DateRange } from 'react-day-picker';
-import type { QuoteStatus } from '@/types/quotes';
-
-=======
 import React from "react";
-import { Calendar, RefreshCw } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Calendar as CalendarComponent } from "@/components/ui/calendar";
-import { format } from "date-fns";
+import {Calendar, RefreshCw} from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {Button} from "@/components/ui/button";
+import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
+import {format} from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 interface QuotesFilterProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -55,7 +29,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
-  setDateRange;
+  setDateRange,
   onReset
 }) => {
   return (
@@ -118,18 +92,15 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                         {format(dateRange.to, "LLL dd, y")}
                       </>
                     ) : (
-<<<<<<< HEAD
-                      format(dateRange.from, 'LLL dd, y')
-=======
 import React from "react";
-import { Calendar, RefreshCw } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Calendar as CalendarComponent } from "@/components/ui/calendar";
-import { format } from "date-fns";
+import {Calendar, RefreshCw} from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover";
+import {Button} from "@/components/ui/button";
+import {Calendar, as, CalendarComponent} from "@/components/ui/calendar";
+import {format} from "date-fns";
 import type { DateRange } from "react-day-picker";
 import type { QuoteStatus } from "@/types/quotes";
 interface QuotesFilterProps {
@@ -152,7 +123,7 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archiveFilter;
   setArchiveFilter;
   dateRange;
-  setDateRange;
+  setDateRange,
   onReset
 }) => {
   return (
@@ -216,37 +187,21 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
                       </>
                     ) : (
                       format(dateRange.from, "LLL dd, y")
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       format(dateRange.from, "LLL dd, y")
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     )
                   ) : (
                     <span>Date range</span>
                   )}
                 </Button>
               </PopoverTrigger>
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <PopoverContent
-                className='w-auto p-0 bg-zion-blue-dark border-zion-blue-light'
-                align='start'
-              >
-                <CalendarComponent
-                  initialFocus
-                  mode='range'
-=======
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
                   mode="range"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <PopoverContent className="w-auto p-0 bg-zion-blue-dark border-zion-blue-light" align="start">
                 <CalendarComponent
                   initialFocus
                   mode="range"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   defaultMonth={dateRange?.from}
                   selected={dateRange}
                   onSelect={setDateRange}
@@ -256,24 +211,13 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             </Popover>
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-        <div className='mt-4 flex justify-end'>
-          <Button
-            variant='outline'
-=======
         
         <div className="mt-4 flex justify-end">
           <Button 
             variant="outline" 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             onClick={onReset}
             className="border-zion-blue-light text-zion-slate-light"
           >
-<<<<<<< HEAD
-            <RefreshCw className='mr-2 h-4 w-4' /> Reset Filters
-=======
         
         <div className="mt-4 flex justify-end">
           <Button 
@@ -282,23 +226,12 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
             className="border-zion-blue-light text-zion-slate-light"
           >
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <RefreshCw className="mr-2 h-4 w-4" /> Reset Filters
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </Button>
         </div>
       </CardContent>
     </Card>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-};
-=======
   )
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -24,7 +24,7 @@ export interface InnovativeAIService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const innovativeAIServices: InnovativeAIService[] = [{
+reviews: number,export const innovativeAIServices: InnovativeAIService[] = [{
     id:,
   quantum-ai-content-generator',
     "name": 'Quantum AI Content Generator,

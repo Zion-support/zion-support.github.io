@@ -1,88 +1,21 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Atom,
-  Dna,
-  Users,
-  Globe,
-  Cpu,
-  Target,
-  Microscope,
-  Lock,
-  Cloud,
-  BarChart3,
-  Settings,
-  Eye,
-  Award,
-  Clock,
-  Heart,
-  Lightbulb,
-  Target as TargetIcon,
-  Zap as ZapIcon,
-  Shield as ShieldIcon,
-  Globe as GlobeIcon,
-  Search,
-  Code,
-  TestTube,
-  Server,
-  Database,
-  Network,
-  Shield as SecurityIcon,
-  Wifi,
-  Building,
-  Cpu as CpuIcon,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-=======
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
-  Wifi, Building, Cpu as CpuIcon
-} from 'lucide-react';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, 
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, 
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, 
-  Eye, Award, Clock, Heart, Lightbulb, Target as TargetIcon, 
-  Zap as ZapIcon, Shield as ShieldIcon, Globe as GlobeIcon;
-  Search, Code, TestTube, Server, Database, Network, Shield as SecurityIcon;
-  Wifi, Building, Cpu as CpuIcon
-} from 'lucide-react';
+import {advancedITInfrastructureServices2025} from '../data/2025-advanced-it-infrastructure-services';
+import {CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb, Target, as, TargetIcon, Zap, as, ZapIcon, Shield, as, ShieldIcon, Globe, as, GlobeIcon, Search, Code, TestTube, Server, Database, Network, Shield, as, SecurityIcon, Wifi, Building, Cpu, as, CpuIcon} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedITInfrastructureServices2025 } from '../data/2025-advanced-it-infrastructure-services';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {advancedITInfrastructureServices2025} from '../data/2025-advanced-it-infrastructure-services';
+ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
 };
 
@@ -107,41 +40,33 @@ const heroStats = [
     value: '60%',
     icon: <TrendingUp className='w-5 h-5' />,
   },
-=======
   website: 'https://ziontechgroup.com'
 };
 
 const heroStats = [
-=======
   website: 'https://ziontechgroup.com'
 };
 
 const heroStats = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   { label: 'Infrastructure Projects', value: '150+', icon: <Server className="w-5 h-5" /> },
   { label: 'Enterprise Clients', value: '300+', icon: <Building className="w-5 h-5" /> },
   { label: 'Uptime Guarantee', value: '99.99%', icon: <Award className="w-5 h-5" /> },
   { label: 'Cost Reduction', value: '60%', icon: <TrendingUp className="w-5 h-5" /> }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const serviceCategories = [
   {
     title: 'Quantum Cloud Computing',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       'Next-generation cloud infrastructure with quantum processing capabilities',
     services: advancedITInfrastructureServices2025.filter(
       s => s.category === 'Quantum Cloud Computing'
     ),
-=======
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing'),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     icon: Cloud,
     color: 'from-indigo-500 to-purple-600',
     features: ['Quantum ProcessingHybrid ComputingAI Acceleration']
@@ -176,14 +101,12 @@ const serviceCategories = [
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Networking'),
     icon: Network,
     color: 'from-purple-500 to-pink-600',
-<<<<<<< HEAD
     features: [
       'Quantum Encryption',
       'Network Optimization',
       'Security Monitoring',
     ],
   },
-=======
     description: 'Next-generation cloud infrastructure with quantum processing capabilities',
     services: advancedITInfrastructureServices2025.filter(s => s.category === 'Quantum Cloud Computing'),
     icon: Cloud,
@@ -222,23 +145,18 @@ const serviceCategories = [
     color: 'from-purple-500 to-pink-600',
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     features: ['Quantum EncryptionNetwork OptimizationSecurity Monitoring']
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const heroFeatures = [
   {
     title: 'Quantum Computing',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
-=======
     description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     icon: Atom,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
   };
@@ -258,10 +176,8 @@ const heroFeatures = [
     title: 'Zero Trust Security',
     description: 'Continuous verification and monitoring that provides comprehensive protection against modern threats.',
     icon: Shield,
-<<<<<<< HEAD
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600',
   },
-=======
     description: 'Revolutionary quantum processing capabilities that provide 1000x performance for specific workloads.',
     icon: Atom,
     gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
@@ -284,11 +200,9 @@ const heroFeatures = [
     icon: Shield,
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const testimonials = [
@@ -296,71 +210,56 @@ const testimonials = [
     name: 'Dr. Jennifer Martinez',
     role: 'CTO, QuantumTech Industries';
     company: 'QuantumTech Industries',
-<<<<<<< HEAD
-<<<<<<< HEAD
     content:
       "Zion Tech Group's quantum cloud infrastructure has revolutionized our research capabilities. We've achieved computational breakthroughs that were previously impossible.",
     rating: 5,
     avatar: '👩‍🔬',
   },
-=======
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
     rating: 5,
     avatar: '👩‍🔬'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     content: 'Zion Tech Group\'s quantum cloud infrastructure has revolutionized our research capabilities. We\'ve achieved computational breakthroughs that were previously impossible.',
     rating: 5,
     avatar: '👩‍🔬'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     name: 'Robert Thompson',
     role: 'Infrastructure Director, EdgeNet Solutions';
     company: 'EdgeNet Solutions',
-<<<<<<< HEAD
-<<<<<<< HEAD
     content:
       'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
     avatar: '👨‍💼',
   },
-=======
     content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
     avatar: '👨‍💼'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     content: 'The autonomous edge computing network has transformed our IoT operations. We now have real-time processing with 90% lower latency and 70% cost reduction.',
     rating: 5,
     avatar: '👨‍💼'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     name: 'Lisa Chang',
     role: 'Security CISO, SecureCorp International';
     company: 'SecureCorp International',
-<<<<<<< HEAD
-<<<<<<< HEAD
     content:
       'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
     avatar: '👩‍🔒',
   },
-=======
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
     avatar: '👩‍🔒'
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     content: 'Their zero-trust security architecture provides comprehensive protection that has prevented multiple sophisticated cyber attacks. The ROI has been exceptional.',
     rating: 5,
     avatar: '👩‍🔒'
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 export default function AdvancedITInfrastructureServices() {
@@ -368,8 +267,6 @@ export default function AdvancedITInfrastructureServices() {
     <Layout>
       <Head>
         <title>Advanced IT Infrastructure Services - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology.'
@@ -401,7 +298,6 @@ export default function AdvancedITInfrastructureServices() {
       <section className='relative py-20 lg:py-32 overflow-hidden'>
         <div className='absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20'></div>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
         <meta name="description" content="Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology." />
         <meta name="keywords" content="IT infrastructure, quantum computing, edge computing, cybersecurity, data centers, cloud computing, zero trust security" />
         <meta property="og:title" content="Advanced IT Infrastructure Services - Zion Tech Group" />
@@ -415,8 +311,6 @@ export default function AdvancedITInfrastructureServices() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <meta name="description" content="Revolutionary IT infrastructure services including quantum cloud computing, edge computing, zero-trust security, and autonomous data centers. Transform your infrastructure with cutting-edge technology." />
         <meta name="keywords" content="IT infrastructure, quantum computing, edge computing, cybersecurity, data centers, cloud computing, zero trust security" />
         <meta property="og:title" content="Advanced IT Infrastructure Services - Zion Tech Group" />
@@ -430,26 +324,21 @@ export default function AdvancedITInfrastructureServices() {
       <section className="relative py-20 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-blue-900/20 to-cyan-900/20"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h1 className='text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6'>
-=======
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Advanced IT Infrastructure Services
             </h1>
             <p className="text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
             </p>
-<<<<<<< HEAD
             <div className='flex flex-wrap justify-center gap-4 mb-12'>
-=======
             <h1 className="text-4xl lg:text-6xl font-bold bg-gradient-to-r from-indigo-400 via-blue-400 to-cyan-400 bg-clip-text text-transparent mb-6">
               Advanced IT Infrastructure Services
             </h1>
@@ -457,22 +346,17 @@ export default function AdvancedITInfrastructureServices() {
               Revolutionary infrastructure solutions with quantum computing, edge computing, and AI-powered automation for the future
             </p>
             <div className="flex flex-wrap justify-center gap-4 mb-12">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="flex flex-wrap justify-center gap-4 mb-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {heroStats.map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, scale: 0.8 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30'
-=======
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   {stat.icon}
                   <span className="text-blue-400 font-semibold">{stat.value}</span>
@@ -485,13 +369,11 @@ export default function AdvancedITInfrastructureServices() {
                 Explore Services
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Link>
-<<<<<<< HEAD
               <Link
                 href={`tel:${contactInfo.mobile}`}
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
               >
                 <Phone className='mr-2 w-5 h-5' />
-=======
                   className="flex items-center space-x-2 bg-white/10 backdrop-blur-lg rounded-lg px-4 py-2 border border-blue-500/30"
                 >
                   {stat.icon}
@@ -507,47 +389,37 @@ export default function AdvancedITInfrastructureServices() {
               </Link>
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Link href={`tel:${contactInfo.mobile}`} className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300">
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Get Started
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Features Section */}
       <section className='py-20 bg-gradient-to-b from-black to-gray-900'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               Why Choose Our IT Infrastructure Services?
@@ -556,10 +428,8 @@ export default function AdvancedITInfrastructureServices() {
               Our infrastructure services combine cutting-edge technology with intelligent automation to deliver unprecedented performance and reliability
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -571,11 +441,9 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {heroFeatures.map((feature, index) => (
               <motion.div
                 key={index}
@@ -583,12 +451,9 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative group'
-=======
                 className="relative group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
                   <div className="bg-gray-900 rounded-xl p-6 h-full">
@@ -596,12 +461,10 @@ export default function AdvancedITInfrastructureServices() {
                       <div className={`${feature.gradient} w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg hover:shadow-cyan-400/40 transition-transform duration-300`}>
                         <feature.icon className="w-8 h-8 text-white" />
                       </div>
-<<<<<<< HEAD
                       <h3 className='text-xl font-semibold text-white mb-3'>
                         {feature.title}
                       </h3>
                       <p className='text-gray-300'>{feature.description}</p>
-=======
                 className="relative group"
               >
                 <div className={`${feature.gradient} p-1 rounded-xl`}>
@@ -612,11 +475,9 @@ export default function AdvancedITInfrastructureServices() {
                       </div>
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-xl font-semibold text-white mb-3">{feature.title}</h3>
                       <p className="text-gray-300">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
                 </div>
@@ -624,37 +485,29 @@ export default function AdvancedITInfrastructureServices() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Services Section */}
       <section id='services' className='py-20 bg-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Services Section */}
       <section id="services" className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               IT Infrastructure Service Categories
@@ -664,9 +517,7 @@ export default function AdvancedITInfrastructureServices() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='space-y-16'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -678,10 +529,8 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
 
           <div className="space-y-16">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="space-y-16">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {serviceCategories.map((category, categoryIndex) => (
               <motion.div
                 key={categoryIndex}
@@ -689,12 +538,9 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: categoryIndex * 0.2 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='relative'
-=======
                 className="relative"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="text-center mb-12">
                   <div className={`inline-flex items-center justify-center w-20 h-20 ${category.color} rounded-2xl mb-6`}>
@@ -704,9 +550,7 @@ export default function AdvancedITInfrastructureServices() {
                   <p className="text-xl text-gray-300 max-w-2xl mx-auto">{category.description}</p>
                 </div>
 
-<<<<<<< HEAD
                 <div className='grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8'>
-=======
                 className="relative"
               >
                 <div className="text-center mb-12">
@@ -718,10 +562,8 @@ export default function AdvancedITInfrastructureServices() {
                 </div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   {category.services.map((service, serviceIndex) => (
                     <motion.div
                       key={service.id}
@@ -729,21 +571,16 @@ export default function AdvancedITInfrastructureServices() {
                       whileInView={{ opacity: 1, scale: 1 }}
                       transition={{ duration: 0.5, delay: serviceIndex * 0.1 }}
                       viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       className='relative group'
-=======
                       className="relative group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
                         <div className="bg-gray-900 rounded-xl p-6 h-full">
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
-<<<<<<< HEAD
                               <span className='bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full'>
-=======
                       className="relative group"
                     >
                       <div className={`${service.color} p-1 rounded-xl`}>
@@ -752,16 +589,12 @@ export default function AdvancedITInfrastructureServices() {
                             <span className="text-3xl">{service.icon}</span>
                             {service.popular && (
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-bold px-3 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                                 Popular
                               </span>
                             )}
                           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <h4 className='text-xl font-semibold text-white mb-2'>
                             {service.name}
                           </h4>
@@ -775,13 +608,12 @@ export default function AdvancedITInfrastructureServices() {
                             <span className='text-gray-400'>
                               {service.period}
                             </span>
-=======
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
                             <span className="text-2xl font-bold text-white">{service.price}</span>
                             <span className="text-gray-400">{service.period}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
                           <p className="text-gray-300 text-sm mb-4">{service.description}</p>
                           <div className="space-y-2 mb-6">
@@ -802,9 +634,7 @@ export default function AdvancedITInfrastructureServices() {
                             </Link>
                             <Link
                               href={`tel:${contactInfo.mobile}`}
-<<<<<<< HEAD
                               className='inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300'
-=======
                           <h4 className="text-xl font-semibold text-white mb-2">{service.name}</h4>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
                           <div className="flex items-center justify-between mb-4">
@@ -831,10 +661,8 @@ export default function AdvancedITInfrastructureServices() {
                             <Link
                               href={`tel:${contactInfo.mobile}`}
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               className="inline-flex items-center px-4 py-2 bg-gradient-to-r from-indigo-500 to-blue-600 text-white text-sm font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             >
                               Get Started
                             </Link>
@@ -851,29 +679,21 @@ export default function AdvancedITInfrastructureServices() {
       </section>
 
       {/* Testimonials Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
               What Our Clients Say
@@ -883,9 +703,7 @@ export default function AdvancedITInfrastructureServices() {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
@@ -897,10 +715,8 @@ export default function AdvancedITInfrastructureServices() {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {testimonials.map((testimonial, index) => (
               <motion.div
                 key={index}
@@ -908,12 +724,9 @@ export default function AdvancedITInfrastructureServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20'
-=======
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="flex items-center mb-4">
                   <span className="text-3xl mr-3">{testimonial.avatar}</span>
@@ -927,9 +740,7 @@ export default function AdvancedITInfrastructureServices() {
                 <div className="flex items-center">
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
-<<<<<<< HEAD
                       <Star key={i} className='w-4 h-4 fill-current' />
-=======
                 className="bg-white/5 backdrop-blur-lg rounded-xl p-6 border border-blue-500/20"
               >
                 <div className="flex items-center mb-4">
@@ -945,10 +756,8 @@ export default function AdvancedITInfrastructureServices() {
                   <div className="flex text-yellow-400">
                     {[...Array(testimonial.rating)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-current" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <Star key={i} className="w-4 h-4 fill-current" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     ))}
                   </div>
                 </div>
@@ -959,30 +768,22 @@ export default function AdvancedITInfrastructureServices() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
       <section className="py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-r from-indigo-900/20 via-blue-900/20 to-cyan-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className='text-3xl lg:text-4xl font-bold text-white mb-6'>
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Transform Your Infrastructure?
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto">
@@ -993,9 +794,7 @@ export default function AdvancedITInfrastructureServices() {
                 href={`tel:${contactInfo.mobile}`}
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
-<<<<<<< HEAD
                 <Phone className='mr-2 w-5 h-5' />
-=======
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Ready to Transform Your Infrastructure?
             </h2>
@@ -1008,30 +807,23 @@ export default function AdvancedITInfrastructureServices() {
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-indigo-500 to-blue-600 text-white font-semibold rounded-lg hover:from-indigo-600 hover:to-blue-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30"
               >
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Phone className="mr-2 w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Call Now: {contactInfo.mobile}
               </Link>
               <Link
                 href={`mailto:${contactInfo.email}`}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300'
-=======
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <Mail className="mr-2 w-5 h-5" />
                 Email Us
               </Link>
             </div>
-<<<<<<< HEAD
             <div className='mt-8 text-center'>
               <p className='text-gray-300 mb-2'>📍 {contactInfo.address}</p>
               <p className='text-gray-300'>🌐 {contactInfo.website}</p>
-=======
                 className="inline-flex items-center px-8 py-4 bg-white/10 backdrop-blur-lg text-white font-semibold rounded-lg border border-blue-500/30 hover:bg-white/20 transition-all duration-300"
               >
                 <Mail className="mr-2 w-5 h-5" />
@@ -1041,25 +833,18 @@ export default function AdvancedITInfrastructureServices() {
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="mt-8 text-center">
               <p className="text-gray-300 mb-2">📍 {contactInfo.address}</p>
               <p className="text-gray-300">🌐 {contactInfo.website}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

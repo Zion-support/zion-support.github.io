@@ -1,20 +1,20 @@
 
 import React, { useState, useEffect } from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import { useDisputes } from "@/hooks/useDisputes";
-import { disputeReasonLabels, DisputeMessage, DisputeStatus } from "@/types/disputes";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { format, formatDistanceToNow } from "date-fns";
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { ShieldAlert, ArrowDown, Check, X, MessageSquare, Download } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
-import { toast } from "sonner";
+import {useParams,, useNavigate} from "react-router-dom";
+import {useDisputes} from "@/hooks/useDisputes";
+import {disputeReasonLabels,, DisputeMessage,, DisputeStatus} from "@/types/disputes";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Tabs,, TabsContent,, TabsList,, TabsTrigger} from "@/components/ui/tabs";
+import {Card,, CardContent,, CardDescription,, CardFooter,, CardHeader,, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Separator} from "@/components/ui/separator";
+import {Avatar,, AvatarFallback,, AvatarImage} from "@/components/ui/avatar";
+import {format,, formatDistanceToNow} from "date-fns";
+import {Alert,, AlertDescription,, AlertTitle} from "@/components/ui/alert";
+import {ShieldAlert,, ArrowDown,, Check,, X,, MessageSquare,, Download} from "lucide-react";
+import {useAuth} from "@/hooks/useAuth";
+import {toast} from "sonner";
 export function DisputeDetail() {
   // useParams may be untyped in this environment, so avoid passing a
   // type argument and cast the result instead to prevent TS2347 errors.
@@ -64,7 +64,7 @@ export function DisputeDetail() {
   }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
 
   const handleStatusChange = async (status: DisputeStatus) => {
-    if (!disputeId) return;
+    if (!disputeId) return,
     
     const success = await updateDisputeStatus(disputeId, status);
     if (success && dispute) {
@@ -134,7 +134,7 @@ export function DisputeDetail() {
   const getStatusBadgeVariant = (status: DisputeStatus) => {
     switch (status) {
       case "open": return "default";
-      case "under_review": return "secondary";
+      case "under_review": return "secondary",
       case "resolved": return "outline", // Changed from "success" to "outline"
       case "closed": return "outline";
       default: return "default"

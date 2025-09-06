@@ -4,13 +4,13 @@ export interface InvestmentPortfolio {
   name: string;
   totalValue: number;
   currency: string;
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive';
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive',
   investmentHorizon: number, // in years
   targetReturn: number;
   assets: PortfolioAsset[];
   lastRebalanced: Date;
   performance: PortfolioPerformance;
-  createdAt: Date;
+  createdAt: Date,
   updatedAt: Date
 }
 
@@ -21,7 +21,7 @@ export interface PortfolioAsset {
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
   quantity: number;
   currentPrice: number;
-  marketValue: number;
+  marketValue: number,
   allocation: number, // percentage of portfolio
   purchasePrice: number;
   purchaseDate: Date;
@@ -29,7 +29,7 @@ export interface PortfolioAsset {
     dailyReturn: number;
     weeklyReturn: number;
     monthlyReturn: number;
-    yearlyReturn: number;
+    yearlyReturn: number,
     totalReturn: number
   }
 }
@@ -43,7 +43,7 @@ export interface PortfolioPerformance {
   beta: number;
   alpha: number;
   trackingError: number;
-  informationRatio: number;
+  informationRatio: number,
   sortinoRatio: number
 }
 
@@ -54,16 +54,16 @@ export interface InvestmentRecommendation {
   asset: {
     symbol: string;
     name: string;
-    type: string;
+    type: string,
     currentPrice: number
   };
   confidence: number;
   reasoning: string[];
   expectedReturn: number;
-  riskLevel: 'low' | 'medium' | 'high';
+  riskLevel: 'low' | 'medium' | 'high',
   timeHorizon: number, // in months
   alternatives: string[];
-  createdAt: Date;
+  createdAt: Date,
   expiresAt: Date
 }
 
@@ -78,23 +78,23 @@ export interface FinancialGoal {
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
   monthlyContribution: number;
   expectedReturn: number;
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive';
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive',
   progress: number, // percentage
-  createdAt: Date;
+  createdAt: Date,
   updatedAt: Date
 }
 
 export interface MarketAnalysis {
   id: string;
   market: string;
-  analysis: string;
+  analysis: string,
   keyMetrics: Record<string, number>;
   trends: string[];
   risks: string[];
   opportunities: string[];
   recommendations: string[];
   confidence: number;
-  lastUpdated: Date;
+  lastUpdated: Date,
   nextUpdate: Date
 }
 
@@ -103,44 +103,44 @@ export interface FinancialPlan {
   userId: string;
   name: string;
   summary: string;
-  goals: FinancialGoal[];
+  goals: FinancialGoal[],
   investmentStrategy: {
     assetAllocation: Record<string, number>;
-    rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually';
+    rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     riskManagement: string[]
   };
   cashFlow: {
     monthlyIncome: number;
     monthlyExpenses: number;
-    savingsRate: number;
+    savingsRate: number,
     emergencyFund: number
   };
   insurance: {
     life: boolean;
     health: boolean;
     disability: boolean;
-    property: boolean;
+    property: boolean,
     recommendations: string[]
   };
   tax: {
     estimatedTaxLiability: number;
-    taxOptimizationStrategies: string[];
+    taxOptimizationStrategies: string[],
     deductions: string[]
   };
   retirement: {
     targetAge: number;
     estimatedNeeds: number;
     currentSavings: number;
-    monthlyContribution: number;
+    monthlyContribution: number,
     projectedValue: number
   };
-  createdAt: Date;
+  createdAt: Date,
   updatedAt: Date
 }
 
 export interface FinancialRequest {
   userId: string;
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking';
+  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking',
   parameters: Record<string, any>;
   preferences?: Record<string, any>
 }
@@ -151,21 +151,21 @@ export interface FinancialResponse {
     portfolio?: InvestmentPortfolio;
     recommendations?: InvestmentRecommendation[];
     plan?: FinancialPlan;
-    analysis?: MarketAnalysis;
+    analysis?: MarketAnalysis,
     goals?: FinancialGoal[]
   };
   insights: string[];
   nextSteps: string[];
-  riskWarnings: string[];
+  riskWarnings: string[],
   estimatedFees: number
 }
 
 export class AIFinancialAdvisorService {
   private apiKey: string;
-  private baseUrl: string;
+  private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -190,7 +190,7 @@ export class AIFinancialAdvisorService {
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -211,7 +211,7 @@ export class AIFinancialAdvisorService {
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/plan`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -271,15 +271,15 @@ export class AIFinancialAdvisorService {
     rebalancingActions: Array<{
       action: 'buy' | 'sell';
       symbol: string;
-      quantity: number;
+      quantity: number,
       estimatedCost: number
     }>;
-    estimatedFees: number;
+    estimatedFees: number,
     expectedImpact: string
   }> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -300,13 +300,13 @@ export class AIFinancialAdvisorService {
   async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
     estimatedNeeds: number;
     monthlyContribution: number;
-    projectedValue: number;
+    projectedValue: number,
     assumptions: Record<string, any>;
     recommendations: string[]
   }> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculator`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -328,12 +328,12 @@ export class AIFinancialAdvisorService {
     strategies: string[];
     estimatedSavings: number;
     implementation: string[];
-    risks: string[];
+    risks: string[],
     deadlines: Record<string, Date>
   }> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};
@@ -354,14 +354,14 @@ export class AIFinancialAdvisorService {
   async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
     reportId: string;
     downloadUrl: string;
-    summary: string;
+    summary: string,
     keyMetrics: Record<string, any>;
-    recommendations: string[];
+    recommendations: string[],
     nextSteps: string[]
   }> {
     try {
       const response = await fetch(`${this.baseUrl}/api/financial/report`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.apiKey}`;
           'Content-Type': 'application/json'};

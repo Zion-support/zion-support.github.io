@@ -1,7 +1,7 @@
 import React from "react";
 import MainLayout from '../components/layout/MainLayout'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
+import {motion} from 'framer-motion;
 import {},
   {
   // TODO: Implement
@@ -347,7 +347,7 @@ export default function NewsPage() {},
                     
                     <Link
                       href={`/news/${article.id}`}`
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-blue-700"
+                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-blue-700"
                     >
 </Link>
                       <span>Read More
@@ -356,7 +356,7 @@ export default function NewsPage() {},
                     </Link>
                   </div>
                 </motion.article>);
-              );
+              ),
             </div>
           </div>
         
@@ -375,7 +375,7 @@ export default function NewsPage() {},
   {
             >
 
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">"
 </h2>
               
               <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">"
@@ -398,4 +398,4 @@ export default function NewsPage() {},
         </section>
       </div>
     </div>
-  );
+  ),

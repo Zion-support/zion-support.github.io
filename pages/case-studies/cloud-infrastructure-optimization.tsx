@@ -1,19 +1,12 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function CaseStudyPage() {
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <title>
           Cloud Infrastructure Optimization - Case Study | Zion Tech Group
         </title>
@@ -25,11 +18,10 @@ export default function CaseStudyPage() {
           name='keywords'
           content='cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps'
         />
-=======
         <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
         <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-gray-900">
@@ -55,11 +47,9 @@ export default function CaseStudyPage() {
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Cloud Infrastructure Optimization
             </h1>
-<<<<<<< HEAD
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>
               How an E-commerce Platform achieved 50% reduction in cloud costs
               with self-healing, auto-scaling infrastructure
-=======
         <title>Cloud Infrastructure Optimization - Case Study | Zion Tech Group</title>
         <meta name="description" content="Discover how an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure. Read our detailed case study." />
         <meta name="keywords" content="cloud optimization, auto-scaling, infrastructure automation, cost reduction, DevOps" />
@@ -90,21 +80,16 @@ export default function CaseStudyPage() {
             </h1>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               How an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               How an E-commerce Platform achieved 50% reduction in cloud costs with self-healing, auto-scaling infrastructure
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </header>
 
           {/* Case Study Content */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <div className='max-w-4xl mx-auto'>
-=======
           <div className="max-w-4xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {/* Company Overview */}
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Company Overview</h2>
@@ -123,11 +108,9 @@ export default function CaseStudyPage() {
                     <div className="text-3xl font-bold text-blue-400">100K+</div>
                     <div className="text-white/70">Products</div>
                   </div>
-<<<<<<< HEAD
                   <div className='text-center'>
                     <div className='text-3xl font-bold text-blue-400'>$5M+</div>
                     <div className='text-white/70'>Annual Revenue</div>
-=======
           <div className="max-w-4xl mx-auto">
             {/* Company Overview */}
             <section className="mb-16">
@@ -150,20 +133,16 @@ export default function CaseStudyPage() {
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-400">$5M+</div>
                     <div className="text-white/70">Annual Revenue</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-400">$5M+</div>
                     <div className="text-white/70">Annual Revenue</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </div>
             </section>
 
             {/* Challenge */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 The Challenge
@@ -178,7 +157,6 @@ export default function CaseStudyPage() {
                     <span>
                       High cloud costs consuming 40% of operational budget
                     </span>
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -187,7 +165,7 @@ export default function CaseStudyPage() {
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
                     <span>High cloud costs consuming 40% of operational budget</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
@@ -197,10 +175,8 @@ export default function CaseStudyPage() {
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
                     <span>Manual scaling requirements causing service disruptions</span>
                   </li>
-<<<<<<< HEAD
                   <li className='flex items-start gap-3'>
                     <div className='w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0'></div>
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">The Challenge</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -220,11 +196,9 @@ export default function CaseStudyPage() {
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <li className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-red-400 rounded-full mt-3 flex-shrink-0"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <span>Lack of monitoring and alerting systems</span>
                   </li>
                 </ul>
@@ -232,8 +206,6 @@ export default function CaseStudyPage() {
             </section>
 
             {/* Solution */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Our Solution
@@ -246,7 +218,6 @@ export default function CaseStudyPage() {
                   We built a comprehensive cloud infrastructure solution that
                   automatically scales, monitors, and heals itself while
                   optimizing costs and performance.
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -254,7 +225,7 @@ export default function CaseStudyPage() {
                 <p className="text-white/90 text-lg mb-6">
                   We built a comprehensive cloud infrastructure solution that automatically scales;
                   monitors, and heals itself while optimizing costs and performance.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -281,7 +252,6 @@ export default function CaseStudyPage() {
                       into infrastructure health and performance.
                     </p>
                   </div>
-<<<<<<< HEAD
 
                   <div className='bg-white/5 rounded-lg p-6 border border-white/10'>
                     <h4 className='text-xl font-semibold text-blue-400 mb-3'>
@@ -290,7 +260,6 @@ export default function CaseStudyPage() {
                     <p className='text-white/80'>
                       AI-powered cost optimization algorithms automatically
                       identify and implement cost-saving opportunities.
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Our Solution</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -324,18 +293,14 @@ export default function CaseStudyPage() {
                       into infrastructure health and performance.
                     </p>
                   </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-blue-400 mb-3">Cost Optimization</h4>
                     <p className="text-white/80">
                       AI-powered cost optimization algorithms automatically identify and 
                       implement cost-saving opportunities.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </p>
                   </div>
                 </div>
@@ -343,20 +308,17 @@ export default function CaseStudyPage() {
             </section>
 
             {/* Results */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Results & Impact
               </h2>
               <div className='bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20'>
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <div>
                     <h3 className="text-2xl font-semibold text-green-400 mb-6">Quantifiable Results</h3>
                     <div className="space-y-4">
@@ -394,10 +356,8 @@ export default function CaseStudyPage() {
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
                         <span>Real-time performance optimization</span>
                       </li>
-<<<<<<< HEAD
                       <li className='flex items-start gap-3'>
                         <div className='w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0'></div>
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Results & Impact</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -441,11 +401,9 @@ export default function CaseStudyPage() {
                       </li>
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <li className="flex items-start gap-3">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-3 flex-shrink-0"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <span>Reduced DevOps team workload</span>
                       </li>
                     </ul>
@@ -455,8 +413,6 @@ export default function CaseStudyPage() {
             </section>
 
             {/* Technologies */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Technologies Used
@@ -476,9 +432,7 @@ export default function CaseStudyPage() {
                       <span className='text-blue-400 font-semibold'>
                         {tech}
                       </span>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Technologies Used</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -486,10 +440,7 @@ export default function CaseStudyPage() {
                   {['Auto-scalingLoad BalancingMonitoringCost Optimization'].map((tech) => (
                     <div key={tech} className="bg-white/5 rounded-lg p-4 text-center border border-white/10">
                       <span className="text-blue-400 font-semibold">{tech}</span>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   ))}
                 </div>
@@ -497,8 +448,6 @@ export default function CaseStudyPage() {
             </section>
 
             {/* Implementation */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-16'>
               <h2 className='text-3xl font-bold text-white mb-6'>
                 Implementation Timeline
@@ -509,14 +458,13 @@ export default function CaseStudyPage() {
                     <div className='w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold'>
                       1
                     </div>
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
                 <div className="space-y-6">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold">1</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <div>
                       <h4 className="text-lg font-semibold text-white">Infrastructure Analysis (Months 1-2)</h4>
                       <p className="text-white/70">Comprehensive analysis of current infrastructure and performance bottlenecks</p>
@@ -534,7 +482,6 @@ export default function CaseStudyPage() {
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 bg-blue-400 rounded-full flex items-center justify-center text-white font-bold">3</div>
                     <div>
-<<<<<<< HEAD
                       <h4 className='text-lg font-semibold text-white'>
                         Testing & Deployment (Months 7-8)
                       </h4>
@@ -542,7 +489,6 @@ export default function CaseStudyPage() {
                         Comprehensive testing and gradual deployment to
                         production
                       </p>
-=======
             <section className="mb-16">
               <h2 className="text-3xl font-bold text-white mb-6">Implementation Timeline</h2>
               <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20">
@@ -568,11 +514,9 @@ export default function CaseStudyPage() {
                     <div>
                       <h4 className="text-lg font-semibold text-white">Testing & Deployment (Months 7-8)</h4>
                       <p className="text-white/70">Comprehensive testing and gradual deployment to production</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h4 className="text-lg font-semibold text-white">Testing & Deployment (Months 7-8)</h4>
                       <p className="text-white/70">Comprehensive testing and gradual deployment to production</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                   </div>
                 </div>
@@ -580,8 +524,6 @@ export default function CaseStudyPage() {
             </section>
 
             {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='text-center'>
               <div className='bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20'>
                 <h2 className='text-2xl font-bold mb-4 text-white'>
@@ -591,14 +533,13 @@ export default function CaseStudyPage() {
                   This case study demonstrates the real impact of infrastructure
                   automation. Let&apos;s discuss how we can help you achieve
                   similar results.
-=======
             <section className="text-center">
               <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Optimize Your Cloud Infrastructure?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This case study demonstrates the real impact of infrastructure automation. 
                   Let&apos,s discuss how we can help you achieve similar results.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
@@ -607,11 +548,9 @@ export default function CaseStudyPage() {
                   >
                     Get Started
                   </Link>
-<<<<<<< HEAD
                   <Link
                     href='/case-studies'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300'
-=======
             <section className="text-center">
               <div className="bg-gradient-to-r from-blue-500/10 to-cyan-500/10 rounded-2xl p-8 border border-blue-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Optimize Your Cloud Infrastructure?</h2>
@@ -629,12 +568,10 @@ export default function CaseStudyPage() {
                   <Link 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Link 
                     href="/case-studies"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-blue-400/50 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     View All Case Studies
                   </Link>
@@ -645,14 +582,9 @@ export default function CaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

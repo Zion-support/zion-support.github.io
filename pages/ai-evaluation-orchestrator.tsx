@@ -1,14 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 const AIEvaluationOrchestrator: React.FC = () => {
-=======
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIEvaluationOrchestratorPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <>
       <Head>
@@ -33,18 +30,16 @@ export default function AIEvaluationOrchestratorPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Talk to Sales</Button>
           </div>
         </div>
-<<<<<<< HEAD
 
         <div className="text-center">
-          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover:opacity-90">
+          <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: opacity-90">
             Talk to Sales
           </a>
         </div>
       </main>
     </Layout>
   );
-=======
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIEvaluationOrchestratorPage() {
   return (
     <>
@@ -74,10 +69,8 @@ export default function AIEvaluationOrchestratorPage() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </div>
     </>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

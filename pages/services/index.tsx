@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  export default function ServicesIndexPage () {
   const all = (enhancedRealMicroSaasServices as unknown[]) .concat (return (<UltraAdvancedFuturisticBackground> <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
 }</div> </div> </section> />) ) 
@@ -36,33 +34,32 @@
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {extraServices} from '../../data/extra-services';
+import {newlyAddedServices} from '../../data/newly-added-services';
+import {curatedMarketServices} from '../../data/curated-market-services';
+import {realMarketServices} from '../../data/real-market-services';
+import {new2025Services} from '../../data/new-2025-services';
+import {marketValidatedServices} from '../../data/market-validated-services';
+import {moreRealServices2025} from '../../data/more-real-services-2025';
+import {realOperationalServices} from '../../data/real-operational-services';
+import {verified2025Additions} from '../../data/verified-2025-additions';
+import {realServicesQ12025} from '../../data/real-services-q1-2025'
+import {realEnterpriseServices2025} from '../../data/real-enterprise-services-2025';
+import {realMarketAugmentations2025} from '../../data/real-market-augmentations-2025';
+import {verifiedRealServices2025Batch2} from '../../data/verified-real-services-2025-batch2';
+import {additionalLiveServices2025} from '../../data/additional-live-services-2025';
+import {real2025Q2Additions} from '../../data/real-2025-q2-additions';
+import {augmentedServicesBatch3} from '../../data/real-augmented-services-2025-batch3';
+import {realServicesQ22025} from '../../data/real-services-q2-2025';
+import {realServicesQ32025} from '../../data/real-services-q3-2025';
+import {realServicesQ42025} from '../../data/real-services-q4-2025';
 // Define a common service interface
 interface Service {
   id?: string;
@@ -74,7 +71,7 @@ interface Service {
   launchDate?: string;
   [key: string]: unknown, // Allow additional properties
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 // Define a unified service interface
 interface Service {
@@ -145,7 +142,6 @@ const sampleServices: Service[] = [
   }
 ];
 
-<<<<<<< HEAD
 }> <h2 className="text-4xl font-bold text-white mb-6" >Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to discuss how our services can transform your business. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Contact Sales </Link> <a href="/get-started" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Get Started </Link> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }<QuoteRequestModal open= {
   modalOpen 
@@ -156,33 +152,32 @@ const sampleServices: Service[] = [
 }onSubmit= {
   handleSubmit 
 }/> </div>) 
-=======
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../../components/ui/Card';
 import Link from 'next/link';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { extraServices } from '../../data/extra-services';
-import { newlyAddedServices } from '../../data/newly-added-services';
-import { curatedMarketServices } from '../../data/curated-market-services';
-import { realMarketServices } from '../../data/real-market-services';
-import { new2025Services } from '../../data/new-2025-services';
-import { marketValidatedServices } from '../../data/market-validated-services';
-import { moreRealServices2025 } from '../../data/more-real-services-2025';
-import { realOperationalServices } from '../../data/real-operational-services';
-import { verified2025Additions } from '../../data/verified-2025-additions';
-import { realServicesQ12025 } from '../../data/real-services-q1-2025'
-import { realEnterpriseServices2025 } from '../../data/real-enterprise-services-2025';
-import { realMarketAugmentations2025 } from '../../data/real-market-augmentations-2025';
-import { verifiedRealServices2025Batch2 } from '../../data/verified-real-services-2025-batch2';
-import { additionalLiveServices2025 } from '../../data/additional-live-services-2025';
-import { real2025Q2Additions } from '../../data/real-2025-q2-additions';
-import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025-batch3';
-import { realServicesQ22025 } from '../../data/real-services-q2-2025';
-import { realServicesQ32025 } from '../../data/real-services-q3-2025';
-import { realServicesQ42025 } from '../../data/real-services-q4-2025';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {extraServices} from '../../data/extra-services';
+import {newlyAddedServices} from '../../data/newly-added-services';
+import {curatedMarketServices} from '../../data/curated-market-services';
+import {realMarketServices} from '../../data/real-market-services';
+import {new2025Services} from '../../data/new-2025-services';
+import {marketValidatedServices} from '../../data/market-validated-services';
+import {moreRealServices2025} from '../../data/more-real-services-2025';
+import {realOperationalServices} from '../../data/real-operational-services';
+import {verified2025Additions} from '../../data/verified-2025-additions';
+import {realServicesQ12025} from '../../data/real-services-q1-2025'
+import {realEnterpriseServices2025} from '../../data/real-enterprise-services-2025';
+import {realMarketAugmentations2025} from '../../data/real-market-augmentations-2025';
+import {verifiedRealServices2025Batch2} from '../../data/verified-real-services-2025-batch2';
+import {additionalLiveServices2025} from '../../data/additional-live-services-2025';
+import {real2025Q2Additions} from '../../data/real-2025-q2-additions';
+import {augmentedServicesBatch3} from '../../data/real-augmented-services-2025-batch3';
+import {realServicesQ22025} from '../../data/real-services-q2-2025';
+import {realServicesQ32025} from '../../data/real-services-q3-2025';
+import {realServicesQ42025} from '../../data/real-services-q4-2025';
 // Define a common service interface
 interface Service {
   id?: string;
@@ -264,8 +259,7 @@ const sampleServices: Service[] = [
   }
 ];
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[])
     .concat(
@@ -292,10 +286,6 @@ export default function ServicesIndexPage() {
     );
     return acc
   }, {} as Record<string, Service[]>);
-
-
-
-
 
   return (
     <UltraAdvancedFuturisticBackground>
@@ -364,7 +354,7 @@ export default function ServicesIndexPage() {
               <div className="space-y-12">
                 {categories.map((category) => {
                   const categoryServices = servicesByCategory[category];
-                  if (!categoryServices || categoryServices.length === 0) return null;
+                  if (!categoryServices || categoryServices.length === 0) return null,
 
                   return (
                     <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
@@ -519,7 +509,7 @@ export default function ServicesIndexPage() {
             <div className="space-y-12">
               {categories.map((category) => {
                 const categoryServices = servicesByCategory[category];
-                if (!categoryServices || categoryServices.length === 0) return null;
+                if (!categoryServices || categoryServices.length === 0) return null,
 
                 return (
                   <div key={category} className="border border-gray-800 rounded-2xl p-8 bg-black/50 backdrop-blur-sm">
@@ -668,7 +658,4 @@ export default function ServicesIndexPage() {
     </div>
   )
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

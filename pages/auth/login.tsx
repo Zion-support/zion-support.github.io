@@ -1,43 +1,30 @@
-import { useRouter } from 'next/router';
-import { useEffect, useState, FormEvent } from 'react';
+import {useRouter} from 'next/router';
+import {useEffect, useState, FormEvent} from 'react';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react';
-=======
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Facebook, Mail, Clock, RefreshCw} from 'lucide-react';
+import {Facebook, Mail, Clock, RefreshCw} from 'lucide-react'
+ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
+import {signIn} from 'next-auth/react';
+import {supabase} from '@/utils/supabase/client';
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-<<<<<<< HEAD
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,;
-} from '@/components/ui/card';
-=======
-import { Facebook, Mail, Clock, RefreshCw } from 'lucide-react'
+import {logInfo, logWarn, logErrorToProduction} from '@/utils/productionLogger';
+import {useTranslation} from 'react-i18next';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle,} from '@/components/ui/card';
+import {Facebook, Mail, Clock, RefreshCw} from 'lucide-react'
 import Head from 'next/head';
-import { signIn } from 'next-auth/react';
-import { supabase } from '@/utils/supabase/client';
+import {signIn} from 'next-auth/react';
+import {supabase} from '@/utils/supabase/client';
 import type { AuthError, User, AuthChangeEvent, Session } from '@supabase/supabase-js';
-import { logInfo, logWarn, logErrorToProduction } from '@/utils/productionLogger';
-import { useTranslation } from 'react-i18next';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {logInfo, logWarn, logErrorToProduction} from '@/utils/productionLogger';
+import {useTranslation} from 'react-i18next';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from '@/components/ui/card';
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const LoginPage = () => {
   const router = useRouter();
@@ -45,24 +32,19 @@ const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState<AuthError | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [isLoading, setIsLoading] = useState(false); // For login form submission
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true); // For initial session check
   const [sessionChecked, setSessionChecked] = useState(false); // New state: true after initial getSession completes
-=======
   const [isLoading, setIsLoading] = useState(false), // For login form submission
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true), // For initial session check
   const [sessionChecked, setSessionChecked] = useState(false), // New state: true after initial getSession completes
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [isLoading, setIsLoading] = useState(false), // For login form submission
   const [user, setUser] = useState<User | null>(null);
   const [isCheckingSession, setIsCheckingSession] = useState(true), // For initial session check
   const [sessionChecked, setSessionChecked] = useState(false), // New state: true after initial getSession completes
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [sessionCheckTimedOut, setSessionCheckTimedOut] = useState(false);
   const [isEmailUnverified, setIsEmailUnverified] = useState(false);
   const [verificationEmailSent, setVerificationEmailSent] = useState(false);
@@ -72,39 +54,29 @@ const LoginPage = () => {
   const [showProactiveResendForm, setShowProactiveResendForm] = useState(false);
   const [proactiveResendEmail, setProactiveResendEmail] = useState('');
   const [isProactivelyResending, setIsProactivelyResending] = useState(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{
     type: 'success' | 'error';
-    text: string;
+    text: string,
   } | null>(null);
 
-=======
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [proactiveResendMessage, setProactiveResendMessage] = useState<{ type: 'success' | 'error', text: string } | null>(null),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   // Using centralized Supabase client (imported at top)
 
   // Effect for initial session check and auth state changes
   useEffect(() => {
     let mounted = true;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    logInfo('LoginPage: Initial session check effect runs.');
-
-=======
     logInfo('LoginPage: Initial session check effect runs.'),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+    logInfo('LoginPage: Initial session check effect runs.'),
+ursor/integrate-build-improve-and-re-verify-b76c
     const sessionTimeoutId = setTimeout(() => {
       if (mounted) {
         logWarn('LoginPage: Session check timeout after 5 seconds'),
         setSessionCheckTimedOut(true);
-<<<<<<< HEAD
         setIsCheckingSession(false); // Allow form to render if timeout
         setSessionChecked(true); // Mark check as complete even on timeout
-=======
     logInfo('LoginPage: Initial session check effect runs.'),
     const sessionTimeoutId = setTimeout(() => {
       if (mounted) {
@@ -112,11 +84,9 @@ const LoginPage = () => {
         setSessionCheckTimedOut(true);
         setIsCheckingSession(false), // Allow form to render if timeout
         setSessionChecked(true), // Mark check as complete even on timeout
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         setIsCheckingSession(false), // Allow form to render if timeout
         setSessionChecked(true), // Mark check as complete even on timeout
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
     }, 5000);
 
@@ -125,19 +95,16 @@ const LoginPage = () => {
 
       setIsCheckingSession(true);
       try {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        logInfo('LoginPage: Calling supabase.auth.getSession()');
+        logInfo('LoginPage: Calling supabase.auth.getSession()'),
         const {
           data: { session },
           error: sessionError,
         } = await supabase.auth.getSession();
         clearTimeout(sessionTimeoutId); // Clear timeout once getSession completes
-=======
         logInfo('LoginPage: Calling supabase.auth.getSession()'),
         const { data: { session }, error: sessionError } = await supabase.auth.getSession(),
         clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         if (!mounted) return;
 
         if (sessionError) {
@@ -149,12 +116,10 @@ const LoginPage = () => {
         }
       } catch (e) {
         if (mounted) {
-<<<<<<< HEAD
           logErrorToProduction('LoginPage: Exception during getSession:', {
             data: e,
           });
           clearTimeout(sessionTimeoutId); // Ensure timeout is cleared on error too
-=======
         logInfo('LoginPage: Calling supabase.auth.getSession()'),
         const { data: { session }, error: sessionError } = await supabase.auth.getSession(),
         clearTimeout(sessionTimeoutId), // Clear timeout once getSession completes
@@ -171,37 +136,28 @@ const LoginPage = () => {
         if (mounted) {
           logErrorToProduction('LoginPage: Exception during getSession:', { data: e }),
           clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           logErrorToProduction('LoginPage: Exception during getSession:', { data: e }),
           clearTimeout(sessionTimeoutId), // Ensure timeout is cleared on error too
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         }
       } finally {
         if (mounted) {
           setIsCheckingSession(false);
           setSessionChecked(true);
-<<<<<<< HEAD
-<<<<<<< HEAD
           logInfo(
             'LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true'
-          );
-=======
+          ),
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           logInfo('LoginPage: Initial session check complete. isCheckingSession: false, sessionChecked: true')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         }
       }
 
       // Listener for auth state changes
-<<<<<<< HEAD
-<<<<<<< HEAD
-      logInfo('LoginPage: Setting up onAuthStateChange listener.');
+      logInfo('LoginPage: Setting up onAuthStateChange listener.'),
       const { data: authListener } = supabase.auth.onAuthStateChange(
         (event: AuthChangeEvent, session: Session | null) => {
-          if (!mounted) return;
+          if (!mounted) return,
           logInfo('LoginPage: onAuthStateChange event:', {
             event,
             userId: session?.user?.id,
@@ -213,7 +169,7 @@ const LoginPage = () => {
             setSessionChecked(true);
             logInfo(
               'LoginPage: onAuthStateChange updated sessionChecked to true.'
-            );
+            ),
           }
         }
       );
@@ -221,12 +177,11 @@ const LoginPage = () => {
       return () => {
         // Cleanup for listener
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.');
-        authListener?.subscription?.unsubscribe();
+        authListener?.subscription?.unsubscribe(),
       };
-=======
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),
       const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
-        if (!mounted) return;
+        if (!mounted) return,
         logInfo('LoginPage: onAuthStateChange event:', { 
           event;
           userId: session?.user?.id 
@@ -238,10 +193,9 @@ const LoginPage = () => {
            setSessionChecked(true);
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
         }
-=======
       logInfo('LoginPage: Setting up onAuthStateChange listener.'),
       const { data: authListener } = supabase.auth.onAuthStateChange((event: AuthChangeEvent, session: Session | null) => {
-        if (!mounted) return;
+        if (!mounted) return,
         logInfo('LoginPage: onAuthStateChange event:', { 
           event;
           userId: session?.user?.id 
@@ -253,29 +207,23 @@ const LoginPage = () => {
            setSessionChecked(true);
            logInfo('LoginPage: onAuthStateChange updated sessionChecked to true.')
         }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       });
       
       return () => { // Cleanup for listener
         logInfo('LoginPage: Unsubscribing from onAuthStateChange.'),
         authListener?.subscription?.unsubscribe()
       }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     };
 
     const unsubscribePromise = checkSessionAndListen();
 
     return () => {
       mounted = false;
-<<<<<<< HEAD
-<<<<<<< HEAD
       clearTimeout(sessionTimeoutId); // Clear timeout on unmount
-=======
       clearTimeout(sessionTimeoutId), // Clear timeout on unmount
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       logInfo('LoginPage: Unmounting, cleaning up auth listener.');
       unsubscribePromise.then(cleanup => cleanup && cleanup())
     }
@@ -308,13 +256,11 @@ const LoginPage = () => {
       if (returnTo.startsWith('http') || returnTo.includes('://')) {
         returnTo = '/dashboard'
       }
-<<<<<<< HEAD
 
       logInfo(
         `LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`
       );
 
-=======
       clearTimeout(sessionTimeoutId), // Clear timeout on unmount
       logInfo('LoginPage: Unmounting, cleaning up auth listener.');
       unsubscribePromise.then(cleanup => cleanup && cleanup())
@@ -350,23 +296,18 @@ const LoginPage = () => {
       }
       
       logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       
       logInfo(`LoginPage: Conditions met for redirect. Current path: ${router.pathname}, Target: ${returnTo}`),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       // Add a small delay to ensure session is fully established
       const redirectTimer = setTimeout(() => {
         // Double-check that we're still logged in before redirecting
         if (user && router.pathname === '/auth/login') {
-<<<<<<< HEAD
-<<<<<<< HEAD
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`);
           router.replace(returnTo); // Use replace to avoid back button issues
-=======
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
           router.replace(returnTo), // Use replace to avoid back button issues
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         }
       }, 100), // Small delay to let session stabilize
       
@@ -382,9 +323,7 @@ const LoginPage = () => {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
       return
     }
-<<<<<<< HEAD
 
-=======
           logInfo(`LoginPage: Executing delayed redirect to ${returnTo}`),
           router.replace(returnTo), // Use replace to avoid back button issues
         }
@@ -402,22 +341,16 @@ const LoginPage = () => {
       setError({ name: 'ValidationError', message: 'Please enter your email address first' } as AuthError),
       return
     }
-    
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-    
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+ursor/integrate-build-improve-and-re-verify-b76c
     setIsResendingVerification(true);
     try {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ email }),
-=======
         body: JSON.stringify({ email })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       });
       
       if (response.ok) {
@@ -430,9 +363,7 @@ const LoginPage = () => {
     } catch (err) {
       setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError)
     } finally {
-<<<<<<< HEAD
       setIsResendingVerification(false);
-=======
         body: JSON.stringify({ email })
       });
       
@@ -447,31 +378,24 @@ const LoginPage = () => {
       setError({ name: 'NetworkError', message: 'Failed to resend verification email. Please try again.' } as AuthError)
     } finally {
       setIsResendingVerification(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsResendingVerification(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   const handleProactiveResendVerification = async (e: FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     if (!proactiveResendEmail) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       setProactiveResendMessage({
         type: 'error',
         text: 'Please enter your email address.',
       });
       return;
-=======
       setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
       return
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setProactiveResendMessage({ type: 'error', text: 'Please enter your email address.' }),
       return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     setIsProactivelyResending(true);
@@ -480,37 +404,27 @@ const LoginPage = () => {
       const response = await fetch('/api/resend-verification-email', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ email: proactiveResendEmail }),
-=======
         body: JSON.stringify({ email: proactiveResendEmail })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         body: JSON.stringify({ email: proactiveResendEmail })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       });
 
       const data = await response.json();
       if (response.ok) {
-<<<<<<< HEAD
-<<<<<<< HEAD
         setProactiveResendMessage({
           type: 'success',
           text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).`,
         });
-=======
         setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       } else {
         setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })
       }
     } catch (err) {
       setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' })
     } finally {
-<<<<<<< HEAD
       setIsProactivelyResending(false);
-=======
         setProactiveResendMessage({ type: 'success', text: `Verification email sent to ${proactiveResendEmail}. Please check your inbox (and spam folder).` })
       } else {
         setProactiveResendMessage({ type: 'error', text: data.message || 'Failed to resend verification email.' })
@@ -519,10 +433,8 @@ const LoginPage = () => {
       setProactiveResendMessage({ type: 'error', text: 'An unexpected error occurred. Please try again.' })
     } finally {
       setIsProactivelyResending(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsProactivelyResending(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -531,13 +443,9 @@ const LoginPage = () => {
     setIsLoading(true);
     setError(null);
     setIsEmailUnverified(false);
-    setVerificationEmailSent(false);
-<<<<<<< HEAD
-<<<<<<< HEAD
+    setVerificationEmailSent(false),
 
-=======
-    
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
       const { data, error: signInError } = await supabase.auth.signInWithPassword({
@@ -583,10 +491,8 @@ const LoginPage = () => {
           setError({ name: signInError.name || 'AuthApiError', message: displayMessage } as AuthError)
         }
       } else if (data.user) {
-<<<<<<< HEAD
         logInfo('Supabase sign-in successful, user:', { data: data.user });
         setUser(data.user); // setUser to trigger useEffect for redirection
-=======
     
     try {
       logInfo('Attempting Supabase login with email:', { data: email }),
@@ -635,24 +541,19 @@ const LoginPage = () => {
       } else if (data.user) {
         logInfo('Supabase sign-in successful, user:', { data: data.user }),
         setUser(data.user), // setUser to trigger useEffect for redirection
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         logInfo('Supabase sign-in successful, user:', { data: data.user }),
         setUser(data.user), // setUser to trigger useEffect for redirection
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         // Redirection is now handled by the useEffect hook
       } else {
         // Should not happen if signInError is null and data.user is null
         logWarn('Supabase sign-in returned no error but no user.');
-<<<<<<< HEAD
-<<<<<<< HEAD
         setError({
           name: 'UnknownAuthError',
           message: 'Login failed due to an unknown error. Please try again.',
         } as AuthError);
-=======
         setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
     } catch (catchedError: any) {
       logErrorToProduction('Exception during Supabase sign-in:', { data: catchedError }),
@@ -665,9 +566,7 @@ const LoginPage = () => {
       }
       setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError)
     } finally {
-<<<<<<< HEAD
       setIsLoading(false);
-=======
         setError({ name: 'UnknownAuthError', message: 'Login failed due to an unknown error. Please try again.' } as AuthError)
       }
     } catch (catchedError: any) {
@@ -682,10 +581,8 @@ const LoginPage = () => {
       setError({ name: 'ExceptionError', message: exceptionMessage } as AuthError)
     } finally {
       setIsLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
@@ -693,39 +590,29 @@ const LoginPage = () => {
   useEffect(() => {
     if (isEmailUnverified && verificationEmailSent && email) {
       const timer = setTimeout(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
         router.push(`/verify-status?email=${encodeURIComponent(email)}`);
-=======
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }, 3000);
       return () => clearTimeout(timer)
     }
-<<<<<<< HEAD
     return undefined; // Explicitly return undefined if condition is not met
-=======
         router.push(`/verify-status?email=${encodeURIComponent(email)}`)
       }, 3000);
       return () => clearTimeout(timer)
     }
     return undefined, // Explicitly return undefined if condition is not met
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return undefined, // Explicitly return undefined if condition is not met
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [isEmailUnverified, verificationEmailSent, email, router]);
 
   // --- Rendering Logic ---
 
   // 1. Primary Loading State: During initial session check
   if (isCheckingSession) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    logInfo('LoginPage: Rendering "Checking authentication..."');
-=======
     logInfo('LoginPage: Rendering "Checking authentication..."'),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    logInfo('LoginPage: Rendering "Checking authentication..."'),
+ursor/integrate-build-improve-and-re-verify-b76c
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -734,9 +621,7 @@ const LoginPage = () => {
           <p className="text-sm text-gray-500 mt-2">This should only take a moment</p>
         </div>
       </div>
-<<<<<<< HEAD
     );
-=======
     logInfo('LoginPage: Rendering "Checking authentication..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -747,21 +632,16 @@ const LoginPage = () => {
         </div>
       </div>
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   // 2. Redirecting State: If session is checked, user exists, and not currently submitting form
   // The redirection useEffect will handle the actual push. This UI is for the brief moment before that.
   if (sessionChecked && user && !isLoading) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."');
-=======
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+    logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
+ursor/integrate-build-improve-and-re-verify-b76c
     return (
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
@@ -770,9 +650,7 @@ const LoginPage = () => {
           <p className="text-gray-600 mb-4">Redirecting to your dashboard...</p>
         </div>
       </div>
-<<<<<<< HEAD
     );
-=======
     logInfo('LoginPage: Rendering "Already Logged In / Redirecting..."'),
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -783,16 +661,12 @@ const LoginPage = () => {
         </div>
       </div>
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   // 3. Render Login Form: If session is checked and no user, OR if a login attempt is in progress (isLoading)
   // This also covers the case where a user was present but a login attempt failed, clearing the user.
-<<<<<<< HEAD
-<<<<<<< HEAD
   logInfo(
     `LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`
   );
@@ -804,30 +678,25 @@ const LoginPage = () => {
       `LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`
     );
     return null; // Or a minimal loader/empty div
-=======
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`),
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
     logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
     return null, // Or a minimal loader/empty div
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   logInfo(`LoginPage: Rendering login form. sessionChecked: ${sessionChecked}, user: ${user?.id}, isLoading: ${isLoading}, pathname: ${router.pathname}`),
   // Defensive check: If router.pathname is not /auth/login, do not render the login form.
   // This is a safeguard against the component's content persisting on other auth routes.
   if (router.pathname !== '/auth/login' && router.pathname !== '/login') {
     logWarn(`LoginPage: Current pathname is ${router.pathname}, not /auth/login or /login. Rendering null to prevent incorrect display.`);
     return null, // Or a minimal loader/empty div
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
     <>
       <Head>
         <title>{`${t('auth.sign_in')} - Zion Tech Marketplace`}</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Sign in to your Zion Tech Marketplace account'
@@ -836,20 +705,17 @@ const LoginPage = () => {
 
       <div className='min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8'>
         <Card className='w-full max-w-md'>
-=======
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
         <Card className="w-full max-w-md">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <meta name="description" content="Sign in to your Zion Tech Marketplace account" />
       </Head>
       
       <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm: px-6 lg:px-8">
         <Card className="w-full max-w-md">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <CardHeader>
             <CardTitle>Sign In</CardTitle>
             <CardDescription>
@@ -857,12 +723,9 @@ const LoginPage = () => {
             </CardDescription>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
-<<<<<<< HEAD
             <form onSubmit={handleLogin} className='space-y-4'>
-=======
             <form onSubmit={handleLogin} className="space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
                   <p className="text-sm text-red-600">{error.message}</p>
@@ -877,9 +740,7 @@ const LoginPage = () => {
                   id="email"
                   type="email"
                   value={email}
-<<<<<<< HEAD
                   onChange={e => setEmail(e.target.value)}
-=======
             <form onSubmit={handleLogin} className="space-y-4">
               {error && (
                 <div className="p-3 bg-red-50 border border-red-200 rounded-md">
@@ -896,33 +757,26 @@ const LoginPage = () => {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setEmail(e.target.value)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   required
                   disabled={isLoading}
                 />
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <div className='space-y-2'>
                 <label htmlFor='password' className='text-sm font-medium'>
-=======
               
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Password
                 </label>
                 <Input
                   id="password"
                   type="password"
                   value={password}
-<<<<<<< HEAD
                   onChange={e => setPassword(e.target.value)}
-=======
               
               <div className="space-y-2">
                 <label htmlFor="password" className="text-sm font-medium">
@@ -933,16 +787,12 @@ const LoginPage = () => {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setPassword(e.target.value)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   required
                   disabled={isLoading}
                 />
               </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
               <Button
                 type='submit'
@@ -954,23 +804,20 @@ const LoginPage = () => {
                   : isEmailUnverified
                     ? t('auth.email_verification_required')
                     : t('auth.sign_in')}
-=======
               
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </Button>
             </form>
             
             <div className="mt-6 text-center">
               <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
-<<<<<<< HEAD
                 <Link
                   href='/auth/register'
                   className='text-blue-600 hover:underline'
                 >
-=======
               
               <Button type="submit" className="w-full" disabled={isLoading || isEmailUnverified}>
                 {isLoading ? 'Signing in...' : isEmailUnverified ? t('auth.email_verification_required') : t('auth.sign_in')}
@@ -981,10 +828,8 @@ const LoginPage = () => {
               <p className="text-sm text-gray-600">
                 Don't have an account?{' '}
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Link href="/auth/register" className="text-blue-600 hover: underline">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Sign up
                 </Link>
               </p>
@@ -993,18 +838,13 @@ const LoginPage = () => {
         </Card>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+  ),
 };
-=======
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default LoginPage;

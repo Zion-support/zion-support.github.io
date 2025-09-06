@@ -1,20 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function SsoUserLifecycleAutomationPage() {
   return (
     <Layout>
       <Head>
         <title>SSO User Lifecycle Automation | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Automate Joiner/Mover/Leaver across SSO/SCIM apps with approvals, logging, and policies.'
@@ -23,10 +16,9 @@ export default function SsoUserLifecycleAutomationPage() {
           rel='canonical'
           href='https://ziontechgroup.com/sso-user-lifecycle-automation'
         />
-=======
         <meta name="description" content="Automate Joiner/Mover/Leaver across SSO/SCIM apps with approvals, logging, and policies." />
         <link rel="canonical" href="https://ziontechgroup.com/sso-user-lifecycle-automation" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto space-y-6">
@@ -37,7 +29,6 @@ export default function SsoUserLifecycleAutomationPage() {
               <div key={f} className="p-4 rounded-xl bg-black/40 border border-emerald-500/30 text-slate-200">{f}</div>
             ))}
           </div>
-<<<<<<< HEAD
           <div className='flex gap-3'>
             <a
               href='/contact'
@@ -51,7 +42,6 @@ export default function SsoUserLifecycleAutomationPage() {
             >
               See market pricing
             </a>
-=======
         <meta name="description" content="Automate Joiner/Mover/Leaver across SSO/SCIM apps with approvals, logging, and policies." />
         <link rel="canonical" href="https://ziontechgroup.com/sso-user-lifecycle-automation" />
       </Head>
@@ -67,26 +57,19 @@ export default function SsoUserLifecycleAutomationPage() {
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-700 text-white">Start from $299/mo</a>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="flex gap-3">
             <a href="/contact" className="px-6 py-3 rounded-xl bg-gradient-to-r from-emerald-600 to-green-700 text-white">Start from $299/mo</a>
             <a href="/market-pricing" className="px-6 py-3 rounded-xl border border-gray-700 text-gray-200">See market pricing</a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </div>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

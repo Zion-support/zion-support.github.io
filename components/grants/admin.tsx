@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import type { GrantApplication, Milestone } from '../../types/grants';
 
@@ -8,21 +8,7 @@ export default function GrantsAdminPage() {
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const headers = useMemo(
-    () =>
-      token
-        ? {
-            Authorization: `Bearer ${token}`,
-            'Content-Type': 'application/json',
-          }
-        : { 'Content-Type': 'application/json' },
-    [token]
-  );
-=======
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items || []))
@@ -32,18 +18,6 @@ export default function GrantsAdminPage() {
     load()
   }, []);
 
-<<<<<<< HEAD
-  const setStatus = async (
-    id: string,
-    status: 'Under Review' | 'Approved' | 'Rejected'
-  ) => {
-    await fetch(`/api/grants/${id}/status`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({ status }),
-    });
-    load();
-=======
   const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
 
   const load = () => {
@@ -57,113 +31,31 @@ export default function GrantsAdminPage() {
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) }),
     load()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) }),
     load()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const saveMilestones = async () => {
     if (!selected) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    await fetch(`/api/grants/${selected.id}/milestones`, {
-      method: 'POST',
-      headers,
-      body: JSON.stringify({ milestones }),
-    });
-    alert('Milestones saved');
-=======
     await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) }),
     alert('Milestones saved')
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) }),
     alert('Milestones saved')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const markComplete = async (milestoneId: string) => {
-    if (!selected) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    await fetch(
-      `/api/grants/${selected.id}/milestones/${milestoneId}/complete`,
-      { method: 'POST', headers }
-    );
-    const r = await fetch(`/api/grants/${selected.id}`).then(x => x.json());
-    setSelected(r.record);
-=======
+    if (!selected) return,
     await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
     setSelected(r.record)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <EnhancedLayout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <h1 className='text-2xl font-semibold mb-4'>Grants Admin</h1>
-      <div className='grid md:grid-cols-3 gap-6'>
-        <div className='md:col-span-2'>
-          <div className='mb-3 flex items-center gap-2'>
-            <input
-              className='border rounded p-2'
-              placeholder='Admin Token'
-              value={token}
-              onChange={e => setToken(e.target.value)}
-            />
-=======
-      <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
-      <div className="grid md:grid-cols-3 gap-6">
-        <div className="md:col-span-2">
-          <div className="mb-3 flex items-center gap-2">
-            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-          </div>
-          <div className="grid gap-3">
-            {items.map((g) => (
-              <div key={g.id} className={`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
-                <div className="flex items-center justify-between">
-                  <div>
-                    <div className="font-medium">{g.projectName}</div>
-                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
-                  </div>
-<<<<<<< HEAD
-                  <div className='flex gap-2'>
-                    <button
-                      className='px-2 py-1 border rounded'
-                      onClick={() => setStatus(g.id, 'Under Review')}
-                    >
-                      Under Review
-                    </button>
-                    <button
-                      className='px-2 py-1 bg-emerald-600 text-white rounded'
-                      onClick={() => setStatus(g.id, 'Approved')}
-                    >
-                      Approve
-                    </button>
-                    <button
-                      className='px-2 py-1 bg-red-600 text-white rounded'
-                      onClick={() => setStatus(g.id, 'Rejected')}
-                    >
-                      Reject
-                    </button>
-                    <button
-                      className='px-2 py-1 border rounded'
-                      onClick={() => setSelected(g)}
-                    >
-                      Milestones
-                    </button>
-=======
       <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
       <div className="grid md:grid-cols-3 gap-6">
         <div className="md:col-span-2">
@@ -178,31 +70,30 @@ export default function GrantsAdminPage() {
                     <div className="font-medium">{g.projectName}</div>
                     <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
                   </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2">
+          <div className="mb-3 flex items-center gap-2">
+            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
+          </div>
+          <div className="grid gap-3">
+            {items.map((g) => (
+              <div key={g.id} className={`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-medium">{g.projectName}</div>
+                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
+                  </div>
                   <div className="flex gap-2">
                     <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>
                     <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
                     <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
                     <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </div>
             ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            {items.length === 0 && (
-              <div className='text-sm text-gray-600'>
-                No submitted applications.
-              </div>
-            )}
-=======
             {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
         <div>
@@ -229,11 +120,6 @@ export default function GrantsAdminPage() {
                 </div>
               </div>
             ) : (
-<<<<<<< HEAD
-              <div className='text-sm text-gray-600'>
-                Select a grant to plan milestones.
-              </div>
-=======
             {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
           </div>
         </div>
@@ -262,21 +148,12 @@ export default function GrantsAdminPage() {
               </div>
             ) : (
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="text-sm text-gray-600">Select a grant to plan milestones.</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             )}
           </div>
         </div>
       </div>
     </EnhancedLayout>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

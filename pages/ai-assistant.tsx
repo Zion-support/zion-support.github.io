@@ -1,14 +1,11 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../components/layout/Layout';
 
 const AIAssistant: React.FC = () => {
-=======
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIAssistantPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <>
       <Head>
@@ -33,7 +30,6 @@ export default function AIAssistantPage() {
             <Button href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white">Request a Demo</Button>
           </div>
         </div>
-<<<<<<< HEAD
 
         <div className="bg-blue-50 rounded-lg p-8 text-center">
           <h2 className="text-2xl font-bold mb-4">Ready to Get Started?</h2>
@@ -41,7 +37,7 @@ export default function AIAssistantPage() {
             Experience the power of AI assistance for your business operations.
           </p>
           <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover:bg-blue-700">
+            <a href="/contact" className="bg-blue-600 text-white px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white rounded-lg hover: bg-blue-700">
               Request a Demo
             </a>
             <a href="/about" className="border border-blue-600 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-50">
@@ -52,8 +48,7 @@ export default function AIAssistantPage() {
       </main>
     </Layout>
   );
-=======
-import Button from '../components/ui/Button';
+import Button from '../components/ui/Button',
 export default function AIAssistantPage() {
   return (
     <>
@@ -83,10 +78,8 @@ export default function AIAssistantPage() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </div>
     </>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

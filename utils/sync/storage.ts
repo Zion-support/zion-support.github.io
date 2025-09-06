@@ -1,20 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs';
-import path from 'path';
-import { MultiverseState, InstanceConfig, SyncEvent } from './types';
-=======
 export interface SyncState {
   config: {
     instanceId: string;
     peers: string[];
     scope: string;
     optIn: boolean;
-    paused: boolean;
+    paused: boolean,
   };
-  lastSyncedAt: string;
+  lastSyncedAt: string,
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 const defaultState: SyncState = {
   config: {
@@ -37,70 +30,6 @@ export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates };
 }
 
-<<<<<<< HEAD
-export function upsertEvent(
-  state: MultiverseState,
-  event: SyncEvent
-): MultiverseState {
-  if (state.seenEventIds[event.eventId]) return state;
-
-  const entityId = getEntityId(event);
-  const currentVersion = state.latestVersionByEntityId[entityId] || 0;
-  const isNewer = event.version > currentVersion;
-
-  if (event.type === 'proposal' && event.merkleRoot && isNewer) {
-    state.proposalMerkleById[entityId] = event.merkleRoot;
-  }
-
-  if (isNewer) {
-    state.latestVersionByEntityId[entityId] = event.version;
-  }
-
-  state.events.push(event);
-  state.seenEventIds[event.eventId] = true;
-  state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
-  return state;
-
-export function getEntityId(event: SyncEvent): string {
-  switch (event.type) {
-    case 'proposal':
-      return (event.payload as any).proposalId;
-    case 'token_transfer':
-      return (event.payload as any).txId;
-    case 'talent_mobility':
-      return (
-        (event.payload as any).personId + ':' + (event.payload as any).startDate
-      );
-    case 'dao_endorsement':
-      return (event.payload as any).resolutionId;
-    case 'leaderboard_entry':
-      return (
-        (event.payload as any).subjectId + ':' + (event.payload as any).period
-      );
-    default:
-      return (event.payload as any).id || event.eventId;
-  }
-
-export function filterEventsByScope(
-  events: SyncEvent[],
-  scope: InstanceConfig['scope']
-): SyncEvent[] {
-  if (scope === 'full') return events;
-  if (scope === 'dao') {
-    return events.filter(
-      e => e.type === 'proposal' || e.type === 'dao_endorsement'
-    );
-  }
-  if (scope === 'marketplace') {
-    return events.filter(
-      e =>
-        e.type === 'token_transfer' ||
-        e.type === 'talent_mobility' ||
-        e.type === 'leaderboard_entry'
-    );
-  }
-  return events;
-=======
 // Sync storage utilities
 export interface SyncJob {
   id: string;
@@ -111,7 +40,7 @@ export interface SyncJob {
   config: {
     batchSize?: number;
     retryAttempts?: number;
-    timeout?: number;
+    timeout?: number,
     filters?: Record<string, any>;
     mappings?: Record<string, string>;
   };
@@ -119,14 +48,14 @@ export interface SyncJob {
     total: number;
     processed: number;
     failed: number;
-    skipped: number;
+    skipped: number,
   };
   startedAt?: string;
   completedAt?: string;
   error?: string;
   metadata?: Record<string, any>;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 export interface SyncConnection {
@@ -134,14 +63,14 @@ export interface SyncConnection {
   name: string;
   type: 'database' | 'api' | 'file' | 'cloud' | 'custom';
   config: {
-    url?: string;
+    url?: string,
     credentials?: Record<string, string>;
     options?: Record<string, any>;
   };
   isActive: boolean;
   lastSyncAt?: string;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 export interface SyncMapping {
@@ -150,25 +79,25 @@ export interface SyncMapping {
   sourceConnectionId: string;
   destinationConnectionId: string;
   sourceTable?: string;
-  destinationTable?: string;
+  destinationTable?: string,
   fieldMappings: Record<string, string>;
   transformations?: Array<{
     field: string;
-    type: 'format' | 'convert' | 'calculate' | 'filter';
+    type: 'format' | 'convert' | 'calculate' | 'filter',
     config: Record<string, any>;
   }>;
   isActive: boolean;
   createdAt: string;
-  updatedAt: string;
+  updatedAt: string,
 }
 
 export interface SyncLog {
   id: string;
   jobId: string;
   level: 'info' | 'warn' | 'error' | 'debug';
-  message: string;
+  message: string,
   details?: Record<string, any>;
-  timestamp: string;
+  timestamp: string,
 }
 
 class SyncStorage {
@@ -197,12 +126,12 @@ class SyncStorage {
   }
 
   async getJob(id: string): Promise<SyncJob | null> {
-    return this.jobs.get(id) || null;
+    return this.jobs.get(id) || null,
   }
 
   async updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
     const job = this.jobs.get(id);
-    if (!job) return null;
+    if (!job) return null,
 
     const updatedJob = {
       ...job,
@@ -215,15 +144,15 @@ class SyncStorage {
   }
 
   async deleteJob(id: string): Promise<boolean> {
-    return this.jobs.delete(id);
+    return this.jobs.delete(id),
   }
 
   async getJobsByStatus(status: SyncJob['status']): Promise<SyncJob[]> {
-    return Array.from(this.jobs.values()).filter(job => job.status === status);
+    return Array.from(this.jobs.values()).filter(job => job.status === status),
   }
 
   async getJobsByType(type: SyncJob['type']): Promise<SyncJob[]> {
-    return Array.from(this.jobs.values()).filter(job => job.type === type);
+    return Array.from(this.jobs.values()).filter(job => job.type === type),
   }
 
   async getAllJobs(): Promise<SyncJob[]> {
@@ -246,12 +175,12 @@ class SyncStorage {
   }
 
   async getConnection(id: string): Promise<SyncConnection | null> {
-    return this.connections.get(id) || null;
+    return this.connections.get(id) || null,
   }
 
   async updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
     const connection = this.connections.get(id);
-    if (!connection) return null;
+    if (!connection) return null,
 
     const updatedConnection = {
       ...connection,
@@ -264,7 +193,7 @@ class SyncStorage {
   }
 
   async deleteConnection(id: string): Promise<boolean> {
-    return this.connections.delete(id);
+    return this.connections.delete(id),
   }
 
   async getActiveConnections(): Promise<SyncConnection[]> {
@@ -289,12 +218,12 @@ class SyncStorage {
   }
 
   async getMapping(id: string): Promise<SyncMapping | null> {
-    return this.mappings.get(id) || null;
+    return this.mappings.get(id) || null,
   }
 
   async updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
     const mapping = this.mappings.get(id);
-    if (!mapping) return null;
+    if (!mapping) return null,
 
     const updatedMapping = {
       ...mapping,
@@ -307,13 +236,13 @@ class SyncStorage {
   }
 
   async deleteMapping(id: string): Promise<boolean> {
-    return this.mappings.delete(id);
+    return this.mappings.delete(id),
   }
 
   async getMappingsByConnection(connectionId: string): Promise<SyncMapping[]> {
     return Array.from(this.mappings.values()).filter(mapping => 
       mapping.sourceConnectionId === connectionId || mapping.destinationConnectionId === connectionId
-    );
+    ),
   }
 
   async getActiveMappings(): Promise<SyncMapping[]> {
@@ -363,7 +292,7 @@ class SyncStorage {
 
     job.status = 'running';
     job.startedAt = new Date().toISOString();
-    job.updatedAt = new Date().toISOString();
+    job.updatedAt = new Date().toISOString(),
     this.jobs.set(jobId, job);
 
     await this.createLog({
@@ -402,7 +331,7 @@ class SyncStorage {
 
   async updateJobProgress(jobId: string, progress: Partial<SyncJob['progress']>): Promise<boolean> {
     const job = this.jobs.get(jobId);
-    if (!job || job.status !== 'running') return false;
+    if (!job || job.status !== 'running') return false,
 
     job.progress = { ...job.progress, ...progress };
     job.updatedAt = new Date().toISOString();
@@ -413,12 +342,12 @@ class SyncStorage {
 
   // Utility methods
   async getJobStats(): Promise<{
-    total: number;
+    total: number,
     byStatus: Record<SyncJob['status'], number>;
     byType: Record<SyncJob['type'], number>;
     running: number;
     completed: number;
-    failed: number;
+    failed: number,
   }> {
     const jobs = Array.from(this.jobs.values());
     
@@ -453,7 +382,7 @@ class SyncStorage {
 
   async getConnectionStats(): Promise<{
     total: number;
-    active: number;
+    active: number,
     byType: Record<SyncConnection['type'], number>;
   }> {
     const connections = Array.from(this.connections.values());
@@ -484,7 +413,7 @@ class SyncStorage {
     const cutoffDate = new Date();
     cutoffDate.setDate(cutoffDate.getDate() - olderThanDays);
     
-    let removedCount = 0;
+    let removedCount = 0,
     for (const [id, log] of this.logs) {
       if (new Date(log.timestamp) < cutoffDate) {
         this.logs.delete(id);
@@ -512,7 +441,7 @@ export async function createJob(job: Omit<SyncJob, 'id' | 'createdAt' | 'updated
 }
 
 export async function getJob(id: string): Promise<SyncJob | null> {
-  return syncStorage.getJob(id);
+  return syncStorage.getJob(id),
 }
 
 export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<SyncJob | null> {
@@ -520,7 +449,7 @@ export async function updateJob(id: string, updates: Partial<SyncJob>): Promise<
 }
 
 export async function startJob(id: string): Promise<boolean> {
-  return syncStorage.startJob(id);
+  return syncStorage.startJob(id),
 }
 
 export async function completeJob(id: string, error?: string): Promise<boolean> {
@@ -536,7 +465,7 @@ export async function createConnection(connection: Omit<SyncConnection, 'id' | '
 }
 
 export async function getConnection(id: string): Promise<SyncConnection | null> {
-  return syncStorage.getConnection(id);
+  return syncStorage.getConnection(id),
 }
 
 export async function updateConnection(id: string, updates: Partial<SyncConnection>): Promise<SyncConnection | null> {
@@ -548,7 +477,7 @@ export async function createMapping(mapping: Omit<SyncMapping, 'id' | 'createdAt
 }
 
 export async function getMapping(id: string): Promise<SyncMapping | null> {
-  return syncStorage.getMapping(id);
+  return syncStorage.getMapping(id),
 }
 
 export async function updateMapping(id: string, updates: Partial<SyncMapping>): Promise<SyncMapping | null> {
@@ -621,7 +550,7 @@ export function generateMappingId(): string {
 
 export function calculateProgress(processed: number, total: number): number {
   if (total === 0) return 0;
-  return Math.round((processed / total) * 100);
+  return Math.round((processed / total) * 100),
 }
 
 export function formatDuration(startTime: string, endTime?: string): string {
@@ -641,9 +570,6 @@ export function formatDuration(startTime: string, endTime?: string): string {
     return `${seconds}s`;
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export function resetState(): void {
   state = { ...defaultState };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

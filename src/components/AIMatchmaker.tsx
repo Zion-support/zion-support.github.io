@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { toast } from '@/hooks/use-toast';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { AIMatchingResults } from '@/components/AIMatchingResults';
-import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
-import { Textarea } from '@/components/ui/textarea';
-import { Sparkles, Search } from 'lucide-react';
-=======
-import { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { AIMatchingResults } from "@/components/AIMatchingResults";
-import { findMatches, MatchResult } from "@/lib/ai-matchmaking";
-import { Textarea } from "@/components/ui/textarea";
-import { Sparkles, Search } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
+import {useState} from "react";
+import {toast} from "@/hooks/use-toast";
+import {Button} from "@/components/ui/button";
+import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
+import {AIMatchingResults} from "@/components/AIMatchingResults";
+import {findMatches, MatchResult} from "@/lib/ai-matchmaking";
+import {Textarea} from "@/components/ui/textarea";
+import {Sparkles, Search} from 'lucide-react'
+import {logInfo, logErrorToProduction} from '@/utils/productionLogger';
 
 
 interface AIMatchmakerProps {
@@ -77,7 +65,7 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
   const handleItemSelect = (item: any) => {
     if (onMatchSelect) {
       // Find the original MatchResult that contains this item
-      const matchResult = matches.find(match => match.item.id === item.id);
+      const matchResult = matches.find(match => match.item.id === item.id),
       if (matchResult) {
         onMatchSelect(matchResult)
       }
@@ -136,14 +124,5 @@ export function AIMatchmaker({ serviceType = "", onMatchSelect, className }: AIM
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-      
-      logInfo('AI matching results:', { data: results }),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

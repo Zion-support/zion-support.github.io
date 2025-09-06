@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Download, Settings } from 'lucide-react';
-import { useCompanyWorkspace } from '@/hooks/useCompanyWorkspace';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Settings } from 'lucide-react'
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+import {Button} from "@/components/ui/button";
+import {Download, Settings} from 'lucide-react'
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 export function AdminHeader() {
   // const { user } = useAuth(), // Unused but available
   const { company } = useCompanyWorkspace();
@@ -29,15 +21,11 @@ export function AdminHeader() {
             <Settings className="h-4 w-4" />
             Settings
           </Button>
-<<<<<<< HEAD
-          <Button variant='outline' size='sm' className='gap-2'>
-            <Download className='h-4 w-4' />
-=======
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, Settings } from 'lucide-react'
-import { useCompanyWorkspace } from "@/hooks/useCompanyWorkspace";
+import {Button} from "@/components/ui/button";
+import {Download, Settings} from 'lucide-react'
+import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 
 export function AdminHeader() { // const { user  } = useAuth(), // Unused but available
   const { company  } = useCompanyWorkspace(),
@@ -59,31 +47,17 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
           </Button>
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <Button variant="outline" size="sm" className="gap-2">
             <Download className="h-4 w-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Export Data
           </Button>
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
-        <div className='bg-card rounded-lg p-4 border border-border'>
-          <div className='text-sm text-muted-foreground'>Subscription Plan</div>
-          <div className='text-xl font-medium'>
-            {company?.plan || 'Enterprise'}
-          </div>
-=======
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Subscription Plan</div>
           <div className="text-xl font-medium">{company?.plan || "Enterprise"}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
         <div className="bg-card rounded-lg p-4 border border-border">
           <div className="text-sm text-muted-foreground">Team Members</div>
@@ -106,11 +80,6 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             />
           </div>
           <div>
-<<<<<<< HEAD
-            <h2 className='font-medium'>{company?.name || 'Company Name'}</h2>
-            <p className='text-sm text-muted-foreground'>
-              Workspace URL: {company?.workspaceUrl || 'loading...'}
-=======
       
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <div className="bg-card rounded-lg p-4 border border-border">
@@ -141,12 +110,9 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <h2 className="font-medium">{company?.name || "Company Name"}</h2>
             <p className="text-sm text-muted-foreground">
               Workspace URL: {company?.workspaceUrl || "loading..."}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </div>
         </div>
@@ -154,11 +120,5 @@ export function AdminHeader() { // const { user  } = useAuth(), // Unused but av
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

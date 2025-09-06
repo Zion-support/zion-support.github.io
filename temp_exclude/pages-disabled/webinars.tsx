@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
+import {motion} from 'framer-motion;
 import {}
   // TODO: Implement,
 };
@@ -249,7 +249,7 @@ export default function WebinarsPage() {}
                     </div>
                       <Link;
                         href={webinar.registrationUrl};
-                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
                       >
 </Link>"
                         <ArrowRight className="w-4 h-4" />"
@@ -257,9 +257,9 @@ export default function WebinarsPage() {}
                       </Link>"
                       <div className="flex gap-4">"
 </div>
-                        <Link;
+                        <Link,
                           href={webinar.recordingUrl};
-                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
+                          className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg hover: bg-blue-700 transition-colors"
                         >
 </Link>"
                           <Play className="w-4 h-4" />"
@@ -273,7 +273,7 @@ export default function WebinarsPage() {}
                       </div>
                   </div>
                 </div>
-              </motion.article>);
+              </motion.article>),
             ))};
           </div>
         </div>
@@ -288,8 +288,8 @@ export default function WebinarsPage() {}
 </div>
               <div>
 </div>"
-                <label className="block text-sm font-medium text-gray-700 mb-2">Category:</label>"
-                <select;
+                <label className="block text-sm font-medium text-gray-700 mb-2">Category: </label>"
+                <select,
                   value={selectedCategory};
                   onChange={(e) => setSelectedCategory(e.target.value)};
 </select>
@@ -298,8 +298,8 @@ export default function WebinarsPage() {}
               </div>
               <div>
 </div>"
-                <label className="block text-sm font-medium text-gray-700 mb-2">Status:</label>"
-                <select;
+                <label className="block text-sm font-medium text-gray-700 mb-2">Status: </label>"
+                <select,
                   value={selectedStatus};
                   onChange={(e) => setSelectedStatus(e.target.value)};
 </select>
@@ -317,9 +317,9 @@ export default function WebinarsPage() {}
           <div className="max-w-6xl mx-auto">"
 </div>"
             <h2 className="text-3xl font-bold text-gray-900 mb-8">All Webinars</h2>"
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">"
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">"
 </div>
-                <motion.article;
+                <motion.article,
                   key={webinar.id};
                   className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                   initial={{ opacity: 0, y: 20 }};
@@ -391,14 +391,14 @@ export default function WebinarsPage() {}
 </div>
                         <Link;
                           href={webinar.registrationUrl};
-                          className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
+                          className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover: bg-blue-700 transition-colors text-sm"
                         >
 </Link>"
                           <ArrowRight className="w-4 h-4" />"
 </ArrowRight>
                         </Link>
                         <>
-                          <Link;
+                          <Link,
                             href={webinar.recordingUrl};
                             className="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors text-sm"
                           >
@@ -420,7 +420,7 @@ export default function WebinarsPage() {}
             </div>"
             <div className="text-center mt-12">"
 </div>"
-              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors">"
+              <button className="bg-blue-600 text-white px-8 py-3 rounded-lg hover: bg-blue-700 transition-colors">"
 </button>
               </button>
             </div>
@@ -442,7 +442,7 @@ export default function WebinarsPage() {}
             "
             <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">"
 </div>
-              <input;"
+              <input,"
                 type="email"
                 placeholder="Enter your email"
                 className="flex-1 px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-300"

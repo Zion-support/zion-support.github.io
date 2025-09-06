@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Menu } from 'lucide-react';
-import Link from 'next/link';
-
-=======
-import { useState } from "react";
-import { Menu } from 'lucide-react'
+import {useState} from "react";
+import {Menu} from 'lucide-react'
 import Link from "next/link";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export function EnterpriseStickyNav() {
   const [open, setOpen] = useState(false);
   return (
@@ -34,16 +26,8 @@ export function EnterpriseStickyNav() {
               <Link href="#testimonials" className="text-sm font-medium hover:text-primary">Testimonials</Link>
             </li>
             <li>
-<<<<<<< HEAD
-              <Link
-                href='#contact'
-                className='text-sm font-medium hover:text-primary'
-              >
-                Contact Us
-              </Link>
-=======
-import { useState } from "react";
-import { Menu } from 'lucide-react'
+import {useState} from "react";
+import {Menu} from 'lucide-react'
 import Link from "next/link";
 export function EnterpriseStickyNav() {
 
@@ -73,21 +57,12 @@ export function EnterpriseStickyNav() {
             </li>
             <li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </li>
           </ul>
         </div>
       </div>
     </nav>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { Search, Sliders } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Button } from "@/components/ui/button";
-import { Search, Sliders } from 'lucide-react'
-import { Input } from "@/components/ui/input";
+import {Button} from "@/components/ui/button";
+import {Search, Sliders} from 'lucide-react'
+import {Input} from "@/components/ui/input";
 interface MobileFilterBarProps {
   searchTerm: string,
   setSearchTerm: (value: string) => void,
@@ -53,12 +45,5 @@ export function MobileFilterBar({
         </p>
       </div>
     </div>
-  );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  setSearchTerm, 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+  ),
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

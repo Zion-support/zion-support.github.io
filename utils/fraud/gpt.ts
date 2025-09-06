@@ -1,79 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GptClassification, MonitoredSource } from './types';
-
-export async function classifyWithGPT(
-  text: string,
-  source: MonitoredSource
-): Promise<GptClassification> {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    const lower = text.toLowerCase();
-    const looksDanger =
-      /(cashapp|paypal\.me|venmo\.com|wa\.me|t\.me|whatsapp|telegram|western union|gift card|crypto only|outside payment)/.test(
-        lower
-      );
-    return {
-      label: looksDanger ? 'DANGEROUS' : 'SUSPICIOUS',
-      reason: looksDanger
-        ? 'Heuristic fallback matched high-risk terms'
-        : 'Heuristic fallback matched suspicious language',
-      confidence: looksDanger ? 0.7 : 0.5,
-    };
-  }
-
-  const { OpenAI } = await import('openai');
-  const client = new OpenAI({ apiKey });
-
-  const systemPrompt =
-    'You are a strict fraud/spam/phishing detector for a marketplace. Respond ONLY in strict JSON: {"label":"SAFE|SUSPICIOUS|DANGEROUS","reason":"short","confidence":0-1}. Consider off-platform payments, scammy/vague job posts, phishing, or social-engineering.';
-  const userPrompt = `Source: ${source}\n\nText:\n${text}\n\nAnalyze this message for signs of fraud, spam, or phishing. Respond: SAFE / SUSPICIOUS / DANGEROUS with a short reason.`;
-
-  const completion = await client.chat.completions.create({
-    model: process.env.FRAUD_GPT_MODEL || 'gpt-4o-mini',
-    messages: [
-      { role: 'system', content: systemPrompt },
-      { role: 'user', content: userPrompt },
-    ],
-    temperature: 0,
-    response_format: { type: 'json_object' as const },
-  });
-
-  const content = completion.choices[0]?.message?.content ?? '{}';
-  try {
-    const parsed = JSON.parse(content);
-    const label = (parsed.label as string)?.toUpperCase?.();
-    if (label !== 'SAFE' && label !== 'SUSPICIOUS' && label !== 'DANGEROUS') {
-      return {
-        label: 'SUSPICIOUS',
-        reason: 'Unrecognized label from GPT',
-        confidence: 0.5,
-      };
-    }
-    const confidence =
-      typeof parsed.confidence === 'number'
-        ? Math.max(0, Math.min(1, parsed.confidence))
-        : 0.6;
-    return {
-      label,
-      reason: parsed.reason || 'No reason provided',
-      confidence,
-    } as GptClassification;
-  } catch {
-    return {
-      label: 'SUSPICIOUS',
-      reason: 'Invalid JSON from GPT',
-      confidence: 0.5,
-    };
-  }
-=======
 // GPT-based fraud classification utilities
 export interface GptClassification {
   label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
   confidence: number; // 0-100
   reasoning: string;
   riskFactors: string[];
-  recommendations: string[];
+  recommendations: string[],
 }
 
 export interface GptConfig {
@@ -83,11 +14,11 @@ export interface GptConfig {
   maxTokens: number;
   timeout: number; // milliseconds
   retryAttempts: number;
-  apiKey?: string;
+  apiKey?: string,
 }
 
 class GptClassifier {
-  private config: GptConfig;
+  private config: GptConfig,
 
   constructor() {
     this.config = {
@@ -103,7 +34,7 @@ class GptClassifier {
 
   async classifyWithGPT(content: string, source: string): Promise<GptClassification> {
     if (!this.config.enabled || !this.config.apiKey) {
-      return this.getDefaultClassification();
+      return this.getDefaultClassification(),
     }
 
     try {
@@ -172,7 +103,7 @@ Respond in JSON format:
 
   private parseResponse(response: string): GptClassification {
     try {
-      const parsed = JSON.parse(response);
+      const parsed = JSON.parse(response),
       
       // Validate the response structure
       if (!parsed.label || !['SAFE', 'SUSPICIOUS', 'DANGEROUS'].includes(parsed.label)) {
@@ -238,16 +169,16 @@ export async function classifyWithGPT(content: string, source: string): Promise<
 
 // Utility functions
 export function isDangerousClassification(classification: GptClassification): boolean {
-  return classification.label === 'DANGEROUS' && classification.confidence > 70;
+  return classification.label === 'DANGEROUS' && classification.confidence > 70,
 }
 
 export function isSuspiciousClassification(classification: GptClassification): boolean {
-  return classification.label === 'SUSPICIOUS' && classification.confidence > 60;
+  return classification.label === 'SUSPICIOUS' && classification.confidence > 60,
 }
 
 export function shouldEscalateToHuman(classification: GptClassification): boolean {
   return classification.label === 'DANGEROUS' || 
-         (classification.label === 'SUSPICIOUS' && classification.confidence > 80);
+         (classification.label === 'SUSPICIOUS' && classification.confidence > 80),
 }
 
 export function getClassificationColor(label: GptClassification['label']): string {
@@ -262,12 +193,10 @@ export function getClassificationColor(label: GptClassification['label']): strin
 export function formatClassificationSummary(classification: GptClassification): string {
   return `${classification.label} (${classification.confidence}% confidence) - ${classification.reasoning}`;
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export interface GptResult {
   label: string;
   confidence: number;
-  reasoning: string;
+  reasoning: string,
 }
 
 export async function analyzeWithGpt(data: any): Promise<GptResult> {
@@ -280,4 +209,3 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

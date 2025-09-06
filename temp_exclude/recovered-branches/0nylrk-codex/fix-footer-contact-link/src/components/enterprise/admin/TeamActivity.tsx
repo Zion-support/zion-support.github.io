@@ -1,16 +1,10 @@
 
 import React from "react";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
-import { CalendarIcon, Search } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
+import {Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
+import {CalendarIcon,, Search} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
 export function TeamActivity() {
   // Mock activity data
   const activities = [
@@ -63,7 +57,7 @@ export function TeamActivity() {
     const diffMs = now.getTime() - date.getTime();
     const diffMins = Math.floor(diffMs / (1000 * 60));
     const diffHrs = Math.floor(diffMs / (1000 * 60 * 60));
-    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24));
+    const diffDays = Math.floor(diffMs / (1000 * 60 * 60 * 24)),
 
     if (diffMins < 60) {
       return `${diffMins} minutes ago`

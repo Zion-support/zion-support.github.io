@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 
-import { execSync } from 'child_process';
+import {execSync} from 'child_process';
 import fs from 'fs';
 import path from 'path';
 
@@ -8,11 +8,11 @@ console.log('🚀 Starting Netlify build with error handling...');
 
 try {
   // Step 1: Install dependencies
-  console.log('📦 Installing dependencies...');
+  console.log('📦 Installing dependencies...'),
   execSync('npm ci --legacy-peer-deps', { stdio: 'inherit' });
 
   // Step 2: Run linting with auto-fix
-  console.log('🔧 Running linting with auto-fix...');
+  console.log('🔧 Running linting with auto-fix...'),
   try {
     execSync('npm run lint:fix', { stdio: 'inherit' });
   } catch (error) {
@@ -20,7 +20,7 @@ try {
   }
 
   // Step 3: Try to build
-  console.log('🏗️  Building the application...');
+  console.log('🏗️  Building the application...'),
   execSync('npm run build', { stdio: 'inherit' });
 
   console.log('✅ Build completed successfully!');

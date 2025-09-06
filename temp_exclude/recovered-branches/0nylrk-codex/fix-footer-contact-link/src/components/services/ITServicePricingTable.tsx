@@ -1,10 +1,10 @@
 
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import {useState,, useMemo} from "react";
+import {onsiteServicePricing,, CountryPricing} from "@/data/onsiteServicePricing";
+import {Input} from "@/components/ui/input";
+import {Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow} from "@/components/ui/table";
+import {Globe,, Search,, ArrowUpDown} from "lucide-react";
+import {Button} from "@/components/ui/button";
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
@@ -40,7 +40,7 @@ export function ITServicePricingTable() {
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-      key;
+      key,
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 

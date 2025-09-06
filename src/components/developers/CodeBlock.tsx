@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useState } from 'react';
-import { Check, Copy } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {useState} from 'react';
+import {Check, Copy} from 'lucide-react'
+import {cn} from "@/lib/utils";
 interface CodeBlockProps {
   code: string,
   language?: string;
@@ -66,10 +62,4 @@ export function CodeBlock({
 }
 
 export default CodeBlock;
-=======
 
-<<<<<<< HEAD
-
-export default CodeBlock;
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

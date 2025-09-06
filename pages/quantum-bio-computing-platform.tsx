@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function QuantumBioComputingPlatformPage() {
   return (
@@ -15,7 +13,7 @@ export default function QuantumBioComputingPlatformPage() {
         />
         <link
           rel='canonical'
-          href='https://ziontechgroup.com/quantum-bio-computing-platform'
+          href='https: //ziontechgroup.com/quantum-bio-computing-platform'
         />
       </Head>
       <div className='container mx-auto px-4 py-24 text-white space-y-6'>
@@ -36,12 +34,10 @@ export default function QuantumBioComputingPlatformPage() {
         </ul>
       </div>
     </UltraFuturisticBackground>
-  );
-=======
+  ),
 export default function QuantumBioComputingPlatformPage() {
-=======
 export default function QuantumBioComputingPlatformPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<UltraFuturisticBackground>
 			<Head>
@@ -61,9 +57,6 @@ export default function QuantumBioComputingPlatformPage() {
 			</div>
 		</UltraFuturisticBackground>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,25 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
-import { Globe } from 'lucide-react';
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,;
-} from '@/components/ui/select';
-import {
-  CountryPricing,
-  onsiteServicePricing,;
-} from '@/data/onsiteServicePricing';
-=======
 
-import { useState, useEffect } from "react";
-import { Globe } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {useState, useEffect} from "react";
+import {Globe} from 'lucide-react'
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
 
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
@@ -40,7 +23,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-    const country = onsiteServicePricing.find(item => item.country === countryName) || null;
+    const country = onsiteServicePricing.find(item => item.country === countryName) || null,
     onCountryChange(country)
   };
 
@@ -58,24 +41,11 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
           <SelectValue placeholder="Select a country" />
         </SelectTrigger>
-<<<<<<< HEAD
-        <SelectContent className='bg-zion-blue-dark border-zion-blue-light max-h-80'>
-          <div className='p-2 border-b border-zion-blue-light'>
-            <p className='text-sm text-zion-slate-light pb-1'>
-              Popular Countries
-            </p>
-            {topCountries.map(item => (
-              <SelectItem
-                key={item.country}
-                value={item.country}
-                className='text-white'
-              >
-=======
 
-import { useState, useEffect } from "react";
-import { Globe } from 'lucide-react'
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
+import {useState, useEffect} from "react";
+import {Globe} from 'lucide-react'
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
+import {CountryPricing, onsiteServicePricing} from "@/data/onsiteServicePricing";
 
 interface CountrySelectorProps {
   onCountryChange: (country: CountryPricing | null) => void,
@@ -98,7 +68,7 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
   
   // Handle country selection
   const handleCountryChange = (countryName: string) => {
-    const country = onsiteServicePricing.find(item => item.country === countryName) || null;
+    const country = onsiteServicePricing.find(item => item.country === countryName) || null,
     onCountryChange(country)
   };
 
@@ -117,66 +87,32 @@ export function CountrySelector({ onCountryChange, selectedCountry }: CountrySel
         <SelectTrigger className="bg-zion-blue border-zion-blue-light text-white">
           <SelectValue placeholder="Select a country" />
         </SelectTrigger>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <SelectContent className="bg-zion-blue-dark border-zion-blue-light max-h-80">
           <div className="p-2 border-b border-zion-blue-light">
             <p className="text-sm text-zion-slate-light pb-1">Popular Countries</p>
             {topCountries.map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
           </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='p-2'>
-            <p className='text-sm text-zion-slate-light pb-1'>All Countries</p>
-            {onsiteServicePricing
-              .sort((a, b) => a.country.localeCompare(b.country))
-              .map(item => (
-                <SelectItem
-                  key={item.country}
-                  value={item.country}
-                  className='text-white'
-                >
-                  {item.country} - ${item.pricePerIncident.toFixed(2)}
-                </SelectItem>
-              ))}
-=======
           <div className="p-2">
             <p className="text-sm text-zion-slate-light pb-1">All Countries</p>
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
-=======
           <div className="p-2">
             <p className="text-sm text-zion-slate-light pb-1">All Countries</p>
             {onsiteServicePricing
               .sort((a, b) => a.country.localeCompare(b.country))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               .map((item) => (
               <SelectItem key={item.country} value={item.country} className="text-white">
                 {item.country} - ${item.pricePerIncident.toFixed(2)}
               </SelectItem>
             ))}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </SelectContent>
       </Select>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

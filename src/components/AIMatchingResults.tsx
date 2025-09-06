@@ -1,26 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { MatchResultItem } from '@/lib/ai-matchmaking';
-import { Card, CardContent } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react';
-import Skeleton from '@/components/ui/skeleton';
-import { cn } from '@/lib/utils';
-
-=======
-import { useState } from "react";
-import { MatchResultItem } from "@/lib/ai-matchmaking";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { BarChart3, BriefcaseIcon, Monitor, User } from 'lucide-react'
+import {useState} from "react";
+import {MatchResultItem} from "@/lib/ai-matchmaking";
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
+import {BarChart3, BriefcaseIcon, Monitor, User} from 'lucide-react'
 import Skeleton from "@/components/ui/skeleton";
-import { cn } from "@/lib/utils";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {cn} from "@/lib/utils";
 interface AIMatchingResultsProps {
   matches: MatchResultItem[],
   onSelectMatch?: (match: MatchResultItem) => void,
@@ -50,7 +36,7 @@ export function AIMatchingResults({
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase();
     if (lowerCategory.includes("talent")) return User;
-    if (lowerCategory.includes("equipment")) return Monitor;
+    if (lowerCategory.includes("equipment")) return Monitor,
     return BriefcaseIcon
   };
   
@@ -178,13 +164,5 @@ export function AIMatchingResults({
       </Tabs>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-  
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

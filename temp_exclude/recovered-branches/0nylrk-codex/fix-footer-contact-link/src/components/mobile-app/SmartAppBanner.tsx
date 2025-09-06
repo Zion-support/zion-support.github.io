@@ -1,8 +1,8 @@
 
 import React, { useState, useEffect } from "react";
-import { X, ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
-import { useIsMobile } from "@/hooks/use-mobile";
+import {X,, ArrowRight} from "lucide-react";
+import {Link} from "react-router-dom";
+import {useIsMobile} from "@/hooks/use-mobile";
 interface SmartAppBannerProps {
   appName?: string;
   appIconSrc?: string;
@@ -15,7 +15,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   appName = "Zion Marketplace";
   appIconSrc;
   appStoreUrl = "/download";
-  googlePlayUrl = "/download";
+  googlePlayUrl = "/download",
   delay = 1500
 }) => {
   const [isVisible, setIsVisible] = useState(false);

@@ -1,29 +1,4 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-// Security middleware
-import { NextResponse } from 'next/server';
-import { getSecurityHeaders } from '../utils/security-headers';
-
-export function securityMiddleware(request) {
-  const response = NextResponse.next();
-  
-  // Add security headers
-  const headers = getSecurityHeaders();
-  headers.forEach(({ key, value }) => {
-    response.headers.set(key, value);
-  });
-  
-  // Add HSTS header for HTTPS
-  if (request.nextUrl.protocol === 'https:') {
-    response.headers.set(
-      'Strict-Transport-Security',
-      'max-age=31536000; includeSubDomains; preload'
-    );
-  }
-  
-  return response;
-=======
 // Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
@@ -39,8 +14,6 @@ export function securityHeaders(req, res, next) {
   
   next();
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 // Security headers middleware
 export function securityHeaders(req, res, next) {
   Object.entries({
@@ -56,4 +29,3 @@ export function securityHeaders(req, res, next) {
   
   next();
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

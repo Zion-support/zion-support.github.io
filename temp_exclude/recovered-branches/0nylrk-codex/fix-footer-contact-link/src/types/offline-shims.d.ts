@@ -15,7 +15,7 @@ declare module 'react' {
   // Generic definition to allow usage like forwardRef<HTMLDivElement, Props>()
   export function forwardRef<T, P = {}>(
     render: (props: P, ref: Ref<T>) => ReactElement | null
-  ): any;
+  ): any,
   export const Fragment: any, export const StrictMode: any,
   export const cloneElement: any, export type ReactNode = any,
   export type ReactElement = any;

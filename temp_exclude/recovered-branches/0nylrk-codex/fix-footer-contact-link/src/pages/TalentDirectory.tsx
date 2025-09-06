@@ -1,15 +1,15 @@
 
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { TalentGrid } from "@/components/talent/TalentGrid";
-import { FilterSidebar } from "@/components/talent/FilterSidebar";
-import { TalentResults } from "@/components/talent/TalentResults";
-import { useTalentDirectory } from "@/hooks/useTalentDirectory";
-import { SORT_OPTIONS } from "@/data/sortOptions";
-import { X } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { TalentProfile } from "@/types/talent";
+import {useNavigate} from "react-router-dom";
+import {AppLayout} from "@/layout/AppLayout";
+import {TalentGrid} from "@/components/talent/TalentGrid";
+import {FilterSidebar} from "@/components/talent/FilterSidebar";
+import {TalentResults} from "@/components/talent/TalentResults";
+import {useTalentDirectory} from "@/hooks/useTalentDirectory";
+import {SORT_OPTIONS} from "@/data/sortOptions";
+import {X} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {TalentProfile} from "@/types/talent";
 export default function TalentDirectory() {
   const navigate = useNavigate();
 
@@ -45,7 +45,7 @@ export default function TalentDirectory() {
     handleToggleSave} = useTalentDirectory();
   
   const handleRequestHire = (talent: TalentProfile) => {
-    setSelectedTalent(talent);
+    setSelectedTalent(talent),
     setIsHireModalOpen(true)
   };
   

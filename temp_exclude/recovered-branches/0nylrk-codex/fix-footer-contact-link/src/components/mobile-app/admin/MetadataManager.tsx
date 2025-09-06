@@ -1,13 +1,13 @@
 
 import React, { useState } from "react";
-import { useForm } from "react-hook-form";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { MetadataForm } from "./MetadataForm";
-import { ScreenshotManager } from "./ScreenshotManager";
-import { ChangelogManager } from "./ChangelogManager";
-import { ExportPanel } from "./ExportPanel";
-import { Button } from "@/components/ui/button";
-import { toast } from "sonner";
+import {useForm} from "react-hook-form";
+import {Tabs,, TabsContent,, TabsList,, TabsTrigger} from "@/components/ui/tabs";
+import {MetadataForm} from "./MetadataForm";
+import {ScreenshotManager} from "./ScreenshotManager";
+import {ChangelogManager} from "./ChangelogManager";
+import {ExportPanel} from "./ExportPanel";
+import {Button} from "@/components/ui/button";
+import {toast} from "sonner";
 export type AppPlatform = "ios" | "android";
 
 export type AppMetadataValues = {
@@ -39,7 +39,7 @@ export const MetadataManager: React.FC = () => {
   const currentForm = currentPlatform === "ios" ? iosForm : androidForm;
   
   const handleSaveMetadata = async (data: AppMetadataValues) => {
-    setIsSaving(true);
+    setIsSaving(true),
     
     try {
       // This would be implemented with actual API calls in production

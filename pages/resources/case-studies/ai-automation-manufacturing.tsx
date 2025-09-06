@@ -1,61 +1,46 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function ResourceCaseStudyPage() {
   const caseStudy = {
     id: 'ai-automation-manufacturing',
     title: 'AI-Powered Manufacturing Automation',
     company: 'Global Manufacturing Corp',
     industry: 'Manufacturing',
-<<<<<<< HEAD
     results: '40% increase in production efficiency, 60% reduction in downtime',
-<<<<<<< HEAD
     description:
       'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
-=======
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     results: '40% increase in production efficiency, 60% reduction in downtime';
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <Head>
         <title>{caseStudy.title} - Resource | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta name='description' content={caseStudy.description} />
         <meta
           name='keywords'
           content='AI automation, manufacturing, resource, case study, predictive maintenance'
         />
-=======
         <meta name="description" content={caseStudy.description} />
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white">
         <main className="container mx-auto px-6 py-12">
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
-<<<<<<< HEAD
             <nav className='mb-8'>
               <Link
                 href='/resources'
                 className='text-cyan-400 hover:text-cyan-300 transition-colors'
               >
-=======
         <meta name="description" content={caseStudy.description} />
         <meta name="keywords" content="AI automation, manufacturing, resource, case study, predictive maintenance" />
       </Head>
@@ -66,26 +51,21 @@ export default function ResourceCaseStudyPage() {
             {/* Breadcrumb */}
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <nav className="mb-8">
               <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 ← Back to Resources
               </Link>
             </nav>
 
             {/* Header */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <header className='mb-12 text-center'>
               <div className='mb-4'>
                 <span className='px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30'>
-=======
             <header className="mb-12 text-center">
               <div className="mb-4">
                 <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   {caseStudy.industry}
                 </span>
               </div>
@@ -95,14 +75,12 @@ export default function ResourceCaseStudyPage() {
             </header>
 
             {/* Key Results */}
-<<<<<<< HEAD
             <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-green-400'>
                 Key Results
               </h2>
               <div className='bg-green-500/10 rounded-lg p-6 border border-green-500/20'>
                 <p className='text-white/90 text-lg'>{caseStudy.results}</p>
-=======
             <header className="mb-12 text-center">
               <div className="mb-4">
                 <span className="px-4 py-2 bg-cyan-400/20 text-cyan-400 text-sm rounded-full border border-cyan-400/30">
@@ -115,22 +93,16 @@ export default function ResourceCaseStudyPage() {
             </header>
 
             {/* Key Results */}
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-green-400">Key Results</h2>
               <div className="bg-green-500/10 rounded-lg p-6 border border-green-500/20">
                 <p className="text-white/90 text-lg">{caseStudy.results}</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </section>
 
             {/* Detailed Analysis */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-blue-400'>
                 Detailed Analysis
@@ -146,7 +118,6 @@ export default function ResourceCaseStudyPage() {
                     and production optimization. Each system was designed to
                     work independently while sharing data for comprehensive
                     insights.
-=======
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -156,7 +127,7 @@ export default function ResourceCaseStudyPage() {
                     Our approach involved deploying autonomous AI systems across three key areas: predictive maintenance,
                     quality control, and production optimization. Each system was designed to work independently while 
                     sharing data for comprehensive insights.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </p>
                 </div>
                 
@@ -168,7 +139,6 @@ export default function ResourceCaseStudyPage() {
                     production requirements.
                   </p>
                 </div>
-<<<<<<< HEAD
 
                 <div className='bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20'>
                   <h3 className='text-xl font-semibold text-yellow-400 mb-3'>
@@ -180,7 +150,6 @@ export default function ResourceCaseStudyPage() {
                     increase in production efficiency and 60% reduction in
                     unplanned downtime. These improvements directly translated
                     to increased profitability and customer satisfaction.
-=======
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-blue-400">Detailed Analysis</h2>
               <div className="space-y-6">
@@ -201,8 +170,7 @@ export default function ResourceCaseStudyPage() {
                     production requirements.
                   </p>
                 </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 
                 <div className="bg-yellow-500/10 rounded-lg p-6 border border-yellow-500/20">
                   <h3 className="text-xl font-semibold text-yellow-400 mb-3">Business Impact</h3>
@@ -210,18 +178,13 @@ export default function ResourceCaseStudyPage() {
                     The implementation resulted in significant improvements across all key metrics, with the most 
                     notable being the 40% increase in production efficiency and 60% reduction in unplanned downtime. 
                     These improvements directly translated to increased profitability and customer satisfaction.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </p>
                 </div>
               </div>
             </section>
 
             {/* Related Resources */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='mb-12'>
               <h2 className='text-2xl font-semibold mb-6 text-fuchsia-400'>
                 Related Resources
@@ -230,14 +193,13 @@ export default function ResourceCaseStudyPage() {
                 <Link
                   href='/case-studies/ai-automation-manufacturing'
                   className='bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300'
-=======
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <Link 
                   href="/case-studies/ai-automation-manufacturing"
                   className="bg-fuchsia-500/10 rounded-lg p-6 border border-fuchsia-500/20 hover:border-fuchsia-400/50 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <h3 className="text-lg font-semibold text-fuchsia-400 mb-2">Full Case Study</h3>
                   <p className="text-white/80 text-sm">Read the complete case study with detailed implementation insights.</p>
@@ -247,14 +209,12 @@ export default function ResourceCaseStudyPage() {
                   href="/resources/whitepapers/autonomous-systems-guide.pdf"
                   className="bg-cyan-500/10 rounded-lg p-6 border border-cyan-500/20 hover:border-cyan-400/50 transition-all duration-300"
                 >
-<<<<<<< HEAD
                   <h3 className='text-lg font-semibold text-cyan-400 mb-2'>
                     Autonomous Systems Guide
                   </h3>
                   <p className='text-white/80 text-sm'>
                     Download our comprehensive guide to autonomous technology.
                   </p>
-=======
             <section className="mb-12">
               <h2 className="text-2xl font-semibold mb-6 text-fuchsia-400">Related Resources</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -272,18 +232,14 @@ export default function ResourceCaseStudyPage() {
                 >
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Autonomous Systems Guide</h3>
                   <p className="text-white/80 text-sm">Download our comprehensive guide to autonomous technology.</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <h3 className="text-lg font-semibold text-cyan-400 mb-2">Autonomous Systems Guide</h3>
                   <p className="text-white/80 text-sm">Download our comprehensive guide to autonomous technology.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </Link>
               </div>
             </section>
 
             {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <section className='text-center'>
               <div className='bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20'>
                 <h2 className='text-2xl font-bold mb-4 text-white'>
@@ -293,14 +249,13 @@ export default function ResourceCaseStudyPage() {
                   This resource demonstrates the real impact of AI automation in
                   manufacturing. Let's discuss how we can help you achieve
                   similar results.
-=======
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
                 <p className="text-white/80 mb-6 max-w-2xl mx-auto">
                   This resource demonstrates the real impact of AI automation in manufacturing. 
                   Let's discuss how we can help you achieve similar results.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
                 <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link 
@@ -309,11 +264,9 @@ export default function ResourceCaseStudyPage() {
                   >
                     Get Started
                   </Link>
-<<<<<<< HEAD
                   <Link
                     href='/resources'
                     className='px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300'
-=======
             <section className="text-center">
               <div className="bg-gradient-to-r from-cyan-500/10 to-fuchsia-500/10 rounded-2xl p-8 border border-cyan-500/20">
                 <h2 className="text-2xl font-bold mb-4 text-white">Ready to Implement Similar Solutions?</h2>
@@ -331,12 +284,10 @@ export default function ResourceCaseStudyPage() {
                   <Link 
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Link 
                     href="/resources"
                     className="px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     Explore More Resources
                   </Link>
@@ -347,14 +298,9 @@ export default function ResourceCaseStudyPage() {
         </main>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

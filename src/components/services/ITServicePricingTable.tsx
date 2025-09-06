@@ -1,30 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState, useMemo } from 'react';
-import {
-  onsiteServicePricing,
-  CountryPricing,;
-} from '@/data/onsiteServicePricing';
-import { Input } from '@/components/ui/input';
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,;
-} from '@/components/ui/table';
-import { Globe, Search, ArrowUpDown } from 'lucide-react';
-import { Button } from '@/components/ui/button';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from 'lucide-react'
-import { Button } from "@/components/ui/button";
+import {useState, useMemo} from "react";
+import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing";
+import {Input} from "@/components/ui/input";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table";
+import {Globe, Search, ArrowUpDown} from 'lucide-react'
+import {Button} from "@/components/ui/button";
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState("");
   const [sortConfig, setSortConfig] = useState<{
@@ -59,7 +39,7 @@ export function ITServicePricingTable() {
 
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-      key;
+      key,
       direction: 
         sortConfig.key === key && sortConfig.direction === "ascending" 
           ? "descending" 
@@ -129,20 +109,5 @@ export function ITServicePricingTable() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-      direction: 
-        sortConfig.key === key && sortConfig.direction === "ascending" 
-          ? "descending" 
-          : "ascending"})
-  };
-
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -1,63 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Brain, 
-  Shield, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Stethoscope,
-  Microscope,
-  Pill,
-  Activity,
-  BarChart3,
-  Lock,
-  Globe,
-  Clock,
-  Star,
-  Award,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  Cloud,
-  Eye,
-  Brain,
-  Dna,
-  TestTube,
-  Building2,
-  Car,
-  UserCheck,
-  FileText,
-  MessageSquare,
-  Video,
-  Camera,
-  Smartphone,
-  Tablet,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Printer,
-  Scanner,
-  Activity,
-  BarChart3,
-  PieChart,
-  Target,
-  Crosshair,
-  Radar,
-  Satellite,
-  Telescope,
-  Microscope,
-  Binoculars
-} from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Heart,, Brain,, Shield,, Zap,, Users,, TrendingUp,, CheckCircle,, ArrowRight,, Stethoscope,, Microscope,, Pill,, Activity,, BarChart3,, Lock,, Globe,, Clock,, Star,, Award,, Rocket,, Cpu,, Database,, Network,, Smartphone,, Monitor,, Server,, Cloud,, Eye,, Brain,, Dna,, TestTube,, Building2,, Car,, UserCheck,, FileText,, MessageSquare,, Video,, Camera,, Smartphone,, Tablet,, Laptop,, Watch,, Headphones,, Speaker,, Printer,, Scanner,, Activity,, BarChart3,, PieChart,, Target,, Crosshair,, Radar,, Satellite,, Telescope,, Microscope,, Binoculars} from 'lucide-react';
 
 export default function AIHealthcarePlatform() {
   const features = [
@@ -382,7 +326,7 @@ export default function AIHealthcarePlatform() {
               to improve patient outcomes and operational efficiency.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-blue-500/25"
@@ -402,5 +346,5 @@ export default function AIHealthcarePlatform() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

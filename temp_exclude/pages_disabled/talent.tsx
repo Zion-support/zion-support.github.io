@@ -1,22 +1,15 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  Clock, 
-  Users, 
-  ArrowRight, 
-  CheckCircle, 
-  Star 
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {MapPin,, Clock,, Users,, ArrowRight,, CheckCircle,, Star} from 'lucide-react';
 
 const jobOpenings = [
   {
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { MapPin, Clock, Users, ArrowRight, CheckCircle, Star } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {MapPin,, Clock,, Users,, ArrowRight,, CheckCircle,, Star} from 'lucide-react';
 import Layout from '../components/Layout';
 
 const jobOpenings = [{
@@ -272,7 +265,7 @@ export default function TalentPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Join Our Team?
               </h2>
               <p className="text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
@@ -297,7 +290,7 @@ export default function TalentPage() {
           </div>
         </section>
       </div>
-  );
+  ),
 }
     </>
   );

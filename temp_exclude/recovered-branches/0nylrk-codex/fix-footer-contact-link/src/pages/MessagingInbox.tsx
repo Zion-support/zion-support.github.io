@@ -1,13 +1,13 @@
 
 import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import {MessageSquare,, Video} from 'lucide-react';
+import {useMessaging} from '@/context/MessagingContext';
+import {ProtectedRoute} from '@/components/ProtectedRoute';
+import {ConversationsList,, ConversationDetailView} from '@/components/messaging';
+import {useIsMobile} from '@/hooks/use-mobile';
+import {toast} from 'sonner';
+import {Button} from '@/components/ui/button';
+import {useNavigate} from 'react-router-dom';
 export default function MessagingInbox() {
   const { 
     conversations;

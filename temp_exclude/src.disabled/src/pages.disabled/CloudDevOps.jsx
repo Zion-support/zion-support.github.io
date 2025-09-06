@@ -1,4 +1,4 @@
-import _React,{ useState } from 'react';'''; import { motion } from 'framer-motion'; import {} Cloud,; Server,; GitFork,; Zap,; Shield,; CheckCircle,; ArrowRight,; Star,; Users,; Award,; Globe,; Lock,; Activity,; Clock,; Eye,; Database,; Smartphone,; Monitor,; Code,'; FileText,''; Truck,'''; Wrench'''';} from 'lucide-react'; "icon": 'GitFork',; "features": [
+import _React,{ useState } from 'react';'''; import {motion} from 'framer-motion'; import {} Cloud,; Server,; GitFork,; Zap,; Shield,; CheckCircle,; ArrowRight,; Star,; Users,; Award,; Globe,; Lock,; Activity,; Clock,; Eye,; Database,; Smartphone,; Monitor,; Code,'; FileText,''; Truck,'''; Wrench'''';} from 'lucide-react'; "icon": 'GitFork',; "features": [
     ; "Automated testing",; "Build automation",; "Deployment automation",,
     "Rollback capabilities""
   ],; "price": "From $12,000",; "timeline": "6-12 weeks",; "category": "DevOps",; platforms["Jenkins","GitHub Actions","GitLab CI","Azure DevOps"];},; {} "; "id": '3',; "title": "Container Orchestration",; "description": "Kubernetes and Docker implementation for scalable containerized applications.",; "icon": 'Server',;"; features = [

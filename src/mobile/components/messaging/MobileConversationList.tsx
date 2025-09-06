@@ -1,22 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Search } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { cn } from '@/lib/utils';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
+import {Card} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Search} from 'lucide-react'
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
 interface Conversation {
   id: string,
   name: string,
@@ -71,20 +60,14 @@ export function MobileConversationList({
           >
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
-<<<<<<< HEAD
-                <AvatarImage
-                  src={conversation.avatar}
-                  alt={conversation.name}
-                />
-=======
 
 import React from "react";
-import { Card } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { cn } from "@/lib/utils";
+import {Card} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Search} from 'lucide-react'
+import {Input} from "@/components/ui/input";
+import {cn} from "@/lib/utils";
 interface Conversation {
   id: string,
   name: string,
@@ -140,28 +123,16 @@ export function MobileConversationList({
             <div className="flex items-center gap-3 py-3 cursor-pointer">
               <Avatar>
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <AvatarImage src={conversation.avatar} alt={conversation.name} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <AvatarFallback>
                   {conversation.name.charAt(0).toUpperCase()}
                 </AvatarFallback>
               </Avatar>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <div className='flex-1 min-w-0'>
-                <div className='flex justify-between items-baseline'>
-                  <h3 className='font-medium truncate'>{conversation.name}</h3>
-                  <span className='text-xs text-muted-foreground whitespace-nowrap ml-2'>
-=======
               
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
                   <h3 className="font-medium truncate">{conversation.name}</h3>
                   <span className="text-xs text-muted-foreground whitespace-nowrap ml-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {conversation.timestamp}
                   </span>
                 </div>
@@ -174,9 +145,6 @@ export function MobileConversationList({
                   </p>
                   
                   {conversation.unreadCount > 0 && (
-<<<<<<< HEAD
-                    <Badge className='ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full'>
-=======
               
               <div className="flex-1 min-w-0">
                 <div className="flex justify-between items-baseline">
@@ -195,35 +163,19 @@ export function MobileConversationList({
                   
                   {conversation.unreadCount > 0 && (
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <Badge className="ml-2 h-5 w-5 p-0 flex items-center justify-center rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {conversation.unreadCount}
                     </Badge>
                   )}
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='border-t border-border ml-12'></div>
-=======
             <div className="border-t border-border ml-12"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="border-t border-border ml-12"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         ))}
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

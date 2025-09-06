@@ -1,72 +1,34 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Zap,
-  Brain,
-  Code,
-  Shield,
-  Users,
-  TrendingUp,
-  CheckCircle,
-  ArrowRight,
-  Star,
-  Clock,
-  Target,
-  Cpu,
-  Rocket,
-  Globe,
-  BarChart3,
-  Settings,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings,} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
-=======
-import { 
-  Zap, Brain, Code, Shield, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { 
-  Zap, Brain, Code, Shield, Users, TrendingUp, 
-  CheckCircle, ArrowRight, Star, Clock, Target;
-  Cpu, Rocket, Globe, BarChart3, Settings
-} from 'lucide-react';
+import {advancedAIAutomationServices2025} from '../data/2025-advanced-ai-automation-services';
+import {Zap, Brain, Code, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Clock, Target, Cpu, Rocket, Globe, BarChart3, Settings} from 'lucide-react';
 import Layout from '../components/layout/Layout';
-import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {advancedAIAutomationServices2025} from '../data/2025-advanced-ai-automation-services';
+ursor/integrate-build-improve-and-re-verify-b76c
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
   website: 'https://ziontechgroup.com',
-=======
   website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 };
 
 const serviceHighlights = [
   {
     title: 'AI Code Generation',
-<<<<<<< HEAD
-<<<<<<< HEAD
     description:
       'Generate production-ready code across multiple languages with AI intelligence',
-=======
     description: 'Generate production-ready code across multiple languages with AI intelligence',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
     features: ['Multi-language supportSecurity scanningPerformance optimizationTeam collaboration']
@@ -97,7 +59,6 @@ const serviceHighlights = [
     description: 'Boost sales performance with AI-powered insights and predictive analytics',
     icon: TrendingUp,
     color: 'from-yellow-500 to-orange-600',
-<<<<<<< HEAD
     features: [
       'Lead scoring',
       'Sales forecasting',
@@ -105,7 +66,6 @@ const serviceHighlights = [
       'Performance optimization',
     ],
   },
-=======
     description: 'Generate production-ready code across multiple languages with AI intelligence',
     icon: Code,
     color: 'from-emerald-500 to-teal-600',
@@ -139,11 +99,9 @@ const serviceHighlights = [
     color: 'from-yellow-500 to-orange-600',
     features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     features: ['Lead scoringSales forecastingCustomer insightsPerformance optimization']
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 const benefits = [
@@ -151,22 +109,17 @@ const benefits = [
     title: '80% Reduction in Manual Work',
     description: 'Automate repetitive tasks and focus on high-value activities',
     icon: Zap,
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: 'text-emerald-400',
   },
-=======
     color: 'text-emerald-400'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     title: '300% ROI Improvement',
     description: 'Significant returns through increased efficiency and productivity',
     icon: TrendingUp,
-<<<<<<< HEAD
     color: 'text-blue-400',
   },
-=======
     color: 'text-emerald-400'
   };
   {
@@ -175,51 +128,37 @@ const benefits = [
     icon: TrendingUp,
     color: 'text-blue-400'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     color: 'text-blue-400'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     title: '24/7 Operation',
     description: 'Round-the-clock automation without human intervention',
     icon: Clock,
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: 'text-purple-400',
   },
-=======
     color: 'text-purple-400'
   };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     color: 'text-purple-400'
   };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   {
     title: 'Real-time Insights',
     description: 'Instant analytics and decision-making support',
     icon: BarChart3,
-<<<<<<< HEAD
-<<<<<<< HEAD
     color: 'text-pink-400',
   },
-=======
     color: 'text-pink-400'
   }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     color: 'text-pink-400'
   }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 ];
 
 export default function AIAutomationServices() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <title>
           AI Automation Services - Zion Tech Group | Advanced AI-Powered
           Automation Solutions
@@ -235,14 +174,13 @@ export default function AIAutomationServices() {
         <meta name='author' content='Zion Tech Group' />
         <meta name='robots' content='index, follow' />
 
-=======
         <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
         <meta name="description" content="Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence." />
         <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
         <meta name="author" content="Zion Tech Group" />
         <meta name="robots" content="index, follow" />
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         {/* Open Graph */}
         <meta property="og:title" content="AI Automation Services - Zion Tech Group" />
         <meta property="og:description" content="Advanced AI-powered automation solutions for modern businesses." />
@@ -264,12 +202,10 @@ export default function AIAutomationServices() {
       </Head>
 
       {/* Hero Section */}
-<<<<<<< HEAD
       <section className='relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg'>
         <div className='absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent'></div>
 
         <div className='relative z-10 container mx-auto px-4 text-center'>
-=======
         <title>AI Automation Services - Zion Tech Group | Advanced AI-Powered Automation Solutions</title>
         <meta name="description" content="Transform your business with our advanced AI automation services. From code generation to DevOps automation, customer support to marketing - automate everything with AI intelligence." />
         <meta name="keywords" content="AI automation, code generation, DevOps automation, customer support AI, marketing automation, sales intelligence, Zion Tech Group" />
@@ -297,26 +233,19 @@ export default function AIAutomationServices() {
       </Head>
 
       {/* Hero Section */}
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden futuristic-bg">
         <div className="absolute inset-0 bg-gradient-to-br from-black/50 via-black/30 to-transparent"></div>
         
         <div className="relative z-10 container mx-auto px-4 text-center">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='max-w-4xl mx-auto'
-=======
             className="max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
               <Zap className="w-5 h-5 text-emerald-400" />
@@ -347,9 +276,7 @@ export default function AIAutomationServices() {
               <Link href="/contact" className="group">
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
                   <span>Get Started</span>
-<<<<<<< HEAD
                   <ArrowRight className='w-5 h-5 group-hover:translate-x-1 transition-transform' />
-=======
             className="max-w-4xl mx-auto"
           >
             <div className="inline-flex items-center space-x-2 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 rounded-full px-6 py-3 mb-8">
@@ -382,21 +309,15 @@ export default function AIAutomationServices() {
                 <button className="border-2 border-emerald-500/50 hover:border-emerald-400 text-emerald-400 hover:text-emerald-300 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:bg-emerald-500/10 flex items-center space-x-2">
                   <span>Get Started</span>
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
               </Link>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 opacity-20 animate-float">
           <div className="w-4 h-4 bg-emerald-400 rounded-full"></div>
@@ -404,13 +325,11 @@ export default function AIAutomationServices() {
         <div className="absolute top-40 right-20 opacity-30 animate-float" style={{ animationDelay: '1s' }}>
           <div className="w-6 h-6 bg-teal-400 rounded-full"></div>
         </div>
-<<<<<<< HEAD
         <div
           className='absolute bottom-40 left-20 opacity-25 animate-float'
           style={{ animationDelay: '2s' }}
         >
           <div className='w-3 h-3 bg-cyan-400 rounded-full'></div>
-=======
         
         {/* Floating Elements */}
         <div className="absolute top-20 left-10 opacity-20 animate-float">
@@ -421,41 +340,31 @@ export default function AIAutomationServices() {
         </div>
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="absolute bottom-40 left-20 opacity-25 animate-float" style={{ animationDelay: '2s' }}>
           <div className="w-3 h-3 bg-cyan-400 rounded-full"></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </section>
 
       {/* Service Highlights */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section
         id='services'
         className='py-20 bg-gradient-to-b from-black to-gray-900'
       >
         <div className='container mx-auto px-4'>
-=======
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section id="services" className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="container mx-auto px-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               AI Automation <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Services</span>
@@ -464,10 +373,8 @@ export default function AIAutomationServices() {
               Comprehensive AI automation solutions that transform every aspect of your business operations
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -479,11 +386,9 @@ export default function AIAutomationServices() {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {serviceHighlights.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -491,12 +396,9 @@ export default function AIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='futuristic-card p-6 group hover:scale-105 transition-all duration-300'
-=======
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-full h-full text-white" />
@@ -507,13 +409,11 @@ export default function AIAutomationServices() {
                 
                 <ul className="space-y-2">
                   {service.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                     <li
                       key={featureIndex}
                       className='flex items-center text-gray-300'
                     >
                       <CheckCircle className='w-5 h-5 text-emerald-400 mr-3 flex-shrink-0' />
-=======
                 className="futuristic-card p-6 group hover:scale-105 transition-all duration-300"
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${service.color} p-4 mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -527,11 +427,9 @@ export default function AIAutomationServices() {
                   {service.features.map((feature, featureIndex) => (
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <li key={featureIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-5 h-5 text-emerald-400 mr-3 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <span>{feature}</span>
                     </li>
                   ))}
@@ -540,37 +438,29 @@ export default function AIAutomationServices() {
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Detailed Services */}
       <section className='py-20 bg-black'>
         <div className='container mx-auto px-4'>
-=======
       </section>
 
       {/* Detailed Services */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Detailed Services */}
       <section className="py-20 bg-black">
         <div className="container mx-auto px-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Our <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span> Portfolio
@@ -579,10 +469,8 @@ export default function AIAutomationServices() {
               Discover our comprehensive range of AI automation services designed for modern enterprises
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -594,11 +482,9 @@ export default function AIAutomationServices() {
           </motion.div>
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {advancedAIAutomationServices2025.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -606,12 +492,9 @@ export default function AIAutomationServices() {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='animated-border'
-=======
                 className="animated-border"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="h-full">
                   <div className="flex items-start justify-between mb-4">
@@ -623,9 +506,7 @@ export default function AIAutomationServices() {
                       </div>
                     </div>
                     {service.popular && (
-<<<<<<< HEAD
                       <span className='bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium'>
-=======
                 className="animated-border"
               >
                 <div className="h-full">
@@ -639,16 +520,12 @@ export default function AIAutomationServices() {
                     </div>
                     {service.popular && (
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <span className="bg-gradient-to-r from-emerald-500 to-teal-600 text-white px-3 py-1 rounded-full text-sm font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         Popular
                       </span>
                     )}
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <p className='text-gray-300 mb-4 leading-relaxed'>
                     {service.description}
@@ -660,14 +537,13 @@ export default function AIAutomationServices() {
                       <span className='text-gray-400 text-lg'>
                         {service.period}
                       </span>
-=======
                   
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                   
                   <div className="flex items-center justify-between mb-4">
                     <div className="text-2xl font-bold text-emerald-400">
                       {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </div>
                     <div className="flex items-center space-x-1">
                       {[...Array(5)].map((_, i) => (
@@ -701,13 +577,11 @@ export default function AIAutomationServices() {
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                     </Link>
-<<<<<<< HEAD
 
                     <Link
                       href='/contact'
                       className='bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105'
                     >
-=======
                   
                   <p className="text-gray-300 mb-4 leading-relaxed">{service.description}</p>
                   
@@ -749,11 +623,9 @@ export default function AIAutomationServices() {
                     </Link>
                     
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     
                     <Link href="/contact" className="bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 hover:scale-105">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       Get Started
                     </Link>
                   </div>
@@ -765,29 +637,21 @@ export default function AIAutomationServices() {
       </section>
 
       {/* Benefits Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-b from-gray-900 to-black'>
         <div className='container mx-auto px-4'>
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-b from-gray-900 to-black">
         <div className="container mx-auto px-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Why Choose <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">AI Automation</span>
@@ -796,10 +660,8 @@ export default function AIAutomationServices() {
               Transform your business with intelligent automation that delivers measurable results
             </p>
           </motion.div>
-<<<<<<< HEAD
 
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -811,11 +673,9 @@ export default function AIAutomationServices() {
           </motion.div>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {benefits.map((benefit, index) => (
               <motion.div
                 key={benefit.title}
@@ -823,17 +683,13 @@ export default function AIAutomationServices() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center group'
-=======
                 className="text-center group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <benefit.icon className={`w-full h-full ${benefit.color}`} />
                 </div>
-<<<<<<< HEAD
 
                 <h3 className='text-xl font-bold text-white mb-4'>
                   {benefit.title}
@@ -841,7 +697,6 @@ export default function AIAutomationServices() {
                 <p className='text-gray-300 leading-relaxed'>
                   {benefit.description}
                 </p>
-=======
                 className="text-center group"
               >
                 <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r from-emerald-500/20 to-teal-500/20 border border-emerald-500/30 p-5 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -850,12 +705,10 @@ export default function AIAutomationServices() {
                 
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 
                 <h3 className="text-xl font-bold text-white mb-4">{benefit.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{benefit.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
@@ -863,29 +716,21 @@ export default function AIAutomationServices() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20'>
         <div className='container mx-auto px-4 text-center'>
-=======
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
         <div className="container mx-auto px-4 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-r from-emerald-900/20 via-teal-900/20 to-cyan-900/20">
         <div className="container mx-auto px-4 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='max-w-4xl mx-auto'
-=======
             className="max-w-4xl mx-auto"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent">Automate</span> Your Business?
@@ -921,12 +766,10 @@ export default function AIAutomationServices() {
                 <div className="text-gray-300">Uptime Guarantee</div>
               </div>
               <div>
-<<<<<<< HEAD
                 <div className='text-3xl font-bold text-emerald-400 mb-2'>
                   350%
                 </div>
                 <div className='text-gray-300'>Average ROI</div>
-=======
             className="max-w-4xl mx-auto"
           >
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
@@ -965,25 +808,18 @@ export default function AIAutomationServices() {
               <div>
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
                 <div className="text-gray-300">Average ROI</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-3xl font-bold text-emerald-400 mb-2">350%</div>
                 <div className="text-gray-300">Average ROI</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

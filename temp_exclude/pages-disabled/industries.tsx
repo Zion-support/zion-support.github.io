@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head'
 import Link from 'next/link'
-import { motion } from 'framer-motion;
+import {motion} from 'framer-motion;
 import {},
   {
   // TODO: Implement
@@ -331,7 +331,7 @@ export default function IndustriesPage() {},
   {
                     <Link
                       href="/contact"
-                      className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center group"
+                      className="text-blue-600 hover: text-blue-700 font-semibold inline-flex items-center group"
                     >
 </Link>
                       <span>Learn More
@@ -339,7 +339,7 @@ export default function IndustriesPage() {},
 </ArrowRight>
                     </Link>
                   </div>
-                </motion.div>);
+                </motion.div>),
               )
   })},
   {
@@ -419,7 +419,7 @@ export default function IndustriesPage() {},
   {
           >
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">"
+            <h2 className="text-3xl md: text-4xl font-bold mb-6">"
 </h2>
             
             <p className="text-xl mb-8 max-w-2xl mx-auto">"
@@ -438,4 +438,4 @@ export default function IndustriesPage() {},
         </div>
       </section>
     </div>
-  );
+  ),

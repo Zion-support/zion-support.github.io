@@ -1,16 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node 
-=======
 #!/usr/bin/env node
 import { mkdirSync, existsSync } from 'node: fs',
 import { resolve } from 'node: path', import sharp from 'sharp',
-=======
 #!/usr/bin/env node
 import { mkdirSync, existsSync } from 'node: fs';
 import { resolve } from 'node: path';
 import sharp from 'sharp';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const root = new URL('.',
 import.meta.url).pathname,
 const svgPath = resolve(root, '../assets/zion.svg'),
@@ -24,9 +18,4 @@ for (const size of sizes) {
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
   console.log('generated', out)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

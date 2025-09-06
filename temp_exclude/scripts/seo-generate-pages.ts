@@ -18,7 +18,7 @@ async function postJson(url: string, body: any): Promise<any> {
       headers: { 'Content-Type': 'application/jsonContent-Length': Buffer.byteLength(data) }};
     const lib = u.protocol === 'https: ' ? https : require('http'),
     const req = lib.request(url, opts, (res: any) => {
-      let buf = '';
+      let buf = '',
       res.on('data', (d: any) => (buf += d)),
       res.on('end', () => {
         try { resolve(JSON.parse(buf)) } catch { resolve({}) }

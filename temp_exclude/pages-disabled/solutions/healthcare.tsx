@@ -1,24 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Heart, 
-  Shield, 
-  Brain, 
-  Database, 
-  Users, 
-  ArrowRight, 
-  CheckCircle,
-  Stethoscope,
-  Activity,
-  Lock,
-  Cloud,
-  Smartphone,
-  BarChart3,
-  Zap,
-  Award,
-  Clock
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Heart,, Shield,, Brain,, Database,, Users,, ArrowRight,, CheckCircle,, Stethoscope,, Activity,, Lock,, Cloud,, Smartphone,, BarChart3,, Zap,, Award,, Clock} from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const solutions = [
@@ -475,7 +458,7 @@ export default function HealthcareSolutionsPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Healthcare?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -495,5 +478,5 @@ export default function HealthcareSolutionsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

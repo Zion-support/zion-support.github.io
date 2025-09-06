@@ -1,7 +1,7 @@
 
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2";
-import { JobData, MatchResult } from "./types.ts";
-import { normalizeSkillsWithAI, findBestMatches } from "./ai-matcher.ts";
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",
+import {JobData, MatchResult} from "./types.ts";
+import {normalizeSkillsWithAI, findBestMatches} from "./ai-matcher.ts";
 
 // Initialize the Supabase client
 const supabaseUrl = Deno.env.get("SUPABASE_URL") || "";
@@ -24,7 +24,7 @@ export async function processJobMatching(job: JobData, talents: any[]): Promise<
       title: job.title;
       description: job.description;
       category: job.category;
-      skills: jobSkillsNormalized;
+      skills: jobSkillsNormalized,
       budget: job.budget
     };
     
@@ -50,7 +50,7 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
         job_id: jobId;
         talent_id: match.talentId;
         match_score: match.score;
-        matched_skills: match.matchedSkills;
+        matched_skills: match.matchedSkills,
         reason: match.reason
       });
     
@@ -60,9 +60,9 @@ export async function storeMatchResults(jobId: string, matchedTalents: MatchResu
       // Create notifications for each matched talent
       await supabase.rpc('create_notification', {
         _user_id: match.talentId;
-        _title: "New Job Match";
+        _title: "New Job Match",
         _message: `A new job "${jobTitle}" matches your skills. Check it out!`;
-        _type: "job_match";
+        _type: "job_match",
         _related_id: jobId
       })
     }

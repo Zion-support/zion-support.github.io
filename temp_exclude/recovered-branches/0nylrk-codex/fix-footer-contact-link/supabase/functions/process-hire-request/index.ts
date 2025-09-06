@@ -1,7 +1,7 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2",
-import { Configuration, OpenAIApi } from "https: //esm.sh/openai@3.2.1",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2",
+import {Configuration,, OpenAIApi} from "https: //esm.sh/openai@3.2.1",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -63,9 +63,8 @@ serve(async (req) => {
           1. A brief summary of this project (max 100 characters)
           2. Classify this project into one category (e.g., "AI Development", "Cloud Migration", "Web Design", etc.)
           
-          Format your response as JSON:
-          {
-            "summary": "Brief summary here";
+          Format your response as JSON: {
+            "summary": "Brief summary here",
             "projectType": "Project type here"
           }
         `;

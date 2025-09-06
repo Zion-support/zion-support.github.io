@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
+import {v4, as, uuidv4} from 'uuid';
+import {readJsonFile, writeJsonFile} from '../../utils/db';
 import type { Conversation, Message } from '../../utils/types';
-import { rateLimit } from '../../utils/rateLimit';
+import {rateLimit} from '../../utils/rateLimit';
 const FILE = 'conversations.json';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;
@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const now = new Date().toISOString();
     const msg: Message = {
-      id: uuidv4();
+      id: uuidv4(),
       conversationId: String(conversationId),
       sender: { type: sender.type, id: String(sender.id) },
       text: text ? String(text) : undefined,

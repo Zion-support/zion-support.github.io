@@ -1,61 +1,18 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Monitor,
-  Cpu,
-  Zap,
-  Database,
-  Cloud,
-  Lock,
-  Code,
-  Sparkles,
-  Target,
-  Award,
-  Lightbulb,;
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { 
-  Search, Star, Users, TrendingUp, 
-  DollarSign, Clock, CheckCircle, ArrowRight;
-  Rocket, Monitor, Cpu, 
-  Zap, Database, Cloud, Lock, Code;
-  Sparkles, Target, Award, Lightbulb
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
-import { innovative2025Services } from '../data/innovative-2025-services';
-import { emergingTech2025Services } from '../data/emerging-tech-2025-services';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Monitor, Cpu, Zap, Database, Cloud, Lock, Code, Sparkles, Target, Award, Lightbulb,, ursor/integrate-build-improve-and-re-verify-b76c, import, {, Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Monitor, Cpu, Zap, Database, Cloud, Lock, Code, Sparkles, Target, Award, Lightbulb, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
+import {innovative2025Services} from '../data/innovative-2025-services';
+import {emergingTech2025Services} from '../data/emerging-tech-2025-services';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function EnhancedServicesShowcase2025() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
   const [sortBy, setSortBy] = useState<string>('name');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const allServices = [...innovative2025Services, ...emergingTech2025Services];
 
   // Dynamic category counts
@@ -79,37 +36,30 @@ export default function EnhancedServicesShowcase2025() {
       service.category.includes('Security') ||
       service.category.includes('Cybersecurity')
   ).length;
-=======
   const allServices = [
     ...innovative2025Services;
     ...emergingTech2025Services
   ];
 
   // Dynamic category counts
-=======
   const allServices = [
     ...innovative2025Services;
     ...emergingTech2025Services
   ];
 
   // Dynamic category counts
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const aiCount = allServices.filter(service => service.category.includes('AI')).length;
   const quantumCount = allServices.filter(service => service.category.includes('Quantum')).length;
   const blockchainCount = allServices.filter(service => service.category.includes('Blockchain')).length;
   const iotCount = allServices.filter(service => service.category.includes('IoT')).length;
   const spaceCount = allServices.filter(service => service.category.includes('Space')).length;
   const cybersecurityCount = allServices.filter(service => service.category.includes('Security') || service.category.includes('Cybersecurity')).length;
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
       id: 'quantum',
       name: 'Quantum Computing',
@@ -130,20 +80,17 @@ export default function EnhancedServicesShowcase2025() {
       icon: '🔒',
       count: cybersecurityCount,
     },
-=======
     { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },
     { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: blockchainCount },
     { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },
     { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
     { id: 'security', name: 'Cybersecurity', icon: '🔒', count: cybersecurityCount }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },
     { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: blockchainCount },
     { id: 'iot', name: 'IoT & Edge Computing', icon: '🌐', count: iotCount },
     { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
     { id: 'security', name: 'Cybersecurity', icon: '🔒', count: cybersecurityCount }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
@@ -151,15 +98,10 @@ export default function EnhancedServicesShowcase2025() {
     { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },
     { id: 'medium', name: '$2K - $8K/month', range: '$2K - $8K' },
     { id: 'high', name: '$8K - $20K/month', range: '$8K - $20K' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'premium', name: '$20K+/month', range: '$20K+' },
-=======
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const sortOptions = [
@@ -167,30 +109,22 @@ export default function EnhancedServicesShowcase2025() {
     { id: 'price-low', name: 'Price Low to High' },
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'rating', name: 'Rating' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'customers', name: 'Customer Count' },
-=======
     { id: 'customers', name: 'Customer Count' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'customers', name: 'Customer Count' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Filter and sort services
   const filteredServices = React.useMemo(() => {
     const parsePriceToNumber = (price: string | number): number => {
-      if (typeof price === 'number') return price;
+      if (typeof price === 'number') return price,
       if (typeof price === 'string') {
         const match = price.replace(/[^0-9.]/g, '');
         const parsed = parseFloat(match || '0');
-<<<<<<< HEAD
-<<<<<<< HEAD
         return isNaN(parsed) ? 0 : parsed;
-=======
         return isNaN(parsed) ? 0 : parsed
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
       return 0
     };
@@ -214,7 +148,6 @@ export default function EnhancedServicesShowcase2025() {
                           (selectedPriceRange === 'high' && parsePriceToNumber(service.price) >= 8000 && parsePriceToNumber(service.price) < 20000) ||
                           (selectedPriceRange === 'premium' && parsePriceToNumber(service.price) >= 20000);
 
-<<<<<<< HEAD
       const matchesPrice =
         selectedPriceRange === 'all' ||
         (selectedPriceRange === 'low' &&
@@ -229,7 +162,6 @@ export default function EnhancedServicesShowcase2025() {
           parsePriceToNumber(service.price) >= 20000);
 
       return matchesSearch && matchesCategory && matchesPrice;
-=======
         return isNaN(parsed) ? 0 : parsed
       }
       return 0
@@ -255,17 +187,13 @@ export default function EnhancedServicesShowcase2025() {
                           (selectedPriceRange === 'premium' && parsePriceToNumber(service.price) >= 20000);
 
       return matchesSearch && matchesCategory && matchesPrice
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return matchesSearch && matchesCategory && matchesPrice
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     });
 
     // Sort services
     switch (sortBy) {
       case 'price-low':
-<<<<<<< HEAD
-<<<<<<< HEAD
         filtered.sort(
           (a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price)
         );
@@ -274,18 +202,15 @@ export default function EnhancedServicesShowcase2025() {
         filtered.sort(
           (a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price)
         );
-=======
         filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price));
         break;
       case 'price-high':
         filtered.sort((a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         filtered.sort((a, b) => parsePriceToNumber(a.price) - parsePriceToNumber(b.price));
         break;
       case 'price-high':
         filtered.sort((a, b) => parsePriceToNumber(b.price) - parsePriceToNumber(a.price));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         break;
       case 'rating':
         filtered.sort((a, b) => b.rating - a.rating);
@@ -294,24 +219,19 @@ export default function EnhancedServicesShowcase2025() {
         filtered.sort((a, b) => b.customers - a.customers);
         break;
       default:
-<<<<<<< HEAD
-<<<<<<< HEAD
         filtered.sort((a, b) => a.name.localeCompare(b.name));
     }
 
     return filtered;
-=======
         filtered.sort((a, b) => a.name.localeCompare(b.name))
     }
 
     return filtered
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         filtered.sort((a, b) => a.name.localeCompare(b.name))
     }
 
     return filtered
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy, allServices]);
 
   const containerVariants = {
@@ -319,21 +239,16 @@ export default function EnhancedServicesShowcase2025() {
     visible: {
       opacity: 1,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         staggerChildren: 0.1,
       },
     },
-=======
         staggerChildren: 0.1
       }
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         staggerChildren: 0.1
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const itemVariants = {
@@ -342,16 +257,13 @@ export default function EnhancedServicesShowcase2025() {
       opacity: 1,
       y: 0,
       transition: {
-<<<<<<< HEAD
-<<<<<<< HEAD
         duration: 0.5,
       },
     },
-=======
         duration: 0.5
       }
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -375,10 +287,8 @@ export default function EnhancedServicesShowcase2025() {
         </Head>
 
         {/* Hero Section */}
-<<<<<<< HEAD
         <section className='relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto text-center'>
-=======
         duration: 0.5
       }
     }
@@ -407,26 +317,21 @@ export default function EnhancedServicesShowcase2025() {
         {/* Hero Section */}
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="relative z-10 pt-20 pb-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='flex items-center justify-center mb-6'>
                 <Sparkles className='w-12 h-12 text-cyan-400 mr-4' />
                 <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent'>
-=======
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   2025 Innovation Showcase
                 </h1>
                 <Sparkles className="w-12 h-12 text-pink-400 ml-4" />
@@ -452,13 +357,11 @@ export default function EnhancedServicesShowcase2025() {
                   <div className="text-3xl font-bold text-green-400">{blockchainCount + iotCount}</div>
                   <div className="text-gray-400">Emerging Tech</div>
                 </div>
-<<<<<<< HEAD
                 <div className='text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl'>
                   <div className='text-3xl font-bold text-pink-400'>
                     {spaceCount + cybersecurityCount}
                   </div>
                   <div className='text-gray-400'>Specialized</div>
-=======
               <div className="flex items-center justify-center mb-6">
                 <Sparkles className="w-12 h-12 text-cyan-400 mr-4" />
                 <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent">
@@ -490,12 +393,10 @@ export default function EnhancedServicesShowcase2025() {
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-center p-6 bg-gray-800/40 border border-gray-700 rounded-2xl">
                   <div className="text-3xl font-bold text-pink-400">{spaceCount + cybersecurityCount}</div>
                   <div className="text-gray-400">Specialized</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -503,18 +404,15 @@ export default function EnhancedServicesShowcase2025() {
         </section>
 
         {/* Search and Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='relative z-10 py-8 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='bg-gray-800/40 border border-gray-700 rounded-2xl p-6'>
               <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
-=======
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6">
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {/* Search */}
                 <div className="relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -522,10 +420,8 @@ export default function EnhancedServicesShowcase2025() {
                     type="text"
                     placeholder="Search services..."
                     value={searchTerm}
-<<<<<<< HEAD
                     onChange={e => setSearchTerm(e.target.value)}
                     className='w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
         <section className="relative z-10 py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gray-800/40 border border-gray-700 rounded-2xl p-6">
@@ -538,30 +434,23 @@ export default function EnhancedServicesShowcase2025() {
                     placeholder="Search services..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     onChange={(e) => setSearchTerm(e.target.value)} className="w-full pl-10 pr-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   />
                 </div>
 
                 {/* Category Filter */}
                 <select
                   value={selectedCategory}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   onChange={e => setSelectedCategory(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
                   {categories.map(category => (
-=======
                   onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setSelectedCategory(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <option key={category.id} value={category.id}>
                       {category.name} ({category.count})
                     </option>
@@ -571,20 +460,15 @@ export default function EnhancedServicesShowcase2025() {
                 {/* Price Range Filter */}
                 <select
                   value={selectedPriceRange}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   onChange={e => setSelectedPriceRange(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
                   {priceRanges.map(range => (
-=======
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {priceRanges.map((range) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setSelectedPriceRange(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <option key={range.id} value={range.id}>
                       {range.name}
                     </option>
@@ -594,20 +478,15 @@ export default function EnhancedServicesShowcase2025() {
                 {/* Sort Options */}
                 <select
                   value={sortBy}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   onChange={e => setSortBy(e.target.value)}
                   className='px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
                 >
                   {sortOptions.map(option => (
-=======
                   onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {sortOptions.map((option) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setSortBy(e.target.value)} className="px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent">
                   {sortOptions.map((option) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <option key={option.id} value={option.id}>
                       {option.name}
                     </option>
@@ -619,14 +498,11 @@ export default function EnhancedServicesShowcase2025() {
         </section>
 
         {/* Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='relative z-10 py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
-=======
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               variants={containerVariants}
               initial="hidden"
@@ -641,10 +517,8 @@ export default function EnhancedServicesShowcase2025() {
                     <div className="flex items-start justify-between mb-4">
                       <div className="text-3xl">{service.icon}</div>
                       {service.popular && (
-<<<<<<< HEAD
                         <div className='flex items-center space-x-1 text-yellow-400 text-sm'>
                           <Star className='w-4 h-4 fill-current' />
-=======
         <section className="relative z-10 py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <motion.div
@@ -663,41 +537,32 @@ export default function EnhancedServicesShowcase2025() {
                       {service.popular && (
                         <div className="flex items-center space-x-1 text-yellow-400 text-sm">
                           <Star className="w-4 h-4 fill-current" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="flex items-center space-x-1 text-yellow-400 text-sm">
                           <Star className="w-4 h-4 fill-current" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           <span>Popular</span>
                         </div>
                       )}
                     </div>
 
                     {/* Service Title and Description */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <h3 className='text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors'>
                       {service.name}
                     </h3>
                     <p className='text-gray-300 text-sm mb-4 line-clamp-2'>
-=======
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-cyan-300 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-gray-300 text-sm mb-4 line-clamp-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       {service.description}
                     </p>
 
                     {/* Price and Customer Count */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='flex items-center justify-between mb-4'>
                       <div className='text-2xl font-bold text-cyan-400'>
                         {service.price}
@@ -707,29 +572,24 @@ export default function EnhancedServicesShowcase2025() {
                       </div>
                       <div className='flex items-center space-x-2 text-sm text-gray-400'>
                         <Users className='w-4 h-4' />
-=======
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="flex items-center justify-between mb-4">
                       <div className="text-2xl font-bold text-cyan-400">
                         {service.price}<span className="text-gray-400 text-lg">{service.period}</span>
                       </div>
                       <div className="flex items-center space-x-2 text-sm text-gray-400">
                         <Users className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <span>{service.customers}</span>
                       </div>
                     </div>
 
                     {/* Key Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='mb-6'>
                       <div className='text-sm text-gray-400 mb-2'>
                         Key Features:
@@ -742,7 +602,6 @@ export default function EnhancedServicesShowcase2025() {
                           >
                             <CheckCircle className='w-4 h-4 text-green-400 mr-2 flex-shrink-0' />
                             <span className='line-clamp-1'>{feature}</span>
-=======
                     <div className="mb-6">
                       <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                       <ul className="space-y-1">
@@ -750,8 +609,6 @@ export default function EnhancedServicesShowcase2025() {
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="mb-6">
                       <div className="text-sm text-gray-400 mb-2">Key Features:</div>
                       <ul className="space-y-1">
@@ -759,37 +616,30 @@ export default function EnhancedServicesShowcase2025() {
                           <li key={index} className="flex items-center text-sm text-gray-300">
                             <CheckCircle className="w-4 h-4 text-green-400 mr-2 flex-shrink-0" />
                             <span className="line-clamp-1">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </li>
                         ))}
                       </ul>
                     </div>
 
                     {/* Market Position */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='mb-6 p-3 bg-gray-700/40 rounded-lg'>
                       <div className='text-xs text-gray-400 mb-1'>
                         Market Position
                       </div>
                       <div className='text-sm text-gray-300 line-clamp-2'>
-=======
                     <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
                       <div className="text-xs text-gray-400 mb-1">Market Position</div>
                       <div className="text-sm text-gray-300 line-clamp-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="mb-6 p-3 bg-gray-700/40 rounded-lg">
                       <div className="text-xs text-gray-400 mb-1">Market Position</div>
                       <div className="text-sm text-gray-300 line-clamp-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         {service.marketPosition}
                       </div>
                     </div>
 
                     {/* ROI and Setup Time */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='flex items-center justify-between mb-6 text-sm'>
                       <div className='flex items-center space-x-1 text-green-400'>
                         <TrendingUp className='w-4 h-4' />
@@ -797,7 +647,6 @@ export default function EnhancedServicesShowcase2025() {
                       </div>
                       <div className='flex items-center space-x-1 text-blue-400'>
                         <Clock className='w-4 h-4' />
-=======
                     <div className="flex items-center justify-between mb-6 text-sm">
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
@@ -805,8 +654,6 @@ export default function EnhancedServicesShowcase2025() {
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
                         <Clock className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="flex items-center justify-between mb-6 text-sm">
                       <div className="flex items-center space-x-1 text-green-400">
                         <TrendingUp className="w-4 h-4" />
@@ -814,14 +661,12 @@ export default function EnhancedServicesShowcase2025() {
                       </div>
                       <div className="flex items-center space-x-1 text-blue-400">
                         <Clock className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <span>{service.setupTime}</span>
                       </div>
                     </div>
 
                     {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='flex gap-3'>
                       <a
                         href={service.link}
@@ -829,22 +674,19 @@ export default function EnhancedServicesShowcase2025() {
                         rel='noopener noreferrer'
                         className='flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center'
                       >
-=======
                     <div className="flex gap-3">
                       <a 
                         href={service.link} 
                         target="_blank" 
                         rel="noopener noreferrer" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 flex items-center justify-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2" />
                       </a>
-<<<<<<< HEAD
                       <a
                         href='/contact'
                         className='flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500'
                       >
-=======
                     <div className="flex gap-3">
                       <a 
                         href={service.link} 
@@ -855,33 +697,26 @@ export default function EnhancedServicesShowcase2025() {
                       </a>
                       <a 
                         href="/contact" className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <a 
                         href="/contact" className="flex-1 bg-gray-700/60 text-white px-4 py-2 rounded-xl text-center text-sm font-medium hover:bg-gray-600/60 transition-all duration-300 border border-gray-600 hover:border-gray-500">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         Contact Us
                       </a>
                     </div>
 
                     {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='mt-4 pt-4 border-t border-gray-700'>
                       <div className='text-xs text-gray-400 mb-2'>
                         Contact Information:
                       </div>
                       <div className='text-xs text-gray-300 space-y-1'>
-=======
                     <div className="mt-4 pt-4 border-t border-gray-700">
                       <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
                       <div className="text-xs text-gray-300 space-y-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="mt-4 pt-4 border-t border-gray-700">
                       <div className="text-xs text-gray-400 mb-2">Contact Information:</div>
                       <div className="text-xs text-gray-300 space-y-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <div>📱 {service.contactInfo.mobile}</div>
                         <div>✉️ {service.contactInfo.email}</div>
                         <div>🌐 {service.contactInfo.website}</div>
@@ -896,8 +731,6 @@ export default function EnhancedServicesShowcase2025() {
             {filteredServices.length === 0 && (
               <motion.div
                 initial={{ opacity: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 animate={{ opacity: 1 }}
                 className='text-center py-16'
               >
@@ -908,46 +741,33 @@ export default function EnhancedServicesShowcase2025() {
                 <p className='text-gray-400'>
                   Try adjusting your search criteria or filters
                 </p>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 animate={{ opacity: 1 }} className="text-center py-16">
                 <div className="text-6xl mb-4">🔍</div>
                 <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
                 <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             )}
           </div>
         </section>
 
         {/* Call to Action */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='relative z-10 py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="relative z-10 py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-gray-300 mb-8">
@@ -972,11 +792,9 @@ export default function EnhancedServicesShowcase2025() {
                   <div className="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
                     <Lightbulb className="w-6 h-6 text-green-400" />
                   </div>
-<<<<<<< HEAD
                   <span className='text-lg text-white'>
                     364 E Main St STE 1008 Middletown DE 19709
                   </span>
-=======
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
@@ -1003,17 +821,13 @@ export default function EnhancedServicesShowcase2025() {
                     <Lightbulb className="w-6 h-6 text-green-400" />
                   </div>
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <span className="text-lg text-white">364 E Main St STE 1008 Middletown DE 19709</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
 
               {/* Action Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              <div className='flex flex-col sm:flex-row gap-4 justify-center'>
+              <div className='flex flex-col sm: flex-row gap-4 justify-center'>
                 <a
                   href='/contact'
                   className='inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline'
@@ -1027,29 +841,24 @@ export default function EnhancedServicesShowcase2025() {
                 >
                   <span className='relative'>View Pricing</span>
                   <DollarSign className='ml-2 w-6 h-6' />
-=======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a 
                   href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
                   <span className="relative">Start Your Transformation</span>
                   <Rocket className="ml-2 w-6 h-6" />
                 </a>
-=======
               <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a 
                   href="/contact" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600 hover:from-blue-500 hover:via-blue-400 hover:to-blue-500 text-white shadow-lg hover:shadow-xl border border-blue-500/20 no-underline">
                   <span className="relative">Start Your Transformation</span>
                   <Rocket className="ml-2 w-6 h-6" />
                 </a>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <a 
                   href="/pricing" className="inline-flex items-center justify-center font-semibold transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-black disabled:opacity-50 disabled:cursor-not-allowed relative overflow-hidden group rounded-xl transform hover:scale-105 active:scale-95 px-6 py-3 text-lg bg-gradient-to-r from-gray-700 via-gray-600 to-gray-700 hover:from-gray-600 hover:via-gray-500 hover:to-gray-600 text-white shadow-lg hover:shadow-xl border border-gray-500/20 no-underline">
                   <span className="relative">View Pricing</span>
                   <DollarSign className="ml-2 w-6 h-6" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </a>
               </div>
             </motion.div>
@@ -1057,14 +866,9 @@ export default function EnhancedServicesShowcase2025() {
         </section>
       </div>
     </EnhancedFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

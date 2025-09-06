@@ -19,7 +19,7 @@ function writeAll(rows: any[]) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status($1).end();
+  if (req.method !== 'POST') return res.status($1).end(),
   const { responseId, rating, comment, pagePath, aiModel } = req.body || {};
   if (!responseId || !rating || !['updown'].includes(rating)) {
     return res.status(400).json({ error: 'Missing responseId or rating' })

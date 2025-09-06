@@ -1,9 +1,9 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0";
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0";
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
+import Stripe from "https://esm.sh/stripe@14.21.0",
+import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
 const corsHeaders = {
-  "Access-Control-Allow-Origin": "*";
+  "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
 
 serve(async (req) => {
@@ -78,7 +78,7 @@ serve(async (req) => {
           .from("transactions")
           .update({ 
             status: "completed";
-            in_escrow: false;
+            in_escrow: false,
             completed_at: new Date().toISOString() 
           })
           .eq("id", transactionId);
@@ -99,7 +99,7 @@ serve(async (req) => {
           
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString();
+              payment_intent: session.payment_intent.toString(),
               reason: "requested_by_customer"
             });
             
@@ -108,7 +108,7 @@ serve(async (req) => {
               .from("transactions")
               .update({ 
                 status: "refunded";
-                refunded_at: new Date().toISOString();
+                refunded_at: new Date().toISOString(),
                 refund_id: refund.id
               })
               .eq("id", transactionId)
@@ -128,7 +128,7 @@ serve(async (req) => {
         await supabaseAdmin
           .from("transactions")
           .update({ 
-            status: "cancelled";
+            status: "cancelled",
             cancelled_at: new Date().toISOString() 
           })
           .eq("id", transactionId);

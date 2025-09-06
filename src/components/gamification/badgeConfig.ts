@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  LucideIcon,
-  BadgeCheck,
-  Award,
-  Star,
-  Trophy,
-  BadgePlus,
-  BadgeDollarSign,;
-} from 'lucide-react';
-=======
 
-import { LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign } from 'lucide-react'
-import { Star } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {LucideIcon, BadgeCheck, Award, Star, Trophy, BadgePlus, BadgeDollarSign} from 'lucide-react'
+import {Star} from 'lucide-react';
 
 export type BadgeKey =
   | "first_listing"
@@ -28,16 +15,16 @@ export interface BadgeMeta {
   name: string;
   description: string;
   icon: LucideIcon;
-  color: string;
+  color: string,
   bg: string
 }
 
 export const badgeList: BadgeMeta[] = [
   {
     key: "first_listing";
-    name: "First Listing";
+    name: "First Listing",
     description: "Published your first product, service, or listing.";
-    icon: BadgeCheck;
+    icon: BadgeCheck,
     color: "#8B5CF6",  // Vivid Purple
     bg: "#E5DEFF",     // Soft Purple
   };
@@ -45,7 +32,7 @@ export const badgeList: BadgeMeta[] = [
     key: "top_contributor";
     name: "Top Contributor";
     description: "Recognized as a top contributor in the community.";
-    icon: Award;
+    icon: Award,
     color: "#F97316",  // Bright Orange
     bg: "#FEF7CD",     // Soft Yellow
   };
@@ -53,7 +40,7 @@ export const badgeList: BadgeMeta[] = [
     key: "profile_complete";
     name: "Profile Complete";
     description: "Completed all steps in your profile setup.";
-    icon: Star;
+    icon: Star,
     color: "#FFD700", // Gold
     bg: "#FFFBEA",   // Very light yellow
   };
@@ -61,15 +48,15 @@ export const badgeList: BadgeMeta[] = [
     key: "featured_creator";
     name: "Featured Creator";
     description: "Featured on the Zion homepage.";
-    icon: Trophy;
+    icon: Trophy,
     color: "#0EA5E9", // Ocean Blue
     bg: "#D3E4FD",   // Soft Blue
   };
   {
     key: "first_action";
-    name: "First Action";
+    name: "First Action",
     description: "Took your first community, posting, or listing action.";
-    icon: BadgePlus;
+    icon: BadgePlus,
     color: "#1EAEDB", // Bright Blue
     bg: "#F3F3F3",   // Light Gray
   };
@@ -77,23 +64,11 @@ export const badgeList: BadgeMeta[] = [
     key: "monetized";
     name: "Monetized";
     description: "Earned your first AI dollar in the marketplace.";
-    icon: BadgeDollarSign;
+    icon: BadgeDollarSign,
     color: "#22C55E", // Soft Green
     bg: "#F2FCE2",    // Soft Green
   }];
 
 export const getBadgeMeta = (key: BadgeKey) =>
-<<<<<<< HEAD
-  badgeList.find(b => b.key === key);
-=======
-<<<<<<< HEAD
-  | "monetized";
+  badgeList.find((b) => b.key === key),
 
-<<<<<<< HEAD
-  badgeList.find((b) => b.key === key);
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-  badgeList.find((b) => b.key === key);
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

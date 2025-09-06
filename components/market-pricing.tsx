@@ -1,17 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const marketData = {
   'ai-consciousness': {
   marketSize: '$45.2B', growthRate: '+28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {
-=======
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  TrendingUp, TrendingDown, DollarSign, Target, 
-  ArrowRight, Check, Star, BarChart3, 
-  Globe, Zap, Shield, Crown, Brain, Atom
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
 import Link from 'next/link';
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
@@ -21,7 +12,6 @@ export default function MarketPricing() {
     { id: 'quantum-computing', name: 'Quantum Computing', icon: <Atom className="w-6 h-6" /> },
     { id: 'autonomous-systems', name: 'Autonomous Systems', icon: <Zap className="w-6 h-6" /> },
     { id: 'enterprise-it', name: 'Enterprise IT', icon: <Shield className="w-6 h-6" /> }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const marketData = {
@@ -875,19 +865,9 @@ export default function MarketPricing() {
   )
 };
 
-<<<<<<< HEAD
-};
-
-};
-export default MarketPricing;
-=======
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import { 
-  TrendingUp, TrendingDown, DollarSign, Target, 
-  ArrowRight, Check, Star, BarChart3, 
-  Globe, Zap, Shield, Crown, Brain, Atom
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {TrendingUp, TrendingDown, DollarSign, Target, ArrowRight, Check, Star, BarChart3, Globe, Zap, Shield, Crown, Brain, Atom} from 'lucide-react';
 import Link from 'next/link';
 export default function MarketPricing() {
   const [selectedMarket, setSelectedMarket] = useState('ai-consciousness');
@@ -1751,7 +1731,4 @@ export default function MarketPricing() {
 };
 
 export default MarketPricing;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default MarketPricing;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

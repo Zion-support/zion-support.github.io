@@ -1,95 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  Shield, 
-  Lock, 
-  Eye, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Brain,
-  AlertTriangle,
-  Network,
-  Server,
-  Cloud,
-  Smartphone,
-  Monitor,
-  Database,
-  Cpu,
-  Globe,
-  Clock,
-  Star,
-  Award,
-  Rocket,
-  MessageSquare,
-  Video,
-  Play,
-  Settings,
-  Key,
-  Globe2,
-  ShieldCheck,
-  Leaf,
-  Scale,
-  Building2,
-  Car,
-  Home,
-  Factory,
-  City,
-  CheckCircle2,
-  ArrowUpRight,
-  MailIcon,
-  Phone,
-  MapPin,
-  Search,
-  Filter,
-  BarChart3,
-  PieChart,
-  Activity,
-  Target,
-  Crosshair,
-  Radar,
-  Satellite,
-  Telescope,
-  Microscope,
-  Binoculars,
-  Camera,
-  Video2,
-  Film,
-  Tv,
-  Radio,
-  Speaker,
-  Headphones,
-  Mic,
-  Phone2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Watch,
-  Clock2,
-  Calendar,
-  Calendar2,
-  User,
-  Users2,
-  UserCheck,
-  UserX,
-  UserPlus,
-  UserMinus,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserCheck2,
-  UserX2,
-  UserPlus2,
-  UserMinus2,
-  UserCog2,
-  UserEdit2,
-  UserSearch2,
-  UserVoice2
-} from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {Shield,, Lock,, Eye,, Zap,, Users,, TrendingUp,, CheckCircle,, ArrowRight,, Brain,, AlertTriangle,, Network,, Server,, Cloud,, Smartphone,, Monitor,, Database,, Cpu,, Globe,, Clock,, Star,, Award,, Rocket,, MessageSquare,, Video,, Play,, Settings,, Key,, Globe2,, ShieldCheck,, Leaf,, Scale,, Building2,, Car,, Home,, Factory,, City,, CheckCircle2,, ArrowUpRight,, MailIcon,, Phone,, MapPin,, Search,, Filter,, BarChart3,, PieChart,, Activity,, Target,, Crosshair,, Radar,, Satellite,, Telescope,, Microscope,, Binoculars,, Camera,, Video2,, Film,, Tv,, Radio,, Speaker,, Headphones,, Mic,, Phone2,, Smartphone2,, Tablet,, Laptop,, Watch,, Clock2,, Calendar,, Calendar2,, User,, Users2,, UserCheck,, UserX,, UserPlus,, UserMinus,, UserCog,, UserEdit,, UserSearch,, UserVoice,, UserCheck2,, UserX2,, UserPlus2,, UserMinus2,, UserCog2,, UserEdit2,, UserSearch2,, UserVoice2} from 'lucide-react';
 
 export default function AICybersecurity() {
   const features = [
@@ -414,7 +326,7 @@ export default function AICybersecurity() {
               to protect their digital assets and maintain business continuity.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
@@ -434,5 +346,5 @@ export default function AICybersecurity() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

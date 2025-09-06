@@ -1,9 +1,4 @@
-import { ServiceVariant } from '../types/service-variants';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {ServiceVariant} from '../types/service-variants';
 export interface EmergingTech2026ServiceV2 {
   id: string;
   name: string;
@@ -34,17 +29,14 @@ export interface EmergingTech2026ServiceV2 {
   contactInfo: {
     mobile: string;
     email: string;
-    address: string;
+    address: string,
     website: string
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
-  rating: number;
-<<<<<<< HEAD
-  reviews: number;
-=======
+  rating: number,
 export interface EmergingTech2026ServiceV2 {
   id: string, name: string,
   tagline: string, price: string,
@@ -71,32 +63,18 @@ export interface EmergingTech2026ServiceV2 {
   rating: number,
   reviews: number
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   reviews: number
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   // Neuromorphic Computing Platform
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: 'neuromorphic-computing-platform',
-    name: 'Neuromorphic Computing Platform',
-    tagline: 'Brain-inspired computing for next-generation AI applications',
-    price: '$1,299',
-    period: '/month',
-    description:
-      "Revolutionary neuromorphic computing platform that mimics the human brain's neural structure for ultra-efficient AI processing. Perfect for research institutions, AI companies, and organizations requiring brain-like computing capabilities.",
-=======
     id: 'neuromorphic-computing-platform';
     name: 'Neuromorphic Computing Platform';
-    tagline: 'Brain-inspired computing for next-generation AI applications';
+    tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$1,299';
-    period: '/month';
+    period: '/month',
     description: 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure for ultra-efficient AI processing. Perfect for research institutions, AI companies, and organizations requiring brain-like computing capabilities.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksHardware accelerationCustom chip designAdvanced simulation toolsResearch collaboration platform';
       'API for developersEnterprise deployment'
@@ -105,7 +83,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🧠';
     color: 'from-violet-600 to-purple-700';
     textColor: 'text-violet-400';
-    link: 'https://ziontechgroup.com/neuromorphic-computing-platform';
+    link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
     marketPosition: 'Competitive with Intel Loihi ($2000+/month), IBM TrueNorth ($1500+/month), and BrainChip ($1000+/month). Our advantage: More affordable pricing, better developer tools, and comprehensive research platform.';
     targetAudience: 'Research institutions, AI companies, Universities, Government agencies, Defense contractors, Technology companies';
     trialDays: 14;
@@ -123,14 +101,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready neuromorphic platform with custom hardware, simulation tools, and research collaboration features.';
     launchDate: '2026-04-01';
     customers: 120;
-    rating: 4.9;
+    rating: 4.9,
     reviews: 85
   };
 
@@ -140,7 +118,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     name: 'Quantum Internet Security Platform';
     tagline: 'Secure the future internet with quantum-resistant cryptography';
     price: '$899';
-    period: '/month';
+    period: '/month',
     description: 'Next-generation quantum internet security platform that protects against quantum attacks and ensures long-term security for critical infrastructure. Perfect for government agencies, financial institutions, and enterprises.';
     features: [
       'Post-quantum cryptographyQuantum-resistant algorithmsReal-time threat detectionMulti-layer securityCompliance frameworksAdvanced monitoringCustom security policiesAPI for integration';
@@ -150,7 +128,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🌐';
     color: 'from-blue-600 to-indigo-700';
     textColor: 'text-blue-400';
-    link: 'https://ziontechgroup.com/quantum-internet-security';
+    link: 'https://ziontechgroup.com/quantum-internet-security',
     marketPosition: 'Competitive with Cloudflare ($20-200), AWS Shield ($3000+/month), and Akamai ($1000+/month). Our advantage: Quantum-resistant security, specialized protection, and future-proof architecture.';
     targetAudience: 'Government agencies, Financial institutions, Healthcare organizations, Defense contractors, Critical infrastructure, Fortune 500 companies';
     trialDays: 21;
@@ -168,14 +146,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready quantum security platform with post-quantum algorithms, real-time monitoring, and enterprise deployment.';
     launchDate: '2026-03-15';
     customers: 680;
-    rating: 4.8;
+    rating: 4.8,
     reviews: 420
   };
 
@@ -185,7 +163,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     name: 'Synthetic Biology AI Platform';
     tagline: 'Design and engineer life with AI-powered synthetic biology';
     price: '$799';
-    period: '/month';
+    period: '/month',
     description: 'Revolutionary AI platform for synthetic biology that enables researchers to design, engineer, and optimize biological systems. Perfect for biotech companies, research institutions, and pharmaceutical organizations.';
     features: [
       'AI-powered DNA designProtein engineering toolsMetabolic pathway optimizationGene editing assistanceBiological simulationRegulatory complianceCollaborative research toolsData visualization';
@@ -195,7 +173,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🧬';
     color: 'from-emerald-600 to-green-700';
     textColor: 'text-emerald-400';
-    link: 'https://ziontechgroup.com/synthetic-biology-ai-platform';
+    link: 'https://ziontechgroup.com/synthetic-biology-ai-platform',
     marketPosition: 'Competitive with Ginkgo Bioworks ($1000+/month), Zymergen ($800+/month), and Twist Bioscience ($600+/month). Our advantage: AI-first approach, better pricing, and comprehensive tools.';
     targetAudience: 'Biotech companies, Research institutions, Pharmaceutical companies, Agricultural companies, Academic researchers, Synthetic biology startups';
     trialDays: 30;
@@ -213,14 +191,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready synthetic biology platform with AI algorithms, DNA design tools, and research collaboration features.';
     launchDate: '2026-04-15';
     customers: 280;
-    rating: 4.7;
+    rating: 4.7,
     reviews: 180
   };
 
@@ -228,9 +206,9 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   {
     id: 'fusion-energy-ai-platform';
     name: 'Fusion Energy AI Platform';
-    tagline: 'AI-powered fusion energy optimization and control';
+    tagline: 'AI-powered fusion energy optimization and control',
     price: '$1,499';
-    period: '/month';
+    period: '/month',
     description: 'Advanced AI platform for fusion energy research, optimization, and control systems. Perfect for fusion research institutions, energy companies, and government agencies working on clean energy solutions.';
     features: [
       'AI plasma controlFusion reactor optimizationReal-time monitoringPredictive maintenanceEnergy efficiency analysisSafety systemsResearch collaborationData analytics';
@@ -240,7 +218,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '☢️';
     color: 'from-red-600 to-pink-700';
     textColor: 'text-red-400';
-    link: 'https://ziontechgroup.com/fusion-energy-ai-platform';
+    link: 'https://ziontechgroup.com/fusion-energy-ai-platform',
     marketPosition: 'Competitive with General Fusion ($2000+/month), TAE Technologies ($1500+/month), and Commonwealth Fusion ($1800+/month). Our advantage: AI-first approach, better pricing, and comprehensive tools.';
     targetAudience: 'Fusion research institutions, Energy companies, Government agencies, Universities, Research organizations, Clean energy startups';
     trialDays: 14;
@@ -258,14 +236,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready fusion AI platform with plasma control algorithms, reactor optimization, and research tools.';
     launchDate: '2026-05-01';
     customers: 95;
-    rating: 4.9;
+    rating: 4.9,
     reviews: 65
   };
 
@@ -275,7 +253,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     name: 'Quantum Machine Learning Platform';
     tagline: 'Accelerate AI with quantum computing power';
     price: '$699';
-    period: '/month';
+    period: '/month',
     description: 'Revolutionary quantum machine learning platform that combines quantum computing with AI to solve complex problems faster than classical computers. Perfect for AI researchers, data scientists, and organizations requiring quantum acceleration.';
     features: [
       'Quantum AI algorithmsHybrid quantum-classical MLQuantum neural networksOptimization algorithmsReal-time quantum processingCustom quantum circuitsPerformance analyticsAPI for developers';
@@ -285,7 +263,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '⚛️';
     color: 'from-cyan-600 to-blue-700';
     textColor: 'text-cyan-400';
-    link: 'https://ziontechgroup.com/quantum-machine-learning';
+    link: 'https://ziontechgroup.com/quantum-machine-learning',
     marketPosition: 'Competitive with IBM Quantum ($0-1000), Google Quantum ($500+/month), and Amazon Braket ($0-1000). Our advantage: Better pricing, comprehensive tools, and specialized quantum ML.';
     targetAudience: 'AI researchers, Data scientists, Research institutions, Technology companies, Universities, Quantum computing enthusiasts';
     trialDays: 21;
@@ -303,14 +281,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready quantum ML platform with quantum algorithms, hybrid computing, and research tools.';
     launchDate: '2026-04-20';
     customers: 420;
-    rating: 4.8;
+    rating: 4.8,
     reviews: 280
   };
 
@@ -318,9 +296,9 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   {
     id: 'autonomous-vehicle-ai-platform';
     name: 'Autonomous Vehicle AI Platform';
-    tagline: 'AI-powered autonomous vehicle development and testing';
+    tagline: 'AI-powered autonomous vehicle development and testing',
     price: '$1,199';
-    period: '/month';
+    period: '/month',
     description: 'Comprehensive AI platform for autonomous vehicle development, testing, and deployment. Perfect for automotive companies, transportation companies, and organizations developing self-driving technology.';
     features: [
       'AI perception systemsPath planning algorithmsSafety validationSimulation environmentReal-time testingRegulatory compliancePerformance analyticsCustom AI models';
@@ -330,7 +308,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🚗';
     color: 'from-slate-600 to-gray-700';
     textColor: 'text-slate-400';
-    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform';
+    link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
     marketPosition: 'Competitive with Waymo ($1500+/month), Cruise ($1200+/month), and Tesla ($800+/month). Our advantage: More affordable pricing, comprehensive tools, and better developer experience.';
     targetAudience: 'Automotive companies, Transportation companies, Technology companies, Research institutions, Universities, Autonomous vehicle startups';
     trialDays: 30;
@@ -348,14 +326,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready autonomous vehicle platform with AI algorithms, simulation tools, and testing capabilities.';
     launchDate: '2026-05-15';
     customers: 180;
-    rating: 4.7;
+    rating: 4.7,
     reviews: 120
   };
 
@@ -365,7 +343,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     name: 'Brain-Computer Interface Platform';
     tagline: 'Connect minds to machines with AI-powered BCI technology';
     price: '$899';
-    period: '/month';
+    period: '/month',
     description: 'Revolutionary brain-computer interface platform that enables direct communication between the human brain and computers. Perfect for medical research, assistive technology, and human augmentation applications.';
     features: [
       'Neural signal processingAI pattern recognitionReal-time brain monitoringCustom BCI applicationsMedical device integrationResearch toolsPerformance analyticsAPI for developers';
@@ -375,7 +353,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🧠';
     color: 'from-purple-600 to-violet-700';
     textColor: 'text-purple-400';
-    link: 'https://ziontechgroup.com/brain-computer-interface';
+    link: 'https://ziontechgroup.com/brain-computer-interface',
     marketPosition: 'Competitive with Neuralink ($1000+/month), CTRL-labs ($800+/month), and Kernel ($1200+/month). Our advantage: More affordable pricing, comprehensive tools, and better research platform.';
     targetAudience: 'Medical researchers, Healthcare organizations, Universities, Technology companies, Assistive technology, Human augmentation';
     trialDays: 21;
@@ -393,14 +371,14 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     contactInfo: {
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready BCI platform with neural processing, AI algorithms, and medical compliance features.';
     launchDate: '2026-06-01';
     customers: 95;
-    rating: 4.8;
+    rating: 4.8,
     reviews: 65
   };
 
@@ -408,9 +386,9 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
   {
     id: 'quantum-internet-platform';
     name: 'Quantum Internet Platform';
-    tagline: 'Build the quantum internet of the future';
+    tagline: 'Build the quantum internet of the future',
     price: '$1,299';
-    period: '/month';
+    period: '/month',
     description: 'Revolutionary quantum internet platform that enables quantum communication, quantum networking, and quantum applications. Perfect for research institutions, government agencies, and organizations building the quantum future.';
     features: [
       'Quantum networkingQuantum communication protocolsQuantum key distributionQuantum repeatersQuantum applicationsReal-time quantum routingPerformance monitoringAPI for developers';
@@ -420,7 +398,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     icon: '🌐';
     color: 'from-indigo-600 to-blue-700';
     textColor: 'text-indigo-400';
-    link: 'https://ziontechgroup.com/quantum-internet-platform';
+    link: 'https://ziontechgroup.com/quantum-internet-platform',
     marketPosition: 'Competitive with quantum research initiatives and government projects. Our advantage: Comprehensive platform, better tools, and research collaboration features.';
     targetAudience: 'Research institutions, Government agencies, Technology companies, Universities, Quantum computing companies, Defense contractors';
     trialDays: 14;
@@ -434,24 +412,8 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     competitors: ['Government initiativesResearch projectsAcademic institutionsQuantum companies'];
     marketSize: '$0.8B market';
     growthRate: '600% annual growth';
-    variant: 'quantum-futuristic';
+    variant: 'quantum-futuristic',
     contactInfo: {
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com',
-    },
-    realImplementation: true,
-    implementationDetails:
-      'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.',
-    launchDate: '2026-06-15',
-    customers: 65,
-    rating: 4.9,
-    reviews: 45,
-  },
-];
-=======
     id: 'neuromorphic-computing-platform', name: 'Neuromorphic Computing Platform',
     tagline: 'Brain-inspired computing for next-generation AI applications',
     price: '$1,299',
@@ -460,7 +422,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'Brain-inspired neural architectureUltra-low power consumptionReal-time learning capabilitiesSpiking neural networksHardware accelerationCustom chip designAdvanced simulation toolsResearch collaboration platform';
       'API for developersEnterprise deployment'
-    ];
+    ],
     popular: true, icon: '🧠',
     color: 'from-violet-600 to-purple-700', textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/neuromorphic-computing-platform',
@@ -495,7 +457,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'Post-quantum cryptographyQuantum-resistant algorithmsReal-time threat detectionMulti-layer securityCompliance frameworksAdvanced monitoringCustom security policiesAPI for integration';
       'Enterprise deployment24/7 security operations'
-    ];
+    ],
     popular: true, icon: '🌐',
     color: 'from-blue-600 to-indigo-700', textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/quantum-internet-security',
@@ -530,7 +492,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'AI-powered DNA designProtein engineering toolsMetabolic pathway optimizationGene editing assistanceBiological simulationRegulatory complianceCollaborative research toolsData visualization';
       'API for custom modelsEnterprise security'
-    ];
+    ],
     popular: true, icon: '🧬',
     color: 'from-emerald-600 to-green-700', textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/synthetic-biology-ai-platform',
@@ -566,7 +528,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'AI plasma controlFusion reactor optimizationReal-time monitoringPredictive maintenanceEnergy efficiency analysisSafety systemsResearch collaborationData analytics';
       'Custom AI modelsEnterprise deployment'
-    ];
+    ],
     popular: true, icon: '☢️',
     color: 'from-red-600 to-pink-700', textColor: 'text-red-400',
     link: 'https://ziontechgroup.com/fusion-energy-ai-platform',
@@ -601,7 +563,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'Quantum AI algorithmsHybrid quantum-classical MLQuantum neural networksOptimization algorithmsReal-time quantum processingCustom quantum circuitsPerformance analyticsAPI for developers';
       'Enterprise deployment24/7 quantum access'
-    ];
+    ],
     popular: true, icon: '⚛️',
     color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/quantum-machine-learning',
@@ -637,7 +599,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'AI perception systemsPath planning algorithmsSafety validationSimulation environmentReal-time testingRegulatory compliancePerformance analyticsCustom AI models';
       'API for integrationEnterprise security'
-    ];
+    ],
     popular: true, icon: '🚗',
     color: 'from-slate-600 to-gray-700', textColor: 'text-slate-400',
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -672,7 +634,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'Neural signal processingAI pattern recognitionReal-time brain monitoringCustom BCI applicationsMedical device integrationResearch toolsPerformance analyticsAPI for developers';
       'Enterprise deploymentMedical compliance'
-    ];
+    ],
     popular: true, icon: '🧠',
     color: 'from-purple-600 to-violet-700', textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/brain-computer-interface',
@@ -708,7 +670,7 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     features: [
       'Quantum networkingQuantum communication protocolsQuantum key distributionQuantum repeatersQuantum applicationsReal-time quantum routingPerformance monitoringAPI for developers';
       'Enterprise deploymentResearch collaboration'
-    ];
+    ],
     popular: true, icon: '🌐',
     color: 'from-indigo-600 to-blue-700', textColor: 'text-indigo-400',
     link: 'https://ziontechgroup.com/quantum-internet-platform',
@@ -734,19 +696,16 @@ export const emergingTech2026ServicesV2: EmergingTech2026ServiceV2[] = [
     reviews: 45
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 1008 Middletown DE 19709';
+      address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup.com'
     };
-    realImplementation: true;
+    realImplementation: true,
     implementationDetails: 'Production-ready quantum internet platform with quantum networking, communication protocols, and research tools.';
     launchDate: '2026-06-15';
     customers: 65;
-    rating: 4.9;
+    rating: 4.9,
     reviews: 45
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

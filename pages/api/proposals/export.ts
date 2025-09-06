@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { PDFDocument, StandardFonts } from 'pdf-lib';
+import {PDFDocument, StandardFonts} from 'pdf-lib';
 import crypto from 'crypto';
-import { updateArtifacts, getProposal, savePdf } from '../../../utils/data/proposals';
-import { create as createIpfsClient } from 'ipfs-http-client';
-import { ethers } from 'ethers';
+import {updateArtifacts, getProposal, savePdf} from '../../../utils/data/proposals';
+import {create, as, createIpfsClient} from 'ipfs-http-client';
+import {ethers} from 'ethers';
 import fs from 'fs';
 import path from 'path';
 function buildIpfsClient() {
@@ -11,12 +11,12 @@ function buildIpfsClient() {
   const projectSecret = process.env.IPFS_PROJECT_SECRET;
   const apiUrl = process.env.IPFS_API_URL || 'https: //ipfs.infura.io:5001/api/v0';
   if (!projectId || !projectSecret) return null;
-  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64');
+  const auth = 'Basic ' + Buffer.from(projectId + ':' + projectSecret).toString('base64'),
   return createIpfsClient({ url: apiUrl, headers: { authorization: auth } as any })
 }
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
-  const pdfDoc = await PDFDocument.create();
+  const pdfDoc = await PDFDocument.create(),
   const page = pdfDoc.addPage([595.28, 841.89]), // A4
   const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
   const fontSize = 11;
@@ -30,7 +30,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
       const wrapped: string[] = [];
       let current = '';
       for (const word of words) {
-        const test = current.length ? current + ' ' + word : word;
+        const test = current.length ? current + ' ' + word : word,
         const width = font.widthOfTextAtSize(test, fontSize);
         if (width > maxWidth) {
           if (current) wrapped.push(current);

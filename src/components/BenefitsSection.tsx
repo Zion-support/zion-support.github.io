@@ -1,18 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { GradientHeading } from './GradientHeading';
-import { FeatureCard } from './FeatureCard';
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useTranslation } from 'react-i18next';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
+import {GradientHeading} from "./GradientHeading";
+import {FeatureCard} from "./FeatureCard";
+import {Bot, Clock, Globe, TrendingDown} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {useTranslation} from "react-i18next";
 interface BenefitsSectionProps {
   className?: string;
   style?: React.CSSProperties
@@ -48,16 +39,12 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
             {t('home.benefits_subtitle')}
           </p>
         </div>
-<<<<<<< HEAD
 
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto'>
-=======
-
-import { GradientHeading } from "./GradientHeading";
-import { FeatureCard } from "./FeatureCard";
-import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useTranslation } from "react-i18next";
+import {GradientHeading} from "./GradientHeading";
+import {FeatureCard} from "./FeatureCard";
+import {Bot, Clock, Globe, TrendingDown} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {useTranslation} from "react-i18next";
 interface BenefitsSectionProps {
   className?: string;
   style?: React.CSSProperties
@@ -93,37 +80,21 @@ export function BenefitsSection({ className, style }: BenefitsSectionProps) {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           {benefits.map((benefit, index) => (
             <FeatureCard
               key={index}
               title={benefit.title}
               description={benefit.description}
               icon={benefit.icon}
-<<<<<<< HEAD
-<<<<<<< HEAD
-              className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'
-=======
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             />
           ))}
         </div>
       </div>
     </section>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

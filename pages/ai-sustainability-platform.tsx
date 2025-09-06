@@ -1,11 +1,8 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page() {
-=======
 import SEO from '../components/SEO';
 export default function AISustainabilityPlatformPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <div className="min-h-[60vh] px-6 py-24">
       <SEO title="AI Sustainability Platform | Zion Tech Group" description="Sustainability analytics and optimization" />
@@ -14,9 +11,7 @@ export default function AISustainabilityPlatformPage() {
         <p className="text-gray-300">Measure and optimize sustainability metrics with AI. Details coming soon.</p>
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
 import SEO from '../components/SEO';
 export default function AISustainabilityPlatformPage() {
   return (
@@ -29,8 +24,6 @@ export default function AISustainabilityPlatformPage() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

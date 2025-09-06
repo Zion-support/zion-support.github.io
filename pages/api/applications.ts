@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { v4 as uuidv4 } from 'uuid';
-import { readJsonFile, writeJsonFile } from '../../utils/db';
+import {v4, as, uuidv4} from 'uuid';
+import {readJsonFile, writeJsonFile} from '../../utils/db';
 import type { Application } from '../../utils/types';
-import { rateLimit } from '../../utils/rateLimit';
+import {rateLimit} from '../../utils/rateLimit';
 const FILE = 'applications.json';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!rateLimit(req, res)) return;

@@ -1,17 +1,14 @@
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
-import { useEffect, useState } from 'react';
+import {useEffect, useState} from 'react';
 
 const STEPS = [
   { key: 'job', label: 'Job posted' },
   { key: 'invite', label: 'First invite sent' },
-<<<<<<< HEAD
-<<<<<<< HEAD
   { key: 'response', label: 'First response received' },
 ] as const;
-=======
   { key: 'response', label: 'First response received' }] as const,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 type StepKey = typeof STEPS[number]['key'];
 
@@ -20,9 +17,7 @@ export default function ClientDashboard() {
   useEffect(() => {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
-<<<<<<< HEAD
       if (raw) setCompleted(JSON.parse(raw));
-=======
   { key: 'response', label: 'First response received' }] as const,
 
 type StepKey = typeof STEPS[number]['key'];
@@ -33,25 +28,20 @@ export default function ClientDashboard() {
     try {
       const raw = window.localStorage.getItem('onboarding.client');
       if (raw) setCompleted(JSON.parse(raw))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       if (raw) setCompleted(JSON.parse(raw))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     } catch {}
   }, []);
 
   useEffect(() => {
-<<<<<<< HEAD
-<<<<<<< HEAD
     try {
       window.localStorage.setItem(
         'onboarding.client',
         JSON.stringify(completed)
       );
     } catch {}
-=======
     try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [completed]);
 
   const progress = Math.round((Object.values(completed).filter(Boolean).length / STEPS.length) * 100);
@@ -67,13 +57,11 @@ export default function ClientDashboard() {
           </div>
           <div className="text-sm font-medium">{progress}%</div>
         </div>
-<<<<<<< HEAD
         <div className='mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded'>
           <div
             className='h-2 rounded bg-blue-600'
             style={{ width: `${progress}%` }}
           />
-=======
     try { window.localStorage.setItem('onboarding.client', JSON.stringify(completed)) } catch {}
   }, [completed]);
 
@@ -92,17 +80,13 @@ export default function ClientDashboard() {
         </div>
         <div className="mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded">
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="mt-3 h-2 w-full bg-gray-100 dark:bg-gray-800 rounded">
           <div className="h-2 rounded bg-blue-600" style={{ width: `${progress}%` }} />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         </div>
       </EnhancedCard>
 
       <EnhancedCard>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <h2 className='font-semibold mb-2'>Checklist</h2>
         <ul className='space-y-2'>
           {STEPS.map(s => (
@@ -114,7 +98,6 @@ export default function ClientDashboard() {
                   {completed[s.key] ? '✓' : ''}
                 </span>
                 <span className='text-sm'>{s.label}</span>
-=======
         <h2 className="font-semibold mb-2">Checklist</h2>
         <ul className="space-y-2">
           {STEPS.map((s) => (
@@ -122,12 +105,11 @@ export default function ClientDashboard() {
               <div className="flex items-center gap-2">
                 <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full border ${completed[s.key] ? 'bg-emerald-500 text-white border-emerald-500' : 'border-gray-300 dark:border-gray-700'}`}>{completed[s.key] ? '✓' : ''}</span>
                 <span className="text-sm">{s.label}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               {completed[s.key] ? (
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
-<<<<<<< HEAD
                 <EnhancedButton
                   onClick={() => toggle(s.key)}
                   variant='secondary'
@@ -135,7 +117,6 @@ export default function ClientDashboard() {
                 >
                   {s.key === 'job' ? 'Post a Job' : 'Mark done'}
                 </EnhancedButton>
-=======
         <h2 className="font-semibold mb-2">Checklist</h2>
         <ul className="space-y-2">
           {STEPS.map((s) => (
@@ -148,24 +129,17 @@ export default function ClientDashboard() {
                 <button onClick={() => toggle(s.key)} className="text-xs text-gray-500 hover:underline">Undo</button>
               ) : (
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <EnhancedButton onClick={() => toggle(s.key)} variant="secondary" className="text-xs py-1 px-2">{s.key === 'job' ? 'Post a Job' : 'Mark done'}</EnhancedButton>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               )}
             </li>
           ))}
         </ul>
       </EnhancedCard>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

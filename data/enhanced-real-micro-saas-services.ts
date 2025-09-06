@@ -29,14 +29,14 @@ export interface MicroSaasService {
     mobile: string;
     email: string;
     address: string;
-    website: string;
+    website: string,
   };
   realImplementation: boolean;
   implementationDetails: string;
   launchDate: string;
   customers: number;
   rating: number;
-  reviews: number;
+  reviews: number,
 }
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
@@ -2289,7 +2289,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
     color: 'from-blue-700 to-cyan-800',
     textColor: 'text-blue-400',
     link: 'https://ziontechgroup.com/kubernetes-guardrails',
-    marketPosition: 'Simpler than full platforms; ships with curated production policies.',
+    marketPosition: 'Simpler than full platforms, ships with curated production policies.',
     targetAudience: 'Platform/SRE teams, DevOps, infra leads',
     trialDays: 14,
     setupTime: '2 hours',
@@ -2408,7 +2408,7 @@ export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
 // Helper functions
 export const getServicesByCategory = (categoryName: string): EnhancedRealMicroSaasService[] => {
   if (categoryName === 'All' || categoryName === 'all') {
-    return enhancedRealMicroSaasServices;
+    return enhancedRealMicroSaasServices,
   }
   
   // Map category names to match service categories

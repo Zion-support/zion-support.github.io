@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react";
-import { toast } from "@/hooks/use-toast";
-import { useAuth } from "@/hooks/useAuth";
-import { supabase } from "@/integrations/supabase/client";
-import { ReferralCode, ReferralStats, Referral, ReferralReward } from "@/types/referrals";
+import {useState,, useEffect} from "react";
+import {toast} from "@/hooks/use-toast";
+import {useAuth} from "@/hooks/useAuth";
+import {supabase} from "@/integrations/supabase/client";
+import {ReferralCode,, ReferralStats,, Referral,, ReferralReward} from "@/types/referrals";
 
 export function useReferrals() {
   const { user } = useAuth();
@@ -181,7 +181,7 @@ export function useReferrals() {
   // Share on social media platforms
   const shareOnSocialMedia = (platform: 'twitter' | 'facebook' | 'linkedin') => {
     const link = getReferralLink();
-    const text = "Join Zion AI marketplace for AI talent and opportunities!";
+    const text = "Join Zion AI marketplace for AI talent and opportunities!",
     
     if (!link) {
       toast({

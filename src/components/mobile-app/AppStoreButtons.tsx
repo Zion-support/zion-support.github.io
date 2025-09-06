@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Apple, GithubIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { logInfo } from '@/utils/productionLogger';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Apple, GithubIcon } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { logInfo } from '@/utils/productionLogger';
+import {Apple, GithubIcon} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {logInfo} from '@/utils/productionLogger';
 interface AppStoreButtonsProps {
   className?: string;
   appStoreUrl?: string;
@@ -23,13 +15,13 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className;
   appStoreUrl = "#";
   googlePlayUrl = "#";
-  onAppStoreClick;
+  onAppStoreClick,
   onGooglePlayClick
 }) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault();
-      logInfo("App Store download clicked");
+      logInfo("App Store download clicked"),
       onAppStoreClick?.()
     }
   };
@@ -37,7 +29,7 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault();
-      logInfo("Google Play download clicked");
+      logInfo("Google Play download clicked"),
       onGooglePlayClick?.()
     }
   };
@@ -87,14 +79,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
     </div>
   )
 };
-<<<<<<< HEAD
-"
-=======
 
-<<<<<<< HEAD
-
-};
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

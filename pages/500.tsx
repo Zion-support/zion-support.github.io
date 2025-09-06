@@ -1,20 +1,13 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Custom500() {
   return (
     <>
       <Head>
         <title>500 - Server Error | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content="Something went wrong on our end. We're working to fix it."
@@ -24,11 +17,10 @@ export default function Custom500() {
           property='og:description'
           content="Something went wrong on our end. We're working to fix it."
         />
-=======
         <meta name="description" content="Something went wrong on our end. We're working to fix it." />
         <meta property="og: title" content="500 - Server Error" />
         <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-red-900 to-slate-900 flex items-center justify-center px-4">
@@ -67,11 +59,9 @@ export default function Custom500() {
               >
                 Services
               </Link>
-<<<<<<< HEAD
               <Link
                 href='/contact'
                 className='px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200'
-=======
         <meta name="description" content="Something went wrong on our end. We're working to fix it." />
         <meta property="og: title" content="500 - Server Error" />
         <meta property="og:description" content="Something went wrong on our end. We're working to fix it." />
@@ -95,7 +85,7 @@ export default function Custom500() {
           <div className="space-y-4">
             <Link 
               href="/" 
-              className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover:from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
+              className="inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-orange-500 text-white font-semibold rounded-lg hover: from-red-600 hover:to-orange-600 transition-all duration-200 transform hover:scale-105"
             >
               Go Home
             </Link>
@@ -116,12 +106,10 @@ export default function Custom500() {
               <Link 
                 href="/contact" 
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <Link 
                 href="/contact" 
                 className="px-6 py-2 bg-white/10 text-white border border-white/20 rounded-lg hover:bg-white/20 transition-all duration-200"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 Contact
               </Link>
@@ -130,14 +118,9 @@ export default function Custom500() {
         </div>
       </div>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

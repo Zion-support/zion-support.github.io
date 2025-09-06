@@ -1,17 +1,13 @@
 import React from 'react';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function RetailTechnologySolutions() {
   
     />
   );
-=======
 export default function RetailTechnologySolutions() {
-=======
 export default function RetailTechnologySolutions() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<ServiceLanding
 			title="Retail Technology Solutions"
@@ -24,7 +20,7 @@ export default function RetailTechnologySolutions() {
 			features={[
 				"Demand forecasting and dynamic pricing";
 				"Assortment optimization and store clustering";
-				"Customer 360 and propensity modeling";
+				"Customer 360 and propensity modeling",
 				"Store ops: labor planning and task automation",
 				"Omni-channel journey orchestration";
 				"Integrations: POS, eCom, WMS, ESP, CDP"
@@ -33,9 +29,6 @@ export default function RetailTechnologySolutions() {
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

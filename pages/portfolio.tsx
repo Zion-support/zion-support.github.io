@@ -1,27 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Rocket,
-  Brain,
-  Atom,
-  Shield,
-  Cloud,
-  BarChart3,
-  ArrowRight,
-  ExternalLink,
-  Star,
-  Users,
-  Clock,
-  TrendingUp,;
-=======
-import { 
-  Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
-  ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Rocket, Brain, Atom, Shield, Cloud, BarChart3, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp,, import, {, Rocket, Brain, Atom, Shield, Cloud, BarChart3, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
@@ -113,7 +93,6 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Our Work - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions."
@@ -124,11 +103,7 @@ export default function PortfolioPage() {
           content='Explore our portfolio of innovative technology projects and solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/portfolio' />
-=======
-import { 
-  Rocket, Brain, Atom, Shield, Cloud, BarChart3, 
-  ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp
-} from 'lucide-react';
+import {Rocket, Brain, Atom, Shield, Cloud, BarChart3, ArrowRight, ExternalLink, Star, Users, Clock, TrendingUp} from 'lucide-react';
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 export default function PortfolioPage() {
@@ -220,52 +195,38 @@ export default function PortfolioPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Our Work - Zion Tech Group</title>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Explore Zion Tech Group's portfolio of innovative technology projects. AI, quantum computing, cybersecurity, and digital transformation solutions." />
         <meta property="og:title" content="Our Work - Zion Tech Group" />
         <meta property="og:description" content="Explore our portfolio of innovative technology projects and solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/portfolio" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <EnhancedNavigation />
 
       {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='relative pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
-=======
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="relative pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-8'
-=======
             className="mb-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Our Work
             </h1>
-<<<<<<< HEAD
             <p className='text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed'>
               Innovative technology solutions that drive business transformation
               and growth
-=======
             className="mb-8"
           >
             <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
@@ -273,11 +234,9 @@ export default function PortfolioPage() {
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Innovative technology solutions that drive business transformation and growth
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
               Innovative technology solutions that drive business transformation and growth
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </motion.div>
 
@@ -285,49 +244,39 @@ export default function PortfolioPage() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-12'
           >
             <p className='text-lg text-white/70 max-w-2xl mx-auto mb-8'>
               Discover how we've helped organizations leverage cutting-edge
               technology to solve complex challenges and achieve remarkable
               results.
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve 
               complex challenges and achieve remarkable results.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             className="mb-12"
           >
             <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8">
               Discover how we've helped organizations leverage cutting-edge technology to solve 
               complex challenges and achieve remarkable results.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Stats Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-16 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>
-=======
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
@@ -335,22 +284,17 @@ export default function PortfolioPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center'
-=======
                 className="text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-8 h-8 text-cyan-400" />
                 </div>
-<<<<<<< HEAD
                 <div className='text-3xl font-bold text-white mb-2'>
                   {stat.number}
                 </div>
                 <div className='text-white/70'>{stat.label}</div>
-=======
                 className="text-center"
               >
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
@@ -358,11 +302,9 @@ export default function PortfolioPage() {
                 </div>
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
                 <div className="text-white/70">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
@@ -370,23 +312,16 @@ export default function PortfolioPage() {
       </section>
 
       {/* Category Filter */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-8 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='flex flex-wrap justify-center gap-4'>
             {categories.map(category => (
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <section className="py-8 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap justify-center gap-4">
             {categories.map((category) => (
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <button
                 key={category}
                 onClick={() => setSelectedCategory(category)}
@@ -404,21 +339,16 @@ export default function PortfolioPage() {
       </section>
 
       {/* Projects Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-7xl mx-auto'>
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {filteredProjects.map((project, index) => (
               <motion.div
                 key={project.title}
@@ -426,12 +356,9 @@ export default function PortfolioPage() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300'
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="p-8">
                   <div className="flex items-center gap-3 mb-4">
@@ -442,7 +369,6 @@ export default function PortfolioPage() {
                       {project.category}
                     </span>
                   </div>
-<<<<<<< HEAD
 
                   <h3 className='text-2xl font-bold text-white mb-4'>
                     {project.title}
@@ -459,7 +385,6 @@ export default function PortfolioPage() {
                           key={tech}
                           className='text-xs bg-white/5 text-white/70 px-2 py-1 rounded'
                         >
-=======
                 className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 backdrop-blur-xl border border-white/10 rounded-2xl overflow-hidden hover:border-blue-500/30 transition-all duration-300"
               >
                 <div className="p-8">
@@ -471,8 +396,7 @@ export default function PortfolioPage() {
                       {project.category}
                     </span>
                   </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   
                   <h3 className="text-2xl font-bold text-white mb-4">{project.title}</h3>
                   <p className="text-white/70 mb-6">{project.description}</p>
@@ -482,17 +406,12 @@ export default function PortfolioPage() {
                     <div className="flex flex-wrap gap-2">
                       {project.technologies.map((tech) => (
                         <span key={tech} className="text-xs bg-white/5 text-white/70 px-2 py-1 rounded">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {tech}
                         </span>
                       ))}
                     </div>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <div className='mb-6'>
                     <h4 className='text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider'>
@@ -505,9 +424,7 @@ export default function PortfolioPage() {
                           className='text-sm text-white/80 flex items-center'
                         >
                           <div className='w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2' />
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   
                   <div className="mb-6">
                     <h4 className="text-sm font-semibold text-white/60 mb-2 uppercase tracking-wider">Results</h4>
@@ -515,34 +432,24 @@ export default function PortfolioPage() {
                       {project.results.map((result) => (
                         <li key={result} className="text-sm text-white/80 flex items-center">
                           <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full mr-2" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {result}
                         </li>
                       ))}
                     </ul>
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                   <div className='flex items-center justify-between'>
                     <span className='text-sm text-white/60'>
                       Client: {project.client}
                     </span>
                     <button className='px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105'>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   
                   <div className="flex items-center justify-between">
                     <span className="text-sm text-white/60">Client: {project.client}</span>
                     <button className="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:scale-105">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       View Details
                     </button>
                   </div>
@@ -554,30 +461,22 @@ export default function PortfolioPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 px-6'>
         <div className='max-w-4xl mx-auto text-center'>
-=======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className='text-4xl font-bold text-white mb-6'>
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               Ready to Start Your Project?
             </h2>
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">
@@ -587,9 +486,7 @@ export default function PortfolioPage() {
               <button className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
                 Start Your Project
               </button>
-<<<<<<< HEAD
               <button className='px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10'>
-=======
             <h2 className="text-4xl font-bold text-white mb-6">
               Ready to Start Your Project?
             </h2>
@@ -601,10 +498,8 @@ export default function PortfolioPage() {
                 Start Your Project
               </button>
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Schedule Consultation
               </button>
             </div>
@@ -614,9 +509,7 @@ export default function PortfolioPage() {
 
       <EnhancedFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+  ),
 </Head> <EnhancedNavigation /> > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6" > Our Work </h1> <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed" > Innovative technology solutions that drive business transformation and growth </p> </motion.div> <motion.div > <p className="text-lg text-white/70 max-w-2xl mx-auto mb-8" > Discover how we've helped organizations leverage cutting-edge technology to solve complex challenges and achieve remarkable results. </p> </motion.div> </div> </section> > <div className="w-16 h-16 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4" > <stat.icon className="w-8 h-8 text-cyan-400" /> </div> </motion.div>) ) 
 }</div> </div> </section> key= {
   category 
@@ -649,11 +542,8 @@ export default function PortfolioPage() {
   once: true 
 
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Start Your Project? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > Let's discuss how we can help you achieve similar results with our innovative technology solutions. </p> Start Your Project </button> <button className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Schedule Consultation </button> </div> </motion.div> </div> </section> <EnhancedFooter /> </div>) 
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

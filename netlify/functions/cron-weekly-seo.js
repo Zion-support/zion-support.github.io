@@ -1,9 +1,4 @@
 const { upsertFile } = require('./_lib/github');
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 async function scorePage(url) {
   const t0 = Date.now(),
   try {
@@ -42,9 +37,6 @@ exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
-<<<<<<< HEAD
-};
-=======
 async function scorePage(url) {
   const t0 = Date.now(),
   try {
@@ -84,7 +76,4 @@ exports.handler = async function() {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
 },
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

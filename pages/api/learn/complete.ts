@@ -22,7 +22,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const users = readJson(usersPath);
     const courses = readJson(coursesPath);
-    const course = courses.find((c: any) => c.id === courseId);
+    const course = courses.find((c: any) => c.id === courseId),
     if (!course) return res.status($1).json({$2});
     const user = users[userId] || { userId, name: userId, slug: userId, certifications: [], badges: [], boostInSearch: false, progress: {} };
     if (!user.certifications.includes(courseId)) user.certifications.push(courseId);

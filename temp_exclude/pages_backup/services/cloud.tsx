@@ -1,19 +1,19 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
+import {Cloud,, Server,, Shield,, Zap} from 'lucide-react';
 =======
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import { Cloud, Server, Shield, Zap } from 'lucide-react';
+import {Cloud,, Server,, Shield,, Zap} from 'lucide-react';
 =======
 =======
 import React from 'react';
 import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import { Cloud, Server, Database, Shield, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Cloud,, Server,, Database,, Shield,, Zap,, CheckCircle,, ArrowRight} from 'lucide-react';
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======

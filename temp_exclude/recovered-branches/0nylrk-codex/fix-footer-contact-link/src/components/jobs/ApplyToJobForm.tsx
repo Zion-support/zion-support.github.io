@@ -1,18 +1,18 @@
 
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useJobApplications } from "@/hooks/useJobApplications";
-import { useResume } from "@/hooks/useResume";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { AlertCircle, FileText, Loader2 } from "lucide-react";
-import { formatDistanceToNow } from "date-fns";
-import { Job } from "@/types/jobs";
-import { toast } from "sonner";
+import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useJobApplications} from "@/hooks/useJobApplications";
+import {useResume} from "@/hooks/useResume";
+import {useAuth} from "@/hooks/useAuth";
+import {Button} from "@/components/ui/button";
+import {Textarea} from "@/components/ui/textarea";
+import {Label} from "@/components/ui/label";
+import {Select,, SelectContent,, SelectItem,, SelectTrigger,, SelectValue} from "@/components/ui/select";
+import {Alert,, AlertDescription} from "@/components/ui/alert";
+import {AlertCircle,, FileText,, Loader2} from "lucide-react";
+import {formatDistanceToNow} from "date-fns";
+import {Job} from "@/types/jobs";
+import {toast} from "sonner";
 interface ApplyToJobFormProps {
   job: Job,
   onSuccess?: () => void
@@ -33,7 +33,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
     e.preventDefault();
     
     if (!user) {
-      toast.error("You must be logged in to apply");
+      toast.error("You must be logged in to apply"),
       navigate("/login", { state: { returnTo: `/jobs/${job.id}` } }),
       return
     }
@@ -56,7 +56,7 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
         }
       }
     } catch (err: any) {
-      setError(err.message || "Failed to submit application");
+      setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")
     } finally {
       setIsSubmitting(false)

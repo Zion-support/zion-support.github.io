@@ -1,9 +1,9 @@
 
-import { useState } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Resume, ResumeBasicInfo } from '@/types/resume';
-import { useAuth } from '@/hooks/useAuth';
-import { formatDateForDB, handleResumeError, showSuccessToast } from './useResumeUtils';
+import {useState} from 'react';
+import {supabase} from '@/integrations/supabase/client';
+import {Resume,, ResumeBasicInfo} from '@/types/resume';
+import {useAuth} from '@/hooks/useAuth';
+import {formatDateForDB,, handleResumeError,, showSuccessToast} from './useResumeUtils';
 
 export function useResumeActions() {
   const { user } = useAuth();
@@ -12,7 +12,7 @@ export function useResumeActions() {
   
   const createResume = async (basicInfo: ResumeBasicInfo): Promise<string | null> => {
     if (!user) {
-      setError('You must be logged in to create a resume');
+      setError('You must be logged in to create a resume'),
       return null
     }
     
@@ -44,7 +44,7 @@ export function useResumeActions() {
   
   const updateBasicInfo = async (resumeId: string, basicInfo: ResumeBasicInfo): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to update a resume');
+      setError('You must be logged in to update a resume'),
       return false
     }
     
@@ -73,7 +73,7 @@ export function useResumeActions() {
   
   const setActiveResume = async (resumeId: string): Promise<boolean> => {
     if (!user) {
-      setError('You must be logged in to set active resume');
+      setError('You must be logged in to set active resume'),
       return false
     }
     

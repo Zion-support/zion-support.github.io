@@ -42,7 +42,7 @@ export class APIRateLimiterService {
   private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -337,7 +337,7 @@ export class APIRateLimiterService {
       overview: {
       
         totalRequests;
-        blockedRequests;
+        blockedRequests,
         activeRules: rules.filter(r => r.enabled).length,
         activeAPIKeys: apiKeys.filter(k => k.isActive).length
       
@@ -373,7 +373,7 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Professional', price: 79,
     period: '/month',
     features: [
-      'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards';
+      'Up to 50 rate limit rulesAdvanced rate limitingUnlimited API keysReal-time monitoringSlack and webhook notifications30-day data retentionAdvanced analyticsCustom dashboards',
       'API access'
     ]
   };
@@ -381,7 +381,7 @@ export const API_RATE_LIMITER_PRICING = {
     name: 'Enterprise', price: 199,
     period: '/month',
     features: [
-      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support';
+      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support',
       'SLA guarantee'
     ]
   }

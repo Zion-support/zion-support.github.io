@@ -1,8 +1,6 @@
 import React from 'react';
 import SEO from '../components/SEO';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function LegalPage() {
   return (
@@ -34,11 +32,9 @@ export default function LegalPage() {
       </div>
     </>
   );
-=======
 export default function LegalPage() {
-=======
 export default function LegalPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<SEO title="Legal | Zion Tech Group" description="Legal resources including privacy policy, terms of service, and cookies." canonical="/legal" />
@@ -52,9 +48,6 @@ export default function LegalPage() {
 			</div>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

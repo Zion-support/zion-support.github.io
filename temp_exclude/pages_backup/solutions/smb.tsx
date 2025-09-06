@@ -1,21 +1,21 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+import {DollarSign,, Zap,, Users,, Building2} from 'lucide-react';
 =======
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import { DollarSign, Zap, Users, Building2 } from 'lucide-react';
+import {DollarSign,, Zap,, Users,, Building2} from 'lucide-react';
 =======
 import React from 'react';
 import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
-import { Building2, Users, DollarSign, Zap, CheckCircle, ArrowRight } from 'lucide-react';
+import {Building2,, Users,, DollarSign,, Zap,, CheckCircle,, ArrowRight} from 'lucide-react';
 export default function SMBSolutionsPage() {
   const smbServices = [;
     {}
@@ -57,15 +57,8 @@ export default function SMBSolutionsPage() {
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Building2, 
-  Users, 
-  DollarSign, 
-  Zap, 
-  CheckCircle, 
-  ArrowRight 
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Building2,, Users,, DollarSign,, Zap,, CheckCircle,, ArrowRight} from 'lucide-react';
 
 const smbServices = [
   {

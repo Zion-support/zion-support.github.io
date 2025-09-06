@@ -10,8 +10,6 @@ export default function PrivacySettingsPage() {
     if (!userId) return;
     setLoading(true);
     setMessage('');
-<<<<<<< HEAD
-<<<<<<< HEAD
     const res = await fetch(
       `/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`
     );
@@ -19,20 +17,17 @@ export default function PrivacySettingsPage() {
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false);
-=======
     const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
     const json = await res.json();
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const res = await fetch(`/api/fraud/settings/opt-out?userId=${encodeURIComponent(userId)}`);
     const json = await res.json();
     if (res.ok) setOptOut(!!json.monitoringContentAnalysisOptOut);
     else setMessage(json.error || 'Failed to load');
     setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const save = async () => {
@@ -42,51 +37,38 @@ export default function PrivacySettingsPage() {
     const res = await fetch('/api/fraud/settings/opt-out', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
       body: JSON.stringify({ userId, optOut }),
     });
     const json = await res.json();
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false);
-=======
       body: JSON.stringify({ userId, optOut })});
     const json = await res.json();
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       body: JSON.stringify({ userId, optOut })});
     const json = await res.json();
     if (res.ok) setMessage('Saved');
     else setMessage(json.error || 'Save failed');
     setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   useEffect(() => {
     const savedUser = localStorage.getItem('user-id');
-<<<<<<< HEAD
-<<<<<<< HEAD
     if (savedUser) setUserId(savedUser);
-=======
     if (savedUser) setUserId(savedUser)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     if (savedUser) setUserId(savedUser)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const onSaveUser = () => {
     localStorage.setItem('user-id', userId);
-<<<<<<< HEAD
-<<<<<<< HEAD
     load();
-=======
     load()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -101,7 +83,6 @@ export default function PrivacySettingsPage() {
           <input id="optout" type="checkbox" checked={optOut} onChange={(e) => setOptOut(e.target.checked)} />
           <label htmlFor="optout">Opt-out of GPT content analysis (basic heuristics still apply)</label>
         </div>
-<<<<<<< HEAD
         <div className='flex items-center gap-2'>
           <button
             disabled={!userId || loading}
@@ -117,7 +98,6 @@ export default function PrivacySettingsPage() {
           >
             Reload
           </button>
-=======
     load()
   };
 
@@ -136,24 +116,17 @@ export default function PrivacySettingsPage() {
         <div className="flex items-center gap-2">
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="flex items-center gap-2">
           <button disabled={!userId || loading} className="bg-green-600 text-white px-3 py-1 rounded disabled:opacity-50" onClick={save}>Save</button>
           <button disabled={!userId || loading} className="bg-gray-200 px-3 py-1 rounded disabled:opacity-50" onClick={load}>Reload</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {message && <div>{message}</div>}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,55 +1,26 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Clock,
-  Users,
-  Zap,
-  Shield,
-  Brain,
-  Rocket,
-  Atom,
-  Globe,
-  Target,
-  Microscope,
-  Phone,
-  Mail,
-  MapPin,;
-} from 'lucide-react';
-=======
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion} from 'framer-motion';
+import {ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin,} from 'lucide-react';
+import {ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin} from 'lucide-react';
+import {ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Brain, Rocket, Atom, Globe, Target, Microscope, Phone, Mail, MapPin} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-b76c
 import UltraFuturisticBackground2031 from '../../components/ui/UltraFuturisticBackground2031';
 import UltraFuturisticNavigation2031 from '../../components/layout/UltraFuturisticNavigation2031';
 import UltraFuturisticFooter2030 from '../../components/layout/UltraFuturisticFooter2030';
-import { futuristicAIServices2030 } from '../../data/2030-futuristic-ai-services';
-import { quantumEmergingTechServices2030 } from '../../data/2030-quantum-emerging-tech';
-import { enterpriseITSolutions2030 } from '../../data/2030-enterprise-it-solutions';
-import { spaceMetaverseTechServices2030 } from '../../data/2030-space-metaverse-tech';
-import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micro-saas';
-import { researchDevelopmentServices2030 } from '../../data/2030-research-development';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import {futuristicAIServices2030} from '../../data/2030-futuristic-ai-services';
+import {quantumEmergingTechServices2030} from '../../data/2030-quantum-emerging-tech';
+import {enterpriseITSolutions2030} from '../../data/2030-enterprise-it-solutions';
+import {spaceMetaverseTechServices2030} from '../../data/2030-space-metaverse-tech';
+import {innovativeMicroSaasServices2030} from '../../data/2030-innovative-micro-saas';
+import {researchDevelopmentServices2030} from '../../data/2030-research-development';
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function FuturisticServices2030Page() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
   };
 
@@ -60,27 +31,22 @@ export default function FuturisticServices2030Page() {
     ...spaceMetaverseTechServices2030,
     ...innovativeMicroSaasServices2030,
     ...researchDevelopmentServices2030,
-=======
     website: 'https://ziontechgroup.com'
   };
 
   const all2030Services = [
-=======
     website: 'https://ziontechgroup.com'
   };
 
   const all2030Services = [
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     ...futuristicAIServices2030;
     ...quantumEmergingTechServices2030;
     ...enterpriseITSolutions2030;
     ...spaceMetaverseTechServices2030;
     ...innovativeMicroSaasServices2030;
     ...researchDevelopmentServices2030
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const serviceCategories = [
@@ -89,110 +55,78 @@ export default function FuturisticServices2030Page() {
       icon: Brain,
       color: 'from-cyan-500 to-blue-500',
       services: futuristicAIServices2030,
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Next-generation AI consciousness and autonomous systems',
     },
-=======
       description: 'Next-generation AI consciousness and autonomous systems'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Next-generation AI consciousness and autonomous systems'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       title: '⚛️ Quantum & Emerging Tech 2030',
       icon: Atom,
       color: 'from-purple-500 to-indigo-500',
       services: quantumEmergingTechServices2030,
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Quantum computing and breakthrough technologies',
     },
-=======
       description: 'Quantum computing and breakthrough technologies'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Quantum computing and breakthrough technologies'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       title: '🏢 Enterprise IT Solutions 2030',
       icon: Globe,
       color: 'from-blue-500 to-cyan-500',
       services: enterpriseITSolutions2030,
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Autonomous enterprise infrastructure and operations',
     },
-=======
       description: 'Autonomous enterprise infrastructure and operations'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Autonomous enterprise infrastructure and operations'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       title: '🌌 Space & Metaverse Tech 2030',
       icon: Rocket,
       color: 'from-emerald-500 to-green-500',
       services: spaceMetaverseTechServices2030,
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Space exploration and digital reality platforms',
     },
-=======
       description: 'Space exploration and digital reality platforms'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Space exploration and digital reality platforms'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       title: '🎯 Innovative Micro SAAS 2030',
       icon: Target,
       color: 'from-yellow-500 to-orange-500',
       services: innovativeMicroSaasServices2030,
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Cutting-edge micro solutions and platforms',
     },
-=======
       description: 'Cutting-edge micro solutions and platforms'
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Cutting-edge micro solutions and platforms'
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       title: '🔬 Research & Development 2030',
       icon: Microscope,
       color: 'from-red-500 to-pink-500',
       services: researchDevelopmentServices2030,
-<<<<<<< HEAD
-<<<<<<< HEAD
       description: 'Breakthrough research and development solutions',
     },
-=======
       description: 'Breakthrough research and development solutions'
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Breakthrough research and development solutions'
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
     <>
       <Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <title>
           2030 Futuristic Technology Services | Zion Tech Group - Revolutionary
           AI, Quantum, Space Tech
@@ -208,14 +142,13 @@ export default function FuturisticServices2030Page() {
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='icon' href='/favicon.ico' />
 
-=======
         <title>2030 Futuristic Technology Services | Zion Tech Group - Revolutionary AI, Quantum, Space Tech</title>
         <meta name="description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development - we're building tomorrow's solutions today." />
         <meta name="keywords" content="2030 technology services, AI consciousness, quantum computing, space mining, metaverse development, neuromorphic computing, DNA computing, Zion Tech Group" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         {/* Open Graph */}
         <meta property="og:title" content="2030 Futuristic Technology Services | Zion Tech Group" />
         <meta property="og:description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development." />
@@ -238,7 +171,6 @@ export default function FuturisticServices2030Page() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-<<<<<<< HEAD
               '@context': 'https://schema.org',
               '@type': 'Service',
               name: '2030 Futuristic Technology Services',
@@ -257,7 +189,6 @@ export default function FuturisticServices2030Page() {
                 email: 'kleber@ziontechgroup.com',
               },
             }),
-=======
         <title>2030 Futuristic Technology Services | Zion Tech Group - Revolutionary AI, Quantum, Space Tech</title>
         <meta name="description" content="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development - we're building tomorrow's solutions today." />
         <meta name="keywords" content="2030 technology services, AI consciousness, quantum computing, space mining, metaverse development, neuromorphic computing, DNA computing, Zion Tech Group" />
@@ -287,33 +218,27 @@ export default function FuturisticServices2030Page() {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https: //schema.org", "@type": "Service",
-=======
-              "@context": "https://schema.org";
+              "@context": "https: //schema.org";
               "@type": "Service";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              "name": "2030 Futuristic Technology Services";
+ursor/integrate-build-improve-and-re-verify-b76c
+              "name": "2030 Futuristic Technology Services",
               "description": "Revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology";
               "provider": {
                 "@type": "Organization";
                 "name": "Zion Tech Group";
                 "url": "https://ziontechgroup.com"
               };
-<<<<<<< HEAD
               "url": "https: //ziontechgroup.com/services/2030-futuristic-services",
-=======
-              "url": "https://ziontechgroup.com/services/2030-futuristic-services";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+              "url": "https: //ziontechgroup.com/services/2030-futuristic-services";
+ursor/integrate-build-improve-and-re-verify-b76c
               "contactPoint": {
                 "@type": "ContactPoint";
                 "telephone": "+1-302-464-0950";
-                "contactType": "customer service";
+                "contactType": "customer service",
                 "email": "kleber@ziontechgroup.com"
               }
             })
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           }}
         />
       </Head>
@@ -323,18 +248,15 @@ export default function FuturisticServices2030Page() {
         <UltraFuturisticNavigation2031 />
 
         {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>
 
           <div className='max-w-7xl mx-auto relative z-10'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
           
           <div className="max-w-7xl mx-auto relative z-10">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -356,11 +278,9 @@ export default function FuturisticServices2030Page() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200'
                 >
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20"></div>
           
@@ -387,33 +307,24 @@ export default function FuturisticServices2030Page() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:via-purple-600 hover:to-pink-600 transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Get Started Today
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'
                 >
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   View Pricing
                 </motion.button>
               </div>
             </motion.div>
 
             {/* Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8 mb-16'>
               {[
                 {
@@ -440,55 +351,43 @@ export default function FuturisticServices2030Page() {
                   value: 'Quantum-Safe',
                   color: 'text-pink-400',
                 },
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               {[
-=======
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
               {[
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 { icon: Users, label: 'Active Customers', value: '2,847+', color: 'text-cyan-400' },
                 { icon: TrendingUp, label: 'Success Rate', value: '99.8%', color: 'text-emerald-400' },
                 { icon: Zap, label: 'Innovation Level', value: 'Revolutionary', color: 'text-purple-400' },
                 { icon: Shield, label: 'Security Rating', value: 'Quantum-Safe', color: 'text-pink-400' }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               ].map((stat, index) => (
                 <motion.div
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   viewport={{ once: true }}
                   className='text-center'
                 >
-=======
                   viewport={{ once: true }} className="text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className="w-12 h-12 mx-auto mb-4" />
                   </div>
-<<<<<<< HEAD
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>
                     {stat.value}
                   </div>
                   <div className='text-gray-400'>{stat.label}</div>
-=======
                   viewport={{ once: true }} className="text-center">
                   <div className={`text-4xl mb-2 ${stat.color}`}>
                     <stat.icon className="w-12 h-12 mx-auto mb-4" />
                   </div>
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className={`text-3xl font-bold ${stat.color} mb-2`}>{stat.value}</div>
                   <div className="text-gray-400">{stat.label}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </motion.div>
               ))}
             </div>
@@ -497,8 +396,6 @@ export default function FuturisticServices2030Page() {
 
         {/* Services by Category */}
         {serviceCategories.map((category, categoryIndex) => (
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section
             key={category.title}
             className='py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden'
@@ -506,23 +403,16 @@ export default function FuturisticServices2030Page() {
             <div className='absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10'></div>
 
             <div className='max-w-7xl mx-auto relative z-10'>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <section key={category.title} className="py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-gray-900/10 to-gray-800/10"></div>
             
             <div className="max-w-7xl mx-auto relative z-10">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 viewport={{ once: true }}
                 className='text-center mb-16'
               >
@@ -530,20 +420,17 @@ export default function FuturisticServices2030Page() {
                   className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}
                 >
                   <category.icon className='w-10 h-10 text-white' />
-=======
                 viewport={{ once: true }} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
                 <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
                   <span className="bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
                     {category.title}
                   </span>
                 </h2>
-<<<<<<< HEAD
                 <p className='text-xl text-gray-300 max-w-3xl mx-auto'>
-=======
                 viewport={{ once: true }} className="text-center mb-16">
                 <div className={`w-20 h-20 bg-gradient-to-r ${category.color} rounded-2xl flex items-center justify-center mx-auto mb-6`}>
                   <category.icon className="w-10 h-10 text-white" />
@@ -554,23 +441,16 @@ export default function FuturisticServices2030Page() {
                   </span>
                 </h2>
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <p className="text-xl text-gray-300 max-w-3xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   {category.description}
                 </p>
               </motion.div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {category.services.map((service, serviceIndex) => (
                   <motion.div
                     key={service.id}
@@ -578,8 +458,6 @@ export default function FuturisticServices2030Page() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: serviceIndex * 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     whileHover={{ y: -5 }}
                     className='group cursor-pointer'
                   >
@@ -599,7 +477,6 @@ export default function FuturisticServices2030Page() {
                             {service.period}
                           </span>
                           <span className='text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full'>
-=======
                     whileHover={{ y: -5 }} className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -610,7 +487,7 @@ export default function FuturisticServices2030Page() {
                         <div className="flex items-center justify-between">
                           <span className="text-cyan-400 font-semibold">{service.price}{service.period}</span>
                           <span className="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             {service.innovationLevel}
                           </span>
                         </div>
@@ -624,10 +501,8 @@ export default function FuturisticServices2030Page() {
                             <Users className="w-3 h-3" />
                             <span>{service.customers}+</span>
                           </div>
-<<<<<<< HEAD
                           <div className='flex items-center space-x-1'>
                             <Star className='w-3 h-3 text-yellow-400' />
-=======
                     whileHover={{ y: -5 }} className="group cursor-pointer">
                     <div className="p-6 rounded-2xl bg-gradient-to-br from-gray-900/60 to-gray-800/60 border border-cyan-500/30 hover:border-cyan-400/50 transition-all duration-300 backdrop-blur-sm">
                       <div className="text-4xl mb-4">{service.icon}</div>
@@ -653,33 +528,26 @@ export default function FuturisticServices2030Page() {
                           </div>
                           <div className="flex items-center space-x-1">
                             <Star className="w-3 h-3 text-yellow-400" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <div className="flex items-center space-x-1">
                             <Star className="w-3 h-3 text-yellow-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             <span>{service.rating}</span>
                           </div>
                         </div>
                       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <div className='flex items-center justify-between'>
                         <span className='text-xs text-gray-400'>
                           Trial: {service.trialDays} days
                         </span>
                         <ArrowRight className='w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform' />
-=======
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-gray-400">Trial: {service.trialDays} days</span>
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <div className="flex items-center justify-between">
                         <span className="text-xs text-gray-400">Trial: {service.trialDays} days</span>
                         <ArrowRight className="w-5 h-5 text-cyan-400 group-hover:translate-x-1 transition-transform" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </div>
                     </div>
                   </motion.div>
@@ -690,30 +558,22 @@ export default function FuturisticServices2030Page() {
         ))}
 
         {/* Contact CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h2 className='text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6'>
-=======
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Ready to Experience the
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
                   {' '}Future of Technology?
@@ -727,11 +587,9 @@ export default function FuturisticServices2030Page() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200'
                 >
-=======
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">
                 Ready to Experience the
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
@@ -747,50 +605,38 @@ export default function FuturisticServices2030Page() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white rounded-xl font-semibold text-lg hover:from-cyan-600 hover:to-blue-600 transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Schedule Consultation
                 </motion.button>
                 <motion.button
                   whileHover={{ scale: 1.05 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200'
                 >
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   whileTap={{ scale: 0.95 }} className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 rounded-xl font-semibold text-lg hover:bg-cyan-400 hover:text-black transition-all duration-200">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   View Pricing
                 </motion.button>
               </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300'>
                 <div className='flex items-center justify-center space-x-2'>
                   <Phone className='w-5 h-5 text-cyan-400' />
-=======
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <span>{contactInfo.mobile}</span>
                 </div>
                 <div className="flex items-center justify-center space-x-2">
                   <Mail className="w-5 h-5 text-purple-400" />
                   <span>{contactInfo.email}</span>
                 </div>
-<<<<<<< HEAD
                 <div className='flex items-center justify-center space-x-2'>
                   <MapPin className='w-5 h-5 text-pink-400' />
                   <span className='text-sm'>{contactInfo.address}</span>
-=======
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 text-gray-300">
                 <div className="flex items-center justify-center space-x-2">
                   <Phone className="w-5 h-5 text-cyan-400" />
@@ -803,12 +649,10 @@ export default function FuturisticServices2030Page() {
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5 text-pink-400" />
                   <span className="text-sm">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex items-center justify-center space-x-2">
                   <MapPin className="w-5 h-5 text-pink-400" />
                   <span className="text-sm">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </motion.div>
@@ -819,14 +663,9 @@ export default function FuturisticServices2030Page() {
         <UltraFuturisticFooter2030 />
       </UltraFuturisticBackground2031>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

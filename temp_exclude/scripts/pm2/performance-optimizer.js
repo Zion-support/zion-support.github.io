@@ -303,7 +303,7 @@ class PerformanceOptimizer {
       },
       {
         name: 'destructuring',
-        regex: /const\s+\w+\s*=\s*[^;]+\.\w+/g,
+        regex: /const\s+\w+\s*=\s*[^,]+\.\w+/g,
         message: 'Consider using destructuring for cleaner code'
       }
     ];
@@ -335,7 +335,7 @@ class PerformanceOptimizer {
       },
       {
         name: 'side effects',
-        regex: /import\s+['"][^'"]*['"];?\s*$/gm,
+        regex: /import\s+['"][^'"]*['"],?\s*$/gm,
         message: 'Side-effect imports can prevent tree shaking'
       }
     ];

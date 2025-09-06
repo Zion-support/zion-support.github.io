@@ -1,14 +1,7 @@
 import Link from 'next/link';
 import type { GetServerSideProps } from 'next';
 import type { Vendor } from '../../utils/vendor-types';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-type Props = { vendors: Vendor[] };
-
-=======
 type Props = { vendors: Vendor[] },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function VendorsPage({ vendors }: Props) {
   return (
     <div className="space-y-6">
@@ -35,8 +28,6 @@ export default function VendorsPage({ vendors }: Props) {
                     {v.name}
                     {v.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
                   </div>
-<<<<<<< HEAD
-=======
 type Props = { vendors: Vendor[] },
 export default function VendorsPage({ vendors }: Props) {
   return (
@@ -65,48 +56,26 @@ export default function VendorsPage({ vendors }: Props) {
                     {v.verified && <span className="text-xs px-2 py-0.5 rounded bg-green-100 text-green-700">Verified</span>}
                   </div>
                   <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="text-xs text-gray-500">Services: {v.servicesOffered?.join() || '—'}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 </div>
               </div>
             </a>
           </Link>
         ))}
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className='text-center text-xs text-gray-500'>
-        Powered by Zion • Co-brand available
-      </div>
-    </div>
-  );
-=======
       <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <div className="text-center text-xs text-gray-500">Powered by Zion • Co-brand available</div>
     </div>
   );
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../../utils/vendor-store');
   const vendors = listVendors();
-<<<<<<< HEAD
-<<<<<<< HEAD
-  return { props: { vendors } };
-};
-=======
   return { props: { vendors } }
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return { props: { vendors } }
 };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

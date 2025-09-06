@@ -1,6 +1,6 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {Configuration,, OpenAIApi} from "npm: openai@4.28.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -42,9 +42,8 @@ Please create:
 3. A suggested price range based on the category and features
 4. A bulleted list of 3-5 key selling points
 
-Format the response as a JSON object with the following structure:
-{
-  "description": "The optimized description here...";
+Format the response as a JSON object with the following structure: {
+  "description": "The optimized description here...",
   "tags": ["tag1", "tag2", "tag3", "tag4", "tag5"];
   "suggestedPrice": { "min": number, "max": number };
   "keyPoints": ["point1", "point2", "point3"]

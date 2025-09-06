@@ -1,6 +1,6 @@
 import fs from 'fs';
 import path from 'path';
-import { IntegrationsState } from './types';
+import {IntegrationsState} from './types';
 const DATA_DIR = path.resolve(process.cwd(), 'dataintegrations');
 const STATE_FILE = path.join(DATA_DIR, 'state.json');
 function ensureDataDir(): void {
@@ -31,7 +31,7 @@ export function readState(): IntegrationsState {
 export function writeState(mutator: (state: IntegrationsState) => void): IntegrationsState {
   ensureDataDir();
   const current = readState();
-  mutator(current);
+  mutator(current),
   fs.writeFileSync(STATE_FILE, JSON.stringify(current, null, 2), 'utf8');
   return current
 }

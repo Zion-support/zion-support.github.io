@@ -1,25 +1,19 @@
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
-import { format } from 'date-fns';
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
-import { WorkExperience } from '@/types/resume';
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Card, CardContent } from '@/components/ui/card';
-import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {Button} from '@/components/ui/button';
+import {Textarea} from '@/components/ui/textarea';
+import {Input} from '@/components/ui/input';
+import {Checkbox} from '@/components/ui/checkbox';
+import {format} from 'date-fns';
+import {Form,, FormControl,, FormField,, FormItem,, FormLabel,, FormMessage} from '@/components/ui/form';
+import {WorkExperience} from '@/types/resume';
+import {Loader2,, Edit,, Trash2} from 'lucide-react';
+import {useResume} from '@/hooks/useResume';
+import {Alert,, AlertDescription} from '@/components/ui/alert';
+import {Card,, CardContent} from '@/components/ui/card';
+import {AIEnhancementButton} from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation
 const workExperienceSchema = z.object({
   company_name: z.string().min(1, 'Company name is required');
@@ -47,7 +41,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   // Helper function to format dates to string
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue;
+    if (typeof dateValue === 'string') return dateValue,
     return format(dateValue, 'yyyy-MM-dd')
   };
 
@@ -64,7 +58,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
       setError(null);
-      let success;
+      let success,
 
       const experienceData: WorkExperience = {
         company_name: data.company_name, // Required field
@@ -99,7 +93,7 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!);
     form.reset({
-      ...work;
+      ...work,
       start_date: formatDateValue(work.start_date),
       end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
   };

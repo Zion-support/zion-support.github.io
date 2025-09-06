@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect, useMemo, useState } from 'react';
-import Badges from './Badges';
-
-=======
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 type Tx = {
   id: string,
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
@@ -32,11 +25,6 @@ function getUserId(): string {
 
 export default function WalletPanel() {
   const [summary, setSummary] = useState<Summary | null>(null);
-<<<<<<< HEAD
-  const [tab, setTab] = useState<'earnings' | 'spending' | 'redeem'>(
-    'earnings'
-  );
-=======
 import React, { useEffect, useMemo, useState } from "react";
 import Badges from "./Badges";
 type Tx = {
@@ -65,10 +53,7 @@ function getUserId(): string {
 export default function WalletPanel() {
   const [summary, setSummary] = useState<Summary | null>(null);
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [tab, setTab] = useState<"earnings" | "spending" | "redeem">("earnings");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const [ethAddress, setEthAddress] = useState<string | null>(null);
 
   const userId = useMemo(() => getUserId(), []);
@@ -76,12 +61,7 @@ export default function WalletPanel() {
   async function refresh() {
     const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
     const data = await res.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
-    setSummary(data);
-=======
     setSummary(data)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   useEffect(() => {
@@ -93,10 +73,6 @@ export default function WalletPanel() {
   const earnings = (summary?.transactions || []).filter((t) =>
     ["earn", "issue"].includes(t.type)
   );
-<<<<<<< HEAD
-  const spending = (summary?.transactions || []).filter(t =>
-    ['burn', 'revoke', 'redeem'].includes(t.type)
-=======
     setSummary(data)
   }
 
@@ -111,11 +87,8 @@ export default function WalletPanel() {
   );
   const spending = (summary?.transactions || []).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const spending = (summary?.transactions || []).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   );
 
   const nextBadgeThreshold = useMemo(() => {
@@ -123,12 +96,7 @@ export default function WalletPanel() {
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return balance;
-=======
     return balance
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }, [balance]);
 
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
@@ -144,10 +112,6 @@ export default function WalletPanel() {
       const accounts = await eth.request({ method: "eth_requestAccounts" }),
       setEthAddress(accounts?.[0] || null)
     } catch (e) {
-<<<<<<< HEAD
-      console.error(e);
-    }
-=======
     return balance
   }, [balance]);
 
@@ -166,36 +130,21 @@ export default function WalletPanel() {
     } catch (e) {
       console.error(e)
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       console.error(e)
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function redeem(amount: number) {
-    if (!amount || amount <= 0) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-    const res = await fetch('/api/wallet/redeem', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ userId, amount }),
-    });
-=======
+    if (!amount || amount <= 0) return,
     const res = await fetch("/api/wallet/redeem", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, amount })});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const data = await res.json();
     if (data.error) {
       alert(data.error)
     } else {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
-<<<<<<< HEAD
-      refresh();
-=======
     const res = await fetch("/api/wallet/redeem", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -206,28 +155,16 @@ export default function WalletPanel() {
     } else {
       alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
       refresh()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       refresh()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className='space-y-6'>
-      <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
-        <div className='flex items-center justify-between'>
-          <div className='flex items-center gap-2'>
-            <span className='text-2xl'>⚡</span>
-=======
     <div className="space-y-6">
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-2xl">⚡</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             <div>
               <div className="text-sm text-gray-500">Balance</div>
               <div className="text-2xl font-semibold">{balance} {symbol}</div>
@@ -243,9 +180,6 @@ export default function WalletPanel() {
           </div>
           <div className="mt-2 text-xs text-gray-500">Next badge at {nextBadgeThreshold} {symbol}</div>
         </div>
-<<<<<<< HEAD
-        <div className='mt-4'>
-=======
     <div className="space-y-6">
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex items-center justify-between">
@@ -267,43 +201,16 @@ export default function WalletPanel() {
           <div className="mt-2 text-xs text-gray-500">Next badge at {nextBadgeThreshold} {symbol}</div>
         </div>
         <div className="mt-4">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <div className="mt-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           <Badges balance={balance} />
         </div>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <div className='p-4 border rounded-lg bg-white dark:bg-zinc-900'>
-        <div className='flex gap-3 mb-4 text-sm'>
-          <button
-            onClick={() => setTab('earnings')}
-            className={`px-3 py-1 rounded border ${tab === 'earnings' ? 'bg-gray-100' : ''}`}
-          >
-            Earnings
-          </button>
-          <button
-            onClick={() => setTab('spending')}
-            className={`px-3 py-1 rounded border ${tab === 'spending' ? 'bg-gray-100' : ''}`}
-          >
-            Spending
-          </button>
-          <button
-            onClick={() => setTab('redeem')}
-            className={`px-3 py-1 rounded border ${tab === 'redeem' ? 'bg-gray-100' : ''}`}
-          >
-            Redeem
-          </button>
-=======
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex gap-3 mb-4 text-sm">
           <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
           <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab === "spending" ? "bg-gray-100" : ""}`}>Spending</button>
           <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab === "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         </div>
         {tab !== "redeem" && (
           <div className="space-y-2">
@@ -330,8 +237,6 @@ export default function WalletPanel() {
               <button className="px-3 py-1 rounded border" onClick={() => redeem(250)}>Redeem 250</button>
               <button className="px-3 py-1 rounded border" onClick={() => redeem(500)}>Redeem 500</button>
             </div>
-<<<<<<< HEAD
-=======
       <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
         <div className="flex gap-3 mb-4 text-sm">
           <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
@@ -364,20 +269,11 @@ export default function WalletPanel() {
               <button className="px-3 py-1 rounded border" onClick={() => redeem(500)}>Redeem 500</button>
             </div>
             <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </div>
         )}
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

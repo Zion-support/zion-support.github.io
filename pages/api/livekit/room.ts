@@ -1,12 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { RoomServiceClient, CreateRoomOptions } from 'livekit-server-sdk';
+import {RoomServiceClient, CreateRoomOptions} from 'livekit-server-sdk';
 
 const LIVEKIT_API_KEY = process.env.LIVEKIT_API_KEY || '';
 const LIVEKIT_API_SECRET = process.env.LIVEKIT_API_SECRET || '';
 const LIVEKIT_HOST = process.env.LIVEKIT_HOST || '';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -14,42 +12,34 @@ export default async function handler(
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('AllowPOST');
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method not allowed' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   try {
     const { projectId, preferredName } = req.body || {};
 
     if (!projectId) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       return res.status(400).json({ error: 'Missing projectId' });
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' });
-=======
       return res.status(400).json({ error: 'Missing projectId' })
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       return res.status(400).json({ error: 'Missing projectId' })
     }
     if (!LIVEKIT_API_KEY || !LIVEKIT_API_SECRET || !LIVEKIT_HOST) {
       return res.status(500).json({ error: 'LiveKit env vars not configured' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const date = new Date();
@@ -58,32 +48,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     // Attempt to create or ensure the room exists
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       const roomService = new RoomServiceClient(
         LIVEKIT_HOST,
         LIVEKIT_API_KEY,
         LIVEKIT_API_SECRET
       );
-=======
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       const roomService = new RoomServiceClient(LIVEKIT_HOST, LIVEKIT_API_KEY, LIVEKIT_API_SECRET);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const opts: CreateRoomOptions = {
-        name: roomName;
+        name: roomName,
         emptyTimeout: 60 * 10, // 10 minutes
         maxParticipants: 24,
-<<<<<<< HEAD
-<<<<<<< HEAD
         metadata: JSON.stringify({
           projectId,
           createdBy: preferredName || 'host',
         }),
-=======
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       };
       await roomService.createRoom(opts).catch(() => Promise.resolve())
     } catch (e) {
@@ -96,8 +78,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     console.error('Room create error', err);
     return res.status(500).json({ error: 'Failed to create room' })
   }
-<<<<<<< HEAD
-=======
         metadata: JSON.stringify({ projectId, createdBy: preferredName || 'host' })};
       await roomService.createRoom(opts).catch(() => Promise.resolve())
     } catch (e) {
@@ -111,7 +91,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: 'Failed to create room' })
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

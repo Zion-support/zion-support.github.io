@@ -15,7 +15,7 @@ export const announceToScreenReader = (message: string): void => {
 
   // Remove after announcement
   setTimeout(() => {
-    document.body.removeChild(announcement);
+    document.body.removeChild(announcement),
   }, 1000);
 };
 
@@ -30,7 +30,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
   ] as HTMLElement;
 
   const handleTabKey = (e: KeyboardEvent) => {
-    if (e.key !== 'Tab') return;
+    if (e.key !== 'Tab') return,
 
     if (e.shiftKey) {
       if (document.activeElement === firstElement) {
@@ -58,7 +58,7 @@ export const trapFocus = (element: HTMLElement): (() => void) => {
 export const getContrastRatio = (color1: string, color2: string): number => {
   const getLuminance = (color: string): number => {
     const rgb = color.match(/\d+/g);
-    if (!rgb) return 0;
+    if (!rgb) return 0,
 
     const [r, g, b] = rgb.map(c => {
       const val = parseInt(c) / 255;
@@ -88,7 +88,7 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby');
   const hasVisibleText = element.textContent?.trim().length > 0;
 
-  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText;
+  return hasAriaLabel || hasAriaLabelledBy || hasVisibleText,
 };
 
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
@@ -125,7 +125,7 @@ export const createSkipLink = (
   targetId: string,
   text: string = 'Skip to main content'
 ): HTMLElement => {
-  const skipLink = document.createElement('a');
+  const skipLink = document.createElement('a'),
   skipLink.href = `#${targetId}`;
   skipLink.textContent = text;
   skipLink.className =
@@ -141,4 +141,3 @@ export const createSkipLink = (
 
   return skipLink;
 };
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31

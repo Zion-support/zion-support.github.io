@@ -13,9 +13,9 @@ async function fetchFromGitHub(): Promise<any[]> {
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     const resp = await fetch(apiUrl, { headers });
     if (!resp.ok) return [];
-    const files = (await resp.json()) as Array<{ name: string; download_url: string, type: string }>;
+    const files = (await resp.json()) as Array<{ name: string, download_url: string, type: string }>;
     const jsonFiles = files.filter((f) => f.type === 'file' && f.name.endsWith('.json'));
-    const results: any[] = [];
+    const results: any[] = [],
     for (const f of jsonFiles.slice(-50).reverse()) {
       try {
         const r = await fetch(f.download_url, { headers });

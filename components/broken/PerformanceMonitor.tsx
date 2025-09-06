@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- const getPerformanceMetrics = useCallback (async () : Promise<PerformanceMetrics> => {
-  return new Promise ( (resolve) => {
-  if (typeof window !== 'undefined' && 'performance' in window) {
-  //Wait for page to be fully loaded if (document.readyState === 'complete') {
-  
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, Zap, Clock, TrendingUp, TrendingDown, 
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
-  BarChart3, Gauge, HardDrive, Wifi, Cpu
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion, AnimatePresence} from 'framer-motion';
+import {Activity, Zap, Clock, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, X, Settings, RefreshCw, BarChart3, Gauge, HardDrive, Wifi, Cpu} from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number,
@@ -34,7 +21,7 @@ interface PerformanceMonitorProps {
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false;
-  autoRefresh = false;
+  autoRefresh = false,
   refreshInterval = 30000
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -142,18 +129,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
+    if (score >= 70) return 'text-yellow-400',
     return 'text-red-400'
   };
 
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-    if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+    if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
     return <AlertTriangle className="w-5 h-5 text-red-400" />
   };
 
   const formatTime = (ms: number): string => {
-    if (ms === 0) return 'N/A';
+    if (ms === 0) return 'N/A',
     if (ms < 1000) return `${Math.round(ms)}ms`;
     return `${(ms / 1000).toFixed(2)}s`
   };
@@ -162,7 +149,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const getDeviceIcon = (deviceType: string) => {
     switch (deviceType) {
       case 'mobile': return Smartphone;
-      case 'tablet': return Tablet;
+      case 'tablet': return Tablet,
       default: return Laptop
     }
   };
@@ -376,25 +363,19 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 // Helper functions
 const getScoreIcon = (score: number) => {
   if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
   return <AlertTriangle className="w-5 h-5 text-red-400" />
 };
 
 const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
   if (score >= 70) return 'Good';
-  if (score >= 50) return 'Needs Improvement';
+  if (score >= 50) return 'Needs Improvement',
   return 'Poor'
 };
-<<<<<<< HEAD
-=======
 import React, { useState, useEffect, useCallback, useRef } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { 
-  Activity, Zap, Clock, TrendingUp, TrendingDown, 
-  AlertTriangle, CheckCircle, X, Settings, RefreshCw;
-  BarChart3, Gauge, HardDrive, Wifi, Cpu
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Activity, Zap, Clock, TrendingUp, TrendingDown, AlertTriangle, CheckCircle, X, Settings, RefreshCw, BarChart3, Gauge, HardDrive, Wifi, Cpu} from 'lucide-react';
 
 interface PerformanceMetrics {
   loadTime: number,
@@ -415,7 +396,7 @@ interface PerformanceMonitorProps {
 
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   showUI = false;
-  autoRefresh = false;
+  autoRefresh = false,
   refreshInterval = 30000
 }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
@@ -486,7 +467,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       setLastUpdate(new Date());
       
       // Check for performance issues and add alerts
-      const newAlerts: string[] = [];
+      const newAlerts: string[] = [],
       if (newMetrics.loadTime > 3000) {
         newAlerts.push('Page load time is slow (>3s)')
       }
@@ -523,18 +504,18 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400';
-    if (score >= 70) return 'text-yellow-400';
+    if (score >= 70) return 'text-yellow-400',
     return 'text-red-400'
   };
 
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-    if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+    if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
     return <AlertTriangle className="w-5 h-5 text-red-400" />
   };
 
   const formatTime = (ms: number): string => {
-    if (ms === 0) return 'N/A';
+    if (ms === 0) return 'N/A',
     if (ms < 1000) return `${Math.round(ms)}ms`;
     return `${(ms / 1000).toFixed(2)}s`
   };
@@ -543,7 +524,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const getDeviceIcon = (deviceType: string) => {
     switch (deviceType) {
       case 'mobile': return Smartphone;
-      case 'tablet': return Tablet;
+      case 'tablet': return Tablet,
       default: return Laptop
     }
   };
@@ -757,20 +738,17 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
 // Helper functions
 const getScoreIcon = (score: number) => {
   if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />;
-  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />;
+  if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
   return <AlertTriangle className="w-5 h-5 text-red-400" />
 };
 
 const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent';
   if (score >= 70) return 'Good';
-  if (score >= 50) return 'Needs Improvement';
+  if (score >= 50) return 'Needs Improvement',
   return 'Poor'
 };
 
 export default PerformanceMonitor;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 
 export default PerformanceMonitor;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

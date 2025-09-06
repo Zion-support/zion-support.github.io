@@ -3,7 +3,7 @@ export function getFraudStore() {
   return {
     listFlagged: async (limit: number, offset: number, filters: any) => {
       // Mock implementation
-      return [];
+      return [],
     },
     recordAction: async (fraudId: string, action: string, reason: string, adminId: string) => {
       // Mock implementation

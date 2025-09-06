@@ -1,19 +1,4 @@
- import {
-  {
-  {
-  AuthRoutes;
-DashboardRoutes;
-MarketplaceRoutes;
-TalentRoutes;
-AdminRoutes;
-MobileAppRoutes;
-ContentRoutes;
-ErrorRoutes;
-EnterpriseRoutes;
-CommunityRoutes;
-DeveloperRoutes;
-SellerRoutes 
-}from './routes';
+ import {{, {, AuthRoutes,, DashboardRoutes,, MarketplaceRoutes,, TalentRoutes,, AdminRoutes,, MobileAppRoutes,, ContentRoutes,, ErrorRoutes,, EnterpriseRoutes,, CommunityRoutes,, DeveloperRoutes,, SellerRoutes}from './routes';
 const Home = React.lazy ( () => import ('./pages/Home') );
 const AIMatcherPage = React.lazy ( () => import ('./pages/AIMatcher') );
 const TalentDirectory = React.lazy ( () => import ('./pages/TalentDirectory') );

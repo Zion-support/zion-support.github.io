@@ -1,30 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import fs from 'fs-extra';
-import path from 'path';
-
-export interface WarningEmailPayload {
-  toUserId: string;
-  toAddress?: string | null;
-=======
 export interface EmailOptions {
   to: string;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   subject: string;
-  body: string;
+  body: string,
 }
 
-<<<<<<< HEAD
-export async function sendWarningEmail(
-  payload: WarningEmailPayload
-): Promise<void> {
-  const logDir = path.resolve(process.cwd(), 'data/fraud');
-  const logPath = path.join(logDir, 'emails.log');
-  await fs.ensureDir(logDir);
-
-  const line = `[${new Date().toISOString()}] toUserId=${payload.toUserId} to=${payload.toAddress || 'unknown'} subject=${payload.subject} body=${payload.body}\n`;
-  await fs.appendFile(logPath, line, 'utf8');
-=======
 // Email utilities
 export interface EmailConfig {
   provider: 'smtp' | 'sendgrid' | 'ses' | 'mailgun' | 'nodemailer';
@@ -38,7 +17,7 @@ export interface EmailConfig {
     secure: boolean;
     auth: {
       user: string;
-      pass: string;
+      pass: string,
     };
   };
 }
@@ -50,7 +29,7 @@ export interface EmailTemplate {
   html: string;
   text: string;
   variables: string[];
-  category: 'transactional' | 'marketing' | 'notification' | 'alert';
+  category: 'transactional' | 'marketing' | 'notification' | 'alert',
 }
 
 export interface EmailMessage {
@@ -60,12 +39,12 @@ export interface EmailMessage {
   subject: string;
   html?: string;
   text?: string;
-  templateId?: string;
+  templateId?: string,
   variables?: Record<string, any>;
   attachments?: Array<{
     filename: string;
     content: string | Buffer;
-    contentType?: string;
+    contentType?: string,
   }>;
   headers?: Record<string, string>;
   priority?: 'low' | 'normal' | 'high';
@@ -76,11 +55,11 @@ export interface EmailResult {
   messageId?: string;
   error?: string;
   provider?: string;
-  timestamp: string;
+  timestamp: string,
 }
 
 class EmailManager {
-  private config: EmailConfig;
+  private config: EmailConfig,
   private templates: Map<string, EmailTemplate> = new Map();
 
   constructor() {
@@ -156,8 +135,7 @@ class EmailManager {
         return this.sendViaMailgun(message);
       case 'smtp':
       case 'nodemailer':
-      default:
-        return this.sendViaSMTP(message);
+      default: return this.sendViaSMTP(message),
     }
   }
 
@@ -270,11 +248,11 @@ class EmailManager {
   }
 
   async getTemplate(id: string): Promise<EmailTemplate | null> {
-    return this.templates.get(id) || null;
+    return this.templates.get(id) || null,
   }
 
   async removeTemplate(id: string): Promise<boolean> {
-    return this.templates.delete(id);
+    return this.templates.delete(id),
   }
 
   async listTemplates(): Promise<EmailTemplate[]> {
@@ -283,7 +261,7 @@ class EmailManager {
 
   private async processTemplate(message: EmailMessage): Promise<EmailMessage | null> {
     const template = this.templates.get(message.templateId!);
-    if (!template) return null;
+    if (!template) return null,
 
     const variables = message.variables || {};
     let subject = template.subject;
@@ -309,12 +287,12 @@ class EmailManager {
   // Validation
   private validateEmailAddresses(emails: string | string[]): boolean {
     const emailList = Array.isArray(emails) ? emails : [emails];
-    return emailList.every(email => this.isValidEmail(email));
+    return emailList.every(email => this.isValidEmail(email)),
   }
 
   private isValidEmail(email: string): boolean {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
+    return emailRegex.test(email),
   }
 
   // Configuration
@@ -332,7 +310,7 @@ export const emailManager = new EmailManager();
 
 // Main function for external use
 export async function sendEmail(message: EmailMessage): Promise<EmailResult> {
-  return emailManager.sendEmail(message);
+  return emailManager.sendEmail(message),
 }
 
 // Warning email function
@@ -346,7 +324,7 @@ export async function sendWarningEmail(
     to,
     subject: `⚠️ WARNING: ${subject}`,
     text: message,
-    html: `<div style="color: #d32f2f; font-family: Arial, sans-serif;">
+    html: `<div style="color: #d32f2f, font-family: Arial, sans-serif;">
       <h2>⚠️ WARNING</h2>
       <h3>${subject}</h3>
       <p>${message.replace(/\n/g, '<br>')}</p>
@@ -380,7 +358,7 @@ export function createEmailTemplate(
 
 export function isValidEmail(email: string): boolean {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
+  return emailRegex.test(email),
 }
 
 export function formatEmailList(emails: string | string[]): string {
@@ -396,10 +374,7 @@ export const COMMON_TEMPLATES = {
   PAYMENT_CONFIRMATION: 'payment_confirmation',
   SECURITY_NOTIFICATION: 'security_notification'
 };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export async function sendWarningEmail(options: EmailOptions): Promise<void> {
   // Mock implementation - in production, this would send actual emails
   console.log('Email would be sent:', options);
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

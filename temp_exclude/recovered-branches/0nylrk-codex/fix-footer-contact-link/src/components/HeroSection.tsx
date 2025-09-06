@@ -1,7 +1,7 @@
 
-import { Button } from "@/components/ui/button";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Link } from "react-router-dom";
+import {Button} from "@/components/ui/button";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Link} from "react-router-dom";
 export function HeroSection() {
   return (
     <section className="relative overflow-hidden py-20 md:py-32">

@@ -1,6 +1,6 @@
 
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
+import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
+import {Configuration,, OpenAIApi} from "npm: openai@4.28.0",
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"};
@@ -39,7 +39,7 @@ The description should: 1. Be approximately 200-300 words
 2. Highlight the key benefits and unique selling points
 3. Use professional language suitable for a marketplace listing
 4. Speak directly to the target audience
-5. Include a compelling opening and closing statement`;
+5. Include a compelling opening and closing statement`,
 
     const completion = await openai.chat.completions.create({
       model: "gpt-4o-mini",

@@ -1,12 +1,12 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
 import type { UserProfile } from "@/types/auth";
-import { toast } from "@/hooks/use-toast";
-import { trackReferral, checkUrlForReferralCode } from "@/utils/referralUtils";
-import { cleanupAuthState } from "@/utils/authUtils";
+import {toast} from "@/hooks/use-toast";
+import {trackReferral, checkUrlForReferralCode} from "@/utils/referralUtils";
+import {cleanupAuthState} from "@/utils/authUtils";
 export function useAuthOperations(
-  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>;
+  setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>,
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
 ) {
   // Check for referral code in URL when the hook is first used
@@ -27,20 +27,20 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Oh no! Something went wrong.";
+          title: "Oh no! Something went wrong.",
           description: error.message});
         return { data: null, error: error.message }
       }
 
       toast({
-        title: "Login successful!";
+        title: "Login successful!",
         description: `Welcome back, ${email}!`});
 
       return { data, error: null }
     } catch (error) {
       toast({
         variant: "destructive";
-        title: "Oh no! Something went wrong.";
+        title: "Oh no! Something went wrong.",
         description: "Failed to sign in. Please check your credentials."});
       return { data: null, error: "Failed to sign in." }
     } finally {
@@ -61,7 +61,7 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Error during signup";
+          title: "Error during signup",
           description: error.message});
         return { data: null, error: error.message }
       }
@@ -73,14 +73,14 @@ export function useAuthOperations(
       }
 
       toast({
-        title: "Signup successful!";
+        title: "Signup successful!",
         description: `Welcome, ${display_name}! Please check your email to verify your account.`});
 
       return { data, error: null }
     } catch (error) {
       toast({
         variant: "destructive";
-        title: "Oh no! Something went wrong.";
+        title: "Oh no! Something went wrong.",
         description: "Failed to sign up. Please try again."});
       return { data: null, error: "Failed to sign up." }
     } finally {
@@ -96,19 +96,19 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Oh no! Something went wrong.";
+          title: "Oh no! Something went wrong.",
           description: error.message})
       } else {
         setUser(null), // Clear the user state upon successful logout
         toast({
-          title: "Logout successful!";
+          title: "Logout successful!",
           description: "You have been successfully logged out."})
       }
     } catch (error) {
       console.error("Logout failed:", error);
       toast({
         variant: "destructive";
-        title: "Logout failed";
+        title: "Logout failed",
         description: "There was an issue logging you out. Please try again."})
     } finally {
       setIsLoading(false)
@@ -116,7 +116,7 @@ export function useAuthOperations(
   };
 
   const resetPassword = async (email: string) => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       const { data, error } = await supabase.auth.resetPasswordForEmail(email, {
         redirectTo: `${window.location.origin}/update-password`});
@@ -124,20 +124,20 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Oh no! Something went wrong.";
+          title: "Oh no! Something went wrong.",
           description: error.message});
         return { data: null, error: error.message }
       }
 
       toast({
-        title: "Password reset email sent!";
+        title: "Password reset email sent!",
         description: `Please check your email (${email}) for instructions on how to reset your password.`});
 
       return { data, error: null }
     } catch (error) {
       toast({
         variant: "destructive";
-        title: "Oh no! Something went wrong.";
+        title: "Oh no! Something went wrong.",
         description: "Failed to send reset password email. Please try again."});
       return { data: null, error: "Failed to send reset password email." }
     } finally {
@@ -146,7 +146,7 @@ export function useAuthOperations(
   };
 
   const updateProfile = async (profileData: Partial<UserProfile>) => {
-    setIsLoading(true);
+    setIsLoading(true),
     try {
       if (!profileData || !profileData.id) {
         throw new Error("Profile data or user ID is missing.")
@@ -159,14 +159,14 @@ export function useAuthOperations(
           user_type: profileData.userType;
           profile_complete: profileData.profileComplete;
           bio: profileData.bio;
-          avatar_url: profileData.avatarUrl;
+          avatar_url: profileData.avatarUrl,
           headline: profileData.headline})
         .eq("id", profileData.id);
 
       if (error) {
         toast({
           variant: "destructive";
-          title: "Failed to update profile";
+          title: "Failed to update profile",
           description: error.message});
         return { error: error.message }
       }
@@ -180,7 +180,7 @@ export function useAuthOperations(
       });
 
       toast({
-        title: "Profile updated!";
+        title: "Profile updated!",
         description: "Your profile has been successfully updated."});
 
       return { error: null }
@@ -188,7 +188,7 @@ export function useAuthOperations(
       console.error("Profile update failed:", error);
       toast({
         variant: "destructive";
-        title: "Profile update failed";
+        title: "Profile update failed",
         description: "There was an issue updating your profile. Please try again."});
       return { error: "Failed to update profile." }
     } finally {
@@ -205,7 +205,7 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Oh no! Something went wrong.";
+          title: "Oh no! Something went wrong.",
           description: error.message})
       }
     } finally {
@@ -222,7 +222,7 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Oh no! Something went wrong.";
+          title: "Oh no! Something went wrong.",
           description: error.message})
       }
     } finally {
@@ -239,7 +239,7 @@ export function useAuthOperations(
       if (error) {
         toast({
           variant: "destructive";
-          title: "Oh no! Something went wrong.";
+          title: "Oh no! Something went wrong.",
           description: error.message})
       }
     } finally {
@@ -257,7 +257,7 @@ export function useAuthOperations(
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
       const address = accounts[0];
       await ethereum.request({
-        method: 'personal_sign';
+        method: 'personal_sign',
         params: [address, address]
       });
       
@@ -265,10 +265,10 @@ export function useAuthOperations(
       setUser({
         id: address;
         displayName: address;
-        profileComplete: true;
+        profileComplete: true,
         email: '', // Add required fields
         userType: 'talent', // Default user type
-        createdAt: new Date().toISOString();
+        createdAt: new Date().toISOString(),
         updatedAt: new Date().toISOString()
       } as UserProfile);
       
@@ -276,7 +276,7 @@ export function useAuthOperations(
     } catch (error: any) {
       toast({
         variant: 'destructive';
-        title: 'Web3 login failed';
+        title: 'Web3 login failed',
         description: error?.message || 'Unable to connect wallet'
       })
     } finally {

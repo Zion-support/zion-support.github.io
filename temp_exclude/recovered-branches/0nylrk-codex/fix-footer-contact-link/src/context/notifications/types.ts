@@ -1,4 +1,4 @@
-import { Notification as BaseNotification } from '@/types/notifications';
+import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
   | 'quote_request'

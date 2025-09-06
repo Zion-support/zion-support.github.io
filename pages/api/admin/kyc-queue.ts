@@ -21,7 +21,7 @@ function save(db: Record<string, KycProfile>) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const db = load();
   if (req.method === 'GET') {
-    const queue = Object.values(db).filter((p) => p.status === 'submitted' || p.status === 'needs_more_info');
+    const queue = Object.values(db).filter((p) => p.status === 'submitted' || p.status === 'needs_more_info'),
     return res.status(200).json({ ok: true, queue })
   }
 

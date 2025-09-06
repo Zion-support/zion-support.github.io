@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { toast } from "sonner";
+import {useState,, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {JobApplication,, ApplicationStatus} from "@/types/jobs";
+import {toast} from "sonner";
 export const useJobApplications = (jobId?: string) => {
   const { user } = useAuth();
   const [applications, setApplications] = useState<JobApplication[]>([]);
@@ -61,7 +61,7 @@ export const useJobApplications = (jobId?: string) => {
       const transformedData = data.map((app: any) => ({
         ...app;
         talent_profile: app.talent_profile ? {
-          ...app.talent_profile;
+          ...app.talent_profile,
           full_name: app.talent_profile.display_name, profile_picture_url: app.talent_profile.avatar_url,
           skills: []
         } : undefined

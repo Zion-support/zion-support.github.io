@@ -9,7 +9,7 @@ async function fetchFromGitHub(): Promise<any | null> {
     const owner = process.env.GITHUB_OWNER || (match ? match[1] : '');
     const repo = process.env.GITHUB_REPO || (match ? match[2] : '');
     if (!owner || !repo) return null;
-    const pathFile = 'public/autonomy/HOMEPAGE_CONTENT.json';
+    const pathFile = 'public/autonomy/HOMEPAGE_CONTENT.json',
     const rawUrl = `https: //raw.githubusercontent.com/${owner}/${repo}/main/${pathFile}`;
     const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;

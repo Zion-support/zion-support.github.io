@@ -1,54 +1,31 @@
 import React, { useState } from 'react';
-import { useTranslation } from 'react-i18next';
+import {useTranslation} from 'react-i18next';
 import i18n from '../../utils/i18n';
-import { supportedLocales, isRtl } from '../../utils/i18n';
+import {supportedLocales, isRtl} from '../../utils/i18n';
 
 const localeToFlag: Record<string, string> = {
   en: 'us',
   pt: 'br',
   es: 'es',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ar: 'sa',
-};
-
-=======
   ar: 'sa'},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   ar: 'sa'},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 const localeLabelKey: Record<string, string> = {
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
-<<<<<<< HEAD
-<<<<<<< HEAD
-  ar: 'lang.arabic',
-};
-
-=======
   ar: 'lang.arabic'},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   ar: 'lang.arabic'},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage || i18n.language || 'en';
 
   const changeLanguage = async (lng: string) => {
-    await i18n.changeLanguage(lng);
+    await i18n.changeLanguage(lng),
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
-<<<<<<< HEAD
-<<<<<<< HEAD
-    setOpen(false);
-=======
     setOpen(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -70,9 +47,6 @@ export default function LanguageSwitcher() {
               <button
                 role="option"
                 aria-selected={current.startsWith(lng)}
-<<<<<<< HEAD
-                className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'
-=======
     setOpen(false)
   };
 
@@ -96,10 +70,7 @@ export default function LanguageSwitcher() {
                 role="option"
                 aria-selected={current.startsWith(lng)}
                 className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 onClick={() => changeLanguage(lng)}
               >
                 <span className={`fi fi-${localeToFlag[lng]}`}></span>
@@ -111,11 +82,5 @@ export default function LanguageSwitcher() {
       )}
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

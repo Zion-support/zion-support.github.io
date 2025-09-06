@@ -1,11 +1,11 @@
 
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import {supabase} from "@/integrations/supabase/client";
+import {toast} from "@/hooks/use-toast";
 import type { UserProfile } from "@/types/auth";
 export const useProfileManagement = (setIsLoading: (loading: boolean) => void) => {
   const updateProfile = async (data: Partial<UserProfile>) => {
     try {
-      setIsLoading(true);
+      setIsLoading(true),
 
       if (!data.id) {
         return { error: "User ID is required" }

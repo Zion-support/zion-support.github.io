@@ -1,8 +1,8 @@
 
-import { Button } from "./ui/button";
-import { Input } from "./ui/input";
-import { GradientHeading } from "./GradientHeading";
-import { useState } from "react";
+import {Button} from "./ui/button";
+import {Input} from "./ui/input";
+import {GradientHeading} from "./GradientHeading";
+import {useState} from "react";
 export function QuoteFormSection() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -13,7 +13,7 @@ export function QuoteFormSection() {
     
     // Simulate form submission
     setTimeout(() => {
-      setIsSubmitting(false);
+      setIsSubmitting(false),
       setIsSubmitted(true)
     }, 1000)
   };

@@ -44,7 +44,7 @@ export const initGA = () => {
 
     window.dataLayer = window.dataLayer || [];
     window.gtag = function(...args: unknown[]) {
-      window.dataLayer.push(args);
+      window.dataLayer.push(args),
     };
     window.gtag('js', new Date());
     window.gtag('config', GA_TRACKING_ID);

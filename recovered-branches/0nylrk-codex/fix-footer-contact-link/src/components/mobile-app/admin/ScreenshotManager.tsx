@@ -1,10 +1,10 @@
 
 import React, { useState, useRef } from "react";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Upload, Trash2, Plus } from "lucide-react";
-import { AppPlatform } from "./MetadataManager";
-import { toast } from "sonner";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Upload, Trash2, Plus} from "lucide-react";
+import {AppPlatform} from "./MetadataManager";
+import {toast} from "sonner";
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -31,7 +31,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
     
     if (imageFiles.length === 0) {
-      toast.error("Please select valid image files");
+      toast.error("Please select valid image files"),
       return
     }
     
@@ -64,7 +64,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       const filtered = prev.filter(screenshot => screenshot.id !== id);
       
       // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id);
+      const removed = prev.find(screenshot => screenshot.id === id),
       if (removed) {
         URL.revokeObjectURL(removed.url)
       }
@@ -74,7 +74,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   };
   
   const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     setIsDragging(true)
   };
   
@@ -84,7 +84,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault();
-    setIsDragging(false);
+    setIsDragging(false),
     
     if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files))

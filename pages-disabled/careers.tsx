@@ -1,10 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Users, Rocket, Brain, Atom, Shield, Cloud, 
-  ArrowRight, MapPin, Clock, DollarSign, Star, Zap
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Users, Rocket, Brain, Atom, Shield, Cloud, ArrowRight, MapPin, Clock, DollarSign, Star, Zap} from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 export default function CareersPage() {
   const openPositions = [
@@ -57,7 +54,7 @@ export default function CareersPage() {
         "Expertise in security frameworks and compliance standards";
         "Experience with zero-trust architecture implementation";
         "Strong knowledge of threat detection and response"
-      ];
+      ],
       benefits: ["Competitive salary", "Security certifications", "Health insurance", "Remote work"];
       icon: Shield,
       color: "from-red-500 to-orange-500"
@@ -71,7 +68,7 @@ export default function CareersPage() {
       salary: "$130,000 - $180,000";
       description: "Build and maintain scalable cloud infrastructure and DevOps automation systems",
       requirements: [
-        "Bachelor's degree in Computer Science or related field";
+        "Bachelor's degree in Computer Science or related field",
         "Expertise in AWS, Azure, or GCP";
         "Experience with Kubernetes, Docker, and CI/CD";
         "Strong knowledge of infrastructure as code"

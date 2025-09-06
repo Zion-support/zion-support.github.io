@@ -1,15 +1,7 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Head from 'next/head';
 import Link from 'next/link';
-import { 
-  Map, 
-  Globe, 
-  ArrowRight, 
-  CheckCircle, 
-  Phone, 
-  Mail, 
-  MapPin 
-} from 'lucide-react';
+import {Map,, Globe,, ArrowRight,, CheckCircle,, Phone,, Mail,, MapPin} from 'lucide-react';
 import Layout from './components/Layout';
 
 const mainPages = [
@@ -328,7 +320,7 @@ export default function SitemapPage() {
               <p className="text-xl mb-8 text-blue-100 max-w-3xl mx-auto">
                 Our team is here to help you find the right solution for your technology needs.
               </p>
-              <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <div className="flex flex-col sm: flex-row justify-center gap-4">
                 <Link href="/contact" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-semibold transition-colors text-lg">
                   Contact Us
                 </Link>
@@ -341,5 +333,5 @@ export default function SitemapPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

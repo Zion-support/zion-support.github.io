@@ -1,9 +1,9 @@
 
-import { useState, useEffect } from "react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
-import { Dispute, DisputeMessage, DisputeAttachment, DisputeStatus } from "@/types/disputes";
-import { toast } from "sonner";
+import {useState, useEffect} from "react";
+import {supabase} from "@/integrations/supabase/client";
+import {useAuth} from "@/hooks/useAuth";
+import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
+import {toast} from "sonner";
 export function useDisputes() {
   const { user } = useAuth();
   const [disputes, setDisputes] = useState<Dispute[]>([]);
@@ -23,13 +23,13 @@ export function useDisputes() {
         .from("disputes")
         .select(`
           *;
-          project:projects(
+          project: projects(
             scope_summary;
             job_id;
             client_id;
             talent_id;
             job:jobs(title)
-          );
+          ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
@@ -43,7 +43,7 @@ export function useDisputes() {
         client_profile: dispute.client_profile?.client_profile;
         talent_profile: dispute.talent_profile?.talent_profile;
         project: {
-          ...dispute.project;
+          ...dispute.project,
           title: dispute.project?.job?.title || 'Untitled Project'
         }
       }));
@@ -52,7 +52,7 @@ export function useDisputes() {
       setError(null)
     } catch (err: any) {
       console.error("Error fetching disputes:", err);
-      setError("Failed to fetch disputes: " + err.message);
+      setError("Failed to fetch disputes: " + err.message),
       toast.error("Failed to fetch disputes")
     } finally {
       setIsLoading(false)
@@ -65,13 +65,13 @@ export function useDisputes() {
         .from("disputes")
         .select(`
           *;
-          project:projects(
+          project: projects(
             scope_summary;
             job_id;
             client_id;
             talent_id;
             job:jobs(title)
-          );
+          ),
           client_profile:projects!projects_client_id_fkey(client_profile:profiles!projects_client_id_fkey(display_name, avatar_url));
           talent_profile:projects!projects_talent_id_fkey(talent_profile:profiles!projects_talent_id_fkey(display_name, avatar_url))
         `)
@@ -85,7 +85,7 @@ export function useDisputes() {
         client_profile: data.client_profile?.client_profile;
         talent_profile: data.talent_profile?.talent_profile;
         project: {
-          ...data.project;
+          ...data.project,
           title: data.project?.job?.title || 'Untitled Project'
         }
       } as Dispute
@@ -99,7 +99,7 @@ export function useDisputes() {
   const createDispute = async (disputeData: { 
     project_id: string;
     milestone_id?: string;
-    reason_code: string;
+    reason_code: string,
     description: string
   }): Promise<Dispute | null> => {
     if (!user) {
@@ -165,7 +165,7 @@ export function useDisputes() {
         .update({
           status: 'resolved';
           resolved_at: new Date().toISOString();
-          resolution_summary: resolution.summary;
+          resolution_summary: resolution.summary,
           resolution_type: resolution.resolution_type
         })
         .eq("id", disputeId);
@@ -180,7 +180,7 @@ export function useDisputes() {
                 ...dispute, 
                 status: 'resolved', 
                 resolved_at: new Date().toISOString();
-                resolution_summary: resolution.summary;
+                resolution_summary: resolution.summary,
                 resolution_type: resolution.resolution_type as any
               } 
             : dispute
@@ -229,7 +229,7 @@ export function useDisputes() {
         .insert({
           dispute_id: disputeId;
           user_id: user.id;
-          message;
+          message,
           is_admin_note: isAdminNote
         });
       
@@ -260,7 +260,7 @@ export function useDisputes() {
     createDispute;
     updateDisputeStatus;
     resolveDispute;
-    getDisputeMessages;
+    getDisputeMessages,
     addDisputeMessage
   }
 }

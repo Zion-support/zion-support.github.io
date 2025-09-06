@@ -1,15 +1,5 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export function TrustBadge({
-  type,
-}: {
-  type: 'Verified' | 'Pro' | 'Top Rated';
-}) {
-=======
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
@@ -27,8 +17,6 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
       <figcaption className="mt-2 font-medium opacity-80">— {author}</figcaption>
     </figure>
   );
-<<<<<<< HEAD
-=======
 export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
   const colorMap = {
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
@@ -48,7 +36,4 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     </figure>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

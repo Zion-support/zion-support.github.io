@@ -1,15 +1,10 @@
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { 
-  getClientBudgetSuggestion;
-  PricingSuggestion;
-  ClientBudgetParams;
-  trackPricingSuggestion
-} from "@/services/pricingSuggestionService";
-import { PricingSuggestionBox } from "./PricingSuggestionBox";
-import { useAuth } from "@/hooks/useAuth";
-import { Sparkles } from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {getClientBudgetSuggestion, PricingSuggestion, ClientBudgetParams, trackPricingSuggestion} from "@/services/pricingSuggestionService";
+import {PricingSuggestionBox} from "./PricingSuggestionBox";
+import {useAuth} from "@/hooks/useAuth";
+import {Sparkles} from "lucide-react";
 interface ClientBudgetRecommenderProps {
   jobTitle: string,
   category: string,
@@ -24,7 +19,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   category;
   timeline;
   scope;
-  experienceLevel;
+  experienceLevel,
   onSuggestionApplied}) => {
   const [isLoading, setIsLoading] = useState(false);
   const [suggestion, setSuggestion] = useState<PricingSuggestion | null>(null);
@@ -38,7 +33,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     setIsLoading(true);
     try {
       const params: ClientBudgetParams = {
-        jobTitle;
+        jobTitle,
         category};
 
       if (timeline) params.timeline = timeline;

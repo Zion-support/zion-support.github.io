@@ -2,8 +2,6 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import Card from '../components/ui/Card';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function ITAssetDiscoveryAgentPage() {
   return (
@@ -27,7 +25,7 @@ export default function ITAssetDiscoveryAgentPage() {
           Agentless discovery across AWS, Azure, GCP, and on‑prem with CMDB
           export and drift alerts.
         </p>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-6'>
+        <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>
           <Card className='p-6 bg-black/40 border border-gray-800'>
             <h2 className='font-semibold mb-2'>Features</h2>
             <ul className='text-sm text-gray-300 space-y-2 list-disc list-inside'>
@@ -83,12 +81,10 @@ export default function ITAssetDiscoveryAgentPage() {
         </div>
       </div>
     </UltraFuturisticBackground>
-  );
-=======
+  ),
 export default function ITAssetDiscoveryAgentPage() {
-=======
 export default function ITAssetDiscoveryAgentPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<UltraFuturisticBackground variant="space" intensity="high">
 			<Head>
@@ -124,7 +120,4 @@ export default function ITAssetDiscoveryAgentPage() {
 	)
 }
 
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

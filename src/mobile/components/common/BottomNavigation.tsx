@@ -1,18 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { Home, ShoppingBag, Users, User } from 'lucide-react';
-import { cn } from '@/lib/utils';
-
-=======
 import React from "react";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import Link from "next/link";
-import { Home, ShoppingBag, Users, User } from 'lucide-react'
-import { cn } from "@/lib/utils";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Home, ShoppingBag, Users, User} from 'lucide-react'
+import {cn} from "@/lib/utils";
 export function BottomNavigation() {
   const router = useRouter();
   
@@ -45,13 +35,11 @@ export function BottomNavigation() {
       })}
     </div>
   );
-<<<<<<< HEAD
-=======
 import React from "react";
-import { useRouter } from "next/router";
+import {useRouter} from "next/router";
 import Link from "next/link";
-import { Home, ShoppingBag, Users, User } from 'lucide-react'
-import { cn } from "@/lib/utils";
+import {Home, ShoppingBag, Users, User} from 'lucide-react'
+import {cn} from "@/lib/utils";
 export function BottomNavigation() {
   const router = useRouter();
   
@@ -85,7 +73,4 @@ export function BottomNavigation() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

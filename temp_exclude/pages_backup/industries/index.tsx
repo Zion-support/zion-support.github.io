@@ -1,45 +1,15 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
-import { Heart, DollarSign, Settings, ShoppingCart, BookOpen, Building, ArrowRight, CheckCircle, Users, Shield, Cloud, Brain } from 'lucide-react';
+import {Heart,, DollarSign,, Settings,, ShoppingCart,, BookOpen,, Building,, ArrowRight,, CheckCircle,, Users,, Shield,, Cloud,, Brain} from 'lucide-react';
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Heart, 
-import React from 'react';
-import Link from 'next/link';';
-import { motion } from 'framer-motion';
-import { Heart, 
-  DollarSign, 
-  Settings, 
-  ShoppingCart, 
-  BookOpen, 
-  Building,
-=======
-=======
-import React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
-import { 
-  Heart,
-  DollarSign,
-  Settings,
-  ShoppingCart,
-  ArrowRight,
-  Building,
-  Users,
-  CheckCircle,
-  Globe,
-  Database,
-  Shield,
-  Cloud,
-<<<<<<< HEAD
-<<<<<<< HEAD
-  Brain
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Heart,, import, React, from, 'react',, import, Link, from, 'next/link',',, import, {, motion} from 'framer-motion';
+import {Heart,, DollarSign,, Settings,, ShoppingCart,, BookOpen,, Building,, =======, =======, import, React, from, 'react', import, Link, from, 'next/link', import, {, motion} from 'framer-motion'
+import {Heart,, DollarSign,, Settings,, ShoppingCart,, ArrowRight,, Building,, Users,, CheckCircle,, Globe,, Database,, Shield,, Cloud,, <<<<<<<, HEAD, <<<<<<<, HEAD, Brain} from 'lucide-react';
 import SimpleLayout from '../../components/SimpleLayout';
   Brain;
 } from 'lucide-react';
@@ -53,7 +23,7 @@ const industries = [
     features: ['AI Diagnostics', 'Telemedicine', 'Patient Management', 'HIPAA Compliance'],
     color: 'from-red-500 to-pink-500'
 =======
-  Brain;
+  Brain,
 } from 'lucide-react';
 =======
   Brain;
@@ -442,13 +412,13 @@ export default function Industries() {
                     </div>;
                     <Link
                       href={industry.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </motion.div>
-                );
+                ),
               })}
             </div>
           </div>
@@ -463,9 +433,9 @@ export default function Industries() {
                       href={industry.href}
 <<<<<<< HEAD
 =======
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
+                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors""
                     >;
-                      <span>Learn More</span>;
+                      <span>Learn More</span>,
                       <ArrowRight className="w-4 h-4 ml-1 group-hover: translate-x-1 transition-transform" />", </Link>,
                   </motion.div>;
                     <div className="space-y-2 mb-6">
@@ -478,13 +448,13 @@ export default function Industries() {
                     </div>
                     
                     <Link href={industry.href}>
-                      <a className="inline-flex items-center text-blue-400 hover:text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
+                      <a className="inline-flex items-center text-blue-400 hover: text-blue-300 font-semibold group-hover:text-blue-200 transition-colors">
                         Learn More
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                       </a>
                     </Link>
                   </motion.div>
-                );
+                ),
               })}
             </div>,
           </div>;
@@ -727,7 +697,7 @@ export default function Industries() {
 =======
 =======
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Don't See Your Industry?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -749,5 +719,5 @@ export default function Industries() {
 =======
 =======
     </Layout>
-  );
+  ),
 }

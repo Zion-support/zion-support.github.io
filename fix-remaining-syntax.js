@@ -8,7 +8,7 @@ console.log(`Fixed ${fixedCount} files`);
 #!/usr/bin/env node
 
 import fs from 'fs';
-import { glob } from 'glob';
+import {glob} from 'glob';
 
 // Function to fix remaining syntax errors
 function fixSyntaxErrors(content) {

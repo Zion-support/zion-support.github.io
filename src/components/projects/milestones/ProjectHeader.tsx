@@ -1,12 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 import React from 'react';
-import { useRouter } from 'next/router';
-import { Button } from '@/components/ui/button';
-import { ArrowLeft } from 'lucide-react'
+import {useRouter} from 'next/router';
+import {Button} from '@/components/ui/button';
+import {ArrowLeft} from 'lucide-react'
 
 interface ProjectHeaderProps {
   title: string
@@ -31,13 +27,11 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
 import React from 'react',
-import { useRouter } from 'next/router',
-import { Button } from '@/components/ui/button',
-import { ArrowLeft } from 'lucide-react'
+import {useRouter} from 'next/router',
+import {Button} from '@/components/ui/button',
+import {ArrowLeft} from 'lucide-react'
 
 interface ProjectHeaderProps {
   title: string
@@ -63,7 +57,4 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
     </div>
   ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

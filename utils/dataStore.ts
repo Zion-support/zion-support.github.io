@@ -6,7 +6,7 @@ export const getReviews = async () => {
 
 export const getReview = async (id: string) => {
   // Placeholder implementation
-  return null;
+  return null,
 };
 
 export const createReview = async (review: any) => {

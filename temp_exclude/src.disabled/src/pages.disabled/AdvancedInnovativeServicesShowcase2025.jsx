@@ -1,4 +1,4 @@
-import _React,{ useState } from 'react';'''; import { Link } from 'react-router-dom'; const AdvancedInnovativeServicesShowcase2025 = () => {}}; const [selectedCategory,setSelectedCategory] = useState('all'); const [searchTerm,setSearchTerm] = useState(''); const [sortBy,setSortBy] = useState('name'); const categories = [
+import _React,{ useState } from 'react';'''; import {Link} from 'react-router-dom'; const AdvancedInnovativeServicesShowcase2025 = () => {}}; const [selectedCategory,setSelectedCategory] = useState('all'); const [searchTerm,setSearchTerm] = useState(''); const [sortBy,setSortBy] = useState('name'); const categories = [
     ; 'all',; 'Legal Tech & Compliance',; 'Quantum Computing & Security',; 'Healthcare & Biotech',; 'Energy & Sustainability',; 'Cybersecurity',; 'Fintech & Trading',; 'Quantum Computing & AI',; 'Supply Chain & Logistics',; 'Edge Computing & IoT',; 'Marketing & Automation',; 'Quantum Technology',; 'AI & Machine Learning',; 'AI & Analytics',,
     'AI & Customer Experience'
   ]; const allServices = [

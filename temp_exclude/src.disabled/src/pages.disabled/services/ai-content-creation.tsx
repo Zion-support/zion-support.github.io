@@ -1,88 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import { 
-  PenTool, 
-  Type, 
-  Image, 
-  Video, 
-  Music, 
-  FileText, 
-  Globe, 
-  Zap, 
-  Users, 
-  TrendingUp, 
-  CheckCircle, 
-  ArrowRight,
-  Brain,
-  Palette,
-  Camera,
-  Mic,
-  Play,
-  Edit3,
-  Layers,
-  Sparkles,
-  Target,
-  BarChart3,
-  Clock,
-  Star,
-  Award,
-  Rocket,
-  Cpu,
-  Database,
-  Network,
-  Smartphone,
-  Monitor,
-  Server,
-  Cloud,
-  Eye,
-  MessageSquare,
-  Calendar,
-  Tag,
-  Hash,
-  AtSign,
-  Link as LinkIcon,
-  Share2,
-  Download,
-  Upload,
-  RefreshCw,
-  Settings,
-  Lock,
-  Shield,
-  Globe2,
-  Smartphone2,
-  Tablet,
-  Laptop,
-  Watch,
-  Headphones,
-  Speaker,
-  Printer,
-  Scanner,
-  Mail,
-  Phone,
-  MapPin,
-  Clock2,
-  Calendar2,
-  User,
-  Users2,
-  UserCheck,
-  UserX,
-  UserPlus,
-  UserMinus,
-  UserCog,
-  UserEdit,
-  UserSearch,
-  UserVoice,
-  UserCheck2,
-  UserX2,
-  UserPlus2,
-  UserMinus2,
-  UserCog2,
-  UserEdit2,
-  UserSearch2,
-  UserVoice2,
-  ShoppingCart
-} from 'lucide-react';
+import {Link} from 'react-router-dom';
+import {motion} from 'framer-motion';
+import {PenTool,, Type,, Image,, Video,, Music,, FileText,, Globe,, Zap,, Users,, TrendingUp,, CheckCircle,, ArrowRight,, Brain,, Palette,, Camera,, Mic,, Play,, Edit3,, Layers,, Sparkles,, Target,, BarChart3,, Clock,, Star,, Award,, Rocket,, Cpu,, Database,, Network,, Smartphone,, Monitor,, Server,, Cloud,, Eye,, MessageSquare,, Calendar,, Tag,, Hash,, AtSign,, Link, as, LinkIcon,, Share2,, Download,, Upload,, RefreshCw,, Settings,, Lock,, Shield,, Globe2,, Smartphone2,, Tablet,, Laptop,, Watch,, Headphones,, Speaker,, Printer,, Scanner,, Mail,, Phone,, MapPin,, Clock2,, Calendar2,, User,, Users2,, UserCheck,, UserX,, UserPlus,, UserMinus,, UserCog,, UserEdit,, UserSearch,, UserVoice,, UserCheck2,, UserX2,, UserPlus2,, UserMinus2,, UserCog2,, UserEdit2,, UserSearch2,, UserVoice2,, ShoppingCart} from 'lucide-react';
 
 export default function AIContentCreation() {
   const features = [
@@ -407,7 +326,7 @@ export default function AIContentCreation() {
               to produce engaging, high-quality content at scale.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
               <Link
                 to="/request-quote"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-purple-500/25"
@@ -427,5 +346,5 @@ export default function AIContentCreation() {
         </div>
       </section>
     </div>
-  );
+  ),
 }

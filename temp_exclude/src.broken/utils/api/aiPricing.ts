@@ -2,7 +2,7 @@
   switch (level) {
   case 'junior': return 0.8;
 case 'mid': return 1.0;
-case 'senior': return 1.3;
+case 'senior': return 1.3,
 default: modelUsed: 'heuristic-v1',
 source: 'heuristic' 
 }

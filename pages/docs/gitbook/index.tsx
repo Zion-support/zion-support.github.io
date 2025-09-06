@@ -1,23 +1,18 @@
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(dir),
   return items.map((name) => {
     const full = path.join(dir, name);
     const rel = path.relative(baseDir, full);
     const stat = fs.statSync(full);
-<<<<<<< HEAD
     return { name, rel, isDir: stat.isDirectory() };
   });
-=======
 function list(dir: string, baseDir: string) {
-  const items = fs.readdirSync(dir);
+  const items = fs.readdirSync(dir),
   return items.map((name) => {
     const full = path.join(dir, name);
     const rel = path.relative(baseDir, full);
@@ -25,22 +20,17 @@ function list(dir: string, baseDir: string) {
     return { name, rel, isDir: stat.isDirectory() }
   })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return { name, rel, isDir: stat.isDirectory() }
   })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook');
   const sections = fs.existsSync(base)
-<<<<<<< HEAD
-<<<<<<< HEAD
     ? list(base, base).map(entry => ({
-=======
     ? list(base, base).map((entry) => ({
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         title: entry.name,
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
     : [];
@@ -59,14 +49,12 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
             <ul className="list-disc pl-5 space-y-1">
               {s.items.map((it) => (
                 <li key={it.rel}>
-<<<<<<< HEAD
                   <a
                     className='underline'
                     href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`}
                     target='_blank'
                     rel='noreferrer'
                   >
-=======
     ? list(base, base).map((entry) => ({
         title: entry.name,
         items: entry.isDir ? list(path.join(base, entry.name), base) : []}))
@@ -87,10 +75,8 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
               {s.items.map((it) => (
                 <li key={it.rel}>
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <a className="underline" href={`https://github.com/Zion-Holdings/zion.app/blob/main/docs/gitbook/${it.rel}`} target="_blank" rel="noreferrer">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     {it.rel}
                   </a>
                 </li>
@@ -100,14 +86,9 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
         ))}
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

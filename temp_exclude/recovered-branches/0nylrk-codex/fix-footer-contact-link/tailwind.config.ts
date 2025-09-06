@@ -1,5 +1,5 @@
-import { Config } from "tailwindcss";
-import { fontFamily } from "tailwindcss/defaultTheme";
+import {Config} from "tailwindcss";
+import {fontFamily} from "tailwindcss/defaultTheme";
 import plugin from "tailwindcss/plugin";
 import animatePlugin from "tailwindcss-animate";
 const config: Config = {
@@ -79,10 +79,10 @@ const config: Config = {
     },
     to: { height: "0" }}};
       animation: {
-        "accordion-down": "accordion-down 0.2s ease-out";
+        "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out"}}};
   plugins: [
-    animatePlugin;
+    animatePlugin,
     plugin(function({ addUtilities }) {
       const newUtilities = {
         '.rtl': {

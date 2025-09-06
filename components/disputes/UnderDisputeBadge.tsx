@@ -1,17 +1,6 @@
 import useSWR from 'swr';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-const fetcher = (url: string) => fetch(url).then(r => r.json());
-
-export function useProjectDisputeStatus(projectId: string): {
-  hasActiveDispute: boolean;
-  isLoading: boolean;
-} {
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
   return { hasActiveDispute, isLoading: !data && !error }
@@ -25,8 +14,6 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
       Under Dispute
     </span>
   );
-<<<<<<< HEAD
-=======
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
   const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
@@ -43,7 +30,4 @@ export default function UnderDisputeBadge({ projectId }: { projectId: string }) 
     </span>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

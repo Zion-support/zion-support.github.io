@@ -1,26 +1,17 @@
-import { useCallback, useMemo, useState } from 'react';
+import {useCallback, useMemo, useState} from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import type {
   MediaBundle,
   MediaAsset,
   PressReleaseType,;
 } from '../../utils/mediaKit';
-import {
-  getDefaultAssets,
-  buildPressRelease,
-  buildTimeline,;
-} from '../../utils/mediaKit';
-=======
+import {getDefaultAssets, buildPressRelease, buildTimeline,} from '../../utils/mediaKit';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+import {getDefaultAssets, buildPressRelease, buildTimeline} from '../../utils/mediaKit';
 import type { MediaBundle, MediaAsset, PressReleaseType } from '../../utils/mediaKit';
-import { getDefaultAssets, buildPressRelease, buildTimeline } from '../../utils/mediaKit';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {getDefaultAssets, buildPressRelease, buildTimeline} from '../../utils/mediaKit';
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const KitPage = () => {
   const [bundle, setBundle] = useState<MediaBundle>('general');
@@ -28,31 +19,24 @@ const KitPage = () => {
   const [companyName, setCompanyName] = useState('Zion');
   const [raiseAmount, setRaiseAmount] = useState('$5M');
   const [tokenName, setTokenName] = useState('ZION');
-<<<<<<< HEAD
-<<<<<<< HEAD
-  const [timeline, setTimeline] = useState<{ label: string; date: string }[]>(
+  const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []
   );
-=======
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]);
 
   const onGenerateTimeline = useCallback(() => {
-<<<<<<< HEAD
     setTimeline(buildTimeline(startDate));
-=======
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>([]),
 
   const assets: MediaAsset[] = useMemo(() => getDefaultAssets(bundle), [bundle]);
 
   const onGenerateTimeline = useCallback(() => {
     setTimeline(buildTimeline(startDate))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     setTimeline(buildTimeline(startDate))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [startDate]);
 
   const onDownloadZip = useCallback(async () => {
@@ -60,13 +44,10 @@ const KitPage = () => {
     const zip = new JSZip();
 
     // Add static/dynamic assets
-<<<<<<< HEAD
-<<<<<<< HEAD
      else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
         zip.file(asset.filename, blob);
-=======
     for (const asset of assets) {
       if (asset.type === 'text' && asset.content != null) {
         zip.file(asset.filename, asset.content)
@@ -74,8 +55,6 @@ const KitPage = () => {
         const res = await fetch(asset.path);
         const blob = await res.blob();
         zip.file(asset.filename, blob)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     for (const asset of assets) {
       if (asset.type === 'text' && asset.content != null) {
         zip.file(asset.filename, asset.content)
@@ -83,14 +62,12 @@ const KitPage = () => {
         const res = await fetch(asset.path);
         const blob = await res.blob();
         zip.file(asset.filename, blob)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
     }
 
     // Add press releases
     const nowStr = new Date().toISOString().substring(0, 10);
-<<<<<<< HEAD
-<<<<<<< HEAD
     const prSeed = buildPressRelease('seed-round', {
       companyName,
       date: nowStr,
@@ -102,16 +79,13 @@ const KitPage = () => {
       date: nowStr,
       tokenName,
     });
-=======
     const prSeed = buildPressRelease('seed-round', { companyName, date: nowStr, raiseAmount });
     const prLaunch = buildPressRelease('launch', { companyName, date: nowStr }),
     const prToken = buildPressRelease('token-sale', { companyName, date: nowStr, tokenName });
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     const prSeed = buildPressRelease('seed-round', { companyName, date: nowStr, raiseAmount });
     const prLaunch = buildPressRelease('launch', { companyName, date: nowStr }),
     const prToken = buildPressRelease('token-sale', { companyName, date: nowStr, tokenName });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     zip.file('press-releases/seed-round.md', prSeed);
     zip.file('press-releases/launch.md', prLaunch);
     if (bundle === 'web3') zip.file('press-releases/token-sale.md', prToken);
@@ -119,29 +93,22 @@ const KitPage = () => {
     // Add timeline if generated
     if (timeline.length > 0) {
       const tl = timeline.map(t => `${t.label}: ${t.date}`).join('\n');
-<<<<<<< HEAD
-<<<<<<< HEAD
       zip.file('rollout-timeline.txt', tl);
-=======
       zip.file('rollout-timeline.txt', tl)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     const blob = await zip.generateAsync({ type: 'blob' }),
     const { saveAs } = await import('file-saver');
-<<<<<<< HEAD
     saveAs(blob, `zion-media-kit-${bundle}.zip`);
-=======
       zip.file('rollout-timeline.txt', tl)
     }
 
     const blob = await zip.generateAsync({ type: 'blob' }),
     const { saveAs } = await import('file-saver');
     saveAs(blob, `zion-media-kit-${bundle}.zip`)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     saveAs(blob, `zion-media-kit-${bundle}.zip`)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, [assets, bundle, companyName, raiseAmount, timeline, tokenName]);
 
   const onGeneratePdf = useCallback(async () => {
@@ -151,12 +118,9 @@ const KitPage = () => {
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
 
     const drawText = (text: string, x: number, y: number, size = 12) => {
-<<<<<<< HEAD
-<<<<<<< HEAD
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) });
-=======
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     };
 
     let y = 760;
@@ -190,9 +154,7 @@ const KitPage = () => {
         </div>
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
-<<<<<<< HEAD
     );
-=======
       page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })
     };
 
@@ -228,25 +190,20 @@ const KitPage = () => {
         <pre className="whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto">{text}</pre>
       </div>
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <div>
       <Head>
         <title>Media Kit - Zion</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Zion media kit: brand, assets, legal, and rollout playbooks.'
         />
-=======
         <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <div className="space-y-8">
@@ -282,7 +239,6 @@ const KitPage = () => {
               <DatePicker selected={startDate} onChange={(d)=>d && setStartDate(d)} className="w-full border rounded px-2 py-1" />
               <button onClick={onGenerateTimeline} className="px-3 py-1 rounded bg-green-600 text-white hover:bg-green-700">Generate</button>
             </div>
-<<<<<<< HEAD
             {timeline.length > 0 && (
               <ul className='mt-3 text-sm list-disc list-inside space-y-1'>
                 {timeline.map(t => (
@@ -290,7 +246,6 @@ const KitPage = () => {
                     <span className='font-medium'>{t.label}:</span> {t.date}
                   </li>
                 ))}
-=======
         <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." />
       </Head>
 
@@ -330,19 +285,15 @@ const KitPage = () => {
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             {timeline.length>0 && (
               <ul className="mt-3 text-sm list-disc list-inside space-y-1">
                 {timeline.map((t)=> (<li key={t.label}><span className="font-medium">{t.label}:</span> {t.date}</li>))}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </ul>
             )}
           </div>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg'>
           <h3 className='font-semibold mb-3'>Assets Included</h3>
           <ul className='grid md:grid-cols-2 gap-3'>
@@ -359,7 +310,6 @@ const KitPage = () => {
                 ) : (
                   <span className='text-gray-400 text-xs'>generated</span>
                 )}
-=======
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
@@ -367,8 +317,6 @@ const KitPage = () => {
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="p-4 border rounded-lg">
           <h3 className="font-semibold mb-3">Assets Included</h3>
           <ul className="grid md:grid-cols-2 gap-3">
@@ -376,14 +324,12 @@ const KitPage = () => {
               <li key={a.filename} className="flex items-center justify-between border rounded p-2">
                 <span className="text-sm">{a.filename}</span>
                 {a.path ? <a href={a.path} download className="text-blue-600 text-sm">Download</a> : <span className="text-gray-400 text-xs">generated</span>}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </li>
             ))}
           </ul>
         </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='p-4 border rounded-lg space-y-4'>
           <h3 className='font-semibold'>Prewritten Press Releases</h3>
           <div className='grid md:grid-cols-3 gap-4'>
@@ -392,38 +338,28 @@ const KitPage = () => {
             {bundle === 'web3' && (
               <PressReleaseCard type='token-sale' title='Token sale' />
             )}
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <section className="p-4 border rounded-lg space-y-4">
           <h3 className="font-semibold">Prewritten Press Releases</h3>
           <div className="grid md:grid-cols-3 gap-4">
             <PressReleaseCard type="seed-round" title="Seed round" />
             <PressReleaseCard type="launch" title="Launch" />
             {bundle === 'web3' && <PressReleaseCard type="token-sale" title="Token sale" />}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </section>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
 };
 
 export default KitPage;
-=======
   )
 };
 
 export default KitPage;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default KitPage;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

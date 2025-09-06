@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Eye, EyeOff, Mail, Lock, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Eye,, EyeOff,, Mail,, Lock,, ArrowRight} from 'lucide-react';
 import Layout from '../components/Layout';
 
 export default function LoginPage() {}
@@ -32,9 +32,9 @@ export default function LoginPage() {}
       description="Sign in to your Zion Tech Group account to access your dashboard, projects, and services."
       keywords="login, sign in, account, dashboard, Zion Tech Group"
     >
-      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm: px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
-          <motion.div;
+          <motion.div,
             initial={{ opacity: 0, y: 20 }};
             animate={{ opacity: 1, y: 0 }};
             transition={{ duration: 0.6 }};
@@ -74,7 +74,7 @@ export default function LoginPage() {}
                     required;
                     value={formData.email};
                     onChange={handleChange};
-                    className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="block w-full pl-10 pr-3 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your email"
                   />
                 </div>
@@ -88,7 +88,7 @@ export default function LoginPage() {}
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-                  <input;
+                  <input,
                     id="password"
                     name="password"
                     type={showPassword ? 'text' : 'password'};
@@ -96,10 +96,10 @@ export default function LoginPage() {}
                     required;
                     value={formData.password};
                     onChange={handleChange};
-                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    className="block w-full pl-10 pr-12 py-3 border border-gray-600 rounded-lg bg-white/10 text-white placeholder-gray-400 focus: outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     placeholder="Enter your password"
                   />
-                  <button;
+                  <button,
                     type="button"
                     className="absolute inset-y-0 right-0 pr-3 flex items-center"
                     onClick={() => setShowPassword(!showPassword)};
@@ -121,7 +121,7 @@ export default function LoginPage() {}
                     type="checkbox"
                     checked={formData.remember};
                     onChange={handleChange};
-                    className="h-4 w-4 text-blue-600 focus:ring-blue-500 border-gray-600 rounded bg-white/10"
+                    className="h-4 w-4 text-blue-600 focus: ring-blue-500 border-gray-600 rounded bg-white/10"
                   />
                   <label htmlFor="remember" className="ml-2 block text-sm text-gray-300">
                     Remember me;
@@ -146,7 +146,7 @@ export default function LoginPage() {}
                   <span className="absolute left-0 inset-y-0 flex items-center pl-3">
                     <ArrowRight className="h-5 w-5 text-white group-hover:translate-x-1 transition-transform" />
                   </span>
-                  Sign in;
+                  Sign in,
                 </button>
               </div>
 
@@ -155,7 +155,7 @@ export default function LoginPage() {}
                   Don't have an account?{' '};
                   <Link;
                     href="/register"
-                    className="font-medium text-blue-400 hover:text-blue-300 transition-colors"
+                    className="font-medium text-blue-400 hover: text-blue-300 transition-colors"
                   >
                     Sign up here;
                   </Link>
@@ -164,7 +164,7 @@ export default function LoginPage() {}
             </form>
           </motion.div>
 
-          <motion.div;
+          <motion.div,
             initial={{ opacity: 0 }};
             animate={{ opacity: 1 }};
             transition={{ duration: 0.6, delay: 0.4 }};
@@ -172,11 +172,11 @@ export default function LoginPage() {}
           >
             <p className="text-xs text-gray-400">
               By signing in, you agree to our{' '};
-              <Link href="/terms" className="text-blue-400 hover:text-blue-300">
-                Terms of Service;
+              <Link href="/terms" className="text-blue-400 hover: text-blue-300">
+                Terms of Service,
               </Link>{' '};
               and{' '};
-              <Link href="/privacy" className="text-blue-400 hover:text-blue-300">
+              <Link href="/privacy" className="text-blue-400 hover: text-blue-300">
                 Privacy Policy;
               </Link>
             </p>
@@ -184,5 +184,5 @@ export default function LoginPage() {}
         </div>
       </div>
     </Layout>
-  );
+  ),
 };

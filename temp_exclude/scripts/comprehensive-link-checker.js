@@ -12,7 +12,7 @@ const path = // // require(;,"});,"})
 class ComprehensiveLinkChecker {;,"});,"})
   constructor() {;,"});,"})
     this.baseUrl =;,"});,"})
-  'https: //ziontechgroup.com;,"});,"})
+  'https: //ziontechgroup.com,,"});,"})
     this.visitedUrls = new Set();,"});,"})
     this.brokenLinks = [];,"});,"})
     this.missingPages = [];,"});,"})
@@ -150,7 +150,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
   generateReport() {;,"});,"})
     const report = {;,"});,"})
       timestamp: new Date().toISOString(),;,"});,"})
-      summary: {;,"});,"})
+      summary: {,,"});,"})
         totalUrls: this.visitedUrls.size,;,"});,"})
         workingLinks: this.workingLinks.length,;,"});,"})
         brokenLinks: this.brokenLinks.length,;,"});,"})
@@ -173,7 +173,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     const summaryReport = {;,"});,"})
       timestamp: report.timestamp,;,"});,"})
       summary: report.summary,;,"});,"})
-      brokenLinks: this.brokenLinks.map(link => ({;,"});,"})
+      brokenLinks: this.brokenLinks.map(link => ({,,"});,"})
         url: link.url,;,"});,"})
         status: link.status,;,"});,"})
         error: link.error,;,"});,"})
@@ -217,11 +217,11 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
     if (missingImportant.length > 0) {;,"});,"})
       recommendations.push({;,"});,"})
         priority: 'HIGH,;,"});,"})
-        category: ;,"});,"})
+        category:  ,,"});,"})
   Missing Pages',;,"});,"})
         description: `Missing critical pages: ${missingImportant.join(, ,;,"});,"})
   )}`,;,"});,"})
-        actions: [;,"});,"})
+        actions: [,,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
     }"});,"})
@@ -239,7 +239,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
         category:;,"});,"})
   'Navigation Structure',;,"});,"})
         description: `Found ${orphanedPages.length} pages that may be difficult to discover`,;,"});,"})
-        actions: [;,"});,"})
+        actions: [,,"});,"})
 ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
       });,"});,"})
     }"});,"})
@@ -267,7 +267,7 @@ ursor/automate-test-fix-improve-and-merge-code-99d1;,"});,"})
 ;,"});,"})
       if (report.recommendations.length > 0) {;,"});,"})
         console.log(;,"});,"})
-  '\n🔧 Recommendations:');,"});,"})
+  '\n🔧 Recommendations: '),,"});,"})
         report.recommendations.forEach((rec, index) => {;,"});,"})
           console.log(;,"});,"})
             `${index + 1}. [${rec.priority}] ${rec.category}: ${rec.description}`;,"});,"})
@@ -857,7 +857,7 @@ class ComprehensiveLinkChecker {;
     if (this.brokenLinks.length > 0) {
       recommendations.push({'
         priority: 'HIGH
-        category: ';Broken Links',
+        category: ',Broken Links',
         description: `Found ${this.brokenLinks.length} broken links that need immediate attention`
         actions: [
           'Fix all broken links identified in the report',
@@ -919,7 +919,7 @@ class ComprehensiveLinkChecker {;
   '🚀 Starting Comprehensive Link Check for Zion Tech Group')';;
     console.log(`Base: URL: ${this.baseUr,l}`);
     try: {
-      await this.loadSitemap();
+      await this.loadSitemap(),
       await: this.checkSitemapUrls(), await: this.checkNavigationLinks(),
       await: this.checkServicePages(), const report = this.generateReport(),
       console.log(

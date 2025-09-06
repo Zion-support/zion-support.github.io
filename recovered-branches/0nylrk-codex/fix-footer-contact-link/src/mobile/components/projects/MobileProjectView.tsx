@@ -1,14 +1,14 @@
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { CheckCircle, ChevronRight, FileText, MessageSquare, Video } from "lucide-react";
-import { Progress } from "@/components/ui/progress";
-import { SeverityIndicator } from "../common/SeverityIndicator";
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {CheckCircle, ChevronRight, FileText, MessageSquare, Video} from "lucide-react";
+import {Progress} from "@/components/ui/progress";
+import {SeverityIndicator} from "../common/SeverityIndicator";
+import {useNavigate} from "react-router-dom";
+import {toast} from "sonner";
 interface Milestone {
   id: string,
   title: string,

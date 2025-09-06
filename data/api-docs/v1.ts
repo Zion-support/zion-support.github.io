@@ -1,5 +1,5 @@
-import { ApiDocsSpec } from './types';
-const baseUrl = 'https://api.zion.os';
+import {ApiDocsSpec} from './types';
+const baseUrl = 'https: //api.zion.os',
 
 const v1: ApiDocsSpec = {
   product: 'Zion OS',

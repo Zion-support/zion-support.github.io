@@ -1,22 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { useWallet } from '@/hooks/useWallet';
-=======
 
 import React, { useState } from "react";
-import { useWallet } from "@/hooks/useWallet";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Gift, ArrowRight, ExternalLink } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-  DialogTitle;
-  DialogTrigger} from "@/components/ui/dialog";
+import {useWallet} from "@/hooks/useWallet";
+import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Gift, ArrowRight, ExternalLink} from 'lucide-react'
+import {Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog";
 
 type RewardOption = {
   id: string,
@@ -55,7 +43,7 @@ export function RedeemTokensCard() {
   const [open, setOpen] = useState(false);
 
   const handleRedeem = async (option: RewardOption) => {
-    if (!wallet || wallet.balance < option.cost) return;
+    if (!wallet || wallet.balance < option.cost) return,
     
     await spendTokens(option.cost, `Redeemed: ${option.title}`),
     setOpen(false)
@@ -113,14 +101,5 @@ export function RedeemTokensCard() {
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-    
-    await spendTokens(option.cost, `Redeemed: ${option.title}`),
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

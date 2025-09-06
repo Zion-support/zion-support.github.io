@@ -1,15 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- const [isSubmitting, setIsSubmitting] = useState (false);
-const [submitSuccess, setSubmitSuccess] = useState (false);
-//Get popular services for showcase const popularServices = [ ...innovativeAIServices2029.filter (s => s.popular);
-...quantumSpaceInnovations2029.filter (s => s.popular);
-...enterpriseITInnovations2029.filter (s => s.popular);
-...innovativeMicroSaas2029.filter (s => s.popular) ].slice (0, 6);
-setIsSubmitting (false);
-setSubmitSuccess (true);
-//Reset form after 3 seconds ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 > <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6" > Let's Transform Your Business </h1> Contact us today for a free consultation and discover how our revolutionary micro SaaS services can accelerate your growth. </p> </motion.div> {
   /* Stats Grid */ 
 }<motion.div > {
   stats.map ( (stat, index) => (<motion.div key= {
@@ -24,25 +12,20 @@ setSubmitSuccess (true);
 }</motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, x: -30 
-=======
 export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, Clock, Users, 
-  MessageSquare, Send, CheckCircle, Star, 
-  Rocket, Brain, Atom, Shield, Zap
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Phone, Mail, MapPin, Globe, Clock, Users, MessageSquare, Send, CheckCircle, Star, Rocket, Brain, Atom, Shield, Zap} from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 // Import service data for showcase
-import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
-import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
-import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
-import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+import {innovativeAIServices2029} from '../data/2029-innovative-ai-services';
+import {quantumSpaceInnovations2029} from '../data/2029-quantum-space-innovations';
+import {enterpriseITInnovations2029} from '../data/2029-enterprise-it-innovations';
+import {innovativeMicroSaas2029} from '../data/2029-innovative-micro-saas';
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -52,7 +35,6 @@ export default function ContactPage() {
     service: '',
     message: ''
   });
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
@@ -76,14 +58,14 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData;
+      ...formData,
       [e.target.name]: e.target.value
     })
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -309,27 +291,20 @@ export default function ContactPage() {
               </motion.div>
             </div>
 
-<<<<<<< HEAD
-}> <h2 className="text-3xl sm: text-4xl lg:text-5xl font-bold text-white mb-6"> Why Choose <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span> </h2> <p className="text-xl text-gray-300 mb-12"> We're not just another technology company - we're your partners in building the future </p> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Rocket className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Revolutionary Technology</h3> <p className="text-gray-300">Access to cutting-edge 2029 technology that's already operational and delivering results</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Brain className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Expert Team</h3> <p className="text-gray-300">World-class engineers and technology experts with decades of combined experience</p> </div> <div className="text-center"> <div className="w-16 h-16 bg-gradient-to-r from-pink-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4"> <Shield className="w-8 h-8 text-white"/> </div> <h3 className="text-xl font-semibold text-white mb-2">Proven Results</h3> <p className="text-gray-300">Track record of successful implementations with measurable ROI and business impact</p> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>) 
-=======
 export default function Page(){return null}
 import React from 'react';
 import React, { useState } from 'react';
 import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { 
-  Phone, Mail, MapPin, Globe, Clock, Users, 
-  MessageSquare, Send, CheckCircle, Star, 
-  Rocket, Brain, Atom, Shield, Zap
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Phone, Mail, MapPin, Globe, Clock, Users, MessageSquare, Send, CheckCircle, Star, Rocket, Brain, Atom, Shield, Zap} from 'lucide-react';
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 // Import service data for showcase
-import { innovativeAIServices2029 } from '../data/2029-innovative-ai-services';
-import { quantumSpaceInnovations2029 } from '../data/2029-quantum-space-innovations';
-import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovations';
-import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas';
+import {innovativeAIServices2029} from '../data/2029-innovative-ai-services';
+import {quantumSpaceInnovations2029} from '../data/2029-quantum-space-innovations';
+import {enterpriseITInnovations2029} from '../data/2029-enterprise-it-innovations';
+import {innovativeMicroSaas2029} from '../data/2029-innovative-micro-saas';
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     name: '',
@@ -362,14 +337,14 @@ export default function ContactPage() {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData;
+      ...formData,
       [e.target.name]: e.target.value
     })
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 2000));
@@ -595,8 +570,6 @@ export default function ContactPage() {
               </motion.div>
             </div>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -890,9 +863,5 @@ export default function ContactPage() {
 
       <UltraFuturisticFooter2029 />
     </UltraFuturisticBackground2029>
-  );
+  ),
 }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

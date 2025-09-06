@@ -2,22 +2,19 @@ import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 type TalentItem = {
   talentSlug: string;
   talentName: string;
   averageRating: number;
-  totalReviews: number;
+  totalReviews: number,
 };
 
 type Props = { items: TalentItem[] };
 
-=======
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
   return (
     <main className="space-y-6">
@@ -41,14 +38,12 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
 };
 
 export const getServerSideProps: GetServerSideProps = async () => {
-<<<<<<< HEAD
   const p = path.join(
     process.cwd(),
     'public',
     'automations',
     'top-talents.json'
   );
-=======
 type TalentItem = { talentSlug: string, talentName: string, averageRating: number, totalReviews: number },
 type Props = { items: TalentItem[] },
 const TopTalentsPage: NextPage<Props> = ({ items }) => {
@@ -75,35 +70,28 @@ const TopTalentsPage: NextPage<Props> = ({ items }) => {
 
 export const getServerSideProps: GetServerSideProps = async () => {
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json');
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-  let items: TalentItem[] = [];
+  let items: TalentItem[] = [],
   try {
     const raw = fs.readFileSync(p, 'utf8');
     const data = JSON.parse(raw);
-<<<<<<< HEAD
     items = data.items || [];
-=======
   const p = path.join(process.cwd(), 'publicautomationstop-talents.json');
   let items: TalentItem[] = [],
   try {
     const raw = fs.readFileSync(p, 'utf8');
     const data = JSON.parse(raw);
     items = data.items || []
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   } catch {}
   return { props: { items } }
 };
 
-<<<<<<< HEAD
 export default TopTalentsPage;
-=======
     items = data.items || []
   } catch {}
   return { props: { items } }
 };
 
 export default TopTalentsPage;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default TopTalentsPage;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

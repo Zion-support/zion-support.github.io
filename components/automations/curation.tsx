@@ -1,14 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import fs from 'fs';
-import path from 'path';
-
-=======
 import React from "react";
 import fs from "fs";
 import path from "path";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 type Experiment = {
   title: string,
   hypothesis?: string;
@@ -18,10 +10,6 @@ type Experiment = {
 };
 
 type Props = {
-<<<<<<< HEAD
-  updatedAt: string | null;
-items: Experiment[] 
-=======
 import React from "react";
 import fs from "fs";
 import path from "path";
@@ -36,25 +24,14 @@ type Experiment = {
 type Props = {
   updatedAt: string | null,
   items: Experiment[]
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   updatedAt: string | null,
   items: Experiment[]
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <main className='mx-auto max-w-4xl px-4 py-12'>
-      <h1 className='text-2xl font-bold text-gray-900'>
-        AI Curated Growth Experiments
-      </h1>
-=======
     <main className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       {updatedAt ? (
         <p className="mt-2 text-sm text-gray-600">Last updated: {updatedAt}</p>
       ) : (
@@ -74,9 +51,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
             {(exp.effort || exp.impact) && (
               <div className="mt-2 text-xs text-gray-500">
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
-<<<<<<< HEAD
-                {exp.effort && exp.impact ? ' · ' : null}
-=======
     <main className="mx-auto max-w-4xl px-4 py-12">
       <h1 className="text-2xl font-bold text-gray-900">AI Curated Growth Experiments</h1>
       {updatedAt ? (
@@ -99,97 +73,50 @@ export default function CurationPage({ updatedAt, items }: Props) {
               <div className="mt-2 text-xs text-gray-500">
                 {exp.effort ? `Effort: ${exp.effort}/5` : null}
                 {exp.effort && exp.impact ? " · " : null}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 {exp.effort && exp.impact ? " · " : null}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {exp.impact ? `Impact: ${exp.impact}/5` : null}
               </div>
             )}
           </div>
         ))}
         {!items.length && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <div className='rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600'>
-=======
           <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="rounded-xl border border-gray-200 bg-white p-6 text-center text-gray-600">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             Nothing to show yet.
           </div>
         )}
       </div>
     </main>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export async function getStaticProps() {
-  try {
-    const filePath = path.join(
-      process.cwd(),
-      'data',
-      'ai-curation',
-      'growth-experiments.json'
-    );
-    const raw = fs.readFileSync(filePath, 'utf8');
-=======
 }
 
 export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
 
 export async function getStaticProps() {
   try {
     const filePath = path.join(process.cwd(), "data", "ai-curation", "growth-experiments.json");
     const raw = fs.readFileSync(filePath, "utf8");
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     const parsed = JSON.parse(raw);
     return {
       props: {
         updatedAt: parsed.updatedAt || null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        items: parsed.items || [],
-      },
-      revalidate: 300,
-    };
-=======
         items: parsed.items || []},
       revalidate: 300}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         items: parsed.items || []},
       revalidate: 300}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   } catch {
     return {
       props: {
         updatedAt: null,
-<<<<<<< HEAD
-<<<<<<< HEAD
-        items: [],
-      },
-      revalidate: 300,
-    };
-  }
-=======
         items: []},
       revalidate: 300}
   };
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         items: []},
       revalidate: 300}
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

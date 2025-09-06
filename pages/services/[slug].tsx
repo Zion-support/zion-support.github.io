@@ -3,19 +3,16 @@ import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
 import Button from '../../components/ui/Button';
 import Card from '../../components/ui/Card';
-import { Check, Mail, MapPin, Phone, ExternalLink } from 'lucide-react';
-import { enhancedRealMicroSaasServices } from '../../data/enhanced-real-micro-saas-services';
-import { extraServices } from '../../data/extra-services';
-import { additionalEnhancedServices } from '../../data/additional-real-services';
-import { newRealServices } from '../../data/new-real-services';
-import { marketReadyServices } from '../../data/market-ready-services';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import {Check, Mail, MapPin, Phone, ExternalLink} from 'lucide-react';
+import {enhancedRealMicroSaasServices} from '../../data/enhanced-real-micro-saas-services';
+import {extraServices} from '../../data/extra-services';
+import {additionalEnhancedServices} from '../../data/additional-real-services';
+import {newRealServices} from '../../data/new-real-services';
+import {marketReadyServices} from '../../data/market-ready-services';
 
 type Service = (typeof enhancedRealMicroSaasServices)[number];
-=======
 type Service = typeof enhancedRealMicroSaasServices[number];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const contactInfo = {
 	mobile: '+1 302 464 0950',
@@ -40,7 +37,7 @@ function toSlug(value: string): string {
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
+		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
@@ -79,7 +76,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
+		const fromLink = extractServiceSlugFromLink(s.link),
 		return fromLink === incomingSlug
 	});
 
@@ -144,7 +141,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							</div>
 						</Card>
 
-<<<<<<< HEAD
             <Card className='p-6 bg-black/40 border border-gray-700/50'>
               <h3 className='text-white font-semibold mb-3'>Contact</h3>
               <div className='space-y-3 text-sm'>
@@ -184,7 +180,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </div>
     </UltraFuturisticBackground>
   );
-=======
 type Service = typeof enhancedRealMicroSaasServices[number];
 
 const contactInfo = {
@@ -210,7 +205,7 @@ function toSlug(value: string): string {
 
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
-		const url = new URL(link);
+		const url = new URL(link),
 		const path = url.pathname.replace(/^\/+|\/+$/g, '');
 		if (path.startsWith('services/')) {
 			return path.substring('services/'.length)
@@ -249,7 +244,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false;
-		const fromLink = extractServiceSlugFromLink(s.link);
+		const fromLink = extractServiceSlugFromLink(s.link),
 		return fromLink === incomingSlug
 	});
 
@@ -314,8 +309,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 							</div>
 						</Card>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 						<Card className="p-6 bg-black/40 border border-gray-700/50">
 							<h3 className="text-white font-semibold mb-3">Contact</h3>
 							<div className="space-y-3 text-sm">
@@ -329,9 +323,6 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 			</div>
 		</UltraFuturisticBackground>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

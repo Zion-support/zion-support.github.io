@@ -1,16 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { forwardRef } from 'react';
-import { ChevronDown } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { SafeRef } from '@/types/ref-types';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { forwardRef } from "react";
-import { ChevronDown } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { SafeRef } from "@/types/ref-types";
+import {ChevronDown} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {SafeRef} from "@/types/ref-types";
 interface SidebarGroupProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
   icon?: React.ReactNode;
@@ -53,13 +45,4 @@ const SidebarGroup = forwardRef<HTMLDivElement, SidebarGroupProps>(
 
 SidebarGroup.displayName = "SidebarGroup";
 export { SidebarGroup };
-=======
 
-<<<<<<< HEAD
-
-
-
-SidebarGroup.displayName = "SidebarGroup",
-export { SidebarGroup };
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88

@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 type ProposalListItem = {
   id: string;
@@ -10,12 +8,10 @@ type ProposalListItem = {
   regionalScope: string;
   type: string;
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
-  createdAt: string;
-=======
+  createdAt: string,
 type ProposalListItem = {
-=======
 type ProposalListItem = {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   id: string,
   title: string,
   targetInstitution: string,
@@ -23,10 +19,7 @@ type ProposalListItem = {
   type: string,
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
   createdAt: string
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default function InternationalProposalsPage() {
@@ -35,16 +28,13 @@ export default function InternationalProposalsPage() {
 
   useEffect(() => {
     fetch('/api/proposals')
-<<<<<<< HEAD
-<<<<<<< HEAD
       .then(r => r.json())
       .then(d => setItems(d.items || []))
       .catch(() => setItems([]));
-=======
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }, []);
 
   const filtered = items.filter((i) => (filter === 'All' ? true : i.regionalScope === filter));
@@ -55,13 +45,11 @@ export default function InternationalProposalsPage() {
         <h1 className="text-2xl font-semibold">International Proposals</h1>
         <div className="flex items-center gap-2 text-sm">
           <span>Filter by region:</span>
-<<<<<<< HEAD
           <select
             className='border rounded px-2 py-1'
             value={filter}
             onChange={e => setFilter(e.target.value)}
           >
-=======
       .then((r) => r.json())
       .then((d) => setItems(d.items || []))
       .catch(() => setItems([]))
@@ -76,10 +64,8 @@ export default function InternationalProposalsPage() {
         <div className="flex items-center gap-2 text-sm">
           <span>Filter by region:</span>
           <select className="border rounded px-2 py-1" value={filter} onChange={(e) => setFilter(e.target.value)}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <select className="border rounded px-2 py-1" value={filter} onChange={(e) => setFilter(e.target.value)}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <option>All</option>
             <option>Global</option>
             <option>Africa</option>
@@ -88,19 +74,16 @@ export default function InternationalProposalsPage() {
             <option>EU</option>
           </select>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='divide-y border rounded'>
           {filtered.map(i => (
             <div
               key={i.id}
               className='p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2'
             >
-=======
         <div className="divide-y border rounded">
           {filtered.map((i) => (
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <div>
                 <div className="font-medium">{i.title}</div>
                 <div className="text-sm text-gray-600">{i.targetInstitution} • {i.type} • {i.regionalScope}</div>
@@ -119,9 +102,7 @@ export default function InternationalProposalsPage() {
         <div className="text-sm text-gray-600">Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div>
       </div>
     </EnhancedLayout>
-<<<<<<< HEAD
   );
-=======
         <div className="divide-y border rounded">
           {filtered.map((i) => (
             <div key={i.id} className="p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-2">
@@ -145,8 +126,6 @@ export default function InternationalProposalsPage() {
     </EnhancedLayout>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

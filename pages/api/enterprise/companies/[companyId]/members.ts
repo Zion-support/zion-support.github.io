@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { store } from '../../../../../utils/data/enterpriseStore';
+import {store} from '../../../../../utils/data/enterpriseStore';
 import type { EnterpriseRole } from '../../../../../utils/types/enterprise';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { companyId } = req.query;
@@ -15,7 +15,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     const { name, email, role } = req.body || {};
     if (!name || !email) return res.status($1).json({$2});
-    const r: EnterpriseRole = role || 'viewer';
+    const r: EnterpriseRole = role || 'viewer',
     const member = store.addMember(companyId, name, email, r);
     return res.status(201).json(member)
   }

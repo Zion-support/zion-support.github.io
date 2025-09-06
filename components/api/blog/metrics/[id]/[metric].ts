@@ -1,10 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { incrementMetric } from '@/utils/data/blogStore';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {incrementMetric} from '@/utils/data/blogStore';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
@@ -12,9 +7,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!['viewslikesshares'].includes(metric)) return res.status(400).json({ error: 'Invalid metric' });
   const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares');
   if (!post) return res.status(404).json({ error: 'Not found' });
-<<<<<<< HEAD
-  return res.status(200).json({ ok: true, metrics: post.metrics });
-=======
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id, metric } = req.query;
   if (req.method !== 'POST') return res.status(405).end();
@@ -24,8 +16,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!post) return res.status(404).json({ error: 'Not found' });
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return res.status(200).json({ ok: true, metrics: post.metrics })
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

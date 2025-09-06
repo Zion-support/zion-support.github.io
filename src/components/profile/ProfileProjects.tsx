@@ -1,16 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { Card, CardContent } from '@/components/ui/card';
-=======
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ProfileProject } from "@/types/profile";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { FileText } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {ProfileProject} from "@/types/profile";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {FileText} from 'lucide-react'
+import {Badge} from '@/components/ui/badge';
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 
 interface ProfileProjectsProps {
   projects: ProfileProject[]
@@ -46,21 +41,14 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
               {project.tags && project.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
-<<<<<<< HEAD
-                    <Badge
-                      key={i}
-                      variant='outline'
-                      className='text-xs border-zion-slate-dark text-zion-slate-light'
-                    >
-=======
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ProfileProject } from "@/types/profile";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
-import { FileText } from 'lucide-react'
-import { Badge } from '@/components/ui/badge';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
+import {Card, CardContent} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
+import {ProfileProject} from "@/types/profile";
+import {AspectRatio} from "@/components/ui/aspect-ratio";
+import {FileText} from 'lucide-react'
+import {Badge} from '@/components/ui/badge';
+import {Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter} from '@/components/ui/card';
 
 interface ProfileProjectsProps {
   projects: ProfileProject[]
@@ -97,27 +85,16 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
                 <div className="flex flex-wrap gap-1 mb-2">
                   {project.tags.map((tag, i) => (
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <Badge key={i} variant="outline" className="text-xs border-zion-slate-dark text-zion-slate-light">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       {tag}
                     </Badge>
                   ))}
                 </div>
               )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-              <div className='text-xs text-zion-slate-light mt-2'>
-=======
               
               <div className="text-xs text-zion-slate-light mt-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               
               <div className="text-xs text-zion-slate-light mt-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 {project.date}
               </div>
             </CardContent>
@@ -126,11 +103,5 @@ export function ProfileProjects({ projects }: ProfileProjectsProps) {
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

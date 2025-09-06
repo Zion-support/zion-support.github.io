@@ -1,26 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { 
-  Building, 
-  Shield, 
-  Brain, 
-  Database, 
-  Users, 
-  ArrowRight, 
-  CheckCircle,
-  Globe,
-  Activity,
-  Lock,
-  Cloud,
-  Smartphone,
-  BarChart3,
-  Zap,
-  Award,
-  Clock,
-  FileText,
-  Scale
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Building,, Shield,, Brain,, Database,, Users,, ArrowRight,, CheckCircle,, Globe,, Activity,, Lock,, Cloud,, Smartphone,, BarChart3,, Zap,, Award,, Clock,, FileText,, Scale} from 'lucide-react';
 import Layout from '../../components/Layout';
 
 const solutions = [
@@ -484,7 +465,7 @@ export default function GovernmentSolutionsPage() {
                 Let our government technology experts help you enhance citizen services 
                 and improve operational efficiency with secure, compliant solutions.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <Link href="/contact" className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   Get Free Consultation
                 </Link>
@@ -497,5 +478,5 @@ export default function GovernmentSolutionsPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

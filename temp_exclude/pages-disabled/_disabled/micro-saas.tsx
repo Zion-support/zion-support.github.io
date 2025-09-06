@@ -1,7 +1,7 @@
 import React from "react";
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import {},
   {
   Cloud,
@@ -1862,12 +1862,12 @@ export default function MicroSaaSPage() {},
                   </h1>
                   </div>
                   <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">Scalable software solutions designed for specific business needs. Rapid deployment, enterprise security, and built-in analytics.</p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm: flex-row gap-4 justify-center">
                   <Link href="/contact" className="px-8 py-4 bg-gradient-to-r from-purple-500 to-indigo-600 text-white rounded-lg hover:shadow-lg transition-all duration-300 font-semibold">
                 Start Your SaaS;
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
-                View All Services;
+                View All Services,
               </Link>
                   </div>
                   </motion.div>
@@ -2190,8 +2190,8 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             viewport={{ once: true }},
   {
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Get Started Today;
+            <h2 className="text-3xl md: text-4xl font-bold text-gray-900 mb-4">
+              Get Started Today,
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
               Ready to transform your business with cutting-edge micro SaaS solutions? Our expert team is here to help you build, deploy, and scale your next-generation software products. Contact us for a free consultation and discover how we can accelerate your digital transformation.
@@ -2236,8 +2236,8 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Email Us</h3>
               <p className="text-gray-600 mb-4">Send us your project details and we'll respond within 24 hours with a detailed proposal.</p>
-              <a href="mailto:kleber@ziontechgroup.com" className="text-purple-600 font-semibold hover:text-purple-700">
-                kleber@ziontechgroup.com;
+              <a href="mailto: kleber@ziontechgroup.com" className="text-purple-600 font-semibold hover:text-purple-700">
+                kleber@ziontechgroup.com,
               </a>
             </motion.div>
 
@@ -2540,7 +2540,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
             viewport={{ once: true }},
   {
           >
-<h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
+<h2 className="text-3xl md: text-4xl font-bold mb-6">Ready to Launch Your Micro SaaS?</h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
               Join 500+ successful businesses that trust Zion Tech Group for their micro SaaS development needs. Let&apos;s build the perfect solution for your business.
             </p>
@@ -2549,7 +2549,7 @@ className="text-center p-6 rounded-lg hover: bg-gray-50 transition-colors"
                 Start Building;
               </Link>
                   <Link href="/services" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-purple-600 transition-all duration-300 font-semibold">
-                View All Services;
+                View All Services,
               </Link>
 </div>
                   </motion.div>

@@ -1,43 +1,32 @@
 export const real2027Q3Additions = [
   {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    id: 'it-asset-discovery-agent',
-    name: 'IT Asset Discovery Agent',
-    tagline: 'Agentless network-wide discovery and enrichment',
-    price: '$149',
-    period: '/month',
-    description:
-      'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
-=======
     id: 'it-asset-discovery-agent';
     name: 'IT Asset Discovery Agent';
     tagline: 'Agentless network-wide discovery and enrichment';
     price: '$149';
-    period: '/month';
+    period: '/month',
     description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     features: [
       'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow, and Jira exportChange detection and drift alerts'
     ];
     category: 'Enterprise IT';
     link: '/it-asset-discovery-agent';
-    realService: true;
+    realService: true,
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   };
   {
     id: 'managed-postgres-ha';
     name: 'Managed Postgres HA';
-    tagline: 'High availability PostgreSQL with SRE runbooks';
+    tagline: 'High availability PostgreSQL with SRE runbooks',
     price: '$1,200';
-    period: '/month';
+    period: '/month',
     description: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.';
     features: [
       'Streaming replication and automatic failoverPITR backups with retention policiesPerformance tuning and query insightsSecurity hardening and auditing'
     ];
     category: 'Cloud & Infrastructure';
     link: '/managed-postgres-ha';
-    realService: true;
+    realService: true,
     roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
   };
   {
@@ -45,29 +34,29 @@ export const real2027Q3Additions = [
     name: 'Vector Search Starter';
     tagline: 'Production RAG foundation with evals and ops';
     price: '$89';
-    period: '/month';
+    period: '/month',
     description: 'Deploy a proven RAG baseline with embeddings, chunking, evaluation harness, and observability for fast iteration.';
     features: [
       'Pinecone/Weaviate/Elastic integrationsChunking strategies and deduplicationEval harness with regression testsTracing, metrics, and dashboards'
     ];
     category: 'AI & Data';
     link: '/vector-search-starter';
-    realService: true;
+    realService: true,
     roi: 'Cut RAG prototyping time from weeks to days while improving answer quality.'
   };
   {
     id: 'serverless-cron-manager';
-    name: 'Serverless Cron Manager';
+    name: 'Serverless Cron Manager',
     tagline: 'Reliable jobs with retries, idempotency, and alerting';
     price: '$39';
-    period: '/month';
+    period: '/month',
     description: 'Schedule and run serverless jobs at scale with observability, concurrency controls, and guaranteed delivery semantics.';
     features: [
       'Idempotent job executionPer-job concurrency and rate limitsDLQ, retries, and exponential backoffMetrics, logs, and alerting'
     ];
     category: 'Developer Tools';
     link: '/serverless-cron-manager';
-    realService: true;
+    realService: true,
     roi: 'Reduce failed job incidents by 70% and engineering toil by 50%.'
   };
   {
@@ -75,14 +64,14 @@ export const real2027Q3Additions = [
     name: 'Domain & DNS Monitor';
     tagline: 'Proactive domain health and expiry guardrails';
     price: '$19';
-    period: '/month';
+    period: '/month',
     description: 'Monitor WHOIS, DNS records, TLS health, and name server changes with instant alerts and audit trails.';
     features: [
       'WHOIS expiry and registrar checksNS, MX, TXT, and CAA drift detectionTLS expiry and configuration healthSlack, Email, and Webhook alerts'
     ];
     category: 'Quality & Monitoring';
     link: '/domain-dns-monitor';
-    realService: true;
+    realService: true,
     roi: 'Avoid costly outages from expired domains and misconfigured DNS.'
   };
   {
@@ -90,44 +79,44 @@ export const real2027Q3Additions = [
     name: 'Uptime & SLO Monitor';
     tagline: 'Synthetic checks with SLOs and error budgets';
     price: '$29';
-    period: '/month';
+    period: '/month',
     description: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.';
     features: [
       'SLO templates and burn-rate alertsMulti-region synthetic and API checksStatus pages and dashboardsChange annotations and incident links'
     ];
     category: 'Observability';
     link: '/uptime-slo-monitor';
-    realService: true;
+    realService: true,
     roi: 'Cut false alerts by 60% and align reliability to user impact.'
   };
   {
     id: 'sso-user-lifecycle-automation';
-    name: 'SSO User Lifecycle Automation';
+    name: 'SSO User Lifecycle Automation',
     tagline: 'Provisioning, deprovisioning, and access reviews';
     price: '$199';
-    period: '/month';
+    period: '/month',
     description: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.';
     features: [
       'Just-in-time provisioningSCIM connectors and custom mappersAccess review workflowsAudit logs and exports'
     ];
     category: 'Security & Identity';
     link: '/sso-user-lifecycle-automation';
-    realService: true;
+    realService: true,
     roi: 'Reduce onboarding time by 80% and access risk by 50%.'
   };
   {
     id: 'api-observability-starter';
-    name: 'API Observability Starter';
+    name: 'API Observability Starter',
     tagline: 'Traces, metrics, logs for APIs in minutes';
     price: '$49';
-    period: '/month';
+    period: '/month',
     description: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.';
     features: [
       'Automatic instrumentation presetsLatency percentiles and error ratesSLO burn and dependency graphsAlert templates and runbooks'
     ];
     category: 'Observability';
     link: '/api-observability-starter';
-    realService: true;
+    realService: true,
     roi: 'Decrease MTTR by 40% and increase release confidence.'
   };
   {
@@ -135,14 +124,14 @@ export const real2027Q3Additions = [
     name: 'Kubernetes RBAC Auditor';
     tagline: 'Least-privilege insights and drift detection';
     price: '$79';
-    period: '/month';
+    period: '/month',
     description: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.';
     features: [
       'RBAC graph analysis and reportsPolicy suggestions and PRsAudit trails and drift alertsMulti-cluster support'
     ];
     category: 'Security & Identity';
     link: '/kubernetes-rbac-auditor';
-    realService: true;
+    realService: true,
     roi: 'Reduce lateral movement risk and pass audits faster.'
   };
   {
@@ -150,14 +139,14 @@ export const real2027Q3Additions = [
     name: 'Infrastructure Drift Detector';
     tagline: 'Detect and reconcile infra drift automatically';
     price: '$69';
-    period: '/month';
+    period: '/month',
     description: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.';
     features: [
       'Terraform plan diffs as PR commentsChange approval workflowsSelective auto-remediationMulti-cloud support'
     ];
     category: 'Cloud & Infrastructure';
     link: '/infrastructure-drift-detector';
-    realService: true;
+    realService: true,
     roi: 'Prevent config drift incidents and reduce compliance toil.'
   };
   {
@@ -165,14 +154,14 @@ export const real2027Q3Additions = [
     name: 'Incident Copilot';
     tagline: 'AI-assisted incident response and postmortems';
     price: '$99';
-    period: '/month';
+    period: '/month',
     description: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.';
     features: [
       'Auto triage and severity suggestionChannel orchestration (Slack/Teams)Timeline and comms templatesPostmortem drafts and actions'
     ];
     category: 'Operations';
     link: '/incident-copilot';
-    realService: true;
+    realService: true,
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'
   };
   {
@@ -180,44 +169,44 @@ export const real2027Q3Additions = [
     name: 'AI Market Research';
     tagline: 'Automated landscape scans and insight briefs';
     price: '$79';
-    period: '/month';
+    period: '/month',
     description: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.';
     features: [
       'Web and doc ingestion with citationsCompetitor profiles and matricesAlerts for launches and pricing changesExport to Slides/Docs'
     ];
     category: 'AI & Data';
     link: '/ai-market-research';
-    realService: true;
+    realService: true,
     roi: 'Save 10–20 analyst hours per week while increasing coverage.'
   };
   {
     id: 'ai-sales-automation';
-    name: 'AI Sales Automation';
+    name: 'AI Sales Automation',
     tagline: 'Sequencing, enrichment, and AI reply drafting';
     price: '$59';
-    period: '/month';
+    period: '/month',
     description: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.';
     features: [
       'Lead enrichment and routingMultichannel sequencesAI-generated replies with approvalsPipeline analytics'
     ];
     category: 'Sales & Marketing';
     link: '/ai-sales-automation';
-    realService: true;
+    realService: true,
     roi: 'Increase meetings booked by 20–40% with consistent outreach.'
   };
   {
     id: 'ai-legal-contract-analyzer';
-    name: 'AI Legal Contract Analyzer';
+    name: 'AI Legal Contract Analyzer',
     tagline: 'Clause extraction, risk flags, and playbooks';
     price: '$99';
-    period: '/month';
+    period: '/month',
     description: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.';
     features: [
       'Smart clause detection and summariesRisk scoring and deviationsPlaybook alignment and suggestionsExport to Word/PDF'
     ];
     category: 'Legal & Compliance';
     link: '/ai-legal-contract-analyzer';
-    realService: true;
+    realService: true,
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.'
   };
   {
@@ -225,19 +214,19 @@ export const real2027Q3Additions = [
     name: 'AI Content Generator';
     tagline: 'SEO-optimized content with brand voice';
     price: '$49';
-    period: '/month';
+    period: '/month',
     description: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.';
     features: [
       'Templates and brand voicesSEO scoring and suggestionsCollaboration and approvalsWordPress/Shopify integrations'
     ];
     category: 'Content & Marketing';
     link: '/ai-content-generator';
-    realService: true;
+    realService: true,
     roi: 'Publish 3–5x more content while improving rankings.'
   };
   {
     id: 'email-dmarc-analyzer';
-    name: 'Email DMARC Analyzer';
+    name: 'Email DMARC Analyzer',
     tagline: 'DMARC, DKIM, SPF reporting and policy help';
     price: '$29';
     period: '/month';
@@ -247,7 +236,7 @@ export const real2027Q3Additions = [
     ];
     category: 'Security & Identity';
     link: '/email-dmarc-analyzer';
-    realService: true;
+    realService: true,
     roi: 'Improve deliverability and block spoofing/phishing attempts.'
   };
   {
@@ -256,21 +245,8 @@ export const real2027Q3Additions = [
     tagline: 'API discovery and vuln scanning with CI gates';
     price: '$199';
     period: '/month';
-    description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.';
+    description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [
-<<<<<<< HEAD
-      'Discovery via traffic/specs',
-      'OWASP API Top 10 checks',
-      'PR annotations and CI gating',
-      'Change detection and drift alerts',
-    ],
-    category: 'Security & Identity',
-    link: '/api-security-scanner',
-    realService: true,
-    roi: 'Prevent high-severity API incidents and cut MTTR.',
-  },
-];
-=======
     id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
     tagline: 'Agentless network-wide discovery and enrichment', price: '$149',
     period: '/month',
@@ -290,7 +266,7 @@ export const real2027Q3Additions = [
     description: 'Turnkey HA architecture with PITR backups, automatic failover, and expert tuning backed by SRE playbooks.',
     features: [
       'Streaming replication and automatic failoverPITR backups with retention policiesPerformance tuning and query insightsSecurity hardening and auditing'
-    ];
+    ],
     category: 'Cloud & Infrastructure', link: '/managed-postgres-ha',
     realService: true,
     roi: 'Eliminate 2–4 on-call incidents/month and improve p99 latency by 20–40%.'
@@ -338,7 +314,7 @@ export const real2027Q3Additions = [
     description: 'Track service uptime with user-centric SLOs, burn rates, and multi-location synthetic checks.',
     features: [
       'SLO templates and burn-rate alertsMulti-region synthetic and API checksStatus pages and dashboardsChange annotations and incident links'
-    ];
+    ],
     category: 'Observability', link: '/uptime-slo-monitor',
     realService: true,
     roi: 'Cut false alerts by 60% and align reliability to user impact.'
@@ -350,7 +326,7 @@ export const real2027Q3Additions = [
     description: 'Automate SCIM provisioning, offboarding, and periodic access reviews across Okta/Auth0/WorkOS.',
     features: [
       'Just-in-time provisioningSCIM connectors and custom mappersAccess review workflowsAudit logs and exports'
-    ];
+    ],
     category: 'Security & Identity', link: '/sso-user-lifecycle-automation',
     realService: true,
     roi: 'Reduce onboarding time by 80% and access risk by 50%.'
@@ -362,7 +338,7 @@ export const real2027Q3Additions = [
     description: 'One-click OpenTelemetry setup with golden signals, latency SLOs, and dashboards for REST and gRPC APIs.',
     features: [
       'Automatic instrumentation presetsLatency percentiles and error ratesSLO burn and dependency graphsAlert templates and runbooks'
-    ];
+    ],
     category: 'Observability', link: '/api-observability-starter',
     realService: true,
     roi: 'Decrease MTTR by 40% and increase release confidence.'
@@ -374,7 +350,7 @@ export const real2027Q3Additions = [
     description: 'Continuously analyze RBAC bindings, detect excessive privileges, and auto-generate least-privilege policies.',
     features: [
       'RBAC graph analysis and reportsPolicy suggestions and PRsAudit trails and drift alertsMulti-cluster support'
-    ];
+    ],
     category: 'Security & Identity', link: '/kubernetes-rbac-auditor',
     realService: true,
     roi: 'Reduce lateral movement risk and pass audits faster.'
@@ -386,7 +362,7 @@ export const real2027Q3Additions = [
     description: 'Detects drift between IaC (Terraform) and live cloud state, with approvals and auto-remediation.',
     features: [
       'Terraform plan diffs as PR commentsChange approval workflowsSelective auto-remediationMulti-cloud support'
-    ];
+    ],
     category: 'Cloud & Infrastructure', link: '/infrastructure-drift-detector',
     realService: true,
     roi: 'Prevent config drift incidents and reduce compliance toil.'
@@ -398,7 +374,7 @@ export const real2027Q3Additions = [
     description: 'Triage, summarize, and coordinate incidents with auto-generated timelines and draft postmortems.',
     features: [
       'Auto triage and severity suggestionChannel orchestration (Slack/Teams)Timeline and comms templatesPostmortem drafts and actions'
-    ];
+    ],
     category: 'Operations', link: '/incident-copilot',
     realService: true,
     roi: 'Reduce incident resolution time by 30–50% and improve learning capture.'
@@ -410,7 +386,7 @@ export const real2027Q3Additions = [
     description: 'Automate competitor tracking, category mapping, and trend detection with exportable insight briefs.',
     features: [
       'Web and doc ingestion with citationsCompetitor profiles and matricesAlerts for launches and pricing changesExport to Slides/Docs'
-    ];
+    ],
     category: 'AI & Data', link: '/ai-market-research',
     realService: true,
     roi: 'Save 10–20 analyst hours per week while increasing coverage.'
@@ -422,7 +398,7 @@ export const real2027Q3Additions = [
     description: 'Automate prospecting, enrichment, and multi-channel outreach with AI-drafted replies and meeting booking.',
     features: [
       'Lead enrichment and routingMultichannel sequencesAI-generated replies with approvalsPipeline analytics'
-    ];
+    ],
     category: 'Sales & Marketing', link: '/ai-sales-automation',
     realService: true,
     roi: 'Increase meetings booked by 20–40% with consistent outreach.'
@@ -434,7 +410,7 @@ export const real2027Q3Additions = [
     description: 'Extract key clauses, flag risks, and align to your negotiation playbooks with redlines and exports.',
     features: [
       'Smart clause detection and summariesRisk scoring and deviationsPlaybook alignment and suggestionsExport to Word/PDF'
-    ];
+    ],
     category: 'Legal & Compliance', link: '/ai-legal-contract-analyzer',
     realService: true,
     roi: 'Cut review cycles from weeks to days and reduce outside counsel spend.'
@@ -446,7 +422,7 @@ export const real2027Q3Additions = [
     description: 'High-quality SEO content in your brand voice with templates, approvals, and CMS integrations.',
     features: [
       'Templates and brand voicesSEO scoring and suggestionsCollaboration and approvalsWordPress/Shopify integrations'
-    ];
+    ],
     category: 'Content & Marketing', link: '/ai-content-generator',
     realService: true,
     roi: 'Publish 3–5x more content while improving rankings.'
@@ -458,7 +434,7 @@ export const real2027Q3Additions = [
     description: 'Aggregate and analyze DMARC reports with actionable guidance to reach enforcement safely.',
     features: [
       'Aggregate and forensic reportsSource identification and alignmentPolicy simulation and enforcement guidesAlerts and exports'
-    ];
+    ],
     category: 'Security & Identity', link: '/email-dmarc-analyzer',
     realService: true,
     roi: 'Improve deliverability and block spoofing/phishing attempts.'
@@ -469,20 +445,17 @@ export const real2027Q3Additions = [
     period: '/month', description: 'Continuously map APIs and detect OWASP API Top 10 risks with CI gating and drift detection.',
     features: [
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
-    ];
+    ],
     category: 'Security & Identity', link: '/api-security-scanner',
     realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       'Discovery via traffic/specsOWASP API Top 10 checksPR annotations and CI gatingChange detection and drift alerts'
     ];
     category: 'Security & Identity';
     link: '/api-security-scanner';
-    realService: true;
+    realService: true,
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

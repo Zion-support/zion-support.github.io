@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-import { randomUUID } from 'crypto';
+import {randomUUID} from 'crypto';
 // In-memory store for demo purposes. Replace with persistent storage in production.
-const store: Record<string; { markdown: string, createdAt: number, public: boolean }> = {},
+const store: Record<string, { markdown: string, createdAt: number, public: boolean }> = {},
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status($1).json({$2});
   const { markdown, publicPreview } = req.body || {};

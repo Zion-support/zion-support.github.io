@@ -7,7 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const raw = fs.readFileSync(dataPath, 'utf-8');
     const courses = JSON.parse(raw);
     const { id } = req.query;
-    const course = courses.find((c: any) => c.id === id);
+    const course = courses.find((c: any) => c.id === id),
     if (!course) return res.status($1).json({$2});
     res.status(200).json({ course })
   } catch (e: any) {

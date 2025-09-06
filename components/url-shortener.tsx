@@ -2,26 +2,8 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Link,
-  Copy,
-  BarChart3,
-  ArrowRight,
-  RefreshCw,
-  CheckCircle,
-  ExternalLink,
-  QrCode,
-  Settings,
-  Trash2,;
-} from 'lucide-react';
-=======
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2} from 'lucide-react';
+import {Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2} from 'lucide-react';
 
 export default function URLShortenerPage() {
   const [longUrl, setLongUrl] = useState('');
@@ -32,12 +14,7 @@ export default function URLShortenerPage() {
 
   const generateShortUrl = async () => {
     if (!longUrl.trim()) return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
     
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     setIsShortening(true);
     
     // Simulate API call delay
@@ -92,9 +69,6 @@ export default function URLShortenerPage() {
   };
 
   const getTotalUrls = () => {
-<<<<<<< HEAD
-    return shortenedUrls.length;
-=======
     
     setIsShortening(true);
     
@@ -151,32 +125,16 @@ export default function URLShortenerPage() {
 
   const getTotalUrls = () => {
     return shortenedUrls.length
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return shortenedUrls.length
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <Head>
         <title>URL Shortener - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <meta
-          name='description'
-          content='Create short, memorable URLs with our professional URL shortening service. Track clicks, generate QR codes, and manage your links efficiently.'
-        />
-        <meta property='og:title' content='URL Shortener - Zion Tech Group' />
-        <meta
-          property='og:description'
-          content='Professional URL shortening service with analytics and QR code generation.'
-        />
-=======
         <meta name="description" content="Create short, memorable URLs with our professional URL shortening service. Track clicks, generate QR codes, and manage your links efficiently." />
         <meta property="og:title" content="URL Shortener - Zion Tech Group" />
         <meta property="og:description" content="Professional URL shortening service with analytics and QR code generation." />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       {/* Hero Section */}
@@ -191,12 +149,6 @@ export default function URLShortenerPage() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-8 leading-tight">
             URL Shortener
           </h1>
-<<<<<<< HEAD
-          <p className='text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed'>
-            Transform long URLs into short, memorable links with our
-            professional shortening service. Track clicks, generate QR codes,
-            and manage your links efficiently with advanced analytics.
-=======
         <meta name="description" content="Create short, memorable URLs with our professional URL shortening service. Track clicks, generate QR codes, and manage your links efficiently." />
         <meta property="og:title" content="URL Shortener - Zion Tech Group" />
         <meta property="og:description" content="Professional URL shortening service with analytics and QR code generation." />
@@ -217,29 +169,18 @@ export default function URLShortenerPage() {
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">
             Transform long URLs into short, memorable links with our professional shortening service. 
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <p className="text-xl text-orange-200 max-w-4xl mx-auto leading-relaxed">
             Transform long URLs into short, memorable links with our professional shortening service. 
             Track clicks, generate QR codes, and manage your links efficiently with advanced analytics.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </p>
         </div>
       </section>
 
       {/* URL Shortening Tool */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-20 bg-gray-900'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-=======
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Create Short URLs Instantly
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -266,11 +207,6 @@ export default function URLShortenerPage() {
                   <input
                     type="url"
                     value={longUrl}
-<<<<<<< HEAD
-                    onChange={e => setLongUrl(e.target.value)}
-                    placeholder='https://example.com/very-long-url-that-needs-shortening'
-                    className='w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent'
-=======
       <section className="py-20 bg-gray-900">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -304,25 +240,17 @@ export default function URLShortenerPage() {
                     onChange={(e) => setLongUrl(e.target.value)}
                     placeholder="https://example.com/very-long-url-that-needs-shortening"
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     onChange={(e) => setLongUrl(e.target.value)}
                     placeholder="https://example.com/very-long-url-that-needs-shortening"
                     className="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   />
                 </div>
 
                 {/* Custom Alias */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <label className='block text-sm font-medium text-gray-300 mb-2'>
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Custom Alias (Optional)
                   ">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     Custom Alias (Optional)
                   </label>
                   <div className="flex space-x-2">
@@ -337,9 +265,6 @@ export default function URLShortenerPage() {
                       className="flex-1 px-4 py-3 bg-gray-700 border border-gray-600 rounded-r-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent"
                     />
                   </div>
-<<<<<<< HEAD
-                  <p className='text-xs text-gray-400 mt-1'>
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2" htmlFor="input-
                     Custom Alias (Optional)
                   ">
@@ -358,10 +283,7 @@ export default function URLShortenerPage() {
                     />
                   </div>
                   <p className="text-xs text-gray-400 mt-1">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <p className="text-xs text-gray-400 mt-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     Leave empty for auto-generated alias
                   </p>
                 </div>
@@ -369,54 +291,29 @@ export default function URLShortenerPage() {
                 <Button
                   onClick={generateShortUrl}
                   disabled={!longUrl.trim() || isShortening}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  className='w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed'
-                >
-                  {isShortening ? (
-                    <>
-                      <RefreshCw className='w-5 h-5 mr-2 animate-spin' />
-=======
                   className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isShortening ? (
                     <>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   className="w-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 text-white py-4 text-lg font-semibold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   {isShortening ? (
                     <>
                       <RefreshCw className="w-5 h-5 mr-2 animate-spin" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       Creating Short URL...
                     </>
                   ) : (
                     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <Link className='w-5 h-5 mr-2' />
-=======
                       <Link className="w-5 h-5 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <Link className="w-5 h-5 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                       Create Short URL
                     </>
                   )}
                 </Button>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                <div className='text-sm text-gray-400'>
-=======
                 <div className="text-sm text-gray-400">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="text-sm text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   <p>• Professional, branded short URLs</p>
                   <p>• Click tracking and analytics</p>
                   <p>• QR code generation</p>
@@ -426,16 +323,9 @@ export default function URLShortenerPage() {
             </Card>
 
             {/* Statistics */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-800 border border-gray-700'>
-              <h3 className='text-2xl font-bold text-white mb-6 flex items-center'>
-                <BarChart3 className='w-6 h-6 mr-3 text-red-400' />
-=======
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <BarChart3 className="w-6 h-6 mr-3 text-red-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Your Statistics
               </h3>
 
@@ -451,9 +341,6 @@ export default function URLShortenerPage() {
                     <div className="text-3xl font-bold text-red-400 mb-2">
                       {getTotalClicks()}
                     </div>
-<<<<<<< HEAD
-                    <div className='text-sm text-gray-400'>Total Clicks</div>
-=======
             <Card className="p-8 bg-gray-800 border border-gray-700">
               <h3 className="text-2xl font-bold text-white mb-6 flex items-center">
                 <BarChart3 className="w-6 h-6 mr-3 text-red-400" />
@@ -473,27 +360,15 @@ export default function URLShortenerPage() {
                       {getTotalClicks()}
                     </div>
                     <div className="text-sm text-gray-400">Total Clicks</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="text-sm text-gray-400">Total Clicks</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
 
                 {shortenedUrls.length === 0 ? (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                  <div className='bg-gray-900 p-6 rounded-lg border border-gray-700 text-center'>
-                    <div className='text-6xl mb-4'>📊</div>
-                    <p className='text-gray-400'>
-                      Your URL statistics will appear here. Create your first
-                      short URL to get started.
-=======
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
                     <div className="text-6xl mb-4">📊</div>
                     <p className="text-gray-400">
                       Your URL statistics will appear here. Create your first short URL to get started.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     </p>
                   </div>
                 ) : (
@@ -510,10 +385,6 @@ export default function URLShortenerPage() {
                               {url.longUrl}
                             </div>
                           </div>
-<<<<<<< HEAD
-                          <div className='text-right ml-3'>
-                            <div className='text-sm text-white font-medium'>
-=======
                   <div className="bg-gray-900 p-6 rounded-lg border border-gray-700 text-center">
                     <div className="text-6xl mb-4">📊</div>
                     <p className="text-gray-400">
@@ -536,11 +407,8 @@ export default function URLShortenerPage() {
                           </div>
                           <div className="text-right ml-3">
                             <div className="text-sm text-white font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <div className="text-right ml-3">
                             <div className="text-sm text-white font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                               {url.clicks} clicks
                             </div>
                           </div>
@@ -557,16 +425,6 @@ export default function URLShortenerPage() {
 
       {/* Shortened URLs List */}
       {shortenedUrls.length > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <section className='py-20 bg-gray-800'>
-          <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <div className='text-center mb-16'>
-              <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-                Your Shortened URLs
-              </h2>
-              <p className='text-xl text-gray-400 max-w-3xl mx-auto'>
-=======
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -574,8 +432,6 @@ export default function URLShortenerPage() {
                 Your Shortened URLs
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 bg-gray-800">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
@@ -583,26 +439,14 @@ export default function URLShortenerPage() {
                 Your Shortened URLs
               </h2>
               <p className="text-xl text-gray-400 max-w-3xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 Manage and track all your shortened URLs in one place.
               </p>
             </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <div className='space-y-4'>
-              {shortenedUrls.map(url => (
-                <Card
-                  key={url.id}
-                  className='p-6 bg-gray-700 border border-gray-600'
-                >
-                  <div className='grid grid-cols-1 lg:grid-cols-3 gap-6'>
-=======
             <div className="space-y-4">
               {shortenedUrls.map((url) => (
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
                   <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                     {/* URL Info */}
                     <div className="lg:col-span-2">
                       <div className="flex items-start justify-between mb-4">
@@ -618,13 +462,6 @@ export default function URLShortenerPage() {
                           <p className="text-gray-400 text-sm break-all">
                             {url.longUrl}
                           </p>
-<<<<<<< HEAD
-                          <div className='flex items-center space-x-4 mt-3 text-sm text-gray-400'>
-                            <span>
-                              Created:{' '}
-                              {new Date(url.createdAt).toLocaleDateString()}
-                            </span>
-=======
             <div className="space-y-4">
               {shortenedUrls.map((url) => (
                 <Card key={url.id} className="p-6 bg-gray-700 border border-gray-600">
@@ -646,11 +483,8 @@ export default function URLShortenerPage() {
                           </p>
                           <div className="flex items-center space-x-4 mt-3 text-sm text-gray-400">
                             <span>Created: {new Date(url.createdAt).toLocaleDateString()}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <div className="flex items-center space-x-4 mt-3 text-sm text-gray-400">
                             <span>Created: {new Date(url.createdAt).toLocaleDateString()}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                             <span>Alias: {url.alias}</span>
                           </div>
                         </div>
@@ -658,16 +492,9 @@ export default function URLShortenerPage() {
                     </div>
 
                     {/* Actions and Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className='flex flex-col space-y-3'>
-                      <div className='text-center p-4 bg-gray-800 rounded-lg'>
-                        <div className='text-2xl font-bold text-orange-400 mb-1'>
-=======
                     <div className="flex flex-col space-y-3">
                       <div className="text-center p-4 bg-gray-800 rounded-lg">
                         <div className="text-2xl font-bold text-orange-400 mb-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           {url.clicks}
                         </div>
                         <div className="text-xs text-gray-400">Total Clicks</div>
@@ -680,9 +507,6 @@ export default function URLShortenerPage() {
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
-<<<<<<< HEAD
-                          <Copy className='w-4 h-4 mr-2' />
-=======
                     <div className="flex flex-col space-y-3">
                       <div className="text-center p-4 bg-gray-800 rounded-lg">
                         <div className="text-2xl font-bold text-orange-400 mb-1">
@@ -699,54 +523,32 @@ export default function URLShortenerPage() {
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
                           <Copy className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <Copy className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           Copy
                         </Button>
                         <Button
                           onClick={() => incrementClicks(url.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          variant='outline'
-                          size='sm'
-                          className='flex-1 border-gray-600 text-gray-300 hover:bg-gray-600'
-                        >
-                          <ExternalLink className='w-4 h-4 mr-2' />
-=======
                           variant="outline"
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           variant="outline"
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
                           <ExternalLink className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           Visit
                         </Button>
                       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-                      <div className='flex space-x-2'>
-=======
                       <div className="flex space-x-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         <Button
                           onClick={() => setShowQR(showQR === url.id ? null : url.id)}
                           variant="outline"
                           size="sm"
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
-<<<<<<< HEAD
-                          <QrCode className='w-4 h-4 mr-2' />
-=======
                       <div className="flex space-x-2">
                         <Button
                           onClick={() => setShowQR(showQR === url.id ? null : url.id)}
@@ -755,35 +557,21 @@ export default function URLShortenerPage() {
                           className="flex-1 border-gray-600 text-gray-300 hover:bg-gray-600"
                         >
                           <QrCode className="w-4 h-4 mr-2" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           <QrCode className="w-4 h-4 mr-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                           QR Code
                         </Button>
                         <Button
                           onClick={() => deleteUrl(url.id)}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                          variant='outline'
-                          size='sm'
-                          className='border-red-600 text-red-400 hover:bg-red-600 hover:text-white'
-                        >
-                          <Trash2 className='w-4 h-4' />
-=======
                           variant="outline"
                           size="sm"
                           className="border-red-600 text-red-400 hover:bg-red-600 hover:text-white"
                         >
                           <Trash2 className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           variant="outline"
                           size="sm"
                           className="border-red-600 text-red-400 hover:bg-red-600 hover:text-white"
                         >
                           <Trash2 className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         </Button>
                       </div>
                     </div>
@@ -791,16 +579,6 @@ export default function URLShortenerPage() {
 
                   {/* QR Code */}
                   {showQR === url.id && (
-<<<<<<< HEAD
-<<<<<<< HEAD
-                    <div className='mt-4 p-4 bg-gray-800 rounded-lg text-center'>
-                      <img
-                        src={url.qrCode}
-                        alt='QR Code'
-                        className='mx-auto mb-3 w-32 h-32'
-                      />
-                      <p className='text-sm text-gray-400'>
-=======
                     <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">
                       <img 
                         src={url.qrCode} 
@@ -808,8 +586,6 @@ export default function URLShortenerPage() {
                         className="mx-auto mb-3 w-32 h-32"
                       />
                       <p className="text-sm text-gray-400">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <div className="mt-4 p-4 bg-gray-800 rounded-lg text-center">
                       <img 
                         src={url.qrCode} 
@@ -817,7 +593,6 @@ export default function URLShortenerPage() {
                         className="mx-auto mb-3 w-32 h-32"
                       />
                       <p className="text-sm text-gray-400">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                         Scan this QR code to visit the shortened URL
                       </p>
                     </div>
@@ -830,76 +605,6 @@ export default function URLShortenerPage() {
       )}
 
       {/* Features */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-20 bg-gray-900'>
-        <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-=======
-      <section className="py-20 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-              Professional URL Shortening Features
-            </h2>
-            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              Everything you need to create, manage, and track your shortened URLs effectively.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🔗</div>
-              <h3 className="text-xl font-bold text-white mb-4">Custom Aliases</h3>
-              <p className="text-gray-400">
-                Create memorable, branded short URLs with custom aliases that reflect your brand.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📊</div>
-              <h3 className="text-xl font-bold text-white mb-4">Click Analytics</h3>
-              <p className="text-gray-400">
-                Track clicks, engagement, and performance metrics for all your shortened URLs.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-xl font-bold text-white mb-4">QR Code Generation</h3>
-              <p className="text-gray-400">
-                Generate QR codes for easy sharing and mobile access to your shortened URLs.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">🛡️</div>
-              <h3 className="text-xl font-bold text-white mb-4">Secure & Reliable</h3>
-              <p className="text-gray-400">
-                Enterprise-grade infrastructure ensures your URLs are always accessible and secure.
-              </p>
-            </Card>
-
-            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-xl font-bold text-white mb-4">Fast Performance</h3>
-              <p className="text-gray-400">
-                Lightning-fast redirects with global CDN for optimal user experience worldwide.
-              </p>
-            </Card>
-
-<<<<<<< HEAD
-            <Card className='text-center p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>🔧</div>
-              <h3 className='text-xl font-bold text-white mb-4'>
-                Easy Management
-              </h3>
-              <p className='text-gray-400'>
-                Simple dashboard to manage, edit, and delete your shortened URLs
-                as needed.
-=======
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -952,17 +657,63 @@ export default function URLShortenerPage() {
               </p>
             </Card>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+              Professional URL Shortening Features
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Everything you need to create, manage, and track your shortened URLs effectively.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">🔗</div>
+              <h3 className="text-xl font-bold text-white mb-4">Custom Aliases</h3>
+              <p className="text-gray-400">
+                Create memorable, branded short URLs with custom aliases that reflect your brand.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-white mb-4">Click Analytics</h3>
+              <p className="text-gray-400">
+                Track clicks, engagement, and performance metrics for all your shortened URLs.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">📱</div>
+              <h3 className="text-xl font-bold text-white mb-4">QR Code Generation</h3>
+              <p className="text-gray-400">
+                Generate QR codes for easy sharing and mobile access to your shortened URLs.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">🛡️</div>
+              <h3 className="text-xl font-bold text-white mb-4">Secure & Reliable</h3>
+              <p className="text-gray-400">
+                Enterprise-grade infrastructure ensures your URLs are always accessible and secure.
+              </p>
+            </Card>
+
+            <Card className="text-center p-8 bg-gray-700 border border-gray-600">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-white mb-4">Fast Performance</h3>
+              <p className="text-gray-400">
+                Lightning-fast redirects with global CDN for optimal user experience worldwide.
+              </p>
+            </Card>
+
             <Card className="text-center p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🔧</div>
               <h3 className="text-xl font-bold text-white mb-4">Easy Management</h3>
               <p className="text-gray-400">
                 Simple dashboard to manage, edit, and delete your shortened URLs as needed.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </p>
             </Card>
           </div>
@@ -970,18 +721,10 @@ export default function URLShortenerPage() {
       </section>
 
       {/* Use Cases */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-20 bg-gray-800'>
-        <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
-          <div className='text-center mb-16'>
-            <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-=======
       <section className="py-20 bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               Perfect For Every Business Need
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
@@ -996,9 +739,6 @@ export default function URLShortenerPage() {
               <p className="text-gray-400 mb-6">
                 Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.
               </p>
-<<<<<<< HEAD
-              <ul className='space-y-2 text-gray-300'>
-=======
       <section className="py-20 bg-gray-800">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -1018,29 +758,13 @@ export default function URLShortenerPage() {
                 Create trackable links for email marketing, social media campaigns, and advertising to measure ROI and engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <ul className="space-y-2 text-gray-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <li>• Track campaign performance</li>
                 <li>• Measure click-through rates</li>
                 <li>• Optimize marketing strategies</li>
               </ul>
             </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>📱</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Social Media
-              </h3>
-              <p className='text-gray-400 mb-6'>
-                Share concise, professional links on social platforms with
-                built-in analytics to understand audience engagement.
-              </p>
-              <ul className='space-y-2 text-gray-300'>
-=======
             <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
@@ -1048,8 +772,6 @@ export default function URLShortenerPage() {
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📱</div>
               <h3 className="text-2xl font-bold text-white mb-4">Social Media</h3>
@@ -1057,26 +779,12 @@ export default function URLShortenerPage() {
                 Share concise, professional links on social platforms with built-in analytics to understand audience engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <li>• Professional appearance</li>
                 <li>• Engagement tracking</li>
                 <li>• Brand consistency</li>
               </ul>
             </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>📧</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Email Marketing
-              </h3>
-              <p className='text-gray-400 mb-6'>
-                Include short, trackable URLs in newsletters and promotional
-                emails to monitor subscriber engagement.
-              </p>
-              <ul className='space-y-2 text-gray-300'>
-=======
             <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📧</div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
@@ -1084,8 +792,6 @@ export default function URLShortenerPage() {
                 Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">📧</div>
               <h3 className="text-2xl font-bold text-white mb-4">Email Marketing</h3>
@@ -1093,26 +799,12 @@ export default function URLShortenerPage() {
                 Include short, trackable URLs in newsletters and promotional emails to monitor subscriber engagement.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <li>• Clean email design</li>
                 <li>• Subscriber analytics</li>
                 <li>• A/B testing support</li>
               </ul>
             </Card>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <Card className='p-8 bg-gray-700 border border-gray-600'>
-              <div className='text-4xl mb-4'>🏢</div>
-              <h3 className='text-2xl font-bold text-white mb-4'>
-                Business Presentations
-              </h3>
-              <p className='text-gray-400 mb-6'>
-                Use short URLs in presentations, business cards, and printed
-                materials for easy access and tracking.
-              </p>
-              <ul className='space-y-2 text-gray-300'>
-=======
             <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
@@ -1120,8 +812,6 @@ export default function URLShortenerPage() {
                 Use short URLs in presentations, business cards, and printed materials for easy access and tracking.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <Card className="p-8 bg-gray-700 border border-gray-600">
               <div className="text-4xl mb-4">🏢</div>
               <h3 className="text-2xl font-bold text-white mb-4">Business Presentations</h3>
@@ -1129,7 +819,6 @@ export default function URLShortenerPage() {
                 Use short URLs in presentations, business cards, and printed materials for easy access and tracking.
               </p>
               <ul className="space-y-2 text-gray-300">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
                 <li>• Professional branding</li>
                 <li>• Easy sharing</li>
                 <li>• Access tracking</li>
@@ -1140,37 +829,6 @@ export default function URLShortenerPage() {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='py-20 bg-gradient-to-r from-orange-600 to-red-600'>
-        <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-          <h2 className='text-3xl sm:text-4xl font-bold text-white mb-6'>
-=======
-      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
-        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-            Ready to Shorten Your URLs?
-          </h2>
-          <p className="text-xl text-orange-100 mb-8">
-            Join thousands of businesses using our professional URL shortening service to improve their link management.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              href="/contact"
-              size="lg"
-              className="bg-white text-orange-600 hover:bg-gray-100"
-            >
-              Get Started Today
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button
-<<<<<<< HEAD
-              href='/pricing'
-              variant='outline'
-              size='lg'
-              className='border-white text-white hover:bg-white hover:text-orange-600'
-=======
       <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
         <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
@@ -1189,16 +847,28 @@ export default function URLShortenerPage() {
               <ArrowRight className="w-5 h-5 ml-2" />
             </Button>
             <Button
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-red-600">
+        <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+            Ready to Shorten Your URLs?
+          </h2>
+          <p className="text-xl text-orange-100 mb-8">
+            Join thousands of businesses using our professional URL shortening service to improve their link management.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Button
+              href="/contact"
+              size="lg"
+              className="bg-white text-orange-600 hover:bg-gray-100"
+            >
+              Get Started Today
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </Button>
+            <Button
               href="/pricing"
               variant="outline"
               size="lg"
               className="border-white text-white hover:bg-white hover:text-orange-600"
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             >
               View Pricing
             </Button>
@@ -1206,12 +876,6 @@ export default function URLShortenerPage() {
         </div>
       </section>
     </>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

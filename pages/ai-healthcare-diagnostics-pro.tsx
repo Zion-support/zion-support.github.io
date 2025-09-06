@@ -1,77 +1,29 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Stethoscope,
-  Brain,
-  Eye,
-  Heart,
-  Microscope,
-  Shield,
-  BarChart3,
-  TrendingUp,
-  Target,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Cpu,
-  Network,
-  Database,
-  Lock,
-  Clock,
-  DollarSign,
-  PieChart,
-  Activity,
-  Zap,
-  Pill,
-  Syringe,
-  Hospital,
-  Ambulance,;
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance,} from 'lucide-react';
 import Link from 'next/link';
 
-=======
-import { 
-  Stethoscope, Brain, Eye, Heart, 
-  Microscope, Shield, BarChart3, 
-  TrendingUp, Target, Users, CheckCircle, 
-  ArrowRight, Cpu, Network, Database, 
-  Lock, Clock, DollarSign, PieChart;
-  Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance} from 'lucide-react';
 import Link from 'next/link';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { 
-  Stethoscope, Brain, Eye, Heart, 
-  Microscope, Shield, BarChart3, 
-  TrendingUp, Target, Users, CheckCircle, 
-  ArrowRight, Cpu, Network, Database, 
-  Lock, Clock, DollarSign, PieChart;
-  Activity, Zap, Pill, Syringe, Hospital, Ambulance
-} from 'lucide-react';
+import {Stethoscope, Brain, Eye, Heart, Microscope, Shield, BarChart3, TrendingUp, Target, Users, CheckCircle, ArrowRight, Cpu, Network, Database, Lock, Clock, DollarSign, PieChart, Activity, Zap, Pill, Syringe, Hospital, Ambulance} from 'lucide-react';
 import Link from 'next/link';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 const AIHealthcareDiagnosticsPro: React.FC = () => {
   const features = [
     {
       icon: Brain,
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Advanced AI Diagnostics',
       description:
         'Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.',
       color: 'from-blue-500 to-cyan-500',
     },
-=======
       title: "Advanced AI Diagnostics",
       description: "Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.";
       color: "from-blue-500 to-cyan-500"
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       icon: Eye,
       title: "Multi-Modal Imaging",
@@ -98,13 +50,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     };
     {
       icon: Zap,
-<<<<<<< HEAD
       title: 'Automated Workflows',
       description:
         'Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.',
       color: 'from-yellow-500 to-orange-500',
     },
-=======
       title: "Advanced AI Diagnostics",
       description: "Deep learning algorithms analyze medical images, lab results, and patient data with 99.2% accuracy for early disease detection.";
       color: "from-blue-500 to-cyan-500"
@@ -135,23 +85,17 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     };
     {
       icon: Zap,
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       title: "Automated Workflows",
       description: "Streamline diagnostic processes with intelligent automation, reducing diagnosis time by up to 80%.";
       color: "from-yellow-500 to-orange-500"
     }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const useCases = [
     {
       icon: Microscope,
-<<<<<<< HEAD
-<<<<<<< HEAD
       title: 'Radiology & Imaging',
       description:
         'AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.',
@@ -161,12 +105,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         'Reduced radiologist workload',
       ],
     },
-=======
       title: "Radiology & Imaging",
       description: "AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.";
       benefits: ["95% accuracy rate", "80% faster diagnosis", "Reduced radiologist workload"]
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       icon: Heart,
       title: "Cardiology",
@@ -181,7 +124,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     };
     {
       icon: Microscope,
-<<<<<<< HEAD
       title: 'Pathology',
       description:
         'Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.',
@@ -191,7 +133,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         'Standardized analysis',
       ],
     },
-=======
       title: "Radiology & Imaging",
       description: "AI-powered analysis of X-rays, CT scans, MRIs, and ultrasounds for faster, more accurate diagnoses.";
       benefits: ["95% accuracy rate", "80% faster diagnosis", "Reduced radiologist workload"]
@@ -210,32 +151,25 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     };
     {
       icon: Microscope,
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       title: "Pathology",
       description: "Digital pathology analysis for cancer detection, grading, and personalized treatment recommendations.";
       benefits: ["Precision medicine", "Faster results", "Standardized analysis"]
     }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const pricingPlans = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Starter',
       price: '$4,999',
       period: '/month',
       description: 'Perfect for small clinics and practices',
-=======
       name: "Starter",
       price: "$4,999";
       period: "/month",
       description: "Perfect for small clinics and practices",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       features: [
         "Up to 1,000 diagnostic scans/month";
         "Basic AI diagnostic models";
@@ -271,7 +205,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       period: "/month",
       description: "For large healthcare networks",
       features: [
-<<<<<<< HEAD
         'Unlimited diagnostic scans',
         'Custom AI model development',
         'Full multi-modal support',
@@ -285,7 +218,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       color: 'from-green-500 to-emerald-500',
       popular: false,
     },
-=======
       name: "Starter",
       price: "$4,999";
       period: "/month",
@@ -325,8 +257,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       period: "/month",
       description: "For large healthcare networks",
       features: [
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         "Unlimited diagnostic scans";
         "Custom AI model development";
         "Full multi-modal support";
@@ -336,24 +267,18 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         "White-label solutions";
         "On-premise deployment";
         "Custom compliance features"
-      ];
+      ],
       color: "from-green-500 to-emerald-500",
       popular: false
     }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const integrations = [
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'PACS Systems',
-=======
       name: "PACS Systems",
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       icon: Database,
       description: "DICOM integration with major PACS vendors",
       color: "from-blue-500 to-cyan-500"
@@ -385,11 +310,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     {
       name: "Cloud Platforms",
       icon: Cpu,
-<<<<<<< HEAD
       description: 'AWS, Azure, Google Cloud, IBM Cloud',
       color: 'from-yellow-500 to-orange-500',
     },
-=======
       name: "PACS Systems",
       icon: Database,
       description: "DICOM integration with major PACS vendors",
@@ -425,30 +348,25 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       description: "AWS, Azure, Google Cloud, IBM Cloud";
       color: "from-yellow-500 to-orange-500"
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: "AWS, Azure, Google Cloud, IBM Cloud";
       color: "from-yellow-500 to-orange-500"
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const specialties = [
     {
       icon: Heart,
-<<<<<<< HEAD
-<<<<<<< HEAD
       name: 'Cardiology',
       description:
         'Heart disease detection, ECG analysis, cardiovascular risk assessment',
       accuracy: '99.1%',
     },
-=======
       name: "Cardiology",
       description: "Heart disease detection, ECG analysis, cardiovascular risk assessment";
       accuracy: "99.1%"
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       icon: Brain,
       name: "Neurology",
@@ -475,13 +393,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     };
     {
       icon: Microscope,
-<<<<<<< HEAD
       name: 'Nephrology',
       description:
         'Kidney disease detection, renal function analysis, transplant assessment',
       accuracy: '98.8%',
     },
-=======
       name: "Cardiology",
       description: "Heart disease detection, ECG analysis, cardiovascular risk assessment";
       accuracy: "99.1%"
@@ -512,24 +428,18 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     };
     {
       icon: Microscope,
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       name: "Nephrology",
       description: "Kidney disease detection, renal function analysis, transplant assessment";
       accuracy: "98.8%"
     }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
     <Layout>
       <Head>
         <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform.'
@@ -555,7 +465,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           rel='canonical'
           href='https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
         />
-=======
         <meta name="description" content="Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform." />
         <meta name="keywords" content="AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy" />
         <meta property="og:title" content="AI Healthcare Diagnostics Pro - Zion Tech Group" />
@@ -563,7 +472,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
         <link rel="canonical" href="https://ziontechgroup.com/ai-healthcare-diagnostics-pro" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       {/* Hero Section */}
@@ -574,13 +483,11 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
         
         {/* Floating Elements */}
-<<<<<<< HEAD
         <div className='absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse'></div>
         <div className='absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000'></div>
         <div className='absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500'></div>
 
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
         <meta name="description" content="Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform." />
         <meta name="keywords" content="AI healthcare, medical diagnostics, medical imaging, disease detection, healthcare AI, medical AI, diagnostic accuracy" />
         <meta property="og:title" content="AI Healthcare Diagnostics Pro - Zion Tech Group" />
@@ -598,27 +505,20 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.1),transparent_50%)]"></div>
         
         {/* Floating Elements */}
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <div className="absolute top-20 left-20 w-2 h-2 bg-cyan-400 rounded-full opacity-60 animate-pulse"></div>
         <div className="absolute bottom-32 right-16 w-3 h-3 bg-purple-400 rounded-full opacity-60 animate-pulse delay-1000"></div>
         <div className="absolute top-1/2 left-1/4 w-1 h-1 bg-green-400 rounded-full opacity-80 animate-pulse delay-500"></div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='mb-8'
-=======
             className="mb-8"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
               <Brain className="w-4 h-4" />
@@ -637,9 +537,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </p>
             
             {/* Key Metrics */}
-<<<<<<< HEAD
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto'>
-=======
             className="mb-8"
           >
             <div className="inline-flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-full text-green-400 text-sm font-medium mb-6">
@@ -660,108 +558,81 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             
             {/* Key Metrics */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm'
               >
                 <div className='text-3xl font-bold text-green-400 mb-2'>
                   99.2%
                 </div>
                 <div className='text-gray-300'>Diagnostic Accuracy</div>
-=======
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
                 <div className="text-gray-300">Diagnostic Accuracy</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm'
               >
                 <div className='text-3xl font-bold text-cyan-400 mb-2'>80%</div>
                 <div className='text-gray-300'>Faster Diagnosis</div>
-=======
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
                 <div className="text-gray-300">Faster Diagnosis</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm'
               >
                 <div className='text-3xl font-bold text-purple-400 mb-2'>
                   24/7
                 </div>
                 <div className='text-gray-300'>Continuous Monitoring</div>
-=======
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 rounded-2xl p-6 backdrop-blur-sm"
               >
                 <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
                 <div className="text-gray-300">Continuous Monitoring</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             </div>
 
             {/* CTA Buttons */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.button
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25'
-=======
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-semibold rounded-xl hover:from-green-600 hover:to-emerald-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-green-500/25"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 Schedule Demo
               </motion.button>
@@ -769,55 +640,42 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 1.0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300'
-=======
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="px-8 py-4 border border-green-500/50 text-green-400 font-semibold rounded-xl hover:bg-green-500/10 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 Contact Sales
               </motion.button>
             </div>
           </motion.div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Features Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Features Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Powered by <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Advanced AI</span>
@@ -827,9 +685,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -841,10 +697,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {features.map((feature, index) => (
               <motion.div
                 key={index}
@@ -852,24 +706,19 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group'
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
                   <feature.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-semibold text-white mb-4'>
                   {feature.title}
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {feature.description}
                 </p>
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-green-500/30 transition-all duration-300 group"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${feature.color} rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
@@ -877,49 +726,39 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <h3 className="text-xl font-semibold text-white mb-4">{feature.title}</h3>
                 <p className="text-gray-300 leading-relaxed">{feature.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Medical Specialties Section */}
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Medical Specialties Section */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Medical Specialties Section */}
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Medical <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Specialties</span>
@@ -929,9 +768,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -943,10 +780,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {specialties.map((specialty, index) => (
               <motion.div
                 key={index}
@@ -954,12 +789,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300'
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center">
@@ -970,14 +802,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     <div className="text-sm text-gray-400">Accuracy</div>
                   </div>
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-semibold text-white mb-3'>
                   {specialty.name}
                 </h3>
                 <p className='text-gray-300 leading-relaxed'>
                   {specialty.description}
                 </p>
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm hover:border-purple-500/30 transition-all duration-300"
               >
                 <div className="flex items-center justify-between mb-4">
@@ -991,49 +821,39 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-3">{specialty.name}</h3>
                 <p className="text-gray-300 leading-relaxed">{specialty.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <h3 className="text-xl font-semibold text-white mb-3">{specialty.name}</h3>
                 <p className="text-gray-300 leading-relaxed">{specialty.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
       {/* Use Cases Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       </section>
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       </section>
 
       {/* Use Cases Section */}
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Transform Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Practice</span>
@@ -1043,9 +863,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1057,10 +875,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {useCases.map((useCase, index) => (
               <motion.div
                 key={index}
@@ -1068,12 +884,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm'
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="flex items-start space-x-4">
                   <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center flex-shrink-0">
@@ -1084,14 +897,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     <p className="text-gray-300 mb-4 leading-relaxed">{useCase.description}</p>
                     <div className="space-y-2">
                       {useCase.benefits.map((benefit, benefitIndex) => (
-<<<<<<< HEAD
                         <div
                           key={benefitIndex}
                           className='flex items-center space-x-2 text-sm'
                         >
                           <CheckCircle className='w-4 h-4 text-green-400' />
                           <span className='text-gray-300'>{benefit}</span>
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-8 backdrop-blur-sm"
               >
                 <div className="flex items-start space-x-4">
@@ -1106,12 +917,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                         <div key={benefitIndex} className="flex items-center space-x-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span className="text-gray-300">{benefit}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div key={benefitIndex} className="flex items-center space-x-2 text-sm">
                           <CheckCircle className="w-4 h-4 text-green-400" />
                           <span className="text-gray-300">{benefit}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       ))}
                     </div>
@@ -1124,32 +933,24 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       </section>
 
       {/* Pricing Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-black relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Choose Your <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Plan</span>
@@ -1159,9 +960,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1173,10 +972,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {pricingPlans.map((plan, index) => (
               <motion.div
                 key={index}
@@ -1185,40 +982,28 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
                 className={`relative bg-gradient-to-br from-gray-800/50 to-gray-900/50 border rounded-2xl p-8 backdrop-blur-sm ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                   plan.popular
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25'
-=======
                   plan.popular 
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   plan.popular 
                     ? 'border-green-500/50 shadow-lg shadow-green-500/25' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     : 'border-gray-700/50'
                 }`}
               >
                 {plan.popular && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
                     <div className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>
-=======
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       Most Popular
                     </div>
                   </div>
                 )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                 <div className='text-center mb-8'>
                   <h3 className='text-2xl font-bold text-white mb-2'>
@@ -1229,28 +1014,25 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                       {plan.price}
                     </span>
                     <span className='text-gray-400'>{plan.period}</span>
-=======
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                   <div className="flex items-baseline justify-center space-x-1 mb-2">
                     <span className="text-4xl font-bold text-white">{plan.price}</span>
                     <span className="text-gray-400">{plan.period}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                   <p className="text-gray-300">{plan.description}</p>
                 </div>
 
                 <ul className="space-y-4 mb-8">
                   {plan.features.map((feature, featureIndex) => (
-<<<<<<< HEAD
                     <li
                       key={featureIndex}
                       className='flex items-center space-x-3'
                     >
                       <CheckCircle className='w-5 h-5 text-green-400 flex-shrink-0' />
                       <span className='text-gray-300'>{feature}</span>
-=======
                 
                 <div className="text-center mb-8">
                   <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
@@ -1266,27 +1048,20 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <li key={featureIndex} className="flex items-center space-x-3">
                       <CheckCircle className="w-5 h-5 text-green-400 flex-shrink-0" />
                       <span className="text-gray-300">{feature}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </li>
                   ))}
                 </ul>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <button
                   className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}
                 >
-=======
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <button className={`w-full py-3 px-6 bg-gradient-to-r ${plan.color} text-white font-semibold rounded-xl hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Get Started
                 </button>
               </motion.div>
@@ -1296,32 +1071,24 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       </section>
 
       {/* Integrations Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-=======
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gray-900 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]"></div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             className='text-center mb-16'
-=======
             className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
               Seamless <span className="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Integrations</span>
@@ -1331,9 +1098,7 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </p>
           </motion.div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-=======
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
@@ -1345,10 +1110,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {integrations.map((integration, index) => (
               <motion.div
                 key={index}
@@ -1356,24 +1119,19 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300'
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
                   <integration.icon className="w-8 h-8 text-white" />
                 </div>
-<<<<<<< HEAD
                 <h3 className='text-xl font-semibold text-white mb-2'>
                   {integration.name}
                 </h3>
                 <p className='text-gray-300 text-sm'>
                   {integration.description}
                 </p>
-=======
                 className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 border border-gray-700/50 rounded-2xl p-6 backdrop-blur-sm text-center hover:border-green-500/30 transition-all duration-300"
               >
                 <div className={`w-16 h-16 bg-gradient-to-r ${integration.color} rounded-2xl flex items-center justify-center mx-auto mb-4`}>
@@ -1381,11 +1139,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </div>
                 <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <h3 className="text-xl font-semibold text-white mb-2">{integration.name}</h3>
                 <p className="text-gray-300 text-sm">{integration.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </motion.div>
             ))}
           </div>
@@ -1393,39 +1149,31 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
       </section>
 
       {/* CTA Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]'></div>
         <div className='relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center'>
-=======
       <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="py-20 bg-gradient-to-r from-green-900/20 via-emerald-900/20 to-cyan-900/20 relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.1),transparent_50%)]"></div>
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
               Ready to{' '}
               <span className='bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent'>
                 Transform
               </span>{' '}
               Healthcare?
-=======
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </h2>
             <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
               Join leading healthcare institutions worldwide who have already revolutionized patient care with AI-powered diagnostics.
@@ -1439,7 +1187,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 Contact Sales
               </button>
             </div>
-<<<<<<< HEAD
 
             <div className='mt-8 text-sm text-gray-400'>
               <p>
@@ -1452,13 +1199,12 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </a>{' '}
                 or email{' '}
                 <a
-                  href='mailto:kleber@ziontechgroup.com'
+                  href='mailto: kleber@ziontechgroup.com'
                   className='text-green-400 hover:text-green-300'
                 >
                   kleber@ziontechgroup.com
                 </a>
               </p>
-=======
             <h2 className="text-4xl md: text-5xl font-bold text-white mb-6">
               Ready to <span className="bg-gradient-to-r from-green-400 to-emerald-400 bg-clip-text text-transparent">Transform</span> Healthcare?
             </h2>
@@ -1477,32 +1223,25 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <div className="mt-8 text-sm text-gray-400">
               <p>Questions? Call us at <a href="tel:+13024640950" className="text-green-400 hover:text-green-300">+1 302 464 0950</a> or email <a href="mailto:kleber@ziontechgroup.com" className="text-green-400 hover:text-green-300">kleber@ziontechgroup.com</a></p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </motion.div>
         </div>
       </section>
     </Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
+  ),
 };
 
 export default AIHealthcareDiagnosticsPro;
-=======
   )
 };
 
 export default AIHealthcareDiagnosticsPro;
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 };
 
 export default AIHealthcareDiagnosticsPro;
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

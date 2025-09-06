@@ -1,6 +1,6 @@
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../components/Layout';
-import { Shield, CheckCircle, AlertTriangle, Clock, FileText, Users, Lock, Eye, EyeOff, Database } from 'lucide-react';
+import {Shield,, CheckCircle,, AlertTriangle,, Clock,, FileText,, Users,, Lock,, Eye,, EyeOff,, Database} from 'lucide-react';
 
 const complianceFrameworks = [
   {
@@ -172,7 +172,7 @@ export default function CompliancePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Questions About Our Security?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -197,5 +197,5 @@ export default function CompliancePage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

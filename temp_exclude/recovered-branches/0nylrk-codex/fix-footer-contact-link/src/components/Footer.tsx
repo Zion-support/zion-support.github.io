@@ -1,6 +1,6 @@
-import { NewsletterForm } from "@/components/NewsletterForm";
-import { Twitter, Linkedin, Facebook, Instagram, Github } from "lucide-react";
-import { Link } from "react-router-dom";
+import {NewsletterForm} from "@/components/NewsletterForm";
+import {Twitter,, Linkedin,, Facebook,, Instagram,, Github} from "lucide-react";
+import {Link} from "react-router-dom";
 export function Footer() {
   return (
     <footer className="bg-zion-blue-dark border-t border-zion-blue-light pt-12 pb-8">

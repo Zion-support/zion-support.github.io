@@ -3,31 +3,8 @@ import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
 import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Shield,
-  Lock,
-  Eye,
-  Database,
-  Globe,
-  User,
-  Settings,
-  AlertTriangle,
-  CheckCircle,
-  Mail,;
-=======
-import { 
-  Shield, Lock, Eye, Database, Globe, 
-  User, Settings, AlertTriangle, CheckCircle, Mail
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { 
-  Shield, Lock, Eye, Database, Globe, 
-  User, Settings, AlertTriangle, CheckCircle, Mail
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, Lock, Eye, Database, Globe, User, Settings, AlertTriangle, CheckCircle, Mail,, import, {, Shield, Lock, Eye, Database, Globe, User, Settings, AlertTriangle, CheckCircle, Mail, import, {, Shield, Lock, Eye, Database, Globe, User, Settings, AlertTriangle, CheckCircle, Mail, ursor/integrate-build-improve-and-re-verify-b76c} from 'lucide-react';
 
 const PrivacyPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -35,12 +12,9 @@ const PrivacyPage: React.FC = () => {
   const privacySections = [
     {
       title: 'Information We Collect',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Database className='w-8 h-8' />,
-=======
       icon: <Database className="w-8 h-8" />,
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       color: 'from-cyan-500 to-blue-500',
       content: [
         'Personal information (name, email, phone number, company)Business information (company size, industry, project requirements)Technical information (IP address, browser type, device information)Usage data (website interactions, service usage patterns)Communication records (emails, phone calls, support tickets)'
@@ -67,7 +41,6 @@ const PrivacyPage: React.FC = () => {
       icon: <Lock className="w-8 h-8" />,
       color: 'from-orange-500 to-red-500',
       content: [
-<<<<<<< HEAD
         'Industry-standard encryption for data in transit and at rest',
         'Regular security audits and vulnerability assessments',
         'Access controls and authentication measures',
@@ -75,7 +48,6 @@ const PrivacyPage: React.FC = () => {
         'Incident response and breach notification procedures',
       ],
     },
-=======
       icon: <Database className="w-8 h-8" />,
       color: 'from-cyan-500 to-blue-500',
       content: [
@@ -106,26 +78,21 @@ const PrivacyPage: React.FC = () => {
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         'Industry-standard encryption for data in transit and at restRegular security audits and vulnerability assessmentsAccess controls and authentication measuresEmployee training on data protectionIncident response and breach notification procedures'
       ]
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const rights = [
     {
       title: 'Access',
       description: 'Request access to your personal information',
-<<<<<<< HEAD
-<<<<<<< HEAD
       icon: <Eye className='w-6 h-6' />,
     },
-=======
       icon: <Eye className="w-6 h-6" />
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       title: 'Correction',
       description: 'Request correction of inaccurate information',
@@ -149,10 +116,8 @@ const PrivacyPage: React.FC = () => {
     {
       title: 'Restriction',
       description: 'Request restriction of processing activities',
-<<<<<<< HEAD
       icon: <Settings className='w-6 h-6' />,
     },
-=======
       icon: <Eye className="w-6 h-6" />
     };
     {
@@ -180,11 +145,9 @@ const PrivacyPage: React.FC = () => {
       description: 'Request restriction of processing activities',
       icon: <Settings className="w-6 h-6" />
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       icon: <Settings className="w-6 h-6" />
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   return (
@@ -192,44 +155,34 @@ const PrivacyPage: React.FC = () => {
       <SEOOptimizer />
       <AnalyticsTracker />
       <Layout>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <main className='relative z-10 pt-8'>
           {/* Hero Section */}
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto text-center'>
-=======
         <main className="relative z-10 pt-8">
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <main className="relative z-10 pt-8">
           {/* Hero Section */}
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h1 className='text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent'>
-=======
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Privacy Policy
                 </h1>
                 <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">
                   Your privacy is our priority. Learn how we protect and handle your personal information.
                 </p>
-<<<<<<< HEAD
                 <div className='flex items-center justify-center gap-4 text-gray-400'>
                   <Shield className='w-6 h-6' />
-=======
                 <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent">
                   Privacy Policy
                 </h1>
@@ -238,11 +191,9 @@ const PrivacyPage: React.FC = () => {
                 </p>
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className="flex items-center justify-center gap-4 text-gray-400">
                   <Shield className="w-6 h-6" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <span>Last updated: {lastUpdated}</span>
                 </div>
               </motion.div>
@@ -250,32 +201,24 @@ const PrivacyPage: React.FC = () => {
           </section>
 
           {/* Overview */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-6xl mx-auto'>
               <div className='grid lg:grid-cols-2 gap-12 items-center'>
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-6xl mx-auto">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
                 >
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <h2 className='text-4xl font-bold mb-6 text-white'>
-=======
                   <h2 className="text-4xl font-bold mb-6 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     Our Commitment to Privacy
                   </h2>
                   <p className="text-lg text-gray-300 mb-6 leading-relaxed">
@@ -292,9 +235,7 @@ const PrivacyPage: React.FC = () => {
                     <span className="font-medium">Your data is safe with us</span>
                   </div>
                 </motion.div>
-<<<<<<< HEAD
 
-=======
                   <h2 className="text-4xl font-bold mb-6 text-white">
                     Our Commitment to Privacy
                   </h2>
@@ -312,21 +253,15 @@ const PrivacyPage: React.FC = () => {
                     <span className="font-medium">Your data is safe with us</span>
                   </div>
                 </motion.div>
-                
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-                
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+
+ursor/integrate-build-improve-and-re-verify-b76c
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6, delay: 0.2 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='relative'
-=======
                   className="relative"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
                     <div className="text-center space-y-6">
@@ -341,13 +276,11 @@ const PrivacyPage: React.FC = () => {
                           <div className="text-2xl font-bold text-cyan-400">256-bit</div>
                           <div className="text-gray-400">Encryption</div>
                         </div>
-<<<<<<< HEAD
                         <div className='text-center'>
                           <div className='text-2xl font-bold text-purple-400'>
                             99.9%
                           </div>
                           <div className='text-gray-400'>Uptime</div>
-=======
                   className="relative"
                 >
                   <div className="bg-gradient-to-br from-cyan-500/20 to-purple-500/20 rounded-2xl p-8 border border-cyan-500/30">
@@ -366,12 +299,10 @@ const PrivacyPage: React.FC = () => {
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">99.9%</div>
                           <div className="text-gray-400">Uptime</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <div className="text-center">
                           <div className="text-2xl font-bold text-purple-400">99.9%</div>
                           <div className="text-gray-400">Uptime</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                       </div>
                     </div>
@@ -382,36 +313,26 @@ const PrivacyPage: React.FC = () => {
           </section>
 
           {/* Privacy Principles */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-20 px-4'>
             <div className='max-w-6xl mx-auto'>
-=======
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-20 px-4">
             <div className="max-w-6xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center mb-16'
-=======
                 className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
                 <p className="text-xl text-gray-300">The foundation of how we handle your data</p>
               </motion.div>
-<<<<<<< HEAD
 
               <div className='grid md:grid-cols-2 gap-8'>
-=======
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Our Privacy Principles</h2>
@@ -419,23 +340,18 @@ const PrivacyPage: React.FC = () => {
               </motion.div>
               
               <div className="grid md:grid-cols-2 gap-8">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               
               <div className="grid md:grid-cols-2 gap-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {privacySections.map((section, index) => (
                   <motion.div
                     key={section.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50'
-=======
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
                       <div className="text-white">
@@ -445,11 +361,9 @@ const PrivacyPage: React.FC = () => {
                     <h3 className="text-2xl font-bold text-white mb-4">{section.title}</h3>
                     <ul className="space-y-3">
                       {section.content.map((item, itemIndex) => (
-<<<<<<< HEAD
                         <li key={itemIndex} className='flex items-start gap-3'>
                           <div className='w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0'></div>
                           <span className='text-gray-300'>{item}</span>
-=======
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-2xl p-8 border border-gray-700/50"
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${section.color} rounded-2xl flex items-center justify-center mb-6`}>
@@ -463,12 +377,10 @@ const PrivacyPage: React.FC = () => {
                         <li key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-300">{item}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <li key={itemIndex} className="flex items-start gap-3">
                           <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
                           <span className="text-gray-300">{item}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </li>
                       ))}
                     </ul>
@@ -479,36 +391,26 @@ const PrivacyPage: React.FC = () => {
           </section>
 
           {/* Your Rights */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50'>
             <div className='max-w-6xl mx-auto'>
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-black/50 to-gray-900/50">
             <div className="max-w-6xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='text-center mb-16'
-=======
                 className="text-center mb-16"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
                 <p className="text-xl text-gray-300">You have control over your personal information</p>
               </motion.div>
-<<<<<<< HEAD
 
               <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-6'>
-=======
                 className="text-center mb-16"
               >
                 <h2 className="text-4xl font-bold mb-4 text-white">Your Privacy Rights</h2>
@@ -516,35 +418,28 @@ const PrivacyPage: React.FC = () => {
               </motion.div>
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {rights.map((right, index) => (
                   <motion.div
                     key={right.title}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     className='bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center'
-=======
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
                       <div className="text-white">
                         {right.icon}
                       </div>
                     </div>
-<<<<<<< HEAD
                     <h3 className='text-xl font-bold text-white mb-2'>
                       {right.title}
                     </h3>
                     <p className='text-gray-300 text-sm'>{right.description}</p>
-=======
                     className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 rounded-xl p-6 border border-gray-700/50 text-center"
                   >
                     <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
@@ -554,11 +449,9 @@ const PrivacyPage: React.FC = () => {
                     </div>
                     <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
                     <p className="text-gray-300 text-sm">{right.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <h3 className="text-xl font-bold text-white mb-2">{right.title}</h3>
                     <p className="text-gray-300 text-sm">{right.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </motion.div>
                 ))}
               </div>
@@ -566,28 +459,20 @@ const PrivacyPage: React.FC = () => {
           </section>
 
           {/* Detailed Policy */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-20 px-4'>
             <div className='max-w-4xl mx-auto'>
-=======
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-20 px-4">
             <div className="max-w-4xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='space-y-12'
-=======
                 className="space-y-12"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div>
                   <h2 className="text-3xl font-bold text-white mb-6">Detailed Privacy Information</h2>
@@ -600,13 +485,11 @@ const PrivacyPage: React.FC = () => {
                         request a quote, or contact our support team. We also automatically collect certain 
                         information about your device and how you interact with our services.
                       </p>
-<<<<<<< HEAD
                       <p className='text-gray-300 leading-relaxed'>
                         This may include your IP address, browser type,
                         operating system, referring URLs, access times, and
                         pages viewed. We use this information to improve our
                         services and provide a better user experience.
-=======
                 className="space-y-12"
               >
                 <div>
@@ -620,22 +503,16 @@ const PrivacyPage: React.FC = () => {
                         request a quote, or contact our support team. We also automatically collect certain 
                         information about your device and how you interact with our services.
                       </p>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <p className="text-gray-300 leading-relaxed">
                         This may include your IP address, browser type, operating system, referring URLs;
                         access times, and pages viewed. We use this information to improve our services 
                         and provide a better user experience.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Usage and Purpose
                       </h3>
@@ -650,35 +527,28 @@ const PrivacyPage: React.FC = () => {
                         send you marketing communications about our services,
                         special offers, and updates. You can opt out of these
                         communications at any time.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use your information to provide, maintain, and improve our services, process 
                         transactions, send you technical notices and support messages, and respond to your 
                         comments and questions.
                       </p>
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Usage and Purpose</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use your information to provide, maintain, and improve our services, process 
                         transactions, send you technical notices and support messages, and respond to your 
                         comments and questions.
                       </p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <p className="text-gray-300 leading-relaxed">
                         With your consent, we may also use your information to send you marketing communications 
                         about our services, special offers, and updates. You can opt out of these communications 
                         at any time.
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Sharing and Disclosure
                       </h3>
@@ -693,7 +563,6 @@ const PrivacyPage: React.FC = () => {
                         These service providers are contractually obligated to
                         keep your information confidential and use it only for
                         the purposes for which we disclose it to them.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Sharing and Disclosure</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We do not sell, trade, or otherwise transfer your personal information to third parties 
@@ -703,8 +572,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         These service providers are contractually obligated to keep your information confidential 
                         and use it only for the purposes for which we disclose it to them.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Sharing and Disclosure</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We do not sell, trade, or otherwise transfer your personal information to third parties 
@@ -714,13 +581,11 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         These service providers are contractually obligated to keep your information confidential 
                         and use it only for the purposes for which we disclose it to them.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Security Measures
                       </h3>
@@ -734,7 +599,6 @@ const PrivacyPage: React.FC = () => {
                         These measures include encryption, access controls,
                         regular security assessments, and employee training on
                         data protection best practices.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Security Measures</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We implement appropriate technical and organizational security measures to protect 
@@ -743,8 +607,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         These measures include encryption, access controls, regular security assessments;
                         and employee training on data protection best practices.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Security Measures</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We implement appropriate technical and organizational security measures to protect 
@@ -753,13 +615,11 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         These measures include encryption, access controls, regular security assessments;
                         and employee training on data protection best practices.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Data Retention
                       </h3>
@@ -773,7 +633,6 @@ const PrivacyPage: React.FC = () => {
                         When we no longer need your information, we will
                         securely delete or anonymize it in accordance with our
                         data retention policies.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We retain your personal information for as long as necessary to provide our services;
@@ -782,8 +641,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         When we no longer need your information, we will securely delete or anonymize it 
                         in accordance with our data retention policies.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Data Retention</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We retain your personal information for as long as necessary to provide our services;
@@ -792,13 +649,11 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         When we no longer need your information, we will securely delete or anonymize it 
                         in accordance with our data retention policies.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         International Data Transfers
                       </h3>
@@ -812,7 +667,6 @@ const PrivacyPage: React.FC = () => {
                         For transfers to countries outside the European Economic
                         Area, we rely on adequacy decisions, standard
                         contractual clauses, or other appropriate safeguards.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">International Data Transfers</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Your information may be transferred to and processed in countries other than your own. 
@@ -822,8 +676,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         For transfers to countries outside the European Economic Area, we rely on adequacy 
                         decisions, standard contractual clauses, or other appropriate safeguards.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">International Data Transfers</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Your information may be transferred to and processed in countries other than your own. 
@@ -833,13 +685,11 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         For transfers to countries outside the European Economic Area, we rely on adequacy 
                         decisions, standard contractual clauses, or other appropriate safeguards.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Cookies and Tracking Technologies
                       </h3>
@@ -852,7 +702,6 @@ const PrivacyPage: React.FC = () => {
                         You can control cookie settings through your browser
                         preferences. However, disabling certain cookies may
                         affect the functionality of our services.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Cookies and Tracking Technologies</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use cookies and similar tracking technologies to enhance your experience on our 
@@ -861,8 +710,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         You can control cookie settings through your browser preferences. However, disabling 
                         certain cookies may affect the functionality of our services.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Cookies and Tracking Technologies</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We use cookies and similar tracking technologies to enhance your experience on our 
@@ -871,13 +718,11 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         You can control cookie settings through your browser preferences. However, disabling 
                         certain cookies may affect the functionality of our services.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Children's Privacy
                       </h3>
@@ -890,7 +735,6 @@ const PrivacyPage: React.FC = () => {
                         If you believe we have collected information from a
                         child under 13, please contact us immediately, and we
                         will take steps to remove such information.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Children's Privacy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Our services are not intended for children under the age of 13. We do not knowingly 
@@ -899,8 +743,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         If you believe we have collected information from a child under 13, please contact 
                         us immediately, and we will take steps to remove such information.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Children's Privacy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         Our services are not intended for children under the age of 13. We do not knowingly 
@@ -909,13 +751,11 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         If you believe we have collected information from a child under 13, please contact 
                         us immediately, and we will take steps to remove such information.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
 
                     <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                       <h3 className='text-2xl font-bold text-white mb-4'>
                         Changes to This Policy
                       </h3>
@@ -929,7 +769,6 @@ const PrivacyPage: React.FC = () => {
                         Your continued use of our services after such changes
                         constitutes acceptance of the updated policy. We
                         encourage you to review this policy periodically.
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We may update this Privacy Policy from time to time to reflect changes in our 
@@ -939,8 +778,6 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         Your continued use of our services after such changes constitutes acceptance of 
                         the updated policy. We encourage you to review this policy periodically.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <h3 className="text-2xl font-bold text-white mb-4">Changes to This Policy</h3>
                       <p className="text-gray-300 mb-4 leading-relaxed">
                         We may update this Privacy Policy from time to time to reflect changes in our 
@@ -950,7 +787,7 @@ const PrivacyPage: React.FC = () => {
                       <p className="text-gray-300 leading-relaxed">
                         Your continued use of our services after such changes constitutes acceptance of 
                         the updated policy. We encourage you to review this policy periodically.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       </p>
                     </div>
                   </div>
@@ -960,29 +797,21 @@ const PrivacyPage: React.FC = () => {
           </section>
 
           {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
           <section className='py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50'>
             <div className='max-w-4xl mx-auto text-center'>
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <section className="py-20 px-4 bg-gradient-to-r from-gray-900/50 to-black/50">
             <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
               >
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <h2 className='text-4xl font-bold mb-6 text-white'>
-=======
                 <h2 className="text-4xl font-bold mb-6 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Questions About Privacy?
                 </h2>
                 <p className="text-xl text-gray-300 mb-8">
@@ -1001,9 +830,7 @@ const PrivacyPage: React.FC = () => {
                     href="/contact"
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
                   >
-<<<<<<< HEAD
                     <User className='w-5 h-5' />
-=======
                 <h2 className="text-4xl font-bold mb-6 text-white">
                   Questions About Privacy?
                 </h2>
@@ -1024,10 +851,8 @@ const PrivacyPage: React.FC = () => {
                     className="border-2 border-cyan-400 text-cyan-400 px-8 py-4 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105 inline-flex items-center gap-2"
                   >
                     <User className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     <User className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     Contact Form
                   </a>
                 </div>
@@ -1037,25 +862,15 @@ const PrivacyPage: React.FC = () => {
         </main>
       </Layout>
     </ErrorBoundary>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default PrivacyPage;
-<<<<<<< HEAD
-=======
   )
 };
 
 export default PrivacyPage;
 
- 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
- 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

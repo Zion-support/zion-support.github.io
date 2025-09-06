@@ -1,19 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react';
-import Link from 'next/link';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ChevronRight, Plus, UserCheck, FileText, Bell} from 'lucide-react'
 import Link from "next/link";
 export function ClientDashboard() {
   return (
@@ -64,17 +54,12 @@ export function ClientDashboard() {
                     <UserCheck className="h-4 w-4" />
                   </div>
                 </div>
-<<<<<<< HEAD
-                <Button size='sm' variant='outline'>
-                  View Details
-                </Button>
-=======
 
 import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { ChevronRight, Plus, UserCheck, FileText, Bell } from 'lucide-react'
+import {Card, CardContent} from "@/components/ui/card";
+import {Button} from "@/components/ui/button";
+import {Badge} from "@/components/ui/badge";
+import {ChevronRight, Plus, UserCheck, FileText, Bell} from 'lucide-react'
 import Link from "next/link";
 export function ClientDashboard() {
   return (
@@ -126,21 +111,13 @@ export function ClientDashboard() {
                   </div>
                 </div>
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <Button size="sm" variant="outline">View Details</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           </CardContent>
         </Card>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Suggested Talents</h2>
@@ -201,13 +178,6 @@ export function ClientDashboard() {
                 <Badge variant="outline" className="text-xs">Node.js</Badge>
                 <Badge variant="outline" className="text-xs">AWS</Badge>
               </div>
-<<<<<<< HEAD
-              <div className='flex gap-2 mt-3'>
-                <Button size='sm'>View Profile</Button>
-                <Button size='sm' variant='outline'>
-                  Message
-                </Button>
-=======
       
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -272,23 +242,15 @@ export function ClientDashboard() {
               <div className="flex gap-2 mt-3">
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex gap-2 mt-3">
                 <Button size="sm">View Profile</Button>
                 <Button size="sm" variant="outline">Message</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </CardContent>
           </Card>
         </div>
       </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
       
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
       <section>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-medium">Recent Updates</h2>
@@ -319,12 +281,6 @@ export function ClientDashboard() {
                 <p className="text-xs text-muted-foreground">1 day ago</p>
               </div>
             </div>
-<<<<<<< HEAD
-
-            <Button variant='outline' className='w-full'>
-              View All Notifications
-            </Button>
-=======
       
       <section>
         <div className="flex items-center justify-between mb-4">
@@ -358,21 +314,12 @@ export function ClientDashboard() {
             </div>
             
             <Button variant="outline" className="w-full">View All Notifications</Button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             
             <Button variant="outline" className="w-full">View All Notifications</Button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           </CardContent>
         </Card>
       </section>
     </div>
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+  ),
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

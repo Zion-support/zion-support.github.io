@@ -1,33 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export type WatchlistMatch = {
-  list: 'OFAC' | 'PEP' | 'Sanctions' | 'AdverseMedia';
-  name: string;
-  score: number; // 0-1 match confidence
-  referenceId?: string;
-  detailsUrl?: string;
-};
-
-export type AmlCheckResult = {
-  status: 'clear' | 'match' | 'review' | 'unknown';
-  matches: WatchlistMatch[];
-  checkedAt: string; // ISO
-  provider: 'mock' | 'remote';
-};
-=======
 export interface AmlResult {
   status: 'clear' | 'match' | 'review';
-  details?: any;
+  details?: any,
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export interface AmlProvider {
-  checkPerson(params: { fullLegalName: string; country: string; dob?: string }): Promise<AmlResult>;
-  checkBusiness(params: { businessName: string; country: string }): Promise<AmlResult>;
+  checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult>;
+  checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>;
 }
 
 class MockAmlProvider implements AmlProvider {
-  async checkPerson(params: { fullLegalName: string; country: string; dob?: string }): Promise<AmlResult> {
+  async checkPerson(params: { fullLegalName: string; country: string, dob?: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
     const name = params.fullLegalName.toLowerCase();
     if (name.includes('test') || name.includes('demo')) {
@@ -36,7 +18,7 @@ class MockAmlProvider implements AmlProvider {
     return { status: 'clear' };
   }
 
-  async checkBusiness(params: { businessName: string; country: string }): Promise<AmlResult> {
+  async checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult> {
     // Mock implementation - in production, this would call a real AML service
     const name = params.businessName.toLowerCase();
     if (name.includes('test') || name.includes('demo')) {
@@ -47,9 +29,6 @@ class MockAmlProvider implements AmlProvider {
 }
 
 export function getAmlProvider(): AmlProvider {
-<<<<<<< HEAD
-  return provider;
-=======
 // AML (Anti-Money Laundering) utilities
 export interface AmlCheck {
   id: string;
@@ -63,11 +42,11 @@ export interface AmlCheck {
     matchedCountries?: string[];
     riskLevel?: 'low' | 'medium' | 'high' | 'critical';
     sources?: string[];
-    notes?: string;
+    notes?: string,
   };
   createdAt: string;
   completedAt?: string;
-  expiresAt: string;
+  expiresAt: string,
 }
 
 export interface AmlProfile {
@@ -85,7 +64,7 @@ export interface AmlProfile {
   lastChecked: string;
   checks: AmlCheck[];
   flags: string[];
-  notes?: string;
+  notes?: string,
 }
 
 export interface AmlConfig {
@@ -94,24 +73,24 @@ export interface AmlConfig {
     sanctions: boolean;
     pep: boolean;
     adverseMedia: boolean;
-    watchlist: boolean;
+    watchlist: boolean,
   };
   thresholds: {
     low: number;
     medium: number;
     high: number;
-    critical: number;
+    critical: number,
   };
   autoBlock: boolean;
   autoBlockThreshold: number;
   checkInterval: number; // days
-  retentionPeriod: number; // days
+  retentionPeriod: number, // days
 }
 
 class AmlManager {
   private profiles: Map<string, AmlProfile> = new Map();
   private checks: Map<string, AmlCheck> = new Map();
-  private config: AmlConfig;
+  private config: AmlConfig,
 
   constructor() {
     this.config = {
@@ -154,12 +133,12 @@ class AmlManager {
   }
 
   async getProfile(userId: string): Promise<AmlProfile | null> {
-    return this.profiles.get(userId) || null;
+    return this.profiles.get(userId) || null,
   }
 
   async updateProfile(userId: string, updates: Partial<AmlProfile>): Promise<AmlProfile | null> {
     const profile = this.profiles.get(userId);
-    if (!profile) return null;
+    if (!profile) return null,
 
     const updatedProfile = { ...profile, ...updates };
     this.profiles.set(userId, updatedProfile);
@@ -170,7 +149,7 @@ class AmlManager {
   async runAmlCheck(userId: string, checkType: AmlCheck['checkType']): Promise<AmlCheck> {
     const profile = this.profiles.get(userId);
     if (!profile) {
-      throw new Error('Profile not found');
+      throw new Error('Profile not found'),
     }
 
     const check: AmlCheck = {
@@ -213,7 +192,7 @@ class AmlManager {
   private async performAmlCheck(profile: AmlProfile, checkType: AmlCheck['checkType']): Promise<{
     result: 'clear' | 'hit' | 'error';
     confidence: number;
-    details: AmlCheck['details'];
+    details: AmlCheck['details'],
   }> {
     // This is a mock implementation - in production, you would integrate with real AML providers
     const mockData = {
@@ -285,7 +264,7 @@ class AmlManager {
             break;
           case 'watchlist':
             riskScore += 50;
-            break;
+            break,
         }
       }
     }
@@ -315,7 +294,7 @@ class AmlManager {
 
   // Utility methods
   async runFullAmlCheck(userId: string): Promise<AmlCheck[]> {
-    const checks: AmlCheck[] = [];
+    const checks: AmlCheck[] = [],
     
     for (const checkType of Object.keys(this.config.proiders) as AmlCheck['checkType'][]) {
       if (this.config.providers[checkType]) {
@@ -328,11 +307,11 @@ class AmlManager {
   }
 
   async getChecksByUser(userId: string): Promise<AmlCheck[]> {
-    return Array.from(this.checks.values()).filter(check => check.userId === userId);
+    return Array.from(this.checks.values()).filter(check => check.userId === userId),
   }
 
   async getChecksByType(checkType: AmlCheck['checkType']): Promise<AmlCheck[]> {
-    return Array.from(this.checks.values()).filter(check => check.checkType === checkType);
+    return Array.from(this.checks.values()).filter(check => check.checkType === checkType),
   }
 
   async getHighRiskProfiles(): Promise<AmlProfile[]> {
@@ -351,7 +330,7 @@ class AmlManager {
 
     profile.status = 'active';
     profile.flags = profile.flags.filter(flag => flag !== 'auto_blocked');
-    profile.notes = reason;
+    profile.notes = reason,
     this.profiles.set(userId, profile);
     return true;
   }
@@ -362,7 +341,7 @@ class AmlManager {
 
     profile.status = 'blocked';
     profile.flags.push('manually_blocked');
-    profile.notes = reason;
+    profile.notes = reason,
     this.profiles.set(userId, profile);
     return true;
   }
@@ -420,7 +399,7 @@ export function generateAmlCheckId(): string {
 }
 
 export function isAmlCheckExpired(check: AmlCheck): boolean {
-  return new Date(check.expiresAt) < new Date();
+  return new Date(check.expiresAt) < new Date(),
 }
 
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
@@ -432,8 +411,5 @@ export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   };
   return colors[riskLevel];
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   return new MockAmlProvider();
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

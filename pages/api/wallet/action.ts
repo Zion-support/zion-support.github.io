@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
-import { handleAction } from "../../../utils/token/service";
+import {handleAction} from "../../../utils/token/service";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status($1).json({$2});
   const { userId, action, metadata } = req.body || {};

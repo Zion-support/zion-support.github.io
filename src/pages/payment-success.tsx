@@ -1,34 +1,19 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react';
-=======
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
+import {Button} from '@/components/ui/button';
 
-import { useRouter } from 'next/router'; // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
+import {useRouter} from 'next/router'; // Changed from useNavigate
+import {CheckCircle2} from 'lucide-react'
 
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { useRouter } from 'next/router', // Changed from useNavigate
-import { CheckCircle2 } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { useTranslation } from 'react-i18next';
+import {Button} from '@/components/ui/button';
+import {useRouter} from 'next/router', // Changed from useNavigate
+import {CheckCircle2} from 'lucide-react'
+import {useTranslation} from 'react-i18next';
 export default function PaymentSuccess() {
   const router = useRouter(), // Changed from navigate
   const { t } = useTranslation();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
   
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   return (
     <div className="min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4">
       <div className="max-w-md w-full bg-zion-blue-dark rounded-xl p-8 border border-zion-blue-light shadow-lg text-center">
@@ -53,9 +38,6 @@ export default function PaymentSuccess() {
           <Button 
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
-<<<<<<< HEAD
-            className='border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white'
-=======
   
 
   return (
@@ -83,10 +65,7 @@ export default function PaymentSuccess() {
             variant="outline"
             onClick={() => router.push('/')} // Changed to router.push
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             className="border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
           >
             {t('errors.return_home')}
           </Button>
@@ -94,11 +73,5 @@ export default function PaymentSuccess() {
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

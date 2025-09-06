@@ -1,24 +1,8 @@
 import React from 'react';
 import MainLayout from '../components/layout/MainLayout';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Users,
-  MapPin,
-  Clock,
-  Briefcase,
-  GraduationCap,
-  Globe,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Heart,
-  Zap,
-  Target,
-  Award,
-  Building,
-  Rocket
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Users,, MapPin,, Clock,, Briefcase,, GraduationCap,, Globe,, ArrowRight,, CheckCircle,, Star,, Heart,, Zap,, Target,, Award,, Building,, Rocket} from 'lucide-react';
 
 const jobOpenings = [
   {
@@ -454,7 +438,7 @@ export default function CareersPage() {
                 We're always looking for talented individuals. Send us your resume 
                 and let us know how you'd like to contribute to our mission.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm: flex-row gap-4 justify-center">
                 <a
                   href="/contact"
                   className="px-8 py-4 bg-white text-blue-600 rounded-lg hover:bg-gray-100 transition-colors font-semibold"
@@ -473,5 +457,5 @@ export default function CareersPage() {
         </section>
       </div>
     </MainLayout>
-  );
+  ),
 }

@@ -1,4 +1,4 @@
-import { FormEvent, useState } from 'react';
+import {FormEvent, useState} from 'react';
 
 export default function VendorRegisterPage() {
   const [loading, setLoading] = useState(false);
@@ -10,7 +10,7 @@ export default function VendorRegisterPage() {
     setMessage(null);
     const form = e.currentTarget;
     const formData = new FormData(form);
-    const payload = Object.fromEntries(formData.entries());
+    const payload = Object.fromEntries(formData.entries()),
     try {
       const res = await fetch('/api/vendors/register', {
         method: 'POST',
@@ -19,20 +19,15 @@ export default function VendorRegisterPage() {
           slug: String(payload.slug),
           name: String(payload.name),
           servicesOffered: String(payload.servicesOffered || '')
-<<<<<<< HEAD
-<<<<<<< HEAD
-            .split(',')
-=======
             .split()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             .map(s => s.trim())
-            .filter(Boolean);
+            .filter(Boolean),
           teamSize: Number(payload.teamSize || 0),
           about: String(payload.about || ''),
           verificationDocs: String(payload.verificationDocs || '')
             .split()
             .map(s => s.trim())
-            .filter(Boolean);
+            .filter(Boolean),
           caseStudies: []})}),
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
@@ -41,9 +36,6 @@ export default function VendorRegisterPage() {
     } catch (err: any) {
       setMessage(err.message)
     } finally {
-<<<<<<< HEAD
-      setLoading(false);
-=======
             .split()
             .map(s => s.trim())
             .filter(Boolean);
@@ -52,7 +44,7 @@ export default function VendorRegisterPage() {
           verificationDocs: String(payload.verificationDocs || '')
             .split()
             .map(s => s.trim())
-            .filter(Boolean);
+            .filter(Boolean),
           caseStudies: []})}),
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed to submit');
@@ -62,26 +54,14 @@ export default function VendorRegisterPage() {
       setMessage(err.message)
     } finally {
       setLoading(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setLoading(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
     }
   }
 
   return (
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <div className='max-w-2xl mx-auto space-y-6'>
-      <h1 className='text-2xl font-semibold'>
-        Apply to become a Vendor Partner
-      </h1>
-      <form onSubmit={onSubmit} className='space-y-4'>
-=======
     <div className="max-w-2xl mx-auto space-y-6">
       <h1 className="text-2xl font-semibold">Apply to become a Vendor Partner</h1>
       <form onSubmit={onSubmit} className="space-y-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
         <div>
           <label className="block text-sm mb-1" htmlFor="input-Agency Name">Agency Name</label>
           <input name="name" required className="w-full border rounded px-3 py-2 bg-transparent" />
@@ -115,8 +95,6 @@ export default function VendorRegisterPage() {
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   );
-<<<<<<< HEAD
-=======
     <div className="max-w-2xl mx-auto space-y-6">
       <h1 className="text-2xl font-semibold">Apply to become a Vendor Partner</h1>
       <form onSubmit={onSubmit} className="space-y-4">
@@ -154,7 +132,4 @@ export default function VendorRegisterPage() {
     </div>
   );
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

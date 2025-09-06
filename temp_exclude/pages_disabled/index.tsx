@@ -1,8 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { ArrowRight, Star, CheckCircle, Clock, Users, Shield, Zap } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {ArrowRight,, Star,, CheckCircle,, Clock,, Users,, Shield,, Zap} from 'lucide-react';
 
 const microSaasProducts = [
   {
@@ -246,7 +246,7 @@ export default function ProductsIndex() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold text-white mb-6">
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
@@ -272,5 +272,5 @@ export default function ProductsIndex() {
         </section>
       </div>
     </>
-  );
+  ),
 }

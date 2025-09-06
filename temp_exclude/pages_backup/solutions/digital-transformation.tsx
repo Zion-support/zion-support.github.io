@@ -1,34 +1,14 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 import Layout from '../../components/Layout';
-import { RefreshCw, Target, Rocket, TrendingUp } from 'lucide-react';
+import {RefreshCw,, Target,, Rocket,, TrendingUp} from 'lucide-react';
 import React from 'react';
 :pages/solutions/digital-transformation.tsx
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Zap,
-  ArrowRight,
-  CheckCircle,
-  Star,
-  Users,
-  BarChart3,
-  Clock,
-  Award,
-  Brain,
-  Cloud,
-  Shield,
-  Target,
-  TrendingUp,
-  Globe,
-  Building,
-  Rocket,
-  DollarSign,
-  ShoppingCart,
-  BookOpen
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Zap,, ArrowRight,, CheckCircle,, Star,, Users,, BarChart3,, Clock,, Award,, Brain,, Cloud,, Shield,, Target,, TrendingUp,, Globe,, Building,, Rocket,, DollarSign,, ShoppingCart,, BookOpen} from 'lucide-react';
 import MainLayout from '../../components/layout/MainLayout';
 const transformationSteps = [
   {
@@ -104,8 +84,8 @@ import React from 'react';
 =======
 import React from 'react';
 import Layout from "../../components/Layout";";
-import { motion } from 'framer-motion';
-import { Rocket, RefreshCw, Target, TrendingUp, CheckCircle, ArrowRight } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Rocket,, RefreshCw,, Target,, TrendingUp,, CheckCircle,, ArrowRight} from 'lucide-react';
 export default function DigitalTransformationPage() {
   const transformationServices = [;
     {}

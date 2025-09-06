@@ -1,86 +1,23 @@
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Brain,
-  Atom,
-  Sparkles,
-  Shield,
-  Zap,
-  Globe,
-  Cpu,
-  Database,
-  Cloud,
-  Smartphone,
-  Palette,
-  MessageSquare,
-  FileText,
-  Calendar,
-  CreditCard,
-  BarChart3,
-  Settings,
-  Code,
-  BookOpen,
-  Activity,
-  Play,
-  Mail,
-  Phone,
-  MapPin,
-  Filter,
-  Grid,
-  List,
-  ChevronDown,
-  ChevronUp,
-  FlaskConical,
-  Dna,
-  Car,
-  Leaf,
-  Factory,
-  Truck,
-  Microscope,
-  GraduationCap,
-  ShieldCheck,
-  Globe2,
-  Bot,
-  ChevronRight,
-  Crown,
-  Infinity,;
-} from 'lucide-react';
-=======
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity } from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity,} from 'lucide-react';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity} from 'lucide-react';
+import {Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle, ArrowRight, Rocket, Brain, Atom, Sparkles, Shield, Zap, Globe, Cpu, Database, Cloud, Smartphone, Palette, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Code, BookOpen, Activity, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Globe2, Bot, ChevronRight, Crown, Infinity} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-b76c
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard';
-import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
-import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-services-v2';
-import { enterpriseIT2026ServicesV2 } from '../data/enterprise-it-2026-services-v2';
-import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-v3';
-import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
-import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
-<<<<<<< HEAD
-<<<<<<< HEAD
+import {innovative2026MicroSaasServicesV2} from '../data/innovative-2026-micro-saas-v2';
+import {emergingTech2026ServicesV2} from '../data/emerging-tech-2026-services-v2';
+import {enterpriseIT2026ServicesV2} from '../data/enterprise-it-2026-services-v2';
+import {innovative2026AIServicesV3} from '../data/innovative-2026-ai-services-v3';
+import {emergingTech2026ServicesV3} from '../data/emerging-tech-2026-services-v3';
+import {enterpriseIT2026ServicesV3} from '../data/enterprise-it-2026-services-v3';
 
-=======
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function Services2026ShowcaseEnhancedPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
@@ -89,8 +26,6 @@ export default function Services2026ShowcaseEnhancedPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
   // Map service variants to supported card variants
-<<<<<<< HEAD
-<<<<<<< HEAD
   const mapServiceVariantToCardVariant = (
     serviceVariant: string
   ):
@@ -127,14 +62,11 @@ export default function Services2026ShowcaseEnhancedPage() {
     | 'quantum-cyberpunk' => {
     if (serviceVariant.includes('quantum') && serviceVariant.includes('ai'))
       return 'quantum-advanced';
-=======
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
     if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const mapServiceVariantToCardVariant = (serviceVariant: string): 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural' | 'quantum-holographic' | 'quantum-advanced' | 'holographic-advanced' | 'neural-quantum' | 'quantum-cyberpunk' | 'holographic-neural' | 'quantum-holographic-advanced' | 'quantum-matrix' | 'neural-cyberpunk' | 'holographic-quantum' | 'quantum-neural-advanced' | 'cyberpunk-holographic' | 'quantum-space' | 'ai-futuristic' | 'quantum-entanglement' | 'holographic-matrix' | 'neural-quantum-cyberpunk' | 'enterprise-futuristic' | 'quantum-futuristic' | 'holographic-futuristic' | 'quantum-iot' | 'quantum-logistics' | 'quantum-financial' | 'quantum-energy' | 'quantum-neural' | 'quantum-cyberpunk' => {
     if (serviceVariant.includes('quantum') && serviceVariant.includes('ai')) return 'quantum-advanced';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     if (serviceVariant.includes('quantum')) return 'quantum';
     if (serviceVariant.includes('ai')) return 'ai-futuristic';
     if (serviceVariant.includes('holographic')) return 'holographic';
@@ -163,61 +95,42 @@ export default function Services2026ShowcaseEnhancedPage() {
     if (serviceVariant.includes('api')) return 'quantum-advanced';
     if (serviceVariant.includes('integration')) return 'quantum-advanced';
     if (serviceVariant.includes('analytics')) return 'neural';
-<<<<<<< HEAD
-<<<<<<< HEAD
-    return 'default';
-=======
+    return 'default',
     return 'default'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return 'default'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-<<<<<<< HEAD
-<<<<<<< HEAD
     website: 'https://ziontechgroup.com',
-=======
     website: 'https://ziontechgroup.com'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     website: 'https://ziontechgroup.com'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   // Combine all 2026 services including new ones
   const all2026Services = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV2,
     ...emergingTech2026ServicesV2,
     ...enterpriseIT2026ServicesV2,
     ...innovative2026AIServicesV3,
     ...emergingTech2026ServicesV3,
     ...enterpriseIT2026ServicesV3,
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     ...innovative2026MicroSaasServicesV2;
     ...emergingTech2026ServicesV2;
     ...enterpriseIT2026ServicesV2;
     ...innovative2026AIServicesV3;
     ...emergingTech2026ServicesV3;
     ...enterpriseIT2026ServicesV3
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Enhanced categories for 2026
   const categories = [
-<<<<<<< HEAD
-<<<<<<< HEAD
     {
       id: 'all',
       name: 'All 2026 Services',
@@ -276,9 +189,7 @@ export default function Services2026ShowcaseEnhancedPage() {
         s => s.category.includes('Manufacturing') || s.category.includes('IoT')
       ).length,
     },
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     { id: 'all', name: 'All 2026 Services', icon: '🚀', count: all2026Services.length },
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
     { id: 'quantum', name: 'Quantum & Emerging Tech', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
@@ -287,10 +198,7 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
     { id: 'financial', name: 'Financial Technology', icon: '💰', count: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'manufacturing', name: 'Manufacturing & IoT', icon: '🏭', count: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
@@ -298,15 +206,10 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
     { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'premium', name: '$20K+/month', range: '$20K+' },
-=======
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const sortOptions = [
@@ -315,15 +218,10 @@ export default function Services2026ShowcaseEnhancedPage() {
     { id: 'price-high', name: 'Price High to Low' },
     { id: 'popularity', name: 'Most Popular' },
     { id: 'newest', name: 'Newest First' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'rating', name: 'Highest Rated' },
-=======
     { id: 'rating', name: 'Highest Rated' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'rating', name: 'Highest Rated' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Filter and sort services
@@ -332,8 +230,6 @@ export default function Services2026ShowcaseEnhancedPage() {
 
     // Search filter
     if (searchTerm) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       filtered = filtered.filter(
         service =>
           service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -342,29 +238,21 @@ export default function Services2026ShowcaseEnhancedPage() {
             .includes(searchTerm.toLowerCase()) ||
           service.category.toLowerCase().includes(searchTerm.toLowerCase())
       );
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       filtered = filtered.filter(service =>
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
         service.category.toLowerCase().includes(searchTerm.toLowerCase())
       )
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Category filter
     if (selectedCategory !== 'all') {
       if (selectedCategory === 'ai') {
-<<<<<<< HEAD
-<<<<<<< HEAD
         filtered = filtered.filter(service => service.category.includes('AI'));
-=======
         filtered = filtered.filter(service => service.category.includes('AI'))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       } else if (selectedCategory === 'quantum') {
         filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
       } else if (selectedCategory === 'enterprise') {
@@ -376,13 +264,11 @@ export default function Services2026ShowcaseEnhancedPage() {
       } else if (selectedCategory === 'financial') {
         filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
-<<<<<<< HEAD
         filtered = filtered.filter(
           service =>
             service.category.includes('Manufacturing') ||
             service.category.includes('IoT')
         );
-=======
         filtered = filtered.filter(service => service.category.includes('AI'))
       } else if (selectedCategory === 'quantum') {
         filtered = filtered.filter(service => service.category.includes('Quantum') || service.category.includes('Emerging'))
@@ -396,10 +282,8 @@ export default function Services2026ShowcaseEnhancedPage() {
         filtered = filtered.filter(service => service.category.includes('Financial') || service.category.includes('Trading'))
       } else if (selectedCategory === 'manufacturing') {
         filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         filtered = filtered.filter(service => service.category.includes('Manufacturing') || service.category.includes('IoT'))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       }
     }
 
@@ -408,8 +292,6 @@ export default function Services2026ShowcaseEnhancedPage() {
       filtered = filtered.filter(service => {
         const price = parseInt(service.price.replace(/[^0-9]/g, ''));
         if (selectedPriceRange === 'low') return price < 1000;
-<<<<<<< HEAD
-<<<<<<< HEAD
         if (selectedPriceRange === 'medium')
           return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high')
@@ -417,35 +299,29 @@ export default function Services2026ShowcaseEnhancedPage() {
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true;
       });
-=======
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true
       })
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
         if (selectedPriceRange === 'premium') return price >= 20000;
         return true
       })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     // Sort services
     filtered.sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
-<<<<<<< HEAD
-<<<<<<< HEAD
           return (
             parseInt(a.price.replace(/[^0-9]/g, '')) -
             parseInt(b.price.replace(/[^0-9]/g, ''))
           );
-=======
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
         case 'popularity':
@@ -458,7 +334,6 @@ export default function Services2026ShowcaseEnhancedPage() {
       }
     });
 
-<<<<<<< HEAD
     return filtered;
   }, [
     all2026Services,
@@ -467,7 +342,6 @@ export default function Services2026ShowcaseEnhancedPage() {
     selectedPriceRange,
     sortBy,
   ]);
-=======
           return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
         case 'price-high':
           return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
@@ -483,18 +357,14 @@ export default function Services2026ShowcaseEnhancedPage() {
 
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return filtered
   }, [all2026Services, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   // Service statistics
   const serviceStats = {
     totalServices: all2026Services.length,
     aiServices: all2026Services.filter(s => s.category.includes('AI')).length,
-<<<<<<< HEAD
-<<<<<<< HEAD
     quantumServices: all2026Services.filter(s => s.category.includes('Quantum'))
       .length,
     enterpriseServices: all2026Services.filter(
@@ -511,14 +381,13 @@ export default function Services2026ShowcaseEnhancedPage() {
     manufacturingServices: all2026Services.filter(
       s => s.category.includes('Manufacturing') || s.category.includes('IoT')
     ).length,
-=======
     quantumServices: all2026Services.filter(s => s.category.includes('Quantum')).length,
     enterpriseServices: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length,
     microSaasServices: all2026Services.filter(s => s.category.includes('SaaS')).length,
     healthcareServices: all2026Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
     financialServices: all2026Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
     manufacturingServices: all2026Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
@@ -545,11 +414,9 @@ export default function Services2026ShowcaseEnhancedPage() {
         </Head>
 
         {/* Enhanced Header Section */}
-<<<<<<< HEAD
         <section className='relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden'>
           <div className='absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30'></div>
           <div className='max-w-7xl mx-auto relative z-10 text-center'>
-=======
     quantumServices: all2026Services.filter(s => s.category.includes('Quantum')).length,
     enterpriseServices: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length,
     microSaasServices: all2026Services.filter(s => s.category.includes('SaaS')).length,
@@ -585,23 +452,18 @@ export default function Services2026ShowcaseEnhancedPage() {
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="relative py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-purple-900/30 via-transparent to-cyan-900/30"></div>
           <div className="max-w-7xl mx-auto relative z-10 text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-<<<<<<< HEAD
-<<<<<<< HEAD
               <h1 className='text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6'>
-=======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Enhanced 2026 Services Showcase
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
@@ -609,9 +471,7 @@ export default function Services2026ShowcaseEnhancedPage() {
               </p>
               
               {/* Service Statistics */}
-<<<<<<< HEAD
               <div className='grid grid-cols-2 md:grid-cols-4 gap-4 mb-12'>
-=======
               <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">
                 Enhanced 2026 Services Showcase
               </h1>
@@ -621,18 +481,14 @@ export default function Services2026ShowcaseEnhancedPage() {
               
               {/* Service Statistics */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {Object.entries(serviceStats).map(([key, value]) => (
                   <motion.div
                     key={key}
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: key.length * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                     className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30'
                   >
                     <div className='text-3xl font-bold text-cyan-400'>
@@ -641,25 +497,20 @@ export default function Services2026ShowcaseEnhancedPage() {
                     <div className='text-sm text-gray-400 capitalize'>
                       {key.replace(/([A-Z])/g, ' $1').trim()}
                     </div>
-=======
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-4 border border-gray-600/30"
                   >
                     <div className="text-3xl font-bold text-cyan-400">{value}</div>
                     <div className="text-sm text-gray-400 capitalize">{key.replace(/([A-Z])/g, ' $1').trim()}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </motion.div>
                 ))}
               </div>
 
               {/* Contact Information */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto'>
                 <h3 className='text-xl font-semibold text-cyan-400 mb-4'>
                   Ready to Transform Your Business?
@@ -667,24 +518,21 @@ export default function Services2026ShowcaseEnhancedPage() {
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-4 text-sm'>
                   <div className='flex items-center justify-center space-x-2'>
                     <Phone className='w-4 h-4 text-purple-400' />
-=======
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center justify-center space-x-2">
                     <Phone className="w-4 h-4 text-purple-400" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center justify-center space-x-2">
                     <Mail className="w-4 h-4 text-purple-400" />
                     <span>{contactInfo.email}</span>
                   </div>
-<<<<<<< HEAD
                   <div className='flex items-center justify-center space-x-2'>
                     <MapPin className='w-4 h-4 text-purple-400' />
                     <span className='text-center'>{contactInfo.address}</span>
-=======
               <div className="bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30 max-w-2xl mx-auto">
                 <h3 className="text-xl font-semibold text-cyan-400 mb-4">Ready to Transform Your Business?</h3>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
@@ -699,12 +547,10 @@ export default function Services2026ShowcaseEnhancedPage() {
                   <div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-4 h-4 text-purple-400" />
                     <span className="text-center">{contactInfo.address}</span>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <div className="flex items-center justify-center space-x-2">
                     <MapPin className="w-4 h-4 text-purple-400" />
                     <span className="text-center">{contactInfo.address}</span>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </div>
@@ -713,16 +559,13 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
 
         {/* Enhanced Search and Filters */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <div className='bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8'>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {/* Search Bar */}
               <div className="relative mb-6">
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -730,10 +573,8 @@ export default function Services2026ShowcaseEnhancedPage() {
                   type="text"
                   placeholder="Search for services, technologies, or use cases..."
                   value={searchTerm}
-<<<<<<< HEAD
                   onChange={e => setSearchTerm(e.target.value)}
                   className='w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <div className="bg-gradient-to-r from-gray-900/50 to-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
@@ -746,21 +587,16 @@ export default function Services2026ShowcaseEnhancedPage() {
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="w-full bg-gray-800/50 border border-gray-600/30 rounded-xl pl-12 pr-4 py-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 />
               </div>
 
               {/* Filters and Controls */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6'>
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {/* Category Filter */}
                 <div>
                   <label className="block text-sm font-medium text-gray-300 mb-2">Category</label>
@@ -769,9 +605,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                     onChange={(e) => setSelectedCategory(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-<<<<<<< HEAD
                     {categories.map(category => (
-=======
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 {/* Category Filter */}
                 <div>
@@ -782,10 +616,8 @@ export default function Services2026ShowcaseEnhancedPage() {
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {categories.map((category) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     {categories.map((category) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <option key={category.id} value={category.id}>
                         {category.name} ({category.count})
                       </option>
@@ -795,22 +627,17 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                 {/* Price Range Filter */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
                     Price Range
                   </label>
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <select
                     value={selectedPriceRange}
                     onChange={(e) => setSelectedPriceRange(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-<<<<<<< HEAD
                     {priceRanges.map(range => (
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2">Price Range</label>
                   <select
                     value={selectedPriceRange}
@@ -818,10 +645,8 @@ export default function Services2026ShowcaseEnhancedPage() {
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {priceRanges.map((range) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     {priceRanges.map((range) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <option key={range.id} value={range.id}>
                         {range.name}
                       </option>
@@ -831,22 +656,17 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                 {/* Sort Options */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
                     Sort By
                   </label>
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <select
                     value={sortBy}
                     onChange={(e) => setSortBy(e.target.value)}
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
-<<<<<<< HEAD
                     {sortOptions.map(option => (
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2">Sort By</label>
                   <select
                     value={sortBy}
@@ -854,10 +674,8 @@ export default function Services2026ShowcaseEnhancedPage() {
                     className="w-full bg-gray-800/50 border border-gray-600/30 rounded-lg px-3 py-2 text-white focus:outline-none focus:ring-2 focus:ring-cyan-500"
                   >
                     {sortOptions.map((option) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     {sortOptions.map((option) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                       <option key={option.id} value={option.id}>
                         {option.name}
                       </option>
@@ -867,25 +685,20 @@ export default function Services2026ShowcaseEnhancedPage() {
 
                 {/* View Mode Toggle */}
                 <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                   <label className='block text-sm font-medium text-gray-300 mb-2'>
                     View Mode
                   </label>
                   <div className='flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1'>
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <button
                       onClick={() => setViewMode('grid')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
                         viewMode === 'grid' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
-<<<<<<< HEAD
                       <Grid className='w-4 h-4 mx-auto' />
-=======
                   <label className="block text-sm font-medium text-gray-300 mb-2">View Mode</label>
                   <div className="flex bg-gray-800/50 border border-gray-600/30 rounded-lg p-1">
                     <button
@@ -895,42 +708,33 @@ export default function Services2026ShowcaseEnhancedPage() {
                       }`}
                     >
                       <Grid className="w-4 h-4 mx-auto" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       <Grid className="w-4 h-4 mx-auto" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </button>
                     <button
                       onClick={() => setViewMode('list')}
                       className={`flex-1 py-2 px-3 rounded-md text-sm font-medium transition-colors ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                         viewMode === 'list'
                           ? 'bg-cyan-600 text-white'
                           : 'text-gray-400 hover:text-white'
                       }`}
                     >
                       <List className='w-4 h-4 mx-auto' />
-=======
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
                       <List className="w-4 h-4 mx-auto" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         viewMode === 'list' ? 'bg-cyan-600 text-white' : 'text-gray-400 hover:text-white'
                       }`}
                     >
                       <List className="w-4 h-4 mx-auto" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     </button>
                   </div>
                 </div>
               </div>
 
               {/* Results Count */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='text-center'>
                 <p className='text-gray-400'>
                   Showing{' '}
@@ -942,17 +746,12 @@ export default function Services2026ShowcaseEnhancedPage() {
                     {all2026Services.length}
                   </span>{' '}
                   services
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <div className="text-center">
                 <p className="text-gray-400">
                   Showing <span className="text-cyan-400 font-semibold">{filteredServices.length}</span> of{' '}
                   <span className="text-cyan-400 font-semibold">{all2026Services.length}</span> services
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </p>
               </div>
             </div>
@@ -960,39 +759,30 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
 
         {/* Enhanced Services Grid */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-16 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-7xl mx-auto'>
             <AnimatePresence mode='wait'>
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-16 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
             <AnimatePresence mode="wait">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {filteredServices.length === 0 ? (
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='text-center py-20'
-=======
                   className="text-center py-20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 >
                   <div className="text-6xl mb-4">🔍</div>
                   <h3 className="text-2xl font-semibold text-gray-300 mb-2">No services found</h3>
                   <p className="text-gray-400">Try adjusting your search criteria or filters</p>
                 </motion.div>
               ) : (
-<<<<<<< HEAD
                 <div
                   className={
                     viewMode === 'grid'
@@ -1000,7 +790,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                       : 'space-y-4'
                   }
                 >
-=======
                   className="text-center py-20"
                 >
                   <div className="text-6xl mb-4">🔍</div>
@@ -1009,10 +798,8 @@ export default function Services2026ShowcaseEnhancedPage() {
                 </motion.div>
               ) : (
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6' : 'space-y-4'}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   {filteredServices.map((service, index) => (
                     <motion.div
                       key={service.id}
@@ -1020,16 +807,13 @@ export default function Services2026ShowcaseEnhancedPage() {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.5, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                       className={
                         viewMode === 'grid'
                           ? ''
                           : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'
                       }
-=======
                       className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     >
                       <UltraFuturisticCard
                         variant={mapServiceVariantToCardVariant(service.variant)}
@@ -1040,9 +824,7 @@ export default function Services2026ShowcaseEnhancedPage() {
                           <div className="flex items-start justify-between mb-4">
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
-<<<<<<< HEAD
                               <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium'>
-=======
                       className={viewMode === 'grid' ? '' : 'bg-gradient-to-r from-gray-800/50 to-gray-700/50 backdrop-blur-sm rounded-xl p-6 border border-gray-600/30'}
                     >
                       <UltraFuturisticCard
@@ -1055,28 +837,23 @@ export default function Services2026ShowcaseEnhancedPage() {
                             <div className="text-4xl">{service.icon}</div>
                             {service.popular && (
                               <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-medium">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                                 Popular
                               </div>
                             )}
                           </div>
 
                           {/* Service Title and Tagline */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <h3 className='text-xl font-bold text-white mb-2'>
                             {service.name}
                           </h3>
                           <p className='text-gray-300 text-sm mb-4'>
                             {service.tagline}
                           </p>
-=======
                           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
                           {/* Price */}
                           <div className="mb-4">
@@ -1099,11 +876,9 @@ export default function Services2026ShowcaseEnhancedPage() {
                               ))}
                             </ul>
                             {service.features.length > 3 && (
-<<<<<<< HEAD
                               <p className='text-xs text-gray-500 mt-1'>
                                 +{service.features.length - 3} more features
                               </p>
-=======
                           <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                           <p className="text-gray-300 text-sm mb-4">{service.tagline}</p>
 
@@ -1129,16 +904,12 @@ export default function Services2026ShowcaseEnhancedPage() {
                             </ul>
                             {service.features.length > 3 && (
                               <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               <p className="text-xs text-gray-500 mt-1">+{service.features.length - 3} more features</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             )}
                           </div>
 
                           {/* Service Stats */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <div className='grid grid-cols-3 gap-2 mb-4 text-xs'>
                             <div className='text-center'>
                               <div className='text-cyan-400 font-semibold'>
@@ -1147,24 +918,21 @@ export default function Services2026ShowcaseEnhancedPage() {
                               <div className='text-gray-400'>
                                 {service.reviews} reviews
                               </div>
-=======
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
                               <div className="text-cyan-400 font-semibold">{service.rating}★</div>
                               <div className="text-gray-400">{service.reviews} reviews</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             </div>
                             <div className="text-center">
                               <div className="text-purple-400 font-semibold">{service.customers}</div>
                               <div className="text-gray-400">customers</div>
                             </div>
-<<<<<<< HEAD
                             <div className='text-center'>
                               <div className='text-green-400 font-semibold'>
                                 {service.trialDays}d
                               </div>
                               <div className='text-gray-400'>trial</div>
-=======
                           <div className="grid grid-cols-3 gap-2 mb-4 text-xs">
                             <div className="text-center">
                               <div className="text-cyan-400 font-semibold">{service.rating}★</div>
@@ -1177,18 +945,14 @@ export default function Services2026ShowcaseEnhancedPage() {
                             <div className="text-center">
                               <div className="text-green-400 font-semibold">{service.trialDays}d</div>
                               <div className="text-gray-400">trial</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div className="text-center">
                               <div className="text-green-400 font-semibold">{service.trialDays}d</div>
                               <div className="text-gray-400">trial</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             </div>
                           </div>
 
                           {/* Market Position */}
-<<<<<<< HEAD
-<<<<<<< HEAD
                           <div className='mb-4 p-3 bg-gray-800/30 rounded-lg'>
                             <h4 className='text-xs font-semibold text-gray-200 mb-1'>
                               Market Position:
@@ -1196,11 +960,10 @@ export default function Services2026ShowcaseEnhancedPage() {
                             <p className='text-xs text-gray-400 line-clamp-2'>
                               {service.marketPosition}
                             </p>
-=======
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           </div>
 
                           {/* ROI */}
@@ -1221,7 +984,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                               <ArrowRight className="w-4 h-4 ml-1" />
                             </Button>
                             <Button
-<<<<<<< HEAD
                               variant='secondary'
                               size='sm'
                               onClick={() =>
@@ -1229,7 +991,6 @@ export default function Services2026ShowcaseEnhancedPage() {
                                   `mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`
                                 )
                               }
-=======
                           <div className="mb-4 p-3 bg-gray-800/30 rounded-lg">
                             <h4 className="text-xs font-semibold text-gray-200 mb-1">Market Position:</h4>
                             <p className="text-xs text-gray-400 line-clamp-2">{service.marketPosition}</p>
@@ -1256,12 +1017,10 @@ export default function Services2026ShowcaseEnhancedPage() {
                               variant="secondary"
                               size="sm"
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                               variant="secondary"
                               size="sm"
                               onClick={() => window.open(`mailto:${contactInfo.email}?subject=Inquiry about ${service.name}`)}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                             >
                               Contact
                             </Button>
@@ -1277,29 +1036,21 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
 
         {/* Enhanced Footer CTA */}
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8'>
           <div className='max-w-4xl mx-auto text-center'>
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className='bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30'
-=======
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Ready to Transform Your Business?
@@ -1325,12 +1076,10 @@ export default function Services2026ShowcaseEnhancedPage() {
                   Call Now
                 </Button>
               </div>
-<<<<<<< HEAD
               <div className='mt-8 text-sm text-gray-400'>
                 <p>
                   Contact: {contactInfo.mobile} | {contactInfo.email}
                 </p>
-=======
               className="bg-gradient-to-r from-cyan-900/50 via-purple-900/50 to-pink-900/50 backdrop-blur-sm rounded-2xl p-8 border border-cyan-500/30"
             >
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
@@ -1359,11 +1108,9 @@ export default function Services2026ShowcaseEnhancedPage() {
               </div>
               <div className="mt-8 text-sm text-gray-400">
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="mt-8 text-sm text-gray-400">
                 <p>Contact: {contactInfo.mobile} | {contactInfo.email}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <p>{contactInfo.address}</p>
               </div>
             </motion.div>
@@ -1371,14 +1118,9 @@ export default function Services2026ShowcaseEnhancedPage() {
         </section>
       </div>
     </UltraFuturisticBackground>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,47 +1,44 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 ] 
 };
 const termsSections = [ {
   Please read these terms carefully before using our website or services. </p> </div> </section> 
 };
 {
-  title: 'Service Description';
+  title: 'Service Description',
 content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
 icon: <Globe className="w-6 h-6 text-green-400" /> 
 };
 {
-  title: 'User Responsibilities';
+  title: 'User Responsibilities',
 content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
 icon: <Users className="w-6 h-6 text-yellow-400" /> 
 };
 {
-  title: 'Privacy and Data Protection';
+  title: 'Privacy and Data Protection',
 content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
 icon: <Eye className="w-6 h-6 text-cyan-400" /> 
 };
 {
-  title: 'Intellectual Property Rights';
+  title: 'Intellectual Property Rights',
 content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
 icon: <Shield className="w-6 h-6 text-red-400" /> 
 }];
 const importantNotices = [ {
   title: 'AI Technology Risks';
-content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.';
+content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.',
 type: 'warning' 
 };
 {
   title: 'Quantum Computing Limitations';
-content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.';
+content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.',
 type: 'info' 
 };
 {
   title: 'Service Availability';
-content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
+content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
 type: 'info' 
 }];
-=======
       ]
     };
     {
@@ -57,13 +54,10 @@ type: 'info'
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, AlertTriangle, CheckCircle, 
-  User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import ErrorBoundary from '../components/ErrorBoundary',
+import {motion} from 'framer-motion';
+import {FileText, Shield, AlertTriangle, CheckCircle, User, Lock, Globe, Scale, Clock, Mail} from 'lucide-react';
+ursor/integrate-build-improve-and-re-verify-b76c
 
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -104,12 +98,8 @@ const TermsPage: React.FC = () => {
   ];
 
   const prohibitedActivities = [
-import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
-  Globe, Calendar, Scale, Users, ArrowRight;
-  BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {FileText, Shield, CheckCircle, AlertTriangle, Globe, Calendar, Scale, Users, ArrowRight, BookOpen, Lock, Zap, Building, Brain, Rocket} from 'lucide-react';
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -121,8 +111,8 @@ import {
         </div>
       </section>
 
-import { motion } from 'framer-motion';
-import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 const Terms: React.FC = () => {
   const sections = [
@@ -182,8 +172,8 @@ const Terms: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 const termsSections = [
@@ -1441,8 +1431,6 @@ export default Terms;
     </ErrorBoundary>
   )
 };
-<<<<<<< HEAD
-=======
       ]
     };
     {
@@ -1458,12 +1446,9 @@ export default Terms;
 import Layout from '../components/layout/Layout';
 import SEOOptimizer from '../components/SEOOptimizer';
 import AnalyticsTracker from '../components/AnalyticsTracker';
-import ErrorBoundary from '../components/ErrorBoundary';
-import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, AlertTriangle, CheckCircle, 
-  User, Lock, Globe, Scale, Clock, Mail
-} from 'lucide-react';
+import ErrorBoundary from '../components/ErrorBoundary',
+import {motion} from 'framer-motion';
+import {FileText, Shield, AlertTriangle, CheckCircle, User, Lock, Globe, Scale, Clock, Mail} from 'lucide-react';
 
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025';
@@ -1504,12 +1489,8 @@ const TermsPage: React.FC = () => {
   ];
 
   const prohibitedActivities = [
-import { motion } from 'framer-motion';
-import { 
-  FileText, Shield, CheckCircle, AlertTriangle, 
-  Globe, Calendar, Scale, Users, ArrowRight;
-  BookOpen, Lock, Zap, Building, Brain, Rocket
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {FileText, Shield, CheckCircle, AlertTriangle, Globe, Calendar, Scale, Users, ArrowRight, BookOpen, Lock, Zap, Building, Brain, Rocket} from 'lucide-react';
 
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -1521,8 +1502,8 @@ import {
         </div>
       </section>
 
-import { motion } from 'framer-motion';
-import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 const Terms: React.FC = () => {
   const sections = [
@@ -1582,8 +1563,8 @@ const Terms: React.FC = () => {
         {/* Hero Section */}
         <section className="relative pt-32 pb-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
-import { motion } from 'framer-motion';
-import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react';
+import {motion} from 'framer-motion';
+import {FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle} from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';
 const termsSections = [
@@ -2842,8 +2823,5 @@ export default Terms;
   )
 };
 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default TermsPage;

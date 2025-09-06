@@ -24,7 +24,7 @@ export interface SpaceTechService {
   "realImplementation": boolean;
   implementationDetails: string, launchDate: string,
   customers: number, rating: number,
-reviews: number;export const spaceTechServices: SpaceTechService[] = [{
+reviews: number,export const spaceTechServices: SpaceTechService[] = [{
     id:,
   space-mission-management-platform',
     "name": 'Space Mission Management Platform,

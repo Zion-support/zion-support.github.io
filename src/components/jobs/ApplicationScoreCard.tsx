@@ -1,24 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState } from 'react';
-import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
-import { supabase } from '@/integrations/supabase/client';
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
-import { toast } from 'sonner';
-import { JobApplication } from '@/types/jobs';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
-import { useState } from "react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { supabase } from "@/integrations/supabase/client";
-import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react'
-import { toast } from "sonner";
-import { JobApplication } from "@/types/jobs";
+import {useState} from "react";
+import {Badge} from "@/components/ui/badge";
+import {Button} from "@/components/ui/button";
+import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
+import {supabase} from "@/integrations/supabase/client";
+import {Loader2, Star, BarChart2, Lightbulb} from 'lucide-react'
+import {toast} from "sonner";
+import {JobApplication} from "@/types/jobs";
 interface ApplicationScoreCardProps {
   application: JobApplication,
   onScoreUpdated?: (updatedApplication: JobApplication) => void
@@ -42,7 +30,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       case "Recommended for Review":
         return "bg-blue-100 text-blue-800";
       case "Low Match":
-        return "bg-orange-100 text-orange-800";
+        return "bg-orange-100 text-orange-800",
       default:
         return "bg-gray-100 text-gray-800"
     }
@@ -100,7 +88,7 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       setTimeout(checkScore, 3000)
       
     } catch (error: any) {
-      setIsScoring(false);
+      setIsScoring(false),
       toast.error(`Failed to score resume: ${error.message}`)
     }
   };
@@ -234,46 +222,5 @@ export function ApplicationScoreCard({ application, onScoreUpdated }: Applicatio
       </CardContent>
     </Card>
   );
-<<<<<<< HEAD
 
-};";
-//Render the score result or button to score return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <CardTitle className="text-lg font-medium flex items-center justify-between" > Resume Match Score </Badge> </CardTitle> </CardHeader> <CardContent> {;
-  hasScore ? (<div> {;
-  /* Score */ ";
-}<div className="flex items-center mb-4" > <div className="p-2 bg-primary/10 rounded-full mr-3" > <Star className="h-5 w-5 text-primary" /> </div> <div> Scored on {;
-  scoredDate ;
-}</div>) ";
-}</div> </div> View detailed breakdown </summary> <div className="mt-2 space-y-2 text-muted-foreground" > {;
-  application.match breakdown.skills match && (<div>) ;
-}</div>) ;
-}{;
-  application.match breakdown.experience match && (<div> </div>) ;
-}{;
-  application.match breakdown.certifications match && (<div>) ;
-}</div>) ;
-}{;
-  application.match breakdown.education match && (<div> </div>) ;
-}</div> </details> </div>) ";
-}</div>) : (<div className="text-center py-4" > <p className="text-muted-foreground mb-4" > Analyze how well this resume matches your job requirements. </p> <Button > {";
-  isScoring ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Scoring Resume... </>) : ("Score Resume") ;
-}</Button> </div>) ;
-}</CardContent> </Card>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-  const hasScore = typeof application.match_score === 'number';
-  
-<<<<<<< HEAD
-      
-<<<<<<< HEAD
-      let attempts = 0;
-      const maxAttempts = 10;
-      
-<<<<<<< HEAD
-
-
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

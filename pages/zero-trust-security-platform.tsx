@@ -1,8 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import ServiceLanding from '../components/sections/ServiceLanding';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 export default function ZeroTrustSecurityPlatformPage() {
   return (
@@ -40,15 +38,13 @@ export default function ZeroTrustSecurityPlatformPage() {
           'SaaS',
           'Public Sector',
         ]}
-        canonical='https://ziontechgroup.com/zero-trust-security-platform'
+        canonical='https: //ziontechgroup.com/zero-trust-security-platform'
       />
     </>
-  );
-=======
+  ),
 export default function ZeroTrustSecurityPlatformPage() {
-=======
 export default function ZeroTrustSecurityPlatformPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 	return (
 		<>
 			<Head>
@@ -76,9 +72,6 @@ export default function ZeroTrustSecurityPlatformPage() {
 			/>
 		</>
 	)
-<<<<<<< HEAD
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,12 +1,9 @@
-import { GetStaticPaths, GetStaticProps } from 'next';
-import { useState } from 'react';
-import { readJson } from '../../utils/fsDb';
+import {GetStaticPaths, GetStaticProps} from 'next';
+import {useState} from 'react';
+import {readJson} from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
@@ -15,12 +12,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
+  const slug = ctx.params?.slug as string,
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
-<<<<<<< HEAD
   const article = articles.find(a => a.slug === slug) || null;
   return { props: { article } };
-=======
 export const getStaticPaths: GetStaticPaths = async () => {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return {
@@ -29,15 +24,13 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const slug = ctx.params?.slug as string;
+  const slug = ctx.params?.slug as string,
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const article = articles.find((a) => a.slug === slug) || null;
   return { props: { article } }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 };
 
 export default function HelpArticlePage({ article }: { article: HelpArticle }) {
@@ -47,15 +40,12 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
     await fetch('/api/support/feedback', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
       body: JSON.stringify({ articleId: article.id, helpful }),
     });
     setVoted(helpful);
-=======
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
@@ -71,9 +61,7 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
         </div>
       </div>
     </article>
-<<<<<<< HEAD
   );
-=======
       body: JSON.stringify({ articleId: article.id, helpful })});
     setVoted(helpful)
   }
@@ -93,8 +81,6 @@ export default function HelpArticlePage({ article }: { article: HelpArticle }) {
     </article>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

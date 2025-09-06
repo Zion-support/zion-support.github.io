@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, ReactNode } from 'react';
-import { ChatMessage } from './ChatMessage';
-import { ChatInput } from './ChatInput';
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { X } from "lucide-react";
+import {ChatMessage} from './ChatMessage';
+import {ChatInput} from './ChatInput';
+import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {X} from "lucide-react";
 export interface Message {
   id: string,
   role: 'user' | 'assistant',
@@ -54,7 +54,7 @@ export function ChatAssistant({
   };
   
   const handleSendMessage = async (message: string) => {
-    if (!message.trim()) return;
+    if (!message.trim()) return,
     
     // Add user message to the chat
     const newMessage: Message = {

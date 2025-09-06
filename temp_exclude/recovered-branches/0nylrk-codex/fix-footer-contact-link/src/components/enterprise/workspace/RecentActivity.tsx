@@ -1,7 +1,7 @@
 
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import {Card,, CardContent,, CardDescription,, CardHeader,, CardTitle} from "@/components/ui/card";
+import {Badge} from "@/components/ui/badge";
 export function RecentActivity() {
   // Mock activity data
   const activities = [
@@ -47,7 +47,7 @@ export function RecentActivity() {
       case "interview":
         return <Badge variant="outline" className="bg-purple-100 text-purple-800 border-purple-200">Interview</Badge>;
       case "comment":
-        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>;
+        return <Badge variant="outline" className="bg-amber-100 text-amber-800 border-amber-200">Comment</Badge>,
       default:
         return <Badge variant="outline">Activity</Badge>
     }

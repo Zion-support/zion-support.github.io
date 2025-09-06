@@ -1,21 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 export default function Page() {
-=======
 import Head from 'next/head';
 export default function RealEstateTechnologySolutions() {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 import Head from 'next/head';
 export default function RealEstateTechnologySolutions() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   return (
     <>
       <Head>
         <title>Real Estate Technology Solutions | Zion Tech Group</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations.'
@@ -24,10 +17,9 @@ export default function RealEstateTechnologySolutions() {
           rel='canonical'
           href='https://ziontechgroup.com/real-estate-technology-solutions'
         />
-=======
         <meta name="description" content="Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations." />
         <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
       <div className="min-h-screen bg-black text-white">
         <section className="container mx-auto px-4 py-20">
@@ -36,9 +28,7 @@ export default function RealEstateTechnologySolutions() {
         </section>
       </div>
     </>
-<<<<<<< HEAD
   );
-=======
         <meta name="description" content="Data, analytics, and automation for real estate technology including valuation, risk modeling, and operations." />
         <link rel="canonical" href="https://ziontechgroup.com/real-estate-technology-solutions" />
       </Head>
@@ -51,8 +41,6 @@ export default function RealEstateTechnologySolutions() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

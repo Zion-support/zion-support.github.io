@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import React, { useState } from 'react';
-=======
-import { useEffect, useMemo, useState } from 'react';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {useEffect, useMemo, useState} from 'react';
+ursor/integrate-build-improve-and-re-verify-b76c
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
@@ -13,14 +10,13 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
   return <span className="text-xl" title={status}>{label}</span>
 }
 
-<<<<<<< HEAD
 interface ConnectionMap {
-  [providerId: string]: any;
+  [providerId: string]: any,
 
 function StatusIcon({
   status,
 }: {
-  status: 'connected' | 'warning' | 'disconnected';
+  status: 'connected' | 'warning' | 'disconnected',
 }) {
   const label =
     status === 'connected' ? '✅' : status === 'warning' ? '⚠️' : '❌';
@@ -31,11 +27,10 @@ function StatusIcon({
   );
 
 interface ConnectionMap {
-  [key: string]: boolean;
+  [key: string]: boolean,
 
 const AdminIntegrationsPage: React.FC = () => {
-=======
-import { useEffect, useMemo, useState } from 'react';
+import {useEffect, useMemo, useState} from 'react';
 import Head from 'next/head';
 interface ProviderMeta { id: string, name: string, category: 'crm' | 'ats', description?: string }
 interface ConnectionMap { [providerId: string]: any }
@@ -46,16 +41,12 @@ function StatusIcon({ status }: { status: 'connected' | 'warning' | 'disconnecte
 }
 
 export default function AdminIntegrationsPage() {
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 export default function AdminIntegrationsPage() {
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
-<<<<<<< HEAD
-<<<<<<< HEAD
   const [syncRules, setSyncRules] = useState<any>({
     autoCreateContacts: true,
     pushNotesMode: 'auto',
@@ -63,9 +54,8 @@ export default function AdminIntegrationsPage() {
     autoUploadResumes: true,
   });
 
-=======
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   async function refresh() {
     const [p, s] = await Promise.all([
       fetch('/api/integrations/providers').then(r => r.json());
@@ -74,11 +64,9 @@ export default function AdminIntegrationsPage() {
     setConnections(s.connections || {})
   }
 
-<<<<<<< HEAD
   useEffect(() => {
     refresh();
   }, []);
-=======
   const [syncRules, setSyncRules] = useState<any>({ autoCreateContacts: true, pushNotesMode: 'auto', autoSyncApplicants: true, autoUploadResumes: true }),
   async function refresh() {
     const [p, s] = await Promise.all([
@@ -89,17 +77,13 @@ export default function AdminIntegrationsPage() {
   }
 
   useEffect(() => { refresh() }, []);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   useEffect(() => { refresh() }, []);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   async function connect(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
       // Open mock oauth popup
-<<<<<<< HEAD
-<<<<<<< HEAD
       window.open(
         `/api/integrations/oauth/${providerId}/start`,
         'oauth',
@@ -115,27 +99,22 @@ export default function AdminIntegrationsPage() {
     } finally {
       setLoading(false);
     }
-=======
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh()
     } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       window.open(`/api/integrations/oauth/${providerId}/start`, 'oauthwidth=500,height=700');
       await new Promise(r => setTimeout(r, 500));
       await fetch('/api/integrations/connect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId, syncRules }) });
       await refresh()
     } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function disconnect(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       await fetch('/api/integrations/disconnect', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -145,23 +124,18 @@ export default function AdminIntegrationsPage() {
     } finally {
       setLoading(false);
     }
-=======
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       await fetch('/api/integrations/disconnect', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function resync(providerId: string) {
-    setLoading(true);
+    setLoading(true),
     try {
-<<<<<<< HEAD
-<<<<<<< HEAD
       await fetch('/api/integrations/resync', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -171,11 +145,10 @@ export default function AdminIntegrationsPage() {
     } finally {
       setLoading(false);
     }
-=======
       await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   const grouped = useMemo(() => ({
@@ -191,10 +164,8 @@ export default function AdminIntegrationsPage() {
           <div className="flex items-center gap-3">
             <div className="h-8 w-8 rounded bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-xs">{p.name.slice(0,2)}</div>
             <div>
-<<<<<<< HEAD
               <div className='font-semibold'>{p.name}</div>
               <div className='text-xs text-gray-500'>{p.description}</div>
-=======
       await fetch('/api/integrations/resync', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ providerId }) }),
       await refresh()
     } finally { setLoading(false) }
@@ -215,27 +186,21 @@ export default function AdminIntegrationsPage() {
             <div>
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="font-semibold">{p.name}</div>
               <div className="text-xs text-gray-500">{p.description}</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
           <StatusIcon status={conn.status} />
         </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <div className='flex items-center gap-2'>
-=======
         <div className="flex items-center gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {!isConnected && (
             <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
           )}
           {isConnected && (
             <>
-<<<<<<< HEAD
               <button
                 onClick={() => resync(p.id)}
                 disabled={loading}
@@ -256,7 +221,6 @@ export default function AdminIntegrationsPage() {
               >
                 Disconnect
               </button>
-=======
         <div className="flex items-center gap-2">
           {!isConnected && (
             <button onClick={() => connect(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-black text-white text-sm">Connect</button>
@@ -266,25 +230,18 @@ export default function AdminIntegrationsPage() {
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <button onClick={() => resync(p.id)} disabled={loading} className="px-3 py-1.5 rounded bg-blue-600 text-white text-sm">Resync Now</button>
               <button onClick={() => setSelected(p.id)} className="px-3 py-1.5 rounded border text-sm">Configure</button>
               <button onClick={() => disconnect(p.id)} disabled={loading} className="px-3 py-1.5 rounded border text-sm">Disconnect</button>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </>
           )}
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     );
-=======
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   function RulesModal() {
@@ -292,23 +249,19 @@ export default function AdminIntegrationsPage() {
     const provider = providers.find(p => p.id === selected)!;
     const isCrm = provider.category === 'crm';
     return (
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='fixed inset-0 bg-black/40 flex items-center justify-center'>
         <div className='w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800'>
           <div className='font-semibold mb-2'>Sync Rules — {provider.name}</div>
           <div className='space-y-3 text-sm'>
-=======
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
           <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
           <div className="space-y-3 text-sm">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {isCrm ? (
               <>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoCreateContacts} onChange={e => setSyncRules({ ...syncRules, autoCreateContacts: e.target.checked })} /> Auto-create contacts</label>
                 <div>
-<<<<<<< HEAD
                   <div className='mb-1'>Push notes:</div>
                   <div className='flex gap-3'>
                     <label className='flex items-center gap-2'>
@@ -336,7 +289,6 @@ export default function AdminIntegrationsPage() {
                       />{' '}
                       Manual only
                     </label>
-=======
       <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
         <div className="w-full max-w-md rounded-lg bg-white dark:bg-neutral-900 p-4 border border-gray-200 dark:border-gray-800">
           <div className="font-semibold mb-2">Sync Rules — {provider.name}</div>
@@ -345,23 +297,17 @@ export default function AdminIntegrationsPage() {
               <>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoCreateContacts} onChange={e => setSyncRules({ ...syncRules, autoCreateContacts: e.target.checked })} /> Auto-create contacts</label>
                 <div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <div className="mb-1">Push notes:</div>
                   <div className="flex gap-3">
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'auto'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'auto' })} /> Auto</label>
                     <label className="flex items-center gap-2"><input type="radio" name="pushNotes" checked={syncRules.pushNotesMode === 'manual'} onChange={() => setSyncRules({ ...syncRules, pushNotesMode: 'manual' })} /> Manual only</label>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   </div>
                 </div>
               </>
             ) : (
               <>
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <label className='flex items-center gap-2'>
                   <input
                     type='checkbox'
@@ -388,10 +334,9 @@ export default function AdminIntegrationsPage() {
                   />{' '}
                   Auto-upload resumes
                 </label>
-=======
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoSyncApplicants} onChange={e => setSyncRules({ ...syncRules, autoSyncApplicants: e.target.checked })} /> Auto-sync applicants</label>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoUploadResumes} onChange={e => setSyncRules({ ...syncRules, autoUploadResumes: e.target.checked })} /> Auto-upload resumes</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </>
             )}
           </div>
@@ -401,9 +346,7 @@ export default function AdminIntegrationsPage() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
     );
-=======
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoSyncApplicants} onChange={e => setSyncRules({ ...syncRules, autoSyncApplicants: e.target.checked })} /> Auto-sync applicants</label>
                 <label className="flex items-center gap-2"><input type="checkbox" checked={!!syncRules.autoUploadResumes} onChange={e => setSyncRules({ ...syncRules, autoUploadResumes: e.target.checked })} /> Auto-upload resumes</label>
               </>
@@ -416,16 +359,12 @@ export default function AdminIntegrationsPage() {
         </div>
       </div>
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
     <>
-<<<<<<< HEAD
-<<<<<<< HEAD
       <Head>
         <title>Admin Integrations • Zion</title>
       </Head>
@@ -434,12 +373,11 @@ export default function AdminIntegrationsPage() {
         <p className='text-sm text-gray-600 mb-6'>
           Connect your CRM and ATS to sync contacts, applicants, and activity.
         </p>
-=======
       <Head><title>Admin Integrations • Zion</title></Head>
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
         <p className="text-sm text-gray-600 mb-6">Connect your CRM and ATS to sync contacts, applicants, and activity.</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
         <section className="mb-8">
           <h2 className="text-lg font-semibold mb-3">CRM</h2>
@@ -455,7 +393,6 @@ export default function AdminIntegrationsPage() {
           </div>
         </section>
 
-<<<<<<< HEAD
         <section className='mb-10'>
           <h2 className='text-lg font-semibold mb-2'>Zapier</h2>
           <div className='text-sm text-gray-600'>Polling endpoints:</div>
@@ -470,7 +407,6 @@ export default function AdminIntegrationsPage() {
                 /api/integrations/zapier/talent-matched?since=TIMESTAMP
               </code>
             </li>
-=======
       <Head><title>Admin Integrations • Zion</title></Head>
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-semibold mb-2">Integrations</h1>
@@ -490,47 +426,33 @@ export default function AdminIntegrationsPage() {
           </div>
         </section>
 
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <section className="mb-10">
           <h2 className="text-lg font-semibold mb-2">Zapier</h2>
           <div className="text-sm text-gray-600">Polling endpoints: </div>
           <ul className="list-disc pl-6 text-sm mt-2">
             <li>New Zion Job Posted → GET <code>/api/integrations/zapier/jobs-posted?since=TIMESTAMP</code></li>
             <li>Talent Matched → GET <code>/api/integrations/zapier/talent-matched?since=TIMESTAMP</code></li>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </ul>
         </section>
 
         <section>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <h2 className='text-lg font-semibold mb-2'>Manual Overrides</h2>
-=======
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <h2 className="text-lg font-semibold mb-2">Manual Overrides</h2>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <ManualOverrideForm />
         </section>
       </main>
       <RulesModal />
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-  );
-=======
+  ),
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
 function ManualOverrideForm() {
   const [jobId, setJobId] = useState('');
@@ -540,8 +462,6 @@ function ManualOverrideForm() {
 
   async function save() {
     setMessage('');
-<<<<<<< HEAD
-<<<<<<< HEAD
     const res = await fetch('/api/integrations/overrides', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -549,10 +469,9 @@ function ManualOverrideForm() {
     });
     if (res.ok) setMessage('Saved');
     else setMessage('Error');
-=======
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
     if (res.ok) setMessage('Saved'), else setMessage('Error')
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   return (
@@ -569,9 +488,7 @@ function ManualOverrideForm() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
   );
-=======
     const res = await fetch('/api/integrations/overrides', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ jobId, disableCrmSync, disableAtsSync }) });
     if (res.ok) setMessage('Saved'), else setMessage('Error')
   }
@@ -592,8 +509,6 @@ function ManualOverrideForm() {
     </div>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
- let pool: Pool | null = null;
-}return pool 
-=======
 import { Pool, PoolClient } from 'pg';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 let pool: Pool | null = null;
 
@@ -29,8 +23,6 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
   } finally {
     client.release()
   }
-<<<<<<< HEAD
-=======
 import { Pool, PoolClient } from 'pg';
 
 let pool: Pool | null = null,
@@ -56,7 +48,4 @@ export async function withUser<T>(userId: string, fn: (client: PoolClient) => Pr
     client.release()
   }
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

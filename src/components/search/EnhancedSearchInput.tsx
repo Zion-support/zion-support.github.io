@@ -1,28 +1,14 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState, useEffect, useRef, useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
-import { Search, X } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { AutocompleteSuggestions } from '@/components/search/AutocompleteSuggestions';
-import { SearchSuggestion } from '@/types/search';
-import { useDebounce } from '@/hooks/useDebounce';
-import { useRouter } from 'next/router';
-import { slugify } from '@/lib/slugify';
-import { debounce } from 'lodash';
-=======
 import React, { useState, useEffect, useRef, useMemo } from "react";
-import { useTranslation } from "react-i18next";
-import { Search, X } from 'lucide-react'
-import { Input } from "@/components/ui/input";
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
-import { useDebounce } from "@/hooks/useDebounce";
-import { useRouter } from "next/router";
-import { slugify } from "@/lib/slugify";
-import { debounce } from "lodash";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
-import { logInfo, logWarn } from '@/utils/productionLogger';
+import {useTranslation} from "react-i18next";
+import {Search, X} from 'lucide-react'
+import {Input} from "@/components/ui/input";
+import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions";
+import {SearchSuggestion} from "@/types/search";
+import {useDebounce} from "@/hooks/useDebounce";
+import {useRouter} from "next/router";
+import {slugify} from "@/lib/slugify";
+import {debounce} from "lodash";
+import {logInfo, logWarn} from '@/utils/productionLogger';
 
 
 interface EnhancedSearchInputProps {
@@ -65,7 +51,7 @@ export function EnhancedSearchInput({
     () =>
       debounce(async (query: string) => {
         if (!query.trim()) {
-          setApiSuggestions([]);
+          setApiSuggestions([]),
           return
         }
 
@@ -132,7 +118,7 @@ export function EnhancedSearchInput({
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
       if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
-        setIsFocused(false);
+        setIsFocused(false),
         // setHighlightedIndex(-1), // Already handled in onBlur generally
       }
     }
@@ -171,7 +157,7 @@ export function EnhancedSearchInput({
     switch (e.key) {
       case 'ArrowDown':
         if (isFocused && filteredSuggestions.length > 0) {
-          e.preventDefault();
+          e.preventDefault(),
           setHighlightedIndex(prev => (prev + 1) % filteredSuggestions.length)
         }
         break;
@@ -279,38 +265,6 @@ export function EnhancedSearchInput({
         listId="autocomplete-suggestions-list" // Pass ID for aria-controls
       />
     </div>
-<<<<<<< HEAD
-  );
 
-}setIsFocused (false);
-inputRef.current?.blur ();
-setHighlightedIndex (-1) ;
-};
-const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {;
-  switch (e.key) {';
-  case 'ArrowDown': if (isFocused && filteredSuggestions.length > 0) {';
-  case 'Escape': e.preventDefault ();
-setIsFocused (false);
-setHighlightedIndex (-1);
-setValueOnFocus (null);
-inputRef.current?.blur ();
-break;
-default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
-break ;
-
-};
-> <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
-  () => onChange ('') ";
-}aria-label="Clear search" > <X className="h-4 w-4" /> </button>) ;
-}</div> <AutocompleteSuggestions /> </div>) ;
-}'"
-=======
-
-<<<<<<< HEAD
-
-          
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

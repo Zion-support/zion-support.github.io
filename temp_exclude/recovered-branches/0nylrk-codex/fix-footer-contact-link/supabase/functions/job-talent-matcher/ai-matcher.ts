@@ -1,5 +1,5 @@
 
-import { JobData, TalentProfile, MatchResult } from "./types.ts";
+import {JobData,, TalentProfile,, MatchResult} from "./types.ts";
 
 // Get openAI API key from environment variables
 const openAiApiKey = Deno.env.get("OPENAI_API_KEY") || "";
@@ -16,7 +16,7 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${openAiApiKey}`
       };
       body: JSON.stringify({
@@ -87,7 +87,7 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         "Authorization": `Bearer ${openAiApiKey}`
       };
       body: JSON.stringify({
@@ -101,12 +101,10 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
             3. A list of matched skills
             4. A brief reason for the match (2-3 sentences)
             
-            Return your response in JSON format only, with no additional text:
-            
-            [
+            Return your response in JSON format only, with no additional text: [
               {
                 "talentId": "talent-id-1";
-                "score": 85;
+                "score": 85,
                 "matchedSkills": ["skill1", "skill2"];
                 "reason": "Brief reason for match"
               };
@@ -165,7 +163,7 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     );
     
     // Calculate a basic match score
-    const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 100);
+    const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 100),
     
     return {
       talentId: talent.id, score: matchScore,

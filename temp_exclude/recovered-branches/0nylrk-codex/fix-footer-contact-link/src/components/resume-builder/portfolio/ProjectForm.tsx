@@ -1,22 +1,16 @@
 
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Textarea } from '@/components/ui/textarea';
-import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from '@/components/ui/form';
-import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
-import { PortfolioProject } from '@/types/resume';
-import { usePortfolio } from '@/hooks/usePortfolio';
-import { useAuth } from '@/hooks/useAuth';
+import {useState} from 'react';
+import {useForm} from 'react-hook-form';
+import {zodResolver} from '@hookform/resolvers/zod';
+import {z} from 'zod';
+import {Button} from '@/components/ui/button';
+import {Input} from '@/components/ui/input';
+import {Textarea} from '@/components/ui/textarea';
+import {Form,, FormControl,, FormField,, FormItem,, FormLabel,, FormMessage} from '@/components/ui/form';
+import {Loader2,, Link,, FileImage,, Github,, Edit} from 'lucide-react';
+import {PortfolioProject} from '@/types/resume';
+import {usePortfolio} from '@/hooks/usePortfolio';
+import {useAuth} from '@/hooks/useAuth';
 // Define schema for form validation
 const projectSchema = z.object({
   title: z.string().min(1, 'Project title is required');
@@ -60,14 +54,14 @@ export function ProjectForm({ project, onSuccess, onCancel }: ProjectFormProps) 
   const onSubmit = async (data: ProjectFormValues) => {
     if (!user) return;
     
-    setIsLoading(true);
+    setIsLoading(true),
     
     try {
       const projectData: PortfolioProject = {
         title: data.title,
         description: data.description,
         technologies: data.technologies ? 
-          data.technologies.split().map(tech => tech.trim()) : [];
+          data.technologies.split().map(tech => tech.trim()) : [],
         image_url: data.image_url,
         github_url: data.github_url || undefined,
         demo_url: data.demo_url || undefined,

@@ -1,10 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
  const partners: Partner[] = [ {
   name: 'Gov Partner' 
-=======
 import Head from 'next/head';
-import React from 'react';
+import React from 'react',
 type Speaker = {
   name: string,
   title: string,
@@ -13,7 +10,7 @@ type Speaker = {
   twitter?: string;
   linkedin?: string;
   highlight?: boolean
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 };
 
 type Partner = {
@@ -51,12 +48,10 @@ export default function SummitPage() {
   const { isPast, days, hours, minutes, seconds } = useCountdown(EVENT_START_ISO);
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
   const [submitting, setSubmitting] = React.useState(false);
-<<<<<<< HEAD
   const [result, setResult] = React.useState<{
     ok?: boolean;
     error?: string;
   } | null>(null);
-=======
 import Head from 'next/head';
 import React from 'react';
 type Speaker = {
@@ -105,58 +100,42 @@ export default function SummitPage() {
   const [form, setForm] = React.useState({ name: '', email: '', role: '', country: '' }),
   const [submitting, setSubmitting] = React.useState(false);
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const [result, setResult] = React.useState<{ ok?: boolean, error?: string } | null>(null);
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 
   const speakers: Speaker[] = [
     {
       name: 'Featured Speaker: Your Name',
-<<<<<<< HEAD
       title: 'Founder, Zion',
-<<<<<<< HEAD
-=======
       title: 'Founder, Zion';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
-<<<<<<< HEAD
       highlight: true,
     },
-=======
     avatarUrl: '/favicon.svg',
       bio: 'Visionary behind Zion Protocol — building AI-native digital nations.',
       twitter: 'https://twitter.com',
       linkedin: 'https://www.linkedin.com',
       highlight: true},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       highlight: true},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Alex Rivera',
       title: 'Head of Protocol Engineering',
       avatarUrl: '/favicon.svg',
-<<<<<<< HEAD
-<<<<<<< HEAD
       bio: 'Leading the architecture of ZionDAO and trust rails.',
     },
-=======
       bio: 'Leading the architecture of ZionDAO and trust rails.'},
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       bio: 'Leading the architecture of ZionDAO and trust rails.'},
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       name: 'Jordan Lee',
       title: 'Zion Alumni | AI Fellow',
       avatarUrl: '/favicon.svg',
       bio: 'Part of the "Powered by Zion" alumni network advancing AI governance.',
-<<<<<<< HEAD
-<<<<<<< HEAD
       twitter: 'https://twitter.com',
     },
   ];
@@ -167,35 +146,29 @@ export default function SummitPage() {
     { name: 'University Partner' },
   ];
 
-=======
       twitter: 'https://twitter.com'}],
   const partners: Partner[] = [
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
     { name: 'University Partner' }],
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       twitter: 'https://twitter.com'}],
   const partners: Partner[] = [
     { name: 'Gov Partner' },
     { name: 'Venture Partner' },
     { name: 'University Partner' }],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
-    setResult(null);
+    setResult(null),
     try {
       const res = await fetch('/api/summit/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ ...form, source: 'summit-page' }),
       });
-=======
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed');
       setResult({ ok: true }),
@@ -203,9 +176,7 @@ export default function SummitPage() {
     } catch (err: any) {
       setResult({ error: err?.message || 'Unexpected error' })
     } finally {
-<<<<<<< HEAD
       setSubmitting(false);
-=======
         body: JSON.stringify({ ...form, source: 'summit-page' })}),
       const data = await res.json();
       if (!res.ok) throw new Error(data?.error || 'Failed');
@@ -215,19 +186,14 @@ export default function SummitPage() {
       setResult({ error: err?.message || 'Unexpected error' })
     } finally {
       setSubmitting(false)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setSubmitting(false)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   const livestreamEmbed = () => {
     if (platform === 'youtube') {
-<<<<<<< HEAD
-<<<<<<< HEAD
       
-=======
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
@@ -235,7 +201,7 @@ export default function SummitPage() {
           title="YouTube livestream"
           allow="accelerometer, autoplay, clipboard-write, encrypted-media, gyroscope, picture-in-picture"
           allowFullScreen
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         />
       )
     }
@@ -256,9 +222,7 @@ export default function SummitPage() {
         title="Twitter livestream"
         allowFullScreen
       />
-<<<<<<< HEAD
     );
-=======
       return (
         <iframe
           className="w-full aspect-video rounded-lg border border-gray-200 dark:border-gray-800"
@@ -287,18 +251,14 @@ export default function SummitPage() {
         allowFullScreen
       />
     )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     )
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   return (
     <>
       <Head>
         <title>Zion Global Summit 2025 — AI, Talent, Trust</title>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <meta
           name='description'
           content='Zion Global Summit: AI, Talent, Trust — Globalized'
@@ -336,15 +296,13 @@ export default function SummitPage() {
             >
               Agenda
             </a>
-=======
         <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
       </Head>
 
-=======
         <meta name="description" content="Zion Global Summit: AI, Talent, Trust — Globalized" />
       </Head>
 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-cyber-dark to-cyber-blue text-white p-8 md:p-12 shadow-neon-blue">
         <div className="max-w-4xl">
           <p className="uppercase tracking-widest text-neon-blue">Zion Global Summit 2025</p>
@@ -354,16 +312,11 @@ export default function SummitPage() {
             <a href="#register" className="inline-flex items-center px-4 py-2 rounded-md bg-neon-blue text-black font-semibold shadow-neon-blue">Register</a>
             <a href="#livestream" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Livestream</a>
             <a href="#agenda" className="inline-flex items-center px-4 py-2 rounded-md border border-white/40 hover:bg-white/10">Agenda</a>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <div className='grid md:grid-cols-3 gap-6 mt-8'>
         <section
           id='agenda'
@@ -371,17 +324,12 @@ export default function SummitPage() {
         >
           <h2 className='text-2xl font-bold mb-4'>Agenda</h2>
           <ol className='space-y-3 list-decimal list-inside'>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       <div className="grid md:grid-cols-3 gap-6 mt-8">
         <section id="agenda" className="md:col-span-2 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
           <h2 className="text-2xl font-bold mb-4">Agenda</h2>
           <ol className="space-y-3 list-decimal list-inside">
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <li>Opening Keynote — Launching Zion Protocol</li>
             <li>Panel 1 — The Future of Digital Nations</li>
             <li>Panel 2 — ZionDAO in Action</li>
@@ -389,8 +337,6 @@ export default function SummitPage() {
             <li>Featured Speaker — Founder</li>
           </ol>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
         <section className='p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
           <h2 className='text-2xl font-bold mb-4'>Event Info</h2>
           <ul className='space-y-2'>
@@ -408,9 +354,7 @@ export default function SummitPage() {
               <span className='font-medium'>Tagline:</span> AI, Talent, Trust —
               Globalized
             </li>
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <section className="p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
           <h2 className="text-2xl font-bold mb-4">Event Info</h2>
           <ul className="space-y-2">
@@ -418,16 +362,11 @@ export default function SummitPage() {
             <li><span className="font-medium">Time:</span> 16:00 UTC</li>
             <li><span className="font-medium">Location:</span> Hybrid (Virtual + In‑Person)</li>
             <li><span className="font-medium">Tagline:</span> AI, Talent, Trust — Globalized</li>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </ul>
         </section>
       </div>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section
         id='speakers'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -445,7 +384,6 @@ export default function SummitPage() {
                   alt={s.name}
                   className='w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800'
                 />
-=======
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -453,13 +391,12 @@ export default function SummitPage() {
             <div key={s.name} className={`p-4 rounded-lg border ${s.highlight ? 'border-neon-blue shadow-neon-blue' : 'border-gray-200 dark:border-gray-800'}`}>
               <div className="flex items-center gap-4">
                 <img src={s.avatarUrl} alt={s.name} className="w-14 h-14 rounded-full border border-gray-200 dark:border-gray-800" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <div>
                   <div className="font-semibold">{s.name}</div>
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
-<<<<<<< HEAD
               <p className='mt-3 text-sm'>{s.bio}</p>
               <div className='mt-3 flex gap-3 text-sm'>
                 {s.twitter && (
@@ -482,7 +419,6 @@ export default function SummitPage() {
                     LinkedIn
                   </a>
                 )}
-=======
       <section id="speakers" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <h2 className="text-2xl font-bold mb-6">Speakers</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -495,24 +431,18 @@ export default function SummitPage() {
                   <div className="text-sm opacity-70">{s.title}</div>
                 </div>
               </div>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <p className="mt-3 text-sm">{s.bio}</p>
               <div className="mt-3 flex gap-3 text-sm">
                 {s.twitter && <a className="underline" href={s.twitter} target="_blank" rel="noreferrer">Twitter</a>}
                 {s.linkedin && <a className="underline" href={s.linkedin} target="_blank" rel="noreferrer">LinkedIn</a>}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
             </div>
           ))}
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section
         id='partners'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -537,34 +467,27 @@ export default function SummitPage() {
               ) : (
                 p.name
               )}
-=======
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</a>
         </div>
-=======
       <section id="partners" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl font-bold">Partners</h2>
           <a href="#register" className="px-4 py-2 rounded-md bg-black text-white dark:bg-white dark:text-black border border-gray-200 dark:border-gray-800">Become a Sponsor</a>
         </div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {partners.map((p) => (
             <div key={p.name} className="h-16 rounded-md border border-dashed border-gray-300 dark:border-gray-700 flex items-center justify-center text-sm opacity-70">
               {p.logoUrl ? <img src={p.logoUrl} alt={p.name} className="max-h-12" /> : p.name}
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           ))}
         </div>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section
         id='livestream'
         className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'
@@ -572,12 +495,11 @@ export default function SummitPage() {
         <div className='flex flex-col md:flex-row md:items-center md:justify-between gap-4'>
           <h2 className='text-2xl font-bold'>Livestream</h2>
           <div className='flex flex-wrap items-center gap-2'>
-=======
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
           <div className="flex flex-wrap items-center gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             <select
               aria-label="Platform"
               className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-transparent"
@@ -655,7 +577,6 @@ export default function SummitPage() {
             >
               {submitting ? 'Submitting...' : 'Submit Registration'}
             </button>
-<<<<<<< HEAD
             {result?.ok && (
               <span className='text-green-600'>
                 Thank you! You are registered.
@@ -664,7 +585,6 @@ export default function SummitPage() {
             {result?.error && (
               <span className='text-red-600'>{result.error}</span>
             )}
-=======
       <section id="livestream" className="mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black">
         <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <h2 className="text-2xl font-bold">Livestream</h2>
@@ -748,18 +668,14 @@ export default function SummitPage() {
             </button>
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
             {result?.error && <span className="text-red-600">{result.error}</span>}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             {result?.ok && <span className="text-green-600">Thank you! You are registered.</span>}
             {result?.error && <span className="text-red-600">{result.error}</span>}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </div>
         </form>
       </section>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark:border-gray-800 bg-white dark:bg-black'>
+      <section className='mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black'>
         <h2 className='text-xl font-semibold'>
           AI Session Summaries (Optional)
         </h2>
@@ -768,8 +684,7 @@ export default function SummitPage() {
         </p>
       </section>
     </>
-  );
-=======
+  ),
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -777,8 +692,6 @@ export default function SummitPage() {
     </>
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="mt-8 p-6 rounded-lg border border-gray-200 dark: border-gray-800 bg-white dark:bg-black">
         <h2 className="text-xl font-semibold">AI Session Summaries (Optional)</h2>
         <p className="text-sm opacity-70 mt-2">Auto-generated summaries and ZionGPT moderation prompts coming soon.</p>
@@ -786,4 +699,4 @@ export default function SummitPage() {
     </>
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

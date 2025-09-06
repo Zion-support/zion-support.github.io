@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useEffect } from 'react';
-import { Header } from '@/components/Header';
-import { SEO } from '@/components/SEO';
-import { GradientHeading } from '@/components/GradientHeading';
-import { Button } from '@/components/ui/button';
-=======
 import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import {useAdvancedOnboardingStatus} from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
   const schema = {
-    "@context": "https://schema.org";
+    "@context": "https: //schema.org";
     "@type": "WebPage";
-    "name": "API & Integrations";
+    "name": "API & Integrations",
     "description": "Connect Zion with Slack, your website and other tools via our API and widgets.";
     "url": "https://app.ziontechgroup.com/features/integrations"
   };
@@ -73,18 +64,13 @@ export default function IntegrationsFeature() {
               <p className="text-zion-slate-light">Yes, free tier requests are limited per hour. Contact sales for higher limits.</p>
             </div>
           </div>
-<<<<<<< HEAD
-          <div className='text-center'>
-            <Button size='lg' className='bg-zion-purple text-white' asChild>
-              <Link href='/developers'>Learn More</Link>
-=======
 import React, { useEffect } from "react";
-import { Header } from "@/components/Header";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
+import {Header} from "@/components/Header";
+import {SEO} from "@/components/SEO";
+import {GradientHeading} from "@/components/GradientHeading";
+import {Button} from "@/components/ui/button";
 import Link from 'next/link';
-import { useAdvancedOnboardingStatus } from "@/hooks/useAdvancedOnboardingStatus";
+import {useAdvancedOnboardingStatus} from "@/hooks/useAdvancedOnboardingStatus";
 export default function IntegrationsFeature() {
   const schema = {
 
@@ -152,23 +138,14 @@ export default function IntegrationsFeature() {
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <div className="text-center">
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </Button>
           </div>
         </div>
       </main>
     </>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

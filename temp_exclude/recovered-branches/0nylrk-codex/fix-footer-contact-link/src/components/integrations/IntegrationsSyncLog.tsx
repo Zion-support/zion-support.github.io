@@ -1,14 +1,8 @@
 
 import React from "react";
-import { Card } from "@/components/ui/card";
-import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+import {Card} from "@/components/ui/card";
+import {Table,, TableBody,, TableCell,, TableHead,, TableHeader,, TableRow} from "@/components/ui/table";
+import {Badge} from "@/components/ui/badge";
 // Sample data for integration sync logs
 const syncLogs = [
   {
@@ -60,7 +54,7 @@ export function IntegrationsSyncLog() {
       case "error":
         return <Badge variant="destructive">Error</Badge>;
       case "warning":
-        return <Badge className="bg-amber-500">Warning</Badge>;
+        return <Badge className="bg-amber-500">Warning</Badge>,
       default:
         return <Badge variant="outline">Unknown</Badge>
     }

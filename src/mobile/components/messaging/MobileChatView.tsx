@@ -1,31 +1,12 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import React, { useState } from 'react';
-import { Avatar, AvatarImage, AvatarFallback } from '@/components/ui/avatar';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import {
-  Send,
-  PaperclipIcon,
-  ChevronLeft,
-  MoreVertical,
-  Video,
-  Phone,;
-} from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { useRouter } from 'next/router';
-import { toast } from 'sonner';
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 import React, { useState } from "react";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone } from 'lucide-react'
-import { cn } from "@/lib/utils";
-import { useRouter } from 'next/router';
-import { toast } from "sonner";
+import {Avatar, AvatarImage, AvatarFallback} from "@/components/ui/avatar";
+import {Button} from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+import {Send, PaperclipIcon, ChevronLeft, MoreVertical, Video, Phone} from 'lucide-react'
+import {cn} from "@/lib/utils";
+import {useRouter} from 'next/router';
+import {toast} from "sonner";
 interface Message {
   id: string,
   content: string,
@@ -61,7 +42,7 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
   
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
-      e.preventDefault();
+      e.preventDefault(),
       handleSend()
     }
   };
@@ -199,15 +180,5 @@ export function MobileChatView({ contact, messages, onBack, onSendMessage }: Mob
       </div>
     </div>
   );
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
-
-    
-<<<<<<< HEAD
-    
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
 
-import { Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket } from 'lucide-react';
+import {Database, Link, Gauge, Check, Phone, Mail, MapPin, Rocket} from 'lucide-react';
 
 export default function AgenticRAGPage() {
 	const contactInfo = {

@@ -7,28 +7,21 @@ export default function UNBridge() {
     type: 'Workforce Dev',
     regionalScope: 'Global South',
     budgetOrResolution: 'USD 3M over 24 months',
-<<<<<<< HEAD
     supportingMultiverses: 'Digital Labor, AI Ethics',
-<<<<<<< HEAD
     promptAssist:
       'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en',
   });
-=======
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.',
     language: 'en'}),
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     supportingMultiverses: 'Digital Labor, AI Ethics';
     promptAssist: 'Write a proposal for the UN Development Program on integrating Zion into their Digital Labor Initiative. Include metrics, social outcomes, and DAO-based governance logic.';
     language: 'en'}),
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<any>(null);
   const [translated, setTranslated] = useState<string>('');
 
-<<<<<<< HEAD
-<<<<<<< HEAD
   const onChange = (
     e: React.ChangeEvent<
       HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
@@ -36,16 +29,13 @@ export default function UNBridge() {
   ) => {
     const { name, value } = e.target;
     setForm(f => ({ ...f, [name]: value }));
-=======
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }))
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   const onChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setForm((f) => ({ ...f, [name]: value }))
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   async function generate() {
@@ -55,8 +45,6 @@ export default function UNBridge() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-<<<<<<< HEAD
-<<<<<<< HEAD
           ...form,
           supportingMultiverses: form.supportingMultiverses
             .split(',')
@@ -69,31 +57,26 @@ export default function UNBridge() {
     } finally {
       setLoading(false);
     }
-=======
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
       setResult(data)
     } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           ...form;
           supportingMultiverses: form.supportingMultiverses.split().map((s) => s.trim()).filter(Boolean)})}),
       const data = await res.json();
       setResult(data)
     } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function translate(targetLanguage: string) {
     if (!result?.markdown) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/proposals/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ markdown: result.markdown, targetLanguage }),
       });
       const data = await res.json();
@@ -101,18 +84,15 @@ export default function UNBridge() {
     } finally {
       setLoading(false);
     }
-=======
         body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
       const data = await res.json();
       setTranslated(data.translated)
     } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         body: JSON.stringify({ markdown: result.markdown, targetLanguage })});
       const data = await res.json();
       setTranslated(data.translated)
     } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function exportArtifacts() {
@@ -122,19 +102,16 @@ export default function UNBridge() {
       await fetch('/api/proposals/export', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ id: result.meta.id }),
       });
       // Refresh meta
       const list = await fetch('/api/proposals/list');
       const { proposals } = await list.json();
-      const updated = proposals.find((p: any) => p.id === result.meta.id);
+      const updated = proposals.find((p: any) => p.id === result.meta.id),
       setResult((r: any) => ({ ...r, meta: updated }));
     } finally {
       setLoading(false);
     }
-=======
         body: JSON.stringify({ id: result.meta.id })}),
       // Refresh meta
       const list = await fetch('/api/proposals/list');
@@ -142,8 +119,6 @@ export default function UNBridge() {
       const updated = proposals.find((p: any) => p.id === result.meta.id),
       setResult((r: any) => ({ ...r, meta: updated }))
     } finally { setLoading(false) }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
         body: JSON.stringify({ id: result.meta.id })}),
       // Refresh meta
       const list = await fetch('/api/proposals/list');
@@ -151,23 +126,20 @@ export default function UNBridge() {
       const updated = proposals.find((p: any) => p.id === result.meta.id),
       setResult((r: any) => ({ ...r, meta: updated }))
     } finally { setLoading(false) }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   }
 
   async function submit(channels: string[]) {
     if (!result?.meta?.id) return;
-    setLoading(true);
+    setLoading(true),
     try {
       const res = await fetch('/api/proposals/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-<<<<<<< HEAD
-<<<<<<< HEAD
         body: JSON.stringify({ id: result.meta.id, channels }),
       });
-=======
         body: JSON.stringify({ id: result.meta.id, channels })});
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       const data = await res.json();
       setResult((r: any) => ({ ...r, meta: data.meta }))
     } finally { setLoading(false) }
@@ -186,7 +158,6 @@ export default function UNBridge() {
             <span className="text-sm">Target institution</span>
             <input name="targetInstitution" value={form.targetInstitution} onChange={onChange} className="w-full border rounded p-2" />
           </label>
-<<<<<<< HEAD
           <label className='block'>
             <span className='text-sm'>Type</span>
             <select
@@ -195,7 +166,6 @@ export default function UNBridge() {
               onChange={onChange}
               className='w-full border rounded p-2'
             >
-=======
         body: JSON.stringify({ id: result.meta.id, channels })});
       const data = await res.json();
       setResult((r: any) => ({ ...r, meta: data.meta }))
@@ -218,20 +188,16 @@ export default function UNBridge() {
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           <label className="block">
             <span className="text-sm">Type</span>
             <select name="type" value={form.type} onChange={onChange} className="w-full border rounded p-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               <option>Workforce Dev</option>
               <option>AI Ethics</option>
               <option>Digital ID</option>
               <option>Education</option>
             </select>
           </label>
-<<<<<<< HEAD
-<<<<<<< HEAD
           <label className='block'>
             <span className='text-sm'>Regional scope</span>
             <input
@@ -240,11 +206,10 @@ export default function UNBridge() {
               onChange={onChange}
               className='w-full border rounded p-2'
             />
-=======
           <label className="block">
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           </label>
           <label className="block">
             <span className="text-sm">Budget / Resolution goals</span>
@@ -288,7 +253,6 @@ export default function UNBridge() {
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.markdownPath} target="_blank" rel="noreferrer">Markdown</a></div>
               )}
               {result.meta.artifacts?.pdfPath && (
-<<<<<<< HEAD
                 <div>
                   <a
                     className='text-blue-600 underline'
@@ -299,7 +263,6 @@ export default function UNBridge() {
                     PDF
                   </a>
                 </div>
-=======
           <label className="block">
             <span className="text-sm">Regional scope</span>
             <input name="regionalScope" value={form.regionalScope} onChange={onChange} className="w-full border rounded p-2" />
@@ -347,40 +310,28 @@ export default function UNBridge() {
               )}
               {result.meta.artifacts?.pdfPath && (
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div><a className="text-blue-600 underline" href={result.meta.artifacts.pdfPath} target="_blank" rel="noreferrer">PDF</a></div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               )}
               {result.meta.artifacts?.ipfsCid && (
                 <div>IPFS CID: {result.meta.artifacts.ipfsCid}</div>
               )}
               {result.meta.artifacts?.signature && (
-<<<<<<< HEAD
-<<<<<<< HEAD
                 <div>
                   Signature: {result.meta.artifacts.signature.slice(0, 30)}…
                 </div>
-=======
                 <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 <div>Signature: {result.meta.artifacts.signature.slice(0, 30)}…</div>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               )}
             </div>
           )}
         </div>
       </div>
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

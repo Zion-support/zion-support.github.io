@@ -26,7 +26,7 @@ export class AIContentGeneratorService {
   private apiKey: string, private baseUrl: string,
 
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl
   }
 
@@ -100,7 +100,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       seoScore: 85, readabilityScore: 78,
       suggestions: [
         'Add more specific examplesInclude relevant statisticsOptimize for target keywords'
-      ];
+      ],
       metadata: {
         title: `${request.topic} - Complete Guide`;
         description: `Learn everything about ${request.topic} and how to implement it effectively.`;
@@ -122,7 +122,7 @@ ${request.topic} represents a significant opportunity for organizations looking 
       ];
       keywordDensity: {
         'content': 2.1;
-        'seo': 1.8;
+        'seo': 1.8,
         'marketing': 1.5
       }
     }

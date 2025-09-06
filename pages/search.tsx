@@ -1,69 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
-import { motion, AnimatePresence } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import {
-  Search,
-  Filter,
-  Grid,
-  List,
-  ArrowRight,
-  ExternalLink,
-  Brain,
-  Shield,
-  Rocket,
-  Cpu,
-  Database,
-  Atom,
-  Target,
-  Star,
-  Sparkles,
-  Zap,
-  Users,
-  Award,
-  Clock,
-  CheckCircle,
-  Globe,
-  Code,
-  Server,
-  TrendingUp,
-  BarChart3,
-  Cloud,
-  Network,
-  Lightbulb,
-  Flame,
-  Zap as ZapIcon,
-  X,
-  Sliders,
-  SortAsc,
-  SortDesc,;
-} from 'lucide-react';
+import {motion, AnimatePresence} from 'framer-motion';
+import {Search, Filter, Grid, List, ArrowRight, ExternalLink, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon, X, Sliders, SortAsc, SortDesc,} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
 
-=======
-import { 
-  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-  X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
+import {Search, Filter, Grid, List, ArrowRight, ExternalLink, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon, X, Sliders, SortAsc, SortDesc} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
-import { 
-  Search, Filter, Grid, List, ArrowRight, ExternalLink, 
-  Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, 
-  Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server;
-  TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap as ZapIcon;
-  X, Sliders, SortAsc, SortDesc
-} from 'lucide-react';
+import {Search, Filter, Grid, List, ArrowRight, ExternalLink, Brain, Shield, Rocket, Cpu, Database, Atom, Target, Star, Sparkles, Zap, Users, Award, Clock, CheckCircle, Globe, Code, Server, TrendingUp, BarChart3, Cloud, Network, Lightbulb, Flame, Zap, as, ZapIcon, X, Sliders, SortAsc, SortDesc} from 'lucide-react';
 import SmartHeader from '../components/SmartHeader';
 import SmartFooter from '../components/SmartFooter';
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
 export default function SearchPage() {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState<any[]>([]);
@@ -73,15 +21,10 @@ export default function SearchPage() {
     category: 'all',
     status: 'all',
     priceRange: 'all',
-<<<<<<< HEAD
-<<<<<<< HEAD
     technology: 'all',
-=======
     technology: 'all'
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     technology: 'all'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   });
   const [sortBy, setSortBy] = useState('relevance');
   const [showFilters, setShowFilters] = useState(false);
@@ -91,31 +34,23 @@ export default function SearchPage() {
     {
       id: 'ai-business-intelligence',
       title: 'AI Business Intelligence',
-<<<<<<< HEAD
-<<<<<<< HEAD
       description:
         'Transform data into actionable insights with AI-powered analytics and predictive modeling',
-=======
       description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Transform data into actionable insights with AI-powered analytics and predictive modeling',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       category: 'AI & Machine Learning',
       status: 'active',
       price: '$499/month',
       technology: 'AI/ML',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: [
         'AI-powered dashboards',
         'Predictive analytics',
         'Real-time insights',
         'Custom reporting',
       ],
-=======
       features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       link: '/ai-business-intelligence',
       icon: Brain,
       color: 'from-purple-500 to-pink-500',
@@ -124,10 +59,8 @@ export default function SearchPage() {
     {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
-<<<<<<< HEAD
       description:
         'Future-proof security with quantum-resistant encryption and AI threat detection',
-=======
       features: ['AI-powered dashboardsPredictive analyticsReal-time insightsCustom reporting'],
       link: '/ai-business-intelligence',
       icon: Brain,
@@ -138,25 +71,20 @@ export default function SearchPage() {
       id: 'quantum-cybersecurity',
       title: 'Quantum Cybersecurity',
       description: 'Future-proof security with quantum-resistant encryption and AI threat detection',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Future-proof security with quantum-resistant encryption and AI threat detection',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       category: 'Cybersecurity',
       status: 'active',
       price: '$799/month',
       technology: 'Quantum',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: [
         'Quantum-resistant encryption',
         'AI threat detection',
         'Zero-trust architecture',
         '24/7 monitoring',
       ],
-=======
       features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       link: '/quantum-cybersecurity',
       icon: Shield,
       color: 'from-red-500 to-orange-500',
@@ -165,10 +93,8 @@ export default function SearchPage() {
     {
       id: 'ai-customer-experience',
       title: 'AI Customer Experience',
-<<<<<<< HEAD
       description:
         'Deliver personalized customer experiences at scale with AI-driven insights',
-=======
       features: ['Quantum-resistant encryptionAI threat detectionZero-trust architecture24/7 monitoring'],
       link: '/quantum-cybersecurity',
       icon: Shield,
@@ -179,25 +105,20 @@ export default function SearchPage() {
       id: 'ai-customer-experience',
       title: 'AI Customer Experience',
       description: 'Deliver personalized customer experiences at scale with AI-driven insights',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Deliver personalized customer experiences at scale with AI-driven insights',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       category: 'AI & Machine Learning',
       status: 'active',
       price: '$399/month',
       technology: 'AI/ML',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: [
         'Customer journey mapping',
         'AI personalization',
         'Sentiment analysis',
         'Predictive support',
       ],
-=======
       features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       link: '/ai-customer-experience',
       icon: Users,
       color: 'from-green-500 to-teal-500',
@@ -206,10 +127,8 @@ export default function SearchPage() {
     {
       id: 'edge-computing-orchestration',
       title: 'Edge Computing Orchestration',
-<<<<<<< HEAD
       description:
         'Deploy and manage applications at the edge with intelligent orchestration',
-=======
       features: ['Customer journey mappingAI personalizationSentiment analysisPredictive support'],
       link: '/ai-customer-experience',
       icon: Users,
@@ -220,25 +139,20 @@ export default function SearchPage() {
       id: 'edge-computing-orchestration',
       title: 'Edge Computing Orchestration',
       description: 'Deploy and manage applications at the edge with intelligent orchestration',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Deploy and manage applications at the edge with intelligent orchestration',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       category: 'Edge Computing',
       status: 'active',
       price: '$349/month',
       technology: 'Edge',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: [
         'Edge node management',
         'IoT device management',
         'Real-time monitoring',
         'Auto-scaling',
       ],
-=======
       features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       link: '/edge-computing-orchestration',
       icon: Network,
       color: 'from-purple-500 to-pink-500',
@@ -261,10 +175,8 @@ export default function SearchPage() {
     {
       id: 'neural-interface',
       title: 'Neural Interface Development',
-<<<<<<< HEAD
       description:
         'Build the future of human-computer interaction with neural interfaces',
-=======
       features: ['Edge node managementIoT device managementReal-time monitoringAuto-scaling'],
       link: '/edge-computing-orchestration',
       icon: Network,
@@ -289,25 +201,20 @@ export default function SearchPage() {
       id: 'neural-interface',
       title: 'Neural Interface Development',
       description: 'Build the future of human-computer interaction with neural interfaces',
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       description: 'Build the future of human-computer interaction with neural interfaces',
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       category: 'Biotechnology',
       status: 'beta',
       price: '$899/month',
       technology: 'Biotech',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: [
         'BCI development tools',
         'Neural signal processing',
         'AI pattern recognition',
         'Safety protocols',
       ],
-=======
       features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       link: '/neural-interface',
       icon: Brain,
       color: 'from-pink-500 to-rose-500',
@@ -325,10 +232,8 @@ export default function SearchPage() {
       link: '/quantum-neural-networks',
       icon: Atom,
       color: 'from-blue-500 to-cyan-500',
-<<<<<<< HEAD
       relevance: 75,
     },
-=======
       features: ['BCI development toolsNeural signal processingAI pattern recognitionSafety protocols'],
       link: '/neural-interface',
       icon: Brain,
@@ -349,11 +254,9 @@ export default function SearchPage() {
       color: 'from-blue-500 to-cyan-500',
       relevance: 75
     };
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       relevance: 75
     };
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     {
       id: 'autonomous-devops',
       title: 'Autonomous DevOps',
@@ -362,17 +265,14 @@ export default function SearchPage() {
       status: 'active',
       price: '$599/month',
       technology: 'DevOps',
-<<<<<<< HEAD
-<<<<<<< HEAD
       features: [
         'Auto-deployment',
         'Performance monitoring',
         'Security scanning',
         'Cost optimization',
       ],
-=======
       features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       link: '/autonomous-devops',
       icon: Cpu,
       color: 'from-emerald-500 to-teal-500',
@@ -404,10 +304,8 @@ export default function SearchPage() {
       link: '/quantum-financial-trading',
       icon: TrendingUp,
       color: 'from-emerald-500 to-green-500',
-<<<<<<< HEAD
       relevance: 68,
     },
-=======
       features: ['Auto-deploymentPerformance monitoringSecurity scanningCost optimization'],
       link: '/autonomous-devops',
       icon: Cpu,
@@ -442,11 +340,9 @@ export default function SearchPage() {
       color: 'from-emerald-500 to-green-500',
       relevance: 68
     }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       relevance: 68
     }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const categories = [
@@ -458,30 +354,20 @@ export default function SearchPage() {
     { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐' },
     { id: 'Space Technology', name: 'Space Technology', icon: '🚀' },
     { id: 'Biotechnology', name: 'Biotechnology', icon: '🧬' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' },
-=======
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'Financial Technology', name: 'Financial Technology', icon: '💰' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const statuses = [
     { id: 'all', name: 'All Statuses', icon: '📊' },
     { id: 'active', name: 'Active', icon: '✅' },
     { id: 'beta', name: 'Beta', icon: '🧪' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' },
-=======
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'coming-soon', name: 'Coming Soon', icon: '🚧' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const priceRanges = [
@@ -489,15 +375,10 @@ export default function SearchPage() {
     { id: 'under-500', name: 'Under $500/month', icon: '💵' },
     { id: '500-1000', name: '$500 - $1,000/month', icon: '💵' },
     { id: '1000-2500', name: '$1,000 - $2,500/month', icon: '💵' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' },
-=======
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'over-2500', name: 'Over $2,500/month', icon: '💵' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   const technologies = [
@@ -507,27 +388,19 @@ export default function SearchPage() {
     { id: 'Edge', name: 'Edge', icon: '🌐' },
     { id: 'Space', name: 'Space', icon: '🚀' },
     { id: 'Biotech', name: 'Biotech', icon: '🧬' },
-<<<<<<< HEAD
-<<<<<<< HEAD
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' },
-=======
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     { id: 'DevOps', name: 'DevOps', icon: '⚙️' }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   ];
 
   // Search function
   const performSearch = () => {
     if (!searchTerm.trim()) {
       setSearchResults([]);
-<<<<<<< HEAD
-<<<<<<< HEAD
       return;
-=======
       return
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
 
     setIsSearching(true);
@@ -535,7 +408,6 @@ export default function SearchPage() {
     // Simulate search delay
     setTimeout(() => {
       const results = allServices.filter(service => {
-<<<<<<< HEAD
         const matchesSearch =
           service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
           service.description
@@ -552,7 +424,6 @@ export default function SearchPage() {
           filters.technology === 'all' ||
           service.technology === filters.technology;
 
-=======
       return
     }
 
@@ -561,8 +432,7 @@ export default function SearchPage() {
     // Simulate search delay
     setTimeout(() => {
       const results = allServices.filter(service => {
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         const matchesSearch = service.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
                             service.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -572,10 +442,7 @@ export default function SearchPage() {
         const matchesStatus = filters.status === 'all' || service.status === filters.status;
         const matchesTechnology = filters.technology === 'all' || service.technology === filters.technology;
         
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         let matchesPrice = true;
         if (filters.priceRange !== 'all') {
           const price = parseInt(service.price.replace(/[^0-9]/g, ''));
@@ -591,8 +458,6 @@ export default function SearchPage() {
               break;
             case 'over-2500':
               matchesPrice = price >= 2500;
-<<<<<<< HEAD
-<<<<<<< HEAD
               break;
           }
         }
@@ -604,20 +469,17 @@ export default function SearchPage() {
           matchesTechnology &&
           matchesPrice
         );
-=======
               break
           }
         }
         
         return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               break
           }
         }
         
         return matchesSearch && matchesCategory && matchesStatus && matchesTechnology && matchesPrice
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       });
 
       // Sort results
@@ -626,8 +488,6 @@ export default function SearchPage() {
           case 'relevance':
             return b.relevance - a.relevance;
           case 'price-low':
-<<<<<<< HEAD
-<<<<<<< HEAD
             return (
               parseInt(a.price.replace(/[^0-9]/g, '')) -
               parseInt(b.price.replace(/[^0-9]/g, ''))
@@ -637,75 +497,51 @@ export default function SearchPage() {
               parseInt(b.price.replace(/[^0-9]/g, '')) -
               parseInt(a.price.replace(/[^0-9]/g, ''))
             );
-=======
             return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
           case 'price-high':
             return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             return parseInt(a.price.replace(/[^0-9]/g, '')) - parseInt(b.price.replace(/[^0-9]/g, ''));
           case 'price-high':
             return parseInt(b.price.replace(/[^0-9]/g, '')) - parseInt(a.price.replace(/[^0-9]/g, ''));
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           case 'name':
             return a.title.localeCompare(b.title);
           case 'status':
             return a.status.localeCompare(b.status);
-<<<<<<< HEAD
-<<<<<<< HEAD
-          default:
-            return 0;
-=======
+          default: return 0,
           default: return 0
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
           default: return 0
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         }
       });
 
       setSearchResults(sortedResults);
-<<<<<<< HEAD
-<<<<<<< HEAD
       setIsSearching(false);
     }, 500);
-=======
       setIsSearching(false)
     }, 500)
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       setIsSearching(false)
     }, 500)
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
   };
 
   // Handle search on Enter key
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter') {
-<<<<<<< HEAD
-<<<<<<< HEAD
-      performSearch();
-=======
+      performSearch(),
       performSearch()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       performSearch()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   };
 
   // Update search when filters change
   useEffect(() => {
     if (searchTerm.trim()) {
-<<<<<<< HEAD
-<<<<<<< HEAD
       performSearch();
-=======
       performSearch()
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       performSearch()
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     }
   }, [filters, sortBy]);
 
@@ -715,12 +551,9 @@ export default function SearchPage() {
       category: 'all',
       status: 'all',
       priceRange: 'all',
-<<<<<<< HEAD
-<<<<<<< HEAD
       technology: 'all',
-=======
       technology: 'all'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
     });
     setSortBy('relevance')
   };
@@ -729,7 +562,6 @@ export default function SearchPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Search | Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering.'
@@ -740,7 +572,6 @@ export default function SearchPage() {
           content='Advanced search across all services and solutions.'
         />
         <link rel='canonical' href='https://ziontechgroup.com/search' />
-=======
       technology: 'all'
     });
     setSortBy('relevance')
@@ -750,40 +581,29 @@ export default function SearchPage() {
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 text-white">
       <Head>
         <title>Search | Zion Tech Group</title>
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
         <meta name="description" content="Search across all AI and technology services, solutions, and resources at Zion Tech Group. Find exactly what you need with our advanced search and filtering." />
         <meta property="og:title" content="Search | Zion Tech Group" />
         <meta property="og:description" content="Advanced search across all services and solutions." />
         <link rel="canonical" href="https://ziontechgroup.com/search" />
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
       </Head>
 
       <SmartHeader />
 
       {/* Hero Section */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='pt-32 pb-20 px-6'>
         <div className='max-w-7xl mx-auto text-center'>
-=======
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
       <section className="pt-32 pb-20 px-6">
         <div className="max-w-7xl mx-auto text-center">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-<<<<<<< HEAD
-<<<<<<< HEAD
             <h1 className='text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6'>
               Search Our Services
             </h1>
@@ -791,38 +611,32 @@ export default function SearchPage() {
               Find the perfect AI and technology solutions for your business
               needs. Search across our comprehensive service catalog with
               advanced filtering options.
-=======
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Search Our Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
               Find the perfect AI and technology solutions for your business needs. 
               Search across our comprehensive service catalog with advanced filtering options.
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent mb-6">
               Search Our Services
             </h1>
             <p className="text-xl md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-8">
               Find the perfect AI and technology solutions for your business needs. 
               Search across our comprehensive service catalog with advanced filtering options.
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </p>
           </motion.div>
         </div>
       </section>
 
       {/* Search Interface */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='px-6 pb-12'>
         <div className='max-w-7xl mx-auto'>
           <div className='bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6'>
-=======
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             {/* Search Bar */}
             <div className="flex flex-col lg:flex-row gap-6 items-center justify-between mb-6">
               <div className="flex-1 max-w-2xl">
@@ -838,9 +652,7 @@ export default function SearchPage() {
                   />
                   <button
                     onClick={performSearch}
-<<<<<<< HEAD
                     className='absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors'
-=======
       <section className="px-6 pb-12">
         <div className="max-w-7xl mx-auto">
           <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6">
@@ -860,10 +672,8 @@ export default function SearchPage() {
                   <button
                     onClick={performSearch}
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     className="absolute right-2 top-1/2 transform -translate-y-1/2 px-4 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-md text-white font-medium transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     Search
                   </button>
@@ -871,21 +681,16 @@ export default function SearchPage() {
               </div>
 
               {/* View Mode Toggle */}
-<<<<<<< HEAD
-<<<<<<< HEAD
               <div className='flex items-center gap-2'>
-=======
               <div className="flex items-center gap-2">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => setViewMode('grid')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
                     viewMode === 'grid' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
-<<<<<<< HEAD
                   <Grid className='w-5 h-5' />
-=======
               <div className="flex items-center gap-2">
                 <button
                   onClick={() => setViewMode('grid')}
@@ -894,47 +699,37 @@ export default function SearchPage() {
                   }`}
                 >
                   <Grid className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   <Grid className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
                 <button
                   onClick={() => setViewMode('list')}
                   className={`p-2 rounded-lg transition-all duration-300 ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                     viewMode === 'list'
                       ? 'bg-cyan-500/20 text-cyan-400'
                       : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
                   <List className='w-5 h-5' />
-=======
                     viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
                   <List className="w-5 h-5" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                     viewMode === 'list' ? 'bg-cyan-500/20 text-cyan-400' : 'bg-white/10 text-white/60 hover:bg-white/20'
                   }`}
                 >
                   <List className="w-5 h-5" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </button>
               </div>
             </div>
 
             {/* Filters and Sort */}
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='flex flex-col lg:flex-row gap-4 items-center justify-between'>
               <div className='flex items-center gap-4'>
-=======
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 <button
                   onClick={() => setShowFilters(!showFilters)}
                   className="flex items-center gap-2 px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-white transition-colors"
@@ -951,13 +746,11 @@ export default function SearchPage() {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
-<<<<<<< HEAD
                   <option value='relevance'>Sort by Relevance</option>
                   <option value='price-low'>Sort by Price: Low to High</option>
                   <option value='price-high'>Sort by Price: High to Low</option>
                   <option value='name'>Sort by Name</option>
                   <option value='status'>Sort by Status</option>
-=======
             <div className="flex flex-col lg:flex-row gap-4 items-center justify-between">
               <div className="flex items-center gap-4">
                 <button
@@ -976,38 +769,29 @@ export default function SearchPage() {
                   onChange={(e) => setSortBy(e.target.value)}
                   className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                 >
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <option value="relevance">Sort by Relevance</option>
                   <option value="price-low">Sort by Price: Low to High</option>
                   <option value="price-high">Sort by Price: High to Low</option>
                   <option value="name">Sort by Name</option>
                   <option value="status">Sort by Status</option>
-<<<<<<< HEAD
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 </select>
               </div>
 
               {Object.values(filters).some(f => f !== 'all') && (
                 <button
                   onClick={clearFilters}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className='flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors'
                 >
                   <X className='w-4 h-4' />
-=======
                   className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   <X className="w-4 h-4" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                   className="flex items-center gap-2 px-4 py-2 text-cyan-400 hover:text-cyan-300 transition-colors"
                 >
                   <X className="w-4 h-4" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   Clear Filters
                 </button>
               )}
@@ -1019,12 +803,9 @@ export default function SearchPage() {
                 initial={{ opacity: 0, height: 0 }}
                 animate={{ opacity: 1, height: 'auto' }}
                 exit={{ opacity: 0, height: 0 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='mt-6 pt-6 border-t border-white/20'
-=======
                 className="mt-6 pt-6 border-t border-white/20"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                   {/* Category Filter */}
@@ -1036,13 +817,11 @@ export default function SearchPage() {
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {categories.map(category => (
-<<<<<<< HEAD
                         <option
                           key={category.id}
                           value={category.id}
                           className='bg-slate-800 text-white'
                         >
-=======
                 className="mt-6 pt-6 border-t border-white/20"
               >
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -1056,10 +835,8 @@ export default function SearchPage() {
                     >
                       {categories.map(category => (
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <option key={category.id} value={category.id} className="bg-slate-800 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {category.icon} {category.name}
                         </option>
                       ))}
@@ -1068,27 +845,22 @@ export default function SearchPage() {
 
                   {/* Status Filter */}
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <label className='block text-white font-medium mb-2'>
                       Status
                     </label>
-=======
                     <label className="block text-white font-medium mb-2">Status</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={filters.status}
                       onChange={(e) => setFilters(prev => ({ ...prev, status: e.target.value }))}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {statuses.map(status => (
-<<<<<<< HEAD
                         <option
                           key={status.id}
                           value={status.id}
                           className='bg-slate-800 text-white'
                         >
-=======
                     <label className="block text-white font-medium mb-2">Status</label>
                     <select
                       value={filters.status}
@@ -1097,10 +869,8 @@ export default function SearchPage() {
                     >
                       {statuses.map(status => (
                         <option key={status.id} value={status.id} className="bg-slate-800 text-white">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <option key={status.id} value={status.id} className="bg-slate-800 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {status.icon} {status.name}
                         </option>
                       ))}
@@ -1109,27 +879,22 @@ export default function SearchPage() {
 
                   {/* Price Range Filter */}
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <label className='block text-white font-medium mb-2'>
                       Price Range
                     </label>
-=======
                     <label className="block text-white font-medium mb-2">Price Range</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={filters.priceRange}
                       onChange={(e) => setFilters(prev => ({ ...prev, priceRange: e.target.value }))}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {priceRanges.map(range => (
-<<<<<<< HEAD
                         <option
                           key={range.id}
                           value={range.id}
                           className='bg-slate-800 text-white'
                         >
-=======
                     <label className="block text-white font-medium mb-2">Price Range</label>
                     <select
                       value={filters.priceRange}
@@ -1138,10 +903,8 @@ export default function SearchPage() {
                     >
                       {priceRanges.map(range => (
                         <option key={range.id} value={range.id} className="bg-slate-800 text-white">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <option key={range.id} value={range.id} className="bg-slate-800 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {range.icon} {range.name}
                         </option>
                       ))}
@@ -1150,27 +913,22 @@ export default function SearchPage() {
 
                   {/* Technology Filter */}
                   <div>
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <label className='block text-white font-medium mb-2'>
                       Technology
                     </label>
-=======
                     <label className="block text-white font-medium mb-2">Technology</label>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                     <select
                       value={filters.technology}
                       onChange={(e) => setFilters(prev => ({ ...prev, technology: e.target.value }))}
                       className="w-full px-3 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-cyan-400/50 focus:bg-white/15 transition-all"
                     >
                       {technologies.map(tech => (
-<<<<<<< HEAD
                         <option
                           key={tech.id}
                           value={tech.id}
                           className='bg-slate-800 text-white'
                         >
-=======
                     <label className="block text-white font-medium mb-2">Technology</label>
                     <select
                       value={filters.technology}
@@ -1179,10 +937,8 @@ export default function SearchPage() {
                     >
                       {technologies.map(tech => (
                         <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                         <option key={tech.id} value={tech.id} className="bg-slate-800 text-white">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                           {tech.icon} {tech.name}
                         </option>
                       ))}
@@ -1196,25 +952,20 @@ export default function SearchPage() {
       </section>
 
       {/* Search Results */}
-<<<<<<< HEAD
-<<<<<<< HEAD
       <section className='px-6 pb-20'>
         <div className='max-w-7xl mx-auto'>
-=======
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
           {/* Results Header */}
           <div className="mb-8">
             <h2 className="text-3xl font-bold text-white mb-2">
               {searchTerm ? `Search Results for "${searchTerm}"` : 'All Services'}
             </h2>
-<<<<<<< HEAD
             <p className='text-white/60'>
               {isSearching
                 ? 'Searching...'
                 : `${searchResults.length} services found`}
-=======
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
           {/* Results Header */}
@@ -1224,45 +975,36 @@ export default function SearchPage() {
             </h2>
             <p className="text-white/60">
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <p className="text-white/60">
               {isSearching ? 'Searching...' : `${searchResults.length} services found`}
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               {Object.values(filters).some(f => f !== 'all') && ' (filtered)'}
             </p>
           </div>
 
           {/* Loading State */}
           {isSearching && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-center py-20'>
               <div className='w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center'>
                 <div className='w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin'></div>
               </div>
               <p className='text-white/60'>Searching our services...</p>
-=======
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <p className="text-white/60">Searching our services...</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="text-center py-20">
               <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-cyan-500/20 flex items-center justify-center">
                 <div className="w-8 h-8 border-2 border-cyan-400 border-t-transparent rounded-full animate-spin"></div>
               </div>
               <p className="text-white/60">Searching our services...</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
             </div>
           )}
 
           {/* No Results */}
           {!isSearching && searchTerm && searchResults.length === 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
@@ -1271,35 +1013,27 @@ export default function SearchPage() {
                 No services found
               </h3>
               <p className='text-white/60 mb-6'>
-=======
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-white/60 mb-6">
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">No services found</h3>
               <p className="text-white/60 mb-6">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 Try adjusting your search terms or filters
               </p>
               <button
                 onClick={clearFilters}
-<<<<<<< HEAD
-<<<<<<< HEAD
                 className='px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors'
-=======
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                 className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg font-medium transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               >
                 Clear All Filters
               </button>
@@ -1308,8 +1042,6 @@ export default function SearchPage() {
 
           {/* Search Results */}
           {!isSearching && searchResults.length > 0 && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <AnimatePresence mode='wait'>
               <div
                 className={
@@ -1318,14 +1050,11 @@ export default function SearchPage() {
                     : 'space-y-6'
                 }
               >
-=======
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
             <AnimatePresence mode="wait">
               <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                 {searchResults.map((service, index) => (
                   <motion.div
                     key={service.id}
@@ -1333,21 +1062,14 @@ export default function SearchPage() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
                     className={`group relative ${
-<<<<<<< HEAD
-<<<<<<< HEAD
                       viewMode === 'grid'
-=======
                       viewMode === 'grid' 
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       viewMode === 'grid' 
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         ? 'p-8 rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl'
                         : 'p-6 rounded-xl border border-white/10 bg-white/5 hover:border-cyan-400/30 transition-all duration-300'
                     }`}
                   >
-<<<<<<< HEAD
-<<<<<<< HEAD
                     <div className='absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl' />
                     <div className='relative z-10'>
                       <div className='flex items-start justify-between mb-4'>
@@ -1355,13 +1077,12 @@ export default function SearchPage() {
                           className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}
                         >
                           <service.icon className='w-8 h-8 text-white' />
-=======
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-4">
                         <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} p-4 flex items-center justify-center`}>
                           <service.icon className="w-8 h-8 text-white" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         </div>
                         <div className="flex flex-col items-end gap-2">
                           <span className={`px-3 py-1 rounded-full text-xs font-medium ${
@@ -1388,13 +1109,11 @@ export default function SearchPage() {
                         <h4 className="text-white font-semibold mb-3 text-sm">Key Features:</h4>
                         <div className="space-y-2">
                           {service.features.map((feature, idx) => (
-<<<<<<< HEAD
                             <div
                               key={idx}
                               className='flex items-center gap-2 text-sm text-white/70'
                             >
                               <CheckCircle className='w-4 h-4 text-cyan-400 flex-shrink-0' />
-=======
                     <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-cyan-400/5 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl" />
                     <div className="relative z-10">
                       <div className="flex items-start justify-between mb-4">
@@ -1428,24 +1147,19 @@ export default function SearchPage() {
                           {service.features.map((feature, idx) => (
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                             <div key={idx} className="flex items-center gap-2 text-sm text-white/70">
                               <CheckCircle className="w-4 h-4 text-cyan-400 flex-shrink-0" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                               <span>{feature}</span>
                             </div>
                           ))}
                         </div>
                       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
                       <div className='flex items-center justify-between'>
-=======
                       
                       <div className="flex items-center justify-between">
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         <a
                           href={service.link}
                           className="flex items-center text-cyan-400 group-hover: text-cyan-300 transition-colors duration-300"
@@ -1454,10 +1168,8 @@ export default function SearchPage() {
                           <ExternalLink className="w-4 h-4 ml-2" />
                         </a>
                         <a
-<<<<<<< HEAD
                           href='mailto:kleber@ziontechgroup.com'
                           className='px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105'
-=======
                       
                       <div className="flex items-center justify-between">
                         <a
@@ -1470,11 +1182,9 @@ export default function SearchPage() {
                         <a
                           href="mailto:kleber@ziontechgroup.com"
                           className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                           href="mailto:kleber@ziontechgroup.com"
                           className="px-4 py-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover: from-cyan-600 hover:to-blue-700 rounded-lg text-white text-sm font-medium transition-all duration-300 transform hover:scale-105"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                         >
                           Get Quote
                         </a>
@@ -1488,22 +1198,18 @@ export default function SearchPage() {
 
           {/* Initial State - Show all services when no search */}
           {!isSearching && !searchTerm && (
-<<<<<<< HEAD
-<<<<<<< HEAD
             <div className='text-center py-20'>
               <div className='w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center'>
                 <Search className='w-12 h-12 text-white/40' />
-=======
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
               </div>
               <h3 className="text-2xl font-semibold text-white mb-2">Start Your Search</h3>
               <p className="text-white/60 mb-6">
                 Enter keywords above to find the perfect technology solutions for your business
               </p>
-<<<<<<< HEAD
               <div className='flex flex-wrap justify-center gap-2'>
                 <span className='text-sm text-white/40'>Popular searches:</span>
                 {[
@@ -1512,7 +1218,6 @@ export default function SearchPage() {
                   'Quantum Computing',
                   'Edge Computing',
                 ].map(term => (
-=======
             <div className="text-center py-20">
               <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-white/10 flex items-center justify-center">
                 <Search className="w-12 h-12 text-white/40" />
@@ -1524,31 +1229,24 @@ export default function SearchPage() {
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
                 {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <div className="flex flex-wrap justify-center gap-2">
                 <span className="text-sm text-white/40">Popular searches:</span>
                 {['AICybersecurityQuantum ComputingEdge Computing'].map((term) => (
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   <button
                     key={term}
                     onClick={() => {
                       setSearchTerm(term);
-<<<<<<< HEAD
-<<<<<<< HEAD
                       performSearch();
                     }}
                     className='px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors'
-=======
                       performSearch()
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
                       performSearch()
                     }}
                     className="px-3 py-1 bg-white/10 hover:bg-white/20 rounded-full text-sm text-white/70 hover:text-white transition-colors"
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c
                   >
                     {term}
                   </button>
@@ -1561,14 +1259,9 @@ export default function SearchPage() {
 
       <SmartFooter />
     </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
   );
-=======
   )
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
   )
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+ursor/integrate-build-improve-and-re-verify-b76c

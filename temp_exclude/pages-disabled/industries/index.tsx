@@ -1,20 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
-import {
-  Heart,
-  DollarSign,
-  Settings,
-  ShoppingCart,
-  BookOpen,
-  Building,
-  ArrowRight,
-  CheckCircle,
-  Users,
-  Shield,
-  Cloud,
-  Brain
-} from 'lucide-react';
+import {motion} from 'framer-motion';
+import {Heart,, DollarSign,, Settings,, ShoppingCart,, BookOpen,, Building,, ArrowRight,, CheckCircle,, Users,, Shield,, Cloud,, Brain} from 'lucide-react';
 import Layout from '../../components/Layout';
 const industries = [
   {
@@ -170,13 +157,13 @@ export default function IndustriesPage() {
                     </div>
                     <Link
                       href={industry.href}
-                      className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
+                      className="inline-flex items-center text-blue-600 hover: text-blue-700 font-semibold group-hover:text-purple-600 transition-colors"
                     >
                       <span>Learn More</span>
                       <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </motion.div>
-                );
+                ),
               })}
             </div>
           </div>
@@ -281,7 +268,7 @@ export default function IndustriesPage() {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md: text-4xl font-bold mb-6">
                 Ready to Transform Your Industry?
               </h2>
               <p className="text-xl mb-8 max-w-2xl mx-auto">
@@ -300,5 +287,5 @@ export default function IndustriesPage() {
         </section>
       </div>
     </Layout>
-  );
+  ),
 }

@@ -1,14 +1,14 @@
 
 import React from 'react';
 // Use the centralized icon wrapper to avoid missing icons
-import { Check, Trash2, ChevronRight } from '@/components/icons';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { formatDistanceToNow } from 'date-fns';
-import { cn } from '@/lib/utils';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import { useNavigate } from 'react-router-dom';
-import { Notification, NotificationType } from '@/context/notifications';
+import {Check,, Trash2,, ChevronRight} from '@/components/icons';
+import {Button} from '@/components/ui/button';
+import {Badge} from '@/components/ui/badge';
+import {formatDistanceToNow} from 'date-fns';
+import {cn} from '@/lib/utils';
+import {Tooltip,, TooltipContent,, TooltipProvider,, TooltipTrigger} from '@/components/ui/tooltip';
+import {useNavigate} from 'react-router-dom';
+import {Notification,, NotificationType} from '@/context/notifications';
 
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
@@ -23,7 +23,7 @@ export const getTypeIcon = (type: NotificationType) => {
     case 'onboarding':
       return <span className="text-zion-cyan">🚀</span>;
     case 'system':
-      return <span className="text-yellow-500">⚠️</span>;
+      return <span className="text-yellow-500">⚠️</span>,
     default:
       return <span className="text-gray-500">📣</span>
   }
@@ -99,7 +99,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon" 
                 className="h-6 w-6"
                 onClick={(e) => {
-                  e.stopPropagation();
+                  e.stopPropagation(),
                   onMarkAsRead(notification.id)
                 }}
               >

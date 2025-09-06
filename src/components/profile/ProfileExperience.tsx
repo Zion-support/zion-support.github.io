@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { ProfileExperience as ProfileExperienceType } from '@/types/profile';
-import { Briefcase } from 'lucide-react';
-=======
 
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
-import { Briefcase } from 'lucide-react'
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
+import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
+import {Briefcase} from 'lucide-react'
 
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[]
@@ -32,12 +26,9 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
               <div className="text-sm text-zion-slate-light mb-2">
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
-<<<<<<< HEAD
-              <p className='text-zion-slate'>{exp.description}</p>
-=======
 
-import { ProfileExperience as ProfileExperienceType } from "@/types/profile";
-import { Briefcase } from 'lucide-react'
+import {ProfileExperience, as, ProfileExperienceType} from "@/types/profile";
+import {Briefcase} from 'lucide-react'
 
 interface ProfileExperienceProps {
   experience: ProfileExperienceType[]
@@ -64,21 +55,12 @@ export function ProfileExperience({ experience }: ProfileExperienceProps) {
                 {exp.startDate} - {exp.current ? 'Present' : exp.endDate}
               </div>
               <p className="text-zion-slate">{exp.description}</p>
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
               <p className="text-zion-slate">{exp.description}</p>
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
             </div>
           </div>
         ))}
       </div>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

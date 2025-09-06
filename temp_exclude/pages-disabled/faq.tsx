@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import MainLayout from '../components/layout/MainLayout'
-import { motion, AnimatePresence } from 'framer-motion;
+import {motion,, AnimatePresence} from 'framer-motion;
 import {}
   // TODO: Implement,
 };
@@ -213,7 +213,7 @@ export default function FAQPage() {}
               className="text-center max-w-4xl mx-auto"
             >
 </motion>"
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">"
+              <h1 className="text-4xl md: text-6xl font-bold mb-6">"
 </h1>"
                 <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">"
 </span>
@@ -237,7 +237,7 @@ export default function FAQPage() {}
 </div>"
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />"
 </Search>
-                  <input;"
+                  <input,"
                     type="text"
                     placeholder="Search FAQs..."
                     value={searchTerm};

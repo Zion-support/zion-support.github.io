@@ -8,8 +8,7 @@ export interface ZionCuttingEdgeService2029 {
   price: string, period: string,
   description: string, features: string[],
   benefits: string[], marketPrice: string,
-  category:
-    | 'AI'
+  category: | 'AI'
     | 'IT'
     | 'SAAS'
     | 'Development'
@@ -20,7 +19,7 @@ export interface ZionCuttingEdgeService2029 {
     | 'Fintech'
     | 'Healthcare'
     | 'IoT'
-    | 'Blockchain';
+    | 'Blockchain',
   icon: string, isPopular?: boolean,
   isNew?: boolean;
   link: string,

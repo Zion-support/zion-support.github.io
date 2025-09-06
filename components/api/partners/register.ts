@@ -1,23 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { createPartner } from '../../../utils/api/partnerAuth';
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST');
-    return res.status(405).json({ error: 'Method Not Allowed' });
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
-import { createPartner } from "../../../utils/api/partnerAuth";
+import {createPartner} from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
     return res.status(405).json({ error: "Method Not Allowed" })
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
   }
   const { name, entityType, pointOfContact, useCaseType, brand } = req.body || {};
   if (!name || !entityType || !pointOfContact?.email || !pointOfContact?.name || !useCaseType) {
@@ -36,17 +22,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         name: partner.name;
         status: partner.status;
         entityType: partner.entityType;
-        useCaseType: partner.useCaseType;
+        useCaseType: partner.useCaseType,
         createdAt: partner.createdAt};
-      apiKey: apiKey.key;
+      apiKey: apiKey.key,
       dashboardUrl: `/partners/dashboard?pid=${partner.id}`})
   } catch (e) {
-<<<<<<< HEAD
-    return res.status(500).json({ error: 'Failed to create partner' });
-  }
-=======
 import type { NextApiRequest, NextApiResponse } from "next";
-import { createPartner } from "../../../utils/api/partnerAuth";
+import {createPartner} from "../../../utils/api/partnerAuth";
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") {
     res.setHeader("Allow", "POST");
@@ -77,9 +59,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(500).json({ error: "Failed to create partner" })
   };
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
     return res.status(500).json({ error: "Failed to create partner" })
   };
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

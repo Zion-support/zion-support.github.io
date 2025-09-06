@@ -1,119 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
-
-const suspiciousLinkHosts = [
-  'paypal.me',
-  'cash.app',
-  'venmo.com',
-  'wa.me',
-  't.me',
-  'telegram.me',
-  'whatsapp.com',
-  'westernunion.com',
-  'moneygram.com',
-];
-
-const suspiciousPhrases = [
-  'whatsapp me',
-  'telegram me',
-  'contact me on whatsapp',
-  'cashapp only',
-  'crypto only',
-  'send crypto',
-  'wire transfer',
-  'gift card',
-  'western union',
-  'off-platform payment',
-  'outside payment',
-  'pay outside',
-  'pay me directly',
-  'dm me on',
-  'reach me on whatsapp',
-  'skype me',
-  'email me at',
-];
-
-const vagueScammyJobPhrases = [
-  'easy work',
-  'quick money',
-  'no experience needed',
-  'work from home and earn fast',
-  'daily payouts',
-  'earn $\\d+ per day',
-];
-
-function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase();
-  return suspiciousLinkHosts.some(host => lower.includes(host));
-
-function containsSuspiciousPhrase(text: string): string[] {
-  const lower = text.toLowerCase();
-  return suspiciousPhrases.filter(p => lower.includes(p));
-
-function containsVagueJobClaims(text: string): string[] {
-  const lower = text.toLowerCase();
-  const reasons: string[] = [];
-  "`);
-  }
-  return reasons;
-
-export interface HeuristicDeps {
-  countEventsByIp: (
-    ip: string,
-    source: MonitoredSource,
-    withinMinutes: number
-  ) => Promise<number>;
-
-export async function evaluateHeuristics(
-  event: FraudEvent,
-  deps: HeuristicDeps
-): Promise<HeuristicEvaluation> {
-  const reasons: string[] = [];
-  let severity: HeuristicEvaluation['severity'] = 'low';
-
-  if (event.source === 'signup' && event.ipAddress) {
-    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10);
-    if (recent >= 3) {
-      reasons.push(
-        `rapid_fire_signups_from_ip:${event.ipAddress}:${recent}in10m`
-      );
-      severity = recent >= 10 ? 'high' : 'medium';
-    }
-  }
-
-  if (
-    (event.source === 'message' ||
-      event.source === 'job_post' ||
-      event.source === 'quote' ||
-      event.source === 'review') &&
-    event.content
-  ) {
-    if (containsSuspiciousHost(event.content)) {
-      reasons.push('outside_payment_link_detected');
-      severity = 'high';
-    }
-    const phrases = containsSuspiciousPhrase(event.content);
-    if (phrases.length > 0) {
-      reasons.push(...phrases.map(p => `suspicious_phrase:"${p}"`));
-      if (severity === 'low') severity = 'medium';
-    }
-  }
-
-  if (event.source === 'job_post' && event.content) {
-    const vague = containsVagueJobClaims(event.content);
-    if (vague.length > 0) {
-      reasons.push(...vague);
-      if (severity === 'low') severity = 'medium';
-    }
-  }
-=======
 export interface HeuristicResult {
   label: string;
   confidence: number;
-  details: any;
+  details: any,
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c
 
 export function runHeuristics(data: any): HeuristicResult {
   // Mock implementation - in production, this would run actual fraud detection heuristics
@@ -132,15 +21,13 @@ export function runHeuristics(data: any): HeuristicResult {
     confidence,
     details: { flags: Array.from(flags) }
   };
-<<<<<<< HEAD
-=======
 // Fraud detection heuristics utilities
 export interface HeuristicResult {
   flagged: boolean;
   severity: 'low' | 'medium' | 'high' | 'critical';
   score: number; // 0-100
   reasons: string[];
-  confidence: number; // 0-100
+  confidence: number, // 0-100
 }
 
 export interface HeuristicConfig {
@@ -149,13 +36,13 @@ export interface HeuristicConfig {
     low: number;
     medium: number;
     high: number;
-    critical: number;
+    critical: number,
   };
   rules: {
     [key: string]: {
       enabled: boolean;
       weight: number;
-      threshold: number;
+      threshold: number,
     };
   };
 }
@@ -164,15 +51,15 @@ export interface FraudEvent {
   id: string;
   source: string;
   userId?: string;
-  content?: string;
+  content?: string,
   metadata?: Record<string, any>;
   ipAddress: string;
   userAgent?: string;
-  timestamp: number;
+  timestamp: number,
 }
 
 class HeuristicAnalyzer {
-  private config: HeuristicConfig;
+  private config: HeuristicConfig,
 
   constructor() {
     this.config = {
@@ -216,7 +103,7 @@ class HeuristicAnalyzer {
   async evaluateHeuristics(
     event: FraudEvent,
     context: {
-      countEventsByIp: (ip: string, source: string, minutes: number) => Promise<number>;
+      countEventsByIp: (ip: string, source: string, minutes: number) => Promise<number>,
     }
   ): Promise<HeuristicResult> {
     if (!this.config.enabled) {
@@ -229,7 +116,7 @@ class HeuristicAnalyzer {
       };
     }
 
-    const results: Array<{ rule: string; score: number; confidence: number; reason: string }> = [];
+    const results: Array<{ rule: string; score: number; confidence: number, reason: string }> = [];
 
     // Check suspicious keywords
     if (this.config.rules.suspicious_keywords.enabled) {
@@ -308,7 +195,7 @@ class HeuristicAnalyzer {
       totalScore += weightedScore;
       totalWeight += ruleConfig.weight;
       totalConfidence += result.confidence;
-      reasons.push(result.reason);
+      reasons.push(result.reason),
     }
 
     const finalScore = totalWeight > 0 ? totalScore / totalWeight : 0;
@@ -317,7 +204,7 @@ class HeuristicAnalyzer {
     // Determine severity
     let severity: HeuristicResult['severity'] = 'low';
     if (finalScore >= this.config.thresholds.critical) {
-      severity = 'critical';
+      severity = 'critical',
     } else if (finalScore >= this.config.thresholds.high) {
       severity = 'high';
     } else if (finalScore >= this.config.thresholds.medium) {
@@ -336,7 +223,7 @@ class HeuristicAnalyzer {
   private async checkSuspiciousKeywords(event: FraudEvent): Promise<{
     score: number;
     confidence: number;
-    reason: string;
+    reason: string,
   }> {
     const suspiciousKeywords = [
       'bitcoin', 'crypto', 'money', 'cash', 'payment', 'transfer',
@@ -365,7 +252,7 @@ class HeuristicAnalyzer {
   private async checkRapidRequests(
     event: FraudEvent,
     context: { countEventsByIp: (ip: string, source: string, minutes: number) => Promise<number> }
-  ): Promise<{ score: number; confidence: number; reason: string }> {
+  ): Promise<{ score: number; confidence: number, reason: string }> {
     const count = await context.countEventsByIp(event.ipAddress, event.source, 5); // 5 minutes
     
     if (count <= 5) {
@@ -393,7 +280,7 @@ class HeuristicAnalyzer {
   private async checkUnusualPatterns(event: FraudEvent): Promise<{
     score: number;
     confidence: number;
-    reason: string;
+    reason: string,
   }> {
     const patterns: string[] = [];
 
@@ -401,7 +288,7 @@ class HeuristicAnalyzer {
     if (event.userAgent) {
       const userAgent = event.userAgent.toLowerCase();
       if (userAgent.includes('bot') || userAgent.includes('crawler') || userAgent.includes('spider')) {
-        patterns.push('Bot-like user agent');
+        patterns.push('Bot-like user agent'),
       }
       if (userAgent.length < 10) {
         patterns.push('Suspiciously short user agent');
@@ -414,8 +301,8 @@ class HeuristicAnalyzer {
       if (content.length > 10000) {
         patterns.push('Unusually long content');
       }
-      if (content.includes('http://') && content.split('http://').length > 5) {
-        patterns.push('Multiple HTTP links');
+      if (content.includes('http: //') && content.split('http://').length > 5) {
+        patterns.push('Multiple HTTP links'),
       }
       if (content.match(/\d{4}-\d{4}-\d{4}-\d{4}/g)?.length > 0) {
         patterns.push('Credit card number pattern');
@@ -450,7 +337,7 @@ class HeuristicAnalyzer {
   private async checkIpReputation(event: FraudEvent): Promise<{
     score: number;
     confidence: number;
-    reason: string;
+    reason: string,
   }> {
     // Mock IP reputation check - in production, integrate with real IP reputation service
     const suspiciousIps = [
@@ -474,7 +361,7 @@ class HeuristicAnalyzer {
   private async analyzeContent(event: FraudEvent): Promise<{
     score: number;
     confidence: number;
-    reason: string;
+    reason: string,
   }> {
     if (!event.content) {
       return { score: 0, confidence: 100, reason: '' };
@@ -485,7 +372,7 @@ class HeuristicAnalyzer {
 
     // Check for spam patterns
     if (content.includes('free money') || content.includes('get rich quick')) {
-      issues.push('Spam-like content');
+      issues.push('Spam-like content'),
     }
 
     // Check for phishing patterns
@@ -536,7 +423,7 @@ export const heuristicAnalyzer = new HeuristicAnalyzer();
 export async function evaluateHeuristics(
   event: FraudEvent,
   context: {
-    countEventsByIp: (ip: string, source: string, minutes: number) => Promise<number>;
+    countEventsByIp: (ip: string, source: string, minutes: number) => Promise<number>,
   }
 ): Promise<HeuristicResult> {
   return heuristicAnalyzer.evaluateHeuristics(event, context);
@@ -562,13 +449,10 @@ export function createFraudEvent(
 }
 
 export function isHighRiskEvent(result: HeuristicResult): boolean {
-  return result.severity === 'high' || result.severity === 'critical';
+  return result.severity === 'high' || result.severity === 'critical',
 }
 
 export function shouldBlockEvent(result: HeuristicResult): boolean {
-  return result.severity === 'critical' && result.confidence > 80;
+  return result.severity === 'critical' && result.confidence > 80,
 }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
-=======
 }
->>>>>>> cursor/integrate-build-improve-and-re-verify-b76c

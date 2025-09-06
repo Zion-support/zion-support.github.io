@@ -1,10 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
-import { supabase } from '@/integrations/supabase/client';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { format } from 'date-fns';
-import { Skeleton } from '@/components/ui/skeleton';
+import {supabase} from '@/integrations/supabase/client';
+import {Card,, CardContent,, CardHeader,, CardTitle} from '@/components/ui/card';
+import {Avatar,, AvatarFallback,, AvatarImage} from '@/components/ui/avatar';
+import {format} from 'date-fns';
+import {Skeleton} from '@/components/ui/skeleton';
 interface MilestoneActivitiesProps {
   projectId: string
 }
@@ -66,7 +66,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   function getActivityDescription(activity: Activity): string {
     switch (activity.action) {
       case 'created':
-        return 'created a new milestone';
+        return 'created a new milestone',
       case 'status_changed':
         return `changed status from ${activity.previous_status || 'none'} to ${activity.new_status}`;
       case 'updated':
