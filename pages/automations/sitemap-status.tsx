@@ -6,11 +6,16 @@ type Props = { urlCount: number };
 
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
-    <main className="space-y-4">
-      <h1 className="text-2xl font-semibold">Sitemap Status</h1>
-      <p className="text-sm text-gray-600">Nightly generated. <a className="text-blue-500 underline" href="/sitemap.xml">View sitemap</a></p>
-      <div className="enhanced-card">
-        <div className="text-lg">Indexed URLs: {urlCount}</div>
+    <main className='space-y-4'>
+      <h1 className='text-2xl font-semibold'>Sitemap Status</h1>
+      <p className='text-sm text-gray-600'>
+        Nightly generated.{' '}
+        <a className='text-blue-500 underline' href='/sitemap.xml'>
+          View sitemap
+        </a>
+      </p>
+      <div className='enhanced-card'>
+        <div className='text-lg'>Indexed URLs: {urlCount}</div>
       </div>
     </main>
   );

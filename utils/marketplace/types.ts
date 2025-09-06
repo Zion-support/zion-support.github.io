@@ -1,23 +1,23 @@
-export type PaymentTermsType = "hourly" | "fixed" | "milestone";
+export type PaymentTermsType = 'hourly' | 'fixed' | 'milestone';
 
 export type Milestone = {
   id: string;
   title: string;
   dueDateIso?: string;
   amountUsd?: number;
-  status?: "planned" | "in-progress" | "done";
+  status?: 'planned' | 'in-progress' | 'done';
 };
 
 export type PaymentTerms =
-  | { type: "hourly"; hourlyRateUsd: number }
-  | { type: "fixed"; fixedAmountUsd: number }
-  | { type: "milestone"; milestones: Milestone[] };
+  | { type: 'hourly'; hourlyRateUsd: number }
+  | { type: 'fixed'; fixedAmountUsd: number }
+  | { type: 'milestone'; milestones: Milestone[] };
 
 export type OfferStatus =
-  | "SENT"
-  | "CONFIRMED"
-  | "CHANGES_REQUESTED"
-  | "DECLINED";
+  | 'SENT'
+  | 'CONFIRMED'
+  | 'CHANGES_REQUESTED'
+  | 'DECLINED';
 
 export type Offer = {
   id: string;
@@ -33,7 +33,7 @@ export type Offer = {
   projectId?: string;
 };
 
-export type ProjectStatus = "ACTIVE" | "COMPLETED" | "ARCHIVED";
+export type ProjectStatus = 'ACTIVE' | 'COMPLETED' | 'ARCHIVED';
 
 export type ProjectDocument = {
   id: string;
@@ -45,7 +45,7 @@ export type ProjectDocument = {
 export type ProjectNote = {
   id: string;
   authorId: string;
-  authorRole: "client" | "talent";
+  authorRole: 'client' | 'talent';
   content: string;
   createdAtIso: string;
 };

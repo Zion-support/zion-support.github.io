@@ -47,7 +47,7 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       // For now, we will rely on getStaticProps to provide the correct post or a 404.
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
-      const directFallback = BLOG_POSTS.find((p) => p.slug === slug) || null;
+      const directFallback = BLOG_POSTS.find(p => p.slug === slug) || null;
       if (directFallback) {
         setPost(directFallback);
         setError(null);
@@ -70,7 +70,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const articleLd = {
     author: post.author.name,
     publishedTime: post.publishedDate,
-    tags: post.tags || []};
+    tags: post.tags || [],
+  };
   const body = (post as any).body || post.content;
   return (
     <>
@@ -78,38 +79,38 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
         title={post.title}
         description={post.excerpt}
         image={post.featuredImage}
-        type="article"
+        type='article'
         article={articleLd}
       />
-      <main className="prose dark:prose-invert max-w-3xl mx-auto py-8">
+      <main className='prose dark:prose-invert max-w-3xl mx-auto py-8'>
         <h1>{post.title}</h1>
-        {post.excerpt && <p className="lead">{post.excerpt}</p>}
-        <div className="flex items-center gap-3 mb-6">
+        {post.excerpt && <p className='lead'>{post.excerpt}</p>}
+        <div className='flex items-center gap-3 mb-6'>
           <img
             src={post.author.avatarUrl}
             alt={post.author.name}
-            className="w-10 h-10 rounded-full"
-            onError={(e) => {
+            className='w-10 h-10 rounded-full'
+            onError={e => {
               const target = e.currentTarget as HTMLImageElement;
               target.src = '/images/blog-placeholder.svg';
             }}
           />
           <div>
-            <p className="m-0 font-medium">{post.author.name}</p>
+            <p className='m-0 font-medium'>{post.author.name}</p>
             {post.author.title && (
-              <p className="m-0 text-sm text-zion-slate-light">
+              <p className='m-0 text-sm text-zion-slate-light'>
                 {post.author.title}
               </p>
             )}
           </div>
         </div>
         {post.featuredImage && (
-          <div className="aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6">
+          <div className='aspect-[16/9] w-full relative overflow-hidden rounded-lg mb-6'>
             <img
               src={post.featuredImage}
               alt={post.title}
-              className="object-cover w-full h-full"
-              onError={(e) => {
+              className='object-cover w-full h-full'
+              onError={e => {
                 const target = e.currentTarget as HTMLImageElement;
                 target.src = '/images/blog-placeholder.svg';
               }}
@@ -129,15 +130,17 @@ export default BlogPostPage;
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), 'content', 'blog');
-  const files = fs.readdirSync(dir).filter((f) => f.endsWith('.md'));
-  const paths = files.map((f) => ({
-    params: { slug: f.replace(/\.md$/, '') }}));
+  const files = fs.readdirSync(dir).filter(f => f.endsWith('.md'));
+  const paths = files.map(f => ({
+    params: { slug: f.replace(/\.md$/, '') },
+  }));
   // Use `blocking` so new posts added after build can be generated on demand
   return { paths, fallback: 'blocking' };
 };
 
 export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
-  params}: {
+  params,
+}: {
   params?: { slug?: string };
 }) => {
   const slug = params?.slug as string;

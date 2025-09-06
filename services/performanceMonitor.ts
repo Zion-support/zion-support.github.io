@@ -58,12 +58,16 @@ export class PerformanceMonitorService {
       const response = await fetch(`${this.baseUrl}/performance/monitor`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ url })});
+          Authorization: `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ url }),
+      });
 
       if (!response.ok) {
-        throw new Error(`Performance monitoring failed: ${response.statusText}`);
+        throw new Error(
+          `Performance monitoring failed: ${response.statusText}`
+        );
       }
 
       return await response.json();
@@ -73,14 +77,24 @@ export class PerformanceMonitorService {
     }
   }
 
-  async getHistoricalData(url: string, days: number = 30): Promise<PerformanceMetrics[]> {
+  async getHistoricalData(
+    url: string,
+    days: number = 30
+  ): Promise<PerformanceMetrics[]> {
     try {
-      const response = await fetch(`${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+      const response = await fetch(
+        `${this.baseUrl}/performance/history?url=${encodeURIComponent(url)}&days=${days}`,
+        {
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+          },
+        }
+      );
 
       if (!response.ok) {
-        throw new Error(`Failed to fetch historical data: ${response.statusText}`);
+        throw new Error(
+          `Failed to fetch historical data: ${response.statusText}`
+        );
       }
 
       return await response.json();
@@ -95,12 +109,16 @@ export class PerformanceMonitorService {
       const response = await fetch(`${this.baseUrl}/performance/config`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(config)});
+          Authorization: `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(config),
+      });
 
       if (!response.ok) {
-        throw new Error(`Failed to set monitoring config: ${response.statusText}`);
+        throw new Error(
+          `Failed to set monitoring config: ${response.statusText}`
+        );
       }
     } catch (error) {
       console.error('Failed to set monitoring config:', error);
@@ -111,9 +129,14 @@ export class PerformanceMonitorService {
   async getAlerts(url?: string): Promise<PerformanceAlert[]> {
     try {
       const params = url ? `?url=${encodeURIComponent(url)}` : '';
-      const response = await fetch(`${this.baseUrl}/performance/alerts${params}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+      const response = await fetch(
+        `${this.baseUrl}/performance/alerts${params}`,
+        {
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`Failed to fetch alerts: ${response.statusText}`);
@@ -126,7 +149,10 @@ export class PerformanceMonitorService {
     }
   }
 
-  async generateReport(url: string, timeframe: 'day' | 'week' | 'month'): Promise<{
+  async generateReport(
+    url: string,
+    timeframe: 'day' | 'week' | 'month'
+  ): Promise<{
     summary: {
       averageLoadTime: number;
       averagePerformanceScore: number;
@@ -140,31 +166,39 @@ export class PerformanceMonitorService {
     };
     recommendations: string[];
   }> {
-    const historicalData = await this.getHistoricalData(url, timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30);
-    
+    const historicalData = await this.getHistoricalData(
+      url,
+      timeframe === 'day' ? 1 : timeframe === 'week' ? 7 : 30
+    );
+
     const loadTimes = historicalData.map(d => d.loadTime);
     const performanceScores = historicalData.map(d => d.performanceScore);
-    const dates = historicalData.map(d => d.timestamp.toISOString().split('T')[0]);
+    const dates = historicalData.map(
+      d => d.timestamp.toISOString().split('T')[0]
+    );
 
     return {
       summary: {
-        averageLoadTime: loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length,
-        averagePerformanceScore: performanceScores.reduce((a, b) => a + b, 0) / performanceScores.length,
+        averageLoadTime:
+          loadTimes.reduce((a, b) => a + b, 0) / loadTimes.length,
+        averagePerformanceScore:
+          performanceScores.reduce((a, b) => a + b, 0) /
+          performanceScores.length,
         uptime: 99.8,
-        alertsCount: Math.floor(Math.random() * 5)
+        alertsCount: Math.floor(Math.random() * 5),
       },
       trends: {
         loadTime: loadTimes,
         performanceScore: performanceScores,
-        dates
+        dates,
       },
       recommendations: [
         'Optimize image sizes and use WebP format',
         'Implement lazy loading for below-the-fold content',
         'Minimize render-blocking resources',
         'Use a CDN for static assets',
-        'Enable compression for text-based resources'
-      ]
+        'Enable compression for text-based resources',
+      ],
     };
   }
 
@@ -183,18 +217,21 @@ export class PerformanceMonitorService {
       performanceScore: Math.floor(Math.random() * 30) + 70,
       accessibilityScore: Math.floor(Math.random() * 20) + 80,
       bestPracticesScore: Math.floor(Math.random() * 20) + 80,
-      seoScore: Math.floor(Math.random() * 20) + 80
+      seoScore: Math.floor(Math.random() * 20) + 80,
     };
   }
 
-  private generateMockHistoricalData(url: string, days: number): PerformanceMetrics[] {
+  private generateMockHistoricalData(
+    url: string,
+    days: number
+  ): PerformanceMetrics[] {
     const data: PerformanceMetrics[] = [];
     const now = new Date();
 
     for (let i = days - 1; i >= 0; i--) {
       const date = new Date(now);
       date.setDate(date.getDate() - i);
-      
+
       data.push({
         url,
         timestamp: date,
@@ -209,7 +246,7 @@ export class PerformanceMonitorService {
         performanceScore: Math.floor(Math.random() * 30) + 70,
         accessibilityScore: Math.floor(Math.random() * 20) + 80,
         bestPracticesScore: Math.floor(Math.random() * 20) + 80,
-        seoScore: Math.floor(Math.random() * 20) + 80
+        seoScore: Math.floor(Math.random() * 20) + 80,
       });
     }
 
@@ -227,7 +264,7 @@ export class PerformanceMonitorService {
         threshold: 2000,
         currentValue: 2500,
         timestamp: new Date(),
-        resolved: false
+        resolved: false,
       },
       {
         id: '2',
@@ -238,8 +275,8 @@ export class PerformanceMonitorService {
         threshold: 80,
         currentValue: 85,
         timestamp: new Date(),
-        resolved: true
-      }
+        resolved: true,
+      },
     ];
 
     return url ? alerts.filter(a => a.url === url) : alerts;
@@ -258,8 +295,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Basic performance metrics',
       'Email alerts',
       '7-day data retention',
-      'Basic reporting'
-    ]
+      'Basic reporting',
+    ],
   },
   professional: {
     name: 'Professional',
@@ -273,8 +310,8 @@ export const PERFORMANCE_MONITOR_PRICING = {
       '30-day data retention',
       'Advanced reporting and analytics',
       'Custom thresholds',
-      'API access'
-    ]
+      'API access',
+    ],
   },
   enterprise: {
     name: 'Enterprise',
@@ -289,7 +326,7 @@ export const PERFORMANCE_MONITOR_PRICING = {
       'Custom dashboards',
       'White-label reporting',
       'Priority support',
-      'SLA guarantee'
-    ]
-  }
+      'SLA guarantee',
+    ],
+  },
 };

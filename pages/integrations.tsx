@@ -3,6 +3,8 @@ import { useRouter } from 'next/router';
 
 export default function IntegrationsRedirect() {
   const router = useRouter();
-  useEffect(() => { router.replace('/admin/integrations'); }, [router]);
+  useEffect(() => {
+    router.replace('/admin/integrations');
+  }, [router]);
   return null;
 }

@@ -1,5 +1,10 @@
 export type ContentType = 'listing' | 'message' | 'cv' | 'job';
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
+export type ModerationStatus =
+  | 'pending'
+  | 'approved'
+  | 'removed'
+  | 'warned'
+  | 'banned';
 
 export type AiScores = {
   toxicity: number; // 0-1

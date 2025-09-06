@@ -4,14 +4,19 @@ import { parseUserFromRequest } from '../../../utils/auth';
 import { DisputeCase, DisputeReason } from '../../../types/disputes';
 import { generateCaseId } from '../../../utils/fsdb';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const user = parseUserFromRequest(req);
 
   if (req.method === 'GET') {
     const all = await readAllDisputes();
     let filtered = all;
     if (user.role !== 'admin') {
-      filtered = all.filter(d => d.clientUserId === user.id || d.talentUserId === user.id);
+      filtered = all.filter(
+        d => d.clientUserId === user.id || d.talentUserId === user.id
+      );
     }
     return res.status(200).json({ disputes: filtered });
   }
@@ -26,9 +31,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       talentUserId,
       reason,
       reasonDetails,
-      description} = req.body || {};
+      description,
+    } = req.body || {};
 
-    if (!projectId || !clientUserId || !talentUserId || !reason || !description) {
+    if (
+      !projectId ||
+      !clientUserId ||
+      !talentUserId ||
+      !reason ||
+      !description
+    ) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -47,7 +59,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       reasonDetails,
       description,
       attachments: [],
-      messages: []};
+      messages: [],
+    };
 
     await createDispute(dispute);
     return res.status(201).json({ dispute });

@@ -1,13 +1,11 @@
-import React from "react";
-import {
-  useToast as useToastHook,
-  Toast} from "@/components/ui/toast";
+import React from 'react';
+import { useToast as useToastHook, Toast } from '@/components/ui/toast';
 
 // Extend the Toast component props with common toast options
 export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
   description?: string;
   title?: string;
-  variant?: "default" | "destructive" | "success";
+  variant?: 'default' | 'destructive' | 'success';
 };
 
 export const useToast = useToastHook;
@@ -28,11 +26,11 @@ baseToast.description = (description: string) => {
 };
 
 baseToast.error = (error: string) => {
-  baseToast({ variant: "destructive", title: "Error", description: error });
+  baseToast({ variant: 'destructive', title: 'Error', description: error });
 };
 
 baseToast.success = (message: string) => {
-  baseToast({ variant: "success", title: "Success", description: message });
+  baseToast({ variant: 'success', title: 'Success', description: message });
 };
 
 // Export the callable toast function.

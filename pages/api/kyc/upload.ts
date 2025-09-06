@@ -22,13 +22,22 @@ function save(db: Record<string, KycProfile>) {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
-  const { userId, kind, filename } = req.body as { userId?: string; kind?: KycDocumentMeta['kind']; filename?: string };
-  if (!userId || !kind || !filename) return res.status(400).json({ error: 'Missing userId, kind or filename' });
+  if (req.method !== 'POST')
+    return res.status(405).json({ error: 'Method not allowed' });
+  const { userId, kind, filename } = req.body as {
+    userId?: string;
+    kind?: KycDocumentMeta['kind'];
+    filename?: string;
+  };
+  if (!userId || !kind || !filename)
+    return res.status(400).json({ error: 'Missing userId, kind or filename' });
 
   const db = load();
   const profile = db[userId];
-  if (!profile) return res.status(404).json({ error: 'Profile not found. Start KYC first.' });
+  if (!profile)
+    return res
+      .status(404)
+      .json({ error: 'Profile not found. Start KYC first.' });
 
   const id = crypto.randomUUID();
   const uploadedAt = new Date().toISOString();
@@ -36,12 +45,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     id,
     kind,
     filename,
-    uploadedAt};
+    uploadedAt,
+  };
   // Replace or add
-  const withoutSameKind = (profile.documents || []).filter((d) => d.kind !== kind);
+  const withoutSameKind = (profile.documents || []).filter(
+    d => d.kind !== kind
+  );
   profile.documents = [...withoutSameKind, doc];
   profile.lastUpdatedAt = uploadedAt;
-  profile.auditTrail.push({ at: uploadedAt, by: userId, action: 'document_uploaded', details: { kind, filename } });
+  profile.auditTrail.push({
+    at: uploadedAt,
+    by: userId,
+    action: 'document_uploaded',
+    details: { kind, filename },
+  });
 
   db[userId] = profile;
   save(db);

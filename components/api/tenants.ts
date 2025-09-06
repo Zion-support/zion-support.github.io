@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
-import { createTenant, getTenants, rotateTenantApiKey, updateTenant } from '@/utils/tenant';
+import {
+  createTenant,
+  getTenants,
+  rotateTenantApiKey,
+  updateTenant,
+} from '@/utils/tenant';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const method = (req.method || 'GET').toUpperCase();
@@ -14,7 +19,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (method === 'POST') {
     const { branding } = req.body || {};
-    if (!branding?.name) return res.status(400).json({ error: 'branding.name required' });
+    if (!branding?.name)
+      return res.status(400).json({ error: 'branding.name required' });
     const tenant = createTenant(branding);
     return res.status(201).json({ tenant });
   }
@@ -29,7 +35,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (method === 'PATCH') {
     const { tenantId, rotateKey } = req.body || {};
-    if (!tenantId || !rotateKey) return res.status(400).json({ error: 'tenantId and rotateKey required' });
+    if (!tenantId || !rotateKey)
+      return res.status(400).json({ error: 'tenantId and rotateKey required' });
     const result = rotateTenantApiKey(tenantId);
     if (!result) return res.status(404).json({ error: 'Tenant not found' });
     return res.status(200).json({ tenant: result });

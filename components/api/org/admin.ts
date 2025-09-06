@@ -6,7 +6,12 @@ const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
 
 type AdminAction =
   | { type: 'invite'; section: keyof OrgData; person: BasePerson }
-  | { type: 'promote'; section: keyof OrgData; id: string; updates: Partial<BasePerson> }
+  | {
+      type: 'promote';
+      section: keyof OrgData;
+      id: string;
+      updates: Partial<BasePerson>;
+    }
   | { type: 'deactivate'; section: keyof OrgData; id: string };
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -27,7 +32,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [];
     // prevent duplicates
-    if (arr.some((p) => p.id === action.person.id)) {
+    if (arr.some(p => p.id === action.person.id)) {
       return res.status(400).json({ error: 'ID already exists' });
     }
     arr.push({ ...action.person, active: true });
@@ -41,7 +46,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const section = action.section;
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [];
-    const idx = arr.findIndex((p) => p.id === action.id);
+    const idx = arr.findIndex(p => p.id === action.id);
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], ...action.updates };
     // @ts-expect-error write back dynamic section
@@ -54,7 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const section = action.section;
     // @ts-expect-error Indexing into dynamic section
     const arr: BasePerson[] = data[section] || [];
-    const idx = arr.findIndex((p) => p.id === action.id);
+    const idx = arr.findIndex(p => p.id === action.id);
     if (idx === -1) return res.status(404).json({ error: 'Not found' });
     arr[idx] = { ...arr[idx], active: false };
     // @ts-expect-error write back dynamic section

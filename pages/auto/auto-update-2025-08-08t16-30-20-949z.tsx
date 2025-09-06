@@ -6,9 +6,9 @@ const AutoUpdate20250808t163020949z: NextPage = () => {
     <div>
       <Head>
         <title>AutoUpdate20250808t163020949z - Zion Tech Solutions</title>
-        <meta name="description" content="AutoUpdate20250808t163020949z page" />
+        <meta name='description' content='AutoUpdate20250808t163020949z page' />
       </Head>
-      
+
       <main>
         <h1>AutoUpdate20250808t163020949z</h1>
         <p>This page is under construction.</p>

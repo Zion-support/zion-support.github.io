@@ -2,7 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
-import type { CreateGrantPayload, GrantApplication } from '../../../types/grants';
+import type {
+  CreateGrantPayload,
+  GrantApplication,
+} from '../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
@@ -14,8 +17,8 @@ function ensureDir() {
 
 function readAllGrants(): GrantApplication[] {
   ensureDir();
-  const files = fs.readdirSync(GRANTS_DIR).filter((f) => f.endsWith('.json'));
-  return files.map((file) => {
+  const files = fs.readdirSync(GRANTS_DIR).filter(f => f.endsWith('.json'));
+  return files.map(file => {
     const full = path.join(GRANTS_DIR, file);
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
@@ -25,7 +28,7 @@ function readAllGrants(): GrantApplication[] {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { status, sector, region, program } = req.query;
-    const list = readAllGrants().filter((g) => {
+    const list = readAllGrants().filter(g => {
       return (
         (status ? g.status === status : true) &&
         (sector ? g.sector === sector : true) &&
@@ -40,7 +43,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'POST') {
     try {
       const payload = req.body as CreateGrantPayload;
-      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+      if (
+        !payload ||
+        !payload.projectName ||
+        !payload.teamInfo ||
+        !payload.proposalSummary ||
+        !payload.timeline
+      ) {
         res.status(400).json({ error: 'Missing required fields' });
         return;
       }
@@ -66,8 +75,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         milestones: [],
         fundsReleased: 0,
         updates: [],
-        votes: []};
-      fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8');
+        votes: [],
+      };
+      fs.writeFileSync(
+        path.join(GRANTS_DIR, `${id}.json`),
+        JSON.stringify(record, null, 2),
+        'utf8'
+      );
       res.status(201).json({ id, record });
     } catch (e: any) {
       res.status(500).json({ error: e?.message || 'Failed to create grant' });

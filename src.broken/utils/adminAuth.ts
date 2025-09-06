@@ -17,20 +17,31 @@ function getEnv(name: string, fallback?: string): string {
 export function signSession(session: AdminSession): string {
   const secret = getEnv('ADMIN_SESSION_SECRET', 'CHANGE_ME_DEV_SECRET');
   const payload = Buffer.from(JSON.stringify(session)).toString('base64');
-  const hmac = crypto.createHmac('sha256', secret).update(payload).digest('hex');
+  const hmac = crypto
+    .createHmac('sha256', secret)
+    .update(payload)
+    .digest('hex');
   return `${payload}.${hmac}`;
 }
 
-export function verifySessionToken(token: string | undefined): AdminSession | null {
+export function verifySessionToken(
+  token: string | undefined
+): AdminSession | null {
   if (!token) return null;
   const secret = getEnv('ADMIN_SESSION_SECRET', 'CHANGE_ME_DEV_SECRET');
   const parts = token.split('.');
   if (parts.length !== 2) return null;
   const [payload, signature] = parts;
-  const expected = crypto.createHmac('sha256', secret).update(payload).digest('hex');
-  if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected))) return null;
+  const expected = crypto
+    .createHmac('sha256', secret)
+    .update(payload)
+    .digest('hex');
+  if (!crypto.timingSafeEqual(Buffer.from(signature), Buffer.from(expected)))
+    return null;
   try {
-    const session = JSON.parse(Buffer.from(payload, 'base64').toString()) as AdminSession;
+    const session = JSON.parse(
+      Buffer.from(payload, 'base64').toString()
+    ) as AdminSession;
     return session;
   } catch {
     return null;
@@ -41,14 +52,17 @@ export function getSessionFromReq(req: NextApiRequest): AdminSession | null {
   const cookieHeader = req.headers.cookie || '';
   const cookie = cookieHeader
     .split(';')
-    .map((c) => c.trim())
-    .find((c) => c.startsWith(`${COOKIE_NAME}=`));
+    .map(c => c.trim())
+    .find(c => c.startsWith(`${COOKIE_NAME}=`));
   if (!cookie) return null;
   const token = cookie.substring(COOKIE_NAME.length + 1);
   return verifySessionToken(token);
 }
 
-export function setSessionCookie(res: NextApiResponse, session: AdminSession): void {
+export function setSessionCookie(
+  res: NextApiResponse,
+  session: AdminSession
+): void {
   const token = signSession(session);
   const maxAge = 60 * 60 * 24; // 1 day
   const expires = new Date(Date.now() + maxAge * 1000).toUTCString();

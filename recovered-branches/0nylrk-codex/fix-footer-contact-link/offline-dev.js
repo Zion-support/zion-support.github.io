@@ -1,4 +1,3 @@
-
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
@@ -17,7 +16,12 @@ const server = http.createServer((req, res) => {
   } else if (req.url === '/online-check') {
     // Endpoint to check if we're online
     res.writeHead(200, { 'Content-Type': 'application/json' });
-    res.end(JSON.stringify({ online: false, message: 'Running in offline development mode' }));
+    res.end(
+      JSON.stringify({
+        online: false,
+        message: 'Running in offline development mode',
+      })
+    );
   } else {
     res.writeHead(404);
     res.end('Not found');

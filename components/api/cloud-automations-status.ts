@@ -10,7 +10,9 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
       for (const f of fs.readdirSync(dir)) {
         if (f.endsWith('.json')) {
           const fp = path.join(dir, f);
-          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'));
+          data[f.replace('.json', '')] = JSON.parse(
+            fs.readFileSync(fp, 'utf8')
+          );
         }
       }
     }

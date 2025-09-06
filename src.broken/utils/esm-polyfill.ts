@@ -10,34 +10,73 @@ if (typeof window === 'undefined') {
     // Ensure lodash modules are properly resolved to lodash-es
     const Module = eval('require')('module');
     const originalResolveFilename = Module._resolveFilename;
-    
-    Module._resolveFilename = function (request: string, parent: any, isMain: boolean, options: any) {
+
+    Module._resolveFilename = function (
+      request: string,
+      parent: any,
+      isMain: boolean,
+      options: any
+    ) {
       // Map lodash imports to lodash-es
       if (request.startsWith('lodash/')) {
         const lodashModule = request.replace('lodash/', 'lodash-es/');
         try {
-          return originalResolveFilename.call(this, lodashModule, parent, isMain, options);
+          return originalResolveFilename.call(
+            this,
+            lodashModule,
+            parent,
+            isMain,
+            options
+          );
         } catch (e) {
           // Fallback to original if lodash-es module doesn't exist
-          return originalResolveFilename.call(this, request, parent, isMain, options);
+          return originalResolveFilename.call(
+            this,
+            request,
+            parent,
+            isMain,
+            options
+          );
         }
       }
-      
+
       // Map lodash to lodash-es
       if (request === 'lodash') {
         try {
-          return originalResolveFilename.call(this, 'lodash-es', parent, isMain, options);
+          return originalResolveFilename.call(
+            this,
+            'lodash-es',
+            parent,
+            isMain,
+            options
+          );
         } catch (e) {
-          return originalResolveFilename.call(this, request, parent, isMain, options);
+          return originalResolveFilename.call(
+            this,
+            request,
+            parent,
+            isMain,
+            options
+          );
         }
       }
-      
-      return originalResolveFilename.call(this, request, parent, isMain, options);
+
+      return originalResolveFilename.call(
+        this,
+        request,
+        parent,
+        isMain,
+        options
+      );
     };
   } catch (error: unknown) {
     // Ignore errors in serverless environments where Module might not be available
-    const errorMessage = error instanceof Error ? error.message : 'Unknown error';
-    console.debug('ESM polyfill: Unable to patch Module._resolveFilename:', errorMessage);
+    const errorMessage =
+      error instanceof Error ? error.message : 'Unknown error';
+    console.debug(
+      'ESM polyfill: Unable to patch Module._resolveFilename:',
+      errorMessage
+    );
   }
 }
 
@@ -47,7 +86,7 @@ if (typeof window !== 'undefined') {
   const globalObj = window as any;
   const originalImport = globalObj.require;
   if (originalImport) {
-    globalObj.require = function(id: string) {
+    globalObj.require = function (id: string) {
       // Map lodash imports to lodash-es for client-side
       if (id.startsWith('lodash/')) {
         const esmModule = id.replace('lodash/', 'lodash-es/');
@@ -57,7 +96,7 @@ if (typeof window !== 'undefined') {
           return originalImport(id);
         }
       }
-      
+
       if (id === 'lodash') {
         try {
           return originalImport('lodash-es');
@@ -65,7 +104,7 @@ if (typeof window !== 'undefined') {
           return originalImport(id);
         }
       }
-      
+
       return originalImport(id);
     };
   }

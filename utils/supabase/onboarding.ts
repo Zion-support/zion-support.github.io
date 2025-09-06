@@ -51,7 +51,10 @@ export async function getCurrentUserId(): Promise<string | null> {
   return null;
 }
 
-export async function fetchOnboardingProgress(userId: string, role: 'talent' | 'client'): Promise<OnboardingRecord | null> {
+export async function fetchOnboardingProgress(
+  userId: string,
+  role: 'talent' | 'client'
+): Promise<OnboardingRecord | null> {
   try {
     const { data, error } = await supabase
       .from('onboarding_progress')
@@ -62,7 +65,10 @@ export async function fetchOnboardingProgress(userId: string, role: 'talent' | '
 
     if (error) {
       // eslint-disable-next-line no-console
-      console.warn('Supabase onboarding fetch error:', (error as any).message || String(error));
+      console.warn(
+        'Supabase onboarding fetch error:',
+        (error as any).message || String(error)
+      );
     }
     return (data as OnboardingRecord | null) ?? null;
   } catch (e) {
@@ -77,7 +83,8 @@ export function fallbackTalentProgress(): TalentOnboarding {
     profile_complete: true,
     skills_added: true,
     availability_set: false,
-    first_job_applied: false};
+    first_job_applied: false,
+  };
 }
 
 export function fallbackClientProgress(): ClientOnboarding {
@@ -85,5 +92,6 @@ export function fallbackClientProgress(): ClientOnboarding {
     job_posted: true,
     talent_invited: false,
     quote_received: false,
-    first_hire_complete: false};
+    first_hire_complete: false,
+  };
 }

@@ -4,9 +4,15 @@ import { vi, afterEach } from 'vitest';
 
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
-  observe() { /* do nothing */ }
-  unobserve() { /* do nothing */ }
-  disconnect() { /* do nothing */ }
+  observe() {
+    /* do nothing */
+  }
+  unobserve() {
+    /* do nothing */
+  }
+  disconnect() {
+    /* do nothing */
+  }
 };
 
 // Mock window.scrollTo
@@ -45,4 +51,5 @@ afterEach(() => {
   // Snapshot placeholder (no-op) – Vitest has its own snapshot system.
   // We expose it so imports compile even if we don't use it.
   // eslint-disable-next-line @typescript-eslint/no-empty-function
-  SnapshotSerializer: () => {}};
+  SnapshotSerializer: () => {},
+};

@@ -10,13 +10,15 @@ interface EnhancedFuturisticBackgroundProps {
   animationSpeed?: number;
 }
 
-const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
+const EnhancedFuturisticBackground: React.FC<
+  EnhancedFuturisticBackgroundProps
+> = ({
   children,
   className = '',
   intensity = 'medium',
   colorScheme = 'quantum',
   particleCount = 100,
-  animationSpeed = 1
+  animationSpeed = 1,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const animationRef = useRef<number | undefined>(undefined);
@@ -27,47 +29,82 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 0, 0, 0.85)',
-      particles: ['#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080', '#8000ff'],
-      glow: '#00ffff'
+      particles: [
+        '#00ffff',
+        '#ff00ff',
+        '#ffff00',
+        '#00ff00',
+        '#ff0080',
+        '#8000ff',
+      ],
+      glow: '#00ffff',
     },
     cyberpunk: {
       primary: '#ff0080',
       secondary: '#00ffff',
       accent: '#ffff00',
       background: 'rgba(20, 0, 40, 0.9)',
-      particles: ['#ff0080', '#00ffff', '#ffff00', '#ff4000', '#8000ff', '#00ff80'],
-      glow: '#ff0080'
+      particles: [
+        '#ff0080',
+        '#00ffff',
+        '#ffff00',
+        '#ff4000',
+        '#8000ff',
+        '#00ff80',
+      ],
+      glow: '#ff0080',
     },
     holographic: {
       primary: '#00ffff',
       secondary: '#ff00ff',
       accent: '#ffff00',
       background: 'rgba(0, 20, 40, 0.85)',
-      particles: ['#00ffff', '#ff00ff', '#ffff00', '#00ff80', '#ff8000', '#8000ff'],
-      glow: '#00ffff'
+      particles: [
+        '#00ffff',
+        '#ff00ff',
+        '#ffff00',
+        '#00ff80',
+        '#ff8000',
+        '#8000ff',
+      ],
+      glow: '#00ffff',
     },
     neural: {
       primary: '#00ff80',
       secondary: '#ff0080',
       accent: '#ffff00',
       background: 'rgba(0, 40, 20, 0.9)',
-      particles: ['#00ff80', '#ff0080', '#ffff00', '#00ffff', '#ff8000', '#8000ff'],
-      glow: '#00ff80'
+      particles: [
+        '#00ff80',
+        '#ff0080',
+        '#ffff00',
+        '#00ffff',
+        '#ff8000',
+        '#8000ff',
+      ],
+      glow: '#00ff80',
     },
     cosmic: {
       primary: '#ff6b6b',
       secondary: '#4ecdc4',
       accent: '#45b7d1',
       background: 'rgba(10, 10, 30, 0.9)',
-      particles: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'],
-      glow: '#4ecdc4'
-    }
+      particles: [
+        '#ff6b6b',
+        '#4ecdc4',
+        '#45b7d1',
+        '#96ceb4',
+        '#feca57',
+        '#ff9ff3',
+      ],
+      glow: '#4ecdc4',
+    },
   };
 
   const intensitySettings = {
     low: { particleCount: 40, speed: 0.45, size: 2, opacity: 0.25 },
     medium: { particleCount: 90, speed: 0.9, size: 3, opacity: 0.45 },
-    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
+    high: { particleCount: 160, speed: 1.25, size: 3.5, opacity: 0.6 },
   };
 
   useEffect(() => {
@@ -106,7 +143,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         this.vx = (Math.random() - 0.5) * settings.speed * animationSpeed;
         this.vy = (Math.random() - 0.5) * settings.speed * animationSpeed;
         this.size = Math.random() * settings.size + 1;
-        this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)];
+        this.color =
+          colors.particles[Math.floor(Math.random() * colors.particles.length)];
         this.opacity = Math.random() * settings.opacity;
         this.life = Math.random() * 100;
         this.maxLife = 100;
@@ -132,17 +170,24 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       draw() {
         ctx.save();
         ctx.globalAlpha = this.opacity;
-        
+
         // Create gradient for particle
-        const gradient = ctx.createRadialGradient(this.x, this.y, 0, this.x, this.y, this.size);
+        const gradient = ctx.createRadialGradient(
+          this.x,
+          this.y,
+          0,
+          this.x,
+          this.y,
+          this.size
+        );
         gradient.addColorStop(0, this.color);
         gradient.addColorStop(1, 'transparent');
-        
+
         ctx.fillStyle = gradient;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.fill();
-        
+
         ctx.restore();
       }
 
@@ -165,7 +210,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
       draw() {
         const distance = Math.sqrt(
-          Math.pow(this.p1.x - this.p2.x, 2) + Math.pow(this.p1.y - this.p2.y, 2)
+          Math.pow(this.p1.x - this.p2.x, 2) +
+            Math.pow(this.p1.y - this.p2.y, 2)
         );
 
         if (distance < 150) {
@@ -192,7 +238,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
 
     // Matrix rain effect
     const matrixRain = () => {
-      const characters = '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
+      const characters =
+        '01アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
       const fontSize = 12;
       const columns = canvas.width / fontSize;
       const drops: number[] = [];
@@ -209,7 +256,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.font = `${fontSize}px monospace`;
 
         for (let i = 0; i < drops.length; i++) {
-          const text = characters[Math.floor(Math.random() * characters.length)];
+          const text =
+            characters[Math.floor(Math.random() * characters.length)];
           ctx.fillText(text, i * fontSize, drops[i] * fontSize);
 
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
@@ -250,8 +298,8 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {
           const distance = Math.sqrt(
-            Math.pow(particles[i].x - particles[j].x, 2) + 
-            Math.pow(particles[i].y - particles[j].y, 2)
+            Math.pow(particles[i].x - particles[j].x, 2) +
+              Math.pow(particles[i].y - particles[j].y, 2)
           );
           if (distance < 150) {
             connections.push(new Connection(particles[i], particles[j]));
@@ -267,12 +315,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         const x = Math.random() * canvas.width;
         const y = Math.random() * canvas.height;
         const size = Math.random() * 20 + 10;
-        
+
         ctx.save();
         ctx.globalAlpha = 0.1;
         ctx.strokeStyle = colors.accent;
         ctx.lineWidth = 1;
-        
+
         if (Math.random() < 0.5) {
           // Draw triangle
           ctx.beginPath();
@@ -285,12 +333,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           // Draw square
           ctx.strokeRect(x - size, y - size, size * 2, size * 2);
         }
-        
+
         ctx.restore();
       }
 
       // Respect reduced motion
-      const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const prefersReduced = window.matchMedia(
+        '(prefers-reduced-motion: reduce)'
+      ).matches;
       if (prefersReduced) {
         // Slow down updates
         setTimeout(() => {
@@ -315,22 +365,20 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     <div className={`relative min-h-screen ${className}`}>
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
         style={{ background: 'transparent' }}
       />
-      
+
       {/* Overlay gradient */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-0"
+      <div
+        className='fixed inset-0 pointer-events-none z-0'
         style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0,0,0,0.3) 100%)`,
         }}
       />
-      
+
       {/* Content */}
-      <div className="relative z-10">
-        {children}
-      </div>
+      <div className='relative z-10'>{children}</div>
     </div>
   );
 };

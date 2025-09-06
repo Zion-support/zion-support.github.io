@@ -1,34 +1,36 @@
-
 /**
  * Format a date string or timestamp into a readable format
  * @param date Date to format
  * @param format Optional format specification
  * @returns Formatted date string
  */
-export const formatDate = (date: Date | string | number, format: string = 'medium'): string => {
+export const formatDate = (
+  date: Date | string | number,
+  format: string = 'medium'
+): string => {
   const dateObj = new Date(date);
-  
+
   switch (format) {
     case 'short':
       return dateObj.toLocaleDateString();
     case 'medium':
-      return dateObj.toLocaleDateString(undefined, { 
-        year: 'numeric', 
-        month: 'short', 
-        day: 'numeric' 
+      return dateObj.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
       });
     case 'long':
-      return dateObj.toLocaleDateString(undefined, { 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+      return dateObj.toLocaleDateString(undefined, {
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
       });
     case 'full':
-      return dateObj.toLocaleDateString(undefined, { 
+      return dateObj.toLocaleDateString(undefined, {
         weekday: 'long',
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric' 
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric',
       });
     case 'relative':
       // Simple relative time (today, yesterday, or date)
@@ -36,7 +38,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
       const yesterday = new Date(today);
       yesterday.setDate(yesterday.getDate() - 1);
-      
+
       if (dateObj >= today) {
         return 'Today';
       } else if (dateObj >= yesterday) {
@@ -57,33 +59,33 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
 export const timeAgo = (date: Date | string | number): string => {
   const dateObj = new Date(date);
   const now = new Date();
-  
+
   const seconds = Math.floor((now.getTime() - dateObj.getTime()) / 1000);
-  
+
   let interval = Math.floor(seconds / 31536000);
   if (interval >= 1) {
     return interval === 1 ? '1 year ago' : `${interval} years ago`;
   }
-  
+
   interval = Math.floor(seconds / 2592000);
   if (interval >= 1) {
     return interval === 1 ? '1 month ago' : `${interval} months ago`;
   }
-  
+
   interval = Math.floor(seconds / 86400);
   if (interval >= 1) {
     return interval === 1 ? '1 day ago' : `${interval} days ago`;
   }
-  
+
   interval = Math.floor(seconds / 3600);
   if (interval >= 1) {
     return interval === 1 ? '1 hour ago' : `${interval} hours ago`;
   }
-  
+
   interval = Math.floor(seconds / 60);
   if (interval >= 1) {
     return interval === 1 ? '1 minute ago' : `${interval} minutes ago`;
   }
-  
+
   return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`;
 };

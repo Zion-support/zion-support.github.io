@@ -8,7 +8,8 @@ const FEEDBACK_FILE = path.join(DATA_DIR, 'feedback_logs.json');
 function readAll(): any[] {
   try {
     if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-    if (!fs.existsSync(FEEDBACK_FILE)) fs.writeFileSync(FEEDBACK_FILE, '[]', 'utf8');
+    if (!fs.existsSync(FEEDBACK_FILE))
+      fs.writeFileSync(FEEDBACK_FILE, '[]', 'utf8');
     const raw = fs.readFileSync(FEEDBACK_FILE, 'utf8');
     return JSON.parse(raw || '[]');
   } catch {
@@ -33,7 +34,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     pagePath: String(pagePath || ''),
     aiModel: String(aiModel || ''),
     userAgent: req.headers['user-agent'] || '',
-    ts: Date.now()};
+    ts: Date.now(),
+  };
   const rows = readAll();
   rows.push(entry);
   writeAll(rows);

@@ -7,13 +7,18 @@ const Chat5gTechnologyAndItsImpactOnIotChat: NextPage = () => {
     <div>
       <Head>
         <title>5gTechnologyAndItsImpactOnIotChat - Zion Tech Solutions</title>
-        <meta name="description" content="5gTechnologyAndItsImpactOnIotChat blog post" />
+        <meta
+          name='description'
+          content='5gTechnologyAndItsImpactOnIotChat blog post'
+        />
       </Head>
-      
+
       <main>
         <h1>5gTechnologyAndItsImpactOnIotChat</h1>
         <p>Blog content coming soon...</p>
-        <Link href="/blog"><a>Back to Blog</a></Link>
+        <Link href='/blog'>
+          <a>Back to Blog</a>
+        </Link>
       </main>
     </div>
   );

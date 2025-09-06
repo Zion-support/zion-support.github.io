@@ -5,7 +5,7 @@ import { CategoryCard } from '@/components/CategoryCard';
 it('renders category card with link to slug', () => {
   render(
     <MemoryRouter>
-      <CategoryCard title="Test Category" description="desc" icon="*" />
+      <CategoryCard title='Test Category' description='desc' icon='*' />
     </MemoryRouter>
   );
 
@@ -16,7 +16,7 @@ it('renders category card with link to slug', () => {
 it('normalizes slug with special characters', () => {
   render(
     <MemoryRouter>
-      <CategoryCard title="R&D Tools!" description="desc" icon="*" />
+      <CategoryCard title='R&D Tools!' description='desc' icon='*' />
     </MemoryRouter>
   );
 
@@ -27,7 +27,7 @@ it('normalizes slug with special characters', () => {
 it('removes accents from slug', () => {
   render(
     <MemoryRouter>
-      <CategoryCard title="Crème Brûlée" description="desc" icon="*" />
+      <CategoryCard title='Crème Brûlée' description='desc' icon='*' />
     </MemoryRouter>
   );
 
@@ -38,7 +38,7 @@ it('removes accents from slug', () => {
 it('treats underscores as spaces in slug', () => {
   render(
     <MemoryRouter>
-      <CategoryCard title="AI_Tools" description="desc" icon="*" />
+      <CategoryCard title='AI_Tools' description='desc' icon='*' />
     </MemoryRouter>
   );
 

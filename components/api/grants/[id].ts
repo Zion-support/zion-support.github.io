@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
+import type {
+  GrantApplication,
+  UpdateGrantPayload,
+} from '../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
@@ -24,7 +27,11 @@ function readGrant(id: string): GrantApplication | null {
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -55,7 +62,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       ...existing,
       ...payload,
       status: payload.submit ? 'Submitted' : existing.status,
-      updatedAt: new Date().toISOString()} as GrantApplication;
+      updatedAt: new Date().toISOString(),
+    } as GrantApplication;
     writeGrant(next);
     res.status(200).json({ record: next });
     return;

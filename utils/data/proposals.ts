@@ -2,7 +2,13 @@ import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted' | 'Rejected' | 'Failed';
+export type ProposalStatus =
+  | 'Draft'
+  | 'Submitted'
+  | 'Under Review'
+  | 'Accepted'
+  | 'Rejected'
+  | 'Failed';
 
 export type ProposalMeta = {
   id: string;
@@ -73,10 +79,16 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
     status: 'Draft',
     artifacts: {
       markdownPath: `/proposals/${id}/proposal.md`,
-      jsonPath: path.relative(process.cwd(), jsonPath)}};
+      jsonPath: path.relative(process.cwd(), jsonPath),
+    },
+  };
 
   fs.writeFileSync(markdownPath, payload.contentMarkdown, 'utf8');
-  fs.writeFileSync(jsonPath, JSON.stringify({ meta, payload }, null, 2), 'utf8');
+  fs.writeFileSync(
+    jsonPath,
+    JSON.stringify({ meta, payload }, null, 2),
+    'utf8'
+  );
 
   const metaPath = path.join(proposalDir, 'meta.json');
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
@@ -84,7 +96,10 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   return meta;
 }
 
-export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => ProposalMeta): ProposalMeta {
+export function updateProposalMeta(
+  id: string,
+  updater: (meta: ProposalMeta) => ProposalMeta
+): ProposalMeta {
   ensureDirs();
   const metaPath = path.join(dataDir, id, 'meta.json');
   if (!fs.existsSync(metaPath)) throw new Error('Proposal not found');
@@ -96,8 +111,10 @@ export function updateProposalMeta(id: string, updater: (meta: ProposalMeta) => 
 
 export function listProposals(): ProposalMeta[] {
   ensureDirs();
-  const entries = fs.readdirSync(dataDir).filter((f) => fs.existsSync(path.join(dataDir, f, 'meta.json')));
-  const metas: ProposalMeta[] = entries.map((id) => {
+  const entries = fs
+    .readdirSync(dataDir)
+    .filter(f => fs.existsSync(path.join(dataDir, f, 'meta.json')));
+  const metas: ProposalMeta[] = entries.map(id => {
     const metaPath = path.join(dataDir, id, 'meta.json');
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
@@ -123,8 +140,12 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   return `/proposals/${id}/proposal.pdf`;
 }
 
-export function updateArtifacts(id: string, artifacts: Partial<ProposalMeta['artifacts']>): ProposalMeta {
-  return updateProposalMeta(id, (meta) => ({
+export function updateArtifacts(
+  id: string,
+  artifacts: Partial<ProposalMeta['artifacts']>
+): ProposalMeta {
+  return updateProposalMeta(id, meta => ({
     ...meta,
-    artifacts: { ...meta.artifacts, ...artifacts }}));
+    artifacts: { ...meta.artifacts, ...artifacts },
+  }));
 }

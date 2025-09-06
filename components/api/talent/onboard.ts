@@ -13,21 +13,25 @@ async function summarizeAndTag(input: {
   skills: string;
   tools?: string;
 }) {
-  const openaiApiKey = process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '';
+  const openaiApiKey =
+    process.env.OPENAI_API_KEY || process.env.OPENAI_API_KEY_ZION || '';
   const combinedText = [
     input.professionalTitle,
     input.bio,
     input.projects || '',
     input.skills,
-    input.tools || ''].join('\n');
+    input.tools || '',
+  ].join('\n');
 
-  const basicTags = Array.from(new Set(
-    (input.skills + ',' + (input.tools || ''))
-      .split(/[,\n]/)
-      .map((s) => s.trim())
-      .filter(Boolean)
-      .map((s) => s.toLowerCase())
-  ));
+  const basicTags = Array.from(
+    new Set(
+      (input.skills + ',' + (input.tools || ''))
+        .split(/[,\n]/)
+        .map(s => s.trim())
+        .filter(Boolean)
+        .map(s => s.toLowerCase())
+    )
+  );
 
   if (!openaiApiKey) {
     const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -43,13 +47,19 @@ async function summarizeAndTag(input: {
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: 'You are an expert technical recruiter.' },
-        { role: 'user', content: prompt }],
-      temperature: 0.4});
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.4,
+    });
 
     const content = response.choices?.[0]?.message?.content || '';
     try {
       const parsed = JSON.parse(content);
-      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
+      if (
+        parsed &&
+        typeof parsed.summary === 'string' &&
+        Array.isArray(parsed.tags)
+      ) {
         return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) };
       }
     } catch (_) {
@@ -63,7 +73,10 @@ async function summarizeAndTag(input: {
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) };
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -84,9 +97,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       timezone,
       hourlyRate,
       portfolioLinks,
-      cvFile} = req.body || {};
+      cvFile,
+    } = req.body || {};
 
-    if (!fullName || !professionalTitle || !bio || !yearsOfExperience || !skills || !availability || !timezone) {
+    if (
+      !fullName ||
+      !professionalTitle ||
+      !bio ||
+      !yearsOfExperience ||
+      !skills ||
+      !availability ||
+      !timezone
+    ) {
       return res.status(400).json({ error: 'Missing required fields' });
     }
 
@@ -125,7 +147,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       bio,
       projects,
       skills,
-      tools});
+      tools,
+    });
 
     const record = {
       id,
@@ -143,15 +166,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       portfolioLinks,
       assets: {
         profileImage: savedProfileImagePath,
-        cv: savedCvPath},
+        cv: savedCvPath,
+      },
       ai: {
         summary,
-        tags}};
+        tags,
+      },
+    };
 
     const perRecordPath = path.join(dataDir, `${id}.json`);
     await fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
-    const aggregatePath = path.join(process.cwd(), 'data', 'talent-submissions.json');
+    const aggregatePath = path.join(
+      process.cwd(),
+      'data',
+      'talent-submissions.json'
+    );
     let aggregate: any[] = [];
     if (fs.existsSync(aggregatePath)) {
       try {

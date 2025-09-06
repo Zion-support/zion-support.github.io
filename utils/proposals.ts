@@ -1,4 +1,8 @@
-export type ProposalStatus = 'Draft' | 'Submitted' | 'Under Review' | 'Accepted';
+export type ProposalStatus =
+  | 'Draft'
+  | 'Submitted'
+  | 'Under Review'
+  | 'Accepted';
 
 export type ProposalIndexItem = {
   id: string;

@@ -10,10 +10,13 @@
   `typeRoots` are merged with normal type resolution.
 */
 
-declare module "react" {
+declare module 'react' {
   // Basic ReactElement stub (JSX trees ultimately compile into this).
   // eslint-disable-next-line @typescript-eslint/consistent-type-definitions
-  export interface ReactElement<P = any, T extends string | React.JSXElementConstructor<any> = any> {
+  export interface ReactElement<
+    P = any,
+    T extends string | React.JSXElementConstructor<any> = any,
+  > {
     type: T;
     props: P;
     key: React.Key | null;

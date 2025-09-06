@@ -9,14 +9,17 @@ export default function ElasticSearchSearch() {
   };
 
   return (
-    <div className="space-y-2">
+    <div className='space-y-2'>
       <input
-        className="border p-2 rounded w-full"
+        className='border p-2 rounded w-full'
         value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="ElasticSearch query"
+        onChange={e => setQuery(e.target.value)}
+        placeholder='ElasticSearch query'
       />
-      <button className="bg-blue-500 text-white px-4 py-2 rounded" onClick={search}>
+      <button
+        className='bg-blue-500 text-white px-4 py-2 rounded'
+        onClick={search}
+      >
         Search
       </button>
     </div>

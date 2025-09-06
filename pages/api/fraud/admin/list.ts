@@ -7,7 +7,10 @@ function ensureAdmin(req: NextApiRequest): boolean {
   return token === process.env.ADMIN_TOKEN;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'GET') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -17,12 +20,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return;
   }
 
-  const { limit = '50', offset = '0', source, userId, status, label } = req.query as Record<string, string>;
-  const store = getFraudStore();
-  const items = await store.listFlagged(parseInt(limit, 10), parseInt(offset, 10), {
-    source: source as any,
+  const {
+    limit = '50',
+    offset = '0',
+    source,
     userId,
-    status: status as any,
-    label: label as any});
+    status,
+    label,
+  } = req.query as Record<string, string>;
+  const store = getFraudStore();
+  const items = await store.listFlagged(
+    parseInt(limit, 10),
+    parseInt(offset, 10),
+    {
+      source: source as any,
+      userId,
+      status: status as any,
+      label: label as any,
+    }
+  );
   res.status(200).json({ items });
 }

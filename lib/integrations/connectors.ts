@@ -12,31 +12,54 @@ export async function simulateAction<T = any>(
     providerId: connection.providerId,
     level: 'info',
     action,
-    details};
+    details,
+  };
   // In a real implementation, call provider SDK/API here using connection.accessToken
   return { log, result: { ok: true } as unknown as T };
 }
 
 // CRM actions
 export const crm = {
-  async syncContact(connection: ProviderConnection, contact: Record<string, any>) {
+  async syncContact(
+    connection: ProviderConnection,
+    contact: Record<string, any>
+  ) {
     return simulateAction(connection, 'crm.syncContact', { contact });
   },
-  async addProjectNote(connection: ProviderConnection, note: Record<string, any>) {
+  async addProjectNote(
+    connection: ProviderConnection,
+    note: Record<string, any>
+  ) {
     return simulateAction(connection, 'crm.addProjectNote', { note });
   },
-  async addEmailTouchpoint(connection: ProviderConnection, touch: Record<string, any>) {
+  async addEmailTouchpoint(
+    connection: ProviderConnection,
+    touch: Record<string, any>
+  ) {
     return simulateAction(connection, 'crm.addEmailTouchpoint', { touch });
-  }};
+  },
+};
 
 // ATS actions
 export const ats = {
-  async pushApplicant(connection: ProviderConnection, applicant: Record<string, any>) {
+  async pushApplicant(
+    connection: ProviderConnection,
+    applicant: Record<string, any>
+  ) {
     return simulateAction(connection, 'ats.pushApplicant', { applicant });
   },
-  async uploadResume(connection: ProviderConnection, resume: Record<string, any>) {
-    return simulateAction(connection, 'ats.uploadResume', { resumeMeta: { name: resume?.name } });
+  async uploadResume(
+    connection: ProviderConnection,
+    resume: Record<string, any>
+  ) {
+    return simulateAction(connection, 'ats.uploadResume', {
+      resumeMeta: { name: resume?.name },
+    });
   },
-  async updateStatus(connection: ProviderConnection, change: Record<string, any>) {
+  async updateStatus(
+    connection: ProviderConnection,
+    change: Record<string, any>
+  ) {
     return simulateAction(connection, 'ats.updateStatus', { change });
-  }};
+  },
+};

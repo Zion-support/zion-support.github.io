@@ -10,7 +10,10 @@ export type ParsedFilters = {
   keywords: string[];
 };
 
-function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: number } {
+function extractBudget(text: string): {
+  minBudgetUsd?: number;
+  maxBudgetUsd?: number;
+} {
   const lower = text.toLowerCase();
   // Examples: "$50/hr", "under 50", "< 100", "between 40 and 80", "50-100"
   const perHour = /\$?\s*(\d{1,4})\s*\/?\s*hr/.exec(lower);
@@ -23,7 +26,8 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
     const max = parseInt(under[2], 10);
     return { maxBudgetUsd: max };
   }
-  const between = /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower);
+  const between =
+    /(between)\s*\$?(\d{1,4})\s*(and|to|-|–|—)\s*\$?(\d{1,4})/.exec(lower);
   if (between) {
     const min = parseInt(between[2], 10);
     const max = parseInt(between[4], 10);
@@ -38,7 +42,9 @@ function extractBudget(text: string): { minBudgetUsd?: number; maxBudgetUsd?: nu
   return {};
 }
 
-function extractAvailability(text: string): ParsedFilters['availability'] | undefined {
+function extractAvailability(
+  text: string
+): ParsedFilters['availability'] | undefined {
   const lower = text.toLowerCase();
   if (/(full\s*-?\s*time)/.test(lower)) return 'full-time';
   if (/(part\s*-?\s*time)/.test(lower)) return 'part-time';
@@ -48,7 +54,12 @@ function extractAvailability(text: string): ParsedFilters['availability'] | unde
 
 function extractType(text: string): SearchType {
   const lower = text.toLowerCase();
-  if (/(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(lower)) return 'talent';
+  if (
+    /(talent|experts?|developers?|engineers?|designers?|freelancers?)/.test(
+      lower
+    )
+  )
+    return 'talent';
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs';
   if (/(projects?|gigs?)/.test(lower)) return 'projects';
   return 'all';
@@ -57,14 +68,35 @@ function extractType(text: string): SearchType {
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase();
   // Simple heuristic e.g., "in latam", "in berlin", "remote"
-  const inMatch = /in\s+([a-zA-Z\s\-]+)$/.exec(lower) || /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec(lower);
+  const inMatch =
+    /in\s+([a-zA-Z\s\-]+)$/.exec(lower) ||
+    /in\s+([a-zA-Z\s\-]+)[,.\s]/.exec(lower);
   if (inMatch) return inMatch[1].trim();
   if (/remote/.test(lower)) return 'remote';
   return undefined;
 }
 
 const COMMON_SKILLS = [
-  'react', 'next.js', 'node', 'typescript', 'javascript', 'python', 'aws', 'gcp', 'azure', 'kubernetes', 'devops', 'docker', 'terraform', 'rag', 'langchain', 'openai', 'nlp', 'pytorch', 'rust', 'postgresql'
+  'react',
+  'next.js',
+  'node',
+  'typescript',
+  'javascript',
+  'python',
+  'aws',
+  'gcp',
+  'azure',
+  'kubernetes',
+  'devops',
+  'docker',
+  'terraform',
+  'rag',
+  'langchain',
+  'openai',
+  'nlp',
+  'pytorch',
+  'rust',
+  'postgresql',
 ];
 
 function extractSkills(text: string): string[] {
@@ -87,19 +119,42 @@ function extractKeywords(text: string): string[] {
     .replace(/[^a-z0-9\s]/g, ' ')
     .split(/\s+/)
     .filter(Boolean)
-    .filter((w) => w.length > 2 && !['show', 'me', 'with', 'and', 'for', 'the', 'a', 'an', 'to', 'by', 'of', 'under', 'over', 'in'].includes(w));
+    .filter(
+      w =>
+        w.length > 2 &&
+        ![
+          'show',
+          'me',
+          'with',
+          'and',
+          'for',
+          'the',
+          'a',
+          'an',
+          'to',
+          'by',
+          'of',
+          'under',
+          'over',
+          'in',
+        ].includes(w)
+    );
 }
 
-export async function parseQueryToFilters(query: string): Promise<ParsedFilters> {
+export async function parseQueryToFilters(
+  query: string
+): Promise<ParsedFilters> {
   const base: ParsedFilters = {
     type: extractType(query),
     skills: extractSkills(query),
     location: extractLocation(query),
     availability: extractAvailability(query),
     ...extractBudget(query),
-    keywords: extractKeywords(query)};
+    keywords: extractKeywords(query),
+  };
 
-  const apiKey = process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
+  const apiKey =
+    process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY;
   if (!apiKey) return base;
 
   try {
@@ -109,16 +164,17 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${apiKey}`},
+        Authorization: `Bearer ${apiKey}`,
+      },
       body: JSON.stringify({
         model: 'gpt-4o-mini',
         messages: [
           { role: 'system', content: system },
-          { role: 'user', content: user }
+          { role: 'user', content: user },
         ],
         temperature: 0.1,
-        response_format: { type: 'json_object' }
-      })
+        response_format: { type: 'json_object' },
+      }),
     });
     if (!resp.ok) throw new Error(`${resp.status}`);
     const data = await resp.json();
@@ -131,7 +187,8 @@ export async function parseQueryToFilters(query: string): Promise<ParsedFilters>
       minBudgetUsd: parsed.minBudgetUsd ?? base.minBudgetUsd,
       maxBudgetUsd: parsed.maxBudgetUsd ?? base.maxBudgetUsd,
       availability: parsed.availability ?? base.availability,
-      keywords: base.keywords};
+      keywords: base.keywords,
+    };
   } catch {
     return base;
   }

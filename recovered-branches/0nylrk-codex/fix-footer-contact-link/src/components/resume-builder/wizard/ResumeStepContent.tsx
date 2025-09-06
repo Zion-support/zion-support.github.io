@@ -1,6 +1,5 @@
-
-import { TabsContent } from "@/components/ui/tabs";
-import { Resume } from "@/types/resume";
+import { TabsContent } from '@/components/ui/tabs';
+import { Resume } from '@/types/resume';
 import { BasicInfoForm } from '../forms/basic-info';
 import { WorkExperienceForm } from '../forms/WorkExperienceForm';
 import { EducationForm } from '../forms/EducationForm';
@@ -15,45 +14,45 @@ interface ResumeStepContentProps {
   onPrevStep: () => void;
 }
 
-export const ResumeStepContent = ({ 
-  activeTab, 
-  resume, 
-  onNextStep, 
-  onPrevStep 
+export const ResumeStepContent = ({
+  activeTab,
+  resume,
+  onNextStep,
+  onPrevStep,
 }: ResumeStepContentProps) => {
   return (
     <>
-      <TabsContent value="basic-info">
-        <BasicInfoForm 
-          resumeId={resume?.id!} 
+      <TabsContent value='basic-info'>
+        <BasicInfoForm
+          resumeId={resume?.id!}
           initialData={resume?.basic_info}
-          onSave={(data) => {
+          onSave={data => {
             // Here you would typically save the data to your backend
-            console.log("Saving basic info:", data);
+            console.log('Saving basic info:', data);
           }}
-          onComplete={onNextStep} 
+          onComplete={onNextStep}
         />
       </TabsContent>
-      
-      <TabsContent value="work-experience">
-        <WorkExperienceForm 
+
+      <TabsContent value='work-experience'>
+        <WorkExperienceForm
           resumeId={resume?.id!}
           workExperiences={resume?.work_experience || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
         />
       </TabsContent>
-      
-      <TabsContent value="education">
-        <EducationForm 
+
+      <TabsContent value='education'>
+        <EducationForm
           resumeId={resume?.id!}
           educationEntries={resume?.education || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
         />
       </TabsContent>
-      
-      <TabsContent value="skills">
+
+      <TabsContent value='skills'>
         <SkillsForm
           resumeId={resume?.id!}
           skills={resume?.skills || []}
@@ -61,21 +60,18 @@ export const ResumeStepContent = ({
           onBack={onPrevStep}
         />
       </TabsContent>
-      
-      <TabsContent value="certifications">
-        <CertificationsForm 
+
+      <TabsContent value='certifications'>
+        <CertificationsForm
           resumeId={resume?.id!}
           certifications={resume?.certifications || []}
           onComplete={onNextStep}
           onBack={onPrevStep}
         />
       </TabsContent>
-      
-      <TabsContent value="preview">
-        <PreviewResume 
-          resume={resume as Resume} 
-          onBack={onPrevStep}
-        />
+
+      <TabsContent value='preview'>
+        <PreviewResume resume={resume as Resume} onBack={onPrevStep} />
       </TabsContent>
     </>
   );

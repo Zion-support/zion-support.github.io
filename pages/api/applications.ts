@@ -12,8 +12,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const { jobId, talentSlug } = req.query;
     let apps = readJsonFile<Application[]>(FILE, []);
-    if (jobId) apps = apps.filter((a) => a.jobId === String(jobId));
-    if (talentSlug) apps = apps.filter((a) => a.talentSlug === String(talentSlug));
+    if (jobId) apps = apps.filter(a => a.jobId === String(jobId));
+    if (talentSlug)
+      apps = apps.filter(a => a.talentSlug === String(talentSlug));
     res.status(200).json({ applications: apps });
     return;
   }
@@ -28,7 +29,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const now = new Date().toISOString();
     const apps = readJsonFile<Application[]>(FILE, []);
 
-    const existing = apps.find((a) => a.jobId === jobId && a.talentSlug === talentSlug);
+    const existing = apps.find(
+      a => a.jobId === jobId && a.talentSlug === talentSlug
+    );
     if (existing) {
       existing.status = action === 'apply' ? 'applied' : 'skipped';
       writeJsonFile<Application[]>(FILE, apps);
@@ -41,7 +44,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       jobId: String(jobId),
       talentSlug: String(talentSlug),
       status: action === 'apply' ? 'applied' : 'skipped',
-      createdAtIso: now};
+      createdAtIso: now,
+    };
     apps.push(app);
     writeJsonFile<Application[]>(FILE, apps);
     res.status(201).json({ application: app });

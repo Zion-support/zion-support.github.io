@@ -16,7 +16,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(405).end('Method Not Allowed');
   }
 
-  const { courseId, userId = 'demo-user' } = req.query as { courseId: string; userId?: string };
+  const { courseId, userId = 'demo-user' } = req.query as {
+    courseId: string;
+    userId?: string;
+  };
 
   try {
     const users = readJson(usersPath);
@@ -27,7 +30,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (!user) return res.status(404).json({ error: 'User not found' });
 
     res.setHeader('Content-Type', 'application/pdf');
-    res.setHeader('Content-Disposition', `attachment; filename="${courseId}-certificate.pdf"`);
+    res.setHeader(
+      'Content-Disposition',
+      `attachment; filename="${courseId}-certificate.pdf"`
+    );
 
     const doc = new PDFDocument({ size: 'A4', margin: 50 });
     // Pipe to response
@@ -38,7 +44,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.rect(0, 0, doc.page.width, doc.page.height).fill('#0f172a');
     doc.fill('#ffffff');
 
-    doc.fontSize(28).text('Zion AI Marketplace', { align: 'center', underline: false });
+    doc
+      .fontSize(28)
+      .text('Zion AI Marketplace', { align: 'center', underline: false });
     doc.moveDown(0.5);
     doc.fontSize(18).text('Certificate of Completion', { align: 'center' });
     doc.moveDown(1.5);
@@ -51,7 +59,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     doc.moveDown(0.5);
     doc.fontSize(20).text(course.title, { align: 'center' });
     doc.moveDown(0.5);
-    doc.fontSize(12).text(`Badge: ${course.certificationBadge}`, { align: 'center' });
+    doc
+      .fontSize(12)
+      .text(`Badge: ${course.certificationBadge}`, { align: 'center' });
 
     const date = new Date().toLocaleDateString();
     doc.moveDown(2);
@@ -59,6 +69,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     doc.end();
   } catch (e: any) {
-    res.status(500).json({ error: e?.message ?? 'Failed to generate certificate' });
+    res
+      .status(500)
+      .json({ error: e?.message ?? 'Failed to generate certificate' });
   }
 }

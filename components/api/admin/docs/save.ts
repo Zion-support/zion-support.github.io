@@ -28,7 +28,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     const body = req.body;
 
-    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+    const jsonString =
+      typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 
     const ts = new Date()
       .toISOString()

@@ -1,8 +1,7 @@
-
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
-import { X } from "lucide-react";
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
 
 export function FloatingCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -20,9 +19,9 @@ export function FloatingCTA() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [isClosed]);
 
@@ -34,27 +33,29 @@ export function FloatingCTA() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">
-      <div className="bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between">
-        <div className="mr-4">
-          <p className="text-white font-medium">Ready to explore Zion?</p>
-          <p className="text-zion-slate-light text-sm">Register today to access all features!</p>
+    <div className='fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in'>
+      <div className='bg-gradient-to-r from-zion-blue-dark to-zion-blue p-4 rounded-lg border border-zion-purple shadow-lg flex items-center justify-between'>
+        <div className='mr-4'>
+          <p className='text-white font-medium'>Ready to explore Zion?</p>
+          <p className='text-zion-slate-light text-sm'>
+            Register today to access all features!
+          </p>
         </div>
-        <div className="flex items-center gap-2">
-          <Button 
-            variant="default" 
-            size="sm" 
-            className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap"
+        <div className='flex items-center gap-2'>
+          <Button
+            variant='default'
+            size='sm'
+            className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple whitespace-nowrap'
             asChild
           >
-            <Link to="/signup">Register Now</Link>
+            <Link to='/signup'>Register Now</Link>
           </Button>
-          <button 
+          <button
             onClick={handleClose}
-            className="text-zion-slate hover:text-white p-1"
-            aria-label="Close"
+            className='text-zion-slate hover:text-white p-1'
+            aria-label='Close'
           >
-            <X className="w-5 h-5" />
+            <X className='w-5 h-5' />
           </button>
         </div>
       </div>

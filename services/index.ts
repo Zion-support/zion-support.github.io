@@ -10,26 +10,26 @@ export type {
   ShortUrl,
   UrlAnalytics,
   ClickEvent,
-  CreateShortUrlRequest
+  CreateShortUrlRequest,
 } from './urlShortenerService';
 
 export type {
   PasswordOptions,
   PasswordStrength,
-  GeneratedPassword
+  GeneratedPassword,
 } from './passwordGeneratorService';
 
 export type {
   QRCodeOptions,
   QRCodeResult,
-  QRCodeTemplate
+  QRCodeTemplate,
 } from './qrCodeService';
 
 export type {
   ConversionOptions,
   ConversionResult,
   SupportedFormat,
-  FileInfo
+  FileInfo,
 } from './fileConverterService';
 
 export type {
@@ -40,7 +40,7 @@ export type {
   KeywordAnalysis,
   LanguageDetection,
   EntityExtraction,
-  TextSummary
+  TextSummary,
 } from './textAnalysisService';
 
 // Service categories for easy discovery
@@ -48,18 +48,18 @@ export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
     description: 'Essential tools for everyday tasks',
-    services: ['urlShortener', 'passwordGenerator', 'qrCodeGenerator']
+    services: ['urlShortener', 'passwordGenerator', 'qrCodeGenerator'],
   },
   MEDIA: {
     name: 'Media & Files',
     description: 'File conversion and media processing tools',
-    services: ['fileConverter']
+    services: ['fileConverter'],
   },
   ANALYSIS: {
     name: 'Analysis & Insights',
     description: 'Text analysis and content insights',
-    services: ['textAnalysis']
-  }
+    services: ['textAnalysis'],
+  },
 } as const;
 
 // Service metadata for the application
@@ -74,10 +74,10 @@ export const SERVICES_METADATA = {
       'Click tracking',
       'Analytics dashboard',
       'Expiration dates',
-      'QR code generation'
+      'QR code generation',
     ],
     pricing: 'Free',
-    apiEndpoint: '/api/url-shortener'
+    apiEndpoint: '/api/url-shortener',
   },
   passwordGenerator: {
     name: 'Password Generator',
@@ -89,10 +89,10 @@ export const SERVICES_METADATA = {
       'Strength analysis',
       'Custom character sets',
       'Password history',
-      'Security recommendations'
+      'Security recommendations',
     ],
     pricing: 'Free',
-    apiEndpoint: '/api/password-generator'
+    apiEndpoint: '/api/password-generator',
   },
   qrCodeGenerator: {
     name: 'QR Code Generator',
@@ -104,10 +104,10 @@ export const SERVICES_METADATA = {
       'Custom styling',
       'Logo integration',
       'Error correction',
-      'Template library'
+      'Template library',
     ],
     pricing: 'Free',
-    apiEndpoint: '/api/qr-code-generator'
+    apiEndpoint: '/api/qr-code-generator',
   },
   fileConverter: {
     name: 'File Converter',
@@ -119,10 +119,10 @@ export const SERVICES_METADATA = {
       'Batch conversion',
       'Quality settings',
       'Metadata preservation',
-      'Cloud processing'
+      'Cloud processing',
     ],
     pricing: 'Free (Basic) / $9.99/month (Pro)',
-    apiEndpoint: '/api/file-converter'
+    apiEndpoint: '/api/file-converter',
   },
   textAnalysis: {
     name: 'Text Analysis',
@@ -134,21 +134,41 @@ export const SERVICES_METADATA = {
       'Sentiment analysis',
       'Keyword extraction',
       'Entity recognition',
-      'Language detection'
+      'Language detection',
     ],
     pricing: 'Free (Basic) / $19.99/month (Pro)',
-    apiEndpoint: '/api/text-analysis'
-  }
+    apiEndpoint: '/api/text-analysis',
+  },
 } as const;
 
 // Service availability and status
 export const getServiceStatus = () => {
   return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
-    textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
+    urlShortener: {
+      status: 'active',
+      uptime: '99.9%',
+      lastUpdated: new Date(),
+    },
+    passwordGenerator: {
+      status: 'active',
+      uptime: '99.9%',
+      lastUpdated: new Date(),
+    },
+    qrCodeGenerator: {
+      status: 'active',
+      uptime: '99.9%',
+      lastUpdated: new Date(),
+    },
+    fileConverter: {
+      status: 'active',
+      uptime: '99.9%',
+      lastUpdated: new Date(),
+    },
+    textAnalysis: {
+      status: 'active',
+      uptime: '99.9%',
+      lastUpdated: new Date(),
+    },
   };
 };
 
@@ -163,7 +183,7 @@ export const getServiceStats = () => {
       passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },
       qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
       fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
-      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
-    }
+      textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 },
+    },
   };
 };

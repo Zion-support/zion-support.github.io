@@ -9,6 +9,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
-    leadInvestor: 'TBD'});
+    leadInvestor: 'TBD',
+  });
   res.status(200).json(terms);
 }

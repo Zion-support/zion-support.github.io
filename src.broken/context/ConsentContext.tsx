@@ -1,4 +1,10 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+} from 'react';
 import Cookies from 'js-cookie';
 
 export type ConsentState = {
@@ -19,7 +25,8 @@ const ConsentContext = createContext<ConsentContextValue>({
   consent: defaultState,
   acceptAll: () => {},
   rejectNonEssential: () => {},
-  updateConsent: () => {}});
+  updateConsent: () => {},
+});
 
 function loadAnalytics() {
   if (document.getElementById('ga-script')) return;
@@ -49,7 +56,9 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
   });
 
   useEffect(() => {
-    Cookies.set('consent_preferences', JSON.stringify(consent), { expires: 365 });
+    Cookies.set('consent_preferences', JSON.stringify(consent), {
+      expires: 365,
+    });
   }, [consent]);
 
   useEffect(() => {
@@ -62,7 +71,9 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
   const updateConsent = (state: ConsentState) => setConsent(state);
 
   return (
-    <ConsentContext.Provider value={{ consent, acceptAll, rejectNonEssential, updateConsent }}>
+    <ConsentContext.Provider
+      value={{ consent, acceptAll, rejectNonEssential, updateConsent }}
+    >
       {children}
     </ConsentContext.Provider>
   );

@@ -29,7 +29,8 @@ const fromAddress = {
   city: 'San Francisco',
   state: 'CA',
   zip: '94103',
-  country: 'US'};
+  country: 'US',
+};
 
 const parcel = { weight: 1, length: 10, width: 10, height: 10 };
 
@@ -52,7 +53,8 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
         const res = await fetch('/api/shipping-rates', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ fromAddress, toAddress, parcel })});
+          body: JSON.stringify({ fromAddress, toAddress, parcel }),
+        });
         const data = await res.json();
         if (res.ok) {
           setRates(data.rates || []);
@@ -77,20 +79,24 @@ export function CheckoutShippingOptions({ toAddress, onSelect }: Props) {
   if (!toAddress) return null;
 
   return (
-    <div className="my-4">
-      <h2 className="font-semibold mb-2">Shipping Options</h2>
+    <div className='my-4'>
+      <h2 className='font-semibold mb-2'>Shipping Options</h2>
       {loading && <p>Loading...</p>}
       {!loading && (
-        <RadioGroup value={selected} onValueChange={handleChange} className="space-y-2">
+        <RadioGroup
+          value={selected}
+          onValueChange={handleChange}
+          className='space-y-2'
+        >
           {rates.map(rate => (
-            <label key={rate.id} className="flex items-center gap-2">
+            <label key={rate.id} className='flex items-center gap-2'>
               <RadioGroupItem value={rate.id} />
               <span>
                 {`${rate.carrier} ${rate.service} - ${rate.rate} ${rate.currency}`}
                 {rate.delivery_days && ` (${rate.delivery_days}d)`}
               </span>
               {rate.tax && (
-                <span className="ml-1 text-sm">(+{rate.tax} taxes)</span>
+                <span className='ml-1 text-sm'>(+{rate.tax} taxes)</span>
               )}
             </label>
           ))}

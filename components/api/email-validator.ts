@@ -40,22 +40,45 @@ export default async function handler(
 
     // Check for common disposable email providers
     const disposableDomains = [
-      'tempmail.org', 'guerrillamail.com', 'mailinator.com', '10minutemail.com',
-      'temp-mail.org', 'sharklasers.com', 'getairmail.com', 'mailnesia.com'
+      'tempmail.org',
+      'guerrillamail.com',
+      'mailinator.com',
+      '10minutemail.com',
+      'temp-mail.org',
+      'sharklasers.com',
+      'getairmail.com',
+      'mailnesia.com',
     ];
     const isDisposable = disposableDomains.some(d => domain?.includes(d));
 
     // Check for role-based emails
     const roleBasedPatterns = [
-      'admin@', 'info@', 'support@', 'contact@', 'sales@', 'help@',
-      'noreply@', 'no-reply@', 'donotreply@', 'do-not-reply@'
+      'admin@',
+      'info@',
+      'support@',
+      'contact@',
+      'sales@',
+      'help@',
+      'noreply@',
+      'no-reply@',
+      'donotreply@',
+      'do-not-reply@',
     ];
-    const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
+    const isRoleBased = roleBasedPatterns.some(pattern =>
+      email.startsWith(pattern)
+    );
 
     // Check for free email providers
     const freeProviders = [
-      'gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'aol.com',
-      'icloud.com', 'protonmail.com', 'mail.com', 'yandex.com'
+      'gmail.com',
+      'yahoo.com',
+      'hotmail.com',
+      'outlook.com',
+      'aol.com',
+      'icloud.com',
+      'protonmail.com',
+      'mail.com',
+      'yandex.com',
     ];
     const isFreeProvider = freeProviders.some(provider => domain === provider);
 
@@ -93,7 +116,8 @@ export default async function handler(
         hasValidMX: true, // Simplified for demo
         isDisposable,
         isRoleBased,
-        isFreeProvider}
+        isFreeProvider,
+      },
     };
 
     res.status(200).json(result);

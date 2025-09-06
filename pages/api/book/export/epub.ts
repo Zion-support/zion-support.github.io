@@ -6,9 +6,15 @@ const Epub = require('epub-gen');
 export const config = {
   api: {
     bodyParser: {
-      sizeLimit: '10mb'}}};
+      sizeLimit: '10mb',
+    },
+  },
+};
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -25,18 +31,27 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     title: project.meta.title,
     author: project.meta.author,
     publisher: project.meta.publisher || 'Zion',
-    content: project.chapters.map((ch: any) => ({ title: ch.title, data: chapterToHtml(ch.content) }))};
+    content: project.chapters.map((ch: any) => ({
+      title: ch.title,
+      data: chapterToHtml(ch.content),
+    })),
+  };
 
   try {
     await new Epub(options, tmpPath).promise;
     const buf = await fs.readFile(tmpPath);
     res.setHeader('Content-Type', 'application/epub+zip');
-    res.setHeader('Content-Disposition', 'attachment; filename="zion-os-book.epub"');
+    res.setHeader(
+      'Content-Disposition',
+      'attachment; filename="zion-os-book.epub"'
+    );
     res.status(200).send(buf);
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Failed to build EPUB' });
   } finally {
-    try { await fs.unlink(tmpPath); } catch {}
+    try {
+      await fs.unlink(tmpPath);
+    } catch {}
   }
 }
 
@@ -44,7 +59,7 @@ function chapterToHtml(text: string): string {
   if (!text) return '';
   return text
     .split(/\n\n+/)
-    .map((p) => `<p>${escapeHtml(p)}</p>`)
+    .map(p => `<p>${escapeHtml(p)}</p>`)
     .join('\n');
 }
 

@@ -11,7 +11,9 @@ export async function connectMetaMask(): Promise<string[] | null> {
   const provider = getEthereumProvider();
   if (!provider) return null;
   try {
-    const accounts: string[] = await provider.request({ method: 'eth_requestAccounts' });
+    const accounts: string[] = await provider.request({
+      method: 'eth_requestAccounts',
+    });
     return accounts;
   } catch (e) {
     return null;
@@ -22,7 +24,9 @@ export async function getAccounts(): Promise<string[] | null> {
   const provider = getEthereumProvider();
   if (!provider) return null;
   try {
-    const accounts: string[] = await provider.request({ method: 'eth_accounts' });
+    const accounts: string[] = await provider.request({
+      method: 'eth_accounts',
+    });
     return accounts;
   } catch (e) {
     return null;

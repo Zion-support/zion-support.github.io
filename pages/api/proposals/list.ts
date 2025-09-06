@@ -6,6 +6,8 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
     const proposals = listProposals();
     res.status(200).json({ proposals });
   } catch (error: any) {
-    res.status(500).json({ error: error?.message || 'Failed to list proposals' });
+    res
+      .status(500)
+      .json({ error: error?.message || 'Failed to list proposals' });
   }
 }

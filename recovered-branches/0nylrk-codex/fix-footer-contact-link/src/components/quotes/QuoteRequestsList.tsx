@@ -1,8 +1,7 @@
-
-import React from "react";
-import { QuoteRequestCard } from "./QuoteRequestCard";
-import { EmptyStateCard } from "./EmptyStateCard";
-import type { QuoteRequest } from "@/types/quotes";
+import React from 'react';
+import { QuoteRequestCard } from './QuoteRequestCard';
+import { EmptyStateCard } from './EmptyStateCard';
+import type { QuoteRequest } from '@/types/quotes';
 
 type QuoteRequestsListProps = {
   quotes: QuoteRequest[];
@@ -19,22 +18,24 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
   isArchived,
   onViewDetails,
   onMarkAsResponded,
-  onToggleArchive
+  onToggleArchive,
 }) => {
   if (isLoading) {
     return (
-      <div className="text-center py-20">
-        <p className="text-zion-slate-light">Loading {isArchived ? 'archived' : 'your'} hire requests...</p>
+      <div className='text-center py-20'>
+        <p className='text-zion-slate-light'>
+          Loading {isArchived ? 'archived' : 'your'} hire requests...
+        </p>
       </div>
     );
   }
-  
+
   if (quotes.length === 0) {
     return <EmptyStateCard type={isArchived ? 'archived' : 'active'} />;
   }
-  
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
       {quotes.map(quote => (
         <QuoteRequestCard
           key={quote.id}

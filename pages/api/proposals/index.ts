@@ -14,7 +14,10 @@ async function ensureStore() {
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   await ensureStore();
   if (req.method === 'GET') {
     const data = await fs.readJson(FILE_PATH);
@@ -30,7 +33,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       regionalScope: body.regionalScope,
       type: body.type,
       status: body.status || 'Draft',
-      createdAt: new Date().toISOString()};
+      createdAt: new Date().toISOString(),
+    };
     data.items.unshift(item);
     await fs.writeJson(FILE_PATH, data, { spaces: 2 });
     return res.status(201).json(item);

@@ -1,4 +1,4 @@
-export type SyncScope = "full" | "dao" | "marketplace";
+export type SyncScope = 'full' | 'dao' | 'marketplace';
 
 export interface Peer {
   id: string;
@@ -17,11 +17,11 @@ export interface InstanceConfig {
 }
 
 export type SyncEventType =
-  | "proposal"
-  | "token_transfer"
-  | "talent_mobility"
-  | "dao_endorsement"
-  | "leaderboard_entry";
+  | 'proposal'
+  | 'token_transfer'
+  | 'talent_mobility'
+  | 'dao_endorsement'
+  | 'leaderboard_entry';
 
 export interface BaseEventPayload {
   id: string;
@@ -61,7 +61,7 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   fromDAO: string;
   toDAO: string;
   resolutionId: string;
-  decision: "endorse" | "reject";
+  decision: 'endorse' | 'reject';
   timestamp: number;
 }
 

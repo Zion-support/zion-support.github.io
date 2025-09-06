@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { AppHeader } from '@/layout/AppHeader';
@@ -10,9 +9,9 @@ function DisputesPage() {
   return (
     <ProtectedRoute>
       <>
-        <SEO 
-          title="Dispute Resolution Center | Zion AI Marketplace" 
-          description="View and manage disputes between clients and talents"
+        <SEO
+          title='Dispute Resolution Center | Zion AI Marketplace'
+          description='View and manage disputes between clients and talents'
         />
         <AppHeader />
         <DisputeDashboard />

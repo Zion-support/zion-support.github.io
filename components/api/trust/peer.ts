@@ -2,7 +2,10 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import type { TrustPeerReview } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });
@@ -18,7 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     reviewerId,
     type,
     note,
-    createdAt: new Date().toISOString()};
+    createdAt: new Date().toISOString(),
+  };
 
   try {
     await supabase.from('trust_peer_reviews').insert(review);

@@ -1,4 +1,3 @@
-
 import { ReactNode } from 'react';
 
 // Extend FeatureCardProps to include key for mapping

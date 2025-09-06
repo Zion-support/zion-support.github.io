@@ -10,7 +10,7 @@ import { ErrorBanner } from '@/components/talent/ErrorBanner';
 import ErrorBoundary from '@/components/GlobalErrorBoundary'; // Import ErrorBoundary
 import { useTalentDirectory } from '@/hooks/useTalentDirectory';
 import { SORT_OPTIONS } from '@/data/sortOptions';
-import { X } from 'lucide-react'
+import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Image from 'next/image';
 import { TalentProfile } from '@/types/talent';
@@ -20,7 +20,8 @@ import {
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious} from '@/components/ui/pagination';
+  PaginationPrevious,
+} from '@/components/ui/pagination';
 
 export default function TalentDirectory() {
   const router = useRouterReady(); // Use our custom hook
@@ -63,7 +64,8 @@ export default function TalentDirectory() {
     toggleAvailability,
     toggleRegion,
     clearFilters,
-    toggleSection} = useTalentDirectory(currentPage, itemsPerPage);
+    toggleSection,
+  } = useTalentDirectory(currentPage, itemsPerPage);
 
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin';
@@ -78,7 +80,7 @@ export default function TalentDirectory() {
   // Load filters from query parameters on first load
   useEffect(() => {
     if (!router.isReady || initialized) return;
-    
+
     const {
       search,
       skills,
@@ -89,27 +91,26 @@ export default function TalentDirectory() {
       expMin,
       expMax,
       sort,
-      page} = router.query as Record<string, string>;
+      page,
+    } = router.query as Record<string, string>;
 
     if (page) setCurrentPage(parseInt(page, 10) || 1);
     if (search) setSearchTerm(search);
-    if (skills) skills.split(',').forEach((s) => toggleSkill(s));
+    if (skills) skills.split(',').forEach(s => toggleSkill(s));
     if (availability)
-      availability.split(',').forEach((a) => toggleAvailability(a));
-    if (regions) regions.split(',').forEach((r) => toggleRegion(r));
+      availability.split(',').forEach(a => toggleAvailability(a));
+    if (regions) regions.split(',').forEach(r => toggleRegion(r));
     if (priceMin && priceMax)
       setPriceRange([Number(priceMin), Number(priceMax)]);
-    if (expMin && expMax)
-      setExperienceRange([Number(expMin), Number(expMax)]);
-    if (sort && SORT_OPTIONS.some((o) => o.value === sort))
-      setSortOption(sort);
+    if (expMin && expMax) setExperienceRange([Number(expMin), Number(expMax)]);
+    if (sort && SORT_OPTIONS.some(o => o.value === sort)) setSortOption(sort);
     setInitialized(true);
   }, [router.isReady, router.query, initialized]); // Fixed dependencies
 
   // Persist filters to query parameters
   useEffect(() => {
     if (!initialized || !router.isReady) return;
-    
+
     const query: Record<string, string> = {};
     if (searchTerm) query.search = searchTerm;
     if (selectedSkills.length) query.skills = selectedSkills.join(',');
@@ -126,9 +127,10 @@ export default function TalentDirectory() {
     }
     if (sortOption !== 'relevance') query.sort = sortOption;
     if (currentPage > 1) query.page = String(currentPage);
-    
+
     router.replace({ pathname: router.pathname, query }, undefined, {
-      shallow: true});
+      shallow: true,
+    });
   }, [
     router.isReady,
     searchTerm,
@@ -139,7 +141,8 @@ export default function TalentDirectory() {
     experienceRange,
     sortOption,
     currentPage,
-    initialized]); // Fixed dependencies
+    initialized,
+  ]); // Fixed dependencies
 
   const handleRequestHire = (talent: TalentProfile) => {
     setSelectedTalent(talent);
@@ -156,7 +159,7 @@ export default function TalentDirectory() {
 
   if (isLoading) {
     return (
-      <div key={pageKey} className="container mx-auto px-4 py-8">
+      <div key={pageKey} className='container mx-auto px-4 py-8'>
         <TalentSkeleton />
       </div>
     );
@@ -176,23 +179,23 @@ export default function TalentDirectory() {
     experienceRange[1] === 15
   ) {
     return (
-      <div key={pageKey} className="container mx-auto px-4 py-8">
-        <div className="text-center py-16">
+      <div key={pageKey} className='container mx-auto px-4 py-8'>
+        <div className='text-center py-16'>
           <Image
-            src="/images/talent-placeholder.svg"
-            alt="No talent"
+            src='/images/talent-placeholder.svg'
+            alt='No talent'
             width={200}
             height={200}
-            className="mx-auto mb-6"
+            className='mx-auto mb-6'
           />
-          <h2 className="text-2xl font-bold text-white mb-4">
+          <h2 className='text-2xl font-bold text-white mb-4'>
             Talent Directory Currently Empty
           </h2>
-          <p className="text-zion-slate-light max-w-md mx-auto mb-6">
+          <p className='text-zion-slate-light max-w-md mx-auto mb-6'>
             No talent profiles are currently available.
           </p>
-          <Link href="/create-talent-profile">
-            <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white">
+          <Link href='/create-talent-profile'>
+            <Button className='bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white'>
               Be the first to list a talent
             </Button>
           </Link>
@@ -203,29 +206,29 @@ export default function TalentDirectory() {
 
   if (error) {
     return (
-      <div key={pageKey} className="container mx-auto px-4 py-8">
-        <ErrorBanner msg="Unable to load talent profiles." />
+      <div key={pageKey} className='container mx-auto px-4 py-8'>
+        <ErrorBanner msg='Unable to load talent profiles.' />
       </div>
     );
   }
 
   return (
-    <div key={pageKey} className="container mx-auto px-4 py-8">
-      <div className="flex flex-col space-y-8">
-        <div className="flex items-start justify-between">
+    <div key={pageKey} className='container mx-auto px-4 py-8'>
+      <div className='flex flex-col space-y-8'>
+        <div className='flex items-start justify-between'>
           <div>
-            <h1 className="text-3xl font-bold text-white mb-2">
+            <h1 className='text-3xl font-bold text-white mb-2'>
               AI & Tech Talent Directory
             </h1>
-            <p className="text-zion-slate-light">
+            <p className='text-zion-slate-light'>
               Connect with expert AI developers, data scientists, ML engineers,
               and tech professionals for your projects.
             </p>
           </div>
           {isAdmin && (
             <Link
-              href="/create-talent-profile"
-              className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark"
+              href='/create-talent-profile'
+              className='bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark'
             >
               Add Talent
             </Link>
@@ -233,9 +236,9 @@ export default function TalentDirectory() {
         </div>
 
         {/* Main content */}
-        <div className="flex flex-col lg:flex-row gap-6">
+        <div className='flex flex-col lg:flex-row gap-6'>
           {/* Sidebar - Desktop */}
-          <div className="w-full lg:w-64 shrink-0 hidden lg:block">
+          <div className='w-full lg:w-64 shrink-0 hidden lg:block'>
             <FilterSidebar
               searchTerm={searchTerm}
               setSearchTerm={setSearchTerm}
@@ -258,18 +261,18 @@ export default function TalentDirectory() {
           </div>
 
           {/* Mobile filter button */}
-          <div className="lg:hidden mb-4">
+          <div className='lg:hidden mb-4'>
             <Button
               onClick={() => setIsMobileFilterOpen(true)}
-              variant="outline"
-              className="w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light"
+              variant='outline'
+              className='w-full border-zion-blue-light text-zion-purple hover:bg-zion-blue-light'
             >
               Filter & Sort
             </Button>
           </div>
 
           {/* Results and Pagination Wrapper for ErrorBoundary */}
-          <div className="flex-1">
+          <div className='flex-1'>
             {' '}
             {/* Added a wrapper div to contain Results and Pagination */}
             <ErrorBoundary>
@@ -291,29 +294,30 @@ export default function TalentDirectory() {
                   setPriceRange,
                   experienceRange,
                   setExperienceRange,
-                  clearFilters}}
+                  clearFilters,
+                }}
               />
 
               {totalPages > 1 && (
-                <div className="mt-6">
-                  <Pagination className="justify-center">
+                <div className='mt-6'>
+                  <Pagination className='justify-center'>
                     <PaginationContent>
                       <PaginationItem>
                         <PaginationPrevious
                           href={`?page=${currentPage - 1}`}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.preventDefault();
                             setCurrentPage(Math.max(1, currentPage - 1));
                           }}
                         />
                       </PaginationItem>
                       {Array.from({ length: totalPages }, (_, i) => i + 1).map(
-                        (page) => (
+                        page => (
                           <PaginationItem key={page}>
                             <PaginationButton
                               page={page}
                               isActive={page === currentPage}
-                              onClick={(e) => {
+                              onClick={e => {
                                 e.preventDefault();
                                 setCurrentPage(page);
                               }}
@@ -324,7 +328,7 @@ export default function TalentDirectory() {
                       <PaginationItem>
                         <PaginationNext
                           href={`?page=${currentPage + 1}`}
-                          onClick={(e) => {
+                          onClick={e => {
                             e.preventDefault();
                             setCurrentPage(
                               Math.min(totalPages, currentPage + 1)
@@ -341,18 +345,18 @@ export default function TalentDirectory() {
 
           {/* Mobile filter sidebar */}
           {isMobileFilterOpen && (
-            <div className="fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex">
-              <div className="w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto">
-                <div className="flex justify-between items-center mb-4">
-                  <h3 className="font-bold text-white">Filter & Sort</h3>
+            <div className='fixed inset-0 bg-black bg-opacity-50 z-50 lg:hidden flex'>
+              <div className='w-80 h-full bg-zion-blue-dark overflow-y-auto p-4 ml-auto'>
+                <div className='flex justify-between items-center mb-4'>
+                  <h3 className='font-bold text-white'>Filter & Sort</h3>
                   <Button
-                    variant="ghost"
-                    size="sm"
+                    variant='ghost'
+                    size='sm'
                     onClick={() => setIsMobileFilterOpen(false)}
-                    className="text-zion-slate-light h-8 w-8 p-0"
+                    className='text-zion-slate-light h-8 w-8 p-0'
                   >
-                    <X className="h-4 w-4" />
-                    <span className="sr-only">Close</span>
+                    <X className='h-4 w-4' />
+                    <span className='sr-only'>Close</span>
                   </Button>
                 </div>
                 <FilterSidebar

@@ -27,7 +27,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <AuthProvider>
             <NotificationProvider>
               <AnalyticsProvider>
-                <LanguageProvider authState={{ isAuthenticated: false, user: null }}>
+                <LanguageProvider
+                  authState={{ isAuthenticated: false, user: null }}
+                >
                   <App />
                   <LanguageDetectionPopup />
                 </LanguageProvider>
@@ -37,5 +39,5 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         </Router>
       </WhitelabelProvider>
     </HelmetProvider>
-  </React.StrictMode>,
+  </React.StrictMode>
 );

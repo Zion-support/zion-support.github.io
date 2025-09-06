@@ -1,13 +1,22 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
-import { getProject, updateMilestone, assertParticipantOrAdmin, isClient, isTalent } from '../../../../../utils/api/projects';
+import {
+  getProject,
+  updateMilestone,
+  assertParticipantOrAdmin,
+  isClient,
+  isTalent,
+} from '../../../../../utils/api/projects';
 import { isMilestoneStatus } from '../../../../../utils/types/milestones';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const user = requireUser(req, res);
   if (!user) return;
 
-  const { projectId, milestoneId } = req.query as { projectId: string; milestoneId: string };
+  const { projectId, milestoneId } = req.query as {
+    projectId: string;
+    milestoneId: string;
+  };
   const project = getProject(projectId);
   if (!project) {
     res.status(404).json({ error: 'Project not found' });

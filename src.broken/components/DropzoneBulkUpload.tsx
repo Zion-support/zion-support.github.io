@@ -29,7 +29,8 @@ export function DropzoneBulkUpload() {
 
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop,
-    accept: { 'text/csv': ['.csv'] }});
+    accept: { 'text/csv': ['.csv'] },
+  });
 
   const handleUpload = async () => {
     if (!file) return;
@@ -39,12 +40,16 @@ export function DropzoneBulkUpload() {
     try {
       const res = await fetch('/products/bulk-upload', {
         method: 'POST',
-        body: formData});
+        body: formData,
+      });
       setProgress(70);
       const data = await res.json();
       setReport(data);
       if (data.errors && data.errors.length) {
-        const csv = ['row,error', ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`)].join('\n');
+        const csv = [
+          'row,error',
+          ...data.errors.map((e: UploadError) => `${e.row},"${e.error}"`),
+        ].join('\n');
         const blob = new Blob([csv], { type: 'text/csv' });
         setErrorUrl(URL.createObjectURL(blob));
       }
@@ -56,11 +61,12 @@ export function DropzoneBulkUpload() {
   };
 
   return (
-    <div className="space-y-4">
+    <div className='space-y-4'>
       <div
         {...getRootProps({
           className:
-            'border-2 border-dashed border-muted rounded-md p-8 text-center cursor-pointer'})}
+            'border-2 border-dashed border-muted rounded-md p-8 text-center cursor-pointer',
+        })}
       >
         <input {...getInputProps()} />
         {isDragActive ? (
@@ -69,17 +75,19 @@ export function DropzoneBulkUpload() {
           <p>Drag and drop CSV file here, or click to select file</p>
         )}
       </div>
-      {file && <p className="text-sm">Selected: {file.name}</p>}
-      <Button onClick={handleUpload} disabled={!file}>Upload</Button>
+      {file && <p className='text-sm'>Selected: {file.name}</p>}
+      <Button onClick={handleUpload} disabled={!file}>
+        Upload
+      </Button>
       {progress > 0 && progress < 100 && <Progress value={progress} />}
       {report && (
-        <div className="text-sm">
+        <div className='text-sm'>
           <p>Created: {report.created}</p>
           {report.errors.length > 0 && (
-            <div className="mt-2">
-              <p className="text-red-500">Errors: {report.errors.length}</p>
+            <div className='mt-2'>
+              <p className='text-red-500'>Errors: {report.errors.length}</p>
               {errorUrl && (
-                <a href={errorUrl} download="errors.csv" className="underline">
+                <a href={errorUrl} download='errors.csv' className='underline'>
                   Download error CSV
                 </a>
               )}

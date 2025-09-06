@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { AppHeader } from '@/layout/AppHeader';
@@ -10,9 +9,9 @@ function ProjectMilestones() {
   return (
     <ProtectedRoute>
       <>
-        <SEO 
-          title="Payment Milestones | Zion AI Marketplace" 
-          description="Manage project payment milestones and deliverables"
+        <SEO
+          title='Payment Milestones | Zion AI Marketplace'
+          description='Manage project payment milestones and deliverables'
         />
         <AppHeader />
         <ProjectMilestonesContent />

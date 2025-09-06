@@ -1,16 +1,16 @@
-
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger} from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { ReviewForm } from "./ReviewForm";
-import { useReviews } from "@/hooks/useReviews";
+  DialogTrigger,
+} from '@/components/ui/dialog';
+import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { ReviewForm } from './ReviewForm';
+import { useReviews } from '@/hooks/useReviews';
 
 interface LeaveReviewModalProps {
   projectId: string;
@@ -25,21 +25,23 @@ export function LeaveReviewModal({
   revieweeId,
   revieweeName,
   isOpen,
-  onClose}: LeaveReviewModalProps) {
-  const { userReview, submitReview, updateReview, isSubmitting } = useReviews(projectId);
+  onClose,
+}: LeaveReviewModalProps) {
+  const { userReview, submitReview, updateReview, isSubmitting } =
+    useReviews(projectId);
   const [open, setOpen] = useState(isOpen);
-  
+
   useEffect(() => {
     setOpen(isOpen);
   }, [isOpen]);
-  
+
   const handleOpenChange = (open: boolean) => {
     setOpen(open);
     if (!open) {
       onClose();
     }
   };
-  
+
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review
@@ -58,19 +60,22 @@ export function LeaveReviewModal({
       return success;
     }
   };
-  
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-md">
+      <DialogContent className='max-w-md'>
         <DialogHeader>
           <DialogTitle>
-            {userReview ? "Edit Your Review" : `Rate Your Experience with ${revieweeName}`}
+            {userReview
+              ? 'Edit Your Review'
+              : `Rate Your Experience with ${revieweeName}`}
           </DialogTitle>
           <DialogDescription>
-            Your feedback helps build a trustworthy community. It will be visible after moderation.
+            Your feedback helps build a trustworthy community. It will be
+            visible after moderation.
           </DialogDescription>
         </DialogHeader>
-        
+
         <ReviewForm
           projectId={projectId}
           revieweeId={revieweeId}

@@ -1,4 +1,4 @@
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
+export type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
 
 export interface Branding {
   logoUrl?: string;
@@ -41,13 +41,13 @@ export interface DeployInput {
 
 export interface DeployLogEntry {
   timestamp: string;
-  level: "info" | "warn" | "error";
+  level: 'info' | 'warn' | 'error';
   action: string;
   details?: Record<string, unknown> | string;
 }
 
 export interface GeneratedAsset {
-  kind: "file" | "page" | "config" | "job" | "event";
+  kind: 'file' | 'page' | 'config' | 'job' | 'event';
   path: string;
   description?: string;
 }
@@ -63,6 +63,6 @@ export interface DeployResult {
 }
 
 export interface AccessControlConfig {
-  allowedRoles: ("Founder" | "Superadmin" | "DAOMultisig")[];
+  allowedRoles: ('Founder' | 'Superadmin' | 'DAOMultisig')[];
   adminKeyConfigured: boolean;
 }

@@ -15,4 +15,5 @@ module.exports = {
   test: jestGlobals.test,
   describe: jestGlobals.describe,
   beforeEach: jestGlobals.beforeEach,
-  afterEach: jestGlobals.afterEach}; 
+  afterEach: jestGlobals.afterEach,
+};

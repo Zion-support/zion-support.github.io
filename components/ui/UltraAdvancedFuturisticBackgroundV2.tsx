@@ -6,10 +6,9 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
   className?: string;
 }
 
-const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackgroundV2Props> = ({ 
-  children, 
-  className = '' 
-}) => {
+const UltraAdvancedFuturisticBackgroundV2: React.FC<
+  UltraAdvancedFuturisticBackgroundV2Props
+> = ({ children, className = '' }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -35,8 +34,16 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
     }> = [];
 
     const colors = [
-      '#00ffff', '#ff00ff', '#ffff00', '#00ff00', '#ff0080',
-      '#8000ff', '#ff8000', '#0080ff', '#ff0080', '#80ff00'
+      '#00ffff',
+      '#ff00ff',
+      '#ffff00',
+      '#00ff00',
+      '#ff0080',
+      '#8000ff',
+      '#ff8000',
+      '#0080ff',
+      '#ff0080',
+      '#80ff00',
     ];
 
     // Initialize particles
@@ -51,7 +58,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
           size: Math.random() * 3 + 1,
           color: colors[Math.floor(Math.random() * colors.length)],
           life: Math.random() * 100,
-          maxLife: 100
+          maxLife: 100,
         });
       }
     };
@@ -62,8 +69,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
 
       // Create gradient background
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0,
-        canvas.width / 2, canvas.height / 2, canvas.width / 2
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
+        canvas.width / 2
       );
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)');
       gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.6)');
@@ -101,8 +112,8 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
             const distance = Math.sqrt(
-              Math.pow(particle.x - otherParticle.x, 2) + 
-              Math.pow(particle.y - otherParticle.y, 2)
+              Math.pow(particle.x - otherParticle.x, 2) +
+                Math.pow(particle.y - otherParticle.y, 2)
             );
             if (distance < 100) {
               ctx.strokeStyle = `rgba(0, 255, 255, ${0.1 * (1 - distance / 100)})`;
@@ -120,7 +131,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       ctx.globalAlpha = 0.1;
       ctx.strokeStyle = '#00ffff';
       ctx.lineWidth = 0.5;
-      
+
       // Vertical lines
       for (let x = 0; x < canvas.width; x += 50) {
         ctx.beginPath();
@@ -128,7 +139,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
         ctx.lineTo(x, canvas.height);
         ctx.stroke();
       }
-      
+
       // Horizontal lines
       for (let y = 0; y < canvas.height; y += 50) {
         ctx.beginPath();
@@ -140,10 +151,12 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       // Draw holographic circles
       ctx.globalAlpha = 0.05;
       for (let i = 0; i < 5; i++) {
-        const centerX = canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
-        const centerY = canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
+        const centerX =
+          canvas.width / 2 + Math.sin(Date.now() * 0.001 + i) * 100;
+        const centerY =
+          canvas.height / 2 + Math.cos(Date.now() * 0.001 + i) * 100;
         const radius = 100 + Math.sin(Date.now() * 0.002 + i) * 50;
-        
+
         ctx.strokeStyle = `hsl(${180 + i * 60}, 100%, 50%)`;
         ctx.lineWidth = 2;
         ctx.beginPath();
@@ -178,101 +191,110 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
-        className="fixed inset-0 w-full h-full pointer-events-none z-0"
-        style={{ background: 'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)' }}
+        className='fixed inset-0 w-full h-full pointer-events-none z-0'
+        style={{
+          background:
+            'radial-gradient(circle at center, rgba(0,0,0,0.8) 0%, rgba(20,20,40,0.6) 50%, rgba(0,0,0,0.9) 100%)',
+        }}
       />
-      
+
       {/* Floating Geometric Shapes */}
-      <div className="fixed inset-0 pointer-events-none z-10">
+      <div className='fixed inset-0 pointer-events-none z-10'>
         <motion.div
-          className="absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20"
+          className='absolute top-20 left-20 w-32 h-32 border border-cyan-400 opacity-20'
           animate={{
             rotate: [0, 360],
             scale: [1, 1.2, 1],
-            opacity: [0.1, 0.3, 0.1]
+            opacity: [0.1, 0.3, 0.1],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
-        
+
         <motion.div
-          className="absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20"
+          className='absolute top-40 right-32 w-24 h-24 border border-purple-400 opacity-20'
           animate={{
             rotate: [360, 0],
             scale: [1, 0.8, 1],
-            opacity: [0.1, 0.4, 0.1]
+            opacity: [0.1, 0.4, 0.1],
           }}
           transition={{
             duration: 6,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
-        
+
         <motion.div
-          className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20"
+          className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20'
           animate={{
             rotate: [0, 360],
             scale: [1, 1.3, 1],
-            opacity: [0.1, 0.2, 0.1]
+            opacity: [0.1, 0.2, 0.1],
           }}
           transition={{
             duration: 10,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
-        
+
         <motion.div
-          className="absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20"
+          className='absolute bottom-20 right-20 w-28 h-28 border border-green-400 opacity-20'
           animate={{
             rotate: [360, 0],
             scale: [1, 0.9, 1],
-            opacity: [0.1, 0.3, 0.1]
+            opacity: [0.1, 0.3, 0.1],
           }}
           transition={{
             duration: 7,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
       </div>
 
       {/* Quantum Energy Particles */}
-      <div className="fixed inset-0 pointer-events-none z-20">
+      <div className='fixed inset-0 pointer-events-none z-20'>
         {[...Array(20)].map((_, i) => (
           <motion.div
             key={i}
-            className="absolute w-2 h-2 bg-cyan-400 rounded-full"
+            className='absolute w-2 h-2 bg-cyan-400 rounded-full'
             style={{
               left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0],
               opacity: [0, 1, 0],
-              scale: [0, 1, 0]
+              scale: [0, 1, 0],
             }}
             transition={{
               duration: 3 + Math.random() * 2,
               repeat: Infinity,
               delay: Math.random() * 2,
-              ease: "easeInOut"
+              ease: 'easeInOut',
             }}
           />
         ))}
       </div>
 
       {/* Neural Network Connections */}
-      <div className="fixed inset-0 pointer-events-none z-30">
-        <svg className="w-full h-full">
+      <div className='fixed inset-0 pointer-events-none z-30'>
+        <svg className='w-full h-full'>
           <defs>
-            <linearGradient id="neuralGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="#00ffff" stopOpacity="0.3" />
-              <stop offset="100%" stopColor="#ff00ff" stopOpacity="0.3" />
+            <linearGradient
+              id='neuralGradient'
+              x1='0%'
+              y1='0%'
+              x2='100%'
+              y2='100%'
+            >
+              <stop offset='0%' stopColor='#00ffff' stopOpacity='0.3' />
+              <stop offset='100%' stopColor='#ff00ff' stopOpacity='0.3' />
             </linearGradient>
           </defs>
           {[...Array(15)].map((_, i) => (
@@ -282,18 +304,18 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
               y1={Math.random() * 100}
               x2={Math.random() * 100}
               y2={Math.random() * 100}
-              stroke="url(#neuralGradient)"
-              strokeWidth="1"
-              opacity="0.1"
+              stroke='url(#neuralGradient)'
+              strokeWidth='1'
+              opacity='0.1'
               animate={{
                 opacity: [0.1, 0.3, 0.1],
-                strokeDasharray: [0, 100, 0]
+                strokeDasharray: [0, 100, 0],
               }}
               transition={{
                 duration: 4 + Math.random() * 2,
                 repeat: Infinity,
                 delay: Math.random() * 2,
-                ease: "easeInOut"
+                ease: 'easeInOut',
               }}
             />
           ))}
@@ -301,9 +323,7 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<UltraAdvancedFuturisticBackg
       </div>
 
       {/* Content */}
-      <div className="relative z-40">
-        {children}
-      </div>
+      <div className='relative z-40'>{children}</div>
     </div>
   );
 };

@@ -1,5 +1,3 @@
-
-
 // Mock ResizeObserver
 global.ResizeObserver = class ResizeObserver {
   constructor() {}
@@ -13,4 +11,3 @@ beforeEach(() => {
   // Reset all mocks before each test
   jest.clearAllMocks();
 });
-

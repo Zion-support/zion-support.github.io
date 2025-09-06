@@ -1,5 +1,10 @@
 export interface ContentGenerationRequest {
-  type: 'blog-post' | 'social-media' | 'email' | 'landing-page' | 'product-description';
+  type:
+    | 'blog-post'
+    | 'social-media'
+    | 'email'
+    | 'landing-page'
+    | 'product-description';
   topic: string;
   tone: 'professional' | 'casual' | 'friendly' | 'formal';
   length: 'short' | 'medium' | 'long';
@@ -38,15 +43,19 @@ export class AIContentGeneratorService {
     this.baseUrl = baseUrl;
   }
 
-  async generateContent(request: ContentGenerationRequest): Promise<ContentGenerationResponse> {
+  async generateContent(
+    request: ContentGenerationRequest
+  ): Promise<ContentGenerationResponse> {
     try {
       // In a real implementation, this would call OpenAI, Claude, or similar API
       const response = await fetch(`${this.baseUrl}/content/generate`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)});
+          Authorization: `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(request),
+      });
 
       if (!response.ok) {
         throw new Error(`Content generation failed: ${response.statusText}`);
@@ -66,8 +75,9 @@ export class AIContentGeneratorService {
         name: 'Blog Post Starter',
         description: 'Professional blog post template with SEO optimization',
         type: 'blog-post',
-        preview: 'Create engaging blog posts that rank well in search engines...',
-        price: 29
+        preview:
+          'Create engaging blog posts that rank well in search engines...',
+        price: 29,
       },
       {
         id: 'social-media-campaign',
@@ -75,7 +85,7 @@ export class AIContentGeneratorService {
         description: 'Complete social media content strategy and posts',
         type: 'social-media',
         preview: 'Engage your audience with compelling social media content...',
-        price: 49
+        price: 49,
       },
       {
         id: 'email-sequence',
@@ -83,7 +93,7 @@ export class AIContentGeneratorService {
         description: 'Convert prospects with persuasive email sequences',
         type: 'email',
         preview: 'Build relationships and drive sales with email automation...',
-        price: 39
+        price: 39,
       },
       {
         id: 'landing-page-copy',
@@ -91,12 +101,14 @@ export class AIContentGeneratorService {
         description: 'High-converting landing page content',
         type: 'landing-page',
         preview: 'Turn visitors into customers with compelling copy...',
-        price: 59
-      }
+        price: 59,
+      },
     ];
   }
 
-  private generateMockContent(request: ContentGenerationRequest): ContentGenerationResponse {
+  private generateMockContent(
+    request: ContentGenerationRequest
+  ): ContentGenerationResponse {
     const mockContent = `# ${request.topic}
 
 This is a ${request.length} ${request.type} about ${request.topic}. The content is written in a ${request.tone} tone to engage the target audience.
@@ -119,13 +131,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
       suggestions: [
         'Add more specific examples',
         'Include relevant statistics',
-        'Optimize for target keywords'
+        'Optimize for target keywords',
       ],
       metadata: {
         title: `${request.topic} - Complete Guide`,
         description: `Learn everything about ${request.topic} and how to implement it effectively.`,
-        tags: [request.topic, request.type, 'guide', 'tutorial']
-      }
+        tags: [request.topic, request.type, 'guide', 'tutorial'],
+      },
     };
   }
 
@@ -142,13 +154,13 @@ ${request.topic} represents a significant opportunity for organizations looking 
       suggestions: [
         'Add more headings for better structure',
         'Include internal links to related content',
-        'Optimize meta description'
+        'Optimize meta description',
       ],
       keywordDensity: {
-        'content': 2.1,
-        'seo': 1.8,
-        'marketing': 1.5
-      }
+        content: 2.1,
+        seo: 1.8,
+        marketing: 1.5,
+      },
     };
   }
 }
@@ -164,8 +176,8 @@ export const AI_CONTENT_PRICING = {
       'Basic templates',
       'SEO analysis',
       'Email support',
-      'Standard quality'
-    ]
+      'Standard quality',
+    ],
   },
   professional: {
     name: 'Professional',
@@ -178,8 +190,8 @@ export const AI_CONTENT_PRICING = {
       'Priority support',
       'High quality output',
       'Custom branding',
-      'API access'
-    ]
+      'API access',
+    ],
   },
   enterprise: {
     name: 'Enterprise',
@@ -193,7 +205,7 @@ export const AI_CONTENT_PRICING = {
       'Highest quality',
       'White-label options',
       'Custom integrations',
-      'SLA guarantee'
-    ]
-  }
+      'SLA guarantee',
+    ],
+  },
 };

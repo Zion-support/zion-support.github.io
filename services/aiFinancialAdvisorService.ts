@@ -18,7 +18,14 @@ export interface PortfolioAsset {
   id: string;
   symbol: string;
   name: string;
-  type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity';
+  type:
+    | 'stock'
+    | 'bond'
+    | 'etf'
+    | 'mutual_fund'
+    | 'crypto'
+    | 'real_estate'
+    | 'commodity';
   quantity: number;
   currentPrice: number;
   marketValue: number;
@@ -75,7 +82,14 @@ export interface FinancialGoal {
   currentAmount: number;
   targetDate: Date;
   priority: 'low' | 'medium' | 'high';
-  category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other';
+  category:
+    | 'retirement'
+    | 'education'
+    | 'home'
+    | 'emergency'
+    | 'vacation'
+    | 'business'
+    | 'other';
   monthlyContribution: number;
   expectedReturn: number;
   riskTolerance: 'conservative' | 'moderate' | 'aggressive';
@@ -106,7 +120,11 @@ export interface FinancialPlan {
   goals: FinancialGoal[];
   investmentStrategy: {
     assetAllocation: Record<string, number>;
-    rebalancingFrequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually';
+    rebalancingFrequency:
+      | 'monthly'
+      | 'quarterly'
+      | 'semi_annually'
+      | 'annually';
     riskManagement: string[];
   };
   cashFlow: {
@@ -140,7 +158,12 @@ export interface FinancialPlan {
 
 export interface FinancialRequest {
   userId: string;
-  requestType: 'portfolio_analysis' | 'investment_recommendation' | 'financial_planning' | 'market_analysis' | 'goal_tracking';
+  requestType:
+    | 'portfolio_analysis'
+    | 'investment_recommendation'
+    | 'financial_planning'
+    | 'market_analysis'
+    | 'goal_tracking';
   parameters: Record<string, any>;
   preferences?: Record<string, any>;
 }
@@ -164,16 +187,24 @@ export class AIFinancialAdvisorService {
   private apiKey: string;
   private baseUrl: string;
 
-  constructor(apiKey: string, baseUrl: string = 'https://api.ziontechgroup.com') {
+  constructor(
+    apiKey: string,
+    baseUrl: string = 'https://api.ziontechgroup.com'
+  ) {
     this.apiKey = apiKey;
     this.baseUrl = baseUrl;
   }
 
   async analyzePortfolio(portfolioId: string): Promise<InvestmentPortfolio> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/portfolio/${portfolioId}/analyze`,
+        {
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -187,14 +218,23 @@ export class AIFinancialAdvisorService {
     }
   }
 
-  async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
+  async getInvestmentRecommendations(
+    userId: string,
+    riskTolerance: string,
+    investmentHorizon: number
+  ): Promise<InvestmentRecommendation[]> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ userId, riskTolerance, investmentHorizon })});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/recommendations`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId, riskTolerance, investmentHorizon }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -213,9 +253,11 @@ export class AIFinancialAdvisorService {
       const response = await fetch(`${this.baseUrl}/api/financial/plan`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify(request)});
+          Authorization: `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(request),
+      });
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -231,9 +273,14 @@ export class AIFinancialAdvisorService {
 
   async trackFinancialGoals(userId: string): Promise<FinancialGoal[]> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/goals/${userId}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/goals/${userId}`,
+        {
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -249,9 +296,14 @@ export class AIFinancialAdvisorService {
 
   async getMarketAnalysis(market: string): Promise<MarketAnalysis> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/market-analysis/${market}`, {
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/market-analysis/${market}`,
+        {
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+          },
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -265,7 +317,10 @@ export class AIFinancialAdvisorService {
     }
   }
 
-  async rebalancePortfolio(portfolioId: string, targetAllocation: Record<string, number>): Promise<{
+  async rebalancePortfolio(
+    portfolioId: string,
+    targetAllocation: Record<string, number>
+  ): Promise<{
     currentAllocation: Record<string, number>;
     targetAllocation: Record<string, number>;
     rebalancingActions: Array<{
@@ -278,12 +333,17 @@ export class AIFinancialAdvisorService {
     expectedImpact: string;
   }> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ targetAllocation })});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ targetAllocation }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -297,7 +357,11 @@ export class AIFinancialAdvisorService {
     }
   }
 
-  async calculateRetirementNeeds(userId: string, targetAge: number, desiredIncome: number): Promise<{
+  async calculateRetirementNeeds(
+    userId: string,
+    targetAge: number,
+    desiredIncome: number
+  ): Promise<{
     estimatedNeeds: number;
     monthlyContribution: number;
     projectedValue: number;
@@ -305,12 +369,17 @@ export class AIFinancialAdvisorService {
     recommendations: string[];
   }> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/retirement-calculator`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ userId, targetAge, desiredIncome })});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/retirement-calculator`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId, targetAge, desiredIncome }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -324,7 +393,10 @@ export class AIFinancialAdvisorService {
     }
   }
 
-  async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
+  async getTaxOptimizationStrategies(
+    userId: string,
+    taxYear: number
+  ): Promise<{
     strategies: string[];
     estimatedSavings: number;
     implementation: string[];
@@ -332,12 +404,17 @@ export class AIFinancialAdvisorService {
     deadlines: Record<string, Date>;
   }> {
     try {
-      const response = await fetch(`${this.baseUrl}/api/financial/tax-optimization`, {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ userId, taxYear })});
+      const response = await fetch(
+        `${this.baseUrl}/api/financial/tax-optimization`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ userId, taxYear }),
+        }
+      );
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -351,7 +428,10 @@ export class AIFinancialAdvisorService {
     }
   }
 
-  async generateFinancialReport(userId: string, reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
+  async generateFinancialReport(
+    userId: string,
+    reportType: 'comprehensive' | 'portfolio' | 'goals' | 'tax'
+  ): Promise<{
     reportId: string;
     downloadUrl: string;
     summary: string;
@@ -363,9 +443,11 @@ export class AIFinancialAdvisorService {
       const response = await fetch(`${this.baseUrl}/api/financial/report`, {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'},
-        body: JSON.stringify({ userId, reportType })});
+          Authorization: `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ userId, reportType }),
+      });
 
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
@@ -380,4 +462,6 @@ export class AIFinancialAdvisorService {
   }
 }
 
-export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key');
+export const aiFinancialAdvisorService = new AIFinancialAdvisorService(
+  process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key'
+);

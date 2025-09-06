@@ -38,20 +38,34 @@ export default async function handler(
     const hasLowercase = /[a-z]/.test(password);
     const hasNumbers = /\d/.test(password);
     const hasSymbols = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password);
-    
+
     // Check for common patterns
     const commonPatterns = [
-      '123', 'abc', 'qwe', 'password', 'admin', 'user', 'test',
-      '123456', 'password123', 'admin123', 'qwerty', 'asdf'
+      '123',
+      'abc',
+      'qwe',
+      'password',
+      'admin',
+      'user',
+      'test',
+      '123456',
+      'password123',
+      'admin123',
+      'qwerty',
+      'asdf',
     ];
-    const hasCommonPatterns = commonPatterns.some(pattern => 
+    const hasCommonPatterns = commonPatterns.some(pattern =>
       password.toLowerCase().includes(pattern)
     );
 
     // Calculate entropy (simplified)
-    const charsetSize = (hasUppercase ? 26 : 0) + (hasLowercase ? 26 : 0) + 
-                       (hasNumbers ? 10 : 0) + (hasSymbols ? 32 : 0);
-    const entropy = charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
+    const charsetSize =
+      (hasUppercase ? 26 : 0) +
+      (hasLowercase ? 26 : 0) +
+      (hasNumbers ? 10 : 0) +
+      (hasSymbols ? 32 : 0);
+    const entropy =
+      charsetSize > 0 ? Math.log2(Math.pow(charsetSize, length)) : 0;
 
     // Calculate score
     let score = 0;
@@ -73,7 +87,8 @@ export default async function handler(
 
     // Generate feedback
     const feedback: string[] = [];
-    if (length < 8) feedback.push('Password is too short (minimum 8 characters)');
+    if (length < 8)
+      feedback.push('Password is too short (minimum 8 characters)');
     if (!hasUppercase) feedback.push('Add uppercase letters');
     if (!hasLowercase) feedback.push('Add lowercase letters');
     if (!hasNumbers) feedback.push('Add numbers');
@@ -84,7 +99,9 @@ export default async function handler(
     // Generate suggestions
     const suggestions: string[] = [];
     if (score < 50) {
-      suggestions.push('Use a mix of uppercase, lowercase, numbers, and symbols');
+      suggestions.push(
+        'Use a mix of uppercase, lowercase, numbers, and symbols'
+      );
       suggestions.push('Make it at least 12 characters long');
       suggestions.push('Avoid personal information and common words');
     }
@@ -109,8 +126,10 @@ export default async function handler(
         hasNumbers,
         hasSymbols,
         hasCommonPatterns,
-        entropy: Math.round(entropy * 100) / 100},
-      suggestions};
+        entropy: Math.round(entropy * 100) / 100,
+      },
+      suggestions,
+    };
 
     res.status(200).json(result);
   } catch (error) {

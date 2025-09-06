@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
-import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants';
+import type {
+  GrantApplication,
+  MilestonesUpdatePayload,
+} from '../../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
@@ -18,13 +21,21 @@ function readGrant(id: string): GrantApplication | null {
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
 }
 
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization || '';
   const token = header.replace('Bearer ', '');
-  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+  return (
+    token &&
+    process.env.ZION_ADMIN_TOKEN &&
+    token === process.env.ZION_ADMIN_TOKEN
+  );
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {

@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react';
 import { toast } from 'sonner';
 import { safeStorage } from '@/utils/safeStorage';
-import {logErrorToProduction} from '@/utils/productionLogger';
-
+import { logErrorToProduction } from '@/utils/productionLogger';
 
 const DISMISS_KEY = 'pwaDismissed';
 const DISMISS_MS = 7 * 24 * 60 * 60 * 1000; // 7 days
 
 export const PwaInstallButton: React.FC = () => {
-  const [promptEvent, setPromptEvent] = useState<BeforeInstallPromptEvent | null>(null);
+  const [promptEvent, setPromptEvent] =
+    useState<BeforeInstallPromptEvent | null>(null);
   const [isInstalling, setIsInstalling] = useState(false);
 
   // Check dismissal flag and register event listener
@@ -18,8 +18,11 @@ export const PwaInstallButton: React.FC = () => {
     if (typeof window === 'undefined') return;
 
     const dismissedAt = safeStorage.getItem(DISMISS_KEY);
-    const recentlyDismissed = dismissedAt && Date.now() - Number(dismissedAt) < DISMISS_MS;
-    const inStandalone = window.matchMedia('(display-mode: standalone)').matches;
+    const recentlyDismissed =
+      dismissedAt && Date.now() - Number(dismissedAt) < DISMISS_MS;
+    const inStandalone = window.matchMedia(
+      '(display-mode: standalone)'
+    ).matches;
 
     if (recentlyDismissed || inStandalone) return;
 
@@ -39,7 +42,8 @@ export const PwaInstallButton: React.FC = () => {
   const onClick = async () => {
     if (!promptEvent) {
       toast('Installation not available', {
-        description: 'Your browser does not support app installation.'});
+        description: 'Your browser does not support app installation.',
+      });
       return;
     }
     try {
@@ -63,9 +67,9 @@ export const PwaInstallButton: React.FC = () => {
   };
 
   return (
-    <div className="fixed bottom-4 right-4 z-50">
+    <div className='fixed bottom-4 right-4 z-50'>
       <Button onClick={onClick} disabled={isInstalling}>
-        {isInstalling && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+        {isInstalling && <Loader2 className='mr-2 h-4 w-4 animate-spin' />}
         Install App
       </Button>
     </div>

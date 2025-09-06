@@ -23,6 +23,6 @@ export const TALENT_PROFILES = [
     reviewsCount: 0,
     createdAt: new Date().toISOString(),
     originalLanguage: 'en',
-    translations: {}
-  }
+    translations: {},
+  },
 ];

@@ -8,9 +8,11 @@ const PerformanceMonitor: React.FC = () => {
         // This would be imported from web-vitals library
         console.log('Web Vitals measurement would be here');
       }
-      
+
       // Measure page load time
-      const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const navigation = performance.getEntriesByType(
+        'navigation'
+      )[0] as PerformanceNavigationTiming;
       if (navigation) {
         const loadTime = navigation.loadEventEnd - navigation.loadEventStart;
         console.log('Page load time:', loadTime);

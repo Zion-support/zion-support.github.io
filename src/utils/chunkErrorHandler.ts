@@ -26,19 +26,19 @@ class ChunkErrorHandler {
     if (typeof window === 'undefined') return;
 
     // Handle webpack chunk loading errors
-    window.addEventListener('error', (event) => {
+    window.addEventListener('error', event => {
       this.handleScriptError(event);
     });
 
     // Handle unhandled promise rejections (async chunk loading)
-    window.addEventListener('unhandledrejection', (event) => {
+    window.addEventListener('unhandledrejection', event => {
       this.handlePromiseRejection(event);
     });
   }
 
   private handleScriptError(event: ErrorEvent): void {
     const { error, filename } = event;
-    
+
     if (this.isChunkError(error, filename)) {
       event.preventDefault(); // Prevent the error from bubbling up
       this.handleChunkError(error, { filename, source: 'script' });
@@ -47,7 +47,7 @@ class ChunkErrorHandler {
 
   private handlePromiseRejection(event: PromiseRejectionEvent): void {
     const error = event.reason;
-    
+
     if (this.isChunkError(error)) {
       event.preventDefault(); // Prevent unhandled rejection
       this.handleChunkError(error, { source: 'promise' });
@@ -59,27 +59,31 @@ class ChunkErrorHandler {
 
     const errorMessage = error.message || String(error);
     const errorName = error.name || '';
-    
+
     const chunkErrorPatterns = [
       'ChunkLoadError',
       'Loading chunk',
       'Failed to fetch dynamically imported module',
       'Failed to import',
       'chunk-',
-      'vendors-'
+      'vendors-',
     ];
 
-    return chunkErrorPatterns.some(pattern => 
-      errorMessage.includes(pattern) || 
-      errorName.includes(pattern) ||
-      (filename && filename.includes(pattern))
+    return chunkErrorPatterns.some(
+      pattern =>
+        errorMessage.includes(pattern) ||
+        errorName.includes(pattern) ||
+        (filename && filename.includes(pattern))
     );
   }
 
-  private async handleChunkError(error: Error, context: { filename?: string; source: string }): Promise<void> {
+  private async handleChunkError(
+    error: Error,
+    context: { filename?: string; source: string }
+  ): Promise<void> {
     const sessionKey = this.getSessionKey();
     const stats = this.getOrCreateErrorStats(sessionKey);
-    
+
     stats.errorCount++;
     stats.lastErrorTime = Date.now();
 
@@ -90,7 +94,7 @@ class ChunkErrorHandler {
       source: context.source,
       filename: context.filename,
       userAgent: navigator.userAgent,
-      url: window.location.href
+      url: window.location.href,
     });
 
     // Attempt recovery based on error count
@@ -101,12 +105,19 @@ class ChunkErrorHandler {
     }
   }
 
-  private async attemptRecovery(attemptNumber: number, context: { filename?: string; source: string }): Promise<void> {
-    logErrorToProduction(`Attempting ChunkLoadError recovery #${attemptNumber}`, undefined, {
-      context: 'chunkErrorRecovery',
-      attemptNumber,
-      recoveryMethod: this.getRecoveryMethod(attemptNumber)
-    });
+  private async attemptRecovery(
+    attemptNumber: number,
+    context: { filename?: string; source: string }
+  ): Promise<void> {
+    logErrorToProduction(
+      `Attempting ChunkLoadError recovery #${attemptNumber}`,
+      undefined,
+      {
+        context: 'chunkErrorRecovery',
+        attemptNumber,
+        recoveryMethod: this.getRecoveryMethod(attemptNumber),
+      }
+    );
 
     switch (attemptNumber) {
       case 1:
@@ -114,19 +125,19 @@ class ChunkErrorHandler {
         await this.delay(this.RETRY_DELAY);
         this.reloadPage();
         break;
-        
+
       case 2:
         // Second attempt: Clear caches and retry
         await this.clearCaches();
         await this.delay(this.RETRY_DELAY * 2);
         this.reloadPage();
         break;
-        
+
       case 3:
         // Third attempt: Hard refresh with cache bypass
         this.hardRefresh();
         break;
-        
+
       default:
         this.showFatalErrorMessage();
     }
@@ -134,10 +145,14 @@ class ChunkErrorHandler {
 
   private getRecoveryMethod(attemptNumber: number): string {
     switch (attemptNumber) {
-      case 1: return 'simple-retry';
-      case 2: return 'cache-clear-retry';
-      case 3: return 'hard-refresh';
-      default: return 'fatal-error';
+      case 1:
+        return 'simple-retry';
+      case 2:
+        return 'cache-clear-retry';
+      case 3:
+        return 'hard-refresh';
+      default:
+        return 'fatal-error';
     }
   }
 
@@ -163,12 +178,12 @@ class ChunkErrorHandler {
 
       logErrorToProduction('Caches cleared successfully', undefined, {
         context: 'chunkErrorRecovery',
-        action: 'cache-clear'
+        action: 'cache-clear',
       });
     } catch (error) {
       logErrorToProduction('Failed to clear caches', error as Error, {
         context: 'chunkErrorRecovery',
-        action: 'cache-clear-failed'
+        action: 'cache-clear-failed',
       });
     }
   }
@@ -251,7 +266,7 @@ class ChunkErrorHandler {
         errorCount: 0,
         lastErrorTime: 0,
         userAgent: navigator.userAgent,
-        url: window.location.href
+        url: window.location.href,
       });
     }
     return this.errorStats.get(sessionKey)!;

@@ -19,7 +19,11 @@ function readGrant(id: string): GrantApplication | null {
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -35,8 +39,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'POST') {
     const { content } = req.body as { content?: string };
-    if (!content || !content.trim()) return res.status(400).json({ error: 'Missing content' });
-    const update = { id: uuidv4(), createdAt: new Date().toISOString(), content: content.trim() };
+    if (!content || !content.trim())
+      return res.status(400).json({ error: 'Missing content' });
+    const update = {
+      id: uuidv4(),
+      createdAt: new Date().toISOString(),
+      content: content.trim(),
+    };
     existing.updates = [...(existing.updates || []), update];
     existing.updatedAt = new Date().toISOString();
     writeGrant(existing);

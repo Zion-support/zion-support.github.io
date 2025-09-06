@@ -14,7 +14,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
   className = '',
   threshold = 0.1,
   delay = 0,
-  direction = 'up'
+  direction = 'up',
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { threshold, once: true });
@@ -54,7 +54,7 @@ export const LazySection: React.FC<LazySectionProps> = ({
       ref={ref}
       initial={getInitialPosition()}
       animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0.8, delay, ease: "easeOut" }}
+      transition={{ duration: 0.8, delay, ease: 'easeOut' }}
       className={className}
     >
       {children}

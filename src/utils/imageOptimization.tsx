@@ -67,10 +67,13 @@ export function OptimizedImage({
   // Generate WebP-compatible src
   const getOptimizedSrc = (originalSrc: string) => {
     // If it's already optimized or external, return as-is
-    if (originalSrc.startsWith('http') || originalSrc.includes('/_next/image')) {
+    if (
+      originalSrc.startsWith('http') ||
+      originalSrc.includes('/_next/image')
+    ) {
       return originalSrc;
     }
-    
+
     // For internal images, Next.js will handle optimization
     return originalSrc;
   };
@@ -89,7 +92,7 @@ export function OptimizedImage({
   // Generate blur placeholder
   const generateBlurDataURL = () => {
     if (blurDataURL) return blurDataURL;
-    
+
     // Generate a simple gray blur placeholder
     return `data:image/svg+xml;base64,${Buffer.from(
       `<svg width="${width || 400}" height="${height || 300}" xmlns="http://www.w3.org/2000/svg">
@@ -117,7 +120,9 @@ export function OptimizedImage({
           width={width}
           height={height}
           priority={priority}
-          blurDataURL={placeholder === 'blur' ? generateBlurDataURL() : undefined}
+          blurDataURL={
+            placeholder === 'blur' ? generateBlurDataURL() : undefined
+          }
           onLoad={handleLoad}
           onError={handleError}
           className={cn(
@@ -129,34 +134,34 @@ export function OptimizedImage({
       )}
 
       {/* Loading placeholder */}
-      {(isLoading && isInView) && (
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse" />
+      {isLoading && isInView && (
+        <div className='absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900 animate-pulse' />
       )}
 
       {/* Error fallback */}
       {hasError && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center">
+        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800 flex items-center justify-center'>
           {fallbackSrc ? (
             <img
               src={fallbackSrc}
               alt={alt}
-              className="max-w-full max-h-full object-contain"
+              className='max-w-full max-h-full object-contain'
               onLoad={handleLoad}
             />
           ) : (
-            <div className="text-gray-400 text-center">
+            <div className='text-gray-400 text-center'>
               <svg
-                className="w-8 h-8 mx-auto mb-2"
-                fill="currentColor"
-                viewBox="0 0 20 20"
+                className='w-8 h-8 mx-auto mb-2'
+                fill='currentColor'
+                viewBox='0 0 20 20'
               >
                 <path
-                  fillRule="evenodd"
-                  d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
-                  clipRule="evenodd"
+                  fillRule='evenodd'
+                  d='M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z'
+                  clipRule='evenodd'
                 />
               </svg>
-              <span className="text-xs">Image not available</span>
+              <span className='text-xs'>Image not available</span>
             </div>
           )}
         </div>
@@ -164,7 +169,7 @@ export function OptimizedImage({
 
       {/* Lazy loading placeholder */}
       {!isInView && lazy && !priority && (
-        <div className="absolute inset-0 bg-gray-100 dark:bg-gray-800" />
+        <div className='absolute inset-0 bg-gray-100 dark:bg-gray-800' />
       )}
     </div>
   );
@@ -176,14 +181,8 @@ export function withImageOptimization<P extends { src: string; alt: string }>(
 ) {
   return function OptimizedComponent(props: P) {
     const { src, alt, ...otherProps } = props;
-    
-    return (
-      <OptimizedImage
-        src={src}
-        alt={alt}
-        {...(otherProps as any)}
-      />
-    );
+
+    return <OptimizedImage src={src} alt={alt} {...(otherProps as any)} />;
   };
 }
 
@@ -198,11 +197,14 @@ export function preloadImage(src: string): Promise<void> {
 }
 
 // Utility to get image dimensions
-export function getImageDimensions(src: string): Promise<{ width: number; height: number }> {
+export function getImageDimensions(
+  src: string
+): Promise<{ width: number; height: number }> {
   return new Promise((resolve, reject) => {
     const img = new window.Image();
-    img.onload = () => resolve({ width: img.naturalWidth, height: img.naturalHeight });
+    img.onload = () =>
+      resolve({ width: img.naturalWidth, height: img.naturalHeight });
     img.onerror = reject;
     img.src = src;
   });
-} 
+}

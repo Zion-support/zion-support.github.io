@@ -18,13 +18,21 @@ function readGrant(id: string): GrantApplication | null {
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
 }
 
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization || '';
   const token = header.replace('Bearer ', '');
-  return token && process.env.ZION_ADMIN_TOKEN && token === process.env.ZION_ADMIN_TOKEN;
+  return (
+    token &&
+    process.env.ZION_ADMIN_TOKEN &&
+    token === process.env.ZION_ADMIN_TOKEN
+  );
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -49,7 +57,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!existing) return res.status(404).json({ error: 'Not found' });
 
   const ms = existing.milestones || [];
-  const idx = ms.findIndex((m) => m.id === milestoneId);
+  const idx = ms.findIndex(m => m.id === milestoneId);
   if (idx === -1) return res.status(404).json({ error: 'Milestone not found' });
 
   ms[idx].completed = true;

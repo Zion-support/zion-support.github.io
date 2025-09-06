@@ -1,11 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const code = (req.query.code as string)?.toLowerCase();
   if (!code) return res.status(400).json({ error: 'Missing code' });
 
-  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+  const usingPlaceholder =
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') ===
+      'placeholder-key';
 
   try {
     if (usingPlaceholder) {
@@ -16,12 +22,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         total_job_creations: 5,
         conversion_rate: 7 / 12,
         payout_amount: 210,
-        currency: 'USD'});
+        currency: 'USD',
+      });
     }
 
     const supabase = getServerSupabase();
 
-    const events = ['visit', 'signup', 'profile_completed', 'job_created', 'hire'] as const;
+    const events = [
+      'visit',
+      'signup',
+      'profile_completed',
+      'job_created',
+      'hire',
+    ] as const;
     const counts: Record<string, number> = {};
 
     for (const ev of events) {
@@ -39,16 +52,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const total_profile_completions = counts['profile_completed'] || 0;
     const total_job_creations = counts['job_created'] || 0;
 
-    const payout_amount = total_profile_completions * 30 + total_job_creations * 50;
+    const payout_amount =
+      total_profile_completions * 30 + total_job_creations * 50;
 
     return res.status(200).json({
       total_signups,
       total_visits,
       total_profile_completions,
       total_job_creations,
-      conversion_rate: total_signups ? total_profile_completions / total_signups : 0,
+      conversion_rate: total_signups
+        ? total_profile_completions / total_signups
+        : 0,
       payout_amount,
-      currency: 'USD'});
+      currency: 'USD',
+    });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }

@@ -31,7 +31,11 @@ async function ensureBaseFiles() {
   try {
     await readFile(DISPUTES_FILE, 'utf8');
   } catch {
-    await writeFile(DISPUTES_FILE, JSON.stringify({ disputes: [] }, null, 2), 'utf8');
+    await writeFile(
+      DISPUTES_FILE,
+      JSON.stringify({ disputes: [] }, null, 2),
+      'utf8'
+    );
   }
 }
 
@@ -48,7 +52,9 @@ export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {
   await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8');
 }
 
-export async function getDisputeById(id: string): Promise<DisputeCase | undefined> {
+export async function getDisputeById(
+  id: string
+): Promise<DisputeCase | undefined> {
   const all = await readAllDisputes();
   return all.find(d => d.id === id);
 }

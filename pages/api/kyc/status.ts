@@ -17,7 +17,8 @@ function load(): Record<string, KycProfile> {
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  if (req.method !== 'GET')
+    return res.status(405).json({ error: 'Method not allowed' });
   const { userId } = req.query as { userId?: string };
   if (!userId) return res.status(400).json({ error: 'Missing userId' });
   const db = load();
@@ -27,5 +28,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ok: true,
     profile,
     requiredDocuments: getRequiredDocuments(profile.role),
-    optionalDocuments: getOptionalDocuments(profile.role)});
+    optionalDocuments: getOptionalDocuments(profile.role),
+  });
 }

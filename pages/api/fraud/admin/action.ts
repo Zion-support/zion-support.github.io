@@ -8,7 +8,10 @@ function ensureAdmin(req: NextApiRequest): boolean {
   return token === process.env.ADMIN_TOKEN;
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -31,8 +34,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const store = getFraudStore();
-  await store.recordAction({ fraudId, action: act, adminId: adminId || null, reason: reason || null });
-  const newStatus = act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
+  await store.recordAction({
+    fraudId,
+    action: act,
+    adminId: adminId || null,
+    reason: reason || null,
+  });
+  const newStatus =
+    act === 'IGNORE' ? 'IGNORED' : act === 'WARN' ? 'WARNED' : 'SUSPENDED';
   await store.updateEventStatus(fraudId, newStatus);
 
   res.status(200).json({ ok: true, status: newStatus });

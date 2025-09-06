@@ -1,6 +1,11 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
-import { addMilestone, getProject, assertParticipantOrAdmin, isClient } from '../../../../utils/api/projects';
+import {
+  addMilestone,
+  getProject,
+  assertParticipantOrAdmin,
+  isClient,
+} from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -25,12 +30,21 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (req.method === 'POST') {
     if (!isClient(project, user)) {
-      res.status(403).json({ error: 'Only client (or admin) can add milestones' });
+      res
+        .status(403)
+        .json({ error: 'Only client (or admin) can add milestones' });
       return;
     }
     const body = req.body as Partial<Milestone>;
-    if (!body || !body.title || !body.dueDate || typeof body.amountUsd !== 'number') {
-      res.status(400).json({ error: 'Missing required fields: title, dueDate, amountUsd' });
+    if (
+      !body ||
+      !body.title ||
+      !body.dueDate ||
+      typeof body.amountUsd !== 'number'
+    ) {
+      res
+        .status(400)
+        .json({ error: 'Missing required fields: title, dueDate, amountUsd' });
       return;
     }
     const created = addMilestone(project, {
@@ -38,7 +52,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       description: body.description,
       dueDate: body.dueDate,
       amountUsd: body.amountUsd,
-      attachments: body.attachments || []});
+      attachments: body.attachments || [],
+    });
     res.status(201).json({ milestone: created });
     return;
   }

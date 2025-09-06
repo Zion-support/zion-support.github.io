@@ -23,7 +23,11 @@ function readGrant(id: string): GrantApplication | null {
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
-  fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8');
+  fs.writeFileSync(
+    grantPath(record.id),
+    JSON.stringify(record, null, 2),
+    'utf8'
+  );
 }
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -39,7 +43,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
-  const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() };
+  const vote = {
+    id: uuidv4(),
+    voter: payload.voter,
+    choice: payload.choice,
+    createdAt: new Date().toISOString(),
+  };
   g.votes = [...(g.votes || []), vote];
   g.updatedAt = new Date().toISOString();
   writeGrant(g);

@@ -7,14 +7,18 @@ async function fetchHtml(url) {
 }
 
 function extractLinks(html, base) {
-  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]);
+  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map(
+    m => m[1]
+  );
   const links = aTags
-    .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
-    .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`));
+    .filter(h => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
+    .map(h =>
+      h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`
+    );
   return Array.from(new Set(links));
 }
 
-exports.handler = async function() {
+exports.handler = async function () {
   try {
     const base = process.env.URL || process.env.DEPLOY_URL || '';
     const pages = ['/', '/learn', '/dao', '/certifications'];
@@ -29,13 +33,18 @@ exports.handler = async function() {
           try {
             const resp = await fetch(l, { method: 'HEAD' });
             checked.push({ url: l, status: resp.status });
-            if (resp.status >= 400) broken.push({ url: l, status: resp.status });
+            if (resp.status >= 400)
+              broken.push({ url: l, status: resp.status });
           } catch (e) {
             broken.push({ url: l, status: 0, error: String(e.message || e) });
           }
         }
       } catch (e) {
-        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) });
+        broken.push({
+          url: `${base}${p}`,
+          status: 0,
+          error: String(e.message || e),
+        });
       }
     }
 
@@ -46,10 +55,20 @@ exports.handler = async function() {
     const token = process.env.GITHUB_TOKEN;
 
     if (owner && repo && token) {
-      await upsertFile({ owner, repo, path: 'data/reports/links/weekly-links.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly link check', token });
+      await upsertFile({
+        owner,
+        repo,
+        path: 'data/reports/links/weekly-links.json',
+        content: JSON.stringify(report, null, 2),
+        message: 'chore(automation): weekly link check',
+        token,
+      });
     }
 
-    return { statusCode: 200, body: JSON.stringify({ ok: true, broken: broken.length }) };
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ ok: true, broken: broken.length }),
+    };
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }

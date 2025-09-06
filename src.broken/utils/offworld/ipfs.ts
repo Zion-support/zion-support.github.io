@@ -47,7 +47,10 @@ export async function addJSON(content: unknown): Promise<IpfsResult> {
   return addBuffer(json, 'data.json');
 }
 
-export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<IpfsResult> {
+export async function addBuffer(
+  buffer: Buffer,
+  filename = 'file.bin'
+): Promise<IpfsResult> {
   await lazyLoadDeps();
 
   // 1) Try Web3.Storage
@@ -68,7 +71,8 @@ export async function addBuffer(buffer: Buffer, filename = 'file.bin'): Promise<
       ? new PinataSDK({ pinataJWTKey: pinataJwt })
       : new PinataSDK(pinataApiKey, pinataSecret);
     const res = await pinata.pinFileToIPFS(bufferToStream(buffer), {
-      pinataMetadata: { name: filename }} as any);
+      pinataMetadata: { name: filename },
+    } as any);
     return { cid: res.IpfsHash, provider: 'pinata' };
   }
 
@@ -138,7 +142,10 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
     for (const f of walk(dirPath)) files.push(f);
 
     let rootCid = '';
-    for await (const res of ipfs.addAll(files, { wrapWithDirectory: true, pin: true })) {
+    for await (const res of ipfs.addAll(files, {
+      wrapWithDirectory: true,
+      pin: true,
+    })) {
       if (res.path === '') rootCid = res.cid?.toString?.() || rootCid;
       rootCid = res.cid?.toString?.() || rootCid;
     }
@@ -149,7 +156,10 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
   return { cid: '', provider: 'none' };
 }
 
-export async function publishManifesto(topic: string, message: string): Promise<boolean> {
+export async function publishManifesto(
+  topic: string,
+  message: string
+): Promise<boolean> {
   await lazyLoadDeps();
   const ipfsUrl = env('IPFS_API') || 'http://127.0.0.1:5001';
   if (!createIpfsClient) return false;
@@ -165,4 +175,5 @@ export async function publishManifesto(topic: string, message: string): Promise<
 export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
-  votes: 'zion.dao.votes'};
+  votes: 'zion.dao.votes',
+};

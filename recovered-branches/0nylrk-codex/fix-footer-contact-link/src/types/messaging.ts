@@ -1,4 +1,3 @@
-
 // Define the shape of a message
 export interface Message {
   id: string;
@@ -53,8 +52,8 @@ export interface MessagingContextType {
   isLoading: boolean;
   sendMessage: (conversationId: string, content: string) => Promise<void>;
   createConversation: (
-    recipientId: string, 
-    initialMessage: string, 
+    recipientId: string,
+    initialMessage: string,
     contextType?: 'job' | 'talent' | 'general',
     contextId?: string,
     contextData?: ConversationContextData

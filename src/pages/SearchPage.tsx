@@ -1,34 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
-import {logErrorToProduction} from '@/utils/productionLogger';
-import {
-  Tabs,
-  TabsContent,
-  TabsList,
-  TabsTrigger} from "@/components/ui/tabs";
-import { Loader2 } from 'lucide-react'
+import { EnhancedSearchInput } from '@/components/search/EnhancedSearchInput';
+import { generateSearchSuggestions } from '@/data/marketplaceData';
+import { SearchSuggestion } from '@/types/search';
+import { logErrorToProduction } from '@/utils/productionLogger';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Loader2 } from 'lucide-react';
 
 interface SearchResult {
   id: string;
-  type: "product" | "service" | "talent" | "blog" | "doc";
+  type: 'product' | 'service' | 'talent' | 'blog' | 'doc';
   title: string;
   description: string;
 }
 
 function highlight(text: string, term: string) {
   if (!term) return text;
-  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
-  const regex = new RegExp(`(${escaped})`, "gi");
+  const escaped = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const regex = new RegExp(`(${escaped})`, 'gi');
   const parts = text.split(regex);
   return (
     <>
       {parts.map((part, i) =>
         regex.test(part) ? (
-          <mark key={i} className="bg-yellow-200 text-black">
+          <mark key={i} className='bg-yellow-200 text-black'>
             {part}
           </mark>
         ) : (
@@ -41,7 +37,7 @@ function highlight(text: string, term: string) {
 
 export default function SearchPage() {
   const router = useRouterReady(); // Use our custom hook
-  const [query, setQuery] = useState("");
+  const [query, setQuery] = useState('');
   const [results, setResults] = useState<SearchResult[]>([]);
   const [loading, setLoading] = useState(false);
   const suggestions: SearchSuggestion[] = generateSearchSuggestions();
@@ -63,8 +59,8 @@ export default function SearchPage() {
   // Sync query with URL parameter changes
   useEffect(() => {
     if (!router.isReady) return;
-    
-    const urlQuery = (router.query.q as string) || "";
+
+    const urlQuery = (router.query.q as string) || '';
     if (urlQuery !== query) {
       setQuery(urlQuery);
     }
@@ -73,7 +69,7 @@ export default function SearchPage() {
   // Fetch results when query changes
   useEffect(() => {
     if (!router.isReady) return;
-    
+
     if (query.trim()) {
       fetchResults(query.trim());
     } else {
@@ -95,7 +91,10 @@ export default function SearchPage() {
         setResults(data.results);
       } else {
         setResults([]);
-        logErrorToProduction('Search API response structure is not as expected:', { data: data });
+        logErrorToProduction(
+          'Search API response structure is not as expected:',
+          { data: data }
+        );
       }
     } catch (error) {
       logErrorToProduction('Search failed:', { data: error });
@@ -117,121 +116,135 @@ export default function SearchPage() {
 
   return (
     <div key={pageKey}>
-      <main className="container mx-auto px-4 py-8">
-        <form onSubmit={handleSubmit} className="mb-6">
+      <main className='container mx-auto px-4 py-8'>
+        <form onSubmit={handleSubmit} className='mb-6'>
           <EnhancedSearchInput
             value={query}
             onChange={setQuery}
-            onSelectSuggestion={(suggestion) => {
+            onSelectSuggestion={suggestion => {
               const searchTerm = suggestion.text.trim();
               setQuery(searchTerm);
               router.push(`/search?q=${encodeURIComponent(searchTerm)}`);
             }}
             searchSuggestions={suggestions}
-            placeholder="Search talent, jobs, and projects..."
+            placeholder='Search talent, jobs, and projects...'
           />
         </form>
 
         {loading && (
-          <div className="flex justify-center py-8">
-            <Loader2 className="h-8 w-8 animate-spin text-zion-purple" />
+          <div className='flex justify-center py-8'>
+            <Loader2 className='h-8 w-8 animate-spin text-zion-purple' />
           </div>
         )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length > 0 && (
-          <div>
-            <p className="text-zion-slate-light mb-2">No marketplace results found. Related blog posts:</p>
-            <div className="space-y-4">
-              {blogResults.map(r => (
-                <div key={`blog-${r.id}`} className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4">
-                  <h3 className="text-lg font-bold text-white">{highlight(r.title, query)}</h3>
-                  <p className="text-zion-slate-light">{highlight(r.description, query)}</p>
-                </div>
-              ))}
+        {!loading &&
+          marketplaceResults.length === 0 &&
+          blogResults.length > 0 && (
+            <div>
+              <p className='text-zion-slate-light mb-2'>
+                No marketplace results found. Related blog posts:
+              </p>
+              <div className='space-y-4'>
+                {blogResults.map(r => (
+                  <div
+                    key={`blog-${r.id}`}
+                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4'
+                  >
+                    <h3 className='text-lg font-bold text-white'>
+                      {highlight(r.title, query)}
+                    </h3>
+                    <p className='text-zion-slate-light'>
+                      {highlight(r.description, query)}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        )}
-        {!loading && marketplaceResults.length === 0 && blogResults.length === 0 && query && (
-          <p className="text-zion-slate-light">No results found for "{query}".</p>
-        )}
+          )}
+        {!loading &&
+          marketplaceResults.length === 0 &&
+          blogResults.length === 0 &&
+          query && (
+            <p className='text-zion-slate-light'>
+              No results found for "{query}".
+            </p>
+          )}
         {!loading && marketplaceResults.length > 0 && (
-          <Tabs defaultValue="products" className="space-y-4">
-            <TabsList className="mb-4">
-              <TabsTrigger value="products">
+          <Tabs defaultValue='products' className='space-y-4'>
+            <TabsList className='mb-4'>
+              <TabsTrigger value='products'>
                 Products ({productResults.length})
               </TabsTrigger>
-              <TabsTrigger value="talent">
+              <TabsTrigger value='talent'>
                 Talent ({talentResults.length})
               </TabsTrigger>
-              <TabsTrigger value="docs">
-                Docs ({docResults.length})
-              </TabsTrigger>
-              <TabsTrigger value="blog">
+              <TabsTrigger value='docs'>Docs ({docResults.length})</TabsTrigger>
+              <TabsTrigger value='blog'>
                 Blog ({blogResults.length})
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="products" className="space-y-4">
+            <TabsContent value='products' className='space-y-4'>
               {results
-                .filter((r) => r.type === "product" || r.type === "service")
-                .map((r) => (
+                .filter(r => r.type === 'product' || r.type === 'service')
+                .map(r => (
                   <div
                     key={`${r.type}-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4'
                   >
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className='text-lg font-bold text-white'>
                       {highlight(r.title, query)}
                     </h3>
-                    <p className="text-zion-slate-light">
+                    <p className='text-zion-slate-light'>
                       {highlight(r.description, query)}
                     </p>
                   </div>
                 ))}
             </TabsContent>
-            <TabsContent value="talent" className="space-y-4">
+            <TabsContent value='talent' className='space-y-4'>
               {results
-                .filter((r) => r.type === "talent")
-                .map((r) => (
+                .filter(r => r.type === 'talent')
+                .map(r => (
                   <div
                     key={`talent-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4'
                   >
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className='text-lg font-bold text-white'>
                       {highlight(r.title, query)}
                     </h3>
-                    <p className="text-zion-slate-light">
+                    <p className='text-zion-slate-light'>
                       {highlight(r.description, query)}
                     </p>
                   </div>
                 ))}
             </TabsContent>
-            <TabsContent value="docs" className="space-y-4">
+            <TabsContent value='docs' className='space-y-4'>
               {results
-                .filter((r) => r.type === "doc")
-                .map((r) => (
+                .filter(r => r.type === 'doc')
+                .map(r => (
                   <div
                     key={`doc-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4'
                   >
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className='text-lg font-bold text-white'>
                       {highlight(r.title, query)}
                     </h3>
-                    <p className="text-zion-slate-light">
+                    <p className='text-zion-slate-light'>
                       {highlight(r.description, query)}
                     </p>
                   </div>
                 ))}
             </TabsContent>
-            <TabsContent value="blog" className="space-y-4">
+            <TabsContent value='blog' className='space-y-4'>
               {results
-                .filter((r) => r.type === "blog")
-                .map((r) => (
+                .filter(r => r.type === 'blog')
+                .map(r => (
                   <div
                     key={`blog-${r.id}`}
-                    className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4"
+                    className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4'
                   >
-                    <h3 className="text-lg font-bold text-white">
+                    <h3 className='text-lg font-bold text-white'>
                       {highlight(r.title, query)}
                     </h3>
-                    <p className="text-zion-slate-light">
+                    <p className='text-zion-slate-light'>
                       {highlight(r.description, query)}
                     </p>
                   </div>

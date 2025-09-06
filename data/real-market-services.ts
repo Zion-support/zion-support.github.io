@@ -45,17 +45,19 @@ const contact = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'
+  website: 'https://ziontechgroup.com',
 };
 
 export const realMarketServices: RealMarketService[] = [
   {
     id: 'llm-gateway-cost-control',
     name: 'LLM Gateway & Cost Control',
-    tagline: 'Centralize model access, control spend, add observability and guardrails',
+    tagline:
+      'Centralize model access, control spend, add observability and guardrails',
     price: '$299',
     period: '/month',
-    description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',
+    description:
+      'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',
     features: [
       'Unified API for multiple LLM providers',
       'Spend caps, rate limits, and usage alerts',
@@ -65,22 +67,27 @@ export const realMarketServices: RealMarketService[] = [
       'Batch and streaming inference',
       'Audit logs and RBAC',
       'LangChain/LlamaIndex SDK support',
-      'Export to data warehouse'
+      'Export to data warehouse',
     ],
     popular: true,
     icon: '🧠',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/llm-gateway',
-    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
+    marketPosition:
+      'Comparable to OpenRouter (usage-based) and EdenAI; adds enterprise guardrails and governance.',
     targetAudience: 'Product teams, platform engineering, data/AI teams',
     trialDays: 14,
     setupTime: '1 day',
     category: 'AI & Data',
     realService: true,
     technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'],
-    integrations: ['OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'],
-    useCases: ['Centralized LLM access, Governance and compliance, Cost optimization'],
+    integrations: [
+      'OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI',
+    ],
+    useCases: [
+      'Centralized LLM access, Governance and compliance, Cost optimization',
+    ],
     roi: 'Reduce AI spend by 20–40% with routing and caps.',
     competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'],
     marketSize: '$40B+ GenAI platform market',
@@ -88,11 +95,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',
+    implementationDetails:
+      'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',
     launchDate: '2024-12-01',
     customers: 85,
     rating: 4.8,
-    reviews: 61
+    reviews: 61,
   },
   {
     id: 'api-observability-starter',
@@ -100,7 +108,8 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Trace, log, and profile your APIs in hours, not weeks',
     price: '$149',
     period: '/month',
-    description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
+    description:
+      'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
     features: [
       'OpenTelemetry auto-instrumentation',
       'Golden signals dashboards',
@@ -108,14 +117,15 @@ export const realMarketServices: RealMarketService[] = [
       'Jaeger/Tempo tracing ready',
       'Grafana dashboards and alerts',
       'Latency heatmaps and p95/p99',
-      'Service map and dependency view'
+      'Service map and dependency view',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/api-observability-starter',
-    marketPosition: 'Alternative to building in-house; complements Datadog and Grafana Cloud.',
+    marketPosition:
+      'Alternative to building in-house; complements Datadog and Grafana Cloud.',
     targetAudience: 'Backend engineers, SREs, platform teams',
     trialDays: 7,
     setupTime: '1 day',
@@ -131,11 +141,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',
+    implementationDetails:
+      'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',
     launchDate: '2024-11-10',
     customers: 120,
     rating: 4.7,
-    reviews: 73
+    reviews: 73,
   },
   {
     id: 'email-deliverability-warmup',
@@ -143,21 +154,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Inbox placement, warmup, and sender reputation monitoring',
     price: '$79',
     period: '/month',
-    description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',
+    description:
+      'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',
     features: [
       'SPF/DKIM/DMARC configuration checks',
       'Seed-list deliverability tests',
       'Automated sending warmup schedules',
       'Blocklist and reputation monitoring',
       'BIMI and TLS validation',
-      'Alerts to Slack/Email with remediation steps'
+      'Alerts to Slack/Email with remediation steps',
     ],
     popular: true,
     icon: '📧',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-400',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
-    marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks; alternatives include Mailgun, SendGrid add-ons.',
+    marketPosition:
+      'Complements ESPs with vendor-agnostic monitoring and playbooks; alternatives include Mailgun, SendGrid add-ons.',
     targetAudience: 'Growth, marketing ops, and platform teams',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -165,7 +178,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['Next.js, DNS, TLS'],
     integrations: ['SendGrid, Mailgun, Postmark'],
-    useCases: ['Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup'],
+    useCases: [
+      'Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup',
+    ],
     roi: 'Lift email open rate by 10–30% and reduce spam placement.',
     competitors: ['SendForensics, Mailgun Deliverability, Folderly'],
     marketSize: '$1B+ deliverability tooling',
@@ -175,14 +190,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'DNS checks, seed-list tests, blacklist APIs, and scheduled warmup orchestration.',
+    implementationDetails:
+      'DNS checks, seed-list tests, blacklist APIs, and scheduled warmup orchestration.',
     launchDate: '2025-02-01',
     customers: 120,
     rating: 4.6,
-    reviews: 44
+    reviews: 44,
   },
   {
     id: 'affiliate-attribution-hub',
@@ -190,21 +206,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Track referrals, detect fraud, and automate commission payouts',
     price: '$129',
     period: '/month',
-    description: 'Cross-device attribution with UTM and first-party identity stitching, fraud heuristics, and automated payouts to affiliates across Stripe/PayPal.',
+    description:
+      'Cross-device attribution with UTM and first-party identity stitching, fraud heuristics, and automated payouts to affiliates across Stripe/PayPal.',
     features: [
       'UTM, ref, and coupon tracking',
       'Attribution windows and LTV credit',
       'Fraud detection heuristics',
       'Stripe/PayPal payout workflows',
       'Partner portal and analytics',
-      'Webhooks and API access'
+      'Webhooks and API access',
     ],
     popular: false,
     icon: '🤝',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/affiliate-attribution-hub',
-    marketPosition: 'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
+    marketPosition:
+      'Lightweight alternative to enterprise affiliate suites; integrates with modern stacks.',
     targetAudience: 'SaaS and eCommerce teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -222,14 +240,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Attribution pipelines, event deduplication, and payout batch jobs.',
+    implementationDetails:
+      'Attribution pipelines, event deduplication, and payout batch jobs.',
     launchDate: '2025-01-15',
     customers: 65,
     rating: 4.5,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'ai-customer-support-suite',
@@ -237,21 +256,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Unified ticketing, chat, and AI assistants with knowledge sync',
     price: '$199',
     period: '/month',
-    description: 'Bring chat, ticketing, and AI assistance together with RAG over docs, macros, and action tools for faster resolution and CSAT uplift.',
+    description:
+      'Bring chat, ticketing, and AI assistance together with RAG over docs, macros, and action tools for faster resolution and CSAT uplift.',
     features: [
       'AI chat and email drafting',
       'RAG over product docs and tickets',
       'Macros and action tools',
       'Sentiment and CSAT analytics',
       'Zendesk/Intercom sync',
-      'Escalation and SLA policies'
+      'Escalation and SLA policies',
     ],
     popular: true,
     icon: '🤖',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-400',
     link: 'https://ziontechgroup.com/ai-customer-support-suite',
-    marketPosition: 'Augments existing helpdesks with agent copilots and automation.',
+    marketPosition:
+      'Augments existing helpdesks with agent copilots and automation.',
     targetAudience: 'Support and success teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -269,14 +290,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Knowledge sync, embeddings, intent detection, and action tools.',
+    implementationDetails:
+      'Knowledge sync, embeddings, intent detection, and action tools.',
     launchDate: '2025-02-05',
     customers: 42,
     rating: 4.7,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'smb-analytics-starter',
@@ -284,14 +306,15 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Privacy-first, cookie-lite analytics with actionable insights',
     price: '$39',
     period: '/month',
-    description: 'Simple dashboards with traffic sources, conversions, and page insights for non-technical teams. Exports and alerts included.',
+    description:
+      'Simple dashboards with traffic sources, conversions, and page insights for non-technical teams. Exports and alerts included.',
     features: [
       'Traffic and conversion funnels',
       'Source/medium and campaigns',
       'Goals and events tracking',
       'Email/Slack anomaly alerts',
       'CSV/BigQuery export',
-      'GDPR-friendly, IP anonymization'
+      'GDPR-friendly, IP anonymization',
     ],
     popular: false,
     icon: '📊',
@@ -316,22 +339,25 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Snippet-based analytics with server-side aggregation and privacy safeguards.',
+    implementationDetails:
+      'Snippet-based analytics with server-side aggregation and privacy safeguards.',
     launchDate: '2025-02-10',
     customers: 33,
     rating: 4.5,
-    reviews: 17
+    reviews: 17,
   },
   {
     id: 'cloud-cost-optimizer',
     name: 'Cloud Cost Optimizer',
-    tagline: 'Automated rightsizing, anomaly detection, and savings recommendations',
+    tagline:
+      'Automated rightsizing, anomaly detection, and savings recommendations',
     price: '$399',
     period: '/month',
-    description: 'Automate detection of idle resources, rightsizing, and savings plans across AWS/GCP/Azure with weekly reports and Jira-ready tickets.',
+    description:
+      'Automate detection of idle resources, rightsizing, and savings plans across AWS/GCP/Azure with weekly reports and Jira-ready tickets.',
     features: [
       'Idle resource detection',
       'Rightsizing and reservations',
@@ -339,14 +365,15 @@ export const realMarketServices: RealMarketService[] = [
       'Tag hygiene and compliance',
       'Weekly savings reports',
       'Auto-created tickets',
-      'RBAC and multi-account'
+      'RBAC and multi-account',
     ],
     popular: true,
     icon: '💸',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-400',
     link: 'https://ziontechgroup.com/cloud-cost-optimizer',
-    marketPosition: 'Competitor to CloudZero, ProsperOps, and native cloud tools; simpler onboarding.',
+    marketPosition:
+      'Competitor to CloudZero, ProsperOps, and native cloud tools; simpler onboarding.',
     targetAudience: 'FinOps, platform engineering, engineering leadership',
     trialDays: 14,
     setupTime: '3 days',
@@ -362,19 +389,22 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Read-only billing access, tagging policy checks, automated recommendation engine.',
+    implementationDetails:
+      'Read-only billing access, tagging policy checks, automated recommendation engine.',
     launchDate: '2024-10-05',
     customers: 65,
     rating: 4.6,
-    reviews: 48
+    reviews: 48,
   },
   {
     id: 'soc2-evidence-automation',
     name: 'SOC 2 Evidence Automation',
-    tagline: 'Automate evidence collection, auditor-ready reports, and continuous controls',
+    tagline:
+      'Automate evidence collection, auditor-ready reports, and continuous controls',
     price: '$499',
     period: '/month',
-    description: 'Automate SOC 2 controls evidence from cloud providers, identity, CI/CD, and ticketing systems with auditor export packs.',
+    description:
+      'Automate SOC 2 controls evidence from cloud providers, identity, CI/CD, and ticketing systems with auditor export packs.',
     features: [
       'Automated evidence collectors',
       'Control mapping (AICPA)',
@@ -382,14 +412,15 @@ export const realMarketServices: RealMarketService[] = [
       'Exception workflows',
       'Risk register and ownership',
       'Change management checks',
-      'Continuous monitoring'
+      'Continuous monitoring',
     ],
     popular: true,
     icon: '🔐',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-400',
     link: 'https://ziontechgroup.com/soc2-evidence-automation',
-    marketPosition: 'Comparable to Drata/Vanta with more engineering visibility.',
+    marketPosition:
+      'Comparable to Drata/Vanta with more engineering visibility.',
     targetAudience: 'Security, compliance leads, CTOs',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -397,7 +428,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['AWS, Azure, GCP, Okta, GitHub, Jira'],
     integrations: ['Okta, Google Workspace, GitHub, Jira, AWS'],
-    useCases: ['Audit readiness, Continuous control monitoring, Vendor assessments'],
+    useCases: [
+      'Audit readiness, Continuous control monitoring, Vendor assessments',
+    ],
     roi: 'Reduce audit time by 50–70%.',
     competitors: ['Drata, Vanta, Secureframe'],
     marketSize: '$10B compliance automation',
@@ -405,11 +438,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Collectors for major SaaS/Cloud, control mapping engine, audit packs.',
+    implementationDetails:
+      'Collectors for major SaaS/Cloud, control mapping engine, audit packs.',
     launchDate: '2024-09-01',
     customers: 42,
     rating: 4.7,
-    reviews: 37
+    reviews: 37,
   },
   {
     id: 'vector-search-starter',
@@ -417,21 +451,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Production vector DB setup with ingestion pipelines in a day',
     price: '$249',
     period: '/month',
-    description: 'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.',
+    description:
+      'Ready-to-run vector database setup (Pinecone/Weaviate/Elastic) with embeddings pipelines, schema, and example retrieval for your data.',
     features: [
       'Provider selection guide',
       'Schema and index templates',
       'ETL/ingestion pipelines',
       'Embeddings and chunking best practices',
       'Latency and cost tuning',
-      'Sample RAG app integration'
+      'Sample RAG app integration',
     ],
     popular: false,
     icon: '🧭',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-400',
     link: 'https://ziontechgroup.com/vector-search-starter',
-    marketPosition: 'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
+    marketPosition:
+      'Accelerator vs DIY; complements vendor docs with turnkey wiring.',
     targetAudience: 'Data engineers, ML engineers, startups',
     trialDays: 7,
     setupTime: '1–2 days',
@@ -447,11 +483,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Terraform and IaC modules, ETL pipelines, sample notebooks.',
+    implementationDetails:
+      'Terraform and IaC modules, ETL pipelines, sample notebooks.',
     launchDate: '2024-08-20',
     customers: 58,
     rating: 4.6,
-    reviews: 41
+    reviews: 41,
   },
   {
     id: 'tls-certificate-monitor',
@@ -459,13 +496,14 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Prevent outages with proactive cert expiry and chain validation',
     price: '$49',
     period: '/month',
-    description: 'Simple, reliable certificate expiry and chain monitoring with Slack/Email alerts and status pages.',
+    description:
+      'Simple, reliable certificate expiry and chain monitoring with Slack/Email alerts and status pages.',
     features: [
       'Multi-domain monitoring',
       'HTTP/TLS and OCSP checks',
       'Slack/Email alerts',
       'Public status pages',
-      'Weekly compliance reports'
+      'Weekly compliance reports',
     ],
     popular: false,
     icon: '🔒',
@@ -488,11 +526,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Agentless checks, scheduled runners, alerting integrations.',
+    implementationDetails:
+      'Agentless checks, scheduled runners, alerting integrations.',
     launchDate: '2024-07-12',
     customers: 90,
     rating: 4.5,
-    reviews: 52
+    reviews: 52,
   },
   {
     id: 'api-security-scanner',
@@ -500,21 +539,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Automatically find auth, injection and OWASP API Top 10 risks',
     price: '$799',
     period: '/month',
-    description: 'Continuous API security scanning for REST/GraphQL with schema discovery, auth testing, fuzzing and CI/CD gates. Reports mapped to OWASP API Top 10 with Jira-ready tickets.',
+    description:
+      'Continuous API security scanning for REST/GraphQL with schema discovery, auth testing, fuzzing and CI/CD gates. Reports mapped to OWASP API Top 10 with Jira-ready tickets.',
     features: [
       'OpenAPI/GraphQL schema discovery',
       'Auth and permission testing',
       'OWASP API Top 10 mapping',
       'Fuzzing and payload mutations',
       'CI/CD quality gates',
-      'Jira tickets and Slack alerts'
+      'Jira tickets and Slack alerts',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-rose-600 to-orange-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/api-security-scanner',
-    marketPosition: 'Competes with Salt Security and Noname (enterprise pricing $3k–$10k+/mo). Lightweight, developer-first and CI-friendly.',
+    marketPosition:
+      'Competes with Salt Security and Noname (enterprise pricing $3k–$10k+/mo). Lightweight, developer-first and CI-friendly.',
     targetAudience: 'Platform and app security teams, backend engineers',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -522,7 +563,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['Node.js, Python, OpenAPI, GraphQL'],
     integrations: ['GitHub Actions, GitLab CI, Jenkins, Jira, Slack'],
-    useCases: ['Shift-left API security, Pre-release checks, Continuous scanning'],
+    useCases: [
+      'Shift-left API security, Pre-release checks, Continuous scanning',
+    ],
     roi: 'Catch critical API vulns pre-prod and reduce incidents by 60%',
     competitors: ['Salt Security, Noname Security, 42Crunch'],
     marketSize: '$5B API security',
@@ -530,11 +573,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
+    implementationDetails:
+      'Schema crawler, auth probes, mutational fuzzing, reporters and CI gates.',
     launchDate: '2024-12-05',
     customers: 54,
     rating: 4.7,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'email-deliverability-monitor',
@@ -542,20 +586,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'SPF/DKIM/DMARC checks, blocklist watch and inbox placement',
     price: '$149',
     period: '/month',
-    description: 'Continuously monitors DNS auth records, blocklists and seed inbox placement. Actionable runbooks and alerts to keep campaigns landing in the inbox.',
+    description:
+      'Continuously monitors DNS auth records, blocklists and seed inbox placement. Actionable runbooks and alerts to keep campaigns landing in the inbox.',
     features: [
       'SPF/DKIM/DMARC validation',
       'Seed inbox placement tests',
       'Blocklist monitoring',
       'DMARC aggregate reports (RUA/RUF)',
-      'Alerts and weekly scorecards'
+      'Alerts and weekly scorecards',
     ],
     popular: false,
     icon: '📧',
     color: 'from-indigo-600 to-purple-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/email-deliverability-monitor',
-    marketPosition: 'Alternatives include GlockApps and MailGenius ($99–$299/mo). Adds automated remediation guides and DNS drift alerts.',
+    marketPosition:
+      'Alternatives include GlockApps and MailGenius ($99–$299/mo). Adds automated remediation guides and DNS drift alerts.',
     targetAudience: 'Growth, marketing, platform teams',
     trialDays: 7,
     setupTime: '2 hours',
@@ -571,11 +617,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'DNS validators, seed inbox network, blocklist checkers and alerting.',
+    implementationDetails:
+      'DNS validators, seed inbox network, blocklist checkers and alerting.',
     launchDate: '2024-09-22',
     customers: 77,
     rating: 4.6,
-    reviews: 44
+    reviews: 44,
   },
   {
     id: 'domain-dns-monitor',
@@ -583,20 +630,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Track DNS, nameserver and SSL changes with instant alerts',
     price: '$89',
     period: '/month',
-    description: 'Watches critical DNS records (A/AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',
+    description:
+      'Watches critical DNS records (A/AAAA, MX, TXT, NS) and TLS changes for drift and hijacks. Keeps an audit trail for compliance.',
     features: [
       'DNS record drift detection',
       'TLS and chain changes',
       'Audit log and diffs',
       'Slack/Email alerts',
-      'Exportable reports'
+      'Exportable reports',
     ],
     popular: false,
     icon: '🌐',
     color: 'from-sky-600 to-blue-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/domain-dns-monitor',
-    marketPosition: 'Similar to DNS Spy and Detectify add-ons ($49–$199/mo) with richer audits.',
+    marketPosition:
+      'Similar to DNS Spy and Detectify add-ons ($49–$199/mo) with richer audits.',
     targetAudience: 'IT, SRE, security teams',
     trialDays: 14,
     setupTime: '30 minutes',
@@ -612,11 +661,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Authoritative resolvers polling, diffs store, TLS probing and alerting.',
+    implementationDetails:
+      'Authoritative resolvers polling, diffs store, TLS probing and alerting.',
     launchDate: '2024-08-18',
     customers: 61,
     rating: 4.5,
-    reviews: 36
+    reviews: 36,
   },
   {
     id: 'uptime-slo-monitor',
@@ -624,20 +674,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Blackbox checks, SLOs, error budgets and burn-rate alerts',
     price: '$99',
     period: '/month',
-    description: 'Define SLOs and error budgets with multi-region uptime checks, latency SLIs and actionable burn-rate alerts.',
+    description:
+      'Define SLOs and error budgets with multi-region uptime checks, latency SLIs and actionable burn-rate alerts.',
     features: [
       'Multi-region uptime checks',
       'Latency and availability SLIs',
       'SLOs and error budgets',
       'Burn-rate alerts',
-      'Public status pages'
+      'Public status pages',
     ],
     popular: true,
     icon: '📈',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/uptime-slo-monitor',
-    marketPosition: 'Alternatives include Better Uptime and UptimeRobot ($8–$49/mo); SLO-first design and budgets included.',
+    marketPosition:
+      'Alternatives include Better Uptime and UptimeRobot ($8–$49/mo); SLO-first design and budgets included.',
     targetAudience: 'SREs, platform and product teams',
     trialDays: 14,
     setupTime: '1 hour',
@@ -653,11 +705,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Probers, SLI calculators, error-budget math and alerting integrations.',
+    implementationDetails:
+      'Probers, SLI calculators, error-budget math and alerting integrations.',
     launchDate: '2024-07-28',
     customers: 112,
     rating: 4.6,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'status-pages-slo',
@@ -665,19 +718,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Customer-facing status pages with SLO metrics baked-in',
     price: '$59',
     period: '/month',
-    description: 'Hosted status pages connected to your SLOs and incidents with custom components and history.',
+    description:
+      'Hosted status pages connected to your SLOs and incidents with custom components and history.',
     features: [
       'Custom components and groups',
       'Incident timelines',
       'SLO and uptime widgets',
-      'Subscriptions and webhooks'
+      'Subscriptions and webhooks',
     ],
     popular: false,
     icon: '📣',
     color: 'from-fuchsia-600 to-pink-700',
     textColor: 'text-fuchsia-300',
     link: 'https://ziontechgroup.com/status-pages-slo',
-    marketPosition: 'Competes with Atlassian Statuspage ($29–$1200/mo); simpler SLO-native approach.',
+    marketPosition:
+      'Competes with Atlassian Statuspage ($29–$1200/mo); simpler SLO-native approach.',
     targetAudience: 'SaaS, infra and platform teams',
     trialDays: 14,
     setupTime: '1 hour',
@@ -693,11 +748,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Static+API hybrid pages, component health, subscriptions.',
+    implementationDetails:
+      'Static+API hybrid pages, component health, subscriptions.',
     launchDate: '2024-06-30',
     customers: 49,
     rating: 4.5,
-    reviews: 27
+    reviews: 27,
   },
   {
     id: 'serverless-cron-manager',
@@ -705,19 +761,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Reliable scheduled jobs without servers and with retries',
     price: '$79',
     period: '/month',
-    description: 'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',
+    description:
+      'Define and run scheduled jobs with retries, jitter and alerts. Ideal for ETL and housekeeping tasks.',
     features: [
       'Cron syntax and UI',
       'Retries with jitter',
       'Dead-letter queues',
-      'Slack alerts'
+      'Slack alerts',
     ],
     popular: false,
     icon: '⏱️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/serverless-cron-manager',
-    marketPosition: 'Comparable to EasyCron and CloudWatch Events; adds portable templates and alerts.',
+    marketPosition:
+      'Comparable to EasyCron and CloudWatch Events; adds portable templates and alerts.',
     targetAudience: 'Developers, data engineers, SREs',
     trialDays: 14,
     setupTime: '1 hour',
@@ -737,7 +795,7 @@ export const realMarketServices: RealMarketService[] = [
     launchDate: '2024-05-12',
     customers: 73,
     rating: 4.5,
-    reviews: 39
+    reviews: 39,
   },
   {
     id: 'pdf-render-api',
@@ -745,19 +803,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Pixel-perfect HTML-to-PDF with fonts and headers/footers',
     price: '$49',
     period: '/month',
-    description: 'Drop-in PDF render API with template helpers, page numbers, margins and secure asset loading.',
+    description:
+      'Drop-in PDF render API with template helpers, page numbers, margins and secure asset loading.',
     features: [
       'Chrome-based renderer',
       'Custom fonts and CSS',
       'Headers/footers, page numbers',
-      'Webhook delivery'
+      'Webhook delivery',
     ],
     popular: true,
     icon: '🧾',
     color: 'from-slate-600 to-slate-800',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/pdf-render-api',
-    marketPosition: 'Competes with PDFMonkey/DocRaptor ($29–$99/mo). Simple pricing, great output quality.',
+    marketPosition:
+      'Competes with PDFMonkey/DocRaptor ($29–$99/mo). Simple pricing, great output quality.',
     targetAudience: 'Developers, ops, finance',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -773,11 +833,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Headless Chrome workers, queueing and asset sandboxing.',
+    implementationDetails:
+      'Headless Chrome workers, queueing and asset sandboxing.',
     launchDate: '2024-04-08',
     customers: 140,
     rating: 4.7,
-    reviews: 91
+    reviews: 91,
   },
   {
     id: 'gdpr-dsar-automation',
@@ -785,19 +846,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Automate data subject requests with evidence and workflows',
     price: '$399',
     period: '/month',
-    description: 'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor-ready evidence packs.',
+    description:
+      'Intake portal, identity verification, data source connectors and fulfillment workflows with auditor-ready evidence packs.',
     features: [
       'Request intake portal',
       'Identity verification',
       'Connectors to data stores',
-      'Evidence packs and exports'
+      'Evidence packs and exports',
     ],
     popular: true,
     icon: '⚖️',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/gdpr-dsar-automation',
-    marketPosition: 'Alternatives: Transcend/Segment privacy ($500–$3k/mo). Faster time-to-value for SMEs.',
+    marketPosition:
+      'Alternatives: Transcend/Segment privacy ($500–$3k/mo). Faster time-to-value for SMEs.',
     targetAudience: 'Legal, security, IT',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -813,11 +876,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Ticketing workflows, connectors, redaction and audit logs.',
+    implementationDetails:
+      'Ticketing workflows, connectors, redaction and audit logs.',
     launchDate: '2024-11-01',
     customers: 31,
     rating: 4.6,
-    reviews: 21
+    reviews: 21,
   },
   {
     id: 'vendor-risk-automation',
@@ -825,19 +889,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Questionnaires, evidence collection and continuous monitoring',
     price: '$299',
     period: '/month',
-    description: 'Automates vendor questionnaires (SIG Lite/CAIQ), evidence collection and scoring with renewal reminders and issues tracking.',
+    description:
+      'Automates vendor questionnaires (SIG Lite/CAIQ), evidence collection and scoring with renewal reminders and issues tracking.',
     features: [
       'SIG/CAIQ templates',
       'Evidence collection links',
       'Risk scoring and tracking',
-      'Renewal reminders'
+      'Renewal reminders',
     ],
     popular: false,
     icon: '🤝',
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/vendor-risk-automation',
-    marketPosition: 'Alternatives: Whistic, OneTrust Vendor Risk ($300–$2k/mo). We focus on speed and automation.',
+    marketPosition:
+      'Alternatives: Whistic, OneTrust Vendor Risk ($300–$2k/mo). We focus on speed and automation.',
     targetAudience: 'Security, procurement and legal',
     trialDays: 14,
     setupTime: '1–2 weeks',
@@ -853,11 +919,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'neural-quantum',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Questionnaire engine, evidence vault, risk scoring and reminders.',
+    implementationDetails:
+      'Questionnaire engine, evidence vault, risk scoring and reminders.',
     launchDate: '2024-10-15',
     customers: 26,
     rating: 4.5,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'browser-performance-monitor',
@@ -865,19 +932,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Core Web Vitals and RUM with actionable diagnostics',
     price: '$129',
     period: '/month',
-    description: 'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code-level fixes with dashboards.',
+    description:
+      'Collects field data (RUM) for Core Web Vitals, surfaces regressions and points to code-level fixes with dashboards.',
     features: [
       'RUM collection script',
       'Core Web Vitals (LCP/CLS/INP)',
       'Regression detection',
-      'Dashboards and alerts'
+      'Dashboards and alerts',
     ],
     popular: false,
     icon: '⚡',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/browser-performance-monitor',
-    marketPosition: 'Alternatives: SpeedCurve ($99–$439/mo). We bundle diagnostics and dev tips.',
+    marketPosition:
+      'Alternatives: SpeedCurve ($99–$439/mo). We bundle diagnostics and dev tips.',
     targetAudience: 'Frontend and growth teams',
     trialDays: 7,
     setupTime: '1 hour',
@@ -893,11 +962,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Lightweight RUM SDK, vitals aggregation and alerting.',
+    implementationDetails:
+      'Lightweight RUM SDK, vitals aggregation and alerting.',
     launchDate: '2024-09-08',
     customers: 52,
     rating: 4.5,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'database-performance-monitor',
@@ -905,19 +975,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Query insights, locks, connection pools and slow query fixes',
     price: '$299',
     period: '/month',
-    description: 'Collector agents for Postgres/MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',
+    description:
+      'Collector agents for Postgres/MySQL with dashboards for slow queries, locks and connection pool saturation with recommendations.',
     features: [
       'Slow query detection',
       'Lock contention analysis',
       'Connection pool saturation',
-      'Advisor recommendations'
+      'Advisor recommendations',
     ],
     popular: true,
     icon: '🗄️',
     color: 'from-indigo-600 to-slate-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/database-performance-monitor',
-    marketPosition: 'Competes with pganalyze and PMM ($199–$499/mo). Simpler setup and actionable fixes.',
+    marketPosition:
+      'Competes with pganalyze and PMM ($199–$499/mo). Simpler setup and actionable fixes.',
     targetAudience: 'Data and platform engineers',
     trialDays: 14,
     setupTime: '1–2 days',
@@ -937,7 +1009,7 @@ export const realMarketServices: RealMarketService[] = [
     launchDate: '2024-08-01',
     customers: 39,
     rating: 4.6,
-    reviews: 23
+    reviews: 23,
   },
   {
     id: 'cloud-platform-managed-kubernetes',
@@ -945,19 +1017,21 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Production EKS/GKE/AKS with GitOps, SSO and guardrails',
     price: '$1,999',
     period: '/month',
-    description: 'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',
+    description:
+      'Landing zone for Kubernetes with IaC, GitOps, SSO, cost controls, backup and observability out of the box.',
     features: [
       'IaC blueprints and GitOps',
       'SSO and RBAC policies',
       'Cost controls and quotas',
-      'Backup and restore runbooks'
+      'Backup and restore runbooks',
     ],
     popular: true,
     icon: '☁️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/cloud-platform',
-    marketPosition: 'Alternatives: Platform9, Rafay (custom pricing). Opinionated, fast time-to-value.',
+    marketPosition:
+      'Alternatives: Platform9, Rafay (custom pricing). Opinionated, fast time-to-value.',
     targetAudience: 'Platform engineering and DevOps',
     trialDays: 0,
     setupTime: '1–3 weeks',
@@ -973,32 +1047,36 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Blueprints, policies, GitOps pipelines and SRE runbooks.',
+    implementationDetails:
+      'Blueprints, policies, GitOps pipelines and SRE runbooks.',
     launchDate: '2025-01-10',
     customers: 17,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'rum-analytics-starter',
     name: 'Real User Monitoring (RUM) Analytics Starter',
-    tagline: 'Measure real user performance, Core Web Vitals and conversion impact',
+    tagline:
+      'Measure real user performance, Core Web Vitals and conversion impact',
     price: '$59',
     period: '/month',
-    description: 'Drop-in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',
+    description:
+      'Drop-in RUM snippet with Core Web Vitals, page timings, SPA route tracking, and conversion impact analysis. Alerts and weekly insights included.',
     features: [
       'Core Web Vitals (LCP, INP, CLS)',
       'Conversion impact analysis',
       'Geo/device breakdowns',
       'Anomaly alerts to Slack/Email',
-      'Privacy-friendly, cookie-lite'
+      'Privacy-friendly, cookie-lite',
     ],
     popular: false,
     icon: '⚡',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/rum-analytics-starter',
-    marketPosition: 'Comparable to SpeedCurve RUM, Raygun RUM, and New Relic Browser; focused SMB starter with clear insights.',
+    marketPosition:
+      'Comparable to SpeedCurve RUM, Raygun RUM, and New Relic Browser; focused SMB starter with clear insights.',
     targetAudience: 'Growth, product, and web teams',
     trialDays: 7,
     setupTime: '15 minutes',
@@ -1014,11 +1092,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'analytics-futuristic' as any,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Snippet capture with server-side aggregation and privacy controls.',
+    implementationDetails:
+      'Snippet capture with server-side aggregation and privacy controls.',
     launchDate: '2025-02-15',
     customers: 26,
     rating: 4.6,
-    reviews: 14
+    reviews: 14,
   },
   {
     id: 'accessibility-compliance-auditor',
@@ -1026,20 +1105,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Automated WCAG checks with actionable fixes and CI integration',
     price: '$79',
     period: '/month',
-    description: 'Automate WCAG 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',
+    description:
+      'Automate WCAG 2.2 AA checks with axe-core powered scans, page templates, and CI gates. Export auditor-ready reports and remediation tasks.',
     features: [
       'axe-core rules and custom checks',
       'CI gate on severity thresholds',
       'Page template scanning',
       'Issue tracker export',
-      'Auditor-ready PDF reports'
+      'Auditor-ready PDF reports',
     ],
     popular: true,
     icon: '♿',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/accessibility-compliance-auditor',
-    marketPosition: 'Alternative to manual audits; complements Deque axe and Pa11y in CI/CD.',
+    marketPosition:
+      'Alternative to manual audits; complements Deque axe and Pa11y in CI/CD.',
     targetAudience: 'Web, product, and compliance teams',
     trialDays: 7,
     setupTime: '1 hour',
@@ -1055,11 +1136,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic' as any,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Headless scans with rulesets, diffing, and gated pipelines.',
+    implementationDetails:
+      'Headless scans with rulesets, diffing, and gated pipelines.',
     launchDate: '2025-02-12',
     customers: 31,
     rating: 4.7,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'api-latency-budget-enforcer',
@@ -1067,20 +1149,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Guardrails for p95/p99 latency budgets with tickets and alerts',
     price: '$119',
     period: '/month',
-    description: 'Define per-endpoint latency budgets (p95/p99) and auto-create remediation tasks when budgets are breached. Includes SLOs, error budgets, and on-call alerts.',
+    description:
+      'Define per-endpoint latency budgets (p95/p99) and auto-create remediation tasks when budgets are breached. Includes SLOs, error budgets, and on-call alerts.',
     features: [
       'Per-route latency SLOs',
       'Error budget tracking',
       'Auto-ticket creation',
       'Slack/PagerDuty alerts',
-      'Weekly drift reports'
+      'Weekly drift reports',
     ],
     popular: false,
     icon: '⏱️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/api-latency-budget-enforcer',
-    marketPosition: 'Bridges observability and execution; complements Datadog SLO and Grafana.',
+    marketPosition:
+      'Bridges observability and execution; complements Datadog SLO and Grafana.',
     targetAudience: 'SREs, platform and backend teams',
     trialDays: 14,
     setupTime: '1 day',
@@ -1096,11 +1180,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'monitoring-futuristic' as any,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'SLO definitions, budget math, and actionable ownership routes.',
+    implementationDetails:
+      'SLO definitions, budget math, and actionable ownership routes.',
     launchDate: '2025-02-18',
     customers: 18,
     rating: 4.5,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'security-headers-monitor',
@@ -1108,20 +1193,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Track HSTS, CSP, TLS config and get hardening playbooks',
     price: '$49',
     period: '/month',
-    description: 'Monitors site headers and TLS for regressions. Provides CSP templates, HSTS, and modern TLS guidance with alerts and diffs.',
+    description:
+      'Monitors site headers and TLS for regressions. Provides CSP templates, HSTS, and modern TLS guidance with alerts and diffs.',
     features: [
       'CSP/HSTS header checks',
       'TLS version/cipher checks',
       'Auto-diff of changes',
       'Slack/Email alerts',
-      'Hardening playbooks'
+      'Hardening playbooks',
     ],
     popular: true,
     icon: '🛡️',
     color: 'from-indigo-600 to-slate-700',
     textColor: 'text-indigo-300',
     link: 'https://ziontechgroup.com/services/security-headers-monitor',
-    marketPosition: 'Lightweight alternative to manual scans; complements Mozilla Observatory and SSL Labs checks.',
+    marketPosition:
+      'Lightweight alternative to manual scans; complements Mozilla Observatory and SSL Labs checks.',
     targetAudience: 'Security and platform teams',
     trialDays: 7,
     setupTime: '20 minutes',
@@ -1129,7 +1216,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['Node.js, TLS, HTTP'],
     integrations: ['Slack, Webhooks'],
-    useCases: ['Prevent misconfigurations, Detect regressions, Improve posture'],
+    useCases: [
+      'Prevent misconfigurations, Detect regressions, Improve posture',
+    ],
     roi: 'Reduce security regressions and audit time.',
     competitors: ['Mozilla Observatory, SSL Labs'],
     marketSize: '$3B security testing',
@@ -1141,7 +1230,7 @@ export const realMarketServices: RealMarketService[] = [
     launchDate: '2025-02-20',
     customers: 44,
     rating: 4.6,
-    reviews: 22
+    reviews: 22,
   },
   {
     id: 'cookie-consent-manager',
@@ -1149,20 +1238,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'GDPR/CCPA consent banner, audit trails, and policy generator',
     price: '$39',
     period: '/month',
-    description: 'Easy consent banner with per-region rules, audit logs, and auto-generated cookie policy pages. Integrates with analytics blockers.',
+    description:
+      'Easy consent banner with per-region rules, audit logs, and auto-generated cookie policy pages. Integrates with analytics blockers.',
     features: [
       'Geo-based consent rules',
       'Policy page generator',
       'Audit log export',
       'Analytics/script blocking',
-      'A/B banner testing'
+      'A/B banner testing',
     ],
     popular: false,
     icon: '🍪',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/cookie-consent-manager',
-    marketPosition: 'Simple alternative to complex CMPs; transparent pricing for SMBs.',
+    marketPosition:
+      'Simple alternative to complex CMPs; transparent pricing for SMBs.',
     targetAudience: 'Marketing, legal, and web teams',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -1182,7 +1273,7 @@ export const realMarketServices: RealMarketService[] = [
     launchDate: '2025-02-22',
     customers: 21,
     rating: 4.5,
-    reviews: 10
+    reviews: 10,
   },
   {
     id: 'backup-policy-auditor',
@@ -1190,20 +1281,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Validate backup frequency, retention and recovery objectives',
     price: '$99',
     period: '/month',
-    description: 'Continuously checks backup policies against RPO/RTO targets across clouds and DBs. Flags drift and creates remediation tasks.',
+    description:
+      'Continuously checks backup policies against RPO/RTO targets across clouds and DBs. Flags drift and creates remediation tasks.',
     features: [
       'RPO/RTO policy checks',
       'Snapshot/restore verification',
       'Drift detection',
       'Weekly compliance reports',
-      'Auto-ticket workflows'
+      'Auto-ticket workflows',
     ],
     popular: false,
     icon: '💾',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/backup-policy-auditor',
-    marketPosition: 'Brings reliability SRE rigor to backups; complements cloud-native backup tools.',
+    marketPosition:
+      'Brings reliability SRE rigor to backups; complements cloud-native backup tools.',
     targetAudience: 'SREs, platform and data teams',
     trialDays: 14,
     setupTime: '2 days',
@@ -1219,11 +1312,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'cloud-futuristic' as any,
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Read-only checks, sample restores, and compliance export.',
+    implementationDetails:
+      'Read-only checks, sample restores, and compliance export.',
     launchDate: '2025-02-24',
     customers: 12,
     rating: 4.5,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'consent-compliance-kit',
@@ -1231,21 +1325,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'GDPR/CPRA consent banners, geo-targeting, and audit-ready logs',
     price: '$49',
     period: '/month',
-    description: 'Deploy IAB TCF v2 compatible consent banners with region-aware policies, capture consent receipts, and export audit logs for GDPR/CPRA. Includes cookie inventory and auto-blocking helpers.',
+    description:
+      'Deploy IAB TCF v2 compatible consent banners with region-aware policies, capture consent receipts, and export audit logs for GDPR/CPRA. Includes cookie inventory and auto-blocking helpers.',
     features: [
       'IAB TCF v2.2 compatible consent',
       'Geo-targeted policies (EEA/UK/US states)',
       'Consent receipts and log exports',
       'Cookie inventory and auto-blocking',
       'Policy pages and versioning',
-      'CMP integrations and tag manager hooks'
+      'CMP integrations and tag manager hooks',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/services/consent-compliance-kit',
-    marketPosition: 'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
+    marketPosition:
+      'Practical, affordable alternative to heavyweight CMPs for SMBs and startups.',
     targetAudience: 'Marketing ops, legal/compliance, web teams',
     trialDays: 7,
     setupTime: '1 day',
@@ -1261,33 +1357,37 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Embeddable banner, policy config UI, consent log store, export jobs.',
+    implementationDetails:
+      'Embeddable banner, policy config UI, consent log store, export jobs.',
     launchDate: '2025-08-22',
     customers: 22,
     rating: 4.6,
-    reviews: 11
+    reviews: 11,
   },
   {
     id: 'api-backfill-reconciliation',
     name: 'API Backfill & Reconciliation',
-    tagline: 'Recover missed events, dedupe, and reconcile systems with confidence',
+    tagline:
+      'Recover missed events, dedupe, and reconcile systems with confidence',
     price: '$99',
     period: '/month',
-    description: 'Detect and repair data gaps between SaaS APIs and your warehouse/CRM. Provides replay-safe backfills, idempotency, and reconciliation reports.',
+    description:
+      'Detect and repair data gaps between SaaS APIs and your warehouse/CRM. Provides replay-safe backfills, idempotency, and reconciliation reports.',
     features: [
       'Gap detection and backfill plans',
       'Idempotent replay and deduplication',
       'Hash-based reconciliation reports',
       'Rate-limit aware workers',
       'Alerting and failure retries',
-      'Warehouse and CRM syncs'
+      'Warehouse and CRM syncs',
     ],
     popular: false,
     icon: '🔁',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/api-backfill-reconciliation',
-    marketPosition: 'Bridges the gap between brittle webhook flows and reliable data pipelines.',
+    marketPosition:
+      'Bridges the gap between brittle webhook flows and reliable data pipelines.',
     targetAudience: 'Data engineers, platform teams, RevOps',
     trialDays: 14,
     setupTime: '2 days',
@@ -1303,11 +1403,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'integration-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Replay-safe pullers, checksum compare, and reconciliation dashboards.',
+    implementationDetails:
+      'Replay-safe pullers, checksum compare, and reconciliation dashboards.',
     launchDate: '2025-08-22',
     customers: 15,
     rating: 4.7,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'data-quality-sla-monitor',
@@ -1315,21 +1416,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Track freshness, nulls, and schema drift with alerting and SLOs',
     price: '$149',
     period: '/month',
-    description: 'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
+    description:
+      'Define and monitor data SLAs for freshness and quality. Receive alerts, create tickets, and visualize lineage impacts for downstream consumers.',
     features: [
       'Freshness and volume checks',
       'Null/outlier thresholds',
       'Schema drift detection',
       'Lineage visualization',
       'SLOs and error budgets',
-      'Slack/Jira alerts and reports'
+      'Slack/Jira alerts and reports',
     ],
     popular: true,
     icon: '📊',
     color: 'from-purple-600 to-pink-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/services/data-quality-sla-monitor',
-    marketPosition: 'Lightweight alternative to full data observability platforms for SMBs.',
+    marketPosition:
+      'Lightweight alternative to full data observability platforms for SMBs.',
     targetAudience: 'Analytics, data engineering, product teams',
     trialDays: 14,
     setupTime: '2 days',
@@ -1337,7 +1440,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['dbt, Airflow, Postgres, BigQuery'],
     integrations: ['Snowflake, BigQuery, Redshift, ClickHouse'],
-    useCases: ['Prevent stale dashboards, Catch pipeline regressions, Improve trust'],
+    useCases: [
+      'Prevent stale dashboards, Catch pipeline regressions, Improve trust',
+    ],
     roi: 'Reduce dashboard breaks; improve data-dependent feature velocity.',
     competitors: ['Monte Carlo, Bigeye, Great Expectations'],
     marketSize: '$1.5B data observability',
@@ -1345,11 +1450,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Metadata collectors, rules engine, SLA store, and alert webhooks.',
+    implementationDetails:
+      'Metadata collectors, rules engine, SLA store, and alert webhooks.',
     launchDate: '2025-08-22',
     customers: 28,
     rating: 4.6,
-    reviews: 13
+    reviews: 13,
   },
   {
     id: 'postgres-index-advisor',
@@ -1357,14 +1463,15 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Automatic index suggestions, vacuum tuning, and slow query fixes',
     price: '$79',
     period: '/month',
-    description: 'Analyze query plans and table stats to recommend and schedule index changes, vacuum/autovacuum tuning, and bloat remediation.',
+    description:
+      'Analyze query plans and table stats to recommend and schedule index changes, vacuum/autovacuum tuning, and bloat remediation.',
     features: [
       'EXPLAIN plan analysis',
       'Missing/unused index detection',
       'Autovacuum and bloat tuning',
       'Safe change windows',
       'Rollback and impact reports',
-      'Alerts on regressions'
+      'Alerts on regressions',
     ],
     popular: false,
     icon: '🐘',
@@ -1387,33 +1494,37 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Read-only plan capture, advisor engine, change scripts, and dashboards.',
+    implementationDetails:
+      'Read-only plan capture, advisor engine, change scripts, and dashboards.',
     launchDate: '2025-08-22',
     customers: 18,
     rating: 4.5,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'gitops-drift-monitor',
     name: 'GitOps Policy & Drift Monitor',
-    tagline: 'Detect and correct drift between Git and cluster state with policy gates',
+    tagline:
+      'Detect and correct drift between Git and cluster state with policy gates',
     price: '$99',
     period: '/month',
-    description: 'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',
+    description:
+      'Continuously compare desired manifests to live resources, enforce policies, and open pull requests to reconcile drift automatically.',
     features: [
       'Desired vs live diffing',
       'OPA/Conftest policy gates',
       'Auto-PR remediation',
       'Slack/Jira alerts',
       'Change history and approvals',
-      'Multi-cluster support'
+      'Multi-cluster support',
     ],
     popular: false,
     icon: '🧭',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/gitops-drift-monitor',
-    marketPosition: 'Complements Argo CD/Flux with governance and auto-remediation workflows.',
+    marketPosition:
+      'Complements Argo CD/Flux with governance and auto-remediation workflows.',
     targetAudience: 'Platform engineering, DevOps, SRE',
     trialDays: 14,
     setupTime: '2 days',
@@ -1429,11 +1540,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'devops-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Cluster collectors, policy engine, reconciler workers, and PR bots.',
+    implementationDetails:
+      'Cluster collectors, policy engine, reconciler workers, and PR bots.',
     launchDate: '2025-08-22',
     customers: 14,
     rating: 4.6,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'soc2-readiness-scanner',
@@ -1441,20 +1553,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Map controls to TSC, auto-collect evidence, and flag gaps',
     price: '$79',
     period: '/month',
-    description: 'Pre-audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor-friendly reports.',
+    description:
+      'Pre-audit posture scanner that links integrations to controls, highlights evidence gaps, and produces auditor-friendly reports.',
     features: [
       'Control mapping templates',
       'Evidence collectors and checks',
       'Policy and process coverage',
       'Gap analysis and tasks',
-      'Exportable auditor reports'
+      'Exportable auditor reports',
     ],
     popular: true,
     icon: '📋',
     color: 'from-teal-600 to-emerald-700',
     textColor: 'text-teal-300',
     link: 'https://ziontechgroup.com/services/soc2-readiness-scanner',
-    marketPosition: 'Faster SOC 2 preparation for startups; complements evidence automation.',
+    marketPosition:
+      'Faster SOC 2 preparation for startups; complements evidence automation.',
     targetAudience: 'Founders, security leads, compliance managers',
     trialDays: 7,
     setupTime: '1 day',
@@ -1470,25 +1584,28 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Connector checks, control mapping DB, gap scoring and exports.',
+    implementationDetails:
+      'Connector checks, control mapping DB, gap scoring and exports.',
     launchDate: '2025-08-22',
     customers: 24,
     rating: 4.7,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'cloud-asset-attack-surface',
     name: 'Cloud Asset Inventory & Attack Surface',
-    tagline: 'Continuously map cloud assets, exposures, and internet-facing risks',
+    tagline:
+      'Continuously map cloud assets, exposures, and internet-facing risks',
     price: '$149',
     period: '/month',
-    description: 'Discover assets across AWS/Azure/GCP, classify risks (public buckets, open ports), and generate remediation tickets with ownership routing.',
+    description:
+      'Discover assets across AWS/Azure/GCP, classify risks (public buckets, open ports), and generate remediation tickets with ownership routing.',
     features: [
       'Multi-cloud asset discovery',
       'Public exposure detection',
       'Ownership and tagging',
       'Risk scoring and SLAs',
-      'Auto-ticket creation'
+      'Auto-ticket creation',
     ],
     popular: true,
     icon: '☁️',
@@ -1503,7 +1620,9 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['AWS Config, Azure Resource Graph, GCP Asset Inventory'],
     integrations: ['Jira, ServiceNow, Slack'],
-    useCases: ['Reduce attack surface, Speed up remediation, Improve visibility'],
+    useCases: [
+      'Reduce attack surface, Speed up remediation, Improve visibility',
+    ],
     roi: 'Lower breach likelihood; improved audit readiness.',
     competitors: ['Wiz, Prisma Cloud (CSPM)'],
     marketSize: '$8B cloud security',
@@ -1511,32 +1630,36 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'cloud-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'API collectors, exposure heuristics, ticket routing, dashboards.',
+    implementationDetails:
+      'API collectors, exposure heuristics, ticket routing, dashboards.',
     launchDate: '2025-08-22',
     customers: 19,
     rating: 4.5,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'llm-red-team-simulator',
     name: 'LLM Red Team & Jailbreak Simulator',
-    tagline: 'Automated adversarial prompts, safety tests, and regression dashboards',
+    tagline:
+      'Automated adversarial prompts, safety tests, and regression dashboards',
     price: '$99',
     period: '/month',
-    description: 'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',
+    description:
+      'Continuously test LLM apps against prompt injection, sensitive data exfiltration, and policy violations with trending dashboards and CI gates.',
     features: [
       'Prompt injection libraries',
       'PII/redaction checks',
       'Safety regression tests',
       'Model/provider matrix',
-      'CI gates and reports'
+      'CI gates and reports',
     ],
     popular: false,
     icon: '🧪',
     color: 'from-rose-600 to-pink-700',
     textColor: 'text-rose-300',
     link: 'https://ziontechgroup.com/services/llm-red-team-simulator',
-    marketPosition: 'Proactive LLM safety for production apps; complements guardrails.',
+    marketPosition:
+      'Proactive LLM safety for production apps; complements guardrails.',
     targetAudience: 'AI platform teams, security engineers',
     trialDays: 7,
     setupTime: '1 day',
@@ -1552,32 +1675,36 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Scenario libraries, orchestrator, CI integration, dashboards.',
+    implementationDetails:
+      'Scenario libraries, orchestrator, CI integration, dashboards.',
     launchDate: '2025-08-22',
     customers: 17,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'affiliate-fraud-detector',
     name: 'Affiliate Fraud Detector',
-    tagline: 'Block coupon abuse, self-referrals, and low-quality traffic at scale',
+    tagline:
+      'Block coupon abuse, self-referrals, and low-quality traffic at scale',
     price: '$129',
     period: '/month',
-    description: 'Enhances affiliate programs with fraud heuristics, device/identity checks, and payout holds to protect margins.',
+    description:
+      'Enhances affiliate programs with fraud heuristics, device/identity checks, and payout holds to protect margins.',
     features: [
       'Self-referral detection',
       'Device and IP risk signals',
       'Velocity and cohort heuristics',
       'Payout hold workflows',
-      'Appeal and review portal'
+      'Appeal and review portal',
     ],
     popular: false,
     icon: '🛑',
     color: 'from-red-600 to-rose-700',
     textColor: 'text-red-300',
     link: 'https://ziontechgroup.com/services/affiliate-fraud-detector',
-    marketPosition: 'Pairs with attribution hubs to prevent fraud-driven losses.',
+    marketPosition:
+      'Pairs with attribution hubs to prevent fraud-driven losses.',
     targetAudience: 'Growth teams, finance ops',
     trialDays: 14,
     setupTime: '2 days',
@@ -1593,11 +1720,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'ai-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
+    implementationDetails:
+      'Data connectors, identity resolution, MMM fitting, and optimizer UI.',
     launchDate: '2025-01-21',
     customers: 48,
     rating: 4.7,
-    reviews: 29
+    reviews: 29,
   },
   {
     id: 'data-governance-starter',
@@ -1605,20 +1733,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Lightweight catalog, lineage, and PII tagging for modern stacks',
     price: '$699',
     period: '/month',
-    description: 'Pragmatic data governance with automated discovery, column-level lineage, PII tagging, and policy enforcement. Vendor-neutral and dbt-friendly.',
+    description:
+      'Pragmatic data governance with automated discovery, column-level lineage, PII tagging, and policy enforcement. Vendor-neutral and dbt-friendly.',
     features: [
       'Automated table/column discovery',
       'Column-level lineage and impact analysis',
       'PII tagging and masking policies',
       'Glossary and ownership workflows',
-      'dbt/Snowflake/BigQuery integrations'
+      'dbt/Snowflake/BigQuery integrations',
     ],
     popular: true,
     icon: '🗂️',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-400',
     link: 'https://ziontechgroup.com/data-governance-starter',
-    marketPosition: 'Compared with Alation/Collibra (enterprise). Faster time-to-value for small data teams.',
+    marketPosition:
+      'Compared with Alation/Collibra (enterprise). Faster time-to-value for small data teams.',
     targetAudience: 'Data Engineering, Analytics, Security & Compliance',
     trialDays: 7,
     setupTime: '3–7 days',
@@ -1626,7 +1756,11 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['TypeScript', 'dbt', 'OpenLineage'],
     integrations: ['Snowflake', 'BigQuery', 'Redshift', 'Databricks'],
-    useCases: ['Self-serve data discovery', 'Compliance readiness', 'Change impact analysis'],
+    useCases: [
+      'Self-serve data discovery',
+      'Compliance readiness',
+      'Change impact analysis',
+    ],
     roi: 'Cut incident resolution time 15–25% via lineage and ownership',
     competitors: ['Alation', 'Collibra', 'Atlan'],
     marketSize: '$6B+ data governance',
@@ -1634,32 +1768,36 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'data-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'OpenLineage-based scanners, dbt metadata, and policy engine.',
+    implementationDetails:
+      'OpenLineage-based scanners, dbt metadata, and policy engine.',
     launchDate: '2025-01-21',
     customers: 34,
     rating: 4.7,
-    reviews: 18
+    reviews: 18,
   },
   {
     id: 'ecommerce-personalization',
     name: 'E‑commerce Personalization Engine',
-    tagline: 'Real-time recommendations, bundles, and promotions that drive AOV',
+    tagline:
+      'Real-time recommendations, bundles, and promotions that drive AOV',
     price: '$499',
     period: '/month',
-    description: 'Plug-and-play personalization for storefronts. Learns from behavior and catalog to optimize recommendations, bundles, and on-site promotions.',
+    description:
+      'Plug-and-play personalization for storefronts. Learns from behavior and catalog to optimize recommendations, bundles, and on-site promotions.',
     features: [
       'Session-based and user-based recommendations',
       'Bundle and upsell optimizer',
       'A/B testing and holdouts',
       'Shopify/BigCommerce apps',
-      'Audience segments and API'
+      'Audience segments and API',
     ],
     popular: true,
     icon: '🛒',
     color: 'from-pink-600 to-rose-700',
     textColor: 'text-pink-300',
     link: 'https://ziontechgroup.com/ecommerce-personalization',
-    marketPosition: 'Alternatives include VWO/Optimizely personalization. Clear SMB pricing and fast setup.',
+    marketPosition:
+      'Alternatives include VWO/Optimizely personalization. Clear SMB pricing and fast setup.',
     targetAudience: 'Shopify/BigCommerce merchants and growth teams',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -1675,11 +1813,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'micro-saas',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'SDK snippet, event collectors, and real-time model serving.',
+    implementationDetails:
+      'SDK snippet, event collectors, and real-time model serving.',
     launchDate: '2025-01-21',
     customers: 120,
     rating: 4.6,
-    reviews: 77
+    reviews: 77,
   },
   {
     id: 'iot-fleet-telemetry',
@@ -1687,20 +1826,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Unified device telemetry, alerts, and predictive maintenance',
     price: '$999',
     period: '/month',
-    description: 'Collect, store, and analyze telemetry from vehicles and devices. Real-time alerts, anomaly detection, geofencing, and maintenance predictions.',
+    description:
+      'Collect, store, and analyze telemetry from vehicles and devices. Real-time alerts, anomaly detection, geofencing, and maintenance predictions.',
     features: [
       'MQTT/HTTP ingestion and device registry',
       'Rules engine and alerting',
       'Anomaly detection and forecasting',
       'Geofencing and trip analytics',
-      'APIs and dashboards'
+      'APIs and dashboards',
     ],
     popular: false,
     icon: '🚚',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/iot-fleet-telemetry',
-    marketPosition: 'Complements AWS IoT/Azure IoT. Faster SMB onboarding with ready analytics.',
+    marketPosition:
+      'Complements AWS IoT/Azure IoT. Faster SMB onboarding with ready analytics.',
     targetAudience: 'Logistics, Mobility, Field Ops, OEMs',
     trialDays: 14,
     setupTime: '2–4 weeks',
@@ -1716,11 +1857,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'edge-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Device registry, stream processors, and feature store for ML.',
+    implementationDetails:
+      'Device registry, stream processors, and feature store for ML.',
     launchDate: '2025-01-21',
     customers: 21,
     rating: 4.5,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'api-security-testing',
@@ -1728,20 +1870,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Automated DAST/SAST for APIs with CI/CD integration',
     price: '$399',
     period: '/month',
-    description: 'Shift-left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',
+    description:
+      'Shift-left API security with automated scanning in pipelines. Finds OWASP API Top 10 issues, secrets, and misconfigurations with fix guidance.',
     features: [
       'OWASP API Top 10 checks',
       'Secrets and token leakage detection',
       'CI/CD and PR annotations',
       'SBOM and dependency risk',
-      'Reports and Jira tickets'
+      'Reports and Jira tickets',
     ],
     popular: false,
     icon: '🛡️',
     color: 'from-slate-600 to-gray-700',
     textColor: 'text-slate-300',
     link: 'https://ziontechgroup.com/api-security-testing',
-    marketPosition: 'Compared with Snyk/42Crunch/Burp Suite. We include actionable PR annotations and auto-fix recipes.',
+    marketPosition:
+      'Compared with Snyk/42Crunch/Burp Suite. We include actionable PR annotations and auto-fix recipes.',
     targetAudience: 'Platform, AppSec, DevSecOps',
     trialDays: 7,
     setupTime: '1–3 days',
@@ -1749,7 +1893,11 @@ export const realMarketServices: RealMarketService[] = [
     realService: true,
     technology: ['OWASP ZAP', 'SAST', 'SBOM'],
     integrations: ['GitHub', 'GitLab', 'Jenkins'],
-    useCases: ['Shift-left security', 'Regulatory compliance', 'Audit readiness'],
+    useCases: [
+      'Shift-left security',
+      'Regulatory compliance',
+      'Audit readiness',
+    ],
     roi: 'Reduce critical vuln exposure window by 40–60%',
     competitors: ['Snyk', 'Burp Suite', '42Crunch'],
     marketSize: '$7B+ AppSec tooling',
@@ -1757,11 +1905,12 @@ export const realMarketServices: RealMarketService[] = [
     variant: 'security-futuristic',
     contactInfo: contact,
     realImplementation: true,
-    implementationDetails: 'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
+    implementationDetails:
+      'Quota enforcer, advisor engine, and GitOps PR flow with alerts.',
     launchDate: '2025-08-22',
     customers: 13,
     rating: 4.5,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'cloudflare-turnstile-proxy',
@@ -1769,13 +1918,14 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Kill signup spam and bot abuse without CAPTCHAs',
     price: '$39',
     period: '/month',
-    description: 'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop-in protection for signups, login, and sensitive endpoints.',
+    description:
+      'Edge proxy that adds Turnstile challenges, device fingerprints, and reputation checks in front of forms and APIs. Drop-in protection for signups, login, and sensitive endpoints.',
     features: [
       'Turnstile token verification',
       'Reputation and ASN heuristics',
       'IP/device fingerprinting',
       'Adaptive challenges',
-      'Block/allow lists and webhooks'
+      'Block/allow lists and webhooks',
     ],
     popular: false,
     icon: '🛡️',
@@ -1800,14 +1950,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Edge verify and adaptive challenge, policy config UI, analytics.',
+    implementationDetails:
+      'Edge verify and adaptive challenge, policy config UI, analytics.',
     launchDate: '2025-02-25',
     customers: 19,
     rating: 4.6,
-    reviews: 8
+    reviews: 8,
   },
   {
     id: 'reverse-etl-lite',
@@ -1815,20 +1966,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Sync warehouse data to SaaS apps in minutes',
     price: '$99',
     period: '/month',
-    description: 'Point-and-click syncs from BigQuery/Snowflake/Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',
+    description:
+      'Point-and-click syncs from BigQuery/Snowflake/Postgres to HubSpot, Salesforce, and ad platforms. Includes scheduling, mapping, and error handling.',
     features: [
       'Warehouse connectors',
       'Field mapping UI',
       'Schedules and retries',
       'Dry-run and diffs',
-      'Row-level filters'
+      'Row-level filters',
     ],
     popular: true,
     icon: '🔄',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/services/reverse-etl-lite',
-    marketPosition: 'Affordable, focused alternative to heavy Reverse ETL suites.',
+    marketPosition:
+      'Affordable, focused alternative to heavy Reverse ETL suites.',
     targetAudience: 'Growth, data engineering, RevOps',
     trialDays: 14,
     setupTime: '1 hour',
@@ -1846,14 +1999,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Connectors, incremental keys, idempotent upserts, error DLQ.',
+    implementationDetails:
+      'Connectors, incremental keys, idempotent upserts, error DLQ.',
     launchDate: '2025-02-26',
     customers: 12,
     rating: 4.5,
-    reviews: 6
+    reviews: 6,
   },
   {
     id: 'ai-rfp-response-copilot',
@@ -1861,20 +2015,22 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Draft RFP answers from your knowledge base with evidence links',
     price: '$129',
     period: '/month',
-    description: 'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',
+    description:
+      'Ingest past proposals, policies, and docs. Draft high-quality RFP responses with citations, track requirements coverage, and export to Word/PDF.',
     features: [
       'RAG over proposals & policies',
       'Section templates and styles',
       'Evidence citations',
       'Gap coverage tracking',
-      'Word/PDF export'
+      'Word/PDF export',
     ],
     popular: true,
     icon: '📝',
     color: 'from-violet-600 to-fuchsia-700',
     textColor: 'text-violet-300',
     link: 'https://ziontechgroup.com/services/ai-rfp-response-copilot',
-    marketPosition: 'Purpose-built for proposal teams; governance and citations built-in.',
+    marketPosition:
+      'Purpose-built for proposal teams; governance and citations built-in.',
     targetAudience: 'Sales engineering, proposal teams, compliance',
     trialDays: 14,
     setupTime: '1 day',
@@ -1892,14 +2048,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Document loaders, chunking, topic maps, structured draft generator.',
+    implementationDetails:
+      'Document loaders, chunking, topic maps, structured draft generator.',
     launchDate: '2025-02-20',
     customers: 14,
     rating: 4.6,
-    reviews: 9
+    reviews: 9,
   },
   {
     id: 'gpt-eval-harness',
@@ -1907,13 +2064,14 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Automated evals with golden sets, judges, and regression gates',
     price: '$79',
     period: '/month',
-    description: 'Define tasks and datasets, run multi-model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
+    description:
+      'Define tasks and datasets, run multi-model evaluations with judge prompts, track metrics and drift, and block risky deployments with CI gates.',
     features: [
       'Golden sets and prompts',
       'Judge model scoring',
       'Multi-model matrix',
       'Regression and drift alerts',
-      'CI quality gates'
+      'CI quality gates',
     ],
     popular: false,
     icon: '🧪',
@@ -1938,35 +2096,39 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Task runners, judge prompts, scoring stores, CI plugin.',
+    implementationDetails:
+      'Task runners, judge prompts, scoring stores, CI plugin.',
     launchDate: '2025-02-12',
     customers: 16,
     rating: 4.5,
-    reviews: 7
+    reviews: 7,
   },
   {
     id: 'gdpr-cookie-consent-edge',
     name: 'GDPR Cookie Consent Edge',
-    tagline: 'Region-aware consent banner with audit receipts and auto-blocking',
+    tagline:
+      'Region-aware consent banner with audit receipts and auto-blocking',
     price: '$49',
     period: '/month',
-    description: 'Deploy a lightweight consent banner with geo rules, consent receipts, automatic tag blocking, and policy page generator.',
+    description:
+      'Deploy a lightweight consent banner with geo rules, consent receipts, automatic tag blocking, and policy page generator.',
     features: [
       'Geo rules (EEA/UK/US states)',
       'Consent receipts & exports',
       'Auto-blocking for tags',
       'Policy page generator',
-      'A/B banner tests'
+      'A/B banner tests',
     ],
     popular: true,
     icon: '🍪',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/services/gdpr-cookie-consent-edge',
-    marketPosition: 'CMP-lite for SMBs with transparent pricing and fast setup.',
+    marketPosition:
+      'CMP-lite for SMBs with transparent pricing and fast setup.',
     targetAudience: 'Marketing, legal, web teams',
     trialDays: 7,
     setupTime: '30 minutes',
@@ -1984,14 +2146,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Banner + middleware policy, receipts store, export jobs.',
+    implementationDetails:
+      'Banner + middleware policy, receipts store, export jobs.',
     launchDate: '2025-02-18',
     customers: 27,
     rating: 4.6,
-    reviews: 12
+    reviews: 12,
   },
   {
     id: 'smart-web-scraper-hub',
@@ -1999,13 +2162,14 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Rotate, render, and extract with compliance guards and queues',
     price: '$89',
     period: '/month',
-    description: 'Render JS pages, rotate IPs, manage robots/politeness, and extract structured data to warehouses with retries and dedupe.',
+    description:
+      'Render JS pages, rotate IPs, manage robots/politeness, and extract structured data to warehouses with retries and dedupe.',
     features: [
       'Headless rendering & queues',
       'IP rotation and backoff',
       'Robots/politeness guards',
       'Deduplication and diffs',
-      'Warehouse exports'
+      'Warehouse exports',
     ],
     popular: false,
     icon: '🕸️',
@@ -2030,37 +2194,39 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Worker pools, proxy rotation, rate-limiters, extractors, exporters.',
+    implementationDetails:
+      'Worker pools, proxy rotation, rate-limiters, extractors, exporters.',
     launchDate: '2025-02-22',
     customers: 10,
     rating: 4.4,
-    reviews: 5
-  }
-  ,
+    reviews: 5,
+  },
   {
     id: 'ecommerce-returns-manager',
     name: 'E‑commerce Returns Manager',
     tagline: 'Automate RMAs, labels, and refund workflows for Shopify/Woo',
     price: '$149',
     period: '/month',
-    description: 'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
+    description:
+      'End‑to‑end returns and exchanges portal with automated label generation, status tracking, disposition rules, and reasons analytics across Shopify and WooCommerce.',
     features: [
       'Self‑serve returns portal',
       'Label generation and tracking',
       'Exchange/repair workflows',
       'Return reasons and defect analytics',
       'Email/SMS notifications',
-      'Warehouse and RMA integrations'
+      'Warehouse and RMA integrations',
     ],
     popular: true,
     icon: '📦',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/ecommerce-returns-manager',
-    marketPosition: 'Streamlined alternative to Loop/Returnly with clearer analytics and flexible policies.',
+    marketPosition:
+      'Streamlined alternative to Loop/Returnly with clearer analytics and flexible policies.',
     targetAudience: 'DTC brands and marketplaces',
     trialDays: 14,
     setupTime: '1–3 days',
@@ -2078,14 +2244,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Embedded portal, label API wiring, policy engine and analytics.',
+    implementationDetails:
+      'Embedded portal, label API wiring, policy engine and analytics.',
     launchDate: '2025-02-08',
     customers: 52,
     rating: 4.6,
-    reviews: 24
+    reviews: 24,
   },
   {
     id: 'automated-email-followups',
@@ -2093,21 +2260,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Sequenced follow‑ups with inbox rotation and reply detection',
     price: '$79',
     period: '/month',
-    description: 'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
+    description:
+      'Create multi‑step follow‑up sequences for leads and customers with reply/booking detection, throttling, and deliverability insights.',
     features: [
       'Sequence builder and templates',
       'Reply/booking detection and stops',
       'Inbox rotation and throttling',
       'A/B testing for subject lines',
       'Warmup and reputation checks',
-      'CRM sync and webhooks'
+      'CRM sync and webhooks',
     ],
     popular: true,
     icon: '📨',
     color: 'from-sky-600 to-indigo-700',
     textColor: 'text-sky-300',
     link: 'https://ziontechgroup.com/automated-email-followups',
-    marketPosition: 'Simpler and more compliant than heavy sales engagement suites for SMBs.',
+    marketPosition:
+      'Simpler and more compliant than heavy sales engagement suites for SMBs.',
     targetAudience: 'SMB sales and success teams',
     trialDays: 7,
     setupTime: '1 day',
@@ -2125,14 +2294,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Sequence engine, deliverability checks, reply webhooks.',
+    implementationDetails:
+      'Sequence engine, deliverability checks, reply webhooks.',
     launchDate: '2025-02-06',
     customers: 78,
     rating: 4.5,
-    reviews: 33
+    reviews: 33,
   },
   {
     id: 'podcast-transcribe-chapters',
@@ -2140,21 +2310,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Accurate transcripts, speakers, summaries, chapters and clips',
     price: '$49',
     period: '/month',
-    description: 'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
+    description:
+      'Upload episodes to get fast transcripts with speaker diarization, show notes, highlights, SEO chapters, and short social clips.',
     features: [
       'High‑accuracy transcription',
       'Speaker diarization',
       'Summaries and chaptering',
       'Topic and keyword extraction',
       'Clip generator for social',
-      'Embeds and RSS sync'
+      'Embeds and RSS sync',
     ],
     popular: true,
     icon: '🎙️',
     color: 'from-purple-600 to-indigo-700',
     textColor: 'text-purple-300',
     link: 'https://ziontechgroup.com/podcast-transcribe-chapters',
-    marketPosition: 'Affordable alternative to Descript/Castmagic focused on speed and SEO.',
+    marketPosition:
+      'Affordable alternative to Descript/Castmagic focused on speed and SEO.',
     targetAudience: 'Podcasters and media teams',
     trialDays: 7,
     setupTime: 'Same day',
@@ -2172,14 +2344,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Batch ASR, diarization, topic modeling, clip renderers.',
+    implementationDetails:
+      'Batch ASR, diarization, topic modeling, clip renderers.',
     launchDate: '2025-02-02',
     customers: 140,
     rating: 4.7,
-    reviews: 58
+    reviews: 58,
   },
   {
     id: 'freelancer-portfolio-studio',
@@ -2187,21 +2360,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Stunning portfolios and case studies with leads tracking',
     price: '$19',
     period: '/month',
-    description: 'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
+    description:
+      'No‑code portfolio builder with industry templates, project pages, lead capture forms, and simple SEO for freelancers and agencies.',
     features: [
       'Drag‑and‑drop templates',
       'Case study generator',
       'Contact and booking forms',
       'Testimonials and logos',
       'Basic SEO and analytics',
-      'Custom domains'
+      'Custom domains',
     ],
     popular: false,
     icon: '🖼️',
     color: 'from-pink-600 to-fuchsia-700',
     textColor: 'text-pink-200',
     link: 'https://ziontechgroup.com/freelancer-portfolio-studio',
-    marketPosition: 'Purpose‑built, simpler than generic site builders for portfolios.',
+    marketPosition:
+      'Purpose‑built, simpler than generic site builders for portfolios.',
     targetAudience: 'Freelancers and micro‑agencies',
     trialDays: 14,
     setupTime: '15 minutes',
@@ -2219,14 +2394,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Template presets, CMS‑like editing, lead capture widgets.',
+    implementationDetails:
+      'Template presets, CMS‑like editing, lead capture widgets.',
     launchDate: '2025-02-04',
     customers: 210,
     rating: 4.6,
-    reviews: 64
+    reviews: 64,
   },
   {
     id: 'local-micro-crm',
@@ -2234,21 +2410,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Simple contacts, reminders, and pipeline for small shops',
     price: '$15',
     period: '/month',
-    description: 'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
+    description:
+      'Lightweight CRM for local businesses: contacts, notes, tasks, reminders, pipeline stages, and SMS/email nudges.',
     features: [
       'Contacts and notes',
       'Reminders and tasks',
       'Simple pipeline stages',
       'Email/SMS nudges',
       'Import/export and tags',
-      'Mobile‑friendly UI'
+      'Mobile‑friendly UI',
     ],
     popular: true,
     icon: '📇',
     color: 'from-amber-600 to-orange-700',
     textColor: 'text-amber-300',
     link: 'https://ziontechgroup.com/local-micro-crm',
-    marketPosition: 'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
+    marketPosition:
+      'Tooled for simplicity; avoids enterprise CRM bloat and costs.',
     targetAudience: 'Local service businesses',
     trialDays: 14,
     setupTime: 'Same day',
@@ -2266,14 +2444,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Minimal CRM with reminders and basic pipeline views.',
+    implementationDetails:
+      'Minimal CRM with reminders and basic pipeline views.',
     launchDate: '2025-02-03',
     customers: 320,
     rating: 4.5,
-    reviews: 77
+    reviews: 77,
   },
   {
     id: 'subjectline-optimizer-ai',
@@ -2281,21 +2460,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Generate and score email subjects with live benchmarks',
     price: '$29',
     period: '/month',
-    description: 'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
+    description:
+      'Create and score subject lines using language models and historical performance data; export to ESPs and run quick A/B tests.',
     features: [
       'AI suggestions and variants',
       'Tone and length tuning',
       'Performance benchmarks',
       'ESP export and A/B tests',
       'Spam words and preview',
-      'Team review workflow'
+      'Team review workflow',
     ],
     popular: false,
     icon: '🧪',
     color: 'from-cyan-600 to-blue-700',
     textColor: 'text-cyan-300',
     link: 'https://ziontechgroup.com/subjectline-optimizer-ai',
-    marketPosition: 'Focused assistant vs. general copy tools; fast iteration for marketers.',
+    marketPosition:
+      'Focused assistant vs. general copy tools; fast iteration for marketers.',
     targetAudience: 'Growth and lifecycle marketers',
     trialDays: 7,
     setupTime: 'Same day',
@@ -2313,14 +2494,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Prompting templates, scoring heuristics, and ESP exports.',
+    implementationDetails:
+      'Prompting templates, scoring heuristics, and ESP exports.',
     launchDate: '2025-02-07',
     customers: 95,
     rating: 4.4,
-    reviews: 28
+    reviews: 28,
   },
   {
     id: 'dev-workflow-analytics',
@@ -2328,21 +2510,23 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'Visualize reviews, velocity, and bottlenecks across repos',
     price: '$199',
     period: '/month',
-    description: 'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
+    description:
+      'Ingest PRs, reviews, and CI to map cycle time, review quality, flaky tests, and hotspots with actionable recommendations.',
     features: [
       'Cycle time and WIP analysis',
       'Review depth and latency',
       'Flaky test detection',
       'Repo hotspots and ownership',
       'Team scorecards and alerts',
-      'Jira/Linear linkage'
+      'Jira/Linear linkage',
     ],
     popular: true,
     icon: '🧩',
     color: 'from-emerald-600 to-teal-700',
     textColor: 'text-emerald-300',
     link: 'https://ziontechgroup.com/dev-workflow-analytics',
-    marketPosition: 'Actionable insights without surveillance; focused on flow metrics.',
+    marketPosition:
+      'Actionable insights without surveillance; focused on flow metrics.',
     targetAudience: 'Engineering teams and platform leads',
     trialDays: 14,
     setupTime: '3 days',
@@ -2360,14 +2544,15 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Ingestion workers, metrics engine, dashboard and alerts.',
+    implementationDetails:
+      'Ingestion workers, metrics engine, dashboard and alerts.',
     launchDate: '2025-02-09',
     customers: 44,
     rating: 4.6,
-    reviews: 19
+    reviews: 19,
   },
   {
     id: 'privacy-consent-manager-smb',
@@ -2375,14 +2560,15 @@ export const realMarketServices: RealMarketService[] = [
     tagline: 'GDPR/CCPA banners, consent logs, DSAR intake and records',
     price: '$49',
     period: '/month',
-    description: 'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',
+    description:
+      'Compliant consent banners, preference center, DSAR intake, and consent logs with exports and region rules.',
     features: [
       'Geo/rule‑based banners',
       'Preference center',
       'DSAR intake and workflows',
       'Cookie catalog and scans',
       'Consent logs and exports',
-      'Multi‑site management'
+      'Multi‑site management',
     ],
     popular: true,
     icon: '⚖️',
@@ -2407,13 +2593,14 @@ export const realMarketServices: RealMarketService[] = [
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
       address: '364 E Main St STE 1008 Middletown DE 19709',
-      website: 'https://ziontechgroup.com'
+      website: 'https://ziontechgroup.com',
     },
     realImplementation: true,
-    implementationDetails: 'Region rules, consent logging, banner/prefs widgets.',
+    implementationDetails:
+      'Region rules, consent logging, banner/prefs widgets.',
     launchDate: '2025-02-01',
     customers: 88,
     rating: 4.6,
-    reviews: 36
-  }
+    reviews: 36,
+  },
 ];

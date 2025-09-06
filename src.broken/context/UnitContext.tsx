@@ -21,10 +21,14 @@ interface UnitContextState {
 const UnitContext = createContext<UnitContextState>({
   unit: 'metric',
   setUnit: () => {},
-  toggleUnit: () => {}});
+  toggleUnit: () => {},
+});
 
 export function UnitProvider({ children }: { children: ReactNode }) {
-  const [unit, setUnit] = useLocalStorage<UnitSystem>('unitSystem', getDefaultUnit());
+  const [unit, setUnit] = useLocalStorage<UnitSystem>(
+    'unitSystem',
+    getDefaultUnit()
+  );
   const toggleUnit = () => setUnit(unit === 'metric' ? 'imperial' : 'metric');
   return (
     <UnitContext.Provider value={{ unit, setUnit, toggleUnit }}>

@@ -36,7 +36,8 @@ export default async function handler(
 
     const user = [
       `Operator Prompt: ${operatorPrompt}`,
-      context ? `Context: ${JSON.stringify(context)}` : undefined]
+      context ? `Context: ${JSON.stringify(context)}` : undefined,
+    ]
       .filter(Boolean)
       .join('\n');
 
@@ -44,11 +45,15 @@ export default async function handler(
       model: 'gpt-4o-mini',
       messages: [
         { role: 'system', content: system },
-        { role: 'user', content: user }],
+        { role: 'user', content: user },
+      ],
       temperature: 0.3,
-      max_tokens: 300});
+      max_tokens: 300,
+    });
 
-    const analysis = completion.choices?.[0]?.message?.content?.trim() || 'No analysis generated.';
+    const analysis =
+      completion.choices?.[0]?.message?.content?.trim() ||
+      'No analysis generated.';
     return res.status(200).json({ analysis });
   } catch (error: any) {
     console.error('Analyze API error', error?.message || error);

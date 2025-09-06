@@ -8,14 +8,14 @@ const LandingPageGenerator: NextPage = () => {
     <div>
       <Head>
         <title>LandingPageGenerator - Zion Tech Solutions</title>
-        <meta name="description" content="LandingPageGenerator service" />
+        <meta name='description' content='LandingPageGenerator service' />
       </Head>
-      
-      <main className="space-y-4">
+
+      <main className='space-y-4'>
         <h1>LandingPageGenerator</h1>
         <p>Service details coming soon...</p>
-        <UseTokensButton serviceId="landing-page-generator" />
-        <Link href="/services">Back to Services</Link>
+        <UseTokensButton serviceId='landing-page-generator' />
+        <Link href='/services'>Back to Services</Link>
       </main>
     </div>
   );

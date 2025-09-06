@@ -23,7 +23,12 @@ interface TextAnalysisResult {
   };
   sentiment: {
     score: number;
-    label: 'very-negative' | 'negative' | 'neutral' | 'positive' | 'very-positive';
+    label:
+      | 'very-negative'
+      | 'negative'
+      | 'neutral'
+      | 'positive'
+      | 'very-positive';
     positiveWords: string[];
     negativeWords: string[];
   };
@@ -55,15 +60,24 @@ export default async function handler(
     }
 
     if (text.length > 10000) {
-      return res.status(400).json({ error: 'Text too long (max 10,000 characters)' });
+      return res
+        .status(400)
+        .json({ error: 'Text too long (max 10,000 characters)' });
     }
 
     // Basic statistics
     const characters = text.length;
     const charactersNoSpaces = text.replace(/\s/g, '').length;
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0).length;
-    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0).length;
-    const paragraphs = text.split(/\n\s*\n/).filter(para => para.trim().length > 0).length;
+    const words = text
+      .trim()
+      .split(/\s+/)
+      .filter(word => word.length > 0).length;
+    const sentences = text
+      .split(/[.!?]+/)
+      .filter(sentence => sentence.trim().length > 0).length;
+    const paragraphs = text
+      .split(/\n\s*\n/)
+      .filter(para => para.trim().length > 0).length;
 
     // Syllable counting (simplified)
     const syllableCount = (word: string): number => {
@@ -84,23 +98,87 @@ export default async function handler(
     const speakingTime = Math.ceil(words / 150);
 
     // Readability scores
-    const fleschReadingEase = Math.max(0, Math.min(100, 206.835 - (1.015 * (words / sentences)) - (84.6 * (syllables / words))));
-    const fleschKincaidGrade = Math.max(0, 0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59);
-    const gunningFog = Math.max(0, 0.4 * ((words / sentences) + 100 * (text.split(/\s+/).filter(word => word.length > 6).length / words)));
-    const smog = Math.max(0, 1.043 * Math.sqrt(text.split(/\s+/).filter(word => word.length > 2).length * (30 / sentences)) + 3.1291);
-    const colemanLiau = Math.max(0, 0.0588 * (charactersNoSpaces / words * 100) - 0.296 * (sentences / words * 100) - 15.8);
-    const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43);
+    const fleschReadingEase = Math.max(
+      0,
+      Math.min(
+        100,
+        206.835 - 1.015 * (words / sentences) - 84.6 * (syllables / words)
+      )
+    );
+    const fleschKincaidGrade = Math.max(
+      0,
+      0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59
+    );
+    const gunningFog = Math.max(
+      0,
+      0.4 *
+        (words / sentences +
+          100 *
+            (text.split(/\s+/).filter(word => word.length > 6).length / words))
+    );
+    const smog = Math.max(
+      0,
+      1.043 *
+        Math.sqrt(
+          text.split(/\s+/).filter(word => word.length > 2).length *
+            (30 / sentences)
+        ) +
+        3.1291
+    );
+    const colemanLiau = Math.max(
+      0,
+      0.0588 * ((charactersNoSpaces / words) * 100) -
+        0.296 * ((sentences / words) * 100) -
+        15.8
+    );
+    const automatedReadability = Math.max(
+      0,
+      4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43
+    );
 
-    const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5);
+    const averageGrade = Math.round(
+      (fleschKincaidGrade +
+        gunningFog +
+        smog +
+        colemanLiau +
+        automatedReadability) /
+        5
+    );
 
     // Sentiment analysis (simplified)
-    const positiveWords = ['good', 'great', 'excellent', 'amazing', 'wonderful', 'fantastic', 'brilliant', 'outstanding', 'superb', 'marvelous'];
-    const negativeWords = ['bad', 'terrible', 'awful', 'horrible', 'dreadful', 'atrocious', 'abysmal', 'appalling', 'dismal', 'lousy'];
+    const positiveWords = [
+      'good',
+      'great',
+      'excellent',
+      'amazing',
+      'wonderful',
+      'fantastic',
+      'brilliant',
+      'outstanding',
+      'superb',
+      'marvelous',
+    ];
+    const negativeWords = [
+      'bad',
+      'terrible',
+      'awful',
+      'horrible',
+      'dreadful',
+      'atrocious',
+      'abysmal',
+      'appalling',
+      'dismal',
+      'lousy',
+    ];
 
     const textWords = text.toLowerCase().split(/\s+/);
-    const positiveCount = textWords.filter(word => positiveWords.includes(word)).length;
-    const negativeCount = textWords.filter(word => negativeWords.includes(word)).length;
-    
+    const positiveCount = textWords.filter(word =>
+      positiveWords.includes(word)
+    ).length;
+    const negativeCount = textWords.filter(word =>
+      negativeWords.includes(word)
+    ).length;
+
     const sentimentScore = positiveCount - negativeCount;
     let sentimentLabel: TextAnalysisResult['sentiment']['label'];
     if (sentimentScore <= -3) sentimentLabel = 'very-negative';
@@ -111,12 +189,15 @@ export default async function handler(
 
     // Keyword analysis
     const wordCounts = new Map<string, number>();
-    text.toLowerCase().split(/\s+/).forEach(word => {
-      const cleanWord = word.replace(/[^\w]/g, '');
-      if (cleanWord.length > 2) {
-        wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1);
-      }
-    });
+    text
+      .toLowerCase()
+      .split(/\s+/)
+      .forEach(word => {
+        const cleanWord = word.replace(/[^\w]/g, '');
+        if (cleanWord.length > 2) {
+          wordCounts.set(cleanWord, (wordCounts.get(cleanWord) || 0) + 1);
+        }
+      });
 
     const topWords = Array.from(wordCounts.entries())
       .sort((a, b) => b[1] - a[1])
@@ -124,7 +205,7 @@ export default async function handler(
       .map(([word, count]) => ({
         word,
         count,
-        frequency: Math.round((count / words) * 1000) / 10
+        frequency: Math.round((count / words) * 1000) / 10,
       }));
 
     // Bigrams and trigrams
@@ -167,7 +248,8 @@ export default async function handler(
         paragraphs,
         syllables,
         readingTime,
-        speakingTime},
+        speakingTime,
+      },
       readability: {
         fleschReadingEase: Math.round(fleschReadingEase * 100) / 100,
         fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
@@ -175,20 +257,25 @@ export default async function handler(
         smog: Math.round(smog * 100) / 100,
         colemanLiau: Math.round(colemanLiau * 100) / 100,
         automatedReadability: Math.round(automatedReadability * 100) / 100,
-        averageGrade},
+        averageGrade,
+      },
       sentiment: {
         score: sentimentScore,
         label: sentimentLabel,
         positiveWords: textWords.filter(word => positiveWords.includes(word)),
-        negativeWords: textWords.filter(word => negativeWords.includes(word))},
+        negativeWords: textWords.filter(word => negativeWords.includes(word)),
+      },
       language: {
         detectedLanguage,
         confidence,
-        isEnglish},
+        isEnglish,
+      },
       keywords: {
         topWords,
         bigrams,
-        trigrams}};
+        trigrams,
+      },
+    };
 
     res.status(200).json(result);
   } catch (error) {

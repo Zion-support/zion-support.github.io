@@ -20,7 +20,11 @@ export type SearchResult = {
   relevance: number;
 };
 
-function computeRelevanceScore(text: string, keywords: string[], weight = 1): number {
+function computeRelevanceScore(
+  text: string,
+  keywords: string[],
+  weight = 1
+): number {
   if (!keywords.length) return 0;
   const lower = text.toLowerCase();
   let score = 0;
@@ -31,7 +35,7 @@ function computeRelevanceScore(text: string, keywords: string[], weight = 1): nu
 }
 
 function computeSkillOverlap(skills: string[], wanted: string[]): number {
-  const set = new Set(skills.map((s) => s.toLowerCase()));
+  const set = new Set(skills.map(s => s.toLowerCase()));
   let score = 0;
   for (const w of wanted) if (set.has(w.toLowerCase())) score += 2;
   return score;
@@ -51,30 +55,55 @@ function availabilityMatches(candidate?: string, requested?: string): boolean {
   return candidate.toLowerCase() === requested.toLowerCase();
 }
 
-function passesRls(visibility: AccessLevel | undefined, access: AccessLevel): boolean {
+function passesRls(
+  visibility: AccessLevel | undefined,
+  access: AccessLevel
+): boolean {
   const level = visibility || 'public';
   const order: AccessLevel[] = ['public', 'member', 'admin'];
   return order.indexOf(access) >= order.indexOf(level);
 }
 
-export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'): { all: SearchResult[]; talent: SearchResult[]; jobs: SearchResult[]; projects: SearchResult[] } {
-  const talent: SearchResult[] = TALENT_PROFILES
-    .filter((p) => availabilityMatches(p.availability, filters.availability))
-    .filter((p) => {
-      if (filters.location) return p.location.toLowerCase().includes(filters.location.toLowerCase());
+export function searchAll(
+  filters: ParsedFilters,
+  access: AccessLevel = 'public'
+): {
+  all: SearchResult[];
+  talent: SearchResult[];
+  jobs: SearchResult[];
+  projects: SearchResult[];
+} {
+  const talent: SearchResult[] = TALENT_PROFILES.filter(p =>
+    availabilityMatches(p.availability, filters.availability)
+  )
+    .filter(p => {
+      if (filters.location)
+        return p.location
+          .toLowerCase()
+          .includes(filters.location.toLowerCase());
       return true;
     })
-    .filter((p) => {
+    .filter(p => {
       if (filters.minBudgetUsd || filters.maxBudgetUsd) {
-        if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd) return false;
-        if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd) return false;
+        if (filters.minBudgetUsd && p.hourlyRateUsd < filters.minBudgetUsd)
+          return false;
+        if (filters.maxBudgetUsd && p.hourlyRateUsd > filters.maxBudgetUsd)
+          return false;
       }
       return true;
     })
-    .map<SearchResult>((p) => {
+    .map<SearchResult>(p => {
       const skillScore = computeSkillOverlap(p.skills, filters.skills);
-      const textScore = computeRelevanceScore(`${p.name} ${p.title} ${p.bio}`, filters.keywords, 0.8);
-      const priceScore = budgetScore(p.hourlyRateUsd, filters.minBudgetUsd, filters.maxBudgetUsd);
+      const textScore = computeRelevanceScore(
+        `${p.name} ${p.title} ${p.bio}`,
+        filters.keywords,
+        0.8
+      );
+      const priceScore = budgetScore(
+        p.hourlyRateUsd,
+        filters.minBudgetUsd,
+        filters.maxBudgetUsd
+      );
       const relevance = skillScore + textScore + priceScore;
       return {
         type: 'talent',
@@ -89,22 +118,29 @@ export function searchAll(filters: ParsedFilters, access: AccessLevel = 'public'
         verified: true,
         visibility: 'public',
         description: p.bio,
-        relevance};
+        relevance,
+      };
     })
-    .filter((r) => passesRls(r.visibility, access))
+    .filter(r => passesRls(r.visibility, access))
     .sort((a, b) => b.relevance - a.relevance);
 
   const jobs: SearchResult[] = [];
   const projects: SearchResult[] = [];
 
-  const all = [...talent, ...jobs, ...projects].sort((a, b) => b.relevance - a.relevance);
+  const all = [...talent, ...jobs, ...projects].sort(
+    (a, b) => b.relevance - a.relevance
+  );
   return { all, talent, jobs, projects };
 }
 
 export function suggestDidYouMean(query: string): string | null {
   // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
   const q = query.toLowerCase();
-  if (q.includes('devops') && q.includes('latam') && !q.includes('job')) return 'DevOps jobs in LATAM';
-  if (q.includes('react') && q.includes('under') && q.match(/\d/)) return 'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr';
+  if (q.includes('devops') && q.includes('latam') && !q.includes('job'))
+    return 'DevOps jobs in LATAM';
+  if (q.includes('react') && q.includes('under') && q.match(/\d/))
+    return (
+      'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr'
+    );
   return null;
 }

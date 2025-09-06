@@ -1,14 +1,31 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { computeTrustScore } from '../../../utils/trust/compute';
-import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust';
+import type {
+  TrustMetricInputs,
+  TrustScoreBreakdown,
+} from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
 
-async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel']; reasonSummary: string }> {
+async function analyzeWithGPT(
+  userId: string,
+  inputs: TrustMetricInputs
+): Promise<{
+  riskLevel: TrustScoreBreakdown['riskLevel'];
+  reasonSummary: string;
+}> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
     // Fallback heuristic
-    const heuristic = inputs.disputeFlags >= 3 ? 'Risk Alert' : (inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4 ? 'High Trust' : 'Moderate Trust');
-    return { riskLevel: heuristic as TrustScoreBreakdown['riskLevel'], reasonSummary: 'Heuristic classification (no OpenAI key set).' };
+    const heuristic =
+      inputs.disputeFlags >= 3
+        ? 'Risk Alert'
+        : inputs.completionRate >= 0.8 && inputs.feedbackAverage >= 4
+          ? 'High Trust'
+          : 'Moderate Trust';
+    return {
+      riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],
+      reasonSummary: 'Heuristic classification (no OpenAI key set).',
+    };
   }
 
   try {
@@ -19,10 +36,16 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const resp = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'You are an impartial risk and trust analyst for a talent marketplace.' },
-        { role: 'user', content: prompt }],
+        {
+          role: 'system',
+          content:
+            'You are an impartial risk and trust analyst for a talent marketplace.',
+        },
+        { role: 'user', content: prompt },
+      ],
       temperature: 0.2,
-      max_tokens: 200});
+      max_tokens: 200,
+    });
 
     const content = resp.choices?.[0]?.message?.content || '';
     const lower = content.toLowerCase();
@@ -33,13 +56,20 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 
     return { riskLevel: level, reasonSummary: content.trim() };
   } catch (e: any) {
-    return { riskLevel: 'Moderate Trust', reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}` };
+    return {
+      riskLevel: 'Moderate Trust',
+      reasonSummary: `Analysis unavailable: ${e?.message || 'unknown error'}`,
+    };
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { userId } = req.query;
-  if (!userId || Array.isArray(userId)) return res.status(400).json({ error: 'Invalid userId' });
+  if (!userId || Array.isArray(userId))
+    return res.status(400).json({ error: 'Invalid userId' });
 
   if (req.method === 'GET') {
     try {
@@ -48,7 +78,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // Fetch inputs from DB if available, else use mock defaults
       let inputs: TrustMetricInputs | null = null;
       try {
-        const { data } = await supabase.from('trust_inputs').select('*').eq('userId', userId).single();
+        const { data } = await supabase
+          .from('trust_inputs')
+          .select('*')
+          .eq('userId', userId)
+          .single();
         if (data) inputs = data.values as TrustMetricInputs;
       } catch {}
 
@@ -64,7 +98,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           disputeFlags: 0,
           verifiedReviewRatio: 0.7,
           endorsements: 8,
-          flags: 0};
+          flags: 0,
+        };
       }
 
       let reasonSummary: string | undefined;
@@ -78,16 +113,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const breakdown = await computeTrustScore(inputs, { reasonSummary });
       const result: TrustScoreBreakdown = {
         ...breakdown,
-        riskLevel: riskLevelOverride || breakdown.riskLevel};
+        riskLevel: riskLevelOverride || breakdown.riskLevel,
+      };
 
       // Persist latest score when possible
       try {
-        await supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result.updatedAt }, { onConflict: 'userId' });
+        await supabase
+          .from('trust_scores')
+          .upsert(
+            { userId, breakdown: result, updatedAt: result.updatedAt },
+            { onConflict: 'userId' }
+          );
       } catch {}
 
       return res.status(200).json(result);
     } catch (e: any) {
-      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' });
+      return res
+        .status(500)
+        .json({ error: e?.message || 'Failed to compute trust score' });
     }
   }
 
@@ -100,13 +143,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const breakdown = await computeTrustScore(inputs);
 
       try {
-        await supabase.from('trust_inputs').upsert({ userId, values: inputs }, { onConflict: 'userId' });
-        await supabase.from('trust_scores').upsert({ userId, breakdown, updatedAt: breakdown.updatedAt }, { onConflict: 'userId' });
+        await supabase
+          .from('trust_inputs')
+          .upsert({ userId, values: inputs }, { onConflict: 'userId' });
+        await supabase
+          .from('trust_scores')
+          .upsert(
+            { userId, breakdown, updatedAt: breakdown.updatedAt },
+            { onConflict: 'userId' }
+          );
       } catch {}
 
       return res.status(200).json(breakdown);
     } catch (e: any) {
-      return res.status(500).json({ error: e?.message || 'Failed to save trust inputs' });
+      return res
+        .status(500)
+        .json({ error: e?.message || 'Failed to save trust inputs' });
     }
   }
 

@@ -4,7 +4,11 @@ import { motion } from 'framer-motion';
 interface UltraFuturisticBackground2035Props {
   children: React.ReactNode;
   intensity?: 'low' | 'medium' | 'high';
-  colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time';
+  colorScheme?:
+    | 'quantum-fusion'
+    | 'neon-cyber'
+    | 'holographic-matrix'
+    | 'space-time';
   particleCount?: number;
   animationSpeed?: number;
   enableHolographic?: boolean;
@@ -13,7 +17,9 @@ interface UltraFuturisticBackground2035Props {
   enableSpaceTime?: boolean;
 }
 
-const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props> = ({
+const UltraFuturisticBackground2035: React.FC<
+  UltraFuturisticBackground2035Props
+> = ({
   intensity = 'medium',
   colorScheme = 'quantum-fusion',
   particleCount = 200,
@@ -21,7 +27,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   enableHolographic = true,
   enableQuantumEffects = true,
   enableNeonEffects = true,
-  enableSpaceTime = true
+  enableSpaceTime = true,
 }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const particlesRef = useRef<any[]>([]);
@@ -35,7 +41,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           secondary: '#ff00ff',
           accent: '#ffff00',
           background: 'rgba(0, 0, 0, 0.95)',
-          glow: 'rgba(0, 255, 255, 0.3)'
+          glow: 'rgba(0, 255, 255, 0.3)',
         };
       case 'neon-cyber':
         return {
@@ -43,7 +49,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           secondary: '#00ff80',
           accent: '#8000ff',
           background: 'rgba(0, 0, 0, 0.9)',
-          glow: 'rgba(255, 0, 128, 0.4)'
+          glow: 'rgba(255, 0, 128, 0.4)',
         };
       case 'holographic-matrix':
         return {
@@ -51,7 +57,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           secondary: '#ff0040',
           accent: '#0040ff',
           background: 'rgba(0, 0, 0, 0.92)',
-          glow: 'rgba(0, 255, 65, 0.35)'
+          glow: 'rgba(0, 255, 65, 0.35)',
         };
       case 'space-time':
         return {
@@ -59,7 +65,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           secondary: '#4ecdc4',
           accent: '#45b7d1',
           background: 'rgba(0, 0, 0, 0.88)',
-          glow: 'rgba(255, 107, 53, 0.3)'
+          glow: 'rgba(255, 107, 53, 0.3)',
         };
       default:
         return {
@@ -67,7 +73,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           secondary: '#ff00ff',
           accent: '#ffff00',
           background: 'rgba(0, 0, 0, 0.95)',
-          glow: 'rgba(0, 255, 255, 0.3)'
+          glow: 'rgba(0, 255, 255, 0.3)',
         };
     }
   };
@@ -102,7 +108,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
           life: Math.random() * 100 + 50,
           maxLife: Math.random() * 100 + 50,
           type: Math.random() > 0.7 ? 'quantum' : 'normal',
-          color: Math.random() > 0.5 ? colors.primary : colors.secondary
+          color: Math.random() > 0.5 ? colors.primary : colors.secondary,
         });
       }
     };
@@ -189,12 +195,20 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [particleCount, animationSpeed, colorScheme, enableHolographic, enableQuantumEffects, enableNeonEffects, enableSpaceTime]);
+  }, [
+    particleCount,
+    animationSpeed,
+    colorScheme,
+    enableHolographic,
+    enableQuantumEffects,
+    enableNeonEffects,
+    enableSpaceTime,
+  ]);
 
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50;
     const time = Date.now() * 0.001;
-    
+
     ctx.strokeStyle = colors.primary;
     ctx.lineWidth = 0.5;
     ctx.globalAlpha = 0.3;
@@ -227,7 +241,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
 
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
-    
+
     // Neon orbs
     for (let i = 0; i < 3; i++) {
       const x = (Math.sin(time * 0.5 + i) * 0.3 + 0.5) * ctx.canvas.width;
@@ -253,7 +267,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
 
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date.now() * 0.001;
-    
+
     // Wormhole effect
     const centerX = ctx.canvas.width / 2;
     const centerY = ctx.canvas.height / 2;
@@ -264,7 +278,7 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
       const angle = time * 2 + i * 0.3;
       const x = centerX + Math.cos(angle) * radius;
       const y = centerY + Math.sin(angle) * radius;
-      const alpha = 1 - (i / 20);
+      const alpha = 1 - i / 20;
 
       ctx.globalAlpha = alpha * 0.5;
       ctx.fillStyle = colors.accent;
@@ -275,52 +289,53 @@ const UltraFuturisticBackground2035: React.FC<UltraFuturisticBackground2035Props
   };
 
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden">
+    <div className='fixed inset-0 -z-10 overflow-hidden'>
       <canvas
         ref={canvasRef}
-        className="w-full h-full"
+        className='w-full h-full'
         style={{
-          background: colors.background}}
+          background: colors.background,
+        }}
       />
-      
+
       {/* Additional overlay effects */}
-      <div className="absolute inset-0 pointer-events-none">
+      <div className='absolute inset-0 pointer-events-none'>
         {/* Quantum energy field */}
         <motion.div
-          className="absolute inset-0"
+          className='absolute inset-0'
           animate={{
             background: [
               `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
-              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`
-            ]
+              `radial-gradient(circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
+            ],
           }}
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut"
+            ease: 'easeInOut',
           }}
         />
-        
+
         {/* Holographic scan lines */}
-        <div className="absolute inset-0 opacity-20">
+        <div className='absolute inset-0 opacity-20'>
           {[...Array(20)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent"
+              className='absolute w-full h-px bg-gradient-to-r from-transparent via-current to-transparent'
               style={{
                 top: `${(i / 20) * 100}%`,
-                color: colors.primary
+                color: colors.primary,
               }}
               animate={{
                 opacity: [0, 1, 0],
-                scaleX: [0, 1, 0]
+                scaleX: [0, 1, 0],
               }}
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-                ease: "easeInOut"
+                ease: 'easeInOut',
               }}
             />
           ))}

@@ -13,7 +13,8 @@ async function fetchFromGitHub(): Promise<any | null> {
     const pathFile = 'public/autonomy/HOMEPAGE_CONTENT.json';
     const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${pathFile}`;
     const headers: Record<string, string> = { 'User-Agent': 'zion-autonomy' };
-    if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
+    if (process.env.GITHUB_TOKEN)
+      headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`;
     const resp = await fetch(rawUrl, { headers });
     if (!resp.ok) return null;
     return await resp.json();
@@ -22,10 +23,18 @@ async function fetchFromGitHub(): Promise<any | null> {
   }
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=600');
   try {
-    const localPath = path.join(process.cwd(), 'public', 'autonomy', 'HOMEPAGE_CONTENT.json');
+    const localPath = path.join(
+      process.cwd(),
+      'public',
+      'autonomy',
+      'HOMEPAGE_CONTENT.json'
+    );
     if (fs.existsSync(localPath)) {
       try {
         const json = JSON.parse(fs.readFileSync(localPath, 'utf8'));

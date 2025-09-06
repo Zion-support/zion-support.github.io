@@ -2,7 +2,7 @@ import { GetServerSideProps } from 'next';
 import { useRouter } from 'next/router';
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/context/auth/AuthProvider';
-import { Search, Filter, Grid, List } from 'lucide-react'
+import { Search, Filter, Grid, List } from 'lucide-react';
 import { SEO } from '@/components/SEO';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -15,7 +15,6 @@ import { TALENT_PROFILES } from '@/data/talentData';
 import { BLOG_POSTS } from '@/data/blog-posts';
 import { useDebounce } from '@/hooks/useDebounce';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
-
 
 interface BaseSearchResult {
   id: string;
@@ -51,14 +50,22 @@ interface CategorySearchResult extends BaseSearchResult {
   type: 'category';
 }
 
-type SearchResult = ProductSearchResult | TalentSearchResult | BlogSearchResult | CategorySearchResult;
+type SearchResult =
+  | ProductSearchResult
+  | TalentSearchResult
+  | BlogSearchResult
+  | CategorySearchResult;
 
 // Type guard functions
-const hasPrice = (result: SearchResult): result is ProductSearchResult => 
+const hasPrice = (result: SearchResult): result is ProductSearchResult =>
   result.type === 'product' || result.type === 'equipment';
 
-const hasRating = (result: SearchResult): result is ProductSearchResult | TalentSearchResult => 
-  result.type === 'product' || result.type === 'equipment' || result.type === 'talent';
+const hasRating = (
+  result: SearchResult
+): result is ProductSearchResult | TalentSearchResult =>
+  result.type === 'product' ||
+  result.type === 'equipment' ||
+  result.type === 'talent';
 
 interface SearchResultsPageProps {
   initialResults: SearchResult[];
@@ -85,12 +92,12 @@ function offlineSearch(
   const match = (text?: string) => text?.toLowerCase().includes(term);
 
   const productResults = MARKETPLACE_LISTINGS.filter(
-    (p) =>
+    p =>
       match(p.title) ||
       match(p.description) ||
       match(p.category) ||
-      p.tags?.some((t) => match(t)),
-  ).map((p) => ({
+      p.tags?.some(t => match(t))
+  ).map(p => ({
     id: p.id,
     title: p.title,
     description: p.description || '',
@@ -104,15 +111,16 @@ function offlineSearch(
       : undefined,
     tags: p.tags,
     category: p.category,
-    date: p.createdAt}));
+    date: p.createdAt,
+  }));
 
   const talentResults = TALENT_PROFILES.filter(
-    (t) =>
+    t =>
       match(t.full_name) ||
       match(t.professional_title) ||
       match(t.bio) ||
-      t.skills?.some((s) => match(s)),
-  ).map((t) => ({
+      t.skills?.some(s => match(s))
+  ).map(t => ({
     id: t.id,
     title: t.full_name,
     description: t.professional_title || '',
@@ -123,15 +131,16 @@ function offlineSearch(
     author: { name: t.full_name, avatar: t.profile_picture_url },
     tags: t.skills,
     category: t.location,
-    date: undefined}));
+    date: undefined,
+  }));
 
   const blogResults = BLOG_POSTS.filter(
-    (b) =>
+    b =>
       match(b.title) ||
       match(b.excerpt) ||
       match(b.content) ||
-      b.tags?.some((t) => match(t)),
-  ).map((b) => ({
+      b.tags?.some(t => match(t))
+  ).map(b => ({
     id: b.slug,
     title: b.title,
     description: b.excerpt,
@@ -140,7 +149,8 @@ function offlineSearch(
     image: b.featuredImage,
     tags: b.tags,
     category: 'Blog',
-    date: b.publishedDate}));
+    date: b.publishedDate,
+  }));
 
   let all = [...productResults, ...talentResults, ...blogResults];
 
@@ -190,8 +200,10 @@ function offlineSearch(
         break;
       case 'rating':
         all.sort((a, b) => {
-          const aRating = (a.type === 'product' || a.type === 'talent') ? (a.rating ?? 0) : 0;
-          const bRating = (b.type === 'product' || b.type === 'talent') ? (b.rating ?? 0) : 0;
+          const aRating =
+            a.type === 'product' || a.type === 'talent' ? (a.rating ?? 0) : 0;
+          const bRating =
+            b.type === 'product' || b.type === 'talent' ? (b.rating ?? 0) : 0;
           return bRating - aRating;
         });
         break;
@@ -210,7 +222,8 @@ export default function SearchResultsPage({
   initialResults,
   query,
   slug,
-  totalCount}: SearchResultsPageProps) {
+  totalCount,
+}: SearchResultsPageProps) {
   const router = useRouter();
   const { isAuthenticated } = useAuth();
   const [results, setResults] = useState<SearchResult[]>(initialResults);
@@ -236,7 +249,8 @@ export default function SearchResultsPage({
         query: searchTerm,
         page: String(page),
         limit: '12',
-        sort: sortBy});
+        sort: sortBy,
+      });
       if (categoryFilter !== 'all') params.append('category', categoryFilter);
       if (minPrice) params.append('minPrice', minPrice);
       if (maxPrice) params.append('maxPrice', maxPrice);
@@ -256,7 +270,7 @@ export default function SearchResultsPage({
       if (page === 1) {
         setResults(data.results || []);
       } else {
-        setResults((prev) => [...prev, ...(data.results || [])]);
+        setResults(prev => [...prev, ...(data.results || [])]);
       }
     } catch (error) {
       logErrorToProduction('Error fetching search results:', { data: error });
@@ -265,12 +279,13 @@ export default function SearchResultsPage({
         category: categoryFilter !== 'all' ? categoryFilter : undefined,
         minPrice: minPrice ? Number(minPrice) : undefined,
         maxPrice: maxPrice ? Number(maxPrice) : undefined,
-        minRating: minRating ? Number(minRating) : undefined});
+        minRating: minRating ? Number(minRating) : undefined,
+      });
       setTotalResults(offline.totalCount);
       if (page === 1) {
         setResults(offline.results);
       } else {
-        setResults((prev) => [...prev, ...offline.results]);
+        setResults(prev => [...prev, ...offline.results]);
       }
     } finally {
       setLoading(false);
@@ -282,7 +297,8 @@ export default function SearchResultsPage({
     setSearchQuery(newQuery);
     if (newQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(newQuery)}`, undefined, {
-        shallow: true});
+        shallow: true,
+      });
       setCurrentPage(1);
     }
   };
@@ -304,10 +320,10 @@ export default function SearchResultsPage({
   };
 
   const categories = Array.from(
-    new Set(results.map((r) => r.category).filter(Boolean)),
+    new Set(results.map(r => r.category).filter(Boolean))
   );
 
-  const filteredResults = results.filter((r) => {
+  const filteredResults = results.filter(r => {
     if (
       categoryFilter !== 'all' &&
       categoryFilter &&
@@ -340,7 +356,7 @@ export default function SearchResultsPage({
       acc[result.type]!.push(result);
       return acc;
     },
-    {} as Record<string, SearchResult[]>,
+    {} as Record<string, SearchResult[]>
   );
 
   const renderResultCard = (result: SearchResult) => {
@@ -348,7 +364,7 @@ export default function SearchResultsPage({
       case 'product':
       case 'equipment':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid='result-card'>
             <ProductCard
               product={{
                 id: result.id,
@@ -365,14 +381,14 @@ export default function SearchResultsPage({
                 created_at: new Date().toISOString(),
                 updated_at: new Date().toISOString(),
                 stock: (result as any).stock,
-                in_stock: ((result as any).stock || 0) > 0
+                in_stock: ((result as any).stock || 0) > 0,
               }}
             />
           </div>
         );
       case 'talent':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid='result-card'>
             <TalentCard
               talent={{
                 id: result.id,
@@ -386,11 +402,12 @@ export default function SearchResultsPage({
                 bio: result.description,
                 summary: result.description,
                 is_verified: false,
-                availability_type: 'available'}}
+                availability_type: 'available',
+              }}
               onViewProfile={(id: string) => {
                 router.push(`/talent/${id}`);
               }}
-              onRequestHire={(talent) => {
+              onRequestHire={talent => {
                 router.push(`/talent/${talent.id}?action=hire`);
               }}
               isAuthenticated={isAuthenticated}
@@ -399,7 +416,7 @@ export default function SearchResultsPage({
         );
       case 'category':
         return (
-          <div key={result.id} data-testid="result-card">
+          <div key={result.id} data-testid='result-card'>
             <CategoryCard
               title={result.title}
               description={result.description || ''}
@@ -411,11 +428,11 @@ export default function SearchResultsPage({
         return (
           <div
             key={result.id}
-            className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow"
-            data-testid="result-card"
+            className='p-4 bg-white dark:bg-gray-800 rounded-lg shadow'
+            data-testid='result-card'
           >
-            <h3 className="font-semibold">{result.title}</h3>
-            <p className="text-gray-600 dark:text-gray-200">
+            <h3 className='font-semibold'>{result.title}</h3>
+            <p className='text-gray-600 dark:text-gray-200'>
               {result.description}
             </p>
           </div>
@@ -432,21 +449,21 @@ export default function SearchResultsPage({
         canonical={`https://app.ziontechgroup.com/search/${slug}`}
       />
 
-      <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
+      <div className='min-h-screen bg-gray-50 dark:bg-gray-900'>
         <div
-          className="container mx-auto px-4 py-8"
-          data-testid="search-results"
+          className='container mx-auto px-4 py-8'
+          data-testid='search-results'
         >
           {/* Search Header */}
-          <div className="mb-8">
-            <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
-              <div className="flex-1">
-                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          <div className='mb-8'>
+            <div className='flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4'>
+              <div className='flex-1'>
+                <h1 className='text-3xl font-bold text-gray-900 dark:text-white mb-2'>
                   Search Results
                 </h1>
                 <p
-                  className="text-gray-600 dark:text-gray-200"
-                  data-testid="results-count"
+                  className='text-gray-600 dark:text-gray-200'
+                  data-testid='results-count'
                 >
                   {filteredResults.length > 0
                     ? `Found ${filteredResults.length} results for "${query}"`
@@ -455,105 +472,105 @@ export default function SearchResultsPage({
               </div>
 
               {/* Search Input */}
-              <div className="relative w-full lg:w-96">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200" />
+              <div className='relative w-full lg:w-96'>
+                <Search className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-200' />
                 <Input
-                  type="text"
+                  type='text'
                   value={searchQuery}
-                  onChange={(e) => handleSearch(e.target.value)}
-                  placeholder="Search marketplace..."
-                  className="pl-10"
+                  onChange={e => handleSearch(e.target.value)}
+                  placeholder='Search marketplace...'
+                  className='pl-10'
                 />
               </div>
             </div>
 
             {/* Controls */}
-            <div className="flex flex-wrap items-center justify-between gap-4 mt-6">
-              <div className="flex items-center gap-2 flex-wrap">
+            <div className='flex flex-wrap items-center justify-between gap-4 mt-6'>
+              <div className='flex items-center gap-2 flex-wrap'>
                 <Button
-                  variant="outline"
-                  size="sm"
-                  className="flex items-center gap-2"
-                  data-testid="filter-button"
+                  variant='outline'
+                  size='sm'
+                  className='flex items-center gap-2'
+                  data-testid='filter-button'
                 >
-                  <Filter className="h-4 w-4" />
+                  <Filter className='h-4 w-4' />
                   Filters
                 </Button>
 
                 <select
                   value={sortBy}
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
-                  data-testid="sort-select"
+                  onChange={e => setSortBy(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
+                  data-testid='sort-select'
                 >
-                  <option value="relevance">Relevance</option>
-                  <option value="newest">Newest</option>
-                  <option value="price_asc">Price: Low to High</option>
-                  <option value="price_desc">Price: High to Low</option>
-                  <option value="rating">Highest Rated</option>
+                  <option value='relevance'>Relevance</option>
+                  <option value='newest'>Newest</option>
+                  <option value='price_asc'>Price: Low to High</option>
+                  <option value='price_desc'>Price: High to Low</option>
+                  <option value='rating'>Highest Rated</option>
                 </select>
 
                 <select
                   value={categoryFilter}
-                  onChange={(e) => setCategoryFilter(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  onChange={e => setCategoryFilter(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
                 >
-                  <option value="all">All Categories</option>
-                  {categories.map((c) => (
+                  <option value='all'>All Categories</option>
+                  {categories.map(c => (
                     <option key={c} value={c}>
                       {c}
                     </option>
                   ))}
                 </select>
 
-                <div className="flex items-center gap-1">
+                <div className='flex items-center gap-1'>
                   <input
-                    type="number"
-                    placeholder="Min $"
+                    type='number'
+                    placeholder='Min $'
                     value={minPrice}
-                    onChange={(e) => setMinPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    onChange={e => setMinPrice(e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
                   />
                   <span>-</span>
                   <input
-                    type="number"
-                    placeholder="Max $"
+                    type='number'
+                    placeholder='Max $'
                     value={maxPrice}
-                    onChange={(e) => setMaxPrice(e.target.value)}
-                    className="w-20 px-2 py-1 border border-gray-300 rounded-md text-sm"
+                    onChange={e => setMaxPrice(e.target.value)}
+                    className='w-20 px-2 py-1 border border-gray-300 rounded-md text-sm'
                   />
                 </div>
 
                 <select
                   value={minRating}
-                  onChange={(e) => setMinRating(e.target.value)}
-                  className="px-3 py-1 border border-gray-300 rounded-md text-sm"
+                  onChange={e => setMinRating(e.target.value)}
+                  className='px-3 py-1 border border-gray-300 rounded-md text-sm'
                 >
-                  <option value="">All Ratings</option>
-                  <option value="4">4★ & up</option>
-                  <option value="3">3★ & up</option>
-                  <option value="2">2★ & up</option>
+                  <option value=''>All Ratings</option>
+                  <option value='4'>4★ & up</option>
+                  <option value='3'>3★ & up</option>
+                  <option value='2'>2★ & up</option>
                 </select>
               </div>
 
-              <div className="flex items-center gap-2">
+              <div className='flex items-center gap-2'>
                 <Button
                   variant={viewMode === 'grid' ? 'default' : 'outline'}
-                  size="sm"
+                  size='sm'
                   onClick={() => setViewMode('grid')}
-                  data-testid="view-mode-grid"
+                  data-testid='view-mode-grid'
                   className={viewMode === 'grid' ? 'active' : ''}
                 >
-                  <Grid className="h-4 w-4" />
+                  <Grid className='h-4 w-4' />
                 </Button>
                 <Button
                   variant={viewMode === 'list' ? 'default' : 'outline'}
-                  size="sm"
+                  size='sm'
                   onClick={() => setViewMode('list')}
-                  data-testid="view-mode-list"
+                  data-testid='view-mode-list'
                   className={viewMode === 'list' ? 'active' : ''}
                 >
-                  <List className="h-4 w-4" />
+                  <List className='h-4 w-4' />
                 </Button>
               </div>
             </div>
@@ -561,24 +578,24 @@ export default function SearchResultsPage({
 
           {/* Loading State */}
           {loading && results.length === 0 && (
-            <div className="flex justify-center py-12">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
+            <div className='flex justify-center py-12'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600'></div>
             </div>
           )}
 
           {/* Empty State */}
           {!loading && filteredResults.length === 0 && (
-            <div data-testid="search-empty-state">
+            <div data-testid='search-empty-state'>
               <SearchEmptyState onRetry={() => fetchResults(searchQuery)} />
             </div>
           )}
 
           {/* Results */}
           {filteredResults.length > 0 && (
-            <div className="space-y-8">
+            <div className='space-y-8'>
               {Object.entries(groupedResults).map(([type, typeResults]) => (
                 <div key={type}>
-                  <h2 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
+                  <h2 className='text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize'>
                     {type}s ({typeResults.length})
                   </h2>
 
@@ -596,15 +613,15 @@ export default function SearchResultsPage({
 
               {/* Load More Button */}
               {results.length < totalResults && (
-                <div className="flex justify-center py-8">
+                <div className='flex justify-center py-8'>
                   <Button
                     onClick={loadMore}
                     disabled={loading}
-                    className="flex items-center gap-2"
+                    className='flex items-center gap-2'
                   >
                     {loading ? (
                       <>
-                        <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
+                        <div className='animate-spin rounded-full h-4 w-4 border-b-2 border-white'></div>
                         Loading...
                       </>
                     ) : (
@@ -638,7 +655,7 @@ export const getServerSideProps: GetServerSideProps<
     logInfo(`Fetching search results for slug: ${slug}, query: ${query}`);
 
     const response = await fetch(
-      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`,
+      `${apiBaseUrl}/api/search?query=${encodeURIComponent(query)}&limit=12`
     );
 
     let results = [];
@@ -651,7 +668,7 @@ export const getServerSideProps: GetServerSideProps<
       logInfo(`Server-side fetch successful: ${results.length} results`);
     } else {
       logErrorToProduction(
-        `Search API error: ${response.status} ${response.statusText}`,
+        `Search API error: ${response.status} ${response.statusText}`
       );
       const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
       results = offline.results;
@@ -663,7 +680,9 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: results,
         query,
         slug,
-        totalCount}};
+        totalCount,
+      },
+    };
   } catch (error) {
     logErrorToProduction('Error fetching search results:', { data: error });
     const offline = offlineSearch(query, 1, 12, { sortBy: 'relevance' });
@@ -673,6 +692,8 @@ export const getServerSideProps: GetServerSideProps<
         initialResults: offline.results,
         query,
         slug,
-        totalCount: offline.totalCount}};
+        totalCount: offline.totalCount,
+      },
+    };
   }
 };

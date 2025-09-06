@@ -3,12 +3,27 @@ import { evaluateHeuristics } from '../../../utils/fraud/heuristics';
 import { classifyWithGPT } from '../../../utils/fraud/gpt';
 import { getFraudStore, newEvent } from '../../../utils/fraud/store';
 import { extractClientIp } from '../../../utils/ip';
-import { AdminActionRecord, GptClassification, GptClassificationLabel, MonitoredSource, StoredFraudRecord } from '../../../utils/fraud/types';
+import {
+  AdminActionRecord,
+  GptClassification,
+  GptClassificationLabel,
+  MonitoredSource,
+  StoredFraudRecord,
+} from '../../../utils/fraud/types';
 import { sendWarningEmail } from '../../../utils/email';
 
-const allowedSources: MonitoredSource[] = ['signup', 'job_post', 'message', 'quote', 'review'];
+const allowedSources: MonitoredSource[] = [
+  'signup',
+  'job_post',
+  'message',
+  'quote',
+  'review',
+];
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method not allowed' });
     return;
@@ -24,14 +39,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const userId = typeof body.userId === 'string' ? body.userId : null;
     const content = typeof body.content === 'string' ? body.content : null;
-    const metadata = (body.metadata && typeof body.metadata === 'object') ? body.metadata : null;
+    const metadata =
+      body.metadata && typeof body.metadata === 'object' ? body.metadata : null;
 
     const ip = extractClientIp(req);
 
     const store = getFraudStore();
-    const event = newEvent({ source, userId, content, metadata, ipAddress: ip });
+    const event = newEvent({
+      source,
+      userId,
+      content,
+      metadata,
+      ipAddress: ip,
+    });
 
-    const heuristic = await evaluateHeuristics(event, { countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m) });
+    const heuristic = await evaluateHeuristics(event, {
+      countEventsByIp: (ip, s, m) => store.countEventsByIp(ip, s, m),
+    });
 
     // Privacy opt-out check for content analysis
     let gpt: GptClassification | undefined = undefined;
@@ -44,18 +68,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       gpt = await classifyWithGPT(content, source);
     }
 
-    let combinedLabel: GptClassificationLabel = gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
+    let combinedLabel: GptClassificationLabel =
+      gpt?.label || (heuristic.flagged ? 'SUSPICIOUS' : 'SAFE');
     if (heuristic.severity === 'high') combinedLabel = 'DANGEROUS';
     if (gpt?.label === 'DANGEROUS') combinedLabel = 'DANGEROUS';
 
-    const autoHide = (process.env.FRAUD_AUTOHIDE === 'true') && (combinedLabel !== 'SAFE') && (source === 'message');
+    const autoHide =
+      process.env.FRAUD_AUTOHIDE === 'true' &&
+      combinedLabel !== 'SAFE' &&
+      source === 'message';
 
     const stored: Omit<StoredFraudRecord, 'id'> = {
       ...event,
       heuristic,
       gpt,
       autoHidden: !!autoHide,
-      status: 'PENDING'};
+      status: 'PENDING',
+    };
 
     const saved = await store.saveEvent(stored);
 
@@ -65,7 +94,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await sendWarningEmail({
           toUserId: userId,
           subject: 'Marketplace warning: suspicious activity detected',
-          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`});
+          body: `We detected potentially suspicious activity on your account (${source}). Please keep all payments on-platform and avoid sharing personal contact info.`,
+        });
       }
     }
 
@@ -76,8 +106,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       heuristic,
       gpt,
       autoHidden: saved.autoHidden,
-      createdAt: saved.createdAt});
+      createdAt: saved.createdAt,
+    });
   } catch (e: any) {
-    res.status(500).json({ error: 'Internal error', details: e?.message || String(e) });
+    res
+      .status(500)
+      .json({ error: 'Internal error', details: e?.message || String(e) });
   }
 }

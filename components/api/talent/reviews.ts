@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   if (req.method === 'GET') {
     // In a real implementation, fetch reviews from Supabase by talent id/slug
     const { slug } = req.query as { slug?: string };
@@ -12,5 +15,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(201).json({ ok: true });
   }
 
-  return res.setHeader('Allow', 'GET, POST').status(405).end('Method Not Allowed');
+  return res
+    .setHeader('Allow', 'GET, POST')
+    .status(405)
+    .end('Method Not Allowed');
 }

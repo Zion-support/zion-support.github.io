@@ -1,22 +1,19 @@
-
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useTalentQuotes } from "@/hooks/useTalentQuotes";
-import { useAuth } from "@/hooks/useAuth";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { 
-  RequestsHeader, 
-  QuoteRequestsList 
-} from "@/components/quotes";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import React, { useState } from 'react';
+import { Header } from '@/components/Header';
+import { Footer } from '@/components/Footer';
+import { useTalentQuotes } from '@/hooks/useTalentQuotes';
+import { useAuth } from '@/hooks/useAuth';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { QuoteDetails } from '@/components/quotes/QuoteDetails';
+import { RequestsHeader, QuoteRequestsList } from '@/components/quotes';
+import type { QuoteRequest } from '@/types/quotes';
+import { ProtectedRoute } from '@/components/ProtectedRoute';
 
 export default function RequestsPanel() {
   const { user } = useAuth();
-  const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-  
+  const isTalent =
+    user?.userType === 'creator' || user?.userType === 'jobSeeker';
+
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
   const [showDetails, setShowDetails] = useState(false);
 
@@ -30,13 +27,13 @@ export default function RequestsPanel() {
     setArchiveFilter,
     markAsViewed,
     markAsResponded,
-    toggleArchive
+    toggleArchive,
   } = useTalentQuotes();
 
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote);
     setShowDetails(true);
-    
+
     // If status is new, mark as viewed
     if (quote.status === 'new') {
       markAsViewed(quote.id);
@@ -51,8 +48,8 @@ export default function RequestsPanel() {
     <ProtectedRoute>
       <div>
         <Header />
-        <div className="min-h-screen bg-zion-blue px-4 py-8">
-          <div className="container mx-auto">
+        <div className='min-h-screen bg-zion-blue px-4 py-8'>
+          <div className='container mx-auto'>
             <RequestsHeader
               unreadCount={unreadCount}
               statusFilter={statusFilter}
@@ -60,15 +57,15 @@ export default function RequestsPanel() {
               archiveFilter={archiveFilter}
               setArchiveFilter={setArchiveFilter}
             />
-            
+
             {/* Main Content */}
-            <Tabs defaultValue="active" className="mb-6">
-              <TabsList className="bg-zion-blue-dark border border-zion-blue-light">
-                <TabsTrigger value="active">Active Requests</TabsTrigger>
-                <TabsTrigger value="archived">Archived</TabsTrigger>
+            <Tabs defaultValue='active' className='mb-6'>
+              <TabsList className='bg-zion-blue-dark border border-zion-blue-light'>
+                <TabsTrigger value='active'>Active Requests</TabsTrigger>
+                <TabsTrigger value='archived'>Archived</TabsTrigger>
               </TabsList>
-              
-              <TabsContent value="active">
+
+              <TabsContent value='active'>
                 <QuoteRequestsList
                   quotes={activeQuotes}
                   isLoading={isLoading}
@@ -78,8 +75,8 @@ export default function RequestsPanel() {
                   onToggleArchive={toggleArchive}
                 />
               </TabsContent>
-              
-              <TabsContent value="archived">
+
+              <TabsContent value='archived'>
                 <QuoteRequestsList
                   quotes={archivedQuotes}
                   isLoading={isLoading}
@@ -92,7 +89,7 @@ export default function RequestsPanel() {
             </Tabs>
           </div>
         </div>
-        
+
         {/* Quote Details Modal */}
         <QuoteDetails
           quote={selectedQuote}
@@ -102,7 +99,7 @@ export default function RequestsPanel() {
             setSelectedQuote(null);
           }}
         />
-        
+
         <Footer />
       </div>
     </ProtectedRoute>

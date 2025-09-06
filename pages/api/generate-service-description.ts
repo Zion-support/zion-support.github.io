@@ -23,18 +23,28 @@ export default async function handler(
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest;
+  const { title, keyFeatures, targetAudience, additionalNotes, tone } =
+    req.body as GenerateServiceDescriptionRequest;
 
   if (!process.env.OPENAI_API_KEY) {
     return res.status(500).json({ error: 'OpenAI API key not configured' });
   }
 
-  if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
-    return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' });
+  if (
+    !title ||
+    !Array.isArray(keyFeatures) ||
+    keyFeatures.length === 0 ||
+    !targetAudience
+  ) {
+    return res.status(400).json({
+      error: 'Missing required fields: title, keyFeatures, targetAudience',
+    });
   }
 
   try {
-    const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.';
+    const toneInstruction = tone
+      ? `Write in a ${tone} tone.`
+      : 'Write in a professional, clear tone.';
 
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 
@@ -56,14 +66,15 @@ Requirements:
     const response = await openai.responses.create({
       model: 'gpt-4o-mini',
       input: prompt,
-      temperature: 0.7});
+      temperature: 0.7,
+    });
 
     let description = '';
     const output = response.output?.[0];
     if (output && output.type === 'message') {
       // Aggregate all text parts from the first message
       description = output.content
-        .filter((c) => c.type === 'output_text')
+        .filter(c => c.type === 'output_text')
         .map((c: any) => c.text)
         .join('\n');
     }
@@ -71,7 +82,9 @@ Requirements:
     if (!description) {
       // Fallback to top-level text if available
       // @ts-ignore
-      description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.';
+      description =
+        (response as any).content?.[0]?.text ||
+        'Unable to generate description at this time.';
     }
 
     return res.status(200).json({ description });

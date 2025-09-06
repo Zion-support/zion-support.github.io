@@ -1,7 +1,15 @@
 export interface Service {
   id: string;
   name: string;
-  category: 'AI Services' | 'IT Services' | 'Micro SAAS' | 'Blockchain' | 'IoT & Edge' | 'Cybersecurity' | 'Cloud & DevOps' | 'Data & Analytics';
+  category:
+    | 'AI Services'
+    | 'IT Services'
+    | 'Micro SAAS'
+    | 'Blockchain'
+    | 'IoT & Edge'
+    | 'Cybersecurity'
+    | 'Cloud & DevOps'
+    | 'Data & Analytics';
   description: string;
   features: string[];
   pricing: {
@@ -30,7 +38,8 @@ export const services: Service[] = [
     id: 'ai-code-assistant',
     name: 'ZionAI Code Assistant',
     category: 'AI Services',
-    description: 'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.',
+    description:
+      'Advanced AI-powered code generation, review, and optimization platform with context-aware suggestions and multi-language support.',
     features: [
       'Real-time code completion and suggestions',
       'Automated code review and optimization',
@@ -38,28 +47,35 @@ export const services: Service[] = [
       'Security vulnerability detection',
       'Code documentation generation',
       'Integration with popular IDEs',
-      'Custom model fine-tuning for enterprise codebases'
+      'Custom model fine-tuning for enterprise codebases',
     ],
     pricing: {
       starter: '$29/month',
       professional: '$99/month',
       enterprise: '$299/month',
-      custom: 'Contact for enterprise pricing'
+      custom: 'Contact for enterprise pricing',
     },
-    technologyStack: ['OpenAI GPT-4', 'Claude 3', 'Python', 'React', 'Node.js', 'PostgreSQL'],
+    technologyStack: [
+      'OpenAI GPT-4',
+      'Claude 3',
+      'Python',
+      'React',
+      'Node.js',
+      'PostgreSQL',
+    ],
     benefits: [
       'Reduce development time by 40-60%',
       'Improve code quality and security',
       'Lower maintenance costs',
       'Accelerate team onboarding',
-      '24/7 AI assistance'
+      '24/7 AI assistance',
     ],
     useCases: [
       'Software development teams',
       'Startups and scale-ups',
       'Enterprise development',
       'Freelance developers',
-      'Educational institutions'
+      'Educational institutions',
     ],
     status: 'active',
     priority: 1,
@@ -68,14 +84,15 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'ai-content-generator',
     name: 'ContentForge AI',
     category: 'AI Services',
-    description: 'Enterprise-grade AI content generation platform for marketing, documentation, and creative writing with brand voice consistency.',
+    description:
+      'Enterprise-grade AI content generation platform for marketing, documentation, and creative writing with brand voice consistency.',
     features: [
       'Multi-format content generation (blogs, emails, social media)',
       'Brand voice training and consistency',
@@ -83,27 +100,34 @@ export const services: Service[] = [
       'Multi-language content creation',
       'Plagiarism detection and originality scoring',
       'Content performance analytics',
-      'Team collaboration and approval workflows'
+      'Team collaboration and approval workflows',
     ],
     pricing: {
       starter: '$49/month',
       professional: '$149/month',
-      enterprise: '$399/month'
+      enterprise: '$399/month',
     },
-    technologyStack: ['GPT-4', 'Claude 3', 'BERT', 'React', 'FastAPI', 'MongoDB'],
+    technologyStack: [
+      'GPT-4',
+      'Claude 3',
+      'BERT',
+      'React',
+      'FastAPI',
+      'MongoDB',
+    ],
     benefits: [
       '10x faster content creation',
       'Consistent brand messaging',
       'Improved SEO performance',
       'Cost-effective content marketing',
-      'Scalable content operations'
+      'Scalable content operations',
     ],
     useCases: [
       'Marketing agencies',
       'E-commerce businesses',
       'Content creators',
       'Enterprise marketing teams',
-      'Educational institutions'
+      'Educational institutions',
     ],
     status: 'active',
     priority: 2,
@@ -111,14 +135,15 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'ai-data-analytics',
     name: 'InsightAI Analytics',
     category: 'AI Services',
-    description: 'Intelligent data analytics platform with predictive modeling, automated insights, and interactive visualizations powered by machine learning.',
+    description:
+      'Intelligent data analytics platform with predictive modeling, automated insights, and interactive visualizations powered by machine learning.',
     features: [
       'Automated data preprocessing and cleaning',
       'Predictive modeling and forecasting',
@@ -126,27 +151,34 @@ export const services: Service[] = [
       'Real-time data streaming analytics',
       'Custom dashboard builder',
       'Anomaly detection and alerting',
-      'Integration with 100+ data sources'
+      'Integration with 100+ data sources',
     ],
     pricing: {
       starter: '$79/month',
       professional: '$199/month',
-      enterprise: '$599/month'
+      enterprise: '$599/month',
     },
-    technologyStack: ['Python', 'TensorFlow', 'PyTorch', 'React', 'FastAPI', 'Apache Kafka'],
+    technologyStack: [
+      'Python',
+      'TensorFlow',
+      'PyTorch',
+      'React',
+      'FastAPI',
+      'Apache Kafka',
+    ],
     benefits: [
       'Uncover hidden patterns in data',
       'Make data-driven decisions faster',
       'Reduce manual analysis time by 80%',
       'Predict future trends accurately',
-      'Real-time business intelligence'
+      'Real-time business intelligence',
     ],
     useCases: [
       'Financial services',
       'Healthcare analytics',
       'E-commerce optimization',
       'Supply chain management',
-      'Marketing analytics'
+      'Marketing analytics',
     ],
     status: 'active',
     priority: 3,
@@ -154,8 +186,8 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
 
   // IT Services
@@ -163,7 +195,8 @@ export const services: Service[] = [
     id: 'managed-it-services',
     name: 'ZionTech Managed IT',
     category: 'IT Services',
-    description: 'Comprehensive managed IT services including 24/7 monitoring, cybersecurity, cloud management, and strategic technology consulting.',
+    description:
+      'Comprehensive managed IT services including 24/7 monitoring, cybersecurity, cloud management, and strategic technology consulting.',
     features: [
       '24/7 network monitoring and support',
       'Cybersecurity threat detection and response',
@@ -171,27 +204,34 @@ export const services: Service[] = [
       'Backup and disaster recovery',
       'Help desk and user support',
       'Technology roadmap planning',
-      'Compliance and audit support'
+      'Compliance and audit support',
     ],
     pricing: {
       starter: '$99/month per user',
       professional: '$149/month per user',
-      enterprise: '$199/month per user'
+      enterprise: '$199/month per user',
     },
-    technologyStack: ['Microsoft 365', 'AWS', 'Azure', 'Cisco', 'Fortinet', 'Veeam'],
+    technologyStack: [
+      'Microsoft 365',
+      'AWS',
+      'Azure',
+      'Cisco',
+      'Fortinet',
+      'Veeam',
+    ],
     benefits: [
       'Reduce IT costs by 25-40%',
       'Improve system uptime to 99.9%',
       'Enhanced security posture',
       'Predictable monthly costs',
-      'Access to enterprise-grade tools'
+      'Access to enterprise-grade tools',
     ],
     useCases: [
       'Small to medium businesses',
       'Healthcare organizations',
       'Financial services',
       'Manufacturing companies',
-      'Professional services firms'
+      'Professional services firms',
     ],
     status: 'active',
     priority: 4,
@@ -199,14 +239,15 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'cybersecurity-audit',
     name: 'SecureShield Audit',
     category: 'IT Services',
-    description: 'Comprehensive cybersecurity assessment and penetration testing services to identify vulnerabilities and strengthen your security posture.',
+    description:
+      'Comprehensive cybersecurity assessment and penetration testing services to identify vulnerabilities and strengthen your security posture.',
     features: [
       'Vulnerability assessment and scanning',
       'Penetration testing (web, mobile, network)',
@@ -214,27 +255,33 @@ export const services: Service[] = [
       'Security policy review and development',
       'Compliance gap analysis (SOC2, ISO27001, HIPAA)',
       'Incident response planning',
-      'Security awareness training'
+      'Security awareness training',
     ],
     pricing: {
       starter: '$2,999/assessment',
       professional: '$5,999/comprehensive',
-      enterprise: '$12,999/enterprise'
+      enterprise: '$12,999/enterprise',
     },
-    technologyStack: ['Nessus', 'Metasploit', 'Burp Suite', 'Wireshark', 'Custom tools'],
+    technologyStack: [
+      'Nessus',
+      'Metasploit',
+      'Burp Suite',
+      'Wireshark',
+      'Custom tools',
+    ],
     benefits: [
       'Identify security gaps before attackers',
       'Meet compliance requirements',
       'Reduce cyber risk exposure',
       'Improve incident response capabilities',
-      'Protect brand reputation'
+      'Protect brand reputation',
     ],
     useCases: [
       'Financial institutions',
       'Healthcare organizations',
       'E-commerce businesses',
       'Government agencies',
-      'Educational institutions'
+      'Educational institutions',
     ],
     status: 'active',
     priority: 5,
@@ -242,8 +289,8 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
 
   // Micro SAAS
@@ -251,7 +298,8 @@ export const services: Service[] = [
     id: 'invoice-automation',
     name: 'InvoiceFlow Pro',
     category: 'Micro SAAS',
-    description: 'Automated invoice processing and accounts payable solution with AI-powered data extraction and approval workflows.',
+    description:
+      'Automated invoice processing and accounts payable solution with AI-powered data extraction and approval workflows.',
     features: [
       'AI-powered invoice data extraction',
       'Automated approval workflows',
@@ -259,12 +307,12 @@ export const services: Service[] = [
       'Integration with accounting software',
       'Real-time payment tracking',
       'Custom approval rules',
-      'Mobile app for approvals'
+      'Mobile app for approvals',
     ],
     pricing: {
       starter: '$19/month',
       professional: '$49/month',
-      enterprise: '$99/month'
+      enterprise: '$99/month',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'OpenAI API', 'Stripe'],
     benefits: [
@@ -272,14 +320,14 @@ export const services: Service[] = [
       'Eliminate manual data entry errors',
       'Improve cash flow management',
       'Enhance audit trail compliance',
-      'Mobile-first approval process'
+      'Mobile-first approval process',
     ],
     useCases: [
       'Small businesses',
       'Accounting firms',
       'Property management',
       'Construction companies',
-      'Healthcare practices'
+      'Healthcare practices',
     ],
     status: 'active',
     priority: 6,
@@ -287,14 +335,15 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
   {
     id: 'project-management',
     name: 'TaskMaster Pro',
     category: 'Micro SAAS',
-    description: 'Intelligent project management platform with AI-powered task prioritization, resource allocation, and progress tracking.',
+    description:
+      'Intelligent project management platform with AI-powered task prioritization, resource allocation, and progress tracking.',
     features: [
       'AI-powered task prioritization',
       'Resource allocation optimization',
@@ -302,12 +351,12 @@ export const services: Service[] = [
       'Time tracking and reporting',
       'Integration with popular tools',
       'Mobile and desktop apps',
-      'Custom workflow automation'
+      'Custom workflow automation',
     ],
     pricing: {
       starter: '$15/month per user',
       professional: '$25/month per user',
-      enterprise: '$35/month per user'
+      enterprise: '$35/month per user',
     },
     technologyStack: ['React', 'Node.js', 'PostgreSQL', 'Redis', 'Socket.io'],
     benefits: [
@@ -315,14 +364,14 @@ export const services: Service[] = [
       'Better resource utilization',
       'Improved project delivery times',
       'Enhanced team collaboration',
-      'Data-driven decision making'
+      'Data-driven decision making',
     ],
     useCases: [
       'Software development teams',
       'Marketing agencies',
       'Construction projects',
       'Event planning',
-      'Consulting firms'
+      'Consulting firms',
     ],
     status: 'active',
     priority: 7,
@@ -330,8 +379,8 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
 
   // Blockchain Services
@@ -339,7 +388,8 @@ export const services: Service[] = [
     id: 'smart-contract-audit',
     name: 'BlockAudit Pro',
     category: 'Blockchain',
-    description: 'Professional smart contract security auditing and optimization services for DeFi, NFT, and enterprise blockchain projects.',
+    description:
+      'Professional smart contract security auditing and optimization services for DeFi, NFT, and enterprise blockchain projects.',
     features: [
       'Comprehensive security analysis',
       'Gas optimization recommendations',
@@ -347,12 +397,12 @@ export const services: Service[] = [
       'Vulnerability assessment',
       'Compliance checking',
       'Post-deployment monitoring',
-      'Emergency response support'
+      'Emergency response support',
     ],
     pricing: {
       starter: '$5,000/audit',
       professional: '$15,000/audit',
-      enterprise: '$50,000/audit'
+      enterprise: '$50,000/audit',
     },
     technologyStack: ['Solidity', 'Vyper', 'Foundry', 'Slither', 'Mythril'],
     benefits: [
@@ -360,14 +410,14 @@ export const services: Service[] = [
       'Optimize gas costs by 20-40%',
       'Build investor confidence',
       'Meet regulatory requirements',
-      'Protect user funds'
+      'Protect user funds',
     ],
     useCases: [
       'DeFi protocols',
       'NFT marketplaces',
       'DAO governance',
       'Enterprise blockchain',
-      'Token launches'
+      'Token launches',
     ],
     status: 'active',
     priority: 8,
@@ -375,8 +425,8 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
 
   // IoT & Edge Computing
@@ -384,7 +434,8 @@ export const services: Service[] = [
     id: 'iot-monitoring',
     name: 'IoT Sentinel',
     category: 'IoT & Edge',
-    description: 'Comprehensive IoT monitoring and management platform with edge computing capabilities for industrial and commercial applications.',
+    description:
+      'Comprehensive IoT monitoring and management platform with edge computing capabilities for industrial and commercial applications.',
     features: [
       'Real-time device monitoring',
       'Edge computing processing',
@@ -392,12 +443,12 @@ export const services: Service[] = [
       'Data visualization dashboards',
       'Integration with industrial protocols',
       'Scalable device management',
-      'Custom alert rules'
+      'Custom alert rules',
     ],
     pricing: {
       starter: '$10/device/month',
       professional: '$25/device/month',
-      enterprise: '$50/device/month'
+      enterprise: '$50/device/month',
     },
     technologyStack: ['Python', 'MQTT', 'Kubernetes', 'InfluxDB', 'Grafana'],
     benefits: [
@@ -405,14 +456,14 @@ export const services: Service[] = [
       'Lower maintenance costs',
       'Improve operational efficiency',
       'Real-time operational insights',
-      'Scalable IoT infrastructure'
+      'Scalable IoT infrastructure',
     ],
     useCases: [
       'Manufacturing facilities',
       'Smart buildings',
       'Agriculture monitoring',
       'Energy management',
-      'Transportation logistics'
+      'Transportation logistics',
     ],
     status: 'active',
     priority: 9,
@@ -420,8 +471,8 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
 
   // Cloud & DevOps
@@ -429,7 +480,8 @@ export const services: Service[] = [
     id: 'devops-automation',
     name: 'DevOps Flow',
     category: 'Cloud & DevOps',
-    description: 'End-to-end DevOps automation platform with CI/CD pipelines, infrastructure as code, and cloud-native deployment tools.',
+    description:
+      'End-to-end DevOps automation platform with CI/CD pipelines, infrastructure as code, and cloud-native deployment tools.',
     features: [
       'Automated CI/CD pipelines',
       'Infrastructure as Code (Terraform)',
@@ -437,27 +489,33 @@ export const services: Service[] = [
       'Container orchestration',
       'Monitoring and alerting',
       'Security scanning',
-      'Cost optimization'
+      'Cost optimization',
     ],
     pricing: {
       starter: '$99/month',
       professional: '$299/month',
-      enterprise: '$799/month'
+      enterprise: '$799/month',
     },
-    technologyStack: ['Docker', 'Kubernetes', 'Terraform', 'Jenkins', 'Prometheus'],
+    technologyStack: [
+      'Docker',
+      'Kubernetes',
+      'Terraform',
+      'Jenkins',
+      'Prometheus',
+    ],
     benefits: [
       'Deploy 10x faster',
       'Reduce deployment errors by 90%',
       'Lower infrastructure costs',
       'Improve team productivity',
-      'Enhanced security posture'
+      'Enhanced security posture',
     ],
     useCases: [
       'Software development teams',
       'Startups and scale-ups',
       'Enterprise IT',
       'DevOps consulting',
-      'Cloud migration projects'
+      'Cloud migration projects',
     ],
     status: 'active',
     priority: 10,
@@ -465,8 +523,8 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
   },
 
   // Data & Analytics
@@ -474,7 +532,8 @@ export const services: Service[] = [
     id: 'data-warehouse',
     name: 'DataVault Enterprise',
     category: 'Data & Analytics',
-    description: 'Modern cloud data warehouse solution with real-time analytics, data governance, and AI-powered insights.',
+    description:
+      'Modern cloud data warehouse solution with real-time analytics, data governance, and AI-powered insights.',
     features: [
       'Real-time data ingestion',
       'Advanced analytics and ML',
@@ -482,27 +541,33 @@ export const services: Service[] = [
       'Self-service BI tools',
       'Data lineage tracking',
       'Performance optimization',
-      'Multi-cloud support'
+      'Multi-cloud support',
     ],
     pricing: {
       starter: '$199/month',
       professional: '$499/month',
-      enterprise: '$1,299/month'
+      enterprise: '$1,299/month',
     },
-    technologyStack: ['Snowflake', 'Apache Airflow', 'dbt', 'Tableau', 'Python'],
+    technologyStack: [
+      'Snowflake',
+      'Apache Airflow',
+      'dbt',
+      'Tableau',
+      'Python',
+    ],
     benefits: [
       'Unified data platform',
       'Real-time analytics',
       'Scalable architecture',
       'Cost-effective storage',
-      'Enhanced data security'
+      'Enhanced data security',
     ],
     useCases: [
       'Business intelligence',
       'Customer analytics',
       'Financial reporting',
       'Supply chain analytics',
-      'Marketing attribution'
+      'Marketing attribution',
     ],
     status: 'active',
     priority: 11,
@@ -510,9 +575,9 @@ export const services: Service[] = [
     contactInfo: {
       email: 'kleber@ziontechgroup.com',
       phone: '+1 302 464 0950',
-      address: '364 E Main St STE 1008 Middletown DE 19709'
-    }
-  }
+      address: '364 E Main St STE 1008 Middletown DE 19709',
+    },
+  },
 ];
 
 export const getServicesByCategory = (category: Service['category']) => {

@@ -17,11 +17,22 @@ interface FeatureFlagContextValue {
   track: (event: string) => void;
 }
 
-const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(undefined);
+const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(
+  undefined
+);
 
-export function FeatureFlagProvider({ children }: { children: React.ReactNode }) {
-  const url = (import.meta as any)?.env?.VITE_UNLEASH_URL || process.env.UNLEASH_URL || '';
-  const [client] = useState(() => new UnleashClient({ url, clientKey: 'frontend', appName: 'zion-app' }));
+export function FeatureFlagProvider({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  const url =
+    (import.meta as any)?.env?.VITE_UNLEASH_URL ||
+    process.env.UNLEASH_URL ||
+    '';
+  const [client] = useState(
+    () => new UnleashClient({ url, clientKey: 'frontend', appName: 'zion-app' })
+  );
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
@@ -38,7 +49,9 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
 
   const isEnabled = (name: string) => (ready ? client.isEnabled(name) : false);
   const getVariant = (name: string) =>
-    ready ? (client as any).getVariant?.(name) ?? { name: 'disabled' } : { name: 'disabled' };
+    ready
+      ? ((client as any).getVariant?.(name) ?? { name: 'disabled' })
+      : { name: 'disabled' };
   const track = (event: string) => {
     const c: any = client;
     if (typeof c.track === 'function') {
@@ -55,6 +68,9 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
 
 export function useFeatureFlags() {
   const ctx = useContext(FeatureFlagContext);
-  if (!ctx) throw new Error('useFeatureFlags must be used within a FeatureFlagProvider');
+  if (!ctx)
+    throw new Error(
+      'useFeatureFlags must be used within a FeatureFlagProvider'
+    );
   return ctx;
 }

@@ -1,34 +1,37 @@
-
-import { useState } from "react";
-import { JobApplication, ApplicationStatus } from "@/types/jobs";
-import { useJobApplications } from "@/hooks/useJobApplications";
+import { useState } from 'react';
+import { JobApplication, ApplicationStatus } from '@/types/jobs';
+import { useJobApplications } from '@/hooks/useJobApplications';
 import {
   ApplicationsTable,
   EmptyState,
   ErrorState,
   LoadingState,
-  ScoreDialog
-} from "./applications";
+  ScoreDialog,
+} from './applications';
 
 interface JobApplicationsTableProps {
   jobId: string;
 }
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
-  const { 
-    applications, 
-    isLoading, 
-    error, 
-    updateApplicationStatus, 
+  const {
+    applications,
+    isLoading,
+    error,
+    updateApplicationStatus,
     markApplicationAsViewed,
-    refetch
+    refetch,
   } = useJobApplications(jobId);
 
   const [processingId, setProcessingId] = useState<string | null>(null);
-  const [selectedApplication, setSelectedApplication] = useState<JobApplication | null>(null);
+  const [selectedApplication, setSelectedApplication] =
+    useState<JobApplication | null>(null);
   const [showScoreDialog, setShowScoreDialog] = useState(false);
-  
-  const handleStatusChange = async (applicationId: string, newStatus: ApplicationStatus) => {
+
+  const handleStatusChange = async (
+    applicationId: string,
+    newStatus: ApplicationStatus
+  ) => {
     setProcessingId(applicationId);
     try {
       await updateApplicationStatus(applicationId, newStatus);

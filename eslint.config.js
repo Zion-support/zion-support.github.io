@@ -15,8 +15,8 @@ export default [
         ecmaVersion: 'latest',
         sourceType: 'module',
         ecmaFeatures: {
-          jsx: true
-        }
+          jsx: true,
+        },
       },
       globals: {
         // Browser globals
@@ -59,14 +59,14 @@ export default [
         afterEach: 'readonly',
         beforeAll: 'readonly',
         afterAll: 'readonly',
-        jest: 'readonly'
-      }
+        jest: 'readonly',
+      },
     },
     plugins: {
       '@typescript-eslint': typescript,
-      'react': react,
+      react: react,
       'react-hooks': reactHooks,
-      '@next/next': next
+      '@next/next': next,
     },
     rules: {
       ...typescript.configs.recommended.rules,
@@ -80,13 +80,13 @@ export default [
       'react/prop-types': 'off',
       'react/react-in-jsx-scope': 'off',
       '@typescript-eslint/no-unused-vars': 'warn',
-      '@typescript-eslint/no-explicit-any': 'warn'
+      '@typescript-eslint/no-explicit-any': 'warn',
     },
     settings: {
       react: {
-        version: 'detect'
-      }
-    }
+        version: 'detect',
+      },
+    },
   },
   {
     files: ['**/*.cjs'],
@@ -108,9 +108,9 @@ export default [
         setInterval: 'readonly',
         clearInterval: 'readonly',
         setImmediate: 'readonly',
-        clearImmediate: 'readonly'
-      }
-    }
+        clearImmediate: 'readonly',
+      },
+    },
   },
   {
     ignores: [
@@ -210,7 +210,7 @@ export default [
       // Page backups
       'pages.__backup/**',
       'pages-disabled/**',
-      'pages.disabled_auto/**'
-    ]
-  }
+      'pages.disabled_auto/**',
+    ],
+  },
 ];

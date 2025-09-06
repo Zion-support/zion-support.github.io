@@ -5,7 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status(405).end();
     return;
   }
-  
+
   // TODO: Implement confirmation logic here
   res.status(200).json({ message: 'Confirm endpoint placeholder' });
-} 
+}

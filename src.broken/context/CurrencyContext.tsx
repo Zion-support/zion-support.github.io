@@ -16,11 +16,13 @@ interface CurrencyContextType {
 const DEFAULT_CURRENCY: CurrencyInfo = {
   code: 'USD',
   symbol: '$',
-  fx_rate: 1};
+  fx_rate: 1,
+};
 
 const CurrencyContext = createContext<CurrencyContextType>({
   currency: DEFAULT_CURRENCY,
-  setCurrency: () => {}});
+  setCurrency: () => {},
+});
 
 const CURRENCY_COOKIE = 'zion_currency';
 
@@ -33,7 +35,9 @@ function writeCookie(name: string, value: string) {
   document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${60 * 60 * 24 * 30}`;
 }
 
-export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({
+  children,
+}) => {
   const [currency, setCurrencyState] = useState<CurrencyInfo>(DEFAULT_CURRENCY);
 
   useEffect(() => {

@@ -29,13 +29,13 @@ export default function Login() {
     <form onSubmit={handleSubmit(onSubmit)}>
       <label>
         Email
-        <input type="email" {...register('email')} />
+        <input type='email' {...register('email')} />
       </label>
       <label>
         Password
-        <input type="password" {...register('password')} />
+        <input type='password' {...register('password')} />
       </label>
-      <button type="submit">Login</button>
+      <button type='submit'>Login</button>
     </form>
   );
 }

@@ -10,7 +10,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const parseArray = (v?: string | string[]) => {
     if (!v) return undefined;
-    return Array.isArray(v) ? v : v.split(',').map((s) => s.trim()).filter(Boolean);
+    return Array.isArray(v)
+      ? v
+      : v
+          .split(',')
+          .map(s => s.trim())
+          .filter(Boolean);
   };
 
   const filters: OrgFilters = {
@@ -22,7 +27,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     regions: parseArray(req.query.regions),
     countries: parseArray(req.query.countries),
     search: (req.query.search as string) || undefined,
-    teamOnly: req.query.teamOnly === 'true' ? true : undefined};
+    teamOnly: req.query.teamOnly === 'true' ? true : undefined,
+  };
 
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);

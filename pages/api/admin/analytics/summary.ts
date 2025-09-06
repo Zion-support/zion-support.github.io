@@ -11,7 +11,12 @@ type EventRow = {
   at: string;
 };
 
-const LOG_FILE = path.join(process.cwd(), 'data', 'analytics', 'events.log.jsonl');
+const LOG_FILE = path.join(
+  process.cwd(),
+  'data',
+  'analytics',
+  'events.log.jsonl'
+);
 
 function parseLines(startIso?: string, endIso?: string): EventRow[] {
   try {
@@ -46,13 +51,22 @@ function featureFromPath(page?: string): string {
   return 'other';
 }
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   const { allowed } = await ensureAdminFromApi(req);
   if (!allowed) return res.status(403).json({ error: 'Forbidden' });
 
-  const { start, end, userType } = req.query as { start?: string; end?: string; userType?: string };
+  const { start, end, userType } = req.query as {
+    start?: string;
+    end?: string;
+    userType?: string;
+  };
 
-  const rows = parseLines(start, end).filter((r) => !userType || userType === 'all' || (r.userType || 'guest') === userType);
+  const rows = parseLines(start, end).filter(
+    r => !userType || userType === 'all' || (r.userType || 'guest') === userType
+  );
 
   const byFeature: Record<string, number> = {};
   const byEvent: Record<string, number> = {};
@@ -75,10 +89,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     .sort((a, b) => b.value - a.value);
 
   const days = Object.keys(byDay).sort();
-  const line = days.map((d) => ({ date: d, value: byDay[d] }));
+  const line = days.map(d => ({ date: d, value: byDay[d] }));
 
-  const funnelStages = ['Visit', 'AI Prompt Used', 'Post Created', 'Message Sent'];
-  const funnel = funnelStages.map((stage) => ({ label: stage, value: byEvent[stage] || 0 }));
+  const funnelStages = [
+    'Visit',
+    'AI Prompt Used',
+    'Post Created',
+    'Message Sent',
+  ];
+  const funnel = funnelStages.map(stage => ({
+    label: stage,
+    value: byEvent[stage] || 0,
+  }));
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
 }

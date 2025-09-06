@@ -7,7 +7,10 @@ type AuthContextType = {
   setRole: (role: UserRole) => void;
 };
 
-const AuthContext = createContext<AuthContextType>({ role: 'talent', setRole: () => {} });
+const AuthContext = createContext<AuthContextType>({
+  role: 'talent',
+  setRole: () => {},
+});
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [role, setRoleState] = useState<UserRole>('talent');
@@ -23,14 +26,16 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const setRole = (r: UserRole) => {
     setRoleState(r);
-    try { 
+    try {
       window.localStorage.setItem('userRole', r);
       document.cookie = `userRole=${r}; path=/; max-age=${60 * 60 * 24 * 365}`;
     } catch {}
   };
 
   return (
-    <AuthContext.Provider value={{ role, setRole }}>{children}</AuthContext.Provider>
+    <AuthContext.Provider value={{ role, setRole }}>
+      {children}
+    </AuthContext.Provider>
   );
 }
 

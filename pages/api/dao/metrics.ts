@@ -19,7 +19,10 @@ function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2));
 }
 
-export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  _req: NextApiRequest,
+  res: NextApiResponse
+) {
   try {
     const cfg = readJson(configPath);
     const cache = readJson(cachePath);
@@ -53,33 +56,53 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
       .sort((a, b) => (b.netDelta > a.netDelta ? 1 : -1))
       .slice(0, 10);
 
-    const topHolders = entries.map((e) => ({ address: e.address, amount: e.netDelta.toString() }));
+    const topHolders = entries.map(e => ({
+      address: e.address,
+      amount: e.netDelta.toString(),
+    }));
 
     // Token distribution buckets (very rough: based on netDelta approximation)
-    const total = entries.reduce((acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n), 0n);
-    const distribution = entries.map((e) => ({
+    const total = entries.reduce(
+      (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n),
+      0n
+    );
+    const distribution = entries.map(e => ({
       address: e.address,
-      percent: total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0
+      percent:
+        total > 0n ? Number((BigInt(e.amount) * 10000n) / total) / 100 : 0,
     }));
 
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.
     const activeProposals: any[] = [];
 
     // Governance participation rate: Placeholder heuristic (unique voters over last N proposals / total token holders in sample)
-    const uniqueAddresses = new Set(txs.flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()]).filter(Boolean));
-    const participationRate = uniqueAddresses.size ? Math.min(100, Math.round((uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100)) : 0;
+    const uniqueAddresses = new Set(
+      txs
+        .flatMap((t: any) => [t.from?.toLowerCase(), t.to?.toLowerCase()])
+        .filter(Boolean)
+    );
+    const participationRate = uniqueAddresses.size
+      ? Math.min(
+          100,
+          Math.round(
+            (uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 100
+          )
+        )
+      : 0;
 
     const result = {
       updatedAt: now,
       tokenDistribution: distribution,
       topHolders,
       activeProposals,
-      governanceParticipationRate: participationRate
+      governanceParticipationRate: participationRate,
     };
 
     writeJson(cachePath, result);
     return res.status(200).json(result);
   } catch (e: any) {
-    return res.status(500).json({ error: e?.message ?? 'Failed to load DAO metrics' });
+    return res
+      .status(500)
+      .json({ error: e?.message ?? 'Failed to load DAO metrics' });
   }
 }

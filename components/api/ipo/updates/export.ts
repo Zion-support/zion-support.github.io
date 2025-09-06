@@ -10,7 +10,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const u = updates.find((x: any) => x.id === id);
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.setHeader('Content-Type', 'application/pdf');
-  res.setHeader('Content-Disposition', `attachment; filename="${u.title.replace(/[^a-z0-9]/gi,'_')}.pdf"`);
+  res.setHeader(
+    'Content-Disposition',
+    `attachment; filename="${u.title.replace(/[^a-z0-9]/gi, '_')}.pdf"`
+  );
   const doc = new PDFDocument({ size: 'A4', margin: 50 });
   doc.pipe(res);
   doc.fontSize(20).text(u.title, { underline: true });

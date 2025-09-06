@@ -1,5 +1,12 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
-import { Room, RoomEvent, RemoteParticipant, LocalParticipant, createLocalTracks, VideoPresets } from 'livekit-client';
+import {
+  Room,
+  RoomEvent,
+  RemoteParticipant,
+  LocalParticipant,
+  createLocalTracks,
+  VideoPresets,
+} from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
 
@@ -16,9 +23,20 @@ type Props = {
   onLeave?: (durationSec: number) => void;
 };
 
-export default function CallRoom({ projectId, userId, displayName, roomName, serverUrl, token, startMode, onLeave }: Props) {
+export default function CallRoom({
+  projectId,
+  userId,
+  displayName,
+  roomName,
+  serverUrl,
+  token,
+  startMode,
+  onLeave,
+}: Props) {
   const [room, setRoom] = useState<Room | null>(null);
-  const [participants, setParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]);
+  const [participants, setParticipants] = useState<
+    Array<RemoteParticipant | LocalParticipant>
+  >([]);
   const [connectedAt, setConnectedAt] = useState<number | null>(null);
 
   const connect = useCallback(async () => {
@@ -33,13 +51,17 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     // create local tracks per start mode
     let localTracks: any[] = [];
     if (startMode === 'video') {
-      localTracks = await createLocalTracks({ audio: true, video: VideoPresets.h720 });
+      localTracks = await createLocalTracks({
+        audio: true,
+        video: VideoPresets.h720,
+      });
     } else {
       localTracks = await createLocalTracks({ audio: true, video: false });
     }
 
     await r.connect(serverUrl, token, {
-      autoSubscribe: true});
+      autoSubscribe: true,
+    });
 
     // publish local tracks
     for (const t of localTracks) {
@@ -49,13 +71,16 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     setRoom(r);
     setConnectedAt(Date.now());
     rebuild(r);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [serverUrl, token, startMode]);
 
   const rebuild = (current?: Room | null) => {
     const r = current || room;
     if (!r) return;
-    const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant, ...Array.from(r.participants.values())];
+    const list: Array<RemoteParticipant | LocalParticipant> = [
+      r.localParticipant,
+      ...Array.from(r.participants.values()),
+    ];
     setParticipants(list);
   };
 
@@ -72,7 +97,9 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
     if (room) {
       room.disconnect();
     }
-    const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0;
+    const durationSec = connectedAt
+      ? Math.round((Date.now() - connectedAt) / 1000)
+      : 0;
     onLeave?.(durationSec);
   };
 
@@ -86,18 +113,26 @@ export default function CallRoom({ projectId, userId, displayName, roomName, ser
   }, [participants.length]);
 
   return (
-    <div className="min-h-screen bg-gray-950 text-gray-100 flex flex-col">
-      <div className="p-4 flex items-center justify-between border-b border-gray-800">
+    <div className='min-h-screen bg-gray-950 text-gray-100 flex flex-col'>
+      <div className='p-4 flex items-center justify-between border-b border-gray-800'>
         <div>
-          <h2 className="text-lg font-semibold">Project Room: {projectId}</h2>
-          <p className="text-xs text-gray-400">Room {roomName}</p>
+          <h2 className='text-lg font-semibold'>Project Room: {projectId}</h2>
+          <p className='text-xs text-gray-400'>Room {roomName}</p>
         </div>
-        <Controls room={room} onLeave={handleLeave} accent="cyan" />
+        <Controls room={room} onLeave={handleLeave} accent='cyan' />
       </div>
 
       <div className={`flex-1 p-4 grid gap-4 ${gridCols}`}>
         {participants.map((p, idx) => (
-          <ParticipantTile key={String((p as any).sid || (p as any).identity) + idx} participant={p} isLocal={p instanceof LocalParticipant} displayName={(p as any).name || (p instanceof LocalParticipant ? 'You' : undefined)} />
+          <ParticipantTile
+            key={String((p as any).sid || (p as any).identity) + idx}
+            participant={p}
+            isLocal={p instanceof LocalParticipant}
+            displayName={
+              (p as any).name ||
+              (p instanceof LocalParticipant ? 'You' : undefined)
+            }
+          />
         ))}
       </div>
     </div>
