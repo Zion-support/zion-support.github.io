@@ -5,87 +5,33 @@ interface SEOProps {
   title?: string;
   description?: string;
   keywords?: string;
-  url?: string;
   image?: string;
+  url?: string;
   type?: string;
-  className?: string;
 }
 
-export function SEO({ 
-  title = "Zion Tech Group - AI & Technology Solutions",
-  description = "Leading AI-powered technology solutions for modern businesses. Transform your digital future with cutting-edge innovation and enterprise-grade reliability.",
-  keywords = "AI, artificial intelligence, technology solutions, digital transformation, enterprise software, cloud computing, cybersecurity, automation",
-  url = "https://ziontechgroup.com",
-  image = "https://ziontechgroup.com/og-image.jpg",
-  type = "website",
-  className
-}: SEOProps) {
-  const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Zion Tech Group",
-    "description": description,
-    "url": url,
-    "logo": "https://ziontechgroup.com/logo.png",
-    "image": image,
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+1-302-464-0950",
-      "contactType": "customer service",
-      "email": "kleber@ziontechgroup.com"
-    },
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "364 E Main St STE 1008",
-      "addressLocality": "Middletown",
-      "addressRegion": "DE",
-      "postalCode": "19709",
-      "addressCountry": "US"
-    },
-    "sameAs": [
-      "https://linkedin.com/company/zion-tech-group",
-      "https://twitter.com/ziontechgroup",
-      "https://facebook.com/ziontechgroup"
-    ],
-    "offers": {
-      "@type": "AggregateOffer",
-      "offerCount": "6",
-      "offers": [
-        {
-          "@type": "Offer",
-          "name": "AI Services",
-          "description": "Custom AI solutions powered by machine learning and deep learning technologies"
-        },
-        {
-          "@type": "Offer",
-          "name": "IT Services",
-          "description": "Comprehensive IT infrastructure and digital transformation solutions"
-        },
-        {
-          "@type": "Offer",
-          "name": "Cybersecurity",
-          "description": "Advanced security solutions to protect your digital assets"
-        }
-      ]
-    }
-  };
-
+const SEO: React.FC<SEOProps> = ({
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI solutions, cybersecurity, and cloud infrastructure. Leading technology solutions for a smarter future.',
+  keywords = 'AI services, cybersecurity, cloud infrastructure, digital transformation, machine learning, technology solutions, business automation',
+  image = 'https://ziontechgroup.com/og-image.jpg',
+  url = 'https://ziontechgroup.com',
+  type = 'website'
+}) => {
   return (
     <Helmet>
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
-      <meta name="author" content="Zion Tech Group" />
-      <meta name="robots" content="index, follow" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta name="robots" content="index,follow" />
+      <link rel="canonical" href={url} />
       
-      {/* Open Graph / Facebook */}
+      {/* Open Graph */}
       <meta property="og:type" content={type} />
       <meta property="og:url" content={url} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
-      <meta property="og:site_name" content="Zion Tech Group" />
       
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -95,14 +41,13 @@ export function SEO({
       <meta property="twitter:image" content={image} />
       
       {/* Additional SEO */}
-      <meta name="theme-color" content="#06b6d4" />
-      <meta name="msapplication-TileColor" content="#06b6d4" />
-      <link rel="canonical" href={url} />
-      
-      {/* Structured Data */}
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      <meta name="author" content="Zion Tech Group" />
+      <meta name="publisher" content="Zion Tech Group" />
+      <meta name="copyright" content="Zion Tech Group" />
+      <meta name="language" content="English" />
+      <meta name="revisit-after" content="7 days" />
     </Helmet>
   );
-}
+};
+
+export default SEO;
