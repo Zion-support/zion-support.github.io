@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "SEO Analyzer | Zion Tech Group",
+  title: 'SEO Analyzer | Zion Tech Group',
   description:
-    "Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.",
+    'Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.',
 };
 
 export default function SEOAnalyzerPage() {
@@ -61,11 +61,11 @@ export default function SEOAnalyzerPage() {
               price="$29/month"
               description="Perfect for small websites and blogs"
               features={[
-                "Up to 5 websites",
-                "Basic SEO analysis",
-                "Email support",
-                "Monthly reports",
-                "100 keyword tracking",
+                'Up to 5 websites',
+                'Basic SEO analysis',
+                'Email support',
+                'Monthly reports',
+                '100 keyword tracking',
               ]}
             />
             <PricingCard
@@ -73,12 +73,12 @@ export default function SEOAnalyzerPage() {
               price="$79/month"
               description="Ideal for growing businesses"
               features={[
-                "Up to 25 websites",
-                "Advanced AI analysis",
-                "Priority support",
-                "Weekly reports",
-                "1,000 keyword tracking",
-                "Competitor analysis",
+                'Up to 25 websites',
+                'Advanced AI analysis',
+                'Priority support',
+                'Weekly reports',
+                '1,000 keyword tracking',
+                'Competitor analysis',
               ]}
             />
             <PricingCard
@@ -86,13 +86,13 @@ export default function SEOAnalyzerPage() {
               price="$199/month"
               description="For large organizations and agencies"
               features={[
-                "Unlimited websites",
-                "Custom AI models",
-                "24/7 dedicated support",
-                "Real-time monitoring",
-                "Unlimited keyword tracking",
-                "White-label reporting",
-                "API access",
+                'Unlimited websites',
+                'Custom AI models',
+                '24/7 dedicated support',
+                'Real-time monitoring',
+                'Unlimited keyword tracking',
+                'White-label reporting',
+                'API access',
               ]}
             />
           </div>

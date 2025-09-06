@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = { 
+export const metadata = {
   title: 'AI Social Media Scheduler | Zion Tech Group',
   description: 'Intelligent social media scheduling tool with AI-powered content optimization, hashtag suggestions, and optimal posting times for maximum engagement.',
-  keywords: 'AI social media scheduler, social media automation, content optimization, hashtag suggestions, social media management, AI posting'
+  keywords: 'AI social media scheduler, social media automation, content optimization, hashtag suggestions, social media management, AI posting',
 };
 
 interface FeatureProps {
@@ -154,14 +154,14 @@ export default function AISocialMediaSchedulerPage() {
         </div>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
-            { name: "Instagram", icon: "📷", color: "bg-gradient-to-r from-purple-500 to-pink-500" },
-            { name: "Facebook", icon: "👥", color: "bg-blue-600" },
-            { name: "Twitter", icon: "🐦", color: "bg-blue-400" },
-            { name: "LinkedIn", icon: "💼", color: "bg-blue-700" },
-            { name: "TikTok", icon: "🎵", color: "bg-black" },
-            { name: "YouTube", icon: "📺", color: "bg-red-600" },
-            { name: "Pinterest", icon: "📌", color: "bg-red-500" },
-            { name: "Snapchat", icon: "👻", color: "bg-yellow-400" }
+            { name: 'Instagram', icon: '📷', color: 'bg-gradient-to-r from-purple-500 to-pink-500' },
+            { name: 'Facebook', icon: '👥', color: 'bg-blue-600' },
+            { name: 'Twitter', icon: '🐦', color: 'bg-blue-400' },
+            { name: 'LinkedIn', icon: '💼', color: 'bg-blue-700' },
+            { name: 'TikTok', icon: '🎵', color: 'bg-black' },
+            { name: 'YouTube', icon: '📺', color: 'bg-red-600' },
+            { name: 'Pinterest', icon: '📌', color: 'bg-red-500' },
+            { name: 'Snapchat', icon: '👻', color: 'bg-yellow-400' },
           ].map((platform, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-200">
               <div className={`w-12 h-12 ${platform.color} rounded-full flex items-center justify-center mx-auto mb-3`}>
@@ -228,12 +228,12 @@ export default function AISocialMediaSchedulerPage() {
             period="month"
             description="Perfect for individuals and small businesses"
             features={[
-              "Up to 5 social accounts",
-              "30 posts per month",
-              "Basic AI content generation",
-              "Optimal timing suggestions",
-              "Basic analytics",
-              "Email support"
+              'Up to 5 social accounts',
+              '30 posts per month',
+              'Basic AI content generation',
+              'Optimal timing suggestions',
+              'Basic analytics',
+              'Email support',
             ]}
             cta="Start Free Trial"
           />
@@ -243,14 +243,14 @@ export default function AISocialMediaSchedulerPage() {
             period="month"
             description="Most popular for growing businesses"
             features={[
-              "Up to 15 social accounts",
-              "Unlimited posts",
-              "Advanced AI content generation",
-              "Hashtag optimization",
-              "Content recycling",
-              "Advanced analytics",
-              "Priority support",
-              "Team collaboration"
+              'Up to 15 social accounts',
+              'Unlimited posts',
+              'Advanced AI content generation',
+              'Hashtag optimization',
+              'Content recycling',
+              'Advanced analytics',
+              'Priority support',
+              'Team collaboration',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -261,15 +261,15 @@ export default function AISocialMediaSchedulerPage() {
             period="month"
             description="For agencies and large organizations"
             features={[
-              "Unlimited social accounts",
-              "Unlimited posts",
-              "Full AI optimization suite",
-              "White-label options",
-              "Custom AI training",
-              "Dedicated account manager",
-              "24/7 phone support",
-              "API access",
-              "Custom reporting"
+              'Unlimited social accounts',
+              'Unlimited posts',
+              'Full AI optimization suite',
+              'White-label options',
+              'Custom AI training',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'API access',
+              'Custom reporting',
             ]}
             cta="Contact Sales"
           />

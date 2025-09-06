@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'CRM Platform Development | Zion Tech Group',
-  description: 'Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.'
+  description: 'Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.',
 };
 
 export default function CRMPlatformPage() {
@@ -11,43 +11,43 @@ export default function CRMPlatformPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build powerful CRM platforms with lead management, sales tracking, customer insights, and automation workflows.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Lead Management" 
+          <Item
+            title="Lead Management"
             details={[
-              "Lead capture forms",
-              "Lead scoring system",
-              "Lead assignment rules",
-              "Lead nurturing workflows",
-              "Lead source tracking",
-              "Conversion analytics",
-              "Lead qualification tools"
-            ]} 
+              'Lead capture forms',
+              'Lead scoring system',
+              'Lead assignment rules',
+              'Lead nurturing workflows',
+              'Lead source tracking',
+              'Conversion analytics',
+              'Lead qualification tools',
+            ]}
           />
-          <Item 
-            title="Sales Pipeline" 
+          <Item
+            title="Sales Pipeline"
             details={[
-              "Deal tracking",
-              "Pipeline visualization",
-              "Sales forecasting",
-              "Activity tracking",
-              "Quote generation",
-              "Contract management",
-              "Revenue reporting"
-            ]} 
+              'Deal tracking',
+              'Pipeline visualization',
+              'Sales forecasting',
+              'Activity tracking',
+              'Quote generation',
+              'Contract management',
+              'Revenue reporting',
+            ]}
           />
-          <Item 
-            title="Customer Management" 
+          <Item
+            title="Customer Management"
             details={[
-              "Contact management",
-              "Communication history",
-              "Customer segmentation",
-              "Support ticket integration",
-              "Customer health scoring",
-              "Lifetime value tracking",
-              "Retention analytics"
-            ]} 
+              'Contact management',
+              'Communication history',
+              'Customer segmentation',
+              'Support ticket integration',
+              'Customer health scoring',
+              'Lifetime value tracking',
+              'Retention analytics',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">CRM Platform Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Starter CRM" 
-          price="$20k–$40k" 
+        <Plan
+          name="Starter CRM"
+          price="$20k–$40k"
           duration="8–12 weeks"
           features={[
-            "Basic contact management",
-            "Lead tracking",
-            "Simple pipeline",
-            "Email integration",
-            "Basic reporting",
-            "Mobile app",
-            "User management"
-          ]} 
+            'Basic contact management',
+            'Lead tracking',
+            'Simple pipeline',
+            'Email integration',
+            'Basic reporting',
+            'Mobile app',
+            'User management',
+          ]}
         />
-        <Plan 
-          name="Professional CRM" 
-          price="$40k–$80k" 
+        <Plan
+          name="Professional CRM"
+          price="$40k–$80k"
           duration="12–18 weeks"
           features={[
-            "Everything in Starter",
-            "Advanced automation",
-            "Custom fields & workflows",
-            "Advanced analytics",
-            "API integrations",
-            "White-label options",
-            "Priority support"
-          ]} 
+            'Everything in Starter',
+            'Advanced automation',
+            'Custom fields & workflows',
+            'Advanced analytics',
+            'API integrations',
+            'White-label options',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise CRM" 
-          price="$80k+" 
+        <Plan
+          name="Enterprise CRM"
+          price="$80k+"
           duration="16–24 weeks"
           features={[
-            "Everything in Professional",
-            "Custom development",
-            "Advanced security",
-            "Multi-tenant architecture",
-            "Dedicated support",
-            "SLA guarantees",
-            "On-premise deployment"
-          ]} 
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your CRM?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=CRM Platform Development Inquiry"
         className="block w-full mt-6 bg-indigo-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
       >

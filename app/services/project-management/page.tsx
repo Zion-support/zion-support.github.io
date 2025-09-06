@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Project Management Platform | Zion Tech Group',
-  description: 'Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.'
+  description: 'Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.',
 };
 
 export default function ProjectManagementPage() {
@@ -11,43 +11,43 @@ export default function ProjectManagementPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build comprehensive project management tools with task tracking, team collaboration, time tracking, and advanced reporting.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Task Management" 
+          <Item
+            title="Task Management"
             details={[
-              "Kanban boards",
-              "Gantt charts",
-              "Task dependencies",
-              "Priority management",
-              "Custom workflows",
-              "Recurring tasks",
-              "Task templates"
-            ]} 
+              'Kanban boards',
+              'Gantt charts',
+              'Task dependencies',
+              'Priority management',
+              'Custom workflows',
+              'Recurring tasks',
+              'Task templates',
+            ]}
           />
-          <Item 
-            title="Team Collaboration" 
+          <Item
+            title="Team Collaboration"
             details={[
-              "Real-time chat",
-              "File sharing",
-              "Comment threads",
-              "Team calendars",
-              "Video meetings",
-              "Notification system",
-              "Activity feeds"
-            ]} 
+              'Real-time chat',
+              'File sharing',
+              'Comment threads',
+              'Team calendars',
+              'Video meetings',
+              'Notification system',
+              'Activity feeds',
+            ]}
           />
-          <Item 
-            title="Reporting & Analytics" 
+          <Item
+            title="Reporting & Analytics"
             details={[
-              "Progress tracking",
-              "Time tracking",
-              "Resource allocation",
-              "Budget management",
-              "Custom dashboards",
-              "Export reports",
-              "Performance metrics"
-            ]} 
+              'Progress tracking',
+              'Time tracking',
+              'Resource allocation',
+              'Budget management',
+              'Custom dashboards',
+              'Export reports',
+              'Performance metrics',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Project Management Platform Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Team Platform" 
-          price="$18k–$35k" 
+        <Plan
+          name="Team Platform"
+          price="$18k–$35k"
           duration="6–10 weeks"
           features={[
-            "Basic task management",
-            "Team collaboration tools",
-            "Simple reporting",
-            "Mobile app",
-            "Basic integrations",
-            "User management",
-            "Cloud hosting"
-          ]} 
+            'Basic task management',
+            'Team collaboration tools',
+            'Simple reporting',
+            'Mobile app',
+            'Basic integrations',
+            'User management',
+            'Cloud hosting',
+          ]}
         />
-        <Plan 
-          name="Professional Platform" 
-          price="$35k–$70k" 
+        <Plan
+          name="Professional Platform"
+          price="$35k–$70k"
           duration="8–14 weeks"
           features={[
-            "Everything in Team",
-            "Advanced workflows",
-            "Time tracking",
-            "Resource management",
-            "Client portal",
-            "Advanced analytics",
-            "Custom integrations"
-          ]} 
+            'Everything in Team',
+            'Advanced workflows',
+            'Time tracking',
+            'Resource management',
+            'Client portal',
+            'Advanced analytics',
+            'Custom integrations',
+          ]}
         />
-        <Plan 
-          name="Enterprise Platform" 
-          price="$70k+" 
+        <Plan
+          name="Enterprise Platform"
+          price="$70k+"
           duration="12–20 weeks"
           features={[
-            "Everything in Professional",
-            "Custom development",
-            "White-label options",
-            "Advanced security",
-            "Dedicated support",
-            "SLA guarantees",
-            "On-premise deployment"
-          ]} 
+            'Everything in Professional',
+            'Custom development',
+            'White-label options',
+            'Advanced security',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your PM Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=Project Management Platform Inquiry"
         className="block w-full mt-6 bg-orange-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-orange-700 transition-colors"
       >

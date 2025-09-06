@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Customer Feedback Analyzer | Zion Tech Group',
-  description: 'Transform customer feedback into actionable insights with AI-powered sentiment analysis, trend detection, and automated reporting.'
+  description: 'Transform customer feedback into actionable insights with AI-powered sentiment analysis, trend detection, and automated reporting.',
 };
 
 export default function CustomerFeedbackAnalyzerPage() {
@@ -8,37 +8,37 @@ export default function CustomerFeedbackAnalyzerPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Customer Feedback Analyzer</h1>
       <p className="text-xl text-gray-600 mb-12">Transform customer feedback into actionable insights with AI-powered sentiment analysis, trend detection, and automated reporting.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="AI Sentiment Analysis" 
+        <FeatureCard
+          title="AI Sentiment Analysis"
           features={[
-            "Real-time sentiment scoring",
-            "Emotion detection",
-            "Language processing",
-            "Multi-language support"
-          ]} 
+            'Real-time sentiment scoring',
+            'Emotion detection',
+            'Language processing',
+            'Multi-language support',
+          ]}
         />
-        <FeatureCard 
-          title="Trend Detection" 
+        <FeatureCard
+          title="Trend Detection"
           features={[
-            "Pattern recognition",
-            "Issue prioritization",
-            "Performance tracking",
-            "Predictive insights"
-          ]} 
+            'Pattern recognition',
+            'Issue prioritization',
+            'Performance tracking',
+            'Predictive insights',
+          ]}
         />
-        <FeatureCard 
-          title="Automated Reporting" 
+        <FeatureCard
+          title="Automated Reporting"
           features={[
-            "Custom dashboards",
-            "Scheduled reports",
-            "Alert notifications",
-            "Executive summaries"
-          ]} 
+            'Custom dashboards',
+            'Scheduled reports',
+            'Alert notifications',
+            'Executive summaries',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-orange-50 to-red-50 border border-orange-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Analyze Customer Feedback?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function CustomerFeedbackAnalyzerPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Understand Your Customers Better?</h2>
         <p className="text-gray-600 mb-6">Start with a free analysis of your existing feedback data and see what insights you're missing.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$149/mo" 
+        <Plan
+          name="Starter"
+          price="$149/mo"
           features={[
-            "Up to 1,000 feedback items",
-            "Basic sentiment analysis",
-            "Monthly reports",
-            "Email support"
-          ]} 
+            'Up to 1,000 feedback items',
+            'Basic sentiment analysis',
+            'Monthly reports',
+            'Email support',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$399/mo" 
+        <Plan
+          name="Professional"
+          price="$399/mo"
           features={[
-            "Up to 10,000 feedback items",
-            "Advanced AI analysis",
-            "Real-time dashboards",
-            "Priority support",
-            "Custom integrations"
-          ]} 
+            'Up to 10,000 feedback items',
+            'Advanced AI analysis',
+            'Real-time dashboards',
+            'Priority support',
+            'Custom integrations',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$899/mo" 
+        <Plan
+          name="Enterprise"
+          price="$899/mo"
           features={[
-            "Unlimited feedback items",
-            "Custom AI models",
-            "White-label solution",
-            "Dedicated support",
-            "API access"
-          ]} 
+            'Unlimited feedback items',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'API access',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-orange-600 text-white hover:bg-orange-700' 
+          popular
+            ? 'bg-orange-600 text-white hover:bg-orange-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

@@ -1,9 +1,9 @@
-import Link from "next/link";
+import Link from 'next/link';
 
 export const metadata = {
-  title: "AI Data Analytics | Zion Tech Group",
+  title: 'AI Data Analytics | Zion Tech Group',
   description:
-    "Advanced AI-powered data analytics platform with predictive modeling, real-time insights, and automated reporting.",
+    'Advanced AI-powered data analytics platform with predictive modeling, real-time insights, and automated reporting.',
 };
 
 export default function AIDataAnalyticsPage() {
@@ -70,11 +70,11 @@ export default function AIDataAnalyticsPage() {
               period="month"
               description="Perfect for small teams"
               features={[
-                "5 data sources",
-                "Basic dashboards",
-                "Standard reports",
-                "Email support",
-                "Monthly insights",
+                '5 data sources',
+                'Basic dashboards',
+                'Standard reports',
+                'Email support',
+                'Monthly insights',
               ]}
               popular={false}
             />
@@ -84,12 +84,12 @@ export default function AIDataAnalyticsPage() {
               period="month"
               description="Most popular for growing businesses"
               features={[
-                "20 data sources",
-                "Advanced dashboards",
-                "Predictive analytics",
-                "Priority support",
-                "Real-time monitoring",
-                "Custom models",
+                '20 data sources',
+                'Advanced dashboards',
+                'Predictive analytics',
+                'Priority support',
+                'Real-time monitoring',
+                'Custom models',
               ]}
               popular={true}
             />
@@ -99,12 +99,12 @@ export default function AIDataAnalyticsPage() {
               period="month"
               description="For large organizations"
               features={[
-                "Unlimited data sources",
-                "Custom dashboards",
-                "Advanced AI models",
-                "Dedicated support",
-                "White-label solution",
-                "API access",
+                'Unlimited data sources',
+                'Custom dashboards',
+                'Advanced AI models',
+                'Dedicated support',
+                'White-label solution',
+                'API access',
               ]}
               popular={false}
             />
@@ -218,7 +218,7 @@ function PricingCard({
 }) {
   return (
     <div
-      className={`border rounded-xl p-6 ${popular ? "border-teal-500 bg-teal-50" : "border-gray-200 bg-white"}`}
+      className={`border rounded-xl p-6 ${popular ? 'border-teal-500 bg-teal-50' : 'border-gray-200 bg-white'}`}
     >
       {popular && (
         <div className="text-center mb-4">

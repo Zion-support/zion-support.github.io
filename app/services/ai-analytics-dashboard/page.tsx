@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'AI-Powered Analytics Dashboard | Zion Tech Group',
-  description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.'
+  description: 'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.',
 };
 
 export default function AIAnalyticsDashboardPage() {
@@ -8,37 +8,37 @@ export default function AIAnalyticsDashboardPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">AI-Powered Analytics Dashboard</h1>
       <p className="text-xl text-gray-600 mb-12">Transform your data into actionable insights with intelligent analytics, real-time visualization, and predictive modeling.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Real-Time Analytics" 
+        <FeatureCard
+          title="Real-Time Analytics"
           features={[
-            "Live data streaming",
-            "Interactive dashboards",
-            "Custom KPI tracking",
-            "Automated alerts"
-          ]} 
+            'Live data streaming',
+            'Interactive dashboards',
+            'Custom KPI tracking',
+            'Automated alerts',
+          ]}
         />
-        <FeatureCard 
-          title="AI-Powered Insights" 
+        <FeatureCard
+          title="AI-Powered Insights"
           features={[
-            "Predictive modeling",
-            "Anomaly detection",
-            "Trend analysis",
-            "Smart recommendations"
-          ]} 
+            'Predictive modeling',
+            'Anomaly detection',
+            'Trend analysis',
+            'Smart recommendations',
+          ]}
         />
-        <FeatureCard 
-          title="Advanced Visualization" 
+        <FeatureCard
+          title="Advanced Visualization"
           features={[
-            "Custom charts & graphs",
-            "Drill-down capabilities",
-            "Mobile-responsive design",
-            "Export & sharing options"
-          ]} 
+            'Custom charts & graphs',
+            'Drill-down capabilities',
+            'Mobile-responsive design',
+            'Export & sharing options',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Key Benefits</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function AIAnalyticsDashboardPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Data?</h2>
         <p className="text-gray-600 mb-6">Get started with a free consultation and see how AI analytics can boost your business performance.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$299/mo" 
+        <Plan
+          name="Starter"
+          price="$299/mo"
           features={[
-            "Up to 5 data sources",
-            "Basic dashboards",
-            "Email reports",
-            "Standard support"
-          ]} 
+            'Up to 5 data sources',
+            'Basic dashboards',
+            'Email reports',
+            'Standard support',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$799/mo" 
+        <Plan
+          name="Professional"
+          price="$799/mo"
           features={[
-            "Up to 20 data sources",
-            "Advanced AI insights",
-            "Real-time alerts",
-            "Priority support",
-            "Custom visualizations"
-          ]} 
+            'Up to 20 data sources',
+            'Advanced AI insights',
+            'Real-time alerts',
+            'Priority support',
+            'Custom visualizations',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$1,999/mo" 
+        <Plan
+          name="Enterprise"
+          price="$1,999/mo"
           features={[
-            "Unlimited data sources",
-            "Custom AI models",
-            "White-label solution",
-            "Dedicated support",
-            "On-premise deployment"
-          ]} 
+            'Unlimited data sources',
+            'Custom AI models',
+            'White-label solution',
+            'Dedicated support',
+            'On-premise deployment',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-blue-600 text-white hover:bg-blue-700' 
+          popular
+            ? 'bg-blue-600 text-white hover:bg-blue-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Analytics Dashboard Platform | Zion Tech Group',
-  description: 'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.'
+  description: 'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.',
 };
 
 export default function AnalyticsDashboardPage() {
@@ -11,43 +11,43 @@ export default function AnalyticsDashboardPage() {
         <p className="text-xl text-gray-600 mb-8">
           Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence tools.
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-          <Item 
-            title="Data Visualization" 
+          <Item
+            title="Data Visualization"
             details={[
-              "Interactive charts & graphs",
-              "Real-time data updates",
-              "Custom dashboard builder",
-              "Drag-and-drop interface",
-              "Multiple chart types",
-              "Responsive design",
-              "Export capabilities"
-            ]} 
+              'Interactive charts & graphs',
+              'Real-time data updates',
+              'Custom dashboard builder',
+              'Drag-and-drop interface',
+              'Multiple chart types',
+              'Responsive design',
+              'Export capabilities',
+            ]}
           />
-          <Item 
-            title="Data Integration" 
+          <Item
+            title="Data Integration"
             details={[
-              "API connections",
-              "Database integration",
-              "CSV/Excel import",
-              "Real-time streaming",
-              "Data transformation",
-              "ETL pipelines",
-              "Data validation"
-            ]} 
+              'API connections',
+              'Database integration',
+              'CSV/Excel import',
+              'Real-time streaming',
+              'Data transformation',
+              'ETL pipelines',
+              'Data validation',
+            ]}
           />
-          <Item 
-            title="Business Intelligence" 
+          <Item
+            title="Business Intelligence"
             details={[
-              "Custom KPI tracking",
-              "Automated alerts",
-              "Trend analysis",
-              "Predictive analytics",
-              "Cohort analysis",
-              "A/B testing insights",
-              "ROI calculations"
-            ]} 
+              'Custom KPI tracking',
+              'Automated alerts',
+              'Trend analysis',
+              'Predictive analytics',
+              'Cohort analysis',
+              'A/B testing insights',
+              'ROI calculations',
+            ]}
           />
         </div>
 
@@ -100,50 +100,50 @@ function Pricing() {
     <section>
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Analytics Platform Pricing</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <Plan 
-          name="Basic Analytics" 
-          price="$16k–$32k" 
+        <Plan
+          name="Basic Analytics"
+          price="$16k–$32k"
           duration="6–10 weeks"
           features={[
-            "Basic dashboard builder",
-            "5 data sources",
-            "Standard chart types",
-            "Export functionality",
-            "User management",
-            "Mobile responsive",
-            "Basic support"
-          ]} 
+            'Basic dashboard builder',
+            '5 data sources',
+            'Standard chart types',
+            'Export functionality',
+            'User management',
+            'Mobile responsive',
+            'Basic support',
+          ]}
         />
-        <Plan 
-          name="Professional Analytics" 
-          price="$32k–$65k" 
+        <Plan
+          name="Professional Analytics"
+          price="$32k–$65k"
           duration="10–16 weeks"
           features={[
-            "Everything in Basic",
-            "Advanced visualizations",
-            "Real-time data",
-            "Custom metrics",
-            "API integrations",
-            "White-label options",
-            "Priority support"
-          ]} 
+            'Everything in Basic',
+            'Advanced visualizations',
+            'Real-time data',
+            'Custom metrics',
+            'API integrations',
+            'White-label options',
+            'Priority support',
+          ]}
         />
-        <Plan 
-          name="Enterprise Analytics" 
-          price="$65k+" 
+        <Plan
+          name="Enterprise Analytics"
+          price="$65k+"
           duration="14–22 weeks"
           features={[
-            "Everything in Professional",
-            "Custom development",
-            "Advanced security",
-            "Multi-tenant architecture",
-            "Dedicated support",
-            "SLA guarantees",
-            "On-premise deployment"
-          ]} 
+            'Everything in Professional',
+            'Custom development',
+            'Advanced security',
+            'Multi-tenant architecture',
+            'Dedicated support',
+            'SLA guarantees',
+            'On-premise deployment',
+          ]}
         />
       </div>
-      
+
       <div className="mt-12 text-center">
         <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Analytics Platform?</h3>
         <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
@@ -168,11 +168,11 @@ function Pricing() {
   );
 }
 
-function Plan({ name, price, duration, features }: { 
-  name: string; 
-  price: string; 
+function Plan({ name, price, duration, features }: {
+  name: string;
+  price: string;
   duration: string;
-  features: string[]; 
+  features: string[];
 }) {
   return (
     <div className="border border-gray-200 rounded-xl p-6 bg-white hover:shadow-lg transition-shadow">
@@ -187,7 +187,7 @@ function Plan({ name, price, duration, features }: {
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Platform Inquiry"
         className="block w-full mt-6 bg-teal-600 text-white text-center py-3 rounded-lg font-semibold hover:bg-teal-700 transition-colors"
       >

@@ -16,7 +16,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   delay = 0,
   className = '',
   showCursor = true,
-  onComplete
+  onComplete,
 }) => {
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);

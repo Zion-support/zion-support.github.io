@@ -3,35 +3,35 @@ import React from 'react';
 const BenefitsSection = () => {
   const benefits = [
     {
-      icon: "🚀",
-      title: "Faster Implementation",
-      description: "Get your solutions up and running quickly with our streamlined processes."
+      icon: '🚀',
+      title: 'Faster Implementation',
+      description: 'Get your solutions up and running quickly with our streamlined processes.',
     },
     {
-      icon: "💰",
-      title: "Cost Effective",
-      description: "Reduce operational costs while improving efficiency and productivity."
+      icon: '💰',
+      title: 'Cost Effective',
+      description: 'Reduce operational costs while improving efficiency and productivity.',
     },
     {
-      icon: "🔒",
-      title: "Secure & Reliable",
-      description: "Enterprise-grade security and 99.9% uptime guarantee for all services."
+      icon: '🔒',
+      title: 'Secure & Reliable',
+      description: 'Enterprise-grade security and 99.9% uptime guarantee for all services.',
     },
     {
-      icon: "📈",
-      title: "Scalable Solutions",
-      description: "Grow your business with solutions that scale with your needs."
+      icon: '📈',
+      title: 'Scalable Solutions',
+      description: 'Grow your business with solutions that scale with your needs.',
     },
     {
-      icon: "🎯",
-      title: "Expert Support",
-      description: "24/7 support from our team of certified professionals."
+      icon: '🎯',
+      title: 'Expert Support',
+      description: '24/7 support from our team of certified professionals.',
     },
     {
-      icon: "⚡",
-      title: "Latest Technology",
-      description: "Stay ahead with cutting-edge AI and IT solutions."
-    }
+      icon: '⚡',
+      title: 'Latest Technology',
+      description: 'Stay ahead with cutting-edge AI and IT solutions.',
+    },
   ];
 
   return (

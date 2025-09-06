@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Chatbot Development | Zion Tech Group',
-  description: 'Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.'
+  description: 'Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.',
 };
 
 export default function ChatbotDevelopmentPage() {
@@ -8,37 +8,37 @@ export default function ChatbotDevelopmentPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Chatbot Development</h1>
       <p className="text-xl text-gray-600 mb-12">Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="AI-Powered Conversations" 
+        <FeatureCard
+          title="AI-Powered Conversations"
           features={[
-            "Natural language understanding",
-            "Context-aware responses",
-            "Multi-language support",
-            "Sentiment analysis"
-          ]} 
+            'Natural language understanding',
+            'Context-aware responses',
+            'Multi-language support',
+            'Sentiment analysis',
+          ]}
         />
-        <FeatureCard 
-          title="Multi-Platform Deployment" 
+        <FeatureCard
+          title="Multi-Platform Deployment"
           features={[
-            "Website integration",
-            "Mobile app integration",
-            "Social media platforms",
-            "Voice assistants"
-          ]} 
+            'Website integration',
+            'Mobile app integration',
+            'Social media platforms',
+            'Voice assistants',
+          ]}
         />
-        <FeatureCard 
-          title="Advanced Features" 
+        <FeatureCard
+          title="Advanced Features"
           features={[
-            "Human handoff",
-            "Analytics & insights",
-            "Custom integrations",
-            "A/B testing"
-          ]} 
+            'Human handoff',
+            'Analytics & insights',
+            'Custom integrations',
+            'A/B testing',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-amber-50 to-yellow-50 border border-amber-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Chatbot Development?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function ChatbotDevelopmentPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Build Your Intelligent Chatbot?</h2>
         <p className="text-gray-600 mb-6">Start with a free consultation to design the perfect chatbot for your business needs.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Basic" 
-          price="$1,999/mo" 
+        <Plan
+          name="Basic"
+          price="$1,999/mo"
           features={[
-            "Simple Q&A chatbot",
-            "Up to 1,000 conversations/month",
-            "Basic integrations",
-            "Email support"
-          ]} 
+            'Simple Q&A chatbot',
+            'Up to 1,000 conversations/month',
+            'Basic integrations',
+            'Email support',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$4,999/mo" 
+        <Plan
+          name="Professional"
+          price="$4,999/mo"
           features={[
-            "Advanced AI capabilities",
-            "Up to 10,000 conversations/month",
-            "Custom integrations",
-            "Priority support",
-            "Analytics dashboard"
-          ]} 
+            'Advanced AI capabilities',
+            'Up to 10,000 conversations/month',
+            'Custom integrations',
+            'Priority support',
+            'Analytics dashboard',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$12,999/mo" 
+        <Plan
+          name="Enterprise"
+          price="$12,999/mo"
           features={[
-            "Unlimited conversations",
-            "Custom AI training",
-            "White-label solution",
-            "Dedicated support",
-            "Multi-platform deployment"
-          ]} 
+            'Unlimited conversations',
+            'Custom AI training',
+            'White-label solution',
+            'Dedicated support',
+            'Multi-platform deployment',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-amber-600 text-white hover:bg-amber-700' 
+          popular
+            ? 'bg-amber-600 text-white hover:bg-amber-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

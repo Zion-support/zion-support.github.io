@@ -1,10 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export const metadata = { 
+export const metadata = {
   title: 'AI Email Optimizer | Zion Tech Group',
   description: 'AI-powered email optimization tool that analyzes, improves, and A/B tests your email campaigns for maximum engagement and conversion rates.',
-  keywords: 'AI email optimizer, email marketing, A/B testing, email analytics, conversion optimization, email automation'
+  keywords: 'AI email optimizer, email marketing, A/B testing, email analytics, conversion optimization, email automation',
 };
 
 interface FeatureProps {
@@ -192,12 +192,12 @@ export default function AIEmailOptimizerPage() {
             period="month"
             description="Perfect for small businesses and startups"
             features={[
-              "Up to 10,000 emails/month",
-              "Basic AI optimization",
-              "Subject line suggestions",
-              "Basic analytics",
-              "Email support",
-              "1 email platform integration"
+              'Up to 10,000 emails/month',
+              'Basic AI optimization',
+              'Subject line suggestions',
+              'Basic analytics',
+              'Email support',
+              '1 email platform integration',
             ]}
             cta="Start Free Trial"
           />
@@ -207,14 +207,14 @@ export default function AIEmailOptimizerPage() {
             period="month"
             description="Most popular for growing businesses"
             features={[
-              "Up to 100,000 emails/month",
-              "Advanced AI optimization",
-              "Content personalization",
-              "A/B testing automation",
-              "Send time optimization",
-              "Priority support",
-              "3 email platform integrations",
-              "Advanced analytics"
+              'Up to 100,000 emails/month',
+              'Advanced AI optimization',
+              'Content personalization',
+              'A/B testing automation',
+              'Send time optimization',
+              'Priority support',
+              '3 email platform integrations',
+              'Advanced analytics',
             ]}
             popular={true}
             cta="Start Free Trial"
@@ -225,15 +225,15 @@ export default function AIEmailOptimizerPage() {
             period="month"
             description="For large organizations with high volume"
             features={[
-              "Unlimited emails",
-              "Full AI optimization suite",
-              "Custom AI models",
-              "White-label options",
-              "Dedicated account manager",
-              "24/7 phone support",
-              "Unlimited integrations",
-              "Custom reporting",
-              "API access"
+              'Unlimited emails',
+              'Full AI optimization suite',
+              'Custom AI models',
+              'White-label options',
+              'Dedicated account manager',
+              '24/7 phone support',
+              'Unlimited integrations',
+              'Custom reporting',
+              'API access',
             ]}
             cta="Contact Sales"
           />

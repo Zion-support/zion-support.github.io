@@ -1,6 +1,6 @@
-export const metadata = { 
+export const metadata = {
   title: 'Predictive Analytics | Zion Tech Group',
-  description: 'Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.'
+  description: 'Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.',
 };
 
 export default function PredictiveAnalyticsPage() {
@@ -8,37 +8,37 @@ export default function PredictiveAnalyticsPage() {
     <section className="max-w-6xl mx-auto px-4 py-16">
       <h1 className="text-4xl font-bold text-gray-900 mb-6">Predictive Analytics</h1>
       <p className="text-xl text-gray-600 mb-12">Forecast the future with AI-powered predictive analytics. Make data-driven decisions with accurate predictions and trend analysis.</p>
-      
+
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="Forecasting & Predictions" 
+        <FeatureCard
+          title="Forecasting & Predictions"
           features={[
-            "Sales forecasting",
-            "Demand prediction",
-            "Risk assessment",
-            "Trend analysis"
-          ]} 
+            'Sales forecasting',
+            'Demand prediction',
+            'Risk assessment',
+            'Trend analysis',
+          ]}
         />
-        <FeatureCard 
-          title="Machine Learning Models" 
+        <FeatureCard
+          title="Machine Learning Models"
           features={[
-            "Custom model development",
-            "Model training & validation",
-            "Automated retraining",
-            "Performance monitoring"
-          ]} 
+            'Custom model development',
+            'Model training & validation',
+            'Automated retraining',
+            'Performance monitoring',
+          ]}
         />
-        <FeatureCard 
-          title="Business Intelligence" 
+        <FeatureCard
+          title="Business Intelligence"
           features={[
-            "Interactive dashboards",
-            "Automated reporting",
-            "Alert systems",
-            "ROI tracking"
-          ]} 
+            'Interactive dashboards',
+            'Automated reporting',
+            'Alert systems',
+            'ROI tracking',
+          ]}
         />
       </div>
-      
+
       <div className="bg-gradient-to-r from-violet-50 to-purple-50 border border-violet-200 rounded-xl p-8 mb-16">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose Our Predictive Analytics?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -72,9 +72,9 @@ export default function PredictiveAnalyticsPage() {
           </div>
         </div>
       </div>
-      
+
       <Pricing />
-      
+
       <div className="mt-16 text-center">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Predict Your Future Success?</h2>
         <p className="text-gray-600 mb-6">Start with a free data assessment and see what predictions can do for your business.</p>
@@ -117,38 +117,38 @@ function Pricing() {
     <div className="mt-16">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Starter" 
-          price="$3,999/mo" 
+        <Plan
+          name="Starter"
+          price="$3,999/mo"
           features={[
-            "Basic forecasting models",
-            "Up to 1M data points",
-            "Standard support",
-            "Cloud deployment"
-          ]} 
+            'Basic forecasting models',
+            'Up to 1M data points',
+            'Standard support',
+            'Cloud deployment',
+          ]}
         />
-        <Plan 
-          name="Professional" 
-          price="$9,999/mo" 
+        <Plan
+          name="Professional"
+          price="$9,999/mo"
           features={[
-            "Advanced ML models",
-            "Up to 10M data points",
-            "Custom model development",
-            "Priority support",
-            "API access"
-          ]} 
+            'Advanced ML models',
+            'Up to 10M data points',
+            'Custom model development',
+            'Priority support',
+            'API access',
+          ]}
           popular={true}
         />
-        <Plan 
-          name="Enterprise" 
-          price="$24,999/mo" 
+        <Plan
+          name="Enterprise"
+          price="$24,999/mo"
           features={[
-            "Unlimited data points",
-            "Custom model development",
-            "On-premise deployment",
-            "Dedicated support",
-            "White-label solution"
-          ]} 
+            'Unlimited data points',
+            'Custom model development',
+            'On-premise deployment',
+            'Dedicated support',
+            'White-label solution',
+          ]}
         />
       </div>
     </div>
@@ -172,11 +172,11 @@ function Plan({ name, price, features, popular = false }: { name: string; price:
           </li>
         ))}
       </ul>
-      <a 
+      <a
         href="tel:+13024640950"
         className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-violet-600 text-white hover:bg-violet-700' 
+          popular
+            ? 'bg-violet-600 text-white hover:bg-violet-700'
             : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
         }`}
       >

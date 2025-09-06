@@ -19,8 +19,8 @@ const LiveChat: React.FC = () => {
       text: 'Hello! Welcome to Zion Tech Group. How can I help you today?',
       isUser: false,
       timestamp: new Date(),
-      type: 'system'
-    }
+      type: 'system',
+    },
   ]);
   const [inputText, setInputText] = useState('');
   const [isTyping, setIsTyping] = useState(false);
@@ -42,7 +42,7 @@ const LiveChat: React.FC = () => {
       id: Date.now().toString(),
       text: inputText,
       isUser: true,
-      timestamp: new Date()
+      timestamp: new Date(),
     };
 
     setMessages(prev => [...prev, userMessage]);
@@ -52,18 +52,18 @@ const LiveChat: React.FC = () => {
     // Simulate bot response
     setTimeout(() => {
       const responses = [
-        "That's a great question! Let me connect you with our technical team.",
-        "I understand you're interested in our services. Would you like to schedule a consultation?",
-        "Thank you for reaching out! Our team will get back to you within 24 hours.",
-        "I can help you with that. Let me provide you with more information.",
-        "That's an excellent point. Our experts would love to discuss this with you."
+        'That\'s a great question! Let me connect you with our technical team.',
+        'I understand you\'re interested in our services. Would you like to schedule a consultation?',
+        'Thank you for reaching out! Our team will get back to you within 24 hours.',
+        'I can help you with that. Let me provide you with more information.',
+        'That\'s an excellent point. Our experts would love to discuss this with you.',
       ];
 
       const botMessage: ChatMessage = {
         id: (Date.now() + 1).toString(),
         text: responses[Math.floor(Math.random() * responses.length)],
         isUser: false,
-        timestamp: new Date()
+        timestamp: new Date(),
       };
 
       setMessages(prev => [...prev, botMessage]);
@@ -81,7 +81,7 @@ const LiveChat: React.FC = () => {
   const quickActions = [
     { label: 'Schedule Call', icon: Phone, action: () => addNotification({ type: 'info', title: 'Call Scheduled', message: 'We\'ll call you within 30 minutes!' }) },
     { label: 'Send Email', icon: Mail, action: () => addNotification({ type: 'info', title: 'Email Sent', message: 'Check your inbox for our response!' }) },
-    { label: 'View Services', icon: MessageCircle, action: () => window.location.href = '/services' }
+    { label: 'View Services', icon: MessageCircle, action: () => window.location.href = '/services' },
   ];
 
   return (
@@ -116,7 +116,7 @@ const LiveChat: React.FC = () => {
             </motion.div>
           )}
         </AnimatePresence>
-        
+
         {/* Notification Badge */}
         {!isOpen && (
           <motion.div
@@ -136,7 +136,7 @@ const LiveChat: React.FC = () => {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            transition={{ duration: 0.3, ease: 'easeOut' }}
             className="fixed bottom-24 right-6 z-50 w-80 h-96 bg-gray-900/95 backdrop-blur-md rounded-2xl border border-gray-700/50 shadow-2xl flex flex-col"
           >
             {/* Chat Header */}
@@ -158,7 +158,7 @@ const LiveChat: React.FC = () => {
 
             {/* Messages */}
             <div className="flex-1 overflow-y-auto p-4 space-y-4">
-              {messages.map((message) => (
+              {messages.map(message => (
                 <motion.div
                   key={message.id}
                   initial={{ opacity: 0, y: 10 }}
@@ -221,7 +221,7 @@ const LiveChat: React.FC = () => {
                 <input
                   type="text"
                   value={inputText}
-                  onChange={(e) => setInputText(e.target.value)}
+                  onChange={e => setInputText(e.target.value)}
                   onKeyPress={handleKeyPress}
                   placeholder="Type your message..."
                   className="flex-1 bg-gray-800 text-white placeholder-gray-400 px-3 py-2 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-cyan-400"

@@ -46,8 +46,8 @@ export const NotificationProvider: React.FC<{ children: React.ReactNode }> = ({ 
   const markAsRead = useCallback(async (id: string) => {
     setNotifications(prev =>
       prev.map(notification =>
-        notification.id === id ? { ...notification, read: true } : notification
-      )
+        notification.id === id ? { ...notification, read: true } : notification,
+      ),
     );
   }, []);
 
