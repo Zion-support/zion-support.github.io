@@ -1,97 +1,110 @@
-
 import React from 'react';
-;
 
 interface LoadingSpinnerProps {
-
-
-
-
-interface LoadingSpinnerProps {
-  size?: 'sm' | 'md' | 'lg' | 'xl';
-  color?: 'blue' | 'white' | 'gray' | 'slate';
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'default' | 'dots' | 'pulse' | 'bars' | 'ring';
+  color?: 'blue' | 'purple' | 'green' | 'red' | 'yellow' | 'gray';
+  className?: string;
   text?: string;
-  full_screen?: boolean;
-  class_name?: string;
+  showText?: boolean;
+  speed?: 'slow' | 'normal' | 'fast';
 }
-    </div>;
-  );
-    return (
-      <div className="fixed inset-0 bg-white bg-opacity-90 flex items-center justify-center z-50">;
-        {spinner}
-      </div>;
-    );
-  }
-  return spinner;
-}
-const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
-  size = 'md',
+
+const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({ 
+  size = 'md', 
+  variant = 'default',
+  color = 'blue',
+  className = '',
   text = 'Loading...',
-  class_name = '', }) => {
-  const size_classes = {
-    sm: 'w - 4 h - 4',
-    md: 'w - 8 h - 8',
-    lg: 'w - 12 h - 12',
-  }
-;
-  const color_classes = {
-    blue: 'text - blue - 600',
-    white: 'text - white',
-    gray: 'text - gray - 600',
-    slate: 'text - slate - 600';
-  }
-;
-  const spinner = (
-    <div className={`flex flex - col items - center justify - center ${class_name}`}>;
-      <div className={`animate - spin rounded - full border - 2 border - gray - 300 border - t-transparent ${size_classes[size]} ${color_classes[color]}`} />;
-      {text && (
-        <p className={`mt - 2 text - sm ${color_classes[color]}`}>;
+  showText = false,
+  speed = 'normal'
+}) => {
+  const sizeClasses = {
+    xs: 'w-3 h-3',
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  };
+
+  const colorClasses = {
+    blue: 'border-blue-600',
+    purple: 'border-purple-600',
+    green: 'border-green-600',
+    red: 'border-red-600',
+    yellow: 'border-yellow-600',
+    gray: 'border-gray-600'
+  };
+
+  const speedClasses = {
+    slow: 'animate-spin',
+    normal: 'animate-spin',
+    fast: 'animate-spin'
+  };
+
+  const renderSpinner = () => {
+    switch (variant) {
+      case 'dots':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2].map((i) => (
+              <div
+                key={i}
+                className={`${sizeClasses[size]} rounded-full ${colorClasses[color]} animate-pulse`}
+                style={{
+                  animationDelay: `${i * 0.2}s`,
+                  animationDuration: '1s'
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'pulse':
+        return (
+          <div className={`${sizeClasses[size]} rounded-full ${colorClasses[color]} animate-pulse`} />
+        );
+
+      case 'bars':
+        return (
+          <div className="flex space-x-1">
+            {[0, 1, 2, 3].map((i) => (
+              <div
+                key={i}
+                className={`w-1 ${sizeClasses[size]} ${colorClasses[color]} animate-pulse`}
+                style={{
+                  animationDelay: `${i * 0.1}s`,
+                  animationDuration: '0.8s'
+                }}
+              />
+            ))}
+          </div>
+        );
+
+      case 'ring':
+        return (
+          <div className={`${sizeClasses[size]} rounded-full border-4 border-gray-200 ${colorClasses[color]} animate-spin`} />
+        );
+
+      default:
+        return (
+          <div className={`${sizeClasses[size]} rounded-full border-2 border-gray-300 border-t-2 ${colorClasses[color]} ${speedClasses[speed]} ${className}`}>
+            <span className="sr-only">{text}</span>
+          </div>
+        );
+    }
+  };
+
+  return (
+    <div className="flex flex-col items-center justify-center space-y-2">
+      {renderSpinner()}
+      {showText && text && (
+        <p className="text-sm text-gray-600 dark:text-gray-300 animate-pulse">
           {text}
-        </p>)}
-    </div>);
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div className="fixed inset - 0 bg - white bg - opacity - 90 flex items - center justify - center z - 50">;
-        {spinner}
-      </div>);
-  }
-  return spinner;
-}
-;
-export default LoadingSpinner;
-import React from 'react;
-import { Loader2 } from 'lucide-react;
-interface LoadingSpinnerProps {;
-  size?: 'sm' | 'md' | 'lg;
-  text?: string;'  class_name?: string;
-}
-const LoadingSpinner: React.FC < LoadingSpinnerProps> = ({
-  size = 'md', text, '  class_name = ; }) => {'  const size_classes = {'    sm: 'w - 4 h - 4',
-    md: 'w - 8 h - 8',
-    md: '    lg: 'w - 12 h - 12', }
-  return (
-    <div className={`flex flex - col items - center justify - center ${class_name}}>      <Loader2 className={`${size_classes[size]} animate - spin text - blue - 600`} />`      {text && (
-        <p className="mt - 2 text - sm text - gray - 600 animate - pulse>{text}</p>      )}"    </div>);
-}
-    <div className={`flex flex-col items-center justify-center ${className}}>      <Loader2 className={`${sizeClasses[size]} animate-spin text-blue-600`} />`      {text && (;
-        <p className="mt-2 text-sm text-gray-600 animate-pulse>{text}</p>      )}"    </div>);
-}
-export default LoadingSpinner;
-export default function LoadingSpinner() {
-  return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-      <div className="text-center text-white">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-400 mx-auto mb-4"></div>
-        <p className="text-lg">Loading...</p>
-      </div>
+        </p>
+      )}
     </div>
   );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+};
+
+export default LoadingSpinner;

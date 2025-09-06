@@ -1,391 +1,207 @@
-  memory: {
-    used: number
-    total: number
-    limit: number
-  } | null;
+import React, { useEffect, useState, useCallback } from 'react';
+
+interface PerformanceMetrics {
+  loadTime: number;
+  renderTime: number;
+  memoryUsage: number;
+  fcp: number; // First Contentful Paint
+  lcp: number; // Largest Contentful Paint
+  cls: number; // Cumulative Layout Shift
+  fid: number; // First Input Delay
 }
+
 interface PerformanceMonitorProps {
-  onPerformanceData?: (data: PerformanceData) => void
+  showMetrics?: boolean;
+  logMetrics?: boolean;
+  onThresholdExceeded?: (metrics: PerformanceMetrics) => void;
+  thresholds?: {
+    loadTime: number;
+    renderTime: number;
+    memoryUsage: number;
+    fcp: number;
+    lcp: number;
+    cls: number;
+    fid: number;
+  };
 }
-interface Performance {
-  getEntriesByType (type: string): PerformanceEntry[];
-  now (): number;
-}
-interface PerformanceEntry {
 
-<<<<<<< HEAD
-interface PerformanceMonitorProps {
-  onPerformanceData?: (data: any) => void;
-}
-
-// Extend Window interface to include performance
-declare global {
-  interface Window {
-    performance: Performance;
+const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
+  showMetrics = false,
+  logMetrics = false,
+  onThresholdExceeded,
+  thresholds = {
+    loadTime: 3000,
+    renderTime: 1000,
+    memoryUsage: 50 * 1024 * 1024, // 50MB
+    fcp: 1800,
+    lcp: 2500,
+    cls: 0.1,
+    fid: 100
   }
-}
+}) => {
+  const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
+  const [isVisible, setIsVisible] = useState(showMetrics);
 
-// Declare Performance and PerformanceNavigationTiming types for TypeScript
-declare global {
-  interface Performance {
-    getEntriesByType(type: string): PerformanceEntry[];
-  }
-  
-  interface PerformanceNavigationTiming extends PerformanceEntry {
-    domContentLoadedEventStart: number;
-    domContentLoadedEventEnd: number;
-    loadEventStart: number;
-    loadEventEnd: number;
-    fetchStart: number;
-  }
-}
+  const checkThresholds = useCallback((currentMetrics: PerformanceMetrics) => {
+    const exceeded = Object.entries(thresholds).some(([key, threshold]) => {
+      const value = currentMetrics[key as keyof PerformanceMetrics];
+      return value > threshold;
+    });
 
-const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({ onPerformanceData }) => {
+    if (exceeded && onThresholdExceeded) {
+      onThresholdExceeded(currentMetrics);
+    }
+  }, [thresholds, onThresholdExceeded]);
+
   useEffect(() => {
-    // Only run on client side
-    if (typeof window === 'undefined' || typeof performance === 'undefined') return;
+    if (typeof window === 'undefined' || !('performance' in window)) return;
 
-    const measurePerformance = () => {
-      const navigation = window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
-      const paint = window.performance.getEntriesByType('paint');
+    let observer: PerformanceObserver | null = null;
+    let webVitalsObserver: PerformanceObserver | null = null;
+
+    const collectMetrics = () => {
+      const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+      const paintEntries = performance.getEntriesByType('paint');
       
-      const performanceData = {
-        // Navigation timing
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        loadComplete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetchStart,
+      if (navigationEntry) {
+        const fcpEntry = paintEntries.find(entry => entry.name === 'first-contentful-paint');
+        const lcpEntry = performance.getEntriesByType('largest-contentful-paint').pop();
         
-        // Paint timing
-        firstPaint: paint.find(entry => entry.name === 'first-paint')?.startTime || 0,
-        firstContentfulPaint: paint.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
-        
-        // Resource timing
-        resourceCount: window.performance.getEntriesByType('resource').length,
-        
-        // Memory usage (if available)
-        memory: (window.performance as any).memory ? {
-          used: (window.performance as any).memory.usedJSHeapSize,
-          total: (window.performance as any).memory.totalJSHeapSize,
-          limit: (window.performance as any).memory.jsHeapSizeLimit
-        } : null
-      };
+        const currentMetrics: PerformanceMetrics = {
+          loadTime: navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
+          renderTime: navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
+          memoryUsage: (performance as any).memory?.usedJSHeapSize || 0,
+          fcp: fcpEntry ? fcpEntry.startTime : 0,
+          lcp: lcpEntry ? lcpEntry.startTime : 0,
+          cls: 0, // Will be updated by observer
+          fid: 0  // Will be updated by observer
+        };
 
-      if (onPerformanceData) {
-        onPerformanceData(performanceData);
+        setMetrics(currentMetrics);
+        checkThresholds(currentMetrics);
+
+        if (logMetrics) {
+          console.log('Performance Metrics:', currentMetrics);
+        }
       }
-
-      // Log performance data in development
-      if (process.env.NODE_ENV === 'development') {
-        console.log('Performance Metrics:', performanceData);
-      }
-=======
-interface PerformanceData {;
-  domContentLoaded: number,;
-  loadComplete: number,;
-  totalLoadTime: number,;
-  firstPaint: number,;
-  firstContentfulPaint: number,;
-  resourceCount: number,;
-  memory: {;
-    used: number,;
-    total: number,;
-    limit: number,;
-  } | null;
-}
-
-interface PerformanceMonitorProps {;
-  onPerformanceData?: (data: PerformanceData) => void,;
-}
-
-// Extend the Window interface to include performance;
-declare global {;
-  interface Window {;
-
-    performance: Performance,;
-  }
-
-  interface Performance {;
-    getEntriesByType(type: string): PerformanceEntry[],;
-    memory?: {;
-      usedJSHeapSize: number, totalJSHeapSize: number,;
-      jsHeapSizeLimit: number,;
->>>>>>> cursor/expand-services-advertise-and-build-project-c52f
     };
-  }
 
-  interface PerformanceEntry {;
-    name: string, startTime: number,;
-    duration: number,;
-  }
-
-  interface PerformanceNavigationTiming extends PerformanceEntry {;
-    domContentLoadedEventStart: number, domContentLoadedEventEnd: number,;
-    loadEventStart: number, loadEventEnd: number,;
-    fetchStart: number,;
-  }
-
-// Define Performance types if not available;
-interface PerformanceEntry {;
-  name: string,;
-  entryType: string,;
-  startTime: number,;
-  duration: number,;
-}
-
-interface Performance {;
-  getEntriesByType(type: string): PerformanceEntry[],;
-}
-
-interface PerformanceNavigationTiming extends PerformanceEntry {;
-  loadEventEnd: number,;
-  loadEventStart: number,;
-  domContentLoadedEventEnd: number,;
-  domContentLoadedEventStart: number,;
-  responseEnd: number,;
-  responseStart: number,;
-  requestStart: number,;
-  navigationStart: number,;
-}
-
-// Define Performance types if not available;
-interface Performance {;
-  getEntriesByType(type: string): PerformanceEntry[];
-  now(): number;
-}
-
-interface PerformanceEntry {;
-  name: string;
-  entry_type: string;
-  start_time: number;
-  duration: number;
-}
-  readonly connectEnd: number;
-  readonly connectStart: number;
-  readonly domComplete: number;
-interface PerformanceNavigationTiming extends PerformanceEntry {
-  readonly connect_end: number;
-  readonly connect_start: number;
-  readonly dom_complete: number;
-  readonly domContentLoadedEventEnd: number;
-  readonly domContentLoadedEventStart: number;
-  readonly dom_interactive: number;
-  readonly dom_loading: number;
-  readonly domainLookupEnd: number;
-  readonly domainLookupStart: number;
-  readonly fetch_start: number;
-  readonly loadEventEnd: number;
-  readonly loadEventStart: number;
-  readonly navigation_start: number;
-  readonly redirect_count: number;
-  readonly redirect_end: number;
-  readonly redirect_start: number;
-  readonly request_start: number;
-  readonly response_end: number;
-  readonly response_start: number;
-  readonly secureConnectionStart: number;
-  readonly transfer_size: number;
-  readonly type: string;
-  readonly unloadEventEnd: number;
-  readonly unloadEventStart: number;
-}
-      measurePerformance();
-    } else {;
-      window && window.addEventListener('load', measurePerformance);
+    // Set up navigation timing observer
+    try {
+      observer = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        if (entries.length > 0) {
+          collectMetrics();
+        }
+      });
+      observer.observe({ entryTypes: ['navigation', 'paint'] });
+    } catch (error) {
+      console.warn('Performance Observer not supported:', error);
     }
-  }, [onPerformanceData]);
-  return null;
-}
-const PerformanceMonitor: React.FC < PerformanceMonitorProps> = ({ onPerformanceData }) => {
-  useEffect (() => {
-// Only run on client side;
-    // Check condition
-if (return) {
-  $2
-}
-    const measure_performance = () =>: any {
-      const navigation_entries = window.performance.getEntriesByType ('navigation');
-      const navigation = navigation_entries[0] as PerformanceNavigationTiming;
-      const paint_entries = window.performance.getEntriesByType ('paint');
-      const performance_data = {
-        // Navigation timing;
-        domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
-        load_complete: navigation.loadEventEnd - navigation.loadEventStart,
-        totalLoadTime: navigation.loadEventEnd - navigation.fetch_start,
-        // Paint timing;
-        first_paint: paint_entries.find (entry => entry.name === 'first - paint')?.start_time || 0,
-        firstContentfulPaint: paint_entries.find (entry => entry.name === 'first - contentful - paint')?.start_time || 0,
-        // Resource timing;
-        resource_count: window.performance.getEntriesByType ('resource').length,
-// Memory usage (if available);
-        memory: (window.performance as Performance & { memory?: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory ? {
-          used: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.usedJSHeapSize,
-          total: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.totalJSHeapSize,
-          limit: (window.performance as Performance & { memory: { usedJSHeapSize: number, totalJSHeapSize: number, jsHeapSizeLimit: number } }).memory.jsHeapSizeLimit;
-      },
-      // Check condition
-if ( {) {
-  $2
-}
-        onPerformanceData (performance_data);
-      }
-      // Log performance data in development;
-      // Check condition
-if ( {) {
-  $2
-}
-        // eslint - disable - next - line no - console;
-        console.log ('Performance Metrics:', performance_data);
-      }
+
+    // Set up Web Vitals observer
+    try {
+      webVitalsObserver = new PerformanceObserver((list) => {
+        const entries = list.getEntries();
+        entries.forEach((entry) => {
+          if (entry.entryType === 'largest-contentful-paint') {
+            setMetrics(prev => prev ? { ...prev, lcp: entry.startTime } : null);
+          }
+        });
+      });
+      webVitalsObserver.observe({ entryTypes: ['largest-contentful-paint'] });
+    } catch (error) {
+      console.warn('Web Vitals Observer not supported:', error);
     }
-;
-    // Measure performance after page load;
-    // Check condition
-if ( {) {
-  $2
-}
-      measure_performance ();
-    } else {
-      window.addEventListener ('load', measure_performance);
-    }
+
+    // Collect initial metrics
+    setTimeout(collectMetrics, 1000);
+
     return () => {
-<<<<<<< HEAD
-      window.removeEventListener('load', measurePerformance);
+      observer?.disconnect();
+      webVitalsObserver?.disconnect();
     };
-  }, [onPerformanceData]);
+  }, [logMetrics, checkThresholds]);
 
-  return null;
+  // Toggle visibility with keyboard shortcut
+  useEffect(() => {
+    const handleKeyPress = (event: KeyboardEvent) => {
+      if (event.ctrlKey && event.shiftKey && event.key === 'P') {
+        setIsVisible(prev => !prev);
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, []);
+
+  if (!metrics || !isVisible) return null;
+
+  const formatBytes = (bytes: number) => {
+    if (bytes === 0) return '0 B';
+    const k = 1024;
+    const sizes = ['B', 'KB', 'MB', 'GB'];
+    const i = Math.floor(Math.log(bytes) / Math.log(k));
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+  };
+
+  const getStatusColor = (value: number, threshold: number) => {
+    return value > threshold ? 'text-red-400' : value > threshold * 0.8 ? 'text-yellow-400' : 'text-green-400';
+  };
+
+  return (
+    <div className="fixed bottom-4 right-4 bg-slate-900/95 backdrop-blur-sm text-white p-3 rounded-lg shadow-lg border border-white/10 text-xs font-mono max-w-xs">
+      <div className="flex justify-between items-center mb-2">
+        <h4 className="font-semibold text-blue-400">Performance</h4>
+        <button
+          onClick={() => setIsVisible(false)}
+          className="text-slate-400 hover:text-white text-lg leading-none"
+          aria-label="Close performance monitor"
+        >
+          ×
+        </button>
+      </div>
+      <div className="space-y-1">
+        <div className="flex justify-between">
+          <span>Load:</span>
+          <span className={getStatusColor(metrics.loadTime, thresholds.loadTime)}>
+            {metrics.loadTime.toFixed(0)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>Render:</span>
+          <span className={getStatusColor(metrics.renderTime, thresholds.renderTime)}>
+            {metrics.renderTime.toFixed(0)}ms
+          </span>
+        </div>
+        <div className="flex justify-between">
+          <span>Memory:</span>
+          <span className={getStatusColor(metrics.memoryUsage, thresholds.memoryUsage)}>
+            {formatBytes(metrics.memoryUsage)}
+          </span>
+        </div>
+        {metrics.fcp > 0 && (
+          <div className="flex justify-between">
+            <span>FCP:</span>
+            <span className={getStatusColor(metrics.fcp, thresholds.fcp)}>
+              {metrics.fcp.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+        {metrics.lcp > 0 && (
+          <div className="flex justify-between">
+            <span>LCP:</span>
+            <span className={getStatusColor(metrics.lcp, thresholds.lcp)}>
+              {metrics.lcp.toFixed(0)}ms
+            </span>
+          </div>
+        )}
+      </div>
+      <div className="mt-2 pt-2 border-t border-white/10 text-xs text-slate-400">
+        Press Ctrl+Shift+P to toggle
+      </div>
+    </div>
+  );
 };
 
 export default PerformanceMonitor;
-=======
-      window.removeEventListener ('load', measure_performance);
-    }
-  }, [onPerformanceData]);
-;
-  return null;
-}
-;
-export default PerformanceMonitor;
-import React, { useEffect, useState } from 'react;
-interface PerformanceMetrics {fcp?: number;
-  lcp?: number;
-  fid?: number;
-  cls?: number;
-  ttfb?: number;
-}
-}));
-}
-            break;
-          case 'navigation': setMetrics(prev => ({ ...prev, ttfb: entry && entry.responseStart - entry && entry.requestStart }));'            break;'        }});
-});
-    // Observe different types of performance entries;
-'    } catch (e) {'      // Fallback for browsers that don&apos;t support all entry types;
-      observer && observer.observe({ entryTypes: ['paint', 'largest-contentful-paint'] });
-'    }';
-    // Show metrics after 3 seconds;
-    const timer = setTimeout(() => {setIsVisible(true);
-}, 3000);
-      clearTimeout(timer);
-}
-}, []);
-  if (!isVisible) return null;
-    return 'Poor;
-};';
-  return (
-    <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs>      <h3 className="text-sm font-semibold mb-3 text-gray-900">Performance Metrics</h3>"      "      <div className="space-y-2 text-xs>        {metrics && metrics.fcp && ("          <div className="flex justify-between>            <span className="text-gray-600">FCP: </span>"            <span className={getScoreColor(metrics && metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math && Math.round(metrics && metrics.fcp)}ms ({getScoreText(metrics && metrics.fcp, { good: 1800, poor: 3000 })})</span>;
-          </div>;
-        )}
-          </div>;
-        )}
-const PerformanceMonitor: React.FC = () => {
-  const [metrics, set_metrics] = useState < PerformanceMetrics>({});
-  const [is_visible, setIsVisible] = useState (false);
-  useEffect (() => {
-// Check condition
-if (return) {
-  $2
-}
-    // Only show in development or for admin users;
-    const is_dev = process.env.NODE_ENV === 'development;
-    const is_admin = local_storage.get_item ('admin_mode') === 'true;
-    '    // Check condition
-if (return) {
-  $2
-}
-    const observer = new PerformanceObserver ((list) => {const entries = list.get_entries ();
-;
-      entries.for_each ((entry) => {
-        switch (entry.entry_type) {
-case 'paint': if ( {'              set_metrics (prev => ({ ...prev, fcp: entry.start_time }))) {
-  $2
-}'            }
-            break;
-          case 'largest - contentful - paint': set_metrics (prev => ({ ...prev, lcp: entry.start_time }));'            break;'          case 'first - input': set_metrics (prev => ({ ...prev, fid: entry.processing_start - entry.start_time }));'            break;'          case 'layout - shift': // Check condition
-if (.hadRecentInput) {'              set_metrics (prev => ({ '                ...prev, cls: (prev.cls || 0) + (entry as any).value ) {
-  $2
-}
-}));
-}
-            break;
-          case 'navigation': set_metrics (prev => ({ ...prev, ttfb: entry.response_start - entry.request_start }));'            break;'        }});
-});
-    // Observe different types of performance entries;
-    try {
-observer.observe ({ entry_types: ['paint', 'largest - contentful - paint', 'first - input', 'layout - shift', 'navigation'] });
-'    } catch (e) {'      // Fallback for browsers that don & apos;t support all entry types;
-      observer.observe ({ entry_types: ['paint', 'largest - contentful - paint'] });
-'    }';
-    // Show metrics after 3 seconds;
-    const timer = set_timeout (() => {setIsVisible (true);
-}, 3000);
-    return () => {
-      observer.disconnect ();
-      clear_timeout (timer);
-}
-}, []);
-  // Check condition
-if (return null) {
-  $2
-}
-  const getScoreColor = (value: number, thresholds: { good: number; poor: number }) =>: any {
-// Check condition
-if (return 'text - green - 600) {
-  $2
-}
-    // Check condition
-if (return 'text - yellow - 600) {
-  $2
-}
-    return 'text - red - 600;
-}';
-  const getScoreText = (value: number, thresholds: { good: number; poor: number }) =>: any {
-    // Check condition
-if (return 'Good) {
-  $2
-}
-    // Check condition
-if (return 'Needs Improvement) {
-  $2
-}
-    return 'Poor;
-}';
-  return (
-    <div className="fixed bottom - 4 left - 4 bg - white shadow - lg rounded - lg p - 4 border z - 50 max - w-xs>      <h3 className="text - sm font - semibold mb - 3 text - gray - 900">Performance Metrics</h3>"      "      <div className="space - y-2 text - xs>        {metrics.fcp && ("          <div className="flex justify - between>            <span className="text - gray - 600">FCP: </span>"            <span className={getScoreColor (metrics.fcp, { good: 1800, poor: 3000 })}>"              {Math.round (metrics.fcp)}ms ({getScoreText (metrics.fcp, { good: 1800, poor: 3000 })})</span>;
-          </div>)}
-        {metrics.lcp && (
-<div className="flex justify - between>            <span className="text - gray - 600">LCP: </span>"            <span className={getScoreColor (metrics.lcp, { good: 2500, poor: 4000 })}>"              {Math.round (metrics.lcp)}ms ({getScoreText (metrics.lcp, { good: 2500, poor: 4000 })})</span>;
-          </div>)}
-        {metrics.fid && (
-<div className="flex justify - between>            <span className="text - gray - 600">FID: </span>"            <span className={getScoreColor (metrics.fid, { good: 100, poor: 300 })}>"              {Math.round (metrics.fid)}ms ({getScoreText (metrics.fid, { good: 100, poor: 300 })})</span>;
-          </div>)}
-        {metrics.cls && (
-<div className="flex justify - between>            <span className="text - gray - 600">CLS: </span>"            <span className={getScoreColor (metrics.cls, { good: 0.1, poor: 0.25 })}>"              {metrics.cls.to_fixed (3)} ({getScoreText (metrics.cls, { good: 0.1, poor: 0.25 })})</span>;
-          </div>)}
-        {metrics.ttfb && (
-<div className="flex justify - between>            <span className="text - gray - 600">TTFB: </span>"            <span className={getScoreColor (metrics.ttfb, { good: 800, poor: 1800 })}>"              {Math.round (metrics.ttfb)}ms ({getScoreText (metrics.ttfb, { good: 800, poor: 1800 })})</span>;
-          </div>)}
-      </div>;
-<div className="mt - 3 pt - 2 border - t border - gray - 200>        <button"          on_click={() => setIsVisible (false)}
-          className="text - xs text - gray - 500 hover: text - gray - 700        >"          Hide</button>;
-      </div>;
->>>>>>> cursor/expand-services-advertise-and-build-project-c52f

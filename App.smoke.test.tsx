@@ -1,8 +1,15 @@
-import { describe, it, expect } from 'vitest';
+import React from 'react';
+import { render } from '@testing-library/react';
+import App from './App';
 
-describe('App Smoke Test', () => {
+describe('App Smoke Tests', () => {
   it('should render without crashing', () => {
-    // Simple test that just checks if the component can be imported
-    expect(true).toBe(true);
+    expect(() => render(<App />)).not.toThrow();
   });
+
+  it('should render a basic structure', () => {
+    const { container } = render(<App />);
+    expect(container.firstChild).toBeTruthy();
+  });
+});
 });

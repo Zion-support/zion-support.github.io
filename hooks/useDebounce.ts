@@ -1,7 +1,12 @@
-<<<<<<< HEAD
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
-export const useDebounce = <T>(value: T, delay: number): T => {
+/**
+ * Custom hook for debouncing values
+ * @param value - The value to debounce
+ * @param delay - The delay in milliseconds
+ * @returns The debounced value
+ */
+export function useDebounce<T>(value: T, delay: number): T {
   const [debouncedValue, setDebouncedValue] = useState<T>(value);
 
   useEffect(() => {
@@ -15,45 +20,102 @@ export const useDebounce = <T>(value: T, delay: number): T => {
   }, [value, delay]);
 
   return debouncedValue;
-};
+}
 
-export default useDebounce;
-import { useState, useEffect } from 'react';
-,import { useState, useEffect } from 'react';
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-import { useState, useEffect } from 'react';
->>>>>>> c9abe902f4e156a854fa9adfeb4892dd1a62a086
->>>>>>> main
-export const useDebounce = <T>(value: T, delay: number): T => {
-  const [debouncedValue, setDebouncedValue] = useState<T>(value);
+/**
+ * Custom hook for debouncing callback functions
+ * @param callback - The callback function to debounce
+ * @param delay - The delay in milliseconds
+ * @param deps - Dependencies array for the callback
+ * @returns The debounced callback function
+ */
+export function useDebouncedCallback<T extends (...args: any[]) => any>(
+  callback: T,
+  delay: number,
+  deps: React.DependencyList = []
+): T {
+  const timeoutRef = useRef<NodeJS.Timeout>();
+  const callbackRef = useRef(callback);
+
+  // Update callback ref when callback changes
   useEffect(() => {
-    const handler = setTimeout(() => {
-      setDebouncedValue(value)}, delay);
+    callbackRef.current = callback;
+  }, [callback]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
     return () => {
-      clearTimeout(handler)}}, [value, delay]);
-  return debouncedValue};
-export default useDebounce;
-<<<<<<< HEAD
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: 'T',delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-<<<<<<< HEAD
-=======
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-<<<<<<< HEAD
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
-=======
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
->>>>>>> 0aea86df97524e9f0bb14202f48b4e4eee196229
-import { useState,useEffect } from 'react'; export const useDebounce = <T>(value: T,delay: number): T => { const [debouncedValue,setDebouncedValue] = useState<T>(value); useEffect(() => { const handler = setTimeout(() => { setDebouncedValue(value)},delay); return () => { clearTimeout(handler)}},[value,delay]); return debouncedValue}; export default useDebounce;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const debouncedCallback = ((...args: Parameters<T>) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    timeoutRef.current = setTimeout(() => {
+      callbackRef.current(...args);
+    }, delay);
+  }) as T;
+
+  return debouncedCallback;
+}
+
+/**
+ * Custom hook for debouncing async operations
+ * @param asyncCallback - The async callback function to debounce
+ * @param delay - The delay in milliseconds
+ * @param deps - Dependencies array for the callback
+ * @returns Object with debounced callback and loading state
+ */
+export function useDebouncedAsyncCallback<T extends (...args: any[]) => Promise<any>>(
+  asyncCallback: T,
+  delay: number,
+  deps: React.DependencyList = []
+) {
+  const [isLoading, setIsLoading] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout>();
+  const callbackRef = useRef(asyncCallback);
+
+  // Update callback ref when callback changes
+  useEffect(() => {
+    callbackRef.current = asyncCallback;
+  }, [asyncCallback]);
+
+  // Cleanup timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
+
+  const debouncedCallback = async (...args: Parameters<T>) => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+
+    return new Promise((resolve, reject) => {
+      timeoutRef.current = setTimeout(async () => {
+        try {
+          setIsLoading(true);
+          const result = await callbackRef.current(...args);
+          resolve(result);
+        } catch (error) {
+          reject(error);
+        } finally {
+          setIsLoading(false);
+        }
+      }, delay);
+    });
+  };
+
+  return {
+    debouncedCallback: debouncedCallback as T,
+    isLoading
+  };
+}
