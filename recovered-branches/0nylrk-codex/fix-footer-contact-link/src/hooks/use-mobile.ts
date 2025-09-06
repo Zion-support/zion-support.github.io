@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
 export function useIsMobile() {
@@ -19,10 +18,3 @@ export function useIsMobile() {
   }, []);
 
   return isMobile;
-}
-=======
- export function useIsMobile () {
-  const [isMobile, setIsMobile] = useState (typeof window !== 'undefined' ? window.innerWidth < 768 : false);
-return isMobile 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

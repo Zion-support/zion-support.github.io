@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { GradientHeading } from '@/components/GradientHeading';
@@ -11,7 +10,7 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,
+  SelectItem,;
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import Skeleton from 'react-loading-skeleton';
@@ -23,14 +22,6 @@ import { toast } from '@/hooks/use-toast';
 import { captureException } from '@/utils/sentry';
 
 interface PriceRange {
-=======
- import {;
-  Select;
-SelectValue;
-SelectTrigger;
-SelectContent;
-interface PriceRange {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   min: number;
 max: number ;
 }interface DynamicListingPageProps {;
@@ -46,8 +37,6 @@ initialPrice?: PriceRange;
   setSelectedCategories (prev => prev.includes (category) ? prev.filter (c => c !== category) : [...prev, category] min: 0;
 max: 10000 ;
 });
-}
-<<<<<<< HEAD
 
 export function DynamicListingPage({
   title,
@@ -558,27 +547,12 @@ export function DynamicListingPage({
       </div>
     </div>
   );
-=======
-}, [allListings]);
-const [currentPriceFilter, setCurrentPriceFilter] = useState< [number, number] > ([0, initialPrice.max]);
-!searchQuery || listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some ( (tag: string) => selectedBrand === "all" || (listing.brand && listing.brand === selectedBrand);
-const matchesPrice = listing.price === null || (listing.price >= currentPriceFilter[0] && listing.price <= currentPriceFilter[1]);
-const matchesRating = selectedRating === null || (listing.rating !== undefined && listing.rating >= selectedRating);";
-return (matchesSearch && matchesCategory && matchesPrice && matchesRating && matchesBrand && matchesSpecs && matchesAvailability case "price-desc": return (b.price || 0) - (a.price || 0);";
-case "rating": return (b.rating || 0) - (a.rating || 0);";
-case "newest": serviceType: categorySlug;
-specificItem: {;
-  id: listing.id;
-title: listing.title;
-category: listing.category;
-image: listing.images?.[0] ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 if (typeof window !== 'undefined') {';
   sessionStorage.setItem ('quoteRequestData', JSON.stringify (quoteData) ) ;
-}
-}
+
+
 }, 500) ;
 };";
 return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <div className="lg:col-span-1" > <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4 sticky top-6" > <h3 className="text-lg font-medium text-white mb-4 flex items-center" > <Filter className="mr-2 h-5 w-5" /> Filters </h3> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Categories </label> > {;
@@ -597,7 +571,7 @@ return (</p> </div> <div className="grid grid-cols-1 lg:grid-cols-4 gap-6" > <di
 }> <SelectTrigger className="bg-zion-blue border border-zion-blue-light text-white" > <SelectValue placeholder="Select Availability" /> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="all" className="text-white" > All </SelectItem> </SelectItem>) ) ;
 }</SelectContent> </Select> </div>) ";
 }<div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Price Range </label> <div className="mt-6 px-2" > <Slider </div> </div> </div> <div className="mb-6" > <label className="text-sm font-medium text-zion-slate-light block mb-2" > Minimum Rating </label> ;
-}
+
 }aria-pressed= {;
   selectedRating === rating ;
 }className= {;

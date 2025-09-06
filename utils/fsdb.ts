@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { promisify } from 'util';
@@ -20,7 +19,6 @@ export function generateCaseId(): string {
   const d = String(date.getDate()).padStart(2, '0');
   const suffix = crypto.randomBytes(3).toString('hex').toUpperCase();
   return `DSP-${y}${m}${d}-${suffix}`;
-}
 
 async function ensureBaseFiles() {
   try {
@@ -38,27 +36,23 @@ async function ensureBaseFiles() {
       'utf8'
     );
   }
-}
 
 export async function readAllDisputes(): Promise<DisputeCase[]> {
   await ensureBaseFiles();
   const raw = await readFile(DISPUTES_FILE, 'utf8');
   const data = JSON.parse(raw) as { disputes: DisputeCase[] };
   return data.disputes || [];
-}
 
 export async function writeAllDisputes(disputes: DisputeCase[]): Promise<void> {
   await ensureBaseFiles();
   const data = { disputes };
   await writeFile(DISPUTES_FILE, JSON.stringify(data, null, 2), 'utf8');
-}
 
 export async function getDisputeById(
   id: string
 ): Promise<DisputeCase | undefined> {
   const all = await readAllDisputes();
   return all.find(d => d.id === id);
-}
 
 export async function upsertDispute(updated: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
@@ -69,24 +63,16 @@ export async function upsertDispute(updated: DisputeCase): Promise<void> {
     all.push(updated);
   }
   await writeAllDisputes(all);
-}
 
 export async function createDispute(dispute: DisputeCase): Promise<void> {
   const all = await readAllDisputes();
   all.push(dispute);
   await writeAllDisputes(all);
-}
 
 export function getDisputeUploadDir(caseId: string): string {
   return path.join(UPLOADS_ROOT, caseId);
-}
 
 export async function ensureDisputeUploadDir(caseId: string): Promise<string> {
   const dir = getDisputeUploadDir(caseId);
   await mkdir(dir, { recursive: true });
   return dir;
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,7 +9,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -18,7 +17,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { DisputeReason, disputeReasonLabels } from '@/types/disputes';
@@ -223,27 +222,8 @@ export function DisputeForm({
       </Form>
     </div>
   );
-}
-=======
- import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-import {
-  Select;
-SelectContent;
-SelectItem;
-SelectTrigger;
-const formSchema = z.object ({
-  reason code: z.string () .min (1, {
-  message: "Please select a reason for the dispute" 
-});
-description: z.string () attachments: z.array (z.any () ) .optional () 
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
+
+
 };
 const removeFile = (index: number) => {
   async function onSubmit (values: z.infer<typeof formSchema>) {
@@ -258,7 +238,7 @@ description: values.description
 //Future enhancement: Upload attachments //For now we just log the files that would be uploaded toast.success ("Your dispute has been submitted");
 }finally {
   setIsSubmitting (false) 
-}
+
 }return (<div className="space-y-6" > <div className="flex items-center space-x-2" > <FileText className="h-5 w-5 text-primary" /> <h2 className="text-xl font-semibold" >Report an Issue</h2> </div> <FormItem> <FormLabel>Reason for dispute</FormLabel> <Select onValueChange= {
   field.onChange 
 }defaultValue= {
@@ -276,5 +256,3 @@ description: values.description
 }/> <FormItem> <FormLabel>Attachments (optional) </FormLabel> <FormControl> <div className="space-y-4" > <Input type="file" multiple > Remove </Button> </li>) ) 
 }</ul> </div>) 
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

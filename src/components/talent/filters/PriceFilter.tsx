@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Slider } from '@/components/ui/slider';
 import { PriceFilterProps } from '@/types/filters';
@@ -47,20 +46,3 @@ export function PriceFilter({
       )}
     </div>
   );
-}
-=======
- export function PriceFilter ({;
-  priceRange, setPriceRange, expanded,  toggleSection, isMobileFilterOpen ;
-}: PriceFilterProps) {;
-  const handleChange = (values: number[]) => {;
-  setPriceRange ([values[0] || 0, values[1] || 500]) ;
-};
-mb-6 border-b border-zion-blue-light pb-6"> <button) : (<ChevronDown className=" h-4 w-4 text-zion-slate-light" />) ;
-}</button> <span>$ {;
-  priceRange[0] ;
-}/hr</span> <span>$ {;
-  priceRange[1] ;
-}/hr</span> </div> <Slider /> </div>) ;
-}</div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

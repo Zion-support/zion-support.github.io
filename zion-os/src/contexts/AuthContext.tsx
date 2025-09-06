@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { createContext, useContext, useEffect, useState } from 'react';
@@ -11,7 +10,6 @@ interface User {
   email: string;
   role: string;
   onboardingCompleted: boolean;
-}
 
 interface AuthContextType {
   user: User | null;
@@ -21,7 +19,6 @@ interface AuthContextType {
   logout: () => Promise<void>;
   register: (name: string, email: string, password: string) => Promise<void>;
   completeOnboarding: () => Promise<void>;
-}
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
@@ -129,7 +126,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
 
 export function useAuth() {
   const context = useContext(AuthContext);
@@ -137,15 +133,3 @@ export function useAuth() {
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
-}
-=======
- setIsLoading (false) 
-}, [session, status]);
-const register = async (name: string, email: string, password: string) => {
-  try {
-  const response = await fetch ("/api/auth/register", {
-  method: "POST", headers: {
-  "Content-Type": "application/json" 
-};
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

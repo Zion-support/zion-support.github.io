@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { supabase } from '@/integrations/supabase/client';
@@ -12,7 +11,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -25,7 +24,7 @@ import {
   CheckCircle2,
   Mail,
   Phone,
-  Globe,
+  Globe,;
 } from 'lucide-react';
 import { HireNowCTA } from '@/components/profile/HireNowCTA';
 
@@ -366,32 +365,7 @@ export default function ProfileDetail() {
       </div>
     </>
   );
-=======
- export default function ProfileDetail () {;
-  //useParams is typed as `any` in this environment due to missing type //definitions, so avoid passing a type argument to prevent TS2347. const router = useRouter ();
-const profileId = router.query.profileId as string;
-const [profileData, setProfileData] = useState<any> (null);
-const [isLoading, setIsLoading] = useState (true);
-const [error,  setError] = useState<string | null> (null);
-useEffect ( () => {;
-  const fetchProfile = async () => {;
-  setIsLoading (true);
-setError (null);
-try {;
-  if (!profileId) {;
-  const {;
-  data, error ;
-}= await supabase .from ("talent profiles") .select ("*") .eq ("id", profileId) if (error) {;
-  throw new Error (error.message) ;
-}if (!data) {;
-  ;
-}setProfileData (data) ;
-}catch (err: any) {;
-  ;
-}finally {;
-  setIsLoading (false) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [profileId]);
 <p>Error: {;
@@ -409,7 +383,7 @@ try {;
 }</CardContent> </Card> </div> <HireNowCTA talentProfile= {;
   {;
   id: profileData?.id || '', full name: profileData?.full name || '',  professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 ;
-}
+
 }/> Website </Link> </div>) ;
 }</div> </div> <a href= {;
   profileData.github url ";

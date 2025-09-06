@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { handleAction } from '../../../utils/token/service';
 
@@ -14,17 +13,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message });
   }
-}
-=======
- try {
-  const tx = handleAction (userId, action, metadata);
-return res.status (200) .json ({
-  tx 
-}) 
-}catch (err: any) {
-  return res.status (400) .json ({
-  error: err.message 
-}) 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

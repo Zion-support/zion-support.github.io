@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 interface ButtonProps {
@@ -9,7 +8,6 @@ interface ButtonProps {
   onClick?: () => void;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
-}
 
 export default function Button({
   children,
@@ -44,28 +42,8 @@ export default function Button({
 
   const classes = `${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${disabledClasses} ${className}`;
 
-  return (
-    <button
-      type={type}
-      className={classes}
-      onClick={onClick}
-      disabled={disabled}
+  
     >
       {children}
     </button>
   );
-}
-=======
- return (<button type= {
-  type 
-}className= {
-  classes 
-}onClick= {
-  onClick 
-}disabled= {
-  disabled 
-}> {
-  children 
-}</button>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

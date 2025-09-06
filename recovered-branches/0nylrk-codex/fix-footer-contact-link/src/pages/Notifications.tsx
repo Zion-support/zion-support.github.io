@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
   NotificationType,
-  NotificationContextType,
+  NotificationContextType,;
 } from '@/context/notifications';
 import { formatDistanceToNow } from 'date-fns';
 import {
@@ -18,7 +17,7 @@ import {
   MessageCircle,
   Briefcase,
   UserCheck,
-  Settings,
+  Settings,;
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -48,14 +47,9 @@ const getNotificationIcon = (
     default:
       return <Bell className={cn(className, 'text-gray-500')} />;
   }
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
-<<<<<<< HEAD
     case 'message':
       return <Badge className='bg-blue-500'>Message</Badge>;
     case 'quote_request':
@@ -99,14 +93,7 @@ const NotificationCard: React.FC<{
     }
   };
 
-  return (
-    <div
-      className={cn(
-        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors',
-        notification.read
-          ? 'border-zion-blue-light bg-zion-blue-dark/10'
-          : 'border-zion-cyan bg-zion-blue-dark/30'
-      )}
+  
     >
       <div className='flex items-start gap-4'>
         <div className='mt-1'>
@@ -270,10 +257,7 @@ export default function NotificationsPage() {
       <Footer />
     </>
   );
-=======
-  case 'message': 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const NotificationCard: React.FC< {
   notification: {
@@ -303,24 +287,3 @@ if (!notification.read) {
 }> </Button>) 
 }</div> </div> </div>) 
 };
-return (<> <SEO title="Notifications | Zion AI Marketplace" description="View and manage your notifications on the Zion AI Marketplace." /> <AppHeader /> <main className="container mx-auto px-4 py-8 min-h-screen" > <div className="flex justify-between items-center mb-6" > <div>) 
-}</h1> <p className="text-muted-foreground" >Stay updated with the latest activities and reminders</p> </div> onClick= {
-  () => markAllAsRead () 
-}> <Check className="mr-2 h-4 w-4" /> Mark all as read </Button>) 
-}</div> </div>) : filteredNotifications.length === 0 ? (<div className="text-center py-12 bg-muted rounded-lg" > <Bell className="mx-auto h-12 w-12 text-muted-foreground mb-3 opacity-30" /> <h3 className="text-xl font-medium" >No notifications found</h3> <p className="text-muted-foreground mt-1" > {
-  filter === 'all' ? "You don't have any notifications yet" : `You don't have any $ {
-  filter 
-}notifications` 
-}</p> </div>) : (<div> {
-  filteredNotifications.map (notification => (<NotificationCard key= {
-  notification.id 
-}notification= {
-  notification 
-}onMarkAsRead= {
-  markAsRead 
-}onDismiss= {
-  dismissNotification 
-}/>) ) 
-}</div>) 
-}</TabsContent> </Tabs> </div> </main> <Footer /> </>) 
-}

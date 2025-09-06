@@ -52,9 +52,7 @@ class UltimateAutomationFactory {,
     ],
 ,
     const results = [],
-    for (const automation of automations) {,
-      const result = await this.runCommand(automation.command, automation.description),
-      results.push({ ...automation, result })
+    )
     };
 ,
     this.log('✅ All automations completed'),

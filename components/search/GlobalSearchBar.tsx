@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -57,11 +56,7 @@ export default function GlobalSearchBar() {
     rec.start();
   };
 
-  return (
-    <form
-      onSubmit={onSubmit}
-      className='relative w-full max-w-lg'
-      role='search'
+  
     >
       <input
         value={query}
@@ -110,16 +105,3 @@ export default function GlobalSearchBar() {
       )}
     </form>
   );
-}
-=======
- useEffect ( () => {
-  if (!query) {
-  
-}
-}className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800" > {
-  s 
-}</button> </li>) ) 
-}</ul> </div>) 
-}</form>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

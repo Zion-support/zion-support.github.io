@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Button } from '@/components/ui/button';
@@ -125,19 +124,8 @@ export default function OrderDetailPage() {
       </Link>
     </div>
   );
-=======
- try {;
-  await supabase.functions.invoke ('send-email',  {;
-  body: {;
-  to: user.email, subject: `Receipt for order $ {;
-  order.orderId ;
-}`;
-html: `<p>Thank you for your purchase. Total $ {;
-  order.total ;
-}.</p>` ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+
+
 };
 `Order #$ {;
   order.orderId ;

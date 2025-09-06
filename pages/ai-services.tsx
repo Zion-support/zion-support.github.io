@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 
-<<<<<<< HEAD
 export default function AIServices() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -287,14 +286,10 @@ export default function AIServices() {
     selectedCategory === 'all'
       ? services
       : services.filter(service => service.category === selectedCategory);
-=======
-const AIServicesPage: React.FC = () => {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   return (
     <>
       <Head>
         <title>AI Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Explore our 100+ advanced AI services including autonomous agents, machine learning, computer vision, NLP, and predictive analytics solutions.'
@@ -573,7 +568,7 @@ const AIServicesPage: React.FC = () => {
       </ErrorBoundary>
     </>
   );
-}
+
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Link from 'next/link';
@@ -630,20 +625,6 @@ export default function AIServicesPage() {
             </Link>
             .
           </div>
-=======
-        <meta name="description" content="Advanced AI services and solutions" />
-      </Head>
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              AI Services
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Discover our comprehensive AI solutions and services designed to transform your business.
-            </p>
-          </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
       </div>
     </>

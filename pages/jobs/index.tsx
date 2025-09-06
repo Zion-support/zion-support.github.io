@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import EnhancedMarketplaceCard from '../../components/ui/EnhancedMarketplaceCard';
 import EnhancedLoading from '../../components/ui/EnhancedLoading';
@@ -50,10 +49,3 @@ export default function JobsListPage() {
       )}
     </div>
   );
-}
-=======
- </Link>) ) 
-}</div>) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

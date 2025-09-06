@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 
 export default function Page() {
@@ -37,8 +36,3 @@ export default function Page() {
       </main>
     </div>
   );
-}
-=======
- <Head> <title>Guide — Cloud Improving Implementation</title> <meta name="description" content="Step-by-step guidance derived from live research signals." /> <meta property="og:title" content="Guide — Cloud Improving Implementation" /> <meta property="og:description" content="Step-by-step guidance derived from live research signals." /> <meta name="twitter:card" content="summary large image" /> </Head> 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

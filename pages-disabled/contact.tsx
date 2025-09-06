@@ -5,11 +5,7 @@ import { Phone, Mail, MapPin, Clock, MessageSquare, ArrowRight } from 'lucide-re
 import MainLayout from '../components/layout/MainLayout';
 
 export default function ContactPage() {
-  return (
-    <MainLayout
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
-      keywords="contact, technology consulting, AI services, cloud solutions, support"
+  
     >
       <Head>
         <title>Contact Us - Zion Tech Group</title>

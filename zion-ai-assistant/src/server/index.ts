@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import 'dotenv/config';
 import express from 'express';
 import cors from 'cors';
 import { z } from 'zod';
 import {
   MilestoneSuggestionInput,
-  MilestoneSuggestionResponse,
+  MilestoneSuggestionResponse,;
 } from '../shared/types.js';
 import { generateMilestones } from './milestoneGenerator.js';
 
@@ -48,8 +47,3 @@ const port = process.env.PORT ? Number(process.env.PORT) : 4321;
 app.listen(port, () => {
   console.log(`zion-ai-assistant listening on http://localhost:${port}`);
 });
-=======
- 
-}
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

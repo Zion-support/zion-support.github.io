@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
 import {
@@ -6,7 +5,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import {
@@ -14,7 +13,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { useState } from 'react';
 import { AnalyticsChart } from './AnalyticsChart';
@@ -195,7 +194,6 @@ export function UserBehaviorStats() {
       />
     </div>
   );
-}
 
 interface EventTypeCardProps {
   title: string;
@@ -203,7 +201,6 @@ interface EventTypeCardProps {
   count: number;
   icon: React.ReactNode;
   isLoading: boolean;
-}
 
 function EventTypeCard({
   title,
@@ -234,9 +231,6 @@ function EventTypeCard({
       </CardContent>
     </Card>
   );
-=======
- type TimeRange = '7d' | '30d' | '90d' | '365d';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const {
   data: behaviorData, isLoading 
 }= useQuery ({
   queryKey: ['user-behavior-data', timeRange], queryFn: async () => {
@@ -246,8 +240,7 @@ function EventTypeCard({
 if (manualError) throw manualError;
 //Process data to count events by type and date 
 }return data || [] 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 //Get the event types for chart data keys return Array.from (allKeys) 
 };
@@ -255,4 +248,3 @@ if (manualError) throw manualError;
   return type .split (' ') .map (word => word.charAt (0) .toUpperCase () + word.slice (1) ) /> </div> <AnalyticsChart /> </div>) 
 }) : (new Intl.NumberFormat () .format (count) ) 
 }</div> </div> </div> </CardContent> </Card>) 
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewSummary from '../../components/reviews/ReviewSummary';
@@ -55,8 +54,4 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   return { props: { clientId: slug } };
 };
 
-=======
- </section> </main>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ClientPage;

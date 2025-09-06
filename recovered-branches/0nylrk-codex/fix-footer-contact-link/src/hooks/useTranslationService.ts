@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
@@ -8,7 +7,6 @@ type ContentType = 'job' | 'profile' | 'service' | 'general';
 interface TranslationResponse {
   translations: Record<SupportedLanguage, string>;
   error?: string;
-}
 
 export function useTranslationService() {
   const [isTranslating, setIsTranslating] = useState(false);
@@ -82,13 +80,5 @@ export function useTranslationService() {
     isTranslating,
     getTranslation,
   };
-=======
- type ContentType = 'job' | 'profile' | 'service' | 'general';
-const translateContent = async (content: string;
-contentType: ContentType = 'general';
-sourceLanguage: SupportedLanguage = 'en';
-setIsTranslating (false);
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
-}

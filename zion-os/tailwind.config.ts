@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -51,9 +50,3 @@ const config: Config = {
 };
 
 export default config;
-=======
-import type {
-  Config 
-}from 'tailwindcss' plugins: [] 
-}export default config
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

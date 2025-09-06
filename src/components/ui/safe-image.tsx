@@ -1,5 +1,4 @@
 'use client';
-<<<<<<< HEAD
 
 import Image from 'next/image';
 import { useState } from 'react';
@@ -15,7 +14,6 @@ interface SafeImageProps {
   priority?: boolean;
   sizes?: string;
   quality?: number;
-}
 
 export function SafeImage({
   src,
@@ -47,57 +45,13 @@ export function SafeImage({
 
   // If we have an error and no fallback, show a placeholder
   if (hasError && (!fallbackSrc || currentSrc === fallbackSrc)) {
-    return (
-      <div
-        className={`flex items-center justify-center bg-gray-100 text-gray-400 ${className}`}
-        style={{ width, height }}
-        role='img'
-        aria-label={alt}
+    
       >
         <ImageIcon className='w-6 h-6' />
       </div>
     );
   }
 
-  return (
-    <Image
-      src={currentSrc}
-      alt={alt}
-      width={width}
-      height={height}
-      className={className}
-      onError={handleError}
-      priority={priority}
-      // Add unoptimized as fallback for problematic images
-      unoptimized={hasError}
+  
     />
   );
-}
-=======
-const handleError = () => {;
-  if (!hasError && fallbackSrc && currentSrc !== fallbackSrc) {;
-  //If we have an error and no fallback, show a placeholder if (hasError && (!fallbackSrc || currentSrc === fallbackSrc) ) {;
-  return (<div className= {;
-  `flex items-center justify-center bg-gray-100 text-gray-400 $ {;
-  className ;
-}` ;
-}> <ImageIcon className="w-6 h-6" /> </div>) ;
-}return (<Image src= {;
-  currentSrc ;
-}alt= {;
-  alt ;
-}width= {;
-  width ;
-}height= {;
-  height ;
-}className= {;
-  className ;
-}onError= {;
-  handleError ;
-}priority= {;
-  priority ;
-}//Add unoptimized as fallback for problematic images unoptimized= {;
-  hasError ;
-}/>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 const supabaseUrl =
@@ -16,8 +15,3 @@ export function getServerSupabase(): SupabaseClient {
     auth: { persistSession: false, autoRefreshToken: false },
   });
   return cachedClient;
-}
-=======
- let cachedClient: SupabaseClient | null = null;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type SyncScope = 'full' | 'dao' | 'marketplace';
 
 export interface Peer {
@@ -6,7 +5,6 @@ export interface Peer {
   baseUrl: string; // e.g., https://zion-latam.example.org
   scope?: SyncScope;
   paused?: boolean;
-}
 
 export interface InstanceConfig {
   instanceId: string;
@@ -15,7 +13,6 @@ export interface InstanceConfig {
   scope: SyncScope;
   peers: Peer[];
   secretConfigured: boolean;
-}
 
 export type SyncEventType =
   | 'proposal'
@@ -26,19 +23,16 @@ export type SyncEventType =
 
 export interface BaseEventPayload {
   id: string;
-}
 
 export interface ProposalVoteEntry {
   voterId: string;
   weight: number;
   choice: string;
-}
 
 export interface ProposalPayload extends BaseEventPayload {
   proposalId: string;
   title: string;
   votes: ProposalVoteEntry[];
-}
 
 export interface TokenTransferPayload extends BaseEventPayload {
   txId: string;
@@ -47,7 +41,6 @@ export interface TokenTransferPayload extends BaseEventPayload {
   fromSubnet: string;
   toSubnet: string;
   timestamp: number;
-}
 
 export interface TalentMobilityPayload extends BaseEventPayload {
   personId: string;
@@ -56,7 +49,6 @@ export interface TalentMobilityPayload extends BaseEventPayload {
   role: string;
   startDate: string;
   endDate?: string;
-}
 
 export interface DaoEndorsementPayload extends BaseEventPayload {
   fromDAO: string;
@@ -64,7 +56,6 @@ export interface DaoEndorsementPayload extends BaseEventPayload {
   resolutionId: string;
   decision: 'endorse' | 'reject';
   timestamp: number;
-}
 
 export interface LeaderboardEntryPayload extends BaseEventPayload {
   subjectId: string; // userId or teamId
@@ -72,7 +63,6 @@ export interface LeaderboardEntryPayload extends BaseEventPayload {
   category: string; // e.g., grants, contributions
   rank?: number;
   period?: string; // e.g., 2025-Q3
-}
 
 export type SyncEventPayload =
   | ProposalPayload
@@ -89,7 +79,6 @@ export interface SyncEvent {
   version: number;
   timestamp: number;
   merkleRoot?: string; // required for proposal events
-}
 
 export interface MultiverseState {
   config: InstanceConfig;
@@ -98,9 +87,3 @@ export interface MultiverseState {
   latestVersionByEntityId: Record<string, number>;
   proposalMerkleById: Record<string, string>;
   events: SyncEvent[];
-}
-=======
-export type SyncScope = "full" | "dao" | "marketplace";
-export type SyncEventType = | "proposal" | "token transfer" | "talent mobility" | "dao endorsement" | "leaderboard entry";
-export type SyncEventPayload = | ProposalPayload | TokenTransferPayload | TalentMobilityPayload | DaoEndorsementPayload | LeaderboardEntryPayload;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

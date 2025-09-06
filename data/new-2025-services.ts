@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
 
 const contact = {
@@ -789,6 +788,3 @@ export const new2025Services: EnhancedRealMicroSaasService[] = [
     reviews: 6,
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -14,7 +14,7 @@ import { },
   CheckCircle,
   Star,
   Users,
-  Clock,
+  Clock,;
   DollarSign;
 } from 'lucide-react';
 import Layout from '../../components/Layout';

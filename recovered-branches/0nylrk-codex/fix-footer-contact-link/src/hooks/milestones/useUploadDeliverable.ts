@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -75,27 +74,4 @@ export const useUploadDeliverable = () => {
     uploadDeliverable,
     isSubmitting,
   };
-=======
- try {
-  setIsSubmitting (true);
-//Get the current milestone const {
-  data: milestone, error: fetchError 
-}= await supabase .from ('project milestones') .select ('*') .eq ('id', milestoneId) .single ();
-//For this example, instead of actually uploading files (which would require storage setup);
-//we'll just store the file metadata in the deliverables JSONB field const {
-  error 
-}= await supabase .from ('project milestones') if (error) throw error;
-// Create activity record await recordMilestoneActivity (milestoneId;
-'deliverable added';
-milestone.status;
-milestone.status;
-}finally {
-  setIsSubmitting (false) 
-}
-};
-return {
-  uploadDeliverable;
-isSubmitting 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

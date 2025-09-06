@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -82,12 +81,7 @@ export function MobileOnboarding() {
       </div>
     </div>
   );
-=======
- const goToNextStep = () => {
-  if (currentStep === "language") {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleRoleSelect = () => {
   return (<div className="min-h-screen flex flex-col" > <div className="flex-1 py-8" > {
@@ -99,4 +93,3 @@ const handleRoleSelect = () => {
 }/> Continue </Button> </div> </div>) 
 }</div> <SignUpForm /> </div>) 
 }</div> </div>) 
-}

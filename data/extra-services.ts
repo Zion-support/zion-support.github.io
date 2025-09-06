@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ExtraService {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface ExtraService {
     email: string;
     address: string;
   };
-}
 
 export const extraServices: ExtraService[] = [
   {
@@ -64,7 +62,3 @@ export const extraServices: ExtraService[] = [
     },
   },
 ];
-=======
- 
-}]
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

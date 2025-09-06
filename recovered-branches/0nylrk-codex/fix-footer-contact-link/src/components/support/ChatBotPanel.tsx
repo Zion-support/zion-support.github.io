@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -335,22 +334,12 @@ export function ChatBotPanel() {
       </div>
     </div>
   );
-=======
- type Message = {
-  id: string;
-content: string;
-export function ChatBotPanel () {
-  const [messages, setMessages] = useState<Message[]> ([ {
-  //Auto-scroll to bottom when messages change useEffect ( () => {
-  if (scrollAreaRef.current) {
-  scrollAreaRef.current.scrollTop = scrollAreaRef.current.scrollHeight 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [messages]);
 //Focus input when component mounts useEffect ( () => {
   if (inputRef.current) {
   inputRef.current.focus () 
-}
+
 }, []);
 const handleSendMessage = async (text: string = inputValue) => {
   if (!text.trim () ) return;
@@ -359,7 +348,6 @@ id: `user-$ {
 }`;
 content: text;
 setIsLoading (true);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const botMessage: Message = {
   id: `bot-$ {
   Date.now () 
 }`;
@@ -367,10 +355,10 @@ setIsLoading (true);
   setFailedAttempts ( (prev) => prev + 1);
 if (failedAttempts >= 2) {
   suggestEscalation () 
-}
+
 }finally {
   setIsLoading (false) 
-}
+
 };
 const sendToAIAssistant = async (message: string) => {
   try {
@@ -383,15 +371,14 @@ body: JSON.stringify ({
   
 }) 
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }const data = await response.json ();
-return {
+
   success: true;
 message: data.message 
-}
+
 }catch (error) {
   
-}
+
 };
 const suggestEscalation = () => {
   const escalationMessage: Message = {
@@ -410,7 +397,7 @@ timestamp: m.timestamp
 }) 
 }catch (error) {
   
-}
+
 };
 const handleQuickReply = (text: string) => {
   handleSendMessage (text) 
@@ -427,7 +414,6 @@ timestamp: new Date ()
 }]);
 //In a real implementation, this would trigger a live chat request 
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleEmailSupport = () => {
   setMessages ( (prev) => [ ...prev, {
   id: `user-$ {
   Date.now () 
@@ -450,4 +436,3 @@ timestamp: new Date ()
 }</div> </div>) 
 }Need more help? </p> <div className="flex gap-2" > <Button > Chat with Live Agent </Button> <Button > Email Support </Button> </div> </div>) 
 }h-4 w-4" /> </Button> </form> </div> </div>) 
-}

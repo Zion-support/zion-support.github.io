@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { QuoteFormData, ListingItem, ServiceType } from '@/types/quotes';
 import { Input } from '@/components/ui/input';
@@ -24,7 +23,6 @@ const listingsSchema = z.array(listingSchema);
 interface ServiceTypeStepProps {
   formData: QuoteFormData;
   updateFormData: (data: Partial<QuoteFormData>) => void;
-}
 
 export function ServiceTypeStep({
   formData,
@@ -228,24 +226,7 @@ export function ServiceTypeStep({
       )}
     </div>
   );
-=======
- const listingSchema = z.object ({;
-  id: z.string ();
-title: z.string ();
-category: z.string ();
-image: z.string () .optional () ;
-});
-const listingsSchema = z.array (listingSchema);
-interface ServiceTypeStepProps {;
-  formData: QuoteFormData;
-updateFormData: (data: Partial<QuoteFormData>) => void ;
-}export function ServiceTypeStep ({;
-  formData, updateFormData ;
-}: ServiceTypeStepProps) {;
-  if (!formData.serviceType) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 fetchServices () ;
 }, [formData.serviceType, debouncedQuery, isMounted]);

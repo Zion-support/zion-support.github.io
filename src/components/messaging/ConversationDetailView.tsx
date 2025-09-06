@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -211,10 +210,7 @@ export function ConversationDetailView() {
       </div>
     </div>
   );
-=======
- ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 <AvatarImage src= {;
   activeConversation.other user.avatar url ;

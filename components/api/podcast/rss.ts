@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -16,7 +15,6 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
@@ -57,15 +55,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
-}
-=======
- </item>`;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+
 }) .join ('\n');
 <channel> <title>Zion Podcast</title> <link>$ {
   siteUrl 
 }/media/podcast</link> <language>en-us</language> <itunes:author>Zion</itunes:author> <description>Zion interviews builders, founders, and contributors.</description> $ {
   items 
 }</channel> </rss>`;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

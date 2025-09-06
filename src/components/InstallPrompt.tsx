@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react'; // X is imported but not used, consider removing if not needed.
 import { Button } from '@/components/ui/button';
@@ -16,7 +15,6 @@ interface BeforeInstallPromptEvent extends Event {
     platform: string;
   }>;
   prompt(): Promise<void>;
-}
 
 // Augment the WindowEventMap to include 'beforeinstallprompt'
 declare global {
@@ -25,7 +23,6 @@ declare global {
     // appinstalled event is standard, but if issues arise, it can be augmented too
     // appinstalled: Event;
   }
-}
 
 export const InstallPrompt: React.FC = () => {
   const [promptEvent, setPromptEvent] =
@@ -144,17 +141,6 @@ export const InstallPrompt: React.FC = () => {
       </div>
     </>
   );
-=======
- // Add typed event listeners window.addEventListener ('beforeinstallprompt', handler as EventListener);';
-window.addEventListener ('appinstalled', handleAppInstalled as EventListener);
-}setVisible (false);
-setPromptEvent (null) ;
-};
-// Only render if promptEvent is set and visible is true if (!promptEvent || !visible) return null;
-return (<> {;
-  /* Styles can be moved to a CSS file or a styled-components block if preferred */ ;
-}<style> </Button> </div> </div> </>) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default InstallPrompt;
 '

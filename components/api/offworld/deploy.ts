@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { execSync } from 'child_process';
 import path from 'path';
@@ -36,9 +35,3 @@ export default async function handler(
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Unknown error' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -14,7 +14,7 @@ import {
   Users,
   Globe,
   Code,
-  Shield
+  Shield;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -152,12 +152,7 @@ const stats = [
 ];
 
 export default function TeamPage() {
-  return (
-    <Layout
-      title="Our Team - Zion Tech Group"
-      description="Meet our expert team of technology professionals. Experienced engineers, data scientists, and business leaders dedicated to delivering exceptional results."
-      keywords="team, experts, engineers, data scientists, AI specialists, cybersecurity experts, technology professionals"
-      canonical="https://ziontechgroup.com/team"
+  
     >
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 text-white py-20">
@@ -385,4 +380,3 @@ export default function TeamPage() {
       </section>
     </Layout>
   );
-}

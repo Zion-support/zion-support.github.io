@@ -2,7 +2,6 @@ import React from 'react';
 
 interface ComprehensiveServicesProps {
   // Add props here as needed
-}
 
 export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
   return (
@@ -11,13 +10,6 @@ export default function ComprehensiveServices({ }: ComprehensiveServicesProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+
+
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ContractTemplate } from '@/types/contracts';
 import { Button } from '@/components/ui/button';
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -9,7 +8,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { useAuth } from '@/hooks/useAuth';
 // useRouter replaces the old useLocation hook from react-router
@@ -22,7 +21,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
+  AlertDialogTitle,;
 } from '@/components/ui/alert-dialog';
 import { useState } from 'react';
 
@@ -31,7 +30,6 @@ interface TemplateListProps {
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
   onEdit: (template: ContractTemplate) => void;
-}
 
 export function TemplateList({
   templates,
@@ -195,48 +193,7 @@ export function TemplateList({
       </AlertDialog>
     </div>
   );
-=======
- //useRouter replaces the old useLocation hook from react-router import {;
-  {;
-  {;
-  useRouter ;
-}from 'next/router';
-import {;
-  AlertDialog;
-AlertDialogAction;
-AlertDialogCancel;
-AlertDialogContent;
-AlertDialogDescription;
-AlertDialogFooter;
-AlertDialogHeader;
-interface TemplateListProps {;
-  templates: ContractTemplate[];
-isLoading: boolean;
-onSelect: (template: ContractTemplate) => void;
-onEdit: (template: ContractTemplate) => void ;
-}export function TemplateList ({;
-  templates;
-isLoading;
-onSelect;
-onEdit ;
-}: TemplateListProps) {;
-  const [templateToDelete,  setTemplateToDelete] = useState<string | null> (null);
-const {;
-  deleteTemplate, setDefaultTemplate ;
-}= useContractTemplates ();
-const {;
-  user ;
-}= useAuth ();
-const router = useRouter ();
-const handleDeleteClick = (templateId: string) => {;
-  setTemplateToDelete (templateId) ;
-};
-const handleDeleteConfirm = async () => {;
-  if (templateToDelete) {;
-  await deleteTemplate.mutateAsync (templateToDelete);
-setTemplateToDelete (null) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleSetDefault = async (templateId: string) => {;
   if (!user) {;

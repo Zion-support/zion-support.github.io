@@ -12,7 +12,7 @@ import { }
   ArrowRight,
   Star,
   Play,
-  Download,
+  Download,;
   Globe;
 } from 'lucide-react';
 import Layout from '../components/Layout';
@@ -298,4 +298,3 @@ export default function TrainingPage() {}
         </section>
       </div>
     </Layout>
-}

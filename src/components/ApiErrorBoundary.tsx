@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -11,18 +10,7 @@ interface ApiErrorBoundaryProps {
   children: ReactNode;
   queryClient?: QueryClient;
   fallback?: ReactNode;
-=======
- constructor (props: ApiErrorBoundaryProps) {;
-  super (props);
-this.state = {;
-  logErrorToProduction ('ApiErrorBoundary caught an error:',  error, errorInfo) ;
-}componentDidMount () {';
-  //Listen for online/offline events if (typeof window !== 'undefined') {;
-  try {;
-  //Invalidate all queries to force refetch if (this.props.queryClient) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 render () {;
   if (this.state.hasError) {';
@@ -42,8 +30,6 @@ render () {;
 }</pre> </details>) ;
 }</div> </div>) ;
 }return this.props.children ;
-}
-<<<<<<< HEAD
 
 export class ApiErrorBoundary extends Component<
   ApiErrorBoundaryProps,
@@ -236,7 +222,6 @@ export class ApiErrorBoundary extends Component<
 
     return this.props.children;
   }
-}
 
 // Hook for accessing query client in function components
 export const useApiErrorHandler = () => {
@@ -250,6 +235,3 @@ export const useApiErrorHandler = () => {
 
   return { handleApiError };
 };
-=======
-}// Hook for accessing query client in function components '"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

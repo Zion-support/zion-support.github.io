@@ -8,7 +8,6 @@ first job applied?: boolean;
 }return null 
 }export async function fetchOnboardingProgress (userId: string, role: 'talent' | 'client') : Promise<OnboardingRecord | null> {
   try {
-<<<<<<< HEAD
     const { data } = await supabase.auth.getUser();
     if (data && (data as any).user?.id) return (data as any).user.id as string;
   } catch {}
@@ -26,7 +25,6 @@ first job applied?: boolean;
     }
   } catch {}
   return null;
-}
 
 export async function fetchOnboardingProgress(
   userId: string,
@@ -53,7 +51,6 @@ export async function fetchOnboardingProgress(
     console.warn('Supabase onboarding fetch exception:', (e as Error).message);
     return null;
   }
-}
 
 export function fallbackTalentProgress(): TalentOnboarding {
   return {
@@ -62,7 +59,6 @@ export function fallbackTalentProgress(): TalentOnboarding {
     availability_set: false,
     first_job_applied: false,
   };
-}
 
 export function fallbackClientProgress(): ClientOnboarding {
   return {
@@ -71,10 +67,3 @@ export function fallbackClientProgress(): ClientOnboarding {
     quote_received: false,
     first_hire_complete: false,
   };
-}
-=======
-  const {
-  data, error 
-}= await supabase .from ('onboarding progress') .select ('*') .eq ('user id', userId) .eq ('role', role) .maybeSingle ();
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

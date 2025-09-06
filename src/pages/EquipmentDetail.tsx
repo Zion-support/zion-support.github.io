@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { NextSeo } from '@/components/NextSeo';
@@ -14,7 +13,7 @@ import {
   RotateCcw,
   Clock,
   AlertTriangle,
-  ArrowLeft,
+  ArrowLeft,;
 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
@@ -28,9 +27,6 @@ import { useCurrency } from '@/hooks/useCurrency';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface EquipmentSpecification {
-=======
- interface EquipmentSpecification {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   name: string;
 value: string ;
 }interface EquipmentDetails {;
@@ -58,8 +54,6 @@ returnPolicy?: string ;
 features: item.tags || [];';
 warranty: '1 Year Manufacturer Warranty';';
 returnPolicy: '30-day return policy' ;
-}
-<<<<<<< HEAD
 
 // Convert ProductListing to EquipmentDetails format
 function convertProductListingToEquipmentDetails(
@@ -89,7 +83,6 @@ function convertProductListingToEquipmentDetails(
     warranty: '1 Year Manufacturer Warranty',
     returnPolicy: '30-day return policy',
   };
-}
 
 // Build sample data from the shared equipment listings
 export const SAMPLE_EQUIPMENT: { [key: string]: EquipmentDetails } =
@@ -548,32 +541,11 @@ export default function EquipmentDetail() {
       </div>
     </>
   );
-}
-=======
-}//Build sample data from the shared equipment listings const [equipment, setEquipment] = useState<EquipmentDetails | undefined> ();
-useEffect ( () => {;
-  async function loadEquipment () {;
-  if (!id) {';
-  //Check if it's already in EquipmentDetails format or needs conversion let equipmentData: EquipmentDetails;
-if (storedData.name) {;
-  //Already in EquipmentDetails format setEquipment (equipmentData);
-setLoading (false);
-return ;
-}
-}
-}//If not found anywhere, set error ;
-}
-}loadEquipment () ;
-}, [id]);
-const handleAddToCart = async () => {;
-  if (!equipment || !isAuthenticated) {;
-  toast ({;
-  return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
+
+
 }finally {;
   setIsAdding (false) ;
-}
+
 };
 const inCart = items.some (item => item.id === equipment?.id);
 return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen bg-zion-blue py-12 px-4" > <div className="container mx-auto" > <div className="text-center py-20" > <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-zion-cyan mx-auto mb-4" ></div> <p className="text-zion-slate-light" >Loading equipment details...</p> </div> </div> </div> </> //Error state if (error || !equipment) {'";
@@ -591,7 +563,7 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }- Zion Marketplace`, description: equipment.description, images: equipment.images.length > 0 && equipment.images[0] ? [ {;
   url: equipment.images[0] ;
 }] : undefined ;
-}
+
 }/> key= {;
   index ;
 }onClick={;
@@ -622,4 +594,3 @@ return (<> <NextSeo title="Loading Equipment..." /> <div className="min-h-screen
 }</p> </div> </div>) ;
 }</div> </motion.div> </div> </div> </div> </>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

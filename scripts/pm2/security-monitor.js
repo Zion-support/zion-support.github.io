@@ -123,10 +123,7 @@ class SecurityMonitor {
       const securityIssues = [];
       const sourceFiles = this.getSourceFiles();
       
-      for (const file of sourceFiles) {
-        const issues = await this.scanFileSecurity(file);
-        securityIssues.push(...issues);
-      }
+      
 
       this.securityReport.codeSecurity = {
         totalIssues: securityIssues.length,
@@ -291,11 +288,7 @@ class SecurityMonitor {
         'Dockerfile'
       ];
 
-      for (const configFile of configFiles) {
-        if (fs.existsSync(configFile)) {
-          const issues = await this.scanConfigFile(configFile);
-          configIssues.push(...issues);
-        }
+      
       }
 
       this.log(`⚙️ Configuration scan completed - ${configIssues.length} issues found`);
@@ -536,12 +529,10 @@ class SecurityMonitor {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const monitor = new SecurityMonitor();
   monitor.run();
-}
 
 module.exports = SecurityMonitor;

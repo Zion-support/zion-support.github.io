@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -8,7 +7,6 @@ export interface ClickableBadgeProps
   extends React.HTMLAttributes<HTMLDivElement> {
   onRemove?: () => void;
   variant?: 'default' | 'secondary' | 'destructive' | 'outline';
-}
 
 export function ClickableBadge({
   children,
@@ -17,15 +15,7 @@ export function ClickableBadge({
   onRemove,
   ...props
 }: ClickableBadgeProps) {
-  return (
-    <div
-      className={cn(
-        badgeVariants({ variant }),
-        'group flex items-center gap-1',
-        onRemove && 'pl-2.5 pr-1.5 py-1',
-        className
-      )}
-      {...props}
+  
     >
       <span>{children}</span>
       {onRemove && (
@@ -43,25 +33,3 @@ export function ClickableBadge({
       )}
     </div>
   );
-}
-=======
- ;
-}export function ClickableBadge ({;
-  children;
-className;
-variant = "default";
-onRemove;
-...props ;
-}: ClickableBadgeProps) {;
-  return (<div className= {;
-  cn (badgeVariants ({;
-  variant ;
-});";
-"group flex items-center gap-1";";
-onRemove && "pl-2.5 pr-1.5 py-1";
-}{;
-  ...props ";
-}> > <X className="h-3 w-3" /> </button>) ;
-}</div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

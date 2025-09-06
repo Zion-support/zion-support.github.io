@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import { Education } from '@/types/resume';
 import { format } from 'date-fns';
 
 interface EducationSectionProps {
   education: Education[];
-}
 
 export function EducationSection({ education }: EducationSectionProps) {
   // Sort education by date (newest first)
@@ -57,11 +55,3 @@ export function EducationSection({ education }: EducationSectionProps) {
       </div>
     </div>
   );
-}
-=======
- if (sortedEducation.length === 0) return null;
-) 
-}</div>) ) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

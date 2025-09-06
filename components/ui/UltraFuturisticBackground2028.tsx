@@ -12,8 +12,6 @@ animate ();
 /> {
   /* Floating Circles */ 
 }<motion.div 
-}
-<<<<<<< HEAD
 
 export default function UltraFuturisticBackground2028({
   children,
@@ -316,17 +314,3 @@ export default function UltraFuturisticBackground2028({
       />
     </div>
   );
-}
-=======
-}animate= {
-  {
-  scale: [0, 1, 0], opacity: [0, 1, 0] 
-}
-}transition= {
-  {
-  duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 3, ease: "easeInOut" 
-}
-}/>) ) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
@@ -6,7 +5,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -21,7 +20,6 @@ interface SmartContractDeploymentProps {
   solidityCode: string;
   onDeploy: (options: DeploymentOptions) => Promise<void>;
   isDeploying: boolean;
-}
 
 export function SmartContractDeployment({
   solidityCode,
@@ -188,31 +186,7 @@ export function SmartContractDeployment({
       </CardFooter>
     </Card>
   );
-=======
- interface SmartContractDeploymentProps {
-  solidityCode: string;
-onDeploy: (options: DeploymentOptions) => Promise<void>;
-isDeploying: boolean 
-}export function SmartContractDeployment ({
-  solidityCode;
-onDeploy;
-isDeploying 
-}: SmartContractDeploymentProps) {
-  const [deploymentOptions, setDeploymentOptions] = useState<DeploymentOptions> ({
-  network: 'none';
-useEscrow: true;
-deployToChain: false;
-walletAddress: '' 
-});
-const handleDeployContract = async () => {
-  if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
-  
-}try {
-  await onDeploy (deploymentOptions) 
-}catch (error) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleDownloadSolidity = () => {
   //Create a blob from the Solidity code const blob = new Blob ([solidityCode], {
@@ -234,4 +208,3 @@ flex items-center gap-2"> <ShieldCheck className=" h-5 w-5 text-primary"/> Smart
 }> {
   isDeploying ? (<> <Loader2 className=" mr-2 h-4 w-4 animate-spin" /> Deploying... </>) : ('Deploy Contract') 
 }</Button> </CardFooter> </Card>) 
-}

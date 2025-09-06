@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { logErrorToProduction } from '@/utils/productionLogger';
@@ -8,14 +7,14 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { Button } from '@/components/ui/button';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { Badge } from '@/components/ui/badge';
 import { toast } from '@/hooks/use-toast';
@@ -27,7 +26,7 @@ import {
   Power,
   PowerOff,
   Users,
-  RefreshCcw,
+  RefreshCcw,;
 } from 'lucide-react';
 import { format } from 'date-fns';
 
@@ -273,15 +272,7 @@ export function TenantsList() {
       )}
     </div>
   );
-=======
- const toggleTenantStatus = async (tenant: WhitelabelTenant) => {;
-  try {;
-  const {;
-  error ;
-}= await supabase .from ('whitelabel tenants') if (error) throw error;
-//Update local state setTenants (tenants.map (t => ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const verifyDns = async (tenant: WhitelabelTenant) => {;
   try {';
@@ -289,7 +280,7 @@ const verifyDns = async (tenant: WhitelabelTenant) => {;
   error ';
 }= await supabase .from ('whitelabel tenants') if (error) throw error;
 //Update local state setTenants (tenants.map (t => ;
-}
+
 };
 return (Refresh </Button> </div> </div>) : (<div className="rounded-md border" > <Table> <TableHeader> <TableRow> <TableHead>Brand</TableHead> <TableHead>Subdomain</TableHead> <TableHead>Custom Domain</TableHead> <TableHead>Status</TableHead> <TableHead>Created At</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   tenants.length === 0 ? (<TableRow> <TableCell colSpan= {;

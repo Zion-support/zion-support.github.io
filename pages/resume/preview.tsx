@@ -15,7 +15,6 @@
   name: 'Your Name', contact: {
   email: 'you@example.com', phone: '+1 555-123-4567', location: 'City, Country', website: 'https://example.com' 
 };
-<<<<<<< HEAD
 
 export default function ResumePreviewPage({
   initialData,
@@ -77,7 +76,6 @@ export default function ResumePreviewPage({
       </div>
     </div>
   );
-}
 
 export const getServerSideProps: GetServerSideProps = async ctx => {
   // Simple auth guard for talent users; adjust with real roles when available
@@ -155,9 +153,3 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
 
   return { props: { initialData, versions } };
 };
-=======
-summary: 'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
-skills: ['AI EngineeringPrompt DesignTypeScriptNode.jsNext.js'];
-technologies: ['OpenAISupabasePostgresVercelDocker'];
-experience: [ 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

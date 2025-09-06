@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
@@ -11,7 +10,6 @@ function list(dir: string, baseDir: string) {
     const stat = fs.statSync(full);
     return { name, rel, isDir: stat.isDirectory() };
   });
-}
 
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook');
@@ -22,7 +20,6 @@ export async function getStaticProps() {
       }))
     : [];
   return { props: { sections }, revalidate: 600 };
-}
 
 export default function DocsIndex({
   sections,
@@ -62,10 +59,3 @@ export default function DocsIndex({
       </div>
     </div>
   );
-}
-=======
- </li>) ) 
-}</ul> </div>) ) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

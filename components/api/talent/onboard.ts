@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -6,7 +5,7 @@ import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
 
 // Lazy import to avoid serverless cold start cost unless needed
-async function summarizeAndTag(input: {
+async function summarizeAndTag(input: {;
   fullName: string;
   professionalTitle: string;
   bio: string;
@@ -72,7 +71,6 @@ async function summarizeAndTag(input: {
 
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) };
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -202,16 +200,3 @@ export default async function handler(
   } catch (error) {
     return res.status(500).json({ error: 'Internal server error' });
   }
-}
-=======
- 
-}
-}catch () {
-  // fall through to heuristic 
-}
-}catch (err) {
-  // ignore and fallback 
-}// Placeholder: trigger operator workflow hook (could be a message queue or cron pickup) // For now, just return success with AI data 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

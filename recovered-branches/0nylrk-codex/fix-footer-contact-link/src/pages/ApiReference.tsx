@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
 import { CodeBlock } from '@/components/developers/CodeBlock';
@@ -441,30 +440,20 @@ export function ApiReference() {
       </div>
     </ApiDocsLayout>
   );
-=======
- 
-};
-//More jobs... ];
-"count" : 42;
-"limit" : 20;
-"offset" : 0 
-}` 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
 };
 ] 
 }` 
-}
+
 };
 requestExample: `curl -X POST \\ https://api.zionai.com/v1/api/jobs \\ //More talent profiles... ];
 "count" : 38;
 "limit" : 20;
 "offset" : 0 
 }` 
-}
+
 };
 requestExample: `curl -X GET \\ https://api.zionai.com/v1/api/talent?skills=React, Node.js&limit=10 \\ -H "Authorization: Bearer YOUR API KEY" ` 
 }];

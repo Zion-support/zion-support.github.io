@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GradientHeading } from '@/components/GradientHeading';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { useState, useEffect, useRef, Suspense } from 'react';
@@ -10,7 +9,7 @@ import {
   Bot,
   Mic,
   Code,
-  Briefcase,
+  Briefcase,;
 } from 'lucide-react';
 import { MARKETPLACE_LISTINGS } from '@/data/listingData';
 import { ProductListing } from '@/types/listings';
@@ -60,27 +59,7 @@ function generateInnovationListing(index: number): ProductListing {
     availability: 'Immediate',
     aiScore: Math.floor(Math.random() * 20) + 80,
   };
-=======
- "AI-Powered Customer Support";";
-"Cloud Infrastructure Management";";
-"Predictive Analytics Consulting";";
-"Cybersecurity Automation Suite";";
-"Robotic Process Automation";";
-"Machine Learning Model Tuning";";
-"IoT Device Integration Service";";
-"Blockchain Data Solutions" ];
-id: `innovation-auto-$ {;
-  index ;
-}`;
-title;
-createdAt: new Date () .toISOString ();
-rating;
-reviewCount;";
-location: "Global";";
-availability: "Immediate";
-aiScore: Math.floor (Math.random () * 20) + 80 ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }//Map of category slugs to their display data const categoryData = {;
   'services': {";
   title: "Services";";
@@ -141,8 +120,6 @@ icon: <Code className="w-6 h-6" /> ;
   title: "Business Solutions";";
 description: "Enterprise AI integrations and services";";
 icon: <Briefcase className="w-6 h-6" /> ;
-}
-<<<<<<< HEAD
 
 export default function CategoryDetail({
   slug: slugProp,
@@ -390,44 +367,7 @@ export default function CategoryDetail({
       </Suspense>
     </>
   );
-=======
-};
-useEffect ( () => {;
-  async function load () {;
-  setIsLoading (true);
-//Find the category data based on slug const currentCategory = categoryData[slug as keyof typeof categoryData] || {';
-  title: slug ?.split ('-') innovationCounterRef.current = 0;';
-//Filter listings by category //If we don't have real listings for this category,  generate placeholder listings const listingsToShow = filteredListings.length > 0 ? filteredListings : Array (4) .fill (null) .map ( (, index) => ({;
-  id: `$ {;
-  slug ;
-}-$ {;
-  index ;
-}`;
-title: `$ {;
-  currentCategory.title ;
-}Product $ {;
-  index + 1 ;
-}`;
-description: `A great $ {;
-  currentCategory.title.toLowerCase () ;
-}solution for your needs.`;
-category: currentCategory.title;
-price: Math.floor (Math.random () * 500) + 50;';
-currency: '$';
-avatarUrl: undefined ;
-};
-images: [`/placeholder.svg`];
-createdAt: new Date () .toISOString ();
-rating: Math.floor (Math.random () * 5) + 1;
-reviewCount: Math.floor (Math.random () * 100) ;
-}) );
-}load () ;
-}, [slug]);
-return () => clearInterval (interval) ;
-}, [slug]);
-//Handle requesting a quote ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 return (<> <NextSeo title= {;
   seoTitle ;

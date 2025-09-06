@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
 function runNode(relPath, args = []) {
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
-}
 
 exports.config = {
   schedule: '*/15 * * * *',
@@ -26,6 +24,3 @@ exports.handler = async () => {
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'));
   return { statusCode: 200, body: logs.join('\n') };
 };
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

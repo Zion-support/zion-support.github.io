@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { Configuration, OpenAIApi } from 'https://esm.sh/openai@3.2.1';
@@ -10,9 +9,6 @@ const corsHeaders = {
 };
 
 interface HireRequest {
-=======
- interface HireRequest {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   talent: {
   id: string;
 full name: string;
@@ -29,12 +25,10 @@ project: {
 timeline: string;
 budgetMin: number;
 budgetMax: number 
-}
+
 }interface EnhancedContent {
   summary: string;
-<<<<<<< HEAD
   projectType: string;
-}
 
 serve(async req => {
   // Handle CORS preflight requests
@@ -225,13 +219,6 @@ serve(async req => {
       }
     );
   }
-=======
-projectType: string 
-}serve (async (req) => {
-  //Handle CORS preflight requests 
-}try {
-  const supabase = createClient ();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //1. Optional: Enhance content with AI let enhancedContent: EnhancedContent | null = null;
 if (openAiKey) {
   try {
   const configuration = new Configuration ({
@@ -246,7 +233,7 @@ const prompt = `Project Overview: "$ {
 }/);
 if (jsonMatch) {
   //Continue without enhanced content 
-}
+
 }//2. Store the request in the database const {
   data: requestRecord, error: requestError 
 }= await supabase .from ('hire requests') .insert ([ {
@@ -261,7 +248,7 @@ if (jsonMatch) {
 }`;
 related id: requestRecord[0].id 
 };
-}
+
 }//4. Send email notification to talent if (talent.email) {
   //In a real implementation, this would call your email sending function const emailResponse = await supabase.functions.invoke ('send-email', {
   body: {
@@ -288,7 +275,7 @@ related id: requestRecord[0].id
   enhancedContent.projectType 
 }</p>` : '' 
 }<p>Please log in to your Zion AI Marketplace account to respond to this request.</p> <p>Best regards, <br>The Zion AI Marketplace Team</p> ` 
-}
+
 });
 }return new Response (JSON.stringify ({
   success: true;
@@ -312,6 +299,5 @@ error: error.message
   ...corsHeaders, " Content-Type": " application/json" 
 };
 }) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

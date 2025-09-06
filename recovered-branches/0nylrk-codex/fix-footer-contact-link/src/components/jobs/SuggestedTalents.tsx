@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
@@ -9,7 +8,6 @@ import { JobMatchCard } from './JobMatchCard';
 interface SuggestedTalentsProps {
   jobId: string;
   jobTitle?: string;
-}
 
 export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
   const [talents, setTalents] = useState([]);
@@ -145,43 +143,11 @@ export function SuggestedTalents({ jobId, jobTitle }: SuggestedTalentsProps) {
       </CardContent>
     </Card>
   );
-=======
- interface SuggestedTalentsProps {
-  jobId: string;
-jobTitle?: string 
-}export function SuggestedTalents ({
-  jobId, jobTitle 
-}: SuggestedTalentsProps) {
-  const [talents, setTalents] = useState ([]);
-const [isLoading, setIsLoading] = useState (true);
-const [isProcessing, setIsProcessing] = useState (false);
-const fetchSuggestedTalents = async () => {
-  setIsLoading (true);
-try {
-  const {
-  data, error 
-}= await supabase .from ("suggested talents") talent profile: talent id (id;
-user id;
-full name;
-professional title;
-profile picture url;
-hourly rate;
-bio;
-years experience;
-key projects;
-skills;
-location;
-category;
-company name) `) 
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleViewProfile = (talentId: string) => {
   //Implement logic to view talent profile 
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Card className="border-zion-blue-light bg-zion-blue" > <CardHeader> <CardTitle> {
   jobTitle ? `Talents for $ {
   jobTitle 
 }` : 'Suggested Talents' 
@@ -216,4 +182,3 @@ const handleViewProfile = (talentId: string) => {
 }/>) ) 
 }</div>) 
 }</CardContent> </Card>) 
-}

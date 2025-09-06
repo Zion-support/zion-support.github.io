@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Head from 'next/head';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import Card from '../components/ui/Card';
@@ -207,33 +206,3 @@ export default function DocsPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
-=======
- const sections = [ {
-  title: 'Getting Started', links: [ {
-  name: 'Overview', href: '/enhanced-services-showcase' 
-};
-{
-  name: 'Pricing & Market Benchmarks', href: '/market-pricing' 
-};
-{
-  name: 'Contact Sales', href: '/contact' 
-}] 
-};
-{
-  title: 'AI Services Docs', links: [ {
-  name: 'AI Guardrails', href: '/ai-guardrails' 
-};
-{
-  name: 'AI Evals', href: '/ai-evals' 
-};
-{
-  name: 'Agentic RAG', href: '/agentic-rag' 
-}] 
-};
-return (<UltraAdvancedFuturisticBackground> <Head> <title>Documentation | Zion Tech Group</title> </li>) ) 
-}</ul> </Card>) ) 
-}</div>) ) 
-}</ul> </Card> </div> </Card> </div> </div> </UltraAdvancedFuturisticBackground>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -16,7 +15,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import {
   Card,
@@ -24,7 +23,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   X,
@@ -35,7 +34,7 @@ import {
   Briefcase,
   MapPin,
   UserRound,
-  Globe,
+  Globe,;
 } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -835,24 +834,14 @@ export function ServiceProviderRegistrationForm() {
       </Card>
     </div>
   );
-=======
- import {
-  Form;
-FormControl;
-FormDescription;
-FormField;
-FormItem;
-FormLabel;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Handle removing service tags const handleRemoveService = (service: string) => {
   setServiceTags (serviceTags.filter ( (s) => s !== service) ) 
 };
 //Handle key press in services input (add on enter) const handleServiceKeyPress = (e: React.KeyboardEvent) => {
   
-}
+
 };
 //Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
   const file = e.target.files?.[0];
@@ -862,36 +851,34 @@ reader.onloadend = () => {
   setUploadedAvatar (reader.result as string) 
 };
 reader.readAsDataURL (file) 
-}
+
 };
 //Generate enhanced profile with AI return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }//Call the Supabase Edge Function const {
   data, error 
 }= await supabase.functions.invoke ('service-profile-enhancer', {
   body: {
   providerData: {
   name: formData.name, title: formData.title, bio: formData.bio, services: serviceTags, location: formData.location 
-}
-}
+
+
 });
 }finally {
   setIsGenerating (false) 
-}
+
 };
 //Apply generated content to form const applyGeneratedContent = () => {
   if (generatedContent) {
   const newServices = generatedContent.services.filter (service => typeof service === 'string' && service && !serviceTags.includes (service) );
 if (newServices.length > 0) {
   
-}
-}
+
+
 };
 //Handle form submission const onSubmit = async (values: ServiceFormValues) => {
   if (serviceTags.length === 0) {
   toast ({
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }setIsSubmitting (true);
 try {
   //For actual implementation with Supabase if (!user?.id) {
@@ -905,11 +892,11 @@ try {
   body: {
   providerData: {
   name: values.name, title: values.title, bio: values.bio, services: serviceTags, location: values.location 
-}
-}
+
+
 });
 //Continue with submission even if enhancement fails 
-}
+
 }else if (generatedContent) {
   finalSummary = generatedContent.summary;
 finalServices = [...new Set ([...serviceTags, ...generatedContent.services]) ] 
@@ -931,12 +918,12 @@ if (error) throw error;
   new Date () .getFullYear () 
 }Zion Marketplace</p> 
 }//Continue with submission even if email fails 
-}
+
 }toast ({
   
 }finally {
   setIsSubmitting (false) 
-}
+
 };
 max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className=" text-2xl text-white">Create Your Service Provider Profile</CardTitle> <CardDescription className=" text-zion-slate"> Showcase your services and expertise to potential clients. </CardDescription> </CardHeader> <FormItem> <FormLabel className=" text-zion-slate-light">Full Name</FormLabel> <FormControl> <div className=" relative"> <UserRound className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> </div> <div className=" col-span-1"> <FormField <FormItem> <FormLabel className=" text-zion-slate-light">Business/Service Name</FormLabel> <FormControl> <div className=" relative"> <Briefcase className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate h-4 w-4"/> <Input /> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
@@ -972,4 +959,3 @@ max-w-4xl mx-auto p-4 md:p-6"> <Card className=" bg-zion-blue-dark border-zion-b
 }</div> </div> <FormItem> <FormLabel className=" text-zion-slate-light">Starting Rate (USD) </FormLabel> <FormControl> <div className=" relative"> <span className=" absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate">$</span> <Input /> </div> </FormControl> <FormDescription className=" text-zion-slate"> Your base hourly or project rate </FormDescription> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> <FormField <FormControl> <div className=" space-y-2"> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" available"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-green-500"></div> Available for Work </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" limited"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-yellow-500"></div> Limited Availability </label> </div> <div className=" flex items-center space-x-2"> <input /> <label htmlFor=" unavailable"className=" text-white flex items-center gap-2"> <div className=" h-2 w-2 rounded-full bg-red-500"></div> Currently Unavailable </label> </div> </div> </FormControl> <FormMessage className=" text-red-400"/> </FormItem>) 
 }/> </div> </div> </CardContent> <CardFooter className=" border-t border-zion-blue-light pt-6"> <div className=" flex flex-col sm:flex-row gap-4 w-full sm:justify-between"> <Button type=" button"variant=" outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" > Save as Draft </Button> <Button </Button> </div> </CardFooter> </form> </Form> </Card> </div>) 
-}

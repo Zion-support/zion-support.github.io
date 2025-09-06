@@ -1,10 +1,9 @@
- 
-}
-<<<<<<< HEAD
+import type { NextApiRequest, NextApiResponse } from 'next';
+import fs from 'fs';
+import path from 'path';
 
 function writeUsers(data: any) {
   fs.writeFileSync(usersPath, JSON.stringify(data, null, 2));
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -57,7 +56,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(500)
       .json({ error: e?.message ?? 'Failed to handle progress' });
   }
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

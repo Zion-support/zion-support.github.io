@@ -6,7 +6,6 @@ const ContactPage: React.FC = () => {
     <>
       <Head>
         <title>Contact Us - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Get in touch with Zion Tech Group for innovative micro SaaS, AI services, and IT solutions. Contact us for a free consultation.'
@@ -85,28 +84,8 @@ const ContactPage: React.FC = () => {
                 </div>
               </div>
             </div>
-=======
-        <meta name="description" content="Get in touch with Zion Tech Group" />
-      </Head>
-      <div className="min-h-screen bg-gray-50 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold text-gray-900 mb-8">
-              Contact Us
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Get in touch with our team for inquiries and support.
-            </p>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
       </div>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default ContactPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

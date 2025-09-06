@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Fragment } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { ProtectedRoute } from '../components/ProtectedRoute';
@@ -46,24 +45,4 @@ const CommunityRoutes = () => {
   );
 };
 
-=======
- const CommunityRoutes = () => {
-  return (<Routes> {
-  /* Public routes */ 
-}<Route path="/community" element= {
-  <CommunityPage /> 
-}/> <Route path="/forum" element= {
-  <CommunityPage /> 
-}/> <Route path="/community/category/:categoryId" element= {
-  <ForumCategoryPage /> 
-}/> <Route path="/community/post/:postId" element= {
-  <ForumPostPage /> 
-}/> <Route path="/community/profile/:userId" element= {
-  <CommunityProfilePage /> 
-}/> /* Protected routes */ 
-}<Route <CreatePostPage /> </ProtectedRoute> 
-}/> <Route <EditPostPage /> </ProtectedRoute> 
-}/> </Routes>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default CommunityRoutes;

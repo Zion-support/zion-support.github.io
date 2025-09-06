@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import AuthRoutes from './AuthRoutes';
 import DashboardRoutes from './DashboardRoutes';
 import MarketplaceRoutes from './MarketplaceRoutes';
@@ -23,18 +22,4 @@ export {
   EnterpriseRoutes,
   CommunityRoutes,
   DeveloperRoutes,
-=======
- export {
-  AuthRoutes;
-DashboardRoutes;
-MarketplaceRoutes;
-TalentRoutes;
-AdminRoutes;
-MobileAppRoutes;
-ContentRoutes;
-ErrorRoutes;
-EnterpriseRoutes;
-CommunityRoutes;
-DeveloperRoutes 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

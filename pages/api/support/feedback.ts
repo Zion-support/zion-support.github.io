@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 
@@ -19,8 +18,3 @@ export default async function handler(
   feedback.push({ articleId, helpful, ts: Date.now() });
   writeJson('support/feedback.json', feedback);
   return res.status(200).json({ ok: true });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

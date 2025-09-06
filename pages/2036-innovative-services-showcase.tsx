@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -30,7 +29,7 @@ import {
   List,
   Phone,
   Mail,
-  MapPin,
+  MapPin,;
 } from 'lucide-react';
 import { real2036InnovativeServices } from '../data/real-2036-innovative-services';
 import { real2036SpecializedServices } from '../data/real-2036-specialized-services';
@@ -531,30 +530,8 @@ export default function InnovativeServicesShowcase2036() {
       </section>
     </Layout>
   );
-=======
- export default function InnovativeServicesShowcase2036 () {
-  const [selectedCategory, setSelectedCategory] = useState ('All Services');
-const [searchTerm, setSearchTerm] = useState ('');
-const [viewMode, setViewMode] = useState<'grid'| 'list'> ('grid');
-const [sortBy, setSortBy] = useState<'name'| 'price'| 'rating'| 'marketSize'> ('name');
-const allServices = [...real2036InnovativeServices, ...real2036SpecializedServices];
-const filteredServices = allServices.filter (service => {
-  const matchesCategory = selectedCategory === 'All Services'|| service.category === selectedCategory;
-const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () );
-return matchesCategory && matchesSearch 
-});
-switch (sortBy) {
-  case 'price': case 'rating': return (b.rating || 0) - (a.rating || 0);
-case 'marketSize': const containerVariants = {
-  hidden: {
-  opacity: 0 
-};
-visible: {
-  opacity: 1, transition: {
-  staggerChildren: 0.1 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+
+
 };
 const itemVariants = {
   hidden: {
@@ -563,24 +540,23 @@ const itemVariants = {
 visible: {
   y: 0, opacity: 1, transition: {
   duration: 0.5 
-}
-}
+
+
 };
-return (<Layout> <SEO title="2036 Innovative Services Showcase | Zion Tech Group" description="Discover our cutting-edge 2036 innovative micro SAAS services, IT solutions, and AI platforms. Transform your business with next-generation technology." keywords="2036 services, innovative micro SAAS, AI platforms, quantum technology, space technology, IT solutions, Zion Tech Group" /> left: `$ {
-  Math.random () * 100 
+
 }%`;
 top: `$ {
   Math.random () * 100 
 }%` 
-}
+
 }animate= {
   {
   y: [0, -100, 0], opacity: [0.3, 1, 0.3] 
-}
+
 }transition= {
   {
   duration: 3 + Math.random () * 2, repeat: Infinity, delay: Math.random () * 2 
-}
+
 }/>) ) 
 }</div> <div className="relative z-10 text-center max-w-6xl mx-auto" > <motion.h1 > 2036 Innovative Services </motion.h1> <motion.p > Experience the future of technology with our cutting-edge micro SAAS services;
 AI platforms, and quantum solutions. Transform your business with next-generation innovation. </motion.p> <motion.div > <button className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:from-cyan-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg shadow-cyan-500/25" > Explore Services </button> <button className="px-8 py-4 border-2 border-cyan-400 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-400 hover:text-black transition-all duration-300 transform hover:scale-105" > Contact Us </button> </motion.div> </div> </section> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Revolutionary Services </h2> <p className="text-xl text-gray-300 max-w-3xl mx-auto" > Discover our comprehensive portfolio of innovative micro SAAS services;
@@ -648,18 +624,17 @@ AI platforms, and cutting-edge technology solutions designed for the future. </p
 }services </motion.div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.6 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Transform Your Business? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Join the future of technology with our innovative services. Contact us today to discuss how we can help you achieve your goals. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a > Get Started Today </Link> <a 
-}

@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 const client = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || process.env.NEXT_PUBLIC_OPENAI_API_KEY,
 });
@@ -50,14 +49,3 @@ Title: ${slide.title}\nContent:\n${slide.content}`;
   } catch (e: any) {
     res.status(500).json({ error: e?.message || 'Rewrite failed' });
   }
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Pitch rewritten' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

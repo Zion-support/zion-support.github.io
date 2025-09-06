@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { Star, Flag, User } from 'lucide-react';
@@ -13,21 +12,11 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Textarea } from '@/components/ui/textarea';
 
 interface ReviewCardProps {
-=======
- import {;
-  Dialog;
-DialogContent;
-DialogDescription;
-DialogFooter;
-DialogHeader;
-DialogTitle;
-interface ReviewCardProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   review: Review;
 onReport: (reviewId: string, reason: string) => Promise<boolean> ;
 }export function ReviewCard ({;
@@ -40,8 +29,6 @@ const success = await onReport (review.id, reportReason);
 setIsReporting (false);
 if (success) {;
   ;
-}
-<<<<<<< HEAD
 
 export function ReviewCard({ review, onReport }: ReviewCardProps) {
   const [reportReason, setReportReason] = useState('');
@@ -223,19 +210,7 @@ export function ReviewCard({ review, onReport }: ReviewCardProps) {
       </div>
     </div>
   );
-=======
-};
-const renderStars = (rating?: number) => {;
-  if (!rating) return null;
-return (<div className="flex" > {;
-  [1, 2, 3,  4, 5].map ( (star) => (<Star key= {;
-  star ;
-}className= {;
-  `h-4 w-4 $ {";
-  star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300" ;
-}` ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }</div>) ;
 };";
 return (<div className="border rounded-lg p-4 bg-card"> <div className="flex justify-between items-start mb-3"> <div className="flex items-center gap-3"> {";

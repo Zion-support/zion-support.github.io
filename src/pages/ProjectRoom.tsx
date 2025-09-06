@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams
 import { Header } from '@/components/Header';
@@ -9,7 +8,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -19,7 +18,7 @@ import {
   Calendar,
   Users,
   Settings,
-  X,
+  X,;
 } from 'lucide-react';
 import { VideoCallRoom } from '@/components/video/VideoCallRoom';
 import { toast } from 'sonner';
@@ -289,17 +288,12 @@ export default function ProjectRoom() {
       </main>
     </>
   );
-=======
- //Switch to video tab if not already there if (activeTab !== 'video') {';
-  setActiveTab ('video') ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const endVideoCall = () => {;
   ;
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
+
 };
 return (<> End Call </Button>) ;
 }<Button variant="outline" >Invite Team Member</Button> </div> </div> </TabsTrigger> <TabsTrigger value="files" className="flex items-center gap-2" > <FileText className="h-4 w-4" /> <span className="hidden sm:inline" >Files</span> </TabsTrigger> </span>) ";

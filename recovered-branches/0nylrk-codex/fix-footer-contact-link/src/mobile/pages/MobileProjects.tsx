@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { MobileHeader } from '../components/common/MobileHeader';
 import { BottomNavigation } from '../components/common/BottomNavigation';
@@ -60,13 +59,9 @@ export function MobileProjects() {
       <BottomNavigation />
     </div>
   );
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Mock data progress: 60;
+
 <MobileHeader title="Project Details" showBack /> <main className="py-4"> <MobileProjectView project= {
   projectData 
 }milestones= {
   milestonesData 
 }/> </main> <BottomNavigation /> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

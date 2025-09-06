@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface MarketValidatedService {
@@ -22,7 +21,6 @@ export interface MarketValidatedService {
     address: string;
     website?: string;
   };
-}
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -529,6 +527,3 @@ export const marketValidatedServices: MarketValidatedService[] = [
     contactInfo,
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

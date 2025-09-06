@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Revolutionary2026MicroSaasService {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface Revolutionary2026MicroSaasService {
     email: string;
     address: string;
   };
-}
 
 export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasService[] =
   [
@@ -42,7 +40,3 @@ export const revolutionary2026MicroSaasServices: Revolutionary2026MicroSaasServi
       },
     },
   ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

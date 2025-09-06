@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface TextAnalysisResult {
@@ -43,7 +42,6 @@ interface TextAnalysisResult {
     bigrams: Array<{ phrase: string; count: number }>;
     trigrams: Array<{ phrase: string; count: number }>;
   };
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -283,10 +281,3 @@ export default async function handler(
     console.error('Text analysis error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-}
-=======
- const topWords = Array.from (wordCounts.entries () ) .sort ( (a, b) => b[1] - a[1]) .slice (0, 10) 
-}const bigrams = Array.from (bigramCounts.entries () ) .sort ( (a, b) => b[1] - a[1]) .slice (0, 5) const trigrams = Array.from (trigramCounts.entries () ) .sort ( (a, b) => b[1] - a[1]) .slice (0, 5) 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

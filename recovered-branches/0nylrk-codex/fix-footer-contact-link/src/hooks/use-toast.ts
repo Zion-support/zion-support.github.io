@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useToast as useToastHook, Toast } from '@/components/ui/toast';
 
@@ -15,7 +14,6 @@ export const useToast = useToastHook;
 function baseToast(props: ToastOptions) {
   const { toast } = useToastHook();
   toast(props);
-}
 
 // Convenience helpers mirroring common toast variants.
 baseToast.title = (title: string) => {
@@ -40,10 +38,4 @@ export const toast = baseToast as typeof baseToast & {
   description: (description: string) => void;
   error: (error: string) => void;
   success: (message: string) => void;
-=======
- //Extend the Toast component props with common toast options export type ToastOptions = React.ComponentPropsWithoutRef<typeof Toast> & {
-  description?: string;
-title?: string;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 // Export the callable toast function. 

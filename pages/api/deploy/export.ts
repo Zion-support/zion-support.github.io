@@ -27,7 +27,6 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       error: 'Export failed' 
     });
   }
-<<<<<<< HEAD
   // In a real system, look up persisted deployment by id
   const fake = {
     id,
@@ -36,7 +35,3 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
   res.setHeader('Content-Type', 'application/json');
   return res.status(200).json(fake);
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

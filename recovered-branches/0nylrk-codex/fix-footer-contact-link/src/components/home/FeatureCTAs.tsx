@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
@@ -6,7 +5,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -23,7 +22,7 @@ import {
   BookOpen,
   Code,
   Building,
-  Clock,
+  Clock,;
 } from 'lucide-react';
 
 export function FeatureCTAs() {
@@ -210,25 +209,3 @@ export function FeatureCTAs() {
       </div>
     </section>
   );
-}
-=======
- import {
-  ArrowRight;
-Users;
-Zap;
-Settings;
-Search;
-MessageSquare;
-Smartphone;
-Calendar;
-BookOpen;
-Code;
-Building;
-Clock const features = [ {
-  {
-  feature.badge 
-}</Badge>) 
-}</div> </Link> </Button> </CardFooter> </Card>) ) 
-}</div> </div> </section>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { useProjects } from '@/hooks/useProjects';
@@ -13,7 +12,7 @@ import {
   MilestoneManager,
   MilestoneCreator,
   ProjectActions,
-  ProjectHeader,
+  ProjectHeader,;
 } from './components';
 
 export function ProjectMilestonesContent() {
@@ -160,14 +159,7 @@ export function ProjectMilestonesContent() {
       </Tabs>
     </div>
   );
-=======
- setIsLoading (true);
-try {
-  
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }loadProject ();
 refetch () 
 }, [projectId, getProjectById, refetch]);
@@ -239,4 +231,3 @@ await handleMilestoneCreated ()
   projectType 
 }/>) 
 }</TabsContent> </Tabs> </div>) 
-}

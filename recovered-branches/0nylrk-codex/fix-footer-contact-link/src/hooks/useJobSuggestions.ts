@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
@@ -118,20 +117,7 @@ export function useJobSuggestions(talentId?: string) {
       declinedMatches,
     },
   };
-=======
- export function useJobSuggestions (talentId?: string) {
-  const [jobMatches, setJobMatches] = useState<JobMatch[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-useEffect ( () => {
-  const fetchSuggestedJobs = async () => {
-  if (!talentId) return;
-setIsLoading (true);
-//Get job matches with job details .select (`*;
-job:job id (*) `) 
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [talentId]);
 .update (updates) if (error) throw error;
@@ -143,7 +129,6 @@ job:job id (*) `)
 }) 
 }: match) );
 //Show appropriate message 
-}
+
 };
 // Filter matches by status 
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 
@@ -103,9 +102,3 @@ export default function InternationalProposalsPage() {
       </div>
     </EnhancedLayout>
   );
-}
-=======
- useEffect ( () => {
-  fetch ('/api/proposals') <option>All</option> <option>Global</option> <option>Africa</option> <option>LATAM</option> <option>APAC</option> <option>EU</option> </select> </div> </div> <div className="text-sm text-gray-600" >Community commentary per region coming next. For now, proposals expose a comments API endpoint.</div> </div> </EnhancedLayout>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

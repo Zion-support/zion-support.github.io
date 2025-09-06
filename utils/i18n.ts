@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
@@ -47,18 +46,5 @@ if (!i18n.isInitialized) {
       ns: ['common'],
       defaultNS: 'common',
     } as any);
-}
 
 export default i18n;
-=======
- if (!i18n.isInitialized) {
-  i18n .use (Backend) .use (LanguageDetector) .use (initReactI18next) .init ({
-  fallbackLng: 'en', supportedLngs: supportedLocales as unknown as string[], interpolation: {
-  escapeValue: false 
-};
-resources;
-ns: ['common'];
-defaultNS: 'common' 
-}as any) 
-}export default i18n;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

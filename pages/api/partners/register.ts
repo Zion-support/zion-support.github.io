@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 
@@ -8,7 +7,6 @@ function sanitizeCode(input: string): string {
     .replace(/[^a-z0-9-]/g, '-')
     .replace(/-+/g, '-')
     .replace(/^-|-$/g, '');
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -64,11 +62,3 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
-}
-=======
- const {
-  data: existing, error: existingErr 
-}= await supabase .from ('partners') .select ('code') .eq ('code', code) .maybeSingle ();
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

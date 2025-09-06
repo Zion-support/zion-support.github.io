@@ -31,10 +31,7 @@ export default function APIPage() {
     }
   ];
 
-  return (
-    <Layout
-      title="API Reference - Zion Tech Group"
-      description="Comprehensive API documentation and reference for integrating with Zion Tech Group services."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900 text-white py-20">
@@ -69,14 +66,7 @@ export default function APIPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {apiFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow"
+                
                   >
                     <div className="text-indigo-600 mb-4">
                       <IconComponent className="w-10 h-10" />
@@ -104,4 +94,3 @@ export default function APIPage() {
       </div>
     </Layout>
   );
-}

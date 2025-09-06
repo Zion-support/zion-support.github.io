@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 import Layout from '../../components/Layout';
 import { GraduationCap, Users, BookOpen, Laptop, Globe } from 'lucide-react';
 import React from 'react';
@@ -14,10 +10,6 @@ const features = [;
     icon: GraduationCap,
     title: 'Learning Management Systems,',
     description: 'Comprehensive LMS platforms that support online and blended learning environments.'';
-<<<<<<< HEAD
-=======
-=======
-=======
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -29,7 +21,7 @@ import {
   Laptop, 
   Globe, 
   CheckCircle, 
-  ArrowRight 
+  ArrowRight ;
 } from 'lucide-react';
 
 const features = [
@@ -38,8 +30,6 @@ const features = [
     title: 'Learning Management System',
     description: 'Comprehensive LMS with course management and student tracking',
     benefits: ['Course creation', 'Student management', 'Progress tracking', 'Assessments']
-<<<<<<< HEAD
-=======
   },
   {}
     icon: Users,
@@ -53,10 +43,6 @@ const features = [
   },
   {}
     icon: Laptop,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
     title: 'Virtual Classrooms,',
     description: 'Advanced virtual classroom solutions with video conferencing and collaboration tools.'';
   },
@@ -169,10 +155,6 @@ const benefits = [
   'Accessible learning for all students'
 ];
 export default function EducationSolutions() {
-<<<<<<< HEAD
-=======
-=======
-=======
     title: 'Virtual Classrooms',
     description: 'Online learning platform with video conferencing and collaboration',
     benefits: ['Video conferencing', 'Screen sharing', 'Breakout rooms', 'Recording']
@@ -180,13 +162,7 @@ export default function EducationSolutions() {
 ];
 
 export default function EducationSolutionsPage() {
-<<<<<<< HEAD
-=======
-  return (
-    <Layout
-      title="Education Solutions - Zion Tech Group"
-      description="Comprehensive education technology solutions for schools, universities, and educational institutions. LMS, SIS, and digital learning platforms."
-      keywords="education solutions, learning management system, student information system, educational technology, digital learning"
+  
     >
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
@@ -223,18 +199,12 @@ export default function EducationSolutionsPage() {
                 Comprehensive solutions designed to enhance learning experiences
                 and streamline educational operations.
               </p>
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
-<<<<<<< HEAD
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-=======
             </motion.div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {features.map((feature, index) => (
@@ -242,10 +212,6 @@ export default function EducationSolutionsPage() {
                   <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-6">
                     <feature.icon className="w-6 h-6 text-indigo-600" />
                   </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">
                     {feature.title}
                   </h3>
@@ -370,10 +336,6 @@ export default function EducationSolutionsPage() {
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </button>
               </div>
-<<<<<<< HEAD
-=======
-=======
-=======
                   <h3 className="text-xl font-semibold mb-2">{feature.title}</h3>
                   <p className="text-gray-600 mb-4">{feature.description}</p>
                   <div className="space-y-2">
@@ -386,8 +348,6 @@ export default function EducationSolutionsPage() {
                   </div>
                 </motion.div>
               ))}
-<<<<<<< HEAD
-=======
             </div>
           </div>
         </section>
@@ -413,15 +373,8 @@ export default function EducationSolutionsPage() {
           </div>
         </section>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
     </Layout>
-=======
-<<<<<<< HEAD
     </Layout>
-=======
     </>
-=======
     </>
   );
-}

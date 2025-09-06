@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 
@@ -76,13 +75,6 @@ serve(async req => {
       status: 500,
     });
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight request if (req.method === "OPTIONS") {
-  
-}try {
-  const supabaseClient = createClient ();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Parse the request body .from ("analytics events") .select ("event type, created at") .gte ("created at", startDate.toISOString () );
 }//Group events by date and event type const eventsByDate = {
   
 };
@@ -90,14 +82,12 @@ data.forEach ( (event) => {
   if (!eventsByDate[date]) {
   eventsByDate[date] = {
   date 
-}
+
 }if (!eventsByDate[date][event.event type]) {
   eventsByDate[date][event.event type] = 0 
-}
+
 });
 //Convert to array for easier consumption by frontend status: 500 
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,7 @@ import {
   CardHeader,
   CardTitle,
   CardDescription,
-  CardFooter,
+  CardFooter,;
 } from '@/components/ui/card';
 import { Loader, Sparkles } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
@@ -20,7 +19,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
@@ -36,7 +35,6 @@ type FormData = z.infer<typeof formSchema>;
 
 interface ServiceDescriptionFormProps {
   onDescriptionGenerated: (description: string) => void;
-}
 
 export function ServiceDescriptionForm({
   onDescriptionGenerated,
@@ -200,33 +198,10 @@ export function ServiceDescriptionForm({
       </CardContent>
     </Card>
   );
-=======
- const formSchema = z.object ({
-  title: z.string () .min (3, "Title must be at least 3 characters");
-keyFeatures: z.string ();
-targetAudience: z.string () 
-});
-const handleSubmit = async (data: FormData) => {
-  setIsLoading (true);
-try {
-  const {
-  data: response, error 
-}= await supabase.functions.invoke ('generate-service-description', {
-  body: {
-  title: data.title;
-keyFeatures: data.keyFeatures;
-targetAudience: data.targetAudience 
-}
-});
-if (error) {
-  throw new Error (error.message) 
-}if (response.error) {
-  throw new Error (response.error) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }finally {
   setIsLoading (false) 
-}
+
 };
 >Service Title</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
 }/> <FormField <FormItem> <FormLabel className="text-zion-slate-light" >Key Features</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
@@ -234,4 +209,3 @@ if (error) {
 }/> <Button className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white" > {
   isLoading ? (<> <Loader className="mr-2 h-4 w-4 animate-spin" /> Generating Description... </>) : (<> <Sparkles className="h-4 w-4 mr-2" /> Generate Description </>) 
 }</Button> </form> </Form> </CardContent> </Card>) 
-}

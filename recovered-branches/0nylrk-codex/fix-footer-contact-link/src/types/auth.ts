@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface UserDetails {
   id?: string;
   name?: string;
@@ -14,7 +13,6 @@ export interface UserDetails {
   bio?: string;
   createdAt?: string;
   updatedAt?: string;
-}
 
 export interface UserProfile {
   id?: string;
@@ -31,7 +29,6 @@ export interface UserProfile {
   role?: string;
   permissions?: string[];
   companyId?: string;
-}
 
 // Update AuthContextType definition to match implementation
 export interface AuthContextType {
@@ -61,8 +58,3 @@ export interface AuthContextType {
     password: string,
     userData?: Partial<UserDetails>
   ) => Promise<{ error: any }>;
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

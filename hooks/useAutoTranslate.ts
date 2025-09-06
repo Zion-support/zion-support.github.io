@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { translateTextViaAI } from '../utils/translation';
 
@@ -46,8 +45,3 @@ export function useAutoTranslate(
   }, [key, debounceMs]);
 
   return { translations, loading, error };
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

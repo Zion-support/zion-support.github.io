@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export default function UNBridge() {
@@ -277,18 +276,3 @@ export default function UNBridge() {
       </div>
     </div>
   );
-}
-=======
- <option>Workforce Dev</option> <option>AI Ethics</option> <option>Digital ID</option> <option>Education</option> </select> </label>) 
-}{
-  result.meta.artifacts?.ipfsCid && (<div>IPFS CID: {
-  result.meta.artifacts.ipfsCid 
-}</div>) 
-}{
-  result.meta.artifacts?.signature && (<div>Signature: {
-  result.meta.artifacts.signature.slice (0, 30) 
-}…</div>) 
-}</div>) 
-}</div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

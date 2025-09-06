@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type ZionChain =
   | 'resumeBuilder'
   | 'daoExplainer'
@@ -10,7 +9,6 @@ export interface RouterResult {
   intent: ZionChain;
   confidence: number;
   notes?: string;
-}
 
 export interface ReflexMetrics {
   signupsLastHour?: number;
@@ -19,13 +17,11 @@ export interface ReflexMetrics {
   baselineSignups?: number;
   baselineDisputeFlags?: number;
   baselineVelocity?: number;
-}
 
 export interface ReflexTrigger {
   action: 'launchRewardPopup' | 'escalateSupport' | 'notifyAdmin';
   reason: string;
   severity: 'low' | 'medium' | 'high';
-}
 
 export interface LogEntry {
   id: string;
@@ -42,7 +38,6 @@ export interface LogEntry {
   status: 'ok' | 'laggy' | 'error' | 'stuck';
   latencyMs?: number;
   payload?: Record<string, unknown>;
-}
 
 import fs from 'fs';
 import path from 'path';
@@ -62,7 +57,6 @@ function ensureDataFiles(): void {
   } catch {
     // In serverless environments, filesystem may be read-only; ignore errors gracefully
   }
-}
 
 export function detectIntent(text: string): RouterResult {
   const lower = (text || '').toLowerCase();
@@ -86,9 +80,7 @@ export function detectIntent(text: string): RouterResult {
     },
   ];
 
-  for (const rule of rules) {
-    if (rule.keywords.some(k => lower.includes(k))) {
-      return { intent: rule.chain, confidence: 0.9, notes: 'Keyword match' };
+  ;
     }
   }
   // Fallback simple heuristic
@@ -97,7 +89,6 @@ export function detectIntent(text: string): RouterResult {
     confidence: 0.5,
     notes: 'Default fallback',
   };
-}
 
 export async function routeToChain(
   intent: ZionChain,
@@ -105,7 +96,6 @@ export async function routeToChain(
 ): Promise<{ routed: boolean; message: string }> {
   // Placeholder for real chain invocations
   return { routed: true, message: `Routed to ${intent}` };
-}
 
 export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   const baselineSignups = metrics.baselineSignups ?? 20;
@@ -137,7 +127,6 @@ export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   }
 
   return triggers;
-}
 
 export async function optimizePrompt(
   original: string,
@@ -194,7 +183,6 @@ export async function optimizePrompt(
       ],
     };
   }
-}
 
 function heuristicTighten(text: string, userIntent?: string): string {
   const trimmed = (text || '').replace(/\s+/g, ' ').trim();
@@ -208,7 +196,6 @@ function heuristicTighten(text: string, userIntent?: string): string {
     .replace(/really\s+/gi, '');
   const withConstraints = `${withoutFillers}\n\nConstraints: respond in under 6 bullets; include only actionable steps; max 120 words; avoid repetition.${userIntent ? ` Intent: ${userIntent}.` : ''}`;
   return withConstraints;
-}
 
 export function readLogs(): { entries: LogEntry[] } {
   ensureDataFiles();
@@ -218,7 +205,6 @@ export function readLogs(): { entries: LogEntry[] } {
   } catch {
     return { entries: [] };
   }
-}
 
 export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
   ensureDataFiles();
@@ -234,7 +220,6 @@ export function appendLog(entry: Omit<LogEntry, 'id' | 'timestamp'>): void {
   } catch {
     // ignore
   }
-}
 
 export function readState<T = unknown>(): T {
   ensureDataFiles();
@@ -244,7 +229,6 @@ export function readState<T = unknown>(): T {
   } catch {
     return {} as unknown as T;
   }
-}
 
 export function writeState<T = unknown>(state: T): void {
   ensureDataFiles();
@@ -253,20 +237,3 @@ export function writeState<T = unknown>(state: T): void {
   } catch {
     // ignore
   }
-}
-=======
-export type ZionChain = 'resumeBuilder' | 'daoExplainer' | 'tokenomicsSimulator' | 'governanceSummarizer' | 'nationAssistant';
-const triggers: ReflexTrigger[] = [];
-if ( (metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
-  
-}return triggers 
-}const resp = await openai.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
-  role: 'system', content: system 
-};
-{
-  role: 'user', content: user 
-}];
-temperature: 0.2;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

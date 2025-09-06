@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { quoteRequestService } from '@/services/quoteRequestService';
@@ -122,18 +121,3 @@ export const useTalentQuotes = () => {
       toggleArchiveMutation.mutate({ id, isArchived }),
   };
 };
-=======
- //Count unread quotes const unreadCount = allQuotes.filter (quote => quote.status === 'new' && !quote.viewed at) .length;
-//Filter quotes based on selected filters const filteredQuotes = allQuotes.filter ( (quote) => {
-  //Status filter if (statusFilter !== 'all' && quote.status !== statusFilter) {
-  return true;
-});
-//Mark as viewed/responded mutation 
-}toast ({
-  title: message;
-}
-});
-//Archive/Unarchive mutation 
-}
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

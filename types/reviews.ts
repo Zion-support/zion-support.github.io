@@ -1,6 +1,5 @@
 export type ProjectStatus = 'InProgress' | 'Completed';
 export type ReviewRole = 'client' | 'talent';
-<<<<<<< HEAD
 
 export type ReviewCategoryScores = {
   communication?: number; // 1-5 optional
@@ -35,5 +34,3 @@ export type ReviewsSummary = {
   totalCompletedProjects: number;
   mostRecent: PublicReview[];
 };
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

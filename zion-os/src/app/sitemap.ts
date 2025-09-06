@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -149,17 +148,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly',
     priority: route === '' ? 1 : 0.8,
   }));
-}
-=======
- const complianceServices = [ '/soc2-compliance-automation'] const allRoutes = [ ...routes, ...aiServices, ...quantumServices, ...networkServices, ...complianceServices] return allRoutes.map ( (route) => ({
-  url: `$ {
-  baseUrl 
-}$ {
-  route 
-}`;
-lastModified: new Date ();
-changeFrequency: 'weekly';
-priority: route === '' ? 1 : 0.8 
-}) ) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

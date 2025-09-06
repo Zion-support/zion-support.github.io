@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -10,8 +9,3 @@ export default async function handler(
   const rssUrl =
     (process.env.SITE_URL || 'http://localhost:3000') + '/podcast.xml';
   return res.status(200).json({ ok: true, rssUrl });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState, useCallback } from 'react';
 import Layout from './layout/Layout';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -37,7 +36,7 @@ import {
   CheckCircle,
   Zap as ZapIcon,
   Brain as BrainIcon,
-  Atom as AtomIcon,
+  Atom as AtomIcon,;
 } from 'lucide-react';
 
 // Import our new revolutionary services
@@ -678,28 +677,25 @@ const Homepage2043: React.FC = () => {
   );
 };
 
-=======
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {
   Math.random () * 100 
 }%`;
 top: `$ {
   Math.random () * 100 
 }%` 
-}
+
 }/>) ) 
 }</div> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }animate= {
   {
   opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }> Revolutionary 2043 Technology </div> {
   /* Main Heading */ 
 }<h1 id="hero-heading" className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-cyan-200 to-blue-300 bg-clip-text text-transparent leading-tight" > The Future of <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > AI Consciousness </span> is Here </h1> Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
@@ -709,23 +705,23 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 }initial= {
   {
   opacity: 0, y: 30 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.6, delay: index * 0.1 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }whileHover= {
   {
   y: -10, scale: 1.02 
-}
+
 }className= {
   `group relative p-8 rounded-2xl $ {
   feature.gradient 
@@ -755,20 +751,19 @@ and autonomous systems that redefine what's possible in technology. </p> > Get S
 }</div> </div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Ready to Experience the <span className="block bg-gradient-to-r from-purple-400 via-pink-400 to-red-400 bg-clip-text text-transparent" > Future of AI? </span> </h2> <p className="text-xl text-gray-300 mb-12 max-w-3xl mx-auto" > Join thousands of organizations already transforming their operations with our revolutionary AI consciousness and quantum computing platforms. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center items-center" > <motion.button > Start Your Journey <ArrowRight className="w-6 h-6" /> </motion.button> <motion.button > <Phone className="w-6 h-6" /> Contact Us </motion.button> </div> <div className="text-center"> <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 mb-4"> <Phone className="w-8 h-8 text-white" /> text-xl font-semibold text-white mb-2">Call Us</h3> <p className=" text-cyan-400">+1 302 464 0950</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 mb-4"> <Mail className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Email Us</h3> <p className=" text-cyan-400">kleber@ziontechgroup.com</p> </div> <div className=" text-center"> <div className=" inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 mb-4"> <MapPin className=" w-8 h-8 text-white"/> </div> <h3 className=" text-xl font-semibold text-white mb-2">Visit Us</h3> <p className=" text-cyan-400" >364 E Main St STE 1008<br />Middletown DE 19709</p> </div> </div> </motion.div> </div> </section> </main> </Layout>) 
 };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default Homepage2043;

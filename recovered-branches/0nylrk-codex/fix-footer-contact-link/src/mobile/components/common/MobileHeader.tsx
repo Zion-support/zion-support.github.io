@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ChevronLeft, Bell, Settings } from 'lucide-react';
@@ -13,7 +12,6 @@ interface MobileHeaderProps {
   className?: string;
   onNotificationsClick?: () => void;
   onSettingsClick?: () => void;
-}
 
 export function MobileHeader({
   title,
@@ -26,12 +24,7 @@ export function MobileHeader({
 }: MobileHeaderProps) {
   const navigate = useNavigate();
 
-  return (
-    <header
-      className={cn(
-        'sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border',
-        className
-      )}
+  
     >
       <div className='flex items-center justify-between h-14 px-4'>
         <div className='flex items-center'>
@@ -65,39 +58,3 @@ export function MobileHeader({
       </div>
     </header>
   );
-}
-=======
- interface MobileHeaderProps {
-  title: string;
-showBack?: boolean;
-showNotifications?: boolean;
-showSettings?: boolean;
-className?: string;
-onNotificationsClick?: () => void;
-onSettingsClick?: () => void 
-}export function MobileHeader ({
-  title;
-showBack = false;
-showNotifications = false;
-showSettings = false;
-className;
-onNotificationsClick;
-onSettingsClick 
-}: MobileHeaderProps) {
-  const navigate = useNavigate ();
-return (<header className= {
-  cn ("sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border";
-className) 
-}> <div className="flex items-center justify-between h-14 px-4" > <div className="flex items-center" > {
-  showBack && (<Button variant="ghost" size="icon" className="mr-2" () => navigate (-1) 
-}> <ChevronLeft className="h-5 w-5" /> <span className="sr-only" >Back</span> </Button>) 
-}<Button variant="ghost" size="icon" onClick= {
-  onNotificationsClick 
-}> <Bell className="h-5 w-5" /> <span className="sr-only" >Notifications</span> </Button>) 
-}{
-  showSettings && (<Button variant="ghost" size="icon" onClick= {
-  onSettingsClick 
-}> <Settings className="h-5 w-5" /> <span className="sr-only" >Settings</span> </Button>) 
-}</div> </div> </header>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

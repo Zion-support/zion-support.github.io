@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -10,7 +9,7 @@ import {
   DialogDescription,
   DialogFooter,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { useToast } from '@/hooks/use-toast';
 import { TalentProfile } from '@/types/talent';
@@ -35,14 +34,6 @@ const formSchema = z.object({
   additionalClauses: z.array(z.string()).default([]),
 });
 
-=======
- const formSchema = z.object ({
-  projectName: z.string () .min (1, "Project name is required");
-scopeSummary: z.string () .min (10, "Scope summary should be at least 10 characters");
-startDate: z.date ({
-  required error: "Start date is required" 
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export type ContractFormValues = z.infer<typeof formSchema>;
 //Update form when initialValues change useEffect ( () => {
   if (initialValues) {
@@ -50,8 +41,6 @@ export type ContractFormValues = z.infer<typeof formSchema>;
   const typedKey = key as keyof ContractFormValues;
 form.setValue (typedKey, initialValues[typedKey]) 
 }) 
-}
-<<<<<<< HEAD
 
 export function ContractForm({
   talent,
@@ -191,17 +180,12 @@ export function ContractForm({
       </DialogFooter>
     </>
   );
-=======
-}, [initialValues, form]);
-//Track form values for template saving return () => subscription.unsubscribe () 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [form, onFormValuesChange]);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }finally {
   setIsGenerating (false) 
-}
+
 };
 talent.full name 
 }</DialogDescription> </DialogHeader> <ProjectDetailsFields form= {
@@ -219,4 +203,3 @@ talent.full name
 }> {
   isGenerating ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Generating Contract... </>) : ("Generate Contract") 
 }</Button> </form> </Form> <DialogFooter className="gap-2 flex-wrap mt-4" > <Button > Reset Form </Button> </DialogFooter> </>) 
-}

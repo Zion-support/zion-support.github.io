@@ -145,12 +145,7 @@ class ErrorPreventionMonitor {
         'utils/next-link-shim.tsx'
       ];
       
-      for (const file of criticalFiles) {
-        if (fs.existsSync(file)) {
-          const content = fs.readFileSync(file, 'utf8');
-          
-          // Check for common syntax errors
-          if (content.includes('export const') && content.includes('{') && !content.includes('}')) {
+      ')) {
             this.log('error', `File ${file} has syntax errors - missing closing braces`);
             await this.fixFileSyntax(file);
           }
@@ -276,7 +271,6 @@ class ErrorPreventionMonitor {
     
     this.log('info', 'Error prevention monitor stopped');
   }
-}
 
 // Handle command line arguments
 const monitor = new ErrorPreventionMonitor();
@@ -300,6 +294,5 @@ if (require.main === module) {
     default:
       console.log('Usage: node error-prevention-monitor.js [start|stop|status|health]');
   }
-}
 
 module.exports = ErrorPreventionMonitor;

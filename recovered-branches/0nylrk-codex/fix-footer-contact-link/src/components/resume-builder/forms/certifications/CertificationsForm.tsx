@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button } from '@/components/ui/button';
@@ -19,7 +18,6 @@ interface CertificationsFormProps {
   certifications: Certification[];
   onComplete: () => void;
   onBack: () => void;
-}
 
 export function CertificationsForm({
   resumeId,
@@ -185,22 +183,7 @@ export function CertificationsForm({
       </div>
     </div>
   );
-=======
- return (<div className="space-y-6" > <div> <h2 className="text-xl font-semibold mb-2" >Certifications & Licenses</h2> <p className="text-muted-foreground" > Add any professional certifications, licenses, or credentials you have earned. </p> </div> {
-  certifications.length > 0 && (<CertificationsList certifications= {
-  certifications 
-}onEdit= {
-  handleEdit 
-}onDelete= {
-  handleDelete 
-}/>) 
-}<div className="flex justify-between pt-2" > <Button if (editingId) {
-  setEditingId (null);
-form.reset ({
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }> {
   editingId ? 'Cancel' : 'Back' 
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) 
-}

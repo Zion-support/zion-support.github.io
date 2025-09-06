@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState, useRef, ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -9,7 +8,6 @@ interface LazyLoadProps {
   children: ReactNode;
   loadingComponent?: ReactNode;
   className?: string;
-}
 
 export function LazyLoad({
   height = '200px',
@@ -65,14 +63,7 @@ export function LazyLoad({
     />
   );
 
-  return (
-    <div
-      ref={containerRef}
-      className={cn(
-        'transition-opacity duration-500',
-        isLoaded ? 'opacity-100' : 'opacity-0',
-        className
-      )}
+  
     >
       {isVisible ? (
         <>
@@ -84,40 +75,6 @@ export function LazyLoad({
       )}
     </div>
   );
-=======
- interface LazyLoadProps {
-  height?: string | number;
-width?: string | number;
-children: ReactNode;
-loadingComponent?: ReactNode;
-className?: string 
-}export function LazyLoad ({
-  height = "200px";
-width = "100%";
-children;
-loadingComponent;
-className 
-}: LazyLoadProps) {
-  const [isVisible, setIsVisible] = useState (false);
-const [isLoaded, setIsLoaded] = useState (false);
-const containerRef = useRef<HTMLDivElement> (null);
-const observer = new IntersectionObserver ( (entries) => {
-  if (entries[0].isIntersecting) {
-  threshold: 0.1 
-});
-useEffect ( () => {
-  if (isVisible) {
-  //Simulate loading delay (remove in production) return () => clearTimeout (timer) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [isVisible]);
 const defaultLoadingComponent = (<Skeleton />);
-return (<div) 
-}> {
-  isVisible ? (<> {
-  !isLoaded && (loadingComponent || defaultLoadingComponent) 
-}{
-  isLoaded && children 
-}</>) : (loadingComponent || defaultLoadingComponent) 
-}</div>) 
-}

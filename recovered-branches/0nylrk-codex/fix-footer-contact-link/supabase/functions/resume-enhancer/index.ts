@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
@@ -104,49 +103,5 @@ serve(async req => {
       }
     );
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}//Call OpenAI API const response = await fetch ("https://api.openai.com/v1/chat/completions", {
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  openAiKey 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: "gpt-4o-mini";
-messages: [ {
-  role: "system";
-content: systemPrompt 
-};
-{
-  role: "user";
-content: userPrompt 
-}];
-temperature: 0.7 
-}) 
-});
-if (!response.ok) {
-  const errorData = await response.json ();
-throw new Error (`OpenAI API error: $ {
-  JSON.stringify (errorData) 
-}`) 
-}const data = await response.json ();
-const enhancedContent = data.choices[0].message.content;
-return new Response (JSON.stringify ({
-  enhancedContent 
-});
-{
-  return new Response (JSON.stringify ({
-  error: error.message 
-});
-{
-  status: 500;
-);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

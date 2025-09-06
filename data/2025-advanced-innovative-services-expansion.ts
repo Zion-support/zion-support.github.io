@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedInnovativeService {
@@ -43,7 +42,6 @@ export interface AdvancedInnovativeService {
   benefits: string[];
   capabilities: string[];
   marketAdvantage: string;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -785,6 +783,3 @@ export const advancedInnovativeServices: AdvancedInnovativeService[] = [
       'Most advanced AI climate prediction platform with research-grade accuracy',
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

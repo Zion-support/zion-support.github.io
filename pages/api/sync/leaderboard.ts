@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
   writeState,
-  upsertEvent,
+  upsertEvent,;
 } from '../../../utils/sync/storage';
 import { signPayload } from '../../../utils/sync/signature';
 import axios from 'axios';
@@ -70,33 +69,3 @@ export default async function handler(
   return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
-}
-=======
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  subjectId, score, category, period, rank 
-}= req.body as {
-  subjectId: string, score: number, category: string, period?: string, rank?: number 
-};
-const event = {
-  eventId: uuidv4 ();
-type: "leaderboard entry" as const;
-payload: {
-  id: entityKey, subjectId, score, category, period, rank 
-};
-version;
-timestamp: Date.now () 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  
-}
-}) );
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

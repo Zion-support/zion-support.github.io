@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { MessageSquare, Video } from 'lucide-react';
 import { useMessaging } from '@/context/MessagingContext';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import {
   ConversationsList,
-  ConversationDetailView,
+  ConversationDetailView,;
 } from '@/components/messaging';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { toast } from 'sonner';
@@ -111,13 +110,7 @@ export default function MessagingInbox() {
       </div>
     </ProtectedRoute>
   );
-=======
- useEffect ( () => {;
-  //Fetch conversations when component mounts const loadData = async () => {;
-  try {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 loadData () ;
 }, [fetchConversations]);

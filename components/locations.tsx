@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -39,7 +38,3 @@ export default function LocationsPage() {
       </div>
     </div>
   );
-}
-=======
- <Head> <title>Locations | Zion Tech Group</title> <meta name="description" content="Our office locations and contact information." /> <link rel="canonical" href="https://ziontechgroup.com/locations" /> </Head> </div> </div> </div> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

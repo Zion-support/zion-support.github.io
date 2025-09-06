@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -9,9 +8,6 @@ import { toast } from 'sonner';
 import { JobApplication } from '@/types/jobs';
 
 interface ApplicationScoreCardProps {
-=======
- interface ApplicationScoreCardProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   application: JobApplication;
 onScoreUpdated?: (updatedApplication: JobApplication) => void ;
 }export function ApplicationScoreCard ({;
@@ -22,8 +18,6 @@ onScoreUpdated?: (updatedApplication: JobApplication) => void ;
 //Get suggestion color const getSuggestionColor = (suggestion: string | undefined) => {;
   switch (suggestion) {;
   ;
-}
-<<<<<<< HEAD
 
 export function ApplicationScoreCard({
   application,
@@ -290,29 +284,7 @@ export function ApplicationScoreCard({
       </CardContent>
     </Card>
   );
-=======
-};
-//Trigger the scoring process const handleScore = async () => {;
-  try {;
-  setIsScoring (true);
-//Call the trigger resume scoring function const {;
-  error ';
-}= await supabase.rpc ('trigger resume scoring';
-{;
-  application id: application.id ;
-});
-//Poll for results every 3 seconds for up to 30 seconds .from ("job applications") .select ("*") .eq ("id", application.id) .single ();
-if (error) {;
-  setIsScoring (false);";
-toast.error ("Failed to check scoring status");
-return ;
-}if (data.scored at) {;
-  setIsScoring (false);";
-toast.success ("Resume scoring completed");
-if (onScoreUpdated) onScoreUpdated (data as JobApplication);
-return ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };";
 //Render the score result or button to score return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <CardTitle className="text-lg font-medium flex items-center justify-between" > Resume Match Score </Badge> </CardTitle> </CardHeader> <CardContent> {;
   hasScore ? (<div> {;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ContentGenerationRequest {
   type:
     | 'blog-post'
@@ -11,7 +10,6 @@ export interface ContentGenerationRequest {
   length: 'short' | 'medium' | 'long';
   keywords?: string[];
   targetAudience?: string;
-}
 
 export interface ContentGenerationResponse {
   content: string;
@@ -24,7 +22,6 @@ export interface ContentGenerationResponse {
     description: string;
     tags: string[];
   };
-}
 
 export interface ContentTemplate {
   id: string;
@@ -33,7 +30,6 @@ export interface ContentTemplate {
   type: string;
   preview: string;
   price: number;
-}
 
 export class AIContentGeneratorService {
   private apiKey: string;
@@ -164,7 +160,6 @@ ${request.topic} represents a significant opportunity for organizations looking 
       },
     };
   }
-}
 
 // Pricing tiers for the AI Content Generator
 export const AI_CONTENT_PRICING = {
@@ -209,18 +204,6 @@ export const AI_CONTENT_PRICING = {
       'SLA guarantee',
     ],
   },
-=======
- async generateContent (request: ContentGenerationRequest) : Promise<ContentGenerationResponse> {
-  try {
-  // In a real implementation, this would call OpenAI, Claude, or similar API const response = await fetch (`$ {
-  this.baseUrl 
-}/content/generate`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 body: JSON.stringify (request) 
 });
@@ -245,8 +228,8 @@ body: JSON.stringify (request)
 }can improve efficiency - Point 3: Best practices for $ {
   request.topic 
 }implementation ## Conclusion 
-}
-}
-}
-}
+
+
+
+
 }// Pricing tiers for the AI Content Generator 

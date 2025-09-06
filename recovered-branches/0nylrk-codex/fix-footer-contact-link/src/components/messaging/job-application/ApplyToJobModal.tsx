@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { ApplyForm } from './ApplyForm';
 import { ApplyToJobModalProps } from './types';
@@ -34,16 +33,3 @@ export function ApplyToJobModal({
       </DialogContent>
     </Dialog>
   );
-}
-=======
- <DialogHeader> <DialogTitle>Apply to Job: {
-  job.title 
-}</DialogTitle> <DialogDescription> Complete your application for this position </DialogDescription> </DialogHeader> <ApplyForm job= {
-  job 
-}onClose= {
-  onClose 
-}onApplySuccess= {
-  onApplySuccess 
-}/> </DialogContent> </Dialog>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

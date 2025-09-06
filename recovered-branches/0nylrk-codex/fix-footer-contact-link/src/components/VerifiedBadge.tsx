@@ -1,17 +1,15 @@
-<<<<<<< HEAD
 import React from 'react';
 import { CheckCircle } from 'lucide-react';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 
 interface VerifiedBadgeProps {
   verified: boolean;
   size?: 'sm' | 'md' | 'lg';
-}
 
 export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
   if (!verified) return null;
@@ -36,8 +34,3 @@ export function VerifiedBadge({ verified, size = 'sm' }: VerifiedBadgeProps) {
       </Tooltip>
     </TooltipProvider>
   );
-}
-=======
- return (<TooltipProvider> <Tooltip> <TooltipTrigger asChild> </span> </TooltipTrigger> <TooltipContent> <p>Verified talent</p> </TooltipContent> </Tooltip> </TooltipProvider>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

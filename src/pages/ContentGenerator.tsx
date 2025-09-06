@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { Input } from '@/components/ui/input';
@@ -20,7 +19,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { Loader2 } from 'lucide-react';
@@ -379,26 +378,7 @@ export default function ContentGenerator() {
       </div>
     </>
   );
-=======
- export default function ContentGenerator () {;
-  const {;
-  user, isLoading ;
-}= useAuth ();
-const router = useRouter ();
-const [contentType, setContentType] = useState<'blog' | 'newsletter' | 'serviceDescription' | 'faq'> ('blog');';
-const [customPrompt, setCustomPrompt] = useState ('');';
-const [topic, setTopic] = useState ('');';
-const [keywords, setKeywords] = useState ('');
-const [autoPublish, setAutoPublish] = useState (false);
-const [includeImage, setIncludeImage] = useState (true);
-const [isGenerating, setIsGenerating] = useState (false);
-const [previewContent, setPreviewContent] = useState<any> (null);';
-const [testEmail, setTestEmail] = useState ('');
-useEffect ( () => {;
-  if (!isLoading && !user) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [user, isLoading, router]);
 const generateContent = async () => {;
   setIsGenerating (true);
@@ -413,11 +393,11 @@ const {;
 userPrompt: customPrompt || topic, //Use customPrompt if available,  else topic keywords: keywordsArray;';
 //autoPublish and includeImage are not explicitly used by 'generate-seo-content'//but we can leave them here, the backend will ignore them if not needed. autoPublish;';
 includeImage: contentType === 'blog'? includeImage : false ;
-}
+
 });
 }finally {;
   setIsGenerating (false) ;
-}
+
 };
 const sendTestNewsletter = async () => {;
   if (!testEmail) {;
@@ -432,9 +412,9 @@ previewText: previewContent.previewText;
 body: previewContent.body;
 testMode: true;
 testEmail ;
-}
+
 });
-}
+
 };
 //Check if user is still loading if (isLoading) {;
   return (<> <Header /> <div className="min-h-screen bg-zion-blue flex items-center justify-center" > <div className="animate-pulse text-white" >Loading...</div> </div> </> return (<> <Header /> <div className="min-h-screen bg-zion-blue py-12" > <div className="container mx-auto px-4" > <h1 className="text-3xl font-bold text-white mb-8" >Content Generator</h1> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8" > <div className="lg:col-span-1" > <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardHeader> <CardTitle className="text-white" >Content Settings</CardTitle> <CardDescription className="text-zion-slate-light" > Configure what type of content you want to generate. </CardDescription> </CardHeader> </SelectTrigger> <SelectContent className="bg-zion-blue-dark border border-zion-blue-light" > <SelectItem value="blog" className="text-white" >Blog Post</SelectItem> <SelectItem value="newsletter" className="text-white" >Email Newsletter</SelectItem> <SelectItem value="serviceDescription" className="text-white" >Service Description</SelectItem> <SelectItem value="faq" className="text-white" >FAQ</SelectItem> </SelectContent> </Select> </div> <div className="space-y-2" > <Label htmlFor="topic" className="text-white" >Main Topic /User Prompt</Label> <Input /> </div> <div className="space-y-2" > <Label htmlFor="keywords" className="text-white" >Keywords (Optional, comma-separated) </Label> <Input /> </div> <div className="space-y-2" > <Label htmlFor="customPrompt" className="text-white" >Detailed Instructions / Custom Prompt (Optional) </Label> <Textarea /> </div> {'";

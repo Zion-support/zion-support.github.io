@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -48,16 +47,7 @@ interface SignupFormProps {
     emailVerificationRequired: boolean;
   }) => void;
   onError?: (error: string) => void;
-=======
- const {;
-  register, handleSubmit, formState: {;
-  errors,  isValid, touchedFields ;
-};
-setError;
-reset;
-watch;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 if (!isTouched) return null;
 if (state?.isValidating) {;
@@ -65,7 +55,6 @@ if (state?.isValidating) {;
   return <CheckCircle className="h-4 w-4 text-green-500" />;
 }if (state?.error) {";
   return <AlertCircle className="h-4 w-4 text-red-500" />;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }return null;
 };
 if (!isTouched) return '';
@@ -84,8 +73,6 @@ return ";
 });
 }finally {;
   setIsSubmitting (false) ;
-}
-<<<<<<< HEAD
 
 export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -546,32 +533,7 @@ export default function SignupForm({ onSuccess, onError }: SignupFormProps) {
       </Button>
     </form>
   );
-=======
-};
-return (<form onSubmit= {;
-  handleSubmit (onSubmit) ";
-}className="space-y-6" > {;
-  /* Name Field */ ";
-}<div className="space-y-2" > <Label htmlFor="name" className="text-sm font-medium" > Full Name <span className="text-red-500" >*</span> relative"> <Input {;
-  errors.name.message ;
-}</p>) ";
-}</div> </Label> <div className=" relative"> <Input {;
-  errors.email.message ;
-}</p>) ";
-}</div> </Label> <div className=" relative"> <Input) : (<Eye className=" h-4 w-4"/>) ;
-}</Button> </div> </div> <span>Password Strength</span> <span className= {';
-  cn ('font-medium', passwordStrength.strength >= 4 ? 'text-green-600': passwordStrength.strength >= 3 ? 'text-blue-600': passwordStrength.strength >= 2 ? 'text-yellow-600': 'text-red-600') ;
-}> {;
-  passwordStrength.label ";
-}</span> </div> <div className=" w-full bg-gray-200 rounded-full h-2"> <div className= {';
-  cn ('h-2 rounded-full transition-all duration-300', passwordStrength.color) ;
-}style= {;
-  {;
-  width: `$ {;
-  passwordStrength.percentage ;
-}%` ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> </div> ✓ 8+ characters </span> <span className= {';
   /[A-Z]/.test (watchedFields.password || '') ? 'text-green-600': 'text-gray-400' ;
 }> ✓ Uppercase letter </span> <span className= {';

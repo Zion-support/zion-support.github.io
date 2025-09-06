@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 import { readJson } from '../../../utils/fsDb';
@@ -77,9 +76,3 @@ export default async function handler(
         'I could not reach the assistant right now. Please try again in a moment.',
     });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import {
   Dialog,
@@ -6,21 +5,13 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { ReviewForm } from './ReviewForm';
 import { useReviews } from '@/hooks/useReviews';
 
-=======
- import {
-  Dialog;
-DialogContent;
-DialogDescription;
-DialogHeader;
-DialogTitle;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 interface LeaveReviewModalProps {
   projectId: string;
 revieweeId: string;
@@ -45,8 +36,6 @@ const handleOpenChange = (open: boolean) => {
   setOpen (open);
 if (!open) {
   onClose () 
-}
-<<<<<<< HEAD
 
 export function LeaveReviewModal({
   projectId,
@@ -115,24 +104,5 @@ export function LeaveReviewModal({
       </DialogContent>
     </Dialog>
   );
-=======
+
 };
-if (userReview) {
-  //Update existing review 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-};
-return (</DialogTitle> <DialogDescription> Your feedback helps build a trustworthy community. It will be visible after moderation. </DialogDescription> </DialogHeader> <ReviewForm projectId= {
-  projectId 
-}revieweeId= {
-  revieweeId 
-}revieweeName= {
-  revieweeName 
-}onSubmit= {
-  handleSubmit 
-}defaultValues= {
-  userReview || undefined 
-}isSubmitting= {
-  isSubmitting 
-}/> </DialogContent> </Dialog>) 
-}

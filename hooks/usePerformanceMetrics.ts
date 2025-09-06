@@ -6,7 +6,6 @@ interface PerformanceMetrics {
   largestContentfulPaint: number;
   cumulativeLayoutShift: number;
   firstInputDelay: number;
-}
 
 export function usePerformanceMetrics() {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
@@ -48,4 +47,3 @@ export function usePerformanceMetrics() {
   }, []);
 
   return { metrics, isSupported };
-}

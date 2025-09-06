@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useToast } from '@/hooks/use-toast';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -10,9 +9,6 @@ import { LoadingContentSkeleton } from './LoadingContentSkeleton';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface GeneratedContent {
-=======
- interface GeneratedContent {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   description: string;
 tags: string[];
 suggestedPrice: {;
@@ -27,8 +23,6 @@ initialValues?: {;
 category?: string;
 keyFeatures?: string;
 targetAudience?: string ;
-}
-<<<<<<< HEAD
 
 export function AIListingGenerator({
   onApplyGenerated,
@@ -130,12 +124,7 @@ export function AIListingGenerator({
       )}
     </div>
   );
-=======
-}export function AIListingGenerator ({;
-  onApplyGenerated, initialValues = {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }: AIListingGeneratorProps) {;
   const {;
   toast ;
@@ -160,7 +149,7 @@ try {;
 }= await supabase.functions.invoke ('ai-listing-generator', {;
   body: {;
   title, category,  keyFeatures, targetAudience ;
-}
+
 });
 if (error) {;
   throw new Error (error.message) ;
@@ -177,14 +166,14 @@ toast ({;
   ;
 }finally {;
   setIsLoading (false) ;
-}
+
 };
 const handleApply = () => {;
   if (generatedContent && onApplyGenerated) {;
   onApplyGenerated (generatedContent);
 toast ({;
   ;
-}
+
 };
 return (<div className="space-y-6" > <Card className="border border-zion-blue-light bg-zion-blue-dark" > <CardHeader> <CardTitle className="flex items-center text-white" > <Sparkles className="h-5 w-5 mr-2 text-zion-cyan" /> AI Listing Optimizer </CardTitle> <p className="text-sm text-zion-slate-light" > Provide basic information and let AI generate optimized, SEO-friendly content for your listing </p> </CardHeader> <CardContent> <AIListingForm onSubmit= {;
   handleGenerate ;

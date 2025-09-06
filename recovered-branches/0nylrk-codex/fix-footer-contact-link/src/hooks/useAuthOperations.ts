@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import type { UserProfile } from '@/types/auth';
@@ -332,29 +331,13 @@ export function useAuthOperations(
     loginWithTwitter,
     loginWithWeb3,
   };
-=======
- export function useAuthOperations (setUser: React.Dispatch<React.SetStateAction<UserProfile | null>>;
-setIsLoading: React.Dispatch<React.SetStateAction<boolean>>) {
-  //Check for referral code in URL when the hook is first used useEffect ( () => {
-  checkUrlForReferralCode () 
-}, []);
-const login = async ({
-  email, password 
-}: {
-  email: string, password: string 
-}) => {
-  setIsLoading (true);
-//Clean up any stale auth state before login cleanupAuthState ();
-return {
-  data, error: null 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }catch (error) {
   toast ({
   
 }finally {
   setIsLoading (false) 
-}
+
 };
 const signup = async ({
   email, password, display name 
@@ -366,21 +349,21 @@ const {
   email, password, options: {
   data: {
   display name: display name 
-}
-}
+
+
 });
 }//Add this after successful signup if (data?.user) {
   //Track referral if there was a referral code await trackReferral (data.user.id, email) 
 }toast ({
   return {
   data, error: null 
-}
+
 }catch (error) {
   toast ({
   
 }finally {
   setIsLoading (false) 
-}
+
 };
 const logout = async () => {
   setIsLoading (true);
@@ -400,7 +383,7 @@ toast ({
   
 }finally {
   setIsLoading (false) 
-}
+
 };
 const resetPassword = async (email: string) => {
   setIsLoading (true);
@@ -416,13 +399,13 @@ if (error) {
   toast ({
   return {
   data, error: null 
-}
+
 }catch (error) {
   toast ({
   
 }finally {
   setIsLoading (false) 
-}
+
 };
 const updateProfile = async (profileData: Partial<UserProfile>) => {
   setIsLoading (true);
@@ -443,17 +426,10 @@ headline: profileData.headline
   if (prevUser) {
   return {
   ...prevUser, ...profileData 
-}
+
 }return prevUser;
 });
-return {
-  error: null 
-}
-}catch (error) {
-  
-}finally {
-  setIsLoading (false) 
-}
+
 };
 const loginWithGoogle = async () => {
   setIsLoading (true);
@@ -462,10 +438,10 @@ try {
   data, error 
 }= await supabase.auth.signInWithOAuth ({
   
-}
+
 }finally {
   setIsLoading (false) 
-}
+
 };
 const loginWithFacebook = async () => {
   setIsLoading (true);
@@ -474,10 +450,10 @@ try {
   data, error 
 }= await supabase.auth.signInWithOAuth ({
   
-}
+
 }finally {
   setIsLoading (false) 
-}
+
 };
 const loginWithTwitter = async () => {
   setIsLoading (true);
@@ -486,10 +462,10 @@ try {
   data, error 
 }= await supabase.auth.signInWithOAuth ({
   
-}
+
 }finally {
   setIsLoading (false) 
-}
+
 };
 const loginWithWeb3 = async () => {
   setIsLoading (true);
@@ -523,9 +499,9 @@ description: error?.message || 'Unable to connect wallet'
 }) 
 }finally {
   setIsLoading (false) 
-}
+
 };
-return {
+
   login;
 signup;
 logout;
@@ -535,5 +511,4 @@ loginWithGoogle;
 loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3 
-}
-}
+

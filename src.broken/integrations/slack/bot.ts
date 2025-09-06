@@ -1,18 +1,10 @@
-<<<<<<< HEAD
 // Mock implementation of Slack bot that doesn't require external dependencies
 // This replaces the original implementation which had dependency issues
 import { switchNetlifySite } from '../../../scripts/switch-netlify-site.js';
 
 interface SlackCommand {
   text: string;
-=======
- // Mock implementation of Slack bot that doesn't require external dependencies // This replaces the original implementation which had dependency issues if (safeConsole && safeConsole.log) {
-  safeConsole.log (`⚡️ Mock Zion Slack bot is running on port $ {
-  port || 3000 
-}!`) 
-}return Promise.resolve () 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }// Create a mock app instance if (safeConsole && safeConsole.log) {
   safeConsole.log (`ZionGPT was asked: $ {
   prompt 
@@ -23,17 +15,13 @@ break;
 case 'suggest-talent': {
   
 }case 'help': default: await respond ('Commands:\n' + '`/zion post-job` - post a new job\n' + '`/zion suggest-talent [skills]` - AI talent suggestions\n' + '`/zion track-project [name]` - project status\n' + '`/zion help` - show this list') 
-}
-<<<<<<< HEAD
 
 interface SlackRespond {
   (text: string): Promise<void>;
-}
 
 // Define console type to avoid TypeScript errors
 interface SafeConsole {
   log: (message: string) => void;
-}
 
 // Declare available globals
 declare const globalThis: {
@@ -70,7 +58,6 @@ class MockApp {
     }
     return Promise.resolve();
   }
-}
 
 // Create a mock app instance
 const app = new MockApp();
@@ -83,7 +70,6 @@ async function askZionGPT(prompt: string): Promise<string> {
     safeConsole.log(`ZionGPT was asked: ${prompt}`);
   }
   return `AI response to: ${prompt}`;
-}
 
 app.command(
   '/zion',
@@ -163,10 +149,7 @@ async function sendSlackAlert(message: string): Promise<void> {
   // In a real scenario, this would use the Slack API to send a message
   // For example: await app.client.chat.postMessage({ channel: '#alerts', text: message });
   return Promise.resolve();
-=======
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 // Mock startup with safer environment access if (safeConsole && safeConsole.log) {
   safeConsole.log (`SLACK ALERT: $ {

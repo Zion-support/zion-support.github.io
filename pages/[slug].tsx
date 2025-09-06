@@ -114,38 +114,22 @@ function getExistingRootPageSlugs(): Set<string> {
 	const entries = fs.readdirSync(pagesDir, { withFileTypes: true }),
 	const reserved = new Set<string>(['apireportsservices']),
 	const slugs = new Set<string>(),
-	for (const entry of entries) {;
-		if (entry.name.startsWith('_')) continue,
-		if (reserved.has(entry.name)) continue,
-		// Files at root;
-		if (entry.isFile()) {;
-			const m = entry.name.match(/^(.*)\.(tsx|ts|jsx|js)$/),
-			if (m) {;
-				const base = m[1],
-				if (base !== 'index' && base !== '404' && base !== '500' && base !== '[slug]') {;
-					slugs.add(base);
-			}
+	
 		}
 		// Directories at root (folder routes);
 		if (entry.isDirectory()) {;
 			slugs.add(entry.name);
 	}
 	return slugs;
-}
+
 ;
 export async function getStaticPaths() {
 	const services = getAllServices(),
 	const slugs = new Set<string>(),
-	for (const s of services) {;
-		if (s.id) slugs.add(toSlug(s.id)),
-		else if (s.name) slugs.add(toSlug(s.name));
-	const existing = getExistingRootPageSlugs(),
-	const filtered = Array.from(slugs).filter((slug) => !existing.has(slug)),
-	return {;
-		paths: filtered.map((slug) => ({ params: { slug } })),
+	 })),
 		fallback: false;
 	}
-}
+
 ;
 export async function getStaticProps({ params }: { params: { slug: string } }) {;
 	const services = getAllServices(),
@@ -157,7 +141,7 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 	return {;
 		props: { service }
 	}
-}
+
 ;
 export default function RootServiceDetailPage({ service }: { service: Service }) {;
 	const canonical = `https://ziontechgroup.com/${toSlug(service.id || service.name || '')}`,

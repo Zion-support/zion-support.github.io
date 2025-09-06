@@ -1,7 +1,7 @@
 import React from 'react';
 interface SignUpProps {
   // Add props here as needed
-}
+
 export default function SignUp({ }: SignUpProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function SignUp({ }: SignUpProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

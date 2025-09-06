@@ -1,7 +1,7 @@
+import { load, save } from '../../../utils/fsdb';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   const db = load();
   if (req.method === 'GET') {
     const queue = Object.values(db).filter(
@@ -39,8 +39,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
-  res.status(200).json({ message: 'KYC Queue API' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

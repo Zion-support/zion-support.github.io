@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type ReviewStatus = 'pending' | 'approved' | 'rejected';
 
 export interface Review {
@@ -22,7 +21,6 @@ export interface Review {
     display_name: string;
     avatar_url?: string;
   };
-}
 
 export interface ReviewReport {
   id: string;
@@ -32,7 +30,3 @@ export interface ReviewReport {
   status: 'pending' | 'resolved' | 'dismissed';
   created_at: string;
   resolved_at?: string;
-}
-=======
- export type ReviewStatus = 'pending' | 'approved' | 'rejected';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

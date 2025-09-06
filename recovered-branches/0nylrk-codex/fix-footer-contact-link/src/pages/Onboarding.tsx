@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -182,26 +181,15 @@ export default function Onboarding() {
       <Footer />
     </>
   );
-=======
- export default function Onboarding () {
-  const {
-  user, updateProfile, isLoading 
-}= useAuth ();
-const [currentStep, setCurrentStep] = useState (0);
-case "talent": return "jobSeeker";
-case "client": return "employer";
-default: 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Direct to specific registration page based on user type if (type === "serviceProvider") {
   navigate ('/service-onboarding');
-return 
-}else if (type === "talent") {
+
   navigate ('/talent-onboarding');
-return 
+
 }? "/client-dashboard" : "/talent-dashboard";
-}
+
 };
 if (!user) {
   navigate ('/login');
@@ -216,4 +204,3 @@ return null;
   () => setCurrentStep (0) 
 }> Back to Role Selection </Button> </div>) 
 }</div> </div> </div> <Footer /> </>) 
-}

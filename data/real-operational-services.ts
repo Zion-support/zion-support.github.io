@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface RealOperationalService {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface RealOperationalService {
     email: string;
     address: string;
   };
-}
 
 export const realOperationalServices: RealOperationalService[] = [
   {
@@ -41,7 +39,3 @@ export const realOperationalServices: RealOperationalService[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

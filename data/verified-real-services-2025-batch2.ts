@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface VerifiedRealService2025Batch2 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface VerifiedRealService2025Batch2 {
     email: string;
     address: string;
   };
-}
 
 export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
   {
@@ -41,7 +39,3 @@ export const verifiedRealServices2025Batch2: VerifiedRealService2025Batch2[] = [
     },
   },
 ];
-=======
- 
-}]
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 import { useJobApplications } from '@/hooks/useJobApplications';
@@ -11,9 +10,6 @@ import { KanbanColumn } from './KanbanColumn';
 import { useIsMobile } from '@/hooks/use-mobile';
 
 interface DnDLocation {
-=======
- interface DnDLocation {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   droppableId: string;
 index: number 
 }interface DropResult {
@@ -55,8 +51,6 @@ const [columns, setColumns] = useState<Record<string JobApplication[]>> ({
 const isMobile = useIsMobile ();
 if (applications) {
   //Group applications by status setColumns (groupedApplications) 
-}
-<<<<<<< HEAD
 
 // Define the kanban board columns based on application statuses
 const COLUMNS = [
@@ -89,7 +83,6 @@ const COLUMNS = [
 
 interface KanbanBoardProps {
   jobId?: string;
-}
 
 export function KanbanBoard({ jobId }: KanbanBoardProps) {
   const { applications, isLoading, updateApplicationStatus } =
@@ -163,9 +156,7 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
   };
 
   if (isLoading) {
-    return (
-      <div
-        className={`grid grid-cols-1 ${!isMobile ? 'md:grid-cols-3 lg:grid-cols-5' : ''} gap-4`}
+    
       >
         {Array.from({ length: isMobile ? 1 : 5 }).map((_, i) => (
           <Card key={i} className='h-[500px]'>
@@ -212,21 +203,13 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
       </div>
     </DragDropContext>
   );
-=======
-}, [applications]);
-//Handle drag end event to update the application status //If there's no destination or the item is dropped in the same place, do nothing if (!destination || (destination.droppableId === source.droppableId && 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 if (isLoading) {
-  return (<div className= {
-  `grid grid-cols-1 $ {
-  !isMobile ? 'md:grid-cols-3 lg:grid-cols-5': '' 
-}gap-4` 
+  
 }> <CardHeader> <Skeleton className="h-8 w-24" /> </CardHeader> <CardContent> <Skeleton className="h-[400px] w-full" /> </CardContent> </Card>) ) 
 }</div>) 
-}<CardContent> <h3 className="text-lg font-semibold mb-2" >No applications yet</h3> <p className="text-muted-foreground mb-6" > You haven't received any applications for this job yet. </p> </CardContent> </Card> return (<DragDropContext onDragEnd= {
-  handleDragEnd 
+}<CardContent> <h3 className="text-lg font-semibold mb-2" >No applications yet</h3> <p className="text-muted-foreground mb-6" > You haven't received any applications for this job yet. </p> </CardContent> </Card> 
 }> <div className= {
   `grid $ {
   isMobile ? 'grid-cols-1 gap-y-6' : 'grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4' 
@@ -246,4 +229,3 @@ if (isLoading) {
   columns[column.id]?.length || 0 
 }/>) ) 
 }</div> </DragDropContext>) 
-}

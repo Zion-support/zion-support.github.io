@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -10,7 +9,6 @@ function ensure() {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(FILE_PATH))
     fs.writeFileSync(FILE_PATH, JSON.stringify([], null, 2), 'utf8');
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(405).end();
@@ -28,8 +26,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   list.push(entry);
   fs.writeFileSync(FILE_PATH, JSON.stringify(list, null, 2), 'utf8');
   res.status(200).json({ ok: true });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

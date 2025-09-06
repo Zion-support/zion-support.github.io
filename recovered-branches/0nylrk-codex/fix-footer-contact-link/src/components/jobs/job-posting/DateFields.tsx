@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import { Label } from '@/components/ui/label';
@@ -6,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger,;
 } from '@/components/ui/popover';
 import { Calendar } from '@/components/ui/calendar';
 import { FormControl } from '@/components/ui/form';
@@ -17,7 +16,6 @@ interface DateFieldsProps {
   setStartDate: (date: Date | undefined) => void;
   endDate: Date | undefined;
   setEndDate: (date: Date | undefined) => void;
-}
 
 export function DateFields({
   startDate,
@@ -88,18 +86,3 @@ export function DateFields({
       </div>
     </div>
   );
-}
-=======
- interface DateFieldsProps {
-  startDate: Date | undefined;
-setStartDate: (date: Date | undefined) => void;
-endDate: Date | undefined;
-setEndDate: (date: Date | undefined) => void 
-}export function DateFields ({
-  startDate, setStartDate, endDate, setEndDate 
-}: DateFieldsProps) {
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-4" > publishedDate">Published Date (Optional) </Label> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
-}</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start"> <Calendar initialFocus /> </PopoverContent> </Popover> </div> <div> <Label htmlFor=" expiryDate">Expiry Date (Optional) </Label> <Popover> <PopoverTrigger asChild> <FormControl> <Button) : (<span>Pick a date</span>) 
-}</Button> </FormControl> </PopoverTrigger> <PopoverContent className=" w-auto p-0"align=" start" > <Calendar initialFocus /> </PopoverContent> </Popover> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

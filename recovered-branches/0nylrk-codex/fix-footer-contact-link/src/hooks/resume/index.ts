@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Resume } from '@/types/resume';
 import { useFetchResume } from './useFetchResume';
@@ -81,16 +80,9 @@ export function useResume() {
     updateCertification: certOperations.updateCertification,
     deleteCertification: certOperations.deleteCertification,
   };
-}
 
 // Export all hooks
 export * from './useFetchResume';
-=======
- // Determine overall loading state const isLoading = fetchResumeOperations.isLoading || resumeActions.isLoading || workOperations.isLoading || educationOperations.isLoading || skillsOperations.isLoading || certOperations.isLoading || resumeListOperations.isLoading;
-// Determine overall error state (use first non-null error) const error = fetchResumeOperations.error || resumeActions.error || workOperations.error || educationOperations.error || skillsOperations.isLoading || certOperations.error || resumeListOperations.error;
-// Override the fetch resume function to update local state 
-}// Export all hooks export * from './useFetchResume';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export * from './useResumeActions';
 export * from './useWorkExperience';
 export * from './useEducation';

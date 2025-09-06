@@ -41,12 +41,10 @@ vcard += 'END: VCARD';
 return vcard;
 }wifiString +=;
 return wifiString;
-}
+
 }return mailto;
-}
+
 }return smsString;
-}
-<<<<<<< HEAD
 
 class QRCodeService {
   private readonly DEFAULT_OPTIONS: Partial<QRCodeOptions> = {
@@ -350,9 +348,5 @@ class QRCodeService {
     // In a real app, this would save to storage
     console.log('QR Code saved:', qrCode.options.text);
   }
-=======
-}return geoString;
-}// Utility methods 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }export const qrCodeService = new QRCodeService ();

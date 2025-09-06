@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { AccessToken } from 'livekit-server-sdk';
 
@@ -49,9 +48,3 @@ export default async function handler(
     console.error('Token error', err);
     return res.status(500).json({ error: 'Failed to create token' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

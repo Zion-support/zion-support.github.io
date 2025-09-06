@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
 
 interface LogoProps {
   customLogo?: string;
-}
 
 export function Logo({ customLogo }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
@@ -40,9 +38,3 @@ export function Logo({ customLogo }: LogoProps) {
       />
     </Link>
   );
-}
-=======
- </Link>) ;
-}return (</Link>) ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

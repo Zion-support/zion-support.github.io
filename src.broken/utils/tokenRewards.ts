@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { apiClient } from './apiClient';
 
 export async function rewardOnboarding(userId: string) {
@@ -11,7 +10,6 @@ export async function rewardOnboarding(userId: string) {
       reason: 'Completed onboarding',
     }),
   });
-}
 
 export async function rewardReferral(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
@@ -19,7 +17,6 @@ export async function rewardReferral(userId: string) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 20, reason: 'Referral' }),
   });
-}
 
 export async function rewardFiveStarReview(userId: string) {
   await apiClient('/functions/v1/token-manager/earn', {
@@ -27,8 +24,3 @@ export async function rewardFiveStarReview(userId: string) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ userId, amount: 10, reason: '5-star review' }),
   });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

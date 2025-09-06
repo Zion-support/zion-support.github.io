@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createNotification } from './createNotification';
 import { HireRequestNotificationParams } from './types';
 
@@ -54,15 +53,7 @@ export async function createHireRequestNotifications({
     success: talentNotification.success,
     talentNotification,
   };
-}
-=======
- /** * Creates a hire request notification for admin and talent */ export async function createHireRequestNotifications ({
-  talentId, adminId, requesterName, requesterEmail, projectType, projectSummary, hireRequestId 
-}: HireRequestNotificationParams) {
-  const projectInfo = projectType ? `$ {
-  projectType 
-}project` : "";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Create notification for talent const talentNotification = await createNotification ({
+
   userId: talentId, title: `New Hire Request from $ {
   requesterName 
 }`;
@@ -98,5 +89,3 @@ sendEmail: true;
 actionUrl: '/admin/hire-requests';
 actionText: 'Review Request' 
 });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

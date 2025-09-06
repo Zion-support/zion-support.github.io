@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { ParsedFilters } from './parser';
 import { TALENT_PROFILES } from '../../data/talent';
 import type { TalentProfile } from '../../data/talent';
@@ -29,18 +28,14 @@ function computeRelevanceScore(
   if (!keywords.length) return 0;
   const lower = text.toLowerCase();
   let score = 0;
-  for (const k of keywords) {
-    if (lower.includes(k.toLowerCase())) score += 1 * weight;
-  }
+  
   return score;
-}
 
 function computeSkillOverlap(skills: string[], wanted: string[]): number {
   const set = new Set(skills.map(s => s.toLowerCase()));
   let score = 0;
   for (const w of wanted) if (set.has(w.toLowerCase())) score += 2;
   return score;
-}
 
 function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (!candidate) return 0;
@@ -48,13 +43,11 @@ function budgetScore(candidate?: number, min?: number, max?: number): number {
   if (max && candidate <= max) score += 1.5;
   if (min && candidate >= min) score += 0.5;
   return score;
-}
 
 function availabilityMatches(candidate?: string, requested?: string): boolean {
   if (!requested) return true;
   if (!candidate) return false;
   return candidate.toLowerCase() === requested.toLowerCase();
-}
 
 function passesRls(
   visibility: AccessLevel | undefined,
@@ -63,7 +56,6 @@ function passesRls(
   const level = visibility || 'public';
   const order: AccessLevel[] = ['public', 'member', 'admin'];
   return order.indexOf(access) >= order.indexOf(level);
-}
 
 export function searchAll(
   filters: ParsedFilters,
@@ -132,7 +124,6 @@ export function searchAll(
     (a, b) => b.relevance - a.relevance
   );
   return { all, talent, jobs, projects };
-}
 
 export function suggestDidYouMean(query: string): string | null {
   // naive suggestion: if user says devops latam -> normalize to "DevOps jobs in LATAM"
@@ -144,9 +135,3 @@ export function suggestDidYouMean(query: string): string | null {
       'React developers under $' + (q.match(/\d{2,3}/)?.[0] || '50') + '/hr'
     );
   return null;
-}
-=======
- const jobs: SearchResult[] = [];
-const projects: SearchResult[] = [];
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

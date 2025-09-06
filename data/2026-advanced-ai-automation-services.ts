@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface AdvancedAIAutomationService {
@@ -40,7 +39,6 @@ export interface AdvancedAIAutomationService {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -372,6 +370,3 @@ export const advancedAIAutomationServices2026: AdvancedAIAutomationService[] = [
     reviews: 267,
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

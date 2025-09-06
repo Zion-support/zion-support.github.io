@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface ShortUrl {
   id: string;
   originalUrl: string;
@@ -8,7 +7,6 @@ export interface ShortUrl {
   expiresAt?: Date;
   isActive: boolean;
   userId?: string;
-}
 
 export interface UrlAnalytics {
   totalClicks: number;
@@ -19,7 +17,6 @@ export interface UrlAnalytics {
   browsers: string[];
   lastClicked: Date;
   clickHistory: ClickEvent[];
-}
 
 export interface ClickEvent {
   id: string;
@@ -32,14 +29,12 @@ export interface ClickEvent {
   device: string;
   browser: string;
   os: string;
-}
 
 export interface CreateShortUrlRequest {
   originalUrl: string;
   customCode?: string;
   expiresAt?: Date;
   userId?: string;
-}
 
 class UrlShortenerService {
   private urls: Map<string, ShortUrl> = new Map();
@@ -184,22 +179,5 @@ class UrlShortenerService {
     this.analytics = new Map(data.analytics);
     this.clicks = new Map(data.clicks);
   }
-}
 
 export const urlShortenerService = new UrlShortenerService();
-=======
- const shortUrl: ShortUrl = {
-  id: this.generateId (), originalUrl: request.originalUrl, shortCode, shortUrl: `$ {
-  process.env.NEXT PUBLIC BASE URL || 'https://zion.app' 
-}/s/$ {
-  shortCode 
-}`;
-createdAt: new Date ();
-expiresAt: request.expiresAt;
-isActive: true;
-userId: request.userId 
-};
-return shortUrl 
-}return url 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -13,7 +13,6 @@ interface Partner {
   lastActivity: string;
   totalReferrals: number;
   totalEarnings: number;
-}
 
 const mockPartners: Partner[] = [
   {
@@ -71,7 +70,6 @@ const AdminPartnersPage: React.FC = () => {
     }, 1000);
   }, []);
 
-<<<<<<< HEAD
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
       method: 'POST',
@@ -171,52 +169,6 @@ const AdminPartnersPage: React.FC = () => {
               <li className='text-gray-500 list-none'>No flags</li>
             )}
           </ul>
-=======
-  const filteredPartners = partners.filter(partner => {
-    const matchesSearch = partner.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.code.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         partner.contactEmail.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesStatus = statusFilter === 'all' || partner.status === statusFilter;
-    return matchesSearch && matchesStatus;
-  });
-
-  const handleStatusChange = (partnerId: string, newStatus: Partner['status']) => {
-    setPartners(prev => 
-      prev.map(partner => 
-        partner.id === partnerId 
-          ? { ...partner, status: newStatus }
-          : partner
-      )
-    );
-  };
-
-  const getStatusColor = (status: string) => {
-    switch (status) {
-      case 'active': return 'bg-green-100 text-green-800';
-      case 'inactive': return 'bg-red-100 text-red-800';
-      case 'pending': return 'bg-yellow-100 text-yellow-800';
-      default: return 'bg-gray-100 text-gray-800';
-    }
-  };
-
-  const totalPartners = partners.length;
-  const activePartners = partners.filter(p => p.status === 'active').length;
-  const totalEarnings = partners.reduce((sum, p) => sum + p.totalEarnings, 0);
-  const totalReferrals = partners.reduce((sum, p) => sum + p.totalReferrals, 0);
-
-  return (
-    <>
-      <Head>
-        <title>Admin Partners - Zion Tech Group</title>
-        <meta name="description" content="Manage partner relationships and commissions" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Partner Management</h1>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-            Add New Partner
-          </button>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
 
         {/* Stats Cards */}
@@ -383,10 +335,3 @@ const AdminPartnersPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default AdminPartnersPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { AlertTriangle, RefreshCw } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,12 +6,10 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface Props {
   children: React.ReactNode;
-}
 
 interface State {
   hasError: boolean;
   error?: Error;
-}
 
 export class EquipmentErrorBoundary extends React.Component<Props, State> {
   constructor(props: Props) {
@@ -69,10 +66,3 @@ export class EquipmentErrorBoundary extends React.Component<Props, State> {
 
     return this.props.children;
   }
-}
-=======
- We're having trouble loading the equipment listings. This might be a temporary issue. </p> <div className="flex gap-2 justify-center" > <Button > <RefreshCw className="h-4 w-4 mr-2" /> Try Again </Button> Refresh Page </Button> </div> </CardContent> </Card> </div>) ;
-}return this.props.children ;
-}
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

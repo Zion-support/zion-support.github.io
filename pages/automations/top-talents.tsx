@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -53,9 +52,4 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { items } };
 };
 
-=======
- </div> <span className="pill" >Auto</span> </div> </Link>) ) 
-}</div> </main>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default TopTalentsPage;

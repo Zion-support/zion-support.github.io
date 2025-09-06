@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -13,7 +12,6 @@ interface NotificationListProps {
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
   onRetry: () => void;
-}
 
 export const NotificationList: React.FC<NotificationListProps> = ({
   loading,
@@ -59,19 +57,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
       )}
     </ScrollArea>
   );
-=======
- {
-  error ? (<div className="p-8 text-center text-amber-500" > <p> {
-  error 
-}</p> <Button > Try Again </Button> </div>) : loading ? (<div className="p-4 space-y-4" > <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> <Skeleton className="h-12 w-full bg-zion-blue-dark/50" /> </div>) : notifications.length === 0 ? (<div className="p-8 text-center text-zion-slate-light" > <p>No notifications yet</p> </div>) : (notifications.map ( (notification) => (<NotificationItem key= {
-  notification.id 
-}notification= {
-  notification 
-}onMarkAsRead= {
-  onMarkAsRead 
-}onDismiss= {
-  onDismiss 
-}/>) ) ) 
-}</ScrollArea>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

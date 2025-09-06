@@ -11,8 +11,6 @@
 {
   headers: {
   'Content-Type': 'application/json' 
-}
-<<<<<<< HEAD
 
 export function useWhitelabelTenant(externalSubdomain?: string) {
   const [tenant, setTenant] = useState<WhitelabelTenant | null>(null);
@@ -95,7 +93,6 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
   }, [externalSubdomain]);
 
   return { tenant, isLoading, error };
-}
 
 // Hook to check if current user is a tenant admin
 export function useTenantAdminStatus(tenantId?: string) {
@@ -139,17 +136,3 @@ export function useTenantAdminStatus(tenantId?: string) {
   }, [tenantId]);
 
   return { isAdmin, isLoading };
-}
-=======
-});
-if (message.includes ('Failed to send a request to the Edge Function') || message.includes ('Failed to connect to Supabase') || message.includes ('No internet connection') ) {
-  loadTenant () 
-}, [externalSubdomain]);
-useEffect ( () => {
-  const checkAdminStatus = async () => {
-  if (!tenantId) {
-  .from ('tenant administrators') .select ('*') .eq ('tenant id', tenantId) .eq ('user id', userId) .single ();
-checkAdminStatus () 
-}, [tenantId]);
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

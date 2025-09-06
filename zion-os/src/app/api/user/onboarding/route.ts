@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextRequest, NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { prisma } from '@/lib/prisma';
@@ -37,13 +36,3 @@ export async function POST(request: NextRequest) {
       { status: 500 }
     );
   }
-}
-=======
- return NextResponse.json ({
-  message: "Onboarding completed successfully", user: {
-  id: updatedUser.id, name: updatedUser.name, email: updatedUser.email, role: updatedUser.role, onboardingCompleted: updatedUser.onboardingCompleted 
-}
-};
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

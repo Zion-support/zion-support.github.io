@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import crypto from 'crypto';
 import {
   updateArtifacts,
   getProposal,
-  savePdf,
+  savePdf,;
 } from '../../../utils/data/proposals';
 import { create as createIpfsClient } from 'ipfs-http-client';
 import { ethers } from 'ethers';
@@ -24,7 +23,6 @@ function buildIpfsClient() {
     url: apiUrl,
     headers: { authorization: auth } as any,
   });
-}
 
 async function generatePdfFromMarkdown(markdown: string, title: string) {
   const pdfDoc = await PDFDocument.create();
@@ -41,13 +39,7 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
       const words = line.split(' ');
       const wrapped: string[] = [];
       let current = '';
-      for (const word of words) {
-        const test = current.length ? current + ' ' + word : word;
-        const width = font.widthOfTextAtSize(test, fontSize);
-        if (width > maxWidth) {
-          if (current) wrapped.push(current);
-          current = word;
-        } else {
+       else {
           current = test;
         }
       }
@@ -59,17 +51,12 @@ async function generatePdfFromMarkdown(markdown: string, title: string) {
   page.drawText(title, { x: margin, y, size: 16, font });
   y -= 24;
 
-  for (const line of lines) {
-    if (y < margin + 12) {
-      y = page.getHeight() - margin;
-      pdfDoc.addPage();
-    }
+  
     page.drawText(line, { x: margin, y, size: fontSize, font });
     y -= 14;
   }
 
   return pdfDoc.save();
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -124,14 +111,3 @@ export default async function handler(
   } catch (error: any) {
     return res.status(500).json({ error: error?.message || 'Export failed' });
   }
-}
-=======
- const lines = markdown .replace (/\r\n/g, '\n') .split ('\n') 
-}if (current) wrapped.push (current);
-return wrapped.length ? wrapped : [' '] 
-});
-}return pdfDoc.save () 
-}
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

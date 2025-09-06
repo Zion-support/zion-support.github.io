@@ -27,7 +27,6 @@ const AIEvals: React.FC = () => {
           </div>
         </div>
 
-<<<<<<< HEAD
 export default function AIEvalsPage() {
   const contactInfo = {
     mobile: '+1 302 464 0950',
@@ -185,46 +184,3 @@ export default function AIEvalsPage() {
       </div>
     </QuantumHolographicMatrixBackground>
   );
-}
-=======
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-            <div className="text-gray-400 text-sm mb-2">Testing</div>
-            <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-cyan-400">🧪</span>
-              Comprehensive Tests
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">
-              Run comprehensive tests on your AI models with automated evaluation frameworks.
-            </p>
-          </div>
-
-          <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-            <div className="text-gray-400 text-sm mb-2">Metrics</div>
-            <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-purple-400">📊</span>
-              Real Metrics
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">
-              Get accurate performance metrics and safety scores for your AI models.
-            </p>
-          </div>
-
-          <div className="bg-black/20 border border-gray-700/50 rounded-2xl p-6">
-            <div className="text-gray-400 text-sm mb-2">Safety</div>
-            <div className="text-white text-xl font-semibold flex items-center gap-2 mb-2">
-              <span className="w-5 h-5 text-pink-400">🛡️</span>
-              Safety Checks
-            </div>
-            <p className="text-gray-400 mt-2 text-sm">
-              Ensure your AI models are safe and reliable with comprehensive safety evaluations.
-            </p>
-          </div>
-        </div>
-      </main>
-    </Layout>
-  );
-};
-
-export default AIEvals;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 
 export default function CoachWidget() {
@@ -47,12 +46,3 @@ export default function CoachWidget() {
       )}
     </div>
   );
-}
-=======
- async function ask () {
-  if (!input.trim () ) return;
-setLoading (true);
-try {
-  </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

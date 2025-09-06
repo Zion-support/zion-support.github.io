@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import { useCurrentUser } from '../../hooks/useCurrentUser';
@@ -119,9 +118,3 @@ export default function ComposePage() {
       </div>
     </div>
   );
-}
-=======
- if (!user) return null;
-</p> </div> <div className="p-4 space-y-3" > <textarea </div> </div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

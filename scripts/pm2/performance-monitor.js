@@ -10,7 +10,6 @@ class PerformanceMonitor {
   this.logFile = path.join(this.projectRoot, 'logs/pm2/performance-monitor.log),
   this.reportFile = path.join(this.projectRoot, 'logs/pm2/performance-report.json'),
   this.startTime = Date.now()
-}
 
   log(message) {
     const timestamp = new Date().toISOString(),
@@ -20,7 +19,7 @@ class PerformanceMonitor {
   fs.appendFileSync(this.logFile, logMessage)
 } catch (error) {
   console.error(Error writing to log file:', error.message)
-}
+
   }
 
   async checkBuildPerformance() {
@@ -58,7 +57,7 @@ class PerformanceMonitor {
 } else {
   buildSize += stat.size,
   fileCount++
-}
+
           });
         };
         
@@ -121,7 +120,7 @@ class PerformanceMonitor {
   bundleStats.cssFiles.push(fileInfo)
 } else {
   bundleStats.assetFiles.push(fileInfo)
-}
+
           }
         });
       };
@@ -197,7 +196,7 @@ class PerformanceMonitor {
           size += this.calculateDirectorySize(fullPath)
 } else {
   size += stat.size
-}
+
       });
     } catch (error) {
       // Skip if can't access
@@ -373,8 +372,7 @@ class PerformanceMonitor {
         });
       } else {
   this.log('\n✨ Performance looks good!)
-}
-      
+
       // Clean up build artifacts if they exist
       if (fs.existsSync('dist')) {
         this.log(🧹 Cleaning up build artifacts...');
@@ -386,7 +384,6 @@ class PerformanceMonitor {
       process.exit(1);
     }
   }
-}
 
 // Run the performance monitor
 const monitor = new PerformanceMonitor(),

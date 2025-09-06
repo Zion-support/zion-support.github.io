@@ -20,10 +20,7 @@ export default function ForgotPassword() {
     setIsSuccess(true);
   };
 
-  return (
-    <MainLayout 
-      title="Forgot Password - Zion Tech Group"
-      description="Reset your password for Zion Tech Group account"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8">
@@ -140,4 +137,3 @@ export default function ForgotPassword() {
       </div>
     </MainLayout>
   );
-}

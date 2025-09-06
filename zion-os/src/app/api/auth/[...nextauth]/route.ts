@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { PrismaAdapter } from '@auth/prisma-adapter';
@@ -72,16 +71,3 @@ const handler = NextAuth({
 });
 
 export { handler as GET, handler as POST };
-=======
- CredentialsProvider ({
-  name: "credentials", credentials: {
-  email: {
-  label: "Email", type: "email" 
-};
-password: {
-  label: "Password", type: "password" 
-}
-};
-const isPasswordValid = await bcrypt.compare (credentials.password;
-user.password);
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
@@ -45,10 +44,4 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-=======
- exports.handler = async function () {
-  try {
-  // Demo ranking: based on certifications and progress 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

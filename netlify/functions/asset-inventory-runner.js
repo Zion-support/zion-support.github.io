@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const path = require('path');
 const { spawnSync } = require('child_process');
 
@@ -13,7 +12,6 @@ function runNode(relPath, args = []) {
     stdout: res.stdout || '',
     stderr: res.stderr || '',
   };
-}
 
 exports.handler = async () => {
   const logs = [];
@@ -31,6 +29,3 @@ exports.handler = async () => {
 
   return { statusCode: 200, body: logs.join('\n') };
 };
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

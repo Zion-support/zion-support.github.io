@@ -265,13 +265,7 @@ class SmartGitAutomator {
 
         this.log(`🔧 Resolving conflicts in ${conflictedFiles.length} files`);
 
-        for (const file of conflictedFiles) {
-          const resolution = await this.intelligentConflictResolution(file);
-          conflicts.push({
-            file,
-            resolution: resolution.type,
-            success: resolution.success
-          });
+        );
 
           if (resolution.success) {
             execSync(`git add ${file}`, { cwd: this.projectRoot, stdio: 'pipe' });
@@ -324,12 +318,7 @@ class SmartGitAutomator {
         this.resolveBySmartAnalysis
       ];
 
-      for (const strategy of strategies) {
-        try {
-          const resolved = strategy(content);
-          if (resolved) {
-            fs.writeFileSync(filePath, resolved);
-            return { type: strategy.name, success: true };
+      ;
           }
         } catch (error) {
           // Try next strategy
@@ -573,12 +562,10 @@ class SmartGitAutomator {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const automator = new SmartGitAutomator();
   automator.run();
-}
 
 module.exports = SmartGitAutomator;

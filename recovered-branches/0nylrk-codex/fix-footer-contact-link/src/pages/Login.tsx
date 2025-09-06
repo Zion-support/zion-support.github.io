@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
 import { Header } from '@/components/Header';
@@ -25,16 +24,3 @@ export default function Login() {
       <Footer />
     </>
   );
-}
-=======
- export default function Login () {
-  const {
-  isAuthenticated, user 
-}= useAuth ();
-//Redirect if user is already logged in and has completed profile if (isAuthenticated && user?.profileComplete) {
-  
-}// Redirect to onboarding if user is authenticated but hasn't completed profile if (isAuthenticated && !user?.profileComplete) {
-  
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

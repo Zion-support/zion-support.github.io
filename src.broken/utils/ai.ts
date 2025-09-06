@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import OpenAI from 'openai';
 
 function getClient(): OpenAI | null {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return null;
   return new OpenAI({ apiKey });
-}
 
 export async function generateText(
   prompt: string,
@@ -24,8 +22,3 @@ export async function generateText(
     temperature: 0.4,
   });
   return resp.choices?.[0]?.message?.content || '';
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

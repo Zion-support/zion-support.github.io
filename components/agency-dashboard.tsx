@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
@@ -156,7 +155,6 @@ export default function AgencyDashboardPage({ vendor }: Props) {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
-}
 
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
@@ -214,19 +212,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       ))}
     </div>
   );
-}
 
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] || null; // tie to auth later
   return { props: { vendor } };
 };
-=======
- .map (s => s.trim () ) .filter (Boolean) 
-}as Vendor;
-//For MVP, update via direct API not implemented, keep local preview only setActiveVendor (updated) 
-}</div> md:col-span-2"> <button className=" px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Save</button> </div> </form> </section> </div> </div> </section> </section> <div className=" text-center text-xs text-gray-500" >Powered by Zion</div> </div>) 
-}</select> </div>) ) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

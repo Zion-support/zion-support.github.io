@@ -19,7 +19,7 @@ import {
   Database,
   Cloud,
   Lock,
-  TrendingUp
+  TrendingUp;
 } from 'lucide-react';
 
 const enterpriseFeatures = [
@@ -395,4 +395,3 @@ export default function EnterpriseSolutionsPage() {
       </div>
     </>
   );
-}

@@ -1,5 +1,4 @@
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-<<<<<<< HEAD
 
 export type DisputeReason =
   | 'Scope Disagreement'
@@ -61,8 +60,3 @@ export type UserSummary = {
   name: string;
   role: 'admin' | 'client' | 'talent';
 };
-=======
-export type DisputeReason = | 'Scope Disagreement' | 'Quality Issues' | 'Delivery Delay' | 'Payment Issue' | 'Communication Breakdown' | 'Other';
-export type DisputeListItem = Pick< DisputeCase;
-'id' | 'projectId' | 'createdAt' | 'status' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

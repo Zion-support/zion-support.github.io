@@ -1,7 +1,7 @@
 import React from 'react';
 interface InputProps {
   // Add props here as needed
-}
+
 export default function Input({ }: InputProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function Input({ }: InputProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -15,7 +15,7 @@ import {
   FileText,
   Users,
   Zap,
-  Shield
+  Shield;
 } from 'lucide-react';
 
 const supportChannels = [
@@ -100,11 +100,7 @@ const resources = [
 ];
 
 export default function SupportPage() {
-  return (
-    <Layout 
-      title="Support - Zion Tech Group | 24/7 Technical Support & Help Center"
-      description="Get expert technical support for all Zion Tech Group services. 24/7 phone support, live chat, email support, and comprehensive help resources."
-      keywords="technical support, help desk, customer service, 24/7 support, IT support, troubleshooting"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
         {/* Hero Section */}
@@ -330,4 +326,3 @@ export default function SupportPage() {
       </div>
     </Layout>
   );
-}

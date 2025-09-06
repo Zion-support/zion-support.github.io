@@ -3,4 +3,3 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout';
 }</ul> </li>) ) 
 }</ul>) 
 }</div> </EnhancedLayout>) 
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { connectMetaMask, getAccounts } from '../../utils/wallet';
 
@@ -132,11 +131,3 @@ export default function UseTokensModal({
       </div>
     </div>
   );
-}
-=======
- export type RedemptionType = 'boost profile' | 'promote listing' | 'premium support';
-}if (!isOpen) return null;
-</div> <div className="text-sm mb-3" >Conversion rate: 1 ZION = $0.01</div>) 
-}</div> </div> 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

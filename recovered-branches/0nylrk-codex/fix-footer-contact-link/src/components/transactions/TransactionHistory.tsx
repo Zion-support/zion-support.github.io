@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/integrations/supabase/client';
@@ -11,7 +10,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Skeleton } from '@/components/ui/skeleton';
@@ -22,14 +21,11 @@ import {
   CheckCircle2,
   XCircle,
   Clock,
-  AlertCircle,
+  AlertCircle,;
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 
 interface Transaction {
-=======
- interface Transaction {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
 user id: string;
 provider id: string;
@@ -47,8 +43,6 @@ provider?: {
 };
 service?: {
   title?: string 
-}
-<<<<<<< HEAD
 
 export function TransactionHistory() {
   const { user } = useAuth();
@@ -146,37 +140,25 @@ export function TransactionHistory() {
           </Badge>
         );
       case 'completed':
-        return (
-          <Badge
-            variant='outline'
-            className='bg-green-500/20 text-green-500 border-green-500'
+        
           >
             <CheckCircle2 className='w-3 h-3 mr-1' /> Completed
           </Badge>
         );
       case 'refunded':
-        return (
-          <Badge
-            variant='outline'
-            className='bg-purple-500/20 text-purple-500 border-purple-500'
+        
           >
             <RefreshCcw className='w-3 h-3 mr-1' /> Refunded
           </Badge>
         );
       case 'cancelled':
-        return (
-          <Badge
-            variant='outline'
-            className='bg-red-500/20 text-red-500 border-red-500'
+        
           >
             <XCircle className='w-3 h-3 mr-1' /> Cancelled
           </Badge>
         );
       default:
-        return (
-          <Badge
-            variant='outline'
-            className='bg-gray-500/20 text-gray-500 border-gray-500'
+        
           >
             <AlertCircle className='w-3 h-3 mr-1' /> Unknown
           </Badge>
@@ -304,10 +286,7 @@ export function TransactionHistory() {
                 ? transaction.provider?.display_name || 'Service Provider'
                 : 'Client';
 
-              return (
-                <Card
-                  key={transaction.id}
-                  className='bg-zion-blue-dark border-zion-blue-light overflow-hidden'
+              
                 >
                   <CardHeader className='pb-3'>
                     <div className='flex justify-between items-start'>
@@ -443,31 +422,7 @@ export function TransactionHistory() {
       </div>
     </div>
   );
-=======
-}export function TransactionHistory () {
-  const {
-  user 
-}= useAuth ();
-const {
-  toast 
-}= useToast ();
-const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'> ('all');
-const {
-  data: transactions, isLoading, error, refetch 
-}= useQuery ({
-  queryKey: ['transactions', user?.id, filter];
-queryFn: async () => {
-  if (!user) return [];
-return data as Transaction[] 
-};
-enabled: !!user 
-});
-if (error) throw error;
-refetch () 
-}catch (error) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const getStatusBadge = (status: string, inEscrow: boolean) => {
   switch (status) {
@@ -477,21 +432,3 @@ case 'refunded': return (<Badge variant="outline" className="bg-purple-500/20 te
 case 'cancelled': return (<Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500" > <XCircle className="w-3 h-3 mr-1" /> Cancelled </Badge>);
 default: return (<Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500" > <AlertCircle className="w-3 h-3 mr-1" /> Unknown </Badge> Try Again </Button> </div> </div>) 
 }<div className="flex space-x-2" > <Button > All </Button> <Button > Pending </Button> <Button > Completed </Button> <Button > Escrow </Button> </div> </div> </CardHeader> <CardContent> <div className="flex justify-between mb-2" > <Skeleton className="h-5 w-1/3 bg-zion-blue-light" /> <Skeleton className="h-5 w-1/4 bg-zion-blue-light" /> </div> <Skeleton className="h-4 w-2/3 bg-zion-blue-light" /> </CardContent> <CardFooter> <Skeleton className="h-9 w-28 bg-zion-blue-light rounded-md" /> </CardFooter> </Card> </div>) ) const counterpartyName = isClient ? transaction.provider?.display name || 'Service Provider' : 'Client';
-return (<Card key= {
-  transaction.id 
-}className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div>) : (<span>Payment from <span className="text-zion-cyan" >Client</span></span>) 
-}</CardDescription> </div> {
-  getStatusBadge (transaction.status, transaction.in escrow) 
-}</div> </CardHeader> transaction.completed at || transaction.refunded at || transaction.cancelled at!) .toLocaleDateString () 
-}</span> </div>) 
-}</CardContent> > <CheckCircle2 className="mr-1 h-4 w-4" /> Release Funds </Button>) 
-}> <RefreshCcw className="mr-1 h-4 w-4" /> Request Refund </Button>) 
-}> <XCircle className="mr-1 h-4 w-4" /> Cancel </Button>) 
-}</CardFooter> </Card>) 
-}) 
-}</div>) : (<div className="text-center py-12 border border-dashed border-zion-blue-light rounded-lg" > <div className="mx-auto w-16 h-16 bg-zion-blue-light/30 rounded-full flex items-center justify-center mb-4" > <ArrowRight className="h-8 w-8 text-zion-slate-light" /> <ArrowLeft className="h-8 w-8 text-zion-slate-light -ml-4" /> </div> ? `You don't have any $ {
-  filter 
-}transactions. Try changing the filter or make a new transaction.` : "You haven't made any transactions yet. Once you make a payment or receive one, it will appear here." 
-}</p> </div>) 
-}</div> </div>) 
-}

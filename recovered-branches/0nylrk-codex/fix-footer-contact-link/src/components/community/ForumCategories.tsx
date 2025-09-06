@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
+  CardDescription,;
 } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -13,7 +12,7 @@ import {
   Briefcase,
   Code,
   FileText,
-  Megaphone,
+  Megaphone,;
 } from '@/components/icons';
 import { ForumCategory, ForumCategoryInfo } from '@/types/community';
 
@@ -62,57 +61,8 @@ const iconMap = {
   Code,
   FileText,
   Megaphone,
-=======
- import {
-  MessageSquare;
-Briefcase;
-Code;
-FileText;
-Megaphone const categories: ForumCategoryInfo[] = [ {
-  id: "getting-hired";
-name: "Getting Hired";
-description: "Tips, strategies, and questions about getting hired on the platform.";
-adminOnly: false;
-icon: "Briefcase" 
-};
-{
-  id: "project-help";
-name: "Project Help";
-description: "Get help with your ongoing projects and collaboration.";
-adminOnly: false;
-icon: "MessageSquare" 
-};
-{
-  id: "ai-tools";
-name: "AI Tools Discussion";
-description: "Discuss AI tools, frameworks, and best practices.";
-adminOnly: false;
-icon: "Code" 
-};
-{
-  id: "feedback";
-name: "Feedback & Feature Requests";
-description: "Share your feedback and suggest new features.";
-adminOnly: false;
-icon: "FileText" 
-};
-{
-  id: "announcements";
-name: "Announcements";
-description: "Official announcements from the Zion team.";
-adminOnly: true;
-icon: "Megaphone" 
-}];
-const iconMap = {
-  Briefcase;
-MessageSquare;
-Code;
-FileText;
-Megaphone 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export const ForumCategories = () => {
-<<<<<<< HEAD
   const { user } = useAuth();
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
 
@@ -144,27 +94,5 @@ export const ForumCategories = () => {
       })}
     </div>
   );
-=======
-  const {
-  user 
-}= useAuth ();
-const isAdmin = user?.userType === 'admin' || user?.role === 'admin';
-{
-  visibleCategories.map ( (category) => {
-  const Icon = iconMap[category.icon as keyof typeof iconMap];
-return (<Link key= {
-  category.id 
-}to= {
-  `/community/category/$ {
-  category.id 
-}` 
-}> <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer" > <CardHeader className="flex flex-row items-center gap-4" > <div className="p-2 bg-zion-purple/10 rounded-full" > <Icon className="h-6 w-6 text-zion-purple" /> </div> <CardTitle className="text-xl" > {
-  category.name 
-}</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-base" > {
-  category.description 
-}</CardDescription> 
-}) 
-}</div>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default ForumCategories;

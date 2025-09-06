@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Head from 'next/head';
 
@@ -407,7 +406,6 @@ export default function TokenomicsWhitepaperBuilder() {
       </div>
     </>
   );
-}
 
 function buildLocalMarkdown(input: {
   tokenName: string;
@@ -426,7 +424,6 @@ function buildLocalMarkdown(input: {
     ? `\n\n> Submitted for legal review. Draft may change pending counsel feedback.`
     : '';
   return `# ${input.tokenName} Tokenomics Whitepaper\n\n## Executive Summary\n${input.tokenName} is a utility token powering a freelance AI marketplace.\n\n## Market Context\nAI-native talent markets require aligned incentives and trust minimization.\n\n## Utility & Usage\n${input.useCases}.\n\n## Rewards System\n${input.rewardsLogic}.\n\n## Distribution\n${distLines}\n\nTotal Supply: ${input.tokenSupply}.\n\n## Governance Model\n${input.governance}.\n\n## Risks + Disclaimers\nThis is not financial advice. ${jurisdictionalNote(input.jurisdiction)}${disclaimer}\n`;
-}
 
 function jurisdictionalNote(j: string) {
   switch (j) {
@@ -441,7 +438,6 @@ function jurisdictionalNote(j: string) {
     default:
       return 'Intended strictly for utility use.';
   }
-}
 
 function DistributionDonut({ data }: { data: DistributionItem[] }) {
   // Simple textual donut placeholder until a chart lib is added
@@ -463,7 +459,6 @@ function DistributionDonut({ data }: { data: DistributionItem[] }) {
       ))}
     </div>
   );
-}
 
 function MarkdownPreview({
   markdown,
@@ -491,27 +486,4 @@ function MarkdownPreview({
       {content || markdown}
     </pre>
   );
-}
-=======
- const [generatedMarkdown, setGeneratedMarkdown] = useState<string> ('');
-const [isGenerating, setIsGenerating] = useState<boolean> (false);
-const [activeSection, setActiveSection] = useState<string> ('Executive Summary');
-return (<> <Head> <title>Tokenomics Whitepaper Generator</title> </Head> </div> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-6" > <div className="space-y-6" > <div className="rounded-lg border p-4 space-y-4" > <h2 className="font-medium" >Builder Inputs</h2> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </div> </div> </div>) ) 
-}</div> <span className="text-xs opacity-60" >Auto-updating preview</span> </div> <MarkdownPreview markdown= {
-  previewMarkdown 
-}activeSection= {
-  activeSection 
-}/> </div> </div> </div> </>) 
-}
-}function jurisdictionalNote (j: string) {
-  switch (j) {
-  case 'US': return 'The token is intended for utility purposes and not as a security within the meaning of U.S. securities laws.';
-case 'EU': return 'Designed for utility under EU frameworks, subject to MiCA and local guidelines as applicable.';
-case 'SG': return 'Intended utility token under MAS guidance, prospective purchasers should not view it as capital markets products.';
-case 'AE': return 'Intended utility token within relevant UAE free zone guidance, not an investment product.';
-default: </div>) ) 
-}</div>) 
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

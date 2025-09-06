@@ -19,8 +19,6 @@ ctx.restore ();
 }, 70%, 60%) `;
 alpha: Math.random () * 0.8 + 0.2;
 life: Math.random () * 100 + 50 
-}
-<<<<<<< HEAD
 
 const UltraFuturisticBackground2045: React.FC<
   UltraFuturisticBackground2045Props
@@ -315,20 +313,5 @@ const UltraFuturisticBackground2045: React.FC<
       </div>
     </div>
   );
-=======
-}
-});
-// Draw connecting lines between nearby particles animationRef.current = requestAnimationFrame (animate) 
-};
-animate ();
-// Handle resize window.addEventListener ('resize', handleResize);
-/> {
-  /* Floating Neon Shapes */ 
-}<motion.div /> {
-  /* Additional floating elements */ 
-}<motion.div /> {
-  /* Energy Orbs */ 
-}<motion.div /> </div> </div>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default UltraFuturisticBackground2045;

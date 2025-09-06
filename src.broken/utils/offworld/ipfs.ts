@@ -1,24 +1,19 @@
  
 }export type IpfsClientChoice = 'web3.storage' | 'pinata' | 'local-ipfs';
-}
-}
-<<<<<<< HEAD
+
 
 function env(name: string): string | undefined {
   return process.env[name] || process.env[name.toLowerCase()];
-}
 
 function bufferToStream(buffer: Buffer): Readable {
   const stream = new Readable();
   stream.push(buffer);
   stream.push(null);
   return stream;
-}
 
 export async function addJSON(content: unknown): Promise<IpfsResult> {
   const json = Buffer.from(JSON.stringify(content, null, 2));
   return addBuffer(json, 'data.json');
-}
 
 export async function addBuffer(
   buffer: Buffer,
@@ -58,7 +53,6 @@ export async function addBuffer(
   }
 
   return { cid: '', provider: 'none' };
-}
 
 export async function addDirectory(dirPath: string): Promise<IpfsResult> {
   await lazyLoadDeps();
@@ -72,12 +66,7 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
       const files: File[] = [];
       function walk(current: string, base = '') {
         const entries = fs.readdirSync(current, { withFileTypes: true });
-        for (const entry of entries) {
-          const full = path.join(current, entry.name);
-          const rel = path.posix.join(base, entry.name);
-          if (entry.isDirectory()) {
-            walk(full, rel);
-          } else {
+         else {
             const data = fs.readFileSync(full);
             files.push(new File([data], rel));
           }
@@ -101,12 +90,7 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
     const files: any[] = [];
     function* walk(dir: string, base = ''): any {
       const entries = fs.readdirSync(dir, { withFileTypes: true });
-      for (const entry of entries) {
-        const full = path.join(dir, entry.name);
-        const rel = path.posix.join(base, entry.name);
-        if (entry.isDirectory()) {
-          yield* walk(full, rel);
-        } else {
+       else {
           const content = fs.readFileSync(full);
           yield { path: rel, content };
         }
@@ -127,7 +111,6 @@ export async function addDirectory(dirPath: string): Promise<IpfsResult> {
 
   // As a last resort, try Pinata pinByHash after local add (requires prior add)
   return { cid: '', provider: 'none' };
-}
 
 export async function publishManifesto(
   topic: string,
@@ -143,13 +126,9 @@ export async function publishManifesto(
   } catch {
     return false;
   }
-}
 
 export const OFFWORLD_TOPICS = {
   manifesto: 'zion.manifesto.broadcast',
   chat: 'zion.chat.messages',
   votes: 'zion.dao.votes',
 };
-=======
-}for (const f of walk (dirPath) ) files.push (f);
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

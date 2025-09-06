@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
@@ -75,8 +74,4 @@ const NewProposal: NextPage = () => {
   );
 };
 
-=======
- return (<div> <Head> <title>New Proposal - Zion AI Marketplace</title> </Head> <h1 className="text-2xl font-semibold mb-4" >Create Proposal</h1> </label> </div> <div className="mt-6 flex items-center justify-between" > <h2 className="text-lg font-semibold" >Proposal / Cover Letter</h2> <AIAssistant </div>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default NewProposal;

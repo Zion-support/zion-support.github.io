@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { SkillCategoryProps } from './types';
 import { SkillItem } from './SkillItem';
 
@@ -24,16 +23,4 @@ export const SkillCategory = ({
       </div>
     </div>
   );
-=======
- <SkillItem key= {
-  skill.id 
-}skill= {
-  skill 
-}category= {
-  category 
-}onDelete= {
-  onDelete 
-}/>) ) 
-}</div> </div>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

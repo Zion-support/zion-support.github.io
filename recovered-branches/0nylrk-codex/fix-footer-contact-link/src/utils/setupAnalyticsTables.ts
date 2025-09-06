@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 
 export async function ensureAnalyticsTablesExist() {
@@ -17,7 +16,6 @@ export async function ensureAnalyticsTablesExist() {
     console.warn('Error checking if analytics tables exist:', error);
     // No need to create tables here, as this could be a connection error
   }
-}
 
 async function createAnalyticsTables() {
   try {
@@ -87,16 +85,7 @@ async function createAnalyticsTables() {
     console.error('Error creating analytics tables:', error);
     // Tables creation failed, but we can still continue
   }
-=======
- //Check if analytics events table exists const {
-  error 
-}= await supabase .from ('analytics events') .select ('id') .limit (1);
-}
-}catch (error) {
-  console.warn ('Error checking if analytics tables exist:', error);
-//No need to create tables here, as this could be a connection error 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }async function createAnalyticsTables () {
   try {
   //Create analytics events table await supabase.rpc ('exec', {
@@ -107,5 +96,4 @@ CREATE INDEX IF NOT EXISTS analytics events created at idx ON public.analytics e
 }catch (error) {
   console.error ('Error creating analytics tables:', error);
 // Tables creation failed, but we can still continue 
-}
-}
+

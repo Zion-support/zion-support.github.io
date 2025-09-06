@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 
@@ -12,7 +11,6 @@ interface UltraFuturisticBackground2038Props {
     | 'space'
     | 'consciousness';
   children?: React.ReactNode;
-}
 
 export default function UltraFuturisticBackground2038({
   intensity = 'medium',
@@ -586,31 +584,18 @@ export default function UltraFuturisticBackground2038({
       {children}
     </div>
   );
-=======
- resizeCanvas ();
-window.addEventListener ('resize', resizeCanvas);
-// Enhanced theme-based color schemes for 2038 const getThemeColors = () => {
-  switch (theme) {
-  case 'consciousness': return {
-  
-}
-};
-Math.random () > 0.5 ? 'quantum-field' : Math.random () > 0.3 ? 'hologram' : 'particle';
-particles.push ({
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 // Enhanced animation loop with consciousness and quantum effects 
-}
-}
-}
+
+
+
 }// Update and draw particles // Quantum entanglement effects if (particle.type === 'quantum-field') {
   particles.forEach ( (otherParticle, otherIndex) => {
   if (index !== otherIndex && Math.random () > 0.99) {
   
-}
-}
+
+
 }) 
 }// Consciousness wave effects ctx.strokeRect (particle.x - hologramSize / 2;
 particle.y - hologramSize / 2;
@@ -635,4 +620,3 @@ animate ();
 }</div> {
   children 
 }</div>) 
-}

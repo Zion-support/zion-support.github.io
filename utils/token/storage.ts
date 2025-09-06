@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { TokenConfig, TokenTransaction, Wallet } from './types';
@@ -11,17 +10,7 @@ export interface TokenStoreData {
   wallets: Record<string, Wallet>;
   transactions: TokenTransaction[];
   config: TokenConfig;
-=======
- this.data = fromDisk ?? {
-  wallets: {
-  
-};
-transactions: [];
-config: DEFAULT TOKEN CONFIG 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
-<<<<<<< HEAD
+
 
 function readFromDisk(): TokenStoreData | null {
   try {
@@ -33,14 +22,12 @@ function readFromDisk(): TokenStoreData | null {
   } catch {
     return null;
   }
-}
 
 function writeToDisk(data: TokenStoreData): void {
   try {
     ensureDataDir();
     fs.writeFileSync(STORE_FILE, JSON.stringify(data, null, 2), 'utf8');
   } catch {}
-}
 
 class InMemoryTokenStore {
   private data: TokenStoreData;
@@ -61,7 +48,6 @@ class InMemoryTokenStore {
   save(): void {
     writeToDisk(this.data);
   }
-}
 
 const store = new InMemoryTokenStore();
 
@@ -96,7 +82,4 @@ export const tokenStore = {
     if (!userId) return txs;
     return txs.filter(t => t.userId === userId);
   },
-=======
-}return wallets[userId] 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

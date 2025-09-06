@@ -5,13 +5,11 @@ interface Notification {
   type: 'success' | 'error' | 'warning' | 'info';
   message: string;
   title?: string;
-}
 
 interface NotificationSystemProps {
   notifications: Notification[];
   onDismiss?: (notificationId: string) => void;
   className?: string;
-}
 
 const NotificationSystem: React.FC<NotificationSystemProps> = ({
   notifications;

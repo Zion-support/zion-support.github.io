@@ -1,7 +1,5 @@
  let pool: Pool | null = null;
 }return pool 
-}
-<<<<<<< HEAD
 
 export async function withUser<T>(
   userId: string,
@@ -22,7 +20,3 @@ export async function withUser<T>(
   } finally {
     client.release();
   }
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

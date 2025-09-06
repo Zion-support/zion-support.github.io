@@ -5,12 +5,7 @@ import { FileText, Shield, AlertCircle, Scale, Mail, Phone, MapPin } from 'lucid
 import Layout from './components/Layout';
 
 export default function TermsPage() {
-  return (
-    <Layout
-      title="Terms of Service - Zion Tech Group"
-      description="Zion Tech Group's terms of service outlining the rules and regulations for using our services."
-      keywords="terms of service, user agreement, service terms, legal terms"
-      canonical="https://ziontechgroup.com/terms"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -161,4 +156,3 @@ export default function TermsPage() {
       </div>
     </Layout>
   );
-}

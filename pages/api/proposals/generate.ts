@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { OpenAI } from 'openai';
 import { createProposal } from '../../../utils/data/proposals';
@@ -58,9 +57,3 @@ export default async function handler(
       .status(500)
       .json({ error: error?.message || 'Failed to generate proposal' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

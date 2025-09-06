@@ -3,4 +3,3 @@ export type UnitSystem = 'metric' | 'imperial';
   return unit === 'imperial' ? `$ {
   kgToLbs (weightKg) .toFixed (1) 
 }lb` 
-}

@@ -1,5 +1,5 @@
 //Zion Tech Group Website JavaScript 
-}
+
 }) 
 });
 //Add scroll effects to elements const observer = new IntersectionObserver (function (entries) {
@@ -14,7 +14,7 @@
   entries.forEach (entry => {
   if (entry.isIntersecting) {
   
-}
+
 }) 
 }//Newsletter subscription submitBtn.disabled = true;
 //Simulate subscription (replace with actual API call) //Reset form this.reset ();
@@ -34,23 +34,23 @@
 {
   title: 'Quantum Computing Services', url: '/services/quantum-computing' 
 }].filter (item => item.title.toLowerCase () .includes (query) );
-}
-}
+
+
 }//Counter animation //Close modal on overlay click modals.forEach (modal => {
   modal.addEventListener ('click', function (e) {
   if (e.target === this) {
   
-}
+
 });
 //Close modal on escape key document.addEventListener ('keydown', function (e) {
   if (e.key === 'Escape') {
   modals.forEach (modal => {
   if (modal.classList.contains ('active') ) {
   
-}
+
 }) 
 }//Performance monitoring 
-}
+
 }//Error tracking window.addEventListener ('error', function (e) {
   console.error ('JavaScript Error:', e.error);
 //Send to error tracking service 
@@ -70,6 +70,6 @@ title: document.title
 button class: e.target.className;
 page: window.location.pathname 
 }) 
-}
+
 });
 // Log performance when page is fully loaded window.addEventListener ('load', logPerformance);

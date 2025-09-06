@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { randomUUID } from 'crypto';
 import { tokenStore } from './storage';
 import { TokenTransaction, WalletSummary } from './types';
@@ -8,7 +7,6 @@ export function getWalletSummary(userId: string): WalletSummary {
   const transactions = tokenStore.getTransactions(userId);
   const config = tokenStore.getConfig();
   return { wallet, transactions, config };
-}
 
 export function earnTokens(
   userId: string,
@@ -31,7 +29,6 @@ export function earnTokens(
   };
   tokenStore.addTransaction(tx);
   return tx;
-}
 
 export function burnTokens(
   userId: string,
@@ -55,7 +52,6 @@ export function burnTokens(
   };
   tokenStore.addTransaction(tx);
   return tx;
-}
 
 export function issueTokens(
   userId: string,
@@ -65,7 +61,6 @@ export function issueTokens(
   const tx = earnTokens(userId, amount, reason);
   tx.type = 'issue';
   return tx;
-}
 
 export function revokeTokens(
   userId: string,
@@ -75,7 +70,6 @@ export function revokeTokens(
   const tx = burnTokens(userId, amount, reason);
   tx.type = 'revoke';
   return tx;
-}
 
 export function handleAction(
   userId: string,
@@ -86,7 +80,6 @@ export function handleAction(
   const amount = earnRules[action];
   if (!amount) throw new Error('Unknown action');
   return earnTokens(userId, amount, action, metadata);
-}
 
 export function burnForFeature(
   userId: string,
@@ -97,7 +90,6 @@ export function burnForFeature(
   const amount = burnRules[feature];
   if (!amount) throw new Error('Unknown feature');
   return burnTokens(userId, amount, feature, metadata);
-}
 
 export function redeemToCredits(
   userId: string,
@@ -108,23 +100,15 @@ export function redeemToCredits(
   tx.type = 'redeem';
   const usd = parseFloat((amount * usdPerToken).toFixed(2));
   return { tx, usd };
-}
 
 export function getAllTransactions() {
   return tokenStore.getTransactions();
-}
 
 export function getConfig() {
   return tokenStore.getConfig();
-}
 
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>
 ): void {
   const current = tokenStore.getConfig();
   tokenStore.setConfig({ ...current, ...partial });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Rocket, ShieldCheck, BadgeCheck } from 'lucide-react';
 
@@ -44,8 +43,3 @@ export default function ServicesPage() {
       </div>
     </EnhancedLayout>
   );
-}
-=======
- export default function ServicesPage () {
-  return (<EnhancedLayout> <h1 className="text-2xl font-semibold" >Services</h1> <div className="mt-6 grid md:grid-cols-3 gap-6" > <section id="mvp" className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <Rocket className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >MVP Acceleration</div> <p className="mt-1 text-sm opacity-80" >Dedicated squads to launch your MVP in weeks with tight feedback cycles.</p> </section> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

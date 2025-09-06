@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 export interface RateLimitConfig {
   requestsPerMinute: number;
   requestsPerHour: number;
   requestsPerDay: number;
   burstLimit: number;
   windowSize: number;
-}
 
 export interface RateLimitRule {
   id: string;
@@ -16,7 +14,6 @@ export interface RateLimitRule {
   enabled: boolean;
   createdAt: Date;
   updatedAt: Date;
-}
 
 export interface RateLimitStats {
   endpoint: string;
@@ -30,7 +27,6 @@ export interface RateLimitStats {
     hour: number;
     day: number;
   };
-}
 
 export interface APIKey {
   id: string;
@@ -41,7 +37,6 @@ export interface APIKey {
   createdAt: Date;
   lastUsed: Date;
   isActive: boolean;
-}
 
 export interface RateLimitViolation {
   id: string;
@@ -52,7 +47,6 @@ export interface RateLimitViolation {
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
   ipAddress: string;
   userAgent: string;
-}
 
 export class APIRateLimiterService {
   private apiKey: string;
@@ -455,7 +449,6 @@ export class APIRateLimiterService {
       },
     };
   }
-}
 
 // Pricing tiers for the API Rate Limiter service
 export const API_RATE_LIMITER_PRICING = {
@@ -504,23 +497,15 @@ export const API_RATE_LIMITER_PRICING = {
       'SLA guarantee',
     ],
   },
-=======
- 'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 body: JSON.stringify (rule) 
 });
-return {
-  ...rule, id: `rule $ {
-  Date.now () 
+
 }`;
 createdAt: new Date ();
 updatedAt: new Date () 
-}
-}
+
+
 }return [ {
   id: 'rule 1', name: 'API Endpoints', pattern: '/api/**', method: 'ALL', config: {
   requestsPerMinute: 100, requestsPerHour: 1000, requestsPerDay: 10000, burstLimit: 50, windowSize: 60 
@@ -537,7 +522,7 @@ enabled: true;
 createdAt: new Date ();
 updatedAt: new Date () 
 }] 
-}
+
 }async updateRateLimitRule (id: string, updates: Partial<RateLimitRule>) : Promise<RateLimitRule> {
   try {
   const response = await fetch (`$ {
@@ -553,17 +538,14 @@ updatedAt: new Date ()
 };
 body: JSON.stringify (updates) 
 });
-return [ {
-  endpoint: '/api/users', method: 'GET', totalRequests: 15420, blockedRequests: 234, averageResponseTime: 45, lastRequest: new Date (), currentUsage: {
-  minute: 15, hour: 180, day: 1200 
-}
+
 };
 {
   endpoint: '/api/auth/login', method: 'POST', totalRequests: 8920, blockedRequests: 156, averageResponseTime: 120, lastRequest: new Date (), currentUsage: {
   minute: 8, hour: 95, day: 650 
-}
+
 }] 
-}
+
 }async createAPIKey (name: string, permissions: string[], rateLimit: RateLimitConfig) : Promise<APIKey> {
   try {
   const response = await fetch (`$ {
@@ -575,9 +557,7 @@ return [ {
 }`;
 'Content-Type': 'application/json' 
 };
-return {
-  id: `key $ {
-  Date.now () 
+
 }`;
 name;
 key: `zion $ {
@@ -588,8 +568,8 @@ rateLimit;
 createdAt: new Date ();
 lastUsed: new Date ();
 isActive: true 
-}
-}
+
+
 }createdAt: new Date ();
 lastUsed: new Date ();
 isActive: true 
@@ -602,11 +582,11 @@ createdAt: new Date ();
 lastUsed: new Date ();
 isActive: true 
 }] 
-}
+
 }return {
   overview: {
   totalRequests, blockedRequests, activeRules: rules.filter (r => r.enabled) .length, activeAPIKeys: apiKeys.filter (k => k.isActive) .length 
 };
 topEndpoints: stats .sort ( (a, b) => b.totalRequests - a.totalRequests) .slice (0, 5) 
-}
+
 }// Pricing tiers for the API Rate Limiter service 

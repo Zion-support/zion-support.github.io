@@ -14,7 +14,7 @@ import {
   Target,
   Heart,
   FileText,
-  Settings
+  Settings;
 } from 'lucide-react';
 
 const accessibilityFeatures = [
@@ -166,10 +166,7 @@ const accessibilityGuidelines = [
 ];
 
 export default function AccessibilityPage() {
-  return (
-    <MainLayout
-      title="Accessibility - Zion Tech Group"
-      description="Learn about Zion Tech Group's commitment to web accessibility and our compliance with WCAG 2.1, Section 508, and ADA standards."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-purple-900 via-indigo-900 to-blue-900 text-white py-20">
@@ -212,14 +209,7 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {accessibilityFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                
                   >
                     <div className="flex items-start space-x-4">
                       <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -269,14 +259,7 @@ export default function AccessibilityPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {standardsCompliance.map((standard, index) => {}
                 const IconComponent = standard.icon;}
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-purple-500 to-blue-600 rounded-lg flex items-center justify-center mx-auto mb-4">
                       <IconComponent className="w-8 h-8 text-white" />
@@ -457,4 +440,3 @@ export default function AccessibilityPage() {
         </section>`
       </div>`
     </MainLayout>`
-}

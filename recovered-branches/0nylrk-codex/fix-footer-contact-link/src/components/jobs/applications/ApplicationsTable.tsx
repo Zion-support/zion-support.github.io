@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar } from '@/components/ui/avatar';
@@ -10,7 +9,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { ApplicationActions } from './ApplicationActions';
 import { StatusBadge } from './StatusBadge';
@@ -25,7 +24,6 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
-}
 
 export function ApplicationsTable({
   applications,
@@ -148,37 +146,7 @@ export function ApplicationsTable({
       />
     </>
   );
-}
-=======
- import {
-  Table;
-TableBody;
-TableCell;
-TableHead;
-TableHeader;
-TableRow interface ApplicationsTableProps {
-  applications: JobApplication[];
-processingId: string | null;
-onViewApplication: (applicationId: string) => Promise<void>;
-onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
-onViewScore: (application: JobApplication) => void 
-}export function ApplicationsTable ({
-  applications;
-processingId;
-onViewApplication;
-onStatusChange;
-onViewScore 
-}: ApplicationsTableProps) {
-  const [hireModalOpen, setHireModalOpen] = useState (false);
-const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
-const handleHireClick = (application: JobApplication) => {
-  setSelectedApplication (application);
-setHireModalOpen (true) 
-};
-//This will be called after the hire confirmation is completed toast ({
-  
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <Table> <TableHeader> <TableRow> <TableHead>Candidate</TableHead> <TableHead className="hidden md:table-cell" >Applied</TableHead> <TableHead className="hidden md:table-cell" >Status</TableHead> <TableHead className="hidden lg:table-cell" >Match Score</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {
+
   applications.map ( (application) => (<TableRow key= {
   application.id 
 }> <TableCell> />) : (<User className="h-4 w-4" />) 
@@ -207,5 +175,3 @@ setHireModalOpen (true)
 }onConfirm= {
   handleHireConfirmed 
 }/> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { format } from 'date-fns';
@@ -16,7 +15,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import {
@@ -28,7 +27,7 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
+  AlertDialogTrigger,;
 } from '@/components/ui/alert-dialog';
 import { Avatar } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -46,7 +45,7 @@ import {
   MessageSquare,
   Video,
   User,
-  XCircle,
+  XCircle,;
 } from 'lucide-react';
 
 function ProjectDetailsContent() {
@@ -736,46 +735,7 @@ function ProjectDetailsContent() {
       <Footer />
     </>
   );
-=======
- import {
-  Card;
-CardContent;
-CardDescription;
-CardFooter;
-CardHeader;
-import {
-  Tabs;
-TabsContent;
-TabsList;
-import {
-  AlertDialog;
-AlertDialogAction;
-AlertDialogCancel;
-AlertDialogContent;
-AlertDialogDescription;
-AlertDialogFooter;
-AlertDialogHeader;
-AlertDialogTitle;
-import {
-  AlertCircle;
-Calendar;
-CheckCircle2;
-Clock;
-FileText;
-Layers;
-MessageSquare;
-Video;
-User;
-//useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. //Load project data if (projectData) {
-  setProject (projectData);
-//Now fetch notes 
-}setIsLoading (false) 
-}loadProject () 
-}, [projectId]);
-.select (`*;
-created by profile:profiles!user id (display name, avatar url) `) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleSubmitNote = async () => {
   if (!newNote.trim () || !project || !user) return;
@@ -784,7 +744,7 @@ try {
 //Refresh notes 
 }finally {
   setIsSubmittingNote (false) 
-}
+
 };
 const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return;
@@ -797,8 +757,8 @@ status: newStatus
 //If offer was accepted, show a special toast if (newStatus === "offer accepted") {
   toast ({
   
-}
-}
+
+
 };
 case "offer accepted": return <Badge className="bg-green-100 text-green-800">Offer Accepted</Badge>;
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>;
@@ -808,7 +768,7 @@ case "canceled": return <Badge variant="destructive">Canceled</Badge>;
 default: return <Badge variant="outline"> {
   status 
 }</Badge> 
-}
+
 };
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4" /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick= {
   () => navigate ("/dashboard") 

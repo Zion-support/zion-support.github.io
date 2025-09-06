@@ -7,4 +7,3 @@ export default function App(): JSX.Element {
       <p>Welcome to our application</p>
     </main>
   );
-}

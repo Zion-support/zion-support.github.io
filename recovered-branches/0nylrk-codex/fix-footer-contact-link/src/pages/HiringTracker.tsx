@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { AppHeader } from '@/layout/AppHeader';
@@ -56,7 +55,6 @@ function HiringTrackerContent() {
       <Footer />
     </>
   );
-}
 
 export default function HiringTracker() {
   return (
@@ -64,9 +62,3 @@ export default function HiringTracker() {
       <HiringTrackerContent />
     </ProtectedRoute>
   );
-}
-=======
- Hiring Tracker | Zion AI Marketplace"description=" Manage your candidate pipeline in the Zion AI Marketplace."/> <AppHeader /> <main className=" container mx-auto px-4 py-8"> <div className=" flex justify-between items-center mb-8"> <div> <h1 className=" text-3xl font-bold flex items-center"> <Briefcase className=" mr-2 h-6 w-6 text-primary"/> Hiring Pipeline </h1> <p className=" text-muted-foreground mt-1"> Track and manage your candidates through the hiring process </p> </div> </div> <TabsList> <TabsTrigger value=" kanban">Kanban Board</TabsTrigger> <TabsTrigger value=" analytics" >Analytics</TabsTrigger> </TabsList> </TabsContent> </Tabs> </main> <Footer /> </>) 
-}export default function HiringTracker () {
-  return (<ProtectedRoute> <HiringTrackerContent /> </ProtectedRoute> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

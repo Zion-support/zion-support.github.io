@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import type { UserProfile } from '@/types/auth';
 
@@ -18,8 +17,4 @@ export function useAuthState() {
     onboardingStep,
     setOnboardingStep,
   };
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 /** * Custom hook to manage auth state */ 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

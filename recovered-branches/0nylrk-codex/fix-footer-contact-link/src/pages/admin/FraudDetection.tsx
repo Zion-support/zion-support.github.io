@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { AppLayout } from '@/layout/AppLayout';
 import { SEO } from '@/components/SEO';
@@ -14,7 +13,7 @@ import {
   FraudStatsCards,
   FraudFilters,
   FraudFlagsTable,
-  FraudTabContent,
+  FraudTabContent,;
 } from '@/components/admin/fraud-detection';
 
 export default function FraudDetection() {
@@ -252,31 +251,7 @@ export default function FraudDetection() {
       </div>
     </AppLayout>
   );
-=======
- //Import refactored components import {
-  FraudStatsCards;
-FraudFilters;
-FraudFlagsTable;
-FraudTabContent const [stats, setStats] = useState<FraudStats> ({
-  total flags: 0;
-pending flags: 0;
-suspicious count: 0;
-dangerous count: 0;
-false positives: 0;
-actioned count: 0 
-});
-//Fetch fraud flags const fetchFraudFlags = async () => {
-  setIsLoading (true);
-try {
-  const {
-  data, error 
-}= await supabase setFlags (data || []);
-setFilteredFlags (data || []);
-//Calculate stats 
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 useEffect ( () => {
   fetchFraudFlags () 
@@ -292,14 +267,13 @@ result = result.filter ( (flag) => flag.user email?.toLowerCase () .includes (qu
   result = result.filter ( (flag) => flag.severity === severityFilter) 
 }//Apply content type filter if (contentTypeFilter) {
   result = result.filter ( (flag) => flag.content type === contentTypeFilter) 
-}
+
 }, [flags, searchQuery, statusFilter, severityFilter, contentTypeFilter]);
 }catch (error) {
   toast ({
   title: "Error", description: "Failed to update flag", variant: "destructive" 
 });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13 
-}
+
 };
 const hasFilters = !! (searchQuery || statusFilter || severityFilter || contentTypeFilter);
 Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detection alerts on the Zion AI Marketplace"/> <div className=" container mx-auto px-4 py-8"> <div className=" flex flex-col md:flex-row items-start md:items-center justify-between mb-8"> <div> <h1 className=" text-3xl font-bold bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent"> Fraud Detection </h1> <p className=" text-zion-slate-light mt-2"> Monitor suspicious activities and protect the marketplace from fraud and abuse </p> </div> <div className=" mt-4 md:mt-0"> <Button > Refresh Data </Button> </div> </div> {
@@ -337,4 +311,3 @@ Fraud Detection | Admin Dashboard"description=" Monitor and manage fraud detecti
 }onAction= {
   handleAction 
 }/> </CardContent> </Card> </TabsContent> <TabsContent value=" pending"> <FraudTabContent tabValue=" pending"/> </TabsContent> <TabsContent value=" dangerous"> <FraudTabContent tabValue=" dangerous"/> </TabsContent> <TabsContent value=" actioned"> <FraudTabContent tabValue=" actioned" /> </TabsContent> </Tabs> </div> </AppLayout>) 
-}

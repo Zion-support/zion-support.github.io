@@ -24,4 +24,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     // fall through to GitHub
     res.status(200).json({ logs: [] });
   }
-}

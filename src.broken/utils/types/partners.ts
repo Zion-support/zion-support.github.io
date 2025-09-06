@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type UseCaseType =
   | 'Education Partnership'
   | 'Workforce Development'
@@ -11,12 +10,10 @@ export interface PartnerPointOfContact {
   name: string;
   email: string;
   phone?: string;
-}
 
 export interface PartnerBrand {
   primaryColorHex?: string;
   logoUrl?: string;
-}
 
 export interface PartnerRecord {
   id: string;
@@ -29,7 +26,6 @@ export interface PartnerRecord {
   apiKeyId?: string;
   createdAt: string;
   updatedAt: string;
-}
 
 export interface ApiKeyRecord {
   id: string;
@@ -40,7 +36,6 @@ export interface ApiKeyRecord {
   lastUsedAt?: string;
   rateLimitPerMinute?: number; // default 60
   monthlyQuota?: number; // optional cap
-}
 
 export interface UsageEntry {
   timestamp: string; // ISO
@@ -49,13 +44,11 @@ export interface UsageEntry {
   endpoint: string;
   statusCode: number;
   latencyMs?: number;
-}
 
 export interface UsageSummary {
   totalRequests: number;
   byEndpoint: Record<string, number>;
   byMonth: Record<string, number>; // YYYY-MM => count
-}
 
 export interface JwtPayload {
   sub: string; // partnerId
@@ -65,7 +58,3 @@ export interface JwtPayload {
   useCaseType: UseCaseType;
   iat: number;
   exp: number;
-}
-=======
-export type UseCaseType = 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

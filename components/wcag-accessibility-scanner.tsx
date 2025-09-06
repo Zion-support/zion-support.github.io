@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
@@ -95,11 +94,3 @@ export default function WCAGScannerPage() {
       </div>
     </UltraAdvancedFuturisticBackground>
   );
-}
-=======
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-  service.name 
-}- Zion Tech Group</title>) ) 
-}</ul> </div> <div className="bg-black/30 rounded-2xl border border-blue-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

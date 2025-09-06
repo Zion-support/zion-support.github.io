@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs-extra';
 import path from 'path';
 import { createClient } from '@supabase/supabase-js';
@@ -10,7 +9,7 @@ import {
   MonthlyReport,
   MonitoredSource,
   PrivacySettings,
-  StoredFraudRecord,
+  StoredFraudRecord,;
 } from './types';
 
 const dataDir = path.resolve(process.cwd(), 'data/fraud');
@@ -24,29 +23,11 @@ function ensureFiles() {
   if (!fs.existsSync(actionsPath)) fs.writeFileSync(actionsPath, '');
   if (!fs.existsSync(privacyPath))
     fs.writeFileSync(privacyPath, JSON.stringify({}));
-=======
- .from ('fraud events') .select ('id, createdAt') .eq ('ipAddress', ip) .eq ('source', source) .gte ('createdAt', new Date (since) .toISOString () );
-return (data?.length ?? 0) 
-}let events: StoredFraudRecord[] = [];
-if (isSupabaseConfigured () ) {
-  return text .split ('\n') .filter (Boolean) .map ( (line) => {
-  try {
-  
-}) .filter (Boolean) as StoredFraudRecord[] 
-}return text .split ('\n') .filter (Boolean) .map ( (line) => {
-  try {
-  
-}) .filter (Boolean) as AdminActionRecord[] 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
-<<<<<<< HEAD
 
 function getSupabaseAdmin() {
   const url = process.env.SUPABASE_URL!;
   const key = process.env.SUPABASE_SERVICE_ROLE!;
   return createClient(url, key, { auth: { persistSession: false } });
-}
 
 export class FraudStore {
   async saveEvent(
@@ -286,12 +267,7 @@ export class FraudStore {
     const falsePositives = actions.filter(a => a.action === 'IGNORE').length;
 
     const reasonCounts: Record<string, number> = {};
-    for (const e of events) {
-      for (const r of e.heuristic.reasons)
-        reasonCounts[r] = (reasonCounts[r] || 0) + 1;
-      if (e.gpt?.reason)
-        reasonCounts[e.gpt.reason] = (reasonCounts[e.gpt.reason] || 0) + 1;
-    }
+    
     const topReasons = Object.entries(reasonCounts)
       .sort((a, b) => b[1] - a[1])
       .slice(0, 10)
@@ -337,11 +313,9 @@ export class FraudStore {
       })
       .filter(Boolean) as AdminActionRecord[];
   }
-}
 
 export function getFraudStore(): FraudStore {
   return new FraudStore();
-}
 
 export function newEvent(
   partial: Partial<FraudEvent> & Pick<FraudEvent, 'source'>
@@ -356,7 +330,3 @@ export function newEvent(
     ipAddress: partial.ipAddress ?? null,
     createdAt: partial.createdAt ?? new Date().toISOString(),
   };
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

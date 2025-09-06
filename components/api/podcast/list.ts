@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -15,7 +14,6 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage();
@@ -29,8 +27,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     audio: e.audio || {},
   }));
   return res.status(200).json({ episodes: simplified });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

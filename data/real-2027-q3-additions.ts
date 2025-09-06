@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const real2027Q3Additions = [
   {
     id: 'it-asset-discovery-agent',
@@ -324,6 +323,3 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.',
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

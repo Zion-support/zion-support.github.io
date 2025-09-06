@@ -19,20 +19,15 @@ return true;
   error.message 
 }`);
 return false;
-}
+
 }//Function to get all files recursively function getAllFiles (dir, extensions) {
   let files = [];
 try {
   const items = fs.readdirSync (dir);
-for (const item of items) {
-  const fullPath = path.join (dir, item);
-const stat = fs.statSync (fullPath);
-if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {
-  files = files.concat (getAllFiles (fullPath, extensions) ) 
-}else if (extensions.some (ext => item.endsWith (ext) ) ) {
+else if (extensions.some (ext => item.endsWith (ext) ) ) {
   files.push (fullPath) 
-}
-}
+
+
 }catch (error) {
   //Skip directories that can't be read 
 }return files;
@@ -40,17 +35,9 @@ if (stat.isDirectory () && !item.startsWith ('.') && item !== 'node modules') {
   console.log ('🔍 Scanning for merge conflicts...');
 const files = getAllFiles (process.cwd (), ['.tsx.ts.jsx.js', '.json.md']);
 let fixedCount = 0;
-for (const file of files) {
-  try {
-  const content = fs.readFileSync (file, 'utf8');
-if (content.includes ('<<<<<<< HEAD') || content.includes ('=======') || content.includes ('>>>>>>>') ) {
-  if (fixMergeConflicts (file) ) {
-  fixedCount++ 
-}
-}
-}catch (error) {
+catch (error) {
   // Skip files that can't be read 
-}
+
 }console.log (`✅ Fixed merge conflicts in $ {
   fixedCount 
 }files`);

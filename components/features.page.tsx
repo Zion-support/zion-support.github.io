@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import { Bot, Globe2, MonitorSmartphone } from 'lucide-react';
 
@@ -31,8 +30,3 @@ export default function FeaturesPage() {
       </div>
     </EnhancedLayout>
   );
-}
-=======
- export default function FeaturesPage () {
-  return (<EnhancedLayout> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <Bot className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >AI Matching</div> <p className="mt-1 text-sm opacity-80" >Instantly surface best-fit candidates for your role.</p> </div> <div className="rounded-2xl border border-gray-200 dark:border-gray-800 p-6 bg-white dark:bg-gray-950" > <MonitorSmartphone className="h-6 w-6 text-indigo-500" /> <div className="mt-3 text-lg font-semibold" >Mobile Milestones</div> <p className="mt-1 text-sm opacity-80" >Track deliverables and approvals anywhere.</p> </div> </div> </EnhancedLayout> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

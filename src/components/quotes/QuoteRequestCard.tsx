@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import {
@@ -6,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
+  CardDescription,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { QuoteStatusBadge } from '@/components/quotes/QuoteStatusBadge';
@@ -15,25 +14,16 @@ import {
   MessageSquare,
   ArchiveIcon,
   RefreshCw,
-  CalendarIcon,
+  CalendarIcon,;
 } from 'lucide-react';
 import type { QuoteRequest } from '@/types/quotes';
 
 type QuoteRequestCardProps = {
-=======
- import {;
-  Card;
-CardContent;
-CardHeader;
-CardTitle;
-CardDescription type QuoteRequestCardProps = {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   quote: QuoteRequest;
 onViewDetails: (quote: QuoteRequest) => void;
 onMarkAsResponded?: (id: string) => void;
 onToggleArchive: (id: string, isArchived: boolean) => void ;
 };
-<<<<<<< HEAD
 
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
   quote,
@@ -50,10 +40,7 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
     }
   };
 
-  return (
-    <Card
-      key={quote.id}
-      className='bg-zion-blue-dark border border-zion-blue-light overflow-hidden'
+  
     >
       <CardHeader className='pb-2'>
         <div className='flex justify-between items-start'>
@@ -120,18 +107,5 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
       </CardContent>
     </Card>
   );
-=======
-quote, onViewDetails, onMarkAsResponded, onToggleArchive ;
-}) => {;
-  //Format date for display const formatDate = (dateString: string) => {;
-  try {;
-  </CardDescription> </div> <QuoteStatusBadge status= {;
-  quote.status ;
-}/> </div> </CardHeader> <CardContent> </div> <div className="flex justify-between items-center mt-4" > <Button > <Eye className="h-4 w-4" /> View Details </Button> onClick={;
-  () => onMarkAsResponded (quote.id) ";
-}className="flex items-center gap-1" > <MessageSquare className="h-4 w-4" /> Mark Responded </Button>) ";
-}<Button) : (<ArchiveIcon className="h-4 w-4" />) ;
-}</Button> </div> </div> </CardContent> </Card>) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 "

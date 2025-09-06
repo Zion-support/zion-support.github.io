@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
+  CardHeader,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { ArrowRight, Check, ExternalLink } from 'lucide-react';
@@ -17,7 +16,6 @@ interface IntegrationCardProps {
   status?: 'connected' | 'disconnected' | 'pending';
   href?: string;
   onConnect?: () => void;
-}
 
 export function IntegrationCard({
   title,
@@ -81,7 +79,6 @@ export function IntegrationCard({
       </CardFooter>
     </Card>
   );
-}
 
 export function IntegrationCards() {
   return (
@@ -89,19 +86,3 @@ export function IntegrationCards() {
       {/* Integration cards would go here */}
     </div>
   );
-}
-=======
- interface IntegrationCardProps {
-  title: string;
-description: string;
-icon: React.ReactNode;
-status?: "connected" | "disconnected" | "pending";
-href?: string;
-<span>Connected</span> </Badge>) : status === "pending" ? (<Badge variant="outline" className="bg-yellow-100 text-yellow-800" >Pending</Badge>) : (<Badge variant="outline" >Not Connected</Badge>) 
-}</div> </CardHeader> <span>Manage</span> <ExternalLink className="h-3.5 w-3.5" /> </Link> </Button>) : (<span>Connect</span> <ArrowRight className="ml-1.5 h-3.5 w-3.5" /> </Button>) 
-}</CardFooter> </Card>) 
-}{
-  /* Integration cards would go here */ 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

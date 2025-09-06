@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -6,7 +5,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   Table,
@@ -14,7 +13,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -22,7 +21,7 @@ import {
   RefreshCw,
   Play,
   CheckCircle,
-  AlertCircle,
+  AlertCircle,;
 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
@@ -30,7 +29,6 @@ import { ModelConfig } from '@/utils/zion-gpt';
 interface ModelVersionData extends ModelConfig {
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
   errorMessage?: string;
-}
 
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);
@@ -255,42 +253,7 @@ export function ZionGPTModelManager() {
       </CardContent>
     </Card>
   );
-=======
- interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
-errorMessage?: string 
-}export function ZionGPTModelManager () {
-  const [models, setModels] = useState<ModelVersionData[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-const [activeJobs, setActiveJobs] = useState< {
-  [key: string]: boolean 
-}> ({
-  
-});
-//Fetch model data on component mount useEffect ( () => {
-  fetchModels () 
-}, []);
-const fetchModels = async () => {
-  try {
-  setIsLoading (true);
-const {
-  data, error 
-}= await supabase .from ('model versions') .select ('*') .order ('createdAt', {
-  ascending: false 
-});
-//Map the data to our component state if (error) throw error;
-//Update the local model status setModels (prev => prev.map (model => model.id === modelId ? {
-  ...model, trainingStatus: data.status, errorMessage: data.error || null 
-}: model) );
-//Also update in the database await supabase .from ('model versions') .update ({
-  training status: data.status, error message: data.error || null, //If training succeeded, automatically set to active ... (data.status === 'succeeded' ? {
-  active: true 
-}: {
-  
-}) 
-}) .eq ('id', modelId) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
   try {
@@ -311,4 +274,3 @@ const toggleModelActive = async (modelId: string, currentActive: boolean, purpos
 }</TableCell> </TableRow>) ) 
 }</TableBody> </Table>) 
 }</CardContent> </Card>) 
-}

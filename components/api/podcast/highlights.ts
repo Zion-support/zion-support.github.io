@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -15,7 +14,6 @@ function ensureStorage() {
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
@@ -42,13 +40,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
 
   return res.status(200).json({ episode });
-}
-=======
- start: t;
-end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00' 
-}) );
-episode.highlights = highlights;
-episodes[idx] = episode;
-fs.writeFileSync (EPISODES PATH, JSON.stringify (episodes, null, 2), 'utf8');
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

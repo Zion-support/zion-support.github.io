@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Star } from 'lucide-react';
 import { ReviewStats } from '@/components/reviews/ReviewStats';
@@ -8,9 +7,6 @@ import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 interface ProfileRatingsProps {
-=======
- interface ProfileRatingsProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   userId: string;
 averageRating?: number;
 ratingCount?: number 
@@ -31,8 +27,6 @@ const [ratingDistribution, setRatingDistribution] = useState<Record<number numbe
 reviews.forEach ( (review) => {
   if (review.rating >= 1 && review.rating <= 5) {
   distribution[review.rating] = (distribution[review.rating] || 0) + 1 
-}
-<<<<<<< HEAD
 
 export function ProfileRatings({
   userId,
@@ -119,10 +113,7 @@ export function ProfileRatings({
       </div>
     </div>
   );
-=======
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [reviews]);
 //Fetch reviews when component mounts return (<div className="space-y-6" > <div className="flex flex-col md:flex-row gap-6" > <div className="md:w-1/3" > <ReviewStats averageRating= {
   averageRating 
@@ -149,4 +140,3 @@ export function ProfileRatings({
 }onReportReview= {
   reportReview 
 }/> </TabsContent> </Tabs> </div> </div> </div>) 
-}

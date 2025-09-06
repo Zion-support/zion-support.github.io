@@ -1,12 +1,7 @@
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = | 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
-kind: | 'government id front' | 'government id back' | 'selfie' | 'business registration' | 'tax certificate' | 'proof of address' for (const req of required) {
-  if (!uploadedKinds.has (req) ) missing.push (`document:$ {
-  req 
-}`) 
-}
-<<<<<<< HEAD
+kind: "document" | 'government id back' | 'selfie' | 'business registration' | 'tax certificate' | 'proof of address' `) 
 
 export interface KycProfile {
   userId: string;
@@ -29,7 +24,6 @@ export interface KycProfile {
     action: string;
     details?: Record<string, unknown>;
   }>;
-}
 
 export function getRequiredDocuments(
   role: KycRole
@@ -47,7 +41,6 @@ export function getRequiredDocuments(
     ];
   }
   return ['government_id_front', 'government_id_back']; // talent
-}
 
 export function getOptionalDocuments(
   role: KycRole
@@ -56,13 +49,11 @@ export function getOptionalDocuments(
     return ['academic_certificate'];
   }
   return ['proof_of_address'];
-}
 
 export function canShowVerifiedBadge(profile?: KycProfile): boolean {
   return (
     !!profile && profile.status === 'approved' && profile.amlStatus !== 'match'
   );
-}
 
 export function getBadgeLabels(profile?: KycProfile): string[] {
   if (!profile) return [];
@@ -71,7 +62,6 @@ export function getBadgeLabels(profile?: KycProfile): string[] {
   if (profile.role === 'enterprise' && profile.status === 'approved')
     labels.push('Business Verified');
   return labels;
-}
 
 export function validateKycSubmission(profile: Partial<KycProfile>): {
   ok: boolean;
@@ -82,8 +72,7 @@ export function validateKycSubmission(profile: Partial<KycProfile>): {
   if (!profile.role) missing.push('role');
   const required = profile.role ? getRequiredDocuments(profile.role) : [];
   const uploadedKinds = new Set((profile.documents || []).map(d => d.kind));
-  for (const req of required) {
-    if (!uploadedKinds.has(req)) missing.push(`document:${req}`);
+  `);
   }
   if (profile.role === 'client' || profile.role === 'enterprise') {
     if (!profile.fullLegalName) missing.push('fullLegalName');
@@ -94,7 +83,3 @@ export function validateKycSubmission(profile: Partial<KycProfile>): {
       missing.push('businessRegistrationNumber');
   }
   return { ok: missing.length === 0, missing };
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

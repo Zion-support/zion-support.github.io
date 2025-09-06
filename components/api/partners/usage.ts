@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   authenticateRequest,
-  calculateUsageSummary,
+  calculateUsageSummary,;
 } from '../../../utils/api/partnerAuth';
 
 export default async function handler(
@@ -19,15 +18,3 @@ export default async function handler(
   }
   const summary = await calculateUsageSummary(auth.partner.id);
   return res.status(200).json({ summary });
-}
-=======
- 
-}const auth = await authenticateRequest (req);
-if (!auth) {
-  
-}const summary = await calculateUsageSummary (auth.partner.id);
-return res.status (200) .json ({
-  summary 
-}) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

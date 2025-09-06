@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 
@@ -6,7 +5,6 @@ function ensureAdmin(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'];
   if (!process.env.ADMIN_TOKEN) return true; // allow if not configured
   return token === process.env.ADMIN_TOKEN;
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -41,8 +39,3 @@ export default async function handler(
     }
   );
   res.status(200).json({ items });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

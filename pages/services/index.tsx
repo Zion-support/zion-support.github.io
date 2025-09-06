@@ -34,15 +34,15 @@
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8, delay: 0.4 
-}
+
 }> <h2 className="text-4xl font-bold text-white mb-6" >Ready to Get Started?</h2> <p className="text-xl text-gray-300 mb-8" > Contact us today to discuss how our services can transform your business. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-semibold rounded-full hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Contact Sales </Link> <a href="/get-started" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-semibold rounded-full hover:bg-cyan-500 hover:text-black transition-all duration-300" > Get Started </Link> </div> </motion.div> </div> </section> </div> </UltraAdvancedFuturisticBackground>) 
 }<QuoteRequestModal open= {
   modalOpen 
@@ -53,4 +53,3 @@
 }onSubmit= {
   handleSubmit 
 }/> </div>) 
-}

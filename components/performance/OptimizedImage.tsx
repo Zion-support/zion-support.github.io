@@ -1,11 +1,11 @@
-import React from 'react,
+import React from 'react,;
   alt: string;
   width?: number;
   height?: number,
   priority?: boolean,
   className?: string,
-  sizes?: string
-};
+  sizes?: string";
+};'
 export const "OptimizedImage": React.FC<OptimizedImageProps> = ({,
   src,
   alt,

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
 import type {
   CreateGrantPayload,
-  GrantApplication,
+  GrantApplication,;
 } from '../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -14,7 +13,6 @@ function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
-}
 
 function readAllGrants(): GrantApplication[] {
   ensureDir();
@@ -24,7 +22,6 @@ function readAllGrants(): GrantApplication[] {
     const raw = fs.readFileSync(full, 'utf8');
     return JSON.parse(raw) as GrantApplication;
   });
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
@@ -92,11 +89,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-}
-=======
- (status ? g.status === status : true) && (sector ? g.sector === sector : true) && (region ? g.region === region : true) && (program ? g.program === program : true) 
-}return 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

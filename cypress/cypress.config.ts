@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { defineConfig } from 'cypress';
 
 export default defineConfig({
@@ -37,13 +36,3 @@ export default defineConfig({
     toConsole: true,
   },
 });
-=======
- 
-};
-env: {
-  CYPRESS TEST USER EMAIL: process.env.CYPRESS TEST USER EMAIL || 'localtest@example.com', CYPRESS TEST USER PASSWORD: process.env.CYPRESS TEST USER PASSWORD || 'localpassword123', CYPRESS TEST USER DISPLAY NAME: process.env.CYPRESS TEST USER DISPLAY NAME || 'Local Test User', EXISTING USER EMAIL: process.env.EXISTING USER EMAIL || 'existing@test.com', EXISTING USER PASSWORD: process.env.EXISTING USER PASSWORD || 'password123', TEST USER NAME: process.env.TEST USER NAME || 'Test User', STRIPE TEST CARD: process.env.STRIPE TEST CARD || '4242424242424242' 
-};
-defaultCommandTimeout: 10000 
-};
-reporter: 'junit';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

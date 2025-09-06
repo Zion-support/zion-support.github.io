@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Control } from 'react-hook-form';
@@ -12,7 +11,6 @@ import { BasicInfoFormData } from './schema';
 
 interface PersonalInfoFieldsProps {
   control: Control<BasicInfoFormData>;
-}
 
 export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
   return (
@@ -74,24 +72,3 @@ export function PersonalInfoFields({ control }: PersonalInfoFieldsProps) {
       />
     </div>
   );
-}
-=======
- interface PersonalInfoFieldsProps {
-  control: Control<BasicInfoFormData> 
-}export function PersonalInfoFields ({
-  control 
-}: PersonalInfoFieldsProps) {
-  return (<div className="grid grid-cols-1 md:grid-cols-2 gap-6" > <FormField control= {
-  control 
-}name="fullName" render= {
-  ({
-  field 
-}) => (<FormItem> <FormLabel>Full Name</FormLabel> <FormControl> <Input placeholder="John Doe" {
-  ...field 
-}/> 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

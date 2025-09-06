@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import crypto from 'crypto';
 import { ProposalVoteEntry } from './types';
 
 export function sha256Hex(input: string): string {
   return crypto.createHash('sha256').update(input).digest('hex');
-}
 
 export function leafHashForVote(vote: ProposalVoteEntry): string {
   const canonical = JSON.stringify({
@@ -13,7 +11,6 @@ export function leafHashForVote(vote: ProposalVoteEntry): string {
     choice: vote.choice,
   });
   return sha256Hex(canonical);
-}
 
 export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
   if (!votes || votes.length === 0) return sha256Hex('EMPTY');
@@ -22,7 +19,6 @@ export function computeMerkleRootFromVotes(votes: ProposalVoteEntry[]): string {
     .sort((a, b) => a.voterId.localeCompare(b.voterId))
     .map(leafHashForVote);
   return computeMerkleRootFromLeaves(leaves);
-}
 
 export function computeMerkleRootFromLeaves(leaves: string[]): string {
   if (leaves.length === 0) return sha256Hex('EMPTY');
@@ -37,7 +33,6 @@ export function computeMerkleRootFromLeaves(leaves: string[]): string {
     layer = next;
   }
   return layer[0];
-}
 
 export function verifyVotesAgainstMerkleRoot(
   votes: ProposalVoteEntry[],
@@ -45,9 +40,3 @@ export function verifyVotesAgainstMerkleRoot(
 ): boolean {
   const root = computeMerkleRootFromVotes(votes);
   return root === merkleRoot;
-}
-=======
- 
-}return layer[0] 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

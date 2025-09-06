@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { toast } from '@/hooks/use-toast';
@@ -7,7 +6,6 @@ import * as auth from '@/services/auth';
 interface LoginFields {
   email: string;
   password: string;
-}
 
 export default function Login() {
   const navigate = useNavigate();
@@ -39,10 +37,3 @@ export default function Login() {
       <button type='submit'>Login</button>
     </form>
   );
-}
-=======
- return (<form onSubmit= {
-  handleSubmit (onSubmit) 
-}> <label> Email </label> <button type="submit" >Login</button> </form>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { SEO } from '@/components/SEO';
 import { AppLayout } from '@/layout/AppLayout';
@@ -38,7 +37,3 @@ const MobileLaunchPage: React.FC = () => {
 };
 
 export default MobileLaunchPage;
-=======
- const MobileLaunchPage: React.FC = () => {
-  return (<AppLayout> <SEO title="Get the Zion App - AI Marketplace in Your Pocket" description="Download the Zion mobile app for iOS and Android. Hire AI talent, find tech jobs, and manage projects on the go." keywords="Zion mobile app, AI talent app, tech job app, project management app, iOS app, Android app" canonical="/mobile-launch" 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

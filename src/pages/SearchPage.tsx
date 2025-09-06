@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { useRouterReady, useRouteChange } from '@/hooks/useRouterReady';
@@ -14,7 +13,6 @@ interface SearchResult {
   type: 'product' | 'service' | 'talent' | 'blog' | 'doc';
   title: string;
   description: string;
-}
 
 function highlight(text: string, term: string) {
   if (!term) return text;
@@ -34,7 +32,6 @@ function highlight(text: string, term: string) {
       )}
     </>
   );
-}
 
 export default function SearchPage() {
   const router = useRouterReady(); // Use our custom hook
@@ -256,26 +253,15 @@ export default function SearchPage() {
       </main>
     </div>
   );
-=======
- import {;
-  Tabs;
-TabsContent;
-TabsList;
-title: string;
-description: string;
-}</mark>) : (part) ) ;
-}</>) ;
-}const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Force re-render and reset state when route changes const productResults = results.filter (r => r.type === 'product' || r.type === 'service' if (urlQuery !== query) {;
   setQuery (urlQuery) ;
-}
+
 }, [router.isReady, router.query.q]), //Fixed dependency array //Fetch results when query changes useEffect ( () => {;
   if (!router.isReady) return;
 if (query.trim () ) {;
   fetchResults (query.trim () ) ;
 }else {;
   setResults ([]) ;
-}
+
 }, [router.isReady, query]), //Fixed dependency array const fetchResults = async (term: string) => {;
   if (!term.trim () ) {;
   setResults ([]);
@@ -293,8 +279,7 @@ if (data && data.results && Array.isArray (data.results) ) {;
 logErrorToProduction ('Search API response structure is not as expected:', {;
   data: data ;
 }) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }catch (error) {';
   logErrorToProduction ('Search failed:', {;
   data: error ;
@@ -302,14 +287,14 @@ logErrorToProduction ('Search API response structure is not as expected:', {;
 setResults ([]) ;
 }finally {;
   setLoading (false) ;
-}
+
 };
 const handleSubmit = (e: React.FormEvent) => {;
   e.preventDefault ();
 router.push (`/search?q=$ {;
   encodeURIComponent (query.trim () ) ;
 }`) ;
-}
+
 };
 //Add key prop to force re-render when route changes </div>) ;
 }{;

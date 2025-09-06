@@ -1,17 +1,15 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   appendLog,
   evaluateReflexes,
   readState,
-  writeState,
+  writeState,;
 } from '@/utils/zionBrain';
 
 function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req))
@@ -53,8 +51,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

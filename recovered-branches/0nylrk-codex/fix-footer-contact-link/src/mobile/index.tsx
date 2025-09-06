@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { MobileApp } from './MobileApp';
 
@@ -6,9 +5,6 @@ export { MobileApp };
 
 // Export all mobile components for potential reuse in other projects
 export * from './components/common/BottomNavigation';
-=======
- // Export all mobile components for potential reuse in other projects export * from './components/common/BottomNavigation';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export * from './components/common/MobileHeader';
 export * from './components/dashboard/ClientDashboard';
 export * from './components/dashboard/TalentDashboard';

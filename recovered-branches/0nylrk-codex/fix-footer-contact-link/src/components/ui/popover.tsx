@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import * as PopoverPrimitive from '@radix-ui/react-popover';
 
@@ -28,12 +27,3 @@ const PopoverContent = React.forwardRef<
 PopoverContent.displayName = PopoverPrimitive.Content.displayName;
 
 export { Popover, PopoverTrigger, PopoverContent };
-=======
-import * as React from "react" import * as PopoverPrimitive from "@radix-ui/react-popover" const Popover = PopoverPrimitive.Root const PopoverTrigger = PopoverPrimitive.Trigger const PopoverContent = React.forwardRef< React.ElementRef<typeof PopoverPrimitive.Content>;
-React.ComponentPropsWithoutRef<typeof PopoverPrimitive.Content>) 
-}{
-  ...props 
-}/> </PopoverPrimitive.Portal>) ) PopoverContent.displayName = PopoverPrimitive.Content.displayName export {
-  Popover, PopoverTrigger, PopoverContent 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 import { SearchSuggestion } from '@/types/search';
 
@@ -216,8 +215,6 @@ export const MAX_PRICE = Math.max(
 export const MIN_PRICE = Math.min(
   ...MARKETPLACE_LISTINGS.map(listing => listing.price || 0)
 );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Shared data source for marketplace listings export const MARKETPLACE LISTINGS: ProductListing[] = [ rating: 4.9;
 reviewCount: 58;
 featured: true;
 location: "Global";
@@ -257,7 +254,6 @@ availability: "Immediate";
 aiScore: 94 
 }];
 //Generate search suggestions based on existing listings ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return suggestions.map (text => ({
   return {
   productTypes: productTypes.map (type => ({
   label: type, value: type 
@@ -269,6 +265,5 @@ availabilityOptions: availability.map (item => ({
   label: item, value: item 
 }) );
 ratingOptions: [1, 2, 3, 4, 5] 
-}
+
 };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

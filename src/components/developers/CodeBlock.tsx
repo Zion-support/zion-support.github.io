@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Check, Copy } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 interface CodeBlockProps {
-=======
- interface CodeBlockProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   code: string;
 language?: string;
 showLineNumbers?: boolean;
@@ -25,9 +21,7 @@ setTimeout ( () => {;
   setCopied (false) ;
 }, 2000) ;
 };
-return (<div className= {;
-  cn ("relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
-className) ;
+
 }> <pre className= {";
   cn ("p-4 overflow-auto";";
 showLineNumbers && "pl-12 relative") ;
@@ -37,8 +31,6 @@ showLineNumbers && "pl-12 relative") ;
   i ";
 }className="h-6 leading-6" > {;
   i + 1 ;
-}
-<<<<<<< HEAD
 
 export function CodeBlock({
   code,
@@ -56,12 +48,7 @@ export function CodeBlock({
     }, 2000);
   };
 
-  return (
-    <div
-      className={cn(
-        'relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto',
-        className
-      )}
+  
     >
       <pre
         className={cn('p-4 overflow-auto', showLineNumbers && 'pl-12 relative')}
@@ -91,21 +78,5 @@ export function CodeBlock({
       )}
     </div>
   );
-}
 
 export default CodeBlock;
-=======
-}</div>) ;
-}> {;
-  copied ? <Check size= {;
-  16 ;
-}/> : <Copy size= {;
-  16 ;
-}/> ;
-}</button> {;
-  language ;
-}</div>) ;
-}</div>) ;
-}export default CodeBlock;
-'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

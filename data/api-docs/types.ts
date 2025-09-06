@@ -1,23 +1,19 @@
 export type HttpMethod = 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
 export type Visibility = 'public' | 'partner' | 'internal';
-<<<<<<< HEAD
 
 export interface CodeSample {
   language: 'curl' | 'javascript' | 'python';
   code: string;
-}
 
 export interface RateLimitInfo {
   tier: 'free' | 'partner' | 'internal';
   limitPerMinute: number;
   burst?: number;
-}
 
 export interface ErrorCode {
   code: string;
   httpStatus: number;
   message: string;
-}
 
 export interface EndpointSpec {
   id: string;
@@ -36,14 +32,12 @@ export interface EndpointSpec {
   errors?: ErrorCode[];
   tags?: string[];
   versions: string[]; // e.g., ['v1'] or ['v1','v2']
-}
 
 export interface SectionSpec {
   id: string;
   title: string;
   description?: string;
   endpoints: EndpointSpec[];
-}
 
 export interface ApiDocsSpec {
   product: 'Zion OS';
@@ -51,6 +45,3 @@ export interface ApiDocsSpec {
   defaultVersion: string;
   sections: SectionSpec[];
   lastUpdatedIso: string;
-}
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -19,7 +18,6 @@ function ensureDataFile(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
   if (!fs.existsSync(DB_PATH))
     fs.writeFileSync(DB_PATH, JSON.stringify({ items: [] }, null, 2), 'utf-8');
-}
 
 export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   ensureDataFile();
@@ -29,8 +27,3 @@ export function saveFeedbackFallback(rec: FeedbackRecord): FeedbackRecord {
   items.push(rec);
   fs.writeFileSync(DB_PATH, JSON.stringify({ items }, null, 2), 'utf-8');
   return rec;
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

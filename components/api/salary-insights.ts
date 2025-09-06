@@ -1,10 +1,9 @@
  
-}
+
 }const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' 
 };
-<<<<<<< HEAD
 
 type InsightResponse = {
   recommendedHourlyUsd: number;
@@ -24,7 +23,6 @@ function median(values: number[]): number {
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
-}
 
 function groupBy<T, K extends string | number>(
   items: T[],
@@ -38,12 +36,10 @@ function groupBy<T, K extends string | number>(
     },
     {} as Record<K, T[]>
   );
-}
 
 function extractCountry(location: string): string {
   const parts = location.split(',').map(p => p.trim());
   return parts[parts.length - 1] || 'Global';
-}
 
 function calculateSimilarityScore(
   targetSkills: string[],
@@ -52,7 +48,6 @@ function calculateSimilarityScore(
   const set = new Set(targetSkills.map(s => s.toLowerCase()));
   const overlap = profile.skills.filter(s => set.has(s.toLowerCase())).length;
   return overlap / Math.max(1, targetSkills.length);
-}
 
 function prng(seed: string): () => number {
   let h = 2166136261 >>> 0;
@@ -66,7 +61,6 @@ function prng(seed: string): () => number {
     h += h << 5;
     return (h >>> 0) / 4294967295;
   };
-}
 
 function buildTrend(
   baseMonthly: number,
@@ -97,7 +91,6 @@ function buildTrend(
     series.push({ label: months[date.getMonth()], value: Math.round(current) });
   }
   return series;
-}
 
 async function maybeGetGptRecommendation(
   input: RequestBody,
@@ -127,7 +120,6 @@ async function maybeGetGptRecommendation(
   } catch {
     return undefined;
   }
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -238,12 +230,3 @@ export default async function handler(
   };
 
   return res.status(200).json(response);
-}
-=======
-{
-  role: 'user', content: prompt 
-}];
-temperature: 0.2;
-return res.status (200) .json (response) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

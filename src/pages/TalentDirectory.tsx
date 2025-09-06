@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useNavigate
 import Link from 'next/link';
@@ -21,7 +20,7 @@ import {
   PaginationItem,
   PaginationButton,
   PaginationNext,
-  PaginationPrevious,
+  PaginationPrevious,;
 } from '@/components/ui/pagination';
 
 export default function TalentDirectory() {
@@ -387,75 +386,7 @@ export default function TalentDirectory() {
       </div>
     </div>
   );
-=======
- if (priceMin && priceMax) setPriceRange ([Number (priceMin), Number (priceMax) ]);
-if (expMin && expMax) ;
-}, [ router.isReady;
-searchTerm;
-selectedSkills;
-selectedAvailability;
-selectedRegions;
-priceRange;
-experienceRange;
-sortOption;
-currentPage;
-initialized]), //Fixed dependencies <TalentSkeleton /> </div>) ;
-}if (!isLoading && !error && filteredTalents.length === 0 && !searchTerm && selectedSkills.length === 0 && selectedAvailability.length === 0 && selectedRegions.length === 0 && priceRange[0] === 50 && priceRange[1] === 200 && experienceRange[0] === 0 && experienceRange[1] === 15 /> <h2 className="text-2xl font-bold text-white mb-4" > Talent Directory Currently Empty </h2> <p className="text-zion-slate-light max-w-md mx-auto mb-6" > No talent profiles are currently available. </p> <Link href="/create-talent-profile" > <Button className="bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" > Be the first to list a talent </Button> </Link> </div> </div>) ;
-}</div>) ";
-}return (<div> <h1 className="text-3xl font-bold text-white mb-2" > AI & Tech Talent Directory </h1> <p className="text-zion-slate-light" > Connect with expert AI developers, data scientists, ML engineers;
-and tech professionals for your projects. </p> </div> {";
-  isAdmin && (<Link href="/create-talent-profile" className="bg-zion-purple text-white px-4 py-2 rounded hover:bg-zion-purple-dark" > Add Talent </Link>) ;
-}</div> <FilterSidebar searchTerm= {;
-  searchTerm ;
-}setSearchTerm= {;
-  setSearchTerm ;
-}selectedSkills= {;
-  selectedSkills ;
-}toggleSkill= {;
-  toggleSkill ;
-}selectedAvailability= {;
-  selectedAvailability ;
-}toggleAvailability= {;
-  toggleAvailability ;
-}selectedRegions= {;
-  selectedRegions ;
-}toggleRegion= {;
-  toggleRegion ;
-}priceRange= {;
-  priceRange ;
-}setPriceRange= {;
-  setPriceRange ;
-}experienceRange= {;
-  experienceRange ;
-}setExperienceRange= {;
-  setExperienceRange ;
-}expandedSections= {;
-  expandedSections ;
-}toggleSection= {;
-  toggleSection ;
-}sortOption= {;
-  sortOption ;
-}setSortOption= {;
-  setSortOption ;
-}clearFilters= {;
-  clearFilters ;
-}/> </div> > Filter & Sort </Button> </div> <ErrorBoundary> <TalentResults talents= {;
-  paginatedTalents ;
-}totalCount= {;
-  total ;
-}isLoading= {;
-  isLoading ;
-}viewProfile= {;
-  viewProfile ;
-}handleRequestHire= {;
-  handleRequestHire ;
-}isAuthenticated= {;
-  isAuthenticated ;
-}activeFiltersProps= {;
-  {;
-  selectedSkills, toggleSkill, selectedAvailability, toggleAvailability, selectedRegions, toggleRegion, priceRange, setPriceRange, experienceRange,  setExperienceRange, clearFilters ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> <PaginationContent> <PaginationItem> <PaginationPrevious href= {;
   `?page=$ {;
   currentPage - 1 ;

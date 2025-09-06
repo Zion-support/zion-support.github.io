@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
 import { Avatar as AvatarPrimitive } from '@/components/ui/avatar'; // Renamed
@@ -9,7 +8,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { ApplicationActions } from './ApplicationActions';
 import { StatusBadge } from './StatusBadge';
@@ -25,7 +24,6 @@ interface ApplicationsTableProps {
   onViewApplication: (applicationId: string) => Promise<void>;
   onStatusChange: (applicationId: string, newStatus: string) => Promise<void>;
   onViewScore: (application: JobApplication) => void;
-}
 
 // Sub-component for avatar to handle its own error state
 const ApplicationAvatar = ({
@@ -166,16 +164,7 @@ export function ApplicationsTable({
       />
     </>
   );
-}
-=======
- import {;
-  Table;
-TableBody;
-TableCell;
-TableHead;
-TableHeader;
-TableRow import Image from 'next/image';
-//Import next/image >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<AvatarPrimitive className="h-8 w-8" > {;
+
   /* Using Renamed AvatarPrimitive */ ;
 }{;
   application.talent profile?.profile picture url && !avatarError ? (<Image src= {;
@@ -220,4 +209,3 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
   handleHireConfirmed ;
 }/> </>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

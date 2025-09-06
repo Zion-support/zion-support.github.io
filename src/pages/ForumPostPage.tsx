@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -18,7 +17,7 @@ import {
   Trash2,
   Pin,
   Lock,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
 import { formatDistanceToNow, format } from 'date-fns';
 import { ForumPost, ForumReply } from '@/types/community';
@@ -483,8 +482,6 @@ export default function ForumPostPage() {
       </div>
     </>
   );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Mock data for a forum post upvotes: 8;
 downvotes: 0 ;
 };
 {;
@@ -515,22 +512,16 @@ downvotes: 0 ;
   if (!user) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleDownvote = () => {;
   if (!user) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
+
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleSubmitReply = async (content: string) => {;
   if (!user) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Create a new reply const newReply: ForumReply = {;
   id: `reply$ {;
   Date.now () ;
@@ -546,21 +537,16 @@ upvotes: 0;
 downvotes: 0 ;
 };
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleMarkAsAnswer = (replyId: string) => {;
   //Only post author or admin can mark an answer if (!isAuthor && !isAdminOrMod) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Update the replies ;
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleReportPost = () => {;
   if (!user) {;
   toast ({;
   ;
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 };";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 container py-8"> <div className=" flex items-center gap-3 mb-6"> <Link href=" /community"className=" text-sm text-muted-foreground hover:text-foreground"> Forum </Link> {;
   post.authorRole ;
 }</Badge>) ;
 }</div> </div> </time> </div> </div> </Badge>) ) ;

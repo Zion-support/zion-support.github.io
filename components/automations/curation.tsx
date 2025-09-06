@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import fs from 'fs';
 import path from 'path';
 
 type Experiment = {
-=======
- type Experiment = {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   title: string;
 hypothesis?: string;
 metric?: string;
@@ -17,7 +13,6 @@ type Props = {
   updatedAt: string | null;
 items: Experiment[] 
 };
-<<<<<<< HEAD
 
 export default function CurationPage({ updatedAt, items }: Props) {
   return (
@@ -75,7 +70,6 @@ export default function CurationPage({ updatedAt, items }: Props) {
       </div>
     </main>
   );
-}
 
 export async function getStaticProps() {
   try {
@@ -103,33 +97,3 @@ export async function getStaticProps() {
       revalidate: 300,
     };
   }
-}
-=======
-export default function CurationPage ({
-  updatedAt, items 
-}: Props) {
-  return (<main className="mx-auto max-w-4xl px-4 py-12" > <h1 className="text-2xl font-bold text-gray-900" >AI Curated Growth Experiments</h1> updatedAt ? (<p className="mt-2 text-sm text-gray-600" >Last updated: {
-  updatedAt 
-}</p>) : (<p className="mt-2 text-sm text-gray-600" >No curated output yet. It will appear here automatically after the next run.</p>) 
-}</div>) 
-}</div>) ) 
-}Nothing to show yet. </div>) 
-}</div> </main>) 
-}return {
-  props: {
-  updatedAt: parsed.updatedAt || null;
-items: parsed.items || [] 
-};
-revalidate: 300 
-}
-}catch {
-  return {
-  props: {
-  updatedAt: null;
-items: [] 
-};
-revalidate: 300 
-}
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

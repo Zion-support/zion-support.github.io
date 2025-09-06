@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { appendAuditLog } from '../../../utils/api/storage';
 
@@ -13,8 +12,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     { label: 'CAC/LTV ratio', value: '1:5.6', trend: 0.4 },
   ];
   res.status(200).json(data);
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

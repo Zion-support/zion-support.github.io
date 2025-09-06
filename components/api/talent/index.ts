@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
@@ -66,9 +65,7 @@ export default async function handler(
           [item.title, item.summary, item.bio || ''].join('\n')
         );
       const translations: TalentProfile['translations'] = {};
-      for (const lang of SUPPORTED_LANGS) {
-        if (!lang || lang === originalLang) continue;
-        translations.title = translations.title || {};
+      ;
         translations.summary = translations.summary || {};
         translations.bio = translations.bio || {};
         if (item.title)
@@ -143,17 +140,3 @@ export default async function handler(
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
-}
-=======
- export default async function handler (req: NextApiRequest, res: NextApiResponse) {
-  if (req.method === 'GET') {
-  try {
-  if (hasSupabase) {
-  
-}
-}item.originalLanguage = originalLang;
-item.translations = translations;
-}
-}return res.setHeader ('AllowGET, POST') .status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

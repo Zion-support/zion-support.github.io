@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -84,10 +83,3 @@ export default function SearchFeature() {
       </main>
     </>
   );
-}
-=======
- Advanced Search"description=" Find exactly what you need with fast, filterable search powered by Elasticsearch."keywords=" search engine, filtering, tech marketplace search"canonical=" https://app.ziontechgroup.com/features/search"/> {;
-  /* Use a normal script tag so JSON-LD is correctly parsed */ ";
-}<script ></script> <Header /> <main className=" bg-background text-white py-12"> <div className=" container mx-auto px-4 md:px-6"> <GradientHeading className=" mb-4 text-center">Advanced Search</GradientHeading> <p className=" text-center text-zion-slate-light max-w-3xl mx-auto mb-8"> Filter listings by skills, price, availability and more. Our engine helps you discover relevant results instantly. </p> <div className=" relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden"> <img <li>Find the right expert or product without endless scrolling.</li> <li>Save favorite searches and get notified of new matches.</li> <li>Sort by rating, price, or recency to surface the best options.</li> </ul> <h2 className=" text-2xl font-bold mb-4">Frequently Asked Questions</h2> <div className=" space-y-4 mb-12"> <div> <p className=" font-semibold">Can I search in multiple languages?</p> <p className=" text-zion-slate-light">Yes, the search engine supports queries in all interface languages.</p> </div> <div> <p className=" font-semibold">How are results ranked?</p> <p className=" text-zion-slate-light">A combination of relevance scoring and community ratings determines the order.</p> </div> </div> <div className=" text-center"> <Button size=" lg"className=" bg-zion-purple text-white"asChild> <Link href=" /search" >Try Search</Link> </Button> </div> </div> </main> </>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -19,7 +19,7 @@ import {
   Zap,
   Shield,
   Cloud,
-  Brain
+  Brain;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -259,11 +259,7 @@ export default function CaseStudiesPage() {
     ? caseStudies 
     : caseStudies.filter(cs => cs.industry === selectedIndustry);
 
-  return (
-    <MainLayout
-      title="Case Studies - Zion Tech Group"
-      description="Explore our successful technology implementations and digital transformation projects. See how we've helped businesses achieve their goals with innovative solutions."
-      keywords="case studies, success stories, technology implementation, digital transformation, AI projects, cloud migration"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -435,14 +431,7 @@ export default function CaseStudiesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => {
                 const IconComponent = industry.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-lg shadow-lg text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                
                   >
                     <div className="text-blue-600 mb-4">
                       <IconComponent className="w-12 h-12 mx-auto" />
@@ -535,13 +524,7 @@ export default function CaseStudiesPage() {
             <div className="grid md:grid-cols-2 gap-8">
               {filteredCaseStudies.map((caseStudy, index) => {
                 const IconComponent = caseStudy.icon;
-                return (
-                  <motion.div
-                    key={caseStudy.id}
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+                
                   >
                     {/* Header */}
                     <div className="p-8 border-b border-gray-200">
@@ -669,4 +652,3 @@ export default function CaseStudiesPage() {
       </div>
     </Layout>
   );
-}

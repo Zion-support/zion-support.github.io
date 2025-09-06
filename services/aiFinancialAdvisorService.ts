@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InvestmentPortfolio {
   id: string;
   userId: string;
@@ -13,7 +12,6 @@ export interface InvestmentPortfolio {
   performance: PortfolioPerformance;
   createdAt: Date;
   updatedAt: Date;
-}
 
 export interface PortfolioAsset {
   id: string;
@@ -40,7 +38,6 @@ export interface PortfolioAsset {
     yearlyReturn: number;
     totalReturn: number;
   };
-}
 
 export interface PortfolioPerformance {
   totalReturn: number;
@@ -53,7 +50,6 @@ export interface PortfolioPerformance {
   trackingError: number;
   informationRatio: number;
   sortinoRatio: number;
-}
 
 export interface InvestmentRecommendation {
   id: string;
@@ -73,7 +69,6 @@ export interface InvestmentRecommendation {
   alternatives: string[];
   createdAt: Date;
   expiresAt: Date;
-}
 
 export interface FinancialGoal {
   id: string;
@@ -97,7 +92,6 @@ export interface FinancialGoal {
   progress: number; // percentage
   createdAt: Date;
   updatedAt: Date;
-}
 
 export interface MarketAnalysis {
   id: string;
@@ -111,7 +105,6 @@ export interface MarketAnalysis {
   confidence: number;
   lastUpdated: Date;
   nextUpdate: Date;
-}
 
 export interface FinancialPlan {
   id: string;
@@ -155,7 +148,6 @@ export interface FinancialPlan {
   };
   createdAt: Date;
   updatedAt: Date;
-}
 
 export interface FinancialRequest {
   userId: string;
@@ -167,7 +159,6 @@ export interface FinancialRequest {
     | 'goal_tracking';
   parameters: Record<string, any>;
   preferences?: Record<string, any>;
-}
 
 export interface FinancialResponse {
   success: boolean;
@@ -182,7 +173,6 @@ export interface FinancialResponse {
   nextSteps: string[];
   riskWarnings: string[];
   estimatedFees: number;
-}
 
 export class AIFinancialAdvisorService {
   private apiKey: string;
@@ -461,35 +451,7 @@ export class AIFinancialAdvisorService {
       throw error;
     }
   }
-}
 
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(
   process.env.FINANCIAL_ADVISOR_API_KEY || 'demo-key'
 );
-=======
- 
-}async getInvestmentRecommendations (userId: string, riskTolerance: string, investmentHorizon: number) : Promise<InvestmentRecommendation[]> {
-  try {
-  const response = await fetch (`$ {
-  this.baseUrl 
-}/api/financial/recommendations`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-}async createFinancialPlan (request: FinancialRequest) : Promise<FinancialPlan> {
-  try {
-  const response = await fetch (`$ {
-  this.baseUrl 
-}/api/financial/plan`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  this.apiKey 
-}`;
-'Content-Type': 'application/json' 
-};
-body: JSON.stringify (request) 
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

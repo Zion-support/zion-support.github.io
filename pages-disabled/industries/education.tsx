@@ -1,6 +1,6 @@
-import React from 'react'
-import Link from 'next/link'
-import { motion } from 'framer-motion'
+import React from 'react';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
 import {
   BookOpen, 
   Brain, 
@@ -14,8 +14,8 @@ import {
   Globe,
   Database
 } from 'lucide-react'
-import Layout from '../../components/Layout'
-
+import Layout from '../../components/Layout';
+;
 const services = [
   {
     title: 'Learning Management Systems',
@@ -87,10 +87,7 @@ const benefits = [
 ];
 
 export default function EducationPage() {
-  return (
-    <Layout
-      title="Education Technology Solutions - Zion Tech Group"
-      description="Transform education with cutting-edge technology solutions including LMS, virtual classrooms, AI tutors, and student information systems."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 text-white py-20">
@@ -215,4 +212,3 @@ export default function EducationPage() {
       </div>
     </Layout>
   )
-}

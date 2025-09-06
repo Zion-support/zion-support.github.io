@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 
 import { cn } from '@/lib/utils';
@@ -7,14 +6,7 @@ export type TextareaProps = React.ComponentProps<'textarea'>;
 
 const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
   ({ className, ...props }, ref) => {
-    return (
-      <textarea
-        className={cn(
-          'flex min-h-[80px] w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50',
-          className
-        )}
-        ref={ref}
-        {...props}
+    
       />
     );
   }
@@ -22,14 +14,3 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
 Textarea.displayName = 'Textarea';
 
 export { Textarea };
-=======
-import * as React from "react" export type TextareaProps = React.ComponentProps<"textarea" >) 
-}ref= {
-  ref 
-}{
-  ...props 
-}/>) 
-}) Textarea.displayName = "Textarea" export {
-  Textarea 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

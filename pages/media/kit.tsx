@@ -1,16 +1,15 @@
-<<<<<<< HEAD
 import { useCallback, useMemo, useState } from 'react';
 import Head from 'next/head';
 import DatePicker from 'react-datepicker';
 import type {
   MediaBundle,
   MediaAsset,
-  PressReleaseType,
+  PressReleaseType,;
 } from '../../utils/mediaKit';
 import {
   getDefaultAssets,
   buildPressRelease,
-  buildTimeline,
+  buildTimeline,;
 } from '../../utils/mediaKit';
 
 const KitPage = () => {
@@ -37,10 +36,7 @@ const KitPage = () => {
     const zip = new JSZip();
 
     // Add static/dynamic assets
-    for (const asset of assets) {
-      if (asset.type === 'text' && asset.content != null) {
-        zip.file(asset.filename, asset.content);
-      } else if (asset.type === 'binary' && asset.path) {
+     else if (asset.type === 'binary' && asset.path) {
         const res = await fetch(asset.path);
         const blob = await res.blob();
         zip.file(asset.filename, blob);
@@ -287,25 +283,4 @@ const KitPage = () => {
   );
 };
 
-=======
- //Add static/dynamic assets for (const asset of assets) {
-  if (asset.type === 'text' && asset.content != null) {
-  </div>) 
-};
-return (<div> <Head> <title>Media Kit - Zion</title> <meta name="description" content="Zion media kit: brand, assets, legal, and rollout playbooks." /> </Head> </div> </header> <button key= {
-  b 
-}onClick= {
-  () => setBundle (b) 
-}className= {
-  `px-3 py-1 rounded border $ {
-  bundle===b ? 'bg-blue-600 text-white border-blue-600':'bg-white' 
-}` 
-}> {
-  b 
-}</button> 
-}</div> <p className="text-xs text-gray-500 mt-2" >Toggle to tailor assets and legal docs.</p> </div> </ul>) 
-}</div> </section> </li>) ) 
-}</ul> </section> </div> </section> </div> </div>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default KitPage;

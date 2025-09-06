@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -13,7 +12,7 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,
+  SelectItem,;
 } from '@/components/ui/select';
 import { BlogPost } from '@/types/blog';
 import { Search } from 'lucide-react';
@@ -458,8 +457,6 @@ export default function Blog() {
       <Footer />
     </>
   );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Sample blog data - in a real app this would come from an API or CMS const BLOG POSTS: BlogPost[] = [ <h2>1. Multimodal AI Systems</h2> <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p> <h2>2. Neuromorphic Computing</h2> <p>Taking inspiration from the human brain's neural structure, neuromorphic computing represents a fundamental shift in how AI processes information. These systems consume significantly less power while delivering enhanced performance for complex tasks.</p> <h2>3. Federated Learning at Scale</h2> <p>Privacy concerns continue to drive adoption of federated learning approaches, where models are trained across multiple devices without exchanging raw data. In 2025, we're seeing enterprise-scale deployments that maintain privacy while delivering powerful insights.</p> <h2>4. Quantum AI</h2> <p>The convergence of quantum computing and AI is beginning to yield practical applications. While still in early stages, quantum-enhanced machine learning algorithms are demonstrating superior performance for specific optimization and pattern recognition problems.</p> <h2>5. AI for Climate Solutions</h2> <h2>Crafting an Irresistible Service Title</h2> <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p> <h2>Compelling Service Descriptions That Convert</h2> <p>Beyond explaining features, your description should emphasize benefits and outcomes. Use client-centered language, incorporate relevant technical terms for searchability, and structure your content with headers and bullet points for easy scanning.</p> <h2>Showcase Your Expertise with Case Studies</h2> <p>Nothing builds credibility like proven results. Include mini case studies that highlight specific problems you've solved, the approach you took, and quantifiable outcomes you achieved. This transforms abstract services into concrete value.</p> <h2>Strategic Pricing and Package Structure</h2> <p>Consider offering tiered packages that cater to different client needs and budgets. Clearly differentiate what's included in each tier, and consider adding value-based pricing elements that tie your compensation to client results.</p> <h2>Leveraging Reviews and Testimonials</h2> 
 }];
 //Categories for filtering "All Categories";
 "Trends";
@@ -541,8 +538,6 @@ Blog - AI & Tech Insights" description="Stay updated with the latest trends in A
 }` 
 }> Read More → </Link> </Button> </CardFooter> </Card>) ) 
 }</div>) : (<div className="text-center py-16"> <h3 className="text-xl font-bold text-white mb-2">No articles found</h3> <p className="text-zion-slate-light mb-6" >Try adjusting your search or filter criteria</p> <Button 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" 
 }</div> </div> <Footer /> </>) 
-}

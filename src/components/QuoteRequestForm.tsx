@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { logDebug, logErrorToProduction } from '@/utils/productionLogger';
 import { useToast } from '@/hooks/use-toast';
@@ -186,17 +185,11 @@ export function QuoteRequestForm() {
   const renderStepContent = () => {
     switch (currentStep) {
       case 'service':
-        return (
-          <ServiceTypeStep
-            formData={formData}
-            updateFormData={updateFormData}
+        
           />
         );
       case 'details':
-        return (
-          <ProjectDetailsStep
-            formData={formData}
-            updateFormData={updateFormData}
+        
           />
         );
       case 'timeline':
@@ -287,12 +280,8 @@ export function QuoteRequestForm() {
       />
     </div>
   );
-=======
- export type QuoteRequestSteps = "service" | "details" | "timeline" | "budget" | "summary";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const [isSubmitting, setIsSubmitting] = useState (false);
 const [autoFillLoading, setAutoFillLoading] = useState (false);
 const [autoFillOpen, setAutoFillOpen] = useState (false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return;";
 }setCurrentStep ("details");
 break;";
 }case "details" : setCurrentStep ("timeline");
@@ -301,9 +290,7 @@ case "timeline" : setCurrentStep ("budget");
 break;";
 case "budget" : setCurrentStep ("summary");
 break;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 default: break ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };";
 case "timeline": setCurrentStep ("details");
 break;";
@@ -311,7 +298,7 @@ case "budget": setCurrentStep ("timeline");
 break;";
 case "summary": setCurrentStep ("budget");
 break;
-}
+
 };
 const handleSubmit = async () => {;
   setIsSubmitting (true);
@@ -319,10 +306,9 @@ try {";
   //In a real application,  you would send the data to your backend logDebug ("Submitting form data:", {;
   data: formData ;
 });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13 //Simulate API call await new Promise (resolve => setTimeout (resolve, 1500) );
 }finally {;
   setIsSubmitting (false) ;
-}
+
 };
 const handleAutoFill = async (description: string) => {;
   setAutoFillLoading (true);
@@ -337,13 +323,12 @@ specificItem: itemId ? {";
 timeline: timeline || formData.timeline;
 }finally {;
   setAutoFillLoading (false) ;
-}
+
 };
 const renderStepContent = () => {;
   switch (currentStep) {;
   default: return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
+
 };";
 <GradientHeading>Request a Quote</GradientHeading> <p className="text-zion-slate-light mt-4" > Tell us about your project and we'll create a customized quote for you </p> <div className="inline-flex items-center bg-zion-blue-dark py-1 px-3 rounded-full mt-3 border border-zion-purple/20" > <Sparkles className="h-4 w-4 text-zion-cyan mr-1" /> <span className="text-sm text-white" >AI-powered matching</span> </div> <Button) ";
 }Auto Fill with AI </Button> </div> <Button variant="outline" onClick={;

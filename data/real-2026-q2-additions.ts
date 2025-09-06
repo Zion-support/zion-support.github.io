@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const real2026Q2Additions = [
   {
     id: 'ai-governance-compliance-hub',
@@ -316,8 +315,5 @@ export const real2026Q2Additions = [
     marketPosition: 'Cost-effective RMM for partners and IT teams',
     roi: 'Reduce mean-time-to-repair by 35% and manual toil by 50%',
     link: 'https://ziontechgroup.com/services/msp-remote-device-ops',
-  },
+  },;
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

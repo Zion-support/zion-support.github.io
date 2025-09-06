@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Badge } from '@/components/ui/badge';
 import { QuoteStatus } from '@/types/quotes';
 
@@ -23,22 +22,9 @@ const statusConfig: Record<QuoteStatus, { label: string; className: string }> =
 
 interface QuoteStatusBadgeProps {
   status: QuoteStatus;
-}
 
 export const QuoteStatusBadge = ({ status }: QuoteStatusBadgeProps) => {
   const config = statusConfig[status];
 
   return <Badge className={config.className}>{config.label}</Badge>;
-=======
- interface QuoteStatusBadgeProps {
-  status: QuoteStatus 
-}export const QuoteStatusBadge = ({
-  status 
-}: QuoteStatusBadgeProps) => {
-  const config = statusConfig[status];
-config.className 
-}> {
-  config.label 
-}</Badge>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

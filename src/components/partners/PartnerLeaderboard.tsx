@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { Badge } from '@/components/ui/badge';
@@ -18,7 +17,6 @@ interface LeaderboardEntry {
   referrals: number;
   earnings: number;
   badges: string[];
-}
 
 export function PartnerLeaderboard() {
   // Placeholder data - would come from API in real implementation
@@ -236,30 +234,7 @@ export function PartnerLeaderboard() {
       </Card>
     </div>
   );
-=======
- import {;
-  {;
-  {;
-  Crown,  Medal, Trophy ;
-}from 'lucide-react' interface LeaderboardEntry {;
-  id: string;
-rank: number;
-name: string;
-avatar?: string;
-referrals: number;
-earnings: number;
-badges: string[] ;
-}//Placeholder data - would come from API in real implementation const leaderboard: LeaderboardEntry[] = [ {;
-  //Function to render rank badge const renderRankBadge = (rank: number) => {;
-  switch (rank) {;
-  case 1: return <Trophy className="h-5 w-5 text-yellow-500" />;";
-case 2: return <Medal className="h-5 w-5 text-gray-400" />;";
-case 3: return <Medal className="h-5 w-5 text-amber-700" />;";
-default: return <span className="text-sm font-semibold"> {;
-  rank ;
-}</span> ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };'";
 return (<div className="space-y-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="flex items-center gap-2"> <Crown className="h-5 w-5 text-yellow-500" /> Top Partners </CardTitle> <CardDescription>This month's top-performing partners</CardDescription> </CardHeader> <CardContent> <div className="space-y-4"> {;
   leaderboard.length > 0 ? (leaderboard.map (entry => (<div key= {;

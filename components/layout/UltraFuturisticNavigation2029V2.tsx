@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -60,7 +59,7 @@ import {
   Lightbulb,
   Award,
   Clock,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
 
 const contactInfo = {
@@ -68,11 +67,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-=======
- const serviceCategories = [ {
-  title: '🚀 2029 Futuristic AI Services', icon: Brain, color: 'from-violet-600 via-purple-600 to-indigo-600', description: 'Next-generation AI consciousness and creativity', services: [ {
-  name: 'AI Consciousness Evolution Platform', href: '/services/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19, 999/month' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 {
   name: 'AI Emotional Intelligence Platform', href: '/services/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3, 999/month' 
@@ -145,7 +139,6 @@ const contactInfo = {
   /* Contact Button */ 
 }<motion.div initial= {
   {
-<<<<<<< HEAD
     title: '🚀 2029 Futuristic AI Services',
     icon: Brain,
     color: 'from-violet-600 via-purple-600 to-indigo-600',
@@ -597,27 +590,3 @@ export default function UltraFuturisticNavigation2029V2() {
       </AnimatePresence>
     </nav>
   );
-}
-=======
-  opacity: 0, scale: 0.8 
-}
-}animate= {
-  {
-  opacity: 1, scale: 1 
-}
-}transition= {
-  {
-  duration: 0.5, delay: 0.5 
-}
-}> <Link href="/contact" className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-cyan-500/25" > <MessageCircle className="w-4 h-4 mr-2" /> Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
-  /* Mobile Navigation Menu */ 
-}<AnimatePresence>) ) 
-}</div> </div> </div> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> {
-  /* Service Categories Dropdown */ 
-}<AnimatePresence> > <div className="flex justify-between items-start" > <div> </div> </a>) ) 
-}</div> </div>) ) 
-}</div> </div> </motion.div>) 
-}</AnimatePresence> </nav>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

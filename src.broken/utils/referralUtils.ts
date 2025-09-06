@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { format } from 'date-fns';
 import { apiClient } from './apiClient';
 
@@ -20,7 +19,6 @@ export function formatDate(date: Date | string | undefined): string {
     logErrorToProduction('Error formatting date:', { data: e });
     return '-';
   }
-}
 
 /**
  * Stores referral code in localStorage when detected in URL
@@ -40,7 +38,6 @@ export function checkUrlForReferralCode(): string | null {
   }
 
   return safeStorage.getItem('referral_code');
-}
 
 /**
  * Track referral when a user signs up
@@ -75,10 +72,7 @@ export async function trackReferral(userId: string, email: string) {
     logErrorToProduction('Error tracking referral:', { data: error });
   }
   return false;
-=======
- /** * Formats a date for display in the referral system * @param date Date or string to format * @returns Formatted date string */ 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/** * Stores referral code in localStorage when detected in window.URL */ 
 }return safeStorage.getItem ('referral code') 
 }/** * Track referral when a user signs up */ // Call API to record the referral const response = await apiClient ('/api/track-referral', {
@@ -86,4 +80,3 @@ export async function trackReferral(userId: string, email: string) {
   'Content-Type': 'application/json' 
 };
 }return false 
-}

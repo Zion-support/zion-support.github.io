@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #!/usr/bin/env node
 
 /**
@@ -25,7 +24,6 @@ class MCPClientIntegration {
   status() {
     return { status: 'placeholder', message: 'Not implemented yet' };
   }
-}
 
 // Export for use in other modules
 module.exports = MCPClientIntegration;
@@ -34,18 +32,3 @@ module.exports = MCPClientIntegration;
 if (require.main === module) {
   const client = new MCPClientIntegration();
   client.connect();
-}
-=======
-#!/usr/bin/env node /** * MCP Client Integration * Placeholder for MCP client integration functionality */ //Placeholder functionality class MCPClientIntegration {
-  constructor () {
-  this.status = 'placeholder' 
-}connect () {
-  
-}status () {
-  return {
-  status: 'placeholder', message: 'Not implemented yet' 
-}
-}
-}//Export for use in other modules module.exports = MCPClientIntegration;
-// Run if called directly 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

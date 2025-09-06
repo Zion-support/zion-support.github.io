@@ -36,8 +36,6 @@ this.phase = Math.random () * Math.PI * 2;
 this.color = `hsl ($ {
   200 + Math.random () * 60 
 }, 80%, 60%) ` 
-}
-<<<<<<< HEAD
 
 const UltraAdvancedQuantumBackground: React.FC<
   UltraAdvancedQuantumBackgroundProps
@@ -379,25 +377,4 @@ const UltraAdvancedQuantumBackground: React.FC<
   );
 };
 
-=======
-}
-}nodeIndex++ 
-}
-}) 
-}ctx.restore () 
-}
-}// Initialize neuralNetworks.push (new NeuralNetwork () );
-}
-}ctx.restore ();
-animationFrameId = requestAnimationFrame (animate) 
-};
-animate ();
-window.addEventListener ('resize', handleResize);
-</div> {
-  /* Floating Quantum Elements */ 
-}<motion.div /> {
-  /* Quantum Canvas */ 
-}<canvas /> </div> </div>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default UltraAdvancedQuantumBackground;

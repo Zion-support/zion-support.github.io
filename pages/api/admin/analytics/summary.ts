@@ -1,3 +1,5 @@
+import path from 'path';
+import fs from 'fs';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 const byFeature: Record<string, number> = {
@@ -10,7 +12,6 @@ const byDay: Record<string, number> = {
   
 };
 
-<<<<<<< HEAD
 const LOG_FILE = path.join(
   process.cwd(),
   'data',
@@ -26,21 +27,10 @@ function parseLines(startIso?: string, endIso?: string): EventRow[] {
     const start = startIso ? new Date(startIso) : null;
     const end = endIso ? new Date(endIso) : null;
     const rows: EventRow[] = [];
-    for (const line of lines) {
-      try {
-        const obj = JSON.parse(line);
-        if (!obj.at) continue;
-        const t = new Date(obj.at);
-        if (start && t < start) continue;
-        if (end && t > end) continue;
-        rows.push(obj);
-      } catch {}
-    }
     return rows;
   } catch {
     return [];
   }
-}
 
 function featureFromPath(page?: string): string {
   if (!page) return 'other';
@@ -49,7 +39,6 @@ function featureFromPath(page?: string): string {
   if (p.includes('talent') || p.includes('job')) return 'job board';
   if (p.includes('rental')) return 'rentals';
   return 'other';
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -72,13 +61,7 @@ export default async function handler(
   const byEvent: Record<string, number> = {};
   const byDay: Record<string, number> = {};
 
-  for (const r of rows) {
-    const f = featureFromPath(r.page);
-    byFeature[f] = (byFeature[f] || 0) + 1;
-    byEvent[r.name] = (byEvent[r.name] || 0) + 1;
-    const day = r.at.slice(0, 10);
-    byDay[day] = (byDay[day] || 0) + 1;
-  }
+  
 
   const pagesMostUsed = Object.entries(byFeature)
     .map(([label, value]) => ({ label, value }))
@@ -103,9 +86,3 @@ export default async function handler(
   }));
 
   res.status(200).json({ pagesMostUsed, events, line, funnel });
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ byFeature, byEvent, byDay });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

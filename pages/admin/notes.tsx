@@ -10,7 +10,6 @@ interface Note {
   updatedAt: string;
   tags: string[];
   isPrivate: boolean;
-}
 
 const mockNotes: Note[] = [
   {
@@ -54,7 +53,6 @@ const AdminNotesPage: React.FC = () => {
   const [isAdmin, setIsAdmin] = useState(true);
 
   useEffect(() => {
-<<<<<<< HEAD
     async function load() {
       setLoading(true);
       try {
@@ -102,38 +100,6 @@ const AdminNotesPage: React.FC = () => {
               <div>{n.text}</div>
             </div>
           ))}
-=======
-    // Simulate loading notes
-    setTimeout(() => {
-      setNotes(mockNotes);
-      setLoading(false);
-    }, 1000);
-  }, []);
-
-  const filteredNotes = notes.filter(note => {
-    const matchesSearch = note.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.content.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         note.author.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesTag = !filterTag || note.tags.includes(filterTag);
-    const matchesPrivacy = !note.isPrivate || showPrivate;
-    return matchesSearch && matchesTag && matchesPrivacy;
-  });
-
-  const allTags = Array.from(new Set(notes.flatMap(note => note.tags)));
-
-  return (
-    <>
-      <Head>
-        <title>Admin Notes - Zion Tech Group</title>
-        <meta name="description" content="Admin notes and documentation" />
-      </Head>
-      <main className="max-w-6xl mx-auto px-4 py-8">
-        <div className="flex justify-between items-center mb-6">
-          <h1 className="text-3xl font-bold">Admin Notes</h1>
-          <button className="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
-            Add New Note
-          </button>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
 
         {/* Filters */}
@@ -239,10 +205,3 @@ const AdminNotesPage: React.FC = () => {
       </main>
     </>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default AdminNotesPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

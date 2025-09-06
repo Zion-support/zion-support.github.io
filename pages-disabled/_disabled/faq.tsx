@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import MainLayout from '../components/layout/MainLayout'
-import { motion, AnimatePresence } from 'framer-motion'
+import React, { useState } from 'react';
+import MainLayout from '../components/layout/MainLayout';
+import { motion, AnimatePresence } from 'framer-motion';
 import {
   ChevronDown, 
   ChevronUp, 
@@ -16,7 +16,7 @@ const faqCategories = [
   { id: 'general', name: 'General Questions', count: 15 },
   { id: 'technical', name: 'Technical Support', count: 20 },
   { id: 'billing', name: 'Billing & Pricing', count: 10 },
-  { id: 'api', name: 'API & Integration', count: 25 }
+  { id: 'api', name: 'API & Integration', count: 25 };
 ];
 
 const faqs = {
@@ -144,10 +144,7 @@ export default function FAQPage() {
     faq.answer.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  return (
-    <MainLayout
-      title="FAQ - Zion Tech Group"
-      description="Find answers to frequently asked questions about our services, pricing, technical support, and more."
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-br from-blue-900 via-purple-900 to-pink-900 text-white py-20">
@@ -308,4 +305,3 @@ export default function FAQPage() {
       </div>
     </MainLayout>
   )
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -8,7 +7,6 @@ export interface TalentProfileData {
   bio: string;
   skills: string[];
   location?: string;
-}
 
 export interface CategorizedSkills {
   programming: string[];
@@ -16,12 +14,10 @@ export interface CategorizedSkills {
   platforms: string[];
   softSkills: string[];
   other: string[];
-}
 
 export interface EnhancedProfile {
   summary: string;
   categorizedSkills: CategorizedSkills;
-}
 
 export function useTalentProfileEnhancer() {
   const [isGenerating, setIsGenerating] = useState(false);
@@ -60,8 +56,3 @@ export function useTalentProfileEnhancer() {
     isGenerating,
     error,
   };
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

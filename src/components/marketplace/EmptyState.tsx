@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import {
   RefreshCw,
@@ -7,7 +6,7 @@ import {
   ShoppingCart,
   Users,
   Wrench,
-  Lightbulb,
+  Lightbulb,;
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -30,7 +29,6 @@ export interface EmptyStateProps {
     onClick: () => void;
   };
   icon?: React.ReactNode;
-}
 
 const defaultContent = {
   products: {
@@ -138,7 +136,6 @@ export function EmptyState({
       )}
     </div>
   );
-}
 
 // Specific empty state variants for quick use
 export function ProductsEmptyState({
@@ -163,118 +160,36 @@ export function ProductsEmptyState({
     ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!"
     : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
 
-  return (
-    <EmptyState
-      type='products'
-      action={action}
-      description={customDescription}
+  
     />
   );
-}
 
 export function CategoriesEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type='categories'
-      action={
-        onRetry ? { label: 'Refresh Categories', onClick: onRetry } : undefined
-      }
+  
     />
   );
-}
 
 export function TalentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type='talent'
-      action={
-        onRetry ? { label: 'Reset Filters', onClick: onRetry } : undefined
-      }
+  
     />
   );
-}
 
 export function EquipmentEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type='equipment'
-      action={
-        onRetry ? { label: 'Refresh Listings', onClick: onRetry } : undefined
-      }
+  
     />
   );
-}
 
 export function SearchEmptyState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type='search'
-      action={onRetry ? { label: 'Clear Search', onClick: onRetry } : undefined}
+  
     />
   );
-}
 
 export function NetworkErrorState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type='network'
-      action={onRetry ? { label: 'Try Again', onClick: onRetry } : undefined}
+  
     />
   );
-}
 
 export function ServerErrorState({ onRetry }: { onRetry?: () => void }) {
-  return (
-    <EmptyState
-      type='error'
-      action={onRetry ? { label: 'Retry', onClick: onRetry } : undefined}
+  
     />
   );
-}
-=======
- </p> {;
-  action && (<Button onClick={;
-  action.onClick ;
-}variant="outline" className="flex items-center gap-2" > </Link> . </p> </div>) ;
-}</div>) ;
-}//Specific empty state variants for quick use ? {;
-  label: isAuthenticated ? 'Add Product' : 'Login to Add Product', onClick: onAddProduct '";
-}: onRetry ? "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or add your own!" : "We're working on adding new products to our marketplace. Check back soon for exciting new offerings, or log in to add your own!";
-}export function CategoriesEmptyState ({;
-  onRetry ;
-}: {;
-  onRetry?: () => void ;
-}) {;
-  return (<EmptyState />) ;
-}export function TalentEmptyState ({;
-  onRetry ;
-}: {;
-  onRetry?: () => void ;
-}) {;
-  return (<EmptyState />) ;
-}export function EquipmentEmptyState ({;
-  onRetry ;
-}: {;
-  onRetry?: () => void ;
-}) {;
-  return (<EmptyState />) ;
-}export function SearchEmptyState ({;
-  onRetry ;
-}: {;
-  onRetry?: () => void ;
-}) {;
-  return (<EmptyState />) ;
-}export function NetworkErrorState ({;
-  onRetry ;
-}: {;
-  onRetry?: () => void ;
-}) {;
-  return (<EmptyState />) ;
-}export function ServerErrorState ({;
-  onRetry ;
-}: {;
-  onRetry?: () => void ;
-}) {;
-  return (<EmptyState />) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

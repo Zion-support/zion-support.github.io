@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import { useMemo, useState } from 'react';
@@ -11,7 +10,6 @@ interface Talent {
   title: string;
   badges: Array<'Verified' | 'Pro' | 'Top Rated'>;
   testimonial?: { quote: string; author: string };
-}
 
 const mockTalent: Talent[] = Array.from({ length: 47 }).map((_, i) => ({
   id: String(i + 1),
@@ -78,27 +76,4 @@ const TalentDirectory: NextPage = () => {
   );
 };
 
-=======
- 
-}const mockTalent: Talent[] = Array.from ({
-  length: 47 
-}) .map ( (, i) => ({
-  id: String (i + 1), name: `Talent $ {
-  i + 1 
-}`;
-title: 'Full-Stack Developer';
-badges: (i % 3 === 0 ? ['Verified'] : i % 3 === 1 ? ['Pro'] : ['Top Rated']) as Talent['badges'];
-<Head> <title>Talent - Zion</title> </Head> <h1 className="text-2xl font-semibold" >Explore Talent</h1>) 
-}</article>) ) 
-}</div> <Pagination page= {
-  page 
-}pageSize= {
-  pageSize 
-}total= {
-  total 
-}onChange= {
-  setPage 
-}/> </div>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default TalentDirectory;

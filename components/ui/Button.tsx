@@ -10,7 +10,6 @@ interface ButtonProps {
   className?: string;
   disabled?: boolean;
   style?: React.CSSProperties;
-}
 
 const Button: React.FC<ButtonProps> = ({
   children,
@@ -20,7 +19,6 @@ const Button: React.FC<ButtonProps> = ({
   variant = "primary",
   className = "",
   disabled = false,
-<<<<<<< HEAD
   type = 'button',
   icon,
   iconPosition = 'left',
@@ -68,23 +66,6 @@ const Button: React.FC<ButtonProps> = ({
       )}
     </>
   );
-=======
-  style,
-}) => {
-  const baseClasses =
-    "px-4 py-2 rounded-md font-medium transition-colors duration-200";
-
-  const variantClasses = {
-    primary: "bg-blue-600 text-white hover:bg-blue-700 disabled:bg-gray-400",
-    secondary: "bg-gray-600 text-white hover:bg-gray-700 disabled:bg-gray-400",
-    outline:
-      "border border-gray-300 text-gray-700 hover:bg-gray-50 disabled:bg-gray-100",
-  };
-
-  const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
-
-  const content = <>{children}</>;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
   if (href) {
     return (
@@ -94,13 +75,7 @@ const Button: React.FC<ButtonProps> = ({
     );
   }
 
-  return (
-    <button
-      type={type}
-      className={classes}
-      onClick={onClick}
-      disabled={disabled}
-      style={style}
+  
     >
       {content}
     </button>

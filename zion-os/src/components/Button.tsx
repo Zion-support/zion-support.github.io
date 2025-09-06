@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import React, { forwardRef } from 'react';
@@ -19,7 +18,6 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   fullWidth?: boolean;
   rounded?: 'sm' | 'md' | 'lg' | 'xl' | 'full';
-}
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   (
@@ -93,14 +91,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
       );
     }
 
-    return (
-      <button
-        ref={ref}
-        type={type}
-        className={classes}
-        onClick={onClick}
-        disabled={disabled || loading}
-        aria-label={typeof children === 'string' ? children : undefined}
+    
       >
         {content}
       </button>
@@ -108,67 +99,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
   }
 );
 
-=======
- const content = (<> {
-  loading && <LoadingSpinner size="sm" color="white" className="mr-2" /> 
-}{
-  icon && iconPosition === 'left' && !loading && <span className="mr-2"> {
-  icon 
-}</span> 
-}<span className= {
-  loading ? 'opacity-0' : '' 
-}> {
-  children 
-}</span> {
-  icon && iconPosition === 'right' && !loading && <span className="ml-2"> {
-  icon 
-}</span> 
-}</>);
-if (href) {
-  return (<Link href= {
-  href 
-}className= {
-  classes 
-}> {
-  content 
-}</Link>) 
-}return (<button ref= {
-  ref 
-}type= {
-  type 
-}className= {
-  classes 
-}onClick= {
-  onClick 
-}disabled= {
-  disabled || loading 
-}aria-label= {
-  typeof children === 'string' ? children : undefined 
-}> {
-  content 
-}</button>) 
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 Button.displayName = 'Button';
 export default Button;
-<<<<<<< HEAD
 
 // Specialized button variants
 export function PrimaryButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='primary' />;
-}
 
 export function SecondaryButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='secondary' />;
-}
 
 export function OutlineButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='outline' />;
-}
 
 export function GhostButton(props: Omit<ButtonProps, 'variant'>) {
   return <Button {...props} variant='ghost' />;
-}
 
 // Icon button variant
 export function IconButton({
@@ -181,7 +126,6 @@ export function IconButton({
       {children}
     </Button>
   );
-}
 
 // Floating action button
 export function FloatingActionButton({
@@ -190,46 +134,6 @@ export function FloatingActionButton({
   className = '',
   ...props
 }: ButtonProps & { icon: React.ReactNode }) {
-  return (
-    <Button
-      {...props}
-      icon={icon}
-      onClick={onClick}
-      className={`fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 ${className}`}
-      size='lg'
-      rounded='full'
+  
     />
   );
-}
-=======
-// Specialized button variants 
-}// Icon button variant export function IconButton ({
-  icon, children, ...props 
-}: ButtonProps & {
-  icon: React.ReactNode 
-}) {
-  return (<Button {
-  ...props 
-}icon= {
-  icon 
-}iconPosition="left" size="sm"> {
-  children 
-}</Button>) 
-}// Floating action button export function FloatingActionButton ({
-  icon, onClick, className = '', ...props 
-}: ButtonProps & {
-  icon: React.ReactNode 
-}) {
-  return (<Button {
-  ...props 
-}icon= {
-  icon 
-}onClick= {
-  onClick 
-}className= {
-  `fixed bottom-8 right-8 w-16 h-16 rounded-full shadow-2xl hover:shadow-3xl z-50 $ {
-  className 
-}` 
-}size="lg" rounded="full" />) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

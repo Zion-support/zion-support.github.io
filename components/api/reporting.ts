@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
@@ -13,7 +12,6 @@ interface ReportingData {
       updatedAt: string;
     }
   >;
-}
 
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} };
@@ -60,8 +58,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 
 type UserRole = 'talent' | 'client';
@@ -38,23 +37,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       {children}
     </AuthContext.Provider>
   );
-}
 
 export function useAuth() {
   return useContext(AuthContext);
-}
-=======
- type UserRole = 'talent' | 'client';
-useEffect ( () => {
-  try {
-  
-}catch {
-  
-}
-}, []);
-}catch {
-  
-}
-};
-return (
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import {
@@ -8,7 +7,7 @@ import {
   Plus,
   RefreshCw,
   Webhook,
-  X,
+  X,;
 } from 'lucide-react';
 import { useWebhooks, type WebhookEventType } from '@/hooks/useWebhooks';
 
@@ -19,7 +18,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   Dialog,
@@ -28,7 +27,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -39,7 +38,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import {
   AlertDialog,
@@ -49,7 +48,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
+  AlertDialogTitle,;
 } from '@/components/ui/alert-dialog';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import {
@@ -57,7 +56,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 
 export function WebhooksManager() {
@@ -564,27 +563,6 @@ export function WebhooksManager() {
       </AlertDialog>
     </Card>
   );
-=======
- export function WebhooksManager () {
-  const {
-  webhooks;
-loading;
-testResult;
-fetchWebhooks;
-createWebhook;
-toggleWebhook;
-deleteWebhook;
-testWebhook;
-clearTestResult 
-}= useWebhooks ();
-const [showDeleteConfirm, setShowDeleteConfirm] = useState<string | null> (null);
-const [showTestDialog, setShowTestDialog] = useState<string | null> (null);
-const [showTestResult, setShowTestResult] = useState (false);
-//Create webhook form state //Load webhooks on mount await createWebhook (webhookName;
-webhookUrl;
-selectedEvents;
-);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Event type options const eventOptions: {
   value: WebhookEventType, label: string, description: string 
 }[] = [ {
   value: 'new application', label: 'New Application', description: 'When a talent applies to a job' 
@@ -617,8 +595,7 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
   event.value 
 }className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70" > </Label> </div>) ) 
 }</div> </div> </div> <DialogFooter> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }> Cancel </Button> <Button onClick= {
   handleCreateWebhook 
 }disabled= {
@@ -671,8 +648,8 @@ setSelectedEvents (prev => prev.includes (event) ? prev.filter (e => e !== event
 setTestEventType ('new application');
 if (showTestResult) {
   
-}
-}
+
+
 }> <DialogContent className="bg-zinc-900 border-zinc-800 text-white"> <DialogHeader> <DialogTitle>Test Webhook</DialogTitle> <DialogDescription className="text-zinc-400"> Send a test webhook to your endpoint. </DialogDescription> </DialogHeader> {
   !showTestResult ? (<> <div className="space-y-4 py-4"> <div className="space-y-2"> <Label htmlFor=" test-event-type">Event Type</Label> <Select value= {
   testEventType 
@@ -695,7 +672,7 @@ if (showTestResult) {
 }</Badge> </div> <div className="space-y-2 mt-4"> <Label>Response Body</Label> <ScrollArea className="h-[200px] rounded border border-zinc-800 bg-black p-4"> </pre> </ScrollArea> </div> </div> </div> <DialogFooter> setShowTestDialog (null);
 setShowTestResult (false);
 clearTestResult ();
-}
+
 }> Close </Button> Test Another Event </Button> </DialogFooter> </>) 
 }</DialogContent> </Dialog> {
   /* Delete Webhook Confirmation Dialog */ 
@@ -704,4 +681,3 @@ clearTestResult ();
 }onOpenChange= {
   (open) => !open && setShowDeleteConfirm (null) 
 }> <AlertDialogContent className="bg-zinc-900 border-zinc-800 text-white"> <AlertDialogHeader> <AlertDialogTitle>Delete Webhook?</AlertDialogTitle> <AlertDialogDescription className="text-zinc-400"> This action will permanently remove this webhook. You will no longer receive events at this endpoint. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel className="bg-transparent text-white hover:bg-zinc-800 border-zinc-700"> Cancel </AlertDialogCancel> <AlertDialogAction > Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
-}

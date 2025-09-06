@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest } from '@/utils/auth';
 import { generateText } from '@/utils/ai';
@@ -30,8 +29,3 @@ export default async function handler(
     'You are an expert technical recruiter. Output strictly valid JSON.'
   );
   return res.status(200).json({ results: text });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

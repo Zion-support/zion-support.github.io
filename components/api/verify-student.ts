@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
 import {
   authenticateRequest,
   enforceRateLimit,
-  recordRequest,
+  recordRequest,;
 } from '../../utils/api/partnerAuth';
 
 const TALENTS_FILE = path.join(
@@ -48,19 +47,3 @@ export default async function handler(
   const verified = Boolean(match && match.certificationStatus === 'completed');
   await recordRequest(req, res, auth.partner, auth.apiKey, started, 200);
   return res.status(200).json({ verified });
-}
-=======
- export default async function handler (req: NextApiRequest, res: NextApiResponse) {
-  const started = Date.now ();
-const auth = await authenticateRequest (req);
-if (!auth) {
-  
-}const {
-  email, programTrack 
-}= req.body || {
-  
-};
-if (!email) {
-  
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

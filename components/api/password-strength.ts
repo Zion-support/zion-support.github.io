@@ -14,8 +14,6 @@ if (!hasSymbols) feedback.push ('Add special characters');
 if (hasCommonPatterns) feedback.push ('Avoid common patterns and words');
 if (entropy < 30) feedback.push ('Password is too predictable');
 // Generate suggestions 
-}
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -136,7 +134,3 @@ export default async function handler(
     console.error('Password strength check error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

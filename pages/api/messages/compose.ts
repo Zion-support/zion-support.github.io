@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import { sendMessage } from '../../../utils/messaging/storage';
@@ -40,8 +39,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
 
   res.status(200).json({ conversation, message });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

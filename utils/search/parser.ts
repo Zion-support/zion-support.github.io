@@ -1,5 +1,4 @@
 export type SearchType = 'all' | 'talent' | 'jobs' | 'projects';
-<<<<<<< HEAD
 
 export type ParsedFilters = {
   type: SearchType;
@@ -41,7 +40,6 @@ function extractBudget(text: string): {
     return { minBudgetUsd: min, maxBudgetUsd: max };
   }
   return {};
-}
 
 function extractAvailability(
   text: string
@@ -51,7 +49,6 @@ function extractAvailability(
   if (/(part\s*-?\s*time)/.test(lower)) return 'part-time';
   if (/(contract|freelance)/.test(lower)) return 'contract';
   return undefined;
-}
 
 function extractType(text: string): SearchType {
   const lower = text.toLowerCase();
@@ -64,7 +61,6 @@ function extractType(text: string): SearchType {
   if (/(jobs?|roles?|openings?|hiring)/.test(lower)) return 'jobs';
   if (/(projects?|gigs?)/.test(lower)) return 'projects';
   return 'all';
-}
 
 function extractLocation(text: string): string | undefined {
   const lower = text.toLowerCase();
@@ -75,7 +71,6 @@ function extractLocation(text: string): string | undefined {
   if (inMatch) return inMatch[1].trim();
   if (/remote/.test(lower)) return 'remote';
   return undefined;
-}
 
 const COMMON_SKILLS = [
   'react',
@@ -103,16 +98,11 @@ const COMMON_SKILLS = [
 function extractSkills(text: string): string[] {
   const lower = text.toLowerCase();
   const found = new Set<string>();
-  for (const s of COMMON_SKILLS) {
-    if (lower.includes(s.toLowerCase())) found.add(s);
-  }
+  
   // rudimentary skill tokenization
   const tokens = lower.split(/[^a-z0-9+.#]/).filter(Boolean);
-  for (const t of tokens) {
-    if (t.length >= 3 && COMMON_SKILLS.includes(t)) found.add(t);
-  }
+  
   return Array.from(found);
-}
 
 function extractKeywords(text: string): string[] {
   return text
@@ -140,7 +130,6 @@ function extractKeywords(text: string): string[] {
           'in',
         ].includes(w)
     );
-}
 
 export async function parseQueryToFilters(
   query: string
@@ -193,18 +182,3 @@ export async function parseQueryToFilters(
   } catch {
     return base;
   }
-}
-=======
-}return {
-  
-}
-}
-}function extractKeywords (text: string) : string[] {
-  return text .toLowerCase () .replace (/[^a-z0-9\s]/g, ' ') .split (/\s+/) .filter (Boolean) ];
-temperature: 0.1;
-response format: {
-  type: 'json object' 
-}
-}) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

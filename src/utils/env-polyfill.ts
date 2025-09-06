@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  *
@@ -31,30 +30,12 @@ if (typeof globalThis !== 'undefined') {
   } else if (typeof (globalThis as any).process.env === 'undefined') {
     (globalThis as any).process.env = { ...defaultEnv };
   }
-=======
-/** * Environment Polyfill for Browser * * This polyfill ensures that process.env is always available in the browser environment. * It prevents the "Cannot read properties of undefined (reading 'env') " error. */ //Define safe defaults for environment variables //Create a safe process object const createProcessObject = () => ({;
-  env: {;
-  ...defaultEnv ;
-};
-versions: {;
-  ;
-};';
-platform: 'browser';';
-arch: 'x64';';
-version: '18.0.0';
-browser: true ;
-});
-//Ensure process is available on globalThis ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }//Ensure process is available on window ;
-}
-<<<<<<< HEAD
 
 // Ensure process is available globally
 if (typeof (globalThis as any).process === 'undefined') {
   (globalThis as any).process = createProcessObject();
-}
 
 // Export a safe environment accessor
 export const safeEnv = {
@@ -86,17 +67,14 @@ export function getEnv(key: string, defaultValue = ''): string {
     return (globalThis as any).process.env[key];
   }
   return defaultValue;
-}
 
 // Check if we're in development mode safely
 export function isDevelopment(): boolean {
   return getEnv('NODE_ENV') === 'development';
-}
 
 // Check if we're in production mode safely
 export function isProduction(): boolean {
   return getEnv('NODE_ENV') === 'production';
-}
 
 // Export the polyfilled process object
 export const processEnv =
@@ -112,6 +90,3 @@ export const processEnv =
 console.log('✅ Environment polyfill loaded successfully');
 
 export default safeEnv;
-=======
-}// Ensure process is available globally '"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createNotification } from './createNotification';
 import { SystemNotificationParams } from './types';
 
@@ -22,8 +21,3 @@ export async function createSystemNotification({
     actionUrl,
     actionText,
   });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

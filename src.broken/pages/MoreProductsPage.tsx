@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { DynamicListingPage } from '@/components/DynamicListingPage';
 import { ProductListing } from '@/types/listings';
@@ -11,31 +10,6 @@ const CATEGORY_FILTERS = Array.from(
 export default function MoreProductsPage() {
   const [listings] = useState<ProductListing[]>([...MORE_PRODUCTS]);
 
-  return (
-    <DynamicListingPage
-      title='More Products'
-      description='Browse additional offerings priced for the average market.'
-      categorySlug='more-products'
-      listings={listings}
-      categoryFilters={CATEGORY_FILTERS}
-      initialPrice={{ min: 0, max: 2000 }}
+  
     />
   );
-}
-=======
- const CATEGORY FILTERS = Array.from (new Set (MORE PRODUCTS.map (p => p.category) ) ) .map (c => ({
-  label: c, value: c 
-}) );
-export default function MoreProductsPage () {
-  const [listings] = useState<ProductListing[]> ([...MORE PRODUCTS]);
-More Products"description=" Browse additional offerings priced for the average market."categorySlug=" more-products" listings= {
-  listings 
-}categoryFilters= {
-  CATEGORY FILTERS 
-}initialPrice= {
-  {
-  min: 0, max: 2000 
-}
-}/>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

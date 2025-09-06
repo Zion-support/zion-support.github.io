@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -40,7 +39,7 @@ import {
   ShoppingCart, 
   BookOpen, 
   Rocket,
-  Laptop
+  Laptop;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -93,7 +92,6 @@ const industries = [
 ];
 
 export default function ITServices() {
-<<<<<<< HEAD
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -379,13 +377,10 @@ export default function ITServices() {
       ? services
       : services.filter(service => service.category === selectedCategory);
 
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   return (
     <Layout>
       <Head>
         <title>IT Services - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Explore our 100+ comprehensive IT services including cloud computing, cybersecurity, DevOps, blockchain solutions, and quantum computing consulting.'
@@ -636,37 +631,10 @@ export default function ITServices() {
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors'
-=======
-        <meta name="description" content="Comprehensive IT services including cloud computing, cybersecurity, database management, and more. Professional IT solutions for your business." />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                IT <span className="text-blue-600">Services</span>
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Professional IT services to keep your business running smoothly. From cloud computing to cybersecurity, 
-                we provide comprehensive technology solutions.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-<<<<<<< HEAD
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
@@ -679,14 +647,6 @@ export default function ITServices() {
                 >
                   Email Us
                 </a>
-=======
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View AI Services
-                </Link>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
               </div>
             </motion.div>
           </div>
@@ -828,53 +788,4 @@ export default function ITServices() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-}
-=======
-=======
- const filteredServices = selectedCategory === 'all' ? services : services.filter (service => service.category === selectedCategory);
-return (<> <Head> <title>IT Services - Zion Tech Group</title> <h1 className= {
-  `text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}> IT Services </h1> <p className= {
-  `text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}> 100+ Comprehensive IT Solutions </p> <p className= {
-  `text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}> Transform your business with our enterprise-grade IT services. From cloud infrastructure to quantum computing, we provide cutting-edge technology solutions that scale with your business and drive innovation. </p> </div> </section> key= {
-  category.id 
-}onClick= {
-  () => setSelectedCategory (category.id) 
-}className= {
-  `px-6 py-3 rounded-lg font-semibold transition-all duration-300 $ {
-  selectedCategory === category.id ? 'bg-green-600 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700' 
-}` 
-}> {
-  category.name 
-}({
-  category.count 
-}) </button>) ) 
-}</div> </div> </section> <div key= {
-  service.id 
-}className= {
-  `p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-green-500/40 transition-all duration-300 hover:scale-105 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}style= {
-  {
-  transitionDelay: `$ {
-  index * 100 
-}ms` 
-}
-}> Popular </div>) 
-}</li>) ) 
-}</ul> </div> </span>) ) 
-}</div> </div> w-full py-2 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors"> Learn More </button> </div>) ) 
-}</div> </div> </section> </svg> </div> <h3 className=" text-xl font-bold mb-2">Cloud Platforms</h3> <p className=" text-slate-400">AWS, Azure, GCP, and hybrid cloud solutions</p> </div> </svg> </div> <h3 className=" text-xl font-bold mb-2">Security</h3> <p className=" text-slate-400">Zero-trust architecture and advanced threat protection</p> </div> </svg> </div> <h3 className=" text-xl font-bold mb-2">DevOps</h3> <p className=" text-slate-400">CI/CD pipelines and infrastructure automation</p> </div> </svg> </div> <h3 className=" text-xl font-bold mb-2">Blockchain</h3> <p className=" text-slate-400">Smart contracts and decentralized applications</p> </div> </div> </div> </section> Ready to Transform Your IT Infrastructure? </h2> <p className=" text-lg text-slate-300 mb-8"> Contact our IT experts to discuss how our comprehensive technology solutions can modernize your infrastructure and accelerate your digital transformation. </p> <div className=" flex flex-col sm:flex-row items-center justify-center gap-4"> <Link href=" /contact"className=" px-8 py-3 bg-green-600 hover:bg-green-700 rounded-lg font-semibold transition-colors" > Get IT Consultation </Link> <a 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

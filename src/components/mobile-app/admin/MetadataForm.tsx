@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import { AppMetadataValues } from './MetadataManager';
@@ -12,14 +11,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
-}
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
@@ -167,22 +165,6 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   );
-=======
- import {;
-  {;
-  {;
-  X ;
-}from 'lucide-react' interface MetadataFormProps {;
-  form: UseFormReturn<AppMetadataValues> ;
-}export const MetadataForm: React.FC<MetadataFormProps> = ({;
-  form ;
-}) => {;
-  e.preventDefault ();
-const value = e.currentTarget.value.trim ();
-if (value && !keywords.includes (value) ) {;
-  ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 }/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) ;
 }/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {;

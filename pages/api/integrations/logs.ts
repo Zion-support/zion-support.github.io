@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '../../../lib/integrations/fileStore';
 
@@ -11,8 +10,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ? state.logs.filter(l => l.providerId === providerId)
     : state.logs;
   res.status(200).json({ logs });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

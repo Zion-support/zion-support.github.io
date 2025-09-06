@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BillingHeader } from './BillingHeader';
 import { CurrentSubscription } from './CurrentSubscription';
@@ -38,11 +37,3 @@ export function BillingDashboard() {
       </Tabs>
     </div>
   );
-}
-=======
- import {
-  Tabs;
-TabsContent;
-TabsList;
-subscription"className=" mt-8"> <TabsList className=" grid w-full grid-cols-4 mb-8"> <TabsTrigger value=" subscription">Subscription</TabsTrigger> <TabsTrigger value=" payment">Payment Methods</TabsTrigger> <TabsTrigger value=" invoices">Invoice History</TabsTrigger> <TabsTrigger value=" usage">Usage Overview</TabsTrigger> </TabsList> <TabsContent value=" subscription"className=" space-y-8"> <CurrentSubscription /> </TabsContent> <TabsContent value=" payment"className=" space-y-8"> <PaymentMethods /> </TabsContent> <TabsContent value=" invoices"className=" space-y-8"> <InvoiceHistory /> </TabsContent> <TabsContent value=" usage"className=" space-y-8" > <UsageOverview /> </TabsContent> </Tabs> </div> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

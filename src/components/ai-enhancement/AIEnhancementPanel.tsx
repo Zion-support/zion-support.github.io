@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardFooter,
+  CardFooter,;
 } from '@/components/ui/card';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,7 @@ import { Input } from '@/components/ui/input';
 import { Sparkles, Loader2, Copy, Check } from 'lucide-react';
 import {
   useAIContentEnhancer,
-  AIEnhancementOptions,
+  AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
 
 interface AIEnhancementPanelProps {
@@ -23,7 +22,6 @@ interface AIEnhancementPanelProps {
   onClose?: () => void;
   showInstructions?: boolean;
   initialContent?: string;
-}
 
 export function AIEnhancementPanel({
   title,
@@ -178,28 +176,3 @@ export function AIEnhancementPanel({
       )}
     </Card>
   );
-}
-=======
- value= {;
-  options.instructions ;
-}onChange= {;
-  (e) => handleInputChange (e, 'instructions') ;
-}/> </div>) ;
-}{;
-  /* Generate button */ ;
-}<Button > {;
-  isEnhancing ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Enhancing... </>) : (<> <Sparkles className="mr-2 h-4 w-4" /> Generate Enhanced Content </>) ";
-}</Button> <Button variant="ghost" size="sm" onClick={;
-  handleCopy ";
-}className="h-8" >) : (<><Copy className="h-4 w-4 mr-1" /> Copy</>) ";
-}</Button> </div> <div className="relative" > <Textarea /> </div> </div>) ;
-}</CardContent> {";
-  onClose && (<Button variant="outline" onClick={;
-  onClose ;
-}> Cancel </Button>) ;
-}<Button onClick={;
-  handleApply ;
-}> Apply to Form </Button> </CardFooter>) ;
-}</Card>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import axios from 'axios';
 import {
   readState,
   writeState,
   upsertEvent,
-  getEntityId,
+  getEntityId,;
 } from '../../../utils/sync/storage';
 import { verifySignature } from '../../../utils/sync/signature';
 import { computeMerkleRootFromVotes } from '../../../utils/sync/merkle';
@@ -22,7 +21,6 @@ function isAllowedByScope(stateType: string, scope: string): boolean {
       stateType === 'leaderboard_entry'
     );
   return true;
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -104,33 +102,3 @@ export default async function handler(
   }
 
   return res.status(200).json({ status: 'accepted', entityId });
-}
-=======
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const event = payload as SyncEvent & {
-  propagate?: boolean 
-};
-if (!event || !event.type || !event.eventId) {
-  
-}const computed = computeMerkleRootFromVotes (votes);
-if (computed !== providedRoot) {
-  
-}
-}const entityId = getEntityId (event);
-const currentState = readState ();
-upsertEvent (currentState, event);
-writeState (currentState);
-const alreadyPropagated = payload.propagate === false;
-if (!alreadyPropagated && currentState.config.peers.length > 0) {
-  await axios.post (url, localBody, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  // ignore peer failure 
-}
-}) ) 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

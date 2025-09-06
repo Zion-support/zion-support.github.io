@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import FocusLock from 'react-focus-lock';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -16,7 +15,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { useForm, type Resolver } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
@@ -33,7 +32,6 @@ interface ContactPublisherModalProps {
   publisherName: string;
   publisherEmail?: string;
   productId?: string;
-}
 
 type FormValues = {
   subject: string;
@@ -184,23 +182,3 @@ export function ContactPublisherModal({
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-}
-=======
- const schema: yup.ObjectSchema<FormValues> = yup .object ({;
-  subject: yup .string () .min (5, 'Subject must be at least 5 characters') .required ('Subject is required'),  message: yup .string () .min (20, 'Message must be at least 20 characters') .required ('Message is required') ;
-}) .required ();
-return (<> <Dialog open= {;
-  isOpen ;
-}onOpenChange= {;
-  onClose ;
-}> <FocusLock disabled= {;
-  !isOpen ;
-}returnFocus> <DialogContent > <DialogHeader> <DialogTitle id="contact-publisher-title" className="text-xl font-bold text-white flex items-center gap-2" > <Mail className="h-5 w-5 text-zion-cyan" /> Contact Publisher </DialogTitle> </DialogHeader> <FormItem> <FormLabel>Subject</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ";
-}/> <FormField <FormItem> <FormLabel>Message</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage className="text-red-500" /> </FormItem>) ;
-}/> <Button </Button> </form> </Form> </DialogContent> </FocusLock> </Dialog> <LoginModal isOpen= {;
-  loginOpen ;
-}onOpenChange= {;
-  setLoginOpen ;
-}/> </>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

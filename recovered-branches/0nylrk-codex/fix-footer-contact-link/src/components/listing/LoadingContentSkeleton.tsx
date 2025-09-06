@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
@@ -25,10 +24,3 @@ export function LoadingContentSkeleton() {
       </CardContent>
     </Card>
   );
-}
-=======
- export function LoadingContentSkeleton () {
-  return (<Card className="border border-zion-blue-light bg-zion-blue-dark overflow-hidden" > h-8 w-3/4 bg-zion-blue-light/20" /> </CardHeader>) ) 
-}</div> </CardContent> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

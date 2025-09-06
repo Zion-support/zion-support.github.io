@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -11,7 +10,6 @@ interface TalentCardSaveButtonProps {
   isSaved: boolean;
   onToggleSave?: (id: string, isSaved: boolean) => void;
   isAuthenticated: boolean;
-}
 
 export function TalentCardSaveButton({
   profileId,
@@ -54,11 +52,7 @@ export function TalentCardSaveButton({
     });
   };
 
-  return (
-    <button
-      className='absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors'
-      onClick={handleSaveToggle}
-      aria-label={localIsSaved ? 'Remove from favorites' : 'Save to favorites'}
+  
     >
       <Heart
         className={cn(
@@ -68,30 +62,9 @@ export function TalentCardSaveButton({
       />
     </button>
   );
-}
-=======
- interface TalentCardSaveButtonProps {;
-  profileId: string;
-profileName: string;
-isSaved: boolean;
-onToggleSave?: (id: string, isSaved: boolean) => void;
-isAuthenticated: boolean ;
-}export function TalentCardSaveButton ({;
-  profileId;
-profileName;
-isSaved;
-onToggleSave;
-isAuthenticated ;
-}: TalentCardSaveButtonProps) {;
-  const {;
-  toast ;
-}= useToast ();
-const router = useRouter ();
-//Handle save toggle return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
+
 }variant: "default" ;
 }) ;
 };
 }/> </button>) ;
 }"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

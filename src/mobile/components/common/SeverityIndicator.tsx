@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react';
@@ -9,7 +8,6 @@ interface SeverityIndicatorProps {
   showText?: boolean;
   size?: 'sm' | 'md' | 'lg';
   className?: string;
-}
 
 export function SeverityIndicator({
   severity,
@@ -21,30 +19,15 @@ export function SeverityIndicator({
   const getSeverityIcon = () => {
     switch (severity) {
       case 'dangerous':
-        return (
-          <AlertCircle
-            className={cn(
-              size === 'sm' ? 'h-3 w-3' : size === 'lg' ? 'h-5 w-5' : 'h-4 w-4',
-              'text-destructive'
-            )}
+        
           />
         );
       case 'suspicious':
-        return (
-          <AlertTriangle
-            className={cn(
-              size === 'sm' ? 'h-3 w-3' : size === 'lg' ? 'h-5 w-5' : 'h-4 w-4',
-              'text-amber-500'
-            )}
+        
           />
         );
       default:
-        return (
-          <CheckCircle
-            className={cn(
-              size === 'sm' ? 'h-3 w-3' : size === 'lg' ? 'h-5 w-5' : 'h-4 w-4',
-              'text-green-500'
-            )}
+        
           />
         );
     }
@@ -56,31 +39,7 @@ export function SeverityIndicator({
       {showText && <span className='capitalize text-sm'>{severity}</span>}
     </div>
   );
-=======
- ;
-}export function SeverityIndicator ({;
-  severity;
-showIcon = true;
-showText = true;
-size = "md";
-className ;
-}: SeverityIndicatorProps) {;
-  const getSeverityIcon = () => {;
-  switch (severity) {;
-  case 'dangerous': return <AlertCircle className= {;
-  cn () ;
-}/>;';
-case 'suspicious': return <AlertTriangle className= {";
-  cn (size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";";
-"text-amber-500") ;
-}/>;
-default: return <CheckCircle className= {";
-  cn (size === "sm" ? "h-3 w-3" : size === "lg" ? "h-5 w-5" : "h-4 w-4";";
-"text-green-500") ;
-}/>;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 return (</div>) ;
 }'"

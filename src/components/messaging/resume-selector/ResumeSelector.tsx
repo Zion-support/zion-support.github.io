@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
@@ -236,31 +235,7 @@ export function ResumeSelector({ onResumeSelected }: ResumeSelectorProps) {
       </div>
     </div>
   );
-=======
- export function ResumeSelector ({;
-  onResumeSelected ;
-}: ResumeSelectorProps) {;
-  const [selectedOption, setSelectedOption] = useState<'recent' | 'select' | 'upload'> ('recent');
-const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
-const [resumeOptions, setResumeOptions] = useState<ResumeOption[]> ([]);
-const [customFile, setCustomFile] = useState<File | null> (null);
-const [isLoading,  setIsLoading] = useState (false);
-const {;
-  resume, fetchResume ;
-}= useResume ();
-//Fetch resume data when component mounts useEffect ( () => {;
-  const loadResumes = async () => {;
-  setIsLoading (true);
-try {;
-  await fetchResume () ;
-}catch (error) {';
-  logErrorToProduction ('Error loading resumes:', {;
-  data: error ;
-}) ;
-}finally {;
-  setIsLoading (false) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [fetchResume]);
 //Update resume options when resume data changes useEffect ( () => {;
@@ -268,16 +243,15 @@ try {;
   const options: ResumeOption[] = [ {;
   setResumeOptions (options);
 //Pre-select the most recent resume ;
-}
+
 }, [resume, selectedOption, onResumeSelected]);';
 //Handle radio option change //Check if it's a PDF file if (file.type !== 'application/pdf') {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Create a custom resume option setCustomFile (file);
 setSelectedResume (customOption);
 onResumeSelected (customOption) ;
-}
+
 };
 //Handle resume download ;
 }catch (error) {';
@@ -288,7 +262,7 @@ toast ({;
   ;
 }finally {;
   setIsLoading (false) ;
-}
+
 };
 //Handle "Generate Resume Now" button const handleGenerateResume = () => {';
   window.open ('/dashboard/talent/portfolio blank') ;

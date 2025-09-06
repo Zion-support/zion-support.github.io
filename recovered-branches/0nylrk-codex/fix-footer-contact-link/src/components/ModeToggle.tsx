@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
@@ -11,10 +10,7 @@ const useTheme = () => ({
 export function ModeToggle() {
   const { theme, setTheme } = useTheme();
 
-  return (
-    <Button
-      variant='ghost'
-      size='icon'
+  
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'dark' ? (
@@ -25,16 +21,3 @@ export function ModeToggle() {
       <span className='sr-only'>Toggle theme</span>
     </Button>
   );
-}
-=======
- export function ModeToggle () {
-  const {
-  theme, setTheme 
-}= useTheme ();
-return (<Button variant="ghost" size="icon" onClick= {
-  () => setTheme (theme === "dark" ? "light" : "dark") 
-}> {
-  theme === "dark" ? (<Sun className="h-5 w-5 text-yellow-300" /> h-5 w-5 text-slate-300"/>) 
-}<span className=" sr-only" >Toggle theme</span> </Button>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

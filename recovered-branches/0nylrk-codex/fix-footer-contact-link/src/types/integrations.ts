@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type IntegrationType = 'crm' | 'ats' | 'webhook' | 'zapier';
 
 export type IntegrationStatus = 'connected' | 'warning' | 'disconnected';
@@ -11,7 +10,6 @@ export interface Integration {
   status: IntegrationStatus;
   lastSync?: string;
   type: IntegrationType;
-}
 
 export interface SyncLog {
   id: string;
@@ -20,7 +18,6 @@ export interface SyncLog {
   status: 'success' | 'error' | 'warning';
   timestamp: string;
   details: string;
-}
 
 export type CrmIntegrationEvents =
   | 'contact_synced'
@@ -35,7 +32,3 @@ export type AtsIntegrationEvents =
   | 'interview_scheduled'
   | 'resume_uploaded'
   | 'job_posted';
-=======
- export type CrmIntegrationEvents = | "contact synced" | "deal created" | "deal updated" | "note added" | "job synced";
-export type AtsIntegrationEvents = | "applicant created" | "candidate status changed" | "interview scheduled" | "resume uploaded" | "job posted";
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

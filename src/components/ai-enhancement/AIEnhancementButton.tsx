@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Loader2, RefreshCw, Check, X } from 'lucide-react';
 import {
   useAIContentEnhancer,
-  AIEnhancementOptions,
+  AIEnhancementOptions,;
 } from '@/hooks/useAIContentEnhancer';
 import { toast } from '@/hooks/use-toast';
 
@@ -22,7 +21,6 @@ interface AIEnhancementButtonProps {
     | 'link';
   size?: 'default' | 'sm' | 'lg' | 'icon';
   contentLength?: number;
-}
 
 export function AIEnhancementButton({
   options,
@@ -121,14 +119,7 @@ export function AIEnhancementButton({
     );
   }
 
-  return (
-    <Button
-      type='button'
-      variant={variant}
-      size={size}
-      className={`gap-1 ${className}`}
-      onClick={handleEnhance}
-      disabled={isEnhancing}
+  
     >
       {isEnhancing ? (
         <Loader2 className='h-4 w-4 animate-spin' />
@@ -138,30 +129,7 @@ export function AIEnhancementButton({
       <span className='text-xs'>{buttonText}</span>
     </Button>
   );
-=======
- ;
-}export function AIEnhancementButton ({;
-  options;
-onEnhanced;
-buttonText = "Enhance with AI";
-className;";
-variant = "ghost";";
-size = "sm";
-contentLength = 10 ;
-}: AIEnhancementButtonProps) {;
-  const {;
-  enhanceContent, isEnhancing ;
-}= useAIContentEnhancer ();
-const [showActions, setShowActions] = useState (false);
-const [generatedContent, setGeneratedContent] = useState<string | null> (null);
-if ( (!options.content || options.content.trim () .length < contentLength) && (!options.context || options.context.trim () .length < contentLength) ) {;
-  toast ({";
-  variant: "destructive" ;
-});
-return ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };";
 <Button type="button" variant="ghost" size="sm" onClick={;
   handleAccept ";

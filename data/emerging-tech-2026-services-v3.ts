@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface EmergingTech2026ServiceV3 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface EmergingTech2026ServiceV3 {
     email: string;
     address: string;
   };
-}
 
 export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
   {
@@ -41,7 +39,3 @@ export const emergingTech2026ServicesV3: EmergingTech2026ServiceV3[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

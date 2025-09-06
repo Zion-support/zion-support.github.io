@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { supabase } from '@/integrations/supabase/client';
@@ -18,7 +17,7 @@ import {
   Github,
   Twitter,
   Linkedin,
-  CheckCircle2,
+  CheckCircle2,;
 } from 'lucide-react';
 
 export default function ProfilePage() {
@@ -260,24 +259,11 @@ export default function ProfilePage() {
       <Footer />
     </>
   );
-=======
- import {
-  Star;
-MapPin;
-Clock;
-Link as LinkIcon;
-Github;
-Twitter;
-Linkedin;
-CheckCircle2 //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. .from ("talent profiles") .select ("*") .eq ("id", profileId) .single ();
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 if (profileId) {
   fetchProfile () 
-}
+
 }, [profileId]);
 if (isLoading) {
   return (<div className="min-h-screen flex items-center justify-center" > <span className="loading loading-ring loading-lg" ></span> </div>) 
@@ -308,8 +294,7 @@ if (isLoading) {
 }</div> </div> </div> <HireNowCTA talentProfile= {
   {
   id: profileData?.id || '', full name: profileData?.full name || '', professional title: profileData?.professional title || '', hourly rate: profileData?.hourly rate || 0 
-}
+
 }/> {
   /* Placeholder for other sidebar elements */ 
 }</div> </div> </div> <Footer /> </>) 
-}

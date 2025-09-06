@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
@@ -8,11 +7,6 @@ const corsHeaders = {
     'authorization, x-client-info, apikey, content-type',
 };
 
-=======
- const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 interface Milestone {
   title: string;
 description: string;
@@ -41,15 +35,13 @@ estimatedHours: number
 if (additionalClauses && additionalClauses.length > 0) {
   prompt += `Please also include the following additional clauses: $ {
   additionalClauses.includes ('nda') ? '- Confidentiality/Non-disclosure agreement' : '' 
-}
+
 }//Add milestone information if available if (milestones && milestones.length > 0) {
   prompt += ` The project will be divided into the following milestones: `;
 milestones.forEach ( (milestone: Milestone, index: number) => {
   prompt += ` prompt += `Please structure the contract to include these milestones in the payment schedule, with payments tied to the completion and approval of each milestone. ` 
 }prompt += `Format the contract professionally with proper sections, numbering, and formatting. Use markdown formatting. `;
 // Call OpenAI API 
-}
-<<<<<<< HEAD
 
 serve(async req => {
   // Handle CORS preflight requests
@@ -190,6 +182,4 @@ serve(async req => {
       }
     );
   }
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

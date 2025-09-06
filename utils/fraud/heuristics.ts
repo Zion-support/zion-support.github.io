@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 
 const suspiciousLinkHosts = [
@@ -45,22 +44,17 @@ const vagueScammyJobPhrases = [
 function containsSuspiciousHost(text: string): boolean {
   const lower = text.toLowerCase();
   return suspiciousLinkHosts.some(host => lower.includes(host));
-}
 
 function containsSuspiciousPhrase(text: string): string[] {
   const lower = text.toLowerCase();
   return suspiciousPhrases.filter(p => lower.includes(p));
-}
 
 function containsVagueJobClaims(text: string): string[] {
   const lower = text.toLowerCase();
   const reasons: string[] = [];
-  for (const pattern of vagueScammyJobPhrases) {
-    const re = new RegExp(pattern, 'i');
-    if (re.test(lower)) reasons.push(`job_vague_claim:"${pattern}"`);
+  "`);
   }
   return reasons;
-}
 
 export interface HeuristicDeps {
   countEventsByIp: (
@@ -68,7 +62,6 @@ export interface HeuristicDeps {
     source: MonitoredSource,
     withinMinutes: number
   ) => Promise<number>;
-}
 
 export async function evaluateHeuristics(
   event: FraudEvent,
@@ -118,10 +111,3 @@ export async function evaluateHeuristics(
     reasons,
     severity,
   };
-}
-=======
- 
-}return reasons 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { SVGProps } from 'react';
 import { logWarn } from '@/utils/productionLogger';
 import {
@@ -294,7 +293,7 @@ import {
   ZapOff as LucideZapOff,
   Zap as LucideZap,
   ZoomIn as LucideZoomIn,
-  ZoomOut as LucideZoomOut,
+  ZoomOut as LucideZoomOut,;
 } from 'lucide-react';
 
 export const Home = LucideHome;
@@ -922,8 +921,3 @@ export const Icon: React.FC<IconProps> = ({
 
 export default Icon; // Default export the Icon component
 export const Icons = iconMap; // Export the map if you need to refer to available icons
-=======
- if (!LucideIconComponent) {;
-  ;
-}// Render the dynamically selected Lucide icon component 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

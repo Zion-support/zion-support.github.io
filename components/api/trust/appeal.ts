@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { TrustAppeal } from '../../../utils/types/trust';
 import { supabase } from '../../../utils/supabase/client';
@@ -28,8 +27,3 @@ export default async function handler(
   } catch {}
 
   return res.status(200).json({ ok: true, appeal });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 export { VideoCallRoom } from '../video/VideoCallRoom';
 
@@ -14,6 +13,3 @@ export const LiveKitRoom: React.FC<{ children?: React.ReactNode }> = ({
 }) => {
   return <div>{children}</div>;
 };
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

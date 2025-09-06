@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { createClient } from '@supabase/supabase-js';
 
 export const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -6,7 +5,6 @@ export const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
 if (!supabaseUrl || !supabaseAnonKey) {
   throw new Error('Missing Supabase environment variables');
-}
 
 // Utility to detect network connectivity. navigator.onLine is not reliable in
 // all environments, so we also try a small request with a short timeout.
@@ -48,6 +46,3 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
 
 // Helper function to get profiles table
 export const getFromProfiles = () => supabase.from('profiles');
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

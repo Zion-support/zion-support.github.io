@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from react-router-dom
 import { useFormik } from 'formik';
@@ -538,16 +537,7 @@ export default function Signup() {
       </div>
     </AuthLayout>
   );
-=======
- setLoading (true);
-setErrorMessage (''), //Clear any previous error setSuccessMessage (''), //Clear any previous success message setEmailVerificationRequired (false);
-try {;
-  const requestData = {;
-  name: values.name, email: values.email, password: values.password, ... (isPartnerSignup && {';
-  userType: 'partner', source: signupSource,  metadata: {';
-  partnerProgram: true, signupType: 'partner' ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }) ;
 };
 toast ({';
@@ -557,15 +547,15 @@ toast ({';
   title: isPartnerSignup ? 'Partner application submitted!': 'Account created successfully!', description: isPartnerSignup ? 'Welcome to the partner program. You can now log in.': 'Welcome to the platform. You can now log in.' ;
 });
 //Redirect to appropriate page after a short delay ;
-}
-}
+
+
 }catch (err: unknown) {';
   logErrorToProduction ('Signup error details:', {;
   message: err.message, response: err.response ? {;
   status: err.response.status,  statusText: err.response.statusText, data: err.response.data ';
 }: 'No response';';
 request: err.request ? 'Request made but no response': 'No request';
-}
+
 });
 }return undefined;
 }, [emailVerificationRequired, formik.values.email, router]);

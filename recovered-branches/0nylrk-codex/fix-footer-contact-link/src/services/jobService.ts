@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from 'sonner';
 
@@ -16,17 +15,9 @@ export async function createJob(jobData: any) {
     console.error('Error creating job:', error);
     throw new Error(error.message || 'Failed to create job');
   }
-=======
- export async function createJob (jobData: any) {
-  try {
-  const {
-  data, error 
-}= await supabase 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }export async function updateJob (jobId: string, jobData: unknown) {
   try {
-<<<<<<< HEAD
     const { data, error } = await supabase
       .from('jobs')
       .update(jobData)
@@ -40,15 +31,9 @@ export async function createJob(jobData: any) {
     console.error('Error updating job:', error);
     throw new Error(error.message || 'Failed to update job');
   }
-=======
-  const {
-  data, error 
-}= await supabase .from ('jobs') .update (jobData) .eq ('id', jobId) .select () .single ();
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }export async function getJobById (jobId: string) {
   try {
-<<<<<<< HEAD
     const { data, error } = await supabase
       .from('jobs')
       .select('*')
@@ -62,10 +47,4 @@ export async function createJob(jobData: any) {
     toast.error('Failed to load job details');
     return null;
   }
-=======
-  const {
-  data, error 
-}= await supabase .from ('jobs') .select ('*') .eq ('id', jobId) .single ();
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

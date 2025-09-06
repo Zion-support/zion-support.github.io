@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import { MilestoneActivity } from './types';
@@ -46,19 +45,4 @@ export const useRecordActivity = () => {
   return {
     recordMilestoneActivity,
   };
-=======
- try {
-  const {
-  data, error 
-}= await supabase .from ('milestone activities') .insert ({
-  milestone id: milestoneId, user id: user.id, action, previous status: previousStatus, new status: newStatus, comment 
-}) .select (`*;
-created by profile: profiles!user id (display name, avatar url) `) .single ();
-if (error) throw error;
-}
-};
-return {
-  recordMilestoneActivity 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

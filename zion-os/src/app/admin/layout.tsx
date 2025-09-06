@@ -1,12 +1,7 @@
 import { ReactNode } from 'react';
-<<<<<<< HEAD
-=======
-import Link from 'next/link';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 interface AdminLayoutProps {
   children: ReactNode;
-}
 
 export default function AdminLayout({ children }: AdminLayoutProps) {
   return (
@@ -21,7 +16,6 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
               </div>
               <h1 className='text-xl font-bold text-white'>Admin Dashboard</h1>
             </div>
-<<<<<<< HEAD
 
             <nav className='flex items-center space-x-6'>
               <a
@@ -40,16 +34,6 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
                 href='/'
                 className='text-white/70 hover:text-white transition-colors duration-200 font-medium'
               >
-=======
-            <nav className="flex items-center space-x-6">
-              <Link href="/admin/instances" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">
-                Instances
-              </Link>
-              <Link href="/admin/os-deploy" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">
-                Deploy
-              </Link>
-              <Link href="/" className="text-white/70 hover:text-white transition-colors duration-200 font-medium">
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
                 ← Back to Dashboard
               </Link>
             </nav>
@@ -61,4 +45,3 @@ export default function AdminLayout({ children }: AdminLayoutProps) {
       <div className='py-8'>{children}</div>
     </div>
   );
-}

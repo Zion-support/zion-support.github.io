@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { FileText } from 'lucide-react';
 import { ResumeOption } from '../resume-selector/types';
@@ -11,7 +10,6 @@ interface SelectResumeSectionProps {
   handleResumeSelect: (resumeId: string) => void;
   handleDownloadResume: () => void;
   isLoading: boolean;
-}
 
 export function SelectResumeSection({
   resumeOptions,
@@ -54,26 +52,3 @@ export function SelectResumeSection({
       )}
     </div>
   );
-}
-=======
- key= {;
-  option.id ;
-}className= {;
-  `w-full text-left p-3 rounded-md transition $ {;
-  selectedResume?.id === option.id ? 'bg-zion-purple/20 border border-zion-purple' : 'bg-zion-blue-dark/30 hover:bg-zion-blue-dark/50' ;
-}` ;
-}onClick={;
-  () => handleResumeSelect (option.id) ;
-}> </div> </button>) ) ;
-}{';
-  selectedResume?.type === 'ai resume' && selectedResume.resume && (<ResumePreviewCard resume= {;
-  selectedResume.resume as Resume ;
-}onDownload= {;
-  handleDownloadResume ;
-}isLoading= {;
-  isLoading ;
-}/>) ;
-}</>) ;
-}</div>) ;
-}'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

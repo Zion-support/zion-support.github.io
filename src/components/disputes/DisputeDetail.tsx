@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useDisputes } from '@/hooks/useDisputes';
@@ -8,7 +7,7 @@ import {
   disputeReasonLabels,
   DisputeMessage,
   DisputeStatus,
-  ResolutionType,
+  ResolutionType,;
 } from '@/types/disputes';
 
 import { Button } from '@/components/ui/button';
@@ -20,7 +19,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -369,10 +368,7 @@ export function DisputeDetail() {
                         .filter(msg => !msg.is_admin_note)
                         .map(msg => {
                           const isCurrentUser = user?.id === msg.user_id;
-                          return (
-                            <div
-                              key={msg.id}
-                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
+                          
                             >
                               <div
                                 className={`max-w-[80%] ${
@@ -718,34 +714,10 @@ export function DisputeDetail() {
       </div>
     </div>
   );
-=======
- export function DisputeDetail () {;
-  const router = useRouter ();
-const {;
-  disputeId ;
-}= router.query as {;
-  disputeId?: string ;
-};
-const {;
-  user ;
-}= useAuth ();
-const {;
-  getDisputeById, updateDisputeStatus, resolveDispute,  getDisputeMessages, addDisputeMessage ;
-}= useDisputes ();
-overview");
-//Check if user is admin (placeholder - implement proper admin check) ;
-}setDispute (disputeData);
-const messagesData = await getDisputeMessages (disputeId);
-setMessages (messagesData) ;
-}catch (error) {;
-  ;
-}finally {;
-  setIsLoading (false) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [disputeId, getDisputeById, getDisputeMessages, router]);
-}
+
 };
 const handleResolveDispute = async () => {;
   if (!disputeId) return;
@@ -762,28 +734,28 @@ resolved at: new Date () .toISOString () ;
 }) ;
 }else {;
   ;
-}
+
 };
 const handleSendMessage = async () => {;
   if (!disputeId || !message.trim () ) return;
 try {;
   ;
-}
+
 }catch (error) {;
   logErrorToProduction ('Error sending message:', {;
   data: error ;
 }) ;
 }finally {;
   setIsSending (false) ;
-}
+
 };
 if (isLoading) {";
   return (<div className=" p-8 text-center"> <div className=" w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div>) ;
 }if (!dispute) {";
   return (<div className=" p-8 text-center"> () => router.push (" /dashboard/disputes") ";
 }className=" mt-4"> Back to Disputes </Button> </div>) ;
-}
-}
+
+
 };";
 container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center justify-between gap-4" > <div> Start Review </Button>) ";
 }</div> </div> <Alert className="bg-green-50 border-green-200 dark:bg-green-900/20 dark:border-green-900"> <Check className="h-4 w-4" /> <AlertTitle>This dispute has been resolved</AlertTitle> <AlertDescription> {;
@@ -804,12 +776,7 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }</p> </Badge> </div>) ;
 }</CardContent> </Card>) ";
 }</TabsContent> <TabsContent value="messages" className="space-y-6"> <Card> <CardHeader> <CardTitle>Messages</CardTitle> <CardDescription>Communication regarding this dispute</CardDescription> </CardHeader> <CardContent> <div className="space-y-6 max-h-[600px] overflow-y-auto p-2"> {";
-  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note) return (<div key= {;
-  msg.id ;
-}className= {;
-  `flex $ {';
-  isCurrentUser ? 'justify-end' : 'justify-start' ;
-}` ;
+  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note) 
 }> <div className= {;
   `max-w-[80%] $ {';
   isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted' ;
@@ -843,8 +810,8 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
   msg.user profile?.display name?.[0] || 'A' ;
 }</AvatarFallback> </Avatar>) ";
 }</div> <Separator className="my-4" /> <div className="space-y-4" > <Textarea ;
-}
-}
+
+
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) ";
 }</Tabs> </div> <div className="space-y-6"> <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> <CardContent className="space-y-6"> <div className="flex items-start gap-4"> <Avatar className="h-10 w-10"> <AvatarImage src= {;
   dispute.client profile?.avatar url ;

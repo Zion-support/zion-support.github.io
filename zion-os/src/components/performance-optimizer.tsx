@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { Suspense, lazy, Component, ReactNode } from 'react';
@@ -23,19 +22,7 @@ const LazyComponent = ({
 interface ErrorBoundaryState {
   hasError: boolean;
   error?: Error;
-=======
-"use client";
-</Suspense>);
-// Error boundary for better error handling render () {
-  if (this.state.hasError) {
-  return this.props.fallback || (<div className="p-6 text-center"> <div className="text-[var (--error) ] text-lg mb-2">Something went wrong</div> <button onClick= {
-  () => this.setState ({
-  hasError: false 
-}) 
-}className="btn-primary" > Try again </button> </div>) 
-}return this.props.children 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }// Loading spinner component <div className= {
   `animate-pulse $ {
   className 
@@ -50,8 +37,6 @@ interface ErrorBoundaryState {
   width: `$ {
   Math.random () * 40 + 60 
 }%` 
-}
-<<<<<<< HEAD
 
 export class ErrorBoundary extends Component<
   ErrorBoundaryProps,
@@ -91,7 +76,6 @@ export class ErrorBoundary extends Component<
 
     return this.props.children;
   }
-}
 
 // Loading spinner component
 export function LoadingSpinner({
@@ -107,12 +91,9 @@ export function LoadingSpinner({
     lg: 'w-8 h-8',
   };
 
-  return (
-    <div
-      className={`animate-spin rounded-full border-2 border-[var(--border)] border-t-[var(--accent)] ${sizeClasses[size]} ${className}`}
+  
     />
   );
-}
 
 // Skeleton loading component
 export function Skeleton({
@@ -133,7 +114,6 @@ export function Skeleton({
       ))}
     </div>
   );
-}
 
 // Performance monitoring hook
 export function usePerformanceMonitor(componentName: string) {
@@ -158,7 +138,6 @@ export function usePerformanceMonitor(componentName: string) {
       }
     },
   };
-}
 
 // Intersection observer hook for lazy loading
 export function useIntersectionObserver(
@@ -181,7 +160,6 @@ export function useIntersectionObserver(
   }, [ref, options]);
 
   return isIntersecting;
-}
 
 // Debounced search hook for better performance
 export function useDebounce<T>(value: T, delay: number): T {
@@ -198,20 +176,5 @@ export function useDebounce<T>(value: T, delay: number): T {
   }, [value, delay]);
 
   return debouncedValue;
-}
 
 export { LazyComponent };
-=======
-}/>) ) 
-}</div>) 
-}// Performance monitoring hook 
-}
-}
-}
-}// Intersection observer hook for lazy loading observer.observe (element);
-return () => observer.disconnect () 
-}, [ref, options]);
-return isIntersecting 
-}// Debounced search hook for better performance return debouncedValue 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

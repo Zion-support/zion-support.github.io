@@ -1,22 +1,14 @@
-<<<<<<< HEAD
 import React, {
   useState,
   useRef,
   useEffect,
   FormEvent,
-  KeyboardEvent,
+  KeyboardEvent,;
 } from 'react';
 import { Button } from '@/components/ui/button';
 import { Send } from 'lucide-react';
 
 interface ChatInputProps {
-=======
- import {;
-  {;
-  {;
-  Send ;
-}from 'lucide-react' interface ChatInputProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   onSend: (message: string) => void;
 disabled?: boolean ;
 }export function ChatInput ({;
@@ -25,8 +17,6 @@ disabled?: boolean ;
   const [message, setMessage] = useState ('');
 const inputRef = useRef<HTMLTextAreaElement> (null);
 //Focus input when component mounts ;
-}
-<<<<<<< HEAD
 
 export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
   const [message, setMessage] = useState('');
@@ -76,9 +66,3 @@ export function ChatInput({ onSend, disabled = false }: ChatInputProps) {
       </Button>
     </form>
   );
-}
-=======
-};
-> <Send className="h-5 w-5" /> </Button> </form>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

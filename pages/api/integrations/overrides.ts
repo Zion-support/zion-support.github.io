@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../lib/integrations/fileStore';
 
@@ -30,8 +29,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
   }
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

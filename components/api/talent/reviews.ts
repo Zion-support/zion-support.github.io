@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -20,9 +19,3 @@ export default async function handler(
     .setHeader('Allow', 'GET, POST')
     .status(405)
     .end('Method Not Allowed');
-}
-=======
- 
-}return res.setHeader ('AllowGET, POST') .status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

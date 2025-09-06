@@ -2,7 +2,6 @@ import React from 'react';
 
 interface RetailSolutionsProps {
   // Add props here as needed
-}
 
 export default function RetailSolutions({ }: RetailSolutionsProps) {
   return (
@@ -11,13 +10,6 @@ export default function RetailSolutions({ }: RetailSolutionsProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-=======
-}
-=======
-}
-=======
-}
+
+
+

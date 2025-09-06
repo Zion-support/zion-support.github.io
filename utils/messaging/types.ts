@@ -1,12 +1,10 @@
 export type UserRole = 'client' | 'talent' | 'admin';
-<<<<<<< HEAD
 
 export interface UserSummary {
   id: string;
   name: string;
   role: UserRole;
   avatarUrl?: string;
-}
 
 export type ConversationContextType =
   | 'job'
@@ -22,7 +20,6 @@ export interface ConversationContext {
   talentId?: string;
   talentName?: string;
   proposalLink?: string;
-}
 
 export interface Conversation {
   id: string;
@@ -30,7 +27,6 @@ export interface Conversation {
   context?: ConversationContext;
   lastMessageAt: string; // ISO
   unreadBy: string[]; // userIds who have unread messages
-}
 
 export type MessageStatus = 'sent' | 'delivered' | 'read';
 
@@ -44,14 +40,12 @@ export interface Message {
   linkUrl?: string;
   createdAt: string; // ISO
   status: MessageStatus;
-}
 
 export interface InboxItem {
   conversation: Conversation;
   otherParticipant: UserSummary;
   lastMessage?: Message;
   unreadCount: number;
-}
 
 export interface NewMessageInput {
   conversationId?: string;
@@ -62,8 +56,3 @@ export interface NewMessageInput {
   attachmentBase64?: string; // data URL or raw base64
   attachmentName?: string; // optional filename
   context?: ConversationContext;
-}
-=======
-export type ConversationContextType = 'job' | 'talent' | 'general' | 'application' | 'invite';
-export type MessageStatus = 'sent' | 'delivered' | 'read';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

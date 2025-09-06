@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.0';
 
 interface CreateWebhookRequest {
-=======
- interface CreateWebhookRequest {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   name: string;
 url: string;
 eventTypes: string[];
@@ -17,8 +13,6 @@ eventType: string
   return new Response ('ok', {
   headers: {
   
-}
-<<<<<<< HEAD
 
 // Create a Supabase client
 const supabaseUrl = Deno.env.get('SUPABASE_URL') as string;
@@ -152,18 +146,9 @@ async function createWebhook(
       headers: { 'Content-Type': 'application/json' },
     });
   }
-=======
-});
-async function createWebhook (userId: string, name: string, url: string, eventTypes: string[], secret?: string) {
-  try {
-  const {
-  data, error 
-}= await supabase .from ('webhook configs') 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }async function getUserWebhooks (userId: string) {
   try {
-<<<<<<< HEAD
     const { data, error } = await supabase
       .from('webhook_configs')
       .select(
@@ -194,7 +179,6 @@ async function createWebhook (userId: string, name: string, url: string, eventTy
       headers: { 'Content-Type': 'application/json' },
     });
   }
-}
 
 async function toggleWebhook(
   userId: string,
@@ -239,28 +223,9 @@ async function toggleWebhook(
       headers: { 'Content-Type': 'application/json' },
     });
   }
-=======
-  const {
-  data, error 
-}= await supabase .from ('webhook configs') .select ('id, name, url, event types, is active, created at, last triggered at') .eq ('user id', userId) 
-}
-}async function toggleWebhook (userId: string, webhookId: string, isActive: boolean) {
-  try {
-  const {
-  data, error 
-}= await supabase .from ('webhook configs') .update ({
-  is active: isActive 
-}) .eq ('id', webhookId) .eq ('user id', userId) .select ('id, name, is active');
-}return new Response (JSON.stringify ({
-  message: `Webhook $ {
-  isActive ? 'activated' : 'deactivated' 
-}successfully`;
-webhook: data[0] 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }async function deleteWebhook (userId: string, webhookId: string) {
   try {
-<<<<<<< HEAD
     const { data, error } = await supabase
       .from('webhook_configs')
       .delete()
@@ -303,7 +268,6 @@ webhook: data[0]
       headers: { 'Content-Type': 'application/json' },
     });
   }
-}
 
 async function testWebhook(
   userId: string,
@@ -393,7 +357,6 @@ async function testWebhook(
       headers: { 'Content-Type': 'application/json' },
     });
   }
-}
 
 async function createWebhookSignature(payload: string, secret: string) {
   // Create HMAC signature using SHA-256
@@ -416,7 +379,6 @@ async function createWebhookSignature(payload: string, secret: string) {
   return Array.from(new Uint8Array(signature))
     .map(b => b.toString(16).padStart(2, '0'))
     .join('');
-}
 
 function createTestPayload(eventType: string) {
   const timestamp = new Date().toISOString();
@@ -496,33 +458,4 @@ function createTestPayload(eventType: string) {
         },
       };
   }
-=======
-  const {
-  data, error 
-}= await supabase .from ('webhook configs') .delete () .eq ('id', webhookId) .eq ('user id', userId) .select ('id');
-}
-}async function testWebhook (userId: string, webhookId: string, eventType: string) {
-  try {
-  //Verify webhook exists and belongs to user const {
-  data: webhook, error: webhookError 
-}= await supabase .from ('webhook configs') .select ('url, secret') .eq ('id', webhookId) .eq ('user id', userId) .single ();
-//Update last triggered timestamp await supabase .from ('webhook configs') false;
-['sign']);
-const signature = await window.crypto.subtle.sign ('HMAC';
-key;
-encoder.encode (payload) );
-//Convert to hex string return Array.from (new Uint8Array (signature) ) .map (b => b.toString (16) .padStart (2, '0') ) .join ('') 
-}// Create different test payload based on event type switch (eventType) {
-  case 'new application': return {
-  case 'quote received': return {
-  event type: 'quote received', event id: eventId, timestamp, data: {
-  quote id: window.crypto.randomUUID (), talent id: window.crypto.randomUUID (), client id: window.crypto.randomUUID (), amount: {
-  min: 1000, max: 2000, currency: 'USD' 
-};
-created at: timestamp 
-}
-};
-case 'milestone approved': 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

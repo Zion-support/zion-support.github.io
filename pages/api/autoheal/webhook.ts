@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 const GITHUB_TOKEN = process.env.GITHUB_TOKEN || '';
 const REPO = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app';
 
@@ -57,18 +56,3 @@ Metadata:\n\n${'```\n' + JSON.stringify(metadata || {}, null, 2) + '\n```'}
     console.error(e);
     return res.status(500).json({ error: 'Failed to process webhook' });
   }
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  const { app, severity, message, stack } = req.body;
-  
-  const body = `Auto-healing alert App: ${app} Severity: ${severity} Message: ${message} Stack:\n\n${stack || 'n/a'}`;
-  
-  res.status(200).json({ message: 'Webhook processed' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

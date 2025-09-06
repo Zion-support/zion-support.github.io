@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 
 /**
@@ -108,8 +107,6 @@ export const ensureProfilesTableExists = async () => {
   } catch (error) {
     console.error('Error setting up profiles table:', error);
   }
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 /** * Checks if the profiles table exists and creates it if it doesn't * This is a utility function that can be called when the app starts */ export const ensureProfilesTableExists = async () => {
   try {
   //Try to execute a simple query to check if the table exists const {
   error 
@@ -142,11 +139,10 @@ END IF;
 END $$;
 `;
 //Execute the creation query using RPC to avoid TypeScript errors 
-}
+
 }catch (error) {
   console.error ('Error setting up profiles table:', error) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 };
 // Call this when the app starts to ensure the table exists export const initializeDatabase = async () => {
   await ensureProfilesTableExists () 

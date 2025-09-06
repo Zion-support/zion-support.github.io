@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { BadgeEarned } from './BadgeEarned';
 import { badgeList, BadgeKey } from './badgeConfig';
@@ -30,22 +29,4 @@ export const MyBadgesPreview: React.FC = () => {
       </div>
     </div>
   );
-=======
- export const MyBadgesPreview: React.FC = () => {
-  return (<div className="p-4 bg-zion-blue rounded-xl shadow-md mx-auto w-full max-w-sm" > <div className="mb-2 flex items-center gap-2" > <span className="font-bold text-lg text-white" >My Badges</span> <span className="ml-2 rounded-full text-xs bg-zion-purple/30 px-2 py-0.5 text-zion-purple" > {
-  earnedBadges.length 
-}earned </span> </div> <div className="flex flex-wrap gap-2" > {
-  earnedBadges.map ( ({
-  badge, date 
-}) => (<BadgeEarned key= {
-  badge 
-}badge= {
-  badge 
-}earnedDate= {
-  date 
-}/>) ) 
-}</div> {
-  /* Example progress for next badge */ 
-}<div className="mt-3 text-xs text-zion-slate-light" > 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

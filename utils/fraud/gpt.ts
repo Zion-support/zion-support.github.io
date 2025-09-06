@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 
 export async function classifyWithGPT(
@@ -65,16 +64,3 @@ export async function classifyWithGPT(
       confidence: 0.5,
     };
   }
-}
-=======
- const completion = await client.chat.completions.create ({
-  model: process.env.FRAUD GPT MODEL || 'gpt-4o-mini', messages: [ {
-  role: 'system', content: systemPrompt 
-};
-{
-  role: 'user', content: userPrompt 
-}];
-temperature: 0;
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

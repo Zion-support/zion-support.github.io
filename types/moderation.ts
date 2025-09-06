@@ -1,5 +1,4 @@
 export type ContentType = 'listing' | 'message' | 'cv' | 'job';
-<<<<<<< HEAD
 export type ModerationStatus =
   | 'pending'
   | 'approved'
@@ -28,6 +27,3 @@ export type FlaggedContent = {
   updatedAt: string;
   adminNotes?: string;
 };
-=======
-export type ModerationStatus = 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

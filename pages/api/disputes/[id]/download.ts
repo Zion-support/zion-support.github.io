@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { getDisputeById } from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  ensureInvolvedOrAdmin,;
 } from '../../../../utils/auth';
 
 export default async function handler(
@@ -42,9 +41,3 @@ export default async function handler(
   );
   const stream = fs.createReadStream(att.path);
   stream.pipe(res);
-}
-=======
- stream.pipe (res);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

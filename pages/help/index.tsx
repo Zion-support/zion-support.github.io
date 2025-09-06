@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { readJson } from '../../utils/fsDb';
 import type { HelpArticle } from '../../utils/support';
@@ -6,7 +5,6 @@ import type { HelpArticle } from '../../utils/support';
 export async function getStaticProps() {
   const articles = readJson<HelpArticle[]>('help/articles.json', []);
   return { props: { articles } };
-}
 
 export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
   const categories = Array.from(new Set(articles.map(a => a.category)));
@@ -34,10 +32,3 @@ export default function HelpIndex({ articles }: { articles: HelpArticle[] }) {
       ))}
     </div>
   );
-}
-=======
- </Link>) ) 
-}</div> </div>) ) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

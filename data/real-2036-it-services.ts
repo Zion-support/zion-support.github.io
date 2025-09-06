@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const real2036ITServices = [
   {
     id: 'quantum-cloud-infrastructure-platform',
@@ -331,6 +330,3 @@ export const real2036ITServices = [
     ],
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

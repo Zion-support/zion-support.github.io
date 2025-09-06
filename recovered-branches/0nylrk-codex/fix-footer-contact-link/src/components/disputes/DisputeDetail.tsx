@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useDisputes } from '@/hooks/useDisputes';
 import {
   disputeReasonLabels,
   DisputeMessage,
-  DisputeStatus,
+  DisputeStatus,;
 } from '@/types/disputes';
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,7 +15,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Separator } from '@/components/ui/separator';
@@ -29,7 +28,7 @@ import {
   Check,
   X,
   MessageSquare,
-  Download,
+  Download,;
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { toast } from 'sonner';
@@ -361,10 +360,7 @@ export function DisputeDetail() {
                         .filter(msg => !msg.is_admin_note)
                         .map(msg => {
                           const isCurrentUser = user?.id === msg.user_id;
-                          return (
-                            <div
-                              key={msg.id}
-                              className={`flex ${isCurrentUser ? 'justify-end' : 'justify-start'}`}
+                          
                             >
                               <div
                                 className={`max-w-[80%] ${
@@ -682,39 +678,10 @@ export function DisputeDetail() {
       </div>
     </div>
   );
-=======
- export function DisputeDetail () {
-  //useParams may be untyped in this environment, so avoid passing a //type argument and cast the result instead to prevent TS2347 errors. const {
-  disputeId 
-}= useParams () as {
-  disputeId?: string 
-};
-const navigate = useNavigate ();
-const {
-  user 
-}= useAuth ();
-const {
-  getDisputeById, updateDisputeStatus, resolveDispute, getDisputeMessages, addDisputeMessage 
-}= useDisputes ();
-if (!disputeId) return;
-const loadDisputeData = async () => {
-  setIsLoading (true);
-try {
-  const disputeData = await getDisputeById (disputeId);
-if (!disputeData) {
-  
-}setDispute (disputeData);
-const messagesData = await getDisputeMessages (disputeId);
-setMessages (messagesData) 
-}catch (error) {
-  
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [disputeId, navigate, getDisputeById, getDisputeMessages]);
-}
+
 };
 }const success = await resolveDispute (disputeId, resolution);
 if (success && dispute) {
@@ -725,20 +692,16 @@ resolution summary: resolution.summary;
 resolution type: resolution.resolution type;
 resolved at: new Date () .toISOString () 
 }) 
-}
+
 };
 setIsSending (true);
 try {
   
 }finally {
   setIsSending (false) 
-}
+
 };
-return (<div className="p-8 text-center"> <div className="w-8 h-8 mx-auto mb-4 animate-spin border-4 border-primary border-t-transparent rounded-full"></div> <p>Loading dispute details...</p> </div> <p>Dispute not found</p> <Button onClick= {
-  () => navigate ("/dashboard/disputes") 
-}className="mt-4" > Back to Disputes </Button> </div>) 
-}
-}
+
 };
 formatDistanceToNow (new Date (dispute.created at), {
   addSuffix: true 
@@ -762,12 +725,7 @@ formatDistanceToNow (new Date (dispute.created at), {
 }</p> </Badge> </div>) 
 }</CardContent> </Card>) 
 }</TabsContent> <TabsContent value="messages" className="space-y-6"> <Card> <CardHeader> <CardTitle>Messages</CardTitle> <CardDescription>Communication regarding this dispute</CardDescription> </CardHeader> <CardContent> <div className="space-y-6 max-h-[600px] overflow-y-auto p-2"> {
-  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note) return (<div key= {
-  msg.id 
-}className= {
-  `flex $ {
-  isCurrentUser ? 'justify-end' : 'justify-start' 
-}` 
+  messages.length === 0 ? (<div className="text-center py-12"> <MessageSquare className="mx-auto h-12 w-12 text-muted-foreground mb-2" /> <p className="text-muted-foreground">No messages yet</p> </div>) : (messages .filter (msg => !msg.is admin note) 
 }> <div className= {
   `max-w-[80%] $ {
   isCurrentUser ? 'bg-primary text-primary-foreground' : 'bg-muted' 
@@ -812,8 +770,7 @@ formatDistanceToNow (new Date (dispute.created at), {
 }{
   !messages.some (msg => msg.is admin note) && (<p className="text-sm text-muted-foreground italic">No admin notes yet</p>) 
 }</div> <div className="mt-4 space-y-4" > <Textarea 
-}
-}
+
+
 }> Add Admin Note </Button> </div> </div> </CardContent> </Card> </TabsContent>) 
 }</Tabs> </div> <div className="space-y-6" > <Card> <CardHeader> <CardTitle>Parties Involved</CardTitle> </CardHeader> </p> </div> </div> <div className="flex justify-center" > <ArrowDown className="h-6 w-6 text-muted-foreground" /> </div> </p> </div> </div> </CardContent> </Card> <Card> <CardHeader> <CardTitle>Case Information</CardTitle> </CardHeader> </div> </CardContent> </Card> </div> </div> </div>) 
-}

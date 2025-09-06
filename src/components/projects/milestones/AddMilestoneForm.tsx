@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,14 +13,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger,;
 } from '@/components/ui/popover';
 import { AIMilestoneGenerator } from './AIMilestoneGenerator';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
@@ -43,7 +42,6 @@ interface AddMilestoneFormProps {
   projectStartDate?: string;
   projectEndDate?: string;
   projectType?: string;
-}
 
 export function AddMilestoneForm({
   onSubmit,
@@ -238,13 +236,7 @@ export function AddMilestoneForm({
       </Form>
     </div>
   );
-=======
- type MilestoneFormValues = z.infer<typeof formSchema>;
-const handleAddMilestones = (milestones: GeneratedMilestone[]) => {;
-  //If there's only one milestone, submit it directly if (milestones.length === 1) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }//If there are multiple milestones, submit them one by one <AIMilestoneGenerator scope= {;
   projectScope ;
 }startDate= {;

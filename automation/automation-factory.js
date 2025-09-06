@@ -191,7 +191,6 @@ class CodeQualityMonitor {
       this.log(\`Error saving metrics: \${error.message}\`);
     }
   }
-}
 
 const monitor = new CodeQualityMonitor();
 monitor.analyzeCodeQuality().then(metrics => {
@@ -223,11 +222,9 @@ monitor.analyzeCodeQuality().then(metrics => {
       this.log(`Error in automation factory: ${error.message}`);
     }
   }
-}
 
 if (require.main === module) {
   const factory = new AutomationFactory();
   factory.run();
-}
 
 module.exports = AutomationFactory;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format } from 'date-fns';
 import { MessageSquare } from 'lucide-react';
@@ -191,10 +190,7 @@ export function ConversationDetailView() {
       </div>
     </div>
   );
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 <AvatarImage src= {
   activeConversation.other user.avatar url 
@@ -222,4 +218,3 @@ export function ConversationDetailView() {
 }<div ref= {
   messagesEndRef 
 }/> </div> placeholder="Type a message..." className="flex-1 bg-zion-blue-dark/30 border border-zion-purple/20 rounded-md p-2 min-h-[80px] text-white focus: outline-none focus:ring-2 focus:ring-zion-cyan" submit"className=" bg-zion-purple hover:bg-zion-purple-dark text-white" > Send </Button> </form> </div> </div>) 
-}

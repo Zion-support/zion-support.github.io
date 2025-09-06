@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Milestone } from '../../utils/types/milestones';
 
@@ -146,24 +145,3 @@ export default function MilestoneCard({
       </div>
     </div>
   );
-}
-=======
- return (<div className="border rounded-lg p-4 bg-white shadow-sm" > <div className="flex items-start justify-between" > <div> <div className= {
-  'h-2 w-2 rounded-full ' + (idx <= currentIndex ? 'bg-green-600' : 'bg-gray-300') 
-}title= {
-  step 
-}/> {
-  idx < statusSteps.length - 1 && (<div className= {
-  'h-0.5 w-8 ' + (idx < currentIndex ? 'bg-green-600' : 'bg-gray-300') 
-}/>) 
-}</div>) ) 
-}</div> </a> </li>) ) 
-}</ul> </div>) 
-}</div>) 
-}> Mark In Progress </button>) 
-}> Submit Work </button>) 
-}> Approve </button>) 
-}> Mark as Paid </button>) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

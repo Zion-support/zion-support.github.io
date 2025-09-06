@@ -199,5 +199,5 @@ export function CategoriesSection({ showTitle = true }) {;
         </motion.div>;
       </div>;
     </section>);
-}
+
 "

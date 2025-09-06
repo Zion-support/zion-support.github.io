@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
   writeState,
-  upsertEvent,
+  upsertEvent,;
 } from '../../../utils/sync/storage';
 import { signPayload } from '../../../utils/sync/signature';
 import axios from 'axios';
@@ -80,41 +79,3 @@ export default async function handler(
   return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
-}
-=======
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  personId, fromNation, toNation, role, startDate, endDate 
-}= req.body as {
-  personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string 
-};
-if (!personId || !fromNation || !toNation || !role || !startDate) {
-  
-}const entityKey = `$ {
-  personId 
-}:$ {
-  startDate 
-}`;
-const version = nextVersionFor (state, entityKey);
-const event = {
-  eventId: uuidv4 ();
-type: "talent mobility" as const;
-payload: {
-  id: entityKey, personId, fromNation, toNation, role, startDate, endDate 
-};
-version;
-timestamp: Date.now () 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  
-}
-}) );
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

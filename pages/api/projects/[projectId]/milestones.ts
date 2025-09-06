@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../utils/api/auth';
 import {
   addMilestone,
   getProject,
   assertParticipantOrAdmin,
-  isClient,
+  isClient,;
 } from '../../../../utils/api/projects';
 import { Milestone } from '../../../../utils/types/milestones';
 
@@ -61,10 +60,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-}
-=======
- 
-}res.setHeader ('AllowGET, POST');
-res.status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

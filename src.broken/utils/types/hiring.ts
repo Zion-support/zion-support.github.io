@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type CandidateStatus =
   | 'applied'
   | 'shortlisted'
@@ -12,7 +11,6 @@ export interface TalentProfile {
   name: string;
   title?: string;
   photoUrl?: string;
-}
 
 export interface JobApplication {
   id: string;
@@ -26,15 +24,9 @@ export interface JobApplication {
   updatedAt?: string;
   lastActivityAt?: string | null;
   talent?: TalentProfile;
-}
 
 export interface ApplicationFilters {
   status?: CandidateStatus | 'all';
   minScore?: number;
   fromDate?: Date | null;
   toDate?: Date | null;
-}
-=======
-export type CandidateStatus = 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

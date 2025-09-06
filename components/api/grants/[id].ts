@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import type {
   GrantApplication,
-  UpdateGrantPayload,
+  UpdateGrantPayload,;
 } from '../../../types/grants';
 
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
@@ -13,18 +12,15 @@ function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true });
   }
-}
 
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
-}
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const file = grantPath(id);
   if (!fs.existsSync(file)) return null;
   return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication;
-}
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
@@ -33,7 +29,6 @@ function writeGrant(record: GrantApplication) {
     JSON.stringify(record, null, 2),
     'utf8'
   );
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string };
@@ -72,10 +67,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, PUT');
   res.status(405).end('Method Not Allowed');
-}
-=======
- 
-}res.setHeader ('AllowGET, PUT');
-res.status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

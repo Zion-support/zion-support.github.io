@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MobileHeader } from '../components/common/MobileHeader';
 import { BottomNavigation } from '../components/common/BottomNavigation';
@@ -46,7 +45,6 @@ interface Message {
   timestamp: string;
   isMe: boolean;
   status: 'read' | 'sent' | 'delivered';
-}
 
 const mockMessages: Message[] = [
   {
@@ -149,9 +147,7 @@ export function MobileMessages() {
       )}
     </div>
   );
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Mock data for demonstration //Define the Message type to resolve the type error interface Message {
+
   id: string;
 content: string;
 timestamp: string;
@@ -178,5 +174,3 @@ isMe: true;
   handleSelectConversation 
 }/> </main> <BottomNavigation /> </>) 
 }</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

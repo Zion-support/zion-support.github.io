@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import CodeSamples from './CodeSamples';
 import TryItConsole from './TryItConsole';
@@ -76,21 +75,3 @@ export default function EndpointDetail({
       )}
     </div>
   );
-}
-=======
- </div> </div> <div>) ) 
-}</ul> </div>) 
-}{
-  endpoint.errors.map ( (e) => (<li key= {
-  e.code 
-}><strong> {
-  e.code 
-}</strong> ({
-  e.httpStatus 
-}) - {
-  e.message 
-}</li>) ) 
-}</ul> </div>) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

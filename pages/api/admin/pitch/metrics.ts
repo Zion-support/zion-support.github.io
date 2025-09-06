@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ensureAdminFromApi } from '../../../../utils/auth';
 
@@ -34,16 +33,10 @@ export default async function handler(
       },
     ],
   };
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
     res.setHeader('Allow', ['GET']);
     return res.status(405).end('Method Not Allowed');
   }
   
-  const data = { metrics: [] };
   res.status(200).json(data);
-}

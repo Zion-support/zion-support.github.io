@@ -7,7 +7,6 @@ export function getPool(): Pool {
     pool = new Pool({ connectionString: process.env.DATABASE_URL });
   }
   return pool;
-}
 
 export async function withUser<T>(
   userId: string,
@@ -28,4 +27,3 @@ export async function withUser<T>(
   } finally {
     client.release();
   }
-}

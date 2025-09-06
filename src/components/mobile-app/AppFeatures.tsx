@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Brain, Clock, Award, Zap } from 'lucide-react';
 import {
@@ -6,7 +5,7 @@ import {
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
+  CardDescription,;
 } from '@/components/ui/card';
 
 const features = [
@@ -71,12 +70,6 @@ export const AppFeatures: React.FC = () => {
       </div>
     </section>
   );
-=======
- const features = [ {;
-  icon: <Brain className="h-10 w-10 text-zion-cyan" />;";
-title: "AI Talent Matching";";
-description: "Our AI algorithm matches you with the perfect talent or job based on your skills and requirements." ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 {";
   icon: <Clock className="h-10 w-10 text-zion-cyan" />;";

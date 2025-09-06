@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ProductListing } from '@/types/listings';
 
 export const MORE_PRODUCTS: ProductListing[] = [
@@ -193,8 +192,6 @@ export const MORE_PRODUCTS: ProductListing[] = [
     aiScore: 89,
   },
 ];
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 export const MORE PRODUCTS: ProductListing[] = [ images: [ "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&h=500" ];
 createdAt: "2024-04-11T10:00:00.000Z";
 rating: 4.5;
 reviewCount: 20;
@@ -274,4 +271,3 @@ location: "Global";
 availability: "Immediate";
 aiScore: 89 
 }];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

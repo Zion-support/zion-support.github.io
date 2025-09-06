@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 async function ask() {
   const prompt = document.getElementById('prompt').value;
   if (!prompt.trim()) {
@@ -7,7 +6,6 @@ async function ask() {
   }
   const res = await chrome.runtime.sendMessage({ type: 'ask', prompt });
   document.getElementById('output').textContent = res.answer;
-}
 
 // Attach handlers once the DOM is fully loaded to avoid null element errors
 document.addEventListener('DOMContentLoaded', () => {
@@ -25,6 +23,3 @@ document.addEventListener('DOMContentLoaded', () => {
       chrome.runtime.sendMessage({ type: 'view-notifications' });
     });
 });
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

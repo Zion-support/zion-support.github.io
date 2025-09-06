@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -38,7 +37,6 @@ export default async function handler(
     `attachment; filename="pitch-deck-${version || 'draft'}.html"`
   );
   res.status(200).send(html);
-}
 
 function escapeHtml(str: string) {
   return String(str)
@@ -47,15 +45,3 @@ function escapeHtml(str: string) {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    res.setHeader('Allow', ['GET']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  const html = '<html><body><h1>Pitch Export</h1></body></html>';
-  res.status(200).send(html);
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router'; // Changed from useParams, useNavigate
 import { Header } from '@/components/Header';
@@ -11,7 +10,7 @@ import {
   DollarSign,
   Tag,
   Users,
-  Briefcase,
+  Briefcase,;
 } from 'lucide-react';
 import { formatDistanceToNow } from 'date-fns';
 import { toast } from 'sonner';
@@ -33,7 +32,6 @@ interface Job {
   created_at: string;
   category: string;
   deadline?: string;
-}
 
 export default function JobDetails() {
   const router = useRouter(); // Init router
@@ -235,11 +233,7 @@ export default function JobDetails() {
       )}
     </>
   );
-}
-=======
- const [isApplyModalOpen, setIsApplyModalOpen] = useState (false);
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 if (error || !job) {;
+
   return (<> <Header /> <div className="container mx-auto px-4 py-16 text-center" > <h1 className="text-2xl font-bold mb-4" >Job Not Found</h1> <p className="mb-8" >The job you're looking for doesn't exist or has been removed.</p> <Button onClick={';
   () => router.push ('/careers') ;
 }>View All Jobs</Button> </div> </>) ;
@@ -277,4 +271,3 @@ const isOwnJob = user?.id === job.client id;
   />) ;
 }</>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import ApiDocsLayout from '@/components/developers/ApiDocsLayout';
 import { CodeBlock } from '@/components/developers/CodeBlock';
@@ -327,20 +326,7 @@ export function ApiErrorCodes() {
       </div>
     </ApiDocsLayout>
   );
-=======
- export function ApiErrorCodes () {
-  const errorExample = ` {
-  "error" : "validation error";
-"message" : "The request was invalid";
-"details" : [ {
-  "field" : "title";
-"error" : "Title is required" 
-};
-{
-  "field" : "budget.min";
-"error" : "Budget minimum must be greater than 0" 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }`;
 const errorCodes = [ {
   status: 400;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { writeState, readState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -30,8 +29,7 @@ export default async function handler(
   const crms = state.connections.filter(c =>
     ['salesforce', 'hubspot', 'zoho', 'pipedrive'].includes(c.providerId)
   );
-  for (const conn of crms) {
-    const { log } = await crm.addProjectNote(conn, {
+   = await crm.addProjectNote(conn, {
       jobId: match.jobId,
       note: `Talent ${match.talentId} matched. ${match.summary || ''}`.trim(),
     });
@@ -39,8 +37,3 @@ export default async function handler(
   }
 
   res.status(200).json({ ok: true, eventId });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

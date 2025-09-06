@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { v4 as uuidv4 } from 'uuid';
 import {
   findProjectById,
   hasExistingReview,
   upsertReview,
-  counterpartRole,
+  counterpartRole,;
 } from '../../../utils/dataStore';
 import type { Review } from '../../../types/reviews';
 
@@ -96,9 +95,3 @@ export default async function handler(
       .status(500)
       .json({ error: 'Internal server error', details: error?.message });
   }
-}
-=======
- await upsertReview (review);
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

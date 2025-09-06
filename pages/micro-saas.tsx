@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -46,11 +45,10 @@ import {
   Link as LinkIcon,
   Award as AwardIcon,
   Star as StarIcon,
-  Home
+  Home;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
-<<<<<<< HEAD
 export default function MicroSaaS() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -264,67 +262,11 @@ export default function MicroSaaS() {
     selectedCategory === 'all'
       ? products
       : products.filter(product => product.category === selectedCategory);
-=======
-const microSaasSolutions = [
-  {
-    id: 1,
-    title: 'AI Content Marketing Suite',
-    description: 'Automated content creation, SEO optimization, and social media management platform with advanced AI capabilities.',
-    icon: FileText,
-    features: ['AI Content Generation', 'SEO Optimization', 'Social Media Scheduling', 'Analytics Dashboard', 'Multi-language Support', 'Brand Voice Training'],
-    pricing: '$29 - $199/month',
-    category: 'AI Marketing',
-    popular: true,
-    benefits: ['10x Content Output', 'SEO Boost', 'Time Savings', 'Better Engagement', 'Cost Reduction'],
-    marketPrice: '$50 - $300/month',
-    link: '/contact',
-    contact: '+1 302 464 0950'
-  },
-  {
-    id: 2,
-    title: 'Smart Lead Management System',
-    description: 'AI-powered lead scoring, nurturing, and conversion optimization platform with predictive analytics.',
-    icon: Target,
-    features: ['Lead Scoring', 'Automated Nurturing', 'CRM Integration', 'Conversion Tracking', 'Predictive Analytics', 'A/B Testing'],
-    pricing: '$49 - $299/month',
-    category: 'AI Sales',
-    popular: true,
-    benefits: ['Higher Conversion', 'Automated Workflows', 'Better ROI', 'Data Insights', 'Reduced Manual Work'],
-    marketPrice: '$75 - $500/month',
-    link: '/contact',
-    contact: '+1 302 464 0950'
-  },
-  {
-    id: 3,
-    title: 'AI-Powered Analytics Dashboard',
-    description: 'Real-time business intelligence with predictive analytics, custom reporting, and automated insights.',
-    icon: BarChart3,
-    features: ['Real-time Analytics', 'Predictive Insights', 'Custom Reports', 'Data Visualization', 'Automated Alerts', 'ROI Tracking'],
-    pricing: '$39 - $249/month',
-    category: 'AI Analytics',
-    popular: true,
-    benefits: ['Data-Driven Decisions', 'Predictive Insights', 'Custom Dashboards', 'ROI Tracking', 'Automated Reporting'],
-    marketPrice: '$60 - $400/month',
-    link: '/contact',
-    contact: '+1 302 464 0950'
-  }
-];
-
-const industries = [
-  { name: 'E-commerce', icon: ShoppingCart, description: 'Online retail and marketplace solutions' },
-  { name: 'Healthcare', icon: Heart, description: 'Healthcare technology and patient management' },
-  { name: 'Education', icon: GraduationCap, description: 'Educational technology and learning platforms' },
-  { name: 'Finance', icon: TrendingUp, description: 'Financial services and fintech solutions' },
-  { name: 'Manufacturing', icon: Building, description: 'Industrial automation and supply chain' },
-  { name: 'Real Estate', icon: Home, description: 'Property management and real estate tech' }
-];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 export default function MicroSaas() {
   return (
     <Layout>
       <Head>
-<<<<<<< HEAD
         <title>Micro SaaS Products - Zion Tech Group</title>
         <meta
           name='description'
@@ -553,38 +495,10 @@ export default function MicroSaas() {
                 <Link
                   href='/contact'
                   className='px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors'
-=======
-        <title>Micro SaaS Solutions - Zion Tech Group</title>
-        <meta name="description" content="Discover our micro SaaS solutions designed to solve specific business problems with AI-powered tools and automation." />
-      </Head>
-
-      <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50">
-        {/* Hero Section */}
-        <section className="relative py-20 px-4">
-          <div className="max-w-7xl mx-auto">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-center"
-            >
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">
-                Micro <span className="text-blue-600">SaaS</span> Solutions
-              </h1>
-              <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Powerful, focused SaaS solutions designed to solve specific business problems. 
-                Get started quickly with our ready-to-deploy micro SaaS applications.
-              </p>
-              <div className="flex flex-wrap justify-center gap-4">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
                 >
                   Get Started
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Link>
-<<<<<<< HEAD
                 <a
                   href={`tel:${contact.phone.replace(/[^\d+]/g, '')}`}
                   className='px-8 py-3 bg-purple-600 hover:bg-purple-700 rounded-lg font-semibold transition-colors'
@@ -597,14 +511,6 @@ export default function MicroSaas() {
                 >
                   Email Us
                 </a>
-=======
-                <Link
-                  href="/ai-services"
-                  className="inline-flex items-center px-6 py-3 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors"
-                >
-                  View AI Services
-                </Link>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
               </div>
             </motion.div>
           </div>
@@ -746,52 +652,4 @@ export default function MicroSaas() {
       </div>
     </Layout>
   );
-<<<<<<< HEAD
-}
-=======
-=======
- const filteredProducts = selectedCategory === 'all' ? products : products.filter (product => product.category === selectedCategory);
-return (<> <Head> <title>Micro SaaS Products - Zion Tech Group</title> <h1 className= {
-  `text-5xl md:text-6xl font-extrabold tracking-tight mb-6 transition-all duration-1000 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}> Micro SaaS Products </h1> <p className= {
-  `text-xl md:text-2xl text-slate-300 mb-8 transition-all duration-1000 delay-200 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}> 150+ Innovative Solutions for Modern Businesses </p> <p className= {
-  `text-lg text-slate-400 mb-12 max-w-3xl mx-auto transition-all duration-1000 delay-400 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}> Discover our comprehensive collection of micro SaaS products designed to solve specific business challenges with focused, efficient, and cost-effective solutions. </p> </div> </section> key= {
-  category.id 
-}onClick= {
-  () => setSelectedCategory (category.id) 
-}className= {
-  `px-6 py-3 rounded-lg font-semibold transition-all duration-300 $ {
-  selectedCategory === category.id ? 'bg-blue-600 text-white' : 'bg-slate-800 text-slate-300 hover:bg-slate-700' 
-}` 
-}> {
-  category.name 
-}({
-  category.count 
-}) </button>) ) 
-}</div> </div> </section> <div key= {
-  product.id 
-}className= {
-  `p-6 bg-slate-900/60 rounded-xl border border-white/10 hover:border-blue-500/40 transition-all duration-300 hover:scale-105 $ {
-  isLoaded ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8' 
-}` 
-}style= {
-  {
-  transitionDelay: `$ {
-  index * 100 
-}ms` 
-}
-}> Popular </div>) 
-}</li>) ) 
-}</ul> </div> </div> <button className="w-full py-2 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors" > Learn More </button> </div>) ) 
-}</div> </div> </section> </svg> </div> <h3 className="text-xl font-bold mb-2" >Lightning Fast</h3> <p className="text-slate-400" >Quick setup and deployment in minutes, not months</p> </div> </svg> </div> <h3 className="text-xl font-bold mb-2" >Cost Effective</h3> <p className="text-slate-400" >Affordable pricing with no hidden costs or long-term contracts</p> </div> </svg> </div> <h3 className="text-xl font-bold mb-2" >Focused Solutions</h3> <p className="text-slate-400" >Specialized tools that solve specific business problems</p> </div> </svg> </div> <h3 className="text-xl font-bold mb-2" >Easy Integration</h3> <p className="text-slate-400" >Seamless integration with your existing tools and workflows</p> </div> </div> </div> </section> Ready to Get Started? </h2> <p className="text-lg text-slate-300 mb-8" > Contact our experts to discuss which micro SaaS products are right for your business and get started with a free trial. </p> <div className="flex flex-col sm:flex-row items-center justify-center gap-4" > <Link href="/contact" className="px-8 py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors" > Get Free Trial </Link> <a 
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

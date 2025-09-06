@@ -1,21 +1,18 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Trophy } from 'lucide-react';
 
 export interface LeaderboardEntry {
   name: string;
   points: number;
-}
 
 interface UserLeaderboardProps {
   entries: LeaderboardEntry[];
-}
 
 export function UserLeaderboard({ entries }: UserLeaderboardProps) {
   return (
@@ -43,22 +40,3 @@ export function UserLeaderboard({ entries }: UserLeaderboardProps) {
       </CardContent>
     </Card>
   );
-}
-=======
- import {;
-  {;
-  {;
-  Trophy ;
-}from 'lucide-react' export interface LeaderboardEntry {;
-  name: string;
-points: number ;
-}interface UserLeaderboardProps {;
-  entries: LeaderboardEntry[] ;
-}entries ;
-}: UserLeaderboardProps) {;
-  return (<Card> <CardHeader> <CardTitle className="flex items-center gap-2" > <Trophy className="h-5 w-5" /> Leaderboard </CardTitle> <CardDescription>Top users by points</CardDescription> </CardHeader> <CardContent> <div key= {;
-  e.name ";
-}className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50" > </div>) ) ;
-}</div> </CardContent> </Card>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

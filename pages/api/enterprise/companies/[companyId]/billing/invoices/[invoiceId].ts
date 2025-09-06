@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export const config = {
@@ -35,9 +34,3 @@ export default async function handler(
     `attachment; filename="invoice-${invoiceId}.pdf"`
   );
   res.status(200).send(pdfBuffer);
-}
-=======
- res.status (200) .send (pdfBuffer);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

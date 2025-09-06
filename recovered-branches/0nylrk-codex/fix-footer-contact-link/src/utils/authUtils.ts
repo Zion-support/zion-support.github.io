@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 import type { UserDetails } from '@/types/auth';
 
@@ -69,14 +68,11 @@ export const checkNewRegistration = async (user: UserDetails) => {
   } catch (error) {
     console.error('Error checking or scheduling welcome email:', error);
   }
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 /** * Utility function to clean up authentication state * This helps prevent auth state inconsistencies and "limbo" states */ //Remove all Supabase auth keys from localStorage Object.keys (localStorage) .forEach ( (key) => {
   if (key.startsWith ('supabase.auth.') || key.includes ('sb-') ) {
   /** * Utility function to check new user registration and schedule welcome emails */export const checkNewRegistration = async (user: UserDetails) => {
   try {
   //Check if user has received welcome email already .from ("email campaigns") .select ("id") .eq ("user id", user.id) .eq ("campaign type", "welcome series") .maybeSingle ();
 // Create a scheduled job for the welcome email await supabase .from ("scheduled jobs") .insert ({
   
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 };

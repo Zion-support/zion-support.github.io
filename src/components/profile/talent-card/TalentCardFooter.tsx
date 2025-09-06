@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Star } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,6 @@ interface TalentCardFooterProps {
   profile: TalentProfile;
   onViewProfile: (id: string) => void;
   onRequestHire?: (profile: TalentProfile) => void;
-}
 
 export function TalentCardFooter({
   profile,
@@ -118,40 +116,7 @@ export function TalentCardFooter({
       />
     </>
   );
-=======
- interface TalentCardFooterProps {;
-  profile: TalentProfile;
-onViewProfile: (id: string) => void;
-onRequestHire?: (profile: TalentProfile) => void ;
-}export function TalentCardFooter ({;
-  profile,  onViewProfile, onRequestHire ;
-}: TalentCardFooterProps) {;
-  const [isHireModalOpen, setIsHireModalOpen] = useState (false);
-const {;
-  userDetails ;
-}= useAuthStatus ();
-const router = useRouter ();
-//Create a compatible UserProfile from UserDetails const userProfile: UserProfile = {;
-  id: userDetails?.id;
-name: userDetails?.name || '';';
-email: userDetails?.email || '';
-userType: null;
-profileComplete: false;
-created at: new Date () .toISOString ();
-updated at: new Date () .toISOString ();';
-role: userDetails?.userType || '';';
-displayName: userDetails?.name || '';
-points: 0;';
-avatarUrl: userDetails?.avatar || '' ;
-};
-//Handle request to hire const handleRequestHire = (e: React.MouseEvent) => {;
-  e.stopPropagation ();
-if (onRequestHire) {;
-  onRequestHire (profile) ;
-}else {;
-  //Open hire modal directly if no handler provided setIsHireModalOpen (true) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Handle view profile const handleViewProfile = (e: React.MouseEvent) => {;
   e.stopPropagation ();';

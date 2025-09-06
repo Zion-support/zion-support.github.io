@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, filterEventsByScope } from '../../../utils/sync/storage';
 
@@ -29,15 +28,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     events,
     scope: requestedScope,
   });
-}
-=======
- const scoped = filterEventsByScope (state.events, state.config.scope);
-const events = scoped.filter ( (e) => (e.timestamp || 0) > since);
-return res.status (200) .json ({
-  instanceId: state.config.instanceId;
-lastSyncedAt: state.lastSyncedAt;
-events;
-scope: requestedScope 
-}) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate, useSearchParams } from 'react-router-dom';
@@ -12,7 +11,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { useFeatureFlags } from '@/context/FeatureFlagContext';
 
@@ -21,7 +20,6 @@ interface CartItem {
   name: string;
   price: number;
   quantity: number;
-}
 
 interface CheckoutForm {
   name: string;
@@ -29,7 +27,6 @@ interface CheckoutForm {
   address: string;
   city: string;
   country: string;
-}
 
 export default function CheckoutV2() {
   const navigate = useNavigate();
@@ -170,10 +167,7 @@ export default function CheckoutV2() {
       </div>
     </div>
   );
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [searchParams]);
 <FormItem> <FormLabel>Name</FormLabel> <FormControl> <Input {
   ...field 
@@ -191,4 +185,3 @@ export default function CheckoutV2() {
 }/> <div className="border-t pt-4" > <div className="flex justify-between font-semibold mb-4" > <span>Subtotal</span> <span>$ {
   subtotal.toFixed (2) 
 }</span> </div> <Button className="w-full" type="submit" > Pay with Stripe (test) </Button> </div> </form> </Form> </div> </div>) 
-}

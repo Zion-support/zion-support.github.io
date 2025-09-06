@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import {
@@ -9,7 +8,7 @@ import {
   Phone,
   Mail,
   MapPin,
-  Check,
+  Check,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 import ServiceAds from '../components/sections/ServiceAds';
@@ -36,7 +35,7 @@ export default function ApiMockContractTestingPage() {
       ],
       link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo,
-    },
+    },;
   ];
 
   const tiers = [
@@ -134,10 +133,3 @@ export default function ApiMockContractTestingPage() {
       </div>
     </Layout>
   );
-}
-=======
- return (<Layout> <Head> <title>API Mock & Contract Testing | Zion Tech Group</title>) ) 
-}</ul> </div>) ) 
-}</div> </div> <div className="text-center" > <a href="/contact" className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-xl" >Book a Demo</Link> </div> </div> </div> </div> </Layout>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

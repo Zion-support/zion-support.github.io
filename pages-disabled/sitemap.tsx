@@ -1,8 +1,8 @@
 import React from "react";
-import MainLayout from '../components/layout/MainLayout'
-import Link from 'next/link'
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next/link';
 import { motion } from 'framer-motion;
-import {}
+import {};
   // TODO: Implement;
 };
   Globe, 
@@ -18,8 +18,8 @@ import {}
   Code,
   BookOpen,
   HelpCircle,
-  Shield,
-  Lock,
+  Shield,";
+  Lock,'
   Search;'
 } from 'lucide-react;
 const siteStructure = []

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useMemo, useState } from 'react';
 import { useRouter } from 'next/router';
 import { TALENT_PROFILES } from '../data/talent';
@@ -132,9 +131,3 @@ export default function RequestToHirePage() {
       </form>
     </div>
   );
-}
-=======
- </div>) 
-}</button> </form> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

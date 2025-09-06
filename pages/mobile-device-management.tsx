@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -151,11 +150,3 @@ export default function MDMPage() {
       </div>
     </Layout>
   );
-}
-=======
- return (<Layout> <Head> <title>Mobile Device Management (MDM) | Zion Tech Group</title> <meta name="description" content="Modern MDM with zero-touch enrollment, compliance policies, app management, and identity integration." /> <link rel="canonical" href="https://ziontechgroup.com/mobile-device-management" /> </Head> <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <div className="max-w-7xl mx-auto space-y-12" > <header className="text-center" > <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-600 mb-4" > <Smartphone className="w-8 h-8 text-white" /> </div> <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-4" >Mobile Device Management (MDM) </h1> <p className="text-gray-300 text-lg max-w-3xl mx-auto" >Secure, compliant device fleets across iOS, Android, macOS, and Windows.</p> <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4" > <a href="/contact" className="px-8 py-4" >Talk to an Engineer</Link> <a href="/market-pricing" className="px-8 py-4" >Market Pricing</Link> </div> </header> <section> </div>) ) 
-}</div> </section> <section> </div>) ) 
-}</div> <div className="text-sm text-gray-400 mt-3 text-center" >We align with leading platforms like Intune, Jamf, and Workspace ONE.</div> </section> <section>) ) 
-}</div> </section> <section className="text-center" > <div className="inline-flex items-center justify-center gap-3 text-gray-300" > <Shield className="w-5 h-5 text-purple-400" /> <span>SAML/SCIM, device attestation, and compliance-ready audit logs</span> </div> </section> </div> </div> </Layout>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

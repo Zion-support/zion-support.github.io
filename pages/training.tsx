@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import SEO from '../components/SEO';
 import Layout from '../components/layout/Layout';
@@ -33,7 +32,7 @@ import {
   Lightbulb,
   Building,
   Globe,
-  Server,
+  Server,;
 } from 'lucide-react';
 
 export default function TrainingPage() {
@@ -823,23 +822,18 @@ export default function TrainingPage() {
       </div>
     </Layout>
   );
-}
 
-=======
- const allPrograms = [ //AI Consciousness Programs const filteredPrograms = allPrograms.filter (program => selectedCategory === 'all' || program.category === selectedCategory);
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Layout> <SEO <motion.div initial= {
   {
   opacity: 0, y: 20 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }> <h1 className="text-5xl lg:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6" > Training & Certification </h1> </p> <div className="flex flex-wrap justify-center gap-4 text-gray-400" > <div className="flex items-center gap-2" > <GraduationCap className="w-5 h-5" /> <span>Expert-Led Training</span> </div> <div className="flex items-center gap-2" > <Award className="w-5 h-5" /> <span>Industry Certifications</span> </div> <div className="flex items-center gap-2" > <Users className="w-5 h-5" /> <span>Global Community</span> </div> </div> </motion.div> </div> </section> key= {
   category.id 
 }onClick= {
@@ -864,20 +858,19 @@ export default function TrainingPage() {
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Career? </h2> <p className="text-xl text-gray-300 mb-8 max-w-3xl mx-auto" > Join thousands of professionals who have already mastered the future of technology. Start your learning journey today and earn industry-recognized certifications. </p> <a href="/contact" className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-bold rounded-xl hover:from-cyan-600 hover:to-blue-600 transition-all duration-300 transform hover:scale-105" > Get Personalized Guidance </Link> <a href="/resources" className="px-8 py-4 border-2 border-cyan-500 text-cyan-400 font-bold rounded-xl hover:bg-cyan-500 hover:text-white transition-all duration-300" > Explore Free Resources </Link> </div> </motion.div> </div> </section> </div> </Layout>) 
 };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default Training;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { ReactNode } from 'react';
 import { cn } from '@/lib/utils';
 import { slugify } from '@/lib/slugify';
@@ -16,7 +15,6 @@ interface CategoryCardProps {
   color?: string;
   count?: number;
   className?: string;
-}
 
 export function CategoryCard({
   title,
@@ -29,13 +27,7 @@ export function CategoryCard({
   // Create a URL-friendly slug from the category title
   const slug = slugify(title);
 
-  return (
-    <Link
-      to={`/category/${slug}`}
-      className={cn(
-        'flex flex-col items-center p-6 bg-zion-blue-light rounded-lg border border-zion-purple/20 hover:border-zion-purple/50 transition-all duration-300 hover:shadow-lg hover:shadow-zion-purple/20 group',
-        className
-      )}
+  
     >
       <div
         className={cn(
@@ -55,23 +47,3 @@ export function CategoryCard({
       )}
     </Link>
   );
-}
-=======
- interface CategoryCardProps {
-  title: string;
-description: string;
-icon: ReactNode | string;
-`/category/$ {
-  slug 
-}` 
-}) 
-}style= {
-  color ? {
-  color 
-}: undefined 
-}> {
-  icon 
-}</div>) 
-}</Link>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
@@ -42,10 +41,3 @@ export default function PaymentSuccess() {
       </div>
     </div>
   );
-}
-=======
- </div> <h1 className="text-2xl font-bold text-white mb-2" >Payment Successful!</h1> <p className="text-zion-slate-light mb-6" > Your payment has been processed successfully. You now have access to all the premium features. </p> <div className="flex flex-col space-y-3" > <Button onClick= {
-  () => navigate ('/dashboard') 
-}className="bg-zion-purple hover:bg-zion-purple-dark text-white" > Go to Dashboard </Button> <Button 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

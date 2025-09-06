@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
 
 // Mock talent profiles for development and testing
@@ -444,8 +443,6 @@ export const MOCK_TALENTS: ProfileData[] = [
     contactEmail: 'david.martinez@example.com',
   },
 ];
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 // Mock talent profiles for development and testing export const MOCK TALENTS: ProfileData[] = [ ] 
 };
 hourlyRate: 150;
 contactEmail: "alexandra.chen@example.com" 
@@ -462,7 +459,7 @@ availableHours: [ {
 };
 {
   day: "Friday", hours: "1:00 PM - 5:00 PM" 
-}
+
 };
 hourlyRate: 135;
 contactEmail: "michael.reynolds@example.com" 
@@ -496,9 +493,8 @@ availableHours: [ {
 };
 {
   day: "Saturday", hours: "12:00 PM - 4:00 PM" 
-}
+
 };
 hourlyRate: 125;
 contactEmail: "david.martinez@example.com" 
 }];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

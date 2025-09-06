@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { UseFormReturn } from 'react-hook-form';
@@ -12,7 +11,6 @@ import { FormValues } from './useHireRequestForm';
 
 interface PersonalInfoFieldsProps {
   form: UseFormReturn<FormValues>;
-}
 
 export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
   return (
@@ -55,16 +53,3 @@ export function PersonalInfoFields({ form }: PersonalInfoFieldsProps) {
       />
     </>
   );
-}
-=======
- interface PersonalInfoFieldsProps {
-  form: UseFormReturn<FormValues> 
-}form 
-}: PersonalInfoFieldsProps) {
-  return (<> <FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Your Name</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-white" >Your Email</FormLabel> <FormControl> <Input /> </FormControl> <FormMessage /> </FormItem>) 
-}/> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

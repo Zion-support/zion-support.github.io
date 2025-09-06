@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { TalentOnboardingForm } from '@/components/profile/TalentOnboardingForm';
 import { Header } from '@/components/Header';
@@ -36,13 +35,4 @@ export default function TalentOnboarding() {
       <Footer />
     </>
   );
-=======
- export default function TalentOnboarding () {
-  const {
-  user, isLoading 
-}= useAuth ();
-// If not authenticated, redirect to login if (!isLoading && !user) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

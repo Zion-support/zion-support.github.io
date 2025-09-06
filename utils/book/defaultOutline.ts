@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { BookChapter } from './bookTypes';
 
 export const defaultChapters: BookChapter[] = [
@@ -11,6 +10,3 @@ export const defaultChapters: BookChapter[] = [
   { title: 'Chapter 6: Building a Post-Platform World', content: '' },
   { title: 'Appendix: Protocol Maps + Timelines', content: '' },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

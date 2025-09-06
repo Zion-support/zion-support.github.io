@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Fastify from 'fastify';
 import cors from '@fastify/cors';
 import rateLimit from '@fastify/rate-limit';
@@ -34,7 +33,6 @@ function getUserId(req: any): string | null {
     (req.query as any)['user_id'] ||
     null
   );
-}
 
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};
@@ -117,10 +115,3 @@ app.listen({ port, host: '0.0.0.0' }).catch(err => {
   app.log.error(err);
   process.exit(1);
 });
-=======
- dotenv.config ();
-};
-methods: ['GETPOSTOPTIONS'] 
-});
-WHERE ($1::text IS NULL OR country = $1) AND ($2::text IS NULL OR EXISTS (SELECT 1 FROM unnest (skills) s WHERE s ILIKE '%' || $2 || '%') ) ORDER BY created at DESC 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -10,24 +9,6 @@ import { useRouter } from 'next/router';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface PaymentButtonProps {
-=======
- import { ;
-  {;
-  {;
-  Loader2 ;
- } from "lucide-react";
-import {;
-  {;
-  {;
-  useRouter ';
-}from 'next/router';
-import {;
-  {;
-  {;
-  logErrorToProduction ';
-}from '@/utils/productionLogger';
-interface PaymentButtonProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   amount: number;
 serviceId: string;
 providerId: string;
@@ -72,8 +53,6 @@ providerId;
 userId: user?.id;
 successUrl: redirectUrl || window.location.href;
 cancelUrl: window.location.href ;
-}
-<<<<<<< HEAD
 
 export function PaymentButton({
   amount,
@@ -149,11 +128,7 @@ export function PaymentButton({
     }
   };
 
-  return (
-    <Button
-      onClick={handlePaymentClick}
-      disabled={isProcessing}
-      className={cn('relative min-w-[120px]', className)}
+  
     >
       {isProcessing ? (
         <>
@@ -165,16 +140,7 @@ export function PaymentButton({
       )}
     </Button>
   );
-=======
-});
-if (error) {;
-  throw error ;
-}//Type assertion needed for mock Supabase client compatibility if ( (data as any) ?.url) {';
-  //Open Stripe checkout in a new tab window.open ( (data as any) .url, 'blank') ;
-}else {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }catch (error) {';
   logErrorToProduction ('Payment error:', {;
   data: error ;
@@ -185,9 +151,9 @@ toast ({;
   //Reset button state after a short delay setTimeout ( () => {;
   setIsProcessing (false) ;
 }, 1500) ;
-}
+
 };
-return (<Button) ;
+
 }> {";
   isProcessing ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Processing... </>) : (buttonText) ;
 }</Button>) ;

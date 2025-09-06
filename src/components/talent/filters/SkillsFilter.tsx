@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Checkbox } from '@/components/ui/checkbox';
@@ -67,33 +66,3 @@ export function SkillsFilter({
       )}
     </div>
   );
-}
-=======
- //Common skills in AI and tech const POPULAR SKILLS = [ "Machine Learning";";
-"Deep Learning";";
-"Python";";
-"TensorFlow";";
-"PyTorch";";
-"Computer Vision";";
-"NLP";";
-"Data Science";";
-"AWS";";
-"Docker";";
-"Kubernetes";";
-"React";";
-"Node.js";";
-"TypeScript";";
-"DevOps";";
-"Security" ];
-toggleSection ";
-}className="flex w-full items-center justify-between text-white font-medium" > <span>Skills</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) ;
-}</button> {;
-  POPULAR SKILLS.map (skill => (<div key= {;
-  skill ";
-}className="flex items-center" > <Checkbox > {;
-  skill ;
-}</label> </div>) ) ;
-}</div>) ;
-}</div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

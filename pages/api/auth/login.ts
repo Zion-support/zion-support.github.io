@@ -1,10 +1,9 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import {
   ensureDemoUsers,
   generateUser,
   setUserCookie,
-  upsertUser,
+  upsertUser,;
 } from '../../../utils/auth';
 import { UserRole } from '../../../utils/messaging/types';
 
@@ -19,15 +18,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   upsertUser(user);
   setUserCookie(res, user);
   res.status(200).json({ user });
-}
-=======
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Login successful' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

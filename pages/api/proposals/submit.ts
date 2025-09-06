@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import {
   getProposal,
   updateProposalMeta,
-  updateArtifacts,
+  updateArtifacts,;
 } from '../../../utils/data/proposals';
 
 async function submitByEmail(
@@ -27,7 +26,6 @@ async function submitByEmail(
     auth: { user, pass },
   });
   await transporter.sendMail({ from, to, subject, text, attachments });
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -70,9 +68,3 @@ export default async function handler(
       .status(500)
       .json({ error: error?.message || 'Submission failed' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

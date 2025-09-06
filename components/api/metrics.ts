@@ -1,9 +1,7 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 function rand(min: number, max: number) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
 function generateSeries(n: number, base: number, volatility = 0.15) {
   const series: number[] = [];
@@ -14,7 +12,6 @@ function generateSeries(n: number, base: number, volatility = 0.15) {
     series.push(last);
   }
   return series;
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const now = new Date();
@@ -166,9 +163,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.status(200).json(response);
-}
-=======
- 
-}res.status (200) .json (response) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

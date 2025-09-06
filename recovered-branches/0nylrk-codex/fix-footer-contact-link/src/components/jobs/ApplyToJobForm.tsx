@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useJobApplications } from '@/hooks/useJobApplications';
@@ -12,7 +11,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { AlertCircle, FileText, Loader2 } from 'lucide-react';
@@ -23,7 +22,6 @@ import { toast } from 'sonner';
 interface ApplyToJobFormProps {
   job: Job;
   onSuccess?: () => void;
-}
 
 export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
   const { user } = useAuth();
@@ -177,34 +175,13 @@ export function ApplyToJobForm({ job, onSuccess }: ApplyToJobFormProps) {
       </div>
     </form>
   );
-=======
- interface ApplyToJobFormProps {
-  job: Job;
-onSuccess?: () => void 
-}export function ApplyToJobForm ({
-  job, onSuccess 
-}: ApplyToJobFormProps) {
-  const {
-  user 
-}= useAuth ();
-const {
-  applyToJob 
-}= useJobApplications ();
-const {
-  resumes, isLoading: isResumesLoading 
-}= useResume ();
-const navigate = useNavigate ();
-const [isSubmitting, setIsSubmitting] = useState (false);
-const [error, setError] = useState<string | null> (null);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }setError (null);
 if (success) {
   if (onSuccess) {
   
 }finally {
   setIsSubmitting (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 handleSubmit 
 }className="space-y-6"> <div> <AlertCircle className="h-4 w-4" /> <AlertDescription> {
@@ -218,4 +195,3 @@ handleSubmit
 }</SelectContent> </Select> > Create Resume </Button> </div>) 
 }</div> </div> <div className="flex justify-end gap-2" > <Button <> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Submitting... </>) : ("Submit Application") 
 }</Button> </div> </form>) 
-}

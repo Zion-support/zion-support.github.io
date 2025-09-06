@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import {
   Download,
@@ -6,13 +5,13 @@ import {
   FileType,
   BookOpen,
   Settings,
-  Wand2,
+  Wand2,;
 } from 'lucide-react';
 import { buildPrintableHtml } from '../../utils/export/buildHtml';
 import type {
   BookProject,
   BookChapter,
-  VisualAsset,
+  VisualAsset,;
 } from '../../utils/book/bookTypes';
 import { defaultChapters } from '../../utils/book/defaultOutline';
 
@@ -45,7 +44,6 @@ function fileToBase64(file: File): Promise<string> {
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
-}
 
 export default function BookBuilder() {
   const [project, setProject] = useState<BookProject>(initialProject);
@@ -381,23 +379,3 @@ export default function BookBuilder() {
       </section>
     </div>
   );
-}
-=======
- const coverPreview = useMemo ( () => {
-  return (<img alt="ISBN barcode" className="h-16" src= {
-  `/api/barcode/isbn?code=$ {
-  encodeURIComponent (project.meta.isbn) 
-}` 
-}/> </div>) : null 
-}</div> </div>) 
-}, [project]);
-> <option value="LETTER" >8.5x11 Letter</option> <option value="A4" >A4</option> </select> </button> </div> </div> <section className="grid grid-cols-1 lg:grid-cols-2 gap-6" > <div className="space-y-4" > <h2 className="font-semibold flex items-center gap-2" > <BookOpen className="w-4 h-4" /> Cover & Branding </h2> <div className="grid grid-cols-1 md:grid-cols-2 gap-3" > <label className="space-y-1" > <div className="text-xs uppercase opacity-60" >Title</div> <input /> </label> <label className="space-y-1" > <div className="text-xs uppercase opacity-60" >Subtitle</div> <input /> </label> <label className="space-y-1" > <div className="text-xs uppercase opacity-60" >Author</div> <input /> </label> <label className="space-y-1" > <div className="text-xs uppercase opacity-60" >ISBN (optional) </div> <input </div> <div className="space-y-4" > <h2 className="font-semibold flex items-center gap-2" > <Settings className="w-4 h-4" /> Visual Elements </h2> </div>) ) 
-}</div> </div> </div> </section> 
-}
-}/> </div>) ) 
-}</div> </section> 
-}
-}placeholder="Attribution" /> <div /> </div>) ) 
-}</div> </section> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,7 +10,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Textarea } from '@/components/ui/textarea';
 import {
@@ -19,7 +18,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { disputeReasonLabels } from '@/types/disputes';
@@ -236,32 +235,8 @@ export function DisputeForm({
       </Form>
     </div>
   );
-}
-=======
- import { ;
-  {;
-  {;
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-import {;
-  Select;
-SelectContent;
-SelectItem;
-SelectTrigger;
-import {;
-  FileText ;
- } from "lucide-react";
-const formSchema = z.object ({;
-  reason code: z.string () .min (1, {;
-  message: "Please select a reason for the dispute" ;
-});
-description: z.string () attachments: z.array (z.any () ) .optional () ;
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
+
+
 };
 const removeFile = (index: number) => {;
   async function onSubmit (values: z.infer<typeof formSchema>) {;
@@ -275,7 +250,7 @@ description: values.description ;
 });
 //Future enhancement: Upload attachments //For now we just log the files that would be uploaded if (files.length > 0) {;
   ;
-}
+
 }finally {;
   setIsSubmitting (false) ;
 }";
@@ -297,4 +272,3 @@ description: values.description ;
 }</ul> </div>) ;
 }</div> </FormControl> <FormMessage /> </FormItem> </Button> </div> </form> </Form> </div>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

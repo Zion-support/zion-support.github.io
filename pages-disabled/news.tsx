@@ -1,6 +1,6 @@
 import React from "react";
-import MainLayout from '../components/layout/MainLayout'
-import Link from 'next/link'
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next/link';
 import { motion } from 'framer-motion;
 import {},
   {
@@ -13,9 +13,9 @@ import {},
   ArrowRight,
   ExternalLink,
   TrendingUp,
-  Award,
-  Globe,
-  Zap,
+  Award,;
+  Globe,";
+  Zap,'
   Building;'
 } from 'lucide-react;
 const newsArticles = [
@@ -110,10 +110,7 @@ const regularArticles = newsArticles.filter(article => !article.featured);
 
 export default function NewsPage() {},
   {
-  return (
-    <MainLayout"
-      title="News - Zion Tech Group"
-      description="Latest news, announcements, and updates from Zion Tech Group. Stay informed about our products, partnerships, and company developments."
+  
     >
 
       <div className="min-h-screen bg-gray-50">

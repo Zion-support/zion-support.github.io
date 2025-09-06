@@ -1,7 +1,7 @@
 import React from 'react';
 interface ProjectManagementDashboardProps {
   // Add props here as needed
-}
+
 export default function ProjectManagementDashboard({ }: ProjectManagementDashboardProps) {
   return (
     <div>
@@ -9,4 +9,3 @@ export default function ProjectManagementDashboard({ }: ProjectManagementDashboa
       <p>This component is currently under development.</p>
     </div>
   );
-}

@@ -10,7 +10,7 @@ import {
   Shield,
   TrendingUp,
   CheckCircle,
-  ArrowRight
+  ArrowRight;
 } from 'lucide-react';
 import Layout from '../components/Layout';
 
@@ -117,11 +117,7 @@ const leadership = [
 ];
 
 export default function CompanyPage() {
-  return (
-    <Layout
-      title="About Our Company - Zion Tech Group"
-      description="Learn about Zion Tech Group's mission, values, and commitment to delivering innovative AI and technology solutions."
-      keywords="about us, company, mission, values, team, leadership, AI company"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -438,4 +434,3 @@ export default function CompanyPage() {
       </div>
     </Layout>
   );
-}

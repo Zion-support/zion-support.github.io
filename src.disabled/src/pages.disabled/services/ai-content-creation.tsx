@@ -81,7 +81,7 @@ import {
   UserEdit2,
   UserSearch2,
   UserVoice2,
-  ShoppingCart
+  ShoppingCart;
 } from 'lucide-react';
 
 export default function AIContentCreation() {
@@ -428,4 +428,3 @@ export default function AIContentCreation() {
       </section>
     </div>
   );
-}

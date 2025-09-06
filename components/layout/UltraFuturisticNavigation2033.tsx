@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -25,7 +24,7 @@ import {
   DollarSign,
   BookOpen,
   Users,
-  MessageCircle,
+  MessageCircle,;
 } from 'lucide-react';
 
 const contactInfo = {
@@ -33,11 +32,6 @@ const contactInfo = {
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com',
-=======
- const serviceCategories = [ {
-  title: '🧠 Revolutionary AI', icon: Brain, color: 'from-violet-500 to-purple-600', services: [ {
-  name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform', description: 'Advanced AI consciousness', price: '$2, 999/month' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 {
   name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Emotional AI platform', price: '$1, 999/month' 
@@ -109,7 +103,6 @@ const contactInfo = {
   /* Contact Button */ 
 }<motion.div whileHover= {
   {
-<<<<<<< HEAD
     title: '🧠 Revolutionary AI',
     icon: Brain,
     color: 'from-violet-500 to-purple-600',
@@ -536,14 +529,11 @@ export default function UltraFuturisticNavigation2033() {
       </nav>
     </>
   );
-=======
-  scale: 1.05 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }whileTap= {
   {
   scale: 0.95 
-}
+
 }> <Link href="/contact" className="px-6 py-3 bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-medium rounded-lg hover:from-purple-700 hover:to-cyan-700 transition-all duration-200 shadow-lg" > Get Started </a> </motion.div> </div> </button> </div> </div> </div> {
   /* Mobile Menu */ 
 }<AnimatePresence>) ) 
@@ -551,4 +541,3 @@ export default function UltraFuturisticNavigation2033() {
 }</div>) ) 
 }</div> </div> > Get Started </a> </div> </div> </motion.div>) 
 }</AnimatePresence> </nav> </>) 
-}

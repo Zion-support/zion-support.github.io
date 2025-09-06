@@ -1,7 +1,7 @@
-import React, { useState } from 'react;
+import React, { useState } from 'react;';
 import Link from 'next/link';
 import { motion, AnimatePresence } from framer-motion';
-import {
+import {;
   Menu;
   X;
   ChevronDown;
@@ -145,11 +145,7 @@ export default function Navigation() {
                       <div className="grid grid-cols-2 gap-4 px-6">
                         {services.map((service, index) => {
                           const IconComponent = service.icon,
-  return (
-                            <Link
-                              key={index}
-                              href={service.href}
-                              className=p-3 rounded-lg hover:bg-blue-50 transition-colors group"
+  
                             >
                               <div className="flex items-center mb-2>
                                 <IconComponent className="w-5 h-5 text-blue-600 mr-2" />
@@ -200,11 +196,7 @@ export default function Navigation() {
                       <div className="grid grid-cols-2 gap-4 px-6>
                         {solutions.map((solution, index) => {
                           const IconComponent = solution.icon,
-  return (
-                            <Link
-                              key={index}
-                              href={solution.href}
-                              className="p-3 rounded-lg hover:bg-blue-50 transition-colors group"
+  
                             >
                               <div className=flex items-center mb-2">
                                 <IconComponent className="w-5 h-5 text-blue-600 mr-2 />
@@ -451,4 +443,3 @@ export default function Navigation() {
       </nav>
     </>
   );
-}

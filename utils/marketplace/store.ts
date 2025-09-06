@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MarketplaceDb, Offer, Project } from './types';
@@ -14,7 +13,6 @@ function ensureDataFile(): void {
     const initial: MarketplaceDb = { offers: [], projects: [] };
     fs.writeFileSync(DB_PATH, JSON.stringify(initial, null, 2), 'utf-8');
   }
-}
 
 export function readDb(): MarketplaceDb {
   ensureDataFile();
@@ -27,12 +25,10 @@ export function readDb(): MarketplaceDb {
   } catch (err) {
     return { offers: [], projects: [] };
   }
-}
 
 export function writeDb(db: MarketplaceDb): void {
   ensureDataFile();
   fs.writeFileSync(DB_PATH, JSON.stringify(db, null, 2), 'utf-8');
-}
 
 export function saveOffer(offer: Offer): Offer {
   const db = readDb();
@@ -44,12 +40,10 @@ export function saveOffer(offer: Offer): Offer {
   }
   writeDb(db);
   return offer;
-}
 
 export function getOfferById(id: string): Offer | undefined {
   const db = readDb();
   return db.offers.find(o => o.id === id);
-}
 
 export function listOffers(params?: {
   talentSlug?: string;
@@ -63,7 +57,6 @@ export function listOffers(params?: {
   if (params?.clientId) list = list.filter(o => o.clientId === params.clientId);
   if (params?.status) list = list.filter(o => o.status === params.status);
   return list.sort((a, b) => b.createdAtIso.localeCompare(a.createdAtIso));
-}
 
 export function saveProject(project: Project): Project {
   const db = readDb();
@@ -75,12 +68,7 @@ export function saveProject(project: Project): Project {
   }
   writeDb(db);
   return project;
-}
 
 export function getProjectById(id: string): Project | undefined {
   const db = readDb();
   return db.projects.find(p => p.id === id);
-}
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

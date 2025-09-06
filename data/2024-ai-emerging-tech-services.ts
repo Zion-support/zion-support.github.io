@@ -41,8 +41,8 @@ export interface AIEmergingTechService {,
   rating: number,
   reviews: number
 };
-export const aiEmergingTechServices: AIEmergingTechService[] = [,
-  {,
+export const aiEmergingTechServices: AIEmergingTechService[] = [,";
+  {,'
     id: "ai-video-generation-platform",
     name: AI Video Generation Platform",
     tagline: "Create professional videos with AI in minutes,

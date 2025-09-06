@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 
 // Security middleware
 import { NextResponse } from 'next/server';
@@ -25,8 +21,3 @@ export function securityMiddleware(request) {
   }
   
   return response;
-}
-<<<<<<< HEAD
-=======
-=======
-=======

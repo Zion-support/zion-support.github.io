@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 
 export function TrustBadge({
@@ -13,14 +12,11 @@ export function TrustBadge({
     'Top Rated':
       'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200',
   } as const;
-  return (
-    <span
-      className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}
+  
     >
       <span className='leading-none'>{type}</span>
     </span>
   );
-}
 
 export function MicroTestimonial({
   quote,
@@ -37,9 +33,3 @@ export function MicroTestimonial({
       </figcaption>
     </figure>
   );
-}
-=======
- </span>) 
-}</figure>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

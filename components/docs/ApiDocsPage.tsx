@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import Sidebar from './Sidebar';
 import EndpointDetail from './EndpointDetail';
@@ -6,7 +5,7 @@ import v1 from '../../data/api-docs/v1';
 import {
   ApiDocsSpec,
   EndpointSpec,
-  Visibility,
+  Visibility,;
 } from '../../data/api-docs/types';
 
 export default function ApiDocsPage() {
@@ -30,10 +29,7 @@ export default function ApiDocsPage() {
   const activeEndpoint =
     allEndpoints.find(e => e.id === activeEndpointId) || firstEndpoint;
 
-  return (
-    <div
-      className='min-h-screen bg-high-contrast-primary text-high-contrast grid grid-cols-1'
-      style={{ gridTemplateColumns: '18rem 1fr' }}
+  
     >
       <Sidebar
         spec={spec}
@@ -98,7 +94,6 @@ export default function ApiDocsPage() {
       </main>
     </div>
   );
-}
 
 function ChangelogWidget() {
   const [content, setContent] = useState('');
@@ -148,13 +143,3 @@ function ChangelogWidget() {
       />
     </div>
   );
-}
-=======
- /> <main className="p-6 space-y-6" > <header className="flex items-center justify-between" > <div> <div className="text-2xl font-bold" >Zion OS API Documentation</div> <div className="text-sm text-high-contrast-muted" >Developer-friendly API docs with live testing</div> </div> <div className="flex gap-2" > <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/openapi" target="blank" rel="noreferrer" >OpenAPI</a> <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/postman" target="blank" rel="noreferrer" >Postman</a> <a className="px-3 py-1 rounded border border-high-contrast-accent" href="/api/docs/graphql" target="blank" rel="noreferrer" >GraphQL</a> </div> </header> {
-  activeEndpoint ? (<EndpointDetail endpoint= {
-  activeEndpoint 
-}/>) : (<div className="text-sm text-high-contrast-muted" >Select an endpoint from the sidebar</div>) 
-}<section className="mt-8" > <div className="text-lg font-semibold mb-2" >Changelog</div> <ChangelogWidget /> </section> </main> </div>) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

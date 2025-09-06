@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { execSync } from 'child_process';
@@ -10,7 +9,6 @@ export interface DevIdentity {
   isAuthenticated: boolean;
   roles: DevRole[];
   userId?: string;
-}
 
 export function getGitStatus(): { connected: boolean; branch?: string } {
   try {
@@ -25,7 +23,6 @@ export function getGitStatus(): { connected: boolean; branch?: string } {
   } catch {
     return { connected: false };
   }
-}
 
 export function getDevIdentity(req: NextApiRequest): DevIdentity {
   // TODO: integrate real auth; for now, check a header and env var for dev
@@ -35,7 +32,6 @@ export function getDevIdentity(req: NextApiRequest): DevIdentity {
     return { isAuthenticated: true, roles: ['admin'], userId: 'admin' };
   }
   return { isAuthenticated: false, roles: [] };
-}
 
 export function requireRoles(
   req: NextApiRequest,
@@ -53,9 +49,3 @@ export function requireRoles(
     return undefined;
   }
   return identity;
-}
-=======
- export type DevRole = "admin" | "maintainer" | "contributor";
-}return identity 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

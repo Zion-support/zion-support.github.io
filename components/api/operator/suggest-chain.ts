@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { CHAINS } from '../../../utils/chains';
 
@@ -45,8 +44,3 @@ export default async function handler(
   res
     .status(200)
     .json({ recommendation: ranked[0], alternatives: ranked.slice(1) });
-}
-=======
- // Simple heuristics // - Low stake: prefer low fees (Polygon, BNB, Avalanche) // - High stake: prefer high trust L2s (Arbitrum/Optimism) or Ethereum // - Region hints (very rough) : // APAC -> BNB/Avalanche, NA/EU -> Arbitrum/Optimism/Ethereum 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

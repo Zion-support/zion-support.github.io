@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { cn } from '@/lib/utils';
 import { CheckIcon } from 'lucide-react';
@@ -8,18 +7,9 @@ interface StepProps {
   label: string;
   description?: string;
   className?: string;
-}
 
 export function Step({ status, label, description, className }: StepProps) {
-  return (
-    <li
-      className={cn(
-        'relative flex items-center',
-        {
-          'opacity-60': status === 'incomplete',
-        },
-        className
-      )}
+  
     >
       <div
         className={cn(
@@ -55,13 +45,11 @@ export function Step({ status, label, description, className }: StepProps) {
       </div>
     </li>
   );
-}
 
 interface StepsProps {
   currentStep: number;
   className?: string;
   children: React.ReactNode;
-}
 
 export function Steps({ currentStep, className, children }: StepsProps) {
   const childrenArray = React.Children.toArray(children);
@@ -94,25 +82,6 @@ export function Steps({ currentStep, className, children }: StepsProps) {
       </div>
     </div>
   );
-=======
- ;
-}status, label, description, className ;
-}: StepProps) {;
-  return (<li className= {;
-  cn (className) ;
-}> <div) : (<span> {;
-  /* Step number would go here */ ;
-}</span>) ;
-}</div> <div className="ml-4 min-w-0" > <h3 > {;
-  label ;
-}</h3>) ;
-}</div> </li>) ;
-}
-}) ";
-}</ol> <div className="hidden md:flex md:mt-4" > <div className="ml-[18px] w-[calc (100%-36px) ] h-0.5 bg-zion-blue-light" > <div width: `$ {;
-  (currentStep / (childrenArray.length - 1) ) * 100 ;
-}%` ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> </div> </div> </div>) ;
 }"

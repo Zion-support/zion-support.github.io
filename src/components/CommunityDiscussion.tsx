@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,6 @@ interface DiscussionPost {
   time: string;
   title: string;
   body: string;
-}
 
 const initialPosts: DiscussionPost[] = [
   {
@@ -165,38 +163,6 @@ export const CommunityDiscussion: React.FC = () => {
     </div>
   );
 };
-=======
- interface DiscussionPost {;
-  id: number;
-author: string;
-avatar?: string;
-time: string;
-title: string;
-body: string ;
-}const initialPosts: DiscussionPost[] = [ {;
-  id: 1;
-author: "Anna Zhou";";
-time: "2h ago";";
-title: "What AI trends are you most excited for in 2025?";";
-body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?" ;
-};
-{;
-  id: 2;
-const handleAddPost = () => {;
-  if (!newTitle.trim () || !newBody.trim () ) return;
-setPosts ([ {;
-  id: Date.now ();";
-author: "You";";
-time: "Now";
-title: newTitle;
-body: newBody ;
-};
-...posts]);";
-setNewTitle ("");";
-setNewBody ("");
-setShowNew (false);
-};";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </span> </div> <Separator className=" mb-6"/> <div className=" mb-4 flex justify-end"> <Button value= {;
   newTitle ;
 }onChange= {;
   (e: React.ChangeEvent<HTMLInputElement>) => setNewTitle (e.target.value) ;
@@ -216,4 +182,3 @@ setShowNew (false);
 }</div> <div className="mt-8 text-xs text-zion-slate-dark text-center"> 🚀 Stay engaged! Top contributors are regularly featured on the homepage. </div> </div>) ;
 };
 '"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

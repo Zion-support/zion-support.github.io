@@ -2,7 +2,6 @@
 }) 
 }</div>) 
 };
-<<<<<<< HEAD
 
 export const StarRating: React.FC<Props> = ({
   value,
@@ -18,11 +17,7 @@ export const StarRating: React.FC<Props> = ({
     <div className='flex items-center gap-1'>
       {stars.map(star => {
         const active = (hovered ?? value) >= star;
-        return (
-          <button
-            key={star}
-            type='button'
-            className={`transition-transform ${readOnly ? 'cursor-default' : 'hover:scale-110'}`}
+        
             onMouseEnter={() => !readOnly && setHovered(star)}
             onMouseLeave={() => !readOnly && setHovered(null)}
             onClick={() => !readOnly && onChange(star)}
@@ -49,6 +44,4 @@ export const StarRating: React.FC<Props> = ({
   );
 };
 
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default StarRating;

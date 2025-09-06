@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -12,7 +11,6 @@ import { useAuth } from '@/hooks/useAuth';
 export interface JobPostingProps {
   jobId?: string;
   onSuccess?: () => void;
-}
 
 export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const { user } = useAuth();
@@ -99,41 +97,4 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
     setInitialValues,
     submitJob,
   };
-=======
- export interface JobPostingProps {
-  jobId?: string;
-onSuccess?: () => void 
-}export const useJobForm = ({
-  jobId, onSuccess 
-}: JobPostingProps) => {
-  const {
-  user 
-}= useAuth ();
-const navigate = useNavigate ();
-const [endDate, setEndDate] = useState<Date | undefined> (undefined);
-const [isRemote, setIsRemote] = useState (false);
-const [isLoading, setIsLoading] = useState (false);
-const [initialValues, setInitialValues] = useState<JobSchemaType | null> (null);
-//Function to create/update jobs that will be implemented by parent component const submitJob = async (values: JobSchemaType) => {
-  if (!user) {
-  
-}
-}finally {
-  setIsLoading (false) 
-}
-};
-return {
-  form;
-isLoading;
-startDate;
-setStartDate;
-endDate;
-setEndDate;
-isRemote;
-setIsRemote;
-initialValues;
-setInitialValues;
-submitJob 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

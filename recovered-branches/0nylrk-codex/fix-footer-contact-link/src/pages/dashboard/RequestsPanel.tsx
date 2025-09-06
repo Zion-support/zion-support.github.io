@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -105,53 +104,3 @@ export default function RequestsPanel() {
       </div>
     </ProtectedRoute>
   );
-}
-=======
- import {
-  RequestsHeader;
-QuoteRequestsList export default function RequestsPanel () {
-  const {
-  user 
-}= useAuth ();
-const isTalent = user?.userType === 'creator' || user?.userType === 'jobSeeker';
-const [showDetails, setShowDetails] = useState (false);
-//If status is new, mark as viewed if (quote.status === 'new') {
-  return (<ProtectedRoute> <div> <Header /> <div className="min-h-screen bg-zion-blue px-4 py-8" > <div className="container mx-auto" > <RequestsHeader unreadCount= {
-  unreadCount 
-}statusFilter= {
-  statusFilter 
-}setStatusFilter= {
-  setStatusFilter 
-}archiveFilter= {
-  archiveFilter 
-}setArchiveFilter= {
-  setArchiveFilter 
-}/> </TabsList> <TabsContent value="active" > <QuoteRequestsList quotes= {
-  activeQuotes 
-}isLoading= {
-  isLoading 
-}isArchived= {
-  false 
-}onViewDetails= {
-  handleViewDetails 
-}onMarkAsResponded= {
-  markAsResponded 
-}onToggleArchive= {
-  toggleArchive 
-}/> </TabsContent> <TabsContent value="archived" > <QuoteRequestsList quotes= {
-  archivedQuotes 
-}isLoading= {
-  isLoading 
-}isArchived= {
-  true 
-}onViewDetails= {
-  handleViewDetails 
-}onMarkAsResponded= {
-  markAsResponded 
-}onToggleArchive= {
-  toggleArchive 
-}/> </TabsContent> </Tabs> </div> </div> {
-  /* Quote Details Modal */ 
-}<QuoteDetails /> <Footer /> </div> </ProtectedRoute>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

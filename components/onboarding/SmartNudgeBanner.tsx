@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { X } from 'lucide-react';
 
@@ -49,9 +48,3 @@ export default function SmartNudgeBanner({
       <div className='text-sm'>{message}</div>
     </div>
   );
-}
-=======
- if (hidden) return null;
-return (</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

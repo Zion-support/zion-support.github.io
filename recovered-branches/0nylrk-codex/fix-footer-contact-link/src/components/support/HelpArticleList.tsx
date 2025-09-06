@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { HELP_CATEGORIES } from './help-content';
 
@@ -13,7 +12,6 @@ interface HelpArticleListProps {
   categoryId: string;
   onArticleSelect: (articleId: string) => void;
   searchQuery: string;
-}
 
 export function HelpArticleList({
   categoryId,
@@ -74,7 +72,6 @@ export function HelpArticleList({
       )}
     </div>
   );
-}
 
 function formatDate(date: string): string {
   return new Date(date).toLocaleDateString('en-US', {
@@ -82,20 +79,4 @@ function formatDate(date: string): string {
     month: 'long',
     day: 'numeric',
   });
-=======
- interface HelpArticleListProps {
-  categoryId: string;
-onArticleSelect: (articleId: string) => void;
-searchQuery: string 
-}export function HelpArticleList ({
-  categoryId, onArticleSelect, searchQuery 
-}: HelpArticleListProps) {
-  const category = HELP CATEGORIES.find (cat => cat.id === categoryId);
-if (!category) {
-  return <div>Category not found</div> 
-}return (<div> </p> </CardContent> </Card>) ) 
-}</div>) 
-}</div>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

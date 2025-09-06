@@ -29,5 +29,5 @@ async function handler(req, res) {
     return;
   }
   res.status(200).json({ orderId: "data.id", token });
-}
+
 export default withErrorLogging(handler);

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -58,24 +57,20 @@ function ensureDataFilesExist(): void {
       JSON.stringify({ proposals: [] }, null, 2)
     );
   }
-}
 
 export function loadTemplates(): ZgpTemplate[] {
   const raw = fs.readFileSync(TEMPLATES_FILE, 'utf8');
   return JSON.parse(raw) as ZgpTemplate[];
-}
 
 export function listProposals(): ZgpProposal[] {
   ensureDataFilesExist();
   const raw = fs.readFileSync(PROPOSALS_FILE, 'utf8');
   const data = JSON.parse(raw) as { proposals: ZgpProposal[] };
   return data.proposals || [];
-}
 
 export function saveProposals(proposals: ZgpProposal[]): void {
   ensureDataFilesExist();
   fs.writeFileSync(PROPOSALS_FILE, JSON.stringify({ proposals }, null, 2));
-}
 
 export function generateProposalNumber(
   templateCode: string,
@@ -91,7 +86,6 @@ export function generateProposalNumber(
   );
   const seq = sameDay.length + 1;
   return `${templateCode}-${yyyymmdd}-${String(seq).padStart(4, '0')}`;
-}
 
 export function createProposal(params: {
   templateId: string;
@@ -134,11 +128,9 @@ export function createProposal(params: {
   proposals.push(proposal);
   saveProposals(proposals);
   return proposal;
-}
 
 export function getProposalById(id: string): ZgpProposal | undefined {
   return listProposals().find(p => p.id === id);
-}
 
 export function updateProposal(
   id: string,
@@ -193,10 +185,3 @@ export function updateProposal(
   proposals[index] = next;
   saveProposals(proposals);
   return next;
-}
-=======
- proposals[index] = next;
-saveProposals (proposals);
-return next 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

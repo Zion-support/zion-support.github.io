@@ -2,7 +2,6 @@
   const load = async () => {
   try {
   if (loading) return <div>Loading episodes…</div>;
-<<<<<<< HEAD
 
   return (
     <div className='space-y-6'>
@@ -70,10 +69,3 @@
       </ul>
     </div>
   );
-}
-=======
-MP4 </a>) 
-}</div> </div> </div> </li>) ) 
-}</ul> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

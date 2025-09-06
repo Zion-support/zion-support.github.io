@@ -29,11 +29,9 @@ class HealthCheckAutomation {
       console.error('❌ Health check failed:', error.message);
     }
   }
-}
 
 if (require.main === module) {
   const healthCheck = new HealthCheckAutomation();
   healthCheck.healthCheck().catch(console.error);
-}
 
 module.exports = HealthCheckAutomation;

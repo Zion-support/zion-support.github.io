@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
+  CardHeader,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -14,7 +13,6 @@ interface CountryServiceCardProps {
   country: CountryPricing;
   onSelect: (country: CountryPricing) => void;
   isPopular?: boolean;
-}
 
 export function CountryServiceCard({
   country,
@@ -75,13 +73,7 @@ export function CountryServiceCard({
     }
   };
 
-  return (
-    <Card
-      className={`h-full transition-all duration-300 hover:shadow-lg ${
-        isPopular
-          ? 'bg-gradient-to-br from-zion-blue-dark to-zion-purple/10 border-zion-purple'
-          : 'bg-zion-blue-dark border-zion-blue-light'
-      }`}
+  
     >
       <CardHeader className='pb-2'>
         <div className='flex items-center justify-between'>
@@ -140,24 +132,3 @@ export function CountryServiceCard({
       </CardFooter>
     </Card>
   );
-}
-=======
- interface CountryServiceCardProps {
-  country: CountryPricing;
-onSelect: (country: CountryPricing) => void;
-isPopular?: boolean 
-}export function CountryServiceCard ({
-  country, onSelect, isPopular 
-}: CountryServiceCardProps) {
-  //Get region flag based on country name (for demo purposes) const getRegionEmoji = (countryName: string) : string => {
-  return emojiMap[countryName] || emojiMap["default" ];
-};
-//Get response time estimate based on country return (<Card className= {
-  `h-full transition-all duration-300 hover:shadow-lg $ {
-  isPopular </div> <div className="flex items-start" > <MapPin className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Service available in major cities</span> </div> <div className="flex items-start" > <Server className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>Hardware & network support</span> </div> <div className="flex items-start" > <Check className="h-4 w-4 mr-2 text-zion-purple mt-1" /> <span>First hour included</span> </div> </div> </CardContent> <CardFooter> <Button onClick= {
-  () => onSelect (country) 
-}className= {
-  `w-full $ {
-  isPopular > Select Service </Button> </CardFooter> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

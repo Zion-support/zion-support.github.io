@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
@@ -13,7 +12,7 @@ import {
   SelectValue,
   SelectTrigger,
   SelectContent,
-  SelectItem,
+  SelectItem,;
 } from '@/components/ui/select';
 import { BlogPost } from '@/types/blog';
 import { generateRandomBlogPost } from '@/utils/generateRandomBlogPost';
@@ -35,7 +34,6 @@ const CATEGORIES = [
 
 export interface BlogProps {
   posts?: BlogPost[];
-}
 
 export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
   logInfo('BlogPage rendering. Initial BLOG_POSTS:', { data: initialPosts });
@@ -314,33 +312,6 @@ export default function Blog({ posts: initialPosts = BLOG_POSTS }: BlogProps) {
       </div>
     </>
   );
-=======
- import { ;
-  {;
-  {;
-  Search ;
- } from "lucide-react";
-import {;
-  {;
-  {;
-  fetchWithRetry ';
-}from '@/utils/fetchWithRetry';
-import {;
-  {;
-  {;
-  logInfo, logErrorToProduction ';
-}from '@/utils/productionLogger';
-//Categories for filtering const CATEGORIES = [ "All Categories";";
-"Trends";";
-"Marketing";";
-"Sustainability";";
-"Ethics";";
-"Recruitment";";
-"Infrastructure" ];
-const query = useDebounce (searchQuery, 300);
-const [isLoading, setIsLoading] = useState (false);
-}, [router.asPath, initialPosts]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 fetchPosts () ;
 }, [query]);
 //Filter blog posts based on selected category only. //Search filtering is handled server-side. return matchesCategory;
 });
@@ -395,8 +366,7 @@ min-h-screen bg-zion-blue pt-12 pb-20 px-4"> <h1>Blog</h1> <div className=" cont
 }<Button variant=" outline" onClick={;
   () => {;
   ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
+
 }</div> </div> </>) ;
 }'"

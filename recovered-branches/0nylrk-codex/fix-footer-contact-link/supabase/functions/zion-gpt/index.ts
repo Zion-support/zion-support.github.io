@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 
@@ -80,39 +79,5 @@ serve(async req => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}const {
-  prompt, modelId, maxTokens = 500, temperature = 0.7 
-}= await req.json ();
-if (!prompt) {
-  
-}//Define the appropriate model to use //Default to base model if no specific model provided const response = await fetch ("https://api.openai.com/v1/chat/completions", {
-  method: "POST";
-headers: {
-  "Authorization" : `Bearer $ {
-  openAIApiKey 
-}`;
-"Content-Type" : "application/json" 
-};
-body: JSON.stringify ({
-  model: model;
-messages: [ {
-  role: "user";
-content: prompt 
-}];
-temperature: temperature 
-}) 
-});
-return new Response (JSON.stringify ({
-  error: error.message 
-});
-{
-  status: 500;
-);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

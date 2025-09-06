@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 import { CheckCircle2, Circle, PartyPopper } from 'lucide-react';
@@ -21,7 +20,6 @@ function computePercentage(steps: OnboardingStep[]): number {
   if (!steps || steps.length === 0) return 0;
   const completedCount = steps.filter(s => s.completed).length;
   return Math.round((completedCount / steps.length) * 100);
-}
 
 export default function OnboardingProgressCard({
   title,
@@ -97,32 +95,3 @@ export default function OnboardingProgressCard({
       ) : null}
     </div>
   );
-}
-=======
- <div className= {
-  `h-2 rounded-full bg-gradient-to-r $ {
-  highlightColorClass 
-}` 
-}style= {
-  {
-  width: `$ {
-  percentage 
-}%` 
-}
-}/> </div> <PartyPopper size= {
-  18 
-}/> <span className="text-sm" >All steps completed — great job!</span> </div>) : null 
-}) 
-}<span className= {
-  step.completed ? 'line-through opacity-70' : '' 
-}> {
-  step.label 
-}</span> </div> {
-  !step.completed && step.ctaHref && step.ctaLabel ? (<Link href= {
-  step.ctaHref 
-}> </a> </a>) : null 
-}</li>) ) 
-}</ul> </a> </a> </div>) : null 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

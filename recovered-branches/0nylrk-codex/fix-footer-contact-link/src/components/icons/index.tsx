@@ -1,6 +1,5 @@
 import React from 'react';
 import * as LucideIcons from 'lucide-react';
-<<<<<<< HEAD
 
 // Alias for missing icons or for icons with different names
 const iconAliases: Record<string, keyof typeof LucideIcons> = {
@@ -112,15 +111,10 @@ const createIconComponent = (
   aliasName: string,
   iconName: keyof typeof LucideIcons
 ) => {
-=======
-// Alias for missing icons or for icons with different names type IconProps = LucideIcons.LucideProps;
-// Create a type safe export for each icon const createIconComponent = (aliasName: string, iconName: keyof typeof LucideIcons) => {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   const IconComponent = (props: IconProps) => {
   // Fix: Use proper type casting to access the icon component // Export all of our icon components const iconExports: Record<string React.FC<IconProps>> = {
   
 };
-<<<<<<< HEAD
 
 // Export all of our icon components
 const iconExports: Record<string, React.FC<IconProps>> = {};
@@ -206,6 +200,3 @@ export const {
 
 // Also export all original icons from lucide-react
 export * from 'lucide-react';
-=======
-// Generate icon exports // Also export all original icons from lucide-react export * from 'lucide-react';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface CustomerTicket {
   id: string;
   customerId: string;
@@ -15,7 +14,6 @@ export interface CustomerTicket {
   tags: string[];
   attachments: string[];
   conversationHistory: CustomerMessage[];
-}
 
 export interface CustomerMessage {
   id: string;
@@ -28,7 +26,6 @@ export interface CustomerMessage {
   sentiment: 'positive' | 'neutral' | 'negative';
   intent: string;
   confidence: number;
-}
 
 export interface CustomerProfile {
   id: string;
@@ -48,7 +45,6 @@ export interface CustomerProfile {
     timezone: string;
   };
   tags: string[];
-}
 
 export interface AIResponse {
   id: string;
@@ -59,7 +55,6 @@ export interface AIResponse {
   nextSteps: string[];
   requiresHumanReview: boolean;
   generatedAt: Date;
-}
 
 export interface CustomerServiceMetrics {
   totalTickets: number;
@@ -77,7 +72,6 @@ export interface CustomerServiceMetrics {
       customerSatisfaction: number;
     }
   >;
-}
 
 export interface CustomerServiceRequest {
   customerId: string;
@@ -87,7 +81,6 @@ export interface CustomerServiceRequest {
   category: string;
   attachments?: string[];
   preferredChannel?: 'email' | 'chat' | 'phone';
-}
 
 export interface CustomerServiceResponse {
   ticketId: string;
@@ -96,7 +89,6 @@ export interface CustomerServiceResponse {
   estimatedResolutionTime: string;
   nextSteps: string[];
   assignedAgent?: string;
-}
 
 export class AICustomerServiceService {
   private apiKey: string;
@@ -406,11 +398,7 @@ export class AICustomerServiceService {
       throw error;
     }
   }
-}
 
 export const aiCustomerServiceService = new AICustomerServiceService(
   process.env.CUSTOMER_SERVICE_API_KEY || ''
 );
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

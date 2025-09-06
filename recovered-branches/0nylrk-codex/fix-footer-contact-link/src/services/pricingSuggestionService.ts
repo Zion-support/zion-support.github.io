@@ -1,17 +1,11 @@
-<<<<<<< HEAD
 // Define types for the pricing recommendation
 export interface PricingSuggestion {
   minRate: number;
   maxRate: number;
   confidence: 'High' | 'Medium' | 'Low';
   explanation: string;
-}
 
 export interface ClientBudgetParams {
-=======
- //Define types for the pricing recommendation 
-}export interface ClientBudgetParams {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   jobTitle: string;
 category: string;
 timeline?: string;
@@ -34,8 +28,6 @@ minRate = Math.max (minRate, 15);
   //Return a fallback suggestion return {
   minRate: 30;
 maxRate: 60;
-}
-<<<<<<< HEAD
 
 // Mock function to generate suggestions
 // In production, this would call an AI service or API
@@ -108,7 +100,6 @@ export async function getClientBudgetSuggestion(
         'We encountered an issue generating a precise recommendation. This is a general market rate - consider your specific requirements when setting your budget.',
     };
   }
-}
 
 export async function getTalentRateSuggestion(
   params: TalentRateParams
@@ -213,7 +204,6 @@ export async function getTalentRateSuggestion(
         'We encountered an issue generating a precise rate recommendation. This is a general suggestion based on market averages.',
     };
   }
-}
 
 // Function to save pricing analytics data
 export async function trackPricingSuggestion(data: {
@@ -239,39 +229,4 @@ export async function trackPricingSuggestion(data: {
     console.error('Error tracking pricing suggestion:', error);
     return false;
   }
-=======
-}export async function getTalentRateSuggestion (params: TalentRateParams) : Promise<PricingSuggestion> {
-  try {
-  const {
-  skills, yearsExperience, location 
-}= params;
-//Base rate calculation based on years of experience inDemandSkills.some (demandSkill => skill.toLowerCase () .includes (demandSkill) ) );
-}//Generate explanation let explanation = `Based on $ {
-  yearsExperience 
-}years of experience`;
-if (hasInDemandSkills) {
-  explanation += `and your in-demand skills ($ {
-  skills.join () 
-}) ` 
-}if (location) {
-  explanation += `, considering market rates in $ {
-  location 
-}` 
-}explanation += `, we recommend a rate of $$ {
-  minRate 
-}-$$ {
-  maxRate 
-}/hour to remain competitive while maximizing your earning potential.`;
-return {
-  minRate;
-maxRate;
-confidence;
-explanation 
-}
-}catch (error) {
-  
-}
-}// Function to save pricing analytics data 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

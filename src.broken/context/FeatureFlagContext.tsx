@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import { UnleashClient } from 'unleash-proxy-client';
 
@@ -10,13 +9,11 @@ export interface Variant {
     type: string;
     value: string;
   };
-}
 
 interface FeatureFlagContextValue {
   isEnabled: (name: string) => boolean;
   getVariant: (name: string) => Variant;
   track: (event: string) => void;
-}
 
 const FeatureFlagContext = createContext<FeatureFlagContextValue | undefined>(
   undefined
@@ -65,7 +62,6 @@ export function FeatureFlagProvider({
       {children}
     </FeatureFlagContext.Provider>
   );
-}
 
 export function useFeatureFlags() {
   const ctx = useContext(FeatureFlagContext);
@@ -74,13 +70,7 @@ export function useFeatureFlags() {
       'useFeatureFlags must be used within a FeatureFlagProvider'
     );
   return ctx;
-=======
- return (<FeatureFlagContext.Provider value= {
-  {
-  isEnabled, getVariant, track 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }> {
   children 
 }</FeatureFlagContext.Provider>) 
-}

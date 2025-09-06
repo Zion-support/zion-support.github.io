@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import i18n from '../../utils/i18n';
@@ -77,16 +76,3 @@ export default function LanguageSwitcher() {
       )}
     </div>
   );
-}
-=======
- > <span className= {
-  `fi fi-$ {
-  localeToFlag[lng] 
-}` 
-}></span> <span> {
-  t (localeLabelKey[lng]) 
-}</span> </button> </li>) ) 
-}</ul>) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

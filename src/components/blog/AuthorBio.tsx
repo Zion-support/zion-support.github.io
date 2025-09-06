@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import React from 'react';
 import type { BlogAuthor } from '@/types/blog';
 
 interface AuthorBioProps {
   author: BlogAuthor;
-}
 
 export function AuthorBio({ author }: AuthorBioProps) {
   if (!author.bio) return null;
@@ -28,13 +26,7 @@ export function AuthorBio({ author }: AuthorBioProps) {
       </div>
     </div>
   );
-=======
- onError= {;
-  (e) => {;
-  const target = e.currentTarget as HTMLImageElement;
-target.src = '/images/blog-placeholder.svg' ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> <div> <p className="font-medium text-lg" > {;
   author.name ;
 }</p> {";

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -22,7 +21,6 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void;
   onViewDetails?: (matchId: string) => void;
   onInvite?: (matchId: string) => void;
-}
 
 export function JobMatchCard({
   matchId,
@@ -139,51 +137,17 @@ export function JobMatchCard({
       </CardContent>
     </Card>
   );
-=======
- interface JobMatchProps {
-  matchId: string;
-talentId: string;
-name: string;
-title: string;
-company: string;
-avatar: string;
-location: string;
-category: string;
-matchPercent: number;
-skills: string[];
-onApply?: (matchId: string) => void;
-onViewDetails?: (matchId: string) => void;
-onInvite?: (matchId: string) => void 
-}export function JobMatchCard ({
-  matchId;
-talentId;
-name;
-title;
-company;
-avatar;
-location;
-category;
-matchPercent;
-skills;
-onApply;
-onViewDetails;
-onInvite 
-}: JobMatchProps) {
-  const handleApply = () => {
-  if (onApply) {
-  onApply (matchId) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleViewDetails = () => {
   if (onViewDetails) {
   onViewDetails (matchId) 
-}
+
 };
 const handleInvite = () => {
   if (onInvite) {
   onInvite (matchId) 
-}
+
 };
 //Generate a formatted date for display const postedDate = new Date ();
 postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), //Random date within last 2 weeks return (<Card className="overflow-hidden" > <CardContent className="p-0" > {
@@ -202,4 +166,3 @@ postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), 
 }</Avatar> </Badge>) ) 
 }</div> Apply Now </Button>) 
 }</div> </div> </CardContent> </Card>) 
-}

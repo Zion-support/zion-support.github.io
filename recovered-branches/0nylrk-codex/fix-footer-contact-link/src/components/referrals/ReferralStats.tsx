@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { ReferralStats as ReferralStatsType } from '@/types/referrals';
 import { Award, Share, Star, TrendingUp } from 'lucide-react';
@@ -6,7 +5,6 @@ import { Award, Share, Star, TrendingUp } from 'lucide-react';
 interface ReferralStatsProps {
   stats: ReferralStatsType;
   isLoading: boolean;
-}
 
 export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
   const statCards = [
@@ -60,18 +58,3 @@ export function ReferralStats({ stats, isLoading }: ReferralStatsProps) {
       ))}
     </div>
   );
-}
-=======
- interface ReferralStatsProps {
-  stats: ReferralStatsType;
-isLoading: boolean 
-}stats, isLoading 
-}: ReferralStatsProps) {
-  const statCards = [ {
-  icon: <Award className="h-5 w-5 text-muted-foreground" />;
-description: "Credits earned from referrals" 
-}];
-}</CardContent> </Card>) ) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

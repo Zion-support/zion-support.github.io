@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useApiErrorHandling } from '@/hooks/useApiErrorHandling';
 import ProductCard from '@/components/ProductCard';
@@ -12,7 +11,7 @@ import {
   SortAsc,
   Sparkles,
   TrendingUp,
-  Star,
+  Star,;
 } from 'lucide-react';
 import { SkeletonCard } from '@/components/ui/skeleton';
 import { ErrorState } from '@/components/jobs/applications/ErrorState';
@@ -34,7 +33,6 @@ import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
  */
 export interface MarketplaceProps {
   // All props removed - component now fetches data independently
-}
 
 // Market insights component
 const MarketInsights: React.FC<{ stats: any }> = ({ stats }) => (
@@ -789,39 +787,6 @@ export default function Marketplace() {
       </AnimatePresence>
     </div>
   );
-=======
- /** * Marketplace component props */ export interface MarketplaceProps {;
-  //All props removed - component now fetches data independently ;
-}//Market insights component </div> </div> </CardContent> </Card>);
-//Filter and sort controls > <option value="">All Categories</option> {;
-  categories.map (category => (<option key= {;
-  category ;
-}value= {;
-  category ;
-}> {;
-  category ;
-}</option>) ) ";
-}</select> </div> <div className="flex items-center gap-2"> <SortAsc className="h-4 w-4 text-muted-foreground"/> <select > <option value=" newest">Newest First</option> <option value=" price-low">Price: Low to High</option> <option value=" price-high">Price: High to Low</option> <option value=" rating">Highest Rated</option> <option value=" popular">Most Popular</option> <option value=" ai-score">AI Score</option> </select> </div> <div className="flex items-center gap-2"> <span className="text-sm">$</span> <input className="w-20 bg-background border border-border px-2 py-1 rounded"/> </div> <div className="flex items-center gap-2"> <span className="text-sm">AI ≥</span> <input className="w-16 bg-background border border-border px-2 py-1 rounded"/> </div> <div className="flex items-center gap-2"> <span className="text-sm">Rating ≥</span> <select value= {;
-  minRating ;
-}onChange= {;
-  (e) => setMinRating (Number (e.target.value) ) ";
-}className="bg-background border border-border px-2 py-1 rounded"> <option value= {;
-  0 ;
-}>Any</option> <option value= {;
-  5 ;
-}>5</option> <option value= {;
-  4 ;
-}>4</option> <option value= {;
-  3 ;
-}>3</option> <option value= {;
-  2 ;
-}>2</option> <option value= {;
-  1 ";
-}>1</option> </select> </div> <div className="flex items-center gap-2"> <select) ) ";
-}</select> </div> <div className=" flex items-center gap-2"> <select) ) ;
-}</select> </div> <Button </Button> </div>);
-/** * Enhanced Marketplace component with infinite scroll and AI product generation * Uses the auto-feed algorithm to continuously generate IT and AI products * Includes intelligent filtering, sorting, and recommendation features */return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Navigate to admin products page router.push ('/admin/products') ;
 }, [isAuthenticated, user, router, toast]);
 //Fetch function for infinite scroll with AI product generation try {;
@@ -842,16 +807,15 @@ case 'ai-score': return (b.aiScore || 0) - (a.aiScore || 0);';
 case 'newest': ;
 }else {;
   handleApiError (err), //This might show a toast or log to Sentry ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
+
 }, [filterCategory, sortBy, showRecommended, priceRange, minAiScore, minRating, filterAvailability, filterLocation, handleApiError, toast]);
 //useInfiniteScrollPagination hook ;
-}
+
 }, [products, loading, scrollToTop, toast]), //Depends on products and loading state //Calculate market stats <motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -877,7 +841,7 @@ case 'newest': ;
   return (<div className="container py-8"> <motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -898,7 +862,7 @@ case 'newest': ;
 }<motion.div className="text-center mb-8"initial= {;
   {;
   opacity: 0, y: -20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -913,15 +877,15 @@ case 'newest': ;
   marketStats && (<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: 0.2 ;
-}
+
 }> <MarketInsights stats= {;
   marketStats ;
 }/> </motion.div>) ;
@@ -930,15 +894,15 @@ case 'newest': ;
 }<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: 0.3 ;
-}
+
 }> <FilterControls sortBy= {;
   sortBy ;
 }setSortBy= {;
@@ -984,13 +948,13 @@ case 'newest': ;
 }<motion.div > <ProductCard product= {;
   {';
   id: product.id, name: product.title, title: product.title, description: product.description || '', price: product.price || 0, currency: product.currency, category: product.category, tags: product.tags, images: product.images, rating: product.rating || 0, reviewCount: product.reviewCount || 0, created at: product.createdAt, updated at: product.createdAt,  //Use createdAt for both stock: product.stock, in stock: (product.stock || 0) > 0 ;
-}
+
 }onBuy= {;
   async () => {;
   if (!isAuthenticated) {;
   //though ProductCard will reset its state in .finally () regardless. throw error ;
-}
-}
+
+
 }buyDisabled= {;
   false ;
 }//Still false, ProductCard handles its own disabled state based on auth /> {;
@@ -1010,7 +974,7 @@ case 'newest': ;
   (isFetching || loading) && (<motion.div className="mt-8"initial= {;
   {;
   opacity: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1 ;
@@ -1030,7 +994,7 @@ case 'newest': ;
   !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {;
   {;
   opacity: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1 ;
@@ -1046,19 +1010,19 @@ case 'newest': ;
 }className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {;
   {;
   opacity: 0, scale: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1, scale: 1 ;
-}
+
 }exit= {;
   {;
   opacity: 0, scale: 0 ;
-}
+
 }whileHover= {;
   {;
   scale: 1.1 ;
-}
+
 }whileTap= {;
   {;
   scale: 0.9 ;

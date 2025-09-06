@@ -1,18 +1,12 @@
-<<<<<<< HEAD
 import {
   UserGroupIcon,
   LightBulbIcon,
-=======
-import { 
-  UserGroupIcon,
-  LightBulbIcon, 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   CogIcon,
   ShieldCheckIcon,
   ChartBarIcon,
   RocketLaunchIcon,
   AcademicCapIcon,
-  GlobeAltIcon,
+  GlobeAltIcon,;
 } from '@heroicons/react/24/outline';
 
 const professionalServices = [
@@ -27,11 +21,7 @@ const professionalServices = [
       'Implementation Roadmap',
       'Change Management Planning',
     ],
-<<<<<<< HEAD
     duration: '4-8 weeks',
-=======
-    duration: '4-8 weeks'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   },
   {
     name: 'Custom AI Development',
@@ -44,7 +34,6 @@ const professionalServices = [
       'Testing & Validation',
       'Documentation & Training',
     ],
-<<<<<<< HEAD
     duration: '8-24 weeks',
   },
   {
@@ -92,22 +81,11 @@ const professionalServices = [
       'Comprehensive audits to ensure your AI systems meet regulatory and ethical standards.',
     icon: ChartBarIcon,
     features: [
-=======
-    duration: '8-16 weeks'
-  },
-  {
-    name: 'Cybersecurity & Compliance',
-    description: 'Enterprise-grade security solutions and compliance management for AI systems.',
-    icon: ShieldCheckIcon,
-    features: [
-      'Security Architecture Design',
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       'Compliance Assessment',
       'Ethical AI Review',
       'Security Audits',
       'Risk Mitigation',
     ],
-<<<<<<< HEAD
     duration: '2-6 weeks',
   },
 ];
@@ -175,17 +153,11 @@ const reasonsToChoose = [
     icon: GlobeAltIcon,
   },
 ];
-=======
-    duration: '2-6 weeks'
-  }
-]
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 export default function ServicesPage() {
   return (
     <div className='bg-black'>
       {/* Hero section */}
-<<<<<<< HEAD
       <div className='relative isolate px-6 pt-14 lg:px-8'>
         <div className='mx-auto max-w-2xl py-32 sm:py-48 lg:py-56'>
           <div className='text-center'>
@@ -199,26 +171,11 @@ export default function ServicesPage() {
               From strategy to implementation, our comprehensive AI services
               help you navigate the complexities of artificial intelligence and
               achieve transformative results.
-=======
-      <div className="relative isolate px-6 pt-14 lg:px-8">
-        <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-          <div className="text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Our{' '}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-600 bg-clip-text text-transparent">
-                Services
-              </span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-300">
-              Comprehensive AI and technology solutions designed to transform your business 
-              and accelerate innovation across all industries.
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             </p>
           </div>
         </div>
       </div>
 
-<<<<<<< HEAD
       {/* Professional Services */}
       <div className='mx-auto max-w-7xl px-6 sm:px-6 lg:px-8'>
         <div className='mx-auto max-w-2xl lg:text-center'>
@@ -368,40 +325,8 @@ export default function ServicesPage() {
             >
               View Solutions <span aria-hidden='true'>→</span>
             </a>
-=======
-      {/* Services section */}
-      <div className="py-24 sm:py-32">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl lg:max-w-none">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Professional Services
-            </h2>
-            <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-              {professionalServices.map((service) => (
-                <div key={service.name} className="flex flex-col">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600">
-                    <service.icon className="h-6 w-6 text-white" aria-hidden="true" />
-                  </div>
-                  <h3 className="mt-6 text-lg font-semibold text-white">{service.name}</h3>
-                  <p className="mt-2 text-base text-gray-300">{service.description}</p>
-                  <div className="mt-4">
-                    <h4 className="text-sm font-semibold text-white mb-2">Key Features:</h4>
-                    <ul className="text-sm text-gray-300 space-y-1">
-                      {service.features.map((feature) => (
-                        <li key={feature}>• {feature}</li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="mt-4 text-sm text-blue-400">
-                    Duration: {service.duration}
-                  </div>
-                </div>
-              ))}
-            </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
       </div>
     </div>
   );
-}

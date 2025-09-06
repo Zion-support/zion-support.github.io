@@ -1,15 +1,12 @@
-<<<<<<< HEAD
 import { createSlice, PayloadAction, createAsyncThunk } from '@reduxjs/toolkit';
 
 export interface WishlistItem {
   id: string;
   type: string;
   data?: any;
-}
 
 export interface WishlistState {
   items: WishlistItem[];
-}
 
 const initialState: WishlistState = {
   items: [],
@@ -53,7 +50,3 @@ const wishlistSlice = createSlice({
 
 export const { addToWishlist, removeFromWishlist } = wishlistSlice.actions;
 export default wishlistSlice.reducer;
-=======
- 
-});
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

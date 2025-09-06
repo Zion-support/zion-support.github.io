@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import PDFDocument from 'pdfkit';
 import {
   getWhitepaperSections,
-  OPERATOR_PROMPT,
+  OPERATOR_PROMPT,;
 } from '../../utils/whitepaper/zionWhitepaper';
 
 function writeSection(doc: PDFDocument, title: string, content: string) {
@@ -14,7 +13,6 @@ function writeSection(doc: PDFDocument, title: string, content: string) {
     width: 480,
     align: 'left',
   });
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -70,17 +68,3 @@ export default async function handler(
     );
 
   doc.end();
-}
-=======
- const doc = new (PDFDocument as any) ({
-  autoFirstPage: false 
-});
-doc.info.Title = `Zion Protocol Whitepaper ($ {
-  edition 
-}) `;
-doc.info.Author = 'Zion Protocol';
-//Cover page // End doc.addPage ();
-doc.fontSize (10) .fillColor ('#444444') .text ('© Zion Protocol. This document is provided for informational purposes and does not constitute financial advice.');
-doc.end () 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

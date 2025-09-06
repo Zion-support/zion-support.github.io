@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -7,7 +6,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -16,13 +15,13 @@ import {
   SelectTrigger,
   SelectValue,
   SelectContent,
-  SelectItem,
+  SelectItem,;
 } from '@/components/ui/select';
 import { Calendar } from '@/components/ui/calendar';
 import {
   Popover,
   PopoverTrigger,
-  PopoverContent,
+  PopoverContent,;
 } from '@/components/ui/popover';
 import { TalentProfile } from '@/types/talent';
 import type { UserProfile } from '@/types/auth';
@@ -40,7 +39,6 @@ interface InterviewRequestFormProps {
   talent: TalentProfile;
   onClose: () => void;
   userDetails?: UserProfile;
-}
 
 const formSchema = z.object({
   date: z
@@ -403,31 +401,7 @@ export function InterviewRequestForm({
       </form>
     </Form>
   );
-}
-=======
- interface InterviewRequestFormProps {;
-  talent: TalentProfile;
-onClose: () => void;
-userDetails?: UserProfile ;
-}const formSchema = z.object ({;
-  date: z.date ({;
-  required error: "Please select a date for the interview." ;
-}) .refine (date => date > new Date (), {";
-  message: "Interview date must be in the future" ;
-});";
-time: z.string () .min (1, "Please select a time for the interview.");";
-duration: z.string () .min (1, "Please select the interview duration.");";
-platform: z.string () .min (1, "Please select a meeting platform.");
-const form = useForm<z.infer<typeof formSchema>> ({;
-  resolver: zodResolver (formSchema), defaultValues: {;
-  title: `Interview with $ {;
-  talent.full name ;
-}`;
-async function onSubmit (values: z.infer<typeof formSchema>) {;
-  if (!userDetails?.id) {;
-  toast ({;
-  return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
+
 }setIsSubmitting (true);
 }catch (error) {;
   logErrorToProduction ('Failed to schedule interview:', {;
@@ -474,4 +448,3 @@ toast ({;
 }<FormField <FormItem> <FormLabel>Notes (Optional) </FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) ;
 }/> </Button> </div> </form> </Form>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

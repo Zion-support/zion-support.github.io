@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -9,12 +7,10 @@ import Link from 'next/link';';
 import { motion } from 'framer-motion';
 import { ShoppingCart, 
   Brain, 
-  BarChart3, 
-=======
+  BarChart3, ;
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -28,18 +24,14 @@ import {
   Users,
   CreditCard,
   Smartphone,
-  Globe,
+  Globe,;
   Database;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'E-commerce Platforms,',
     description: 'Custom e-commerce solutions with advanced features and seamless user experience.,',
-=======
-=======
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -108,16 +100,12 @@ const services = [
       'Social commerce integration'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Increased Sales,',
     description: 'Personalized experiences and optimized inventory drive higher conversion rates.,',
     icon: ShoppingCart;
-=======
-=======
 ];
 const benefits = [
   {
@@ -140,8 +128,6 @@ const benefits = [
     description: 'Advanced analytics provide actionable insights for business growth.,',
     icon: Database;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function RetailPage() {
   return (;
@@ -189,15 +175,9 @@ export default function RetailPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
-=======
 ];
 export default function RetailPage() {
-  return (
-    <Layout
-      title="Retail Technology Solutions - Zion Tech Group"
-      description="Transform retail with e-commerce platforms, inventory management AI, customer analytics, and omnichannel solutions."
-      keywords="retail technology, e-commerce, inventory management, customer analytics, omnichannel retail, retail AI"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -245,8 +225,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -260,8 +238,6 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -279,8 +255,6 @@ export default function RetailPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">";
@@ -292,8 +266,6 @@ export default function RetailPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-violet-600 rounded-lg flex items-center justify-center mb-6">
@@ -311,13 +283,9 @@ export default function RetailPage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
             </div>
           </div>
         </section>
@@ -328,8 +296,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -343,8 +309,6 @@ export default function RetailPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -371,13 +335,9 @@ export default function RetailPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
             </div>
           </div>
         </section>
@@ -388,8 +348,6 @@ export default function RetailPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Retail?;
@@ -411,8 +369,6 @@ export default function RetailPage() {
         </section>;
       </div>;
     </Layout>;
-=======
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Retail?
@@ -435,4 +391,3 @@ export default function RetailPage() {
       </div>
     </Layout>
   );
-}

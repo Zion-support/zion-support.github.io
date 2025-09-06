@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type Infobox = {
   founder: string;
   launchYear: string;
@@ -111,7 +110,6 @@ export function generateZionWiki(): WikiContent {
   ];
 
   return { title, intro, infobox, sections, references };
-}
 
 export function generateZionDocs(): DocsContent {
   const wiki = generateZionWiki();
@@ -162,7 +160,6 @@ export function generateZionDocs(): DocsContent {
       ],
     },
   };
-}
 
 export function buildMarkdownFromWiki(wiki: WikiContent): string {
   const infobox = `| | |
@@ -189,7 +186,6 @@ export function buildMarkdownFromWiki(wiki: WikiContent): string {
     wiki.references.forEach((r, i) => lines.push(`${i + 1}. ${r}`));
   }
   return lines.join('\n');
-}
 
 export function buildWikitextFromWiki(wiki: WikiContent): string {
   const lines: string[] = [];
@@ -213,7 +209,6 @@ export function buildWikitextFromWiki(wiki: WikiContent): string {
     wiki.references.forEach(r => lines.push(`* ${r}`));
   }
   return lines.join('\n');
-}
 
 export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
   const sections = [
@@ -227,13 +222,11 @@ export function buildNotionMarkdownFromDocs(docs: DocsContent): string {
   const lines: string[] = [];
   lines.push('# Zion OS — Internal Documentation');
   lines.push('');
-  for (const s of sections) {
-    lines.push(`## ${s.title}`);
+  `);
     for (const p of s.paragraphs) lines.push(p);
     lines.push('');
   }
   return lines.join('\n');
-}
 
 export function slugify(input: string): string {
   return input
@@ -242,23 +235,3 @@ export function slugify(input: string): string {
     .trim()
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
-}
-=======
- 
-}export function buildMarkdownFromWiki (wiki: WikiContent) : string {
-  const infobox = `| | | |---|---| | Founder | $ {
-  wiki.infobox.founder 
-}| 
-}return lines.join ('\n') 
-}
-}return lines.join ('\n') 
-}for (const s of sections) {
-  lines.push (`## $ {
-  s.title 
-}`);
-for (const p of s.paragraphs) lines.push (p);
-lines.push ('') 
-}return lines.join ('\n') 
-}export function slugify (input: string) : string {
-  return input .toLowerCase () .replace (/[^a-z0-9\s-]/g, '') .trim () 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

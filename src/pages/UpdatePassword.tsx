@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -15,7 +14,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { toast } from '@/hooks/use-toast';
 import { cleanupAuthState } from '@/utils/authUtils';
@@ -294,20 +293,11 @@ export default function UpdatePassword() {
       </div>
     </>
   );
-=======
- import {;
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Form validation schema const updatePasswordSchema = z .object ({;
   password: z .string () if (token) {;
   setAccessToken (token) ;
 }else {;
   ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, []);
 //Form submission handler ;
 }setIsLoading (true);
@@ -327,7 +317,6 @@ if (error) {;
 description: error.message;
 setError (error.message);
 return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Show success message and clean up auth state //Clean auth state and redirect after a delay cleanupAuthState ();
 setTimeout ( () => {;
   ;
@@ -339,13 +328,13 @@ toast ({;
   ;
 }finally {;
   setIsLoading (false) ;
-}
+
 };
 const onInvalid = (errors: any) => {;
   const firstError = Object.keys (errors) [0] as keyof UpdatePasswordFormValues;
 if (firstError) {;
   form.setFocus (firstError) ;
-}
+
 };";
 error && (<div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-md text-white"> <p className="text-sm"> {;
   error ;

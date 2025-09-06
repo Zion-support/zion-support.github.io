@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
@@ -15,7 +14,6 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {};
   }
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET')
@@ -31,8 +29,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     requiredDocuments: getRequiredDocuments(profile.role),
     optionalDocuments: getOptionalDocuments(profile.role),
   });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

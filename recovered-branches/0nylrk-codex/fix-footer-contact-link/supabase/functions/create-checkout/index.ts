@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import Stripe from 'https://esm.sh/stripe@14.21.0';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.0';
@@ -134,26 +133,5 @@ serve(async req => {
       status: 500,
     });
   }
-=======
- 
-}const supabaseClient = createClient (Deno.env.get ("SUPABASE URL") ?? "";
-Deno.env.get ("SUPABASE ANON KEY") ?? "");
-//Check if customer exists const customers = await stripe.customers.list ({
-  email: user.email, limit: 1 
-});
-let customerId;
-if (customers.data.length > 0) {
-  customerId = customers.data[0].id 
-}//Determine product name and description based on the request ? "Service Payment": "Premium Subscription";
-const productDescription = escrow ? "Payment held in escrow until service completion": "Direct payment for services";
-customer: customerId, customer email: customerId ? undefined : user.email, line items: [ {
-  price data: {
-  currency: currency, product data: {
-  name: productName, description: productDescription 
-};
-unit amount: amount * 100, //Convert to cents status: 500 
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

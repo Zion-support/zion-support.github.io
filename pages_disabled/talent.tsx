@@ -8,7 +8,7 @@ import {
   Users, 
   ArrowRight, 
   CheckCircle, 
-  Star 
+  Star ;
 } from 'lucide-react';
 
 const jobOpenings = [
@@ -298,7 +298,6 @@ export default function TalentPage() {
         </section>
       </div>
   );
-}
+
     </>
   );
-}

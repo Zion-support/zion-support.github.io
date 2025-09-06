@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 
 export function ReferralGuide() {
@@ -58,10 +57,3 @@ export function ReferralGuide() {
       </CardContent>
     </Card>
   );
-}
-=======
- const steps = [ {
-  
-}</div> </CardContent> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

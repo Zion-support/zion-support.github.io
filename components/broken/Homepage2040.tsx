@@ -5,12 +5,12 @@
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1, delayChildren: 0.2 
-}
-}
+
+
 };
-}
+
 };
-}
+
 };
 <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden" aria-labelledby="hero-heading" > left: `$ {
   Math.random () * 100 
@@ -21,15 +21,15 @@ top: `$ {
 animationDelay: `$ {
   Math.random () * 3 
 }s` 
-}
+
 }animate= {
   {
   scale: [0, 1, 0], opacity: [0, 1, 0] 
-}
+
 }transition= {
   {
   duration: 3, repeat: Infinity, delay: Math.random () * 3 
-}
+
 }/>) ) 
 }</div> </div> <div className="text-center max-w-6xl mx-auto relative z-10" > <motion.div > {
   /* Enhanced Company Badge */ 

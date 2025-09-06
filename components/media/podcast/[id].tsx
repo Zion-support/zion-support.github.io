@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 
@@ -38,9 +37,3 @@ export default function EpisodePage() {
       </div>
     </div>
   );
-}
-=======
- if (!episode) return <div>Loading…</div>;
-return (</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

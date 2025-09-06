@@ -12,7 +12,7 @@ result.strength = this.getStrengthLevel (result.score);
 // Generate feedback result.feedback = this.generateFeedback (result.details);
 result.suggestions = this.generateSuggestions (result.details);
 result.warnings = this.generateWarnings (result.details);
-return result 
+
 }/** * Calculate password strength score */ // Length scoring (0-25 points) if (details.length >= 12) score += 25;
 else if (details.length >= 10) score += 20;
 else if (details.length >= 8) score += 15;
@@ -43,8 +43,7 @@ if (details.hasRepeatingChars) score -= 10;
 }/** * Generate improvement suggestions */ suggestions.push ('Consider using a passphrase with random words');
 suggestions.push ('Use unique passwords for each account');
 suggestions.push ('Consider a password manager for secure storage');
-return suggestions 
-}/** * Generate security warnings */ return warnings 
+
 }/** * Generate a strong password */ // Ensure at least one character from each category password += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor (Math.random () * 26) ];
 password += 'abcdefghijklmnopqrstuvwxyz'[Math.floor (Math.random () * 26) ];
 password += '0123456789'[Math.floor (Math.random () * 10) ];
@@ -54,14 +53,11 @@ password += '!@#$%^&* () +-=[] {
 // Fill the rest randomly 
 }/** * Generate a memorable passphrase */ return passphrase 
 }/** * Add custom common password */ /** * Remove password from common list */ /** * Get service statistics */ 
-}
-<<<<<<< HEAD
 
 export interface CommonPasswordData {
   commonPasswords: Set<string>;
   commonWords: Set<string>;
   patterns: RegExp[];
-}
 
 class PasswordStrengthService {
   private commonPasswords: Set<string>;
@@ -535,13 +531,9 @@ class PasswordStrengthService {
       totalPatterns: this.patterns.length,
     };
   }
-}
 
 // Export singleton instance
 export const passwordStrengthService = new PasswordStrengthService();
 
 // Export the class for custom instances
 export { PasswordStrengthService };
-=======
-}// Export singleton instance 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

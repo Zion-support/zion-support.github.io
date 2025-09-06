@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import Head from 'next/head';
 
@@ -136,9 +135,3 @@ export default function OffworldConsole() {
       {status && <p className='text-sm text-gray-700'>{status}</p>}
     </div>
   );
-}
-=======
- 
-}return (<div className="min-h-screen p-8 space-y-8" > <Head> <title>Zion Offworld Console</title> </Head> <h1 className="text-2xl font-bold" >Offworld Console</h1> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

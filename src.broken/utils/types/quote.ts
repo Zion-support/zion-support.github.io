@@ -5,7 +5,6 @@ export type AdminQuoteStatus =
   | 'Accepted'
   | 'Closed';
 export type TalentQuoteStatus = 'New' | 'Viewed' | 'Replied';
-<<<<<<< HEAD
 
 export type QuoteRequest = {
   id: string;
@@ -30,5 +29,3 @@ export type QuoteFilters = {
   talentSlug?: string | 'All';
   search?: string;
 };
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

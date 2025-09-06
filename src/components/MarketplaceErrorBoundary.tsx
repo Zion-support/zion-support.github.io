@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { ErrorBoundary, FallbackProps } from 'react-error-boundary';
 import * as Sentry from '@sentry/nextjs';
@@ -10,7 +9,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface MarketplaceErrorFallbackProps extends FallbackProps {
   // Additional props if needed
-}
 
 function MarketplaceErrorFallback({
   error,
@@ -66,11 +64,9 @@ function MarketplaceErrorFallback({
       </div>
     </div>
   );
-}
 
 interface MarketplaceErrorBoundaryProps {
   children: React.ReactNode;
-}
 
 export function MarketplaceErrorBoundary({
   children,
@@ -91,35 +87,8 @@ export function MarketplaceErrorBoundary({
     });
   };
 
-  return (
-    <ErrorBoundary
-      FallbackComponent={MarketplaceErrorFallback}
-      onError={handleError}
+  
     >
       {children}
     </ErrorBoundary>
   );
-}
-=======
- function MarketplaceErrorFallback ({;
-  error, resetErrorBoundary ;
-}: MarketplaceErrorFallbackProps) {;
-  const handleRetry = async () => {;
-  try {;
-  //Re-call SWR mutate ('*') to refresh all cached data ;
-}
-};
-</AlertDescription> </Alert> <div className="flex flex-col space-y-2" > <Button > <RefreshCcw className="mr-2 h-4 w-4" /> Retry </Button> <Button > Reload Page </Button> </div> <a > contact support </Link> </div> </div> </div>) ;
-}export function MarketplaceErrorBoundary ({;
-  children ;
-}: MarketplaceErrorBoundaryProps) {;
-  const handleError = (error: Error, errorInfo: React.ErrorInfo) => {;
-  //Log boundary errors to Sentry return (<ErrorBoundary FallbackComponent= {;
-  MarketplaceErrorFallback ;
-}onError= {;
-  handleError ;
-}> {;
-  children ;
-}</ErrorBoundary>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

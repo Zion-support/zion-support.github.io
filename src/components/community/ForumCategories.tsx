@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import {
   Card,
   CardContent,
   CardHeader,
   CardTitle,
-  CardDescription,
+  CardDescription,;
 } from '@/components/ui/card';
 import { useAuth } from '@/hooks/useAuth';
 import {
@@ -13,7 +12,7 @@ import {
   Briefcase,
   Code,
   FileText,
-  Megaphone,
+  Megaphone,;
 } from 'lucide-react';
 import { ForumCategoryInfo } from '@/types/community';
 
@@ -98,17 +97,10 @@ export const ForumCategories = () => {
   );
 };
 
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const categories: ForumCategoryInfo[] = [ const visibleCategories = categories.filter (category => !category.adminOnly || isAdmin);
 {;
   visibleCategories.map ( (category) => {;
   const Icon = iconMap[category.icon as keyof typeof iconMap];
-return (<Link key= {;
-  category.id ;
-}href= {;
-  `/community/category/$ {;
-  category.id ;
-}` ;
+
 }> <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer" > <CardHeader className="flex flex-row items-center gap-4" > <div className="p-2 bg-zion-purple/10 rounded-full" > <Icon className="h-6 w-6 text-zion-purple" /> </div> <CardTitle className="text-xl" > {;
   category.name ";
 }</CardTitle> </CardHeader> <CardContent> <CardDescription className="text-base" > {;
@@ -117,6 +109,5 @@ return (<Link key= {;
 }) ;
 }</div>) ;
 };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ForumCategories;
 "

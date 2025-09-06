@@ -13,7 +13,7 @@ import {
   Users,
   Shield,
   Cloud,
-  Brain
+  Brain;
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 const industries = [
@@ -73,11 +73,7 @@ const stats = [
   { number: '24/7', label: 'Industry Support' }
 ];
 export default function IndustriesPage() {
-  return (
-    <Layout
-      title="Industry Solutions - Zion Tech Group"
-      description="Specialized technology solutions for healthcare, finance, manufacturing, retail, education, and government sectors."
-      keywords="industry solutions, healthcare technology, fintech, manufacturing IoT, retail technology, education technology, government services"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -136,15 +132,7 @@ export default function IndustriesPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {industries.map((industry, index) => {
                 const IconComponent = industry.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
+                
                   >
                     <div className={`w-16 h-16 bg-gradient-to-r ${industry.color} rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}>
                       <IconComponent className="w-8 h-8 text-white" />
@@ -301,4 +289,3 @@ export default function IndustriesPage() {
       </div>
     </Layout>
   );
-}

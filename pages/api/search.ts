@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { AccessLevel } from '../../utils/search/filter';
 import { parseQueryToFilters } from '../../utils/search/parser';
@@ -37,9 +36,3 @@ export default async function handler(
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Search failed' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

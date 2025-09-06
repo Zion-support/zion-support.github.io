@@ -4,7 +4,6 @@ type OpenAIClient = OpenAI;
 
 export function createOpenAIClient(apiKey: string): OpenAIClient {
   return new OpenAI({ apiKey });
-}
 
 export async function generateJobPost(
   openai: OpenAIClient,
@@ -21,4 +20,3 @@ Add responsibilities, requirements, and benefits in bullet points.`;
     input: prompt,
   });
   return completion.output_text;
-}

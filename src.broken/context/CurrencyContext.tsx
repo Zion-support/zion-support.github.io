@@ -1,16 +1,7 @@
  export type SupportedCurrency = 'USD' | 'EUR' | 'GBP';
-}
-}, []);
-return (<CurrencyContext.Provider value= {
-  {
-  currency, setCurrency 
-}
-<<<<<<< HEAD
 
-const DEFAULT_CURRENCY: CurrencyInfo = {
-  code: 'USD',
-  symbol: '$',
-  fx_rate: 1,
+}, []);
+
 };
 
 const CurrencyContext = createContext<CurrencyContextType>({
@@ -23,11 +14,9 @@ const CURRENCY_COOKIE = 'zion_currency';
 function readCookie(name: string): string | null {
   const match = document.cookie.match(new RegExp('(^| )' + name + '=([^;]+)'));
   return match ? decodeURIComponent(match[2]) : null;
-}
 
 function writeCookie(name: string, value: string) {
   document.cookie = `${name}=${encodeURIComponent(value)}; path=/; max-age=${60 * 60 * 24 * 30}`;
-}
 
 export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
@@ -51,9 +40,4 @@ export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({
       {children}
     </CurrencyContext.Provider>
   );
-=======
-}> {
-  children 
-}</CurrencyContext.Provider>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

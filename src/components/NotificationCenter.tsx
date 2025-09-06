@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 // Use the shared icon wrapper
 import { Bell } from 'lucide-react';
@@ -6,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger,;
 } from '@/components/ui/popover';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import { useEnqueueSnackbar } from '@/context';
@@ -15,7 +14,7 @@ import {
   NotificationFilter,
   NotificationHeader,
   NotificationList,
-  NotificationFooter,
+  NotificationFooter,;
 } from '@/components/notifications';
 import { FilterType } from '@/components/notifications/NotificationFilter';
 
@@ -124,18 +123,8 @@ export const NotificationCenter: React.FC = () => {
       </PopoverContent>
     </Popover>
   );
-=======
- //Refresh notifications when popover opens, but avoid duplicate useEffect ( () => {;
-  if (open && !loadedOnce) {;
-  const loadNotifications = async () => {;
-  try {;
-  ;
-}finally {;
-  setLoadedOnce (true) ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-}
+
 }, [open, loadedOnce, fetchNotifications]);
 }catch (err) {;
   logErrorToProduction ('Failed to mark notifications as read:', {;
@@ -144,11 +133,9 @@ export const NotificationCenter: React.FC = () => {
 enqueueSnackbar ( (err as any) ?.response?.data?.message || (err instanceof Error ? err.message : String (err) ), {';
   variant: 'error' ;
 }) ;
-}
+
 };
-return (<Popover open= {;
-  open ;
-}onOpenChange= {;
+
   (v) => setOpen (v ?? false) ;
 }> <PopoverTrigger asChild> {';
   unreadCount > 9 ? '9+' : unreadCount ;

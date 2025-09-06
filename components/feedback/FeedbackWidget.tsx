@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -103,19 +102,3 @@ export default function FeedbackWidget({
       )}
     </div>
   );
-}
-=======
- const submit = async () => {
-  if (!rating) {
-  <button type="button" onClick= {
-  () => setRating (rating === 'up' ? null : 'up') 
-}className= {
-  `inline-flex items-center gap-1 rounded-md border px-2 py-1 text-sm $ {
-  rating === 'up' ? 'bg-emerald-600 text-white border-emerald-600' : '' 
-}` 
-}aria-pressed= {
-  rating === 'up' 
-}> <span>👍</span> <span>Yes</span> </button> <button > <span>👎</span> <span>No</span> </button> </div> <textarea </button> </div> </div>) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

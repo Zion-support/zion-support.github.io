@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -16,17 +15,9 @@ export default async function handler(
   const base64 = Buffer.from(html, 'utf-8').toString('base64');
   const url = `data:text/html;base64,${base64}`;
   res.status(200).json({ url });
-}
 
 function escapeHtml(str: string) {
   return String(str)
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;');
-}
-=======
- 
-}function escapeHtml (str: string) {
-  return String (str) .replace (/&/g, '&amp, ') .replace (/</g, '<') .replace (/>/g, '>') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -42,10 +42,7 @@
       \"email\": \'london@ziontechgroup.com\'
     }
   ];
-  return (
-    <MainLayout
-      title=\"Contact Us - Zion Tech Group\"
-      description=\"Get in touch with Zion Tech Group. We\'re here to help you transform your business with innovative technology solutions.\"
+  
     >
       {/* Hero Section */}
       <section className=\"bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900 text-white py-20\">
@@ -605,4 +602,3 @@
       </div>
     </>
   );
-}

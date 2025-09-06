@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Dispute, DisputeStatus } from '@/types/disputes';
 import { Button } from '@/components/ui/button';
@@ -9,7 +8,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import Skeleton from '@/components/ui/skeleton';
 import { formatDistanceToNow } from 'date-fns';
@@ -17,19 +16,9 @@ import { ShieldAlert } from 'lucide-react';
 import Link from 'next/link';
 
 type DisputesListProps = {
-=======
- import {;
-  Table;
-TableBody;
-TableCell;
-TableHead;
-TableHeader;
-type DisputesListProps = {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   disputes: Dispute[];
 isLoading: boolean ;
 };
-<<<<<<< HEAD
 
 export function DisputesList({ disputes, isLoading }: DisputesListProps) {
   const [statusFilter, setStatusFilter] = useState<DisputeStatus | 'all'>(
@@ -215,15 +204,7 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
       </div>
     </div>
   );
-=======
-export function DisputesList ({;
-  disputes, isLoading ;
-}: DisputesListProps) {;
-  const filteredDisputes = statusFilter === "all" const getStatusBadgeVariant = (status: DisputeStatus) => {;
-  switch (status) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 if (isLoading) {";
   return (<div className="space-y-4" > <div className="flex gap-2 mb-4" > {";

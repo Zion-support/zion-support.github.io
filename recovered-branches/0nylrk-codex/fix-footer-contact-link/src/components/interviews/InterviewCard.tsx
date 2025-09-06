@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -22,22 +21,19 @@ import {
   AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
-  AlertDialogTrigger,
+  AlertDialogTrigger,;
 } from '@/components/ui/alert-dialog';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { Clock, ExternalLink, MessageSquare, Video, X } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { InterviewResponseForm } from './InterviewResponseForm';
 
 interface InterviewCardProps {
-=======
- interface InterviewCardProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   interview: Interview;
 onRefresh: () => Promise<void> 
 }export function InterviewCard ({
@@ -71,8 +67,6 @@ const getRelativeTime = () => {
   return `Starts in $ {
   formatDistanceToNow (interviewDate) 
 }` 
-}
-<<<<<<< HEAD
 
 export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
   const { user } = useAuth();
@@ -173,10 +167,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       case 'completed':
         return <Badge className='bg-green-700'>Completed</Badge>;
       case 'cancelled':
-        return (
-          <Badge
-            variant='outline'
-            className='border-destructive text-destructive'
+        
           >
             Cancelled
           </Badge>
@@ -366,24 +357,7 @@ export function InterviewCard({ interview, onRefresh }: InterviewCardProps) {
       </Dialog>
     </Card>
   );
-=======
-};
-if (success) {
-  toast ({
-  title: `Interview $ {
-  status 
-}`;
-}setIsLoading (false) 
-};
-}setIsLoading (false) 
-};
-const getStatusBadge = () => {
-  switch (interview.status) {
-  case 'requested': default: return <Badge> {
-  interview.status 
-}</Badge> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 </p> </CardHeader> <CardContent className="pt-2" > <div className="space-y-3" > <div className="flex items-start gap-3" > <Clock className="h-4 w-4 mt-0.5 text-muted-foreground" /> <div> </p> </div> </div> <div> <p className="font-medium capitalize" > {
   interview.meeting platform 
@@ -408,4 +382,3 @@ const getStatusBadge = () => {
 }isLoading= {
   isLoading 
 }/> </DialogContent> </Dialog> </Card>) 
-}

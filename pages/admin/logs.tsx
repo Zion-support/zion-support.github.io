@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { GetServerSideProps } from 'next';
 import fs from 'fs';
@@ -12,7 +11,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import {
   AlertTriangle,
@@ -21,13 +20,9 @@ import {
   XCircle,
   Search,
   Download,
-  RefreshCw,
+  RefreshCw,;
 } from 'lucide-react';
 import { logErrorToProduction } from '@/utils/productionLogger';
-=======
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
 interface LogEntry {
   id: string;
@@ -46,16 +41,13 @@ interface LogEntry {
     duration: number;
     memory?: number;
   };
-}
 
-<<<<<<< HEAD
 interface LogsPageProps {
   logs: LogEntry[];
   errorCount: number;
   warningCount: number;
   totalCount: number;
   lastUpdated: string;
-}
 
 const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
   switch (level) {
@@ -71,48 +63,9 @@ const LogLevelIcon = ({ level }: { level: LogEntry['level'] }) => {
       return <XCircle className='h-4 w-4 text-red-700' />;
     default:
       return <Info className='h-4 w-4 text-gray-500' />;
-=======
-const mockLogs: LogEntry[] = [
-  {
-    id: '1',
-    level: 'info',
-    message: 'User logged in successfully',
-    category: 'authentication',
-    component: 'LoginForm',
-    timestamp: '2025-01-15T10:00:00Z',
-    sessionId: 'sess_123',
-    userId: 'user_456'
-  },
-  {
-    id: '2',
-    level: 'error',
-    message: 'Failed to process payment',
-    category: 'payment',
-    component: 'PaymentProcessor',
-    timestamp: '2025-01-15T10:05:00Z',
-    sessionId: 'sess_124',
-    userId: 'user_789',
-    error: {
-      name: 'PaymentError',
-      stack: 'Error: Payment failed\n    at PaymentProcessor.process...'
-    }
-  },
-  {
-    id: '3',
-    level: 'warn',
-    message: 'High memory usage detected',
-    category: 'performance',
-    component: 'MemoryMonitor',
-    timestamp: '2025-01-15T10:10:00Z',
-    performance: {
-      duration: 1500,
-      memory: 85
-    }
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   }
 ];
 
-<<<<<<< HEAD
 const LogLevelBadge = ({ level }: { level: LogEntry['level'] }) => {
   const colors = {
     debug: 'bg-blue-100 text-blue-800',
@@ -146,15 +99,6 @@ export default function LogsPage({
   const sources = Array.from(new Set(logs.map(log => log.source))).filter(
     Boolean
   );
-=======
-const AdminLogsPage: React.FC = () => {
-  const [logs, setLogs] = useState<LogEntry[]>([]);
-  const [filteredLogs, setFilteredLogs] = useState<LogEntry[]>([]);
-  const [loading, setLoading] = useState(true);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [levelFilter, setLevelFilter] = useState('all');
-  const [categoryFilter, setCategoryFilter] = useState('all');
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 
   useEffect(() => {
     // Simulate loading logs
@@ -169,19 +113,12 @@ const AdminLogsPage: React.FC = () => {
     let filtered = [...logs];
 
     if (searchTerm) {
-<<<<<<< HEAD
       filtered = filtered.filter(
         log =>
           log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
           log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
           (log.component &&
             log.component.toLowerCase().includes(searchTerm.toLowerCase()))
-=======
-      filtered = filtered.filter(log => 
-        log.message.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        log.category.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (log.component && log.component.toLowerCase().includes(searchTerm.toLowerCase()))
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       );
     }
 
@@ -207,7 +144,6 @@ const AdminLogsPage: React.FC = () => {
     }
   };
 
-<<<<<<< HEAD
   const exportLogs = () => {
     const dataStr = JSON.stringify(filteredLogs, null, 2);
     const dataUri =
@@ -239,13 +175,6 @@ const AdminLogsPage: React.FC = () => {
       parts.push(`FPS: ${performance.fps}`);
     }
 
-=======
-  const formatPerformance = (performance: LogEntry['performance']) => {
-    if (!performance) return null;
-    const parts = [];
-    if (performance.duration) parts.push(`${performance.duration}ms`);
-    if (performance.memory) parts.push(`${performance.memory}% memory`);
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     return parts.length > 0 ? parts.join(', ') : null;
   };
 
@@ -254,7 +183,6 @@ const AdminLogsPage: React.FC = () => {
   const totalCount = logs.length;
 
   return (
-<<<<<<< HEAD
     <div className='container mx-auto p-6 space-y-6'>
       <div className='flex items-center justify-between'>
         <h1 className='text-3xl font-bold'>System Logs & Error Monitoring</h1>
@@ -269,37 +197,8 @@ const AdminLogsPage: React.FC = () => {
             <Download className='h-4 w-4 mr-2' />
             Export
           </Button>
-=======
-    <>
-      <Head>
-        <title>Admin Logs - Zion Tech Group</title>
-        <meta name="description" content="System logs and monitoring dashboard" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <h1 className="text-3xl font-bold mb-6">System Logs</h1>
-        
-        {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Total Logs</h3>
-            <p className="text-2xl font-bold">{totalCount}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Errors</h3>
-            <p className="text-2xl font-bold text-red-600">{errorCount}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Warnings</h3>
-            <p className="text-2xl font-bold text-yellow-600">{warningCount}</p>
-          </div>
-          <div className="bg-white rounded-lg shadow p-4">
-            <h3 className="text-sm font-medium text-gray-500">Last Updated</h3>
-            <p className="text-sm">{new Date().toLocaleString()}</p>
-          </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
 
-<<<<<<< HEAD
       {/* Summary Cards */}
       <div className='grid grid-cols-1 md:grid-cols-4 gap-4'>
         <Card>
@@ -411,55 +310,9 @@ const AdminLogsPage: React.FC = () => {
                 ))}
               </SelectContent>
             </Select>
-=======
-        {/* Filters */}
-        <div className="bg-white rounded-lg shadow p-6 mb-6">
-          <h2 className="text-lg font-semibold mb-4">Filters</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <div>
-              <label className="block text-sm font-medium mb-2">Search</label>
-              <input
-                type="text"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                placeholder="Search logs..."
-                className="w-full p-2 border rounded-md"
-              />
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Level</label>
-              <select
-                value={levelFilter}
-                onChange={(e) => setLevelFilter(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Levels</option>
-                <option value="debug">Debug</option>
-                <option value="info">Info</option>
-                <option value="warn">Warning</option>
-                <option value="error">Error</option>
-                <option value="critical">Critical</option>
-              </select>
-            </div>
-            <div>
-              <label className="block text-sm font-medium mb-2">Category</label>
-              <select
-                value={categoryFilter}
-                onChange={(e) => setCategoryFilter(e.target.value)}
-                className="w-full p-2 border rounded-md"
-              >
-                <option value="all">All Categories</option>
-                <option value="authentication">Authentication</option>
-                <option value="payment">Payment</option>
-                <option value="performance">Performance</option>
-                <option value="system">System</option>
-              </select>
-            </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
-<<<<<<< HEAD
       {/* Logs Table */}
       <Card>
         <CardHeader>
@@ -518,50 +371,6 @@ const AdminLogsPage: React.FC = () => {
                             <pre className='mt-1 text-xs overflow-x-auto'>
                               {log.error.stack}
                             </pre>
-=======
-        {/* Logs Table */}
-        <div className="bg-white rounded-lg shadow">
-          <div className="p-6 border-b">
-            <h2 className="text-lg font-semibold">Log Entries ({filteredLogs.length})</h2>
-          </div>
-          <div className="p-6">
-            {loading ? (
-              <div className="text-center py-8">Loading logs...</div>
-            ) : filteredLogs.length === 0 ? (
-              <div className="text-center py-8 text-gray-500">
-                No logs found matching the current filters.
-              </div>
-            ) : (
-              <div className="space-y-4">
-                {filteredLogs.map((log) => (
-                  <div key={log.id} className="border rounded-lg p-4">
-                    <div className="flex items-start justify-between">
-                      <div className="flex-1">
-                        <div className="flex items-center gap-2 mb-2">
-                          <span className={`px-2 py-1 rounded text-xs font-semibold ${getLevelColor(log.level)}`}>
-                            {log.level.toUpperCase()}
-                          </span>
-                          <span className="text-sm text-gray-500">{log.category}</span>
-                          {log.component && (
-                            <span className="text-sm text-gray-500">• {log.component}</span>
-                          )}
-                        </div>
-                        <p className="text-gray-900 mb-2">{log.message}</p>
-                        {log.error && (
-                          <details className="mb-2">
-                            <summary className="cursor-pointer text-sm text-red-600 hover:text-red-800">
-                              View Error Details
-                            </summary>
-                            <div className="mt-2 p-2 bg-red-50 rounded">
-                              <div><strong>Name:</strong> {log.error.name}</div>
-                              {log.error.stack && (
-                                <div className="mt-2">
-                                  <strong>Stack:</strong>
-                                  <pre className="text-xs mt-1 whitespace-pre-wrap">{log.error.stack}</pre>
-                                </div>
-                              )}
-                            </div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
                           </details>
                         )}
                         <div className="flex items-center justify-between text-xs text-gray-500">
@@ -577,7 +386,6 @@ const AdminLogsPage: React.FC = () => {
                       <div className="text-xs text-gray-500 ml-4">
                         {new Date(log.timestamp).toLocaleString()}
                       </div>
-<<<<<<< HEAD
                     </details>
                   )}
 
@@ -585,11 +393,8 @@ const AdminLogsPage: React.FC = () => {
                     <div>
                       Session: {log.sessionId}
                       {log.userId && ` • User: ${log.userId}`}
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
                     </div>
                   </div>
-<<<<<<< HEAD
 
                   {log.url && (
                     <div className='text-xs text-muted-foreground truncate'>
@@ -601,9 +406,6 @@ const AdminLogsPage: React.FC = () => {
             ) : (
               <div className='text-center text-muted-foreground py-8'>
                 No logs found matching the current filters.
-=======
-                ))}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
               </div>
             )}
           </div>
@@ -613,7 +415,6 @@ const AdminLogsPage: React.FC = () => {
   );
 };
 
-<<<<<<< HEAD
 export const getServerSideProps: GetServerSideProps = async () => {
   try {
     const logsDir = path.join(process.cwd(), 'logs');
@@ -624,17 +425,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
       const files = fs.readdirSync(logsDir);
       const logFiles = files.filter(file => file.endsWith('.log'));
 
-      for (const file of logFiles) {
-        try {
-          const filePath = path.join(logsDir, file);
-          const content = fs.readFileSync(filePath, 'utf-8');
-          const lines = content.split('\n').filter(line => line.trim());
-
-          for (const line of lines) {
-            try {
-              const logEntry = JSON.parse(line);
-              logs.push(logEntry);
-            } catch (parseError) {
+       catch (parseError) {
               // Skip malformed log entries
             }
           }
@@ -679,6 +470,3 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
   }
 };
-=======
-export default AdminLogsPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

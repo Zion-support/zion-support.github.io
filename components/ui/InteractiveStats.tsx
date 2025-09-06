@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 
 function useCounter(target: number, durationMs: number) {
@@ -16,7 +15,6 @@ function useCounter(target: number, durationMs: number) {
     return () => cancelAnimationFrame(raf);
   }, [target, durationMs]);
   return value;
-}
 
 export default function InteractiveStats() {
   const hires = useCounter(1200, 1200);
@@ -31,7 +29,6 @@ export default function InteractiveStats() {
       <Stat label='Satisfaction' value={satisfaction} suffix='%' />
     </div>
   );
-}
 
 function Stat({
   label,
@@ -51,9 +48,3 @@ function Stat({
       <div className='text-sm text-gray-600 dark:text-gray-300'>{label}</div>
     </div>
   );
-}
-=======
- </div>) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

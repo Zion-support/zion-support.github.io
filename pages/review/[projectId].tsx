@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import type { NextPage, GetServerSideProps } from 'next';
 import ReviewForm from '../../components/reviews/ReviewForm';
@@ -96,15 +95,4 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   } as any;
 };
 
-=======
- const ReviewSubmitPage: NextPage<Props> = ({
-  projectId, fromRole, fromId, valid, reason 
-}) => {
-  if (!valid) {
-  return (<main className="max-w-2xl mx-auto p-6" > <h1 className="text-2xl font-semibold mb-3" >Review unavailable</h1> <p className="text-sm text-gray-600" > {
-  reason || 'You cannot submit a review for this project.' 
-}</p> </main>) 
-}return (</main>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ReviewSubmitPage;

@@ -5,7 +5,7 @@
 };
 'es-ES': {
   translation: esTranslation 
-}
+
 };
 fallbackLng: 'en-US', // Default language debug: process.env.NODE ENV === 'development';
 interpolation: {

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../utils/sync/storage';
 
@@ -10,8 +9,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   state.config.paused = Boolean(paused);
   writeState(state);
   return res.status(200).json({ paused: state.config.paused });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

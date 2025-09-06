@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { MapPin } from 'lucide-react';
 import { PaymentButton } from '@/components/transactions/PaymentButton';
 import { CountryPricing } from '@/data/onsiteServicePricing';
@@ -6,7 +5,6 @@ import { toast } from '@/hooks/use-toast';
 
 interface PaymentSectionProps {
   selectedCountry: CountryPricing;
-}
 
 export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   // Handle successful payment
@@ -43,16 +41,4 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
       </p>
     </div>
   );
-}
-=======
- interface PaymentSectionProps {
-  selectedCountry: CountryPricing 
-}selectedCountry 
-}: PaymentSectionProps) {
-  //Handle successful payment const handlePaymentInitiated = () => {
-  toast ({
-  
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (/> <p className="text-xs text-zion-slate-light mt-2" > Price includes transportation and first hour onsite. Additional hours billed separately. </p> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

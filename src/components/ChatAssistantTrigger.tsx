@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -62,19 +61,7 @@ export function ChatAssistantTrigger() {
       )}
     </>
   );
-=======
- export function ChatAssistantTrigger () {;
-  const [isOpen, setIsOpen] = useState (false);
-try {;
-  ;
-}return Promise.resolve () ;
-}catch (error) {;
-  logErrorToProduction ('Error in AI chat:', {;
-  data: error ;
-});
-return Promise.resolve () ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
   isOpen && (<ChatAssistant isOpen= {;
@@ -84,7 +71,7 @@ return (<> <Button > <MessageSquare className="h-5 w-5" /> </Button> {;
 }recipient= {;
   {';
   id: 'ai-assistant', name: 'AI Assistant',  avatarUrl: 'https://placehold.co/64x64?text=AI', role: 'Virtual Assistant' ;
-}
+
 }onSendMessage= {;
   handleSendMessage ;
 }/>) ;

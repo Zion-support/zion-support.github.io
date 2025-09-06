@@ -16,7 +16,7 @@ import {
   Settings,
   Users,
   Clock,
-  Award
+  Award;
 } from 'lucide-react';
 import Layout from '../../components/Layout';
 
@@ -125,10 +125,7 @@ const processSteps = [
 ];
 
 export default function CloudDevOpsPage() {
-  return (
-    <Layout 
-      title="Cloud & DevOps Services - Zion Tech Group" 
-      description="Expert cloud migration, DevOps implementation, and infrastructure management services. Transform your operations with modern cloud technologies."
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -193,14 +190,7 @@ export default function CloudDevOpsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {services.map((service, index) => {
                 const IconComponent = service.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white/10 backdrop-blur-md rounded-lg p-8 border border-white/20 hover:bg-white/15 transition-all duration-300"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                
                   >
                     <div className="flex items-center mb-6">
                       <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mr-4">
@@ -283,14 +273,7 @@ export default function CloudDevOpsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => {
                 const IconComponent = benefit.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="text-center"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
+                
                   >
                     <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-6">
                       <IconComponent className="w-8 h-8 text-white" />
@@ -418,4 +401,3 @@ export default function CloudDevOpsPage() {
       </div>
     </Layout>
   );
-}

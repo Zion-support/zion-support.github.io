@@ -1,11 +1,9 @@
-<<<<<<< HEAD
 import React, { useMemo, useState } from 'react';
 
 interface TryItProps {
   method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   path: string; // full URL or relative
   requiresAuth: boolean;
-}
 
 export default function TryItConsole({
   method,
@@ -103,9 +101,3 @@ export default function TryItConsole({
       </div>
     </div>
   );
-}
-=======
- </div> </div> {
-  (method === 'POST' || method === 'PUT' || method === 'PATCH') && (<div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

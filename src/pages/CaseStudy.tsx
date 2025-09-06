@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { CASE_STUDIES } from '@/data/case-studies';
@@ -10,7 +9,7 @@ import {
   BreadcrumbList,
   BreadcrumbItem,
   BreadcrumbLink,
-  BreadcrumbSeparator,
+  BreadcrumbSeparator,;
 } from '@/components/ui/breadcrumb';
 import BreadcrumbJsonLd from '@/components/BreadcrumbJsonLd';
 import { getBreadcrumbsForPath } from '@/utils/routeUtils';
@@ -91,9 +90,3 @@ export default function CaseStudy() {
       </div>
     </>
   );
-}
-=======
- <BreadcrumbList> <BreadcrumbItem> <BreadcrumbLink asChild> <Link href="/" >Home</Link> </BreadcrumbLink> </BreadcrumbItem> <BreadcrumbSeparator /> <BreadcrumbItem> <BreadcrumbLink asChild> <Link href="/case-studies" >Case Studies</Link> </BreadcrumbLink> </BreadcrumbItem> <BreadcrumbSeparator /> <BreadcrumbItem> </BreadcrumbLink> </BreadcrumbItem> </BreadcrumbList> </Breadcrumb> <Button variant="outline" className="mb-8 border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white" asChild > <Link href="/case-studies" > <ArrowLeft className="mr-2 h-4 w-4" /> Back to Case Studies </Link> </Button> <img Download PDF </Link> </Button>) ;
-}<div </p> </div> </div> </>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

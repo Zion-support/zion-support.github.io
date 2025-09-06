@@ -1,10 +1,6 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 const ServicesIndex: NextPage = () => {
   const services = [
     {
@@ -245,10 +241,6 @@ const ServicesIndex: NextPage = () => {
       link: "/services/ai-automation"
     }
   ];
-<<<<<<< HEAD
-=======
-=======
-=======
 import { motion } from 'framer-motion';
 import { Brain, Network, Cloud, Shield, Zap, Target, Users, BarChart3, ArrowRight, CheckCircle, Star, Award, Clock, Globe } from 'lucide-react';
 
@@ -296,8 +288,6 @@ const services = [
 ];
 
 export default function ServicesIndex() {
-<<<<<<< HEAD
-=======
   return (
     <>
       <Head>
@@ -305,10 +295,6 @@ export default function ServicesIndex() {
         <meta name="description" content="Comprehensive technology services including AI development, cloud solutions, blockchain, IoT platforms, and micro SAAS solutions. Expert IT services for modern businesses." />
         <meta name="keywords" content="AI development services, cloud solutions, blockchain development, IoT platforms, micro SAAS, cybersecurity, web development, data analytics" />
       </Head>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-20">
         <div className="container mx-auto px-4">
@@ -512,10 +498,6 @@ export default function ServicesIndex() {
                 <div className="flex justify-between items-center">
                   <span className="text-lg font-semibold text-green-600">{service.pricing}</span>
                   <Link href={service.link} className="bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition-colors">
-<<<<<<< HEAD
-=======
-=======
-=======
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -566,8 +548,6 @@ export default function ServicesIndex() {
                     href={service.link}
                     className="w-full inline-flex items-center justify-center px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
                   >
-<<<<<<< HEAD
-=======
                     Learn More
                   </Link>
                 </div>
@@ -589,25 +569,16 @@ export default function ServicesIndex() {
             </Link>
           </div>
         </section>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
       </main>
     </div>
   );
 };
-<<<<<<< HEAD
 export default ServicesIndex;
-=======
 export default ServicesIndex;
-=======
       </div>
     </>
   );
-}
-=======
+
       </div>
     </>
   );
-}

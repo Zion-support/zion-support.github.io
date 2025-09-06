@@ -146,5 +146,5 @@ export function ChatAssistant({ isOpen: externalIsOpen, onClose,  recipient, onS
           </>)}
       </motion.div>;
     </AnimatePresence>);
-}
+
 '"

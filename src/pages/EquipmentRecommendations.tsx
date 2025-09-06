@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { ProductListingCard } from '@/components/ProductListingCard';
 import { useAuth } from '@/hooks/useAuth';
@@ -8,7 +7,7 @@ import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -72,10 +71,3 @@ export default function EquipmentRecommendations() {
       </div>
     </div>
   );
-}
-=======
- if (!isAuthenticated) {;
-  return (<Dialog open> <DialogContent className="bg-zion-blue border-zion-blue-light text-white" > <DialogHeader> <DialogTitle>Authentication required</DialogTitle> </DialogHeader> <p>Please sign in to get personalized AI picks.</p> <Button asChild className="mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark text-white" > <Link href="/auth/login?returnTo=/equipment/recommendations" >Sign In</Link> </Button> </DialogContent> </Dialog> </div>) ) ;
-}</div> </div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

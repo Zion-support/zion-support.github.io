@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type JobStatus = 'new' | 'in_progress' | 'filled' | 'closed';
 
 export type JobCategory =
@@ -14,7 +13,6 @@ export interface JobBudget {
   min: number;
   max: number;
   currency: string;
-}
 
 export interface Job {
   id: string;
@@ -28,7 +26,6 @@ export interface Job {
   status: JobStatus;
   created_at: string;
   updated_at: string;
-}
 
 export interface JobFormData {
   title: string;
@@ -38,7 +35,6 @@ export interface JobFormData {
   budgetMin: number;
   budgetMax: number;
   deadline: Date;
-}
 
 // Add JobMatch interface to be shared across components
 export interface JobMatch {
@@ -66,7 +62,6 @@ export interface JobMatch {
     category?: string;
     company_name?: string;
   };
-}
 
 export interface ResumeAttachment {
   id: string;
@@ -76,7 +71,6 @@ export interface ResumeAttachment {
   resume_id?: string;
   summary?: string;
   skills?: string[];
-}
 
 export type ApplicationStatus =
   | 'new'
@@ -128,10 +122,3 @@ export interface JobApplication {
   match_suggestion?: string;
   scored_at?: string;
   notes?: string; // New field for client notes
-}
-=======
- export type JobStatus = 'new' | 'in progress' | 'filled' | 'closed';
-export type JobCategory = | 'development' | 'design' | 'marketing' | 'content' | 'data' | 'business' | 'other';
-export type ApplicationStatus = 'new' | 'viewed' | 'shortlisted' | 'interview' | 'hired' | 'rejected';
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

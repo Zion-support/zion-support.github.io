@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 
@@ -140,13 +139,4 @@ const EnhancedNavigation = () => {
   );
 };
 
-=======
- {
-  /* Logo */ 
-}<Link href="/" className="flex items-center space-x-2" > <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center" > <span className="text-white font-bold text-xl" >Z</span> </div> <span className="text-xl font-bold text-gray-800" >Zion Tech Group</span> </Link> Home </Link> <Link href="/services" className="text-gray-600 hover:text-blue-600 font-medium transition-colors" > Services </Link> <Link href="/products" className="text-gray-600 hover:text-blue-600 font-medium transition-colors" > Products </Link> <Link href="/about" className="text-gray-600 hover:text-blue-600 font-medium transition-colors" > About </Link> <Link href="/blog" className="text-gray-600 hover:text-blue-600 font-medium transition-colors" > Blog </Link> <Link href="/talent" className="text-gray-600 hover:text-blue-600 font-medium transition-colors" > Careers </Link> <Link href="/contact" className="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors" > Get Started </Link> </div> {
-  /* Mobile menu button */ 
-}<button </svg> </button> </div> Home </Link> <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md" > Services </Link> <Link href="/products" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md" > Products </Link> <Link href="/about" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md" > About </Link> <Link href="/blog" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md" > Blog </Link> <Link href="/talent" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md" > Careers </Link> <Link href="/contact" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md" > Contact </Link> </div> </div>) 
-}</div> </nav>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default EnhancedNavigation;

@@ -47,7 +47,7 @@ import {
   Home,
   Trash2,
   Camera,
-  HardDrive
+  HardDrive;
 } from 'lucide-react';
 
 const microSaaSProducts = [{
@@ -592,17 +592,7 @@ export default function MicroSaaSPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {microSaaSProducts.map((product, index) => {}
               const IconComponent = product.icon;}
-              return (
-                <motion.div
-                  key={index}
-className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative ${
-                    product.popular ? "ring-2 ring-purple-200" : ''
-                  }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  whileHover={{ y: -5 }}
+              
                 >
                   {product.popular && (
                     <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
@@ -672,14 +662,7 @@ className={`bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all dur
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {features.map((feature, index) => {}
               const IconComponent = feature.icon;}
-              return (
-                <motion.div
-                  key={index}
-className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-purple-600" />
@@ -715,14 +698,7 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {benefits.map((benefit, index) => {}
               const IconComponent = benefit.icon;}
-              return (
-                <motion.div
-                  key={index}
-                  className="text-center"
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: index * 0.1 }}
-                  viewport={{ once: true }}
+              
                 >
                   <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                   <IconComponent className="w-8 h-8 text-purple-600" />
@@ -941,4 +917,3 @@ className="text-center p-6 rounded-lg hover:bg-gray-50 transition-colors"
                   </div>
                   </section>
                   </div>
-}

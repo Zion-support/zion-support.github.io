@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { BookProject } from '../book/bookTypes';
 
 export function buildPrintableHtml(project: BookProject): string {
@@ -68,7 +67,6 @@ export function buildPrintableHtml(project: BookProject): string {
   ${visualsHtml}
 </body>
 </html>`;
-}
 
 function paragraphize(text: string): string {
   if (!text) return '';
@@ -76,7 +74,6 @@ function paragraphize(text: string): string {
     .split(/\n\n+/)
     .map(p => `<p>${escapeHtml(p)}</p>`)
     .join('\n');
-}
 
 function escapeHtml(s: string): string {
   return s
@@ -85,33 +82,3 @@ function escapeHtml(s: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
-}
-=======
- const chapterHtml = chapters .map ( (c) => ` <section class="chapter"> <h2>$ {
-  escapeHtml (c.title) 
-}</h2> <div class="content">$ {
-  paragraphize (c.content) 
-}</div> </section> `) .join ('\n\n');
-const visualsHtml = [ ...visuals.timelineImages;
-...visuals.daoVoteCharts;
-...visuals.uiScreens] return `<!doctype html> <html> <head> <meta charset="utf-8" /> <title>$ {
-  escapeHtml (meta.title) 
-}</title> <style> </style> </head> <body> <section class="cover"> <div>$ {
-  escapeHtml (meta.publisher || '') 
-}</div> <h1>$ {
-  escapeHtml (meta.title) 
-}</h1> <h3>$ {
-  escapeHtml (meta.subtitle || '') 
-}</h3> <div class="by">By $ {
-  escapeHtml (meta.author) 
-}</div> $ {
-  barcode 
-}</section> $ {
-  quotesHtml 
-}$ {
-  chapterHtml 
-}$ {
-  visualsHtml 
-}</body> </html>` 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

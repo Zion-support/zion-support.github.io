@@ -236,4 +236,3 @@ note: 'SMB budgets: $50–$2, 000/mo.'
 }</div> <div className="text-center mt-6" > <Button href="/market-pricing" className="px-8 py-4 bg-gradient-to-r from-cyan-600 to-blue-700 text-white" >More Market References</Button> </div> </section> <section>) ) 
 }</div> </section> <section> </div> </section> <section>) ) 
 }</div> </section> </div> </div> </UltraAdvancedFuturisticBackground>) 
-}

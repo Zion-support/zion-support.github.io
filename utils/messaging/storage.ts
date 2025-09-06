@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -8,7 +7,7 @@ import {
   InboxItem,
   Message,
   NewMessageInput,
-  UserSummary,
+  UserSummary,;
 } from './types';
 
 const DATA_DIR = path.join(process.cwd(), 'data', 'messaging');
@@ -26,26 +25,21 @@ function ensureFiles() {
   if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, '[]', 'utf8');
   if (!fs.existsSync(UPLOADS_DIR))
     fs.mkdirSync(UPLOADS_DIR, { recursive: true });
-}
 
 function readJson<T>(filePath: string): T {
   ensureFiles();
   return JSON.parse(fs.readFileSync(filePath, 'utf8')) as T;
-}
 
 function writeJson<T>(filePath: string, data: T): void {
   ensureFiles();
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
-}
 
 export function getUserById(userId: string): UserSummary | undefined {
   const users = readJson<UserSummary[]>(USERS_FILE);
   return users.find(u => u.id === userId);
-}
 
 export function listUsers(): UserSummary[] {
   return readJson<UserSummary[]>(USERS_FILE);
-}
 
 export function listConversations(userId: string): InboxItem[] {
   const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
@@ -82,21 +76,18 @@ export function listConversations(userId: string): InboxItem[] {
     );
 
   return items;
-}
 
 export function getConversationById(
   conversationId: string
 ): Conversation | undefined {
   const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
   return conversations.find(c => c.id === conversationId);
-}
 
 export function getMessages(conversationId: string): Message[] {
   const messages = readJson<Message[]>(MESSAGES_FILE);
   return messages
     .filter(m => m.conversationId === conversationId)
     .sort((a, b) => a.createdAt.localeCompare(b.createdAt));
-}
 
 export function markAsRead(conversationId: string, userId: string): void {
   const conversations = readJson<Conversation[]>(CONVERSATIONS_FILE);
@@ -105,15 +96,7 @@ export function markAsRead(conversationId: string, userId: string): void {
 
   // Update message statuses
   let changed = false;
-  for (const m of messages) {
-    if (
-      m.conversationId === conversationId &&
-      m.recipientId === userId &&
-      m.status !== 'read'
-    ) {
-      m.status = 'read';
-      changed = true;
-    }
+  
   }
   if (changed) writeJson(MESSAGES_FILE, messages);
 
@@ -124,7 +107,6 @@ export function markAsRead(conversationId: string, userId: string): void {
     conv.lastMessageAt = now; // keep order fresh
     writeJson(CONVERSATIONS_FILE, conversations);
   }
-}
 
 function saveAttachmentIfProvided(
   base64?: string,
@@ -143,7 +125,6 @@ function saveAttachmentIfProvided(
   } catch (e) {
     return undefined;
   }
-}
 
 export function createOrGetConversation(
   senderId: string,
@@ -169,7 +150,6 @@ export function createOrGetConversation(
   conversations.push(conv);
   writeJson(CONVERSATIONS_FILE, conversations);
   return conv;
-}
 
 export function sendMessage(input: NewMessageInput): {
   conversation: Conversation;
@@ -216,13 +196,3 @@ export function sendMessage(input: NewMessageInput): {
   writeJson(CONVERSATIONS_FILE, conversations);
 
   return { conversation, message };
-}
-=======
- return items 
-}
-}if (changed) writeJson (MESSAGES FILE, messages);
-// Update conversation unreadBy let conversation: Conversation | undefined;
-if (input.conversationId) {
-  
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

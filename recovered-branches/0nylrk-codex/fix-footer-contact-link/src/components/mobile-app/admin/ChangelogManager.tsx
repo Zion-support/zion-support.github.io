@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -9,20 +8,13 @@ import { AppPlatform } from './MetadataManager';
 
 interface ChangelogManagerProps {
   platform: AppPlatform;
-}
 
 type ChangelogEntry = {
-=======
- interface ChangelogManagerProps {
-  platform: AppPlatform 
-}type ChangelogEntry = {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
 version: string;
 date: string;
 changes: string 
 };
-<<<<<<< HEAD
 
 export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
   platform,
@@ -144,22 +136,6 @@ export const ChangelogManager: React.FC<ChangelogManagerProps> = ({
       </CardContent>
     </Card>
   );
-=======
-platform 
-}) => {
-  const [entries, setEntries] = useState<ChangelogEntry[]> ([ {
-  const handleAddEntry = () => {
-  if (!newEntry.version || !newEntry.changes) return;
-const entry: ChangelogEntry = {
-  ...newEntry;
-id: Math.random () .toString (36) .substring (2, 9) 
-};
-setEntries ([entry, ...entries]);
-setNewEntry ({
-  version: "";
-date: new Date () .toISOString () .split ('T') [0];
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Card className=" bg-zion-blue border-zion-purple/30"> <CardHeader> <CardTitle>Version History</CardTitle> </CardHeader> <CardContent> <div className=" space-y-4"> <div className=" flex flex-col md:flex-row gap-3"> <div className=" flex-1 grid grid-cols-2 gap-3"> <Input /> </div> <Button onClick= {
   handleAddEntry 
 }disabled= {
   !newEntry.version || !newEntry.changes 
@@ -167,5 +143,4 @@ date: new Date () .toISOString () .split ('T') [0];
   entry.id 
 }className=" p-3 rounded border border-zion-purple/20 bg-zion-blue-dark"> > <Trash2 className=" h-4 w-4" /> </Button> </div>) 
 }</div> </div> </CardContent> </Card>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

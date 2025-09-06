@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { Header } from '@/components/Header';
@@ -132,41 +131,5 @@ export default function VideoCall() {
       <Footer />
     </>
   );
-=======
- roomId 
-}` 
-}) 
-}, 1500) 
+
 };
-//Navigate back after a short delay setTimeout ( () => {
-  navigate (-1) 
-}, 1500) 
-};
-const simulateUserJoining = () => {
-  //This is just for demo purposes - in a real app, this would be handled by the video call service const mockUsers = [ {
-  id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false 
-};
-{
-  id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true 
-};
-{
-  id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true 
-}];
-const randomUser = mockUsers[Math.floor (Math.random () * mockUsers.length) ];
-if (!participants.find (p => p.id === randomUser.id) ) {
-  setParticipants (prev => [...prev, randomUser]);
-toast (`$ {
-  randomUser.name 
-}joined the call`) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-};
-return (<> </Button> </div>) : (<div className="space-y-4" > <VideoCallRoom roomId= {
-  roomId || '' 
-}participants= {
-  participants 
-}onLeave= {
-  handleLeaveCall 
-}/> Simulate user joining (demo only) </Button> </div> </div>) 
-}</main> <Footer /> </>) 
-}

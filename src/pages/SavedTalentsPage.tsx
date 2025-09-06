@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { SEO } from '@/components/SEO';
 import { TalentCard } from '@/components/talent/TalentCard';
@@ -227,31 +226,7 @@ export default function SavedTalentsPage() {
       </div>
     </>
   );
-=======
- import { ;
-  {;
-  {;
-  Heart ;
- } from "lucide-react";
-import {;
-  {;
-  {;
-  logInfo, logWarn ';
-}from '@/utils/productionLogger';
-export default function SavedTalentsPage () {;
-  const {;
-  user ;
-}= useAuth ();
-const [savedTalents, setSavedTalents] = useState<TalentProfile[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-const router = useRouter ();
-//Using router.asPath instead of useLocation useEffect ( () => {;
-  if (!user) {;
-  router.push (`/auth/login?returnTo=$ {;
-  encodeURIComponent (router.asPath) ;
-}`) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [user, router]);
 }const {;
   data, error ;
@@ -269,11 +244,10 @@ availability;
 is verified) `) ;
 }finally {;
   setIsLoading (false) ;
-}
+
 };
 }, [user]);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleToggleSave = async (talentId: string, isCurrentlySaved: boolean) => {;
   try {;
   if (!user) {;
   ;
@@ -291,17 +265,16 @@ if (error) {;
 }data: talentData, error: talentError ';
 }= await supabase .from ('talent profiles') .select ('*') .eq ('id', talentId) .single ();
 return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
-}
-}
+
+
+
 }catch (error) {;
   logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
   message: 'Error toggling saved talent' ;
 });
 toast ({;
   ;
-}
+
 };'";
 return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View and manage your saved talents in the Zion AI Marketplace" /> <div className="container mx-auto px-4 py-8" > <h1 className="text-3xl font-bold mb-4" >Saved Talents</h1> <p className="text-muted-foreground" > Here are the talents you've saved for future reference. </p>) : savedTalents.length === 0 ? (<div className="py-8" > <EmptyState <TalentCard key= {;
   talent.id ;

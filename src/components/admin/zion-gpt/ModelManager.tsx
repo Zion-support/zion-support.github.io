@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -6,7 +5,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   Table,
@@ -14,7 +13,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -22,36 +21,13 @@ import {
   RefreshCw,
   Play,
   CheckCircle,
-  AlertCircle,
+  AlertCircle,;
 } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { ModelConfig } from '@/utils/zion-gpt';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface ModelVersionData extends ModelConfig {
-=======
- import { ;
-  {;
-  {;
-  Loader2, RefreshCw, Play,  CheckCircle, AlertCircle ;
- } from "lucide-react";
-import {;
-  {;
-  {;
-  supabase ';
-}from '@/integrations/supabase/client';
-import {;
-  {;
-  {;
-  ModelConfig ';
-}from '@/utils/zion-gpt';
-import {;
-  {;
-  {;
-  logErrorToProduction ';
-}from '@/utils/productionLogger';
-interface ModelVersionData extends ModelConfig {';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
 errorMessage?: string ;
 }export function ZionGPTModelManager () {;
@@ -84,8 +60,6 @@ const {;
   ;
 }) ';
 }) .eq ('id', modelId) ;
-}
-<<<<<<< HEAD
 
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([]);
@@ -314,15 +288,7 @@ export function ZionGPTModelManager() {
       </CardContent>
     </Card>
   );
-=======
-};
-const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {;
-  try {;
-  //If activating, deactivate all other models with the same purpose if (!currentActive) {';
-  await supabase .from ('model versions') ';
-}//Update this model await supabase .from ('model versions') ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 return (<Card className="w-full" > <CardHeader className="flex flex-row items-center justify-between" > <div> <CardTitle>ZionGPT Models</CardTitle> <CardDescription> Manage fine-tuned AI models for different platform features </CardDescription> </div> </div>) : (<Table> <TableHeader> <TableRow> <TableHead>Model ID</TableHead> <TableHead>Version</TableHead> <TableHead>Purpose</TableHead> <TableHead>Base Model</TableHead> <TableHead>Status</TableHead> <TableHead>Created</TableHead> <TableHead className="text-right" >Actions</TableHead> </TableRow> </TableHeader> <TableBody> {;
   models.map ( (model) => (<TableRow key= {;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import OpenAI from 'openai';
 
 export type ClientBudgetRequest = {
@@ -40,14 +39,12 @@ function roundMoney(value: number): number {
   if (!isFinite(value)) return 0;
   // Round to nearest $5 for cleaner display
   return Math.max(0, Math.round(value / 5) * 5);
-}
 
 function clampRange(min: number, max: number): { min: number; max: number } {
   if (min > max) {
     return { min: max, max: min };
   }
   return { min, max };
-}
 
 function inferExperienceLevelFromYears(
   years?: number
@@ -56,7 +53,6 @@ function inferExperienceLevelFromYears(
   if (years < 2) return 'junior';
   if (years < 6) return 'mid';
   return 'senior';
-}
 
 function locationCostIndex(location: string): number {
   const loc = location.toLowerCase();
@@ -80,7 +76,6 @@ function locationCostIndex(location: string): number {
   )
     return 1.15;
   return 1.0;
-}
 
 function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {
   const text = skillsOrCategory.join(' ').toLowerCase();
@@ -100,20 +95,14 @@ function baseHourlyForSkillsOrCategory(skillsOrCategory: string[]): number {
   if (/design|ux|ui|product design|figma|illustrator|photoshop/.test(text))
     return 40;
   return 50; // general software baseline
-}
 
 function experienceMultiplier(level: 'junior' | 'mid' | 'senior'): number {
-=======
- function experienceMultiplier (level: 'junior' | 'mid' | 'senior') : number {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   switch (level) {
   case 'junior': return 0.8;
 case 'mid': return 1.0;
 case 'senior': return 1.3;
 default: modelUsed: 'heuristic-v1';
 source: 'heuristic' 
-}
-<<<<<<< HEAD
 
 function computeHeuristicClientBudget(
   input: ClientBudgetRequest
@@ -139,7 +128,6 @@ function computeHeuristicClientBudget(
     modelUsed: 'heuristic-v1',
     source: 'heuristic',
   };
-}
 
 function computeHeuristicTalentRate(
   input: TalentRateRequest
@@ -163,7 +151,6 @@ function computeHeuristicTalentRate(
     modelUsed: 'heuristic-v1',
     source: 'heuristic',
   };
-}
 
 async function callOpenAIForClientBudget(
   input: ClientBudgetRequest
@@ -226,7 +213,6 @@ Constraints:
   } catch (error) {
     return null;
   }
-}
 
 async function callOpenAIForTalentRate(
   input: TalentRateRequest
@@ -286,7 +272,6 @@ Constraints:
   } catch (error) {
     return null;
   }
-}
 
 export async function generateClientBudgetSuggestion(
   input: ClientBudgetRequest
@@ -308,7 +293,6 @@ export async function generateClientBudgetSuggestion(
     modelUsed: llm.modelUsed,
     source: 'hybrid',
   };
-}
 
 export async function generateTalentRateSuggestion(
   input: TalentRateRequest
@@ -332,37 +316,4 @@ export async function generateTalentRateSuggestion(
     modelUsed: llm.modelUsed,
     source: 'hybrid',
   };
-=======
-}modelUsed: 'heuristic-v1';
-source: 'heuristic' 
-}
-}Contract: - Title: $ {
-  input.title 
-}- Category: $ {
-  input.category 
-}- Timeline: $ {
-  weeks 
-}weeks - Scope: $ {
-  input.scope || 'Not specified' 
-}- Experience Level: $ {
-  input.experienceLevel || 'mid' 
-}Constraints: - Assume remote contractor. - Use current global market rates. - currency must be "USD" . - min and max are numbers with no commas. - confidence is one of: Low, Medium, High. - rationale is a brief sentence (max 40 words) .`;
-Constraints: - Consider global averages and location factor. - currency must be "USD" . - hourlyRate, min, max are numbers with no commas. - confidence is one of: Low, Medium, High. - rationale is a brief sentence (max 40 words) .`;
-return {
-  currency: 'USD', min, max, confidence, rationale: `$ {
-  llm.rationale 
-}Heuristic cross-check around $$ {
-  roundMoney ( (heuristic.min + heuristic.max) / 2) 
-}for sanity.`;
-modelUsed: llm.modelUsed;
-source: 'hybrid' 
-}
-}return {
-  currency: 'USD', hourlyRate: hourly, min, max, confidence, rationale: `$ {
-  llm.rationale 
-}Heuristic cross-check for consistency with location and experience bands.`;
-modelUsed: llm.modelUsed;
-source: 'hybrid' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

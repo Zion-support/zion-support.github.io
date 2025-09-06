@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 
 async function psi(url, strategy = 'mobile', key) {
@@ -11,7 +10,6 @@ async function psi(url, strategy = 'mobile', key) {
   const resp = await fetch(endpoint.toString());
   if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`);
   return resp.json();
-}
 
 exports.handler = async function () {
   try {
@@ -20,8 +18,7 @@ exports.handler = async function () {
     const pages = ['/', '/learn', '/dao', '/certifications'];
 
     const results = [];
-    for (const p of pages) {
-      const url = `${baseUrl}${p}`;
+    ${p}`;
       try {
         const mobile = await psi(url, 'mobile', key);
         const desktop = await psi(url, 'desktop', key);
@@ -54,8 +51,4 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

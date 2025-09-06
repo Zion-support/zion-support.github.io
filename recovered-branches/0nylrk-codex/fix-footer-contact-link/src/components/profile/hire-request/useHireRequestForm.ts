@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -7,9 +6,6 @@ import { useHireRequest } from '@/hooks/useHireRequest';
 import { TalentProfile } from '@/types/talent';
 
 interface UseHireRequestFormProps {
-=======
- interface UseHireRequestFormProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   talent: TalentProfile;
 onClose: () => void;
 initialJobTitle?: string;
@@ -17,7 +13,7 @@ userDetails?: {
   name?: string;
 email?: string;
 id?: string 
-}
+
 }export interface FormValues {
   requesterName: string;
 requesterEmail: string;
@@ -50,8 +46,6 @@ projectOverview: initialJobTitle ? `Job: $ {
 }` : "";
 timeline: "";
 budgetMax: talent.hourly rate ? talent.hourly rate * 1.5 : 50 
-}
-<<<<<<< HEAD
 
 export function useHireRequestForm({
   talent,
@@ -131,20 +125,10 @@ export function useHireRequestForm({
     isSubmitting,
     onSubmit,
   };
-=======
-});
-// Handle form submission try {
-  const requestData = {
-  talent: {
-  
-}finally {
-  setIsSubmitting (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
-return {
+
   form;
 isSubmitting;
 onSubmit 
-}
-}
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Star } from 'lucide-react';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
@@ -82,14 +81,6 @@ export const AppTestimonials: React.FC = () => {
       </div>
     </section>
   );
-=======
- const testimonials = [ {;
-  name: "Alex Johnson";";
-role: "AI Developer";";
-text: "The Zion app has completely changed how I find work. The AI matching is spot on and I've landed 3 contracts in my first month!";
-rating: 5;";
-avatar: "/placeholder.svg" ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 {";
   name: "Sarah Williams";";

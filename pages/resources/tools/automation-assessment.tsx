@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
@@ -288,13 +287,3 @@ export default function ToolPage() {
       </div>
     </>
   );
-}
-=======
- <Head> <title>Automation Readiness Assessment - Results | Zion Tech Group</title> <meta name="description" content="View your automation readiness assessment results and get personalized recommendations." /> </Head> <div className="min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white" > <main className="container mx-auto px-6 py-12" > <div className="max-w-4xl mx-auto" > <nav className="mb-8" > <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors" > ← Back to Resources </Link> </nav> <div className="text-center mb-12" > <h1 className="text-4xl font-bold text-white mb-4" >Assessment Results</h1> <p className="text-white/80 text-lg" >Your automation readiness evaluation is complete</p> </div> </div>) ) 
-}</div> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <button /contact"className=" px-8 py-4 border border-white/20 rounded-lg text-white hover:border-cyan-400/50 transition-all duration-300"> Get Personalized Recommendations </Link> </div> </div> </div> </main> </div> </>) 
-}return (<> <Head> <title>Automation Readiness Assessment | Zion Tech Group</title> <meta name=" description"content=" Evaluate your organization's readiness for AI automation implementation with our interactive assessment tool."/> </Head> <div className=" min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white"> <main className=" container mx-auto px-6 py-12"> <div className=" max-w-4xl mx-auto"> <nav className=" mb-8"> <Link href=" /resources"className=" text-cyan-400 hover:text-cyan-300 transition-colors"> ← Back to Resources </Link> </nav> </label>) ) 
-}</div> <div className=" flex justify-between" > <button > Previous </button> <button > {
-  currentQuestion === questions.length - 1 ? 'Get Results': 'Next' 
-}</button> </div> </div> </div> </main> </div> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

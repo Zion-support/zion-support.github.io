@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../utils/sync/storage';
 import { Peer } from '../../../utils/sync/types';
@@ -29,19 +28,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   writeState(state);
   return res.status(200).json({ peers: state.config.peers });
-}
-=======
- const id = peer.id || uuidv4 ();
-const existing = state.config.peers.find ( (p) => p.baseUrl === peer.baseUrl);
-if (existing) {
-  
-}else {
-  state.config.peers.push ({
-  id, baseUrl: peer.baseUrl, scope: peer.scope || state.config.scope, paused: false 
-}) 
-}writeState (state);
-return res.status (200) .json ({
-  peers: state.config.peers 
-}) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

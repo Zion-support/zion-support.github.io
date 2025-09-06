@@ -12,11 +12,7 @@ export default function ContactPage() {
 import Layout from '../components/Layout';
 
 export default function ContactPage() {
-  return (
-    <Layout 
-      title="Contact Us - Zion Tech Group"
-      description="Get in touch with our expert team for technology solutions and consulting."
-      keywords="contact, support, technology consulting, AI services, IT services, micro SaaS"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
       
@@ -376,4 +372,3 @@ export default function ContactPage() {
       </div>
     </Layout>
   );
-}

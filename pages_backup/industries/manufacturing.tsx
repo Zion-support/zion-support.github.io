@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Layout from '../../components/Layout';
@@ -10,12 +8,10 @@ import { motion } from 'framer-motion';
 import { Settings, 
   Brain, 
   Shield, 
-  BarChart3, 
-=======
+  BarChart3, ;
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
-=======
 import React from 'react';
 import Link from 'next/link';';
 import { motion } from 'framer-motion';
@@ -30,18 +26,14 @@ import {
   Wrench,
   Activity,
   Database,
-  FileText,
+  FileText,;
   Users;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 import Layout from '../../components/Layout';';
 const services = [;
   {}
     title: 'Smart Factory Solutions,',
     description: 'IoT-enabled manufacturing systems for intelligent production management.,',
-=======
-=======
 import Layout from '../../components/Layout';
 const services = [
   {
@@ -110,16 +102,12 @@ const services = [
       'Scenario planning'';
     ];
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 const benefits = [;
   {}
     title: 'Increased Efficiency,',
     description: 'Automated processes and AI optimization improve production efficiency.,',
     icon: Activity;
-=======
-=======
 ];
 const benefits = [
   {
@@ -142,8 +130,6 @@ const benefits = [
     description: 'Optimized operations and reduced waste lower manufacturing costs.,',
     icon: BarChart3;
   }
-<<<<<<< HEAD
-<<<<<<< HEAD
 ;];
 export default function ManufacturingPage() {
   return (;
@@ -191,15 +177,9 @@ export default function ManufacturingPage() {
             </motion.div>;
           </div>;
         </section>;
-=======
-=======
 ];
 export default function ManufacturingPage() {
-  return (
-    <Layout
-      title="Manufacturing Technology Solutions - Zion Tech Group"
-      description="Transform manufacturing with smart factory solutions, IoT networks, predictive maintenance, and digital twin technology."
-      keywords="manufacturing technology, smart factory, IoT manufacturing, predictive maintenance, digital twin, Industry 4.0"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -247,8 +227,6 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -262,8 +240,6 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
               {services.map((service, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -281,8 +257,6 @@ export default function ManufacturingPage() {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100""
                 >;
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">";
@@ -294,8 +268,6 @@ export default function ManufacturingPage() {
                     {service.features.map((feature, featureIndex) => (,
                       <li key={featureIndex} className="flex items-center text-sm text-gray-600">"
                         <CheckCircle className="w-4 h-4 text-green-500 mr-3 flex-shrink-0" />";
-=======
-=======
                   className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 p-8 border border-gray-100"
                 >
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-600 rounded-lg flex items-center justify-center mb-6">
@@ -313,13 +285,9 @@ export default function ManufacturingPage() {
                   </ul>,
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
             </div>
           </div>
         </section>
@@ -330,8 +298,6 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
               className="text-center mb-16""
             >;
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">";
@@ -345,8 +311,6 @@ export default function ManufacturingPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">";
               {benefits.map((benefit, index) => (,
                 <motion.div}),
-=======
-=======
               className="text-center mb-16"
             >
               <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -373,13 +337,9 @@ export default function ManufacturingPage() {
                   <p className="text-gray-600 leading-relaxed">{benefit.description}</p>"
                 </motion.div>;
               ))}
-<<<<<<< HEAD
-<<<<<<< HEAD
             </div>,
           </div>;
         </section>;
-=======
-=======
             </div>
           </div>
         </section>
@@ -390,8 +350,6 @@ export default function ManufacturingPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-<<<<<<< HEAD
-<<<<<<< HEAD
             >,
               <h2 className="text-4xl md:text-5xl font-bold mb-6">";
                 Ready to Transform Manufacturing?;
@@ -413,8 +371,6 @@ export default function ManufacturingPage() {
         </section>;
       </div>;
     </Layout>;
-=======
-=======
             >
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Ready to Transform Manufacturing?
@@ -437,4 +393,3 @@ export default function ManufacturingPage() {
       </div>
     </Layout>
   );
-}

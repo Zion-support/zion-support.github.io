@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Check } from 'lucide-react';
@@ -7,7 +6,6 @@ import { cn } from '@/lib/utils';
 interface FeatureHighlightsProps {
   className?: string;
   style?: React.CSSProperties;
-}
 
 export function FeatureHighlights({
   className,
@@ -87,16 +85,3 @@ export function FeatureHighlights({
       </div>
     </section>
   );
-}
-=======
- interface FeatureHighlightsProps {;
-  className?: string;
-style?: React.CSSProperties ;
-}className, style ;
-}: FeatureHighlightsProps) {;
-  const highlightsData = [ {;
-  Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed </p> </div> </li>) ) ;
-}</ul> </CardContent> </Card>) ) ;
-}</div> </div> </section>) ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

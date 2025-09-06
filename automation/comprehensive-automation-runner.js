@@ -200,11 +200,9 @@ class ComprehensiveAutomationRunner {
       this.saveResults();
     }
   }
-}
 
 if (require.main === module) {
   const runner = new ComprehensiveAutomationRunner();
   runner.run();
-}
 
 module.exports = ComprehensiveAutomationRunner;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -192,14 +191,3 @@ export default function GrantDetailPage() {
       </div>
     </EnhancedLayout>
   );
-}
-=======
- 
-}
-};
-if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>;
-if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>;
-</ul> </div>) 
-}</section> </div> </div> </section> </div> </section> </aside> </div> </EnhancedLayout>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

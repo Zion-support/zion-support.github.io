@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import {
@@ -6,7 +5,7 @@ import {
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { TalentProfile } from '@/types/talent';
@@ -15,7 +14,6 @@ import { FormValues } from './useHireRequestForm';
 interface BudgetFieldsProps {
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
-}
 
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
   return (
@@ -67,17 +65,3 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
       />
     </>
   );
-}
-=======
- interface BudgetFieldsProps {
-  form: UseFormReturn<FormValues>;
-talent?: TalentProfile 
-}form, talent 
-}: BudgetFieldsProps) {
-  return (<> <FormField control= {
-  form.control 
-}<FormItem> <FormLabel className="text-white" >Budget (Min) </FormLabel> <FormControl> <div className="relative" > <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" >$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel className="text-white" >Budget (Max) </FormLabel> <FormControl> <div className="relative" > <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-zion-slate" >$</span> <Input /> </div> </FormControl> <FormMessage className="text-red-400" /> </FormItem>) 
-}/> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

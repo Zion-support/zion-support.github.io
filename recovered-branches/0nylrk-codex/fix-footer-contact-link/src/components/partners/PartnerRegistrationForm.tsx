@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { z } from 'zod';
 import { useForm } from 'react-hook-form';
@@ -9,7 +8,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -20,14 +19,14 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
@@ -383,31 +382,13 @@ export function PartnerRegistrationForm() {
       </CardContent>
     </Card>
   );
-}
-=======
- const partnerFormSchema = z.object ({
-  name: z.string () .min (2, {
-  message: "Name must be at least 2 characters." 
-});
-website: z.string () .url ({
-  message: "Please enter a valid URL." 
-}) .optional () .or (z.literal ("") );
-instagram: z.string () .optional ();
-youtube: z.string () .optional ();
-linkedin: z.string () .optional ();
-const {
-  data: existingPartner 
-}= await supabase .from ('partner profiles') .select ('id') .eq ('user id', user.id) .single ();
-setIsSubmitting (false);
-return true;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+
 }return false;
 };
 async function onSubmit (data: PartnerFormValues) {
   if (!user) {
   toast ({
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }//Insert new partner profile const {
   data: newPartner, error 
 }= await supabase .from ('partner profiles') .insert ([ {
@@ -425,7 +406,7 @@ data: existingCode
 }= await supabase .from ('referral codes') .select ('code') .eq ('user id', user.id) .single ();
 }finally {
   setIsSubmitting (false) 
-}
+
 }return (<Card className=" bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle>Partner Registration</CardTitle> <CardDescription>Register to become a Zion AI partner and start earning rewards</CardDescription> </CardHeader> <CardContent> </FormControl> <FormMessage /> </FormItem>) 
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) 
 }/> <div className=" grid sm:grid-cols-2 gap-4"> <FormField </FormControl> <FormMessage /> </FormItem>) 
@@ -445,5 +426,3 @@ data: existingCode
 }> <FormControl> <SelectTrigger> <SelectValue placeholder=" Select payout method" /> </SelectTrigger> </FormControl> <SelectContent> </SelectContent> </Select> <FormMessage /> </FormItem>) 
 }/> </div> <FormField <FormItem> <FormLabel>Bio</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> Limit: 500 characters </FormDescription> <FormMessage /> </FormItem>) 
 }/> </div> <Button </Button> </form> </Form> </CardContent> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

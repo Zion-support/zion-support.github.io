@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
@@ -16,14 +15,3 @@ export default async function handler(
     content:
       'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.',
   });
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Slide added' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

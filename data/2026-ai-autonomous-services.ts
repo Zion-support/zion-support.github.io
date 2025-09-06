@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface AiAutonomousService2026 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface AiAutonomousService2026 {
     email: string;
     address: string;
   };
-}
 
 export const aiAutonomousServices2026: AiAutonomousService2026[] = [
   {
@@ -41,7 +39,3 @@ export const aiAutonomousServices2026: AiAutonomousService2026[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

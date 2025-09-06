@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.38.4';
 import { corsHeaders } from '../_shared/cors.ts';
 
 interface AnalyzeRequest {
-=======
- interface AnalyzeRequest {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   content: string;
 contentType: string;
 flagId?: string 
@@ -19,8 +15,6 @@ success: boolean
 }return {
   supabase: createClient (supabaseUrl, supabaseServiceKey);
 openaiApiKey 
-}
-<<<<<<< HEAD
 
 // Initialize environment and clients
 const initializeServices = () => {
@@ -36,12 +30,9 @@ const initializeServices = () => {
     supabase: createClient(supabaseUrl, supabaseServiceKey),
     openaiApiKey,
   };
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 //Validate request content const validateRequest = (data: unknown) : AnalyzeRequest => {
   if (!data || typeof data !== 'object') {
-<<<<<<< HEAD
     throw new Error('Invalid request body');
   }
 
@@ -228,13 +219,6 @@ serve(async req => {
       }
     );
   }
-=======
-  
-}const request = data as AnalyzeRequest;
-if (!request.content) {
-  if (!request.contentType) {
-  throw new Error ("No content type provided");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }return request;
 };
 //Create prompt for OpenAI const createAnalysisPrompt = (contentType: string, content: string) : string => {
@@ -247,16 +231,15 @@ max tokens: 150
 });
 }return {
   classification, explanation 
-}
+
 }catch (error) {
   
-}
+
 };
 flagId: string;
 classification: string;
 explanation: string 
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Main request handler //Initialize services const {
   supabase, openaiApiKey 
 }= initializeServices ();
 //Parse and validate request const requestData = await req.json () .catch (err => {
@@ -271,7 +254,7 @@ const {
 explanation;
 success: true 
 };
-return new Response (JSON.stringify ({
+
   error: error.message || "An unexpected error occurred";
 success: false 
 });
@@ -279,8 +262,7 @@ success: false
   status: statusCode;
 headers: {
   ...corsHeaders, "Content-Type" : "application/json" 
-}
+
 }) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

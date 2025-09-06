@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, {
   useState,
   useEffect,
   useRef,
   ReactNode,
-  useContext,
+  useContext,;
 } from 'react';
 import { AuthContext } from '../../context/auth/AuthContext';
 import { useDebounce } from '../../hooks/useDebounce';
@@ -21,7 +20,6 @@ export interface Message {
   message: string;
   timestamp: Date;
   read?: boolean;
-}
 
 export interface ChatAssistantProps {
   isOpen: boolean;
@@ -38,7 +36,6 @@ export interface ChatAssistantProps {
   contextHeader?: ReactNode;
   /** Optional canned questions shown when the chat is empty */
   starterQuestions?: string[];
-}
 
 export function ChatAssistant({
   isOpen,
@@ -195,12 +192,7 @@ export function ChatAssistant({
 
   if (!isOpen) return null;
 
-  return (
-    <div
-      className='fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4'
-      role='dialog'
-      aria-modal='true'
-      aria-labelledby='chat-assistant-title'
+  
     >
       <div className='w-full max-w-xl bg-zion-blue rounded-lg shadow-xl overflow-hidden flex flex-col max-h-[80vh]'>
         {/* Header */}
@@ -313,17 +305,7 @@ export function ChatAssistant({
       )}
     </div>
   );
-=======
- /** Optional canned questions shown when the chat is empty */ starterQuestions?: string[] ;
-}const [storedGuestMessages, setStoredGuestMessages] = useLocalStorage< Message[] > (isGuest ? localStorageKey : 'dummy-guest-key', //Use a dummy key if not guest to prevent LS write for logged-in users []);
-const [displayGuestMessages, setDisplayGuestMessages] = useState<Message[]> ([]);
-const [loggedInMessages, setLoggedInMessages] = useState<Message[]> (initialMessages);
-//Effect for guest user messages useEffect ( () => {;
-  if (isGuest) {;
-  //Priority: initialMessages prop > localStorage > empty array if (initialMessages && initialMessages.length > 0) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [ isGuest;
 initialMessages;
 storedGuestMessages;

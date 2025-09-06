@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
@@ -255,26 +254,6 @@ serve(async req => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}const supabase = createClient (supabaseUrl, supabaseAnonKey);
-try {
-  const {
-  applicationId 
-}= await req.json ();
-if (!applicationId) {
-  
-}//1. Fetch the application with job details and resume content const {
-  data: application, error: appError 
-}= await supabase .from ("job applications") job id;
-talent id;
-cover letter;
-resume id;
-job: jobs (title, description, skills);
-talent profile:profiles!talent id (bio, skills) `) let resumeSkills: string[] = [];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 .select (` summary;
 headline;
 resume skills!inner (name, category, years experience);
 work history!inner (company name, role title, start date, end date, description);
@@ -305,8 +284,7 @@ education!inner (institution, degree, field of study) `)
   edu.institution 
 }`) .join (" \n") 
 }Skills: `;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
+
 }//3. If no resume content, use talent profile and cover letter `;
 resumeSkills = application.talent profile?.skills || [];
 }//4. Prepare job details # Resume Content $ {
@@ -338,8 +316,7 @@ scored at: new Date () .toISOString ()
   status: 500;
 headers: {
   ...corsHeaders, " Content-Type": " application/json" 
-}
+
 }) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

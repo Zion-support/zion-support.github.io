@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -26,16 +25,3 @@ export default async function handler(
   } catch (e) {
     return res.status(500).json({ error: 'Failed to load certifications' });
   }
-}
-=======
- 
-}try {
-  const certifications = (await fs.pathExists (CERTS FILE) ) ? await fs.readJSON (CERTS FILE) : [];
-return res.status (200) .json ({
-  certifications 
-}) 
-}catch (e) {
-  
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

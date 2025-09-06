@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
@@ -12,13 +11,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import {
   Popover,
   PopoverContent,
-  PopoverTrigger,
+  PopoverTrigger,;
 } from '@/components/ui/popover';
 import { Textarea } from '@/components/ui/textarea';
 import { cn } from '@/lib/utils';
@@ -47,7 +46,6 @@ interface WorkExperienceItemFormProps {
   initialData?: WorkExperience;
   onSubmit: (data: WorkExperience) => Promise<void>;
   onCancel: () => void;
-}
 
 export function WorkExperienceItemForm({
   initialData,
@@ -352,9 +350,7 @@ export function WorkExperienceItemForm({
       />
     </>
   );
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema end date: z.date () .optional ();
+
 is current: z.boolean () .default (false);
 description: z.string () .optional ();
 location: z.string () .optional () ;
@@ -365,7 +361,6 @@ type FormValues = z.infer<typeof formSchema>;
 };
 setIsEnhancementDialogOpen (false);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<> </FormControl> <FormMessage /> </FormItem>) ;
 }/> <FormField </FormControl> <FormMessage /> </FormItem>) ;
 }/> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) ";
 }/> <FormField <FormLabel>Current Position</FormLabel> <div className="flex items-center gap-2 h-10" > <Switch /> <label htmlFor="current-position" className="text-sm text-muted-foreground" > I currently work here </label> </div> <FormMessage /> </FormItem>) ";
@@ -383,4 +378,3 @@ setIsEnhancementDialogOpen (false);
 }/> <> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Saving... </>) : (<>Save</>) ;
 }</Button> </div> </form> </Form> <AIEnhancementDialog /> </>) ;
 }"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

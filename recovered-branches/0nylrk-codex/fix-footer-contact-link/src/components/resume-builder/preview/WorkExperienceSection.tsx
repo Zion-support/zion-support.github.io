@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import { WorkExperience } from '@/types/resume';
 import { format } from 'date-fns';
 
 interface WorkExperienceSectionProps {
   workExperience: WorkExperience[];
-}
 
 export function WorkExperienceSection({
   workExperience,
@@ -62,11 +60,3 @@ export function WorkExperienceSection({
       </div>
     </div>
   );
-}
-=======
- if (sortedWorkExperience.length === 0) return null;
-) 
-}</div>) ) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

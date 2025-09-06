@@ -233,4 +233,3 @@ export default function DocsPage() {
       </div>
     </Layout>
   );
-}

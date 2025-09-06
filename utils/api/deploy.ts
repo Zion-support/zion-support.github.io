@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import {
   DeployInput,
   DeployResult,
   DeployLogEntry,
-  GeneratedAsset,
+  GeneratedAsset,;
 } from '../types/zion';
 
 function toSlug(name: string): string {
@@ -14,22 +13,18 @@ function toSlug(name: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)+/g, '')
     .slice(0, 64);
-}
 
 function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
-}
 
 function writeTextFile(filePath: string, content: string) {
   ensureDir(path.dirname(filePath));
   fs.writeFileSync(filePath, content, 'utf8');
-}
 
 function nowIso(): string {
   return new Date().toISOString();
-}
 
 export async function performDeploy(input: DeployInput): Promise<DeployResult> {
   const version = 'Zion OS v1.0';
@@ -315,42 +310,3 @@ export async function performDeploy(input: DeployInput): Promise<DeployResult> {
     summary,
     version,
   };
-}
-=======
- function toSlug (name: string) : string {
-  return name .toLowerCase () ensureDir (baseDir);
-writeTextFile (daoConfigPath;
-JSON.stringify ({
-  treasury: `$ {
-  instanceSlug 
-}-treasury`;
-governanceMode: input.governanceMode;
-quorum: 0.6;
-votingPeriodDays: 7;
-constitutionDoc: `/constitution`;
-createdAt: nowIso () 
-};
-null;
-2) writeTextFile (tokenConfigPath;
-JSON.stringify ({
-  symbol: "ZION$", decimals: 18, enabled: input.tokenActivation, stakingEnabled: input.modules.token, escrowEnabled: true, createdAt: nowIso () 
-};
-null;
-2) writeTextFile (roadmapPath;
-`# Public Roadmap\n\n- Q1: Launch core modules\n- Q2: DAO consolidation\n- Q3: Nation builder\n` writeTextFile (summitEventPath;
-JSON.stringify ({
-  name: `$ {
-  input.instanceName 
-}Summit`;
-route: "/summit";
-scheduledAt: new Date (Date.now () + 7 * 24 * 60 * 60 * 1000) .toISOString () 
-};
-null;
-2) writeTextFile (pagesActivationPath;
-JSON.stringify ({
-  activate: [ "/about", "/manifesto", "/constitution", "/partners", "/academy", "/marketplace", "/dao", defaultNationRoute] 
-};
-null;
-2) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

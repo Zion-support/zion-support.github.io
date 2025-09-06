@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -12,9 +11,6 @@ import { useLanguage, SupportedLanguage } from '@/context/LanguageContext';
 import { toast } from '@/components/ui/use-toast';
 
 interface TranslatableJobFormProps {
-=======
- interface TranslatableJobFormProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   onSubmit: (formData: any) => void;
 isSubmitting?: boolean 
 }export function TranslatableJobForm ({
@@ -31,16 +27,11 @@ const {
 }= useLanguage ();
 //Form fields with translations const [budget, setBudget] = useState ("");
 const [deadline, setDeadline] = useState ("");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Handle text changes //Complete any missing translations with auto-translation await ensureAllTranslations ();
 onSubmit ({
   //Find first non-empty content to translate for (const lang of supportedLanguages.map (l => l.code) ) {
   if (field === 'title' && title[lang]) {
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
-<<<<<<< HEAD
 
 export function TranslatableJobForm({
   onSubmit,
@@ -469,9 +460,7 @@ export function TranslatableJobForm({
       </div>
     </form>
   );
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Ensure all translations are available if (!title.en && !title.es && !title.pt && !title.ar) return;
 if (!description.en && !description.es && !description.pt && !description.ar) return;
@@ -496,4 +485,3 @@ if (!description.en && !description.es && !description.pt && !description.ar) re
   t ('jobs.submitting') 
 }</>) : (t ('jobs.post job button') ) 
 }</Button> </div> </form>) 
-}

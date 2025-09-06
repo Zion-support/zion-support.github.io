@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { processJobMatching, storeMatchResults } from './job-matching.ts';
@@ -78,30 +77,14 @@ serve(async req => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
-  const {
-  jobId 
-}= await req.json ();
-if (!jobId) {
-  
-}//1. Retrieve job details const {
-  data: job, error: jobError 
-}= await supabase .from ("jobs") .select ("*") .eq ("id", jobId) .single ();
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }//3. Use AI to normalize skills and find matches //4. Store matches in database and create notifications await storeMatchResults (jobId, matchedTalents, job.title);
-return new Response (return new Response (JSON.stringify ({
-  error: error.message 
+
 });
 {
   status: 500;
 headers: {
   ...corsHeaders, "Content-Type" : "application/json" 
-}
+
 }) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

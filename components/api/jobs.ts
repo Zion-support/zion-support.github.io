@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -21,16 +20,3 @@ export default async function handler(
   } catch (e) {
     return res.status(500).json({ error: 'Failed to load jobs' });
   }
-}
-=======
- 
-}try {
-  const jobs = (await fs.pathExists (JOBS FILE) ) ? await fs.readJSON (JOBS FILE) : [];
-return res.status (200) .json ({
-  jobs 
-}) 
-}catch (e) {
-  
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

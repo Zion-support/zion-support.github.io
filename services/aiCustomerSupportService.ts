@@ -21,8 +21,7 @@ updatedAt: new Date ()
 };
 this.tickets.push (ticket);
 this.updateAnalytics ();
-return ticket 
-}if (ticket) {
+
   ticket.status = status;
 ticket.updatedAt = new Date ();
 if (status === 'resolved') {
@@ -30,8 +29,6 @@ if (status === 'resolved') {
 if (ticket.createdAt && ticket.resolvedAt) {
   
 }this.updateAnalytics () 
-}
-<<<<<<< HEAD
 
 export interface SupportTicket {
   id: string;
@@ -55,7 +52,6 @@ export interface SupportTicket {
   resolvedAt?: Date;
   firstResponseTime?: number; // in minutes
   resolutionTime?: number; // in hours
-}
 
 export interface TicketMessage {
   id: string;
@@ -65,7 +61,6 @@ export interface TicketMessage {
   isInternal: boolean;
   createdAt: Date;
   attachments: Attachment[];
-}
 
 export interface Customer {
   id: string;
@@ -79,7 +74,6 @@ export interface Customer {
   satisfactionScore: number; // 1-5
   lastContactDate: Date;
   createdAt: Date;
-}
 
 export interface SupportAgent {
   id: string;
@@ -91,7 +85,6 @@ export interface SupportAgent {
   currentTickets: number;
   maxTickets: number;
   performance: AgentPerformance;
-}
 
 export interface AgentPerformance {
   ticketsResolved: number;
@@ -99,7 +92,6 @@ export interface AgentPerformance {
   customerSatisfaction: number; // 1-5
   firstResponseTime: number; // in minutes
   escalationRate: number; // percentage
-}
 
 export interface ChatbotSession {
   id: string;
@@ -112,7 +104,6 @@ export interface ChatbotSession {
   resolved: boolean;
   escalated: boolean;
   satisfaction: number; // 1-5
-}
 
 export interface ChatbotMessage {
   id: string;
@@ -121,7 +112,6 @@ export interface ChatbotMessage {
   timestamp: Date;
   intent?: string;
   confidence?: number;
-}
 
 export interface KnowledgeBaseArticle {
   id: string;
@@ -134,7 +124,6 @@ export interface KnowledgeBaseArticle {
   notHelpful: number;
   lastUpdated: Date;
   createdBy: string;
-}
 
 export interface SupportAnalytics {
   totalTickets: number;
@@ -150,7 +139,6 @@ export interface SupportAnalytics {
     ticketsResolved: number;
     satisfaction: number;
   }>;
-}
 
 export interface AIRecommendation {
   type:
@@ -163,7 +151,6 @@ export interface AIRecommendation {
   impact: 'low' | 'medium' | 'high';
   confidence: number;
   actionItems: string[];
-}
 
 class AICustomerSupportService {
   private tickets: SupportTicket[] = [];
@@ -688,73 +675,5 @@ class AICustomerSupportService {
   async getAnalytics(): Promise<SupportAnalytics> {
     return this.analytics;
   }
-}
 
 export const aiCustomerSupportService = new AICustomerSupportService();
-=======
-}if (!ticket) {
-  throw new Error (`Ticket $ {
-  ticketId 
-}not found`) 
-}const message: TicketMessage = {
-  id: `msg $ {
-  Date.now () 
-}$ {
-  Math.random () .toString (36) .substr (2, 9) 
-}`;
-...messageData;
-createdAt: new Date () 
-};
-ticket.messages.push (message);
-ticket.updatedAt = new Date ();
-// Update first response time if this is the first agent response this.updateAnalytics ();
-return message 
-}async startChatbotSession (customerId: string) : Promise<ChatbotSession> {
-  const session: ChatbotSession = {
-  id: `chat $ {
-  Date.now () 
-}$ {
-  Math.random () .toString (36) .substr (2, 9) 
-}`;
-customerId;
-startTime: new Date ();
-messages: [];
-intent: '';
-confidence: 0;
-resolved: false;
-escalated: false;
-satisfaction: 0 
-};
-this.chatbotSessions.push (session);
-return session 
-}if (!session) {
-  throw new Error (`Session $ {
-  sessionId 
-}not found`) 
-}const message: ChatbotMessage = {
-  id: `chat msg $ {
-  Date.now () 
-}$ {
-  Math.random () .toString (36) .substr (2, 9) 
-}`;
-...messageData;
-timestamp: new Date () 
-};
-session.messages.push (message);
-// Simulate AI intent detection return message 
-}...articleData;
-views: 0;
-helpful: 0;
-notHelpful: 0;
-createdBy: 'system';
-lastUpdated: new Date () 
-};
-this.knowledgeBase.push (article);
-return article 
-}return this.knowledgeBase.filter (article => article.title.toLowerCase () .includes (lowerQuery) || article.content.toLowerCase () .includes (lowerQuery) || article.tags.some (tag => tag.toLowerCase () .includes (lowerQuery) ) // Ticket prioritization recommendation const highPriorityOpenTickets = this.tickets.filter (t => t.priority === 'high' && t.status === 'open') .length;
-if (highPriorityOpenTickets > 5) {
-  recommendations.push ({
-  
-}return recommendations 
-}const resolutionTimes = this.tickets .filter (t => t.resolutionTime) const responseTimes = this.tickets .filter (t => t.firstResponseTime) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

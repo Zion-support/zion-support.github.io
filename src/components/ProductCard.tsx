@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import Link from 'next/link';
 import { Heart } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
@@ -8,7 +7,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { useDispatch } from 'react-redux';
 import type { AppDispatch } from '@/store';
@@ -28,7 +27,6 @@ interface ProductCardProps {
   onBuyAttemptComplete?: () => void; // Callback to signal the buy attempt is finished (success or fail)
   /** Disable the Buy Now button (e.g. when the checkout route isn't ready). */
   buyDisabled?: boolean;
-}
 
 export default function ProductCard({
   product,
@@ -78,10 +76,7 @@ export default function ProductCard({
         extra: { product },
       }
     );
-    return (
-      <div
-        className='relative border rounded-lg bg-card p-4 text-center h-full flex flex-col justify-center items-center'
-        data-testid='product-card-error'
+    
       >
         <p className='text-destructive text-sm'>
           Product information unavailable.
@@ -146,10 +141,7 @@ export default function ProductCard({
 
   const imageSizes = isMobile ? '100vw' : isTablet ? '50vw' : '33vw';
 
-  return (
-    <div
-      className='relative border rounded-lg bg-card p-4'
-      data-testid='product-card'
+  
     >
       <button
         className='absolute top-2 right-2 p-1 rounded-full bg-background/70'
@@ -272,27 +264,7 @@ export default function ProductCard({
       </div>
     </div>
   );
-=======
- const stockStatus = product.stock === undefined ? 'In stock' : product.stock <= 0 ? 'Out of stock' : product.stock <= 5 ? 'Low stock' : 'In stock';';
-const stockVariant = product.stock === undefined ? 'success' : product.stock <= 0 ? 'destructive' : product.stock <= 5 ? 'warning' : 'success';
-//Reset redirecting state if component unmounts (e.g., navigation cancelled by user) </div>) ;
-}const addToCart = () => {;
-  if (!isAuthenticated) {;
-  toast ({;
-  ;
-}
-};
-> <Heart className= {';
-  active ? 'text-red-500 fill-red-500' : 'text-gray-500' ;
-}/> </button> src= {;
-  imageUrl ;
-}alt= {;
-  imageAltText ;
-}style= {;
-  {';
-  objectFit: 'cover' ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }onError= {;
   (e) => handleImageError (e) ;
 }priority= {;
@@ -305,7 +277,7 @@ const stockVariant = product.stock === undefined ? 'success' : product.stock <= 
 }style= {;
   {';
   objectFit: 'cover' ;
-}
+
 }onError= {;
   (e) => handleImageError (e) ;
 }priority= {;

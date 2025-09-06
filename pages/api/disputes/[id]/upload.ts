@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import path from 'path';
 import {
   ensureDisputeUploadDir,
   getDisputeById,
-  upsertDispute,
+  upsertDispute,;
 } from '../../../../utils/fsdb';
 import {
   parseUserFromRequest,
-  ensureInvolvedOrAdmin,
+  ensureInvolvedOrAdmin,;
 } from '../../../../utils/auth';
 
 export const config = {
@@ -44,16 +43,7 @@ export default async function handler(
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
 
-    for (const f of files) {
-      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
-      const buffer = Buffer.from(
-        f.base64.split(',').pop() || f.base64,
-        'base64'
-      );
-      const filePath = path.join(dir, safeName);
-      await fsPromisesWrite(filePath, buffer);
-      dispute.attachments.push({
-        id: `${Date.now()}-${safeName}`,
+    -${safeName}`,
         fileName: safeName,
         fileSize: buffer.length,
         mimeType: f.mimeType || 'application/octet-stream',
@@ -70,7 +60,6 @@ export default async function handler(
 
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
-}
 
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import('fs');
@@ -86,24 +75,3 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
       }
     );
   });
-}
-=======
- dispute.attachments.push ({
-  id: `$ {
-  Date.now () 
-}-$ {
-  safeName 
-}`;
-fileName: safeName;
-fileSize: buffer.length;
-mimeType: f.mimeType || 'application/octet-stream';
-path: filePath;
-uploadedAt: now;
-uploadedByUserId: user.id 
-}) 
-}
-}res.setHeader ('AllowPOST');
-return res.status (405) .end ('Method Not Allowed') 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

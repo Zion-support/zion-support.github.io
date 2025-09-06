@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 
 export type FeedbackContext = { actionType?: string; metadata?: any };
@@ -119,33 +118,3 @@ export default function FeedbackModal({
       </div>
     </div>
   );
-}
-=======
- if (!isOpen) return null;
-async function submit () {
-  if (rating < 1) return onClose (false);
-setLoading (true);
-try {
-  
-}catch {
-  
-}setLoading (false);
-onClose (true) 
-}<button key= {
-  n 
-}onMouseEnter= {
-  () => setHover (n) 
-}onMouseLeave= {
-  () => setHover (0) 
-}onClick= {
-  () => setRating (n) 
-}className= {
-  (hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300' 
-}aria-label= {
-  `$ {
-  n 
-}stars` 
-}>★</button>) ) 
-}</div> </div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,6 +1,5 @@
  html2pdf () .set (opt) .from (element) .save () 
 };
-<<<<<<< HEAD
 
 export default function PdfExportButton({
   targetRef,
@@ -23,17 +22,8 @@ export default function PdfExportButton({
     html2pdf().set(opt).from(element).save();
   };
 
-  return (
-    <button
-      onClick={onClick}
-      className='no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover:bg-blue-700 focus:outline-none'
-      aria-label='Download as PDF'
+  
     >
       Download as PDF
     </button>
   );
-}
-=======
-return (<button aria-label="Download as PDF" 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

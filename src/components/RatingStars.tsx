@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Star, StarHalf } from 'lucide-react';
 
@@ -22,10 +21,7 @@ export function RatingStars({
           );
         }
         if (i === filled && half) {
-          return (
-            <StarHalf
-              key={i}
-              className='h-4 w-4 fill-zion-cyan text-zion-cyan'
+          
             />
           );
         }
@@ -36,17 +32,7 @@ export function RatingStars({
       )}
     </div>
   );
-=======
- if (i < filled) {;
-  return (<Star key= {;
-  i ;
-}className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
-}if (i === filled && half) {;
-  return (<StarHalf key= {;
-  i ";
-}className="h-4 w-4 fill-zion-cyan text-zion-cyan" />) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }) ;
 }{";
   typeof count === 'number' && (<span className="text-xs ml-1" > ({;

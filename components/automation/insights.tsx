@@ -4,4 +4,3 @@
   talentMd 
 }</pre>) 
 }</section> </div>) 
-}

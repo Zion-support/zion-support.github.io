@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -18,7 +17,7 @@ import {
   Star,
   Users,
   TrendingUp,
-  Zap,
+  Zap,;
 } from 'lucide-react';
 
 const contactInfo = {
@@ -288,11 +287,7 @@ export default function EnhancedFooter() {
               <div className='flex space-x-4'>
                 {socialLinks.map(social => {
                   const Icon = social.icon;
-                  return (
-                    <a
-                      key={social.name}
-                      href={social.href}
-                      className='w-10 h-10 bg-gray-800/50 border border-gray-700/50 rounded-lg flex items-center justify-center text-gray-400 hover:text-cyan-400 hover:border-cyan-500/50 transition-all duration-200'
+                  
                     >
                       <Icon className='w-5 h-5' />
                     </a>
@@ -368,70 +363,3 @@ export default function EnhancedFooter() {
       </div>
     </footer>
   );
-}
-=======
-import React from 'react;
-;
-const EnhancedFooter: React.FC = () => {,
-  const currentYear = new Date().getFullYear();
-,
-  const services = [,
-    { name: 'AI Development', href: /services/ai-development' },
-    { name: 'Cloud Migration, href: '/services/cloud-migration' },
-    { name: Cybersecurity', href: '/services/cybersecurity },
-    { name: 'Mobile Apps', href: /services/mobile-development' },
-    { name: 'Web Development, href: '/services/web-development' },
-    { name: Data Analytics', href: '/services/data-analytics };
-  ],
-,
-  const products = [,
-    { name: 'ZionAI Analytics', href: /products/zion-ai-analytics' },
-    { name: 'CloudSecure Pro, href: '/products/cloudsecure-pro' },
-    { name: DataFlow Engine', href: '/products/dataflow-engine },
-    { name: 'MobileFirst CMS', href: /products/mobilefirst-cms' };
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook } from 'lucide-react,
-,
-const EnhancedFooter: React.FC = () => {,
-  const currentYear = new Date().getFullYear(),
-,
-  const services = [,
-    { name: 'AI Services', href: /ai-services' },
-    { name: 'IT Services, href: '/it-services' },
-    { name: Blockchain Solutions', href: '/blockchain-solutions },
-    { name: 'Micro SaaS', href: /micro-saas' },
-    { name: 'Security, href: '/security' },
-    { name: Case Studies', href: '/case-studies }
-  ],
-,
-  const company = [,
-    { name: 'About Us', href: /about' }
-  ],
-,
-  return (,
-                  </Link>,
-                </li>))};
-            </ul>,
-          </div>,
-                  </Link>,
-                </li>,
-              ))};
-            </ul>,
-          </div>,
-                  </Link>,
-                </li>,
-              ))};
-            </ul>,
-          </div>,
-        </div>,
-              </Link>,
-            </div>,
-          </div>,
-        </div>,
-      </div>,
-    </footer>,
-  )
-};
-,
-export default EnhancedFooter
-],
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

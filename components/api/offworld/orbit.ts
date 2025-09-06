@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   connectOrbit,
   appendChatMessage,
   recordVote,
-  editConstitution,
+  editConstitution,;
 } from '@/utils/offworld/orbitdb';
 
 export default async function handler(
@@ -34,9 +33,3 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

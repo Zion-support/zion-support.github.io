@@ -1,10 +1,6 @@
-<<<<<<< HEAD
 import { Resume } from '@/types/resume';
 
 export interface StepProps {
-=======
- export interface StepProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
 label: string 
 }export interface NavigationButtonsProps {
@@ -23,4 +19,3 @@ onCancel: () => void;
 isLoading: boolean 
 }export interface EmptyResumeProps {
   onCreateClick: () => void 
-}

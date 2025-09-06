@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -33,13 +32,3 @@ export default function EnterpriseBilling() {
       <Footer />
     </ProtectedRoute>
   );
-}
-=======
- export default function EnterpriseBilling () {
-  const {
-  user 
-}= useAuth ();
-//Check if user has billing permissions 
-}Enterprise Billing - Zion AI Marketplace"description=" Manage your subscription, view invoice history, and download billing statements."/> <Header /> <main className=" min-h-screen bg-background" > <BillingDashboard /> </main> <Footer /> </ProtectedRoute>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

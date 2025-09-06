@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { render, screen } from '@testing-library/react';
 import WalletPage from '@/pages/Wallet';
 import { vi } from 'vitest';
@@ -22,14 +21,3 @@ describe('WalletPage', () => {
     ).toBeInTheDocument();
   });
 });
-=======
- transactions: [];
-loading: false;
-fetchWallet: vi.fn ();
-fetchTransactions: vi.fn ();
-earnTokens: vi.fn ();
-spendTokens: vi.fn () 
-}as any);
-render (<WalletPage />);
-expect (
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

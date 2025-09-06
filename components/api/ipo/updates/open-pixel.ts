@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 
@@ -22,8 +21,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'no-store, no-cache, must-revalidate, proxy-revalidate'
   );
   res.status(200).send(pixel);
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

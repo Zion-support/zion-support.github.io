@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Project } from '@/types/projects';
 
 export const PROJECTS: Project[] = [
@@ -23,7 +22,4 @@ export const PROJECTS: Project[] = [
     },
   },
 ];
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 export const PROJECTS: Project[] = [ 
 }];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

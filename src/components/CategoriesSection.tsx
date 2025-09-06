@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import Link from 'next/link';
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react';
@@ -16,7 +15,6 @@ interface CategoryType {
   itemCount?: number; // Example field for number of items in a category
   // Add a 'link' property if your API provides it, or construct it.
   link?: string;
-}
 
 // Default static categories with translation keys
 const getDefaultCategories = (t: any) => [
@@ -82,7 +80,6 @@ interface CategoriesSectionProps {
   className?: string;
   style?: React.CSSProperties;
   categories?: CategoryType[]; // Accept categories as a prop
-}
 
 export function CategoriesSection({
   showTitle = true,
@@ -115,10 +112,7 @@ export function CategoriesSection({
 
   // If fetchedCategories is an empty array, and we want to show nothing:
   if (fetchedCategories && fetchedCategories.length === 0) {
-    return (
-      <section
-        className={cn('py-20 bg-zion-blue text-center', className)}
-        style={style}
+    
       >
         <div className='container mx-auto px-4'>
           <h2 className='text-3xl font-semibold text-white mb-4'>
@@ -198,11 +192,9 @@ export function CategoriesSection({
       </div>
     </section>
   );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //This is the type definition copied from Categories.tsx for consistency. //Ideally, this would be in a shared types file. //Helper to get icon component from name const getIcon = (iconName?: string) => {;
   switch (iconName) {;
   ;
-}
+
 };
 const getSpecialServices = (t: any) => [ {;
   title: t ('categories.it onsite services');
@@ -235,18 +227,14 @@ title: cat.name;
 icon: getIcon (cat.iconName) ;
 }) );
 //If fetchedCategories is an empty array, and we want to show nothing: if (fetchedCategories && fetchedCategories.length === 0) {;
-  return (<section className= {";
-  cn ("py-20 bg-zion-blue text-center", className) ;
-}style= {;
-  style ";
+  
 }> <div className="container mx-auto px-4" > <h2 className="text-3xl font-semibold text-white mb-4" > {';
   t ('home.no categories title') ";
 }</h2> <p className="text-zion-slate-light text-lg mb-2" > {';
   t ('home.no categories desc') ";
 }</p> <p className="text-zion-slate-light text-md" > {';
   t ('home.no categories support') ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }return (</p> </div>) ;
 }</div> </Link>) ) ;
 }</div> > {;

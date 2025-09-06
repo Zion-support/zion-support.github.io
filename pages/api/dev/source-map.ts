@@ -1,8 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
-<<<<<<< HEAD
 import {
   getSourceMapWithExistence,
-  deployBasicTemplateForPath,
+  deployBasicTemplateForPath,;
 } from '../../../utils/sourceMap';
 import { getGitStatus, requireRoles } from '../../../utils/devAccess';
 
@@ -36,25 +35,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, POST');
   res.status(405).end('Method Not Allowed');
-}
-=======
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'GET') {
-    return res.status(405).json({ error: 'Method not allowed' });
-  }
-
-  try {
-    // Return source map information
-    res.status(200).json({
-      success: true,
-      sourceMap: 'available',
-      timestamp: new Date().toISOString()
-    });
-  } catch (error) {
-    res.status(500).json({ 
-      error: 'Failed to retrieve source map' 
-    });
-  }
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

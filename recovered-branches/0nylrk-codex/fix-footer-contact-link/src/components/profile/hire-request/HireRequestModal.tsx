@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { HireRequestForm } from './HireRequestForm';
 import { TalentProfile } from '@/types/talent';
@@ -15,7 +14,6 @@ interface HireRequestModalProps {
   isOpen: boolean;
   onClose: () => void;
   userDetails?: UserProfile;
-}
 
 export function HireRequestModal({
   talent,
@@ -46,25 +44,3 @@ export function HireRequestModal({
       </DialogContent>
     </Dialog>
   );
-}
-=======
- interface HireRequestModalProps {
-  talent: TalentProfile | null;
-isOpen: boolean;
-onClose: () => void;
-userDetails?: UserProfile 
-}export function HireRequestModal ({
-  talent, isOpen, onClose, userDetails 
-}: HireRequestModalProps) {
-  const handleClose = () => {
-  onClose () 
-};
-return (</DialogTitle> </DialogHeader> <HireRequestForm talent= {
-  talent 
-}onClose= {
-  handleClose 
-}userDetails= {
-  userDetails 
-}/> </DialogContent> </Dialog>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

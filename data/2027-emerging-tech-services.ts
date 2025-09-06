@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Service {
   id: string;
   name: string;
@@ -15,7 +14,6 @@ export interface Service {
   roi: string;
   link: string;
   tags: string[];
-}
 
 export const emergingTech2027Services: Service[] = [
   {
@@ -505,6 +503,3 @@ export const emergingTech2027Services: Service[] = [
     ],
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

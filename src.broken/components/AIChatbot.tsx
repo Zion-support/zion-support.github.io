@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, {
   useState,
   useRef,
   useEffect,
   Dispatch,
-  SetStateAction,
+  SetStateAction,;
 } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -15,7 +14,7 @@ import {
   User,
   Sparkles,
   ChevronUp,
-  ChevronDown,
+  ChevronDown,;
 } from 'lucide-react';
 
 interface ChatMessage {
@@ -24,11 +23,9 @@ interface ChatMessage {
   content: string;
   timestamp: Date;
   isTyping?: boolean;
-}
 
 interface AIChatbotProps {
   className?: string;
-}
 
 const AIChatbot: React.FC<AIChatbotProps> = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -339,33 +336,9 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = '' }) => {
   );
 };
 
-=======
- const [messages, setMessages] = useState<ChatMessage[]> ([ {
-  id: '1';
-type: 'bot';
-content: 'Hello! I\'m Zion AI, your intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons';
-timestamp: new Date () 
-}]);
-const [inputValue, setInputValue] = useState ('');
-const [isTyping, setIsTyping] = useState (false);
-const messagesEndRef = useRef<HTMLDivElement> (null);
-const inputRef = useRef<HTMLInputElement> (null);
-const scrollToBottom = () => {
-  messagesEndRef.current?.scrollIntoView ({
-  behavior: 'smooth' 
-}) 
-};
-useEffect ( () => {
-  scrollToBottom () 
-}, [messages]);
-//AI response simulation const generateAIResponse = async (userMessage: string) : Promise<string> => {
-  setIsTyping (true);
-//Simulate AI processing time await new Promise (resolve => setTimeout (resolve, 1000 + Math.random () * 2000) );
-const responses = [ ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Add some context-aware responses let finalResponse: string = randomResponse;
 if (userMessage.toLowerCase () .includes ('price') || userMessage.toLowerCase () .includes ('cost') ) {
   
-}
+
 };
 setMessages ([...messages, userMessage]);
 setInputValue ('');
@@ -386,19 +359,19 @@ setIsTyping (false)
   !isOpen && (<motion.button initial= {
   {
   scale: 0 
-}
+
 }animate= {
   {
   scale: 1 
-}
+
 }whileHover= {
   {
   scale: 1.1 
-}
+
 }whileTap= {
   {
   scale: 0.95 
-}
+
 }onClick= {
   () => setIsOpen (true) 
 }className="w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-600 text-white rounded-full shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 flex items-center justify-center" > <MessageCircle className="w-6 h-6" /> </motion.button>) 
@@ -408,15 +381,15 @@ setIsTyping (false)
   isOpen && (<motion.div initial= {
   {
   opacity: 0, scale: 0.8, y: 20 
-}
+
 }animate= {
   {
   opacity: 1, scale: 1, y: 0 
-}
+
 }exit= {
   {
   opacity: 0, scale: 0.8, y: 20 
-}
+
 }className="absolute bottom-16 right-0 w-96 bg-gray-900/95 backdrop-blur-xl border border-white/20 rounded-2xl shadow-2xl overflow-hidden" > {
   /* Chat Header */ 
 }<div className="bg-gradient-to-r from-cyan-500/20 to-blue-500/20 p-4 border-b border-white/10"> <div className="flex items-center justify-between"> <div className="flex items-center gap-3"> <div className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center"> <Bot className="w-5 h-5 text-white" /> </div> <div> <h3 className="text-white font-semibold">Zion AI Assistant</h3> <div className="flex items-center gap-1"> <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div> <span className="text-xs text-gray-300">Online</span> </div> </div> </div> <div className="flex items-center gap-2"> <button onClick= {
@@ -434,11 +407,11 @@ setIsTyping (false)
 }initial= {
   {
   opacity: 0, y: 10 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }className= {
   `flex gap-3 $ {
   message.type === 'user'? 'justify-end': 'justify-start' 
@@ -468,19 +441,19 @@ setIsTyping (false)
   isTyping && (<motion.div initial= {
   {
   opacity: 0, y: 10 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }className="flex gap-3 justify-start" > <div className="w-8 h-8 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-full flex items-center justify-center"> <Bot className="w-4 h-4 text-white" /> </div> <div className="bg-white/10 border border-white/20 rounded-2xl p-3"> <div className="flex items-center gap-1"> <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce"></div> <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style= {
   {
   animationDelay: '0.1s' 
-}
+
 }></div> <div className="w-2 h-2 bg-cyan-400 rounded-full animate-bounce" style= {
   {
   animationDelay: '0.2s' 
-}
+
 }></div> </div> </div> </motion.div>) 
 }<div ref= {
   messagesEndRef 
@@ -506,5 +479,4 @@ setIsTyping (false)
 }</motion.div>) 
 }</AnimatePresence> </div>) 
 };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default AIChatbot;

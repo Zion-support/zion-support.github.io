@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // ZionGPT Utility Functions
 // This file handles interaction with the fine-tuned ZionGPT model
 
@@ -24,7 +23,6 @@ export interface ModelConfig {
   baseModel: string;
   purpose: string;
   active: boolean;
-}
 
 // Get the latest active model ID for a specific purpose
 export async function getActiveModelId(
@@ -63,7 +61,6 @@ export async function getActiveModelId(
     console.error('Error fetching active model:', error);
     return 'gpt-3.5-turbo'; // Fallback to base model
   }
-}
 
 // Log usage of the fine-tuned model
 export async function logModelUsage(
@@ -87,14 +84,12 @@ export async function logModelUsage(
     console.error('Error logging model usage:', error);
     // Non-blocking - we don't want to fail the main operation
   }
-}
 
 // Calculate approximate cost based on token usage
 function calculateCost(modelId: string, tokens: number): number {
   // These are example rates - adjust based on actual OpenAI pricing for fine-tuned models
   const ratePerToken = modelId.includes('zion') ? 0.000016 : 0.000008; // Higher for fine-tuned models
   return tokens * ratePerToken;
-}
 
 // Function to call ZionGPT models through Supabase Edge Function
 export async function callZionGPT({
@@ -141,21 +136,4 @@ export async function callZionGPT({
     console.error('Error calling ZionGPT:', error);
     throw error;
   }
-=======
- // ZionGPT Utility Functions // This file handles interaction with the fine-tuned ZionGPT model // Get the latest active model ID for a specific purpose export async function getActiveModelId (purpose: 'job' | 'resume' | 'support') : Promise<ModelVersion> {
-  try {
-  const {
-  data, error 
-}= await supabase .from ('model versions') .select ('id') .eq ('purpose', purpose) .eq ('active', true) .order ('version', {
-  ascending: false 
-}) .limit (1) .single ();
-await supabase .from ('model usage logs') .insert ({
-  if (error) throw error;
-// Log usage for analytics if (data.tokensUsed) {
-  await logModelUsage (modelId, data.tokensUsed, `$ {
-  purpose 
-}-generation`;
-userId) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

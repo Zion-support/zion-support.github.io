@@ -8,7 +8,7 @@ import {
   CheckCircle, 
   Phone, 
   Mail, 
-  MapPin 
+  MapPin ;
 } from 'lucide-react';
 import Layout from './components/Layout';
 
@@ -77,12 +77,7 @@ const legalPages = [
 ];
 
 export default function SitemapPage() {
-  return (
-    <Layout
-      title="Sitemap - Zion Tech Group"
-      description="Complete sitemap of Zion Tech Group website. Find all our services, solutions, and resources in one place."
-      keywords="sitemap, website navigation, all pages, services, solutions, resources"
-      canonical="https://ziontechgroup.com/sitemap"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -342,4 +337,3 @@ export default function SitemapPage() {
       </div>
     </Layout>
   );
-}

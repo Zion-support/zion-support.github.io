@@ -1,14 +1,13 @@
-<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
   useState,
   useEffect,
-  ReactNode,
+  ReactNode,;
 } from 'react';
 import {
   useWhitelabelTenant,
-  WhitelabelTenant,
+  WhitelabelTenant,;
 } from '@/hooks/useWhitelabelTenant';
 
 export interface WhitelabelContextType {
@@ -23,7 +22,6 @@ export interface WhitelabelContextType {
     cta: string;
   };
   tenant: WhitelabelTenant | null;
-}
 
 const defaultContext: WhitelabelContextType = {
   isWhitelabel: false,
@@ -56,7 +54,6 @@ export const useWhitelabel = (): WhitelabelContextType => {
 
 interface WhitelabelProviderProps {
   children: ReactNode;
-}
 
 export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
   const [contextValue, setContextValue] =
@@ -84,16 +81,4 @@ export const WhitelabelProvider = ({ children }: WhitelabelProviderProps) => {
       {children}
     </WhitelabelContext.Provider>
   );
-=======
- // The context may be undefined if the provider is not mounted. By declaring // the generic as `WhitelabelContextType | null` we get proper type checking // without falling back to an empty object which triggers TS2740 errors. // Cast is used here because the context default is `null` until provided by // `WhitelabelProvider`. The runtime check above guarantees it's defined. return context as WhitelabelContextType 
-};
-useEffect ( () => {
-  if (!isLoading && tenant) {
-  setContextValue ({
-  return (<WhitelabelContext.Provider value= {
-  contextValue 
-}> {
-  children 
-}</WhitelabelContext.Provider>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

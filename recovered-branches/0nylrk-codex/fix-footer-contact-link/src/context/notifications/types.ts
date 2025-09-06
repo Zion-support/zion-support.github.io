@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Notification as BaseNotification } from '@/types/notifications';
 
 export type NotificationType =
@@ -13,7 +12,6 @@ export interface Notification extends BaseNotification {
   type: NotificationType;
   action_url?: string;
   action_text?: string;
-}
 
 export type FilterType =
   | 'all'
@@ -33,8 +31,3 @@ export interface NotificationContextType {
   dismissNotification: (id: string) => Promise<void>;
   setFilter: (filter: FilterType) => void;
   fetchNotifications: () => Promise<void>;
-}
-=======
- export type NotificationType = | 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
-export type FilterType = | 'all' | 'unread' | 'messages' | 'onboarding' | 'system';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

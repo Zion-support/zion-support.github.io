@@ -15,7 +15,7 @@ import { }
   Award,
   Globe,
   Lock,
-  Clock,
+  Clock,;
   TrendingUp;
 } from 'lucide-react';
 import Layout from '../components/Layout';

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { useAuth } from '@/hooks/useAuth';
@@ -16,7 +15,7 @@ import {
   FileText,
   Heart,
   Key,
-  ShoppingBag,
+  ShoppingBag,;
 } from 'lucide-react';
 import { useGetOrdersQuery } from '@/hooks/useOrders';
 import { useFavorites } from '@/hooks/useFavorites';
@@ -504,35 +503,7 @@ export default function Dashboard() {
       <GuidedTour role={roleForTour} />
     </>
   );
-=======
- export default function Dashboard () {;
-  const {;
-  logout ;
-}= useAuth ();
-const {;
-  user, loading ;
-}= useRequireAuth (), //This will handle authentication and redirects const {;
-  toast ;
-}= useToast ();
-//Add safe checks for user ID to prevent premature API calls const userId = user?.id;
-const {;
-  data: orders = [], isLoading: ordersLoading ;
-}= useGetOrdersQuery (userId);
-const {;
-  favorites ;
-}= useFavorites ();
-//Type assertion to work around Supabase User type limitations const userWithExtendedProps = user as any;
-const userType = userWithExtendedProps?.userType || user?.user metadata?.userType || 'talent';';
-const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent';
-if (loading) {;
-  return (<div className="min-h-screen flex items-center justify-center" > <div className="text-center" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4" ></div> <p className="text-gray-600" >Loading dashboard...</p> </div> </div>) ;
-}//useRequireAuth will handle redirect if user is not authenticated if (!user) {";
-  return (<div className="min-h-screen flex items-center justify-center" > <div className="text-center" > <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto mb-4" ></div> <p className="text-gray-600" >Redirecting to login...</p> </div> </div>) ;
-}const handleTestNotification = async () => {;
-  try {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };";
 return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className="container mx-auto px-4 py-8"> <div className="grid grid-cols-1 lg:grid-cols-3 gap-8"> {;
   /* Left Sidebar - User Profile */ ";
@@ -551,8 +522,8 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }<div className="flex flex-col gap-2 mt-4"> <Button > <Send size= {;
   16 ";
 }className="text-zion-cyan" /> Send Test Notification </Button> <Button ;
-}
-}
+
+
 }> <Settings size= {;
   16 ";
 }className="text-zion-purple" /> async () => {;
@@ -570,9 +541,8 @@ toast ({";
   toast ({";
   title: "Error sending notification",  description: "Please try again", variant: "destructive" ;
 });
->>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13 ;
-}
-}
+
+
 }> <Bell size= {;
   16 ";
 }className="text-yellow-500"/> Send System Alert </Button> </div> </div> </div> {;

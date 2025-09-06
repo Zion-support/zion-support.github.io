@@ -33,7 +33,6 @@ function getUserId(req: any): string | null {
     (req.query as any)['user_id'] ||
     null
   );
-}
 
 app.post('/ai/ask', async (req, reply) => {
   const body = (req.body as any) || {};

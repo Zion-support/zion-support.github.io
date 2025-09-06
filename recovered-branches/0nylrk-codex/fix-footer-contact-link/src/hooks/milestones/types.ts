@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 
 export type MilestoneStatus =
@@ -22,7 +21,6 @@ export interface Milestone {
   updated_at: string;
   created_by: string;
   deliverables?: any[];
-}
 
 export interface MilestoneActivity {
   id: string;
@@ -37,8 +35,3 @@ export interface MilestoneActivity {
     display_name: string;
     avatar_url?: string;
   };
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

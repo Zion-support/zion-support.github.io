@@ -1,16 +1,15 @@
-<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { toast } from '@/hooks/use-toast';
 import {
   darkModeMessages,
-  lightModeMessages,
+  lightModeMessages,;
 } from '@/utils/themeToggleMessages';
 import { logInfo, logErrorToProduction } from '@/utils/productionLogger';
 // Use the ThemeProvider hook directly to ensure no conflicts
@@ -92,13 +91,7 @@ export function ModeToggle() {
 
   if (!isClient) {
     // Return a neutral state during SSR to prevent hydration issues
-    return (
-      <Button
-        variant='ghost'
-        size='icon'
-        disabled
-        aria-label='Loading theme toggle'
-        className='focus-visible:ring-ring relative text-foreground'
+    
       >
         <div className='h-5 w-5 bg-muted rounded animate-pulse' />{' '}
         {/* Changed to bg-muted for theme consistency */}
@@ -159,41 +152,7 @@ export function ModeToggle() {
       </Tooltip>
     </TooltipProvider>
   );
-=======
- //Use the ThemeProvider hook directly to ensure no conflicts import { ;
-  {;
-  {;
-  useTheme ;
- } from "@/components/ThemeProvider";
-import {;
-  {;
-  {;
-  logIssue ";
-}from "@/utils/logIssue" import {;
-  {;
-  {;
-  useEffect, useState ";
-}from "react" export function ModeToggle () {;
-  const {;
-  theme, toggleTheme ;
-}= useTheme ();
-const [isClient, setIsClient] = useState (false);
-//Ensure we're on the client side to avoid hydration mismatches useEffect ( () => {;
-  setIsClient (true) ;
-}, []);
-//Determine the actual resolved theme for display purposes const resolvedTheme = ( () => {';
-  if (!isClient) return 'light', //Default for SSR ;
-}return theme;
-}) ();
-try {;
-  //Determine the new theme we are switching TO logInfo (`Theme toggle: $ {;
-  resolvedTheme ;
-}→ $ {;
-  newTheme ;
-}`);
-//Show user feedback with a developer-centric message ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 if (!isClient) {";
   //Return a neutral state during SSR to prevent hydration issues return (<Button variant="ghost" size="icon" disabled aria-label="Loading theme toggle" className="focus-visible:ring-ring relative text-foreground" > <div className="h-5 w-5 bg-muted rounded animate-pulse" /> {;

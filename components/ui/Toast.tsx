@@ -1,16 +1,13 @@
  export type ToastType = 'success' | 'error' | 'info' | 'warning';
-return () => clearTimeout (timer) 
+
 }, [toast.id, toast.duration, onRemove]);
 const getIcon = () => {
   switch (toast.type) {
   case 'success': 
-}
-<<<<<<< HEAD
 
 interface ToastProps {
   toast: Toast;
   onRemove: (id: string) => void;
-}
 
 const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
   const [isVisible, setIsVisible] = useState(true);
@@ -69,17 +66,7 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
     }
   };
 
-  return (
-    <motion.div
-      initial={{ opacity: 0, x: 300, scale: 0.8 }}
-      animate={{
-        opacity: isVisible ? 1 : 0,
-        x: isVisible ? 0 : 300,
-        scale: isVisible ? 1 : 0.8,
-      }}
-      exit={{ opacity: 0, x: 300, scale: 0.8 }}
-      transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className={`relative p-4 rounded-xl border ${getBorderColor()} ${getBackgroundColor()} backdrop-blur-xl shadow-2xl max-w-sm`}
+  
     >
       <div className='flex items-start space-x-3'>
         <div className='flex-shrink-0 mt-0.5'>{getIcon()}</div>
@@ -124,7 +111,6 @@ const ToastItem: React.FC<ToastProps> = ({ toast, onRemove }) => {
 interface ToastContainerProps {
   toasts: Toast[];
   onRemove: (id: string) => void;
-}
 
 export const ToastContainer: React.FC<ToastContainerProps> = ({
   toasts,
@@ -180,33 +166,3 @@ export const useToast = () => {
     removeToast,
   };
 };
-=======
-};
-switch (toast.type) {
-  case 'success': return 'border-green-500/20';
-case 'error': return 'border-red-500/20';
-case 'warning': return 'border-yellow-500/20';
-case 'info': const getBackgroundColor = () => {
-  switch (toast.type) {
-  case 'success': return 'bg-green-500/10';
-case 'error': return 'bg-red-500/10';
-case 'warning': return 'bg-yellow-500/10';
-case 'info': {
-  toast.message 
-}</p>) 
-}</div> <button > <X className="w-4 h-4 text-white/60 hover:text-white" /> </button> </div> <motion.div className= {
-  `h-full $ {
-  toast.type === 'success' ? 'bg-green-400' : toast.type === 'error' ? 'bg-red-400' : toast.type === 'warning' ? 'bg-yellow-400' : /> </div> </motion.div>) 
-};
-<AnimatePresence> {
-  toasts.map ( (toast) => (<ToastItem key= {
-  toast.id 
-}toast= {
-  toast 
-}onRemove= {
-  onRemove 
-}/>) ) 
-}</AnimatePresence> </div>) 
-};
-// Hook for managing toasts 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { TalentProfile } from '@/types/talent';
@@ -134,38 +133,13 @@ export function useSavedTalents() {
     toggleSaveTalent,
     isTalentSaved,
   };
-=======
- export function useSavedTalents () {
-  const {
-  isAuthenticated, userDetails 
-}= useAuthStatus ();
-const [savedTalents, setSavedTalents] = useState<TalentProfile[]> ([]);
-const [savedTalentIds, setSavedTalentIds] = useState<string[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-const fetchSavedTalents = async () => {
-  if (!isAuthenticated || !userDetails.id) {
-  setIsLoading (true);
-try {
-  //Get saved talent IDs const {
-  data: savedData, error: savedError 
-}= await supabase .from ('saved talents') .select ('talent id') .eq ('user id', userDetails.id);
-if (savedError) throw savedError;
-if (talentIds.length > 0) {
-  //Fetch full talent profiles for saved talents const {
-  data: talentData, error: talentError 
-}= await supabase .from ('talent profiles') .select ('*') .in ('id', talentIds);
-if (talentError) throw talentError;
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [isAuthenticated, userDetails.id]);
 //Toggle save talent const toggleSaveTalent = async (talent: TalentProfile) => {
   if (!isAuthenticated || !userDetails.id || !talent.id) {
   toast ({
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }try {
   if (isSaved) {
   //Remove from saved talents const {
@@ -183,12 +157,11 @@ talent id: talent.id
 });
 setSavedTalents (prev => [...prev, talent]);
 setSavedTalentIds (prev => [...prev, talent.id]);
-}
+
 }catch (error) {
   console.error ('Error toggling saved talent:', error);
 toast ({
   
-}
+
 };
 // Check if talent is saved 
-}

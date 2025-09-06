@@ -1,6 +1,4 @@
  
-}
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -38,7 +36,3 @@ export default async function handler(
     });
     return res.status(500).json({ error: 'Router failure' });
   }
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

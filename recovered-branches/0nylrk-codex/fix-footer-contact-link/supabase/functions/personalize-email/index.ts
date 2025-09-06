@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 
@@ -123,39 +122,6 @@ serve(async req => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
-  //Get personalization request data const {
-  break;
-case "inactivity reminder" : userPrompt = `Create a re-engagement email for a $ {
-  userData.userType === "talent" ? "talent/professional" : "client/employer" 
-}named $ {
-  userData.firstName 
-}who has been inactive for $ {
-  activityData.daysInactive 
-}days. They haven't completed their $ {
-  activityData.incompleteAction 
-}.`;
-subjectContext = "Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.";
-break;
-case "job application" : userPrompt = `Create an email encouraging a talent named $ {
-  userData.firstName 
-}who hasn't applied to any jobs yet. Their skills are: $ {
-  userData.skills ? userData.skills.join (", ") : "AI-related skills" 
-}. Encourage them to complete their profile and apply to relevant positions.`;
-subjectContext = "Create a subject line that emphasizes opportunity and personal growth.";
-break;
-case "profile completion" : userPrompt = `Create an email for $ {
-  userData.firstName 
-}reminding them to complete their profile. They have completed $ {
-  userData.profileCompletion || 0 
-}% of their profile. Focus on how a complete profile increases visibility.`;
-subjectContext = "Create a short, motivational subject line about profile completion.";
-break;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 default: //Call OpenAI API to generate personalized content const response = await fetch ("https://api.openai.com/v1/chat/completions", {
   method: "POST";
 headers: {
   "Authorization" : `Bearer $ {
@@ -181,9 +147,8 @@ if (jsonMatch) {
   generatedContent = JSON.parse (jsonMatch[0]) 
 }catch (e2) {
   
-}
+
 }// Apply the generated content to the template or return it directly return new Response (JSON.stringify (generatedContent), {
   
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Loader2 } from 'lucide-react';
@@ -16,7 +15,6 @@ interface ApplyFormProps {
   job: Job;
   onClose: () => void;
   onApplySuccess?: (jobId: string) => Promise<void>;
-}
 
 export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
   const { createConversation } = useMessaging();
@@ -180,31 +178,9 @@ export function ApplyForm({ job, onClose, onApplySuccess }: ApplyFormProps) {
       </div>
     </>
   );
-=======
- interface ApplyFormProps {;
-  job: Job;
-onClose: () => void;
-onApplySuccess?: (jobId: string) => Promise<void> ;
-}export function ApplyForm ({;
-  job,  onClose, onApplySuccess ;
-}: ApplyFormProps) {;
-  const {;
-  createConversation ;
-}= useMessaging ();
-const {;
-  applyToJob ;
-}= useJobApplications ();
-const [message, setMessage] = useState ();
-const [proposalLink, setProposalLink] = useState ('');
-const [isSubmitting, setIsSubmitting] = useState (false);
-const [activeTab, setActiveTab] = useState<string> ("message");
-const [selectedResume, setSelectedResume] = useState<ResumeOption | null> (null);
-const [selectedResumeId, setSelectedResumeId] = useState<string | null> (null);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleApply = async () => {;
   if (!message.trim () ) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ';
 }//First submit the application to the job applications table const applicationSuccess = await applyToJob (job.id, message, selectedResume && selectedResume.type === 'ai resume'? selectedResumeId || undefined : undefined, selectedResume && selectedResume.type === 'custom upload'? selectedResume.file : undefined);
 if (!applicationSuccess) {;
   ;
@@ -239,8 +215,7 @@ toast ({;
   ;
 }finally {;
   setIsSubmitting (false) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 return (<> <Tabs value= {;
   activeTab ;

@@ -1,6 +1,4 @@
  
-}
-<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest,
@@ -112,7 +110,3 @@ export default async function handler(
     console.error('Email validation error:', error);
     res.status(500).json({ error: 'Internal server error' });
   }
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -12,7 +11,7 @@ import {
   Star,
   ShoppingCart,
   AlertTriangle,
-  RefreshCw,
+  RefreshCw,;
 } from 'lucide-react';
 import { NextSeo } from '@/components/NextSeo';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
@@ -576,61 +575,7 @@ function MarketplacePageContent() {
       </div>
     </>
   );
-=======
- </div> </div> </CardContent> </Card>);
-//Filter controls <option value="">All Categories</option> {;
-  categories.map ( (cat: string) => <option key= {;
-  cat ;
-}value= {;
-  cat ;
-}> {;
-  cat ;
-}</option>) ";
-}</select> </div> <div className="flex items-center gap-2"> <SortAsc className="h-4 w-4 text-muted-foreground"/> import {;
-  {;
-  {;
-  useDispatch ;
-}from 'react-redux';
-import {;
-  {;
-  type {;
-  AppDispatch ';
-}from '@/store';
-import {;
-  {;
-  {;
-  addItem ';
-}from '@/store/cartSlice';
-import {;
-  {;
-  {;
-  useAuth ';
-}from '@/context/auth/AuthProvider';
-import {;
-  {;
-  {;
-  toast ';
-}from '@/hooks/use-toast';";
-//Product card return (<Card className="h-full hover:shadow-lg transition-shadow"> <CardHeader className="pb-3"> <div className="flex items-start justify-between"> <div className="flex-1 min-w-0"> AI {;
-  product.aiScore ;
-}</Badge>) ";
-}</div> </div> <div className="text-right"> </Badge> </div> </div> </CardHeader> <CardContent className="pt-0"> <div className="flex items-center gap-4 mb-3"> <div className="flex items-center gap-1"> <Star className="h-4 w-4 text-yellow-500 fill-current"/> <span className="text-sm font-medium"> {;
-  product.rating?.toFixed (1) ";
-}</span> <span className="text-xs text-muted-foreground"> ({;
-  product.reviewCount ";
-}reviews) </span> </div> </div> > <ShoppingCart className="h-4 w-4"/> </Button> View Details </Button> </div> </CardContent> </Card>) ;
-};
-//Loading grid </div>);
-//Main component //Sort the processed dataset processedDataset.sort ( (a, b) => {;
-  switch (sortBy) {';
-  case 'price-low': return (a.price || 0) - (b.price || 0);';
-case 'price-high': return (b.price || 0) - (a.price || 0);';
-case 'rating': return (b.rating || 0) - (a.rating || 0);';
-case 'popular': return (b.reviewCount || 0) - (a.reviewCount || 0);';
-case 'ai-score': return (b.aiScore || 0) - (a.aiScore || 0);';
-default: //'newest' ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [sortBy, filterCategory, showRecommended]);
 return () => clearTimeout (timeoutId) ;
 }, [sortBy, filterCategory, showRecommended, refresh]);
@@ -643,7 +588,7 @@ return () => window.removeEventListener ('scroll', handleScroll) ;
 return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -658,7 +603,7 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }return (<> <NextSeo /> <div className="container py-8"> <motion.div className="text-center mb-8"initial= {;
   {;
   opacity: 0, y: -20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -671,30 +616,30 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
   marketStats && (<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: 0.2 ;
-}
+
 }> <MarketplaceInsights stats= {;
   marketStats ;
 }/> </motion.div>) ;
 }<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: 0.3 ;
-}
+
 }> <MarketplaceFilterControls sortBy= {;
   sortBy ;
 }setSortBy= {;
@@ -718,23 +663,23 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }initial= {;
   {;
   opacity: 0, scale: 0.9 ;
-}
+
 }animate= {;
   {;
   opacity: 1, scale: 1 ;
-}
+
 }exit= {;
   {;
   opacity: 0, scale: 0.9 ;
-}
+
 }transition= {;
   {;
   delay: Math.min (index * 0.03, 0.5) ;
-}
+
 }whileHover= {;
   {;
   scale: 1.02 ;
-}
+
 }> <MarketplaceCard product= {;
   item ;
 }onViewDetails= {;
@@ -742,17 +687,17 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
   if (typeof window !== 'undefined') {;
   try {;
   ;
-}
+
 }/> </motion.div>) ) ;
 }</AnimatePresence> </motion.div> {";
   (isFetching || loading) && products.length > 0 && (<motion.div className="mt-8"initial= {;
   {;
   opacity: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1 ;
-}
+
 }> <MarketplaceLoadingGrid count= {;
   4 ;
 }/> </motion.div>) ;
@@ -772,7 +717,7 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
   !hasMore && products.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t"initial= {;
   {;
   opacity: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1 ;
@@ -786,19 +731,19 @@ return (<> <NextSeo /> <div className="container py-8"> <motion.div initial= {;
 }className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50"initial= {;
   {;
   opacity: 0, scale: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1, scale: 1 ;
-}
+
 }exit= {;
   {;
   opacity: 0, scale: 0 ;
-}
+
 }whileHover= {;
   {;
   scale: 1.1 ;
-}
+
 }whileTap= {;
   {;
   scale: 0.9 ;

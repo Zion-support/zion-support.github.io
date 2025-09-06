@@ -10,18 +10,7 @@ temperature: 0.3
 });
 const content = response.choices[0]?.message?.content || '';
 const typeMatch = content.match (/type\s*:\s* (.+) $/im);
-return {
-  summary: content.trim (), type: typeMatch ? typeMatch[1].trim () : 'unknown' 
-}
-}catch (err) {
-  return {
-  summary: description.slice (0, 280), type: 'unknown' 
-}
-<<<<<<< HEAD
 
-async function summarizeWithOpenAI(description: string) {
-  try {
-    if (!process.env.OPENAI_API_KEY)
       return { summary: description.slice(0, 280), type: 'unknown' };
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
@@ -43,7 +32,6 @@ async function summarizeWithOpenAI(description: string) {
   } catch (err) {
     return { summary: description.slice(0, 280), type: 'unknown' };
   }
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -83,46 +71,3 @@ export default async function handler(
   // TODO: Integrate notifications (email/webhook) for admin and talent
 
   return res.status(200).json({ id, status: 'ok' });
-}
-=======
-}
-}export default async function handler (req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') return res.status (405) .json ({
-  error: 'Method not allowed' 
-});
-const {
-  name, email, budget, timeline, description, talentSlug 
-}= req.body || {
-  
-};
-if (!name || !email || !description) return res.status (400) .json ({
-  error: 'Missing required fields' 
-});
-const normalizedBudget = String (budget ?? '') .replace (/[^0-9.\-]/g, '');
-const ai = await summarizeWithOpenAI (String (description) );
-const requests = await loadRequests ();
-const now = new Date () .toISOString ();
-const id = `req $ {
-  Date.now () 
-}`;
-const record = {
-  id;
-name;
-email;
-budget: normalizedBudget;
-timeline: String (timeline || '');
-description: String (description);
-talentSlug: talentSlug || null;
-aiSummary: ai.summary;
-aiType: ai.type;
-status: 'new';
-createdAt: now;
-updatedAt: now 
-};
-requests.push (record);
-await saveRequests (requests);
-//TODO: Integrate notifications (email/webhook) for admin and talent return res.status (200) .json ({
-  id, status: 'ok' 
-}) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

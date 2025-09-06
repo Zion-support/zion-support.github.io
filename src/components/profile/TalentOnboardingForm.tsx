@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -11,7 +10,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -21,7 +20,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { AspectRatio } from '@/components/ui/aspect-ratio';
 import { Separator } from '@/components/ui/separator';
@@ -40,7 +39,7 @@ import {
   ArrowLeft,
   Trash2,
   Plus,
-  CheckCircle2,
+  CheckCircle2,;
 } from 'lucide-react';
 import { useAuth } from '@/hooks/useAuth';
 import { useTalentProfileEnhancer } from '@/hooks/useTalentProfileEnhancer';
@@ -197,9 +196,7 @@ export function TalentOnboardingForm() {
   // [Previous implementation continues...]
 
   return null;
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define the form schema with validation const talentSchema = z.object ({;
+
   //Step 1: Basic Info basicInfo: z.object ({;
   ) .optional () .default ([]);
 cv: z.any () .optional () ;
@@ -210,7 +207,7 @@ const form = useForm<TalentFormValues> ({;
   resolver: zodResolver (talentSchema), defaultValues: {;
   basicInfo: {;
   cv: undefined ;
-}
+
 };
 //Handle profile picture upload const handleProfilePictureUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {;
   const file = e.target.files?.[0];
@@ -223,10 +220,9 @@ reader.readAsDataURL (file);
 }//Get the public window.URL const {;
   data: {;
   publicUrl ;
-}
+
 }= supabase.storage.from ('resumes') .getPublicUrl (fileName);
 return publicUrl;
 };
 //Rest of the file remains unchanged... // [Previous implementation continues...] return null;
 }'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

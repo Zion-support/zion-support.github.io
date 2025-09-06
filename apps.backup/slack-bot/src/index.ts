@@ -21,7 +21,6 @@ function helpText(): string {
     '`/zion track-project [name]` – milestone status',
     '`/zion help` – command list',
   ].join('\n');
-}
 
 app.command('/zion', async ({ command, ack, respond }) => {
   await ack();

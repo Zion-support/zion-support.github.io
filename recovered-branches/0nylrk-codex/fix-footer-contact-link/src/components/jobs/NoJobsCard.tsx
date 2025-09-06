@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 interface NoJobsCardProps {
   onUpdateProfile?: () => void;
-}
 
 export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
   return (
@@ -22,14 +20,3 @@ export function NoJobsCard({ onUpdateProfile }: NoJobsCardProps) {
       </CardContent>
     </Card>
   );
-}
-=======
- interface NoJobsCardProps {
-  onUpdateProfile?: () => void 
-}export function NoJobsCard ({
-  onUpdateProfile 
-}: NoJobsCardProps) {
-  return (<Card className="bg-muted/30 border border-dashed" > <CardContent className="p-6 text-center" > <p className="text-muted-foreground" > onUpdateProfile && (<Button variant="outline" className="mt-4" asChild> <a href="/profile" >Update Profile</Link> </Button>) 
-}</CardContent> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import type { CSSProperties } from 'react';
 import { Sheet, SheetContent } from '@/components/ui/sheet';
@@ -10,21 +9,13 @@ export interface SidebarProps extends React.ComponentProps<'div'> {
   side?: 'left' | 'right';
   variant?: 'sidebar' | 'floating' | 'inset';
   collapsible?: 'offcanvas' | 'icon' | 'none';
-}
 
 export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
   (props, ref) => {
     const { isMobile, state, openMobile, setOpenMobile } = useSidebar();
 
     if (props.collapsible === 'none') {
-      return (
-        <div
-          className={cn(
-            'flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground',
-            props.className
-          )}
-          ref={ref}
-          {...props}
+      
         >
           {props.children}
         </div>
@@ -51,14 +42,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement, SidebarProps>(
       );
     }
 
-    return (
-      <div
-        ref={ref}
-        className='group peer hidden md:block text-sidebar-foreground'
-        data-state={state}
-        data-collapsible={state === 'collapsed' ? props.collapsible : ''}
-        data-variant={props.variant}
-        data-side={props.side}
+    
       >
         {/* This is what handles the sidebar gap on desktop */}
         <div
@@ -104,24 +88,7 @@ export const SidebarRail = React.forwardRef<
 >((props, ref) => {
   const { toggleSidebar } = useSidebar();
 
-  return (
-    <button
-      ref={ref}
-      data-sidebar='rail'
-      aria-label='Toggle Sidebar'
-      tabIndex={-1}
-      onClick={toggleSidebar}
-      title='Toggle Sidebar'
-      className={cn(
-        'absolute inset-y-0 z-20 hidden w-4 -translate-x-1/2 transition-all ease-linear after:absolute after:inset-y-0 after:left-1/2 after:w-[2px] hover:after:bg-sidebar-border group-data-[side=left]:-right-4 group-data-[side=right]:left-0 sm:flex',
-        '[[data-side=left]_&]:cursor-w-resize [[data-side=right]_&]:cursor-e-resize',
-        '[[data-side=left][data-state=collapsed]_&]:cursor-e-resize [[data-side=right][data-state=collapsed]_&]:cursor-w-resize',
-        'group-data-[collapsible=offcanvas]:translate-x-0 group-data-[collapsible=offcanvas]:after:left-full group-data-[collapsible=offcanvas]:hover:bg-sidebar',
-        '[[data-side=left][data-collapsible=offcanvas]_&]:-right-2',
-        '[[data-side=right][data-collapsible=offcanvas]_&]:-left-2',
-        props.className
-      )}
-      {...props}
+  
     />
   );
 });
@@ -131,8 +98,7 @@ export const SidebarInset = React.forwardRef<
   HTMLDivElement,
   React.ComponentProps<'main'>
 >((props, ref) => {
-  return (
-    <main
+  
       ref={ref as SafeRef<HTMLDivElement>}
       className={cn(
         'relative flex min-h-svh flex-1 flex-col bg-background',
@@ -144,43 +110,3 @@ export const SidebarInset = React.forwardRef<
   );
 });
 SidebarInset.displayName = 'SidebarInset';
-=======
-) 
-}ref= {
-  ref 
-}{
-  ...props 
-}> {
-  props.children 
-}</div>) 
-}if (isMobile) {
-  return (<Sheet open= {
-  openMobile 
-}onOpenChange= {
-  setOpenMobile 
-}{
-  ...props 
-}> <SheetContent 
-}side= {
-  props.side 
-}> </SheetContent> </Sheet>) 
-}return (<div > {
-  /* This is what handles the sidebar gap on desktop */ 
-}<div) 
-}{
-  ...props 
-}> <div data-sidebar="sidebar" className="flex h-full w-full flex-col bg-sidebar group-data-[variant=floating]:rounded-lg group-data-[variant=floating]:border group-data-[variant=floating]:shadow" > {
-  props.children 
-}</div> </div> </div>) 
-}) Sidebar.displayName = "Sidebar" export const SidebarRail = React.forwardRef< HTMLButtonElement;
-) 
-}{
-  ...props 
-}/>) 
-}) SidebarRail.displayName = "SidebarRail" export const SidebarInset = React.forwardRef< HTMLDivElement;
-) 
-}{
-  ...props 
-}/>) 
-}) SidebarInset.displayName = "SidebarInset" 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

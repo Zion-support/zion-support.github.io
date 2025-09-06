@@ -7,8 +7,6 @@ if (subdomainParam) {
 }= await supabase .from ('whitelabel tenants') .select ('id, brand name, subdomain, custom domain, primary color, logo url, theme preset') .eq ('subdomain', subdomainParam) .eq ('is active', true) .single ();
 .from ('whitelabel tenants') .select ('id, brand name, subdomain, custom domain, primary color, logo url, theme preset') .eq ('custom domain', hostname) .eq ('is active', true) .single ();
 // If no match on custom domain, try subdomain 
-}
-<<<<<<< HEAD
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -23,7 +21,6 @@ const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY');
 
 if (!supabaseUrl || !supabaseServiceKey) {
   throw new Error('Required environment variables are not set');
-}
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
@@ -138,6 +135,4 @@ serve(async req => {
       }
     );
   }
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
@@ -8,7 +7,7 @@ import { Milestone } from '../../../utils/types/milestones';
 import {
   createMilestone,
   fetchMilestones,
-  updateMilestoneStatus,
+  updateMilestoneStatus,;
 } from '../../../utils/api/milestones-client';
 
 function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
@@ -17,7 +16,6 @@ function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
   const r = url.searchParams.get('role');
   if (r === 'talent' || r === 'admin') return r;
   return 'client';
-}
 
 export default function ProjectMilestonesPage() {
   const router = useRouter();
@@ -158,33 +156,3 @@ export default function ProjectMilestonesPage() {
       </div>
     </div>
   );
-}
-=======
- 
-}catch {
-  
-}
-}, [role]);
-return (<div> <Head> <title>Project Milestones</title> <meta name="description" content="Track project deliverables and milestone payments" /> </Head> </div> <MilestoneForm onSubmit= {
-  handleCreate 
-}/> </div>) 
-}{
-  milestones.length === 0 && (<div className="text-gray-600" >No milestones yet. {
-  role !== 'talent' ? 'Create the first one.' : '' 
-}</div>) 
-}{
-  milestones.map ( (m) => (<MilestoneCard key= {
-  m.id 
-}milestone= {
-  m 
-}projectId= {
-  String (projectId) 
-}role= {
-  role 
-}onAction= {
-  handleAction 
-}/>) ) 
-}</div>) 
-}</div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

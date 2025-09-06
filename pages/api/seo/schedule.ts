@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -31,14 +30,7 @@ export default async function handler(
     const outDir = path.join(process.cwd(), 'data', 'page-metadata', 'seo');
     fs.mkdirSync(outDir, { recursive: true });
 
-    for (const prompt of picks) {
-      const regionMatch = prompt.match(/in\s+([A-Za-z\s]+)/i);
-      const region = regionMatch ? regionMatch[1].trim() : undefined;
-      const serviceMatch = prompt.match(/^(.*?)\s+in\s+/i);
-      const service = serviceMatch ? serviceMatch[1].trim() : undefined;
-
-      const genReq = await fetch(
-        `${process.env.SELF_HOST || 'http://localhost:3000'}/api/seo/generate`,
+    /api/seo/generate`,
         {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -59,9 +51,3 @@ export default async function handler(
     console.error(e);
     return res.status(500).json({ error: 'Failed to schedule landing pages' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Define the shape of a message
 export interface Message {
   id: string;
@@ -11,7 +10,6 @@ export interface Message {
   sender_avatar?: string;
   attachment_url?: string;
   attachment_name?: string;
-}
 
 // Define the shape of a conversation
 export interface Conversation {
@@ -34,14 +32,12 @@ export interface Conversation {
   context_type?: 'job' | 'talent' | 'general';
   context_id?: string;
   context_data?: ConversationContextData;
-}
 
 // Context data for creating a conversation
 export interface ConversationContextData {
   title?: string;
   description?: string;
   image_url?: string;
-}
 
 // Define the shape of the messaging context
 export interface MessagingContextType {
@@ -67,7 +63,3 @@ export interface MessagingContextType {
   setActiveConversation: (value: Conversation | null) => void;
   fetchConversations: () => Promise<void>;
   loadMessages: (conversationId: string) => Promise<void>;
-}
-=======
- // Define the shape of a message /** * Set the currently active conversation. Passing `null` will clear the * selection. */ 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

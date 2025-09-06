@@ -5,10 +5,10 @@
   Briefcase,
   Phone,
   Mail,
-import React, { useState, useEffect } from 'react,
+import React, { useState, useEffect } from 'react,';
 import Link from 'next/link';
 import { useRouter } from next/navigation';
-import { motion, AnimatePresence } from 'framer-motion,
+import { motion, AnimatePresence } from 'framer-motion,;
 import {;
   Menu;
   X;
@@ -30,8 +30,8 @@ import {;
   Calendar,
   FileText,
   Award,
-  Globe,
-  Search,
+  Globe,";
+  Search,'
 const "Header: React.FC = () => {,
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {,
@@ -63,7 +63,6 @@ const "Header: React.FC = () => {,
   ),
 export default Header
 
-<<<<<<< HEAD
 const Header: React.FC = () => {
   const navigation = [
     { name: 'About', href: '/about' },
@@ -131,6 +130,3 @@ const Header: React.FC = () => {
 };
 
 export default Header;
-=======
-}}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

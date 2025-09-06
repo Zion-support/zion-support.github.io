@@ -19,7 +19,7 @@ interface AuthContextType {;
   loginWithFacebook: () => Promise<any>;
   loginWithTwitter: () => Promise<any>;
   loginWithWeb3: () => Promise<any>;
-}
+
 ;
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 ;

@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   GeneratedMilestone,
   MilestoneInput,
-  useMilestoneGenerator,
+  useMilestoneGenerator,;
 } from '@/hooks/useMilestoneGenerator';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Loader2, Sparkles, Check } from 'lucide-react';
@@ -18,7 +17,6 @@ interface MilestoneSuggestionsProps {
   endDate?: Date;
   projectType: string;
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void;
-}
 
 export function MilestoneSuggestions({
   projectName,
@@ -123,18 +121,7 @@ export function MilestoneSuggestions({
       )}
     </div>
   );
-=======
- const handleGenerateMilestones = async () => {
-  const input: MilestoneInput = {
-  scope: `$ {
-  projectName 
-}: $ {
-  scopeSummary 
-}`;
-startDate: startDate.toISOString ();
-endDate: endDate ? endDate.toISOString () : null;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 <Button variant="outline" onClick= {
   handleGenerateMilestones 
@@ -144,4 +131,3 @@ endDate: endDate ? endDate.toISOString () : null;
 }AI-Suggested Milestones </CardTitle> </CardHeader> <CardContent> </div> </div>) ) 
 }<div className="flex items-center justify-center mt-4 text-sm text-muted-foreground" > <Check className="h-4 w-4 mr-1 text-green-500" /> These milestones will be added to your contract </div> </div> </CardContent> </Card>) 
 }</div>) 
-}

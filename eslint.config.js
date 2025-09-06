@@ -51,7 +51,6 @@ export default [
         // React
         React: "readonly",
         // Jest/Testing globals
-<<<<<<< HEAD
         describe: 'readonly',
         it: 'readonly',
         test: 'readonly',
@@ -68,31 +67,12 @@ export default [
       react: react,
       'react-hooks': reactHooks,
       '@next/next': next,
-=======
-        describe: "readonly",
-        it: "readonly",
-        test: "readonly",
-        expect: "readonly",
-        beforeEach: "readonly",
-        afterEach: "readonly",
-        beforeAll: "readonly",
-        afterAll: "readonly",
-        jest: "readonly",
-      },
-    },
-    plugins: {
-      "@typescript-eslint": typescript,
-      react: react,
-      "react-hooks": reactHooks,
-      "@next/next": next,
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     },
     rules: {
       ...typescript.configs.recommended.rules,
       ...react.configs.recommended.rules,
       ...reactHooks.configs.recommended.rules,
       ...next.configs.recommended.rules,
-<<<<<<< HEAD
       'no-unused-vars': 'warn',
       'no-console': 'warn',
       'prefer-const': 'error',
@@ -105,20 +85,6 @@ export default [
     settings: {
       react: {
         version: 'detect',
-=======
-      "no-unused-vars": "warn",
-      "no-console": "warn",
-      "prefer-const": "error",
-      "no-var": "error",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "@typescript-eslint/no-unused-vars": "warn",
-      "@typescript-eslint/no-explicit-any": "warn",
-    },
-    settings: {
-      react: {
-        version: "detect",
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
       },
     },
   },
@@ -128,7 +94,6 @@ export default [
       sourceType: "commonjs",
       globals: {
         // Node.js globals
-<<<<<<< HEAD
         process: 'readonly',
         console: 'readonly',
         require: 'readonly',
@@ -146,30 +111,6 @@ export default [
         clearImmediate: 'readonly',
       },
     },
-=======
-        process: "readonly",
-        console: "readonly",
-        require: "readonly",
-        module: "readonly",
-        exports: "readonly",
-        __dirname: "readonly",
-        __filename: "readonly",
-        global: "readonly",
-        Buffer: "readonly",
-        setTimeout: "readonly",
-        clearTimeout: "readonly",
-        setInterval: "readonly",
-        clearInterval: "readonly",
-        setImmediate: "readonly",
-        clearImmediate: "readonly",
-      },
-    },
-    rules: {
-      "@typescript-eslint/no-require-imports": "off",
-      "no-undef": "off",
-      "no-console": "off",
-    },
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   },
   {
     ignores: [
@@ -233,14 +174,9 @@ export default [
       ".eslintrc.disabled.js.prettierrc.js",
 
       // Page backups
-<<<<<<< HEAD
       'pages.__backup/**',
       'pages-disabled/**',
       'pages.disabled_auto/**',
-=======
-      "pages.__backup/**pages-disabled/**",
-      "pages.disabled_auto/**",
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     ],
   },
 ];

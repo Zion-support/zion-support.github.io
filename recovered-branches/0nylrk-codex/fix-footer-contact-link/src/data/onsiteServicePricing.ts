@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 export interface CountryPricing {
   country: string;
   pricePerIncident: number;
-}
 
 export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Afghanistan', pricePerIncident: 131.04 },
@@ -237,7 +235,3 @@ export const onsiteServicePricing: CountryPricing[] = [
   { country: 'Zambia', pricePerIncident: 62.01 },
   { country: 'Zimbabwe', pricePerIncident: 60.5 },
 ];
-=======
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

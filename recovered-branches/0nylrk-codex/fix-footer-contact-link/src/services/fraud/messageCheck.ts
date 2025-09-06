@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Message checking functionality
 import { FraudSeverity } from '@/types/fraud';
 import { analyzeContent } from './analyzeContent';
@@ -27,8 +26,3 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
     severity,
   };
 };
-=======
- // Message checking functionality // Determine severity based on number and type of issues let severity: FraudSeverity = 'safe';
-if (analysis.reasons.length > 0) {
-  severity = analysis.reasons.length > 2 || analysis.reasons.some (r => r.includes ('payment') || r.includes ('external') ) ? 'dangerous' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

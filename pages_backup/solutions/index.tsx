@@ -11,7 +11,7 @@ import {
   Users,
   Building,
   Target,
-  Zap
+  Zap;
 } from 'lucide-react';
 import MainLayout from '../../components/layout/MainLayout';
 
@@ -58,11 +58,7 @@ const stats = [
 ];
 
 export default function SolutionsPage() {
-  return (
-    <MainLayout
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for enterprises, startups, and industries. Custom development and specialized services."
-      keywords="enterprise solutions, startup solutions, custom development, industry solutions, technology consulting"
+  
     >
       <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
         {/* Hero Section */}
@@ -226,4 +222,3 @@ export default function SolutionsPage() {
       </div>
     </MainLayout>
   );
-}

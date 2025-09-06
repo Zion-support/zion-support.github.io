@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { jsPDF } from 'jspdf';
 import { ResumeBasicInfo } from '@/types/resume';
 import { PdfThemeColors } from '../themeConfig';
@@ -40,12 +39,3 @@ export function addBasicInfoSection(
   }
 
   return yPos;
-}
-=======
- // Add horizontal line divider doc.setDrawColor (colors.accent);
-doc.setLineWidth (0.5);
-doc.line (20, yPos, 190, yPos);
-yPos += 10;
-// Add summary if available return yPos 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,7 +16,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import {
   Card,
@@ -25,7 +24,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   X,
@@ -35,7 +34,7 @@ import {
   Check,
   Briefcase,
   MapPin,
-  UserRound,
+  UserRound,;
 } from 'lucide-react';
 import { toast } from '@/components/ui/use-toast';
 import { supabase } from '@/integrations/supabase/client';
@@ -74,30 +73,18 @@ interface CategorizedSkills {
   platforms: string[];
   softSkills: string[];
   other: string[];
-=======
- import {;
-  Form;
-FormControl;
-FormDescription;
-FormField;
-FormItem;
-FormLabel;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define form schema message: "Hourly rate must be a number" ;
 });";
 availability: z.enum (["available", "limited", "unavailable"]);
 enhancedProfile: z.boolean () .default (true) ;
 });
 type CategoryType = 'programming' | 'devops' | 'platforms' | 'softSkills' | 'other';
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Handle removing skill tags const handleRemoveSkill = (skill: string) => {;
   setSkillTags (skillTags.filter ( (s) => s !== skill) ) ;
 };
 //Handle key press in skills input (add on enter) const handleSkillKeyPress = (e: React.KeyboardEvent) => {;
   ;
-}
-<<<<<<< HEAD
 
 export function TalentRegistrationForm() {
   // Remove the useToast() hook since we're importing the toast function directly
@@ -912,29 +899,17 @@ export function TalentRegistrationForm() {
       </Card>
     </div>
   );
-=======
-};
-//Handle avatar upload const handleAvatarUpload = (e: React.ChangeEvent<HTMLInputElement>) => {;
-  const file = e.target.files?.[0];
-if (file) {;
-  const reader = new FileReader ();
-reader.onloadend = () => {;
-  setUploadedAvatar (reader.result as string) ;
-};
-reader.readAsDataURL (file) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Generate enhanced profile with AI return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Call the Supabase Edge Function const {;
   data, error ';
 }= await supabase.functions.invoke ('talent-profile-enhancer', {;
   body: {;
   talentData: {;
   name: formData.name, title: formData.title, bio: formData.bio,  skills: skillTags, location: formData.location ;
-}
-}
+
+
 });
 }else {';
   //Fallback for mock/development mode logWarn ('Mock AI response - using fallback content');
@@ -946,11 +921,11 @@ devops: ["Docker", "CI/CD", "AWS" ];";
 platforms: ["Node.js", "Next.js", "Vercel" ];";
 softSkills: ["Communication", "Problem Solving",  "Team Leadership" ];";
 other: ["Project Management", "Technical Writing" ] ;
-}
+
 });
 toast ({;
   ;
-}
+
 }catch (error: any) {';
   logErrorToProduction ('Error generating enhanced profile:', {;
   data: error ;
@@ -959,7 +934,7 @@ toast ({;
   ;
 }finally {;
   setIsGenerating (false) ;
-}
+
 };
 //Apply generated content to form const applyGeneratedContent = () => {;
   if (generatedContent) {;
@@ -969,9 +944,9 @@ if (Array.isArray (categorySkills) ) {;
   categorySkills.forEach (skill => {';
   if (typeof skill === 'string' && skill && !skillTags.includes (skill) ) {;
   ;
-}
+
 });
-}
+
 };
 //Get category color //Send notification email const sendEnhancementNotification = async (userId: string, email: string) => {;
   try {';
@@ -980,14 +955,13 @@ if (Array.isArray (categorySkills) ) {;
   <p>Your profile has been enhanced with AI. You're now more discoverable to recruiters and companies!</p> <p>We've added a professional summary and categorized your skills to help you stand out.</p> <p>You can review and edit these enhancements in your profile dashboard.</p> <div style="margin-top: 30px, padding-top: 20px, border-top: 1px solid #eee, "> <p style="color: #666,  font-size: 12px, ">© $ {;
   new Date () .getFullYear () ;
 }Zion Marketplace</p> ;
-}
-}
+
+
 };
 //Handle form submission const onSubmit = async (values: TalentFormValues) => {;
   if (skillTags.length === 0) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }setIsSubmitting (true);
 try {;
   //For actual implementation with Supabase if (!user?.id) {;
@@ -998,21 +972,21 @@ try {;
   body: {;
   talentData: {;
   name: values.name, title: values.title, bio: values.bio,  skills: skillTags, location: values.location ;
-}
-}
+
+
 });';
 //Extract skills from each category and ensure they're strings Object.values (categorizedSkills) .forEach (categorySkills => {;
   if (Array.isArray (categorySkills) ) {;
   categorySkills.forEach (skill => {';
   if (typeof skill === 'string'&& skill) {;
   ;
-}
+
 });
 //Create a unique set of skills finalSkills = [...new Set ([...skillTags, ...aiSkills]) ] ;
 }//Continue with submission even if enhancement fails ;
 }//Send notification email if we have user email if (userEmail && values.enhancedProfile && user?.id) {;
   sendEnhancementNotification (user.id, userEmail) ;
-}
+
 }, 1500);
 //Here would be the actual code to save the profile to Supabase /* const {;
   error ';
@@ -1025,8 +999,7 @@ availability status: values.availability;
 });
 if (error) throw error;
 */ setIsSubmitting (false);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
-}
+
 };";
 return (<div className="max-w-4xl mx-auto p-4 md:p-6"> <Card className="bg-zion-blue-dark border-zion-blue-light"> <CardHeader> <CardTitle className="text-2xl text-white">Create Your Talent Profile</CardTitle> <CardDescription className="text-zion-slate"> Showcase your skills and experience to potential clients and employers. </CardDescription> </CardHeader> <Form {;
   ...form ;

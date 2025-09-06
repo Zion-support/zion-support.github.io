@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { UseFormReturn } from 'react-hook-form';
 import { AppMetadataValues } from './MetadataManager';
@@ -12,14 +11,13 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Badge } from '@/components/ui/badge';
 import { X } from 'lucide-react';
 
 interface MetadataFormProps {
   form: UseFormReturn<AppMetadataValues>;
-}
 
 export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
   const { control, register, watch, setValue } = form;
@@ -166,26 +164,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
       </CardContent>
     </Card>
   );
-=======
- interface MetadataFormProps {
-  form: UseFormReturn<AppMetadataValues> 
-}export const MetadataForm: React.FC<MetadataFormProps> = ({
-  form 
-}) => {
-  e.preventDefault ();
-const value = e.currentTarget.value.trim ();
-if (value && !keywords.includes (value) ) {
-  
-}
-};
-}/> <FormField <FormItem> <FormLabel>Short Description</FormLabel> <FormControl> <Input </FormDescription> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Long Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormDescription> {
-  longDescription.length 
-}/ {
-  maxDescriptionLength 
-}characters </FormDescription> </FormItem>) 
-}/> <div> <FormLabel htmlFor="keywords" >Keywords</FormLabel> <Input className="mb-2" /> <div className="flex flex-wrap gap-2 mt-2"> className="ml-1 hover:text-red-300" > <X className="h-3 w-3" /> </button> </Badge>) ) 
-}</div> <FormDescription className="mt-2" > Add keywords to improve discoverability (max 100 characters total) </FormDescription> </div> <FormField <FormItem> <FormLabel>App Version</FormLabel> <FormControl> <Input /> </FormControl> </FormItem>) 
-}/> </div> </Form> </CardContent> </Card>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

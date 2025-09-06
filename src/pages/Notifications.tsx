@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useNotifications } from '@/context/notifications/NotificationContext';
 import {
   NotificationType,
-  NotificationContextType,
+  NotificationContextType,;
 } from '@/context/notifications';
 import { formatDistanceToNow } from 'date-fns';
 import {
@@ -17,7 +16,7 @@ import {
   Briefcase,
   UserCheck,
   Settings,
-  Package,
+  Package,;
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
@@ -106,14 +105,7 @@ const NotificationCard: React.FC<{
     }
   };
 
-  return (
-    <div
-      className={cn(
-        'border rounded-lg shadow-sm p-4 mb-3 group transition-colors',
-        notification.read
-          ? 'border-zion-blue-light bg-zion-blue-dark/10'
-          : 'border-zion-cyan bg-zion-blue-dark/30'
-      )}
+  
     >
       <div className='flex items-start gap-4'>
         <div className='mt-1'>
@@ -276,15 +268,12 @@ export default function NotificationsPage() {
       </main>
     </>
   );
-=======
- ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const getNotificationTypeBadge = (type: NotificationType) => {;
   switch (type) {;
   case 'message': ;
-}
+
 };
 const NotificationCard: React.FC< {;
   notification: {;
@@ -304,9 +293,7 @@ onDismiss: (id: string) => Promise<void> ;
 }) => {;
   const router = useRouter ();
 if (!notification.read) {;
-  return (<div className= {';
-  cn ('border rounded-lg shadow-sm p-4 mb-3 group transition-colors', notification.read ? 'border-zion-blue-light bg-zion-blue-dark/10' addSuffix: true ;
-}) ;
+  
 }</span> {;
   !notification.read && (<Badge variant="outline" className="bg-zion-cyan bg-opacity-20 text-zion-cyan text-xs" > New </Badge>) ;
 }</div> </div> onClick={;

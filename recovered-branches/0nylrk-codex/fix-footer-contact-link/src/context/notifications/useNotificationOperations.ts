@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Notification, FilterType, NotificationContextType } from './types';
@@ -117,31 +116,3 @@ export const useNotificationOperations = (
     fetchNotifications,
   };
 };
-=======
- setLoading (true);
-try {
-  const {
-  data, error 
-}= await supabase .from ('notifications') .select ('*') .eq ('user id', userId) try {
-  const {
-  error 
-}= await supabase .from ('notifications') .update ({
-  read: true 
-}) .eq ('id', id) .eq ('user id', userId);
-try {
-  const {
-  error 
-}= await supabase .from ('notifications') .update ({
-  read: true 
-}) .eq ('user id', userId) .eq ('read', false);
-try {
-  const {
-  error 
-}= await supabase .from ('notifications') .delete () .eq ('id', id) .eq ('user id', userId);
-const filteredNotifications = notifications.filter (notification => {
-  switch (filter) {
-  case 'unread': return !notification.read;
-case 'messages': return notification.type === 'message';
-case 'onboarding': return notification.type === 'onboarding';
-case 'system': 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

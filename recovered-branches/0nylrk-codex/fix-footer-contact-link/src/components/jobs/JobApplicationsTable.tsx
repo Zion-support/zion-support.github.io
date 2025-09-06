@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { JobApplication, ApplicationStatus } from '@/types/jobs';
 import { useJobApplications } from '@/hooks/useJobApplications';
@@ -7,12 +6,11 @@ import {
   EmptyState,
   ErrorState,
   LoadingState,
-  ScoreDialog,
+  ScoreDialog,;
 } from './applications';
 
 interface JobApplicationsTableProps {
   jobId: string;
-}
 
 export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
   const {
@@ -89,46 +87,3 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
       />
     </>
   );
-}
-=======
- import {
-  ApplicationsTable;
-EmptyState;
-ErrorState;
-LoadingState;
-ScoreDialog interface JobApplicationsTableProps {
-  jobId: string 
-}export function JobApplicationsTable ({
-  jobId 
-}: JobApplicationsTableProps) {
-  const {
-  applications;
-isLoading;
-error;
-updateApplicationStatus;
-markApplicationAsViewed;
-refetch 
-}= useJobApplications (jobId);
-const [selectedApplication, setSelectedApplication] = useState<JobApplication | null> (null);
-const [showScoreDialog, setShowScoreDialog] = useState (false);
-return (<> <ApplicationsTable applications= {
-  applications 
-}processingId= {
-  processingId 
-}onViewApplication= {
-  handleViewApplication 
-}onStatusChange= {
-  handleStatusChange 
-}onViewScore= {
-  handleViewScore 
-}/> <ScoreDialog open= {
-  showScoreDialog 
-}onOpenChange= {
-  setShowScoreDialog 
-}application= {
-  selectedApplication 
-}onScoreUpdated= {
-  handleScoreUpdated 
-}/> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

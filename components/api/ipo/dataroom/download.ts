@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -26,9 +25,4 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   appendAuditLog({ type: 'file_download', section, name: file });
   fs.createReadStream(fullPath).pipe(res);
-}
-=======
- fs.createReadStream (fullPath) .pipe (res);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

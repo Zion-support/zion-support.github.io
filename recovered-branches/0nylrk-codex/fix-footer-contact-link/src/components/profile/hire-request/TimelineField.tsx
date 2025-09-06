@@ -1,24 +1,22 @@
-<<<<<<< HEAD
 import {
   FormField,
   FormItem,
   FormLabel,
   FormControl,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { UseFormReturn } from 'react-hook-form';
 import { FormValues } from './useHireRequestForm';
 
 interface TimelineFieldProps {
   form: UseFormReturn<FormValues>;
-}
 
 export function TimelineField({ form }: TimelineFieldProps) {
   const timelineOptions = [
@@ -31,10 +29,7 @@ export function TimelineField({ form }: TimelineFieldProps) {
     { value: 'Ongoing', label: 'Ongoing' },
   ];
 
-  return (
-    <FormField
-      control={form.control}
-      name='timeline'
+  
       render={({ field }) => (
         <FormItem>
           <FormLabel className='text-white'>Project Timeline</FormLabel>
@@ -61,15 +56,7 @@ export function TimelineField({ form }: TimelineFieldProps) {
       )}
     />
   );
-}
-=======
- interface TimelineFieldProps {
-  form: UseFormReturn<FormValues> 
-}export function TimelineField ({
-  form 
-}: TimelineFieldProps) {
-  const timelineOptions = [ ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <FormControl> <Select onValueChange= {
+
   field.onChange 
 }value= {
   field.value 
@@ -85,5 +72,3 @@ export function TimelineField({ form }: TimelineFieldProps) {
 }</SelectItem>) ) 
 }</SelectContent> </Select> </FormControl> <FormMessage /> </FormItem>) 
 }/>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

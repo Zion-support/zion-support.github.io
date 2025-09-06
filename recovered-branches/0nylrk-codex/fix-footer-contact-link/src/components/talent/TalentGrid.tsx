@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { TalentCard } from '@/components/talent/TalentCard';
 import { TalentProfile } from '@/types/talent';
 
@@ -12,7 +11,6 @@ export interface TalentGridProps {
   viewProfile?: (id: string) => void;
   clearFilters?: () => void;
   handleRequestHire?: (talent: TalentProfile) => void;
-}
 
 export function TalentGrid({
   talents,
@@ -84,31 +82,14 @@ export function TalentGrid({
       ))}
     </div>
   );
-=======
- export interface TalentGridProps {
-  talents: TalentProfile[];
-isLoading: boolean;
-onTalentClick: (id: string) => void;
-savedTalentIds: string[];
-onToggleSave: (id: string, isSaved: boolean) => void;
-isAuthenticated: boolean;
-viewProfile?: (id: string) => void;
-clearFilters?: () => void;
-handleRequestHire?: (talent: TalentProfile) => void 
-}talents, isLoading, onTalentClick, savedTalentIds, onToggleSave, isAuthenticated, viewProfile, clearFilters, handleRequestHire 
-}: TalentGridProps) {
-  const handleRequestHireInternal = (talent: TalentProfile) => {
-  if (handleRequestHire) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleViewProfile = (id: string) => {
   if (viewProfile) {
   viewProfile (id) 
 }else {
   onTalentClick (id) 
-}
+
 };
 if (isLoading) {
   
@@ -133,4 +114,3 @@ if (isLoading) {
   isAuthenticated 
 }/>) ) 
 }</div>) 
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 export default async function handler(
@@ -20,16 +19,3 @@ export default async function handler(
       .status(500)
       .json({ error: e.message || 'Failed to queue emails' });
   }
-}
-=======
- 
-}// TODO: Integrate with actual provider return res.status (200) .json ({
-  status: 'queued', provider 
-}) 
-}catch (e: any) {
-  return res.status (500) .json ({
-  error: e.message || 'Failed to queue emails' 
-}) 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

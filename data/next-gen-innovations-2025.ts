@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface NextGenInnovation2025 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface NextGenInnovation2025 {
     email: string;
     address: string;
   };
-}
 
 export const nextGenInnovations2025: NextGenInnovation2025[] = [
   {
@@ -41,7 +39,3 @@ export const nextGenInnovations2025: NextGenInnovation2025[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

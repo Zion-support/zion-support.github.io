@@ -8,7 +8,6 @@ const completion = await client.chat.completions.create ({
   model: 'gpt-4o-mini', messages: [ {
   role: 'system', content: system 
 };
-<<<<<<< HEAD
 
 export type AnalyzeResponse = {
   analysis: string;
@@ -63,14 +62,3 @@ export default async function handler(
     console.error('Analyze API error', error?.message || error);
     return res.status(500).json({ error: 'Failed to generate analysis' });
   }
-}
-=======
-{
-  role: 'user', content: user 
-}];
-temperature: 0.3;
-max tokens: 300 
-});
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

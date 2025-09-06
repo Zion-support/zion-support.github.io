@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NotificationType } from './types';
 import { createNotification } from './createNotification';
 
@@ -53,8 +52,3 @@ export async function createTestNotification(userId: string) {
     actionUrl: actions[randomType].url,
     actionText: actions[randomType].text,
   });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

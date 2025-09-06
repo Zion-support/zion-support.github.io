@@ -101,14 +101,7 @@ class ErrorPreventionAutomation {
         'utils/next-link-shim.tsx'
       ];
       
-      for (const file of filesToCheck) {
-        if (fs.existsSync(file)) {
-          let content = fs.readFileSync(file, 'utf8');
-          let modified = false;
-          
-          // Fix common TypeScript issues
-          if (content.includes('any') && !content.includes('// eslint-disable')) {
-            this.log('warn', `Found 'any' types in ${file}`);
+      `);
           }
           
           // Fix missing type annotations
@@ -180,12 +173,7 @@ class ErrorPreventionAutomation {
       
       let allFilesValid = true;
       
-      for (const file of criticalFiles) {
-        if (fs.existsSync(file)) {
-          const content = fs.readFileSync(file, 'utf8');
-          
-          // Check for common syntax errors
-          if (content.includes('export const') && content.includes('{') && !content.includes('}')) {
+      ')) {
             this.log('error', `File ${file} has syntax errors - missing closing braces`);
             allFilesValid = false;
           }
@@ -281,7 +269,6 @@ class ErrorPreventionAutomation {
       logFile: this.logFile
     };
   }
-}
 
 // Handle command line arguments
 const automation = new ErrorPreventionAutomation();
@@ -316,6 +303,5 @@ if (require.main === module) {
     default:
       console.log('Usage: node error-prevention-automation.js [start|stop|status|health|lint|type|build]');
   }
-}
 
 module.exports = ErrorPreventionAutomation;

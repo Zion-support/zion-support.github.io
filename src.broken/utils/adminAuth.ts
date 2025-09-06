@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type AdminSession = {
   username: string;
   issuedAt: number;
@@ -13,7 +12,6 @@ function getEnv(name: string, fallback?: string): string {
   const v = process.env[name] || fallback;
   if (!v) throw new Error(`Missing required env var ${name}`);
   return v;
-}
 
 export function signSession(session: AdminSession): string {
   const secret = getEnv('ADMIN_SESSION_SECRET', 'CHANGE_ME_DEV_SECRET');
@@ -23,7 +21,6 @@ export function signSession(session: AdminSession): string {
     .update(payload)
     .digest('hex');
   return `${payload}.${hmac}`;
-}
 
 export function verifySessionToken(
   token: string | undefined
@@ -47,7 +44,6 @@ export function verifySessionToken(
   } catch {
     return null;
   }
-}
 
 export function getSessionFromReq(req: NextApiRequest): AdminSession | null {
   const cookieHeader = req.headers.cookie || '';
@@ -58,7 +54,6 @@ export function getSessionFromReq(req: NextApiRequest): AdminSession | null {
   if (!cookie) return null;
   const token = cookie.substring(COOKIE_NAME.length + 1);
   return verifySessionToken(token);
-}
 
 export function setSessionCookie(
   res: NextApiResponse,
@@ -69,19 +64,13 @@ export function setSessionCookie(
   const expires = new Date(Date.now() + maxAge * 1000).toUTCString();
   const cookie = `${COOKIE_NAME}=${token}; Path=/; HttpOnly; SameSite=Lax; Max-Age=${maxAge}; Expires=${expires}`;
   res.setHeader('Set-Cookie', cookie);
-}
 
 export function clearSessionCookie(res: NextApiResponse): void {
   const cookie = `${COOKIE_NAME}=deleted; Path=/; HttpOnly; SameSite=Lax; Max-Age=0; Expires=Thu, 01 Jan 1970 00:00:00 GMT`;
   res.setHeader('Set-Cookie', cookie);
-}
 
 export function isInternalAgentRequest(req: NextApiRequest): boolean {
   const key = req.headers['x-internal-key'];
   const expected = getEnv('AGENT_INTERNAL_KEY', 'DEV_INTERNAL_KEY');
   if (!key || Array.isArray(key)) return false;
   return crypto.timingSafeEqual(Buffer.from(key), Buffer.from(expected));
-}
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

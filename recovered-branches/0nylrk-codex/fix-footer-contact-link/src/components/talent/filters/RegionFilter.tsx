@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react';
 import { Checkbox } from '@/components/ui/checkbox';
 import { RegionFilterProps } from '@/types/filters';
@@ -55,10 +54,7 @@ export function RegionFilter({
       )}
     </div>
   );
-}
-=======
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 <button onClick= {
+
   toggleSection 
 }className="flex w-full items-center justify-between text-white font-medium" > <span>Region</span>) : (<ChevronDown className="h-4 w-4 text-zion-slate-light" />) 
 }</button> {
@@ -69,5 +65,3 @@ export function RegionFilter({
 }</label> </div>) ) 
 }</div>) 
 }</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

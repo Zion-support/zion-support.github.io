@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { useRouter } from 'next/router';
@@ -8,7 +7,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Input } from '@/components/ui/input';
 import {
@@ -17,7 +16,7 @@ import {
   TableCell,
   TableHead,
   TableHeader,
-  TableRow,
+  TableRow,;
 } from '@/components/ui/table';
 import { Badge } from '@/components/ui/badge';
 import {
@@ -27,7 +26,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
+  DialogTrigger,;
 } from '@/components/ui/dialog';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
@@ -38,9 +37,6 @@ import { logErrorToProduction } from '@/utils/productionLogger';
 import { EmptyState } from '@/components/ui/empty-state';
 
 interface PartnerProfile {
-=======
- interface PartnerProfile {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
 user id: string;
 name: string;
@@ -59,8 +55,6 @@ commission rate?: number ;
   if (!isAuthenticated) {';
   router.push ('/auth/login?returnTo=' + encodeURIComponent ('/admin/partners') );
 return ;
-}
-<<<<<<< HEAD
 
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
@@ -366,28 +360,19 @@ export default function PartnerManager() {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'pending':
-        return (
-          <Badge
-            variant='outline'
-            className='bg-yellow-900/30 text-yellow-500 border-yellow-600'
+        
           >
             Pending
           </Badge>
         );
       case 'approved':
-        return (
-          <Badge
-            variant='outline'
-            className='bg-green-900/30 text-green-500 border-green-600'
+        
           >
             Approved
           </Badge>
         );
       case 'rejected':
-        return (
-          <Badge
-            variant='outline'
-            className='bg-red-900/30 text-red-500 border-red-600'
+        
           >
             Rejected
           </Badge>
@@ -400,10 +385,7 @@ export default function PartnerManager() {
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null;
 
-    return (
-      <Badge
-        variant='outline'
-        className='bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1'
+    
       >
         <Flag className='h-3 w-3' />
         {flags}
@@ -757,66 +739,7 @@ export default function PartnerManager() {
       </Dialog>
     </div>
   );
-=======
-}, [isAuthenticated, router]);
-const {;
-  data, error ';
-}= await supabase .from ('partner profiles') .select ('*') if (error) throw error;
-//If no data is returned, use mock data if (!data || data.length === 0) {;
-  const mockData: PartnerProfile[] = [ {';
-  id: '1', user id: 'user1', name: 'AI Bytes', status: 'pending', created at: new Date (Date.now () - 2 * 24 * 60 * 60 * 1000) .toISOString (), niche: 'AI Tutorials', audience size: '10k-50k',  social media: {';
-  twitter: '@aibytes', youtube: 'AI Bytes' ;
-};';
-website: 'aibytes.com';';
-bio: 'We create AI tutorials and insights for developers.';';
-payout method: 'paypal';
-fraud flags: 0;
-commission rate: 25 ;
-};
-{';
-  id: '2', user id: 'user2', name: 'ML Academy', status: 'approved', created at: new Date (Date.now () - 15 * 24 * 60 * 60 * 1000) .toISOString (), niche: 'Machine Learning Education', audience size: 'over100k',  social media: {';
-  twitter: '@mlacademy', youtube: 'ML Academy' ;
-};';
-website: 'mlacademy.edu';';
-bio: 'Premiere online academy for machine learning enthusiasts.';';
-payout method: 'bank';
-fraud flags: 0;
-commission rate: 30 ;
-};
-{';
-  id: '3', user id: 'user3', name: 'Tech Insights', status: 'rejected', created at: new Date (Date.now () - 5 * 24 * 60 * 60 * 1000) .toISOString (), niche: 'Technology News',  audience size: '1k-10k', social media: {';
-  twitter: '@techinsights' ;
-};';
-website: 'techinsights.io';';
-bio: 'We share insights about the latest in tech.';';
-payout method: 'window.crypto';
-fraud flags: 2;
-commission rate: 20 ;
-};
-{';
-  id: '4', user id: 'user4', name: 'CodeMaster', status: 'approved', created at: new Date (Date.now () - 30 * 24 * 60 * 60 * 1000) .toISOString (), niche: 'Coding Tutorials', audience size: '50k-100k',  social media: {';
-  youtube: 'CodeMaster', linkedin: 'codemaster' ;
-};';
-website: 'codemaster.dev';';
-bio: 'Learn to code with our expert tutorials.';';
-payout method: 'paypal';
-fraud flags: 0;
-commission rate: 25 ;
-};
-{';
-  id: '5', user id: 'user5', name: 'AI Daily', status: 'pending', created at: new Date (Date.now () - 1 * 24 * 60 * 60 * 1000) .toISOString (), niche: 'AI News', audience size: '10k-50k',  social media: {';
-  twitter: '@aidaily', instagram: '@aidailynews' ;
-};';
-website: 'aidaily.news';';
-bio: 'Daily updates on the world of artificial intelligence.';';
-payout method: 'platform credit';
-fraud flags: 1;
-commission rate: 20 ;
-}];
-}finally {;
-  setIsLoading (false) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const filterPartners = (partners: PartnerProfile[], status: string, query: string) => {;
   let filtered = partners;
@@ -832,8 +755,6 @@ activeTab;
 searchQuery);
 //Close the dialog if open if (isDetailsOpen && selectedPartner?.id === partnerId) {;
   setIsDetailsOpen (false) ;
-}
-<<<<<<< HEAD
 
 function PartnerTable({
   partners,
@@ -949,15 +870,7 @@ function PartnerTable({
       </TableBody>
     </Table>
   );
-=======
-}catch (error) {;
-  logErrorToProduction (error instanceof Error ? error.message : String (error),  error instanceof Error ? error : undefined, {';
-  message: 'Error updating partner status' ;
-});
-toast ({;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 try {;
   //Update commission rate setPartners (partners.map (p => filterPartners (partners.map (p => p.id === selectedPartner.id ? {;
@@ -972,12 +885,12 @@ setIsSettingsOpen (false) ;
 });
 toast ({;
   ;
-}
+
 };
 const getStatusBadge = (status: string) => {;
   switch (status) {';
   case 'pending': ;
-}
+
 };
 return (<Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1"> <Flag className="h-3 w-3" /> {;
   flags ;

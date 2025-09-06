@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import * as React from 'react';
@@ -29,14 +28,3 @@ const Checkbox = React.forwardRef<
 Checkbox.displayName = CheckboxPrimitive.Root.displayName;
 
 export { Checkbox };
-=======
- "use client" const Checkbox = React.forwardRef< React.ElementRef<typeof CheckboxPrimitive.Root>;
-React.ComponentPropsWithoutRef<typeof CheckboxPrimitive.Root> > ( ({;
-  className, ...props ;
-}, ref) => (<CheckboxPrimitive.Root) ;
-}{;
-  ...props ";
-}> <CheckboxPrimitive.Indicator > <Check className="h-3 w-3" /> </CheckboxPrimitive.Indicator> </CheckboxPrimitive.Root>) ) Checkbox.displayName = CheckboxPrimitive.Root.displayName export {;
-  Checkbox ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

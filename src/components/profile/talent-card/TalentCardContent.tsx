@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MapPin } from 'lucide-react';
 import { TalentCardSkills } from './TalentCardSkills';
@@ -8,7 +7,6 @@ interface TalentCardContentProps {
   bio: string;
   timezone: string | undefined;
   skills: string[] | undefined;
-}
 
 export function TalentCardContent({
   summary,
@@ -42,27 +40,3 @@ export function TalentCardContent({
       <TalentCardSkills skills={skills} />
     </div>
   );
-}
-=======
- interface TalentCardContentProps {;
-  summary: string | undefined;
-bio: string;
-timezone: string | undefined;
-skills: string[] | undefined ;
-}export function TalentCardContent ({;
-  summary, bio,  timezone, skills ;
-}: TalentCardContentProps) {;
-  const [isHovering, setIsHovering] = useState (false);
-/* Location */ ;
-}<span> {;
-  timezone ;
-}</span> </div>) ;
-}{;
-  /* Short bio or summary - longer on hover for desktop */ ;
-}<div </p> </div> {;
-  /* Skills */ ;
-}<TalentCardSkills skills= {;
-  skills ;
-}/> </div>) ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

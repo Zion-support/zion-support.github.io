@@ -1,6 +1,5 @@
 import OpenAI from 'openai';
 export type SupportedProvider = 'openai' | 'deepl' | 'none';
-<<<<<<< HEAD
 
 const provider: SupportedProvider =
   (process.env.TRANSLATION_PROVIDER as SupportedProvider) ||
@@ -13,7 +12,6 @@ const provider: SupportedProvider =
 let openai: OpenAI | null = null;
 if (provider === 'openai') {
   openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-}
 
 async function translateWithOpenAI(
   text: string,
@@ -33,7 +31,6 @@ async function translateWithOpenAI(
     temperature: 0.2,
   });
   return (completion.choices?.[0]?.message?.content || '').trim();
-}
 
 async function translateWithDeepL(
   text: string,
@@ -57,7 +54,6 @@ async function translateWithDeepL(
   const data = await res.json();
   if (!res.ok) throw new Error(data?.message || 'DeepL error');
   return data?.translations?.[0]?.text || '';
-}
 
 export async function translateText(
   text: string,
@@ -72,13 +68,8 @@ export async function translateText(
   } catch {
     return text;
   }
-}
 
 export function detectLanguageSimple(text: string): string {
   // Very simple heuristic; in production use a language detection library or model
   // Default to 'en'
   return 'en';
-}
-=======
-const provider: SupportedProvider = (process.env.TRANSLATION PROVIDER as SupportedProvider) || (process.env.OPENAI API KEY ? 'openai' : process.env.DEEPL API KEY ? 'deepl' : 'none');
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

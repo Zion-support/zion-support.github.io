@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { SEO } from '@/components/SEO';
 import { useState, useEffect } from 'react';
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react';
@@ -9,14 +8,11 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { logWarn } from '@/utils/productionLogger';
 
 interface ServiceStatus {
-=======
- interface ServiceStatus {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   name: string;
 status: 'operational' | 'degraded' | 'outage' | 'maintenance';
 description: string;
@@ -54,8 +50,6 @@ useEffect ( () => {;
   async function fetchUptime () {;
   try {;
   ;
-}
-<<<<<<< HEAD
 
 const FALLBACK_SERVICES: ServiceStatus[] = [
   {
@@ -341,14 +335,7 @@ export default function Status() {
       </main>
     </>
   );
-=======
-}fetchUptime () ;
-}, []);';
-const getStatusIcon = (status: ServiceStatus['status']) => {;
-  switch (status) {';
-  case 'operational': ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 switch (status) {';
   case 'operational': return 'Operational';';

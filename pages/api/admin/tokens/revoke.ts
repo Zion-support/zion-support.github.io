@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { revokeTokens } from '../../../../utils/token/service';
 
@@ -15,21 +14,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       reason || 'admin_revoke'
     );
     return res.status(200).json({ tx });
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    if (req.method !== 'POST') {
-      res.setHeader('Allow', ['POST']);
-      return res.status(405).end('Method Not Allowed');
-    }
-    
-    res.status(200).json({ message: 'Token revoked' });
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   } catch (err: any) {
     return res.status(400).json({
       error: err.message
     });
   }
-}

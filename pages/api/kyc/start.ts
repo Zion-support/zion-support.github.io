@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
@@ -15,12 +14,10 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {};
   }
-}
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST')
@@ -75,14 +72,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role),
   });
-}
-=======
- profile.role = role;
-if (fullLegalName) profile.fullLegalName = fullLegalName;
-if (businessName) profile.businessName = businessName;
-if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
-profile.lastUpdatedAt = now;
-db[userId] = profile;
-save (db);
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

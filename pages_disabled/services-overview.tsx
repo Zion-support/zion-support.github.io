@@ -16,7 +16,7 @@ import {
   Star, 
   Award, 
   Clock, 
-  Globe 
+  Globe ;
 } from 'lucide-react';
 
 const serviceCategories = [
@@ -263,4 +263,3 @@ export default function ServicesOverview() {
       </div>
     </>
   );
-}

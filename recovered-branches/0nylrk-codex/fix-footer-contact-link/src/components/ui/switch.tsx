@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import * as SwitchPrimitives from '@radix-ui/react-switch';
 
@@ -26,17 +25,3 @@ const Switch = React.forwardRef<
 Switch.displayName = SwitchPrimitives.Root.displayName;
 
 export { Switch };
-=======
-import * as React from "react" import * as SwitchPrimitives from "@radix-ui/react-switch" const Switch = React.forwardRef< React.ElementRef<typeof SwitchPrimitives.Root>;
-React.ComponentPropsWithoutRef<typeof SwitchPrimitives.Root> > ( ({
-  className, ...props 
-}, ref) => (<SwitchPrimitives.Root) 
-}{
-  ...props 
-}ref= {
-  ref 
-}> <SwitchPrimitives.Thumb) 
-}/> </SwitchPrimitives.Root>) ) Switch.displayName = SwitchPrimitives.Root.displayName export {
-  Switch 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

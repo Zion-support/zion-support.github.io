@@ -1,10 +1,11 @@
- const doc = new PDFDocument ({
+import type { NextApiRequest, NextApiResponse } from 'next';
+import PDFDocument from 'pdfkit';
+
+const doc = new PDFDocument ({
   size: 'A4', margin: 50 
 });
 // Zion certificate template (simple) doc.rect (0, 0, doc.page.width, doc.page.height) .fill ('#0f172a');
 doc.fill ('#ffffff');
-}
-<<<<<<< HEAD
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
@@ -69,7 +70,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(500)
       .json({ error: e?.message ?? 'Failed to generate certificate' });
   }
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

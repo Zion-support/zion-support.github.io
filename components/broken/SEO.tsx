@@ -56,8 +56,6 @@
   /* Structured Data */ 
 }<script 
 }] 
-}
-<<<<<<< HEAD
 
 const SEO: React.FC<SEOProps> = ({
   title = 'Zion Tech Group - Revolutionary AI, Quantum Computing & Space Technology Solutions',
@@ -263,18 +261,4 @@ const SEO: React.FC<SEOProps> = ({
   );
 };
 
-=======
-}) 
-}
-}/> {
-  /* Custom Meta Tags */ 
-}{
-  structuredData && (<script type="application/ld+json" dangerouslySetInnerHTML= {
-  {
-  html: JSON.stringify (structuredData) 
-}
-}/>) 
-}</Head>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default SEO;

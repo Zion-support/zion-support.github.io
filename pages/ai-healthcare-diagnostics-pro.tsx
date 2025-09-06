@@ -1,7 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
-<<<<<<< HEAD
 import { motion } from 'framer-motion';
 import {
   Stethoscope,
@@ -28,7 +27,7 @@ import {
   Pill,
   Syringe,
   Hospital,
-  Ambulance,
+  Ambulance,;
 } from 'lucide-react';
 import Link from 'next/link';
 
@@ -265,15 +264,10 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
     },
   ];
 
-=======
-
-const AIHealthcareDiagnosticsPro: React.FC = () => {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   return (
     <Layout>
       <Head>
         <title>AI Healthcare Diagnostics Pro - Zion Tech Group</title>
-<<<<<<< HEAD
         <meta
           name='description'
           content='Revolutionize healthcare with AI-powered diagnostics. Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and improve patient outcomes with our advanced AI platform.'
@@ -393,20 +387,8 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               </motion.button>
             </div>
           </motion.div>
-=======
-        <meta name="description" content="Transform healthcare delivery with the world's most advanced AI diagnostic platform" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Healthcare Diagnostics Pro</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transform healthcare delivery with the world's most advanced AI diagnostic platform. 
-            Achieve 99.2% accuracy in disease detection, reduce diagnosis time by 80%, and save countless lives through early intervention.
-          </p>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
         </div>
 
-<<<<<<< HEAD
       {/* Features Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(56,189,248,0.05),transparent_50%)]'></div>
@@ -454,24 +436,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </p>
               </motion.div>
             ))}
-=======
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="text-3xl font-bold text-green-400 mb-2">99.2%</div>
-            <div className="text-gray-600">Diagnostic Accuracy</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="text-3xl font-bold text-cyan-400 mb-2">80%</div>
-            <div className="text-gray-600">Faster Diagnosis</div>
-          </div>
-          <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-            <div className="text-3xl font-bold text-purple-400 mb-2">24/7</div>
-            <div className="text-gray-600">Continuous Monitoring</div>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
-<<<<<<< HEAD
       {/* Medical Specialties Section */}
       <section className='py-20 bg-black relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_20%_80%,rgba(139,92,246,0.08),transparent_50%)]'></div>
@@ -493,13 +460,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
               Our AI platform covers all major medical specialties with
               specialized models trained on millions of cases for maximum
               accuracy.
-=======
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Radiology</h3>
-            <p className="text-gray-600 mb-4">
-              Advanced AI-powered radiology analysis for X-rays, CT scans, and MRIs.
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
             </p>
             <ul className="text-sm text-gray-500 space-y-2">
               <li>• X-ray analysis</li>
@@ -509,7 +469,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
             </ul>
           </div>
 
-<<<<<<< HEAD
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {specialties.map((specialty, index) => (
               <motion.div
@@ -539,36 +498,9 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
                 </p>
               </motion.div>
             ))}
-=======
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Pathology</h3>
-            <p className="text-gray-600 mb-4">
-              AI-powered pathology analysis for tissue samples and cellular structures.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Tissue analysis</li>
-              <li>• Cellular diagnostics</li>
-              <li>• Cancer detection</li>
-              <li>• Disease classification</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Cardiology</h3>
-            <p className="text-gray-600 mb-4">
-              Comprehensive cardiac diagnostics and monitoring with AI assistance.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• ECG analysis</li>
-              <li>• Heart rhythm monitoring</li>
-              <li>• Cardiac imaging</li>
-              <li>• Risk assessment</li>
-            </ul>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
-<<<<<<< HEAD
       {/* Use Cases Section */}
       <section className='py-20 bg-gray-900 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(236,73,153,0.06),transparent_50%)]'></div>
@@ -816,23 +748,6 @@ const AIHealthcareDiagnosticsPro: React.FC = () => {
           </motion.div>
         </div>
       </section>
-=======
-        <div className="bg-green-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold mb-4">Transform Your Practice</h2>
-          <p className="text-lg text-gray-700 mb-6">
-            From radiology to pathology, our AI platform adapts to your specific medical specialty and workflow requirements.
-          </p>
-          <div className="flex justify-center gap-4">
-            <a href="/contact" className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700">
-              Schedule Demo
-            </a>
-            <a href="/about" className="border border-green-600 text-green-600 px-6 py-3 rounded-lg hover:bg-green-50">
-              Contact Sales
-            </a>
-          </div>
-        </div>
-      </main>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
     </Layout>
   );
 };

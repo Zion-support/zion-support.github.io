@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
 import {
   Interview,
   InterviewRequest,
-  InterviewResponse,
+  InterviewResponse,;
 } from '@/types/interview';
 import { toast } from '@/components/ui/use-toast';
 
@@ -318,18 +317,6 @@ export function useInterviews() {
     respondToInterview,
     cancelInterview,
   };
-=======
- export function useInterviews () {
-  const [interviews, setInterviews] = useState<Interview[]> ([]);
-const [isLoading, setIsLoading] = useState (false);
-const [error, setError] = useState<string | null> (null);
-const {
-  user 
-}= useAuth ();
-if (!user) {
-  toast ({
-  return null;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }setIsLoading (true);
 setError (null);
 try {
@@ -341,13 +328,12 @@ try {
 }data.id);
 }finally {
   setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Fetch interviews for the current user (as client or talent) const fetchInterviews = async () : Promise<Interview[]> => {
   if (!user?.id) {
   setInterviews ([]);
-return [] 
+
 }setError (null);
 try {
   //Get interviews where the user is either the client or the talent const {
@@ -381,13 +367,12 @@ return formattedInterviews;
   
 }finally {
   setIsLoading (false) 
-}
+
 };
 response: InterviewResponse) : Promise<boolean> => {
   if (!user?.id) {
   toast ({
   return false;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }setIsLoading (true);
 setError (null);
 try {
@@ -419,12 +404,12 @@ interviewId);
 //Refresh the interviews list 
 }finally {
   setIsLoading (false) 
-}
+
 };
 try {
   await supabase.from ('notifications') .insert ({
   
-}
+
 };
 //Cancel an interview (either client or talent can cancel) const cancelInterview = async (interviewId: string) : Promise<boolean> => {
   if (!user?.id) return false;
@@ -440,9 +425,9 @@ interviewId);
 // Refresh the interviews list 
 }finally {
   setIsLoading (false) 
-}
+
 };
-return {
+
   interviews;
 isLoading;
 error;
@@ -450,5 +435,4 @@ requestInterview;
 fetchInterviews;
 respondToInterview;
 cancelInterview 
-}
-}
+

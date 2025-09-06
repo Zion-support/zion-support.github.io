@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import EnhancedCard from '../../components/ui/EnhancedCard';
 import EnhancedButton from '../../components/ui/EnhancedButton';
@@ -48,9 +47,3 @@ export default function NewJobPage() {
       </EnhancedCard>
     </div>
   );
-}
-=======
- return (<div className="max-w-2xl mx-auto" > <EnhancedCard> </form>) 
-}</EnhancedCard> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

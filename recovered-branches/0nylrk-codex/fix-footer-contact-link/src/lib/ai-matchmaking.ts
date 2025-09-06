@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // AI Matchmaking utility functions
 
 export interface MatchResultItem {
@@ -9,14 +8,12 @@ export interface MatchResultItem {
   price?: number;
   skills?: string[];
   image?: string;
-}
 
 export interface MatchResult {
   item: MatchResultItem;
   score: number;
   matchedSkills: string[];
   reason: string;
-}
 
 // Sample data for testing when API is not available
 const sampleData: MatchResultItem[] = [
@@ -84,9 +81,4 @@ export async function findMatches(
     console.error('Error in matchmaking:', error);
     return [];
   }
-=======
- // AI Matchmaking utility functions if (type && type !== "all") {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

@@ -89,21 +89,7 @@
     try {,
       const items = fs.readdirSync(dir),
 ,
-      for (const item of items) {,
-        const fullPath = path.join(dir, item),
-        const stat = fs.statSync(fullPath),
-,
-        if (stat.isDirectory()) {,
-          if (!fullPath.includes('node_modules') &&,
-              !fullPath.includes('.git') &&,
-              !fullPath.includes('dist') &&,
-              !fullPath.includes('build') &&,
-              !fullPath.includes('.next') &&,
-              !fullPath.includes('coverage') &&,
-              !fullPath.includes('logs')) {,
-            const subAnalyses = await this.walkDirectory(fullPath),
-            analyses.push(...subAnalyses)
-          };
+      ;
         } else if (stat.isFile()) {,
           const ext = path.extname(fullPath),
           if (['.js.jsx.ts.tsx'].includes(ext)) {,

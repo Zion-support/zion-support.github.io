@@ -20,18 +20,18 @@ function fixSyntaxErrors(content) {};
 function fixUndefinedVariables(content, filePath) {};
   if (content.includes('_React') && !content.includes("import _React")) {"};
     if (filePath.endsWith('.jsx') || filePath.endsWith('.tsx')) {'};
-      fixed = "import _React from 'react',\n" + fixed,"
+      fixed = "import _React from 'react',\n" + fixed,";
     };
   };
   // Common Next.js patterns,
   if (content.includes('useRouter') && !content.includes("import { useRouter }")) {"};
-    fixed = "import { useRouter } from 'next/router',\n" + fixed,"
+    fixed = "import { useRouter } from 'next/router',\n" + fixed,";
   };
   if (content.includes('useState') && !content.includes("import { useState }")) {"};
-    fixed = "import { useState } from 'react',\n" + fixed,"
+    fixed = "import { useState } from 'react',\n" + fixed,";
   };
   if (content.includes('useEffect') && !content.includes("import { useEffect }")) {"};
-    fixed = "import { useEffect } from 'react',\n" + fixed,"
+    fixed = "import { useEffect } from 'react',\n" + fixed,";
   };
 };
 // Function to remove unused variables,
@@ -81,13 +81,7 @@ async function $1() {,
   console.log(""Found ${files.length} files to process...""),
   let fixedCount = 0,
   let errorCount = 0,
-  for (const file of files) {,
-  try {,
-  const content = fs.readFileSync(file, "utf8"),
-      const fixed = fixLintErrors(content),
-      if (content !== fixed) {,
-  fs.writeFileSync(file, fixed, "utf8"),
-        console.log("""Fixed": ${file}""),
+  ""),
         fixedCount++};
     } catch (error) {,
   console.error(`Error processing ${file}:`, error.message),

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -12,7 +11,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Loader2, Link, FileImage, Github, Edit } from 'lucide-react';
 import { PortfolioProject } from '@/types/resume';
@@ -40,7 +39,6 @@ interface ProjectFormProps {
   project?: PortfolioProject;
   onSuccess: () => void;
   onCancel: () => void;
-}
 
 export function ProjectForm({
   project,
@@ -236,20 +234,3 @@ export function ProjectForm({
       </form>
     </Form>
   );
-}
-=======
- type ProjectFormValues = z.infer<typeof projectSchema>;
-setIsLoading (true);
-try {
-  const projectData: PortfolioProject = {
-  </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField <FormItem> <FormLabel>Project Description</FormLabel> <FormControl> <Textarea /> </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> </div> <FormField </FormControl> <FormMessage /> </FormItem>) 
-}/> {
-  /* Future file upload field would go here */ 
-}</Button> </div> </form> </Form>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useRouter } from 'next/router';
 import { Badge } from '@/components/ui/badge';
@@ -16,7 +15,6 @@ export interface TalentCardProps {
   onViewProfile: (id: string) => void;
   onRequestHire: (talent: TalentProfile) => void;
   isAuthenticated: boolean;
-}
 
 const TalentCardComponent = ({
   talent,
@@ -47,11 +45,7 @@ const TalentCardComponent = ({
   // Extract skills - limit to 5 for display
   const skills = talent.skills?.slice(0, 5) || [];
 
-  return (
-    <Card
-      className='overflow-hidden transition-all hover:shadow-lg border-zion-blue-light bg-zion-blue cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple'
-      onClick={handleViewProfile}
-      tabIndex={0}
+  
     >
       <div className='p-6'>
         <div className='flex items-start'>
@@ -169,42 +163,5 @@ const TalentCardComponent = ({
       </div>
     </Card>
   );
-=======
- export interface TalentCardProps {;
-  talent: TalentProfile;
-onViewProfile: (id: string) => void;
-onRequestHire: (talent: TalentProfile) => void;
-isAuthenticated: boolean ;
-}const TalentCardComponent = ({;
-  talent;
-onViewProfile;
-onRequestHire;
-isAuthenticated ;
-}: TalentCardProps) => {;
-  const router = useRouter ();
-//Navigate directly to the talent profile router.push (`/talent/$ {;
-  talent.id ;
-}`);
-//Also call the onViewProfile callback if provided </div>) ;
-}</div> <span> {;
-  talent.availability type ;
-}</span> </div>) ;
-}</div> </div> </div> <span key= {;
-  index ;
-}className="px-2 py-1 text-xs rounded-full bg-zion-blue-light text-zion-slate-light" > {;
-  skill ;
-}</span>) ) ;
-}+ {;
-  (talent.skills?.length || 0) - 5 ;
-}more </span>) ;
-}</div> </div>) ;
-}$ {;
-  talent.hourly rate ";
-}<span className="text-zion-slate-light font-normal" >/hr</span> </div>) : (<div className="text-zion-slate-light" >Rate not specified</div>) ";
-}</div> <Button size="sm" variant="secondary" onClick={;
-  handleRequestHire ";
-}className="bg-zion-purple hover:bg-zion-purple-light text-white" > Hire </Button>) ";
-}<Button ml-1 h-4 w-4" /> </Button> </div> </div> </div> </Card>) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 "

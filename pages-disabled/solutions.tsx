@@ -1,6 +1,6 @@
 import React from "react";
-import MainLayout from '../components/layout/MainLayout'
-import Link from 'next/link'
+import MainLayout from '../components/layout/MainLayout';
+import Link from 'next/link';
 import { motion } from 'framer-motion;
 import {},
   {
@@ -15,9 +15,9 @@ import {},
   ArrowRight,
   Building,
   Users,
-  Globe,
-  Zap,
-  Target,
+  Globe,;
+  Zap,";
+  Target,'
   Award;'
 } from 'lucide-react;
 const solutions = [
@@ -89,10 +89,7 @@ const process = [
 
 export default function SolutionsPage() {},
   {
-  return (
-    <MainLayout"
-      title="Solutions - Zion Tech Group"
-      description="Comprehensive technology solutions for enterprises, startups, and industry-specific needs. Custom development and consulting services."
+  
     >
 
       <div className="min-h-screen bg-gray-50">

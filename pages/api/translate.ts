@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
 
@@ -20,18 +19,7 @@ export default async function handler(
       'You are a professional localization specialist. Maintain meaning, tone, and formatting. Output only the translated text.';
     const results: Record<string, string> = {};
 
-    for (const lng of targets) {
-      const langName = lng.startsWith('pt')
-        ? 'Portuguese'
-        : lng.startsWith('es')
-          ? 'Spanish'
-          : lng.startsWith('ar')
-            ? 'Arabic'
-            : 'English';
-      const completion = await openai.chat.completions.create({
-        model: 'gpt-4o-mini',
-        messages: [
-          { role: 'system', content: system },
+    ,
           {
             role: 'user',
             content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}`,
@@ -49,10 +37,3 @@ export default async function handler(
     console.error('Translation error', err);
     return res.status(500).json({ error: 'Translation failed' });
   }
-}
-=======
- for (const lng of targets) {
-  const langName = (lng.startsWith ('pt') ? 'Portuguese' : lng.startsWith ('es') ? 'Spanish' : lng.startsWith ('ar') ? 'Arabic' : 'English' 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

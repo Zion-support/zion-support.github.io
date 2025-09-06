@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { JobsList } from '@/components/jobs/JobsList';
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,7 @@ import {
   Star,
   PlusCircle,
   Kanban,
-  Video,
+  Video,;
 } from 'lucide-react';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { SuggestedTalents } from '@/components/jobs/SuggestedTalents';
@@ -181,7 +180,6 @@ function ClientDashboardContent() {
       </main>
     </>
   );
-}
 
 export default function ClientDashboard() {
   return (
@@ -189,10 +187,7 @@ export default function ClientDashboard() {
       <ClientDashboardContent />
     </ProtectedRoute>
   );
-=======
- const showAdvanced = //Set the first job as selected when jobs are loaded (if any) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [jobs, selectedJobId]);
 return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Manage your jobs and talent requests in the Zion AI Marketplace." /> <main className="container mx-auto px-4 py-8"> <div className= {;
   `flex flex-col $ {;

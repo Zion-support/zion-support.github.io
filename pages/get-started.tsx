@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import {
@@ -17,7 +16,7 @@ import {
   Video,
   Code,
   Globe,
-  Building,
+  Building,;
 } from 'lucide-react';
 
 export default function GetStarted() {
@@ -551,23 +550,15 @@ export default function GetStarted() {
       </section>
     </div>
   );
-=======
- const onboardingSteps = [ {
-  > <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6" > Get Started Today </h1> </p> <div className="flex flex-wrap justify-center gap-6" > <div className="flex items-center gap-2 text-cyan-400" > <Rocket className="w-6 h-6" /> <span>Quick Start</span> </div> <div className="flex items-center gap-2 text-purple-400" > <Users className="w-6 h-6" /> <span>Expert Guidance</span> </div> <div className="flex items-center gap-2 text-green-400" > <CheckCircle className="w-6 h-6" /> <span>Proven Results</span> </div> </div> </motion.div> </div> </section> > <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Simple 4-Step Process </h2> <p className="text-xl text-gray-400" >From initial consultation to full implementation</p> </motion.div> <motion.div key= {
-  step.step 
-}initial= {
-  {
-  opacity: 0, y: 20 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8, delay: index * 0.1 
-}
+
 }className= {
   `text-center p-6 rounded-2xl border transition-all duration-300 $ {
   currentStep === step.step ? 'bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border-cyan-500/50' : 'bg-gradient-to-br from-gray-900/30 to-black/30 border-gray-800/50' 
@@ -592,14 +583,13 @@ export default function GetStarted() {
 }</div> </div> </section> <motion.div initial= {
   {
   opacity: 0, y: 20 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }> <h2 className="text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Ready to Begin Your Journey? </h2> <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto" > Our team of experts is ready to help you navigate the future of technology. Let's discuss your project and create a roadmap to success. </p> <a href="/contact" className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-8 py-4 rounded-2xl font-semibold hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300" > Contact Our Team <ArrowRight className="w-5 h-5" /> </Link> <a href="/quote" className="inline-flex items-center gap-2 border border-cyan-500/30 text-cyan-400 px-8 py-4 rounded-2xl font-semibold hover:bg-cyan-500/10 transition-all duration-300" > Get a Quote </Link> </div> </motion.div> </div> </section> </div>) 
-}

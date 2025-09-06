@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readOrgData, filterOrgData } from '../../../utils/org-data';
 import type { OrgFilters, RoleType } from '../../../types/org';
@@ -33,8 +32,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const filtered = filterOrgData(data, filters);
   return res.status(200).json(filtered);
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

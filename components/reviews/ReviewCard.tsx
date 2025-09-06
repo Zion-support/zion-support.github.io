@@ -1,7 +1,6 @@
  > Report abuse </button> </div>) 
 }</div> </div>) 
 };
-<<<<<<< HEAD
 
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (
@@ -54,6 +53,4 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   );
 };
 
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ReviewCard;

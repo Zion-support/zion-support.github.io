@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { AppLayout } from '@/layout/AppLayout';
@@ -11,14 +10,14 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { formatDistanceToNow } from 'date-fns';
 import {
   CommunityUser,
   ForumPost,
-  Badge as BadgeType,
+  Badge as BadgeType,;
 } from '@/types/community';
 import PostCard from '@/components/community/PostCard';
 import UserBadges from '@/components/community/UserBadges';
@@ -390,9 +389,7 @@ export default function CommunityProfilePage() {
       </div>
     </AppLayout>
   );
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Mock user data ];
+
 isVerified: true;
 isModerator: false 
 };
@@ -420,5 +417,3 @@ isModerator: false
 }/>) ) 
 }</div>) : (<Card> <CardContent className="p-6 text-center" > <p className="text-muted-foreground" >This user hasn't created any posts yet.</p> </CardContent> </Card>) 
 }</TabsContent> <TabsContent value="activity" className="mt-6" > <h2 className="text-xl font-bold mb-4" >Recent Activity</h2> <Card> </div> <div> <p>Replied to <Link to="/community/post/3" className="text-zion-purple hover:underline" >Looking for feedback on my automated testing approach</Link></p> </div> </li> </div> <div> <p>Earned badge <span className="font-medium" >Top Contributor</span></p> </div> </li> </div> <div> <p>Replied to <Link to="/community/post/7" className="text-zion-purple hover:underline" >Comparing different vector embedding models</Link></p> </div> </li> </div> <div> <p>Created post <Link to="/community/post/1" className="text-zion-purple hover:underline" >Best practices for AI model fine-tuning</Link></p> </div> </li> </div> <div> </div> </li> </ul> </CardContent> </Card> </TabsContent> </Tabs> </div> </div> </div> </AppLayout>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

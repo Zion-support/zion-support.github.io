@@ -1,8 +1,6 @@
  const getInitialPosition = () => {
   switch (direction) {
   case 'up': 
-}
-<<<<<<< HEAD
 
 export const LazySection: React.FC<LazySectionProps> = ({
   children,
@@ -44,29 +42,11 @@ export const LazySection: React.FC<LazySectionProps> = ({
     }
   };
 
-  return (
-    <motion.div
-      ref={ref}
-      initial={getInitialPosition()}
-      animate={isInView ? getAnimatePosition() : getInitialPosition()}
-      transition={{ duration: 0.8, delay, ease: 'easeOut' }}
-      className={className}
+  
     >
       {children}
     </motion.div>
   );
 };
 
-=======
-};
-const getAnimatePosition = () => {
-  switch (direction) {
-  case 'up': 
-}
-};
-return (<motion.div > {
-  children 
-}</motion.div>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default LazySection;

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -59,7 +58,7 @@ import {
   Film,
   BookOpenCheck,
   Building,
-  MessageCircle,
+  MessageCircle,;
 } from 'lucide-react';
 
 interface NavigationItem {
@@ -71,7 +70,6 @@ interface NavigationItem {
   badge?: string;
   title?: string;
   featured?: boolean;
-}
 
 const contactInfo = {
   mobile: '+1 302 464 0950',
@@ -713,14 +711,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
     closeDropdowns();
   };
 
-  return (
-    <nav
-      aria-label='Primary'
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
-          ? 'bg-black/95 backdrop-blur-xl border-b border-gray-800/50 shadow-2xl'
-          : 'bg-transparent'
-      }`}
+  
     >
       {/* Background Effects */}
       <div className='absolute inset-0'>
@@ -1041,12 +1032,7 @@ const UltraFuturisticNavigation2035: React.FC = () => {
   );
 };
 
-=======
- ] 
-}];
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 window.addEventListener ('scroll', handleScroll);
-return () => window.removeEventListener ('scroll', handleScroll) 
+
 }, []);
 </div> <div> <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </div> <div className="text-xs text-gray-400" >Revolutionary Technology</div> </div> </a> > {
   item.icon 
@@ -1136,5 +1122,4 @@ return () => window.removeEventListener ('scroll', handleScroll)
 }</div> </div> </div> </div> </div> </div> </div> </motion.div>) 
 }</AnimatePresence> </div> </nav>) 
 };
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default UltraFuturisticNavigation2035;

@@ -3,10 +3,7 @@ import Head from 'next/head';
 import Layout from '../../components/Layout';
 
 export default function APIDocsPage() {
-  return (
-    <Layout 
-      title="API Documentation - Zion Tech Group"
-      description="Comprehensive API documentation for all our services"
+  
     >
       <div className="min-h-screen bg-gray-50">
         <section className="bg-gradient-to-r from-blue-600 to-purple-600 py-20">
@@ -24,4 +21,3 @@ export default function APIDocsPage() {
       </div>
     </Layout>
   );
-}

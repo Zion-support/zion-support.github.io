@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import useSWR from 'swr';
 import { TALENT_PROFILES } from '../../../../data/talent';
@@ -33,10 +32,7 @@ export default function JobApplicantsPage() {
         )}
         {applications.map(a => {
           const talent = TALENT_PROFILES.find(t => t.slug === a.talentSlug);
-          return (
-            <div
-              key={a.id}
-              className='border rounded p-4 bg-white dark:bg-gray-900'
+          
             >
               <div className='flex items-center justify-between'>
                 <div>
@@ -56,12 +52,3 @@ export default function JobApplicantsPage() {
       </div>
     </div>
   );
-}
-=======
- return (<div key= {
-  a.id 
-}className="border rounded p-4 bg-white dark:bg-gray-900" > <div className="flex items-center justify-between" > <div> </div> <button className="px-2 py-1 text-sm border rounded" >Message</button> </div> </div>) 
-}) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

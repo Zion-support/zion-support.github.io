@@ -1,6 +1,5 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 const TOKEN = process.env.WEB3_STORAGE_TOKEN || '';
 
 export const config = { api: { bodyParser: { sizeLimit: '2mb' } } };
@@ -25,14 +24,3 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Backup failed' });
   }
-}
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Backup uploaded' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

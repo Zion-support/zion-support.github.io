@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export default function CategoryIndexPage() {
   return (
     <div className='container mx-auto px-4 py-10'>
@@ -8,6 +7,3 @@ export default function CategoryIndexPage() {
       </p>
     </div>
   );
-}
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

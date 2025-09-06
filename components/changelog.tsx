@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -25,7 +24,6 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
       )}
     </main>
   );
-}
 
 export async function getStaticProps() {
   try {
@@ -38,17 +36,3 @@ export async function getStaticProps() {
   } catch {
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
   }
-}
-=======
- {
-  generatedAt && (<p className="mt-2 text-sm text-gray-600" >Generated: {
-  generatedAt 
-}</p>) 
-}{
-  content 
-}</pre>) : (<div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600" > No changelog generated yet. </div>) 
-}</main>) 
-}
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

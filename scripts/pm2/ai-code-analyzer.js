@@ -51,9 +51,7 @@ class AICodeAnalyzer {
       this.log(`📁 Found ${sourceFiles.length} source files to analyze`);
 
       // Analyze each file
-      for (const file of sourceFiles) {
-        await this.analyzeFile(file);
-      }
+      
 
       // Generate overall metrics
       this.generateMetrics();
@@ -560,12 +558,10 @@ class AICodeAnalyzer {
       process.exit(1);
     }
   }
-}
 
 // Run if called directly
 if (require.main === module) {
   const analyzer = new AICodeAnalyzer();
   analyzer.run();
-}
 
 module.exports = AICodeAnalyzer;

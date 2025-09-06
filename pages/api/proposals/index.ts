@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
 import path from 'path';
@@ -13,7 +12,6 @@ async function ensureStore() {
   } catch {
     await fs.writeJson(FILE_PATH, { items: [] }, { spaces: 2 });
   }
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -41,8 +39,3 @@ export default async function handler(
     return res.status(201).json(item);
   }
   res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

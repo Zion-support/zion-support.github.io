@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { crm } from '../../../../lib/integrations/connectors';
@@ -21,8 +20,7 @@ export default async function handler(
       c.providerId === 'pipedrive'
   );
   const results: any[] = [];
-  for (const conn of crms) {
-    const { log } = await crm.addEmailTouchpoint(conn, {
+   = await crm.addEmailTouchpoint(conn, {
       subject: 'Resume viewed',
       resumeId: resume.id,
     });
@@ -30,8 +28,3 @@ export default async function handler(
     results.push({ providerId: conn.providerId, ok: true });
   }
   res.status(200).json({ ok: true, results });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

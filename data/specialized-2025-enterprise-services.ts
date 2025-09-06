@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface SpecializedEnterpriseService {
@@ -43,7 +42,6 @@ export interface SpecializedEnterpriseService {
   benefits: string[];
   capabilities: string[];
   marketAdvantage: string;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -571,6 +569,3 @@ export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
 ];
 
 export default specializedEnterpriseServices;
-=======
- export default specializedEnterpriseServices;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

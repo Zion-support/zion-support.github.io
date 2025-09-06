@@ -1,29 +1,21 @@
-<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
   useEffect,
   useState,
-  ReactNode,
+  ReactNode,;
 } from 'react';
 import Cookies from 'js-cookie';
 
 export type ConsentState = {
   analytics: boolean;
   ads: boolean;
-=======
- const ConsentContext = createContext<ConsentContextValue> ({
-  consent: defaultState, acceptAll: () => {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 rejectNonEssential: () => {
   
 };
 updateConsent: () => {
   
-}
-<<<<<<< HEAD
 
 const defaultState: ConsentState = { analytics: false, ads: false };
 
@@ -44,7 +36,6 @@ function loadAnalytics() {
   const inline = document.createElement('script');
   inline.text = `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','GA_MEASUREMENT_ID');`;
   document.body.appendChild(inline);
-}
 
 function loadAds() {
   if (document.getElementById('ads-script')) return;
@@ -53,7 +44,6 @@ function loadAds() {
   s.async = true;
   s.id = 'ads-script';
   document.body.appendChild(s);
-}
 
 export function ConsentProvider({ children }: { children: ReactNode }) {
   const [consent, setConsent] = useState<ConsentState>(() => {
@@ -76,24 +66,10 @@ export function ConsentProvider({ children }: { children: ReactNode }) {
   const rejectNonEssential = () => setConsent({ analytics: false, ads: false });
   const updateConsent = (state: ConsentState) => setConsent(state);
 
-  return (
-    <ConsentContext.Provider
-      value={{ consent, acceptAll, rejectNonEssential, updateConsent }}
+  
     >
       {children}
     </ConsentContext.Provider>
   );
-}
 
 export const useConsent = () => useContext(ConsentContext);
-=======
-});
-return (<ConsentContext.Provider value= {
-  {
-  consent, acceptAll, rejectNonEssential, updateConsent 
-}
-}> {
-  children 
-}</ConsentContext.Provider>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

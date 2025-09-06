@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { updateProposalMeta } from '../../../utils/data/proposals';
 
@@ -16,9 +15,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       .status(500)
       .json({ error: error?.message || 'Failed to update status' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

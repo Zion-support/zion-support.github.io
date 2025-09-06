@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
@@ -20,7 +19,6 @@ function applyTranslations(item: TalentProfile, lang?: string) {
     item: { ...item, ...translated },
     translated: Object.keys(translated).length > 0,
   };
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -53,9 +51,3 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e.message });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

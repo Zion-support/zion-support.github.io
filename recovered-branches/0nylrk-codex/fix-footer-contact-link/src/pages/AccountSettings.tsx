@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -12,7 +11,7 @@ import {
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Separator } from '@/components/ui/separator';
 import { Switch } from '@/components/ui/switch';
@@ -310,28 +309,10 @@ export default function AccountSettings() {
       <Footer />
     </>
   );
-=======
- export default function AccountSettings () {
-  const {
-  user 
-}= useAuth ();
-const [displayWeb3, setDisplayWeb3] = useState (false);
-const [didHandle, setDidHandle] = useState ('');
-const [enableBackup, setEnableBackup] = useState (false);
-const [isSubmitting, setIsSubmitting] = useState (false);
-useEffect ( () => {
-  try {
-  const saved = localStorage.getItem ('account settings');
-if (saved) {
-  const parsed = JSON.parse (saved);
-setDisplayWeb3 (!!parsed.displayWeb3);
-setDidHandle (parsed.didHandle || '');
-setEnableBackup (!!parsed.enableBackup) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }catch (e) {
   console.error ('Error loading account settings', e) 
-}
+
 }, []);
 const handleSave = () => {
   setIsSubmitting (true);
@@ -342,7 +323,7 @@ try {
 toast.error ('Failed to save settings') 
 }finally {
   setIsSubmitting (false) 
-}
+
 }, 1000) 
 };
 try {
@@ -352,4 +333,3 @@ try {
 }</span> </div>) : (<div className="flex items-center gap-2 bg-gray-100 p-3 rounded-md" > <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-500" > <line x1="18" y1="6" x2="6" y2="18" ></line> <line x1="6" y1="6" x2="18" y2="18" ></line> </svg> <span>No wallet connected</span> </div>) 
 }</div> <div> </p> </div> </div> </div> <div> <h3 className="font-medium mb-2" >Recovery Options</h3> <Button ? 'Restore your profile data from decentralized storage': 'Enable backup first to use this feature' 
 }</p> </div> </CardContent> </Card> </div> </main> <Footer /> </>) 
-}

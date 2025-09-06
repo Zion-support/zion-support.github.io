@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let DIDKit: any;
 let ethers: any;
 
@@ -9,14 +8,12 @@ async function lazyLoadDeps() {
   try {
     ethers = await import('ethers');
   } catch {}
-}
 
 export interface IdentityProfile {
   did?: string;
   ens?: string | null;
   lens?: string | null;
   address?: string | null;
-}
 
 export async function generateDIDKey(): Promise<string | null> {
   await lazyLoadDeps();
@@ -28,7 +25,6 @@ export async function generateDIDKey(): Promise<string | null> {
   } catch {
     return null;
   }
-}
 
 export async function resolveENS(address: string): Promise<string | null> {
   await lazyLoadDeps();
@@ -39,14 +35,12 @@ export async function resolveENS(address: string): Promise<string | null> {
   } catch {
     return null;
   }
-}
 
 export async function resolveLens(
   handleOrAddress: string
 ): Promise<string | null> {
   // Placeholder: Lens API would be online; return null in offworld
   return null;
-}
 
 export async function buildIdentityProfile(
   address?: string
@@ -55,8 +49,3 @@ export async function buildIdentityProfile(
   const ens = address ? await resolveENS(address) : null;
   const lens = address ? await resolveLens(address) : null;
   return { did: did || undefined, ens, lens, address: address || null };
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

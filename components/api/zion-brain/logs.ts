@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readLogs } from '@/utils/zionBrain';
 
@@ -6,7 +5,6 @@ function isAuthorized(req: NextApiRequest): boolean {
   const token = req.headers['x-admin-token'] || req.query.token;
   const superToken = process.env.SUPERADMIN_TOKEN;
   return !superToken || token === superToken;
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req))
@@ -25,10 +23,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const byModule: Record<string, number> = {};
   const byType: Record<string, number> = {};
-  for (const e of entries) {
-    byModule[e.module] = (byModule[e.module] || 0) + 1;
-    byType[String(e.type)] = (byType[String(e.type)] || 0) + 1;
-  }
+  
 
   return res.status(200).json({
     entries: entries.slice(-200),
@@ -36,8 +31,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     byType,
     total: entries.length,
   });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MobileHeader } from '../components/common/MobileHeader';
 import { BottomNavigation } from '../components/common/BottomNavigation';
@@ -137,14 +136,5 @@ export function MobileBrowse() {
       <BottomNavigation />
     </div>
   );
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Mock data for demonstration //Navigate to details page 
+
 };
-return (<div className="min-h-screen" > <MobileHeader title= {
-  browseType === "jobs" ? "Browse Jobs" : "Browse Talents" 
-}> <Button > Jobs </Button> <Button > Talents </Button> </div> </div> <BrowseFilters type= {
-  browseType 
-}/> <div className="py-4 px-4" > <BrowseCards /> </div> <BottomNavigation /> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

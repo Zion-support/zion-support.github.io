@@ -75,11 +75,9 @@ class HealthChecker {
       results: this.results
     };
   }
-}
 
 if (require.main === module) {
   const checker = new HealthChecker();
   checker.runAllChecks().catch(console.error);
-}
 
 module.exports = HealthChecker;

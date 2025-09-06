@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../utils/db';
 import type { Job } from '../../../utils/types';
@@ -66,20 +65,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'GET, PATCH');
   res.status(405).end('Method Not Allowed');
-}
-=======
- if (typeof title === 'string') job.title = title;
-if (typeof description === 'string') job.description = description;
-if (typeof category === 'string') job.category = category;
-if (Array.isArray (requiredSkills) ) job.requiredSkills = requiredSkills.map (String);
-if (typeof budgetMinUsd === 'number' || budgetMinUsd === null) job.budgetMinUsd = budgetMinUsd ?? undefined;
-if (typeof budgetMaxUsd === 'number' || budgetMaxUsd === null) job.budgetMaxUsd = budgetMaxUsd ?? undefined;
-if (typeof deliveryDeadlineIso === 'string' || deliveryDeadlineIso === null) job.deliveryDeadlineIso = deliveryDeadlineIso ?? undefined;
-if (typeof status === 'string') job.status = status as Job['status'];
-job.updatedAtIso = new Date () .toISOString ();
-jobs[idx] = job;
-writeJsonFile<Job[]> (FILE, jobs);
-}res.setHeader ('AllowGET, PATCH');
-res.status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

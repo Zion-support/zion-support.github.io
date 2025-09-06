@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState } from '../../../utils/sync/storage';
 import { filterEventsByScope } from '../../../utils/sync/storage';
@@ -30,15 +29,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- export default function handler (req: NextApiRequest, res: NextApiResponse) {
-  const state = readState ();
-status: "ok";
-instanceId: state.config.instanceId;
-config: state.config;
-lastSyncedAt: state.lastSyncedAt;
-counts: {
-  totalEvents: scopedEvents.length;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

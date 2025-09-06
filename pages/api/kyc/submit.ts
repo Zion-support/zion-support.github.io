@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { KycProfile } from '../../../utils/kyc';
 import { validateKycSubmission } from '../../../utils/kyc';
@@ -16,12 +15,10 @@ function load(): Record<string, KycProfile> {
   } catch {
     return {};
   }
-}
 
 function save(db: Record<string, KycProfile>) {
   fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(FILE, JSON.stringify(db, null, 2));
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -115,12 +112,3 @@ export default async function handler(
   save(db);
 
   res.status(200).json({ ok: true, profile, aml: amlResult });
-}
-=======
- profile.amlStatus = amlResult.status === 'clear' ? 'clear' : amlResult.status === 'match' ? 'match' : 'review';
-// Flags and risk scoring profile.flags = Array.from (flags);
-profile.riskScore = riskScore;
-db[userId] = profile;
-save (db);
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

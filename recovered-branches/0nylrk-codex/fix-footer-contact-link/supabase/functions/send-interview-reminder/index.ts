@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2';
 import { Resend } from 'npm:resend@2.0.0';
@@ -50,21 +49,7 @@ serve(async req => {
     const results = [];
 
     if (interviews && interviews.length > 0) {
-      for (const interview of interviews) {
-        // Send email to client
-        const clientEmail = interview.clients?.email;
-        const talentName =
-          interview.talents?.display_name ||
-          interview.talents?.full_name ||
-          'Talent';
-        const interviewDate = new Date(interview.scheduled_date);
-
-        if (clientEmail) {
-          try {
-            await resend.emails.send({
-              from: 'Zion Marketplace <onboarding@resend.dev>',
-              to: [clientEmail],
-              subject: `Your interview with ${talentName} is starting soon!`,
+       is starting soon!`,
               html: `
                 <h1>Interview Reminder</h1>
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>
@@ -132,33 +117,5 @@ serve(async req => {
       status: 500,
     });
   }
-=======
- serve (async (req) => {
-  //Handle CORS preflight requests if (req.method === "OPTIONS") {
-  
-}try {
-  //Use service role key for admin privileges const supabase = createClient (supabaseUrl, supabaseServiceKey);
-//Get upcoming interviews in the next hour const now = new Date ();
-const thirtyMinutesFromNow = new Date (now.getTime () + 30 * 60000);
-data: interviews, error 
-}= await supabase .from ('interviews') .select (`*;
-clients: client id (*);
-talents:talent id (*) `) .eq ('statusconfirmed') .gte ('scheduled date', now.toISOString () ) .lt ('scheduled date', thirtyMinutesFromNow.toISOString () ) .is ('reminder sent', null);
-if (error) throw error;
-const results = [];
-if (interviews && interviews.length > 0) {
-  for (const interview of interviews) {
-  //Send email to client try {
-  await resend.emails.send ({
-  <p>Please be ready on time!</p> ` 
-});
-try {
-  await resend.emails.send ({
-  <p>Please be ready on time!</p> ` 
-});
-}//Mark the interview as reminder sent await supabase .from ('interviews') status: 500 
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+
 });

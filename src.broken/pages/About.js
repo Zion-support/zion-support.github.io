@@ -1,12 +1,10 @@
-<<<<<<< HEAD:src.broken/pages/About.js
+:src.broken/pages/About.js
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { SEO } from "@/components/SEO";
 import { GradientHeading } from "@/components/GradientHeading";
-=======
 import React from 'react';
 
->>>>>>> origin/chore/fix-build-nav-links:src/pages/About.js
 export default function About() {
     return (
         <div className="min-h-screen bg-background p-8">
@@ -22,11 +20,11 @@ export default function About() {
                 </p>
             </div>
         </div>
-<<<<<<< HEAD:src.broken/pages/About.js
+:src.broken/pages/About.js
       </main>
       <Footer />
     </>);
-}
+
 import { Users, Target, Globe, Award, Shield, Lightbulb } from 'lucide-react';
 const About = () => {
     const values = [
@@ -430,7 +428,4 @@ const Integrity = ({className}: {className ?  : string}) => (
 export default About;
     </></></></></></>);
 };
-=======
     );
-}
->>>>>>> origin/chore/fix-build-nav-links:src/pages/About.js

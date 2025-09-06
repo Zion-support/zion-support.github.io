@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { MobileHeader } from '@/mobile/components/common/MobileHeader';
 import { BottomNavigation } from '@/mobile/components/common/BottomNavigation';
@@ -11,7 +10,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Zap, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -121,7 +120,6 @@ export function MobileJobPost() {
       <BottomNavigation />
     </div>
   );
-}
 
 function DetailsStep() {
   return (
@@ -177,7 +175,6 @@ function DetailsStep() {
       </div>
     </div>
   );
-}
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
@@ -283,7 +280,6 @@ function RequirementsStep() {
       </div>
     </div>
   );
-}
 
 function BudgetStep() {
   return (
@@ -360,7 +356,6 @@ function BudgetStep() {
       </div>
     </div>
   );
-}
 
 function PreviewStep() {
   return (
@@ -412,29 +407,7 @@ function PreviewStep() {
       </Button>
     </div>
   );
-=======
- import {;
-  Select;
-SelectContent;
-SelectItem;
-SelectTrigger;
-SelectValue type JobPostStep = "details" | "requirements" | "budget" | "preview";
-const goToNextStep = () => {";
-  if (currentStep === "details") {;
-  ;
-}
-};
-const goToPrevStep = () => {;
-  ;
-}
-};
-const renderStepContent = () => {;
-  switch (currentStep) {";
-  case "requirements": return <RequirementsStep />;";
-case "budget": return <BudgetStep />;";
-case "preview": default: return <DetailsStep /> ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };";
 min-h-screen flex flex-col"> <MobileHeader </div> <Button variant=" outline"className=" flex gap-1"> <Zap className=" h-4 w-4"/> AI Assist </Button> </div> {;
   renderStepContent () ";

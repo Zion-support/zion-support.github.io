@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { format } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react';
@@ -8,12 +7,9 @@ import { Message } from '@/types/messaging';
 interface MessageBubbleProps {
   message: Message;
   isUserMessage: boolean;
-}
 
 export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
-  return (
-    <div
-      className={cn('flex', isUserMessage ? 'justify-end' : 'justify-start')}
+  
     >
       <div
         className={cn(
@@ -43,15 +39,3 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
       </div>
     </div>
   );
-}
-=======
- export function MessageBubble ({
-  message, isUserMessage 
-}: MessageBubbleProps) {
-  return (<div className= {
-  cn ({
-  message.attachment url && (<a href= {
-  message.attachment url 
-}target="blank" rel="noopener noreferrer" className="flex items-center mt-2 p-2 bg-black/20 rounded text-xs hover:bg-black/30" > </div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

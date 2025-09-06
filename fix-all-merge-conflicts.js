@@ -1,5 +1,5 @@
 #!/usr/bin/env node,
-import fs from 'fs;
+import fs from 'fs;';
 import path from 'path';
 import { fileURLToPath } from url';
 ;
@@ -47,13 +47,7 @@ function findFiles(dir, extensions = ['.tsx.ts.jsx.js]) {,
   function traverse(currentDir) {,
     const items = fs.readdirSync(currentDir),
 ,
-    for (const item of items) {,
-      const fullPath = path.join(currentDir, item),
-      const stat = fs.statSync(fullPath),
-,
-      if (stat.isDirectory() && !item.startsWith('.') && item !== node_modules') {,
-        traverse(fullPath)
-      } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {,
+     else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {,
         files.push(fullPath)
       };
     };

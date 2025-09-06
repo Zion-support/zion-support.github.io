@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readState, writeState } from '../../../../lib/integrations/fileStore';
 import { ats } from '../../../../lib/integrations/connectors';
@@ -21,8 +20,7 @@ export default async function handler(
       c.providerId === 'bamboohr'
   );
   const results: any[] = [];
-  for (const conn of atsProviders) {
-    const { log } = await ats.updateStatus(conn, {
+   = await ats.updateStatus(conn, {
       applicantId: talent.id,
       status: 'hired',
     });
@@ -30,8 +28,3 @@ export default async function handler(
     results.push({ providerId: conn.providerId, ok: true });
   }
   res.status(200).json({ ok: true, results });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

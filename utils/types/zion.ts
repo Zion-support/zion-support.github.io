@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export type GovernanceMode = 'Admin' | 'DAO' | 'Hybrid';
 
 export interface Branding {
@@ -6,7 +5,6 @@ export interface Branding {
   primaryColor?: string;
   secondaryColor?: string;
   subdomain?: string;
-}
 
 export interface DeployModules {
   marketplace: boolean;
@@ -27,7 +25,6 @@ export interface DeployModules {
   grantPortal?: boolean;
   trailer?: boolean;
   bookStore?: boolean;
-}
 
 export interface DeployInput {
   instanceName: string;
@@ -38,20 +35,17 @@ export interface DeployInput {
   branding: Branding;
   modules: DeployModules;
   requestedRoutes?: string[];
-}
 
 export interface DeployLogEntry {
   timestamp: string;
   level: 'info' | 'warn' | 'error';
   action: string;
   details?: Record<string, unknown> | string;
-}
 
 export interface GeneratedAsset {
   kind: 'file' | 'page' | 'config' | 'job' | 'event';
   path: string;
   description?: string;
-}
 
 export interface DeployResult {
   success: boolean;
@@ -61,12 +55,7 @@ export interface DeployResult {
   logs: DeployLogEntry[];
   summary: string;
   version: string;
-}
 
 export interface AccessControlConfig {
   allowedRoles: ('Founder' | 'Superadmin' | 'DAOMultisig')[];
   adminKeyConfigured: boolean;
-}
-=======
-export type GovernanceMode = "Admin" | "DAO" | "Hybrid";
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

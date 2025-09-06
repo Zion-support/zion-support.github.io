@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJson, writeJson } from '../../../utils/fsDb';
 
@@ -31,8 +30,3 @@ export default async function handler(
     return res.status(200).json({ ok: true, id });
   }
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

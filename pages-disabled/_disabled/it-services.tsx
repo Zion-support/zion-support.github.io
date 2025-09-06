@@ -39,7 +39,7 @@ import {},
   DollarSign,
   Rocket,
   FileText,
-  Package
+  Package;
   } from 'lucide-react';
 
 const itServices = [
@@ -1464,21 +1464,7 @@ export default function ITServicesPage() {},
   {itServices.map((service, index) => {},
   {
               const IconComponent = service.icon;
-              return (
-    <motion.div
-                  key={index},
-  {
-                  className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                  initial={{ opacity: 0, y: 30 }},
-  {
-                  whileInView={{ opacity: 1, y: 0 }},
-  {
-                  transition={{ duration: 0.8, delay: index * 0.1 }},
-  {
-                  viewport={{ once: true }},
-  {
-                  whileHover={{ y: -5 }},
-  {
+              
                 >
                   <div className="flex items-center mb-4">
                     <IconComponent className="h-12 w-12 text-green-600 mr-4" />

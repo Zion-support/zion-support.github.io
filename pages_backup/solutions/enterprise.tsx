@@ -47,11 +47,7 @@ const enterpriseSolutions = [
 ];
 
 export default function EnterpriseSolutions() {
-  return (
-    <Layout
-      title="Enterprise Solutions - Zion Tech Group"
-      description="Comprehensive enterprise solutions for large organizations"
-      keywords="enterprise solutions, business solutions, corporate services, enterprise software"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -105,13 +101,7 @@ export default function EnterpriseSolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {enterpriseFeatures.map((feature, index) => {
                 const IconComponent = feature.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white rounded-lg shadow-lg p-6 text-center"
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                
                   >
                     <IconComponent className="w-12 h-12 text-blue-600 mx-auto mb-4" />
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -196,4 +186,3 @@ export default function EnterpriseSolutions() {
       </div>
     </Layout>
   );
-}

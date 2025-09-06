@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -32,7 +31,3 @@ export default function DiversityInclusionPage() {
       </div>
     </div>
   );
-}
-=======
- <li>Inclusive hiring practices and diverse panels</li> <li>Equal opportunities and career development</li> <li>Respectful, safe, and collaborative culture</li> </ul> </div> </div> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 
@@ -10,7 +9,6 @@ function getUserId(req: NextApiRequest): string {
     .find(c => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
   return 'demo-user-1';
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -35,13 +33,3 @@ export default async function handler(
   } catch (e) {
     return res.status(500).json({ error: 'Unexpected error' });
   }
-}
-=======
- const {
-  error 
-}= await supabase .from ('notifications') .update ({
-  read status: true 
-}) .eq ('id', id) .eq ('user id', userId);
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

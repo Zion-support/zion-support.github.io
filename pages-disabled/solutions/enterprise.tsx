@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
   // TODO: Implement
-}
+
   Building, 
   Shield, 
   Users, 
@@ -17,7 +17,7 @@ import {
   Settings,
   Award,
   Clock,
-  Target,
+  Target,;
   TrendingUp;'
 } from 'lucide-react';
 const features = [
@@ -105,10 +105,7 @@ const testimonials = [
 ];
 
 export default function EnterpriseSolutionsPage() {
-  return (
-    <MainLayout"
-      title="Enterprise Solutions - Zion Tech Group"
-      description="Comprehensive enterprise technology solutions with enterprise-grade security, scalability, and 24/7 support for large organizations."
+  
     >
 </$1>
       <div className="min-h-screen bg-gray-50">"
@@ -432,4 +429,3 @@ export default function EnterpriseSolutionsPage() {
         </section>
       </div>
     </$1>
-}

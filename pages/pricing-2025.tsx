@@ -6,8 +6,8 @@ const containerVariants = {
 visible: {
   opacity: 1, transition: {
   staggerChildren: 0.1 
-}
-}
+
+
 };
 const itemVariants = {
   hidden: {
@@ -16,21 +16,21 @@ const itemVariants = {
 visible: {
   opacity: 1, y: 0, transition: {
   duration: 0.5 
-}
-}
+
+
 };
 <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }> <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-blue-100 to-cyan-100 bg-clip-text text-transparent" > 2025 Pricing & Services </h1> Monthly </span> <button onClick= {
   () => setBillingCycle (billingCycle === 'monthly' ? 'annual' : 'monthly') 
 }className= {
@@ -86,19 +86,18 @@ visible: {
 }</div> </section> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Need Enterprise Solutions? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > We offer custom enterprise solutions, volume discounts, and dedicated support for organizations requiring multiple services or specialized implementations. </p> <div className="flex flex-col sm:flex-row gap-4 justify-center" > <a href="mailto:kleber@ziontechgroup.com?subject=Enterprise Solutions Inquiry&body=Hi, I'm interested in enterprise solutions and volume pricing. Please provide more information about your enterprise offerings, custom implementations, and dedicated support options." className="px-8 py-4 bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 hover:shadow-2xl flex items-center justify-center gap-2" > Contact Enterprise Sales <ArrowRight className="w-5 h-5" /> </Link> <a href="tel:+13024640950" className="px-8 py-4 border border-white/20 hover:border-white/40 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/5 hover:bg-white/10" > Call Us Now </Link> </div> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent" > Frequently Asked Questions </h2> </motion.div> </motion.div>) ) 
 }</div> </div> </section> <EnhancedFooter /> </div>) 
-}

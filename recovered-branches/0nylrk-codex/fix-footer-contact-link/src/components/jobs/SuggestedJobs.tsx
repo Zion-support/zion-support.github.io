@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useAuth } from '@/hooks/useAuth';
 import { Loader2 } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
@@ -8,7 +7,6 @@ import { NoJobsCard } from './NoJobsCard';
 
 interface SuggestedJobsProps {
   talentId?: string;
-}
 
 export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
   const { user } = useAuth();
@@ -111,25 +109,7 @@ export function SuggestedJobs({ talentId }: SuggestedJobsProps) {
       )}
     </div>
   );
-=======
- interface SuggestedJobsProps {
-  talentId?: string 
-}export function SuggestedJobs ({
-  talentId 
-}: SuggestedJobsProps) {
-  const {
-  user 
-}= useAuth ();
-const currentTalentId = talentId || user?.id;
-const {
-  isLoading;
-updateJobMatchStatus;
-categorizedMatches: {
-  newMatches;
-viewedMatches;
-appliedMatches 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }= useJobSuggestions (currentTalentId);
 const handleApply = (matchId: string, jobId: string) => {
   updateJobMatchStatus (matchId, 'applied');
@@ -181,4 +161,3 @@ if (isLoading) {
 }/>) ) 
 }</div> </div>) 
 }</div>) 
-}

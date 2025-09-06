@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import TrustBadge from '../components/ui/TrustBadge';
@@ -162,18 +161,3 @@ export default function TrustPage() {
       </div>
     </EnhancedLayout>
   );
-}
-=======
- 
-}load () 
-}, [userId]);
-</li>) ) 
-}</ul> </div>) 
-}<strong>Operator GPT Analysis:</strong> {
-  data.reasonSummary 
-}</div>) 
-}</div> </form> </div>) 
-}</div> </div>) 
-}</div> </EnhancedLayout>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

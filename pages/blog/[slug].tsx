@@ -1,15 +1,12 @@
  
 }interface BlogPostPageProps {
   /** * Preloaded blog post for static generation. Can be null if not found. */ 
-}
-<<<<<<< HEAD
 
 interface BlogPostPageProps {
   /**
    * Preloaded blog post for static generation. Can be null if not found.
    */
   initialPost: BlogPost | null;
-}
 
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter();
@@ -104,25 +101,8 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       </main>
     </>
   );
-=======
-}, [slug, initialPost]);
-{
-  post.author.title 
-}</p>) 
-}</div> </div> /> </div>) 
-}<ReactMarkdown> {
-  body 
-}</ReactMarkdown> <AuthorBio author= {
-  post.author 
-}/> <SocialShareButtons title= {
-  post.title 
-}/> <CommentsSection slug= {
-  post.slug 
-}/> </main> </>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default BlogPostPage;
-<<<<<<< HEAD
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const dir = path.join(process.cwd(), 'content', 'blog');
@@ -151,5 +131,3 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
   }
   return { props: { initialPost: post }, revalidate: 60 };
 };
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

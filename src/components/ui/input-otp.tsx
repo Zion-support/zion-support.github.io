@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import * as React from 'react';
 import { OTPInput, OTPInputContext } from 'input-otp';
 import { Dot } from 'lucide-react';
@@ -36,15 +35,7 @@ const InputOTPSlot = React.forwardRef<
   const inputOTPContext = React.useContext(OTPInputContext) as any;
   const { char, hasFakeCaret, isActive } = inputOTPContext.slots[index];
 
-  return (
-    <div
-      ref={ref}
-      className={cn(
-        'relative flex h-10 w-10 items-center justify-center border-y border-r border-input text-sm transition-all first:rounded-l-md first:border-l last:rounded-r-md',
-        isActive && 'z-10 ring-2 ring-ring ring-offset-background',
-        className
-      )}
-      {...props}
+  
     >
       {char}
       {hasFakeCaret && (
@@ -68,16 +59,3 @@ const InputOTPSeparator = React.forwardRef<
 InputOTPSeparator.displayName = 'InputOTPSeparator';
 
 export { InputOTP, InputOTPGroup, InputOTPSlot, InputOTPSeparator };
-=======
- const InputOTP = React.forwardRef< React.ElementRef<typeof OTPInput>;
-React.ComponentPropsWithoutRef<typeof OTPInput> > ( ({;
-  className,  containerClassName, ...props ;
-}, ref) => (<OTPInput />) ) InputOTP.displayName = "InputOTP") ) InputOTPGroup.displayName = "InputOTPGroup") ;
-}{;
-  ...props ;
-}> </div>) ;
-}</div>) ";
-}) InputOTPSlot.displayName = "InputOTPSlot" <Dot /> </div>) ) InputOTPSeparator.displayName = "InputOTPSeparator" export {;
-  InputOTP, InputOTPGroup,  InputOTPSlot, InputOTPSeparator ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

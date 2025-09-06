@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Star } from 'lucide-react';
 import { useForm } from 'react-hook-form';
@@ -10,20 +9,12 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
 import { Switch } from '@/components/ui/switch';
 import { Review } from '@/types/reviews';
 
-=======
- import {
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 interface ReviewFormValues {
   rating?: number;
 review text?: string;
@@ -34,13 +25,11 @@ would work again?: boolean;
 is anonymous?: boolean 
 }interface ReviewFormProps {
   projectId: string;
-<<<<<<< HEAD
   revieweeId: string;
   revieweeName: string;
   onSubmit: (data: any) => Promise<boolean>;
   defaultValues?: Review;
   isSubmitting: boolean;
-}
 
 export function ReviewForm({
   projectId,
@@ -332,35 +321,7 @@ export function ReviewForm({
       </form>
     </Form>
   );
-=======
-revieweeId: string;
-revieweeName: string;
-onSubmit: (data: any) => Promise<boolean>;
-defaultValues?: Review;
-isSubmitting: boolean 
-}export function ReviewForm ({
-  projectId;
-revieweeId;
-revieweeName;
-onSubmit;
-defaultValues;
-isSubmitting 
-}: ReviewFormProps) {
-  const [hoveredStar, setHoveredStar] = useState<number> (0);
-defaultValues: defaultValues ? {
-  return (<Form {
-  ...form 
-}> <form onSubmit= {
-  form.handleSubmit (handleSubmit) 
-}className="space-y-6" > {
-  /* Main Rating */ 
-}<FormField control= {
-  form.control 
-}name="rating" rules= {
-  {
-  required: "Rating is required" 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }render= {
   ({
   field 
@@ -434,4 +395,3 @@ defaultValues: defaultValues ? {
   field.onChange 
 }/> </FormControl> <FormLabel className="cursor-pointer font-normal"> Submit anonymously </FormLabel> </div> <p className="text-xs text-muted-foreground mt-1" > Anonymous reviews won't display your name but will still be linked to your account. </p> <FormMessage /> </FormItem>) 
 }/> <Button </Button> </form> </Form>) 
-}

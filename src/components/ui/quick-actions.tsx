@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -13,7 +12,7 @@ import {
   Settings,
   Activity,
   Package,
-  Monitor,
+  Monitor,;
 } from 'lucide-react';
 
 interface QuickAction {
@@ -24,7 +23,6 @@ interface QuickAction {
   action: () => void;
   category: 'performance' | 'development' | 'maintenance';
   dangerous?: boolean;
-}
 
 export function QuickActions() {
   const { user } = useAuth();
@@ -289,21 +287,3 @@ export function QuickActions() {
       </Card>
     </div>
   );
-}
-=======
- const [isVisible, setIsVisible] = useState (false);
-const [isProcessing, setIsProcessing] = useState<string | null> (null);
-}localStorage.clear ();
-sessionStorage.clear ();
-window.location.reload () ;
-}
-};
-<Button variant="outline" size="sm" onClick={;
-  () => setIsVisible (true) ";
-}className="bg-background/80 backdrop-blur-sm" > <Settings className="w-4 h-4 mr-2" /> Quick Actions </Button> </div>) ;
-}> ✕ </Button> </div> </CardHeader>) : (action.icon) ;
-}</div> </div> </div> </div> </Button> </div>) ) ;
-}</div> </div>) ) ;
-}</CardContent> </Card> </div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

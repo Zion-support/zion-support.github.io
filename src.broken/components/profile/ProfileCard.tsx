@@ -1,10 +1,8 @@
-<<<<<<< HEAD
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
 import { TalentProfile } from '@/types/talent';
 
 interface ProfileCardProps {
   profile: TalentProfile;
-}
 
 export function ProfileCard({ profile }: ProfileCardProps) {
   return (
@@ -30,22 +28,3 @@ export function ProfileCard({ profile }: ProfileCardProps) {
       </CardContent>
     </Card>
   );
-}
-=======
- interface ProfileCardProps {
-  profile: TalentProfile 
-}export function ProfileCard ({
-  profile 
-}: ProfileCardProps) {
-  return (<Card className="bg-zion-blue-dark border-zion-blue-light text-white mb-6" > profile-name" > {
-  profile.full name 
-}</CardTitle> </CardHeader> <CardContent> {
-  profile.skills.map (skill => (<li key= {
-  skill 
-}> {
-  skill 
-}</li>) ) 
-}</ul>) 
-}</CardContent> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

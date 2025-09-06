@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { AppLayout } from '@/layout/AppLayout';
 import { SEO } from '@/components/SEO';
@@ -22,11 +21,5 @@ const AppMetadataManager: React.FC = () => {
       </div>
     </AppLayout>
   );
-=======
- const AppMetadataManager: React.FC = () => {
-  return (App Metadata Manager"description=" Manage app store metadata for the Zion mobile application"noindex= {
-  true 
-}/> <div className=" container py-8"> <h1 className=" text-3xl font-bold text-zion-cyan mb-8" >App Metadata Manager</h1> <MetadataManager /> </div> </AppLayout>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default AppMetadataManager;

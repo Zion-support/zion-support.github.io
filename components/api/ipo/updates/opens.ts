@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
@@ -10,8 +9,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const u = updates.find((x: any) => x.id === id);
   if (!u) return res.status(404).json({ error: 'Not found' });
   res.status(200).json({ opens: u.opens || 0 });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

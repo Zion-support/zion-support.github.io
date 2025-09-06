@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -11,13 +10,13 @@ import { toast } from '@/components/ui/use-toast';
 import {
   logInfo,
   logWarn,
-  logErrorToProduction,
+  logErrorToProduction,;
 } from '@/utils/productionLogger';
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import z from 'zod';
 import { ChatAssistant } from '@/components/ChatAssistant';
@@ -489,23 +488,7 @@ export default function Contact() {
       )}
     </>
   );
-=======
- ;
-}setErrors ({;
-  ;
-});
-setIsSubmitting (true);
-logInfo ('[ContactForm] Starting form submission (fetch to /api/contact) .');
-try {';
-  fetch ('/api/contact',  {';
-  method: 'POST', headers: {';
-  'Content-Type': 'application/json' ;
-};
-body: JSON.stringify (formData) ;
-}) //Note: setIsSubmitting (false) is called within then/catch of the promise. //If fetch itself or .then/.catch structure has a synchronous error;';
-//the outer try/catch will handle it. //This throw will be caught by the .catch block below throw new Error (errorData.error || 'Failed to send message') ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }) .catch ( (err) => {';
   //This catches errors from the fetch promise (network, res.ok is false,  or manual throw) logErrorToProduction ('[ContactForm] Fetch promise chain error:', {;
   data: err ;
@@ -527,7 +510,7 @@ toast ({';
 description: error instanceof Error ? error.message : 'An unexpected critical error occurred.';';
 variant: 'destructive' ;
 }) ;
-}
+
 };
 //Handle sending messages to the AI chat assistant const handleSendMessage = async (message: string) : Promise<void> => {;
   try {';
@@ -535,7 +518,7 @@ variant: 'destructive' ;
   method: 'POST', headers: {';
   'Content-Type': 'application/json' ;
 };
-}
+
 };';
 return (<> <SEO title="Contact Us - Get Help from Zion Tech Marketplace" description="Reach out to Zion Tech Marketplace for personalized support. Ask questions, get guidance, and connect with our tech-savvy team today. We’re eager to assist—drop us a line anytime." keywords="contact Zion, AI marketplace support, tech platform contact" canonical="https://app.ziontechgroup.com/contact" /> <main className="min-h-screen bg-zion-blue pt-24 pb-20" > <div className="container mx-auto px-4 sm:px-6 lg:px-8" > <div className="text-center mb-16" > <GradientHeading>Contact Us</GradientHeading> <p className="mt-4 text-zion-slate-light text-xl max-w-3xl mx-auto" > Have questions or want to learn more? We'd love to hear from you. </p> </div> <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-24" > <div> <h2 className="text-3xl font-bold text-white mb-6" > Get in Touch </h2> <p className="text-zion-slate-light text-lg mb-8" > Whether you have a question about our platform, pricing, or anything else, our team is ready to answer all your questions. </p> <div> <label htmlFor="name" className="block text-white mb-2" > Your Name </label> <Input) ";
 }</div> <div> <label htmlFor="email" className="block text-white mb-2" > Email Address </label> <Input {;

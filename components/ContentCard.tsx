@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Link from 'next/link';
 
@@ -11,7 +10,6 @@ interface ContentCardProps {
   glow: string;
   date?: string;
   category?: string;
-}
 
 const ContentCard: React.FC<ContentCardProps> = ({
   title,
@@ -23,10 +21,7 @@ const ContentCard: React.FC<ContentCardProps> = ({
   date,
   category,
 }) => {
-  return (
-    <Link
-      href={href}
-      className={`group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-500 hover-lift ${glow}`}
+  
     >
       {/* Background Glow */}
       <div className='pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-cyan-500/0 via-cyan-400/10 to-cyan-500/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-100' />
@@ -76,22 +71,3 @@ const ContentCard: React.FC<ContentCardProps> = ({
 };
 
 export default ContentCard;
-=======
- const ContentCard: React.FC<ContentCardProps> = ({
-  title, description, href, icon, color, glow, date, category 
-}) => {
-  return (<Link href= {
-  href 
-}className= {
-  `group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-xl hover:border-cyan-400/30 transition-all duration-500 hover-lift $ {
-  glow 
-}` 
-}> {
-  category 
-}</span>) 
-}</div> Read More <span className="ml-2 group-hover:translate-x-1 transition-transform duration-300" >→</span> </div> {
-  date 
-}</span>) 
-}</div> </Link>) 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

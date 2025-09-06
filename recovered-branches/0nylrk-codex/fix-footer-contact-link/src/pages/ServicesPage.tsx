@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { DynamicListingPage } from '@/components/DynamicListingPage';
 import { ProductListing } from '@/types/listings';
 import { AppLayout } from '@/layout/AppLayout';
@@ -188,8 +187,6 @@ export default function ServicesPage() {
       <TrustedBySection />
     </AppLayout>
   );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Sample service listings const SERVICE LISTINGS: ProductListing[] = [ aiScore: 94;
 rating: 4.8;
 reviewCount: 85 
 }];
@@ -201,7 +198,5 @@ reviewCount: 85
 }initialPrice= {
   {
   min: 3000, max: 10000 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> <TrustedBySection /> </AppLayout>) 
-}

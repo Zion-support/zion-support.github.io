@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { DynamicListingPage } from '@/components/DynamicListingPage';
 import { ProductListing } from '@/types/listings';
 
@@ -156,30 +155,12 @@ const TALENT_FILTERS = [
 ];
 
 export default function TalentsPage() {
-  return (
-    <DynamicListingPage
-      title='AI & Tech Talent'
-      description='Connect with highly skilled professionals in AI, software development, data science, and more.'
-      categorySlug='talents'
-      listings={TALENT_LISTINGS}
-      categoryFilters={TALENT_FILTERS}
-      initialPrice={{ min: 100, max: 200 }}
+  
     />
   );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Sample talent listings const TALENT LISTINGS: ProductListing[] = [ aiScore: 94;
 rating: 4.9;
 reviewCount: 21 
 }];
 //Filter options specific to talents export default function TalentsPage () {
-  return (<DynamicListingPage listings= {
-  TALENT LISTINGS 
-}categoryFilters= {
-  TALENT FILTERS 
-}initialPrice= {
-  {
-  min: 100, max: 200 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+  
 }/>) 
-}

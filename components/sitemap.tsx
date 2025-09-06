@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 
@@ -46,9 +45,3 @@ export default function SitemapPage() {
       </div>
     </div>
   );
-}
-=======
- return (<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8" > <Head> <title>Sitemap | Zion Tech Group</title> <meta name="description" content="Quick links to the main routes and pages." /> <link rel="canonical" href="https://ziontechgroup.com/sitemap" /> </Head>) ) 
-}</ul> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

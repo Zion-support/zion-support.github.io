@@ -13,7 +13,6 @@
   
 }) 
 };
-<<<<<<< HEAD
 
 export default function AIAssistant({
   buttonLabel = 'Generate with AI',
@@ -184,18 +183,3 @@ export default function AIAssistant({
       )}
     </>
   );
-}
-=======
-return (<> <button > {
-  buttonLabel 
-}</button> </div> <div className="p-4 space-y-3" > <div> <label className="block text-xs font-medium mb-1" >Operator prompt</label> <textarea <button onClick= {
-  () => {
-  onAccept (output), onClose () 
-}
-}disabled= {
-  !canAccept 
-}className="ml-auto rounded-md bg-green-600 text-white px-3 py-1.5 text-sm disabled:opacity-60" 
-}</div> </div> </div> </div>) 
-}</>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

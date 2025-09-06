@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -9,18 +8,15 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
-}
 
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
-}
 
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
   const p = grantPath(id);
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-}
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
@@ -29,7 +25,6 @@ function writeGrant(record: GrantApplication) {
     JSON.stringify(record, null, 2),
     'utf8'
   );
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
@@ -54,8 +49,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
   res.status(200).json({ record: g });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

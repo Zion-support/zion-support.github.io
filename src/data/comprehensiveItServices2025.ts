@@ -31,6 +31,6 @@ export interface ComprehensiveITService {;
 };
   competitors?: string[];
   marketSize?: string;
-}
+
 ;
 export const COMPREHENSIVE_IT_SERVICES_2025: ComprehensiveITService[] = [];

@@ -8,11 +8,10 @@ const matchesSearch = service.name.toLowerCase () .includes (searchTerm.toLowerC
   animate: {
   transition: {
   staggerChildren: 0.1 
-}
-}
+
+
 };
-return (<> <Head> <title>Innovative 2025 Services Showcase - Zion Tech Group</title> <meta name="description" content="Discover Zion Tech Group's innovative 2025 services including AI-powered solutions, advanced IT infrastructure, and cutting-edge micro SAAS platforms. Transform your business with our revolutionary technology solutions." /> <meta name="keywords" content="innovative services 2025, AI services, IT infrastructure, micro SAAS, cybersecurity, cloud solutions, Zion Tech Group" /> <meta name="viewport" content="width=device-width, initial-scale=1" /> <link rel="canonical" href="https://ziontechgroup.com/innovative-2025-services-showcase" /> </Head> left: `$ {
-  Math.random () * 100 
+
 }%`;
 top: `$ {
   Math.random () * 100 
@@ -23,7 +22,7 @@ animationDelay: `$ {
 animationDuration: `$ {
   2 + Math.random () * 3 
 }s` 
-}
+
 }/>) ) 
 }</div> </div> > <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent" > Innovative 2025 </span> <br /> <span className="text-white" >Services Showcase</span> </motion.h1> <motion.p > Experience the future of technology with our revolutionary AI platforms, quantum computing solutions;
 autonomous systems, and innovative micro SAAS services that are transforming industries worldwide. </motion.p> <motion.div /> <Search className="absolute right-4 top-1/2 transform -translate-y-1/2 w-6 h-6 text-gray-400" /> </div> </div> key= {

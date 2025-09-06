@@ -2,7 +2,6 @@
   submitting ? 'Submitting...' : 'Submit Review' 
 }</button> </form>) 
 };
-<<<<<<< HEAD
 
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;
@@ -137,6 +136,4 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
   );
 };
 
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 export default ReviewForm;

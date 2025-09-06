@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { Bell, Calendar, X } from 'lucide-react';
@@ -82,20 +81,7 @@ export function ProjectOfferBanner() {
         ))}
     </div>
   );
-=======
- export function ProjectOfferBanner () {;
-  const router = useRouter ();
-const {;
-  projects, isLoading ;
-}= useProjects ();
-const [pendingOffers, setPendingOffers] = useState<Project[]> ([]);
-const [dismissed, setDismissed] = useState<Set<string>> (new Set () );
-useEffect ( () => {;
-  if (projects && !isLoading) {;
-  const offers = projects.filter (p => p.status === 'offer sent');
-setPendingOffers (offers) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [projects, isLoading]);
 const handleDismiss = (projectId: string, e: React.MouseEvent) => {;
   e.stopPropagation ();

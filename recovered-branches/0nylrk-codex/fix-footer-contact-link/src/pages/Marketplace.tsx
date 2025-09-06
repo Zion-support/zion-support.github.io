@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
@@ -12,7 +11,7 @@ import { ProductListingCard } from '@/components/ProductListingCard';
 import {
   MARKETPLACE_LISTINGS,
   generateSearchSuggestions,
-  generateFilterOptions,
+  generateFilterOptions,;
 } from '@/data/marketplaceData';
 import { toast } from '@/hooks/use-toast';
 import { useNavigate } from 'react-router-dom';
@@ -262,21 +261,7 @@ export default function Marketplace() {
       </main>
     </AppLayout>
   );
-=======
- const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions ();
-const filterOptions = generateFilterOptions ();
-//Search filter if (searchQuery && !listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) && !listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) && !listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) ) {
-  return true;
-});
-switch (filterType) {
-  case 'productType': setSelectedProductTypes (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-break;
-case 'location': setSelectedLocations (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-break;
-case 'availability': setSelectedAvailability (prev => prev.includes (value) ? prev.filter (item => item !== value) : [...prev, value]);
-break 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const clearAllFilters = () => {
   //Handle requesting a quote const handleRequestQuote = (listingId: string) => {
@@ -296,15 +281,15 @@ specificItem: {
 title: listing.title;
 category: listing.category;
 image: listing.images?.[0] 
-}
-}
+
+
 }) 
-}
+
 };
 Discover professional services and products for your AI and tech projects. Browse our curated collection of solutions from verified providers. </p> </div> /> </div> <div className="flex gap-2" > <Button variant="ghost" size="icon" className="text-zion-slate-light" > <Grid3X3 className="h-4 w-4" /> </Button> <Button variant="ghost" size="icon" className="text-zion-slate-light" > <ListFilter className="h-4 w-4" /> </Button> </div> </div> </div> <FilterSidebar filters= {
   {
   selectedProductTypes, selectedLocations, selectedAvailability, selectedRating 
-}
+
 }filterOptions= {
   filterOptions 
 }onFilterChange= {
@@ -344,4 +329,3 @@ Discover professional services and products for your AI and tech projects. Brows
   clearAllFilters 
 }className="bg-zion-purple hover:bg-zion-purple-dark" > Clear Filters </Button> </div>) 
 }</div> </div> </div> </main> </AppLayout>) 
-}

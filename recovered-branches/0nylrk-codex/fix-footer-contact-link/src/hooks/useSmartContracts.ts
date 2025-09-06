@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -6,7 +5,7 @@ import { toast } from 'sonner';
 import {
   BlockchainNetwork,
   DeploymentOptions,
-  SmartContractInfo,
+  SmartContractInfo,;
 } from '@/types/smart-contracts';
 import { TalentProfile } from '@/types/talent';
 import { ContractFormValues } from '@/components/contracts/components/ContractForm';
@@ -112,19 +111,7 @@ export function useSmartContracts() {
     isLoading,
     deploymentStatus,
   };
-=======
- export function useSmartContracts () {
-  const {
-  user 
-}= useAuth ();
-const [isLoading, setIsLoading] = useState (false);
-const [deploymentStatus, setDeploymentStatus] = useState<'idle' | 'deploying' | 'success' | 'error'> ('idle');
-talent: TalentProfile;
-clientName: string if (error) throw error;
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 options: DeploymentOptions 
 }try {
@@ -145,12 +132,11 @@ createdBy: user.id;
 status: 'deployed' 
 };
 // Wait to simulate blockchain transaction time await new Promise (resolve => setTimeout (resolve, 2000) );
-}
+
 };
-return {
+
   generateSolidityContract;
 deploySmartContract;
 isLoading;
 deploymentStatus 
-}
-}
+

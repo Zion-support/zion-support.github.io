@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router'; // Changed from useParams
 import { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -100,12 +99,7 @@ export default function ProductPage() {
       </div>
     </>
   );
-=======
- useEffect ( () => {;
-  //Update product if id changes and is available from router.query if (id) {;
-  ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Only fetch if id is available (from router) ;
 }const inCart = items.some (i => i.id === product.id);
@@ -116,7 +110,7 @@ dispatch ({;
   type: 'ADD ITEM';
 payload: {;
   id: product.id, name: product.title,  price: product.price ?? 0, quantity: 1 ;
-}
+
 });
 toast.success (`1× $ {;
   product.title ;

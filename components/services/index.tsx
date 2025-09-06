@@ -12,7 +12,7 @@ body: JSON.stringify ({
   start: values.timelineStart, end: values.timelineEnd 
 };
 budgetRange: values.budgetRange;
-}
+
 };
 <Head> <title>Zion AI Marketplace - Services</title> <meta name="description" content="Discover curated IT services. Request quotes with AI-assisted summaries." /> </Head>) ) 
 }</div> </div> </div> </div> <QuoteRequestModal open= {

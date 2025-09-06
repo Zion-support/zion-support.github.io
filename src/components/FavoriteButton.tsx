@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -10,13 +9,12 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 
 interface FavoriteButtonProps {
   itemId: string;
   className?: string;
-}
 
 export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
   const { isWishlisted, toggle } = useWishlist();
@@ -75,24 +73,3 @@ export function FavoriteButton({ itemId, className }: FavoriteButtonProps) {
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen} />
     </>
   );
-}
-=======
- ? "Item has been removed from your wishlist" : "Item has been added to your wishlist" ;
-}) ;
-};
-cn ('absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover:bg-zion-blue-light/30 transition-colors', className) ;
-}onClick={;
-  handleClick ;
-}aria-label= {';
-  active ? 'Remove from favorites' : 'Save to favorites' ;
-}> <Heart className= {';
-  cn ('h-4 w-4 transition-transform duration-200', active ? 'fill-red-500 text-red-500 scale-110' : 'text-zion-slate') ;
-}/> </button> </TooltipTrigger> {;
-  !isAuthenticated && <TooltipContent>Login required</TooltipContent> ;
-}</Tooltip> </TooltipProvider> <LoginModal isOpen= {;
-  loginOpen ;
-}onOpenChange= {;
-  setLoginOpen ;
-}/> </>) ;
-}'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

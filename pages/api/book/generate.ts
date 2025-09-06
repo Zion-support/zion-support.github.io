@@ -1,18 +1,13 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 
-<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-=======
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   if (req.method !== 'POST') {
     res.setHeader('Allow', ['POST']);
     return res.status(405).end('Method Not Allowed');
   }
-<<<<<<< HEAD
 
   const { meta, chapters } = req.body as {
     meta: any;
@@ -34,8 +29,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const system = `You are a book-writing assistant. Write concise but high-signal chapters for a visionary, systems-architecture book. Maintain clear structure, use short paragraphs, bullets where helpful, and end each chapter with 3 actionable principles.`;
 
   const drafted = [] as { title: string; content: string }[];
-  for (const ch of chapters) {
-    const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`;
+   — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 600-900 words. Include 1 short quote block if appropriate.`;
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini',
       messages: [
@@ -49,9 +43,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 
   res.status(200).json({ chapters: drafted });
-}
-=======
-  
-  res.status(200).json({ message: 'Book generated' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

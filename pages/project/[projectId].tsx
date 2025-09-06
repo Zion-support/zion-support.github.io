@@ -16,17 +16,17 @@ const [note, setNote] = useState ("");
   setError (e.message) 
 }finally {
   setLoading (false) 
-}
+
 }load () 
 }, [projectId]);
 const [showFeedback, setShowFeedback] = useState (false);
-}
+
 }async function markCompleted () {
   const res = await fetch (`/api/marketplace/projects`, {
   if (json.ok) {
   setProject (json.project);
 setShowFeedback (true) 
-}
+
 }return (<div className=" max-w-4xl mx-auto p-6 space-y-6"> {
   loading && <div>Loading…</div> 
 }{
@@ -65,7 +65,7 @@ setShowFeedback (true)
   m.status && <span> • {
   m.status 
 }</span> 
-}
+
 }</ul> </section>) : (<span> {
   d.name 
 }</span>) 
@@ -81,9 +81,8 @@ setShowFeedback (true)
   {
   actionType: 'chatbot use', metadata: {
   projectId 
-}
-}
+
+
 }userHeaders= {
   headers 
 }/> </div>) 
-}

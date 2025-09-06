@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { AnalyticsChart } from '@/components/analytics/AnalyticsChart';
 
@@ -13,7 +12,6 @@ interface PageViewsChartProps {
   data: Array<{ date: string; views: number }>;
   timeRange: string;
   onTimeRangeChange: (range: string) => void;
-}
 
 export function PageViewsChart({
   data,
@@ -39,25 +37,3 @@ export function PageViewsChart({
       </CardContent>
     </Card>
   );
-}
-=======
- interface PageViewsChartProps {
-  data: Array< {
-  date: string, views: number 
-}>;
-timeRange: string;
-onTimeRangeChange: (range: string) => void 
-}export function PageViewsChart ({
-  data, timeRange, onTimeRangeChange 
-}: PageViewsChartProps) {
-  return (<Card className="bg-zion-blue-dark border-zion-blue-light overflow-hidden" > <CardHeader className="pb-2" > <CardTitle className="text-white text-lg" >Page Views Trend</CardTitle> <CardDescription className="text-zion-slate-light" >Daily page view statistics</CardDescription> p-0 pb-4"> <AnalyticsChart title="" data= {
-  data || [] 
-}dataKeys= {
-  ['views'] 
-}timeRange= {
-  timeRange 
-}onTimeRangeChange= {
-  onTimeRangeChange 
-}/> </CardContent> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

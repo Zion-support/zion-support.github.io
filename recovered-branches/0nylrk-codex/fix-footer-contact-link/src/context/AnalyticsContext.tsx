@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, {
   createContext,
   useState,
   useContext,
   useEffect,
-  ReactNode,
+  ReactNode,;
 } from 'react';
 import { useLocation } from 'react-router-dom';
 import { useAuth } from '@/hooks/useAuth';
@@ -35,7 +34,6 @@ export interface AnalyticsEvent {
   timestamp: number;
   userId?: string | null;
   metadata?: Record<string, any>;
-}
 
 export interface AnalyticsContextType {
   trackEvent: (
@@ -51,7 +49,6 @@ export interface AnalyticsContextType {
   lastEvent: AnalyticsEvent | null;
   events: AnalyticsEvent[];
   clearEvents: () => void;
-}
 
 const AnalyticsContext = createContext<AnalyticsContextType | undefined>(
   undefined
@@ -123,32 +120,12 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
     setLastEvent(null);
   };
 
-  return (
-    <AnalyticsContext.Provider
-      value={{
-        trackEvent,
-        trackConversion,
-        pageViews,
-        lastEvent,
-        events,
-        clearEvents,
-      }}
+  
     >
       {children}
     </AnalyticsContext.Provider>
   );
-=======
- //Analytics event types export type AnalyticsEventType = | 'page view' | 'button click' | 'form submit' | 'form error' | 'search' | 'filter' | 'conversion' | 'listing view' | 'listing contact' | 'payment initiated' | 'payment completed' | 'signup' | 'login';
-//Interface for analytics events const AnalyticsContext = createContext<AnalyticsContextType | undefined> (undefined);
-//eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [location.pathname]);
-//Function to track general analytics events try {
-  //Store event in Supabase for persistent analytics await supabase.from ('analytics events') .insert ([ {
-  
-}catch (error) {
-  console.error ('Error logging analytics event:', error) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Function to track conversion events const trackConversion = (conversionType: string, value?: number, metadata: Record<string any> = {
   
@@ -165,7 +142,7 @@ setLastEvent (null)
 };
 {
   trackEvent, trackConversion, pageViews, lastEvent, events, clearEvents 
-}
+
 }> {
   children 
 }</AnalyticsContext.Provider>) 

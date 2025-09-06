@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import Link from 'next/link';
@@ -8,13 +7,13 @@ import {
   MessageSquare,
   Pin,
   Lock,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
 import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
+  CardHeader,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -24,9 +23,6 @@ import { ForumPost } from '@/types/community';
 import { logInfo } from '@/utils/productionLogger';
 
 interface PostCardProps {
-=======
- interface PostCardProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   post: ForumPost;
 compact?: boolean ;
 }const PostCardComponent = ({;
@@ -38,10 +34,7 @@ compact?: boolean ;
 const timeAgo = formatDistanceToNow (new Date (post.createdAt), {;
   addSuffix: true ;
 });
-return (<Card data-testid="post-card" className= {";
-  cn ("transition-shadow hover:shadow-md";";
-post.isPinned && "border-zion-purple/50";";
-post.isFeatured && "bg-zion-purple/5") ;
+
 }> <p>DEBUG: PostCard ID: {;
   post?.id ";
 }</p> <CardHeader className="flex flex-row items-start gap-4 space-y-0" > <Avatar className="h-10 w-10" > <AvatarImage src= {;
@@ -71,8 +64,6 @@ post.isFeatured && "bg-zion-purple/5") ;
   tag ";
 }variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {;
   tag ;
-}
-<<<<<<< HEAD
 
 const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
   logInfo('PostCardComponent rendering with post:', {
@@ -82,14 +73,7 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
     addSuffix: true,
   });
 
-  return (
-    <Card
-      data-testid='post-card'
-      className={cn(
-        'transition-shadow hover:shadow-md',
-        post.isPinned && 'border-zion-purple/50',
-        post.isFeatured && 'bg-zion-purple/5'
-      )}
+  
     >
       <p>DEBUG: PostCard ID: {post?.id}</p>
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>
@@ -161,15 +145,6 @@ const PostCardComponent = ({ post, compact = false }: PostCardProps) => {
       </CardFooter>
     </Card>
   );
-=======
-}</div> </div> </CardHeader> {";
-  !compact && (<CardContent> <div className="line-clamp-3" > {;
-  post.content ;
-}</div> </CardContent>) ;
-}</div> </div> {";
-  post.isFeatured && (<div> <Badge className="bg-zion-purple" >Featured</Badge> </div>) ;
-}</CardFooter> </Card>) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default PostCard;
 '"

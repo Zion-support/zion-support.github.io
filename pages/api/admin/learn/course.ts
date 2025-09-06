@@ -1,7 +1,8 @@
+import fs from 'fs';
+import path from 'path';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.setHeader('Allow', 'POST');
     return res.status(405).end('Method Not Allowed');
@@ -24,8 +25,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e?.message ?? 'Failed to save course' });
   }
-}
-=======
-  res.status(200).json({ message: 'Course API' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

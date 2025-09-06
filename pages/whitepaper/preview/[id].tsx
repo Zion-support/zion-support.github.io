@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
@@ -33,10 +32,3 @@ export default function WhitepaperPreview() {
       <pre className='whitespace-pre-wrap text-sm leading-6'>{markdown}</pre>
     </div>
   );
-}
-=======
- // Simple client fetch from a volatile in-memory store endpoint (for demo we echo in query) // In a production app, this would fetch from a real DB. fetch (`/api/whitepaper/get?id=$ {
-  id 
-}`) return (</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

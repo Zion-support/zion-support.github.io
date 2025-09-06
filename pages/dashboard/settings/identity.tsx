@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../../utils/kyc';
@@ -59,8 +58,3 @@ export default function IdentitySettingsPage() {
       </main>
     </>
   );
-}
-=======
- return (<> <Head> <title>Identity Settings - Zion</title> <meta name="description" content="Manage your identity verification status" /> </Head> <main className="max-w-3xl mx-auto px-4 py-8" > <h1 className="text-2xl font-bold mb-4" >Identity</h1> </div> <a href="/verify" className="inline-block rounded bg-blue-600 text-white px-4 py-2" >Go to verification</Link> </main> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

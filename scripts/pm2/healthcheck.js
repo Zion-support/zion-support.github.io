@@ -11,13 +11,12 @@ const distOk = fs.existsSync(dist/index.html'),
 		req.on(error', () => resolve(false));
 		req.end();
 	});
-}
 
 (async () => {
   const ok = distOk && (await pingPreview()),
   if (!ok) {
 		console.error('Healthcheck failed),
   process.exit(1)
-}
+
 	console.log('Healthy');
 })();

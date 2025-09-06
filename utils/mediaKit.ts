@@ -1,6 +1,5 @@
 export type MediaBundle = 'general' | 'web3' | 'institutional';
 export type PressReleaseType = 'seed-round' | 'launch' | 'token-sale';
-<<<<<<< HEAD
 
 export type MediaAsset = {
   path: string; // public-relative path for fetch
@@ -65,11 +64,9 @@ export function getDefaultAssets(bundle: MediaBundle): MediaAsset[] {
     colors,
     ...legalByBundle[bundle],
   ];
-}
 
 export function buildBrandGuidelines(): string {
   return `# Zion Brand Guidelines\n\n## Logo\n- Primary: Zion logomark (svg)\n- Clear space: 24px around\n\n## Colors\n- Primary: Zion Blue #0A84FF\n- Secondary: Deep Space #0B1220\n- Accent: Neon Lime #C3F53C\n\n## Typography\n- Headings: Inter, 700\n- Body: Inter, 400\n\n## Voice\n- Confident, precise, forward-looking\n`;
-}
 
 export function buildColorsAndTypography() {
   return {
@@ -84,7 +81,6 @@ export function buildColorsAndTypography() {
       body: { family: 'Inter', weight: 400 },
     },
   };
-}
 
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
@@ -125,7 +121,6 @@ export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
 
   if (kind === 'web3') return [...base, ...web3Extras];
   return base;
-}
 
 export function buildPressRelease(
   type: PressReleaseType,
@@ -147,7 +142,6 @@ export function buildPressRelease(
     return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} announces the ${params.tokenName ?? '[Token]'} token sale. This is not an offer of securities. See legal notices.\n\nDistribution:\n- Community: 40%\n- Treasury: 20%\n\nAbout ${params.companyName}:\n${boilerplate}`;
   }
   return `FOR IMMEDIATE RELEASE\nDate: ${params.date}\n\n${header}\n\n${params.companyName} launches ZionGPT Core, an intelligent operations layer. Key benefits include automation, compliance, and insight.\n\nAbout ${params.companyName}:\n${boilerplate}`;
-}
 
 export function buildTimeline(startDate: Date) {
   const addDays = (d: Date, days: number) =>
@@ -162,31 +156,9 @@ export function buildTimeline(startDate: Date) {
     },
     { label: 'Week 4: Zion Global Summit', date: fmt(addDays(startDate, 21)) },
   ];
-}
 
 function titleCase(s: string) {
   return s.replace(
     /\w\S*/g,
     w => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase()
   );
-}
-=======
-return [...common, ...social, brandGuidelines, colors, ...legalByBundle[bundle]] 
-}export function buildColorsAndTypography () {
-  return {
-  colors: {
-  primary: '#0A84FF', secondary: '#0B1220', accent: '#C3F53C', neutral: '#9CA3AF' 
-};
-typography: {
-  heading: {
-  family: 'Inter', weight: 700 
-};
-body: {
-  family: 'Inter', weight: 400 
-}
-}
-}
-}if (kind === 'web3') return [...base, ...web3Extras];
-return base 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

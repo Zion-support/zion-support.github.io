@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { IPFS } from 'ipfs-core-types';
 
 let createIpfsClient: any;
@@ -13,19 +12,16 @@ async function lazyLoadDeps() {
     const orbit = await import('orbit-db');
     OrbitDB = (orbit as any).default || orbit;
   } catch {}
-}
 
 export interface OrbitStores {
   chat: any;
   votes: any;
   constitution: any;
-}
 
 export interface OrbitConnections {
   ipfs: IPFS | null;
   orbit: any | null;
   stores: OrbitStores | null;
-}
 
 export async function connectOrbit(
   customIpfsUrl?: string
@@ -45,7 +41,6 @@ export async function connectOrbit(
   const constitution = await orbit.docstore('zion.constitution');
 
   return { ipfs, orbit, stores: { chat, votes, constitution } };
-}
 
 export async function appendChatMessage(
   stores: OrbitStores,
@@ -54,7 +49,6 @@ export async function appendChatMessage(
   if (!stores?.chat) return false;
   await stores.chat.add({ ...message, ts: message.ts || Date.now() });
   return true;
-}
 
 export async function recordVote(
   stores: OrbitStores,
@@ -63,7 +57,6 @@ export async function recordVote(
   if (!stores?.votes) return false;
   await stores.votes.add({ ...vote, ts: vote.ts || Date.now() });
   return true;
-}
 
 export async function editConstitution(
   stores: OrbitStores,
@@ -77,8 +70,3 @@ export async function editConstitution(
     ts: change.ts || Date.now(),
   });
   return true;
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

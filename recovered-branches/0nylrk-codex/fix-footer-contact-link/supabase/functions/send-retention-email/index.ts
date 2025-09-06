@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { serve } from 'https://deno.land/std@0.190.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.45.0';
 import { Resend } from 'npm:resend@2.0.0';
@@ -26,7 +25,6 @@ interface EmailData {
   onboarding_status?: any;
   job_id?: string;
   job_title?: string;
-}
 
 serve(async req => {
   // Handle CORS preflight requests
@@ -387,55 +385,7 @@ async function generateEmail(
       </div>
     `,
   };
-=======
- interface EmailData {
-  user id: string;
-email type: string;
-display name: string;
-user type: string;
-days inactive?: number;
-onboarding status?: any;
-job id?: string;
-job title?: string 
-}serve (async (req) => {
-  //Handle CORS preflight requests 
-}try {
-  //Extract job data from request const jobData = await req.json ();
-const {
-  id: jobId, payload 
-}= jobData;
-const emailData = payload as EmailData;
-//Fetch user's email const {
-  data: userData, error: userError 
-}= await supabase .from ("profiles") .select ("id, display name, avatar url, user type") .eq ("id", emailData.user id) .single ();
-}//Generate email content based on email type const {
-  subject, html 
-}= await generateEmail (emailData, userData);
-//Send email via Resend const emailResponse = await resend.emails.send ({
-  from: "Zion AI Marketplace <notifications@zion.ai>";
-to: userEmail;
-subject: subject;
-html: html 
-});
-if (emailResponse.error) {
-  throw new Error (`Failed to send email: $ {
-  emailResponse.error.message 
-}`) 
-}//Update job status await supabase //Update email campaign record await supabase .from ("email campaigns") .update ({
-  status: "sent";
-sent at: new Date () .toISOString () 
-}) .eq ("user id", emailData.user id) .eq ("campaign type", emailData.email type);
-success: false;
-error: error.message 
-});
-{
-  headers: {
-  ...corsHeaders;
-"Content-Type" : "application/json" 
-};
-}) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 if (email type === "welcome series") {
   //Customize based on user type if (user type === "jobSeeker" || user type === "creator") {
@@ -450,16 +400,16 @@ html: `<h2>Welcome to Zion AI Marketplace!</h2> <p>Hi $ {
 html: ` <h2>Welcome to Zion AI Marketplace!</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We're excited to have you join our community of innovative businesses and entrepreneurs.</p> <p>Here's what to do next to get started: </p> <ol> <li>Complete your company profile</li> <li>Post your first job or project</li> <li>Browse talent profiles in our directory</li> <li>Connect with AI professionals that match your needs</li> </ol> 
-}
+
 }if (user type === "jobSeeker" || user type === "creator") {
   if (!onboarding.profile completed) {
   
-}
+
 }else {
   //For clients if (!onboarding.job posted) {
   
-}
-}
+
+
 }return {
   subject: `$ {
   firstName 
@@ -471,7 +421,7 @@ html: `jobSeeker"|| user type === " creator") {
 html: ` <h2>New opportunities waiting for you!</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We've seen new AI projects posted in your area of expertise this week.</p> <p>Complete your profile this week and unlock premium visibility to stand out to clients looking for talent like you.</p> </div> <p>The Zion AI Marketplace Team</p> </div> ` 
-}
+
 }else {
   //For clients subject: `Zion's top AI talent this week — don't miss out, $ {
   firstName 
@@ -479,28 +429,26 @@ html: ` <h2>New opportunities waiting for you!</h2> <p>Hi $ {
 html: ` <h2>This week's top AI talent</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We've added new exceptional AI professionals to our talent pool this week who might be perfect for your projects.</p> <p>Post a job this week and get featured in our newsletter sent to all our talent.</p> 
-}
+
 }return {
   subject: `$ {
   firstName 
 }, we miss you! Special offer inside`;
 html: `</div> <p>The Zion AI Marketplace Team</p> </div> ` 
-}
+
 }else {
   //For clients subject: `$ {
   firstName 
 }, exclusive hiring discount inside`;
 html: ` 
-}
+
 }return {
   subject: `Boost your profile visibility, $ {
   firstName 
 }`;
 html: ` <h2>Boost your profile visibility</h2> <ul> <li>Add more details to your skills and experience</li> <li>Upload samples of your work to your portfolio</li> <li>Make sure your availability is up to date</li> <li>Adjust your rate if needed to be more competitive</li> </ul> </div> <p>The Zion AI Marketplace Team</p> </div> ` 
 };
-return {
-  subject: `Tips to find the perfect talent for " $ {
-  emailData.job title 
+
 }"`;
 html: ` "> <a href="$ {
   supabaseUrl 
@@ -511,8 +459,7 @@ color: white;
 padding: 12px 20px;
 text-decoration: none;
 border-radius: 4px;
-">Update Job Post</a> >>>>>>> cursor/fix-lint-push-and-merge-to-main-ce13 </div> <p>The Zion AI Marketplace Team</p> </div> ` 
-}
+">Update Job Post</a> }
 }//Default generic email return {
   subject: `$ {
   firstName 
@@ -520,5 +467,4 @@ border-radius: 4px;
 html: ` <h2>We've missed you!</h2> <p>Hi $ {
   firstName 
 }, </p> <p>We noticed you haven't been active on Zion AI Marketplace recently.</p> 
-}
-}
+

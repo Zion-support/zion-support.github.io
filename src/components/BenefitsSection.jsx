@@ -191,5 +191,5 @@ export function BenefitsSection() {;
         </motion.div>;
       </div>;
     </section>);
-}
+
 '"

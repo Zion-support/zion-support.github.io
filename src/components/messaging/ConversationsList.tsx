@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react';
 import { Conversation } from '@/types/messaging';
@@ -10,7 +9,6 @@ interface ConversationsListProps {
   activeConversation: Conversation | null;
   setActiveConversation: (conversation: Conversation) => void;
   markAsRead: (conversationId: string) => Promise<void>;
-}
 
 export function ConversationsList({
   conversations,
@@ -71,21 +69,3 @@ export function ConversationsList({
       )}
     </div>
   );
-}
-=======
- if (!conversation) {;
-  return <div style= {;
-  style ;
-}/> ;
-}return (<div style= {;
-  style ;
-}> <ConversationItem /> </div>) ;
-};
-return (<div className="w-full md:w-80 border-r border-zion-purple/20 overflow-y-auto" > <div className="p-3 border-b border-zion-purple/20" > <h3 className="font-medium text-white" >Conversations</h3> </div> <p>No conversations yet</p> <p className="text-sm mt-1" > Start a conversation from a job or talent profile. </p> </div>) : (<List height= {;
-  listHeight ;
-}> {;
-  Row ;
-}</List>) ;
-}</div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

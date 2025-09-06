@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { formatDistanceToNow } from 'date-fns';
 import { Link } from 'react-router-dom';
 import {
@@ -7,13 +6,13 @@ import {
   MessageSquare,
   Pin,
   Lock,
-  CheckCircle,
+  CheckCircle,;
 } from 'lucide-react';
 import {
   Card,
   CardContent,
   CardFooter,
-  CardHeader,
+  CardHeader,;
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
@@ -23,9 +22,6 @@ import { ForumPost } from '@/types/community';
 import { ProfileBadge } from '@/components/profile/ProfileBadge';
 
 interface PostCardProps {
-=======
- interface PostCardProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   post: ForumPost;
 compact?: boolean 
 }export const PostCard = ({
@@ -34,7 +30,7 @@ compact?: boolean
   const timeAgo = formatDistanceToNow (new Date (post.createdAt), {
   addSuffix: true 
 });
-return (<Card className= {
+
   cn ("transition-shadow hover:shadow-md";
 post.isPinned && "border-zion-purple/50";
 post.isFeatured && "bg-zion-purple/5") 
@@ -63,21 +59,13 @@ post.isFeatured && "bg-zion-purple/5")
   tag 
 }variant="outline" className="bg-zion-purple/10 hover:bg-zion-purple/20" > {
   tag 
-}
-<<<<<<< HEAD
 
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), {
     addSuffix: true,
   });
 
-  return (
-    <Card
-      className={cn(
-        'transition-shadow hover:shadow-md',
-        post.isPinned && 'border-zion-purple/50',
-        post.isFeatured && 'bg-zion-purple/5'
-      )}
+  
     >
       <CardHeader className='flex flex-row items-start gap-4 space-y-0'>
         <Avatar className='h-10 w-10'>
@@ -148,14 +136,5 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
       </CardFooter>
     </Card>
   );
-=======
-}</div> </div> </CardHeader> {
-  !compact && (<CardContent> <div className="line-clamp-3" > {
-  post.content 
-}</div> </CardContent>) 
-}</div> </div> {
-  post.isFeatured && (<div> <Badge className="bg-zion-purple" >Featured</Badge> </div>) 
-}</CardFooter> </Card>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default PostCard;

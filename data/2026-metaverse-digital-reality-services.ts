@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface MetaverseDigitalRealityService2026 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface MetaverseDigitalRealityService2026 {
     email: string;
     address: string;
   };
-}
 
 export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService2026[] =
   [
@@ -42,7 +40,3 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
       },
     },
   ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

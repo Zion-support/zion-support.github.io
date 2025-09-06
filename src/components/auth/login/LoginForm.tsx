@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useRouter } from 'next/router';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
@@ -15,7 +14,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import Link from 'next/link';
@@ -288,30 +287,16 @@ export function LoginForm() {
       </form>
     </Form>
   );
-=======
- import {;
-  Form;
-FormControl;
-FormField;
-FormItem;
-FormLabel;
-const onSubmit = async (data: LoginFormValues) => {;
-  if (isSubmitting) return;
-setIsSubmitting (true);
-//Pass email and password to the login function ;
-}else {;
-  errorMessage = result.error.message ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+
+
 }else {;
   fireEvent ('login', {';
   method: 'email' ;
 }) ;
-}
+
 }finally {;
   setIsSubmitting (false) ;
-}
+
 };
 const handleResendEmail = async () => {';
   const email = form.getValues ('email');
@@ -337,12 +322,12 @@ if (response.ok) {';
   setVerificationMessage ('Verification email sent. Please check your inbox.') ;
 }else {';
   setVerificationMessage (data.message || 'Failed to resend verification email.') ;
-}
+
 }catch (err) {';
   setVerificationMessage ('Failed to resend verification email.') ;
 }finally {;
   setIsResending (false) ;
-}
+
 };
 const handleCheckStatus = () => {';
   const email = form.getValues ('email');
@@ -355,8 +340,7 @@ return ;
   encodeURIComponent (email) ;
 }`) ;
 };
-return (<Form {;
-  ...form ;
+
 }> {;
   form.formState.errors.root && (<Alert variant="destructive" className="mb-4" > form.formState.errors.root.message ;
 }</AlertDescription> </Alert>) ;

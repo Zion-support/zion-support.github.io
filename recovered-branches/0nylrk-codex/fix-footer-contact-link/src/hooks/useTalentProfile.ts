@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { TalentProfile as TalentProfileType } from '@/types/talent';
 import { ProfileData } from '@/types/profile';
@@ -60,26 +59,11 @@ export function useTalentProfile(id: string | undefined) {
   }, [id]);
 
   return { profile, isLoading, error, mockProfileData };
-=======
- export function useTalentProfile (id: string | undefined) {
-  const [profile, setProfile] = useState<TalentProfileType | null> (null);
-const [isLoading, setIsLoading] = useState (true);
-const [error, setError] = useState<string | null> (null);
-const [mockProfileData, setMockProfileData] = useState<ProfileData | null> (null);
-const fetchProfile = async () => {
-  if (!id) {
-  
-}setError (null);
-if (mockProfile) {
-  setMockProfileData (mockProfile);
-// Convert the ProfileData to TalentProfileType 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }setIsLoading (false) 
 }, 800) 
 }catch (err) {
   
-}
+
 };
 }, [id]);
-}

@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../utils/auth';
 import {
   getConversationById,
   getMessages,
-  sendMessage,
+  sendMessage,;
 } from '../../../utils/messaging/storage';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -47,9 +46,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     res.status(405).json({ error: 'Method not allowed' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

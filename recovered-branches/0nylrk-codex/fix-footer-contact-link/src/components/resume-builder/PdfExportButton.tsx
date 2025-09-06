@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
@@ -10,7 +9,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuRadioGroup,
   DropdownMenuRadioItem,
-  DropdownMenuCheckboxItem,
+  DropdownMenuCheckboxItem,;
 } from '@/components/ui/dropdown-menu';
 // Use the centralized icon wrapper to avoid missing icon issues
 import { FileText, ChevronDown, Loader2, Download } from '@/components/icons';
@@ -21,7 +20,6 @@ import { FontFamily } from '@/utils/pdf/fontConfig';
 
 interface PdfExportButtonProps {
   resume: Resume;
-}
 
 export function PdfExportButton({ resume }: PdfExportButtonProps) {
   const [isExporting, setIsExporting] = useState(false);
@@ -134,19 +132,7 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       </DropdownMenuContent>
     </DropdownMenu>
   );
-=======
- setIsExporting (true);
-try {
-  const options: ExportOptions = {
-  
-}catch (error) {
-  console.error ('Error exporting PDF:', error);
-toast ({
-  
-}finally {
-  setIsExporting (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 h-4 w-4"/>) 
 }Export PDF <ChevronDown className=" h-4 w-4"/> </Button> </DropdownMenuTrigger> <DropdownMenuContent align=" end"className=" w-56" > <DropdownMenuLabel>PDF Export Options</DropdownMenuLabel> <DropdownMenuSeparator /> </DropdownMenuRadioGroup> <DropdownMenuSeparator /> <DropdownMenuCheckboxItem checked= {
@@ -154,4 +140,3 @@ h-4 w-4"/>)
 }onCheckedChange= {
   setIncludePortfolio 
 }> Include Portfolio Projects </DropdownMenuCheckboxItem> <DropdownMenuSeparator /> Download PDF </DropdownMenuItem> </DropdownMenuContent> </DropdownMenu>) 
-}

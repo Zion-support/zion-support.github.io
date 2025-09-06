@@ -1,5 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
 // Use the centralized icon wrapper to avoid missing icons
 import { Check, Trash2, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { useRouter } from 'next/router';
 import { Notification, NotificationType } from '@/context/notifications';
@@ -44,7 +43,6 @@ interface NotificationItemProps {
   notification: Notification;
   onMarkAsRead: (id: string) => Promise<void>;
   onDismiss: (id: string) => Promise<void>;
-}
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   notification,
@@ -63,12 +61,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     }
   };
 
-  return (
-    <div
-      className={cn(
-        'p-3 border-b border-zion-blue-light relative group',
-        !notification.read ? 'bg-zion-blue-dark/30' : ''
-      )}
+  
     >
       <div className='flex items-start gap-2'>
         <div className='text-xl'>{getTypeIcon(notification.type)}</div>
@@ -156,12 +149,6 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
       </div>
     </div>
   );
-=======
-//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {;
-  switch (type) {';
-  case 'message': ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 interface NotificationItemProps {;
   notification: Notification;

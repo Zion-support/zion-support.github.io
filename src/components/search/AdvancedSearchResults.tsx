@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/router';
 import {
@@ -9,7 +8,7 @@ import {
   SortDesc,
   GridIcon,
   List,
-  Loader2,
+  Loader2,;
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,7 +18,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Slider } from '@/components/ui/slider';
@@ -29,7 +28,7 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetTrigger,
+  SheetTrigger,;
 } from '@/components/ui/sheet';
 import { EnhancedSearchInput } from './EnhancedSearchInput';
 import { generateSearchSuggestions } from '@/data/marketplaceData';
@@ -48,7 +47,6 @@ interface SearchResult {
   rating?: number;
   tags?: string[];
   date?: string;
-}
 
 interface SearchFilters {
   types: string[];
@@ -57,7 +55,6 @@ interface SearchFilters {
   maxPrice: number;
   minRating: number;
   sort: string;
-}
 
 interface SearchResponse {
   results: SearchResult[];
@@ -66,7 +63,6 @@ interface SearchResponse {
   limit: number;
   query: string;
   hasMore: boolean;
-}
 
 // Highlight search terms in text
 const HighlightText: React.FC<{
@@ -697,48 +693,6 @@ export const AdvancedSearchResults: React.FC = () => {
 };
 
 export default AdvancedSearchResults;
-=======
- return (<span className= {;
-  className ;
-}> {;
-  parts.map ( (part, index) => part.toLowerCase () === searchTerm.toLowerCase () ? (</mark>) : (part) ) ;
-}</span>) ;
-};
-//Search Result Card Component const handleClick = () => {;
-  if (result.url) {;
-  return (<div onClick={;
-  handleClick ;
-}className= {;
-  cardClass ;
-}> {;
-  result.image && (<div className= {;
-  viewMode === 'grid' ? "mb-3" : "flex-shrink-0" ;
-}> <img src= {;
-  result.image ;
-}alt= {;
-  result.title ;
-}className= {'";
-  viewMode === 'grid' ? "w-full h-48 object-cover rounded" : "w-20 h-20 object-cover rounded" ;
-}";
-}<div className="flex-1" > <div className="flex items-start justify-between mb-2" > <div> </div>) ;
-}</div> </Badge>) ) ;
-}</div> </div>) ;
-}</div> </div> </div>) ;
-};";
-//Filter Sidebar Component return (<div className="space-y-6" > <div> <Checkbox id= {;
-  option.id ;
-}checked= {;
-  filters.types.includes (option.id) ;
-}onCheckedChange= {;
-  (checked) => handleTypeChange (option.id, !!checked) ;
-}/> </label> </div>) ) ;
-}</div> </div> <Separator /> <div> ";
-}> <SelectTrigger> <SelectValue placeholder="All Categories" /> </SelectTrigger> <SelectContent> </SelectItem>) ) ";
-}</SelectContent> </Select> </div> <Separator /> <div> <h3 className="font-semibold mb-3" >Price Range</h3> <div className="px-2" > <Slider </div> </div> </div> <Separator /> <div> ";
-}> <SelectTrigger> <SelectValue /> </SelectTrigger> <SelectContent> <SelectItem value="0" >Any Rating</SelectItem> <SelectItem value="1" >1+ Stars</SelectItem> <SelectItem value="2" >2+ Stars</SelectItem> <SelectItem value="3" >3+ Stars</SelectItem> <SelectItem value="4" >4+ Stars</SelectItem> <SelectItem value="4.5" >4.5+ Stars</SelectItem> </SelectContent> </Select> </div> </div>) ;
-};
-//No Results Component ];";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 </p> </div> <div className="max-w-md mx-auto space-y-4" > <div> > {;
   suggestion ;
 }</Button>) ) ;
 }</div> </div> <li>• Try different keywords</li> <li>• Check your spelling</li> <li>• Use fewer filters</li> <li>• Search for broader terms</li> </ul> </div> </div> </div>) ;
@@ -797,4 +751,3 @@ setHasMore (data.hasMore);
 };
 export default AdvancedSearchResults;
 '"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

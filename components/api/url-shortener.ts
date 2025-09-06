@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 interface ShortUrl {
@@ -9,18 +8,15 @@ interface ShortUrl {
   createdAt: string;
   clicks: number;
   isActive: boolean;
-}
 
 interface UrlShortenerRequest {
   originalUrl: string;
   customCode?: string;
-}
 
 interface UrlShortenerResponse {
   success: boolean;
   data?: ShortUrl;
   error?: string;
-}
 
 // In-memory storage (in production, use a database)
 const urlStorage = new Map<string, ShortUrl>();
@@ -34,7 +30,6 @@ function generateShortCode(length: number = 6): string {
     result += chars.charAt(Math.floor(Math.random() * chars.length));
   }
   return result;
-}
 
 // Validate URL format
 function isValidUrl(url: string): boolean {
@@ -44,7 +39,6 @@ function isValidUrl(url: string): boolean {
   } catch {
     return false;
   }
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -125,7 +119,6 @@ export default async function handler(
       error: 'Method not allowed',
     });
   }
-}
 
 // Handle redirects for short URLs
 export async function getServerSideProps({
@@ -153,28 +146,3 @@ export async function getServerSideProps({
       permanent: false,
     },
   };
-}
-=======
- 
-}export default async function handler (req: NextApiRequest, res: NextApiResponse<UrlShortenerResponse>) {
-  if (req.method === 'POST') {
-  // Create short window.URL try {
-  
-}// Check if window.URL already exists const existingUrl = Array.from (urlStorage.values () ) .find (url => url.originalUrl === originalUrl);
-const shortUrl: ShortUrl = {
-  id: Date.now () .toString (), originalUrl, shortCode, shortUrl: `$ {
-  req.headers.host 
-}/api/url-shortener/$ {
-  shortCode 
-}`;
-createdAt: new Date () .toISOString ();
-clicks: 0;
-isActive: true 
-};
-urlStorage.set (shortCode, shortUrl);
-}
-}// Handle redirects for short URLs 
-}// Increment click count shortUrl.clicks++;
-urlStorage.set (shortCode, shortUrl);
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

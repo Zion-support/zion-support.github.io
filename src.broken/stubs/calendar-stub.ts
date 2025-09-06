@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Emergency stub for react-day-picker during build issues
 
 export interface CalendarProps {
@@ -9,12 +8,10 @@ export interface CalendarProps {
   onSelect?: (date: Date | undefined) => void;
   mode?: string;
   [key: string]: any;
-}
 
 export interface DateRange {
   from?: Date;
   to?: Date;
-}
 
 // Stub DayPicker component - simple function that returns null during build
 export const DayPicker = (props: CalendarProps) => {
@@ -33,7 +30,3 @@ export const format = (date: Date, formatStr: string) => {
 export const isValid = (date: any): date is Date => {
   return date instanceof Date && !isNaN(date.getTime());
 };
-=======
-// Emergency stub for react-day-picker during build issues // Export as default export default DayPicker;
-// Additional exports that might be needed 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

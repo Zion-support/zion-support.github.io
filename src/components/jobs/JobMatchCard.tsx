@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -9,9 +8,6 @@ import { formatDistanceToNow } from 'date-fns';
 import { JobMatch } from '@/types/jobs';
 
 interface JobMatchProps {
-=======
- interface JobMatchProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   matchId: string;
 talentId: string;
 name: string;
@@ -43,8 +39,6 @@ onInvite ;
   const handleApply = () => {;
   if (onApply) {;
   onApply (matchId) ;
-}
-<<<<<<< HEAD
 
 export function JobMatchCard({
   matchId,
@@ -161,18 +155,12 @@ export function JobMatchCard({
       </CardContent>
     </Card>
   );
-=======
-};
-const handleViewDetails = () => {;
-  if (onViewDetails) {;
-  onViewDetails (matchId) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleInvite = () => {;
   if (onInvite) {;
   onInvite (matchId) ;
-}
+
 };
 //Generate a formatted date for display const postedDate = new Date ();
 postedDate.setDate (postedDate.getDate () - Math.floor (Math.random () * 14) ), //Random date within last 2 weeks return (<Card className="overflow-hidden" > <CardContent className="p-0" > {;

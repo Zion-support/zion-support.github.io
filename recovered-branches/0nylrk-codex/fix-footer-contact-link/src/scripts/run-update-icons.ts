@@ -5,9 +5,6 @@
   console.error (`Error executing script: $ {
   error 
 }`);
-return 
-}if (stderr) {
-  console.error (stderr) 
-}
+
 });
 >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 

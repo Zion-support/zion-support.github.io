@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ReactNode } from 'react';
 
 // Extend FeatureCardProps to include key for mapping
@@ -10,7 +9,6 @@ declare module '@/components/FeatureCard' {
     className?: string;
     key?: number | string;
   }
-}
 
 // Extend ListingScoreCardProps to include key for mapping
 declare module '@/components/ListingScoreCard' {
@@ -28,7 +26,6 @@ declare module '@/components/ListingScoreCard' {
     key?: string | number;
     variant?: string;
   }
-}
 
 // Extend ChatMessageProps to include key for mapping
 declare module '@/components/ChatAssistant/ChatMessage' {
@@ -38,7 +35,6 @@ declare module '@/components/ChatAssistant/ChatMessage' {
     timestamp?: Date;
     key?: string | number;
   }
-}
 
 // Extend ProductListingCardProps to include key for mapping
 declare module '@/components/ProductListingCard' {
@@ -48,8 +44,3 @@ declare module '@/components/ProductListingCard' {
     onRequestQuote: (listingId: string) => void;
     key?: string | number;
   }
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

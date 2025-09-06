@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface InnovativeMicroSaasV3 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface InnovativeMicroSaasV3 {
     email: string;
     address: string;
   };
-}
 
 export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
   {
@@ -41,7 +39,3 @@ export const innovativeMicroSaasServicesV3: InnovativeMicroSaasV3[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

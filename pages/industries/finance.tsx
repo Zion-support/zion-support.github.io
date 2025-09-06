@@ -211,4 +211,3 @@ export default function FinancePage() {
       </div>
     </Layout>
   );
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createClient } from '@supabase/supabase-js';
 import OpenAI from 'openai';
@@ -78,9 +77,3 @@ export default async function handler(
     console.error('quote-request error', e);
     return res.status(500).json({ message: 'Server error' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { GradientHeading } from '@/components/GradientHeading';
 import { ListingScoreCard } from '@/components/ListingScoreCard';
@@ -8,7 +7,7 @@ import {
   Select,
   SelectTrigger,
   SelectContent,
-  SelectItem,
+  SelectItem,;
 } from '@/components/ui/select';
 import { Search, Filter, ArrowDownAZ, ArrowUpZA } from 'lucide-react';
 import ListingGridSkeleton from '@/components/skeletons/ListingGridSkeleton';
@@ -30,7 +29,6 @@ interface Listing {
   reviewCount?: number;
   price?: number | null;
   createdAt: string;
-}
 
 interface CategoryListingPageProps {
   title: string;
@@ -38,7 +36,6 @@ interface CategoryListingPageProps {
   listings: Listing[];
   sortOptions?: { label: string; value: string }[];
   filterOptions?: { label: string; value: string }[];
-}
 
 export function CategoryListingPage({
   title,
@@ -273,9 +270,7 @@ export function CategoryListingPage({
       </div>
     </>
   );
-}
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Example listing type //Process listings based on filters and search const processedListings = initialListings .filter (listing => {;
+
   //Apply search filter const matchesSearch = listing.title.toLowerCase () .includes (searchQuery.toLowerCase () ) || listing.description.toLowerCase () .includes (searchQuery.toLowerCase () ) || (listing.tags && listing.tags.some (tag => tag.toLowerCase () .includes (searchQuery.toLowerCase () ) ) );
 //Apply category filters if (selectedFilter === 'all') return matchesSearch;';
 if (selectedFilter === 'high-rating') return matchesSearch && (listing.rating || 0) >= 4;';
@@ -358,4 +353,3 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }className="border-zion-purple text-zion-purple hover:bg-zion-purple/10" ;
 }</div> </div> </div> </>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

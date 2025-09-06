@@ -12,7 +12,7 @@ isUsingUserProvided: isUsingUserProvidedSupabaseCredentials;
 envUrlActuallyProvided: !!envSupabaseUrl;
 envKeyActuallyProvided: !!envSupabaseAnonKey;
 actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefined' 
-}
+
 }) 
 }// Enhanced helper function to check online status // Assume online if navigator.onLine is not available (e.g., in Node.js environment for tests) return true 
 }// Optimized safeFetch for development mode with better error handling export async function safeFetch (url: string, options: RequestInit = {
@@ -21,7 +21,6 @@ actualClientAuthExists: typeof actualSupabaseClientFromUtils?.auth !== 'undefine
   try {
   // In development, provide faster mock responses for specific endpoints if needed if (process.env.NODE ENV === 'development' && url.includes ('/favorites') ) {
   
-}
+
 }captureException (lastError);
 throw new Error ('Failed to connect to Supabase') 
-}

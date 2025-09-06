@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { Header } from '@/components/Header';
 import { SEO } from '@/components/SEO';
@@ -436,26 +435,7 @@ export default function TranslationManager() {
       </main>
     </>
   );
-=======
- export default function TranslationManager () {;
-  const {;
-  t, i18n ;
-}= useTranslation ();
-const isMobile = useIsMobile ();
-const {;
-  supportedLanguages ;
-}= useLanguage ();
-const {;
-  translateContent, isTranslating ;
-}= useTranslationService ();
-}return acc;
-}, {;
-  ;
-}as Record<string string>) ;
-};
-currentTranslations[lang.code] = flattenObject (res) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 setTranslations (currentTranslations);
 //Get all unique keys across all languages setFilteredKeys (Array.from (allKeys) ) ;
@@ -476,8 +456,6 @@ setEditingKey (null);
 setIsSaving (false);
 }, 1000);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }try {;
   const {;
   translations: translatedText, error ;
@@ -485,12 +463,11 @@ setIsSaving (false);
 'general';
 sourceLanguage);
 return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }//Update edited translations with auto-translated content ;
-}
+
 };
 [lang]: value ;
-}
+
 }as Record<string Record<SupportedLanguage string>>) ;
 };
 const getMissingLanguages = (key: string) : SupportedLanguage[] => {;

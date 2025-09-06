@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { MobileThemeProvider } from './theme/MobileThemeProvider';
@@ -34,11 +33,3 @@ export function MobileApp() {
       </Routes>
     </MobileThemeProvider>
   );
-}
-=======
- export function MobileApp () {
-  const {
-  isAuthenticated 
-}= useAuth ();
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

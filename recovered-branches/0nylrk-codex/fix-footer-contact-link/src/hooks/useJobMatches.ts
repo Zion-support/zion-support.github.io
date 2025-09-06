@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { toast } from '@/hooks/use-toast';
@@ -87,33 +86,7 @@ export function useJobMatches(jobId: string) {
     isProcessing,
     triggerAIMatching,
   };
-=======
- export function useJobMatches (jobId: string) {
-  const [matches, setMatches] = useState<JobMatch[]> ([]);
-const [isLoading, setIsLoading] = useState (true);
-const [isProcessing, setIsProcessing] = useState (false);
-const fetchMatches = async () => {
-  setIsLoading (true);
-try {
-  const {
-  data, error 
-}= await supabase .from ("job talent matches") talent profile: talent id (id;
-user id;
-full name;
-professional title;
-profile picture url;
-hourly rate;
-bio;
-years experience;
-key projects;
-skills) `) if (error) throw error;
-setMatches (data || []) 
-}catch (error) {
-  
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const triggerAIMatching = async () => {
   setIsProcessing (true);
@@ -121,22 +94,21 @@ try {
   const response = await supabase.functions.invoke ('job-talent-matcher', {
   body: {
   jobId 
-}
+
 });
 // Refresh the matches list await fetchMatches () 
 }catch (error) {
   
 }finally {
   setIsProcessing (false) 
-}
+
 };
 useEffect ( () => {
   fetchMatches () 
 }, [jobId]);
-return {
+
   matches;
 isLoading;
 isProcessing;
 triggerAIMatching 
-}
-}
+

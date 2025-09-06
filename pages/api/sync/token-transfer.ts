@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   readState,
   writeState,
-  upsertEvent,
+  upsertEvent,;
 } from '../../../utils/sync/storage';
 import { signPayload } from '../../../utils/sync/signature';
 import axios from 'axios';
@@ -83,39 +82,3 @@ export default async function handler(
   return res
     .status(200)
     .json({ status: 'created', version, eventId: event.eventId });
-}
-=======
- const state = readState ();
-if (!state.config.optIn || state.config.paused) {
-  
-}const {
-  txId, token, amount, fromSubnet, toSubnet, timestamp 
-}= req.body as {
-  txId: string;
-token: string;
-amount: number;
-fromSubnet: string;
-toSubnet: string;
-timestamp?: number 
-};
-}const version = nextVersionFor (state, txId);
-const event = {
-  eventId: uuidv4 ();
-type: "token transfer" as const;
-payload: {
-  id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now () 
-};
-version;
-timestamp: Date.now () 
-};
-upsertEvent (state, event);
-writeState (state);
-await axios.post (url, body, {
-  headers, timeout: 5000 
-}) 
-}catch {
-  
-}
-}) );
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

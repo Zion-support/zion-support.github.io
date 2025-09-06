@@ -9,7 +9,7 @@ process.env.NEXT PUBLIC SUPABASE ANON KEY = 'test anon key';
 //Jest-axe matchers for accessibility //Mock import.meta.env for Jest - This was ineffective for the SyntaxError //global.import = {
   // //@ts-expect-error //meta: {
   //env: {
-  //VITE SUPABASE URL: 'mock supabase url', //VITE SUPABASE ANON KEY: 'mock supabase anon key', //MODE: 'test', // 
+  //VITE SUPABASE URL: 'mock supabase url', //VITE SUPABASE ANON KEY: 'mock supabase anon key', //MODE: 'test', // ;
 };
 // 
 };
@@ -22,13 +22,13 @@ process.env.NEXT PUBLIC SUPABASE ANON KEY = 'test anon key';
   data: {
   subscription: {
   unsubscribe: jest.fn () 
-}
-}
+
+
 }) );
 //Add any other specific methods from supabase.auth if they get called 
 };
 //Add other top-level Supabase client methods if they get called //e.g., from: jest.fn (), rpc: jest.fn (), etc. //For now, keeping it minimal. 
-}
+
 }) );
 //Mock Firebase/Firestore jest.mock ('firebase/firestore', () => {
   //Mock collection function to be available on the db instance (for v8 style) //and as a top-level export (for v9 style) . return {
@@ -45,9 +45,7 @@ update: jest.fn ( () => Promise.resolve () );
 delete: jest.fn ( () => Promise.resolve () );
 onSnapshot: jest.fn ( () => jest.fn () ), //Returns an unsubscribe function 
 }) );
-return {
-  getFirestore: jest.fn ( () => ({
-  //For v8 style: db.collection ('path') collection: mockCollection, //For v8 style: db.doc ('path/docId') doc: mockDoc, //Add any other methods directly on db if used, e.g. batch, runTransaction 
+
 }) );
 //For v9 style: collection (db, 'path') collection: mockCollection;
 //For v9 style: doc (db, 'pathdocId') doc: mockDoc;
@@ -78,7 +76,7 @@ fromDate: jest.fn ( (date) => ({
 }) ) 
 };
 //Add other Firestore exports your code uses 
-}
+
 });
 jest.mock ('firebase/auth', () => ({
   getAuth: jest.fn ( () => ({
@@ -87,12 +85,12 @@ jest.mock ('firebase/auth', () => ({
 createUserWithEmailAndPassword: jest.fn ( () => Promise.resolve ({
   user: {
   uid: 'mock-uid', email: 'mock@example.com' 
-}
+
 }) );
 signInWithEmailAndPassword: jest.fn ( () => Promise.resolve ({
   user: {
   uid: 'mock-uid', email: 'mock@example.com' 
-}
+
 }) );
 sendEmailVerification: jest.fn ( () => Promise.resolve () );
 sendPasswordResetEmail: jest.fn ( () => Promise.resolve () );
@@ -121,12 +119,12 @@ deleteObject: jest.fn ( () => Promise.resolve () );
   get: jest.fn ( () => Promise.resolve ({
   data: {
   
-}
+
 }) );
 post: jest.fn ( () => Promise.resolve ({
   data: {
   
-}
+
 }) );
 //Add other axios methods if used (e.g., put, delete, request) 
 }) );
@@ -134,18 +132,18 @@ post: jest.fn ( () => Promise.resolve ({
   //@ts-expect-error - BroadcastChannel polyfill for test environment global.BroadcastChannel = class BroadcastChannelMock {
   constructor (name: string) {
   //@ts-expect-error - Mock name property assignment //Mock axios.create to return axios itself import {
-  {
+  {;
   axios from 'axios';
 //@ts-ignore //----------------------------- //Vitest Compatibility Layer for Jest //----------------------------- //Some test files were originally written for Vitest and import utilities from 'vitest'. //To keep migrating gradually while still running the Jest suite successfully, we create //a lightweight shim that re-maps the most common Vitest helpers to their Jest equivalents. //This avoids individual test failures like "Vitest cannot be imported in a CommonJS module" . // //NOTE: When the test suite is fully migrated to Vitest this shim can be removed together //with the associated `moduleNameMapper` entry in `jest.config.cjs`. //--------------------------------------------------------------------------- return {
   //Named export expected in `import {
   vi 
 }from 'vitest'` statements vi: {
-  fn: jestFn, spyOn: jest.spyOn.bind (jest), mock: jest.mock.bind (jest), clearAllMocks: jest.clearAllMocks, resetAllMocks: jest.resetAllMocks, restoreAllMocks: jest.restoreAllMocks, useFakeTimers: jest.useFakeTimers.bind (jest), useRealTimers: jest.useRealTimers.bind (jest), runAllTimers: jest.runAllTimers.bind (jest), advanceTimersByTime: jest.advanceTimersByTime.bind (jest), //Provide a simple implementation of `import.meta` mocking helpers //frequently used in Vitest examples // (no-op implementations because Jest already handles env vars via `process.env`) . importActual: jest.requireActual, mockResolvedValue: <T = unknown> (value: T) => jest.fn () .mockResolvedValue (value), mockRejectedValue: <T = unknown> (value: T) => jest.fn () .mockRejectedValue (value) 
+  fn: jestFn, spyOn: jest.spyOn.bind (jest), mock: jest.mock.bind (jest), clearAllMocks: jest.clearAllMocks, resetAllMocks: jest.resetAllMocks, restoreAllMocks: jest.restoreAllMocks, useFakeTimers: jest.useFakeTimers.bind (jest), useRealTimers: jest.useRealTimers.bind (jest), runAllTimers: jest.runAllTimers.bind (jest), advanceTimersByTime: jest.advanceTimersByTime.bind (jest), //Provide a simple implementation of `import.meta` mocking helpers //frequently used in Vitest examples // (no-op implementations because Jest already handles env vars via `process.env`) . importActual: jest.requireActual, mockResolvedValue: <T = unknown> (value: T) => jest.fn () .mockResolvedValue (value), mockRejectedValue: <T = unknown> (value: T) => jest.fn () .mockRejectedValue (value) ;
 };
 //Re-export common testing globals so that `import {
   {
   {
-  expect, test 
+  expect, test ;
 }from 'vitest'` //continues to work inside the Jest environment. describe: global.describe;
 it: global.it;
 test: global.test;
@@ -165,7 +163,7 @@ afterAll: global.afterAll
   
 }disconnect () {
   
-}
+
 }//@ts-ignore window.IntersectionObserver = MockIntersectionObserver;
 //@ts-ignore global.IntersectionObserver = MockIntersectionObserver 
 }//Ensure all code paths use the mock implementation //Some services import the global fetch reference before jest-fetch-mock is enabled. //Override it explicitly so those modules receive the mocked version. //@ts-ignore jest.mock ('@supabase/ssr', () => ({
@@ -174,7 +172,7 @@ afterAll: global.afterAll
   onAuthStateChange: jest.fn ( () => ({
   //Provide minimal mocks for other @supabase/ssr helpers referenced by auth-js jest.mock ('@supabase/ssr/dist/main/cookies', () => ({
   getAll: () => ({
-  
+  ;
 });
 setItem: jest.fn ();
 getItem: jest.fn () 

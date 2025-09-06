@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { QuoteFormData } from '@/types/quotes';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,9 +8,6 @@ import { findMatches, MatchResult } from '@/lib/ai-matchmaking';
 import { toast } from '@/hooks/use-toast';
 
 interface SummaryStepProps {
-=======
- interface SummaryStepProps {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   formData: QuoteFormData;
 updateFormData: (data: Partial<QuoteFormData>) => void 
 }export function SummaryStep ({
@@ -30,8 +26,6 @@ formData.serviceType;
 3);
 }finally {
   setIsMatching (false) 
-}
-<<<<<<< HEAD
 
 export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
   const [isMatching, setIsMatching] = useState(false);
@@ -260,15 +254,7 @@ export function SummaryStep({ formData, updateFormData }: SummaryStepProps) {
       </div>
     </div>
   );
-}
-=======
-};
-}, [formData]);
-const handleSelectMatch = (match: MatchResult) => {
-  //Update the form with the selected match updateFormData ({
-  
-};
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Extract just the items from each MatchResult for the AIMatchingResults component return (<div className="space-y-6" > <h3 className="text-xl font-semibold text-white mb-4" >Review Your Request</h3> {
+
   /* AI Matching Results */ 
 }<AIMatchingResults serviceType= {
   formData.serviceType 
@@ -303,5 +289,3 @@ const handleSelectMatch = (match: MatchResult) => {
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Budget</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </div> </CardContent> </Card> </div> {
   /* Contact Information */ 
 }<div> <h4 className="text-lg font-medium text-white mb-2" >Contact Information</h4> <Card className="bg-zion-blue-dark border border-zion-blue-light" > <CardContent className="pt-4" > <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </div> </CardContent> </Card> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

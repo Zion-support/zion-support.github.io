@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 const WINDOW_MS = 5 * 60 * 1000; // 5 minutes
@@ -28,9 +27,3 @@ export function rateLimit(req: NextApiRequest, res: NextApiResponse): boolean {
   }
 
   return true;
-}
-=======
- const store: Map<string number[]> = new Map ();
-}return true 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

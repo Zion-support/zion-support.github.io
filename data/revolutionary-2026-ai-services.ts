@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface Revolutionary2026AiService {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface Revolutionary2026AiService {
     email: string;
     address: string;
   };
-}
 
 export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
   {
@@ -41,7 +39,3 @@ export const revolutionary2026AIServices: Revolutionary2026AiService[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

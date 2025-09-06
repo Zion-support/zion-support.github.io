@@ -4,13 +4,11 @@ import Head from 'next/head';
 interface ProviderMeta {
   id: string;
   name: string;
-<<<<<<< HEAD
   category: 'crm' | 'ats';
   description?: string;
-}
+
 interface ConnectionMap {
   [providerId: string]: any;
-}
 
 function StatusIcon({
   status,
@@ -24,19 +22,13 @@ function StatusIcon({
       {label}
     </span>
   );
-=======
-  status: string;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
 
 interface ConnectionMap {
   [key: string]: boolean;
-}
 
 const AdminIntegrationsPage: React.FC = () => {
   const [providers, setProviders] = useState<ProviderMeta[]>([]);
   const [connections, setConnections] = useState<ConnectionMap>({});
-<<<<<<< HEAD
   const [loading, setLoading] = useState(false);
   const [selected, setSelected] = useState<string | null>(null);
   const [syncRules, setSyncRules] = useState<any>({
@@ -334,7 +326,6 @@ const AdminIntegrationsPage: React.FC = () => {
       <RulesModal />
     </>
   );
-}
 
 function ManualOverrideForm() {
   const [jobId, setJobId] = useState('');
@@ -393,25 +384,3 @@ function ManualOverrideForm() {
       </div>
     </div>
   );
-}
-=======
-
-  return (
-    <div className="p-6 max-w-7xl mx-auto">
-      <Head>
-        <title>Admin Integrations - Zion Tech Solutions</title>
-        <meta name="description" content="Admin integrations management" />
-      </Head>
-      
-      <h1 className="text-2xl font-bold mb-4">Integrations Management</h1>
-      
-      <div className="bg-white shadow rounded-lg p-6">
-        <h2 className="text-lg font-semibold mb-4">Available Providers</h2>
-        <p className="text-gray-600">No integrations configured yet.</p>
-      </div>
-    </div>
-  );
-};
-
-export default AdminIntegrationsPage;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -8,14 +7,12 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 
 function grantPath(id: string) {
   return path.join(GRANTS_DIR, `${id}.json`);
-}
 
 function readGrant(id: string): GrantApplication | null {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
   const p = grantPath(id);
   if (!fs.existsSync(p)) return null;
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication;
-}
 
 function writeGrant(record: GrantApplication) {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -24,7 +21,6 @@ function writeGrant(record: GrantApplication) {
     JSON.stringify(record, null, 2),
     'utf8'
   );
-}
 
 function isAuthorized(req: NextApiRequest) {
   const header = req.headers.authorization || '';
@@ -34,7 +30,6 @@ function isAuthorized(req: NextApiRequest) {
     process.env.ZION_ADMIN_TOKEN &&
     token === process.env.ZION_ADMIN_TOKEN
   );
-}
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) {
@@ -71,9 +66,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   writeGrant(existing);
   res.status(200).json({ record: existing });
-}
-=======
- ms[idx].completed = true;
-ms[idx].completedAt = new Date () .toISOString ();
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

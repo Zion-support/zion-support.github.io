@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export const advancedMicroSaasExpansion2025V2 = [
   {
     name: 'AI Content Factory Pro',
@@ -229,6 +228,3 @@ export const advancedMicroSaasExpansion2025V2 = [
     ],
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

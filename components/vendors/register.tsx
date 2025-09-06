@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { FormEvent, useState } from 'react';
 
 export default function VendorRegisterPage() {
@@ -112,8 +111,3 @@ export default function VendorRegisterPage() {
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );
-}
-=======
- <div> <label className="block text-sm mb-1" >Agency Name</label> <input name="name" required className="w-full border rounded px-3 py-2 bg-transparent" /> </div> <div> </div> <div> <label className="block text-sm mb-1" >Services Offered</label> <input name="servicesOffered" placeholder="AI prototyping, Data labeling, MLOps" className="w-full border rounded px-3 py-2 bg-transparent" /> </div> <div> </div> <div> <label className="block text-sm mb-1" >Verification Docs (URLs, comma-separated) </label> <input name="verificationDocs" className="w-full border rounded px-3 py-2 bg-transparent" /> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

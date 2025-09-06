@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface ComprehensiveService {
@@ -40,7 +39,6 @@ export interface ComprehensiveService {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 const contact = {
   mobile: '+1 302 464 0950',
@@ -886,6 +884,3 @@ export const comprehensiveServicesExpansion: ComprehensiveService[] = [
     reviews: 178,
   },
 ];
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

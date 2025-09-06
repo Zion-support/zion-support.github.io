@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useForm, ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -17,7 +16,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -542,50 +541,27 @@ export function ProductSubmissionForm() {
       </TabsContent>
     </Tabs>
   );
-}
-=======
- import {;
-  {;
-  Image from 'next/image';
-//Import next/image import {;
-  Sparkles ';
-}from 'lucide-react' //Define the form schema with zod const productSchema = z.object ({;
-  title: z.string () .min (3, "Title must be at least 3 characters");";
-description: z.string () .min (10,  "Description must be at least 10 characters");
-price: z .string () .refine ( (val) => !isNaN (parseFloat (val) ) && parseFloat (val) >= 0, {";
-  message: "Price must be a valid number" ;
-});";
-category: z.string () .min (1, "Please select a category");';
-video: typeof window === 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();';
-model: typeof window === 'undefined' ? z.any () .optional () : z.instanceof (File) .optional ();
-tags: z.string () .optional () ;
-});
-//Type for our form values type ProductFormValues = z.infer<typeof productSchema>;
-const [isSubmitting, setIsSubmitting] = React.useState (false);
-const [imagePreview, setImagePreview] = React.useState (null as string | null);";
-const [activeTab, setActiveTab] = React.useState ("manual");
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Initialize the form //Handle image upload preview const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
+
   const file = e.target.files?.[0];
 if (file) {;
   reader.onloadend = () => {;
   setImagePreview (reader.result as string) ;
 };
 reader.readAsDataURL (file) ;
-}
+
 };
-}
+
 };
 const handleModelChange = (e: React.ChangeEvent<HTMLInputElement>) => {;
   const file = e.target.files?.[0];
 if (file) {;
   ;
-}
+
 };
 //Apply AI-generated content to the form const handleApplyGenerated = (content: any) => {;
   if (!user) {;
   toast ({;
   return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }setIsSubmitting (true);
 author: {";
   name: user.displayName || "Anonymous Creator";
@@ -627,12 +603,9 @@ const {;
   ;
 }finally {;
   setIsSubmitting (false) ;
-}
+
 };
-return (<Tabs value= {;
-  activeTab ;
-}onValueChange= {;
-  setActiveTab ";
+
 }className="w-full"> <TabsList className="grid grid-cols-2 mb-6" > <TabsTrigger value="manual" className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple" > ai"className="data-[state=active]:bg-zion-purple/20 data-[state=active]:text-zion-purple"> <Sparkles className="h-4 w-4 mr-2"/> AI-Powered Creation </TabsTrigger> </TabsList> ;
 }";
 }/> <FormField Describe your product in detail..." className="min-h-32" {;
@@ -656,4 +629,3 @@ return (<Tabs value= {;
 }/> <FormField </FormControl> <FormDescription> Upload a 3D model for interactive viewing </FormDescription> <FormMessage /> </FormItem>) ";
 }/> <div className="flex justify-end" > <Button </Button> </div> </form> </Form> </TabsContent> <TabsContent value="ai" > <AIListingGenerator /> </TabsContent> </Tabs>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

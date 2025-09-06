@@ -43,11 +43,7 @@ const categories = [
 ];
 
 export default function WhitePapersPage() {
-  return (
-    <MainLayout
-      title="White Papers - Zion Tech Group"
-      description="Download our comprehensive white papers on AI, cloud computing, cybersecurity, and digital transformation."
-      keywords="white papers, AI guide, cloud migration, cybersecurity, digital transformation"
+  
     >
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
@@ -154,4 +150,3 @@ export default function WhitePapersPage() {
       </div>
     </MainLayout>
   );
-}

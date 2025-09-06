@@ -230,4 +230,3 @@ export default function IndustriesPage() {
       </div>
     </Layout>
   );
-}

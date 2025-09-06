@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import {
@@ -7,14 +6,13 @@ import {
   BriefcaseIcon,
   MessageSquare,
   User,
-  MessageCircle,
+  MessageCircle,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useAuth } from '@/hooks/useAuth';
 
 interface MobileBottomNavProps {
   unreadCount?: number;
-}
 
 export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const location = useLocation();
@@ -95,55 +93,3 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
       </div>
     </nav>
   );
-}
-=======
- interface MobileBottomNavProps {
-  unreadCount?: number 
-}export function MobileBottomNav ({
-  unreadCount = 0 
-}: MobileBottomNavProps) {
-  const location = useLocation ();
-const {
-  user 
-}= useAuth ();
-const isAuthenticated = !!user;
-const navItems = [ {
-  name: "Home";
-href: "/";
-icon: Home;
-matches: (path: string) => path === "/" 
-};
-{
-  name: "Browse";
-href: "/talent";
-icon: Search;
-matches: (path: string) => path.startsWith ("/talent") || path.startsWith ("/categories") || path.startsWith ("/marketplace") 
-};
-{
-  name: "Community";
-href: "/community";
-icon: MessageCircle;
-matches: (path: string) => path.startsWith ("/community") || path.startsWith ("/forum") 
-};
-{
-  name: "Messages";
-href: "/messages";
-icon: MessageSquare;
-matches: (path: string) => path.startsWith ("/messages") || path.startsWith ("/inbox");
-badge: unreadCount;
-authRequired: true 
-};
-{
-  name: "Dashboard";
-href: "/dashboard";
-icon: User;
-matches: (path: string) => path.startsWith ("/dashboard");
-authRequired: true 
-}];
-return ({
-  item.badge > 9 ? '9+' : item.badge 
-}</span>) 
-}</div> </Link>) ) 
-}</div> </nav>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

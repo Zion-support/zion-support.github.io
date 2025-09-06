@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -13,15 +12,8 @@ import {
   ScreenShare,
   ScreenShareOff,
   Volume2,
-  VolumeX,
+  VolumeX,;
 } from 'lucide-react';
-=======
- import { ;
-  {;
-  {;
-  Video, VideoOff, Mic, MicOff, Phone, ScreenShare, ScreenShareOff,  Volume2, VolumeX ;
- } from "lucide-react";
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 import './video-call.css';
 interface Participant {;
   id: string;
@@ -62,8 +54,6 @@ if (!isAudioOnly) {;
   setIsVideoEnabled (false);
 if (onToggleVideo) {;
   ;
-}
-<<<<<<< HEAD
 
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId,
@@ -277,8 +267,6 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       </CardContent>
     </Card>
   );
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 </Badge> </div> </CardHeader> {;
   /* Placeholder for actual video stream */ ;

@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   ensureAdmin,
-  parseUserFromRequest,
+  parseUserFromRequest,;
 } from '../../../../../../utils/auth';
 import { updateFlagStatus } from '../../../../../../utils/moderationDb';
 import type { ModerationStatus } from '../../../../../../types/moderation';
@@ -40,16 +39,3 @@ export default async function handler(
 
   res.setHeader('Allow', 'POST');
   return res.status(405).end('Method Not Allowed');
-}
-=======
-import { NextApiRequest, NextApiResponse } from 'next';
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (req.method !== 'POST') {
-    res.setHeader('Allow', ['POST']);
-    return res.status(405).end('Method Not Allowed');
-  }
-  
-  res.status(200).json({ message: 'Flag action processed' });
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

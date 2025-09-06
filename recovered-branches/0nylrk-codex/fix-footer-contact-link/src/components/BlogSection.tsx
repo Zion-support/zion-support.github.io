@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading';
 import { Card, CardContent, CardFooter } from '@/components/ui/card';
 import { Button } from './ui/button';
@@ -90,10 +89,7 @@ export function BlogSection() {
       </div>
     </section>
   );
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Get the 3 most recent blog posts </p> </div> <Button variant="outline" className="mt-4 md:mt-0 border-zion-purple text-zion-cyan hover:bg-zion-purple/10" asChild > <Link to="/blog" >View All Articles</Link> </Button> </div> 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> <div className="absolute bottom-4 left-4 text-zion-purple/70 text-4xl font-bold" > {
   index + 1 
 }</div> </div> <CardContent className="p-6" > <div className="flex items-center justify-between mb-3" > <span className="text-xs text-zion-cyan bg-zion-blue px-2 py-1 rounded" > {
@@ -112,4 +108,3 @@ export function BlogSection() {
 }` 
 }>Read More →</Link> </Button> </CardFooter> </Card>) ) 
 }</div> </div> </section>) 
-}

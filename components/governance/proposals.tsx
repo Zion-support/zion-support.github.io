@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -10,7 +9,6 @@ export async function getStaticProps() {
   } catch {
     return { props: { data: { updatedAt: null, proposals: [] } } };
   }
-}
 
 export default function Proposals({
   data,
@@ -46,8 +44,3 @@ export default function Proposals({
       </ul>
     </div>
   );
-}
-=======
-import fs from 'fs' import path from 'path' </ul> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

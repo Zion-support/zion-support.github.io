@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import dynamic from 'next/dynamic';
 
@@ -15,7 +14,6 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
   } catch {
     return null;
   }
-}
 
 export default function Web3LoginButton() {
   const [open, setOpen] = useState(false);
@@ -105,9 +103,3 @@ export default function Web3LoginButton() {
       )}
     </>
   );
-}
-=======
- </div>) 
-}</>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

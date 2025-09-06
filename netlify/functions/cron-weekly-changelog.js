@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const { upsertFile } = require('./_lib/github');
 
 async function fetchJson(url, token) {
@@ -12,7 +11,6 @@ async function fetchJson(url, token) {
   });
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
   return resp.json();
-}
 
 exports.handler = async function () {
   try {
@@ -32,10 +30,7 @@ exports.handler = async function () {
 
     const byAuthor = {};
     const messages = [];
-    for (const c of commits) {
-      const author = c.commit?.author?.name || c.author?.login || 'unknown';
-      byAuthor[author] = (byAuthor[author] || 0) + 1;
-      messages.push({ sha: c.sha, message: c.commit?.message || '' });
+    );
     }
 
     const summary = {
@@ -63,22 +58,4 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) };
   }
-=======
- async function fetchJson (url, token) {
-  const resp = await fetch (url, {
-  headers: token ? {
-  'Authorization': `token $ {
-  token 
-}`, 'Accept': 'application/vnd.github+json' 
-}: {
-  
-}
-}const summary = {
-  updatedAt: Date.now (), since, totalCommits: commits.length, authors: Object.entries (byAuthor) .map ( ([name, count]) => ({
-  name, count 
-}) ) .sort ( (a, b) => b.count - a.count);
-messages 
-};
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

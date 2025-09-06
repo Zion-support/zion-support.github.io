@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, { useEffect, useRef } from 'react';
 import type {
   RemoteParticipant,
   LocalParticipant,
   TrackPublication,
-  Track,
+  Track,;
 } from 'livekit-client';
 
 type Props = {
@@ -70,13 +69,3 @@ export default function ParticipantTile({
       </div>
     </div>
   );
-}
-=======
- useEffect ( () => {
-  const handleTrackSubscribed = (pub: TrackPublication, track: Track) => {
-  if (track.kind === 'video' && videoRef.current) {
-  participant.on ('trackSubscribed', handleTrackSubscribed);
-participant.on ('trackUnsubscribed', handleTrackUnsubscribed);
-</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

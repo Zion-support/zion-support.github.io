@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -17,13 +16,13 @@ import {
   MoreVertical,
   Calendar,
   AlertTriangle,
-  BriefcaseIcon,
+  BriefcaseIcon,;
 } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger,
+  DropdownMenuTrigger,;
 } from '@/components/ui/dropdown-menu';
 import { ScoreBadge } from '@/components/jobs/applications/ScoreBadge';
 import { toast } from '@/hooks/use-toast';
@@ -33,7 +32,6 @@ import Image from 'next/image'; // Import next/image
 interface CandidateCardProps {
   application: JobApplication;
   index: number;
-}
 
 export function CandidateCard({ application, index }: CandidateCardProps) {
   const [showNotes, setShowNotes] = useState(false);
@@ -236,23 +234,10 @@ export function CandidateCard({ application, index }: CandidateCardProps) {
       />
     </>
   );
-}
-=======
- import { ;
-  {;
-  {;
-  MessageSquare, User, FileText, MoreVertical, Calendar,  AlertTriangle, BriefcaseIcon ;
- } from "lucide-react";
-import {;
-  DropdownMenu;
-DropdownMenuContent;
-DropdownMenuItem;';
-import Image from 'next/image';
-//Import next/image >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleSaveNotes = () => {';
+
   //Here you would save the notes to the database //For now, we'll just show a toast toast ({;
   setShowNotes (false);
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 const handleHireConfirmed = () => {;
   //Hiring process completed via the modal toast ({;
   application.id ;
 }index= {;
@@ -327,4 +312,3 @@ import Image from 'next/image';
   handleHireConfirmed ;
 }/> </>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

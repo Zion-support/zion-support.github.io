@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { formatDistanceToNow } from 'date-fns';
 import { JobApplication } from '@/types/jobs';
@@ -8,7 +7,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   FileText,
@@ -16,7 +15,7 @@ import {
   HelpCircle,
   Calendar,
   ExternalLink,
-  Download,
+  Download,;
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { StatusBadge } from './StatusBadge';
@@ -25,7 +24,6 @@ import { toast } from 'sonner';
 
 interface ApplicationCardProps {
   application: JobApplication;
-}
 
 export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expanded, setExpanded] = useState(false);
@@ -50,11 +48,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>
         );
       case 'hired':
-        return (
-          <Button
-            variant='secondary'
-            size='sm'
-            className='bg-green-100 text-green-800 hover:bg-green-200 hover:text-green-900'
+        
           >
             <FileText className='h-4 w-4 mr-1' /> View Offer
           </Button>
@@ -165,16 +159,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
       </CardFooter>
     </Card>
   );
-}
-=======
- interface ApplicationCardProps {
-  application: JobApplication 
-}export function ApplicationCard ({
-  application 
-}: ApplicationCardProps) {
-  const [expanded, setExpanded] = useState (false);
-//This would typically download the resume file return (<Button variant="default" size="sm" > <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview </Button>);
-case "interview" : >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 return (<Button variant="default" size="sm" > <Calendar className="h-4 w-4 mr-1" /> View Interview Details </Button> return (<Button variant="outline" size="sm" > <HelpCircle className="h-4 w-4 mr-1" /> View Feedback </Button>);
+
 default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <div className="flex justify-between items-start" > <div> </div> </div> <StatusBadge status= {
   application.status 
 }/> </div> </CardHeader> {
@@ -188,5 +173,3 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }% </div> <span className="ml-2 text-xs text-muted-foreground" >Relevance to job requirements</span> </div> </div>) 
 }</div>) 
 }</CardContent> <Button variant="outline" size="sm" asChild > </Link> </Button> </div> </div> <Button variant="secondary" size="sm" className="w-full" asChild > </Link> </Button> </CardFooter> </Card>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

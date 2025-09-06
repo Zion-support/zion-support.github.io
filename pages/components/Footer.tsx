@@ -45,7 +45,7 @@ import {
   Wrench,
   PieChart,
   ClipboardList,
-  Layers
+  Layers;
 } from 'lucide-react';
 
 const footerSections = [
@@ -349,4 +349,3 @@ export default function Footer() {
       </div>
     </footer>
   );
-}

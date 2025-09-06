@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { getBadgeMeta, BadgeKey } from './badgeConfig';
 
@@ -8,7 +7,6 @@ interface BadgeEarnedProps {
   showName?: boolean;
   showDesc?: boolean;
   earnedDate?: string;
-}
 
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
   badge,
@@ -56,30 +54,4 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
       )}
     </div>
   );
-=======
- interface BadgeEarnedProps {
-  badge: BadgeKey;
-size?: number;
-showName?: boolean;
-showDesc?: boolean;
-earnedDate?: string 
-}export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
-  badge;
-size = 44;
-showName = true;
-showDesc = false;
-earnedDate 
-}) => {
-  const meta = getBadgeMeta (badge);
-if (!meta) return null;
-const Icon = meta.icon;
-flex flex-col items-center text-center gap-1 px-2" > <div style= {
-  {
-  > <Icon color= {
-  meta.color 
-}size= {
-  size * 0.7 
-}/> </div>) 
-}</div>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

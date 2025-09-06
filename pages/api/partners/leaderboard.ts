@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '../../../utils/supabase/server';
 
@@ -48,14 +47,3 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
   }
-}
-=======
- try {
-  if (usingPlaceholder) {
-  return res.status (200) .json ({
-  leaders: [ const {
-  data, error 
-}= await supabase .from ('referral events') .select ('partner code, event, created at') 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

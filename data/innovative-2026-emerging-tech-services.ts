@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ServiceVariant } from '../types/service-variants';
 
 export interface Innovative2026EmergingTechService {
@@ -40,7 +39,6 @@ export interface Innovative2026EmergingTechService {
   customers: number;
   rating: number;
   reviews: number;
-}
 
 export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] =
   [
@@ -549,15 +547,6 @@ export const innovative2026EmergingTechServices: Innovative2026EmergingTechServi
 
 export const getPopularEmergingTechServices = () => {
   return innovative2026EmergingTechServices.filter(service => service.popular);
-=======
- 
-}export const innovative2026EmergingTechServices: Innovative2026EmergingTechService[] = [ // Neuromorphic Computing Platform realImplementation: true;
-implementationDetails: 'Advanced neuromorphic computing platform with brain-inspired architecture, spiking neural networks, and comprehensive development tools. Includes research collaboration features.';
-launchDate: '2026-01-10';
-customers: 80;
-rating: 4.9;
-reviews: 40 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 // DNA Computing Platform realImplementation: true;
 implementationDetails: 'Advanced DNA computing platform with molecular biology integration, bioinformatics tools, and comprehensive computing capabilities. Includes professional bioengineering support.';
@@ -595,7 +584,6 @@ rating: 4.9;
 reviews: 30 
 }];
 export const getEmergingTechServicesByCategory = (category: string) => {
-<<<<<<< HEAD
   return innovative2026EmergingTechServices.filter(service =>
     service.category.toLowerCase().includes(category.toLowerCase())
   );
@@ -610,6 +598,3 @@ export const getEmergingTechServicesByPriceRange = (
     return price >= minPrice && price <= maxPrice;
   });
 };
-=======
-  return innovative2026EmergingTechServices.filter (service => service.category.toLowerCase () .includes (category.toLowerCase () ) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

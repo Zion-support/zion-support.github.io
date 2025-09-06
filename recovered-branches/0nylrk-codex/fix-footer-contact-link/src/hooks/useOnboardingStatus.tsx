@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useAuth } from './useAuth';
 import { supabase } from '@/integrations/supabase/client';
 
 interface OnboardingStatus {
-=======
- interface OnboardingStatus {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   profileCompleted: boolean;
 skillsAdded: boolean;
 availabilitySet: boolean;
@@ -43,8 +39,6 @@ jobPosted: data.job posted || false;
 inviteSent: data.talent invited || false;
 responseReceived: data.quote received || false 
 }) 
-}
-<<<<<<< HEAD
 
 export function useOnboardingStatus() {
   const { user } = useAuth();
@@ -95,12 +89,7 @@ export function useOnboardingStatus() {
   }, [user]);
 
   return status;
-=======
-}catch (err) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 }, [user]);
 return status;
-}

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { setSessionCookie } from '../../../utils/adminAuth';
 
@@ -18,9 +17,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } else {
     res.status(401).json({ error: 'Invalid credentials' });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { NextApiRequest } from 'next';
 
 type DemoUser = { id: string; role: 'client' | 'talent'; talentSlug?: string };
@@ -11,7 +10,6 @@ export function getDemoUser(req: NextApiRequest): DemoUser {
     (role === 'client' ? 'client-1' : 'talent-1');
   const talentSlug = (req.headers['x-demo-talent-slug'] as string) || undefined;
   return { id, role: role === 'talent' ? 'talent' : 'client', talentSlug };
-}
 
 export function assertClient(req: NextApiRequest): DemoUser {
   const u = getDemoUser(req);
@@ -22,7 +20,6 @@ export function assertClient(req: NextApiRequest): DemoUser {
     throw err;
   }
   return u;
-}
 
 export function assertTalentOrClientForOffer(
   req: NextApiRequest,
@@ -40,7 +37,3 @@ export function assertTalentOrClientForOffer(
   // @ts-ignore
   err.statusCode = 403;
   throw err;
-}
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

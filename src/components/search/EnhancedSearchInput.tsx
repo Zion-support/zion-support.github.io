@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Search, X } from 'lucide-react';
@@ -12,9 +11,6 @@ import { debounce } from 'lodash';
 import { logInfo, logWarn } from '@/utils/productionLogger';
 
 interface EnhancedSearchInputProps {
-=======
- interface EnhancedSearchInputProps {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   value: string;
 onChange: (value: string) => void;
 }, 300);
@@ -27,8 +23,6 @@ onChange: (value: string) => void;
   function handleClickOutside (event: MouseEvent) {;
   if (containerRef.current && !containerRef.current.contains (event.target as Node) ) {;
   ;
-}
-<<<<<<< HEAD
 
 export function EnhancedSearchInput({
   value,
@@ -224,11 +218,7 @@ export function EnhancedSearchInput({
     }
   };
 
-  return (
-    <div
-      className='relative w-full'
-      ref={containerRef}
-      role='combobox'
+  
       aria-expanded={isFocused && filteredSuggestions.length > 0}
       aria-haspopup='listbox'
       aria-controls='autocomplete-suggestions-list' // Added aria-controls
@@ -297,9 +287,7 @@ export function EnhancedSearchInput({
       />
     </div>
   );
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }setIsFocused (false);
 inputRef.current?.blur ();
 setHighlightedIndex (-1) ;
@@ -315,7 +303,7 @@ inputRef.current?.blur ();
 break;
 default: //For other keys (character input), reset enterHandledPostFocus setEnterHandledPostFocus (false);
 break ;
-}
+
 };
 > <div className="relative flex items-center w-full" > <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-zion-slate" /> <Input onClick={';
   () => onChange ('') ";

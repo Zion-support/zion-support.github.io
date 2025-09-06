@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useForm, type ControllerRenderProps } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -14,7 +13,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
-  FormMessage,
+  FormMessage,;
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
@@ -31,7 +30,6 @@ interface TemplateSaveFormProps {
   onComplete: () => void;
   editTemplate?: ContractTemplate | null;
   currentValues?: ContractFormValues;
-}
 
 export function TemplateSaveForm({
   onCancel,
@@ -142,13 +140,7 @@ export function TemplateSaveForm({
       </form>
     </Form>
   );
-}
-=======
- const formSchema = z.object ({;
-  title: z.string () .min (1, "Title is required");
-isDefault: z.boolean () ;
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 type FormValues = z.infer<typeof formSchema>;
+
 setSaving (true);
 try {;
   if (editTemplate) {;
@@ -162,4 +154,3 @@ try {;
 }Template`) ;
 }</Button> </div> </form> </Form>) ;
 }"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

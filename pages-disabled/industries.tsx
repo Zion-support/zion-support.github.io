@@ -1,6 +1,6 @@
 import React from "react";
-import Head from 'next/head'
-import Link from 'next/link'
+import Head from 'next/head';
+import Link from 'next/link';
 import { motion } from 'framer-motion;
 import {},
   {
@@ -19,9 +19,9 @@ import {},
   Zap, 
   Users,
   Globe,
-  BarChart3,
-  Brain,
-  Network,
+  BarChart3,;
+  Brain,";
+  Network,'
   Cloud;'
 } from 'lucide-react;
 const industries = [

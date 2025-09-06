@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { AppHeader } from '@/layout/AppHeader';
 import { Footer } from '@/components/Footer';
@@ -15,7 +14,7 @@ import {
   Star,
   PlusCircle,
   Kanban,
-  Video,
+  Video,;
 } from 'lucide-react';
 import { ProtectedRoute } from '@/components/ProtectedRoute';
 import { SuggestedTalents } from '@/components/jobs/SuggestedTalents';
@@ -170,7 +169,6 @@ function ClientDashboardContent() {
       <Footer />
     </>
   );
-}
 
 export default function ClientDashboard() {
   return (
@@ -178,13 +176,7 @@ export default function ClientDashboard() {
       <ClientDashboardContent />
     </ProtectedRoute>
   );
-=======
- //Set the first job as selected when jobs are loaded (if any) useEffect ( () => {
-  if (jobs.length > 0 && !selectedJobId) {
-  setSelectedJobId (jobs[0].id);
-setSelectedJobTitle (jobs[0].title) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [jobs, selectedJobId]);
 const handleJobSelect = (jobId: string, jobTitle: string) => {
   setSelectedJobId (jobId);

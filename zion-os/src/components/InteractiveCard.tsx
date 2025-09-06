@@ -1,10 +1,4 @@
- return (<Link href= {
-  href 
-}className= {
-  `group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift $ {
-  className 
-}` 
-}onMouseEnter= {
+ 
   () => setIsHovered (true) 
 }onMouseLeave= {
   () => setIsHovered (false) 
@@ -30,8 +24,6 @@
 }-500), var (--$ {
   color.split ('-') [3] 
 }-500) ) ` 
-}
-<<<<<<< HEAD
 
 export default function InteractiveCard({
   title,
@@ -44,10 +36,7 @@ export default function InteractiveCard({
 }: InteractiveCardProps) {
   const [isHovered, setIsHovered] = useState(false);
 
-  return (
-    <Link
-      href={href}
-      className={`group block p-8 rounded-2xl border border-white/10 hover:border-white/30 bg-black/20 hover:bg-black/40 transition-all duration-500 transform hover:scale-105 hover:shadow-2xl backdrop-blur-sm hover-lift ${className}`}
+  
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       aria-label={`Navigate to ${title} page`}
@@ -105,7 +94,6 @@ export default function InteractiveCard({
       </div>
     </Link>
   );
-}
 
 export function FeatureCard({
   title,
@@ -115,13 +103,7 @@ export function FeatureCard({
   stats,
   className = '',
 }: InteractiveCardProps & { stats?: { label: string; value: string }[] }) {
-  return (
-    <InteractiveCard
-      title={title}
-      description={description}
-      icon={icon}
-      href={href}
-      className={className}
+  
     >
       {stats && (
         <div className='mt-6 pt-6 border-t border-white/10'>
@@ -139,7 +121,6 @@ export function FeatureCard({
       )}
     </InteractiveCard>
   );
-}
 
 export function TestimonialCard({
   quote,
@@ -156,9 +137,7 @@ export function TestimonialCard({
   rating?: number;
   className?: string;
 }) {
-  return (
-    <div
-      className={`bg-black/30 backdrop-blur-sm border border-white/10 rounded-2xl p-8 hover:bg-black/50 transition-all duration-300 transform hover:scale-105 ${className}`}
+  
     >
       {/* Quote icon */}
       <div className='text-4xl mb-4'>💬</div>
@@ -189,23 +168,3 @@ export function TestimonialCard({
       </div>
     </div>
   );
-}
-=======
-}/> </div> </Link>) 
-}title= {
-  title 
-}description= {
-  description 
-}icon= {
-  icon 
-}href= {
-  href 
-}className= {
-  className 
-}> </div>) ) 
-}</div> </div>) 
-}</InteractiveCard>) 
-}</svg>) ) 
-}</div> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

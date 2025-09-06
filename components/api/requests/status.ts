@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
@@ -11,12 +10,10 @@ function readAll() {
   } catch {
     return [];
   }
-}
 
 function writeAll(items: any[]) {
   fs.mkdirSync(path.dirname(REQUESTS_PATH), { recursive: true });
   fs.writeFileSync(REQUESTS_PATH, JSON.stringify(items, null, 2));
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -34,8 +31,3 @@ export default async function handler(
   items[idx] = { ...items[idx], status, updatedAt: new Date().toISOString() };
   writeAll(items);
   res.status(200).json({ ok: true });
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

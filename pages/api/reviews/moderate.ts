@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { readReviews, writeReviews } from '../../../utils/dataStore';
 
@@ -56,11 +55,3 @@ export default async function handler(
       .status(500)
       .json({ error: 'Internal server error', details: error?.message });
   }
-}
-=======
- type Action = 'approve' | 'remove' | 'edit';
-}reviews[idx].rating = updates.rating 
-}
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

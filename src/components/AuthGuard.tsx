@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -13,7 +12,6 @@ interface AuthGuardProps {
   fallback?: React.ReactNode;
   showToast?: boolean;
   allowGuest?: boolean;
-}
 
 export function AuthGuard({
   children,
@@ -134,35 +132,12 @@ export function AuthGuard({
 
   // Render children if all auth checks pass
   return <>{children}</>;
-=======
- //If authentication is required but user is not authenticated if (requireAuth && !isAuthenticated && !allowGuest) {;
-  if (showToast) {;
-  toast ({;
-  ;
-}const returnTo = encodeURIComponent (router.asPath);
-router.push (`$ {;
-  redirectTo ;
-}?returnTo=$ {;
-  returnTo ;
-}`);
-return ;
-}//If specific roles are required if (requireRole && isAuthenticated && user) {;
-  const userRoles = user.role ? [user.role] : [];
-const hasRequiredRole = requireRole.some (role => userRoles.includes (role) );
-if (showToast) {;
-  toast ({;
-  ;
-}router.push ('/dashboard'), //Redirect to dashboard instead of login return ;
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }, [isAuthenticated, isLoading, user, requireAuth, requireRole, router, redirectTo, showToast, allowGuest]);
 //Show loading state while auth is being determined Please log in to access this feature. </p> </div> </div> if (!hasRequiredRole) {;
   return fallback || (<div className="flex flex-col items-center justify-center min-h-screen gap-4" > <Shield className="h-12 w-12 text-muted-foreground" /> <div className="text-center" > <h2 className="text-xl font-semibold mb-2" >Access Denied</h2> <p className="text-muted-foreground" > This feature requires {';
   requireRole.join ('or ') ;
 }privileges. </p> </div> </div>) ;
-}
-<<<<<<< HEAD
 
 // Hook for programmatic auth checks
 export function useAuthGuard() {
@@ -240,14 +215,7 @@ export function useAuthGuard() {
     user,
     isLoading,
   };
-=======
-}//Render children if all auth checks pass return (<AuthGuard {;
-  ...guardOptions ;
-}> <Component {;
-  ...props ;
-}/> </AuthGuard>) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }//Hook for programmatic auth checks ;
 }router.push (`$ {;
   redirectTo ;

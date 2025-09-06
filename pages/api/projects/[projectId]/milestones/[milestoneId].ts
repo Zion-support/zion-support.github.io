@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireUser } from '../../../../../utils/api/auth';
 import {
@@ -6,7 +5,7 @@ import {
   updateMilestone,
   assertParticipantOrAdmin,
   isClient,
-  isTalent,
+  isTalent,;
 } from '../../../../../utils/api/projects';
 import { isMilestoneStatus } from '../../../../../utils/types/milestones';
 
@@ -75,12 +74,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.setHeader('Allow', 'PATCH');
   res.status(405).end('Method Not Allowed');
-}
-=======
- (status === 'In Progress' && isClientUser) || (status === 'Submitted' && isTalentUser) || (status === 'Approved' && isClientUser) || (status === 'Paid' && isClientUser);
-if (!allowed && user.role !== 'admin') {
-  
-}res.setHeader ('AllowPATCH');
-res.status (405) .end ('Method Not Allowed') 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

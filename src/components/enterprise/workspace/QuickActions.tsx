@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React from 'react';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { FileText, Plus, Search, Calendar } from 'lucide-react';
@@ -71,15 +70,3 @@ export function QuickActions() {
       </CardContent>
     </Card>
   );
-}
-=======
- import { ;
-  {;
-  {;
-  FileText, Plus,  Search, Calendar ;
- } from "lucide-react";
-const actions = [ {;
-  return (<Card> <CardHeader> <CardTitle>Quick Actions</CardTitle> <CardDescription>Fast access to common tasks</CardDescription> </CardHeader> <CardContent> </div> </Button>) ) ;
-}</div> </CardContent> </Card>) ;
-}'
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

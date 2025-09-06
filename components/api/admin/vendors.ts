@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import {
   setVendorApproval,
   setVendorCommission,
-  suspendVendor,
+  suspendVendor,;
 } from '../../../utils/vendor-store';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -22,9 +21,3 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res.status(500).json({ error: e.message });
   }
-}
-=======
- 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

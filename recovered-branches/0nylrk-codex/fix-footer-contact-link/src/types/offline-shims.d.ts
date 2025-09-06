@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 declare module 'react' {
   const React: any;
   export default React;
@@ -47,17 +46,11 @@ declare module 'react' {
   export type LegacyRef<T = any> = any;
   export type ElementRef<T = any> = any;
   export type CSSProperties = Record<string, string | number | undefined>;
-}
 
 declare module 'react-dom' {
   export * from 'react-dom/index';
-}
 
 declare module 'react/jsx-runtime' {
   export const jsx: any;
   export const jsxs: any;
   export const Fragment: any;
-}
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

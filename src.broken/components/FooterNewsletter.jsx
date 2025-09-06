@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
@@ -37,10 +36,7 @@ export function FooterNewsletter() {
     }
   };
 
-  return (
-    <form
-      onSubmit={handleSubmit}
-      className='flex flex-col space-y-3 sm:flex-row sm:space-y-0 sm:space-x-2'
+  
     >
       <Input
         type='email'
@@ -75,12 +71,3 @@ export function FooterNewsletter() {
       </Button>
     </form>
   );
-}
-=======
- required /> {
-  /* Honeypot field */ 
-}<input > {
-  isSubmitting ? (<> <Loader2 className="h-4 w-4 mr-2 animate-spin" /> Subscribing... </>) : ('Subscribe') 
-}</Button> </form>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

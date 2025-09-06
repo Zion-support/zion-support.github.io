@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -79,7 +78,7 @@ import {
   AtomIcon,
   MenuIcon,
   CloseIcon,
-  ChevronRightIcon,
+  ChevronRightIcon,;
 } from 'lucide-react';
 
 const contactInfo = {
@@ -650,111 +649,3 @@ export default function UltraFuturisticNavigation2032() {
       <div className='h-20' />
     </>
   );
-}
-=======
- const serviceCategories = [ {
-  title: '🧠 AI & Consciousness 2030', icon: BrainIcon, color: 'from-violet-600 via-purple-600 to-indigo-600', description: 'Next-generation AI consciousness and emotional intelligence', services: [ {
-  name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19, 999/month' 
-};
-{
-  name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3, 999/month' 
-};
-{
-  name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5, 999/month' 
-};
-{
-  name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12, 999/month' 
-}] 
-};
-{
-  title: '⚛️ Quantum & Emerging Tech 2030', icon: AtomIcon, color: 'from-indigo-600 via-blue-600 to-cyan-600', description: 'Quantum computing and beyond', services: [ {
-  name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15, 999/month' 
-};
-{
-  name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25, 999/month' 
-};
-{
-  name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' 
-};
-{
-  name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' 
-}] 
-};
-{
-  title: '🚀 Space & Metaverse 2030', icon: Rocket, color: 'from-teal-600 via-emerald-600 to-green-600', description: 'Space exploration and digital reality', services: [ {
-  name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45, 999/month' 
-};
-{
-  name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' 
-};
-{
-  name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform', description: 'Immersive holographic events', price: '$799/month' 
-};
-{
-  name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7, 999/month' 
-}] 
-};
-{
-  title: '⚙️ Enterprise IT 2030', icon: CpuIcon, color: 'from-blue-600 via-cyan-600 to-teal-600', description: 'Autonomous enterprise infrastructure', services: [ {
-  name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' 
-};
-{
-  name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' 
-};
-{
-  name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' 
-};
-{
-  name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' 
-}] 
-};
-{
-  title: '🎯 Business Solutions 2030', icon: Target, color: 'from-green-600 via-yellow-600 to-orange-600', description: 'Practical business solutions with AI', services: [ {
-  name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' 
-};
-{
-  name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' 
-};
-{
-  name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' 
-};
-{
-  name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro', description: 'Professional transcription', price: '$149/month' 
-}] 
-};
-{
-  title: '🔬 Research & Development 2030', icon: Microscope, color: 'from-orange-600 via-red-600 to-pink-600', description: 'Breakthrough research solutions', services: [ {
-  name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' 
-};
-{
-  name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1, 299/month' 
-};
-{
-  name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2, 999/month' 
-};
-{
-  name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3, 999/month' 
-}] 
-}];
-</a> </div> </div> <div className="flex items-center space-x-4" > <a href="https://github.com/Zion-Holdings" target="blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors" > <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" > <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /> </svg> </a> <a href="https://linkedin.com/company/ziontechgroup" target="blank" rel="noopener noreferrer" className="text-gray-400 hover:text-cyan-400 transition-colors" > <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" > <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.047-1.852-3.047-1.853 0-2.136 1.445-2.136 2.939v5.677H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /> </svg> </a> </div> </div> </div> </div> {
-  /* Main Navigation */ 
-}<nav className= {
-  `fixed top-0 left-0 right-0 z-50 transition-all duration-300 $ {
-  isScrolled ? 'bg-black/95 backdrop-blur-xl border-b border-cyan-500/20 shadow-2xl shadow-cyan-500/10' </div> <div> <div className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Zion Tech Group </div> <div className="text-xs text-gray-400" >2030 Future Technology</div> </div> </a> <span>Services</span> <ChevronDown className="w-4 h-4 group-hover:rotate-180 transition-transform" /> </button> > <div className="flex items-center justify-between" > <div> </div> </a>) ) 
-}</div> </div>) ) 
-}</div> </div> </div> </div> </div> Get Started </button> </a> </div> {
-  /* Mobile Menu Button */ 
-}<button </button> </div> </div> </nav> {
-  /* Mobile Menu */ 
-}<AnimatePresence> </div> <div> <div className="text-xl font-bold bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent" > Zion Tech Group </div> </div> </div> > <span className="flex items-center space-x-3" > <Briefcase className="w-5 h-5" /> <span>Services</span> </span> <ChevronRightIcon className= {
-  `w-5 h-5 transition-transform $ {
-  activeCategory === 0 ? 'rotate-90' : '' 
-}` 
-}/> </button>) ) 
-}</div>) ) 
-}</div>) 
-}</div>) ) 
-}</div> </div> </div> </div> </div> Get Started Today </button> </a> </div> </div> </div> </div> </motion.div>) 
-}</AnimatePresence> </>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

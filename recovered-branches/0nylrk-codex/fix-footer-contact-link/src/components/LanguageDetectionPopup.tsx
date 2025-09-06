@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 import {
@@ -9,12 +8,12 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
+  AlertDialogTitle,;
 } from '../components/ui/alert-dialog';
 import {
   useLanguage,
   SupportedLanguage,
-  LanguageContextType,
+  LanguageContextType,;
 } from '../context/LanguageContext';
 
 export function LanguageDetectionPopup() {
@@ -82,11 +81,3 @@ export function LanguageDetectionPopup() {
       </AlertDialogContent>
     </AlertDialog>
   );
-}
-=======
- if (!detectedLanguage) return null;
-> {
-  t ('general.yes') 
-}</AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

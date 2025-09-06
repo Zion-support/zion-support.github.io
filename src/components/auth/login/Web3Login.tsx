@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { useAuth } from '@/hooks/useAuth';
@@ -92,47 +91,20 @@ export function Web3Login() {
     );
   }
 
-  return (
-    <Button
-      type='button'
-      variant='outline'
-      className='w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan'
-      onClick={handleWeb3Login}
-      disabled={buttonDisabled}
-      title={buttonTitle || undefined} // Ensure title is not an empty string if not needed
+  
     >
       {buttonContent}
     </Button>
   );
-=======
- export function Web3Login () {;
-  const {;
-  loginWithWeb3 ;
-}= useAuth ();
-const {;
-  isWalletSystemAvailable ;
-}= useAppWallet ();
-const [isLoading, setIsLoading] = useState (false);
-const handleWeb3Login = async () => {;
-  if (!isWalletSystemAvailable) {;
-  return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }await loginWithWeb3 (), //This is from useAuth, assumed to be a separate flow ;
 }finally {;
   setIsLoading (false) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const buttonDisabled = isLoading || !isWalletSystemAvailable;
 const buttonTitle = !isWalletSystemAvailable ? "Web3 login is currently unavailable. Please ensure your Reown Project ID is configured." : "";";
->Sign in with Web3</span> </> return (<Button type=" button"variant=" outline"className="w-full border border-zion-blue-light bg-zion-blue-dark text-white hover:bg-zion-blue hover:text-zion-cyan" onClick={;
-  handleWeb3Login ;
-}disabled= {;
-  buttonDisabled ;
-}title= {;
-  buttonTitle || undefined ;
+>Sign in with Web3</span> </> 
 }//Ensure title is not an empty string if not needed > {;
   buttonContent ;
 }</Button>) ;

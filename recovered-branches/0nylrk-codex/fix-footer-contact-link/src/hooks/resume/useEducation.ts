@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Education } from '@/types/resume';
@@ -6,7 +5,7 @@ import { useAuth } from '@/hooks/useAuth';
 import {
   formatDateForDB,
   handleResumeError,
-  showSuccessToast,
+  showSuccessToast,;
 } from './useResumeUtils';
 
 export function useEducation() {
@@ -133,19 +132,7 @@ export function useEducation() {
     updateEducation,
     deleteEducation,
   };
-=======
- setIsLoading (true);
-setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('education') if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not add education') 
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const updateEducation = async (eduId: string, education: Education) : Promise<boolean> => {
   if (!user) {
@@ -160,7 +147,7 @@ try {
   return handleResumeError (e, 'Could not update education') 
 }finally {
   setIsLoading (false) 
-}
+
 };
 const deleteEducation = async (eduId: string) : Promise<boolean> => {
   if (!user) {
@@ -176,13 +163,12 @@ if (error) throw error;
   return handleResumeError (e, 'Could not delete education') 
 }finally {
   setIsLoading (false) 
-}
+
 };
-return {
+
   isLoading;
 error;
 addEducation;
 updateEducation;
 deleteEducation 
-}
-}
+

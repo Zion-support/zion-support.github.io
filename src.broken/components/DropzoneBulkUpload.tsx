@@ -1,13 +1,10 @@
  const onDrop = useCallback ( (accepted: File[]) => {
   if (accepted.length) {
   
-}
-<<<<<<< HEAD
 
 interface UploadReport {
   created: number;
   errors: UploadError[];
-}
 
 export function DropzoneBulkUpload() {
   const [file, setFile] = useState<File | null>(null);
@@ -93,13 +90,7 @@ export function DropzoneBulkUpload() {
       )}
     </div>
   );
-=======
-}catch (err) {
-  console.error (err) 
-}finally {
-  setProgress (100) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 space-y-4" > <div {
   ...getRootProps ({
@@ -113,4 +104,3 @@ space-y-4" > <div {
 }</div>) 
 }</div>) 
 }</div>) 
-}

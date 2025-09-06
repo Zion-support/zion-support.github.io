@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
 import {
   Room,
@@ -6,7 +5,7 @@ import {
   RemoteParticipant,
   LocalParticipant,
   createLocalTracks,
-  VideoPresets,
+  VideoPresets,;
 } from 'livekit-client';
 import ParticipantTile from './ParticipantTile';
 import Controls from './Controls';
@@ -65,9 +64,7 @@ export default function CallRoom({
     });
 
     // publish local tracks
-    for (const t of localTracks) {
-      await r.localParticipant.publishTrack(t);
-    }
+    
 
     setRoom(r);
     setConnectedAt(Date.now());
@@ -138,27 +135,3 @@ export default function CallRoom({
       </div>
     </div>
   );
-}
-=======
- setRoom (r);
-setConnectedAt (Date.now () );
-rebuild (r);
-// eslint-disable-next-line react-hooks/exhaustive-deps 
-}, [serverUrl, token, startMode]);
-</div> <div className= {
-  `flex-1 p-4 grid gap-4 $ {
-  gridCols 
-}` 
-}> {
-  participants.map ( (p, idx) => (<ParticipantTile key= {
-  String ( (p as any) .sid || (p as any) .identity) + idx 
-}participant= {
-  p 
-}isLocal= {
-  p instanceof LocalParticipant 
-}displayName= {
-  (p as any) .name || (p instanceof LocalParticipant ? 'You' : undefined) 
-}/>) ) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,6 +1,6 @@
-import React from 'react'
-import Head from 'next/head'
-
+import React from 'react';
+import Head from 'next/head';
+;
 const codeExamples = [
   {
     language: 'JavaScript',
@@ -24,13 +24,13 @@ url = 'https://ziontechgroup.com/api/v1/contact'
 headers = {
   'Authorization': 'Bearer YOUR_API_KEY',
   'Content-Type': 'application/json'
-}
+
 data = {
   'name': 'John Doe',
   'email': 'john@example.com',
   'message': 'Interested in AI services',
   'company': 'Tech Corp'
-}
+
 response = requests.post(url, json=data, headers=headers)
 print(response.json())`
   }
@@ -62,4 +62,4 @@ export default function APIDocumentationPage() {
       </main>
     </div>
   )
-}
+;

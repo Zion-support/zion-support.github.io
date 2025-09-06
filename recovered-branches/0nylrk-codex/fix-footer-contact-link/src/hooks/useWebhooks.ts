@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { supabase } from '@/integrations/supabase/client';
@@ -18,9 +17,6 @@ export interface Webhook {
   is_active: boolean;
   created_at: string;
   last_triggered_at: string | null;
-=======
- export type WebhookEventType = 'new application' | 'quote received' | 'milestone approved' | 'talent hired';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Helper to get the base window.URL for webhook functions const getWebhookUrl = () => {
   //import.meta may be undefined when this hook is executed in a Node //environment (e.g. during server side rendering or tests) . Using optional //chaining avoids a TypeError in those cases and falls back to process.env. setLoading (true);
 setError (null);
 try {
@@ -32,13 +28,10 @@ try {
   session.access token 
 }`;
 'Content-Type': 'application/json' 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 });
 }finally {
   setLoading (false) 
-}
-<<<<<<< HEAD
 
 export function useWebhooks() {
   const { user } = useAuth();
@@ -373,32 +366,7 @@ export function useWebhooks() {
     testWebhook,
     clearTestResult: () => setTestResult(null),
   };
-=======
-};
-//Create new webhook const createWebhook = async (name: string, url: string, eventTypes: WebhookEventType[], secret?: string) => {
-  if (!user) return;
-setError (null);
-try {
-  
-}getWebhookUrl () 
-}/create`, {
-  method: 'POST', headers: {
-  'Authorization': `Bearer $ {
-  session.access token 
-}`;
-'Content-Type': 'application/json' 
-};
-//Add the new webhook to the list setWebhooks (prev => [result.webhook, ...prev]);
-return result.webhook 
-}catch (err) {
-  console.error ('Error creating webhook:', err);
-setError (err instanceof Error ? err.message : 'An unknown error occurred');
-toast ({
-  
-}finally {
-  setLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Toggle webhook active status const toggleWebhook = async (webhookId: string, isActive: boolean) => {
   if (!user) return;
@@ -421,7 +389,7 @@ toast ({
   
 }finally {
   setLoading (false) 
-}
+
 };
 //Delete webhook const deleteWebhook = async (webhookId: string) => {
   if (!user) return;
@@ -445,7 +413,7 @@ toast ({
   
 }finally {
   setLoading (false) 
-}
+
 };
 //Test webhook const testWebhook = async (webhookId: string, eventType: WebhookEventType) => {
   if (!user) return;
@@ -469,9 +437,9 @@ toast ({
   
 }finally {
   setLoading (false) 
-}
+
 };
-return {
+
   webhooks;
 loading;
 error;
@@ -482,5 +450,4 @@ toggleWebhook;
 deleteWebhook;
 testWebhook;
 clearTestResult: () => setTestResult (null) 
-}
-}
+

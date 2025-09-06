@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 import { TalentProfile } from '@/types/talent';
 import { GeneratedMilestone } from '@/hooks/useMilestoneGenerator';
@@ -9,7 +8,6 @@ interface Milestone {
   description: string;
   dueDate: string;
   estimatedHours: number;
-}
 
 export async function generateContract(
   values: ContractFormValues,
@@ -54,17 +52,4 @@ export async function generateContract(
   } else {
     throw new Error('Failed to generate contract');
   }
-=======
- interface Milestone {
-  title: string;
-description: string;
-dueDate: string;
-estimatedHours: number 
-}export async function generateContract (values: ContractFormValues;
-talent: TalentProfile;
-clientName: string;
-generatedMilestones: GeneratedMilestone[]) : Promise<string> {
-  const additionalClauses = values.additionalClauses || [];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-}
+

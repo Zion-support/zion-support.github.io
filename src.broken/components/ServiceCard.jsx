@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { Heart } from 'lucide-react';
 import { toast } from 'sonner';
@@ -36,11 +35,7 @@ export default function ServiceCard({ service, onSelect }) {
     }).catch(() => {});
   };
 
-  return (
-    <div
-      data-testid={`service-card-${service.id}`}
-      onClick={handleClick}
-      className='cursor-pointer p-4 border border-zion-blue-light rounded-lg bg-zion-blue-dark hover:border-zion-purple/50 relative'
+  
     >
       <button
         onClick={handleSave}
@@ -52,21 +47,7 @@ export default function ServiceCard({ service, onSelect }) {
       <h3 className='text-white font-medium'>{service.title}</h3>
     </div>
   );
-=======
- export default function ServiceCard ({
-  service, onSelect 
-}) {
-  const navigate = useNavigate ();
-const location = useLocation ();
-const {
-  user 
-}= useAuth ();
-const dispatch = useAppDispatch ();
-const handleClick = () => {
-  if (onSelect) {
-  onSelect (service.id) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleSave = (e) => {
   e.stopPropagation ();
@@ -74,6 +55,3 @@ toast.info ('Log in to save favorites');
 navigate (`/login?next=$ {
   encodeURIComponent (location.pathname + location.search) 
 }`);
-return 
-}> <Heart className="w-4 h-4" /> </button> </div>) 
-}

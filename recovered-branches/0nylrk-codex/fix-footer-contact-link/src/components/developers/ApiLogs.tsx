@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { format } from 'date-fns';
 import { List, RefreshCw } from 'lucide-react';
@@ -11,14 +10,14 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { Badge } from '@/components/ui/badge';
 
@@ -224,47 +223,7 @@ export function ApiLogs() {
       </CardContent>
     </Card>
   );
-=======
- import {
-  {
-  {
-  Button 
-}from "@/components/ui/button";
-import {
-  {
-  {
-  Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle 
-}from "@/components/ui/card";
-import {
-  {
-  {
-  Select, SelectContent, SelectItem, SelectTrigger, SelectValue 
-}from "@/components/ui/select";
-import {
-  {
-  {
-  Badge 
-}from "@/components/ui/badge";
-export function ApiLogs () {
-  const {
-  logs, totalLogs, loading, fetchApiLogs 
-}= useApiKeys ();
-const [pageSize, setPageSize] = useState (25);
-const [currentPage, setCurrentPage] = useState (0);
-//Load logs on mount and when pagination changes useEffect ( () => {
-  fetchApiLogs (pageSize, currentPage * pageSize) 
-}, [pageSize, currentPage]);
-const handleRefresh = () => {
-  fetchApiLogs (pageSize, currentPage * pageSize) 
-};
-//Helper to format the timestamp const formatTimestamp = (timestamp: string) => {
-  return format (new Date (timestamp), 'yyyy-MM-dd HH: mm:ss') 
-};
-//Helper to get badge color based on status code const getStatusBadge = (statusCode: number) => {
-  if (statusCode >= 200 && statusCode < 300) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Calculate pagination info const totalPages = Math.ceil (totalLogs / pageSize);
 const hasNextPage = currentPage < totalPages - 1;
@@ -277,4 +236,3 @@ bg-zinc-900 border-zinc-800 text-white"> <CardHeader> </CardTitle> <CardDescript
 }</Badge> </td> </tr>) ) ) 
 }</tbody> </table> </div> </div> <div className=" flex space-x-2" > <Button > Previous </Button> <Button > Next </Button> </div> </div>) 
 }</CardContent> </Card>) 
-}

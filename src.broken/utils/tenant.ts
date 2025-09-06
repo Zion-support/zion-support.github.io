@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import crypto from 'crypto';
 import { readJsonFile, writeJsonFile, updateJsonFile } from './fileDb';
 
@@ -8,7 +7,6 @@ export interface TenantMember {
   userId: string;
   email: string;
   role: TenantRole;
-}
 
 export interface TenantBranding {
   name: string;
@@ -17,7 +15,6 @@ export interface TenantBranding {
   secondaryColor?: string;
   coBranding?: boolean;
   tagline?: string;
-}
 
 export interface Tenant {
   id: string;
@@ -26,11 +23,9 @@ export interface Tenant {
   members: TenantMember[];
   createdAt: string;
   updatedAt: string;
-}
 
 export interface TenantsFile {
   tenants: Tenant[];
-}
 
 const FILE = 'tenants.json';
 const FALLBACK: TenantsFile = { tenants: [] };
@@ -38,15 +33,12 @@ const FALLBACK: TenantsFile = { tenants: [] };
 export function getTenants(): Tenant[] {
   const data = readJsonFile<TenantsFile>(FILE, FALLBACK);
   return data.tenants;
-}
 
 export function getTenantById(tenantId: string): Tenant | undefined {
   return getTenants().find(t => t.id === tenantId);
-}
 
 export function getTenantByApiKey(apiKey: string): Tenant | undefined {
   return getTenants().find(t => t.apiKey === apiKey);
-}
 
 export function createTenant(branding: TenantBranding): Tenant {
   const now = new Date().toISOString();
@@ -66,7 +58,6 @@ export function createTenant(branding: TenantBranding): Tenant {
     FALLBACK
   );
   return tenant;
-}
 
 export function updateTenant(
   tenantId: string,
@@ -92,7 +83,6 @@ export function updateTenant(
     FALLBACK
   );
   return result;
-}
 
 export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
   let result: Tenant | undefined = undefined;
@@ -114,8 +104,3 @@ export function rotateTenantApiKey(tenantId: string): Tenant | undefined {
     FALLBACK
   );
   return result;
-}
-=======
- export type TenantRole = 'owner' | 'admin' | 'recruiter' | 'viewer';
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

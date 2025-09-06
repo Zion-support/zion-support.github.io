@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { MultiverseState, InstanceConfig, SyncEvent } from './types';
@@ -8,7 +7,6 @@ const STATE_PATH = path.join(DATA_DIR, 'state.json');
 
 function ensureDataDir(): void {
   if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
-}
 
 function defaultConfig(): InstanceConfig {
   const instanceId = process.env.ZION_INSTANCE_ID || 'zion-local';
@@ -22,7 +20,6 @@ function defaultConfig(): InstanceConfig {
       process.env.ZION_SYNC_SECRET && process.env.ZION_SYNC_SECRET.length > 0
     ),
   };
-}
 
 function defaultState(): MultiverseState {
   return {
@@ -33,7 +30,6 @@ function defaultState(): MultiverseState {
     proposalMerkleById: {},
     events: [],
   };
-}
 
 export function readState(): MultiverseState {
   ensureDataDir();
@@ -59,12 +55,10 @@ export function readState(): MultiverseState {
     fs.writeFileSync(STATE_PATH, JSON.stringify(initial, null, 2));
     return initial;
   }
-}
 
 export function writeState(state: MultiverseState): void {
   ensureDataDir();
   fs.writeFileSync(STATE_PATH, JSON.stringify(state, null, 2));
-}
 
 export function upsertEvent(
   state: MultiverseState,
@@ -88,7 +82,6 @@ export function upsertEvent(
   state.seenEventIds[event.eventId] = true;
   state.lastSyncedAt = Math.max(state.lastSyncedAt || 0, event.timestamp || 0);
   return state;
-}
 
 export function getEntityId(event: SyncEvent): string {
   switch (event.type) {
@@ -109,7 +102,6 @@ export function getEntityId(event: SyncEvent): string {
     default:
       return (event.payload as any).id || event.eventId;
   }
-}
 
 export function filterEventsByScope(
   events: SyncEvent[],
@@ -130,30 +122,3 @@ export function filterEventsByScope(
     );
   }
   return events;
-}
-=======
- 
-}function defaultState () : MultiverseState {
-  return {
-  config: defaultConfig (), lastSyncedAt: 0, seenEventIds: {
-  
-};
-latestVersionByEntityId: {
-  
-};
-proposalMerkleById: {
-  
-};
-events: [] 
-}
-}state.events.push (event);
-state.seenEventIds[event.eventId] = true;
-state.lastSyncedAt = Math.max (state.lastSyncedAt || 0, event.timestamp || 0);
-return state 
-}case "token transfer": return (event.payload as any) .txId;
-case "talent mobility": return (event.payload as any) .personId + ":" + (event.payload as any) .startDate;
-case "dao endorsement": return (event.payload as any) .resolutionId;
-case "leaderboard entry": return (event.payload as any) .subjectId + ":" + (event.payload as any) .period;
-default: 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

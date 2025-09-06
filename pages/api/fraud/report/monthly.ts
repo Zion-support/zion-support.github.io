@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getFraudStore } from '../../../../utils/fraud/store';
 
@@ -15,8 +14,3 @@ export default async function handler(
   const store = getFraudStore();
   const report = await store.generateMonthlyReport(month);
   res.status(200).json(report);
-}
-=======
- 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

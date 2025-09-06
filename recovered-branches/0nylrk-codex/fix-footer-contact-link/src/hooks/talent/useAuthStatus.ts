@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 
 export function useAuthStatus() {
@@ -42,23 +41,15 @@ export function useAuthStatus() {
     handleToggleSave,
     toggleAuth,
   };
-=======
- //Mock saved talents const [savedTalents, setSavedTalents] = useState<string[]> ([]);
-//Toggle saved talent const handleToggleSave = (talentId: string, isSaved: boolean) => {
-  if (isAuthenticated) {
-  if (isSaved) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //For demo purposes, let's provide a login/logout toggle const toggleAuth = () => {
   setIsAuthenticated (prev => !prev) 
 };
-return {
+
   isAuthenticated;
 userDetails;
 savedTalents;
 handleToggleSave;
 toggleAuth 
-}
-}
+

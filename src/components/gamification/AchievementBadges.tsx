@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { BadgeCheck } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
@@ -7,11 +6,9 @@ export interface Achievement {
   title: string;
   description: string;
   achieved: boolean;
-}
 
 interface AchievementBadgesProps {
   achievements: Achievement[];
-}
 
 export function AchievementBadges({ achievements }: AchievementBadgesProps) {
   return (
@@ -34,21 +31,3 @@ export function AchievementBadges({ achievements }: AchievementBadgesProps) {
       </CardContent>
     </Card>
   );
-}
-=======
- export interface Achievement {;
-  id: string;
-title: string;
-description: string;
-achieved: boolean ;
-}interface AchievementBadgesProps {;
-  achievements: Achievement[] ;
-}achievements ;
-}: AchievementBadgesProps) {;
-  return (<Card> <CardHeader> <CardTitle>Achievements</CardTitle> </CardHeader> <CardContent className="space-y-3" > {;
-  achievements.map ( (a) => (<div key= {;
-  a.id ";
-}className="flex items-start gap-3" > <BadgeCheck </div> </div>) ) ;
-}</CardContent> </Card>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

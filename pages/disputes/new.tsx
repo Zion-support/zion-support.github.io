@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useRouter } from 'next/router';
 import React, { useEffect, useMemo, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
@@ -180,7 +179,6 @@ export default function NewDisputePage() {
       </div>
     </EnhancedLayout>
   );
-}
 
 function toBase64(file: File): Promise<string> {
   return new Promise((resolve, reject) => {
@@ -189,18 +187,3 @@ function toBase64(file: File): Promise<string> {
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
-}
-=======
- type ReasonType = typeof REASONS[number];
-const [projectId, setProjectId] = useState (qProjectId || '');
-const [reason, setReason] = useState<ReasonType> ('Scope Disagreement');
-const [reasonDetails, setReasonDetails] = useState ('');
-const [description, setDescription] = useState ('');
-const [files, setFiles] = useState<File[]> ([]);
-const [talentUserId, setTalentUserId] = useState (talentId || '');
-const [clientUserId, setClientUserId] = useState (clientId || (user.role === 'client'? user.id : '') );
-const [submitting, setSubmitting] = useState (false);
-}return (<EnhancedLayout> </div> <div className="grid grid-cols-1 md:grid-cols-2 gap-4" > <div> </div> </form> </div> </EnhancedLayout>) 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

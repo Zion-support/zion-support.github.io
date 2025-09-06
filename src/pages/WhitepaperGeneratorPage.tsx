@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect, useCallback } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import WhitepaperSectionEditor from '@/components/WhitepaperSectionEditor';
@@ -11,9 +10,6 @@ import { toast } from 'sonner';
 import { logErrorToProduction } from '@/utils/productionLogger';
 
 interface WhitepaperSection {
-=======
- interface WhitepaperSection {;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   id: string;
 title: string;
 content: string ;
@@ -107,13 +103,10 @@ setError (e.message || 'An unexpected error occurred.');
 setSections ([]) ;
 }finally {;
   setIsLoading (false) ;
-}
-<<<<<<< HEAD
 
 interface DistributionChartItem {
   name: string;
   value: number;
-}
 
 const COLORS = [
   '#0088FE',
@@ -1056,178 +1049,6 @@ const WhitepaperGeneratorPage: React.FC = () => {
       </div>
     </div>
   );
-=======
-};
-setSections (prevSections => prevSections.map (section => section.id === id ? {;
-  ...section, content: newContent ;
-}: section) ) ;
-};
-}
-}
-});
-return mdContent;
-};
-}finally {;
-  setIsDownloading (false) ;
-}
-};
-const handleDownloadPdf = async () => {;
-  setIsDownloading (true);
-setError (null);';
-}//Temporarily ensure the entire preview panel content is visible for capture if it's scrollable internally. //This might involve temporarily changing styles, which is complex and error-prone. //A better approach for very long content is to paginate in jsPDF directly. //For now, we capture what's visible or rely on html2canvas's capabilities with scroll. const canvas = await html2canvas (previewPanelRef.current, {;
-  scale: 2, //Increase scale for better resolution useCORS: true, //If there are any external images/fonts (though unlikely here) logging: true, //For debugging onclone: (documentClone) => {';
-  //You might need to re-apply some styles here if they don't transfer well pdf.addImage (imgData, 'PNG', 0, position,  pdfWidth, imgHeight);
-heightLeft -= pdfHeight;
-}finally {;
-  setIsDownloading (false) ;
-}
-};
-const handleGenerateShareableLink = async () => {;
-  if (sections.length === 0) {;
-  ;
-}setIsSharing (true);
-setError (null);
-setShareableLink (null);
-setCurrentSharedWhitepaperId (null);
-setCurrentSharedWhitepaperIsPublic (null);
-try {;
-  const whitepaperPayload = {;
-  tokenName;
-tokenSupply;
-sections;
-distributionChartData;
-distributionBreakdown ;
-};
-const {;
-  data: response, error: funcError ';
-}= await supabase.functions.invoke ('create-shared-whitepaper', {;
-  body: whitepaperPayload ;
-});
-if (funcError) throw new Error (`Supabase function error: $ {;
-  funcError.message ;
-}`);';
-if (!response) throw new Error ('No response received from create-shared-whitepaper function');
-if ( (response as any) .error) throw new Error (`Error from create-shared-whitepaper: $ {;
-  (response as any) .error ;
-}`);';
-if (! (response as any) .id) throw new Error ('Failed to get ID for shareable link.');
-}finally {;
-  setIsSharing (false) ;
-}
-};
-const handleTogglePublicStatus = async () => {;
-  if (!currentSharedWhitepaperId || currentSharedWhitepaperIsPublic === null) {;
-  ;
-}//Optimistically update UI, or wait for response for certainty const newPublicStatus = !currentSharedWhitepaperIsPublic;
-}
-};
-}setIsSubmittingToCounsel (true);
-setError (null);
-try {;
-  let linkToSubmit = shareableLink;
-let whitepaperIdToSubmit = currentSharedWhitepaperId;
-if (!linkToSubmit || !whitepaperIdToSubmit) {;
-  const {;
-  data: linkResponse, error: linkFuncError ';
-}= await supabase.functions.invoke ('create-shared-whitepaper', {;
-  body: whitepaperPayload ;
-});
-if (linkFuncError) throw new Error (`Failed to create link for counsel: $ {;
-  linkFuncError.message ;
-}`);';
-if (!linkResponse) throw new Error ('No response received from create-shared-whitepaper function for counsel');
-if ( (linkResponse as any) .error) throw new Error (`Error from create-shared-whitepaper function: $ {;
-  (linkResponse as any) .error ;
-}`);';
-if (! (linkResponse as any) .id) throw new Error ('Failed to get ID for shareable link for counsel.');
-linkToSubmit = `$ {;
-  window.location.origin ;
-}/whitepaper/view/$ {;
-  (linkResponse as any) .id ;
-}`;
-whitepaperIdToSubmit = (linkResponse as any) .id;
-setShareableLink (linkToSubmit);
-setCurrentSharedWhitepaperId (whitepaperIdToSubmit);
-setCurrentSharedWhitepaperIsPublic ( (linkResponse as any) .is public) ';
-}//Ensure it's public before submitting, or handle as per requirements if (currentSharedWhitepaperIsPublic === false) {;
-  const {;
-  data: statusResponse, error: statusError ';
-}= await supabase.functions.invoke ('set-shared-whitepaper-public-status', {;
-  body: {;
-  whitepaperId: whitepaperIdToSubmit, isPublic: true ;
-}
-});
-if (statusError) throw new Error (`Failed to make whitepaper public: $ {;
-  statusError.message ;
-}`);';
-if (!statusResponse) throw new Error ('No response received from set-shared-whitepaper-public-status function');
-if ( (statusResponse as any) .error) throw new Error ( (statusResponse as any) .error);
-setCurrentSharedWhitepaperIsPublic (true) ;
-}const {;
-  data: notifyResponse, error: notifyError ';
-}= await supabase.functions.invoke ('notify-legal-team', {;
-  body: {;
-  whitepaperId: whitepaperIdToSubmit,  sharableLink: linkToSubmit, //Corrected variable name tokenName: tokenName ;
-}
-}finally {;
-  setIsSubmittingToCounsel (false) ;
-}
-};
-return (<div className="flex flex-col md:flex-row h-screen max-h-screen p-4 gap-4 bg-gray-100" > {;
-  /* Left Column: Inputs and Editors */ ";
-}<div className="md:w-1/2 lg:w-2/5 xl:w-1/3 p-4 bg-white rounded-lg shadow-md overflow-y-auto" > <div className="flex justify-between items-center mb-6" > <h1 className="text-xl font-bold text-center flex-grow" >Whitepaper Configuration</h1> <div className="flex space-x-1" > <Button onClick={;
-  handleDownloadMarkdown ;
-}disabled= {;
-  isDownloading || sections.length === 0 || isLoading || isSharing || isSubmittingToCounsel ";
-}variant="outline" size="sm" title="Download as Markdown" > <Download className="h-4 w-4" /> <span className="ml-1 hidden sm:inline" >MD</span> </Button> <Button onClick={;
-  handleDownloadPdf ;
-}disabled= {;
-  isDownloading || sections.length === 0 || isLoading || isSharing || isSubmittingToCounsel ";
-}variant="outline" size="sm" title="Download as PDF" > <Download className="h-4 w-4" /> <span className="ml-1 hidden sm:inline" >PDF</span> </Button> <Button onClick={;
-  handleGenerateShareableLink ;
-}disabled= {;
-  isSharing || sections.length === 0 || isLoading || isDownloading || isSubmittingToCounsel ";
-}variant="outline" size="sm" title="Generate Shareable Link" > <Share2 className="h-4 w-4" /> <span className="ml-1 hidden sm:inline" >Share</span> /* END OF INPUT FIELDS */ ;
-}<Button > {';
-  isLoading ? 'Generating Draft...' : 'Generate Whitepaper Draft' ;
-}</Button> > {';
-  currentSharedWhitepaperIsPublic ? 'Make Private' : 'Make Public' ;
-}</Button> </div> ;
-}
-}>Copy</Button> </div> {";
-  currentSharedWhitepaperIsPublic !== null && (<p className="text-xs mt-1 text-gray-600" > Currently: {";
-  currentSharedWhitepaperIsPublic ? "Public" : "Private (Only admins can view) " ;
-}
-}</div>) ;
-}{;
-  /* Submit to Counsel Button */ ;
-}{";
-  sections.length > 0 && (<Button type="button" onClick={;
-  handleSubmitToCounsel ;
-}key= {;
-  section.id ;
-}title= {;
-  section.title ;
-}content= {;
-  section.content ;
-}onContentChange= {;
-  (newContent) => handleSectionContentChange (section.id, newContent) ;
-}/>) ) ;
-}</div>) ;
-}{;
-  rawDraft ;
-}</pre>) ;
-}</div>) ;
-}</div> <WhitepaperPreviewPanel sections= {;
-  sections ;
-}distributionChartData= {;
-  distributionChartData ;
-}tokenName= {;
-  tokenName ;
-}tokenSupply= {;
-  tokenSupply ;
-}/> </div> </div>) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
 export default WhitepaperGeneratorPage;
 '"

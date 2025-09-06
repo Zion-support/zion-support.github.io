@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { ADMIN_TYPES, AdminType, ListParams } from '../../../utils/admin/types';
 import { v4 as uuidv4 } from 'uuid';
@@ -10,7 +9,6 @@ function isSupabaseConfigured() {
     !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
     process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https://placeholder.supabase.co'
   );
-}
 
 function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
   const { search, sort, order, page, pageSize, format, ...rest } =
@@ -28,7 +26,6 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters,
     format: (format as any) || undefined,
   };
-}
 
 function toCsv(rows: any[]): string {
   if (!rows.length) return '';
@@ -42,7 +39,6 @@ function toCsv(rows: any[]): string {
     rows.map(r => headers.map(h => escape(r[h])).join(','))
   );
   return lines.join('\n');
-}
 
 export default async function handler(
   req: NextApiRequest,
@@ -179,14 +175,7 @@ export default async function handler(
   }
 
   return res.status(405).json({ error: 'Method not allowed' });
-}
-=======
- return lines.join ('\n');
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
+
 }return res.status (200) .send (toCsv (data || []) );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }return res.status (200) .send (toCsv (pageItems) );
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
+

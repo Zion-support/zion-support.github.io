@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Education } from '@/types/resume';
 import { EducationItem } from './EducationItem';
 
@@ -6,7 +5,6 @@ interface EducationListProps {
   educationEntries: Education[];
   onEdit: (education: Education) => void;
   onDelete: (id: string) => void;
-}
 
 export function EducationList({
   educationEntries,
@@ -30,17 +28,3 @@ export function EducationList({
       ))}
     </div>
   );
-}
-=======
- <EducationItem key= {
-  edu.id 
-}education= {
-  edu 
-}onEdit= {
-  onEdit 
-}onDelete= {
-  onDelete 
-}/>) ) 
-}</div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

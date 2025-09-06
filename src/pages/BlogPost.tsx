@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
@@ -15,7 +14,7 @@ import {
   Share2,
   Facebook,
   Twitter,
-  Linkedin,
+  Linkedin,;
 } from 'lucide-react';
 import type { BlogPost as BlogPostType } from '@/types/blog';
 import { Separator } from '@/components/ui/separator';
@@ -353,21 +352,7 @@ export default function BlogPost() {
       </div>
     </>
   );
-=======
- import ReactMarkdown from 'react-markdown';
-//Importing the sample blog posts - in a real app, you would fetch this from an API p.id !== data.id && (p.category === data.category || p.tags.some ( (tag) => data.tags.includes (tag) ) ) p.id !== currentPost.id && (p.category === currentPost.category || p.tags.some ( (tag) => currentPost.tags.includes (tag) ) ) <p>Failed to load article.</p> <Button onClick={;
-  () => router.reload () ;
-}>Retry</Button> </div>) ;
-}//If post is still null after loading, show not found <p>Article not found.</p> <Button onClick={';
-  () => router.push ('/blog') ;
-}>Back to Blog</Button> </div>) ;
-}switch (platform) {';
-  case 'facebook': return `https://www.facebook.com/sharer/sharer.php?u=$ {;
-  url ;
-}`;';
-case 'twitter': ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 outline"className=" border-zion-blue-light text-zion-slate-light hover:bg-zion-blue-light hover:text-white"asChild > <Link href=" /blog"> <ArrowLeft className=" mr-2 h-4 w-4"/> Back to all articles </Link> </Button> </div> </div> <div className=" relative"> <Button > <Share2 className=" h-4 w-4 mr-1"/> <span className=" text-sm">Share</span> </Button> <a href= {';
   getShareUrl ('facebook') ";

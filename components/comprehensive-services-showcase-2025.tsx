@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
@@ -42,7 +41,7 @@ import {
   Shield as ShieldIcon,
   Globe as GlobeIcon,
   Zap as ZapIcon,
-  Target as TargetIcon,
+  Target as TargetIcon,;
 } from 'lucide-react';
 
 // Import service data
@@ -67,7 +66,6 @@ interface Service {
   launchDate: string;
   badge?: string;
   icon?: React.ReactNode;
-}
 
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
@@ -740,9 +738,6 @@ export default function ComprehensiveServicesShowcase2025() {
       </div>
     </Layout>
   );
-=======
- ];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Filter by search term if (searchTerm) {
   filtered = filtered.filter (service => service.name.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.description.toLowerCase () .includes (searchTerm.toLowerCase () ) || service.tagline.toLowerCase () .includes (searchTerm.toLowerCase () ) 
 }//Sort services filtered.sort ( (a, b) => {
   switch (sortBy) {
@@ -751,7 +746,7 @@ case 'rating': return b.rating - a.rating;
 case 'newest': return new Date (b.launchDate) .getTime () - new Date (a.launchDate) .getTime ();
 case 'price-low': setFilteredServices (filtered) 
 }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]);
-}
+
 };
 description"content=" Explore our complete portfolio of innovative micro SAAS, AI, IT, and emerging technology services. Find the perfect solution for your business needs."/> <meta name=" keywords"content=" micro SAAS, AI services, IT solutions, quantum computing, emerging technology, business solutions, Zion Tech Group"/> </Head> left: `$ {
   Math.random () * 100 
@@ -759,21 +754,20 @@ description"content=" Explore our complete portfolio of innovative micro SAAS, A
 top: `$ {
   Math.random () * 100 
 }%` 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/>) ) 
 }</div> <div className=" relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto"> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }animate= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }> <h1 className=" text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6"> <span className=" bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent"> Comprehensive </span> <br /> <span className=" text-white">Services Showcase</span> </h1> </motion.div>) ) 
 }</div> /> </div> </div> </motion.div> </div> </div> key= {
   category.name 
@@ -813,18 +807,17 @@ top: `$ {
 }</div> <motion.div initial= {
   {
   opacity: 0, y: 30 
-}
+
 }whileInView= {
   {
   opacity: 1, y: 0 
-}
+
 }transition= {
   {
   duration: 0.8 
-}
+
 }viewport= {
   {
   once: true 
-}
+
 }> <h2 className=" text-4xl font-bold text-white mb-6"> Ready to Transform Your Business? </h2> <p className=" text-xl text-cyan-300 mb-8 max-w-3xl mx-auto"> Our team of experts is ready to help you implement the perfect solution for your needs. Get in touch today and discover how our innovative services can drive your success. </p> <a href=" /contact"className=" bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white font-medium py-4 px-8 rounded-xl transition-all duration-200 hover:shadow-lg hover:shadow-cyan-500/25 hover:scale-105"> Get Started Today </a> <a href=" /pricing"className=" border border-cyan-500/50 text-cyan-300 hover:text-white hover:bg-gradient-to-r hover:from-cyan-500/20 hover:to-blue-500/20 font-medium py-4 px-8 rounded-xl transition-all duration-200" > View Pricing Plans </a> </div> </motion.div> </div> </div> </Layout>) 
-}

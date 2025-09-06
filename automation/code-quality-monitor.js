@@ -162,7 +162,6 @@ class CodeQualityMonitor {
       this.log(`Error saving metrics: ${error.message}`);
     }
   }
-}
 
 if (require.main === module) {
   const monitor = new CodeQualityMonitor();
@@ -174,6 +173,5 @@ if (require.main === module) {
     console.error('Error:', error.message);
     process.exit(1);
   });
-}
 
 module.exports = CodeQualityMonitor;

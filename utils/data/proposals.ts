@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
@@ -31,19 +30,7 @@ export type ProposalMeta = {
     ensRecordHash?: string;
     signature?: string;
   };
-=======
- const meta: ProposalMeta = {
-  id, createdAt, updatedAt, title: payload.title, targetInstitution: payload.targetInstitution, type: payload.type, regionalScope: payload.regionalScope, budgetOrResolution: payload.budgetOrResolution, supportingMultiverses: payload.supportingMultiverses || [], languages: payload.language ? [payload.language] : ['en'], status: 'Draft', artifacts: {
-  markdownPath: `/proposals/$ {
-  id 
-}/proposal.md`;
-jsonPath: path.relative (process.cwd (), jsonPath) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };
-return meta 
-}
-<<<<<<< HEAD
 
 export function createProposal(payload: ProposalPayload): ProposalMeta {
   ensureDirs();
@@ -87,7 +74,6 @@ export function createProposal(payload: ProposalPayload): ProposalMeta {
   fs.writeFileSync(metaPath, JSON.stringify(meta, null, 2), 'utf8');
 
   return meta;
-}
 
 export function updateProposalMeta(
   id: string,
@@ -100,7 +86,6 @@ export function updateProposalMeta(
   const next = updater({ ...current, updatedAt: new Date().toISOString() });
   fs.writeFileSync(metaPath, JSON.stringify(next, null, 2), 'utf8');
   return next;
-}
 
 export function listProposals(): ProposalMeta[] {
   ensureDirs();
@@ -112,7 +97,6 @@ export function listProposals(): ProposalMeta[] {
     return JSON.parse(fs.readFileSync(metaPath, 'utf8')) as ProposalMeta;
   });
   return metas.sort((a, b) => (a.createdAt < b.createdAt ? 1 : -1));
-}
 
 export function getProposal(id: string): ProposalMeta | null {
   try {
@@ -122,7 +106,6 @@ export function getProposal(id: string): ProposalMeta | null {
   } catch {
     return null;
   }
-}
 
 export function savePdf(id: string, pdfBytes: Uint8Array): string {
   ensureDirs();
@@ -131,7 +114,6 @@ export function savePdf(id: string, pdfBytes: Uint8Array): string {
   const pdfPath = path.join(publicProposalDir, 'proposal.pdf');
   fs.writeFileSync(pdfPath, Buffer.from(pdfBytes));
   return `/proposals/${id}/proposal.pdf`;
-}
 
 export function updateArtifacts(
   id: string,
@@ -141,7 +123,3 @@ export function updateArtifacts(
     ...meta,
     artifacts: { ...meta.artifacts, ...artifacts },
   }));
-}
-=======
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

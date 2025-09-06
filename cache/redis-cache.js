@@ -44,4 +44,3 @@ export class RedisCache {
       return false;
     }
   }
-}

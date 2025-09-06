@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -7,7 +6,7 @@ import {
   CardHeader,
   CardTitle,
   CardContent,
-  CardFooter,
+  CardFooter,;
 } from '@/components/ui/card';
 import { supabase } from '@/integrations/supabase/client';
 import { Loader2, Star, BarChart2, Lightbulb } from 'lucide-react';
@@ -17,7 +16,6 @@ import { JobApplication } from '@/types/jobs';
 interface ApplicationScoreCardProps {
   application: JobApplication;
   onScoreUpdated?: (updatedApplication: JobApplication) => void;
-}
 
 export function ApplicationScoreCard({
   application,
@@ -252,20 +250,7 @@ export function ApplicationScoreCard({
       </CardContent>
     </Card>
   );
-=======
- interface ApplicationScoreCardProps {
-  application: JobApplication;
-onScoreUpdated?: (updatedApplication: JobApplication) => void 
-}export function ApplicationScoreCard ({
-  application, onScoreUpdated 
-}: ApplicationScoreCardProps) {
-  const [isScoring, setIsScoring] = useState (false);
-//Determine if application has been scored const hasScore = typeof application.match score === 'number';
-//Get suggestion color const getSuggestionColor = (suggestion: string | undefined) => {
-  switch (suggestion) {
-  
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Trigger the scoring process const handleScore = async () => {
   try {
@@ -279,13 +264,11 @@ onScoreUpdated?: (updatedApplication: JobApplication) => void
 //Poll for results every 3 seconds for up to 30 seconds .from ("job applications") .select ("*") .eq ("id", application.id) .single ();
 if (error) {
   setIsScoring (false);
-return toast.error ("Failed to check scoring status") 
-}if (data.scored at) {
+
   setIsScoring (false);
 toast.success ("Resume scoring completed");
 if (onScoreUpdated) onScoreUpdated (data as JobApplication);
-return 
-}
+
 };
 //Render the score result or button to score return (<Card className="overflow-hidden" > <CardHeader className="pb-3" > <CardTitle className="text-lg font-medium flex items-center justify-between" > Resume Match Score </Badge> </CardTitle> </CardHeader> <CardContent> {
   hasScore ? (<div> {
@@ -305,4 +288,3 @@ return
   isScoring ? (<> <Loader2 className="mr-2 h-4 w-4 animate-spin" /> Scoring Resume... </>) : ("Score Resume") 
 }</Button> </div>) 
 }</CardContent> </Card>) 
-}

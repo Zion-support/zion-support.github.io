@@ -1,9 +1,9 @@
-import React from "react" 
-import Link from 'next/link' 
-import { motion } from 'framer-motion' 
-import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Users, Award, Phone, Mail, MapPin } from 'lucide-react' 
-import Layout from '../components/Layout' 
-
+import React from "react" ;
+import Link from 'next/link' ;
+import { motion } from 'framer-motion' ;
+import { Brain, Network, Cloud, ArrowRight, CheckCircle, Star, Users, Award, Phone, Mail, MapPin } from 'lucide-react' ;
+import Layout from '../components/Layout' ;
+;
 const stats = [
   { number: '99.9%', label: 'Uptime Guarantee' },
   { number: '24/7', label: 'Support Available' },
@@ -91,11 +91,7 @@ const processSteps = [
 ] 
 
 export default function HomePage() {
-  return (
-    <Layout
-      title="Zion Tech Group - Leading AI & Technology Solutions"
-      description="Transform your business with cutting-edge AI solutions, cloud services, and technology consulting. Expert team delivering innovative results."
-      keywords="AI services, technology consulting, cloud solutions, digital transformation, machine learning, software development"
+  
     >
       <div className="min-h-screen">
         {/* Hero Section */}
@@ -203,15 +199,7 @@ export default function HomePage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {services.map((service, index) => {
                 const IconComponent = service.icon 
-                return (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group relative"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: index * 0.1 }}
-                    viewport={{ once: true }}
-                    whileHover={{ y: -5 }}
+                
                   >
                     <div className="flex items-center mb-4">
                       <IconComponent className="h-12 w-12 text-blue-600 mr-4" />
@@ -385,4 +373,3 @@ export default function HomePage() {
       </div>
     </Layout>
   );
-}

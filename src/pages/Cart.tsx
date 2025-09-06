@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 import { useSelector, useDispatch } from 'react-redux';
@@ -8,7 +7,7 @@ import { useAuth } from '@/hooks/useAuth';
 import type { RootState, AppDispatch } from '@/store';
 import {
   removeItem as removeItemAction,
-  updateQuantity as updateQuantityAction,
+  updateQuantity as updateQuantityAction,;
 } from '@/store/cartSlice';
 import { logErrorToProduction } from '@/utils/productionLogger';
 import { CartItem as CartItemComponent } from '@/components/cart/CartItem';
@@ -26,7 +25,7 @@ import {
   CreditCard,
   ArrowRight,
   Package,
-  Shield,
+  Shield,;
 } from 'lucide-react';
 import { useWishlist } from '@/hooks/useWishlist';
 import { toast } from '@/hooks/use-toast';
@@ -394,10 +393,7 @@ export default function CartPage() {
       </div>
     </div>
   );
-=======
- ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 toast ({;
   title: wasWishlisted ? 'Removed from wishlist' : 'Added to wishlist', description: wasWishlisted ? `$ {;
@@ -409,11 +405,11 @@ toast ({;
 }initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: index * 0.1 ;

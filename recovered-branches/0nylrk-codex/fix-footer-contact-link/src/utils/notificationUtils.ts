@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { supabase } from '@/integrations/supabase/client';
 
 type NotificationType =
@@ -58,7 +57,6 @@ export async function createNotification({
     console.error('Error creating notification:', error);
     return { success: false, error };
   }
-}
 
 /**
  * Creates a hire request notification for admin and talent
@@ -120,7 +118,6 @@ export async function createHireRequestNotifications({
     success: talentNotification.success,
     talentNotification,
   };
-}
 
 /**
  * Creates an onboarding notification for a user
@@ -193,7 +190,6 @@ export async function createOnboardingNotification({
     actionUrl,
     actionText,
   });
-}
 
 /**
  * Creates a system notification for a user
@@ -222,7 +218,6 @@ export async function createSystemNotification({
     actionUrl,
     actionText,
   });
-}
 
 /**
  * Demo function to create test notifications for the current user
@@ -275,16 +270,11 @@ export async function createTestNotification(userId: string) {
     actionUrl: actions[randomType].url,
     actionText: actions[randomType].text,
   });
-=======
- type NotificationType = 'message' | 'quote request' | 'booking confirmation' | 'hire request' | 'onboarding' | 'system';
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 /** * Creates a notification for a user and optionally sends an email notification */ if (error) throw error;
 //If sendEmail is true, call the edge function to send an email 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/** * Creates a hire request notification for admin and talent */? `$ {
   projectType 
 }project` : "";
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Create notification for talent const talentNotification = await createNotification ({
   userId: talentId, title: `New Hire Request from $ {
   requesterName 
 }`;
@@ -345,4 +335,3 @@ break;
 case 'talent invited': 
 }/** * Creates a system notification for a user */ 
 }/** * Demo function to create test notifications for the current user */ 
-}

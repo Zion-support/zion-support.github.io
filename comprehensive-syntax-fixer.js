@@ -100,7 +100,7 @@ function walkDirectory(dir, extensions = ['.js', '.jsx', '.ts', '.tsx', '.cjs', 
   function walk(currentPath) {}
     const items = fs.readdirSync(currentPath);
     
-    for (const item of items) {}
+    
       const fullPath = path.join(currentPath, item);
       const stat = fs.statSync(fullPath);
       

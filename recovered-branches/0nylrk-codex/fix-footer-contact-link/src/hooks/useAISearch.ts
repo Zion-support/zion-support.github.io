@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { TALENT_PROFILES } from '@/data/talentData';
 import { JOB_POSTS } from '@/data/jobsData';
@@ -9,13 +8,8 @@ export interface SearchResult {
   type: 'talent' | 'job' | 'project';
   title: string;
   description: string;
-}
 
 interface SearchFilters {
-=======
- 
-}interface SearchFilters {
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
   type?: string | null;
 skills?: string[] | null;
 location?: string | null;
@@ -46,15 +40,12 @@ const filters: SearchFilters = data.filters || {
 const items: SearchResult[] = [];
 const matchSkill = (skills: string[] | undefined) => {
   if (!filters.skills || filters.skills.length === 0) return true;
-return skills?.some ( (s) => filters.skills!.some ( (f) => s.toLowerCase () .includes (f.toLowerCase () ) ) ) 
+
 };
 if (!filters.type || filters.type === "talent" || filters.type === "all") {
   TALENT PROFILES.forEach ( (t) => {
   
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
-<<<<<<< HEAD
 
 export function useAISearch() {
   const [results, setResults] = useState<SearchResult[]>([]);
@@ -140,19 +131,10 @@ export function useAISearch() {
   };
 
   return { results, loading, search };
-=======
+
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-});
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
-}
+
 }finally {
   setLoading (false) 
-}
+
 };
-return {
-  results, loading, search 
-}
-}

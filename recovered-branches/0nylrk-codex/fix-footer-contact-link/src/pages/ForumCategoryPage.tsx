@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -15,7 +14,7 @@ import {
   Code,
   FileText,
   Megaphone,
-  Search,
+  Search,;
 } from '@/components/icons';
 
 // Mock category data
@@ -376,45 +375,7 @@ export default function ForumCategoryPage() {
       </div>
     </AppLayout>
   );
-=======
- import {
-  MessageSquare;
-Briefcase;
-Code;
-FileText;
-Megaphone;
-Search adminOnly: false;
-icon: "Briefcase" 
-};
-"project-help" : {
-  id: "project-help";
-name: "Project Help";
-description: "Get help with your ongoing projects and collaboration.";
-adminOnly: false;
-icon: "MessageSquare" 
-};
-"ai-tools" : {
-  id: "ai-tools";
-name: "AI Tools Discussion";
-description: "Discuss AI tools, frameworks, and best practices.";
-adminOnly: false;
-icon: "Code" 
-};
-"feedback" : {
-  id: "feedback";
-name: "Feedback & Feature Requests";
-description: "Share your feedback and suggest new features.";
-adminOnly: false;
-icon: "FileText" 
-};
-"announcements" : {
-  id: "announcements";
-name: "Announcements";
-description: "Official announcements from the Zion team.";
-adminOnly: true;
-icon: "Megaphone" 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Mock data for posts by category {
   id: "2";
@@ -567,7 +528,7 @@ upvotes: 8;
 downvotes: 0;
 replyCount: 2;
 isPinned: true 
-}
+
 };
 export default function ForumCategoryPage () {
   //useParams is typed as `any` in this environment due to missing type //definitions, so avoid passing a type argument to prevent TS2347. const {
@@ -622,4 +583,3 @@ return (<AppLayout> <div className="container py-8"> <h1>Category not found</h1>
 }> Create New Post </Link> </Button>) 
 }</div>) 
 }</div> </AppLayout>) 
-}

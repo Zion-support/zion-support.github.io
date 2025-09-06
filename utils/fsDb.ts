@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 
@@ -8,7 +7,6 @@ function ensureDir(dirPath: string) {
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
-}
 
 export function readJson<T>(relativePath: string, fallback: T): T {
   const full = path.join(dataRoot, relativePath);
@@ -18,13 +16,8 @@ export function readJson<T>(relativePath: string, fallback: T): T {
   } catch (_) {
     return fallback;
   }
-}
 
 export function writeJson<T>(relativePath: string, value: T): void {
   const full = path.join(dataRoot, relativePath);
   ensureDir(path.dirname(full));
   fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
-}
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

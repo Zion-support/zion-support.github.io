@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { TalentProfile } from '@/utils/types/talent';
 
 export const TALENT_PROFILES: TalentProfile[] = [
@@ -134,30 +133,3 @@ export const TALENT_PROFILES: TalentProfile[] = [
     createdAt: new Date().toISOString(),
   },
 ];
-=======
- verified: true;
-rating: 4.9;
-reviewsCount: 28;
-createdAt: new Date () .toISOString () 
-};
-verified: true;
-rating: 4.8;
-reviewsCount: 19;
-createdAt: new Date () .toISOString () 
-};
-verified: false;
-rating: 4.7;
-reviewsCount: 12;
-createdAt: new Date () .toISOString () 
-};
-verified: true;
-rating: 4.6;
-reviewsCount: 34;
-createdAt: new Date () .toISOString () 
-};
-verified: false;
-rating: 4.5;
-reviewsCount: 9;
-createdAt: new Date () .toISOString () 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

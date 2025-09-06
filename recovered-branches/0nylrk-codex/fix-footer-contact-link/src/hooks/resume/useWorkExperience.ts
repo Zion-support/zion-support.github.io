@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { WorkExperience } from '@/types/resume';
@@ -6,7 +5,7 @@ import { useAuth } from '@/hooks/useAuth';
 import {
   formatDateForDB,
   handleResumeError,
-  showSuccessToast,
+  showSuccessToast,;
 } from './useResumeUtils';
 
 export function useWorkExperience() {
@@ -127,19 +126,7 @@ export function useWorkExperience() {
     updateWorkExperience,
     deleteWorkExperience,
   };
-=======
- setIsLoading (true);
-setError (null);
-try {
-  const {
-  error 
-}= await supabase .from ('work history') if (error) throw error;
-}catch (e: any) {
-  return handleResumeError (e, 'Could not add work experience') 
-}finally {
-  setIsLoading (false) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const updateWorkExperience = async (workId: string, work: WorkExperience) : Promise<boolean> => {
   if (!user) {
@@ -154,7 +141,7 @@ try {
   return handleResumeError (e, 'Could not update work experience') 
 }finally {
   setIsLoading (false) 
-}
+
 };
 const deleteWorkExperience = async (workId: string) : Promise<boolean> => {
   if (!user) {
@@ -170,13 +157,12 @@ if (error) throw error;
   return handleResumeError (e, 'Could not delete work experience') 
 }finally {
   setIsLoading (false) 
-}
+
 };
-return {
+
   isLoading;
 error;
 addWorkExperience;
 updateWorkExperience;
 deleteWorkExperience 
-}
-}
+

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 const GITHUB_API = 'https://api.github.com';
 
 async function getFile(owner, repo, path, token) {
@@ -12,7 +11,6 @@ async function getFile(owner, repo, path, token) {
   if (resp.status === 404) return null;
   if (!resp.ok) throw new Error(`GitHub getFile HTTP ${resp.status}`);
   return resp.json();
-}
 
 async function upsertFile({ owner, repo, path, content, message, token }) {
   if (!token || !owner || !repo) throw new Error('Missing GitHub credentials');
@@ -37,17 +35,5 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
     throw new Error(`GitHub upsertFile HTTP ${resp.status}: ${text}`);
   }
   return resp.json();
-}
 
 module.exports = { upsertFile };
-=======
-const GITHUB API = 'https: //api.github.com';
-'Authorization': `token $ {
-  token 
-}`;
-'Accept': 'application/vnd.github+jsonContent-Type': 'application/json' 
-};
-body: JSON.stringify (body) 
-}return resp.json () 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect, useCallback, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/router';
@@ -11,13 +10,13 @@ import {
   Star,
   ShoppingCart,
   Clock,
-  Award,
+  Award,;
 } from 'lucide-react';
 import { useInfiniteScrollPagination } from '@/hooks/useInfiniteScroll';
 import {
   generateITServices,
   getServicesMarketStats,
-  getRecommendedServices,
+  getRecommendedServices,;
 } from '@/utils/servicesAutoFeedAlgorithm';
 import { ProductListing } from '@/types/listings';
 import { SkeletonCard } from '@/components/ui/skeleton';
@@ -445,51 +444,7 @@ export default function ServicesPage() {
       </AnimatePresence>
     </div>
   );
-=======
- // Initial services from existing data const INITIAL SERVICES: ProductListing[] = SERVICES;
-// Market insights component </div> </CardContent> </Card>);
-// Filter controls <option value="">All Categories</option> {;
-  categories.map ( (cat: string) => <option key= {;
-  cat ;
-}value= {;
-  cat ;
-}> {;
-  cat ;
-}</option>) ";
-}</select> </div> <div className="flex items-center gap-2"> <SortAsc className="h-4 w-4 text-muted-foreground" /> </Button> </div>);";
-// Service card return (<Card className="h-full hover:shadow-lg transition-shadow"> <CardHeader className="pb-3"> <div className="flex items-start justify-between"> <div className="flex-1 min-w-0"> <h3 className="font-semibold text-lg mb-1 line-clamp-1"> {;
-  service.title ";
-}</h3> <div className="flex items-center gap-2 mb-2"> <div className="flex items-center gap-1"> <Star className="h-4 w-4 text-yellow-500 fill-current" /> AI Score: {;
-  service.aiScore ;
-}</Badge>) ";
-}</div> </Badge> </div> </div> <p className="text-sm text-muted-foreground mb-3 line-clamp-2"> {;
-  service.description ";
-}</p> <div className="flex items-center justify-between"> <ShoppingCart className="h-4 w-4 mr-1" /> Contact </Button> </div> </CardHeader> </Card>) ;
-};
-// Loading grid const ServicesLoadingGrid = ({;
-  count = 8 ;
-}: {;
-  count?: number ";
-}) => (<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"> {;
-  Array.from ({;
-  length: count ;
-}) .map ( (, i) => <SkeletonCard key= {;
-  i ;
-}/>) ;
-}</div>);
-// Main component let allServices: ProductListing[] = [];
-if (page === 1) {;
-  filteredServices.sort ( (a,  b) => {;
-  switch (sortBy) {;
-  case 'price-low': return (a.price || 0) - (b.price || 0);';
-case 'price-high': return (b.price || 0) - (a.price || 0);';
-case 'rating': return (b.rating || 0) - (a.rating || 0);';
-case 'ai-score': if (loading && services.length === 0) {";
-  return (<div className="container py-8"> <motion.div initial= {;
-  {;
-  opacity: 0, y: 20 ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -502,7 +457,7 @@ case 'ai-score': if (loading && services.length === 0) {";
 }return (<div className="container py-8"> <motion.div className="text-center mb-8" initial= {;
   {;
   opacity: 0, y: -20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
@@ -511,30 +466,30 @@ case 'ai-score': if (loading && services.length === 0) {";
   marketStats && (<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: 0.2 ;
-}
+
 }> <ServicesMarketInsights stats= {;
   marketStats ;
 }/> </motion.div>) ;
 }<motion.div initial= {;
   {;
   opacity: 0, y: 20 ;
-}
+
 }animate= {;
   {;
   opacity: 1, y: 0 ;
-}
+
 }transition= {;
   {;
   delay: 0.3 ;
-}
+
 }> <ServiceFilterControls sortBy= {;
   sortBy ;
 }setSortBy= {;
@@ -558,23 +513,23 @@ case 'ai-score': if (loading && services.length === 0) {";
 }initial= {;
   {;
   opacity: 0, scale: 0.9 ;
-}
+
 }animate= {;
   {;
   opacity: 1, scale: 1 ;
-}
+
 }exit= {;
   {;
   opacity: 0, scale: 0.9 ;
-}
+
 }transition= {;
   {;
   delay: Math.min (index * 0.03, 0.5) ;
-}
+
 }whileHover= {;
   {;
   scale: 1.02 ;
-}
+
 }> <ServiceCard service= {;
   item ;
 }onViewDetails= {;
@@ -586,11 +541,11 @@ case 'ai-score': if (loading && services.length === 0) {";
   (isFetching || loading) && (<motion.div className="mt-8" initial= {;
   {;
   opacity: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1 ;
-}
+
 }> <ServicesLoadingGrid count= {;
   4 ;
 }/> </motion.div>) ;
@@ -598,7 +553,7 @@ case 'ai-score': if (loading && services.length === 0) {";
   !hasMore && services.length > 0 && (<motion.div className="text-center mt-12 py-8 border-t" initial= {;
   {;
   opacity: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1 ;
@@ -612,19 +567,19 @@ case 'ai-score': if (loading && services.length === 0) {";
 }className="fixed bottom-8 right-8 p-3 bg-primary hover:bg-primary/90 rounded-full shadow-lg z-50" initial= {;
   {;
   opacity: 0, scale: 0 ;
-}
+
 }animate= {;
   {;
   opacity: 1, scale: 1 ;
-}
+
 }exit= {;
   {;
   opacity: 0, scale: 0 ;
-}
+
 }whileHover= {;
   {;
   scale: 1.1 ;
-}
+
 }whileTap= {;
   {;
   scale: 0.9 ;

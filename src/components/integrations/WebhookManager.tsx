@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import {
   Card,
@@ -6,7 +5,7 @@ import {
   CardDescription,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -19,7 +18,7 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
+  SelectValue,;
 } from '@/components/ui/select';
 import { toast } from 'sonner';
 
@@ -339,32 +338,11 @@ export function WebhookManager() {
       </div>
     </div>
   );
-}
-=======
- export function WebhookManager () {;
-  const {;
-  webhooks;
-loading;
-error;
-testResult;
-fetchWebhooks;
-createWebhook;
-toggleWebhook;
-deleteWebhook;
-testWebhook ;
-}= useWebhooks ();
-const [newWebhook, setNewWebhook] = useState ({;
-  name: "";";
-url: "";";
-selectedEvent: ""as WebhookEventType;
-eventTypes: [] as WebhookEventType[];
-];
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
+
 }setNewWebhook ({;
   ...newWebhook;
 eventTypes: [...newWebhook.eventTypes, newWebhook.selectedEvent];
 };
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 ;
 }newWebhook.url;
 newWebhook.eventTypes;
 newWebhook.secret || undefined);";
@@ -432,4 +410,3 @@ newWebhook.secret || undefined);";
 }</pre> </div> </div> </CardContent> </Card>) ;
 }</div> </div>) ;
 }'"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

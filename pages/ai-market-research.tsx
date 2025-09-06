@@ -1,6 +1,5 @@
 import React from 'react';
 import Head from 'next/head';
-<<<<<<< HEAD
 import {
   Phone,
   Mail,
@@ -8,7 +7,7 @@ import {
   Check,
   ArrowRight,
   Star,
-  Search,
+  Search,;
 } from 'lucide-react';
 import Layout from '../components/layout/Layout';
 
@@ -98,63 +97,6 @@ export default function AIMarketResearchPage() {
                 </div>
               </div>
             </div>
-=======
-import Layout from '../components/layout/Layout';
-
-const AIMarketResearch: React.FC = () => {
-  return (
-    <Layout>
-      <Head>
-        <title>AI Market Research - Zion Tech Group</title>
-        <meta name="description" content="AI-powered market research and analysis platform" />
-      </Head>
-      <main className="max-w-7xl mx-auto px-4 py-8">
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold mb-4">AI Market Research</h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Conduct comprehensive market research with AI-powered analysis and insights.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Data Collection</h3>
-            <p className="text-gray-600 mb-4">
-              Automatically collect market data from multiple sources and formats.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Web scraping</li>
-              <li>• API integration</li>
-              <li>• Survey data</li>
-              <li>• Social media monitoring</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Trend Analysis</h3>
-            <p className="text-gray-600 mb-4">
-              Identify market trends and patterns with AI-powered analysis.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Trend identification</li>
-              <li>• Pattern recognition</li>
-              <li>• Predictive modeling</li>
-              <li>• Market forecasting</li>
-            </ul>
-          </div>
-
-          <div className="bg-white rounded-lg shadow-lg p-6">
-            <h3 className="text-xl font-semibold mb-4">Competitive Intelligence</h3>
-            <p className="text-gray-600 mb-4">
-              Monitor competitors and analyze market positioning with AI insights.
-            </p>
-            <ul className="text-sm text-gray-500 space-y-2">
-              <li>• Competitor analysis</li>
-              <li>• Market positioning</li>
-              <li>• Pricing intelligence</li>
-              <li>• Strategy insights</li>
-            </ul>
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
           </div>
         </div>
 
@@ -175,10 +117,3 @@ const AIMarketResearch: React.FC = () => {
       </main>
     </Layout>
   );
-<<<<<<< HEAD
-}
-=======
-};
-
-export default AIMarketResearch;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

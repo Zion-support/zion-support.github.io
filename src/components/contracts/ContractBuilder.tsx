@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { Button } from '@/components/ui/button';
@@ -21,7 +20,6 @@ interface ContractBuilderProps {
   talent: TalentProfile;
   clientName: string;
   onContractGenerated?: (contractContent: string) => void;
-}
 
 export function ContractBuilder({
   isOpen,
@@ -54,9 +52,7 @@ export function ContractBuilder({
   };
 
   if (showSmartContractBuilder) {
-    return (
-      <SmartContractBuilder
-        isOpen={isOpen}
+    
         onClose={() => {
           setShowSmartContractBuilder(false);
           onClose();
@@ -135,34 +131,9 @@ export function ContractBuilder({
       </DialogContent>
     </Dialog>
   );
-=======
- interface ContractBuilderProps {;
-  isOpen: boolean;
-onClose: () => void;
-talent: TalentProfile;
-clientName: string;
-onContractGenerated?: (contractContent: string) => void ;
-}export function ContractBuilder ({;
-  isOpen;
-onClose;
-talent;
-clientName;
-onContractGenerated ;
-}: ContractBuilderProps) {;
-  const [formValues, setFormValues] = useState<ContractFormValues | undefined> (undefined);
-const [templateManagerOpen,  setTemplateManagerOpen] = useState (false);
-const [showSmartContractBuilder, setShowSmartContractBuilder] = useState (false);
-const handleLoadTemplate = (templateData: ContractFormValues) => {;
-  setFormValues (templateData) ;
+
 };
-const handleContractGenerated = (contract: string) => {;
-  if (onContractGenerated) {;
-  onContractGenerated (contract) ;
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
-};
-return (<SmartContractBuilder isOpen= {;
-  isOpen ;
+
 }/>) ;
 }</TabsList> <div className="flex gap-2" > <Button > <Save className="h-4 w-4" /> Templates </Button> <Button > Smart Contract Builder </Button> </div> </div> <TabsContent value="form" className="pt-4" > <ContractForm talent= {;
   talent ;

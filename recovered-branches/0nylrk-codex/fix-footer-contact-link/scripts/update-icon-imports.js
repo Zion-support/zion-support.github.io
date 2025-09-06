@@ -5,7 +5,7 @@
   filePath 
 }:`, err);
 return false;
-}
+
 }//Find all TypeScript/JavaScript/JSX/TSX files const files = glob.sync ('src/**/*. {
   js, jsx, ts, tsx 
 }');

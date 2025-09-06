@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import { cn } from '@/lib/utils';
@@ -11,7 +10,6 @@ interface ChatMessageProps {
   message: string;
   isUser: boolean;
   timestamp: Date;
-}
 
 export const ChatMessage: React.FC<ChatMessageProps> = ({
   message,
@@ -90,7 +88,6 @@ function escapeHtml(unsafe: string): string {
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;')
     .replace(/'/g, '&#039;');
-}
 
 function formatMessageWithLinks(message: string): string {
   // First, escape any HTML so that user input cannot break out of the intended
@@ -112,30 +109,3 @@ function formatMessageWithLinks(message: string): string {
   );
 
   return formattedMessage;
-}
-=======
- interface ChatMessageProps {;
-  message: string;
-isUser: boolean;
-timestamp: Date ;
-}export const ChatMessage: React.FC<ChatMessageProps> = ({;
-  message;
-isUser;
-timestamp ;
-}: ChatMessageProps) => {;
-  const {;
-  theme ;
-}= useTheme ();
-html: string ;
-}> ( () => ({;
-  html: formatMessageWithLinks (message) ;
-});
-[message]);
-return (<> <AvatarImage src="https://i.pravatar.cc/40?img=1" alt="User avatar" /> <AvatarFallback>U</AvatarFallback> </>) : (<> <AvatarImage src="https://placehold.co/40x40?text=AI" alt="Zion Support" /> <AvatarFallback className="bg-zion-purple text-white" >Z</AvatarFallback> </>) ;
-}</Avatar> </div> </div> </div>) ;
-};
-//A lightweight HTML escaping utility to prevent XSS. We avoid adding a heavy //dependency like DOMPurify for now and instead escape the five critical //characters. This ensures any user-supplied string is rendered harmless //before we perform our link replacements below. ;
-}//First, escape any HTML so that user input cannot break out of the intended //markup.);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Replace help-center references like [Getting Started]);
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 "
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

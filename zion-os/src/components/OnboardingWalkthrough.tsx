@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 'use client';
 
 import { useState, useEffect } from 'react';
@@ -10,30 +9,7 @@ interface WalkthroughStep {
   description: string;
   target?: string;
   position: 'top' | 'bottom' | 'left' | 'right';
-=======
- useEffect ( () => {
-  // Show walkthrough for new users who haven't completed onboarding if (user && !user.onboardingCompleted) {
-  return (<> {
-  /* Overlay */ 
-}<div className="fixed inset-0 bg-black/50 z-40" onClick= {
-  handleSkip 
-}/> {
-  /* Walkthrough Modal */ 
-}<div className="fixed z-50 inset-0 flex items-center justify-center p-4"> <div className="bg-zinc-800 rounded-xl border border-zinc-700 max-w-md w-full p-6 shadow-2xl"> {
-  /* Progress Bar */ 
-}<div className="mb-6"> <div className="flex justify-between items-center mb-2"> <span className="text-sm text-zinc-400"> Step {
-  currentStep + 1 
-}of {
-  walkthroughSteps.length 
-}</span> <button onClick= {
-  handleSkip 
-}className="text-zinc-400 hover:text-zinc-300 text-sm" > Skip tour </button> </div> <div className="w-full bg-zinc-700 rounded-full h-2"> <div className="bg-blue-500 h-2 rounded-full transition-all duration-300" style= {
-  {
-  width: `$ {
-  ( (currentStep + 1) / walkthroughSteps.length) * 100 
-}%` 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }/> </div> </div> {
   /* Step Content */ 
 }<div className="text-center mb-6"> <h3 className="text-xl font-semibold text-white mb-3"> {
@@ -55,7 +31,6 @@ interface WalkthroughStep {
 }{
   currentStepData.target && (<div className="fixed z-30 pointer-events-none" style= {
   {
-<<<<<<< HEAD
     id: 'welcome',
     title: 'Welcome to Zion OS! 🚀',
     description:
@@ -231,7 +206,6 @@ export function OnboardingWalkthrough() {
       )}
     </>
   );
-}
 
 // Hook to add data attributes for walkthrough targeting
 export function useWalkthroughTarget(id: string) {
@@ -239,16 +213,3 @@ export function useWalkthroughTarget(id: string) {
     'data-walkthrough-target': id,
     id,
   };
-}
-=======
-  top: 0, left: 0, right: 0, bottom: 0 
-}
-}> <div className="absolute border-2 border-blue-500 rounded-lg shadow-lg bg-blue-500/10" style= {
-  {
-  top: "50%", left: "50%", transform: "translate (-50%, -50%) ", width: "300px", height: "200px" 
-}
-}/> </div>) 
-}</>) 
-}// Hook to add data attributes for walkthrough targeting 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

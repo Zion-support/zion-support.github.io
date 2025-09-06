@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import {
   Card,
   CardContent,
   CardDescription,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Wallet, Info, Check, ChevronRight, ArrowUpRight } from 'lucide-react';
@@ -13,7 +12,7 @@ import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
-  TooltipTrigger,
+  TooltipTrigger,;
 } from '@/components/ui/tooltip';
 import { useToast } from '@/hooks/use-toast';
 import { useAuth } from '@/hooks/useAuth';
@@ -159,27 +158,8 @@ export function OnChainExport() {
       </CardContent>
     </Card>
   );
-=======
- import {
-  Tooltip;
-TooltipContent;
-TooltipProvider;
-export function OnChainExport () {
-  const [isConnected, setIsConnected] = useState (false);
-const [isExporting, setIsExporting] = useState (false);
-const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'> ('idle');
-const {
-  toast 
-}= useToast ();
-const {
-  user 
-}= useAuth ();
-try {
-  //Check if wallet is available return;
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }//Request accounts 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 setExportStatus ('success');
 toast ({
@@ -190,7 +170,7 @@ toast ({
   
 }finally {
   setIsExporting (false) 
-}
+
 };
 h-5 w-5"/>) 
 }On-chain Export <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Info className=" h-4 w-4 text-muted-foreground cursor-help"/> </TooltipTrigger> <TooltipContent> <p className=" max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p> </TooltipContent> </Tooltip> </TooltipProvider> </CardTitle> <CardDescription>Export your ZION$ to an external wallet</CardDescription> </CardHeader> <CardContent> <span>Available to export:</span> <span className=" font-medium">250 ZION$</span> </div> {
@@ -201,4 +181,3 @@ h-5 w-5"/>)
 }> </Button>) 
 }</div>) : (<div className=" space-y-2"> <p className=" text-sm text-muted-foreground mb-3" > Connect your web3 wallet to export tokens to the blockchain. </p> Connect Wallet </Button> </div>) 
 }</CardContent> </Card>) 
-}

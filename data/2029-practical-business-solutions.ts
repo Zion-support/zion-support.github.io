@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface PracticalBusinessSolution2029 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface PracticalBusinessSolution2029 {
     email: string;
     address: string;
   };
-}
 
 export const practicalBusinessSolutionServices2029: PracticalBusinessSolution2029[] =
   [
@@ -42,7 +40,3 @@ export const practicalBusinessSolutionServices2029: PracticalBusinessSolution202
       },
     },
   ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

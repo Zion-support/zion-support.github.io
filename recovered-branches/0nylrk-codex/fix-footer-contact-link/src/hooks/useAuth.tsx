@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 import React, {
   createContext,
   useContext,
   useState,
   useEffect,
-  ReactNode,
+  ReactNode,;
 } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { AuthContext } from '@/context/auth/AuthContext';
@@ -26,7 +25,6 @@ export interface UserDetails {
   bio?: string;
   createdAt?: string;
   updatedAt?: string;
-}
 
 export interface AuthContextType {
   user: UserDetails | null;
@@ -53,7 +51,6 @@ export interface AuthContextType {
   loginWithFacebook: () => Promise<void>;
   loginWithTwitter: () => Promise<void>;
   loginWithWeb3: () => Promise<void>;
-}
 
 // Create a provider component
 export function AuthProvider({ children }: { children: ReactNode }) {
@@ -211,7 +208,6 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   };
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-}
 
 // Custom hook to use the auth context
 export function useAuth(): AuthContextType {
@@ -220,8 +216,6 @@ export function useAuth(): AuthContextType {
     throw new Error('useAuth must be used within an AuthProvider');
   }
   return context;
-=======
- >>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 //Define types for our context //Mock auth functions for now - these would connect to Supabase in a real implementation const signIn = async (email: string, password: string) => {
   //This would be replaced with actual Supabase auth //Mock successful sign-in setUser ({
   id: "mock-user-id";
 email;
@@ -237,9 +231,7 @@ name: userData?.name || " New User";
 userType: userData?.userType;
 profileComplete: false 
 });
-return {
-  error: null 
-}
+
 };
 const resetPassword = async (email: string) => {
   //Mock implementation if (user) {
@@ -248,7 +240,7 @@ const resetPassword = async (email: string) => {
 }) 
 }return {
   error: null 
-}
+
 };
 const loginWithGoogle = async () => {
   //Mock implementation setUser ({
@@ -295,8 +287,7 @@ profileComplete: true
 }) 
 }catch (err) {
   console.error ('Web3 login failed', err) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 //Check for existing session on mount useEffect ( () => {
   //Mock loading state and then set a null user to simulate no session setIsLoading (true);
@@ -322,14 +313,8 @@ loginWithFacebook;
 loginWithTwitter;
 loginWithWeb3 
 };
-return <AuthContext.Provider value= {
-  value 
-}> {
-  children 
-}</AuthContext.Provider> 
-}// Custom hook to use the auth context export function useAuth () : AuthContextType {
+
   const context = useContext (AuthContext);
 if (context === undefined) {
   
 }return context;
-}

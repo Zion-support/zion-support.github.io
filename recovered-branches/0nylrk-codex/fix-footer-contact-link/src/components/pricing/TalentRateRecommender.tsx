@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import {
   getTalentRateSuggestion,
   PricingSuggestion,
   TalentRateParams,
-  trackPricingSuggestion,
+  trackPricingSuggestion,;
 } from '@/services/pricingSuggestionService';
 import { PricingSuggestionBox } from './PricingSuggestionBox';
 import { useAuth } from '@/hooks/useAuth';
@@ -17,7 +16,6 @@ interface TalentRateRecommenderProps {
   location?: string;
   onSuggestionApplied: (value: number) => void;
   rateType: 'hourly' | 'fixed';
-}
 
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
   skills,
@@ -98,38 +96,4 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       </div>
     </div>
   );
-=======
- import {
-  getTalentRateSuggestion;
-PricingSuggestion;
-TalentRateParams;
-trackPricingSuggestion interface TalentRateRecommenderProps {
-  skills: string[];
-yearsExperience: number;
-location?: string;
-}finally {
-  setIsLoading (false) 
-}
-};
-if (suggestion) {
-  //We'll use the middle of the range as the suggested rate //Track this suggestion application if (user) {
-  trackPricingSuggestion ({
-  
-}
-}
-};
-return (<div className="space-y-4" > <div> {
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick= {
-  generateSuggestion 
-}> <Sparkles className="h-4 w-4 mr-2" /> Optimize Rate with AI </Button>) : (<PricingSuggestionBox suggestion= {
-  suggestion 
-}isLoading= {
-  isLoading 
-}onApplySuggestion= {
-  handleApplySuggestion 
-}rateType= {
-  rateType 
-}/>) 
-}</div> </div>) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 };

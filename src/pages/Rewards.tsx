@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Gift } from 'lucide-react';
 
 const REWARDS = [
@@ -27,12 +26,3 @@ export default function RewardsPage() {
       </ul>
     </div>
   );
-}
-=======
- {;
-  REWARDS.map ( (r) => (<li key= {;
-  r.id ;
-}className="flex justify-between items-center border rounded-md p-4" > <div> </div> <Gift className="h-5 w-5" /> </li>) ) ;
-}</ul> </div>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

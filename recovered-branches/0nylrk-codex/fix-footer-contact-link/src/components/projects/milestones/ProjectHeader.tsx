@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
@@ -6,7 +5,6 @@ import { ArrowLeft } from 'lucide-react';
 
 interface ProjectHeaderProps {
   title: string;
-}
 
 export function ProjectHeader({ title }: ProjectHeaderProps) {
   const navigate = useNavigate();
@@ -29,10 +27,3 @@ export function ProjectHeader({ title }: ProjectHeaderProps) {
       </div>
     </div>
   );
-}
-=======
- <Button variant="ghost" size="sm" className="mr-2" onClick= {
-  () => navigate (-1) 
-}> <ArrowLeft className="h-4 w-4 mr-1" /> Back </Button> </div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

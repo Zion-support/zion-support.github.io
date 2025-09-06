@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { ContractTemplate } from '@/types/contracts';
 import { Button } from '@/components/ui/button';
 import { Loader2, Edit, Trash, Star, StarOff } from 'lucide-react';
@@ -13,7 +12,7 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
+  AlertDialogTitle,;
 } from '@/components/ui/alert-dialog';
 import { useState } from 'react';
 
@@ -22,7 +21,6 @@ interface TemplateListProps {
   isLoading: boolean;
   onSelect: (template: ContractTemplate) => void;
   onEdit: (template: ContractTemplate) => void;
-}
 
 export function TemplateList({
   templates,
@@ -160,39 +158,7 @@ export function TemplateList({
       </AlertDialog>
     </div>
   );
-=======
- import {
-  AlertDialog;
-AlertDialogAction;
-AlertDialogCancel;
-AlertDialogContent;
-AlertDialogDescription;
-AlertDialogFooter;
-AlertDialogHeader;
-interface TemplateListProps {
-  templates: ContractTemplate[];
-isLoading: boolean;
-onSelect: (template: ContractTemplate) => void;
-onEdit: (template: ContractTemplate) => void 
-}export function TemplateList ({
-  templates;
-isLoading;
-onSelect;
-onEdit 
-}: TemplateListProps) {
-  const [templateToDelete, setTemplateToDelete] = useState<string | null> (null);
-const {
-  deleteTemplate, setDefaultTemplate 
-}= useContractTemplates ();
-const handleDeleteClick = (templateId: string) => {
-  setTemplateToDelete (templateId) 
-};
-const handleDeleteConfirm = async () => {
-  if (templateToDelete) {
-  await deleteTemplate.mutateAsync (templateToDelete);
-setTemplateToDelete (null) 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 };
 const handleSetDefault = async (templateId: string) => {
   await setDefaultTemplate.mutateAsync (templateId) 
@@ -220,4 +186,3 @@ if (isLoading) {
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Template</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this template? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction className="bg-destructive text-destructive-foreground hover:bg-destructive/90" onClick= {
   handleDeleteConfirm 
 }> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </div>) 
-}

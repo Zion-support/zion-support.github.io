@@ -23,10 +23,10 @@ export const mockNextRouter = () => ({
   pathname: '/',
   query: {},
   asPath: '/',
-}
+
 });
 
 export const createMockProps = (overrides = {}) => ({
   ...overrides
-}
+
 });

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface PartnerProfile {
   id: string;
   user_id: string;
@@ -19,14 +18,12 @@ export interface PartnerProfile {
   created_at: string;
   updated_at: string;
   commission_rate?: number;
-}
 
 export interface PartnerSettings {
   id: string;
   commission_rate: number;
   fraud_threshold: number;
   is_payouts_enabled: boolean;
-}
 
 export interface PartnerReferralLink {
   id: string;
@@ -37,7 +34,6 @@ export interface PartnerReferralLink {
   clicks: number;
   conversions: number;
   created_at: string;
-}
 
 export interface PartnerPayout {
   id: string;
@@ -47,7 +43,3 @@ export interface PartnerPayout {
   method: string;
   created_at: string;
   completed_at?: string;
-}
-=======
- 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

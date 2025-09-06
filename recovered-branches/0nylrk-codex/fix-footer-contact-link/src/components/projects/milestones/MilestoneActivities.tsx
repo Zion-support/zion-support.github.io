@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,7 +7,6 @@ import { Skeleton } from '@/components/ui/skeleton';
 
 interface MilestoneActivitiesProps {
   projectId: string;
-}
 
 interface Activity {
   id: string;
@@ -26,7 +24,6 @@ interface Activity {
     display_name: string;
     avatar_url: string | null;
   };
-}
 
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
   const [activities, setActivities] = useState<Activity[]>([]);
@@ -164,24 +161,7 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
       </Card>
     </div>
   );
-=======
- useEffect ( () => {
-  async function fetchActivities () {
-  try {
-  setIsLoading (true);
-const {
-  data, error 
-}= await supabase .from ('milestone activities') .select (`*;
-milestone: milestone id (title);
-created by profile:profiles!user id (display name, avatar url) `) .eq ('project id', projectId) if (error) throw error;
-function getActivityDescription (activity: Activity) : string {
-  switch (activity.action) {
-  case 'created': return 'created a new milestone';
-case 'status changed': case 'updated': return 'updated milestone details';
-case 'deliverable added': return 'added a deliverable';
-default: return activity.action.replace (/ /g, ' ') 
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
-}
+
 }<Card key= {
   i 
 }> <CardContent className="p-6" > <div className="flex items-center space-x-4" > <Skeleton className="h-10 w-10 rounded-full" /> <div className="space-y-2" > <Skeleton className="h-4 w-40" /> <Skeleton className="h-4 w-60" /> </div> </div> </CardContent> </Card>) ) 
@@ -192,4 +172,3 @@ default: return activity.action.replace (/ /g, ' ')
 }</AvatarFallback> </Avatar>) 
 }</p> </div> </div>) ) 
 }</div> </CardContent> </Card> </div>) 
-}

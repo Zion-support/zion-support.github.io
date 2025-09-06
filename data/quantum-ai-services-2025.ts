@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 export interface QuantumAiService2025 {
   id: string;
   name: string;
@@ -14,7 +13,6 @@ export interface QuantumAiService2025 {
     email: string;
     address: string;
   };
-}
 
 export const quantumAIServices2025: QuantumAiService2025[] = [
   {
@@ -41,7 +39,3 @@ export const quantumAIServices2025: QuantumAiService2025[] = [
     },
   },
 ];
-=======
- 
-}];
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

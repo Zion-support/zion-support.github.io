@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import { Briefcase, Star, User } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,12 +7,10 @@ interface UserTypeOption {
   name: string;
   description: string;
   icon: React.ElementType;
-}
 
 interface UserTypeSelectionProps {
   onSelect: (userType: 'serviceProvider' | 'talent' | 'client') => void;
   selectedType: string | null;
-}
 
 export function UserTypeSelection({
   onSelect,
@@ -54,9 +51,7 @@ export function UserTypeSelection({
           const Icon = type.icon;
           const isSelected = selectedType === type.id;
 
-          return (
-            <Button
-              key={type.id}
+          
               onClick={() => onSelect(type.id)}
               variant='outline'
               className={`h-auto flex flex-col items-center justify-center p-6 space-y-3 border ${
@@ -84,22 +79,3 @@ export function UserTypeSelection({
       </div>
     </div>
   );
-}
-=======
- name: string;
-description: string;
-icon: React.ElementType;
-}export function UserTypeSelection ({
-  onSelect, selectedType 
-}: UserTypeSelectionProps) {
-  const userTypes: UserTypeOption[] = [ {
-  This helps us personalize your experience </p> </div> {
-  userTypes.map ( (type) => {
-  const Icon = type.icon;
-const isSelected = selectedType === type.id;
-type.id 
-}</p> </div> </Button>) 
-}) 
-}</div> </div>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

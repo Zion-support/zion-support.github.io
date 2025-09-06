@@ -1,9 +1,8 @@
-<<<<<<< HEAD
 import {
   Dialog,
   DialogContent,
   DialogHeader,
-  DialogTitle,
+  DialogTitle,;
 } from '@/components/ui/dialog';
 import { JobApplication } from '@/types/jobs';
 import { ApplicationScoreCard } from '../ApplicationScoreCard';
@@ -13,7 +12,6 @@ interface ScoreDialogProps {
   onOpenChange: (open: boolean) => void;
   application: JobApplication | null;
   onScoreUpdated: (updatedApplication: JobApplication) => void;
-}
 
 export function ScoreDialog({
   open,
@@ -36,28 +34,3 @@ export function ScoreDialog({
       </DialogContent>
     </Dialog>
   );
-}
-=======
- interface ScoreDialogProps {
-  open: boolean;
-onOpenChange: (open: boolean) => void;
-application: JobApplication | null;
-onScoreUpdated: (updatedApplication: JobApplication) => void 
-}export function ScoreDialog ({
-  open;
-onOpenChange;
-application;
-onScoreUpdated 
-}: ScoreDialogProps) {
-  return (<Dialog open= {
-  open 
-}onOpenChange= {
-  onOpenChange 
-}> <DialogContent className="sm:max-w-md" > application && (<ApplicationScoreCard application= {
-  application 
-}onScoreUpdated= {
-  onScoreUpdated 
-}/>) 
-}</DialogContent> </Dialog>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -8,7 +7,6 @@ interface StickyActionProps {
   children: React.ReactNode;
   showAfterScroll?: number;
   position?: 'bottom' | 'top';
-}
 
 export function StickyAction({
   className,
@@ -59,16 +57,3 @@ export function StickyAction({
       )}
     </AnimatePresence>
   );
-}
-=======
- interface StickyActionProps {
-  className?: string;
-children: React.ReactNode;
-showAfterScroll?: number;
-useEffect ( () => {
-  const handleScroll = () => {
-  if (window.scrollY > showAfterScroll) {
-  isVisible && (<motion.div </div> </motion.div>) 
-}</AnimatePresence>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

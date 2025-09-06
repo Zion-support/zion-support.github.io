@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import { useAuth } from '@/hooks/useAuth';
@@ -8,7 +7,7 @@ import {
   CardContent,
   CardFooter,
   CardHeader,
-  CardTitle,
+  CardTitle,;
 } from '@/components/ui/card';
 import {
   Rocket,
@@ -16,7 +15,7 @@ import {
   Users,
   Calendar,
   Eye,
-  MessageSquare,
+  MessageSquare,;
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
@@ -29,14 +28,12 @@ interface WizardStep {
     url: string;
   };
   skipText?: string;
-}
 
 interface OnboardingWizardProps {
   type: 'client' | 'talent';
   onComplete: () => void;
   onSkip: () => void;
   className?: string;
-}
 
 export function OnboardingWizard({
   type,
@@ -150,12 +147,7 @@ export function OnboardingWizard({
     }
   };
 
-  return (
-    <Card
-      className={cn(
-        'border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md',
-        className
-      )}
+  
     >
       <CardHeader>
         <CardTitle className='text-center text-white'>
@@ -216,25 +208,3 @@ export function OnboardingWizard({
       </CardFooter>
     </Card>
   );
-}
-=======
- ;
-}];
-const talentSteps: WizardStep[] = [ ;
-};
-skipText: "Skip for now" ;
-};
-}];";
-: index < currentStep ? "bg-zion-cyan" : "bg-zion-blue-light") ;
-}/>) ) ";
-}</div> </div> </div> </CardContent> <CardFooter className="flex flex-col space-y-2" > <Button > {;
-  steps[currentStep]?.action.text ;
-}</Button> {";
-  steps[currentStep]?.skipText && (<Button variant="ghost" className="text-zion-slate-light hover:text-white" onClick={;
-  handleSkip ;
-}> {;
-  steps[currentStep]?.skipText ;
-}</Button>) ;
-}</CardFooter> </Card>) ;
-}"
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

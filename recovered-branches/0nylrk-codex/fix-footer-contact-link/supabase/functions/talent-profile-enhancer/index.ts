@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import 'https://deno.land/x/xhr@0.1.0/mod.ts';
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts';
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2.7.1';
@@ -11,11 +10,6 @@ const corsHeaders = {
     'authorization, x-client-info, apikey, content-type',
 };
 
-=======
- const corsHeaders = {
-  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type' 
-};
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 interface TalentProfileData {
   name: string;
 title: string;
@@ -30,7 +24,7 @@ devops: string[];
 platforms: string[];
 softSkills: string[];
 other: string[] 
-}
+
 }serve (async (req) => {
   //Handle CORS preflight requests if (req.method === 'OPTIONS') {
   
@@ -48,13 +42,12 @@ body: JSON.stringify ({
 {
   role: 'user', content: `Create a professional profile summary and categorize skills based on this information: Name: $ {
   talentData.name 
-}
+
 }Each category should have no more than 3 skills, and there should be no more than 8 skills total across all categories.` 
 }];
 temperature: 0.7;
 }) 
 });
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-4fa7 
 }//Extract the generated content from the response const responseContent = openAIData.choices[0].message.content;
 //Parse the JSON response let enhancedProfile: EnhancedProfile;
 try {
@@ -65,7 +58,7 @@ try {
 {
   headers: {
   ...corsHeaders, 'Content-Type': 'application/json' 
-}
+
 }) 
 }catch (error) {
   return new Response (JSON.stringify ({
@@ -74,10 +67,8 @@ try {
 {
   status: 500, headers: {
   ...corsHeaders, 'Content-Type': 'application/json' 
-}
+
 }) 
-}
-<<<<<<< HEAD
 
 serve(async req => {
   // Handle CORS preflight requests
@@ -175,6 +166,4 @@ serve(async req => {
       headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     });
   }
-=======
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
 });

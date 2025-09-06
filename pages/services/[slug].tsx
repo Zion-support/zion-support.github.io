@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground';
@@ -27,14 +26,12 @@ function getAllServices(): Service[] {
     newRealServices as Service[],
     marketReadyServices as Service[]
   );
-}
 
 function toSlug(value: string): string {
   return value
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '');
-}
 
 function extractServiceSlugFromLink(link: string): string | null {
   try {
@@ -47,19 +44,12 @@ function extractServiceSlugFromLink(link: string): string | null {
   } catch {
     return null;
   }
-}
 
 export async function getStaticPaths() {
   const services = getAllServices();
   const slugs = new Set<string>();
 
-  for (const s of services) {
-    // Prefer explicit link under /services/* when available
-    const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null;
-    if (fromLink) {
-      slugs.add(fromLink);
-      continue;
-    }
+  
     // Fall back to normalized id or name to provide a stable URL under /services/*
     if (s.id) slugs.add(toSlug(s.id));
     else if (s.name) slugs.add(toSlug(s.name));
@@ -69,7 +59,6 @@ export async function getStaticPaths() {
     paths: Array.from(slugs).map(slug => ({ params: { slug } })),
     fallback: false,
   };
-}
 
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const services = getAllServices();
@@ -96,7 +85,6 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
   return {
     props: { service },
   };
-}
 
 export default function ServiceDetailPage({ service }: { service: Service }) {
   return (
@@ -215,19 +203,3 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
       </div>
     </UltraFuturisticBackground>
   );
-}
-=======
- function getAllServices () : Service[] {
-  return enhancedRealMicroSaasServices .concat (
-}return {
-  paths: Array.from (slugs) .map ( (slug) => ({
-  params: {
-  slug 
-}
-}) );
-fallback: false 
-}
-}</li>) ) 
-}</ul> </Card> </div> </div> </Card> </div> </div> </div> </UltraFuturisticBackground>) 
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468

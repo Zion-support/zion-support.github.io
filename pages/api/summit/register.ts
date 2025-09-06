@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 
@@ -40,14 +39,3 @@ export default async function handler(
   } catch (e: any) {
     return res.status(500).json({ error: e?.message || 'Unknown error' });
   }
-}
-=======
- 
-}const {
-  data, error 
-}= await supabase .from ('summit registrations') .insert ([ {
-  name, email, role, country, source: source || 'zion-global-2025', created at: new Date () .toISOString () 
-}]) .select ('*') .single ();
-}
-}
->>>>>>> 9d7f11d5d98b1e74b0f79fee50dcaab1a752f468
