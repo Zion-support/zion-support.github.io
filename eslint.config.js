@@ -13,9 +13,6 @@ const compat = new FlatCompat({
 });
 
 export default [
-<<<<<<< HEAD
-  // ...compat.extends('next/core-web-vitals'), // Not needed for Vite project
-=======
   js.configs.recommended,
   {
     languageOptions: {
@@ -37,7 +34,6 @@ export default [
       'prefer-const': 'warn'
     }
   },
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1446
   {
     ignores: [
       'node_modules/**',
@@ -121,7 +117,6 @@ export default [
       'structural-*.js',
       'system-*.js',
       'ultimate-*.js',
-<<<<<<< HEAD
       '*.js',
       'src_backup_temp/**',
       'temp-backup/**',
@@ -218,10 +213,4 @@ export default [
       'no-console': 'off',
     },
   },
-=======
-      'pages_backup_conflict/**',
-      'data.disabled/**'
-    ]
-  }
->>>>>>> origin/cursor/fix-lint-push-and-merge-to-main-1446
 ];
