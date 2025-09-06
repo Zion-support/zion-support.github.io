@@ -1,63 +1,59 @@
-className={`cursor-pointer transition-all ${
+className={`cursor-pointer transition-all ${}
             selectedRole === 'client' 
-              ? "border-primary bg-primary/5" 
-              : "border-border hover:border-primary/40"
-          }`}
+              ? "border-primary bg-primary/5" "
+              : "border-border hover:border-primary/40"`
+          }`}'
           onClick={() => handleSelect('client')}
-        >
-          <CardContent className="p-5">
-            <div className="flex items-center">
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">
+        >"
+          <CardContent className="p-5">"
+            <div className="flex items-center">"
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">"
                 <Users className="h-6 w-6 text-primary" />
-              </div>
-              <div className="flex-1">
-                <h3 className="font-medium">I'm hiring</h3>
+              </div>"
+              <div className="flex-1">'"
+                <h3 className="font-medium">I'm hiring</h3>"
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>
-              </div>
+              </div>'
               {selectedRole === 'client' && (
-
-                <Check className="h-5 w-5 text-primary" />
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Briefcase, Users, Check } from 'lucide-react';
+"
+                <Check className="h-5 w-5 text-primary" />"
+import React, { useState } from "react",;"
+import { Button } from "@/components/ui/button",;"
+import { Card, CardContent } from "@/components/ui/card",;'
+import { Briefcase, Users, Check } from 'lucide-react';"
 type UserRole = "talent" | "client" | null,;
 interface RolePickerProps {;
   onSelect: (role: UserRole) => void;
 }
 ;
-export function RolePicker({ onSelect }: RolePickerProps) {;
-  const [selectedRole, setSelectedRole] = useState<UserRole>(null),;
-  const handleSelect = (role: UserRole) => {;
-    setSelectedRole(role);
-    onSelect(role);
+export function RolePicker() { return null; }
   };
-  return (
-    <div className='space-y-4 px-4'>;
-      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>;
+  return ('
+    <div className='space-y-4 px-4'>;'
+      <h2 className='text-xl font-medium'>What brings you to Zion?</h2>;'
       <p className='text-muted-foreground'>;
         Choose how you want to use our platform;
       </p>;
-
+'
       <div className='space-y-3 mt-6'>;
-        <Card
-          className={`cursor-pointer transition-all ${
-            selectedRole === 'talent'
-              ? 'border-primary bg-primary/5'
-              : 'border-border hover:border-primary/40'
-          }`}
+        <Card;`
+          className={`cursor-pointer transition-all ${'
+            selectedRole === 'talent''
+              ? 'border-primary bg-primary/5''
+              : 'border-border hover:border-primary/40'`
+          }`}'
           onClick={() => handleSelect('talent')}
-        >;
-          <CardContent className="p-5">;
-            <div className="flex items-center">;
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
+        >;"
+          <CardContent className="p-5">;"
+            <div className="flex items-center">;"
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;"
                 <Briefcase className="h-6 w-6 text-primary" />;
-              </div>;
-              <div className="flex-1">;
-                <h3 className="font-medium">I'm offering services</h3>;
+              </div>;"
+              <div className="flex-1">;'"
+                <h3 className="font-medium">I'm offering services</h3>;"
                 <p className="text-sm text-muted-foreground">Find work and showcase your skills</p>;
-              </div>;
-              {selectedRole === 'talent' && (;
+              </div>;'
+              {selectedRole === 'talent' && (;"
                 <Check className="h-5 w-5 text-primary" />;
               )}
 
@@ -66,94 +62,94 @@ export function RolePicker({ onSelect }: RolePickerProps) {;
         </Card>;
 
 
-        <Card
-          className={`cursor-pointer transition-all ${
-            selectedRole === 'client'
-              ? 'border-primary bg-primary/5'
-              : 'border-border hover:border-primary/40'
-          }`}
+        <Card;`
+          className={`cursor-pointer transition-all ${'
+            selectedRole === 'client''
+              ? 'border-primary bg-primary/5''
+              : 'border-border hover:border-primary/40'`
+          }`}'
           onClick={() => handleSelect('client')}
-        >;
-          <CardContent className="p-5">;
-            <div className="flex items-center">;
-              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;
+        >;"
+          <CardContent className="p-5">;"
+            <div className="flex items-center">;"
+              <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mr-4">;"
                 <Users className="h-6 w-6 text-primary" />;
-              </div>;
-              <div className="flex-1">;
-                <h3 className="font-medium">I'm hiring</h3>;
+              </div>;"
+              <div className="flex-1">;'"
+                <h3 className="font-medium">I'm hiring</h3>;"
                 <p className="text-sm text-muted-foreground">Post jobs and find talented professionals</p>;
-              </div>;
-              {selectedRole === 'client' && (;
+              </div>;'
+              {selectedRole === 'client' && (;"
                 <Check className="h-5 w-5 text-primary" />;
               )}
-
-import React, { useState } from 'react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { Briefcase, Users, Check } from 'lucide-react';
+'
+import React, { useState } from 'react';'
+import { Button } from '@/components / ui / button';'
+import { Card, CardContent } from '@/components / ui / card';'
+import { Briefcase, Users, Check } from 'lucide-react';'
 type UserRole = 'talent' | 'client' | null;
-interface RolePickerProps {
+interface RolePickerProps {}
   on_select: (role: UserRole) => void;
-export /**
- * RolePicker - Function description
+export /**;
+ * RolePicker - Function description;
  */
-function RolePicker() {
+function RolePicker() {}
   const [selected_role, setSelectedRole] = useState < UserRole>(null);
-  const handle_select = (role: UserRole) =>: any {
+  const handle_select = (role: UserRole) =>: any {}
     setSelectedRole (role);
     on_select (role);
   }
-  return (
-    <div className='space - y-4 px - 4'>;
-      <h2 className='text - xl font - medium'>What brings you to Zion?</h2>;
+  return ('
+    <div className='space - y-4 px - 4'>;'
+      <h2 className='text - xl font - medium'>What brings you to Zion?</h2>;'
       <p className='text - muted - foreground'>;
         Choose how you want to use our platform;
-      </p>;
+      </p>;'
       <div className='space - y-3 mt - 6'>;
-        <Card;
-          className={`cursor - pointer transition - all ${
-            selected_role === 'talent';
-              ? 'border - primary bg - primary / 5';
-              : 'border - border hover:border - primary / 40';
-          }`}
+        <Card;`
+          className={`cursor - pointer transition - all ${'
+            selected_role === 'talent';'
+              ? 'border - primary bg - primary / 5';'
+              : 'border - border hover:border - primary / 40';`
+          }`}'
           on_click = {(, ) => handle_select ('talent'), }
-        >;
-          <CardContent className='p - 5'>;
-            <div className='flex items - center'>;
-              <div className='w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center mr - 4'>;
+        >;'
+          <CardContent className='p - 5'>;'
+            <div className='flex items - center'>;'
+              <div className='w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center mr - 4'>;'
                 <Briefcase className='h - 6 w - 6 text - primary' />;
-              </div>;
-              <div className='flex - 1'>;
-                <h3 className='font - medium'>I'm offering services</h3>;
+              </div>;'
+              <div className='flex - 1'>;'
+                <h3 className='font - medium'>I'm offering services</h3>;'
                 <p className='text - sm text - muted - foreground'>;
                   Find work and showcase your skills;
                 </p>;
-              </div>;
-              {selected_role === 'talent' && (
+              </div>;'
+              {selected_role === 'talent' && ('
                 <Check className='h - 5 w - 5 text - primary' />)}
             </div>;
           </CardContent>;
         </Card>;
-        <Card;
-          className={`cursor - pointer transition - all ${
-            selected_role === 'client';
-              ? 'border - primary bg - primary / 5';
-              : 'border - border hover:border - primary / 40';
-          }`}
+        <Card;`
+          className={`cursor - pointer transition - all ${'
+            selected_role === 'client';'
+              ? 'border - primary bg - primary / 5';'
+              : 'border - border hover:border - primary / 40';`
+          }`}'
           on_click = {() => handle_select ('client'), }
-        >;
-          <CardContent className='p - 5'>;
-            <div className='flex items - center'>;
-              <div className='w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center mr - 4'>;
+        >;'
+          <CardContent className='p - 5'>;'
+            <div className='flex items - center'>;'
+              <div className='w - 12 h - 12 rounded - full bg - primary / 10 flex items - center justify - center mr - 4'>;'
                 <Users className='h - 6 w - 6 text - primary' />;
-              </div>;
-              <div className='flex - 1'>;
-                <h3 className='font - medium'>I'm hiring</h3>;
+              </div>;'
+              <div className='flex - 1'>;'
+                <h3 className='font - medium'>I'm hiring</h3>;'
                 <p className='text - sm text - muted - foreground'>;
                   Post jobs and find talented professionals;
                 </p>;
-              </div>;
-              {selected_role === 'client' && (
+              </div>;'
+              {selected_role === 'client' && ('
                 <Check className='h - 5 w - 5 text - primary' />)}
 
             </div>;
@@ -165,4 +161,4 @@ function RolePicker() {
 
     </div>);
 }
-;
+;'"`

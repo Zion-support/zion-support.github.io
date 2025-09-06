@@ -1,56 +1,27 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 
-=======
-import * as React from 'react';
-import * as ProgressPrimitive from '@radix-ui/react-progress';
 import {cn} from '@/lib/utils';
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-import {cn} from '@/lib/utils';
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import * as React from "react"
+
+import * as React from "react""
+import * as ProgressPrimitive from "@radix-ui/react-progress""
+import * as React from "react""
 import * as ProgressPrimitive from "@radix-ui/react-progress"
-import * as React from "react"
-import * as ProgressPrimitive from "@radix-ui/react-progress"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-
-import { cn } from "@/lib/utils"
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-const Progress = React.forwardRef<
-  React.ElementRef<typeof ProgressPrimitive.Root>
-  React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
-></typeof>(({ className, value, ...props }, ref) => (
-  <ProgressPrimitive.Root
-=======
-
-const Progress = React && React.forwardRef<;
-  React && React.ElementRef<typeof ProgressPrimitive && ProgressPrimitive.Root>,;
-  React && React.ComponentPropsWithoutRef<typeof ProgressPrimitive && ProgressPrimitive.Root>;
-></typeof>(({ className, value, ...props }, ref) => (;
-  <ProgressPrimitive&& ProgressPrimitive.Root
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     ref={ref}
     className={cn(
 
-=======
 
+"
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
-=======
 
+"
 import { cn } from "@/lib/utils"
 
-
-import * as React from "react";
+";
+import * as React from "react";"
 import * as ProgressPrimitive from "@radix-ui/react-progress";
-;
+;"
 import { cn } from "@/lib/utils";
 ;
 const Progress = React.forwardRef<;
@@ -59,47 +30,32 @@ const Progress = React.forwardRef<;
 >(({ className, value, ...props }, ref) => (;
   <ProgressPrimitive.Root;
     ref={ref}
-
+"
       "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
+
+"
 import { cn } from "@/lib/utils"
 
 const Progress = React.forwardRef<
   React.ElementRef<typeof ProgressPrimitive.Root>
   React.ComponentPropsWithoutRef<typeof ProgressPrimitive.Root>
->(({ className, value, ...props }, ref) => (
-  <ProgressPrimitive.Root
-
+>(({ className, value, ...props }, ref) => (;
+  <ProgressPrimitive.Root;
 const Progress = React && React.forwardRef<;
   React && React.ElementRef<typeof ProgressPrimitive && ProgressPrimitive.Root>,;
   React && React.ComponentPropsWithoutRef<typeof ProgressPrimitive && ProgressPrimitive.Root>;
 ></typeof>(({ className, value, ...props }, ref) => (;
-  <ProgressPrimitive&& ProgressPrimitive.Root
+  <ProgressPrimitive&& ProgressPrimitive.Root;
     ref={ref}
     className={cn(
-<<<<<<< HEAD
-      'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
-      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-      className
-    )}
-    {...props}
-  >
-    <ProgressPrimitive.Indicator
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
 
 export { Progress };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+"
       className="h-full w-full flex-1 bg-primary transition-all"
 
       style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
@@ -108,19 +64,19 @@ export { Progress };
 ));
 Progress && Progress.displayName = ProgressPrimitive && ProgressPrimitive.Root.displayName;
 
-export { Progress };
-import React from 'react';
+export { Progress };'
+import React from 'react';'
 import * as React from 'react';
     ref={ref}
-    className={cn(
+    className={cn('
       'relative h-4 w-full overflow-hidden rounded-full bg-secondary'
-      className
+      className;
     )}
     {...props}>;
-    <ProgressPrimitive&& ProgressPrimitive.Indicator
-      className='h-full w-full flex-1 bg-primary transition-all'
+    <ProgressPrimitive&& ProgressPrimitive.Indicator'
+      className='h-full w-full flex-1 bg-primary transition-all''
 import * as ProgressPrimitive from '@radix - ui / react - progress';
-;
+;'
 import {cn} from '@/lib / utils';
 ;
 const Progress = React.forward_ref<;
@@ -129,58 +85,25 @@ const Progress = React.forward_ref<;
 ></typeof>(({ class_name, value, ...props }, ref) => (
   <ProgressPrimitive.Root;
     ref={ref}
-    className={cn (
+    className={cn ('
       'relative h - 4 w - full overflow - hidden rounded - full bg - secondary',
       class_name)}
     {...props}
   >;
-    <ProgressPrimitive.Indicator;
-      className='h - full w - full flex - 1 bg - primary transition - all';
+    <ProgressPrimitive.Indicator;'
+      className='h - full w - full flex - 1 bg - primary transition - all';`
       style={{ transform: `translate_x (-${100 - (value || 0)}%)` }}
     />;
   </ProgressPrimitive.Root>));
 Progress.display_name = ProgressPrimitive.Root.display_name;
 ;
-export { Progress }
-;
-
-
-
-
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      className="h-full w-full flex-1 bg-primary transition-all"
-
-    className={cn(;
-      "relative h-4 w-full overflow-hidden rounded-full bg-secondary",;
-      className;
-    )}
-
-
-
-    {...props}
-  >;
-    <ProgressPrimitive.Indicator;
-      className="h-full w-full flex-1 bg-primary transition-all";
-      style={{ transform:`translateX(-${100 - (value || 0)}%)` }}
-      className='h-full w-full flex-1 bg-primary transition-all'
-      style={{ transform: `translateX(-${100 - (value |0)}%)` }}
-    />
-  </ProgressPrimitive.Root>
-));
-Progress.displayName = ProgressPrimitive.Root.displayName;
-export { Progress }
-
 export { Progress };
-      className="h-full w-full flex-1 bg-primary transition-all"
-      style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
-    />;
-  </ProgressPrimitive.Root>;
-));
-Progress.displayName = ProgressPrimitive.Root.displayName;
-export { Progress }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+
+
+
+
+'"`

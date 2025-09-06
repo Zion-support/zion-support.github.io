@@ -1,8 +1,7 @@
->>>>>>> origin/main
-import { useState, useEffect, useCallback } from 'react'; // Added useCallback;
+>>>>>>> origin/main;
+import { useState, useEffect, useCallback } from 'react'; // Added useCallback;'
 import { supabase } from '@/integrations/supabase/client';
-export default function Page() {;
- finally {;
+export default function Page() { return null; }
       setIsLoading(false)}
   }, [jobId]); // jobId is a dependency of loadJobDetails;
   useEffect(() => {;
@@ -12,14 +11,15 @@ export default function Page() {;
     job,
     isLoading,
     error,
-    loadJobDetails, // Return refetch function as loadJobDetails for clarity;
+    loadJobDetails, // Return refetch function as loadJobDetails for clarity;"
     "refetch": loadJobDetails // Added refetch alias for consistency if preferred}}
-export default useJobDetails;
+export default useJobDetails;'
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; finally {; setIsLoading(false);,} },[jobId]); useEffect(() => {},[]); loadJobDetails();,},[loadJobDetails]); return {; job,; isLoading,; error,; loadJobDetails,refetch: 'loadJobDetails };,} export default useJobDetails;
->>>>>>> main
->>>>>>> main
+>>>>>>> main;
+>>>>>>> main'
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; finally {; setIsLoading(false),} },[jobId]); useEffect(() => {},[]); loadJobDetails(),},[loadJobDetails]); return {; job,isLoading,error,loadJobDetails,refetch: loadJobDetails },} export default useJobDetails;
->>>>>>> main
->>>>>>> origin/main
+>>>>>>> main;
+>>>>>>> origin/main'
 import { useState,useEffect,useCallback } from 'react'; import { supabase } from '@/integrations/supabase/client'; export default function Page() {; finally {; setIsLoading(false),} },[jobId]); useEffect(() => {},[]); loadJobDetails(),},[loadJobDetails]); return {; job,isLoading,error,loadJobDetails,refetch: loadJobDetails },} export default useJobDetails;
->>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326
+>>>>>>> d0b4cabda824e2db66cecb53192832d7e749a326;
+'"

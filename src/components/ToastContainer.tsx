@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ToastContainer: React.FC = () => {
+const ToastContainer: React.FC = () => {}
   return (
     <div id="toast-container" className="fixed top-4 right-4 z-50">
       {/* Toast notifications will be rendered here */}
@@ -8,4 +8,4 @@ const ToastContainer: React.FC = () => {
   );
 };
 
-export default ToastContainer;
+export default ToastContainer;'"

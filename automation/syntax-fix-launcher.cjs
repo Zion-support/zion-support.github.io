@@ -1,11 +1,5 @@
 #!/usr/bin/env node
-<<<<<<< HEAD
-/**
- * Syntax Fix Launcher
- * Launches syntax fixing operations
- */
-=======
->>>>>>> main
+
 
 const fs = require('fs');
 const path = require('path');
@@ -13,63 +7,7 @@ const { execSync } = require('child_process');
 
 class SyntaxFixLauncher {
   constructor() {
-<<<<<<< HEAD
-    this.logsDir = path.join(__dirname, 'logs');
-    this.ensureLogsDir();
-  }
 
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
-
-  log(message) {
-    const timestamp = new Date().toISOString();
-    console.log(`[${timestamp}] ${message}`);
-  }
-
-  async quickFix() {
-    this.log('🔧 Running quick syntax fixes...');
-    
-    try {
-      // Fix common merge conflict patterns
-      this.fixMergeConflicts();
-      
-      // Fix common syntax errors
-      this.fixCommonSyntaxErrors();
-      
-      this.log('✅ Quick syntax fixes completed');
-      return { success: true };
-    } catch (error) {
-      this.log(`❌ Quick syntax fixes failed: ${error.message}`);
-      return { success: false, error: error.message };
-    }
-  }
-
-  fixMergeConflicts() {
-    this.log('🔍 Fixing merge conflicts...');
-    
-    const filesToFix = [
-      'eslint.config.js',
-      'src/pages/Home.tsx',
-      'src/pages/Contact.tsx',
-      'src/pages/Services.tsx',
-      'app/page.tsx',
-      'app/about/page.tsx',
-      'app/contact/page.tsx'
-    ];
-
-    filesToFix.forEach(file => {
-      const filePath = path.join(process.cwd(), file);
-      if (fs.existsSync(filePath)) {
-        try {
-          let content = fs.readFileSync(filePath, 'utf8');
-          
-          // Remove merge conflict markers
-          content = content.replace(/<<<<<<< .*\n/g, '');
-          content = content.replace(/======= .*\n/g, '');
-          content = content.replace(/>>>>>>> .*\n/g, '');
           
           // Clean up extra whitespace
           content = content.replace(/\n\s*\n\s*\n/g, '\n\n');
@@ -179,7 +117,7 @@ if (args.includes('quick-fix')) {
   console.log('Usage: node syntax-fix-launcher.js quick-fix');
   process.exit(1);
 }
-=======
+
     this.projectRoot = process.cwd();
     this.fixedFiles = [];
     this.errors = [];
@@ -309,4 +247,4 @@ if (args.includes('quick-fix')) {
 // Run the launcher
 const launcher = new SyntaxFixLauncher();
 launcher.run().catch(console.error);
->>>>>>> main
+

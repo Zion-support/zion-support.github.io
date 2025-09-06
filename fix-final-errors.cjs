@@ -1,19 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 #!/usr/bin/env node
 const fs = require('fs');
 const path = require('path');
@@ -115,24 +102,17 @@ files.forEach(file => {
     fixedCount++}
 });
 #!/usr/bin/env node/usr/bin/env nodeconst fs = require("fs");"const path = require("path");/ Final targeted fixes for remaining errorsconst fixes = [/ Fix missing semicolons in import statements {" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*$/gm,"" replacement: "import { $1 } from \"$2\";" }, / Fix malformed import statements {"" pattern: /import\s*{\s*([^}]+)\s*}\s*from\s*"([^"]+)"\s*export\s*default\s*function/g,"" replacement: "import { $1 } from \"$2\";\n\nexport default function" }, / Fix missing semicolons after import statements {" pattern: /import\s+([^]+)\s*$/gm,"" replacement: "import $1;" }, / Fix unterminated string literals {"" pattern: /"([^"]*)\s*$/gm,"" replacement: "\"$1\";" }, / Fix malformed function declarations {" pattern: /export\s*default\s*function\s*(\w+)\s*\(\s*\)\s*{\s*$/gm,"" replacement: "export default function $1() {\n return (" }, / Fix missing closing brackets {" pattern: /return\s*\(\s*<div[^>]*>\s*$/gm,"" replacement: "return (\n <div className="min-h-screen bg-white">" }, / Fix malformed JSX {" pattern: /<\/div>\s*;\s*$/gm,"" replacement: "</div>\n );\n}" }, / Fix missing semicolons in object properties {"" pattern: /(\w+):\s*"([^"]*)",\s*$/gm,"" replacement: "$1: \"$2\"," }, / Fix malformed array declarations {" pattern: /const\s+(\w+)\s*=\s*\[\s*$/gm,"" replacement: "const $1 = [\n " }, / Fix missing commas in arrays {"" pattern: /"([^"]*)"\s*;\s*"([^"]*)"/g,"" replacement: "\"$1\",\n \"$2\"" }];function fixFile(filePath) { try {" let content = fs.readFileSync(filePath, "utf8"); let originalContent = content; / Apply fixes fixes.forEach(fix => { content = content.replace(fix.pattern, fix.replacement)}); / Additional cleanup content = content" .replace(/;\s*;\s*/g, ";\n")" .replace(/,\s*,\s*/g, ",\n")" .replace(/\s+$/gm, "") / Remove trailing whitespace .trim(); / Ensure proper file ending" if (!content.endsWith("}") && !content.endsWith(";")) {" content += "\n}"} if (content !== originalContent) { fs.writeFileSync(filePath, content);" console.log(`Fixed: ${filePath}`); return true} return false} catch (error) {` console.error(`Error fixing ${filePath}:`, error.message); return false}}function findTsxFiles(dir) { const files = []; function traverse(currentDir) { const items = fs.readdirSync(currentDir); for (const item of items) { const fullPath = path.join(currentDir, item); const stat = fs.statSync(fullPath); " if (stat.isDirectory() && !item.startsWith(".") && item !== "node_modules") {" traverse(fullPath)} else if (item.endsWith(".tsx") | item.endsWith(".jsx")) { files.push(fullPath)} } } traverse(dir); return files}/ Main execution"const srcDir = path.join(__dirname, "src");const files = findTsxFiles(srcDir);`console.log(`Found ${files.length} files to check.`);let fixedCount = 0;files.forEach(file => { if (fixFile(file)) { fixedCount++}});`console.log(`Fixed ${fixedCount} files.`);'"`'"`
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
-=======
-<<<<<<< HEAD
->>>>>>> 7c5570ce863aceb5500c5da6ecbea653a552cacd
-=======
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
->>>>>>> main
+
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -146,19 +126,8 @@ const path = require('path')
     "replacement"
     "replacement"
     "pattern"
-<<<<<<< HEAD
-<<<<<<< HEAD
-    "replacement"
-<<<<<<<< HEAD:fix-final-errors.cjs
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-    "replacement"
-=======
-<<<<<<< HEAD
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
     "replacement"
     "replacement"
 const fs = require('fs');
@@ -230,11 +199,8 @@ filesToFix.forEach(file => {
 });
 
 console.log(`Fixed final errors in ${fixedCount} files.`);
-<<<<<<< HEAD
->>>>>>>> origin/cursor/expand-services-advertise-and-build-project-dbb7:backup-problematic-files/fix-final-errors.cjs
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
     "replacement"
->>>>>>> main
+

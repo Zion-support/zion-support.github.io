@@ -1,18 +1,17 @@
-} from '../../utils/depins';
+} from '../../utils/depins';'
 import { CHAINS } from '../../utils/chains';
-const ClientOnlyBridge = dynamic(
+const ClientOnlyBridge = dynamic('
   () => import('../../components/ui/BridgeForm')
-  { ssr: false }
-);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';
+  { ssr: false }'
+);import { fetchDepinActivities, calculateRewards, DepinReward } from '../../utils/depins';'
 import { CHAINS } from '../../utils/chains';
 
 
-
+'
 const ClientOnlyBridge = dynamic(() => import('../../components/ui/BridgeForm'), { ssr: false }),
-export default function TokenIntegrationsPage() {;
-
-  const { account, connect } = useWallet();
-  const [region, setRegion] = useState('');
+export default function TokenIntegrationsPage() { return null; }
+  const { account, connect } = useWallet();'
+  const [region, setRegion] = useState('');'
   const [stake, setStake] = useState('');
   const [suggestion, setSuggestion] = useState<any>(null);
   const [rewards, setRewards] = useState<DepinReward[] | null>(null);
@@ -38,12 +37,12 @@ export default function TokenIntegrationsPage() {;
     setSuggestion(data);
   }
   return (
-          <button
-            onClick={syncDepin}
-            className='px-4 py-2 rounded bg-purple-600 text-white'>;
+          <button;
+            onClick={syncDepin}'
+            className='px-4 py-2 rounded bg-purple-600 text-white'>;'
             {depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}
           </button>;
-          {!account && (;
+          {!account && (;'
             <button onClick={connect} className='px-4 py-2 rounded border'>;
               Connect Wallet;
             </button>;
@@ -52,114 +51,114 @@ export default function TokenIntegrationsPage() {;
 
     setSuggestion(data)
         </div>;
-        {rewards && (;
+        {rewards && (;'
           <div className='mt-3 space-y-2 text-sm'>;
-            {rewards && rewards.map((r, i) => (;
+            {rewards && rewards.map((r, i) => (;'
               <div key={i} className='flex items-center justify-between'>;
                 <span>;
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>;
-        {rewards && (;
+        {rewards && (;"
           <div className="mt-3 space-y-2 text-sm">;
-            {rewards && rewards.map((r, i) => (;
+            {rewards && rewards.map((r, i) => (;"
               <div key={i} className="flex items-center justify-between">;
-                <span>{r && r.network} — {r && r.reason}</span>;
+                <span>{r && r.network} — {r && r.reason}</span>;"
                 <span className="font-medium">+{r && r.points} ZION$</span>;
               </div>;
-            <input
+            <input;
               value={region}
-              onChange={e => setRegion(e && e.target.value)}
-              placeholder='e && e.g., US, EU, APAC';
+              onChange={e => setRegion(e && e.target.value)}'
+              placeholder='e && e.g., US, EU, APAC';'
               className='border rounded px-3 py-2 bg-white dark:bg-black';
             />;
-          </div>;
-          <div className='flex flex-col gap-1'>;
+          </div>;'
+          <div className='flex flex-col gap-1'>;'
             <label className='text-xs text-gray-500'>Stake (USD)</label>;
-            <input
+            <input;
               value={stake}
-              onChange={e => setStake(e && e.target.value)}
-              placeholder='e && e.g., 1000';
+              onChange={e => setStake(e && e.target.value)}'
+              placeholder='e && e.g., 1000';'
               className='border rounded px-3 py-2 bg-white dark:bg-black';
             />;
-          </div>;
+          </div>;'
           <div className='flex items-end'>;
-            <button
-              onClick={runOperator}
+            <button;
+              onClick={runOperator}'
               className='w-full px-4 py-2 rounded bg-indigo-600 text-white'>;
               Suggest Chain;
             </button>;
           </div>;
         </div>;
-        {suggestion && (;
+        {suggestion && (;'
           <div className='text-sm mt-2'>;
-            <div>;
+            <div>;'
               <span className='text-gray-500'>Recommendation:</span>{' '}
               <b>{suggestion && suggestion.recommendation?.chain?.name}</b>;
             </div>;
-            {suggestion && suggestion.alternatives && (;
-              <div className='text-gray-500'>;
+            {suggestion && suggestion.alternatives && (;'
+              <div className='text-gray-500'>;'
                 Alternatives:{' '}
                 {suggestion && suggestion.alternatives;
-                  .map((a: any) => a && a.chain.name);
+                  .map((a: any) => a && a.chain.name);'
                   .join(', ')}
-              </div>            )}          </div>;
-          <div className="flex flex-col gap-1">;
-            <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>;
+              </div>            )}          </div>;"
+          <div className="flex flex-col gap-1">;"
+            <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>;"
             <input value={stake} onChange={(e) => setStake(e && e.target.value)} placeholder="e && e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />;
-          </div>;
+          </div>;"
           <div className="flex items-end"><button onClick={runOperator} className="w-full px-4 py-2 rounded bg-indigo-600 text-white">Suggest Chain</button></div>;
         </div>;
-        {suggestion && (;
+        {suggestion && (;"
           <div className="text-sm mt-2">;
-            <div>;
+            <div>;"
               <span className="text-gray-500">Recommendation:</span> <b>{suggestion && suggestion.recommendation?.chain?.name}</b>;
             </div>;
-            {suggestion && suggestion.alternatives && (;
+            {suggestion && suggestion.alternatives && (;'"
               <div className="text-gray-500">Alternatives: {suggestion && suggestion.alternatives.map((a: any) => a && a.chain.name).join(', ')}</div>;
-  return (
-    <div className="space-y-8">
-      <section className="space-y-2">
-        <h1 className="text-2xl font-bold">ZION$ Integrations</h1>
+  return ("
+    <div className="space-y-8">"
+      <section className="space-y-2">"
+        <h1 className="text-2xl font-bold">ZION$ Integrations</h1>"
         <p className="text-gray-600 dark:text-gray-300">Omnichain transfers via LayerZero and DePIN rewards.</p>
-      </section>
+      </section>"
       <section className="space-y-4">
         <ClientOnlyBridge />
-      </section>
-      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">
-        <h2 className="text-lg font-semibold">DePIN Hook</h2>
-        <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>
-        <div className="flex gap-2">
-          <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>
+      </section>"
+      <section className="space-y-3 p-4 border rounded border-gray-200 dark:border-gray-800">"
+        <h2 className="text-lg font-semibold">DePIN Hook</h2>"
+        <p className="text-sm text-gray-600 dark:text-gray-300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>"
+        <div className="flex gap-2">'"
+          <button onClick={syncDepin} className="px-4 py-2 rounded bg-purple-600 text-white">{depinsSyncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>"
           {!account && <button onClick={connect} className="px-4 py-2 rounded border">Connect Wallet</button>}
         </div>
-        {rewards && (
+        {rewards && ("
           <div className="mt-3 space-y-2 text-sm">
-            {rewards.map((r, i) => (
+            {rewards.map((r, i) => ("
               <div key={i} className="flex items-center justify-between">
-                <span>{r.network} — {r.reason}</span>
+                <span>{r.network} — {r.reason}</span>"
                 <span className="font-medium">+{r.points} ZION$</span>
             ))}
           </div>
         )}
-      </section>
-          <div className="flex flex-col gap-1">
-            <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>
+      </section>"
+          <div className="flex flex-col gap-1">"
+            <label className="text-xs text-gray-500" htmlFor="input-Stake (USD)">Stake (USD)</label>"
             <input value={stake} onChange={(e) => setStake(e.target.value)} placeholder="e.g., 1000" className="border rounded px-3 py-2 bg-white dark:bg-black" />
-          </div>
+          </div>"
           <div className="flex items-end"><button onClick={runOperator} className="w-full px-4 py-2 rounded bg-indigo-600 text-white">Suggest Chain</button></div>
         </div>
-        {suggestion && (
+        {suggestion && ("
           <div className="text-sm mt-2">
-            <div>
+            <div>"
               <span className="text-gray-500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>
             </div>
-            {suggestion.alternatives && (
+            {suggestion.alternatives && ('"
               <div className="text-gray-500">Alternatives: {suggestion.alternatives.map((a: any) => a.chain.name).join(', ')}</div>
             )}
           </div>;
         )}
   );
-}        <div>Security</div>;
+}        <div>Security</div>;"
         <ul className="list-disc ml-5 space-y-1">;
           <li>Onchain tx logs (client + API echo)</li>;
           <li>Rate limits (client + API token bucket)</li>;
@@ -170,41 +169,41 @@ export default function TokenIntegrationsPage() {;
   );
 ;
   );
-
-import dynamic from 'next / dynamic';
-import React, { useEffect, useState } from 'react';
+'
+import dynamic from 'next / dynamic';'
+import React, { useEffect, useState } from 'react';'
 import { use_wallet } from '../../hooks / use_wallet';
-import {
+import {}
   fetchDepinActivities,
   calculate_rewards,
-  DepinReward,
-} from '../../utils / depins';
+  DepinReward,';
+} from '../../utils / depins';'
 import { CHAINS } from '../../utils / chains';
 ;
-const ClientOnlyBridge = dynamic (
+const ClientOnlyBridge = dynamic ('
   () => import ('../../components / ui / BridgeForm'),
-  { ssr: false }
-);import { fetchDepinActivities, calculate_rewards, DepinReward } from '../../utils / depins';
-import { CHAINS } from '../../utils / chains';
+  { ssr: false }';
+);import { fetchDepinActivities, calculate_rewards, DepinReward } from '../../utils / depins';'
+import { CHAINS } from '../../utils / chains';'
 const ClientOnlyBridge = dynamic (() => import ('../../components / ui / BridgeForm'), { ssr: false }),
-export default /**
- * TokenIntegrationsPage - Function description
+export default /**;
+ * TokenIntegrationsPage - Function description;
  */
-function TokenIntegrationsPage() {
-  const { account, connect } = use_wallet ();
-  const [region, set_region] = useState ('');
+function TokenIntegrationsPage() {}
+  const { account, connect } = use_wallet ();'
+  const [region, set_region] = useState ('');'
   const [stake, set_stake] = useState ('');
   const [suggestion, set_suggestion] = useState < any>(null);
   const [rewards, set_rewards] = useState < DepinReward[] | null>(null);
   const [depins_syncing, setDepinsSyncing] = useState (false);
 ;
   async /**
- * sync_depin - Function description
+ * sync_depin - Function description;
  */
-function sync_depin() {
-    // Check condition
-if ( {) {
-  $2
+function sync_depin() {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       await connect ();
       return;    }      return;
@@ -216,144 +215,142 @@ if ( {) {
     setDepinsSyncing (false);  }    setDepinsSyncing (false);
   }
   async /**
- * run_operator - Function description
+ * run_operator - Function description;
  */
-function run_operator() {
-    const res = await fetch ('/api / operator / suggest - chain', {
-      method: 'POST',
+function run_operator() { return null; }
       headers: { 'Content - Type': 'application / json' },
       body: JSON.stringify ({ region, stake_usd: stake }),
     });
     const data = await res.json ();
     set_suggestion (data);
   }
-  return (
-    <div className='space - y-8'>;
-      <section className='space - y-2'>;
-        <h1 className='text - 2xl font - bold'>ZION$ Integrations</h1>;
+  return ('
+    <div className='space - y-8'>;'
+      <section className='space - y-2'>;'
+        <h1 className='text - 2xl font - bold'>ZION$ Integrations</h1>;'
         <p className='text - gray - 600 dark:text - gray - 300'>;
           Omnichain transfers via LayerZero and DePIN rewards.;
         </p>;
-      </section>;
+      </section>;'
       <section className='space - y-4'>;
         <ClientOnlyBridge />;
-      </section>;
-      <section className='space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800'>;
-        <h2 className='text - lg font - semibold'>DePIN Hook</h2>;
+      </section>;'
+      <section className='space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800'>;'
+        <h2 className='text - lg font - semibold'>DePIN Hook</h2>;'
         <p className='text - sm text - gray - 600 dark:text - gray - 300'>;
           Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT;
           jobs, and data streaming.;
-        </p>;
+        </p>;'
         <div className='flex gap - 2'>;
           <button;
-            on_click={sync_depin}
+            on_click={sync_depin}'
             className='px - 4 py - 2 rounded bg - purple - 600 text - white';
-          >;
+          >;'
             {depins_syncing ? 'Syncing…' : 'Sync DePIN Rewards'}
           </button>;
-          {!account && (
+          {!account && ('
             <button on_click={connect} className='px - 4 py - 2 rounded border'>;
               Connect Wallet;
             </button>)}
         </div>;
-        {rewards && (
+        {rewards && ('
           <div className='mt - 3 space - y-2 text - sm'>;
-            {rewards.map ((r, i) => (
+            {rewards.map ((r, i) => ('
               <div key={i} className='flex items - center justify - between'>;
                 <span>;
                   {r.network} — {r.reason}
-                </span>;
+                </span>;'
                 <span className='font - medium'>+{r.points} ZION$</span>              </div>    const data = await res.json ();
     set_suggestion (data);
   }
-  return (
-    <div className="space - y-8">;
-      <section className="space - y-2">;
-        <h1 className="text - 2xl font - bold">ZION$ Integrations</h1>;
+  return ("
+    <div className="space - y-8">;"
+      <section className="space - y-2">;"
+        <h1 className="text - 2xl font - bold">ZION$ Integrations</h1>;"
         <p className="text - gray - 600 dark:text - gray - 300">Omnichain transfers via LayerZero and DePIN rewards.</p>;
-      </section>;
+      </section>;"
       <section className="space - y-4">;
         <ClientOnlyBridge />;
-      </section>;
-      <section className="space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800">;
-        <h2 className="text - lg font - semibold">DePIN Hook</h2>;
-        <p className="text - sm text - gray - 600 dark:text - gray - 300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;
-        <div className="flex gap - 2">;
-          <button on_click={sync_depin} className="px - 4 py - 2 rounded bg - purple - 600 text - white">{depins_syncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>;
+      </section>;"
+      <section className="space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800">;"
+        <h2 className="text - lg font - semibold">DePIN Hook</h2>;"
+        <p className="text - sm text - gray - 600 dark:text - gray - 300">Plug into DIMO, Helium, Hivemapper to reward ZION$ for compute, IoT jobs, and data streaming.</p>;"
+        <div className="flex gap - 2">;'"
+          <button on_click={sync_depin} className="px - 4 py - 2 rounded bg - purple - 600 text - white">{depins_syncing ? 'Syncing…' : 'Sync DePIN Rewards'}</button>;"
           {!account && <button on_click={connect} className="px - 4 py - 2 rounded border">Connect Wallet</button>}
         </div>;
-        {rewards && (
+        {rewards && ("
           <div className="mt - 3 space - y-2 text - sm">;
-            {rewards.map ((r, i) => (
+            {rewards.map ((r, i) => ("
               <div key={i} className="flex items - center justify - between">;
-                <span>{r.network} — {r.reason}</span>;
+                <span>{r.network} — {r.reason}</span>;"
                 <span className="font - medium">+{r.points} ZION$</span>;
               </div>))}
           </div>)}
-      </section>;
-      <section className='space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800'>;
-        <h2 className='text - lg font - semibold'>Operator AI Actions</h2>;
+      </section>;'
+      <section className='space - y-3 p - 4 border rounded border - gray - 200 dark:border - gray - 800'>;'
+        <h2 className='text - lg font - semibold'>Operator AI Actions</h2>;'
         <p className='text - sm text - gray - 600 dark:text - gray - 300'>;
           Based on your region and stake, we suggest the best chain for ZION$.;
-        </p>;
-        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 3'>;
-          <div className='flex flex - col gap - 1'>;
+        </p>;'
+        <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 3'>;'
+          <div className='flex flex - col gap - 1'>;'
             <label className='text - xs text - gray - 500'>Region</label>;
             <input;
               value={region}
-              on_change={e => set_region (e.target.value)}
-              placeholder='e.g., US, EU, APAC';
+              on_change={e => set_region (e.target.value)}'
+              placeholder='e.g., US, EU, APAC';'
               className='border rounded px - 3 py - 2 bg - white dark:bg - black';
             />;
-          </div>;
-          <div className='flex flex - col gap - 1'>;
+          </div>;'
+          <div className='flex flex - col gap - 1'>;'
             <label className='text - xs text - gray - 500'>Stake (USD)</label>;
             <input;
               value={stake}
-              on_change={e => set_stake (e.target.value)}
-              placeholder='e.g., 1000';
+              on_change={e => set_stake (e.target.value)}'
+              placeholder='e.g., 1000';'
               className='border rounded px - 3 py - 2 bg - white dark:bg - black';
             />;
-          </div>;
+          </div>;'
           <div className='flex items - end'>;
             <button;
-              on_click={run_operator}
+              on_click={run_operator}'
               className='w - full px - 4 py - 2 rounded bg - indigo - 600 text - white';
             >;
               Suggest Chain;
             </button>;
           </div>;
         </div>;
-        {suggestion && (
+        {suggestion && ('
           <div className='text - sm mt - 2'>;
-            <div>;
+            <div>;'
               <span className='text - gray - 500'>Recommendation:</span>{' '}
               <b>{suggestion.recommendation?.chain?.name}</b>;
             </div>;
-            {suggestion.alternatives && (
-              <div className='text - gray - 500'>;
+            {suggestion.alternatives && ('
+              <div className='text - gray - 500'>;'
                 Alternatives:{' '}
                 {suggestion.alternatives;
-                  .map ((array: any) => a.chain.name);
+                  .map ((array: any) => a.chain.name);'
                   .join (', ')}
-              </div>            )}          </div>;
-          <div className="flex flex - col gap - 1">;
-            <label className="text - xs text - gray - 500" html_for="input - Stake (USD)">Stake (USD)</label>;
+              </div>            )}          </div>;"
+          <div className="flex flex - col gap - 1">;"
+            <label className="text - xs text - gray - 500" html_for="input - Stake (USD)">Stake (USD)</label>;"
             <input value={stake} on_change={(e) => set_stake (e.target.value)} placeholder="e.g., 1000" className="border rounded px - 3 py - 2 bg - white dark:bg - black" />;
-          </div>;
+          </div>;"
           <div className="flex items - end"><button on_click={run_operator} className="w - full px - 4 py - 2 rounded bg - indigo - 600 text - white">Suggest Chain</button></div>;
         </div>;
-        {suggestion && (
+        {suggestion && ("
           <div className="text - sm mt - 2">;
-            <div>;
+            <div>;"
               <span className="text - gray - 500">Recommendation:</span> <b>{suggestion.recommendation?.chain?.name}</b>;
             </div>;
-            {suggestion.alternatives && (
+            {suggestion.alternatives && ('"
               <div className="text - gray - 500">Alternatives: {suggestion.alternatives.map ((array: any) => a.chain.name).join (', ')}</div>)}
           </div>)}
-      </section>;
+      </section>;'
       <section className='space - y-2 text - xs text - gray - 500'>;
-        <div > Security</div>;
+        <div > Security</div>;'
         <ul className='list - disc ml - 5 space - y-1'>;
           <li > Onchain tx logs (client + API echo)</li>;
           <li > Rate limits (client + API token bucket)</li>;
@@ -363,7 +360,7 @@ function run_operator() {
           </li>        </ul>;
       </section>;
     </div>);
-}        <div > Security</div>;
+}        <div > Security</div>;"
         <ul className="list - disc ml - 5 space - y-1">;
           <li > Onchain tx logs (client + API echo)</li>;
           <li > Rate limits (client + API token bucket)</li>;
@@ -372,3 +369,4 @@ function run_operator() {
       </section>;
     </div>);
 }
+'"

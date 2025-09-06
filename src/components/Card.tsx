@@ -1,14 +1,14 @@
 import React from 'react';
 
 interface CardProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
   title?: string;
   description?: string;
   className?: string;
   onClick?: () => void;
 }
 
-const Card: React.FC<CardProps> = ({ 
+const Card: React.FC<CardProps> = ({
   children, 
   title, 
   description, 
@@ -17,15 +17,21 @@ const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div 
-      className={`bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow ${className}`}
+      className={`bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300 cursor-pointer ${className}`}
       onClick={onClick}
     >
       {title && (
-        <h3 className="text-xl font-semibold mb-3 text-gray-900">{title}</h3>
+        <h3 className="text-xl font-bold text-white mb-3">
+          {title}
+        </h3>
       )}
+      
       {description && (
-        <p className="text-gray-600 mb-4">{description}</p>
+        <p className="text-gray-300 mb-4">
+          {description}
+        </p>
       )}
+      
       {children}
     </div>
   );

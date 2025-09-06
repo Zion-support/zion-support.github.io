@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';'
 import { motion } from 'framer-motion';
 
-interface TypingAnimationProps {
+interface TypingAnimationProps {}
   text: string;
   speed?: number;
   delay?: number;
@@ -10,35 +10,35 @@ interface TypingAnimationProps {
   onComplete?: () => void;
 }
 
-const TypingAnimation: React.FC<TypingAnimationProps> = ({
+const TypingAnimation: React.FC<TypingAnimationProps> = ({}
   text,
   speed = 100,
-  delay = 0,
+  delay = 0,'
   className = '',
   showCursor = true,
-  onComplete
-}) => {
+  onComplete;
+}) => {'
   const [displayedText, setDisplayedText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isComplete, setIsComplete] = useState(false);
 
-  useEffect(() => {
-    if (currentIndex < text.length) {
-      const timeout = setTimeout(() => {
+  useEffect(() => {}
+    if (currentIndex < text.length) {}
+      const timeout = setTimeout(() => {}
         setDisplayedText(prev => prev + text[currentIndex]);
         setCurrentIndex(prev => prev + 1);
       }, speed);
 
       return () => clearTimeout(timeout);
-    } else if (!isComplete) {
+    } else if (!isComplete) {}
       setIsComplete(true);
       onComplete?.();
     }
   }, [currentIndex, text, speed, isComplete, onComplete]);
 
-  useEffect(() => {
-    if (delay > 0) {
-      const timeout = setTimeout(() => {
+  useEffect(() => {}
+    if (delay > 0) {}
+      const timeout = setTimeout(() => {}
         setCurrentIndex(0);
       }, delay);
       return () => clearTimeout(timeout);
@@ -46,7 +46,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   }, [delay]);
 
   return (
-    <motion.span
+    <motion.span;
       className={className}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
@@ -54,7 +54,7 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
     >
       {displayedText}
       {showCursor && (
-        <motion.span
+        <motion.span;
           animate={{ opacity: [1, 0, 1] }}
           transition={{ duration: 0.8, repeat: Infinity }}
           className="ml-1"
@@ -66,4 +66,4 @@ const TypingAnimation: React.FC<TypingAnimationProps> = ({
   );
 };
 
-export default TypingAnimation;
+export default TypingAnimation;'"

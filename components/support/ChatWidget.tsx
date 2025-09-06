@@ -1,56 +1,55 @@
 import { X } from 'lucide-react';
 
-type ChatMessage = {
+type ChatMessage = {'
   role: 'user' | 'assistant' | 'system'
-  content: string
-  timestamp?: number
+  content: string;
+  timestamp?: number;
 }
-function generateSessionId(): string {
-
+function generateSessionId(): string {}
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);'
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [failedIntents, setFailedIntents] = useState(0);
-  const [showEscalation, setShowEscalation] = useState(false);
+  const [showEscalation, setShowEscalation] = useState(false);'
   const sessionIdRef = useRef<string>('');
   const messagesEndRef = useRef<HTMLDivElement | null>(null);
 
     } catch {}
   }
 
-  async function escalateSupport(reason: string) {
-    try {
-      await fetch('/api/support/escalate', {
-
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+  async function escalateSupport(reason: string) {}
+    try {'
+      await fetch('/api/support/escalate', {}
+'
+        method: 'POST','
+        headers: { 'Content-Type': 'application/json' },'
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
-  }
-        method: 'POST'
+  }'
+        method: 'POST''
         headers: { 'Content-Type': 'application/json' }
-        body: JSON.stringify({
-          sessionId: sessionIdRef.current
-          reason
+        body: JSON.stringify({}
+          sessionId: sessionIdRef.current;
+          reason'
           tag: 'escalate'
         })
       });
-
+'
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
-
+'
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
       setShowEscalation(true);    } catch {}
 
-
+'
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
     } catch {}
   }
-
+'
       setShowEscalation(true);    } catch {}        body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
 
       setShowEscalation(true)
@@ -59,11 +58,11 @@ function generateSessionId(): string {
     } catch {}
   }
 
-  async function onSend(messageText?: string) {
+  async function onSend(messageText?: string) {}
     const text = (messageText ?? input).trim();
     if (!text) return;
           const next = n + 1;
-          if (next >= 3) {;
+          if (next >= 3) {;'
             escalateSupport('Failed to match user intent 3+ times');
           }
           return next;
@@ -71,15 +70,14 @@ function generateSessionId(): string {
       } else if (data?.meta?.intentMatched === true) {;
         setFailedIntents(0);
       }
-  return (
+  return ('
     <div className='fixed bottom-4 right-4 z-50'>      }
-      if (data?.meta?.intentMatched === false) {
-        setFailedIntents((n) => {
-
+      if (data?.meta?.intentMatched === false) {}
+        setFailedIntents((n) => {}
       if (data?.meta?.intentMatched === false) {;
         setFailedIntents((n) => {;
           const next = n + 1;
-          if (next >= 3) {;
+          if (next >= 3) {;'
             escalateSupport('Failed to match user intent 3+ times');
           }
           return next;
@@ -88,7 +86,7 @@ function generateSessionId(): string {
         setFailedIntents(0);
       }
     }
-  }
+  }'
     <div className='fixed bottom-4 right-4 z-50'>
 
   return (
@@ -103,35 +101,35 @@ function generateSessionId(): string {
 
     }
   }
-  return (
+  return ('
     <div className='fixed bottom-4 right-4 z-50'>;
       {!isOpen && (;
-        <button
+        <button'
           aria-label='Open support chat'
-          onClick={() => setIsOpen(true)}
+          onClick={() => setIsOpen(true)}'
           className='rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black'        >      {!isOpen && (;
-        <button
+        <button;
           aria-label="Open support chat"
-          onClick={() => setIsOpen(true)}
+          onClick={() => setIsOpen(true)}"
           className="rounded-full shadow-lg bg-blue-600 text-white w-14 h-14 flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 dark:focus:ring-offset-black";
         >;
           ?;
         </button>;
       )}
-              <div
+              <div;
                 key={idx}
-                className={
+                className={'
                   m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'
                 }>;
-                <div
-                  className={
-                    m && m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;
+                <div;
+                  className={'
+                    m && m.role === 'assistant''
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark:bg-gray-800'                      : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'            {messages && messages.map((m, idx) => (;'
               <div key={idx} className={m && m.role === 'assistant' ? 'text-sm' : 'text-sm text-right'}>;
-                <div
-                  className={
-                    m && m.role === 'assistant'
-                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800'
+                <div;
+                  className={'
+                    m && m.role === 'assistant''
+                      ? 'inline-block rounded-2xl px-3 py-2 bg-gray-100 dark: bg-gray-800''
                       : 'inline-block rounded-2xl px-3 py-2 bg-blue-600 text-white'
                   }
                 >
@@ -142,16 +140,16 @@ function generateSessionId(): string {
 
 
             )}
-                  <button
+                  <button;
                     key={q}
-                    onClick={() => onSend(q)}
-                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;
+                    onClick={() => onSend(q)}'"
+                    className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >            <div className="px-3 pb-2">;"
               <div className="flex flex-wrap gap-2 mb-2">;
                 {quickReplies && quickReplies.map((q) => (;
-                  <button
+                  <button;
                     key={q}
-                    onClick={() => onSend(q)}
-                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    onClick={() => onSend(q)}"
+                    className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800"'
                     className='text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800'                  >
 
                   >
@@ -161,7 +159,7 @@ function generateSessionId(): string {
                 ))}
               </div>
             </div>
-          )}
+          )}"
                     className="text-xs rounded-full px-3 py-1 border border-gray-200 dark:border-gray-700 hover:bg-gray-100 dark:hover:bg-gray-800";
                     {q}
                   </button>;
@@ -173,33 +171,33 @@ function generateSessionId(): string {
 
 
 
-
+'
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>
-            {!showEscalation ? (
+            {!showEscalation ? ('
               <div className='flex gap-2'>
-
+'
           <div className='border-t border-gray-200 dark:border-gray-800 p-2'>;
-            {!showEscalation ? (;
+            {!showEscalation ? (;'
               <div className='flex gap-2'>;
-                <input
+                <input;
                   value={input}
                   onChange={e => setInput(e && e.target.value)}
-                  onKeyDown={e => {;
+                  onKeyDown={e => {;'
                     if (e && e.key === 'Enter' && !e && e.shiftKey) {;
                       e && e.preventDefault();
                       onSend();
                     }
-                  }}
-                  placeholder='Ask a question…';
+                  }}'
+                  placeholder='Ask a question…';'
                   className='flex-1 rounded-xl border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500'                />;
-                <button
+                <button;
                   onClick={() => onSend()}
-                  disabled={isLoading}
+                  disabled={isLoading}"
               <div className="flex gap-2">
-                <input
+                <input;
                   value={input}
                 />
-                <button
+                <button;
                   onClick={() => onSend()}
                   disabled={isLoading}
                     }
@@ -211,8 +209,9 @@ function generateSessionId(): string {
 }
   );
 }
-useEffect ( () => {
-  // Check condition
-if ( {) {
-  $2
+useEffect ( () => {}
+  // Check condition;
+if ( {) {}
+  $2;
 }
+'"

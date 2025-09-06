@@ -1,87 +1,45 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';
-import { createServerSideClient } from '../src / utils / supabase / server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
-<<<<<<< HEAD
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 
-import Link from 'next / link';
-import Head from 'next / head';
+import { GetServerSideProps, GetServerSidePropsContext } from 'next / types';'
+import { createServerSideClient } from '../src / utils / supabase / server';'
+import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';'
+import { Button } from '@/components / ui / button';'
+import { Badge } from '@/components / ui / badge';'
+import { User, Mail, Calendar, Shield } from 'lucide-react';
+
+
+
+'
+import Link from 'next / link';'
+import Head from 'next / head';'
 import type { User as SupabaseUser } from '@supabase / supabase - js';
-interface PrivatePageProps {
+interface PrivatePageProps {}
   user: SupabaseUser;
 
-<<<<<<< HEAD
-=======
 
-interface PrivatePageProps {;
-  user: SupabaseUser;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-interface PrivatePageProps {;
-  user: SupabaseUser;
-
-import { GetServerSideProps, GetServerSidePropsContext } from 'next/types';
-import { createServerSideClient } from '../src/utils/supabase/server';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { User, Mail, Calendar, Shield } from 'lucide-react';
-import Link from 'next/link';
-import Head from 'next/head';
-import type { User as SupabaseUser } from '@supabase/supabase-js';
-interface PrivatePageProps {user: SupabaseUser;
-interface PrivatePageProps {;
-  user: SupabaseUser;
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  } catch (error) {
-    console.error("Error:", error);
+  } catch (error) {}
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
 }
-export default /**
- * PrivatePage - Function description
+export default /**;
+ * PrivatePage - Function description;
  */
-function PrivatePage() {
+function PrivatePage() {}
   return (
-<<<<<<< HEAD
-=======
 
 
-        <title>Private Profile - Zion Tech Marketplace</title>
-        <meta name="description" content="Private user profile page" />
-      </Head>
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
         <Card>
           <CardHeader>
             <CardTitle className=&quot;flex items-center gap-2&quot;>
               <Shield className=&quot;h-5 w-5&quot; />
-              Private User Profile
+              Private User Profile;
             </CardTitle>
             <p className=&quot;text-muted-foreground&quot;>
-              This page is only accessible to authenticated users
+              This page is only accessible to authenticated users;
             </p>
           </CardHeader>
           <CardContent className=&quot;space-y-6&quot;>
@@ -114,22 +72,16 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
-
-
-
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-            <div className="p-4 bg-muted/50 rounded-lg">
-              <h4 className="font-medium mb-2">Authentication Details</h4>
+"
+            <div className="p-4 bg-muted/50 rounded-lg">"
+              <h4 className="font-medium mb-2">Authentication Details</h4>"
               <div className="grid gap-2 text-sm">
-                <div>
+                <div>"
                   <span className="font-medium">Last Sign In: </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-                  {user.last_sign_in_at
-                    ? new Date(user.last_sign_in_at).toLocaleString()
+
+
+                  {user.last_sign_in_at;
+                    ? new Date(user.last_sign_in_at).toLocaleString()'
                     : 'Never'
                   }
                 </div>
@@ -141,23 +93,16 @@ function PrivatePage() {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-=======
 
 
-            <div className="flex gap-2">
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
               <Button asChild>
                 <Link href=&quot;/dashboard&quot;>
-                  Go to Dashboard
+                  Go to Dashboard;
                 </Link>
               </Button>
               <Button asChild variant=&quot;outline&quot;>
                 <Link href=&quot;/&quot;>
-                  Back to Home
+                  Back to Home;
                 </Link>
               </Button>
             </div>
@@ -166,86 +111,68 @@ function PrivatePage() {
       </div>
     </>
   )
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
+export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {};
   const supabase = createServerSideClient (context);
   const { data, error } = await supabase.auth.get_user ();
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return {
-      redirect: {
+    return {}
+      redirect: {'
         destination: '/auth / login';
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
     <>
       <Head>
-<<<<<<< HEAD
-        <title>Private Profile - Zion Tech Marketplace</title>;
-        <meta name=&quot;description&quot; content=&quot;Private user profile page&quot; />
-      </Head>
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-=======
-        <title>Private Profile - Zion Tech Marketplace</title>
-        <meta name="description" content="Private user profile page" />
-      </Head>
-<<<<<<< HEAD
-      <div className=&quot;container max-w-4xl mx-auto py-8&quot;>
-=======
-      <div className="container max-w-4xl mx-auto py-8">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
+
         <Card>
-          <CardHeader>
-            <CardTitle className="flex items-center gap-2">
+          <CardHeader>"
+            <CardTitle className="flex items-center gap-2">"
               <Shield className="h-5 w-5" />
-              Private User Profile
-            </CardTitle>
+              Private User Profile;
+            </CardTitle>"
             <p className="text-muted-foreground">
-              This page is only accessible to authenticated users
+              This page is only accessible to authenticated users;
             </p>
-          </CardHeader>
-          <CardContent className="space-y-6">
-            <div className="flex items-start gap-4">
-              <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/20">
+          </CardHeader>"
+          <CardContent className="space-y-6">"
+            <div className="flex items-start gap-4">"
+              <div className="p-3 rounded-full bg-blue-100 dark:bg-blue-900/20">"
                 <User className="h-6 w-6 text-blue-600 dark:text-blue-400" />
-              </div>
-              <div className="flex-1 space-y-2">
-                <h3 className="text-lg font-semibold">User Information</h3>
-                <div className="grid gap-3">
-                  <div className="flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                    <span className="text-sm">{user.email}</span>
-                    <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>
-                      {user.email_confirmed_at ? "Verified" : "Unverified"  } catch (error) {
-    console.error("Error:", error);
+              </div>"
+              <div className="flex-1 space-y-2">"
+                <h3 className="text-lg font-semibold">User Information</h3>"
+                <div className="grid gap-3">"
+                  <div className="flex items-center gap-2">"
+                    <Mail className="h-4 w-4 text-muted-foreground" />"
+                    <span className="text-sm">{user.email}</span>"
+                    <Badge variant={user.email_confirmed_at ? "default" : "secondary"}>"
+                      {user.email_confirmed_at ? "Verified" : "Unverified"  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </Badge>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Calendar className="h-4 w-4 text-muted-foreground" />
+                  </div>"
+                  <div className="flex items-center gap-2">"
+                    <Calendar className="h-4 w-4 text-muted-foreground" />"
                     <span className="text-sm">
-                      Joined {new Date(user.created_at).toLocaleDateString()  } catch (error) {
-    console.error("Error:", error);
+                      Joined {new Date(user.created_at).toLocaleDateString()  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                     </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm">User ID: </span>
+                  </div>"
+                  <div className="flex items-center gap-2">"
+                    <span className="text-sm">User ID: </span>"
                     <code className="px-2 py-1 bg-muted rounded text-xs font-mono">
-                      {user.id  } catch (error) {
-    console.error("Error:", error);
+                      {user.id  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -254,37 +181,29 @@ if ( {) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className=&quot;p-4 bg-muted/50 rounded-lg&quot;>
-              <h4 className=&quot;font-medium mb-2&quot;>Authentication Details</h4>
-              <div className=&quot;grid gap-2 text-sm&quot;>
-<<<<<<< HEAD
-                <div>
-                  <span className=&quot;font-medium&quot;>Last Sign In: </span>
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-            <div className="p-4 bg-muted/50 rounded-lg">
-              <h4 className="font-medium mb-2">Authentication Details</h4>
+
+"
+            <div className="p-4 bg-muted/50 rounded-lg">"
+              <h4 className="font-medium mb-2">Authentication Details</h4>"
               <div className="grid gap-2 text-sm">
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
-                <div>
+
+                <div>"
                   <span className="font-medium">Last Sign In: </span>
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-                  {user.last_sign_in_at
-                    ? new Date(user.last_sign_in_at).toLocaleString()
+
+                  {user.last_sign_in_at;
+                    ? new Date(user.last_sign_in_at).toLocaleString()'
                     : 'Never'
-                    } catch (error) {
-    console.error("Error:", error);
+                    } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
                 </div>
-                <div>
-                  <span className="font-medium">App Metadata: </span>
+                <div>"
+                  <span className="font-medium">App Metadata: </span>"
                   <code className="text-xs">
-                    {JSON.stringify(user.app_metadata, null, 2)  } catch (error) {
-    console.error("Error:", error);
+                    {JSON.stringify(user.app_metadata, null, 2)  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -292,23 +211,18 @@ if ( {) {
                 </div>
               </div>
             </div>
-<<<<<<< HEAD
-            <div className=&quot;flex gap-2&quot;>
-=======
-            <div className="flex gap-2">
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              <Button asChild>
+
+
+
+
+              <Button asChild>"
                 <Link href="/dashboard">
-                  Go to Dashboard
+                  Go to Dashboard;
                 </Link>
-              </Button>
-              <Button asChild variant="outline">
+              </Button>"
+              <Button asChild variant="outline">"
                 <Link href="/">
-                  Back to Home
+                  Back to Home;
                 </Link>
               </Button>
             </div>
@@ -317,50 +231,28 @@ if ( {) {
       </div>
     </>
   )
-<<<<<<< HEAD
-}
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {const supabase = createServerSideClient(context);
-  const { data, error } = await supabase.auth.getUser();
-  if (error |!data?.user) {return {;
-      redirect: {;
-        destination: '/auth/login';
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
         permanent: false}}
   }
-  return {
-    props: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-
+  return {}
+    props: {}
       user: data.user}}
 }
-=======
 
 
-=======
-<<<<<<< HEAD
-=======
 
 
-      user: data.user}}
-}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
 
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-  } catch (error) {
-    console.error("Error:", error);
+
+
+
+
+
+  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
 }
@@ -370,44 +262,21 @@ export const getServerSideProps: GetServerSideProps = async (context: GetServerS
   const { data, error } = await supabase.auth.getUser();
   if (error || !data?.user) {;
     return {;
-      redirect: {;
+      redirect: {;'
         destination: '/auth/login';
-        permanent: false}  } catch (error) {
-    console.error("Error:", error);
+        permanent: false}  } catch (error) {"
+    console.error("Error:", error);"
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-    } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-;
-  return {;
-    props: {;
-      user: data.user}  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
 
 
 } ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
 
-} ;
-} ;
-} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-=======
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
+
+
+
+
+'"

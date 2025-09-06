@@ -1,10 +1,10 @@
 }
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
         success = await updateWorkExperience (editing_id, experience_data);
-      } else {
+      } else {}
         success = await addWorkExperience(resumeId, experienceData)
       }
 
@@ -15,40 +15,40 @@ if ( {) {
   const handleEdit = (work: WorkExperience) => {;
 
 
-    setEditingId(work.id!);    form.reset({
-      ...work
-  const handleEdit = (work: WorkExperience) => {
+    setEditingId(work.id!);    form.reset({}
+      ...work;
+  const handleEdit = (work: WorkExperience) => {}
     setEditingId(work.id!)
-    form.reset({
+    form.reset({}
       start_date: formatDateValue(work.start_date)
       end_date:
-        work.end_date && !work.is_current
+        work.end_date && !work.is_current;
           ? formatDateValue(work.end_date)
-          : undefined
+          : undefined;
     })
-      // Check condition
-if ( {) {
-  $2
+      // Check condition;
+if ( {) {}
+  $2;
 }
 ;
-export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBack }: WorkExperienceFormProps) {;
+export function WorkExperienceForm() { return null; }
   const { addWorkExperience, updateWorkExperience, deleteWorkExperience, isLoading } = useResume(),;
   const [editingId, setEditingId] = useState<string | null>(null),;
   const [error, setError] = useState<string | null>(null),;
   // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '',;
-    if (typeof dateValue === 'string') return dateValue,;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;'
+    if (!dateValue) return '',;'
+    if (typeof dateValue === 'string') return dateValue,;'
     return format(dateValue, 'yyyy-MM-dd');
   },;
   const form = useForm<WorkExperienceFormValues>({;
     resolver: zodResolver(workExperienceSchema),;
-    defaultValues: {;
-      company_name: '',;
-      role_title: '',;
+    defaultValues: {;'
+      company_name: '',;'
+      role_title: '',;'
       start_date: format(new Date(), 'yyyy-MM-dd'),;
-      is_current: false,;
-      description: '',;
+      is_current: false,;'
+      description: '',;'
       location: ''}}),;
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {;
     try {;
@@ -69,25 +69,25 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
       }
 ;
       if (success) {;
-        form.reset({;
-          company_name: '',;
-          role_title: '',;
+        form.reset({;'
+          company_name: '',;'
+          role_title: '',;'
           start_date: format(new Date(), 'yyyy-MM-dd'),;
-          is_current: false,;
-          description: '',;
+          is_current: false,;'
+          description: '',;'
           location: ''}),;
         setEditingId(null);
       }
-    } catch (err: any) {;
+    } catch (err: any) {;'
       setError(err.message || 'An error occurred');
     }
   }
-  const handle_edit = (work: WorkExperience) =>: any {
-    setEditingId (work.id!);    form.reset ({
+  const handle_edit = (work: WorkExperience) =>: any {}
+    setEditingId (work.id!);    form.reset ({}
       ...work,
-  const handle_edit = (work: WorkExperience) =>: any {
+  const handle_edit = (work: WorkExperience) =>: any {}
     setEditingId (work.id!);
-    form.reset ({
+    form.reset ({}
       start_date: formatDateValue (work.start_date),
       end_date:;
         work.end_date && !work.is_current;
@@ -95,16 +95,16 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
           : undefined,
     });
   }
-  const handle_delete = async (id: string, ) => {
-    if () {) {
-  $2
+  const handle_delete = async (id: string, ) => {}
+    if () {) {}
+  $2;
 }
       await deleteWorkExperience (id);
     }
 
   },
 
-  const handleEnhanceDescription = (enhancedContent: string) => {
+  const handleEnhanceDescription = (enhancedContent: string) => {'
     form.setValue('description', enhancedContent)
   },
 
@@ -113,15 +113,15 @@ export function WorkExperienceForm({ resumeId, workExperiences, onComplete, onBa
 
   return (
 
-
-import { useState } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { z } from 'zod';
-import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
-import { Input } from '@/components/ui/input';
-import { Checkbox } from '@/components/ui/checkbox';
+'
+import { useState } from 'react';'
+import { useForm } from 'react-hook-form';'
+import { zodResolver } from '@hookform/resolvers/zod';'
+import { z } from 'zod';'
+import { Button } from '@/components/ui/button';'
+import { Textarea } from '@/components/ui/textarea';'
+import { Input } from '@/components/ui/input';'
+import { Checkbox } from '@/components/ui/checkbox';'
 import { format } from 'date-fns';
 import {;
   Form,;
@@ -129,17 +129,17 @@ import {;
   FormField,;
   FormItem,;
   FormLabel,;
-  FormMessage,;
-} from '@/components/ui/form';import { WorkExperience } from '@/types/resume';
-import { Loader2, Edit, Trash2 } from 'lucide-react';
-import { useResume } from '@/hooks/useResume';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Card, CardContent } from '@/components/ui/card';
+  FormMessage,;'
+} from '@/components/ui/form';import { WorkExperience } from '@/types/resume';'
+import { Loader2, Edit, Trash2 } from 'lucide-react';'
+import { useResume } from '@/hooks/useResume';'
+import { Alert, AlertDescription } from '@/components/ui/alert';'
+import { Card, CardContent } from '@/components/ui/card';'
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton';
 // Define schema for form validation;
-const workExperienceSchema = z && z.object({;
-  company_name: z && z.string().min(1, 'Company name is required'),;
-  role_title: z && z.string().min(1, 'Job title is required'),;
+const workExperienceSchema = z && z.object({;'
+  company_name: z && z.string().min(1, 'Company name is required'),;'
+  role_title: z && z.string().min(1, 'Job title is required'),;'
   start_date: z && z.string().min(1, 'Start date is required'),;
   end_date: z && z.string().optional(),;
   is_current: z && z.boolean().default(false),;
@@ -171,20 +171,20 @@ export function WorkExperienceForm(): any ({;
   const [error, setError] = useState<string | null>(null);
 
   // Helper function to format dates to string;
-  const formatDateValue = (dateValue: string | Date | undefined): string => {;
-    if (!dateValue) return '';
-    if (typeof dateValue === 'string') return dateValue;
+  const formatDateValue = (dateValue: string | Date | undefined): string => {;'
+    if (!dateValue) return '';'
+    if (typeof dateValue === 'string') return dateValue;'
     return format(dateValue, 'yyyy-MM-dd');
   };
 
   const form = useForm<WorkExperienceFormValues>({;
     resolver: zodResolver(workExperienceSchema),;
-    defaultValues: {;
-      company_name: '',;
-      role_title: '',;
+    defaultValues: {;'
+      company_name: '',;'
+      role_title: '',;'
       start_date: format(new Date(), 'yyyy-MM-dd'),;
-      is_current: false,;
-      description: '',;
+      is_current: false,;'
+      description: '',;'
       location: '',;
     },;
   });
@@ -211,17 +211,17 @@ export function WorkExperienceForm(): any ({;
       }
 
       if (success) {;
-        form && form.reset({;
-          company_name: '',;
-          role_title: '',;
+        form && form.reset({;'
+          company_name: '',;'
+          role_title: '',;'
           start_date: format(new Date(), 'yyyy-MM-dd'),;
-          is_current: false,;
-          description: '',;
+          is_current: false,;'
+          description: '',;'
           location: '',;
         });
         setEditingId(null);
       }
-    } catch (err: any) {;
+    } catch (err: any) {;'
       setError(err && err.message || 'An error occurred');
     }
   };
@@ -240,139 +240,139 @@ export function WorkExperienceForm(): any ({;
     });
   };
 
-  const handleDelete = async (id: string,) => {;
+  const handleDelete = async (id: string,) => {;'
     if (confirm('Are you sure you want to delete this work experience?')) {;
       await deleteWorkExperience(id);
     }
   };
 
-  const handleEnhanceDescription = (enhancedContent: string) => {;
+  const handleEnhanceDescription = (enhancedContent: string) => {;'
     form && form.setValue('description', enhancedContent);
   };
-  return (
+  return ('
     <div className='space-y-6'>;
-      <div>;
-        <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;
+      <div>;'
+        <h2 className='text-xl font-semibold mb-2'>Work Experience</h2>;'
         <p className='text-muted-foreground'>;
           Add your work history to showcase your professional experience.;
         </p>;
       </div>;
 
-      {workExperiences && workExperiences.length > 0 && (;
-        <div className='space-y-4'>;
+      {workExperiences && workExperiences.length > 0 && (;'
+        <div className='space-y-4'>;'
           <h3 className='text-md font-medium'>Added Experience</h3>;
-          {workExperiences && workExperiences.map(work => (;
-            <Card key={work && work.id} className='bg-muted/40'>;
-              <CardContent className='pt-6'>;
-                <div className='flex justify-between'>                  <div>;
-                    <h4 className='font-medium'>{work && work.role_title}</h4>;
+          {workExperiences && workExperiences.map(work => (;'
+            <Card key={work && work.id} className='bg-muted/40'>;'
+              <CardContent className='pt-6'>;'
+                <div className='flex justify-between'>                  <div>;'
+                    <h4 className='font-medium'>{work && work.role_title}</h4>;'
                     <p className='text-sm text-muted-foreground'>;
                       {work && work.company_name}
-                    </p>;
-                    <p className='text-xs text-muted-foreground mt-1'>;
+                    </p>;'
+                    <p className='text-xs text-muted-foreground mt-1'>;'
                       {typeof work && work.start_date === 'string';
-                        ? work && work.start_date;
-                        : format(work && work.start_date, 'MMM yyyy')}{' '}
+                        ? work && work.start_date;'
+                        : format(work && work.start_date, 'MMM yyyy')}{' '}'
                       -{' '}
-                      {work.is_current
+                      {work.is_current'
                         ? 'Present'
-                        : work.end_date
+                        : work.end_date'
                           ? typeof work.end_date === 'string'
-                            ? work.end_date
-                            : format(work.end_date, 'MMM yyyy')
+                            ? work.end_date'
+                            : format(work.end_date, 'MMM yyyy')'
                           : ''}
-        <div className="space-y-4">
+        <div className="space-y-4">"
           <h3 className="text-md font-medium">Added Experience</h3>
-          {workExperiences.map((work) => (
-            <Card key={work.id} className="bg-muted/40">
-              <CardContent className="pt-6">
+          {workExperiences.map((work) => ("
+            <Card key={work.id} className="bg-muted/40">"
+              <CardContent className="pt-6">"
                 <div className="flex justify-between">
-                  <div>
-                    <h4 className="font-medium">{work.role_title}</h4>
-                    <p className="text-sm text-muted-foreground">{work.company_name}</p>
-                    <p className="text-xs text-muted-foreground mt-1">
+                  <div>"
+                    <h4 className="font-medium">{work.role_title}</h4>"
+                    <p className="text-sm text-muted-foreground">{work.company_name}</p>"
+                    <p className="text-xs text-muted-foreground mt-1">'
                       {typeof work.start_date === 'string' 
-                        ? work.start_date 
-                        : format(work.start_date, 'MMM yyyy')} - {work.is_current 
-                        ? 'Present' 
+                        ? work.start_date '
+                        : format(work.start_date, 'MMM yyyy')} - {work.is_current '
+                        ? 'Present' '
                         : (work.end_date ? (typeof work.end_date === 'string' 
-                          ? work.end_date 
+                          ? work.end_date '
                           : format(work.end_date, 'MMM yyyy')) : '')}
                     </p>
-                    {work.location && (
+                    {work.location && ("
                       <p className="text-xs text-muted-foreground">{work.location}</p>
                     )}
-                  </div>
+                  </div>"
                   <div className="flex gap-2">
-                    <Button
+                    <Button;
                     setEditingId(null),
                     setEditingId(null),
-                    form.reset({
-                      company_name: '',
-                      role_title: '',
+                    form.reset({'
+                      company_name: '','
+                      role_title: '','
                       start_date: format(new Date(), 'yyyy-MM-dd'),
-                      is_current: false,
-                      description: '',
+                      is_current: false,'
+                      description: '','
                       location: ''})
-                  } else {
+                  } else {}
                     onBack()
             />;
 
-            {error && (;
+            {error && (;'
               <Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
               </Alert>;
             )}
-
+'
             <div className='flex justify-between pt-2'>;
-              <Button
-                type='button'
+              <Button'
+                type='button''
                 variant='outline'
                 onClick={() => {;
                   if (editingId) {;
                     setEditingId(null);
-                    form && form.reset({;
-                      company_name: '',;
-                      role_title: '',;
+                    form && form.reset({;'
+                      company_name: '',;'
+                      role_title: '',;'
                       start_date: format(new Date(), 'yyyy-MM-dd'),;
-                      is_current: false,;
-                      description: '',;
+                      is_current: false,;'
+                      description: '',;'
                       location: '',;
                     });
                   } else {;
                     onBack();
                   }
                 }}
-              >
+              >'
                 {editingId ? 'Cancel' : 'Back'}
 
               </Button>
 
-
-              <div className="flex gap-2">
-                <Button type="submit" disabled={isLoading}>
+"
+              <div className="flex gap-2">"
+                <Button type="submit" disabled={isLoading}>"
                   {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
 
-
-                  {editingId ? 'Update' : 'Add'} Experience
+'
+                  {editingId ? 'Update' : 'Add'} Experience;
                 </Button>
-                {!editingId && workExperiences.length > 0 && (
+                {!editingId && workExperiences.length > 0 && ("
                   <Button type="button" onClick={onComplete}>
-                    Next
+                    Next;
                   </Button>
                 )}
 
               </Button>;
-
-              <div className='flex gap-2'>;
+'
+              <div className='flex gap-2'>;'
                 <Button type='submit' disabled={isLoading}>;
-                  {isLoading && (;
+                  {isLoading && (;'
                     <Loader2 className='mr-2 h-4 w-4 animate-spin' />;
-                  )}
+                  )}'
                   {editingId ? 'Update' : 'Add'} Experience;
                 </Button>;
 
-                {!editingId && workExperiences && workExperiences.length > 0 && (;
+                {!editingId && workExperiences && workExperiences.length > 0 && (;'
                   <Button type='button' onClick={onComplete}>;
                     Next;
                   </Button>;
@@ -383,42 +383,42 @@ export function WorkExperienceForm(): any ({;
 
                 </FormItem>)}
             />;
-            {error && (
+            {error && ('
               <Alert variant='destructive'>;
                 <AlertDescription>{error}</AlertDescription>;
-              </Alert>)}
+              </Alert>)}'
             <div className='flex justify - between pt - 2'>;
-              <Button;
-                type='button';
+              <Button;'
+                type='button';'
                 variant='outline';
-                on_click={() => {
-                  // Check condition
-if ( {) {
-  $2
+                on_click={() => {}
+                  // Check condition;
+if ( {) {}
+  $2;
 }
                     setEditingId (null);
-                    form.reset ({
-                      company_name: '',
-                      role_title: '',
+                    form.reset ({'
+                      company_name: '','
+                      role_title: '','
                       start_date: format (new Date (), 'yyyy - MM - dd'),
-                      is_current: false,
-                      description: '',
+                      is_current: false,'
+                      description: '','
                       location: '',
                     });
-                  } else {
+                  } else {}
                     on_back ();
                   }
                 }}
-              >;
+              >;'
                 {editing_id ? 'Cancel' : 'Back'}
-              </Button>;
-              <div className='flex gap - 2'>;
+              </Button>;'
+              <div className='flex gap - 2'>;'
                 <Button type='submit' disabled={is_loading}>;
-                  {is_loading && (
-                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}
+                  {is_loading && ('
+                    <Loader2 className='mr - 2 h - 4 w - 4 animate - spin' />)}'
                   {editing_id ? 'Update' : 'Add'} Experience;
                 </Button>;
-                {!editing_id && work_experiences.length > 0 && (
+                {!editing_id && work_experiences.length > 0 && ('
                   <Button type='button' on_click={on_complete}>;
                     Next;
                   </Button>)}
@@ -437,11 +437,11 @@ if ( {) {
 
 
 
-    </div>);
-}> {';
+    </div>);'
+}> {';'
   editing_id ? 'Cancel': 'Back';
 }</Button> Next </Button>);
-}</div> </div> </form> </Form> </div> </div>);
+}</div> </div> </form> </Form> </div> </div>);'"
 }'"  );
 }
-;
+;'"

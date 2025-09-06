@@ -1,187 +1,62 @@
-export const metadata = { 
-  title: 'AI Project Management Tool | Zion Tech Group',
-  description: 'Streamline your projects with AI-powered project management, automated task assignment, and intelligent resource optimization.'
-};
+import React from 'react';'
+import Link from 'next/link';
 
-export default function AIProjectManagementPage() {
-  return (
-    <section className="max-w-6xl mx-auto px-4 py-16">
-      <h1 className="text-4xl font-bold text-gray-900 mb-6">AI Project Management Tool</h1>
-      <p className="text-xl text-gray-600 mb-12">Streamline your projects with AI-powered management, automated task assignment, and intelligent resource optimization.</p>
-      
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        <FeatureCard 
-          title="AI Task Management" 
-          features={[
-            "Smart task assignment",
-            "Priority optimization",
-            "Deadline prediction",
-            "Resource allocation"
-          ]} 
-        />
-        <FeatureCard 
-          title="Team Collaboration" 
-          features={[
-            "Real-time communication",
-            "File sharing & versioning",
-            "Progress tracking",
-            "Team performance analytics"
-          ]} 
-        />
-        <FeatureCard 
-          title="Project Analytics" 
-          features={[
-            "Performance metrics",
-            "Risk assessment",
-            "Budget tracking",
-            "Timeline optimization"
-          ]} 
-        />
-      </div>
-      
-      <div className="bg-gradient-to-r from-indigo-50 to-blue-50 border border-indigo-200 rounded-xl p-8 mb-16">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Why Choose AI-Powered Project Management?</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="flex items-start">
-            <span className="text-indigo-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Increase Productivity by 40%</h3>
-              <p className="text-gray-600">AI optimizes task distribution and identifies bottlenecks automatically</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-indigo-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Reduce Project Delays</h3>
-              <p className="text-gray-600">Predictive analytics help prevent delays before they happen</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-indigo-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Better Resource Utilization</h3>
-              <p className="text-gray-600">AI ensures optimal allocation of team members and resources</p>
-            </div>
-          </div>
-          <div className="flex items-start">
-            <span className="text-indigo-500 mr-3 text-xl">✓</span>
-            <div>
-              <h3 className="font-semibold text-gray-900">Scalable Solution</h3>
-              <p className="text-gray-600">Grows with your team from 5 to 500+ members seamlessly</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-      <Pricing />
-      
-      <div className="mt-16 text-center">
-        <h2 className="text-2xl font-bold text-gray-900 mb-4">Ready to Transform Your Project Management?</h2>
-        <p className="text-gray-600 mb-6">Start with a free trial and see how AI can revolutionize your team's productivity.</p>
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <a
-            href="tel:+13024640950"
-            className="bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors"
-          >
-            Call +1 302 464 0950
-          </a>
-          <a
-            href="mailto:kleber@ziontechgroup.com"
-            className="border-2 border-indigo-600 text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-600 hover:text-white transition-colors"
-          >
-            Email Us
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function FeatureCard({ title, features }: { title: string; features: string[] }) {
-  return (
-    <div className="border border-gray-200 rounded-xl p-6 bg-white shadow-sm">
-      <h3 className="text-xl font-bold text-gray-900 mb-4">{title}</h3>
-      <ul className="space-y-2 text-gray-600">
-        {features.map(f => (
-          <li key={f} className="flex items-center">
-            <span className="text-indigo-500 mr-2">•</span> {f}
+export const metadata = {}
+      <h3 className="text-xl font-semibold text-gray-900 mb-3">{title}</h3>"
+      <p className="text-gray-600 mb-4">{description}</p>"
+      <ul className="space-y-2">
+        {benefits.map((benefit, index) => ("
+          <li key={index} className="text-sm text-gray-600 flex items-center">"
+            <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mr-2"></span>
+            {benefit}
           </li>
         ))}
       </ul>
-    </div>
+    </div>;
   );
 }
 
-function Pricing() {
-  return (
-    <div className="mt-16">
-      <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Pricing Plans</h2>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Plan 
-          name="Team" 
-          price="$99/mo" 
-          features={[
-            "Up to 10 team members",
-            "Basic AI features",
-            "Project templates",
-            "Email support"
-          ]} 
-        />
-        <Plan 
-          name="Professional" 
-          price="$299/mo" 
-          features={[
-            "Up to 50 team members",
-            "Advanced AI optimization",
-            "Custom workflows",
-            "Priority support",
-            "API integrations"
-          ]} 
-          popular={true}
-        />
-        <Plan 
-          name="Enterprise" 
-          price="$799/mo" 
-          features={[
-            "Unlimited team members",
-            "Custom AI models",
-            "White-label solution",
-            "Dedicated support",
-            "On-premise deployment"
-          ]} 
-        />
-      </div>
-    </div>
-  );
-}
 
-function Plan({ name, price, features, popular = false }: { name: string; price: string; features: string[]; popular?: boolean }) {
-  return (
-    <div className={`border rounded-xl p-6 bg-white shadow-sm ${popular ? 'border-indigo-500 ring-2 ring-indigo-200' : 'border-gray-200'}`}>
-      {popular && (
-        <div className="bg-indigo-500 text-white text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
-          Most Popular
+      {popular && ("
+        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">"
+          <span className="bg-blue-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+            Most Popular;
+          </span>
         </div>
-      )}
-      <h4 className="text-xl font-bold text-gray-900 mb-2">{name}</h4>
-      <div className="text-3xl font-bold text-indigo-600 mb-4">{price}</div>
-      <ul className="space-y-2 text-gray-600 mb-6">
-        {features.map(f => (
-          <li key={f} className="flex items-center">
-            <span className="text-green-500 mr-2">✓</span> {f}
+      )}"
+      <div className="text-center mb-6">"
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">{name}</h3>"
+        <div className="text-4xl font-bold text-blue-600 mb-2">
+          {price}"
+          <span className="text-lg text-gray-500 font-normal">/{period}</span>
+        </div>"
+        <p className="text-gray-600">{description}</p>
+      </div>"
+      <ul className="space-y-3 mb-8">
+        {features.map((feature, index) => ("
+          <li key={index} className="flex items-center">"
+            <svg className="w-5 h-5 text-green-500 mr-3" fill="currentColor" viewBox="0 0 20 20">"
+              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+            </svg>"
+            <span className="text-gray-700">{feature}</span>
           </li>
         ))}
       </ul>
-      <a 
-        href="tel:+13024640950"
-        className={`w-full py-3 px-6 rounded-lg font-semibold transition-colors text-center block ${
-          popular 
-            ? 'bg-indigo-600 text-white hover:bg-indigo-700' 
-            : 'bg-gray-100 text-gray-900 hover:bg-gray-200'
+      <a"
+        href="mailto:kleber@ziontechgroup.com?subject=AI Project Management - {name} Plan"
+        className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${}
+          popular'
+            ? 'bg-blue-600 text-white hover:bg-blue-700''
+            : 'bg-gray-900 text-white hover:bg-gray-800'`
         }`}
       >
-        Get Started
+        Get Started;
       </a>
     </div>
   );
 }
+
+
+    </div>
+  );
+}'"`

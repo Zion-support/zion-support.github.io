@@ -1,53 +1,53 @@
-import fs from 'fs';
+import fs from 'fs';'
 import path from 'path';
 
-  content: string | null
-  generatedAt: string | null
+  content: string | null;
+  generatedAt: string | null;
 }
-export default function ChangelogPage({ content, generatedAt }: Props) {
+export default function ChangelogPage({ content, generatedAt }: Props) {}
   return (
-
+;
 type Props = {;
   content: string | null;
   content: string | null,
   generated_at: string | null;
 }
 ;
-export default /**
- * ChangelogPage - Function description
+export default /**;
+ * ChangelogPage - Function description;
  */
-function ChangelogPage() {
-  return (
-    <main className='mx-auto max-w-4xl px-4 py-12'>
+function ChangelogPage() {}
+  return ('
+    <main className='mx-auto max-w-4xl px-4 py-12'>'
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>
-      {generatedAt && (
+      {generatedAt && ('
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>
       )}
-
-    <main className='mx - auto max - w-4xl px - 4 py - 12'>;
+'
+    <main className='mx - auto max - w-4xl px - 4 py - 12'>;'
       <h1 className='text - 2xl font - bold text - gray - 900'>Changelog</h1>;
-      {generated_at && (
+      {generated_at && ('
         <p className='mt - 2 text - sm text - gray - 600'>Generated: {generated_at}</p>)}
-      {content ? (
+      {content ? ('
         <pre className='mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm'>;
           {content}
-        </pre>) : (
+        </pre>) : ('
         <div className='mt - 6 rounded - xl border border - gray - 200 bg - white p - 6 text - gray - 600'>          No changelog generated yet.      {generated_at && (
         <p className="mt - 2 text - sm text - gray - 600">Generated: {generated_at}</p>)}
 
-      {content ? (
+      {content ? ("
         <pre className="mt - 6 whitespace - pre - wrap rounded - xl border border - gray - 200 bg - white p - 6 text - sm text - gray - 800 shadow - sm">;
 {content}
         </pre>
-      ) : (
+      ) : ("
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">
           No changelog generated yet.
         </div>
       )}
 
 
-export default function ChangelogPage({ content, generatedAt }: Props) {
-  return (
+export default function ChangelogPage({ content, generatedAt }: Props) {}
+  return (;
     </main>;
 
           No changelog generated yet.
@@ -56,25 +56,25 @@ export default function ChangelogPage({ content, generatedAt }: Props) {
       )}
     </main>
 export default function ChangelogPage(): any ({ content, generatedAt }: Props) {;
-  return (
-    <main className='mx-auto max-w-4xl px-4 py-12'>;
+  return ('
+    <main className='mx-auto max-w-4xl px-4 py-12'>;'
       <h1 className='text-2xl font-bold text-gray-900'>Changelog</h1>;
-      {generatedAt && (;
+      {generatedAt && (;'
         <p className='mt-2 text-sm text-gray-600'>Generated: {generatedAt}</p>;
       )}
-      {content ? (;
+      {content ? (;'
         <pre className='mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm'>;
           {content}
         </pre>;
-      ) : (;
-        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>          No changelog generated yet.      {generatedAt && (;
+      ) : (;'
+        <div className='mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600'>          No changelog generated yet.      {generatedAt && (;"
         <p className="mt-2 text-sm text-gray-600">Generated: {generatedAt}</p>;
       )}
-      {content ? (;
+      {content ? (;"
         <pre className="mt-6 whitespace-pre-wrap rounded-xl border border-gray-200 bg-white p-6 text-sm text-gray-800 shadow-sm">;
 {content}
         </pre>;
-      ) : (;
+      ) : (;"
         <div className="mt-6 rounded-xl border border-gray-200 bg-white p-6 text-gray-600">;
           No changelog generated yet.;
         </div>;
@@ -82,16 +82,11 @@ export default function ChangelogPage(): any ({ content, generatedAt }: Props) {
     </main>;
   );
 }
-  } catch {
+  } catch {}
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
-  } catch {
-
-export async function getStaticProps() {;
-  try {;
-    const file = path && path.join(process && process.cwd(), 'CHANGELOG && CHANGELOG.md');
-    const content = fs && fs.readFileSync(file, 'utf8');
-    return {;
+  } catch {}
+export async function getStaticProps() { return null; }
       props: { content, generatedAt: new Date().toISOString() },;
       revalidate: 300,;
     };
@@ -105,26 +100,26 @@ export async function getStaticProps() {;
 }
 
 
-export async /**
- * getStaticProps - Function description
+export async /**;
+ * getStaticProps - Function description;
  */
-function getStaticProps() {
-  try {
-    const file = path.join(process.cwd(), 'CHANGELOG.md');
+function getStaticProps() {}
+  try {'
+    const file = path.join(process.cwd(), 'CHANGELOG.md');'
     const content = fs.readFileSync(file, 'utf8');
-    return {
+    return {}
       props: { content, generatedAt: new Date().toISOString() }
-      revalidate: 300
+      revalidate: 300;
     }
-  } catch {
+  } catch {}
   }    return { props: { content, generatedAt: new Date().toISOString() }, revalidate: 300 }
 
-  } catch {
+  } catch {}
     return { props: { content: null, generatedAt: null }, revalidate: 300 }
 }
 }
 }
-  } catch {
-
+  } catch {}
     return { props: { content: null, generatedAt: null }, revalidate: 300 };
 
+'"

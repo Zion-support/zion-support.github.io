@@ -1,107 +1,60 @@
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState, useEffect } from "react";
-import {useParams, useNavigate} from "react-router-dom";
-import {TalentProfile} from "@/components/profile/TalentProfile";
-import {ProfileLoadingState} from "@/components/profile/ProfileLoadingState";
-import {ProfileErrorState} from "@/components/profile/ProfileErrorState";
-import {BackToDirectoryButton} from "@/components/profile/BackToDirectoryButton";
-import {useTalentProfile} from "@/hooks/useTalentProfile";
-import {HireRequestModal} from "@/components/profile/hire-request";
-import {useAuthStatus} from "@/hooks/talent";
-import {MessageTalentModal} from "@/components/messaging/MessageTalentModal";
-import {StickyAction} from "@/components/ui/sticky-action";
-import {Handshake, MessageSquare} from "lucide-react";
-import {Button} from "@/components/ui/button";
-import {useAuth} from "@/hooks/useAuth";
-import {UserProfile} from "@/types/auth";
+
+import React, { useState, useEffect } from "react";"
+import {useParams, useNavigate} from "react-router-dom";"
+import {TalentProfile} from "@/components/profile/TalentProfile";"
+import {ProfileLoadingState} from "@/components/profile/ProfileLoadingState";"
+import {ProfileErrorState} from "@/components/profile/ProfileErrorState";"
+import {BackToDirectoryButton} from "@/components/profile/BackToDirectoryButton";"
+import {useTalentProfile} from "@/hooks/useTalentProfile";"
+import {HireRequestModal} from "@/components/profile/hire-request";"
+import {useAuthStatus} from "@/hooks/talent";"
+import {MessageTalentModal} from "@/components/messaging/MessageTalentModal";"
+import {StickyAction} from "@/components/ui/sticky-action";"
+import {Handshake, MessageSquare} from "lucide-react";"
+import {Button} from "@/components/ui/button";"
+import {useAuth} from "@/hooks/useAuth";"
+import {UserProfile} from "@/types/auth";"
 import {toast} from "@/hooks/use-toast";
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function TalentProfilePage() {;
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { id } = useParams() as { id?: string };
 
-=======
-export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { id } = useParams() as { id?: string };
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
   const { isAuthenticated, user } = useAuth();
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import React, { useState, useEffect } from "react",
-import { useParams, useNavigate } from "react-router-dom",
-import { TalentProfile } from "@/components/profile/TalentProfile",
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",
-import { useTalentProfile } from "@/hooks/useTalentProfile",
-import { HireRequestModal } from "@/components/profile/hire-request",
-import { useAuthStatus } from "@/hooks/talent",
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",
-import { StickyAction } from "@/components/ui/sticky-action",
-import { Handshake, MessageSquare } from "lucide-react",
-import { Button } from "@/components/ui/button",
-import { useAuth } from "@/hooks/useAuth",
-import { UserProfile } from "@/types/auth",
+"
+import React, { useState, useEffect } from "react","
+import { useParams, useNavigate } from "react-router-dom","
+import { TalentProfile } from "@/components/profile/TalentProfile","
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState","
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState","
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton","
+import { useTalentProfile } from "@/hooks/useTalentProfile","
+import { HireRequestModal } from "@/components/profile/hire-request","
+import { useAuthStatus } from "@/hooks/talent","
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal","
+import { StickyAction } from "@/components/ui/sticky-action","
+import { Handshake, MessageSquare } from "lucide-react","
+import { Button } from "@/components/ui/button","
+import { useAuth } from "@/hooks/useAuth","
+import { UserProfile } from "@/types/auth",";
 import { toast } from "@/hooks/use-toast";
-export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
-
-
-
+export default function TalentProfilePage() {};
+  // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string }
   const navigate = useNavigate();
   const { profile, isLoading, error } = useTalentProfile(id);
   const [isHireModalOpen, setIsHireModalOpen] = useState(false);
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false);
   const { userDetails } = useAuthStatus();
-  const { isAuthenticated, user } = useAuth();
+  const { isAuthenticated, user } = useAuth();"
 import { toast } from "@/hooks/use-toast",
-export default function TalentProfilePage() {
-  // Cast to specify the expected route param type since useParams may be untyped
+export default function TalentProfilePage() {};
+  // Cast to specify the expected route param type since useParams may be untyped;
   const { id } = useParams() as { id?: string },
   const navigate = useNavigate(),
   const { profile, isLoading, error } = useTalentProfile(id),
@@ -109,80 +62,52 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
-  // Create a compatible UserProfile from UserDetails or the authenticated user
-  const userProfile: UserProfile = user ? {
-    id: user.id |''
-    displayName: user.displayName |''
-    email: user.email |'', // Ensure email is always a string
+
+  // Create a compatible UserProfile from UserDetails or the authenticated user;
+  const userProfile: UserProfile = user ? {}
+    id: user.id |'''
+    displayName: user.displayName |'''
+    email: user.email |'', // Ensure email is always a string'
     userType: user.userType |''
-    profileComplete: user.profileComplete |false
+    profileComplete: user.profileComplete |false;
     createdAt: user.createdAt |new Date().toISOString()
-    updatedAt: user.updatedAt |new Date().toISOString()
+    updatedAt: user.updatedAt |new Date().toISOString()'
     role: user.role |''
-  } : {
-    id: userDetails?.id |''
-    displayName: userDetails?.name |''
-    email: userDetails?.email |'', // Ensure email is always a string
-    userType: '', // Default empty string since userDetails doesn't have this property
-    profileComplete: false, // Default value since userDetails doesn't have this property
-    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
-    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property
-    role: '' // Default empty string since userDetails doesn't have this property
-<<<<<<< HEAD
-
-
-  },
-
-
-
-<<<<<<< HEAD
-=======
-  }
-  },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  // Handle loading error gracefully
-  useEffect(() => {
-    if (error) {
-      toast({
-        title: "Error loading profile"
-        description: "There was a problem loading this talent profile. Please try again."
+  } : {'
+    id: userDetails?.id |'''
+    displayName: userDetails?.name |'''
+    email: userDetails?.email |'', // Ensure email is always a string'
+    userType: '', // Default empty string since userDetails doesn't have this property'
+    profileComplete: false, // Default value since userDetails doesn't have this property'
+    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property'
+    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property'
+    role: '' // Default empty string since userDetails doesn't have this property;
+  // Handle loading error gracefully;
+  useEffect(() => {}
+    if (error) {}
+      toast({"
+        title: "Error loading profile""
+        description: "There was a problem loading this talent profile. Please try again.""
         variant: "destructive"})
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-    }
-  }, [error]);
-  if (isLoading) {
-    return <ProfileLoadingState />
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-import React, { useState, useEffect } from "react",;
-import { useParams, useNavigate } from "react-router-dom",;
-import { TalentProfile } from "@/components/profile/TalentProfile",;
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",;
-import { useTalentProfile } from "@/hooks/useTalentProfile",;
-import { HireRequestModal } from "@/components/profile/hire-request",;
-import { useAuthStatus } from "@/hooks/talent",;
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",;
-import { StickyAction } from "@/components/ui/sticky-action",;
-import { Handshake, MessageSquare } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { useAuth } from "@/hooks/useAuth",;
-import { UserProfile } from "@/types/auth",;
+"
+import React, { useState, useEffect } from "react",;"
+import { useParams, useNavigate } from "react-router-dom",;"
+import { TalentProfile } from "@/components/profile/TalentProfile",;"
+import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;"
+import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;"
+import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",;"
+import { useTalentProfile } from "@/hooks/useTalentProfile",;"
+import { HireRequestModal } from "@/components/profile/hire-request",;"
+import { useAuthStatus } from "@/hooks/talent",;"
+import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",;"
+import { StickyAction } from "@/components/ui/sticky-action",;"
+import { Handshake, MessageSquare } from "lucide-react",;"
+import { Button } from "@/components/ui/button",;"
+import { useAuth } from "@/hooks/useAuth",;"
+import { UserProfile } from "@/types/auth",;"
 import { toast } from "@/hooks/use-toast",;
-export default function TalentProfilePage() {;
-  // Cast to specify the expected route param type since useParams may be untyped;
+export default function TalentProfilePage() { return null; }
   const { id } = useParams() as { id?: string },;
   const navigate = useNavigate(),;
   const { profile, isLoading, error } = useTalentProfile(id),;
@@ -191,124 +116,84 @@ export default function TalentProfilePage() {;
   const { userDetails } = useAuthStatus(),;
   const { isAuthenticated, user } = useAuth(),;
   // Create a compatible UserProfile from UserDetails or the authenticated user;
-  const userProfile: UserProfile = user ? {;
-    id: user.id || '',;
-    displayName: user.displayName || '',;
-    email: user.email || '', // Ensure email is always a string;
+  const userProfile: UserProfile = user ? {;'
+    id: user.id || '',;'
+    displayName: user.displayName || '',;'
+    email: user.email || '', // Ensure email is always a string;'
     userType: user.userType || '',;
     profileComplete: user.profileComplete || false,;
     createdAt: user.createdAt || new Date().toISOString(),;
-    updatedAt: user.updatedAt || new Date().toISOString(),;
+    updatedAt: user.updatedAt || new Date().toISOString(),;'
     role: user.role || '';
-  } : {;
-    id: userDetails?.id || '',;
-    displayName: userDetails?.name || '',;
-    email: userDetails?.email || '', // Ensure email is always a string;
-    userType: '', // Default empty string since userDetails doesn't have this property;
-    profileComplete: false, // Default value since userDetails doesn't have this property;
-    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
-    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
+  } : {;'
+    id: userDetails?.id || '',;'
+    displayName: userDetails?.name || '',;'
+    email: userDetails?.email || '', // Ensure email is always a string;'
+    userType: '', // Default empty string since userDetails doesn't have this property;'
+    profileComplete: false, // Default value since userDetails doesn't have this property;'
+    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;'
+    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;'
     role: '' // Default empty string since userDetails doesn't have this property;
   },;
   // Handle loading error gracefully;
   useEffect(() => {;
     if (error) {;
-      toast({;
-        title: "Error loading profile",;
-        description: "There was a problem loading this talent profile. Please try again.",;
+      toast({;"
+        title: "Error loading profile",;"
+        description: "There was a problem loading this talent profile. Please try again.",;"
         variant: "destructive"});
     }
   }, [error]),;
   if (isLoading) {;
     return <ProfileLoadingState />;
-<<<<<<< HEAD
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   }
-  if (error |!profile) {
+  if (error |!profile) {}
     return <ProfileErrorState error={error} />
   }
-<<<<<<< HEAD
 
 
 
-
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const handleRequestHire = () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required"
-        description: "Please sign in to hire this talent."
-        variant: "default"})
+  const handleRequestHire = () => {}
+    if (!isAuthenticated) {}
+      toast({"
+        title: "Authentication required""
+        description: "Please sign in to hire this talent.""
+        variant: "default"})'
       navigate('/login', { state: { from: `/talent/${id}` } })
-      return
+      return;
     }
     setIsHireModalOpen(true)
-<<<<<<< HEAD
-
-
-  },
 
 
 
-<<<<<<< HEAD
-=======
-  }
-  },
-
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const handleMessageTalent = () => {
-    if (!isAuthenticated) {
-      toast({
-        title: "Authentication required"
-        description: "Please sign in to message this talent."
-        variant: "default"})
+  const handleMessageTalent = () => {}
+    if (!isAuthenticated) {}
+      toast({"
+        title: "Authentication required""
+        description: "Please sign in to message this talent.""
+        variant: "default"})'`
       navigate('/login', { state: { from: `/talent/${id}` } })
-      return
+      return;
     }
     setIsMessageModalOpen(true)
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-
-=======
-  }
-
-  return (
-    <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile
-        profile={profile}
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
   },
 
-  return (
+  return ("
     <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile 
+      <TalentProfile;
         profile={profile} 
-<<<<<<< HEAD
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 ;
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to hire this talent.",;
-        variant: "default"}),;
+      toast({;"
+        title: "Authentication required",;"
+        description: "Please sign in to hire this talent.",;"
+        variant: "default"}),;'`
       navigate('/login', { state: { from: `/talent/${id}` } }),;
       return;
     }
@@ -316,140 +201,70 @@ export default function TalentProfilePage() {;
   },;
   const handleMessageTalent = () => {;
     if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to message this talent.",;
-        variant: "default"}),;
+      toast({;"
+        title: "Authentication required",;"
+        description: "Please sign in to message this talent.",;"
+        variant: "default"}),;'`
       navigate('/login', { state: { from: `/talent/${id}` } });
       return;
     }
     setIsMessageModalOpen(true);
   };
-  return (;
+  return (;"
     <div className="min-h-screen bg-zion-blue pb-12">;
       <TalentProfile;
         profile={profile} ;
-<<<<<<< HEAD
 
-  },
-
-  return (
-    <div className="min-h-screen bg-zion-blue pb-12">
-      <TalentProfile 
-        profile={profile} 
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />
       <BackToDirectoryButton />
       {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>
+      <StickyAction>"
         <div className="p-2 flex gap-2">
-          <Button
-            size="sm"
+          <Button"
+            size="sm""
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
             onClick={handleRequestHire}
-          >
+          >"
             <Handshake className="mr-2 h-4 w-4" />
-            Hire Now
+            Hire Now;
           </Button>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   // Create a compatible UserProfile from UserDetails or the authenticated user;
-  const userProfile: UserProfile = user ? {;
-    id: user && user.id || '',;
-    displayName: user && user.displayName || '',;
-    email: user && user.email || '', // Ensure email is always a string;
+  const userProfile: UserProfile = user ? {;'
+    id: user && user.id || '',;'
+    displayName: user && user.displayName || '',;'
+    email: user && user.email || '', // Ensure email is always a string;'
     userType: user && user.userType || '',;
     profileComplete: user && user.profileComplete || false,;
     createdAt: user && user.createdAt || new Date().toISOString(),;
-    updatedAt: user && user.updatedAt || new Date().toISOString(),;
+    updatedAt: user && user.updatedAt || new Date().toISOString(),;'
     role: user && user.role || '';
-  } : {;
-    id: userDetails?.id || '',;
-    displayName: userDetails?.name || '',;
-    email: userDetails?.email || '', // Ensure email is always a string;
-    userType: '', // Default empty string since userDetails doesn't have this property;
-    profileComplete: false, // Default value since userDetails doesn't have this property;
-    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
-    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;
+  } : {;'
+    id: userDetails?.id || '',;'
+    displayName: userDetails?.name || '',;'
+    email: userDetails?.email || '', // Ensure email is always a string;'
+    userType: '', // Default empty string since userDetails doesn't have this property;'
+    profileComplete: false, // Default value since userDetails doesn't have this property;'
+    createdAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;'
+    updatedAt: new Date().toISOString(), // Default value since userDetails doesn't have this property;'
     role: '' // Default empty string since userDetails doesn't have this property;
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import React, { useState, useEffect } from "react",;
-import { useParams, useNavigate } from "react-router-dom",;
-import { TalentProfile } from "@/components/profile/TalentProfile",;
-import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState",;
-import { ProfileErrorState } from "@/components/profile/ProfileErrorState",;
-import { BackToDirectoryButton } from "@/components/profile/BackToDirectoryButton",;
-import { useTalentProfile } from "@/hooks/useTalentProfile",;
-import { HireRequestModal } from "@/components/profile/hire-request",;
-import { useAuthStatus } from "@/hooks/talent",;
-import { MessageTalentModal } from "@/components/messaging/MessageTalentModal",;
-import { StickyAction } from "@/components/ui/sticky-action",;
-import { Handshake, MessageSquare } from "lucide-react",;
-import { Button } from "@/components/ui/button",;
-import { useAuth } from "@/hooks/useAuth",;
-import { UserProfile } from "@/types/auth",;
-import { toast } from "@/hooks/use-toast",;
-;
-export default function TalentProfilePage() {;
-  // Cast to specify the expected route param type since useParams may be untyped;
-  const { id } = useParams() as { id?:string },;
-  const navigate = useNavigate(),;
-  const { profile, isLoading, error } = useTalentProfile(id),;
-  const [isHireModalOpen, setIsHireModalOpen] = useState(false),;
-  const [isMessageModalOpen, setIsMessageModalOpen] = useState(false),;
-  const { userDetails } = useAuthStatus(),;
-  const { isAuthenticated, user } = useAuth(),;
-;
-  // Create a compatible UserProfile from UserDetails or the authenticated user;
-  const userProfile:UserProfile = user ? {;
-    id:user.id || '',;
-    displayName:user.displayName || '',;
-    email:user.email || '', // Ensure email is always a string;
-    userType:user.userType || '',;
-    profileComplete:user.profileComplete || false,;
-    createdAt:user.createdAt || new Date().toISOString(),;
-    updatedAt:user.updatedAt || new Date().toISOString(),;
-    role:user.role || '';
-  } {;
-    id:userDetails?.id || '',;
-    displayName:userDetails?.name || '',;
-    email:userDetails?.email || '', // Ensure email is always a string;
-    userType:'', // Default empty string since userDetails doesn't have this property;
-    profileComplete:false, // Default value since userDetails doesn't have this property;
-    createdAt:new Date().toISOString(), // Default value since userDetails doesn't have this property;
-    updatedAt:new Date().toISOString(), // Default value since userDetails doesn't have this property;
-    role:'' // Default empty string since userDetails doesn't have this property;
-  },;
-;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
   // Handle loading error gracefully;
   useEffect(() => {;
     if (error) {;
       toast({;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-        title: "Error loading profile",;
-        description: "There was a problem loading this talent profile. Please try again.",;
+"
+        title: "Error loading profile",;"
+        description: "There was a problem loading this talent profile. Please try again.",;"
         variant: "destructive"});
     }
   }, [error]);
@@ -464,10 +279,10 @@ export default function TalentProfilePage() {;
 
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to hire this talent.",;
-        variant: "default"}),;
+      toast({;"
+        title: "Authentication required",;"
+        description: "Please sign in to hire this talent.",;"
+        variant: "default"}),;'`
       navigate('/login', { state: { from: `/talent/${id}` } }),;
       return;
     }
@@ -476,131 +291,71 @@ export default function TalentProfilePage() {;
 
   const handleMessageTalent = () => {;
     if (!isAuthenticated) {;
-      toast({;
-        title: "Authentication required",;
-        description: "Please sign in to message this talent.",;
-        variant: "default"}),;
+      toast({;"
+        title: "Authentication required",;"
+        description: "Please sign in to message this talent.",;"
+        variant: "default"}),;'`
       navigate('/login', { state: { from: `/talent/${id}` } }),;
       return;
     }
     setIsMessageModalOpen(true);
   };
 
-  return (
+  return ("
     <div className="min-h-screen bg-zion-blue pb-12">;
-      <TalentProfile
+      <TalentProfile;
         profile={profile} 
-<<<<<<< HEAD
-=======
-        title:"Error loading profile",;
-        description:"There was a problem loading this talent profile. Please try again.",;
-        variant:"destructive"}),;
-    }
-  }, [error]),;
-;
-  if (isLoading) {;
-    return <ProfileLoadingState />,;
-  }
-;
-  if (error || !profile) {;
-    return <ProfileErrorState error={error} />,;
-  }
-;
-  const handleRequestHire = () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title:"Authentication required",;
-        description:"Please sign in to hire this talent.",;
-        variant:"default"}),;
-      navigate('/login', { state:{ from:`/talent/${id}` } }),;
-      return,;
-    }
-    setIsHireModalOpen(true),;
-  },;
-;
-  const handleMessageTalent = () => {;
-    if (!isAuthenticated) {;
-      toast({;
-        title:"Authentication required",;
-        description:"Please sign in to message this talent.",;
-        variant:"default"}),;
-      navigate('/login', { state:{ from:`/talent/${id}` } }),;
-      return,;
-    }
-    setIsMessageModalOpen(true),;
-  },;
-;
-  return (;
-    <div className="min-h-screen bg-zion-blue pb-12">;
-      <TalentProfile ;
-        profile={profile} ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
         onRequestHire={handleRequestHire}
         onMessageTalent={handleMessageTalent}
       />;
       <BackToDirectoryButton />;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 
       {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>;
+      <StickyAction>;"
         <div className="p-2 flex gap-2">;
-          <Button
-            size="sm"
+          <Button"
+            size="sm""
             className="bg-zion-purple text-white hover:bg-zion-purple-dark"
-            onClick={handleRequestHire}>;
+            onClick={handleRequestHire}>;"
             <Handshake className="mr-2 h-4 w-4" />;
             Hire Now;
           </Button>;
-<<<<<<< HEAD
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <Button
-            size="sm"
-            variant="outline"
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-            onClick={handleMessageTalent}
-          >
-            <MessageSquare className="mr-2 h-4 w-4" />
-            Message
-          </Button>
-        </div>
-      </StickyAction>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 
-            onClick={handleMessageTalent}>;
+
+
+          <Button"
+            size="sm""
+            variant="outline""
+            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
+
+            onClick={handleMessageTalent}>;"
             <MessageSquare className="mr-2 h-4 w-4" />;
-=======
-import React, { useState, useEffect } from './react';
-import { use_params, use_navigate } from './react-router-dom';
-import { TalentProfile } from '@/components / profile / TalentProfile';
-import { ProfileLoadingState } from '@/components / profile / ProfileLoadingState';
-import { ProfileErrorState } from '@/components / profile / ProfileErrorState';
-import { BackToDirectoryButton } from '@/components / profile / BackToDirectoryButton';
-import { useTalentProfile } from '@/hooks / useTalentProfile';
-import { HireRequestModal } from '@/components / profile / hire - request';
-import { useAuthStatus } from '@/hooks / talent';
-import { MessageTalentModal } from '@/components / messaging / MessageTalentModal';
-import { StickyAction } from '@/components / ui / sticky - action';
-import { Handshake, MessageSquare } from './lucide-react';
-import { Button } from '@/components / ui / button';
-import { use_auth } from '@/hooks / use_auth';
-import { UserProfile } from '@/types / auth';
+'
+import React, { useState, useEffect } from './react';'
+import { use_params, use_navigate } from './react-router-dom';'
+import { TalentProfile } from '@/components / profile / TalentProfile';'
+import { ProfileLoadingState } from '@/components / profile / ProfileLoadingState';'
+import { ProfileErrorState } from '@/components / profile / ProfileErrorState';'
+import { BackToDirectoryButton } from '@/components / profile / BackToDirectoryButton';'
+import { useTalentProfile } from '@/hooks / useTalentProfile';'
+import { HireRequestModal } from '@/components / profile / hire - request';'
+import { useAuthStatus } from '@/hooks / talent';'
+import { MessageTalentModal } from '@/components / messaging / MessageTalentModal';'
+import { StickyAction } from '@/components / ui / sticky - action';'
+import { Handshake, MessageSquare } from './lucide-react';'
+import { Button } from '@/components / ui / button';'
+import { use_auth } from '@/hooks / use_auth';'
+import { UserProfile } from '@/types / auth';'
 import { toast } from '@/hooks / use - toast';
-export default /**
- * TalentProfilePage - Function description
+export default /**;
+ * TalentProfilePage - Function description;
  */
-function TalentProfilePage() {
+function TalentProfilePage() {}
   // Cast to specify the expected route param type since use_params may be untyped;
   const { id } = use_params () as { id?: string }
   const navigate = use_navigate ();
@@ -611,82 +366,82 @@ function TalentProfilePage() {
   const { is_authenticated, user } = use_auth ();
 ;
   // Create a compatible UserProfile from UserDetails or the authenticated user;
-  const user_profile: UserProfile = user ? {
-    id: user.id || '',
-    display_name: user.display_name || '',
-    email: user.email || '', // Ensure email is always a string;
+  const user_profile: UserProfile = user ? {'
+    id: user.id || '','
+    display_name: user.display_name || '','
+    email: user.email || '', // Ensure email is always a string;'
     user_type: user.user_type || '',
     profile_complete: user.profile_complete || false,
     created_at: user.created_at || new Date ().toISOString (),
-    updated_at: user.updated_at || new Date ().toISOString (),
+    updated_at: user.updated_at || new Date ().toISOString (),'
     role: user.role || '';
-  } : {
-    id: user_details?.id || '',
-    display_name: user_details?.name || '',
-    email: user_details?.email || '', // Ensure email is always a string;
-    user_type: '', // Default empty string since user_details doesn't have this property;
-    profile_complete: false, // Default value since user_details doesn't have this property;
-    created_at: new Date ().toISOString (), // Default value since user_details doesn't have this property;
-    updated_at: new Date ().toISOString (), // Default value since user_details doesn't have this property;
+  } : {'
+    id: user_details?.id || '','
+    display_name: user_details?.name || '','
+    email: user_details?.email || '', // Ensure email is always a string;'
+    user_type: '', // Default empty string since user_details doesn't have this property;'
+    profile_complete: false, // Default value since user_details doesn't have this property;'
+    created_at: new Date ().toISOString (), // Default value since user_details doesn't have this property;'
+    updated_at: new Date ().toISOString (), // Default value since user_details doesn't have this property;'
     role: '' // Default empty string since user_details doesn't have this property;
   }
 ;
   // Handle loading error gracefully;
-  useEffect (() => {
-    // Check condition
-if ( {) {
-  $2
+  useEffect (() => {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      toast ({
-        title: "Error loading profile",
-        description: "There was a problem loading this talent profile. Please try again.",
+      toast ({"
+        title: "Error loading profile","
+        description: "There was a problem loading this talent profile. Please try again.","
         variant: "destructive"});
     }
   }, [error]);
 ;
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return <ProfileLoadingState />;
   }
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
     return <ProfileErrorState error={error} />;
   }
-  const handleRequestHire = () =>: any {
-    // Check condition
-if ( {) {
-  $2
+  const handleRequestHire = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      toast ({
-        title: "Authentication required",
-        description: "Please sign in to hire this talent.",
-        variant: "default"}),
+      toast ({"
+        title: "Authentication required","
+        description: "Please sign in to hire this talent.","
+        variant: "default"}),'`
       navigate ('/login', { state: { from: `/talent/${id}` } }),
       return;
     }
     setIsHireModalOpen (true);
   }
 ;
-  const handleMessageTalent = () =>: any {
-    // Check condition
-if ( {) {
-  $2
+  const handleMessageTalent = () =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
-      toast ({
-        title: "Authentication required",
-        description: "Please sign in to message this talent.",
-        variant: "default"}),
+      toast ({"
+        title: "Authentication required","
+        description: "Please sign in to message this talent.","
+        variant: "default"}),'`
       navigate ('/login', { state: { from: `/talent/${id}` } }),
       return;
     }
     setIsMessageModalOpen (true);
   }
 ;
-  return (
+  return ("
     <div className="min - h-screen bg - zion - blue pb - 12">;
       <TalentProfile;
         profile={profile}
@@ -695,81 +450,40 @@ if ( {) {
       />;
       <BackToDirectoryButton />;
       {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>;
+      <StickyAction>;"
         <div className="p - 2 flex gap - 2">;
-          <Button;
-            size="sm";
+          <Button;"
+            size="sm";"
             className="bg - zion - purple text - white hover:bg - zion - purple - dark";
             on_click={handleRequestHire}
-          >;
+          >;"
             <Handshake className="mr - 2 h - 4 w - 4" />;
             Hire Now;
           </Button>;
-          <Button;
-            size="sm";
-            variant="outline";
+          <Button;"
+            size="sm";"
+            variant="outline";"
             className="border - zion - purple text - zion - purple hover:bg - zion - purple / 10";
             on_click={handleMessageTalent}
-          >;
+          >;"
             <MessageSquare className="mr - 2 h - 4 w - 4" />;
-<<<<<<< HEAD
 
-=======
-      ;
-      {/* Sticky action buttons that appear when scrolling */}
-      <StickyAction>;
-        <div className="p-2 flex gap-2">;
-          <Button ;
-            size="sm";
-            className="bg-zion-purple text-white hover:bg-zion-purple-dark";
-            onClick={handleRequestHire}
-          >;
-            <Handshake className="mr-2 h-4 w-4" />;
-            Hire Now;
-          </Button>;
-          <Button ;
-            size="sm";
-            variant="outline";
-            className="border-zion-purple text-zion-purple hover:bg-zion-purple/10";
-            onClick={handleMessageTalent}
-          >;
-            <MessageSquare className="mr-2 h-4 w-4" />;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
             Message;
           </Button>;
         </div>;
       </StickyAction>;
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-      
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-      
-      
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Request to Hire Modal */}
-      <HireRequestModal
+      <HireRequestModal;
         talent={profile}
         isOpen={isHireModalOpen}
         onClose={() => setIsHireModalOpen(false)}
         userDetails={userProfile}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-      />;
-
-
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
       {/* Request to Hire Modal */}
       <HireRequestModal;
         talent={profile}
@@ -785,16 +499,11 @@ if ( {) {
       />;
     </div>);
 }
-<<<<<<< HEAD
 
-=======
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
       />
       {/* Message Talent Modal */}
-      <MessageTalentModal
+      <MessageTalentModal;
         talent={profile}
         isOpen={isMessageModalOpen}
         onClose={() => setIsMessageModalOpen(false)}
@@ -825,40 +534,39 @@ if ( {) {
         onClose={() => setIsMessageModalOpen(false)}
       />;
     </div>;
-  ),; export default function TalentProfilePage () {
-  //Cast to specify the expected route param type since useParams may be untyped const {
-  id 
-}= useParams () as {
-  id?: string 
+  ),; export default function TalentProfilePage () {}
+  //Cast to specify the expected route param type since useParams may be untyped const {};
+  id;
+}= useParams () as {}
+  id?: string;
 };
 const navigate = useNavigate ();
-const {
-  profile, isLoading, error 
+const {}
+  profile, isLoading, error;
 }= useTalentProfile (id);
 const [isHireModalOpen, setIsHireModalOpen] = useState (false);
 const [isMessageModalOpen, setIsMessageModalOpen] = useState (false);
-const {
-  userDetails 
+const {}
+  userDetails;
 }= useAuthStatus ();
-const {
-  isAuthenticated, user 
+const {}
+  isAuthenticated, user;
 }= useAuth ();
-//Create a compatible UserProfile from UserDetails or the authenticated user const userProfile: UserProfile = user ? {
-  id: user.id || '';
-displayName: user.displayName || '';
+//Create a compatible UserProfile from UserDetails or the authenticated user const userProfile: UserProfile = user ? {'
+  id: user.id || '';'
+displayName: user.displayName || '';'
 email: user.email || '', //Ensure email is always a string userType: user.userType || '';
 profileComplete: user.profileComplete || false;
 createdAt: user.createdAt || new Date () .toISOString ();
-updatedAt: user.updatedAt || new Date () .toISOString ();
+updatedAt: user.updatedAt || new Date () .toISOString ();'
 role: user.role || '' 
-}: {
-  id: userDetails?.id || '';
-displayName: userDetails?.name || '';
-email: userDetails?.email || '', //Ensure email is always a string userType: '', //Default empty string since userDetails doesn't have this property profileComplete: false, //Default value since userDetails doesn't have this property createdAt: new Date () .toISOString (), //Default value since userDetails doesn't have this property updatedAt: new Date () .toISOString (), //Default value since userDetails doesn't have this property role: ''//Default empty string since userDetails doesn't have this property 
+}: {'
+  id: userDetails?.id || '';'
+displayName: userDetails?.name || '';'
+email: userDetails?.email || '', //Ensure email is always a string userType: '', //Default empty string since userDetails doesn't have this property profileComplete: false, //Default value since userDetails doesn't have this property createdAt: new Date () .toISOString (), //Default value since userDetails doesn't have this property updatedAt: new Date () .toISOString (), //Default value since userDetails doesn't have this property role: ''//Default empty string since userDetails doesn't have this property;
 };
-if (error) {
-  toast ({
-  
+if (error) {}
+  toast ({}
 }
 ;
 
@@ -866,41 +574,42 @@ if (error) {
 return;
 }setIsHireModalOpen (true) 
 };
-const handleMessageTalent = () => {
-  if (!isAuthenticated) {
-  toast ({
+const handleMessageTalent = () => {}
+  if (!isAuthenticated) {}
+  toast ({}
   return;
 }setIsMessageModalOpen (true) 
 };
-<TalentProfile profile= {
-  profile 
-}onRequestHire= {
-  handleRequestHire 
-}onMessageTalent= {
-  handleMessageTalent 
-}/> <BackToDirectoryButton /> {
-  /* Sticky action buttons that appear when scrolling */ 
-}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {
+<TalentProfile profile= {}
+  profile;
+}onRequestHire= {}
+  handleRequestHire;
+}onMessageTalent= {}
+  handleMessageTalent;
+}/> <BackToDirectoryButton /> {}
+  /* Sticky action buttons that appear when scrolling */ "
+}<StickyAction> <div className="p-2 flex gap-2" > <Button > <Handshake className="mr-2 h-4 w-4" /> Hire Now </Button> <Button > <MessageSquare className="mr-2 h-4 w-4" /> Message </Button> </div> </StickyAction> {}
   /* Request to Hire Modal */ 
-}<HireRequestModal talent= {
-  profile 
-}isOpen= {
-  isHireModalOpen 
-}onClose= {
+}<HireRequestModal talent= {}
+  profile;
+}isOpen= {}
+  isHireModalOpen;
+}onClose= {}
   () => setIsHireModalOpen (false) 
-}userDetails= {
-  userProfile 
-}/> {
+}userDetails= {}
+  userProfile;
+}/> {}
   /* Message Talent Modal */ 
-}<MessageTalentModal talent= {
-  profile 
-}isOpen= {
-  isMessageModalOpen 
-}onClose= {
+}<MessageTalentModal talent= {}
+  profile;
+}isOpen= {}
+  isMessageModalOpen;
+}onClose= {}
   () => setIsMessageModalOpen (false) 
 }/> </div>) 
 }
 ;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+
+
+'"`

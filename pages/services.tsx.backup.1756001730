@@ -81,7 +81,7 @@ export default function ServicesPage() {
     ...innovativeAIServices,
     ...emergingTechAdvancedServices,
     ...itInfrastructureServices
-=======
+
     ...newOperationalServices2025,
     ...realServicesQ12025,
     ...realEnterpriseServices2025,
@@ -117,7 +117,7 @@ export default function ServicesPage() {
     { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
   ];
-=======
+
 import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
@@ -142,25 +142,7 @@ import { cuttingEdgeAIServices } from '../data/2034-cutting-edge-ai-services';
 import { real2026Q2Services } from '../data/real-2026-q2-services';
 
 // Import existing service data
-<<<<<<< HEAD
-import { realMicroSaasServices } from '../data/real-micro-saas-services';
-import { innovativeAIServices } from '../data/innovative-ai-services';
-import { enterpriseITServices } from '../data/enterprise-it-services';
-import { emergingTechServices } from '../data/emerging-tech-services';
-import { newRealServices } from '../data/new-real-services';
-import { realOperationalServices } from '../data/real-operational-services';
-import { marketReadyServices } from '../data/market-ready-services';
-import { marketValidatedServices } from '../data/market-validated-services';
-import { industryRealServices } from '../data/industry-real-services';
-import { real2025Q4AdditionsBatch2 } from '../data/real-2025-q4-additions-batch2';
-=======
-import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
-import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
-import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
-import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
-import { newRealServices2026 } from '../data/2025-2026-new-real-services';
-import { additionalRealMicroSaas2026 } from '../data/2026-additional-real-micro-saas';
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
+
 
 // Helper function to get service category
 const getServiceCategory = (service: any) => {
@@ -206,26 +188,7 @@ const allServices = [
   ...enterpriseITSolutions,
   ...innovativeMicroSaasSolutions,
   ...cuttingEdgeAIServices,
-<<<<<<< HEAD
-  ...real2026Q2Services,
-  ...realMicroSaasServices,
-  ...innovativeAIServices,
-  ...enterpriseITServices,
-  ...emergingTechServices,
-  ...newRealServices,
-  ...realOperationalServices,
-  ...marketReadyServices,
-  ...marketValidatedServices,
-  ...industryRealServices,
-  ...real2025Q4AdditionsBatch2
-=======
-  ...realMicroSaasServices2025,
-  ...innovativeAIServices2025,
-  ...innovativeITServices2025,
-  ...emergingTechServices2025,
-  ...newRealServices2026,
-  ...additionalRealMicroSaas2026
->>>>>>> origin/cursor/enhance-app-with-new-services-and-futuristic-design-78c2
+
 ];
 
 const categories = [
@@ -465,7 +428,7 @@ export default function Services() {
               <Card
                 key={index}
                 className="card-hover group border-gradient-blue cursor-pointer"
-=======
+
   return (
     <div className="min-h-screen bg-black text-white">
       <Head>
@@ -627,7 +590,7 @@ export default function Services() {
 
       <EnhancedFooter />
     </>
-=======
+
       {/* Services Grid */}
       <section className="px-6 pb-20">
         <div className="max-w-7xl mx-auto">
@@ -744,7 +707,7 @@ export default function Services() {
         <div className="max-w-4xl mx-auto text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
-=======
+
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.05 }}
                 >

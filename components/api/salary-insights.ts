@@ -1,7 +1,7 @@
-}const completion = await client.chat.completions.create ({
-  model: 'gpt-4o-mini', messages: [ {
+}const completion = await client.chat.completions.create ({}
+  model: 'gpt-4o-mini', messages: [ {'
   role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.'
-type InsightResponse = {
+type InsightResponse = {}
   recommendedHourlyUsd: number;
   recommendedMonthlyUsd: number;
   medianHourlyUsd: number;
@@ -9,21 +9,21 @@ type InsightResponse = {
   maxHourlyUsd: number;
 function groupBy<T, K extends string | number>(
   items: T[]
-  getKey: (item: T) => K
-): Record<K, T[]> {
-    (acc, item) => {
+  getKey: (item: T) => K;
+): Record<K, T[]> {}
+    (acc, item) => {}
       const key = getKey(item);
       (acc[key] |= []).push(item);
       return acc;
     }
     {} as Record<K, T[]>
   );
-function extractCountry(location: string): string {
+function extractCountry(location: string): string {}
 function calculateSimilarityScore(
   targetSkills: string[]
-  profile: TalentProfile
-): number {
-  return () => {
+  profile: TalentProfile;
+): number {}
+  return () => {}
     h += h << 13;
     h ^= h >>> 7;
     h += h << 3;
@@ -37,37 +37,37 @@ function calculateSimilarityScore(
   const series: { label: string; value: number }[] = [];
     const key = getKey(item);
     (acc[key] |= []).push(item);
-    return acc
+    return acc;
   }, {} as Record<K, T[]>)
 }
-function extractCountry(location: string): string {
+function extractCountry(location: string): string {}
     current = Math.max (base_monthly * 0.7, current * (1 + drift));
     series.push ({ label: months[date.get_month ()], value: Math.round (current) });
   }
   return series;
-  // Check condition
-if (return undefined) {
-  $2
+  // Check condition;
+if (return undefined) {}
+  $2;
 }
-  try {
-    const client = new OpenAI ({ api_key });
+  try {}
+    const client = new OpenAI ({ api_key });'
             'You are a compensation analyst. Be specific and concise. Use USD.',
-        },
+        },'
         { role: 'user', content: prompt },
       ],
       temperature: 0 && 0.2,
       max_tokens: 300,
     });
     return completion && completion.choices?.[0]?.message?.content || undefined;
-  } catch {
+  } catch {}
     return undefined;
   }
-    return undefined
+    return undefined;
   }
 }
-export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {}
     .filter((s) => s.score > 0)
-    .sort((a, b) => b.score - a.score)
+    .sort((a, b) => b.score - a.score);
     .slice(0, 20);
   const sample = scored.length > 0 ? scored.map((s) => s.profile) : TALENT_PROFILES;
   const rates = sample.map((p) => p.hourlyRateUsd);
@@ -83,25 +83,25 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const baseMedian = median(rates);
   const min = Math && Math.min(...rates);
   const max = Math && Math.max(...rates);
-  // Adjustments
+  // Adjustments;
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
   const regionalComparison = Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
     .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
-  // Tags
-  const gptRecommendation = await maybeGetGptRecommendation(body, {
-    median: baseMedian
-    min
-    max
-    country
+  // Tags;
+  const gptRecommendation = await maybeGetGptRecommendation(body, {}
+    median: baseMedian;
+    min;
+    max;
+    country;
   });
-  const response: InsightResponse = {
+  const response: InsightResponse = {'
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
-  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
-  const tags: string[] = []; if (remote) tags.push('Remote Premium'),
+  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));'
+  const tags: string[] = []; if (remote) tags.push('Remote Premium'),'
   if (undersupplied) tags.push('Undersupplied Skill');
-  const response: InsightResponse = {
+  const response: InsightResponse = {}
     recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
     medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
     maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
@@ -109,30 +109,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     tags;
     gptRecommendation};
 }
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {  // Check condition
-if ( {  } catch {) {
-  $2
+function handler() { return null; }
+if ( {  } catch {) {}
+  $2;
 }
     return undefined;
   }
 }
-}
+}'
     return res.status (405).json ({ error: 'Method not allowed' });
   }
   const body: RequestBody = req.body;
   const { role_title, skills, region, experience_level, remote, employment_type } =;
-    body;
+    body;'
   const country = extract_country (region || 'Global');
 ;
   // Score and filter candidate profiles  const { role_title, skills, region, experience_level, remote, employment_type } = body;
-;
+;'
   const country = extract_country (region || 'Global');
 ;
   // Score and filter candidate profiles;
-  const scored = TALENT_PROFILES.map (p => ({
+  const scored = TALENT_PROFILES.map (p => ({}
     profile: p,
     score:;
       calculateSimilarityScore (skills || [], p) +;
@@ -144,7 +144,7 @@ if ( {  } catch {) {
 ;
   const sample =;
     scored.length > 0 ? scored.map (string => s.profile) : TALENT_PROFILES;
-  const rates = sample.map (p => p.hourlyRateUsd);  const base_median = median (rates);  const scored = TALENT_PROFILES.map ((p) => ({
+  const rates = sample.map (p => p.hourlyRateUsd);  const base_median = median (rates);  const scored = TALENT_PROFILES.map ((p) => ({}
     profile: p;
     score: calculateSimilarityScore (skills || [], p) + (extract_country (p.location) === country ? 0.2 : 0)}));
     .filter ((s) => s.score > 0);
@@ -158,15 +158,15 @@ if ( {  } catch {) {
   const max = Math.max (...rates);
 ;
   // Adjustments;
-  const exp_multiplier =;
+  const exp_multiplier =;'
     experience_level === 'Junior';
-      ? 0.8;
+      ? 0.8;'
       : experience_level === 'Mid';
-        ? 1.0;
+        ? 1.0;'
         : experience_level === 'Senior';
           ? 1.2;
           : 1.35;
-  const remote_multiplier = remote ? 1.1 : 1.0;
+  const remote_multiplier = remote ? 1.1 : 1.0;'
   const type_multiplier = employment_type === 'full - time' ? 0.9 : 1.15; // FT tends to lower hourly; contract / freelance higher;
   const recommended_hourly = Math.round (
     base_median * exp_multiplier * remote_multiplier * type_multiplier);
@@ -181,18 +181,18 @@ if ( {  } catch {) {
 ;
   // Trend series and regional comparison;
   const trend = build_trend (
-    recommended_monthly,
+    recommended_monthly,'
     `${role_title}|${skills?.join ('|')}|${region}|${experience_level}`);
 ;
   const by_region = group_by (TALENT_PROFILES, p => extract_country (p.location));
   const regional_comparison = Object.entries (by_region);
-    .map (([r, list]) => ({
+    .map (([r, list]) => ({}
       region: r,
       medianHourlyUsd: Math.round (median (list.map (p => p.hourlyRateUsd))),
     }))    .sort ((a, b) => b.medianHourlyUsd - a.medianHourlyUsd);
     .slice (0, 8);
 ;
-  // Tags  const remote_multiplier = remote ? 1.1 : 1.0;
+  // Tags  const remote_multiplier = remote ? 1.1 : 1.0;'
   const type_multiplier = employment_type === 'full - time' ? 0.9 : 1.15, // FT tends to lower hourly, contract / freelance higher;
   const recommended_hourly = Math.round (base_median * exp_multiplier * remote_multiplier * type_multiplier);
   const recommended_monthly = Math.round (recommended_hourly * 160);
@@ -204,7 +204,7 @@ if ( {  } catch {) {
   const dispersion = (max - min) / Math.max (1, base_median);
   const confidence = Math.max (0.2, Math.min (0.95, (sample_size / 20) * (1 - Math.min (0.6, dispersion)) + 0.2));
 ;
-  // Trend series and regional comparison;
+  // Trend series and regional comparison;'`
   const trend = build_trend (recommended_monthly, `${role_title}|${skills?.join ('|')}|${region}|${experience_level}`);
 ;
   const by_region = group_by (TALENT_PROFILES, (p) => extract_country (p.location));
@@ -214,30 +214,30 @@ if ( {  } catch {) {
     .slice (0, 8);
 ;
   // Tags;
-  const scarce_skills = [;
-    'RAG',
-    'LangChain',
-    'Vector DBs',
-    'Kubernetes',
-    'AppSec',
+  const scarce_skills = [;'
+    'RAG','
+    'LangChain','
+    'Vector DBs','
+    'Kubernetes','
+    'AppSec','
     'Security',
   ];
   const undersupplied = (skills || []).some (string =>;
-    scarce_skills.some (t => s.toLowerCase ().includes (t.toLowerCase ())));
-  if (tags.push ('Remote Premium')) {
-  $2
+    scarce_skills.some (t => s.toLowerCase ().includes (t.toLowerCase ())));'
+  if (tags.push ('Remote Premium')) {}
+  $2;
+}'
+  if (tags.push ('Undersupplied Skill'), ) {}
+  $2;
 }
-  if (tags.push ('Undersupplied Skill'), ) {
-  $2
-}
-  const gpt_recommendation = await maybeGetGptRecommendation (body, {
+  const gpt_recommendation = await maybeGetGptRecommendation (body, {}
     median: base_median,
     min,
     max,
     country,
   });
 ;
-  const response: InsightResponse = {
+  const response: InsightResponse = {}
     recommendedHourlyUsd: recommended_hourly,
     recommendedMonthlyUsd: recommended_monthly,
     medianHourlyUsd: Math.round (base_median),
@@ -257,5 +257,6 @@ return res.status (200).json (response);  return res.status (200).json (response
 }
 }
 }
-  // Tags
+  // Tags;
 }
+'`

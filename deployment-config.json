@@ -14,14 +14,7 @@
   },
   "monitoring": {
     "enabled": true,
-    "metrics": [
-      "performance",
-      "errors",
-      "uptime"
-    ],
-    "alerts": [
-      "error_rate",
-      "response_time"
-    ]
+    "metrics": ["performance", "errors", "uptime"],
+    "alerts": ["error_rate", "response_time"]
   }
 }

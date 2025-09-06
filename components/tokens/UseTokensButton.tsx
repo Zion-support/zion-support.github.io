@@ -1,18 +1,18 @@
-  serviceId
-  defaultType
-}: {
+  serviceId;
+  defaultType;
+}: {}
   serviceId?: string;
   defaultType?: RedemptionType;
   const [open, setOpen] = useState(false);
   return (
     <>;
-      <button
+      <button;
         onClick={() => setOpen(true)}
         className="enhanced-button enhanced-button-primary";
       >;
         Use Tokens;
       </button>;
-      <UseTokensModal
+      <UseTokensModal;
         isOpen={open}
         onClose={() => setOpen(false)}
         serviceId={serviceId}
@@ -21,13 +21,13 @@
   const [open, setOpen] = useState(false);
   return (
     <>;
-      <button
-        onClick={() => setOpen(true)}
+      <button;
+        onClick={() => setOpen(true)}"
         className="enhanced-button enhanced-button-primary";
       >;
         Use Tokens;
       </button>;
-      <UseTokensModal
+      <UseTokensModal;
         isOpen={open}
         onClose={() => setOpen(false)}
         serviceId={serviceId}
@@ -38,7 +38,7 @@
   );
   const [open, setOpen] = useState(false);
   return (
-      <UseTokensModal
+      <UseTokensModal;
         isOpen={open}
         onClose={() => setOpen(false)}
         serviceId={serviceId}
@@ -50,7 +50,7 @@
   return (
     <>;
       <button;
-        on_click={() => set_open (true)}
+        on_click={() => set_open (true)}"
         className="enhanced - button enhanced - button - primary";
       >;
         Use Tokens;
@@ -66,7 +66,7 @@
   return (
     <>;
       <button;
-        on_click={() => set_open (true)}
+        on_click={() => set_open (true)}"
         className="enhanced - button enhanced - button - primary";
       >;
         Use Tokens;
@@ -78,3 +78,4 @@
         default_type={default_type}
       />;
     </>);
+"

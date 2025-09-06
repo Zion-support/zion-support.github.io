@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react';'
 import { motion } from 'framer-motion';
 
-interface ModernCardProps {
+interface ModernCardProps {}
   children: React.ReactNode;
   className?: string;
   hover?: boolean;
@@ -9,22 +9,22 @@ interface ModernCardProps {
   onClick?: () => void;
 }
 
-const ModernCard: React.FC<ModernCardProps> = ({
-  children,
+const ModernCard: React.FC<ModernCardProps> = ({}
+  children,'
   className = '',
-  hover = true,
+  hover = true,'
   gradient = 'from-blue-500/10 to-purple-500/10',
-  onClick
-}) => {
+  onClick;
+}) => {}
   return (
-    <motion.div
+    <motion.div;
       className={`
-        bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6
-        ${gradient ? `bg-gradient-to-br ${gradient}` : ''}
-        ${hover ? 'hover:bg-white/10 hover:border-white/20' : ''}
+        bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6'`
+        ${gradient ? `bg-gradient-to-br ${gradient}` : ''}'
+        ${hover ? 'hover:bg-white/10 hover:border-white/20' : ''}'
         ${onClick ? 'cursor-pointer' : ''}
-        transition-all duration-300
-        ${className}
+        transition-all duration-300;
+        ${className}`
       `}
       whileHover={hover ? { scale: 1.02, y: -2 } : {}}
       whileTap={onClick ? { scale: 0.98 } : {}}
@@ -38,4 +38,4 @@ const ModernCard: React.FC<ModernCardProps> = ({
   );
 };
 
-export default ModernCard;
+export default ModernCard;'`

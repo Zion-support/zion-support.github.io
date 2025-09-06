@@ -1,4 +1,4 @@
-export type SkeletonProps = {
+export type SkeletonProps = {};
   className?: string;
 }
 export type SkeletonProps = {;
@@ -11,80 +11,81 @@ export type SkeletonProps = {;
   class_name?: string;
 }
 ;
-export default /**
- * Skeleton - Function description
+export default /**;
+ * Skeleton - Function description;
  */
-function Skeleton() {
+function Skeleton() {}
     >;
-      <div className='absolute inset - 0 -translate - x-full animate-[shimmer_1.2s_infinite] bg - gradient - to - r from - transparent via - white / 40 dark:via - white / 10 to - transparent' />;
+      <div className='absolute inset - 0 -translate - x-full animate-[shimmer_1.2s_infinite] bg - gradient - to - r from - transparent via - white / 40 dark:via - white / 10 to - transparent' />;`
       <style jsx global>{`;
-        @keyframes shimmer {
-          100% {
+        @keyframes shimmer {}
+          100% {}
             transform: translate_x (100%);
-          }        }
+          }        }`
       `}</style>;
     </div>);
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
 }
 export type SkeletonProps = {;
   className?: string;
 }
 
 
-export const Skeleton: React.FC<SkeletonProps> = ({ ",;
+export const Skeleton: React.FC<SkeletonProps> = ({ ",;"
   className = ",;
   width,;
   height,;
   rounded = false}) => {;
-  const style: React && React.CSSProperties = {}
-export const Skeleton: React.FC<SkeletonProps> = ({ "
-  className = "
-  width
-  height
-  rounded = false}) => {
+  const style: React && React.CSSProperties = {}"
+export const Skeleton: React.FC<SkeletonProps> = ({ ""
+  className = ";
+  width;
+  height;
+  rounded = false}) => {}
   const style: React.CSSProperties = {}
-
-  ";
-  if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;
+"
+  ";"
+  if (width) style && style.width = typeof width === "number" ? "${width}px" : width,;"
 if (height) style && style.height = typeof height === "number" ? "${height}px" : height,;
-
-return (";
-    <divclassName="{"animate-pulse" bg-gray-200 ${rounded ? "rounded-full" : "rounded"} ${className}"}"
+"
+return (";"
+    <divclassName="{"animate-pulse" bg-gray-200 ${rounded ? "rounded-full" : "rounded"} ${className}"}""
       style="{style}">;
    />;
   );
-}
-export const CardSkeleton: React.FC = () => (";
-    <Skeleton height="{20}" className="mb-4"  />";
-    <Skeleton height="{16}" className="mb-2"  />";
+}"
+export const CardSkeleton: React.FC = () => (";"
+    <Skeleton height="{20}" className="mb-4"  />";"
+    <Skeleton height="{16}" className="mb-2"  />";"
     <Skeleton height="{16}" width="60%"  />;
   </div>;
 );
-}
-export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";
-  <div className="space-y-2">;
-    {Array && Array.from({ length: lines }).map((_, i) => (";
-      <Skeletonkey="{i}" "
-        height="{16}" 
+}"
+export const TextSkeleton: React.FC<{ lines?: number }> = ({ lines = 3 }) => (";"
+  <div className="space-y-2">;"
+    {Array && Array.from({ length: lines }).map((_, i) => (";"
+      <Skeletonkey="{i}" ""
+        height="{16}" "
         width="{i" === lines - 1 ? "60%" : "100%"}
             />;
-    ))}
+    ))}'"
   </div>"';
 );
 }
 ;
     </div>
   );
-
+`
       `}</style>
 
 
+'"`

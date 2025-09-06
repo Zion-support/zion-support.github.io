@@ -1,50 +1,15 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
-  }
-
-=======
-import Document, { Html, Head, Main, NextScript } from 'next/document';
-
-export default class MyDocument extends Document {
->>>>>>> origin/cursor/create-and-automate-service-index-page-b746
   render() {
     return (
       <Html lang="en">
         <Head />
         <body>
-=======
+
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-<<<<<<< HEAD
-export default class MyDocument extends Document {
-  render() {
-    return (
-      <Html lang="en" className="h-full">
-        <Head />
-        <body className="min-h-full bg-white dark:bg-black">
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
-          <Main />
-          <NextScript />
-        </body>
-      </Html>
-    );
-  }
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
 
-export default MyDocument;
-=======
-}
->>>>>>> origin/cursor/create-and-automate-service-index-page-b746
-=======
-=======
+
+
 export default class ZionDocument extends Document {
 	render() {
 		return (
@@ -66,6 +31,6 @@ export default class ZionDocument extends Document {
 			</Html>
 		);
 	}
->>>>>>> origin/cursor/enhance-and-automate-web-app-with-ai-ae0d
+
 }
->>>>>>> 5fe4d4a516412daaecc6e2e3437df4b5fdac83d3
+

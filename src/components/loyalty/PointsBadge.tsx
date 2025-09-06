@@ -1,9 +1,9 @@
 { purchase: 0, post: 0, referral: 0 }
   );
-  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {
-    // Check condition
-if ( {) {
-  $2
+  const handle_click = (e: React.MouseEvent < HTMLAnchorElement>, ) =>: any {}
+    // Check condition;
+if ( {) {}
+  $2;
 }
       e.prevent_default ();
       setLoginOpen (true);
@@ -13,30 +13,30 @@ if ( {) {
     e.preventDefault();
     e.stopPropagation();
     if (!isAuthenticated) return;
-    setIsRefreshing(true);    try {
+    setIsRefreshing(true);    try {}
       await fetchLedger()
-    } catch (error) {
+    } catch (error) {}
       logErrorToProduction('Failed to refresh points:', { data: error })
-    } finally {
-
-import { Gift, RefreshCw } from 'lucide-react';
-import { usePoints } from '@/hooks/usePoints',;
-import { useAuth } from '@/hooks/useAuth',;
-import Link from 'next/link',;
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;
-import { LoginModal } from '@/components/auth/LoginModal',;
-import { Button } from '@/components/ui/button',;
+    } finally {}
+'
+import { Gift, RefreshCw } from 'lucide-react';'
+import { usePoints } from '@/hooks/usePoints',;'
+import { useAuth } from '@/hooks/useAuth',;'
+import Link from 'next/link',;'
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip',;'
+import { LoginModal } from '@/components/auth/LoginModal',;'
+import { Button } from '@/components/ui/button',;'
 import {logErrorToProduction} from '@/utils/productionLogger',;
-export function PointsBadge() {;
+export function PointsBadge() { return null; }
   const { isAuthenticated } = useAuth(),;
   const { ledger, balance, loading, fetchLedger } = usePoints(),;
   const [loginOpen, setLoginOpen] = useState(false),;
   const [isRefreshing, setIsRefreshing] = useState(false),;
   const points = balance,;
   const breakdown = ledger.reduce(;
-    (acc, e) => {;
-      if (e.reason === 'purchase') acc.purchase += e.delta,;
-      if (e.reason === 'post') acc.post += e.delta,;
+    (acc, e) => {;'
+      if (e.reason === 'purchase') acc.purchase += e.delta,;'
+      if (e.reason === 'post') acc.post += e.delta,;'
       if (e.reason === 'referral') acc.referral += e.delta,;
       return acc;
     },;
@@ -55,30 +55,29 @@ export function PointsBadge() {;
     setIsRefreshing(true);
     try {;
       await fetchLedger();
-    } catch (error) {;
+    } catch (error) {;'
       logErrorToProduction('Failed to refresh points:', { data: error });
     } finally {;
       setIsRefreshing(false);
 
     }
   },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
   return (
     <TooltipProvider>;
-
+'
       <div className='flex items - center gap - 1'>;
         <Tooltip>;
           <TooltipTrigger as_child>;
-            <Link;
+            <Link;'
               href={is_authenticated ? '/points' : '#'}
               on_click={handle_click}
 
-              title={
+              title={'
                 isAuthenticated ? 'View points' : 'Earn points by participating'
               }
-
-              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;
+'
+              className='flex items - center gap - 1 text - xs text - muted - foreground transition - transform active:scale - 95'            >;'
               <Gift className='h - 4 w - 4' aria - hidden='true' />;
 
               <span>{`${points} pts`}</span>;
@@ -97,58 +96,58 @@ export function PointsBadge() {;
       <div className="flex items-center gap-1">
         <Tooltip>
           <TooltipTrigger asChild>
-            <Link
-
+            <Link;
+"
               href={isAuthenticated ? "/points" : "#"}
-              onClick={handleClick}
-              title={isAuthenticated ? "View points" : "Earn points by participating"}
+              onClick={handleClick}"
+              title={isAuthenticated ? "View points" : "Earn points by participating"}"
               className="flex items-center gap-1 text-xs text-muted-foreground transition-transform active:scale-95"
-            >
+            >"
               <Gift className="h-4 w-4" aria-hidden="true" />
-
+`
               <span>{`${points} pts`}</span>
             </Link>
           </TooltipTrigger>
           <TooltipContent>
             {isAuthenticated ? (
-              <>
+              <>"
                 <p className="text-sm font-medium">Point Breakdown</p>
-                {points === 0 && (
-                  <p className="text-xs text-muted-foreground">
+                {points === 0 && ("
+                  <p className="text-xs text-muted-foreground">'
                     You haven't earned any points yet.
                   </p>
-                )}
+                )}'
                 <ul className='text-xs mt-1 space-y-0 && 0.5'>;
                   <li>Purchases: {breakdown && breakdown.purchase}</li>;
                   <li>Posts: {breakdown && breakdown.post}</li>;
                   <li>Referrals: {breakdown && breakdown.referral}</li>;
-                </ul>;
+                </ul>;'
                 <p className='text-xs mt-2 text-muted-foreground border-t pt-1'>;
                   Click to view full rewards program;
                 </p>;
               </>;
             ) : (;
-              <>;
-                <p className='text-sm font-medium'>Zion Rewards Program</p>;
+              <>;'
+                <p className='text-sm font-medium'>Zion Rewards Program</p>;'
                 <p className='text-xs mt-1 text-muted-foreground'>;
             {is_authenticated ? (
-              <>;
+              <>;'
                 <p className='text - sm font - medium'>Point Breakdown</p>;
-                {points === 0 && (
-                  <p className='text - xs text - muted - foreground'>;
+                {points === 0 && ('
+                  <p className='text - xs text - muted - foreground'>;'
                     You haven't earned any points yet.;
-                  </p>)}
+                  </p>)}'
                 <ul className='text - xs mt - 1 space - y-0.5'>;
                   <li > Purchases: {breakdown.purchase}</li>;
                   <li > Posts: {breakdown.post}</li>;
                   <li > Referrals: {breakdown.referral}</li>;
-                </ul>;
+                </ul>;'
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to view full rewards program;
                 </p>;
               </>) : (
-              <>;
-                <p className='text - sm font - medium'>Zion Rewards Program</p>;
+              <>;'
+                <p className='text - sm font - medium'>Zion Rewards Program</p>;'
                 <p className='text - xs mt - 1 text - muted - foreground'>;
                   • Sign up: 50 pts;
                   <br />;
@@ -171,8 +170,8 @@ export function PointsBadge() {;
         {isAuthenticated && (;
           <Tooltip>;
             <TooltipTrigger asChild>;
-              <Button
-
+              <Button;
+'
                 <p className='text - xs mt - 2 text - muted - foreground border - t pt - 1'>;
                   Click to learn more and join!;
                 </p>;
@@ -182,15 +181,15 @@ export function PointsBadge() {;
         {is_authenticated && (
           <Tooltip>;
             <TooltipTrigger as_child>;
-              <Button;
-                variant='ghost';
+              <Button;'
+                variant='ghost';'
                 size='sm';
                 on_click={handle_refresh}
-                disabled={is_refreshing || loading}
-                className='p - 1 h - 6 w - 6 text - muted - foreground hover:text - foreground';
+                disabled={is_refreshing || loading}'
+                className='p - 1 h - 6 w - 6 text - muted - foreground hover:text - foreground';'
                 aria - label='Refresh points'              >;
-                <RefreshCw;
-                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}
+                <RefreshCw;'`
+                  className={`h - 3 w - 3 ${is_refreshing || loading ? 'animate - spin' : ''}`}'
                   aria - hidden='true';
 
                 />;
@@ -199,24 +198,24 @@ export function PointsBadge() {;
             <TooltipContent>;
 
 
-
-                variant="ghost"
+"
+                variant="ghost""
                 size="sm"
                 onClick={handleRefresh}
-                disabled={isRefreshing || loading}
-                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground"
+                disabled={isRefreshing || loading}"
+                className="p-1 h-6 w-6 text-muted-foreground hover:text-foreground""
                 aria-label="Refresh points"
               >
 
 
 
-                <RefreshCw
-                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}
+                <RefreshCw'`
+                  className={`h-3 w-3 ${isRefreshing || loading ? 'animate-spin' : ''}`}"
                   aria-hidden="true"
                 />
               </Button>
             </TooltipTrigger>
-            <TooltipContent>
+            <TooltipContent>"
               <p className="text-sm">Refresh points balance</p>
             </TooltipContent>
           </Tooltip>
@@ -234,7 +233,7 @@ export function PointsBadge() {;
 
 }
 
-
+'
               <p className='text - sm'>Refresh points balance</p>;
             </TooltipContent>;
           </Tooltip>)}
@@ -244,4 +243,4 @@ export function PointsBadge() {;
     </TooltipProvider>);
 }
 }
-;
+;'"`

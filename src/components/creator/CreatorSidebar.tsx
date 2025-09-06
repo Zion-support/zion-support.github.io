@@ -1,44 +1,43 @@
-} from 'lucide-react'; import {
-
+} from 'lucide-react'; import {};
 } from "@/components/ui/sidebar";
 
 
-export function AppSidebar() {
+export function AppSidebar() {}
   return (
     <Sidebar>
       <SidebarContent>
-
-        <SidebarGroup title="Dashboard">
+"
+        <SidebarGroup title="Dashboard">"
           <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
             <span>Home</span>
 
-          </SidebarMenuItem>
+          </SidebarMenuItem>"
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
-          </SidebarMenuItem>
+          </SidebarMenuItem>"
           <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>
             <span>Notifications</span>
           </SidebarMenuItem>
-        </SidebarGroup>
-        <SidebarGroup title="Content">
+        </SidebarGroup>"
+        <SidebarGroup title="Content">"
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>
             <span>My Content</span>
-          </SidebarMenuItem>
+          </SidebarMenuItem>"
           <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>
             <span>Analytics</span>
           </SidebarMenuItem>
-        </SidebarGroup>
-        <SidebarGroup title="Settings">
+        </SidebarGroup>"
+        <SidebarGroup title="Settings">"
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>
             <span>Profile</span>
-          </SidebarMenuItem>
+          </SidebarMenuItem>"
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>
             <span>Settings</span>
           </SidebarMenuItem>
         </SidebarGroup>
       </SidebarContent>
 
-
+;
 import {;
   Bell,;
   FileText,;
@@ -46,7 +45,7 @@ import {;
   Mail,;
   Search,;
   Settings,;
-  Users,;
+  Users,;'
 } from 'lucide-react';import {;
   Sidebar,;
   SidebarContent,;
@@ -55,9 +54,9 @@ import {;
   // SidebarMenu, // Removed;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
-  // SidebarGroupContent, // Not needed;
+  // SidebarGroupContent, // Not needed;'
 } from '@/components/ui/sidebar';
-  // SidebarGroupContent, // Not needed;
+  // SidebarGroupContent, // Not needed;"
 } from "@/components/ui/sidebar";
 import {;
   Sidebar;
@@ -67,69 +66,65 @@ import {;
   // SidebarMenu, // Removed;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
-  // SidebarGroupContent, // Not needed;
+  // SidebarGroupContent, // Not needed;"
 } from "@/components/ui/sidebar";
 
-export function AppSidebar() {;
-  return (
-    <Sidebar>;
-      <SidebarContent>;
-        <SidebarGroup title='Dashboard'>;
+export function AppSidebar() { return null; }
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>;
             <span>Home</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>;
             <span>Messages</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>;
             <span>Notifications</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-
-        <SidebarGroup title='Content'>;
+'
+        <SidebarGroup title='Content'>;'
           <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>;
             <span>My Content</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>;
             <span>Analytics</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-
-        <SidebarGroup title='Settings'>;
+'
+        <SidebarGroup title='Settings'>;'
           <SidebarMenuItem href='/profile' icon={<Users size={16} />}>;
             <span>Profile</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
             <span>Messages</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>;
             <span>Notifications</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-
-        <SidebarGroup title="Content">;
+"
+        <SidebarGroup title="Content">;"
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
             <span>My Content</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>;
             <span>Analytics</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
-
-        <SidebarGroup title="Settings">;
+"
+        <SidebarGroup title="Settings">;"
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
             <span>Profile</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>;
             <span>Settings</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
-
+'
 import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-react'
-
+;
     </Sidebar>;
   );
 }
@@ -142,9 +137,9 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
   // SidebarMenu, // Removed;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
-  // SidebarGroupContent, // Not needed;
+  // SidebarGroupContent, // Not needed;'
 } from '@/components / ui / sidebar';
-  // SidebarGroupContent, // Not needed;
+  // SidebarGroupContent, // Not needed;"
 } from "@/components / ui / sidebar";
   Sidebar;
   SidebarContent;
@@ -153,63 +148,63 @@ import { Bell, FileText, Home, Mail, Search, Settings, Users } from 'lucide-reac
   // SidebarMenu, // Removed;
   // SidebarMenuButton, // Removed;
   // SidebarGroupLabel, // Not needed;
-  // SidebarGroupContent, // Not needed;
+  // SidebarGroupContent, // Not needed;"
 } from "@/components / ui / sidebar";
-export /**
- * AppSidebar - Function description
+export /**;
+ * AppSidebar - Function description;
  */
-function AppSidebar() {
+function AppSidebar() {}
   return (
     <Sidebar>;
-      <SidebarContent>;
-        <SidebarGroup title='Dashboard'>;
+      <SidebarContent>;'
+        <SidebarGroup title='Dashboard'>;'
           <SidebarMenuItem href='/creator - dashboard' icon={<Home size={16} />}>;
             <span > Home</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/messaging' icon={<Mail size={16} />}>;
             <span > Messages</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/notifications' icon={<Bell size={16} />}>;
             <span > Notifications</span>;
           </SidebarMenuItem>;
-        </SidebarGroup>;
-        <SidebarGroup title='Content'>;
+        </SidebarGroup>;'
+        <SidebarGroup title='Content'>;'
           <SidebarMenuItem href='/publish' icon={<FileText size={16} />}>;
             <span > My Content</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/analytics' icon={<Search size={16} />}>;
             <span > Analytics</span>;
           </SidebarMenuItem>;
-        </SidebarGroup>;
-        <SidebarGroup title='Settings'>;
+        </SidebarGroup>;'
+        <SidebarGroup title='Settings'>;'
           <SidebarMenuItem href='/profile' icon={<Users size={16} />}>;
             <span > Profile</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;'
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span > Settings</span>            <span > Home</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>;
             <span > Messages</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/notifications" icon={<Bell size={16} />}>;
             <span > Notifications</span>;
           </SidebarMenuItem>;
-        </SidebarGroup>;
-        <SidebarGroup title="Content">;
+        </SidebarGroup>;"
+        <SidebarGroup title="Content">;"
           <SidebarMenuItem href="/publish" icon={<FileText size={16} />}>;
             <span > My Content</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/analytics" icon={<Search size={16} />}>;
             <span > Analytics</span>;
           </SidebarMenuItem>;
-        </SidebarGroup>;
-        <SidebarGroup title="Settings">;
+        </SidebarGroup>;"
+        <SidebarGroup title="Settings">;"
           <SidebarMenuItem href="/profile" icon={<Users size={16} />}>;
             <span > Profile</span>;
-          </SidebarMenuItem>;
+          </SidebarMenuItem>;"
           <SidebarMenuItem href="/settings" icon={<Settings size={16} />}>;
             <span > Settings</span>;
           </SidebarMenuItem>;
         </SidebarGroup>;
       </SidebarContent>;
     </Sidebar>);
-}
+}'"

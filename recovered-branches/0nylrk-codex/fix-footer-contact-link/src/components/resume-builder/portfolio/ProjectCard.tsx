@@ -1,74 +1,8 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState  } from './react';
-import { Card, CardContent, CardFooter  } from '@/components / ui / card';
-import { Button  } from '@/components / ui / button';
-import { Badge  } from '@/components / ui / badge';
-import {
-  AlertDialog,
-  AlertDialogAction,
-  AlertDialogCancel,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogFooter,
-  AlertDialogHeader,
-  AlertDialogTitle,
-} from '@/components / ui / alert - dialog';
-import { Edit, Trash2, Github, Link, FileText  } from './lucide-react';
-import { PortfolioProject  } from '@/types / resume';
-interface ProjectCardProps {
-  project: PortfolioProject;
-  on_edit: (project: PortfolioProject) => void;
-  on_delete: (project_id: string) => void;
-}
-export /**
- * ProjectCard - Function description
- */
-function ProjectCard() {
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState (false);
-;
-  const handle_delete = () =>: any {
-    // Check condition
-if ( {) {
-  $2
-}
-      on_delete (project.id);
-    }
-    setDeleteDialogOpen (false);
-  }
-;
-
-  return (
-    <Card className="h - full flex flex - col">;
-      <div className="relative h - 48 overflow - hidden rounded - t-lg bg - muted">;
-        {project.image_url ? (
-          <img;
-            src={project.image_url}
-            alt={project.title}
-import {useState} from 'react';
-import {Card, CardContent, CardFooter} from '@/components/ui/card';
-import {Button} from '@/components/ui/button';
-import {Badge} from '@/components/ui/badge';
-import {AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle} from '@/components/ui/alert-dialog';
-import {Edit, Trash2, Github, Link, FileText} from 'lucide-react';
-import {PortfolioProject} from '@/types/resume';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-
-=======
-=======
-import { useState } from "react";
-import { Card, CardContent, CardFooter } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { useState } from "react";"
+import { Card, CardContent, CardFooter } from "@/components/ui/card";"
+import { Button } from "@/components/ui/button";"
 import { Badge } from "@/components/ui/badge";
-import {
+import {}
   AlertDialog,
   AlertDialogAction,
   AlertDialogCancel,
@@ -76,108 +10,51 @@ import {
   AlertDialogDescription,
   AlertDialogFooter,
   AlertDialogHeader,
-  AlertDialogTitle,
-} from "@/components/ui/alert-dialog";
-import { Edit, Trash2, Github, Link, FileText } from "lucide-react";
+  AlertDialogTitle,";
+} from "@/components/ui/alert-dialog";"
+import { Edit, Trash2, Github, Link, FileText } from "lucide-react";"
 import { PortfolioProject } from "@/types/resume";
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-interface ProjectCardProps {
+interface ProjectCardProps {}
   project: PortfolioProject;
   onEdit: (project: PortfolioProject) => void;
   onDelete: (projectId: string) => void;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
 
 
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
 
-<<<<<<< HEAD
-=======
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
-
-
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {;
-export function ProjectCard({ project, onEdit, onDelete }: ProjectCardProps) {
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-
-  const handleDelete = () => {
-    if (project.id) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-      onDelete(project.id)
-
-=======
-=======
-<<<<<<< HEAD
-      onDelete(project.id)
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-import { useState } from 'react',;
-import { Card, CardContent, CardFooter } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
-import { PortfolioProject } from '@/types/resume',;
-
-interface ProjectCardProps {;
-  project: PortfolioProject,;
-  onEdit: (project: PortfolioProject) => void,;
-  onDelete: (projectId: string) => void;
-}
-export function ProjectCard(): any ({ project, onEdit, onDelete }: ProjectCardProps) {;
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false);
-  const handleDelete = () => {;
-
-    if (project.id) {;
+export function ProjectCard() { return null; }
+  const handleDelete = () => {}
+    if (project.id) {}
       onDelete(project.id);
-
-
     }
     setDeleteDialogOpen(false);
   };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-  return (
-    <Card className="h-full flex flex-col">
+
+
+  return ("
+    <Card className="h-full flex flex-col">"
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">
         {project.image_url ? (
-          <img
-<<<<<<< HEAD
-            src={project && project.image_url} 
-            alt={project && project.title} 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            className="w-full h-full object-cover"
-          />;
-        ) : (;
-=======
+          <img;
             src={project.image_url}
-            alt={project.title}
+            alt={project.title}"
             className="w-full h-full object-cover"
           />;
         ) : (;
 
-import { useState } from 'react',;
-import { Card, CardContent, CardFooter } from '@/components/ui/card',;
-import { Button } from '@/components/ui/button',;
-import { Badge } from '@/components/ui/badge',;
-import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;
-import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;
+            src={project.image_url}
+            alt={project.title}"
+            className="w-full h-full object-cover"
+          />;
+        ) : (;
+
+import { useState } from 'react',;'
+import { Card, CardContent, CardFooter } from '@/components/ui/card',;'
+import { Button } from '@/components/ui/button',;'
+import { Badge } from '@/components/ui/badge',;'
+import { AlertDialog, AlertDialogAction, AlertDialogCancel, AlertDialogContent, AlertDialogDescription, AlertDialogFooter, AlertDialogHeader, AlertDialogTitle } from '@/components/ui/alert-dialog',;'
+import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',;'
 import { PortfolioProject } from '@/types/resume',;
 ;
 interface ProjectCardProps {;
@@ -186,293 +63,116 @@ interface ProjectCardProps {;
   onDelete:(projectId:string) => void;
 }
 ;
-export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
-  const [deleteDialogOpen, setDeleteDialogOpen] = useState(false),;
-  ;
-  const handleDelete = () => {;
-    if (project.id) {;
-      onDelete(project.id),;
+export function ProjectCard() { return null; }
     }
     setDeleteDialogOpen(false),;
   },;
   ;
   return (;
-=======
+
   return (
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-    <Card className="h-full flex flex-col">;
+"
+    <Card className="h-full flex flex-col">;"
       <div className="relative h-48 overflow-hidden rounded-t-lg bg-muted">;
         {project && project.image_url ? (;
-          <img
+          <img"
             className="w-full h-full object-cover"
           />;
-<<<<<<< HEAD
-        ) :(;
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-        ) : (;
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          <div className="w-full h-full flex items-center justify-center bg-muted">;
+"
+          <div className="w-full h-full flex items-center justify-center bg-muted">;"
             <FileText className="h-12 w-12 text-muted-foreground/50" />;
           </div>;
         )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-            className="w - full h - full object - cover";
-          />) : (
-          <div className="w - full h - full flex items - center justify - center bg - muted">;
-            <FileText className="h - 12 w - 12 text - muted - foreground / 50" />;
-          </div>)}
-      </div>;
-      <CardContent className="flex - grow pt - 6">;
-        <div className="space - y-2">;
-          <h3 className="font - semibold text - lg">{project.title}</h3>;
-
-          {project.description && (
-            <p className="text - sm text - muted - foreground line - clamp - 3">;
-              {project.description}
-
-      </div>;
-
-      <CardContent className="flex-grow pt-6">;
-        <div className="space-y-2">;
-          <h3 className="font-semibold text-lg">{project && project.title}</h3>;
-
-          {project && project.description && (;
-            <p className="text-sm text-muted-foreground line-clamp-3">{project && project.description}</p>;
-          )}
-
-          {project && project.technologies && project && project.technologies.length > 0 && (;
-            <div className="flex flex-wrap gap-1 mt-2">;
-              {project && project.technologies.map((tech, index) => (;
-                <Badge key={index} variant="secondary" className="text-xs">;
-
-                  {tech}
-                </Badge>;
-              ))}
-            </div>;
-=======
       </div>
-<<<<<<< HEAD
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
-          <h3 className="font-semibold text-lg">{project.title}</h3>
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
-
-      <CardContent className="flex-grow pt-6">
-        <div className="space-y-2">
+"
+      <CardContent className="flex-grow pt-6">"
+        <div className="space-y-2">"
           <h3 className="font-semibold text-lg">{project.title}</h3>
 
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          {project.description && (
+          {project.description && ("
             <p className="text-sm text-muted-foreground line-clamp-3">
               {project.description}
             </p>
           )}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-            </p>)}
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-          {project.technologies && project.technologies.length > 0 && (
+          {project.technologies && project.technologies.length > 0 && ("
             <div className="flex flex-wrap gap-1 mt-2">
-              {project.technologies.map((tech, index) => (
+              {project.technologies.map((tech, index) => ("
                 <Badge key={index} variant="secondary" className="text-xs">
                   {tech}
-<<<<<<< HEAD
-<<<<<<< HEAD
-                </Badge>))}
-            </div>)}
-        </div>;
-      </CardContent>;
-      <CardFooter className="flex justify - between border - t bg - muted / 40 p - 4">;
-        <div className="flex gap - 2">;
-
-          {project.github_url && (
-            <a;
-              href={project.github_url}
-
-              target="_blank";
-              rel="noopener noreferrer";
-            >;
-              <Button variant="ghost" size="icon">;
-                <Github className="h - 4 w - 4" />;
-              </Button>;
-            </a>)}
-
-          {project.demo_url && (
-            <a;
-              href={project.demo_url}
-
-        </div>;
-      </CardContent>;
-
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">;
-        <div className="flex gap-2">;
-          {project && project.github_url && (;
-            <a href={project && project.github_url} target="_blank" rel="noopener noreferrer">;
-              <Button variant="ghost" size="icon">;
-                <Github className="h-4 w-4" />;
-              </Button>;
-            </a>;
-          )}
-
-          {project && project.demo_url && (;
-            <a href={project && project.demo_url} target="_blank" rel="noopener noreferrer">;
-              <Button variant="ghost" size="icon">;
-                <Link className="h-4 w-4" />;
-              </Button>;
-            </a>;
-          )}
-        </div>;
-
-        <div className="flex gap-2">;
-          <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>;
-            <Edit className="h-4 w-4" />;
-          </Button>;
-          <Button variant="ghost" size="icon" onClick={() => setDeleteDialogOpen(true)}>;
-            <Trash2 className="h-4 w-4" />;
-          </Button>;
-        </div>;
-      </CardFooter>;
-
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
-        <AlertDialogContent>;
-          <AlertDialogHeader>;
-            <AlertDialogTitle>Delete Project</AlertDialogTitle>;
-            <AlertDialogDescription>;
-              Are you sure you want to delete this project? This action cannot be undone.;
-            </AlertDialogDescription>;
-          </AlertDialogHeader>;
-          <AlertDialogFooter>;
-            <AlertDialogCancel>Cancel</AlertDialogCancel>;
-            <AlertDialogAction onClick={handleDelete} className="bg-destructive text-destructive-foreground">;
-=======
-              target="_blank";
-              rel="noopener noreferrer";
-            >;
-              <Button variant="ghost" size="icon">;
-                <Link className="h - 4 w - 4" />;
-              </Button>;
-            </a>)}
-        </div>;
-        <div className="flex gap - 2">;
-          <Button variant="ghost" size="icon" on_click={() => on_edit (project)}>;
-            <Edit className="h - 4 w - 4" />;
-          </Button>;
-          <Button;
-            variant="ghost";
-            size="icon";
-            on_click={() => setDeleteDialogOpen (true)}
-          >;
-            <Trash2 className="h - 4 w - 4" />;
-          </Button>;
-        </div>;
-      </CardFooter>;
-      <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>;
-        <AlertDialogContent>;
-          <AlertDialogHeader>;
-            <AlertDialogTitle > Delete Project</AlertDialogTitle>;
-            <AlertDialogDescription>;
-              Are you sure you want to delete this project? This action cannot;
-              be undone.;
-            </AlertDialogDescription>;
-          </AlertDialogHeader>;
-          <AlertDialogFooter>;
-            <AlertDialogCancel > Cancel</AlertDialogCancel>;
-            <AlertDialogAction;
-              on_click={handle_delete}
-              className="bg - destructive text - destructive - foreground";
-            >;
-
-              Delete;
-            </AlertDialogAction>;
-          </AlertDialogFooter>;
-        </AlertDialogContent>;
-      </AlertDialog>;
-
-    </Card>);
-=======
-                </Badge>;
-              ))}
-            </div>;
-                  {tech}
-
                 </Badge>;
               ))}
             </div>;
 
+      </div>
+
+
+
+          {project.description && ("
+            <p className="text-sm text-muted-foreground line-clamp-3">
+              {project.description}
+            </p>
           )}
         </div>
       </CardContent>
-<<<<<<< HEAD
-=======
-
->>>>>>> main
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">
+"
+      <CardFooter className="flex justify-between border-t bg-muted/40 p-4">"
         <div className="flex gap-2">
           {project.github_url && (
-            <a
-              href={project.github_url}
-              target="_blank"
+            <a;
+              href={project.github_url}"
+              target="_blank""
               rel="noopener noreferrer"
-            >
-              <Button variant="ghost" size="icon">
+            >"
+              <Button variant="ghost" size="icon">"
                 <Github className="h-4 w-4" />
               </Button>
-            </Link>
+            </a>
           )}
 
           {project.demo_url && (
-            <a
-              href={project.demo_url}
-              target="_blank"
+            <a;
+              href={project.demo_url}"
+              target="_blank""
               rel="noopener noreferrer"
-            >
-              <Button variant="ghost" size="icon">
+            >"
+              <Button variant="ghost" size="icon">"
                 <Link className="h-4 w-4" />
               </Button>
-            </Link>
+            </a>
           )}
         </div>
-        <div className="flex gap-2">
-          <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>
+"
+        <div className="flex gap-2">"
+          <Button variant="ghost" size="icon" onClick={() => onEdit(project)}>"
             <Edit className="h-4 w-4" />
           </Button>
-          <Button
-            variant="ghost"
+          <Button"
+            variant="ghost""
             size="icon"
             onClick={() => setDeleteDialogOpen(true)}
-          >
+          >"
             <Trash2 className="h-4 w-4" />
           </Button>
         </div>
       </CardFooter>
+
       <AlertDialog open={deleteDialogOpen} onOpenChange={setDeleteDialogOpen}>
         <AlertDialogContent>
           <AlertDialogHeader>
             <AlertDialogTitle>Delete Project</AlertDialogTitle>
             <AlertDialogDescription>
-              Are you sure you want to delete this project? This action cannot
+              Are you sure you want to delete this project? This action cannot;
               be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
             <AlertDialogCancel>Cancel</AlertDialogCancel>
-            <AlertDialogAction
-              onClick={handleDelete}
+            <AlertDialogAction;
+              onClick={handleDelete}"
               className="bg-destructive text-destructive-foreground"
             >
-              Delete
+              Delete;
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
@@ -484,40 +184,30 @@ export function ProjectCard({ project, onEdit, onDelete } ProjectCardProps) {;
 
     </Card>;
   ),;}
- const handleDelete = () => {
-  if (project.id) {
+ const handleDelete = () => {}
+  if (project.id) {"
   />) : (<div className="w-full h-full flex items-center justify-center bg-muted" > <FileText className="h-12 w-12 text-muted-foreground/50" /> </div>) 
 }</div> </Badge>) ) 
 }</div>) 
 }</div> </CardContent> </Button> </Link>) 
 }</Button> </Link>) 
-}</div> </Button> </div> </CardFooter> <AlertDialog open= {
-  deleteDialogOpen 
-}onOpenChange= {
-  setDeleteDialogOpen 
+}</div> </Button> </div> </CardFooter> <AlertDialog open= {}
+  deleteDialogOpen;
+}onOpenChange= {}
+  setDeleteDialogOpen;
 }> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Delete Project</AlertDialogTitle> <AlertDialogDescription> Are you sure you want to delete this project? This action cannot be undone. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> Delete </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Card>) 
 }
   );
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
 }
 }
 ;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
   );
 }
   )
 }
 ;
-<<<<<<< HEAD
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
+
+'"

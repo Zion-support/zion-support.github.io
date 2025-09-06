@@ -1,40 +1,40 @@
   return <OrgChartPage />;
 }
 const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
-export default function OrgChartGovernancePage() {
+export default function OrgChartGovernancePage() {};
   return <OrgChartPage />;
-}
+}'
 import dynamic from 'next / dynamic';
 ;
-const OrgChartPage = dynamic (
+const OrgChartPage = dynamic ('
   () => import ('../../components / org / OrgChartPage'),
-  { ssr: false }
+  { ssr: false };
 );
 
-export default function OrgChartGovernancePage() {;
+export default function OrgChartGovernancePage() { return null; }
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
-export default function OrgChartGovernancePage() {;
-  return <OrgChartPage />;
+export default function OrgChartGovernancePage() { return null; }
 }
 
 }
-export default function OrgChartGovernancePage() {
+export default function OrgChartGovernancePage() {};
   return <OrgChartPage />;
 }
 ;
-export default /**
- * OrgChartGovernancePage - Function description
+export default /**;
+ * OrgChartGovernancePage - Function description;
  */
-function OrgChartGovernancePage() {
+function OrgChartGovernancePage() { return null; }
   return <OrgChartPage />;const OrgChartPage = dynamic (() => import ('../../components / org / OrgChartPage'), { ssr: false }),
-export default /**
- * OrgChartGovernancePage - Function description
+export default /**;
+ * OrgChartGovernancePage - Function description;
  */
-function OrgChartGovernancePage() {
+function OrgChartGovernancePage() {}
   return <OrgChartPage />;
 }
 
 
-export default function OrgChartGovernancePage() {;
+export default function OrgChartGovernancePage() { return null; }
   return <OrgChartPage />;const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
 
+'

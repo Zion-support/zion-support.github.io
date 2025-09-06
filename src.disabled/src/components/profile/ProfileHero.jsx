@@ -1,12 +1,12 @@
 import React from 'react';
-interface ProfileHeroProps {
-  // Add props here as needed
+interface ProfileHeroProps {}
+  // Add props here as needed;
 }
-export default function ProfileHero({ }: ProfileHeroProps) {
+export default function ProfileHero({ }: ProfileHeroProps) {}
   return (
     <div>
       <h1>ProfileHero</h1>
       <p>This component is currently under development.</p>
-    </div>
+    </div>;
   );
-}
+}'

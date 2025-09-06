@@ -1,19 +1,16 @@
 }
   }
-import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';
-import { useAuth } from '@/hooks/useAuth';
+import { ShoppingCart } from 'lucide-react';import { useAuth } from '@/hooks/useAuth';import { ShoppingCart } from 'lucide-react';'
+import { useAuth } from '@/hooks/useAuth';'
 import { LoginModal } from '@/components/auth/LoginModal';
 
-export function CartDrawer() {;
-  const items = useSelector((s: RootState) => s && s.cart.items);  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);  const items = useSelector((s: RootState) => s && s.cart.items),;
-  const count = items && items.reduce((sum, i) => sum + i && i.quantity, 0);
-
-import { ShoppingCart } from 'lucide-react'
-import { useAuth } from '@/hooks/useAuth';
+export function CartDrawer() { return null; }
+import { ShoppingCart } from 'lucide-react'';
+import { useAuth } from '@/hooks/useAuth';'
 import { LoginModal } from '@/components/auth/LoginModal';
 
-export function CartDrawer() {
-  const items = useSelector((s: RootState) => s.cart.items),
+export function CartDrawer() {}
+  const items = useSelector((s: RootState) => s.cart.items),;
   const count = items.reduce((sum, i) => sum + i.quantity, 0);
 
   const { isAuthenticated } = useAuth();
@@ -21,8 +18,8 @@ export function CartDrawer() {
 
 
 
-  const handleClick = (e: React.MouseEvent) => {
-    if (!isAuthenticated) {
+  const handleClick = (e: React.MouseEvent) => {}
+    if (!isAuthenticated) {}
       e.preventDefault();
       setLoginOpen(true)
     }
@@ -34,13 +31,13 @@ export function CartDrawer() {
 
   return (
     <>
-      <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>
+      <Link href="/cart" aria-label="Cart" className="relative p-1" onClick={handleClick}>"
         <ShoppingCart className="h-5 w-5 text-foreground hover:text-primary" />
         {count > 0 && (
 
 
 ;
-
+"
           <span className="absolute -top-1 -right-1 bg-primary text-primary-foreground text-[10px] rounded-full h-4 w-4 flex items-center justify-center">
             {count}
 
@@ -56,16 +53,16 @@ export function CartDrawer() {
   );
 }
 
-      <Link;
-        href='/cart';
-        aria - label='Cart';
+      <Link;'
+        href='/cart';'
+        aria - label='Cart';'
         className='relative p - 1';
         on_click={handle_click}
-      >;
+      >;'
         <ShoppingCart className='h - 5 w - 5 text - foreground hover:text - primary' />;
-        {count > 0 && (
-          <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}
-          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
+        {count > 0 && ('
+          <span className='absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center'>            {count}"
+          <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;"
           <span className="absolute -top - 1 -right - 1 bg - primary text - primary - foreground text-[10px] rounded - full h - 4 w - 4 flex items - center justify - center">;
             {count}
           </span>)}
@@ -73,4 +70,4 @@ export function CartDrawer() {
       <LoginModal is_open={login_open} onOpenChange={setLoginOpen} />;
     </>);
 }
-;
+;'"

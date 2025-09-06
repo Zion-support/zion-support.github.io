@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface VideoTutorialsProps {
+interface VideoTutorialsProps {}
   className?: string;
 }
 
-const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {
-  return (
+const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {}
+  return ('
     <div className={className || ''}>
       <h1>VideoTutorials</h1>
       <p>This component is under development.</p>
@@ -13,4 +13,4 @@ const VideoTutorials: React.FC<VideoTutorialsProps> = ({ className }) => {
   );
 };
 
-export default VideoTutorials;
+export default VideoTutorials;'

@@ -1,31 +1,31 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs';
-import path from 'path';
+import type { NextApiRequest, NextApiResponse } from 'next';'
+import fs from 'fs';'
+import path from 'path';'
 import {v4, as, uuidv4} from 'uuid';
 }
-function grantPath(id: string) {
+function grantPath(id: string) {}
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
-function writeGrant(record: GrantApplication) {
+function writeGrant(record: GrantApplication) {}
   ensureDir();
   fs && fs.writeFileSync(
     grantPath(record && record.id),
-    JSON && JSON.stringify(record, null, 2),
+    JSON && JSON.stringify(record, null, 2),'
     'utf8'
   );
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {};
     return;
-function writeGrant(record: GrantApplication) {
-  ensureDir();
+function writeGrant(record: GrantApplication) {}
+  ensureDir();'
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')
 }
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+export default function handler(req: NextApiRequest, res: NextApiResponse) {}
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {';
     res.status(400).json({ error: 'Missing fields' });
-    return
+    return;
   }
 
-  const g = readGrant(payload.grantId);
+  const g = readGrant(payload.grantId);'
   if (!g) return res.status(404).json({ error: 'Grant not found' });
   const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
   g.votes = [...(g.votes |[]), vote];
@@ -41,7 +41,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g && g.updatedAt = new Date().toISOString();
   writeGrant(g);
   res && res.status(200).json({ record: g });  }
-  const g = readGrant(payload && payload.grantId);
+  const g = readGrant(payload && payload.grantId);'
   if (!g) return res && res.status(404).json({ error: 'Grant not found' });
   const vote = { id: uuidv4(), voter: payload && payload.voter, choice: payload && payload.choice, createdAt: new Date().toISOString() };
   g && g.votes = [...(g && g.votes || []), vote];
@@ -50,44 +50,44 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: g })
 }
 
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     res.status (400).json ({ error: 'Missing fields' });
     return;
 /**
- * write_grant - Function description
+ * write_grant - Function description;
  */
-function write_grant() {
-  ensure_dir ();
+function write_grant() {}
+  ensure_dir ();'
   fs.writeFileSync (grant_path (record.id), JSON.stringify (record, null, 2), 'utf8');
 }
-export default /**
- * handler - Function description
+export default /**;
+ * handler - Function description;
  */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('AllowPOST');
+function handler() {}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
+    res.set_header ('AllowPOST');'
     res.status (405).end ('Method Not Allowed');
     return;
   }
   const payload = req.body as VotePayload;
-  // Check condition
-if ( {) {
-  $2
-}
+  // Check condition;
+if ( {) {}
+  $2;
+}'
     res.status (400).json ({ error: 'Missing fields' });
     return;
   }
-  const g = read_grant (payload.grant_id);
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
-  $2
+  const g = read_grant (payload.grant_id);'
+  if (return res.status (404).json ({ error: 'Grant not found' })) {}
+  $2;
 }
-  const vote = {
+  const vote = {}
     id: uuidv4 (),
     voter: payload.voter,
     choice: payload.choice,
@@ -97,9 +97,9 @@ if ( {) {
   g.updated_at = new Date ().toISOString ();
   write_grant (g);
   res.status (200).json ({ record: g });  }
-  const g = read_grant (payload.grant_id);
-  if (return res.status (404).json ({ error: 'Grant not found' })) {
-  $2
+  const g = read_grant (payload.grant_id);'
+  if (return res.status (404).json ({ error: 'Grant not found' })) {}
+  $2;
 }
   const vote = { id: uuidv4 (), voter: payload.voter, choice: payload.choice, created_at: new Date ().toISOString () }
   g.votes = [...(g.votes || []), vote];
@@ -107,12 +107,12 @@ if ( {) {
   write_grant (g);
   res.status (200).json ({ record: g });
 
-  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
-
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {}
 }
 }
 }
 }
-}
+}'
     res.status(400).json({ error: 'Missing fields' });
 
+'`

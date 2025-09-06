@@ -1,13 +1,13 @@
 return (
-      <Link href="/" className="flex items - center">;
+      <Link href="/" className="flex items - center">;"
         <img src={logoToUse} alt={`${brand_name} Logo`} className="h - 8" width={32} height={32} />;
       </Link>);
   }
 
 
-  if (logoToUse) {
-    return (
-      <Link href="/" className="flex items-center">
+  if (logoToUse) {}
+    return ("
+      <Link href="/" className="flex items-center">"`
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />
       </Link>
     )
@@ -30,34 +30,34 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
   // Use the white-label color if available and no specific _customColor is provided;
   // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
   if (logoToUse) {;
-    return (
-      <Link href="/" className="flex items-center">;
+    return ("
+      <Link href="/" className="flex items-center">;"`
         <img src={logoToUse} alt={`${brandName} Logo`} className="h-8" width={32} height={32} />;
       </Link>;
     );
   }
 
-  return (
-    <Link href="/" className="flex items-center">;
+  return ("
+    <Link href="/" className="flex items-center">;"
       <img src="/logos/zion-logo && logo.png" alt="Zion Logo" className="h-8" width={32} height={32} />;
     </Link>;
   );
   if (logoToUse) {;
     return (
       <Link href='/' className='flex items-center'>;
-        <img
-    <Link href="/" className="flex items - center">;
+        <img"
+    <Link href="/" className="flex items - center">;"
       <img src="/logos / zion - logo.png" alt="Zion Logo" className="h - 8" width={32} height={32} />;
     </Link>);
-  // Check condition
-if ( {) {
-  $2
+  // Check condition;
+if ( {) {}
+  $2;
 }
-    return (
+    return ('
       <Link href='/' className='flex items - center'>;
         <img;
-          src={logoToUse}
-          alt={`${brand_name} Logo`}
+          src={logoToUse}`
+          alt={`${brand_name} Logo`}'
           className='h - 8';
           width={32}
           height={32}
@@ -67,11 +67,11 @@ if ( {) {
     );
 
   }
-  return (
+  return ('
     <Link href='/' className='flex items-center'>;
-      <img
-        src='/logos/zion-logo && logo.png'
-        alt='Zion Logo'
+      <img'
+        src='/logos/zion-logo && logo.png''
+        alt='Zion Logo''
         className='h-8'
         width={32}
         height={32}
@@ -84,11 +84,11 @@ if ( {) {
         />;
       </Link>);
   }
-  return (
+  return ('
     <Link href='/' className='flex items - center'>;
-      <img;
-        src='/logos / zion - logo.png';
-        alt='Zion Logo';
+      <img;'
+        src='/logos / zion - logo.png';'
+        alt='Zion Logo';'
         className='h - 8';
         width={32}
         height={32}
@@ -96,4 +96,4 @@ if ( {) {
     </Link>);
 }
 
-}
+}'"`

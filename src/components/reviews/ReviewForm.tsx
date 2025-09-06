@@ -18,7 +18,7 @@ interface ReviewFormProps {;
 
   )
 }
-interface ReviewFormProps {
+interface ReviewFormProps {}
   project_id: string,
   reviewee_id: string,
   reviewee_name: string,

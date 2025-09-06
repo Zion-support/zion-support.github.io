@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
+import Button from './Button';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,6 +9,7 @@ const Header: React.FC = () => {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
   return (
     <header className="bg-gray-900 text-white shadow-lg fixed w-full top-0 z-40">
       <div className="container mx-auto px-4">
@@ -22,17 +24,27 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-            <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
-            <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-            <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
-            <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+            <Link to="/" className="hover:text-blue-400 transition-colors">
+              Home
+            </Link>
+            <Link to="/about" className="hover:text-blue-400 transition-colors">
+              About
+            </Link>
+            <Link to="/services" className="hover:text-blue-400 transition-colors">
+              Services
+            </Link>
+            <Link to="/contact" className="hover:text-blue-400 transition-colors">
+              Contact
+            </Link>
+            <Button variant="primary" size="sm">
+              Get Started
+            </Button>
           </nav>
 
           {/* Mobile Menu Button */}
           <button
+            className="md:hidden p-2"
             onClick={toggleMenu}
-            className="md:hidden p-2 rounded-lg hover:bg-gray-800 transition-colors"
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -43,16 +55,41 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-700">
             <nav className="flex flex-col space-y-4">
-              <Link to="/" className="hover:text-blue-400 transition-colors">Home</Link>
-              <Link to="/about" className="hover:text-blue-400 transition-colors">About</Link>
-              <Link to="/services" className="hover:text-blue-400 transition-colors">Services</Link>
-              <Link to="/pricing" className="hover:text-blue-400 transition-colors">Pricing</Link>
-              <Link to="/contact" className="hover:text-blue-400 transition-colors">Contact</Link>
+              <Link 
+                to="/" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Home
+              </Link>
+              <Link 
+                to="/about" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                About
+              </Link>
+              <Link 
+                to="/services" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Services
+              </Link>
+              <Link 
+                to="/contact" 
+                className="hover:text-blue-400 transition-colors"
+                onClick={toggleMenu}
+              >
+                Contact
+              </Link>
+              <Button variant="primary" size="sm" className="w-full">
+                Get Started
+              </Button>
             </nav>
           </div>
         )}
       </div>
-
     </header>
   );
 };

@@ -1,21 +1,14 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
 ;
-const PerformanceMonitor.dynamic = () => {
+const PerformanceMonitor.dynamic = () => {}
   return (
     <div data - testid="performancemonitor.dynamic">;
       <h1 > PerformanceMonitor.dynamic</h1>;
     </div>);
 }
 ;
-<<<<<<< HEAD
 
-=======
->>>>>>> 99482a9199aaf93c62fadf06056b12429832a7df
-=======
->>>>>>> f8e9d8204b854980b1ebe0327134be4447b2409a
-export default PerformanceMonitor.dynamic;
+
+
+export default PerformanceMonitor.dynamic;'"

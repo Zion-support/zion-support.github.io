@@ -1,89 +1,67 @@
-<<<<<<< HEAD
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } } fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0;  } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0;  } } fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> main
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } } fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
-import fs from "fs";
-import path from "path";
+
+
+
+
+import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } } fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;"
+import fs from "fs";"
+import path from "path";"
 import { glob } from "glob";
 function fileName = path.basename(filePath, path.extname(filePath));
-    // Find the current function name in the file
+    // Find the current function name in the file;
     const functionMatch = content.match(
       /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/);
     if (!functionMatch) return false;
     const currentFunctionName = functionMatch[1];
-    // Convert filename to valid function numberWords = {
-  "5": "Five",
-          "4": "Four",
-          "3": "Three",
-          "2": "Two",
-          "1": "One",
-          "0": "Zero"};
-        return numberWords[digit] || `_${digit}`})};
+    // Convert filename to valid function numberWords = {"
+  "5": "Five","
+          "4": "Four","
+          "3": "Three","
+          "2": "Two","
+          "1": "One","
+          "0": "Zero"};`
+        return numberWords[digit] || `_${digit}`})};`
         return numberWords[digit] || `_${digit}`});
-    // If the function name is already valid, skip
+    // If the function name is already valid, skip;
     if (currentFunctionName === functionName) return false;
-    // Replace the function name throughout the file
+    // Replace the function name throughout the file;
     let fixedContent = content.replace(
-      new RegExp(
-        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`),
+      new RegExp("`
+        `const\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`),`
       `const ${functionName}: NextPage = () => {`);
-    // Also replace the export default
+    // Also replace the export default;
     fixedContent = fixedContent.replace(
-      new RegExp(
-        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),
+      new RegExp("`
+        `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),`
       `export default ${functionName}`);
-    // Replace in title and description
+    // Replace in title and description;
     fixedContent = fixedContent.replace(
-      new RegExp(
-        `<title>${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),
+      new RegExp("`
+        `<title>${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),"`
       `<title>${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`);
     fixedContent = fixedContent.replace(
-      new RegExp(
-        `content="${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),
+      new RegExp("`
+        `content="${currentFunctionName.replace(/[.*+?^${ /* empty */ }()|[\]\\]/g, "\\$&")}`),"`
       `content="${fileName.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}`);
-    if (fixedContent !== content) {
+    if (fixedContent !== content) {"
       fs.writeFileSync(filePath, fixedContent, "utf8");
-      // // // // // // // console.log(
-        `Fixed function name "in": ${filePath} (${currentFunctionName} -> ${functionName})`);
+      // // // // // // // console.log("`
+        `Fixed function name "in": ${filePath} (${currentFunctionName} -> ${functionName})`);`
     // // // // // // // console.error(`Error processing ${filePath}:`, error.message);
     return false;
-async function fixAllFiles() {
-  const files = await glob("pages/**/*.{ts,tsx}", {
+async function fixAllFiles() { return null; }
+  const files = await glob("pages/**/*.{ts,tsx}", {"
     "ignore": ["node_modules/**", ".next/**"]});
   const fixedCount = 0;
-<<<<<<< HEAD
-=======
-  for (const file of files) {
-    if (fixFunctionName(file)) {
-      fixedCount++}
->>>>>>> main
-  }
+
+  }`
   // // // // // // // console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles()}}}}}}}}}
       return true}
-    return false} catch (error) {
+    return false} catch (error) {}`
     console.error(`Error processing ${filePath}:`, error.message);
     return false}
-<<<<<<< HEAD
-=======
-}
-async function fixedCount = 0;
-  for (const file of files) {
-    if (fixFunctionName(file)) {
-      fixedCount++}
->>>>>>> main
-  }
+
+  }`
   console.log(`Fixed ${fixedCount} files.`)}
 fixAllFiles();
 export default fileName;
@@ -93,28 +71,16 @@ export default fileName;
 export default fileName;
 export default fileName;
 export default fileName;
-<<<<<<< HEAD
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0;  } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0;  } console.log(`Fixed ${fixedCount} files.`)} fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0;  } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0;  } console.log(`Fixed ${fixedCount} files.`)} fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
+
+
+
+"`
 import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } console.log(`Fixed ${fixedCount} files.`)} fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } console.log(`Fixed ${fixedCount} files.`)} fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-<<<<<<< HEAD
->>>>>>> origin/main
-<<<<<<< HEAD
-=======
->>>>>>> bda99e5abd16efb90ee02549943231847392138b
-=======
-import fs from "fs"; import path from "path"; import { glob } from "glob"; function fileName = path.basename(filePath,path.extname(filePath)); const functionMatch = content.match( /const\s+([^:]+):\s*NextPage\s*=\s*\(\)\s*=>\s*{/,); if (!functionMatch) return false; const currentFunctionName = functionMatch[1]; 5: "Five",4: "Four",3: "Three",2: "Two",1: "One",0: "Zero",}; return numberWords[digit] || `_${digit}`})}; return numberWords[digit] || `_${digit}`}); if (currentFunctionName === functionName) return false; let fixedContent = content.replace( new RegExp( `const\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}:\\s*NextPage\\s*=\\s*\\(\\)\\s*=>\\s*{`,),`const ${functionName}: NextPage = () => {`,); fixedContent = fixedContent.replace( new RegExp( `export\\s+default\\s+${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`export default ${functionName}`,); fixedContent = fixedContent.replace( new RegExp( `<title>${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`<title>${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); fixedContent = fixedContent.replace( new RegExp( `content="${currentFunctionName.replace(/[.*+?^${ }()|[\]\\]/g,"\\$&")}`,),`content="${fileName.replace(/-/g," ").replace(/\b\w/g,(l) => l.toUpperCase())}`,); if (fixedContent !== content) { fs.writeFileSync(filePath,fixedContent,"utf8"); `Fixed function name in: ${filePath} (${currentFunctionName} -> ${functionName})`,); return false; async function fixAllFiles() { const files = await glob("pages*.{ts,tsx}",{ ignore: ["node_modules/**",".next/**"],}); const fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } fixAllFiles()}}}}}}}}} return true} return false} catch (error) { console.error(`Error processing ${filePath}:`,error.message); return false} } async function fixedCount = 0; for (const file of files) { if (fixFunctionName(file)) { fixedCount++} } console.log(`Fixed ${fixedCount} files.`)} fixAllFiles(); export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName; export default fileName;
->>>>>>> main
->>>>>>> main
-=======
->>>>>>> f239ba8ab20235073506b800efb123c18d8bf440
-=======
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
->>>>>>> main
+
+
+
+
+
+
+
+"`

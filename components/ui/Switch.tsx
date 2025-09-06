@@ -1,13 +1,11 @@
-interface SwitchProps {
-
+interface SwitchProps {}
 interface SwitchProps {;
   checked?: boolean;
   onCheckedChange?: (checked: boolean) => void;
   disabled?: boolean;
   class_name?: string;
 }
-}) => {
-
+}) => {}
 const Switch: React.FC<SwitchProps> = ({;
   checked = false,;
   onCheckedChange,;
@@ -15,8 +13,9 @@ const Switch: React.FC<SwitchProps> = ({;
   className = "",;
 }) => {;
   return (
-    <button;
-      type="button";
+    <button;"
+      type="button";"
       role="switch";
       aria - checked={checked}
       disabled={disabled}
+"

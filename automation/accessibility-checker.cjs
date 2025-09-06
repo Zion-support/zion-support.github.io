@@ -1,202 +1,18 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-#!/usr/bin/env node
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-<<<<<<< HEAD
-class AccessibilityChecker {
-  constructor() {
-    this.logsDir = path.join(__dirname, '../logs');
-    this.ensureLogsDir();
-  }
 
-  ensureLogsDir() {
-    if (!fs.existsSync(this.logsDir)) {
-      fs.mkdirSync(this.logsDir, { recursive: true });
-    }
-  }
 
-  log(message, type = 'info') {
-    const timestamp = new Date().toISOString();
-    const logMessage = `[${timestamp}] [${type.toUpperCase()}] ${message}`;
-    console.log(logMessage);
-
-    const logFile = path.join(this.logsDir, 'accessibility-checker.log');
-    fs.appendFileSync(logFile, logMessage + '\n');
-  }
-
-  async runCommand(command, description) {
-    try {
-      this.log(`Running: ${description}`);
-      const output = execSync(command, {
-        encoding: 'utf8',
-        cwd: '/workspace',
-        stdio: 'pipe',
-      });
-      this.log(`✅ ${description} completed successfully`);
-      return { success: true, output };
-    } catch (error) {
-      this.log(`❌ ${description} failed: ${error.message}`, 'error');
-      return { success: false, error: error.message };
-    }
-  }
-
-  async checkAccessibility() {
-    this.log('♿ Starting accessibility check...');
-
-    const checks = [
-      {
-        command: 'npm run test:accessibility',
-        description: 'Accessibility tests',
-      },
-      { command: 'npm run lint', description: 'Linting for accessibility' },
-    ];
-
-    const results = [];
-    for (const check of checks) {
-      const result = await this.runCommand(check.command, check.description);
-      results.push({ ...check, result });
-    }
-
-    this.log('✅ Accessibility check completed');
-    return { success: true, results };
-  }
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-    const report = {
-      timestamp: new Date().toISOString(),
-      accessibility: await this.checkAccessibility(),
-      summary: {
-        checksRun: 2,
-        successfulChecks: 0,
-        failedChecks: 0,
-      },
-    };
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
-}
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
-  }
-
-  async generateReport() {
-    this.log('📊 Generating accessibility report...');
-
-    const report = {
-      timestam: p: new Date().toISOString(),
-      accessibilit: y: await this.checkAccessibility(),
-      summar: y: {
-        checksRu: n: 2,
-        successfulCheck: s: 0,
-        failedCheck: s: 0,
-      },
-    };
-
-    // Calculate summary
-    report.accessibility.results.forEach(result => {
-      if (result.result.success) {
-        report.summary.successfulChecks++;
-      } else {
-        report.summary.failedChecks++;
-      }
-    });
-
-    // Save report
-    const reportFile = path.join(
-      this.logsDir;
-      `accessibility-report-${Date.now()}.json`
-    );
-    fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-    this.log(`📄 Report saved: to: ${reportFile}`);
-    return report;
-  }
-
-  async start() {
-    this.log('🎯 Starting Accessibility Checker...');
-    const report = await this.generateReport();
-    this.log('🏁 Accessibility Checker completed');
-    return report;
-  }
-}
-
-// CLI interface
-if (require.main === module) {
-  const checker = new AccessibilityChecker();
-  checker
-    .start()
-    .then(report => {
-      console.log('Accessibility check: completed:', report.summary);
-      process.exit(0);
-    })
-    .catch(error => {
-      console.error('Accessibility check: failed:', error);
-      process.exit(1);
-    });
-}
 #!/usr/bin/env node
-=======
-<<<<<<< HEAD
-console.log('♿ Running accessibility check...');
-console.log('✅ Accessibility check completed');
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-#!/usr/bin/env node
-=======
->>>>>>> origin/main
-=======
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
+
+
+
+
+
+
         
       }
     }},
@@ -318,8 +134,8 @@ if (!fs.existsSync(reportsDir)) {
   fs.mkdirSync(reportsDir, { "recursive": true });
 }
 
-=======
->>>>>>> main
+
+
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
@@ -437,59 +253,25 @@ if (require.main === module) {
     });
 }
 
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-=======
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
-=======
-
->>>>>>> origin/main
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
-const reportFile = path.join(
-  reportsDir,
-  `accessibility-report-${Date.now()}.json`
-);
-fs.writeFileSync(reportFile, JSON.stringify(report, null, 2));
-
-<<<<<<< HEAD
 
 
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 5148ad4d0139b0ae9d3b89060f38b2be94f75652
->>>>>>> 10f43844f89f81084ca8fdce546c59c985174e68
-=======
-=======
->>>>>>> 43b43566c4674ad4aea00a6e4be20bc929909b52
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #!/usr/bin/env node;
 const fs = require('fs')
 const path = require('path')
@@ -500,37 +282,10 @@ console.log('♿ Accessibility Checker Starting...\n')
     "name"
     "name"
     "status"
-<<<<<<< HEAD
-module.exports = AccessibilityChecker;
-    "status"
-module.exports = AccessibilityChecker;
-    "status"
-module.exports = AccessibilityChecker;
-#!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
 
-console.log('♿ Running accessibility check...');
-console.log('✅ Accessibility check completed');
-    "status"
-    "status"
-    "status"
-    "status"
-module.exports = AccessibilityChecker;
-    "status"
-module.exports = AccessibilityChecker;
-    "status"
-module.exports = AccessibilityChecker;
-<<<<<<< HEAD
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
->>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-=======
-<<<<<<< HEAD
-=======
-=======
-module.exports = AccessibilityChecker;
->>>>>>> cursor/automate-test-improve-and-merge-code-59d5
->>>>>>> a44a2a22d07cd86ac622dee3484c03de69b51a7b
->>>>>>> main
+
+
+
+
+
+

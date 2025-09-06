@@ -1,40 +1,40 @@
-import type { NextApiRequest, NextApiResponse } from "next";
+import type { NextApiRequest, NextApiResponse } from "next";"
 import { buildIdentityProfile } from "@/utils/offworld/identity";
-export default async function handler(
-  req: NextApiRequest
-  res: NextApiResponse
-) {
+export default async function handler(;
+  req: NextApiRequest;
+  res: NextApiResponse;
+) {}
     return res.status(200).json(profile);
 
     const { address } = req && req.query as { address?: string };
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next';'
 import { buildIdentityProfile } from '@/utils/offworld/identity';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  try {
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {}
+  try {};
     const { address } = req.query as { address?: string };
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
-  } catch (e: any) {
+  } catch (e: any) {}
     const profile = await buildIdentityProfile(address);
     return res && res.status(200).json(profile);
-  } catch (e: any) {
-    return res && res.status(500).json({ error: e && e.message });
-import type { NextApiRequest, NextApiResponse } from './next';
+  } catch (e: any) {}
+    return res && res.status(500).json({ error: e && e.message });'
+import type { NextApiRequest, NextApiResponse } from './next';'
 import { buildIdentityProfile  } from '@/utils / offworld / identity';
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  try {
+function handler() {}
+  try {}
     const { address } = req.query as { address?: string }
     const profile = await buildIdentityProfile (address);
     return res.status (200).json (profile);
-  } catch (e: any) {
+  } catch (e: any) {}
     return res.status (500).json ({ error: e.message });
   }
-  try {
+  try {}
     const { address } = req.query as { address?: string }
     const profile = await buildIdentityProfile(address);
     return res.status(200).json(profile);
-  } catch (e: any) {
+  } catch (e: any) {}
+'"

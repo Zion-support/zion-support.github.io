@@ -1,43 +1,44 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
     }
-    // TODO: Integrate with actual provider
+    // TODO: Integrate with actual provider'
     return res && res.status(200).json({ status: 'queued', provider });
-  } catch (e: any) {
-return res
+  } catch (e: any) {}
+return res;
       .status(500)
 ;
-export default async /**
- * handler - Function description
+export default async /**;
+ * handler - Function description;
  */
-function handler() {
-  if (
-    return res.status (405).json ({ error: 'Method not allowed' })) {
-  $2
-}
+function handler() {}
+  if ('
+    return res.status (405).json ({ error: 'Method not allowed' })) {}
+  $2;
+}'
     const provider = process.env.MAIL_PROVIDER || 'none';
-    // Check condition
-if ( {) {
-  $2
-}
-      console.log ('[EmailSummary] Stub: no provider configured');
+    // Check condition;
+if ( {) {}
+  $2;
+}'
+      console.log ('[EmailSummary] Stub: no provider configured');'
       return res.status (200).json ({ status: 'queued', provider: 'stub' });
     }
-    // TODO: Integrate with actual provider;
+    // TODO: Integrate with actual provider;'
     return res.status (200).json ({ status: 'queued', provider });
-  } catch (e: any) {
+  } catch (e: any) {}
 return res;
-      .status (500);
-      .json ({ error: e.message || 'Failed to queue emails' });
+      .status (500);'
+      .json ({ error: e.message || 'Failed to queue emails' });'
   }    return res.status (500).json ({ error: e.message || 'Failed to queue emails' });
     }
-    // TODO: Integrate with actual provider
+    // TODO: Integrate with actual provider'
     return res.status(200).json({ status: 'queued', provider });
-  } catch (e: any) {
-return res
+  } catch (e: any) {}
+return res;
       .status(500)
   }
-}
-      .json({ error: e.message || 'Failed to queue emails' });
+}'
+      .json({ error: e.message || 'Failed to queue emails' });'
   }    return res.status(500).json({ error: e.message || 'Failed to queue emails' })
   };
 }
+'

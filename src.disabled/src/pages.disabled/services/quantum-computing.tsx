@@ -1,11 +1,11 @@
 import React from 'react';
 
-interface Quantum-computingProps {
+interface Quantum-computingProps {}
   className?: string;
 }
 
-const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {
-  return (
+const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {}
+  return ('
     <div className={className || ''}>
       <h1>Quantum-computing</h1>
       <p>This component is under development.</p>
@@ -13,4 +13,4 @@ const Quantum-computing: React.FC<Quantum-computingProps> = ({ className }) => {
   );
 };
 
-export default Quantum-computing;
+export default Quantum-computing;'

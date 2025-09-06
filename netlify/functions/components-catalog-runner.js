@@ -1,109 +1,72 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
-
-function runNode(relPath, args = []) {
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
-const path = require ('path');
+const path = require ('path');'
 const { spawn_sync } = require ('child_process');
 ;
 /**
- * run_node - Function description
+ * run_node - Function description;
  */
-function run_node() {
-  const abs = path.resolve (__dirname, '..', '..', rel_path);
+function run_node() { return null; }
   return spawn_sync ('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-exports.config = {
+
+exports.config = {'
   schedule: '*/30 * * * *'
-}
-  const abs = path && path.resolve(__dirname, '..', '..', relPath);
+}'
+  const abs = path && path.resolve(__dirname, '..', '..', relPath);'
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
 
-exports && exports.config = {
+exports && exports.config = {'
   schedule: '*/30 * * * *',
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
     if (res && res.stdout) logs && logs.push(res && res.stdout);
     if (res && res.stderr) logs && logs.push(res && res.stderr);
     logs && logs.push(`exit=${res && res.status || 0}`);
     return res && res.status || 0;
   }
-<<<<<<< HEAD
-=======
 
-
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
+`
     logs.push(`exit=${res.status |0}`);
     return res.status |0;
-  }
-  step('components:catalog', () =>
+  }'
+  step('components:catalog', () =>'
     runNode('automation/components-catalog && catalog.cjs')
   );
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-  const abs = path.resolve(__dirname, '....', relPath),
-  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
-=======
 
-  const abs = path.resolve(__dirname, '....', relPath),
-  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
 
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
-}
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));
-  return { statusCode: 200, body: logs && logs.join('\n') };
-};  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),
-  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
+}'
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs'));'
+  return { statusCode: 200, body: logs && logs.join('\n') };'
+};  step('components:catalog', () => runNode('automation/components-catalog && catalog.cjs')),'
+  step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),'
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
 
-=======
->>>>>>> cursor/expand-services-advertise-and-build-project-4b36
->>>>>>> origin/cursor/expand-services-advertise-and-build-project-c28b
 }
 ;
-exports.handler = async () => {
+exports.handler = async () => {}
   const logs = [];
   /**
- * step - Function description
+ * step - Function description;
  */
-function step() {
+function step() {}`
     logs.push (`\number=== ${name} ===`);
     const res = fn ();
-    if (logs.push (res.stdout)) {
-  $2
+    if (logs.push (res.stdout)) {}
+  $2;
 }
-    if (logs.push (res.stderr)) {
-  $2
-}
+    if (logs.push (res.stderr)) {}
+  $2;
+}`
     logs.push (`exit=${res.status || 0}`);
     return res.status || 0;
-  }
-  step ('components:catalog', () =>;
-    run_node ('automation / components - catalog.cjs'));
-  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));
+  }'
+  step ('components:catalog', () =>;'
+    run_node ('automation / components - catalog.cjs'));'
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs'));'
+  return { status_code: 200, body: logs.join ('\n') }'
+}  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),'
+  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),'
   return { status_code: 200, body: logs.join ('\n') }
-}  step ('components:catalog', () => run_node ('automation / components - catalog.cjs')),
-  step ('git:sync', () => run_node ('automation / advanced - git - sync.cjs')),
-  return { status_code: 200, body: logs.join ('\n') }
+'`

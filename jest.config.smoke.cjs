@@ -4,12 +4,7 @@ const createJestConfig = nextJest({
   dir: './',
 });
 
-<<<<<<< HEAD
 const customJestConfig = {
-=======
-const config = {
-  testEnvironment: 'jsdom',
->>>>>>> main
   setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
   testEnvironment: 'jsdom',
   moduleNameMapper: {
@@ -41,7 +36,6 @@ const config = {
     '<rootDir>/temp_conflicts/',
     '<rootDir>/temp_working/',
   ],
-<<<<<<< HEAD
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
   verbose: true,
   collectCoverage: false,
@@ -49,18 +43,3 @@ const config = {
 };
 
 module.exports = createJestConfig(customJestConfig);
-=======
-  coverageThreshold: {
-    global: {
-      branches: 70,
-      functions: 70,
-      lines: 70,
-      statements: 70,
-    },
-  },
-  moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/']
-};
-
-module.exports = createJestConfig(config);
->>>>>>> main

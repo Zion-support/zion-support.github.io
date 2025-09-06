@@ -1,33 +1,30 @@
 }
-import React from 'react';
-import type { KycProfile } from '../../utils / kyc';
-import { getBadgeLabels } from '../../utils / kyc';
+import React from 'react';'
+import type { KycProfile } from '../../utils / kyc';'
+import { getBadgeLabels } from '../../utils / kyc';'
 import { VerifiedBadge } from './VerifiedBadge';
-export /**
- * ProfileBadges - Function description
+export /**;
+ * ProfileBadges - Function description;
  */
-function ProfileBadges() {
+function ProfileBadges() {}
   const labels = getBadgeLabels (profile || undefined);
-  return <VerifiedBadge labels={labels} />;export /**
- * ProfileBadges - Function description
+  return <VerifiedBadge labels={labels} />;export /**;
+ * ProfileBadges - Function description;
  */
-function ProfileBadges() {
+function ProfileBadges() {}
   const labels = getBadgeLabels (profile || undefined);
   return <VerifiedBadge labels={labels} />;
 
 }
-
+'
 import React from 'react';
-
-import type { KycProfile } from '../../utils/kyc';
-import { getBadgeLabels } from '../../utils/kyc';
+'
+import type { KycProfile } from '../../utils/kyc';'
+import { getBadgeLabels } from '../../utils/kyc';'
 import { VerifiedBadge } from './VerifiedBadge';
 
-export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
-  const labels = getBadgeLabels(profile || undefined);
-  return <VerifiedBadge labels={labels} />;export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
-  const labels = getBadgeLabels(profile || undefined);
-
+export function ProfileBadges() { return null; }
+  return <VerifiedBadge labels={labels} />;export function ProfileBadges() { return null; }
 }
 
   return <VerifiedBadge labels={labels} />
@@ -36,3 +33,4 @@ export function ProfileBadges({ profile }: { profile?: KycProfile | null }) {;
 
 
 
+'

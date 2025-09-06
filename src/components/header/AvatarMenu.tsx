@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AvatarMenu = () => {
+const AvatarMenu = () => {}
   return (
     <div>
       {/* AvatarMenu component */}
@@ -8,4 +8,4 @@ const AvatarMenu = () => {
   );
 };
 
-export default AvatarMenu;
+export default AvatarMenu;'

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TalentCardBadges = () => {
+const TalentCardBadges = () => {}
   return (
     <div>
       {/* TalentCardBadges component */}
@@ -8,4 +8,4 @@ const TalentCardBadges = () => {
   );
 };
 
-export default TalentCardBadges;
+export default TalentCardBadges;'

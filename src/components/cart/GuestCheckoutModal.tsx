@@ -1,34 +1,33 @@
-try {
+try {}
       on_submit ({ email, address });
-    } finally {
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
+    } finally {}
+class ErrorBoundary extends React.Component {}
+  constructor(props) {}
     super(props);
     this.state = { hasError: false };
   }
   
-  static getDerivedStateFromError(error) {
+  static getDerivedStateFromError(error) {}
     return { hasError: true };
   }
   
-  componentDidCatch(error, errorInfo) {
+  componentDidCatch(error, errorInfo) {}
     console.error('Error caught by boundary:', error, errorInfo);
   }
   
-  render() {
-    if (this.state.hasError) {
+  render() {}
+    if (this.state.hasError) {}
       return <div>Something went wrong.</div>;
     }
     
     return this.props.children;
   }
-}
-import React from 'react';
-import { useState } from 'react';
-import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
+}'
+import React from 'react';'
+import { useState } from 'react';'
+import { Button } from '@/components/ui/button';'
+import { Input } from '@/components/ui/input';'
+import { Label } from '@/components/ui/label';'
 import { Textarea } from '@/components/ui/textarea';
 import {;
   Dialog,;
@@ -36,9 +35,9 @@ import {;
   DialogDescription,;
   DialogFooter,;
   DialogHeader,;
-  DialogTitle,;
-} from '@/components/ui/dialog';
-import { User, Mail, MapPin, CreditCard } from 'lucide-react';
+  DialogTitle,;'
+} from '@/components/ui/dialog';'
+import { User, Mail, MapPin, CreditCard } from 'lucide-react';'
 import { isProdDomain } from '@/utils/getStripe';
 
 interface GuestCheckoutModalProps {;
@@ -49,14 +48,14 @@ export default function GuestCheckoutModal(): any ({;
   open,;
   onOpenChange,;
   onSubmit,;
-}: GuestCheckoutModalProps) {;
-  const [email, setEmail] = useState('');
+}: GuestCheckoutModalProps) {;'
+  const [email, setEmail] = useState('');'
   const [address, setAddress] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleSubmit = async (e: React && React.FormEvent) => {;
     e && e.preventDefault();
-    if (!email || !address) {;
+    if (!email || !address) {;'
       alert('Please fill in all required fields');
       return;
     }
@@ -77,116 +76,116 @@ export default function GuestCheckoutModal(): any ({;
 
   return (
 
-    <Dialog open={open} onOpenChange={onOpenChange}>;
+    <Dialog open={open} onOpenChange={onOpenChange}>;'
       <DialogContent className='bg-zion-blue border-zion-cyan/20 max-w-md'>;
-        <DialogHeader>;
-          <DialogTitle className='text-white flex items-center gap-2'>;
+        <DialogHeader>;'
+          <DialogTitle className='text-white flex items-center gap-2'>;'
             <User className='h-5 w-5 text-zion-cyan' />;
             Guest Checkout;
-          </DialogTitle>;
+          </DialogTitle>;'
           <DialogDescription className='text-zion-slate-light'>;
             Enter your details to complete your purchase as a guest.;
           </DialogDescription>;
         </DialogHeader>;
 
-        {!isProdDomain() && (;
+        {!isProdDomain() && (;'
           <div className='rounded-md bg-amber-500/20 p-2 text-center text-amber-400'>;
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
           </div>;
         )}
-
-        <form onSubmit={handleSubmit} className='space-y-4'>;
+'
+        <form onSubmit={handleSubmit} className='space-y-4'>;'
           <div className='space-y-2'>;
 
-            <Label
-              htmlFor='guest-email'
-              className='text-white flex items-center gap-2'>;
+            <Label'
+              htmlFor='guest-email''
+              className='text-white flex items-center gap-2'>;'
               <Mail className='h-4 w-4 text-zion-cyan' />;
               Email Address;
             </Label>;
-            <Input
-              id='guest-email'
+            <Input'
+              id='guest-email''
               type='email'
-
-              value={email || ''}
-              onChange={e => setEmail(e && e.target.value || '')}
-              placeholder='your && your.email@example && example.com'              required;
+'
+              value={email || ''}'
+              onChange={e => setEmail(e && e.target.value || '')}'
+              placeholder='your && your.email@example && example.com'              required;'
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light';
             />;
           </div>;
-
+'
           <div className='space-y-2'>;
 
-            <Label
-              htmlFor='guest-address'
-              className='text-white flex items-center gap-2'>;
+            <Label'
+              htmlFor='guest-address''
+              className='text-white flex items-center gap-2'>;'
               <MapPin className='h-4 w-4 text-zion-cyan' />;
               Shipping Address;
             </Label>;
-            <Textarea
+            <Textarea'
               id='guest-address'
-
-              value={address || ''}
-              onChange={e => setAddress(e && e.target.value || '')}
-              placeholder='Enter your full shipping address...'              required;
+'
+              value={address || ''}'
+              onChange={e => setAddress(e && e.target.value || '')}'
+              placeholder='Enter your full shipping address...'              required;'
               className='bg-zion-blue-light border-zion-cyan/30 text-white placeholder:text-zion-slate-light min-h-[80px]';
             />;
           </div>;
-
-          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;
+'
+          <div className='bg-yellow-500/10 border border-yellow-500/30 rounded-lg p-3'>;'
             <p className='text-yellow-400 text-sm'>;
-    <Dialog open={open} onOpenChange={onOpenChange}>;
+    <Dialog open={open} onOpenChange={onOpenChange}>;'
       <DialogContent className='bg - zion - blue border - zion - cyan / 20 max - w-md'>;
-        <DialogHeader>;
-          <DialogTitle className='text - white flex items - center gap - 2'>;
+        <DialogHeader>;'
+          <DialogTitle className='text - white flex items - center gap - 2'>;'
             <User className='h - 5 w - 5 text - zion - cyan' />;
             Guest Checkout;
-          </DialogTitle>;
+          </DialogTitle>;'
           <DialogDescription className='text - zion - slate - light'>;
             Enter your details to complete your purchase as a guest.;
           </DialogDescription>;
         </DialogHeader>;
-        {!isProdDomain () && (
+        {!isProdDomain () && ('
           <div className='rounded - md bg - amber - 500 / 20 p - 2 text - center text - amber - 400'>;
             Pay with test data – use card 4242 4242 4242 4242 and any future;
             date.;
-          </div>)}
-        <form on_submit={handle_submit} className='space - y-4'>;
+          </div>)}'
+        <form on_submit={handle_submit} className='space - y-4'>;'
           <div className='space - y-2'>;
-            <Label;
-              html_for='guest - email';
+            <Label;'
+              html_for='guest - email';'
               className='text - white flex items - center gap - 2';
-            >;
+            >;'
               <Mail className='h - 4 w - 4 text - zion - cyan' />;
               Email Address;
             </Label>;
-            <Input;
-              id='guest - email';
-              type='email';
-              value={email || ''}
-              on_change={e => set_email (e.target.value || '')}
-              placeholder='your.email@example.com'              required;
+            <Input;'
+              id='guest - email';'
+              type='email';'
+              value={email || ''}'
+              on_change={e => set_email (e.target.value || '')}'
+              placeholder='your.email@example.com'              required;'
               className='bg - zion - blue - light border - zion - cyan / 30 text - white placeholder:text - zion - slate - light';
             />;
-          </div>;
+          </div>;'
           <div className='space - y-2'>;
-            <Label;
-              html_for='guest - address';
+            <Label;'
+              html_for='guest - address';'
               className='text - white flex items - center gap - 2';
-            >;
+            >;'
               <MapPin className='h - 4 w - 4 text - zion - cyan' />;
               Shipping Address;
             </Label>;
-            <Textarea;
-              id='guest - address';
-              value={address || ''}
-              on_change={e => set_address (e.target.value || '')}
-              placeholder='Enter your full shipping address...'              required;
+            <Textarea;'
+              id='guest - address';'
+              value={address || ''}'
+              on_change={e => set_address (e.target.value || '')}'
+              placeholder='Enter your full shipping address...'              required;'
               className='bg - zion - blue - light border - zion - cyan / 30 text - white placeholder:text - zion - slate - light min - h-[80px]';
             />;
-          </div>;
-          <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;
+          </div>;'
+          <div className='bg - yellow - 500 / 10 border border - yellow - 500 / 30 rounded - lg p - 3'>;'
             <p className='text - yellow - 400 text - sm'>;
 
               💡 Creating an account allows you to track your order and checkout;
@@ -196,30 +195,28 @@ export default function GuestCheckoutModal(): any ({;
 
 
 
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="guest-email" className="text-white flex items-center gap-2">
+        <form onSubmit={handleSubmit} className="space-y-4">"
+          <div className="space-y-2">"
+            <Label htmlFor="guest-email" className="text-white flex items-center gap-2">"
               <Mail className="h-4 w-4 text-zion-cyan" />
-              Email Address
+              Email Address;
             </Label>
-            <Input
-
-
-              {isSubmitting ? (
+            <Input;
+              {isSubmitting ? ('
                 'Processing...'
               ) : (
-                <>
+                <>'
                   <CreditCard className='h-4 w-4 mr-2' />
-                  Continue to Payment
+                  Continue to Payment;
                 </>
               )}
 
-              disabled={isSubmitting || !email || !address}
+              disabled={isSubmitting || !email || !address}'
               className='bg-zion-cyan hover:bg-zion-cyan/90 text-zion-blue'>;
-              {isSubmitting ? (;
+              {isSubmitting ? (;'
                 'Processing...';
               ) : (;
-                <>;
+                <>;'
                   <CreditCard className='h-4 w-4 mr-2' />;
                   Continue to Payment;
                 </>;
@@ -228,22 +225,22 @@ export default function GuestCheckoutModal(): any ({;
 };
 };
 
-
+'
           <DialogFooter className='space - x-2'>;
-            <Button;
-              type='button';
+            <Button;'
+              type='button';'
               variant='outline';
-              on_click={() => onOpenChange (false)}
+              on_click={() => onOpenChange (false)}'
               className='border - zion - cyan / 30 text - zion - slate - light hover:bg - zion - cyan / 10'            >;
               Cancel;
             </Button>;
-            <Button;
+            <Button;'
               type='submit';
-              disabled={is_submitting || !email || !address}
+              disabled={is_submitting || !email || !address}'
               className='bg - zion - cyan hover:bg - zion - cyan / 90 text - zion - blue'            >;
-              {is_submitting ? (
+              {is_submitting ? ('
                 'Processing...') : (
-                <>;
+                <>;'
                   <CreditCard className='h - 4 w - 4 mr - 2' />;
                   Continue to Payment;
                 </>)}
@@ -258,4 +255,4 @@ export default function GuestCheckoutModal(): any ({;
     </Dialog>);
 }
 }
-;
+;'"
