@@ -2,7 +2,6 @@ name: Workflow Health Monitor
 
 on:
 
-
   schedule: - cron: '0 */4 * * *'  # Every 4 hours
   workflow_dispatch: {}
   workflow_run:
@@ -13,7 +12,6 @@ on:
 
 concurrency:
 
-
   group: workflow-health-monitor
   cancel-in-progress: false
 
@@ -22,31 +20,21 @@ concurrency:
 
 jobs:
 
-
   monitor: name: Monitor and Fix Workflows
     
       - name: Checkout repository
 
-    
-                
           fetch-depth: 0
 
       - name: Setup Node.js
 
-
-                
           node-version: 20
           cache: npm
 
       - name: Install dependencies
 
-
-                
-
       - name: Clean git state
 
-
-                
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
           # Clean up any existing rebase state
@@ -58,8 +46,6 @@ jobs:
 
       - name: Run Workflow Health Monitor
 
-
-                
           # Set environment variables for safer git operations
           export GIT_AUTHOR_NAME="github-actions[bot]"
           export GIT_COMMITTER_NAME="github-actions[bot]"
@@ -82,8 +68,6 @@ jobs:
 
       - name: Upload health reports
 
-
-          
           name: workflow-health-reports
           path: |
             automation/logs/workflow-health-report.json
@@ -93,8 +77,6 @@ jobs:
 
       - name: Commit health improvements
 
-
-          
           if [ -n "$(git status --porcelain)" ]; then
             git add -A
             git commit -m "chore(health): auto-fix workflow issues and improve health score"
@@ -105,8 +87,6 @@ jobs:
 
       - name: Create health summary
 
-
-          
           if [ -f "automation/logs/workflow-health-report.json" ]; then
             echo "## 📊 Workflow Health Summary" >> $GITHUB_STEP_SUMMARY
             echo " >> $GITHUB_STEP_SUMMARY

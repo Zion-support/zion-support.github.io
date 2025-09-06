@@ -2,8 +2,8 @@
 
 import fs from 'fs';
 import path from 'path';
-import { execSync } from 'child_process';
-import { fileURLToPath } from 'url';
+import {execSync} from 'child_process';
+import {fileURLToPath} from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -44,7 +44,7 @@ class ComprehensiveErrorPrevention {
         'solutions.disabled',
         'scripts.disabled',
         'automation_backup',
-        'data_backup'
+        'data_backup';
       ];
 
       for (const dir of corruptedDirs) {
@@ -71,7 +71,7 @@ class ComprehensiveErrorPrevention {
       const result = execSync('npm run lint:fix', { 
         encoding: 'utf8', 
         cwd: process.cwd(),
-        stdio: 'pipe'
+        stdio: 'pipe';
       });
       
       this.fixedCount++;
@@ -90,7 +90,7 @@ class ComprehensiveErrorPrevention {
       const result = execSync('npm run build', { 
         encoding: 'utf8', 
         cwd: process.cwd(),
-        stdio: 'pipe'
+        stdio: 'pipe';
       });
       
       this.fixedCount++;
@@ -109,7 +109,7 @@ class ComprehensiveErrorPrevention {
       const result = execSync('npx tsc --noEmit', { 
         encoding: 'utf8', 
         cwd: process.cwd(),
-        stdio: 'pipe'
+        stdio: 'pipe';
       });
       
       this.fixedCount++;

@@ -1,0 +1,6 @@
+
+
+    let filteredTalents = allTalents
+    }
+}
+;

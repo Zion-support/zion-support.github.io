@@ -1,248 +1,221 @@
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, ChevronDown, Brain, Network, Cloud, Shield, Code, Zap, Building, Phone, Mail, MapPin } from 'lucide-react';
-import { useRouter } from 'next/router';
-import React, { useState, useEffect } from 'react';
-import Link from 'next/link';
+"use client";
 
-const servicesDropdown = [
-  {
-    icon: Brain,
-    title: 'AI & Machine Learning',
-    description: 'Intelligent solutions for business automation',
-    href: '/ai-services',
-  },
-  {
-    icon: Shield,
-    title: 'Cybersecurity',
-    description: 'Advanced security and threat protection',
-    href: '/it-services',
-  },
-  {
-    icon: Cloud,
-    title: 'Cloud Infrastructure',
-    description: 'Scalable cloud solutions and migration',
-    href: '/it-services',
-  },
-  {
-    icon: Code,
-    title: 'Custom Software Development',
-    description: 'Tailored applications to meet your specific business needs',
-    href: '/services',
-  },
-  {
-    icon: Network,
-    title: 'System Integration',
-    description: 'Seamless integration of existing systems',
-    href: '/services',
-  },
-  {
-    icon: Zap,
-    title: 'Digital Transformation',
-    description: 'Complete digital overhaul of your business processes',
-    href: '/services',
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Code,
+  Smartphone,
+  Cloud,
+  Database,
+  Shield,
+  Zap,
+  Building,
+  ShoppingCart,
+  Heart,
+  GraduationCap,
+  Factory,
+  Truck,
+  CreditCard,
+} from "lucide-react";
 
-  }
-
-];
-
-const Header: React.FC<{ onMenuClick?: () => void }> = ({ onMenuClick }) => {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
+  const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
+  const [isIndustriesOpen, setIsIndustriesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const router = useRouter();
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+      setIsScrolled(window.scrollY > 0);
     };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    if (onMenuClick) {
-      onMenuClick();
-    }
-  };
+  const servicesDropdown = [
+    {
+      title: "Web Development",
+      description: "Custom websites and web applications",
+      href: "/services/web-development",
+      icon: Code,
+    },
+    {
+      title: "Mobile Development",
+      description: "iOS and Android applications",
+      href: "/services/mobile-development",
+      icon: Smartphone,
+    },
+    {
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure",
+      href: "/services/cloud-solutions",
+      icon: Cloud,
+    },
+    {
+      title: "Database Management",
+      description: "Database design and optimization",
+      href: "/services/database-management",
+      icon: Database,
+    },
+    {
+      title: "Security Services",
+      description: "Cybersecurity and data protection",
+      href: "/services/security",
+      icon: Shield,
+    },
+    {
+      title: "Performance Optimization",
+      description: "Speed and efficiency improvements",
+      href: "/services/performance",
+      icon: Zap,
+    },
+  ];
 
-  const closeMenu = () => {
-    setIsMenuOpen(false);
-    setIsServicesOpen(false);
-  };
+  const solutionsDropdown = [
+    {
+      title: "Enterprise Solutions",
+      description: "Comprehensive business technology solutions",
+      href: "/solutions/enterprise",
+      icon: Building,
+    },
+    {
+      title: "E-commerce Platforms",
+      description: "Online store development and management",
+      href: "/solutions/ecommerce",
+      icon: ShoppingCart,
+    },
+    {
+      title: "Healthcare Technology",
+      description: "Specialized healthcare IT solutions",
+      href: "/solutions/healthcare",
+      icon: Heart,
+    },
+    {
+      title: "Educational Platforms",
+      description: "Learning management systems",
+      href: "/solutions/education",
+      icon: GraduationCap,
+    },
+  ];
+
+  const industriesDropdown = [
+    { name: "Manufacturing", href: "/industries/manufacturing", icon: Factory },
+    { name: "Logistics", href: "/industries/logistics", icon: Truck },
+    { name: "Finance", href: "/industries/finance", icon: CreditCard },
+    { name: "Healthcare", href: "/industries/healthcare", icon: Heart },
+    { name: "Education", href: "/industries/education", icon: GraduationCap },
+    { name: "Retail", href: "/industries/retail", icon: ShoppingCart },
+  ];
+
+  const navigation = [
+    { name: "Home", href: "/" },
+    {
+      name: "Services",
+      href: "/services",
+      submenu: [
+        { name: "AI Services", href: "/ai-services", icon: Brain },
+        { name: "IT Services", href: "/it-services", icon: Network },
+        { name: "Micro SAAS", href: "/micro-saas", icon: Cloud },
+      ],
+    },
+    { name: "About", href: "/about" },
+    { name: "Services", href: "/services" },
+    { name: "Solutions", href: "/solutions" },
+    { name: "Industries", href: "/industries" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   const handleServiceClick = (href: string) => {
-    router.push(href);
     closeMenu();
+    window.location.href = href;
   };
 
   return (
-    <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-    }`}>
+    <header className="bg-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+        <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
-              <Zap className="h-6 w-6 text-white" />
-            </div>
-            <span className={`text-2xl font-bold transition-colors duration-300 ${
-              isScrolled ? 'text-gray-900' : 'text-white'
-            }`}>
+          <div className="flex-shrink-0">
+            <Link href="/" className="text-2xl font-bold text-blue-600">
               Zion Tech Group
-            </span>
-          </Link>
+            </Link>
+          </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center space-x-8">
-            <Link
-              href="/"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              Home
-            </Link>
-
-            <div className="relative">
-              <button
-                onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`flex items-center space-x-1 font-medium transition-colors duration-200 ${
-                  isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-                }`}
+          <nav className="hidden lg:flex space-x-8">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                href={item.href}
+                className="text-gray-700 hover:text-blue-600 font-medium transition-colors"
               >
-                <span>Services</span>
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${
-                  isServicesOpen ? 'rotate-180' : ''
-                }`} />
-              </button>
-
-              <AnimatePresence>
-                {isServicesOpen && (
-                  <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -10 }}
-                    className="absolute top-full left-0 mt-2 w-80 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50"
-                  >
-                    {servicesDropdown.map((service) => (
-                      <button
-                        key={service.title}
-                        onClick={() => handleServiceClick(service.href)}
-                        className="w-full text-left px-4 py-3 hover:bg-gray-50 transition-colors"
-                      >
-                        <div className="flex items-start space-x-3">
-                          <service.icon className="h-5 w-5 text-blue-600 mt-0.5" />
-                          <div>
-                            <div className="font-medium text-gray-900">{service.title}</div>
-                            <div className="text-sm text-gray-500">{service.description}</div>
-                          </div>
-                        </div>
-                      </button>
-                    ))}
-
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </div>
-
-            <Link
-              href="/about"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              About
-            </Link>
-
-            <Link
-              href="/contact"
-              className={`font-medium transition-colors duration-200 ${
-                isScrolled ? 'text-gray-700 hover:text-blue-600' : 'text-white hover:text-blue-300'
-              }`}
-            >
-              Contact
-            </Link>
+                {item.name}
+              </Link>
+            ))}
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Desktop CTA Button */}
+          <div className="hidden lg:flex items-center space-x-4">
+            <Link
+              href="/contact"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors duration-200"
+            >
+              Get Started
+            </Link>
+          </div>
+
+          {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="lg:hidden p-2 text-gray-600 hover:text-gray-900 transition-colors"
+            className="lg:hidden p-2 rounded-lg transition-colors duration-200 text-gray-700 hover:bg-gray-100"
           >
-            <Menu className="h-6 w-6" />
+            {isMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
           </button>
         </div>
-      </div>
 
-      {/* Mobile menu */}
-      <AnimatePresence>
-        {isMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white border-t border-gray-200"
-          >
-            <div className="px-4 py-2 space-y-1">
-              <Link
-                href="/"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Home
-              </Link>
-              
-              <div className="px-3 py-2">
-                <button
-                  onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className="flex items-center justify-between w-full text-left text-gray-700 hover:text-blue-600 transition-colors"
+        {/* Mobile Menu */}
+        <AnimatePresence>
+          {isMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="lg:hidden bg-white shadow-lg"
+            >
+              <div className="px-4 py-6 space-y-4">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    href={item.href}
+                    onClick={closeMenu}
+                    className="block text-gray-700 hover:text-blue-600 font-medium"
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Link
+                  href="/contact"
+                  onClick={closeMenu}
+                  className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center px-6 py-3 rounded-lg font-medium transition-colors duration-200"
                 >
-                  <span>Services</span>
-                  <ChevronDown className={`h-4 w-4 transition-transform ${
-                    isServicesOpen ? 'rotate-180' : ''
-                  }`} />
-                </button>
-                
-                {isServicesOpen && (
-                  <div className="mt-2 space-y-1">
-                    {servicesDropdown.map((service) => (
-                      <button
-                        key={service.title}
-                        onClick={() => handleServiceClick(service.href)}
-                        className="block w-full text-left px-6 py-2 text-sm text-gray-600 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-                      >
-                        {service.title}
-                      </button>
-                    ))}
-                  </div>
-                )}
+                  Get Started
+                </Link>
               </div>
-              
-              <Link
-                href="/about"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                About
-              </Link>
-              
-              <Link
-                href="/contact"
-                className="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-md transition-colors"
-                onClick={closeMenu}
-              >
-                Contact
-              </Link>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
     </header>
   );
-};
-
-export default Header;
+}
