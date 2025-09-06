@@ -1,68 +1,62 @@
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 interface PerformanceMetrics {
-  fps: number;
-  memoryUsage: number;
   loadTime: number;
+  renderTime: number;
+  memoryUsage?: number;
 }
 
 export const usePerformance = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fps: 0,
-    memoryUsage: 0,
-    loadTime: 0
+    loadTime: 0,
+    renderTime: 0
   });
-  const [isMonitoring, setIsMonitoring] = useState(false);
 
   useEffect(() => {
-    // Only monitor in development
-    if (process.env.NODE_ENV !== 'development') {
-      return;
-    }
-
-    setIsMonitoring(true);
-
-    // Get load time
-    const loadTime = performance.now();
-    setMetrics(prev => ({ ...prev, loadTime: Math.round(loadTime) }));
-
-    // Monitor FPS
-    let lastTime = performance.now();
-    let frameCount = 0;
-
-    const measureFPS = () => {
-      const currentTime = performance.now();
-      frameCount++;
-
-      if (currentTime - lastTime >= 1000) {
-        setMetrics(prev => ({ ...prev, fps: frameCount }));
-        frameCount = 0;
-        lastTime = currentTime;
-      }
-
-      requestAnimationFrame(measureFPS);
+    const startTime = performance.now();
+    
+    // Measure render time
+    const measureRender = () => {
+      const renderTime = performance.now() - startTime;
+      setMetrics(prev => ({
+        ...prev,
+        renderTime: Math.round(renderTime)
+      }));
     };
 
-    // Monitor memory usage
-    const measureMemory = () => {
-      if ('memory' in performance) {
-        const memory = (performance as any).memory;
+    // Use requestAnimationFrame to measure after render
+    requestAnimationFrame(measureRender);
+
+    // Measure page load time
+    const measureLoadTime = () => {
+      if (performance.timing) {
+        const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
         setMetrics(prev => ({
           ...prev,
-          memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024)
+          loadTime: Math.round(loadTime)
         }));
       }
     };
 
-    measureFPS();
-    measureMemory();
+    if (document.readyState === 'complete') {
+      measureLoadTime();
+    } else {
+      window.addEventListener('load', measureLoadTime);
+    }
 
-    const interval = setInterval(measureMemory, 1000);
+    // Memory usage (if available)
+    if ('memory' in performance) {
+      const memory = (performance as any).memory;
+      setMetrics(prev => ({
+        ...prev,
+        memoryUsage: Math.round(memory.usedJSHeapSize / 1024 / 1024) // MB
+      }));
+    }
 
     return () => {
-      clearInterval(interval);
+      window.removeEventListener('load', measureLoadTime);
     };
   }, []);
 
-  return { metrics, isMonitoring };
+  return metrics;
 };
