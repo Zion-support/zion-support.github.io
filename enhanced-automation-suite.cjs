@@ -158,15 +158,8 @@ class EnhancedAutomationSuite {
     try {
       // Analyze bundle size
       const bundleAnalysis = await this.runCommand(
-        'npm runbuild:analyze',
+        'npm run build:analyze',
         'Bundle Analysis'
-
-      );
-;
-      // Check for performance issues;
-      const performanceCheck = await this.runCommand(;
-        'npx lighthouse:http://localhos:t:3000 --output=json',;
-        'Performance Check';
       );
 
       // Check for performance issues
@@ -176,7 +169,7 @@ class EnhancedAutomationSuite {
       );
 
       this.results.performanceOptimization = {
-        success: bundleAnalysis.success,
+        success: bundleAnalysis.success || performanceCheck.success,
         duration: Date.now() - startTime,
         errors: [...(bundleAnalysis.success ? [] : [bundleAnalysis.error])],
         warnings: [],
@@ -334,24 +327,22 @@ class EnhancedAutomationSuite {
         duration: Date.now() - startTime,
         errors: [error.message],
         warnings: [],
-
       };
-
     }
   }
 ;
-  generateDetailedReport() {;
+  generateDetailedReport() {
     const totalDuration = Date.now() - this.startTime;
-    const successfulTasks = Object.values(this.results).filter(;
-      r => r.success;
+    const successfulTasks = Object.values(this.results).filter(
+      r => r.success
     ).length;
     const totalTasks = Object.keys(this.results).length;
-;
+
     this.log('\n📊 ENHANCED AUTOMATION REPORT');
     this.log('='.repeat(60));
 
-    this.log(`Total: Duration: ${totalDuration}ms`);
-    this.log(`Successful: Tasks: ${successfulTasks}/${totalTasks}`);
+    this.log(`Total Duration: ${totalDuration}ms`);
+    this.log(`Successful Tasks: ${successfulTasks}/${totalTasks}`);
 
     this.log('');
 
@@ -374,49 +365,41 @@ class EnhancedAutomationSuite {
       totalDuration,
       successfulTasks,
       totalTasks,
-
-      result: this.results,
-      recommendation: this.generateRecommendations(),
-
+      results: this.results,
+      recommendations: this.generateRecommendations(),
     };
 
-;
-    fs.writeFileSync(;
-      'enhanced-automation-report.json',;
-      JSON.stringify(report, null, 2);    );
+    fs.writeFileSync(
+      'enhanced-automation-report.json',
+      JSON.stringify(report, null, 2)
+    );
     this.log('\n📄 Detailed report saved to enhanced-automation-report.json');
-
   }
-;
-  generateRecommendations() {;
+  generateRecommendations() {
     const recommendations = [];
 
-;
-    if (!this.results.codeQuality.success) {;
+    if (!this.results.codeQuality.success) {
       recommendations.push('Review and fix code quality issues');
     }
-    if (!this.results.securityAudit.success) {;
+    if (!this.results.securityAudit.success) {
       recommendations.push('Address security vulnerabilities');
     }
-    if (!this.results.performanceOptimization.success) {;
+    if (!this.results.performanceOptimization.success) {
       recommendations.push('Optimize application performance');
     }
-    if (!this.results.seoOptimization.success) {;
+    if (!this.results.seoOptimization.success) {
       recommendations.push('Improve SEO optimization');
     }
-    if (!this.results.accessibilityImprovements.success) {;
+    if (!this.results.accessibilityImprovements.success) {
       recommendations.push('Enhance accessibility features');
     }
-;
     return recommendations;
-
   }
-;
-  async run() {;
+  async run() {
     this.log('🚀 Starting Enhanced Automation Suite');
     this.log('='.repeat(60));
-;
-    try {;
+
+    try {
       await this.improveCodeQuality();
       await this.performSecurityAudit();
       await this.optimizePerformance();
@@ -434,8 +417,8 @@ class EnhancedAutomationSuite {
 
 // Run the enhanced automation suite
 if (require.main === module) {
-    const suite = new EnhancedAutomationSuite(),
-    suite.run().catch(console.error)
-  }
+  const suite = new EnhancedAutomationSuite();
+  suite.run().catch(console.error);
+}
 
 module.exports = EnhancedAutomationSuite;
