@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
+
   Rocket
   Brain
   Atom
@@ -59,40 +59,7 @@ import {
   CpuIcon;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield
 
-=======
 
-
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next / link';
-import { motion } from 'framer-motion';
-
-=======
-import {
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Rocket,
   Brain,
@@ -144,19 +111,13 @@ import {
   Palette,
   Video,
   LockIcon,
-<<<<<<< HEAD
 
-  GlobeIcon,;
-  CpuIcon,;} from 'lucide-react';import {
-  Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
-=======
 
   GlobeIcon,;
   CpuIcon,;} from 'lucide-react';import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield, ;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   Phone, Mail, MapPin, Globe, ArrowRight;
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github;
   CheckCircle, Award, Star, Crown, Gem, Infinity;
@@ -168,18 +129,7 @@ import {
   { name: 'Status', href: '/status', icon: Activity }
 ];
 
-<<<<<<< HEAD
 
-
-const quickLinks = [;
-  { name: 'Home', href: '/', icon: Home },;
-  { name: 'Services', href: '/services', icon: Briefcase },;
-  { name: 'Solutions', href: '/solutions', icon: Target },;
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },;
-  { name: 'Resources', href: '/resources', icon: BookOpen },;
-  { name: 'Case Studies', href: '/case-studies', icon: FileText },;
-  { name: 'Blog', href: '/blog', icon: MessageSquare },;
-=======
       {
         name: 'AI Business Intelligence Pro'
         href: '/ai-business-intelligence-pro'
@@ -314,7 +264,7 @@ const quickLinks = [
   { name: 'Resources', href: '/resources', icon: BookOpen }
   { name: 'Case Studies', href: '/case-studies', icon: FileText }
   { name: 'Blog', href: '/blog', icon: MessageSquare }
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
   { name: 'Contact', href: '/contact', icon: MessageCircle },];  { name: 'Contact', href: '/contact', icon: MessageCircle }
   { label: 'Happy Customers', value: '50K+', icon: Users },
   { label: 'Services Delivered', value: '200+', icon: Rocket },
@@ -374,20 +324,14 @@ const stats = [;
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },];
 export default function UltraFuturisticFooter2034() {;
   return (
-<<<<<<< HEAD
+
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
 ];
 export default function UltraFuturisticFooter2034() {
   return (
+
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>
-=======
 
-
-export default function UltraFuturisticFooter2034() {;
-
-  return (
-    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Animated Background Elements */}
 
       <div className='absolute inset-0 overflow-hidden'>;
@@ -415,44 +359,26 @@ export default function UltraFuturisticFooter2034() {;
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">;
             {/* Company Info */}
 
-=======
-            <div className="lg:col-span-1">
-              <motion.div
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function UltraFuturisticFooter2034() {
-  return (
-
-              <motion.div
 
 
-
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6 }}
                 viewport={{ once: true }}
                 className='space-y-6'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
               >
                 <div className='flex items-center space-x-3'>
                   <div className='relative'>
@@ -496,8 +422,7 @@ export default function UltraFuturisticFooter2034() {
                   Leading provider of cutting-edge AI, quantum computing, and emerging technology solutions.
                   Empowering businesses with innovative tools for the future.
                 </p>
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
                 className='space-y-6'>;
                 <div className='flex items-center space-x-3'>;
                   <div className='relative'>;
@@ -548,29 +473,18 @@ export default function UltraFuturisticFooter2034() {
 
                   ))}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 {/* Contact Info */}
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <span>{contactInfo.mobile}</span>
                   </div>
@@ -581,55 +495,22 @@ export default function UltraFuturisticFooter2034() {
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-purple-400 transition-colors'>
                     <MapPin className='w-4 h-4' />
                     <span className='text-sm'>{contactInfo.address}</span>                  </div>                    <span>{contactInfo.mobile}</span>
-=======
-                <div className="grid grid-cols-2 gap-4">
-                  {stats.map((stat, index) => (
-                    <motion.div
-                      key={stat.label}
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.5, delay: index * 0.1 }}
-                      viewport={{ once: true }}
-                      className="text-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10"
-                    >
-                      <stat.icon className="w-6 h-6 text-cyan-400 mx-auto mb-2" />
-                      <div className="text-lg font-bold text-white">{stat.value}</div>
-                      <div className="text-xs text-gray-400">{stat.label}</div>
-                    </motion.div>
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-                  ))}
-                </div>
-=======
-                      <div className='text-xs text-gray-400'>{stat.label}</div>                    </motion.div>
-
-                    </motion.div>
 
                   ))}
                 </div>
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                 {/* Contact Info */}
-<<<<<<< HEAD
-                <div className="space-y-3">
-                  <div className="flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors">
-                    <Phone className="w-4 h-4" />
-=======
+
                 <div className='space-y-3'>
                   <div className='flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-colors'>
                     <Phone className='w-4 h-4' />
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                     <span>{contactInfo.mobile}</span>
                   </div>
                   <div className="flex items-center space-x-3 text-gray-300 hover:text-blue-400 transition-colors">
@@ -677,25 +558,13 @@ export default function UltraFuturisticFooter2034() {
             <div className='lg:col-span-2'>              <motion && motion.div            <div className="lg:col-span-2">;
               <motion&& motion.div
 
-=======
 
-            {/* Services */}
-            <div className="lg:col-span-2">
-              <motion.div
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-            {/* Services */}
-            <div className='lg:col-span-2'>              <motion.div            <div className="lg:col-span-2">
-              <motion.div
-
-<<<<<<< HEAD
-=======
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}
@@ -708,7 +577,10 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                       viewport={{ once: true }}
                       className='space-y-4'
 
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     >
                       <div className='flex items-center space-x-2'>
                         <category.icon className='w-5 h-5 text-cyan-400' />
@@ -747,10 +619,13 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
                               {service.price}
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                             </span>
                           </Link>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -771,34 +646,30 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
               <motion.div
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-            <div className='lg:col-span-1'>              <motion.div
 
-              <motion.div
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}
                 viewport={{ once: true }}
                 className='space-y-8'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.4 }}
+                viewport={{ once: true }}
+                className='space-y-8'
+
+
+
+>>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
               >
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -825,42 +696,8 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 </div>;
 
 
-=======
-                        key={link.name}
-                        href={link.href}
-                        className='flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group'
-                      >
-                        <link.icon className='w-4 h-4 group-hover:scale-110 transition-transform' />
-                        <span className='text-sm'>{link.name}</span>                      </Link>              >
-                {/* Quick Links */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Quick Links</h4>
-                  <div className="space-y-2">
-                    {quickLinks.map((link) => (
-                      <Link
-                        key={link.name}
-                        href={link.href}
-                        className="flex items-center space-x-2 text-gray-300 hover:text-cyan-400 transition-colors group"
-                      >
-                        <link.icon className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                        <span className="text-sm">{link.name}</span>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                        <span className='text-sm'>{link.name}</span>                      </Link>
 
-                      </Link>
 
-                    ))}
-                  </div>
-                </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {/* Company Links */}
                 <div>
                   <h4 className='text-lg font-semibold text-white mb-4'>
@@ -893,37 +730,18 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   </div>
                 </div>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 {/* Social Links */}
 
 
-=======
-                        className='w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110'
-                      >
-                        <social.icon className='w-5 h-5' />                      </Link>                      <Link
-                        key={social.name}
-                        href={social.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-lg flex items-center justify-center text-white hover:from-cyan-600 hover:to-blue-600 transition-all duration-200 hover:scale-110"
-                      >
-                        <social.icon className="w-5 h-5" />
-                      </Link>
-                        <social.icon className='w-5 h-5' />                      </Link>
 
-                      </Link>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     ))}
                   </div>
                 </div>
@@ -931,8 +749,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
             </div>
           </div>
 
-<<<<<<< HEAD
-=======
+
                   </div>;
                 </div>;
               </motion && motion.div>;
@@ -940,13 +757,11 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
           </div>;
 
 
-=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* Certifications */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -963,48 +778,18 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                   viewport={{ once: true }}
 
 
-=======
-                  className='flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200'
-                >
-                  <CheckCircle className='w-4 h-4 text-green-400 mr-2' />
-                  <span className='text-xs text-gray-300 text-center'>
-                    {cert}
-                  </span>                </motion.div>                  className="flex items-center justify-center p-3 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all duration-200"
-                >
-                  <CheckCircle className="w-4 h-4 text-green-400 mr-2" />
-                  <span className="text-xs text-gray-300 text-center">{cert}</span>
-                  </span>                </motion.div>
 
-                </motion.div>
-
-<<<<<<< HEAD
               ))}
             </div>
           </motion.div>
         </div>
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-              ))}
-            </div>
-          </motion.div>
-        </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               ))}
 
@@ -1017,6 +802,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         {/* Bottom Bar */}
         <div className='border-t border-white/10 bg-black/50 backdrop-blur-sm'>
           <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6'>
@@ -1033,7 +819,7 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
                 </Link>
                 <Link
                   href='/terms'
-<<<<<<< HEAD
+
                   className='hover:text-cyan-400 transition-colors'
                 >
                   Terms of Service
@@ -1053,40 +839,20 @@ transition={{ duration: 0 && 0.5, delay: index * 0 && 0.1 }}
 );
 }
 import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
-export default function UltraFuturisticFooter2034() {return (";
-;
-export default function UltraFuturisticFooter2034() {;
-  return (";
-=======
 
-
-            </div>;
-          </div>;
-        </div>;
-      </div>;
-
-
-=======
-
-;
-export default function UltraFuturisticFooter2034() {;
-  return (";
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     <footer className = "py-8 text-center text-sm text-gray-400">;
       <span>© {new Date().getFullYear()} Zion Tech Group</span>;
     </footer>;
   )}"';
   );
 }
-<<<<<<< HEAD
-=======
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

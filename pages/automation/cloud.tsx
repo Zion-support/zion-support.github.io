@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 import { useEffect, useState } from 'react';
 
@@ -10,18 +7,16 @@ export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([])
   useEffect(() => {
 import { useEffect, useState } from 'react',
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import { useEffect, useState } from 'react',;
 ;
 import { useEffect, useState } from 'react',
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export default function CloudAutomationHub() {
   const [logs, setLogs] = useState<any[]>([]),
 export default function CloudAutomationHub() {_const [logs, _setLogs] = useState<any[]>([]);
@@ -62,38 +57,30 @@ ursor/fix-lint-push-and-merge-to-main-ce13
           <h3 className="font-semibold">Intelligence Digest</h3>
           <p className="text-sm text-gray-600 dark:text-gray-400">Docs/INTELLIGENCE_DIGEST.md</p>
         </Link>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       </div>
       <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4">
         <h2 className="font-semibold mb-3">Recent Automation Logs</h2>
         <ul className="space-y-2 text-sm">
-<<<<<<< HEAD
+
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>}
-          {logs.map((log) => (
-            <li key={log.id} className="flex items-center justify-between">
-              <span>{log.generatedAt |log.file}</span>
-=======
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {logs.length === 0 && <li className="text-gray-500">No logs yet. The workflows will generate logs on schedule.</li>  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {logs.map((log) => (
             <li key={log.id} className="flex items-center justify-between">
               <span>{log.generatedAt || log.file}</span>
@@ -107,9 +94,8 @@ ursor/fix-lint-push-and-merge-to-main-ce13
         <a href="/api/automation/cloud-logs" className="inline-flex items-center px-4 py-2 rounded-md border border-gray-300 dark:border-gray-700">Refresh Logs</a>
       </div>
     </div>
-<<<<<<< HEAD
-  );
-};
+
+
   )
 import { useEffect, useState } from 'react';
 export default function CloudAutomationHub(req, res) {
@@ -123,28 +109,7 @@ export default function CloudAutomationHub(req, res) {
   }, []);
   return (;
     <div className="space-y-6">;
-=======
 
-=======
-}
-
-=======
-import { useEffect, useState } from 'react',
-;
-export default /**
- * CloudAutomationHub - Function description
- */
-function CloudAutomationHub() {
-  const [logs, set_logs] = useState < any[]>([]),
-  useEffect (() => {
-    fetch ('/api / automation / cloud - logs');
-      .then ((r) => r.json ());
-      .then ((d) => set_logs (d.logs || []));
-      .catch (() => set_logs ([]));
-  }, []),
-  return (
-    <div className="space - y-6">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div>;
         <h1 className="text - 2xl font - bold">Autonomous Cloud Automation</h1>;
         <p className="text - sm text - gray - 600 dark:text - gray - 400">Runs scheduled workflows: roadmap synthesis, link health checks, market intelligence, sitemap refresh, and logging.</p>;
@@ -178,22 +143,17 @@ function CloudAutomationHub() {
         <a href="https: //github.com" target="_blank" rel="noreferrer" className="inline - flex items - center px - 4 py - 2 rounded - md bg - indigo - 600 text - white hover:bg - indigo - 700">View Workflow</a>;
         <a href="/api / automation / cloud - logs" className="inline - flex items - center px - 4 py - 2 rounded - md border border - gray - 300 dark:border - gray - 700">Refresh Logs</a>;
       </div>;
-<<<<<<< HEAD
+
     </div>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-=======
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

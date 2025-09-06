@@ -1,12 +1,10 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 
 
   res.status(200).json({ items })
+
+
 import { NextApiRequest, NextApiResponse } from 'next',;
 import { requireUser } from '../../../utils/auth',;
 import { listConversations } from '../../../utils/messaging/storage',;
@@ -17,6 +15,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const items = listConversations(user.id),
   res.status(200).json({ items });
 };
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
@@ -25,10 +26,7 @@ import { requireUser } from '../../../utils/auth';
 import { listConversations } from '../../../utils/messaging/storage';
 export default function handler(req, res) {
   try {
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const user = requireUser(req, res);
   if (!user) return,;
   if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
@@ -44,13 +42,11 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
 }
+}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

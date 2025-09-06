@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-export interface ModerationFlag {
-export interface ModerationFlag {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   id: string;
   contentId: string;
   contentType: string;
@@ -14,20 +9,9 @@ export interface ModerationFlag {;
   createdAt: string;
   updatedAt: string;
   adminNotes?: string;
-<<<<<<< HEAD
-=======
-=======
-export interface ModerationFlag {
-  id: string;
-  content_id: string;
-  content_type: 'post' | 'comment' | 'user';
-  reason: string;
-  user_email: string;
-  status: 'pending' | 'approved' | 'removed' | 'warned' | 'banned';
-  created_at: string;
-  admin_notes?: string;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
 }
 
 ;
@@ -50,24 +34,8 @@ export async function create_flag (data: Partial < ModerationFlag>): Promise < M
 
 }
 
-<<<<<<< HEAD
-=======
-=======
-// Moderation database utilities
-export interface ModerationFlag {
-  id: string, type: 'spam' | 'inappropriate' | 'harassment' | 'other',
-  content: string, reporterId: string,
-  reportedUserId?: string;
-  status: 'pending' | 'reviewed' | 'resolved' | 'dismissed', createdAt: Date,
-  updatedAt: Date, moderatorId?: string,
-  notes?: string;
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 // Mock data storage - replace with actual database
 let flags: ModerationFlag[] = [];
@@ -103,9 +71,7 @@ export async function updateFlagStatus(
 ): Promise<FlaggedContent | undefined> {;
   const flag = await getFlagById(id);
   if (!flag) return undefined;
-=======
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
   flag.status = status;
   flag.adminNotes = adminNotes || flag.adminNotes;
   flag.updatedAt = new Date().toISOString();

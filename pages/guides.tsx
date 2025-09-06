@@ -17,7 +17,7 @@ import Layout from "./components/Layout";
 origin/main
 origin/automation-improvements-final
 import {
-<<<<<<< HEAD
+
   BookOpen
   Clock
   User
@@ -215,9 +215,7 @@ import {
   SleepyFace2
   YawningFace2
   DizzyFace2
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   BookOpen,
   Clock,
@@ -415,15 +413,9 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  DizzyFace2,;
-=======
 
-  DizzyFace2,;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "lucide-react";
 const guides = [
 
@@ -803,122 +795,7 @@ ursor/integrate-build-improve-and-re-verify-8f7d
 origin/automation-improvements-final
       </div>
     </Layout>
-=======
-                  className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors inline-flex items-center">;
-                  Request Custom Guide;
-                  <ExternalLink className="ml-2 w-5 h-5" />;
-                </Link>;
-              </div>;
-            </motion && motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   );
-=======
-                      </span>;
-                    </div>;
-                  </div>;
-                  <div className="p - 6">;
-                    <div className="flex items - center justify - between text - sm text - gray - 500 mb - 4">;
-                      <div className="flex items - center">;
-                        <Clock className="w - 4 h - 4 mr - 1" />;
-                        {guide.read_time}
-                      </div>;
-                      <div className="flex items - center">;
-                        <User className="w - 4 h - 4 mr - 1" />;
-                        {guide.author}
-                      </div>;
-                    </div>;
-                    <h3 className="text - xl font - bold text - gray - 900 mb - 2">;
-                      {guide.title}
-                    </h3>;
-                    <p className="text - gray - 600 mb - 4">{guide.description}</p>;
-                    <div className="flex items - center justify - between mb - 4">;
-                      <div className="flex items - center">;
-                        <div className="flex items - center">;
-                          {[...Array (5)].map ((_, i) => (
-                            <Star;
-                              key={i}
-                              className={`w - 4 h - 4 ${
-                                i < Math.floor (guide.rating);
-                                  ? "text - yellow - 400";
-                                  : "text - gray - 300";
-                              }`}
-                              fill="current_color";
-                            />))}
-                        </div>;
-                        <span className="ml - 2 text - sm text - gray - 600">;
-                          {guide.rating} ({guide.students} students);
-                        </span>;
-                      </div>;
-                    </div>;
-                    <div className="flex flex - wrap gap - 2 mb - 6">;
-                      {guide.tags.map ((tag) => (
-                        <span;
-                          key={tag}
-                          className="px - 2 py - 1 bg - gray - 100 text - gray - 600 text - xs rounded";
-                        >;
-                          {tag}
-                        </span>))}
-                    </div>;
-                    <div className="flex gap - 2">;
-                      <Link;
-                        href="#";
-                        className="flex - 1 bg - blue - 600 text - white px - 4 py - 2 rounded - lg font - semibold hover:bg - blue - 700 transition - colors text - center inline - flex items - center justify - center";
-                      >;
-                        <Play className="w - 4 h - 4 mr - 2" />;
-                        Start Guide;
-                      </Link>;
-                      <Link;
-                        href="#";
-                        className="px - 4 py - 2 border border - gray - 300 text - gray - 700 rounded - lg font - semibold hover:bg - gray - 50 transition - colors inline - flex items - center";
-                      >;
-                        <Download className="w - 4 h - 4" />;
-                      </Link>;
-                    </div>;
-                  </div>;
-                </motion.div>))}
-            </div>;
-          </div>;
-        </section>;
-        {/* CTA Section */}
-        <section className="py - 20 bg - gradient - to - r from - green - 600 to - teal - 600 text - white">;
-          <div className="container mx - auto px - 4">;
-            <motion.div;
-              className="text - center";
-              initial={{ opacity: 0, coordinate_y: 30 }}
-              whileInView={{ opacity: 1, coordinate_y: 0 }}
-              transition={{ duration: 0.8 }}
-            >;
-              <h2 className="text - 4xl font - bold mb - 6">;
-                Ready to Start Learning?;
-              </h2>;
-              <p className="text - xl mb - 8 text - green - 100">;
-                Join thousands of developers who are already mastering new;
-                technologies with our guides.;
-              </p>;
-              <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                <Link;
-                  href="#guides";
-                  className="bg - white text - green - 600 px - 8 py - 3 rounded - lg font - semibold hover:bg - green - 50 transition - colors inline - flex items - center";
-                >;
-                  Browse All Guides;
-                  <ArrowRight className="ml - 2 w - 5 h - 5" />;
-                </Link>;
-                <Link;
-                  href="/contact";
-                  className="border - 2 border - white text - white px - 8 py - 3 rounded - lg font - semibold hover:bg - white hover:text - green - 600 transition - colors inline - flex items - center";
-                >;
-                  Request Custom Guide;
-                  <ExternalLink className="ml - 2 w - 5 h - 5" />;
-                </Link>;
-              </div>;
-            </motion.div>;
-          </div>;
-        </section>;
-      </div>;
-    </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

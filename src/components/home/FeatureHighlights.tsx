@@ -51,7 +51,7 @@ function FeatureHighlights() {
   const highlights_data = [;
 
 
-<<<<<<< HEAD
+
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = [
 
@@ -76,57 +76,13 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
         "Access to enterprise clients and high-value projects",
         "Professional development resources and community support"
       ]
-=======
-  const highlightsData = [
 
-    {
-      title: 'For Talent Seekers',
-      features: [;
-        'AI - powered talent matching based on your specific project requirements',
-        'Verified profiles with skills validation and credential checking',
-        'Transparent pricing and no hidden fees',
-        'Direct communication with potential candidates',
-        'Secure payment protection and dispute resolution',
-        'Post jobs and receive AI - matched applicants',
-      ],
-    },
-    {
-      title: 'For Talent & Service Providers',
-      features: [;
-        'Create a professional profile showcasing your skills and experience',
-        'Get matched with relevant projects that fit your expertise',
-        'Secure payment processing with on - time disbursements',
-        'Build your reputation through client reviews and ratings',
-        'Access to enterprise clients and high - value projects',
-        'Professional development resources and community support',
-      ],
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },
     {
 
       title: "For Enterprise Clients",
       features: [
-<<<<<<< HEAD
-        'White-labeled talent portal with your company branding',
-        'Dedicated account management and priority support',
-        'Custom talent pools and preferred provider networks',
-        'Advanced analytics and reporting capabilities',
-        'API access for seamless integration with your HR systems',
-        'Customizable workflow and approval processes',
-      ],
-    },
-  ]
-        "White-labeled talent portal with your company branding",
-        "Dedicated account management and priority support",
-        "Custom talent pools and preferred provider networks",
-        "Advanced analytics and reporting capabilities",
-        "API access for seamless integration with your HR systems",
-        "Customizable workflow and approval processes"
-      ]
-    }
-  ],
 
-=======
       title: "For Talent Seekers",
       features: [
         "AI-powered talent matching based on your specific project requirements",
@@ -151,44 +107,13 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
     {
       title: "For Enterprise Clients",
       features: [
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        'White-labeled talent portal with your company branding',
-        'Dedicated account management and priority support',
-        'Custom talent pools and preferred provider networks',
-        'Advanced analytics and reporting capabilities',
-        'API access for seamless integration with your HR systems',
-        'Customizable workflow and approval processes',
-      ],
-    },
-  ]
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        "White-labeled talent portal with your company branding",
-        "Dedicated account management and priority support",
-        "Custom talent pools and preferred provider networks",
-        "Advanced analytics and reporting capabilities",
-        "API access for seamless integration with your HR systems",
-        "Customizable workflow and approval processes"
-      ]
-    }
-  ],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>
       <div className="container mx-auto px-4">
@@ -198,7 +123,7 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
             Whatever your role in the tech ecosystem, Zion offers specialized features to help you succeed
           </p>
         </div>
-<<<<<<< HEAD
+
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6'>
           {highlightsData.map((category, index) => (
             <Card
@@ -377,10 +302,7 @@ export function FeatureHighlights() {
   )}
 '"`
 )
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 '"`;
 );

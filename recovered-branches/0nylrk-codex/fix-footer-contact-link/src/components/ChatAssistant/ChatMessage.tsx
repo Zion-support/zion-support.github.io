@@ -1,36 +1,18 @@
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-interface ChatMessageProps {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 
 import {cn} from "@/lib/utils";
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { cn } from "@/lib/utils";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-interface ChatMessageProps {
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 interface ChatMessageProps {;
   role: 'user' | 'assistant',;
   message: string,;
 
   timestamp?: Date;
-<<<<<<< HEAD
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import { cn } from "@/lib/utils",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
-=======
   key?: string | number;
 }
 
@@ -39,39 +21,26 @@ export function ChatMessage(): any ({ role, message, timestamp }: ChatMessagePro
   const isUser = role === 'user';
 
 
-=======
-import {cn} from "@/lib/utils";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-
-=======
-import { cn } from "@/lib/utils",
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 
 
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface ChatMessageProps {
   role: 'user' | 'assistant',
   message: string,
   timestamp?: Date,
   key?: string | number
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
-  const isUser = role === 'user';
+
 export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
 
   const isUser = role === 'user';
   const isUser = role === 'user',
   
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <divclassName={cn(
@@ -105,20 +74,15 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {
         <div className="whitespace-pre-wrap">{message}</div>
         {timestamp && (
           <div className="text-xs text-zion-slate mt-1 text-right">
-<<<<<<< HEAD
+
             {timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
           </div>
         )}
       </div>
     </div>
   )
-};
-=======
 
-};
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { cn } from "@/lib/utils",;
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
 interface ChatMessageProps {;
@@ -165,10 +129,7 @@ export function ChatMessage({ role, message, timestamp }: ChatMessageProps) {;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-}
-}
-=======
+
 
 import { cn } from '@/lib / utils';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
@@ -213,10 +174,6 @@ function ChatMessage() {
     </div>);
 
 }
-=======
 
-}
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

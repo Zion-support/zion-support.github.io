@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-}
- 
- 
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 const allServices = [ //New 2035 services (featured first) ...innovative2035MicroSaasServices;
@@ -89,19 +83,12 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   service.id
 }initial= {
   {
-<<<<<<< HEAD
+
   opacity: 0, y: 50
 }whileInView= {
   {
   opacity: 1, y: 0
-=======
-  opacity: 0, y: 50 
 
-}whileInView= {
-  {
-  opacity: 1, y: 0 
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 }transition= {
   {
   duration: 0.8, delay: index * 0.1
@@ -142,14 +129,9 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 }initial= {
   {
-<<<<<<< HEAD
+
   opacity: 0, y: 50
-=======
 
-  opacity: 0, y: 50 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }whileInView= {
   {
   opacity: 1, y: 0
@@ -158,10 +140,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 
   duration: 0 && 0.8, delay: index * 0 && 0.1 
-=======
 
-  duration: 0.8, delay: index * 0.1 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 }viewport= {
   {
@@ -169,11 +148,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 
 
 
-=======
-}> <UltraFuturisticServiceCard2026 /> </motion.div>) ) 
-}</div> </div> </section> > <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6" > <span className="bg-gradient-to-r from-indigo-400 to-purple-500 bg-clip-text text-transparent" > Quantum Cybersecurity </span> </h2> <p className="text-xl text-gray-300 max-w-4xl mx-auto" > Unbreakable security powered by quantum computing and advanced AI algorithms. </p> </motion.div> <motion.div key= {
-  service.id
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 }initial= {
   {
   opacity: 0, y: 50
@@ -270,8 +245,7 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
   title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊'
 }].map ( (feature, index) => (<motion.div </p> </motion.div>) )
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>)
-<<<<<<< HEAD
-=======
+
 
 
   duration: 0 && 0.8 
@@ -301,48 +275,14 @@ const allServices = [ //New 2035 services (featured first) ...innovative2035Micr
 }</div> </div> </div> </footer> </UltraFuturisticBackground2035>) ;
 
 
+
+}export default Homepage2025;export default Homepage2025;
+
+
+
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-}export default Homepage2025;export default Homepage2025;
-<<<<<<< HEAD
 
-
-export default Homepage2025;
-
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-}export default Homepage2025;export default Homepage2025;
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-}
-}
-}
-}
-}
-<<<<<<< HEAD
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-}
-=======
-{
-  title: 'Scalable Solutions', description: 'From startups to enterprises, our solutions scale with your business and grow with your ambitions.', icon: '📊';
-}].map ( (feature, index) => (<motion.div </p> </motion.div>) );
-}</div> </div> </div> </footer> </UltraFuturisticBackground2035>);
-}export default Homepage2025;export default Homepage2025;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

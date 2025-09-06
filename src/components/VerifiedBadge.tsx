@@ -87,10 +87,9 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   },
   
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   return (
@@ -143,10 +142,9 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
 
   );
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     </TooltipProvider>);
 }

@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-import React from "react";
-import { Button } from "@/components/ui/button";
-import { Download, FileText, Mail, BarChart3 } from "lucide-react";
-import { Link } from "react-router-dom";
+
+
 
 import React from "react",
 import { Button } from "@/components/ui/button",
@@ -10,53 +7,13 @@ import { Download, FileText, Mail, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Download, FileText, Mail, BarChart3 } from "lucide-react",
 import { Link } from "react-router-dom",
-=======
-
-import React from './react';
-import { Button  } from '@/components / ui / button';
-import { Download, FileText, Mail, BarChart3  } from './lucide-react';
-import { Link  } from './react-router-dom';
-export /**
- * BillingHeader - Function description
- */
-function BillingHeader() {
-  return (
-    <div className="space - y-2">;
-      <div className="flex items - center justify - between">;
-        <h1 className="text - 3xl font - bold tracking - tight">;
-          Billing & Invoices;
-        </h1>;
-        <div className="flex gap - 2">;
-          <Button variant="outline" size="sm" className="gap - 1">;
-            <Download className="h - 4 w - 4" />;
-            Export;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap - 1">;
-            <Mail className="h - 4 w - 4" />;
-            Contact Billing Support;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap - 1" as_child>;
-            <Link to="/dashboard / client / analytics">;
-              <BarChart3 className="h - 4 w - 4" />;
-
-              Analytics;
-            </Link>;
-          </Button>;
-        </div>;
-      </div>;
-
-      <p className="text - muted - foreground">;
-        Manage your subscription, view invoice history, and update payment;
-        methods.;
-      </p>;
-    </div>);
-
-}
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export function BillingHeader() {
   return (
     <div className="space-y-2">
@@ -82,14 +39,11 @@ export function BillingHeader() {
       <p className="text-muted-foreground">
         Manage your subscription, view invoice history, and update payment methods.
       </p>
-<<<<<<< HEAD
+
     </div>
   );
 }
-    </div>;
-  );
-}
-    </div>
+
   )
 import React from "react",;
 import { Button } from "@/components/ui/button",;
@@ -124,9 +78,10 @@ export function BillingHeader() {;
   );
 }
 ;
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

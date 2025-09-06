@@ -161,11 +161,8 @@ function ApiDocsHub() {
             >
               <div className={`w-12 h-12 rounded-full bg-gradient-to-r ${section.color} flex items-center justify-center mb-4`}>
                 <section.icon className="h-6 w-6 text-white" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               </div>
               <h2 className="text-xl font-semibold text-white mb-2">{section.title}</h2>
               <p className="text-zinc-400 mb-4">{section.description}</p>
@@ -188,10 +185,9 @@ function ApiDocsHub() {
           <h2 className="text-xl font-semibold text-white mb-4">Ready to get started?</h2>
           <p className="text-zinc-400 mb-6">
             To use the Zion AI Marketplace API, you'll need an API key. Visit your developer portal to create one.
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           </p>
           <Link
@@ -203,7 +199,7 @@ function ApiDocsHub() {
           </Link>
         </div>
       </div>
-<<<<<<< HEAD
+
     </ApiDocsLayout>;
   );
 export default ApiDocsHub;
@@ -273,9 +269,7 @@ export function ApiDocsHub() {;
               </div>;
             </Link>;
           ))}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
 
 import React from "react",;

@@ -11,29 +11,8 @@ export default function QuantumComputing({ }: QuantumComputingProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-<<<<<<< HEAD
-:src.pages.disabled/QuantumComputing.jsx
-}
-}
-ursor/add-new-services-and-deploy-updates-0462
 
 
 
-origin/cursor/integrate-build-improve-and-re-verify-c7b5
-:src.pages.disabled/QuantumComputing.jsx
-}
-}
-}
-}
-}
-:temp_exclude/src.pages.disabled/QuantumComputing.jsx
-=======
 
-
-
-}
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

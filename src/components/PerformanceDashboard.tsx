@@ -306,10 +306,9 @@ const PerformanceDashboard: React.FC = () => {
 
   const completedImprovements = improvements.filter(imp => imp.status === 'completed'),
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -331,10 +330,9 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
         
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Card>
@@ -349,10 +347,9 @@ const PerformanceDashboard: React.FC = () => {
           </CardContent>
         </Card>
         
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <Card>
@@ -362,7 +359,7 @@ const PerformanceDashboard: React.FC = () => {
             </CardTitle>
           </CardHeader>
           <CardContent>
-<<<<<<< HEAD
+
             <div className="text-2xl font-bold">{metrics.loadTime}s</div>
             <p className="text-xs text-gray-500">Average page load</p>
           </CardContent>
@@ -376,13 +373,7 @@ const PerformanceDashboard: React.FC = () => {
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-5 w-5 text-green-500" />
               <span className="text-sm font-semibold text-green-600">Healthy</span>
-=======
-            <div className='flex items-center space-x-2'>
-              <CheckCircle className='h-5 w-5 text-green-500' />
-              <span className='text-sm font-semibold text-green-600'>
-                Healthy
-              </span>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             </div>
           </CardContent>
         </Card>
@@ -487,11 +478,8 @@ const PerformanceDashboard: React.FC = () => {;
               <div key={improvement.id} className="flex items-start space-x-3 p-3 border rounded-lg">
                 <div className="flex-shrink-0 mt-1">
                   {getCategoryIcon(improvement.category)}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between">
@@ -677,11 +665,8 @@ const PerformanceDashboard: React.FC = () => {;
                       {getStatusIcon(improvement.status)}
                     </div>
                   </div>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   <p className='text-sm text-gray-600 mt-1'>
                     {improvement.description}
                   </p>
@@ -704,11 +689,8 @@ const PerformanceDashboard: React.FC = () => {;
       <div className="flex space-x-4">
         <Button onClick={() => window.open('/api/health/environment_blank')} variant="outline">
           <Shield className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           Check Health Status
         </Button>
         <Button onClick={() => alert('Bundle analysis available with: npm run build:analyze')} variant="outline">
@@ -718,10 +700,9 @@ const PerformanceDashboard: React.FC = () => {;
       </div>
     </div>
   )
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           variant='outline';
         >;
@@ -731,10 +712,9 @@ export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard;
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 },
 
@@ -755,10 +735,9 @@ export default PerformanceDashboard,
 };
 
 export default PerformanceDashboard;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

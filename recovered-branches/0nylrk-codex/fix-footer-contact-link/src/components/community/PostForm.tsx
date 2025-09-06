@@ -1,24 +1,7 @@
 
-<<<<<<< HEAD
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {Card, CardContent, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
-import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {ForumCategory} from "@/types/community";
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { useForm } from "react-hook-form",
 import { 
@@ -42,18 +25,19 @@ import { Textarea } from "@/components/ui/textarea";
 import { ForumCategory } from "@/types/community";
 import { Textarea } from "@/components/ui/textarea",
 import { ForumCategory } from "@/types/community",
-<<<<<<< HEAD
-interface PostFormValues {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+interface PostFormValues {
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface PostFormValues {
   title: string,
   content: string,
   categoryId: ForumCategory,
   tags: string
-<<<<<<< HEAD
+
 }
+
 
   title: string
   content: string
@@ -62,22 +46,9 @@ interface PostFormValues {
   tags: string
 }
 interface PostFormProps {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  initialValues?: Partial<PostFormValues>;
-  onSubmit: (values: PostFormValues) => void,
-  isEditing?: boolean
-}
 
-export const PostForm = ({;
-  initialValues;
-  onSubmit;
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { useForm } from "react-hook-form",;
 import {;
@@ -128,16 +99,10 @@ export const PostForm = ({
       categoryId: initialValues?.categoryId |"project-help"
       tags: initialValues?.tags |""
     }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -182,22 +147,13 @@ export const PostForm = ({
     try {
       await on_submit (values);
     } finally {
-<<<<<<< HEAD
+
       setIsSubmitting(false)
     }
-  }
-      title: initialValues?.title || "",
-      content: initialValues?.content || "",
-      categoryId: initialValues?.categoryId || "project-help",
-      tags: initialValues?.tags || ""
-    }
-  };
+
   }),;
   const [isSubmitting, setIsSubmitting] = useState(false),;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const handleSubmit = async (values: PostFormValues) => {;
     setIsSubmitting(true),;
     try {;
@@ -206,14 +162,11 @@ export const PostForm = ({
       setIsSubmitting(false);
 
     }
-<<<<<<< HEAD
-  },
-
-=======
-  }
-=======
 
 
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -232,26 +185,7 @@ export const PostForm = ({
               render={({ field }) => (;
                 <FormItem>;
                   <FormLabel>Title</FormLabel>;
-=======
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle>{is_editing ? "Edit Post" : "Create New Post"}</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
-        <Form {...form}>;
-          <form className="space - y-6" on_submit={form.handle_submit (handle_submit)}>;
-            <FormField;
-              control={form.control}
-              name="title";
-              render={({ field }) => (
-                <FormItem>;
-                  <FormLabel > Title</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   <FormControl>;
                     <Input placeholder="Enter post title..." {...field} />;
                   </FormControl>;
@@ -336,11 +270,13 @@ export default PostForm;
 
 },
 
-<<<<<<< HEAD
+
 export default PostForm,
+
 export default PostForm;
 export default PostForm,
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

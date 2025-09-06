@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {useState, useEffect} from "react";
 import {useSearchParams} from "react-router-dom";
 import {AppLayout} from "@/layout/AppLayout";
@@ -24,13 +17,14 @@ import {ServiceProcessSteps} from "@/components/services/PageSections/ServicePro
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes";
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction";
 export default function ITOnsiteServicesPage() {;
-<<<<<<< HEAD
+
   const [searchParams] = useSearchParams();
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
   
   // Check for success parameter in URL
   const success = searchParams.get("success");
+
 import { useState, useEffect } from "react",
 import { useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -51,8 +45,7 @@ export default function ITOnsiteServicesPage() {
   const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState("");
   // Check for success parameter in URL
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   const success = searchParams.get("success");
 import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
@@ -65,13 +58,13 @@ export default function ITOnsiteServicesPage() {
 
 
   
-<<<<<<< HEAD
+
   // Check for success parameter in URL
   const success = searchParams.get("success"),
-  
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+  
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Show success toast if redirected from successful payment
   useEffect(() => {
@@ -192,13 +185,12 @@ export default function ITOnsiteServicesPage() {;
     <AppLayout>;
       <section className="py-16 bg-zion-blue">;
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* Hero Section with Features */}
 
           <PageHero />;
@@ -251,10 +243,7 @@ export default function ITOnsiteServicesPage() {;
   )
 }
 }
-<<<<<<< HEAD
-;
-;
-=======
+
       toast ({
         title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."});
@@ -337,10 +326,9 @@ if (return 1) {
       <QuoteFormSection />;
     </AppLayout>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

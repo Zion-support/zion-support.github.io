@@ -9,25 +9,18 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       updates: Partial < BasePerson>;
     }
   | { type: 'deactivate'; section: keyof OrgData; id: string }
-<<<<<<< HEAD
+
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY |'dev-admin-key';
   if (req.method !== 'POST') {;
     return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
-=======
 
-  if (req && req.method !== 'POST') {
-    return res && res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process && process.env.ORG_ADMIN_KEY || 'dev-admin-key';
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-  if (req.method !== 'POST') {;
-    return res.status(405).json({ error: 'Method not allowed' });  }const ADMIN_KEY = process.env.ORG_ADMIN_KEY || 'dev-admin-key';
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 type AdminAction =
   | { type: 'invite', section: keyof OrgData, person: BasePerson }
   | { type: 'promote', section: keyof OrgData, id: string, updates: Partial<BasePerson> }
@@ -36,20 +29,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
 
   }
-<<<<<<< HEAD
-;
-=======
-
 
 ;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const key = req.headers['x-admin-key'];
-=======
 
-  const key = req && req.headers['x-admin-key'];
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   if (key !== ADMIN_KEY) {
     return res && res.status(401).json({ error: 'Unauthorized' });
   }
@@ -97,27 +82,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any;
     writeOrgData(data);
 
-=======
-    return res.status(200).json({ ok: true })
 
-  }
-
-    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
-
-    if (idx === -1) return res.status(404).json({ error: 'Not found' });
-    arr[idx] = { ...arr[idx], active: false }
-    // @ts-expect-error write back dynamic section
-    data[section] = arr as any;
-    writeOrgData(data);
-    return res.status(200).json({ ok: true });
-  }
-
-
-  }
-
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }
 return res.status(400).json({ error: 'Unknown action' });    return res.status(200).json({ ok: true })
   }
@@ -263,8 +228,4 @@ return res.status (400).json ({ error: 'Unknown action' });    return res.status
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

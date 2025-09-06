@@ -1,12 +1,5 @@
-<<<<<<< HEAD
-import React from 'react';
-import {Badge} from "@/components/ui/badge";
-import {Button} from "@/components/ui/button";
-import {Card, CardContent} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Building, MapPin, Clock, DollarSign, Star} from "lucide-react";
-import {formatDistanceToNow} from "date-fns";
-import {JobMatch} from "@/types/jobs";
+
+
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -68,6 +61,9 @@ export function JobMatchCard({
 
 import { formatDistanceToNow } from "date-fns",
 import { JobMatch } from "@/types/jobs",
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface JobMatchProps {
   matchId: string,
   talentId: string,
@@ -82,40 +78,8 @@ interface JobMatchProps {
   onApply?: (matchId: string) => void,
   onViewDetails?: (matchId: string) => void,
   onInvite?: (matchId: string) => void
-}
 
-export function JobMatchCard({ ;
-  matchId;
-  talentId, 
-  name, 
-  title, 
-  company, 
-  avatar, 
-  location, 
-  category, 
-  matchPercent, 
-  skills;
-  onApply, 
-  onViewDetails, 
-  onInvite 
-}: JobMatchProps) {
-  const handleApply = () => {
-    if (onApply) {
-      onApply(matchId)
-    }
-  };
 
-  const handleViewDetails = () => {
-    if (onViewDetails) {
-      onViewDetails(matchId)
-    }
-  };
-
-  const handleInvite = () => {
-    if (onInvite) {
-      onInvite(matchId)
-    }
-  };
 import React from 'react',;
 import { Badge } from "@/components/ui/badge",;
 import { Button } from "@/components/ui/button",;
@@ -171,18 +135,13 @@ export function JobMatchCard({;
     }
   },
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
   // Generate a formatted date for display
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks
-=======
 
-
-
-
-
-import React from 'react';
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="overflow-hidden">;
       <CardContent className="p-0">;
@@ -260,33 +219,25 @@ import React from 'react';
                 Apply Now;
               </Button>;
             )}
-<<<<<<< HEAD
+
           </div>
         </div>
       </CardContent>
     </Card>
   )
-}
-=======
 
 
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           </div>;
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 =======

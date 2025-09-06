@@ -79,25 +79,10 @@ export default async function handler(
     });
 
   }
+
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-
-  }
-<<<<<<< HEAD
 
 }
-<<<<<<< HEAD
-
-}
-}
-=======
-
-}
-
-}
-
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

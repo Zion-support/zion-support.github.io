@@ -27,36 +27,13 @@ if (!session?.user?.email) {
       { status: 200 }
     );
   } catch (error) {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-    console && console.error('Onboarding completion error:', error);
-    return NextResponse && NextResponse.json(
-          id: updated_user.id,
-          name: updated_user.name,
-          email: updated_user.email,
-          role: updated_user.role,
-          onboarding_completed: updated_user.onboarding_completed,
-        },
-      },
-      { status: 200 }
-    );
-  } catch (error) {
-    console.error ('Onboarding completion error:', error);
-    return NextResponse.json (
 
-      { error: 'Internal server error' },
-<<<<<<< HEAD
-=======
+    console.error('Onboarding completion error:', error);
+    return NextResponse.json(
 
 
-=======
 
-      { error: 'Internal server error' },
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { NextRequest, NextResponse } from "next/server",;
 import { getServerSession } from "next-auth",;
 import { prisma } from "@/lib/prisma",;
@@ -90,13 +67,12 @@ export async function POST(request: NextRequest) {;
     console.error("Onboarding completion error:", error);
     return NextResponse.json(;
       { error: "Internal server error" };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       { status: 500 }
     );
   }

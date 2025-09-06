@@ -1,41 +1,22 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-import React from "react";
-import { Control } from "react-hook-form";
-import {
+
   FormField
   FormItem
   FormLabel
   FormControl
   FormDescription
   FormMessage
-=======
 
-
-import {;
-  FormField,;
-  FormItem,;
-  FormLabel,;
-  FormControl,;
-  FormDescription,;
-  FormMessage,;
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   FormField,
   FormItem,
   FormLabel,
   FormControl,
   FormDescription,
   FormMessage,;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "@/components/ui/form";
 
 import { Textarea } from "@/components/ui/textarea";
@@ -49,6 +30,7 @@ interface DescriptionFieldsProps {;
 }
 
 
+
 export function DescriptionFields(): any ({;
   control,;
   handleEditorChange,;
@@ -58,36 +40,7 @@ export function DescriptionFields(): any ({;
   return (
     <>;
       <FormField
-<<<<<<< HEAD
-        control;
-                  field.onChange(e.target.value)
 
-=======
-<<<<<<< HEAD
-        control;
-                  field.onChange(e.target.value)
-=======
-=======
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-        control={control}
-        name="description"
-        render={({ field }) => (;
-          <FormItem>;
-            <FormLabel>Job Description</FormLabel>;
-            <FormControl>;
-              <Textarea
-=======
-
-=======
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',
 import { Control } from 'react-hook-form',
 import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from "@/components/ui/form",
@@ -112,25 +65,19 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
   return (;
     <>;
       <FormField;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         control={control}
         name="description"
         render={({ field }) => (
           <FormItem>
             <FormLabel>Job Description</FormLabel>
             <FormControl>
-<<<<<<< HEAD
-              <Textarea
-              <Textarea 
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 value={editorContent}
                 onChange={(e) => {;
@@ -138,45 +85,7 @@ export function DescriptionFields({ control, handleEditorChange, editorContent }
                   field.onChange(e.target.value);
                 }}
                 className="min-h-[200px]";
-=======
-import React from './react';
-import { Control  } from './react - hook - form';
-import {
-  FormField,
-  FormItem,
-  FormLabel,
-  FormControl,
-  FormDescription,
-  FormMessage,
-} from '@/components / ui / form';
-import { Textarea  } from '@/components / ui / textarea';
-import { JobSchemaType  } from './validation';
-interface DescriptionFieldsProps {
-  control: Control < JobSchemaType>;
-  handleEditorChange: (content: string) => void;
-  editor_content: string;
-}
-export /**
- * DescriptionFields - Function description
- */
-function DescriptionFields() {
-  return (
-    <>;
-      <FormField;
-        control={control}
-        name="description";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Job Description</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                value={editor_content}
-                on_change={(e) => {
-                  handleEditorChange (e.target.value);
-                  field.on_change (e.target.value);
-                }}
-                className="min - h-[200px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 placeholder="Enter a detailed description of the job role";
               />;
             </FormControl>;
@@ -198,20 +107,7 @@ function DescriptionFields() {
               <Textarea
                 placeholder="List the main responsibilities of this job"
                 className="resize-none min-h-[100px]"
-=======
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="responsibilities";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Responsibilities (Optional)</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                placeholder="List the main responsibilities of this job";
-                className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 {...field}
               />;
             </FormControl>;
@@ -233,20 +129,7 @@ function DescriptionFields() {
               <Textarea
                 placeholder="List the required qualifications for this job"
                 className="resize-none min-h-[100px]"
-=======
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="qualifications";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Qualifications (Optional)</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                placeholder="List the required qualifications for this job";
-                className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 {...field}
               />;
             </FormControl>;
@@ -268,20 +151,7 @@ function DescriptionFields() {
               <Textarea
                 placeholder="List the benefits offered for this job"
                 className="resize-none min-h-[100px]"
-=======
-          </FormItem>)}
-      />;
-      <FormField;
-        control={control}
-        name="benefits";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Benefits (Optional)</FormLabel>;
-            <FormControl>;
-              <Textarea;
-                placeholder="List the benefits offered for this job";
-                className="resize - none min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 {...field}
               />;
             </FormControl>;
@@ -338,16 +208,12 @@ function DescriptionFields() {
     </>
       />;
     </>;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   );
-=======
-          </FormItem>)}
-      />;
-    </>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

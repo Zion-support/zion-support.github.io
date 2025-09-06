@@ -1,6 +1,6 @@
 
 
-<<<<<<< HEAD
+
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function BiotechAIResearchPlatformPage() {
@@ -30,8 +30,10 @@ export default function BiotechAIResearchPlatformPage() {
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               </div>
             </div>
           </div>
@@ -45,11 +47,14 @@ export default function BiotechAIResearchPlatformPage() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-;
 
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+;
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

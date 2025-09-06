@@ -324,21 +324,18 @@ interface TalentProfileProps {
 }
 
 export function TalentProfile({ 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   profile,
   onRequestHire,
   onMessageTalent
 }: TalentProfileProps) {
-<<<<<<< HEAD
+
   const { isAuthenticated } = useAuth(),
   
   const { isAuthenticated } = useAuth()
   // Create proper availability object from talent profile
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   const availability: Availability = {
     status:
@@ -364,7 +361,7 @@ export function TalentProfile({
       date: new Date().toISOString(), // Default date since we don't have this data
     })) |[]
 
-<<<<<<< HEAD
+
   return (
     <div className='container mx-auto px-4 py-8'>
       {/* Profile Header */}
@@ -459,8 +456,7 @@ export function TalentProfile({;
       />;
       {/* Main content area */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-8">
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         {/* Left Column - Skills & Info */}
         <div className="space-y-8">
           <ProfileSkills skills={skillsArray} />
@@ -527,10 +523,9 @@ export function TalentProfile({;
               ratingCount={profile.rating_count}
             />;
           </div>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           {/* Hire Now CTA */}
           {isAuthenticated && (
@@ -575,10 +570,9 @@ export function TalentProfile({;
                       onClick={onMessageTalent}
                     >
                       <MessageSquare className="mr-2 h-5 w-5" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       Message
                     </Button>

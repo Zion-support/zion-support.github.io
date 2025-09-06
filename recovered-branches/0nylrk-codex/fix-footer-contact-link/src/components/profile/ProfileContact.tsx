@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Mail, Send} from "lucide-react";
-import {useState} from "react";
-import {toast} from "@/hooks/use-toast";
+
+
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
@@ -42,10 +37,10 @@ export function ProfileContact({
   }
 import { useState } from "react",
 import { toast } from "@/hooks/use-toast",
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface ProfileContactProps {
   email?: string,
   profileName: string,
@@ -82,55 +77,13 @@ export function ProfileContact({ email, profileName, profileType }: ProfileConta
         <Mail className="mr-2 h-5 w-5 text-zion-cyan" />
         Contact
       </h3>
-=======
-import { Button  } from '@/components / ui / button';
-import { Input  } from '@/components / ui / input';
-import { Textarea  } from '@/components / ui / textarea';
-import { Mail, Send  } from './lucide-react';
-import { useState  } from './react';
-import { toast  } from '@/hooks / use - toast';
-interface ProfileContactProps {
-  email?: string;
-  profile_name: string;
-  profile_type: "service" | "talent";
-}
-export /**
- * ProfileContact - Function description
- */
-function ProfileContact() {
-  const [message, set_message] = useState ("");
-  const [subject, set_subject] = useState ("");
-  const [is_sending, setIsSending] = useState (false);
-;
-  const handleSendMessage = (e: React.FormEvent) =>: any {
-    e.prevent_default ();
-    setIsSending (true);
-;
-    // Here would be the actual API call to send the message;
-    set_timeout (() => {
-      setIsSending (false);
-      set_message ("");
-      (set_subject (""),
-        toast ({
-          title: "Message Sent",
-          description: `Your message has been sent to ${profile_name}.`,
-        }));
-    }, 1000);
-  }
-;
-  return (
-    <div className="bg - zion - blue - dark border border - zion - blue - light rounded - lg p - 6 mb - 8">;
-      <h3 className="text - xl font - bold text - white mb - 4 flex items - center">;
-        <Mail className="mr - 2 h - 5 w - 5 text - zion - cyan" />;
-        Contact;
-      </h3>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       {email && (
         <div className="mb - 4 text - zion - slate - light">;
           <span className="block">Email: </span>;
           <a;
             href={`mailto:${email}`}
-<<<<<<< HEAD
+
             className="text-zion-cyan hover:underline truncate block"
           >
             {email}
@@ -168,26 +121,14 @@ function ProfileContact() {
         </div>
       </form>
     </div>
-  );
-}
-  )
-  )
-}
+
 import { Button } from "@/components/ui/button",;
 import { Input } from "@/components/ui/input",;
 import { Textarea } from "@/components/ui/textarea",;
 import { Mail, Send } from "lucide-react",;
 import { useState } from "react",;
 import { toast } from "@/hooks/use-toast",;
-=======
 
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-import {Textarea} from "@/components/ui/textarea";
-import {Mail, Send} from "lucide-react";
-import {useState} from "react";
-import {toast} from "@/hooks/use-toast";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface ProfileContactProps {;
   email?: string;
   profileName: string,;
@@ -243,21 +184,7 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
               value={subject}
               onChange={(e) => setSubject(e && e.target.value)}
               className="bg-zion-blue border-zion-blue-light text-white";
-=======
-            className="text - zion - cyan hover:underline truncate block";
-          >;
-            {email}
-          </a>;
-        </div>)}
-      <form on_submit={handleSendMessage}>;
-        <div className="space - y-4">;
-          <div>;
-            <Input;
-              placeholder="Subject";
-              value={subject}
-              on_change={(e) => set_subject (e.target.value)}
-              className="bg - zion - blue border - zion - blue - light text - white";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               required;
             />;
           </div>;
@@ -293,37 +220,11 @@ export function ProfileContact(): any ({ email, profileName, profileType }: Prof
     </div>;
   );
 }
-<<<<<<< HEAD
-;
-=======
 
-=======
-            <Textarea;
-              placeholder={`Message to ${profile_name}...`}
-              value={message}
-              on_change={(e) => set_message (e.target.value)}
-              className="bg - zion - blue border - zion - blue - light text - white min - h-[120px]";
-              required;
-            />;
-          </div>;
-          <Button;
-            type="submit";
-            className="w - full bg - zion - cyan hover:bg - zion - cyan / 90";
-            disabled={is_sending}
-          >;
-            <Send className="mr - 2 h - 4 w - 4" />;
-            {is_sending ? "Sending..." : "Send Message"}
-          </Button>;
-        </div>;
-      </form>;
-    </div>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  )
-=======
-  )
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

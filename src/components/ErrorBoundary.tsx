@@ -1,5 +1,7 @@
 
+
 import React, { Component, ReactNode, ErrorInfo } from 'react';
+
 
 
 interface Props {
@@ -9,6 +11,8 @@ interface Props {
 interface State {
   hasError: boolean;
   error?: Error;
+
+
 }
 
 class ErrorBoundary extends Component<Props, State> {
@@ -23,11 +27,18 @@ class ErrorBoundary extends Component<Props, State> {
 
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
     console.error('Error caught by boundary:', error, errorInfo);
+
+    this.setState({
+      error,
+      errorInfo
+    });
+
   }
 
   render() {
     if (this.state.hasError) {
       return (
+
         <div className="min-h-screen bg-gray-900 text-white flex items-center justify-center">
           <div className="text-center p-8">
             <h1 className="text-4xl font-bold text-red-400 mb-4">Something went wrong</h1>
@@ -60,6 +71,7 @@ class ErrorBoundary extends Component<Props, State> {
                 </pre>
               </details>
             )}
+
 
           </div>
         </div>

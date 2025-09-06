@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Project, ProjectStatus} from "@/types/projects";
-import {toast} from "sonner";
-export function useProjects() {;
-  const { user } = useAuth();
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
+
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -25,13 +16,13 @@ export function useProjects() {
   const [projects, setProjects] = useState<Project[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const [error, setError] = useState<string | null>(null);
   const fetchProjects = async () => {
@@ -127,21 +118,7 @@ export function useProjects() {
       
       // Transform the data to match our project types
       const transformedProject = {
-=======
-          job:jobs (title, description);
-          talent_profile:profiles ! talent_id (display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
-          client_profile:profiles ! client_id (display_name, avatar_url);
-        `);
-        .eq ("id", project_id);
-        .single ();
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Transform the data to match our project types;
-      const transformed_project = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         ...data;
 
         talent_profile: data && data.talent_profile ? {
@@ -345,11 +322,11 @@ export function useProjects() {;
     refetch: fetchProjects;
     getProjectById;
     updateProjectStatus;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   }
 }

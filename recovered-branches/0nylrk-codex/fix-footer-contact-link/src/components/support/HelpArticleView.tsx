@@ -1,11 +1,6 @@
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {ThumbsUp, ThumbsDown} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {HELP_CATEGORIES} from "./help-content";
+
+
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
@@ -14,7 +9,7 @@ import { toast } from "@/components/ui/use-toast",
 import { HELP_CATEGORIES } from "./help-content";
 interface HelpArticleViewProps {
 import { HELP_CATEGORIES } from "./help-content",
-=======
+
 import React, { useState } from './react';
 import { Button  } from '@/components / ui / button';
 import { Card  } from '@/components / ui / card';
@@ -28,7 +23,9 @@ interface HelpArticleViewProps {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface HelpArticleViewProps {
   articleId: string
 }
@@ -45,18 +42,8 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
     if (found) {
       article = found,
       break
-<<<<<<< HEAD
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card } from "@/components/ui/card",;
-import { ThumbsUp, ThumbsDown } from "lucide-react",;
-import { toast } from "@/components/ui/use-toast",;
-import { HELP_CATEGORIES } from "./help-content",;
-interface HelpArticleViewProps {;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   articleId: string;
 }
 
@@ -72,54 +59,16 @@ export function HelpArticleView({ articleId }: HelpArticleViewProps) {
 
     const found = category.articles.find((a) => a.id === articleId);
     if (found) {
-=======
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Card} from "@/components/ui/card";
-import {ThumbsUp, ThumbsDown} from "lucide-react";
-import {toast} from "@/components/ui/use-toast";
-import {HELP_CATEGORIES} from "./help-content";
-interface HelpArticleViewProps {;
-  articleId: string;
-}
 
-export function HelpArticleView(): any ({ articleId }: HelpArticleViewProps) {;
-  const [feedbackGiven, setFeedbackGiven] = useState<"helpful" | "not-helpful" | null>(null);
 
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {;
-    const found = category && category.articles.find(a => a && a.id === articleId);
-    if (found) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-export /**
- * HelpArticleView - Function description
- */
-function HelpArticleView() {
-  const [feedback_given, setFeedbackGiven] = useState<;
-    "helpful" | "not - helpful" | null;
-  >(null);
-;
-  // Find the article in all categories;
-  let article;
-  for (const category of HELP_CATEGORIES) {
-    const found = category.articles.find ((a) => a.id === article_id);
-    // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       article = found;
       break;
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
   if (!article) {
@@ -270,12 +219,19 @@ if ( {) {
                 Contact Support;
               </Button>;
             </div>;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+          )}
+        </div>
+      </Card>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           )}
         </div>;
@@ -289,26 +245,17 @@ function formatDate(date: string): string {
     year: "numeric"
     month: "long"
     day: "numeric"
-<<<<<<< HEAD
+
+
+
   });
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   })
-  })
-<<<<<<< HEAD
-}
-;
-function formatDate(date: string): string {;
-  return new Date(date).toLocaleDateString("en-US", {;
-    year: "numeric";
-    month: "long";
-    day: "numeric";
-  });
-}
-;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

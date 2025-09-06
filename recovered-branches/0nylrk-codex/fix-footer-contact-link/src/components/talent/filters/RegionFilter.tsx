@@ -1,20 +1,19 @@
 
-<<<<<<< HEAD
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {RegionFilterProps} from "@/types/filters";
+
+
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { RegionFilterProps } from "@/types/filters";
 
 import { Checkbox } from "@/components/ui/checkbox",
 import { RegionFilterProps } from "@/types/filters",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const REGION_OPTIONS = [
   { id: "North America", label: "North America" }
   { id: "Europe", label: "Europe" }
@@ -102,11 +101,11 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
                 htmlFor={`region-${region.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 {region.label}
               </label>
             </div>
@@ -114,34 +113,15 @@ export function RegionFilter({ selectedRegions, toggleRegion, expanded, toggleSe
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-=======
 
-    </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+    </div>
+
   );
 }
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { ChevronDown, ChevronUp  } from './lucide-react';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { RegionFilterProps  } from '@/types / filters';
-const REGION_OPTIONS = [;
-  { id: "North America", label: "North America" },
-  { id: "Europe", label: "Europe" },
-  { id: "Asia", label: "Asia" },
-  { id: "South America", label: "South America" },
-  { id: "Australia", label: "Australia" },
-  { id: "Africa", label: "Africa" },
-];
-;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

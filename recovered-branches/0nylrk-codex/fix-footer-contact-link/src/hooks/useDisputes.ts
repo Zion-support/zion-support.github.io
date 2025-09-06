@@ -1,15 +1,6 @@
 
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {useAuth} from "@/hooks/useAuth";
-import {Dispute, DisputeMessage, DisputeAttachment, DisputeStatus} from "@/types/disputes";
-import {toast} from "sonner";
-export function useDisputes() {;
-  const { user } = useAuth();
-  const [disputes, setDisputes] = useState<Dispute[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+
+
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { useAuth } from "@/hooks/useAuth",
@@ -26,12 +17,13 @@ export function useDisputes() {
   const [disputes, setDisputes] = useState<Dispute[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [error, setError] = useState<string | null>(null),
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const [error, setError] = useState<string | null>(null);
   const fetchDisputes = async () => {
@@ -208,22 +200,12 @@ export function useDisputes() {
       console && console.error("Error updating dispute status:", err);
       toast && toast.error("Failed to update dispute status");
       return false
-<<<<<<< HEAD
+
     }
   }
   const resolveDispute = async (
-    disputeId: string
-    disputeId: string, 
-=======
 
-      console.error ("Error fetching dispute:", err);
-      toast.error ("Failed to fetch dispute details");
-=======
 
-    disputeId: string, 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { useAuth } from "@/hooks/useAuth",;
@@ -378,13 +360,12 @@ if (throw error) {
   },;
   const resolveDispute = async (;
     disputeId: string,;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     resolution: { summary: string, resolution_type: string }
   ): Promise < boolean> => {
     try {
@@ -520,20 +501,11 @@ if ( {) {
     create_dispute;
     updateDisputeStatus;
 
-<<<<<<< HEAD
-    addDisputeMessage
-  }
-}
-=======
-    resolve_dispute;
-    getDisputeMessages,
-    addDisputeMessage;
-
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
   ): Promise<boolean> => {;
     try {;
       const { error } = await supabase;
@@ -627,13 +599,12 @@ if ( {) {
     resolveDispute;
     getDisputeMessages;
     addDisputeMessage;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   }
 }
 ;

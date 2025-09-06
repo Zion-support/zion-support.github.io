@@ -1,21 +1,15 @@
 
-<<<<<<< HEAD
-import { supabase } from '@/integrations/supabase/client';
-import { supabase } from '@/integrations/supabase/client',
-=======
 
-import { supabase } from '@/integrations/supabase/client',
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {supabase} from '@/integrations/supabase/client';
 import { supabase } from '@/integrations/supabase/client',
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export async function ensureAnalyticsTablesExist() {
   try {
     // Check if analytics_events table exists
@@ -31,19 +25,13 @@ export async function ensureAnalyticsTablesExist() {
     if (error && error.code === 'PGRST204') {
       console && console.log('Creating analytics tables...');
       await createAnalyticsTables()
-<<<<<<< HEAD
+
     }
   } catch (error) {
     console.warn('Error checking if analytics tables exist:', error);
     // No need to create tables here, as this could be a connection error
-  }
-}
-=======
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { supabase } from '@/integrations/supabase/client',;
 export async function ensureAnalyticsTablesExist() {;
   try {;
@@ -59,12 +47,11 @@ export async function ensureAnalyticsTablesExist() {;
   } catch (error) {;
     console.warn('Error checking if analytics tables exist:', error),;
     // No need to create tables here, as this could be a connection error;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 
@@ -164,9 +151,8 @@ async function createAnalyticsTables() {
   } catch (error) {
     console.error('Error creating analytics tables:', error),
     // Tables creation failed, but we can still continue
-<<<<<<< HEAD
-  }
-}
+
+
 ;
 async function createAnalyticsTables() {;
   try {;
@@ -234,7 +220,10 @@ async function createAnalyticsTables() {;
   }
 }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { KycProfile } from "../../../utils/kyc";
 import { getRequiredDocuments, getOptionalDocuments } from "../../../utils/kyc";
@@ -41,7 +38,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     optionalDocuments: getOptionalDocuments(profile.role)
   });
 }
-<<<<<<< HEAD
+
+
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -103,10 +101,10 @@ const FILE = path.join (DATA_DIR, "profiles.json");
 ;
 function load (): Record < string, KycProfile> {
   try {
+
     const raw = fs.readFileSync (FILE, "utf8");
     return JSON.parse (raw);
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch {
     return {}
@@ -115,11 +113,28 @@ function load (): Record < string, KycProfile> {
 }
 
 
-<<<<<<< HEAD
-  });
 
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden' });
+    ok: true,;
+    profile;
+    requiredDocuments: getRequiredDocuments(profile.role);
+    optionalDocuments: getOptionalDocuments(profile.role)});
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+    } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
 }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  } catch (error) {
+    console.error("Error:", error);
+    return res.status(500).json({ error: "Internal server error" });
+  }
+}
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React, { useState } from "react";
 import {MobileHeader} from "../components/common/MobileHeader";
 import {BottomNavigation} from "../components/common/BottomNavigation";
@@ -20,16 +13,9 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react";
 import {Badge} from "@/components/ui/badge";
 import {Card, CardContent} from "@/components/ui/card";
-<<<<<<< HEAD
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
-export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { MobileHeader } from "../components/common/MobileHeader",
 import { BottomNavigation } from "../components/common/BottomNavigation",
@@ -47,13 +33,9 @@ import {
 import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
 import { Badge } from "@/components/ui/badge",
 import { Card, CardContent } from "@/components/ui/card",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 type JobPostStep = "details" | "requirements" | "budget" | "preview",
 
@@ -86,7 +68,7 @@ export function MobileJobPost() {
   
   const renderStepContent = () => {
     switch (currentStep) {
-<<<<<<< HEAD
+
       case "details": return <DetailsStep />,
       case "requirements":
         return <RequirementsStep />,
@@ -183,18 +165,15 @@ function DetailsStep() {
       </div>
       <div className="space-y-2">
         <Label htmlFor="description">Job Description</Label>
-        <Textarea
-          id="description"
-          placeholder="Describe the job role and responsibilities"
-        <Textarea 
-          id="description" 
-          placeholder="Describe the job role and responsibilities" 
+
           rows={5}
         />
       </div>
     </div>
   )
 }
+
+
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
     "React", "TypeScript", "Node.js"
@@ -203,6 +182,8 @@ function RequirementsStep() {
         <Textarea 
           id="description" 
           placeholder="Describe the job role and responsibilities" 
+
+
 import React, { useState } from "react",;
 import { MobileHeader } from "../components/common/MobileHeader",;
 import { BottomNavigation } from "../components/common/BottomNavigation",;
@@ -221,10 +202,7 @@ import { Zap, ChevronLeft, ChevronRight } from "lucide-react",;
 import { Badge } from "@/components/ui/badge",;
 import { Card, CardContent } from "@/components/ui/card",;
 type JobPostStep = "details" | "requirements" | "budget" | "preview",;
-=======
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export function MobileJobPost() {;
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
 
@@ -265,12 +243,7 @@ export function MobileJobPost() {;
   };
 
 
-=======
 
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="min-h-screen flex flex-col">;
       <MobileHeader
@@ -377,16 +350,12 @@ function DetailsStep() {;
     </div>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
@@ -575,7 +544,7 @@ function DetailsStep() {
           {skills.map((skill) => (
             <Badge
               key={skill}
-<<<<<<< HEAD
+
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1"
             >
@@ -584,6 +553,7 @@ function DetailsStep() {
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
               <button 
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
+
 ;
 function RequirementsStep() {;
   const [skills, setSkills] = useState<string[]>([;
@@ -595,9 +565,7 @@ function RequirementsStep() {;
       setSkills([...skills, newSkill]),;
       setNewSkill("");
     }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   };
 
   const removeSkill = (skill: string) => {;
@@ -650,23 +618,14 @@ function RequirementsStep() {;
               variant="secondary"
               className="flex items-center gap-1 px-3 py-1">;
               {skill}
-<<<<<<< HEAD
-              <button;
-                className="ml-1 rounded-full hover:bg-background/20 p-1";
-=======
+
               <button
                 className="ml-1 rounded-full hover:bg-background/20 p-1"
-=======
-              variant="secondary"
-              className="flex items-center gap-1 px-3 py-1"
-            >
-              {skill}
 
-              <button 
-                className="ml-1 rounded-full hover:bg-background/20 p-1"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 onClick={() => removeSkill(skill)}
               >;
                 ×;
@@ -697,42 +656,38 @@ function RequirementsStep() {;
       <div className="space-y-2">
         <Label htmlFor="responsibilities">Key Responsibilities</Label>
         <Textarea
-<<<<<<< HEAD
+
           id="responsibilities"
           placeholder="List the key responsibilities for this role"
           rows={4}
+
         />
       </div>
     </div>
   )
+
+
 }
         <Textarea 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           id="responsibilities" 
           placeholder="List the key responsibilities for this role" 
 
           rows={4}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         />;
       </div>;
     </div>;
   );
-<<<<<<< HEAD
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
 function BudgetStep() {
@@ -845,10 +800,7 @@ function PreviewStep() {
   )
 }
 }
-<<<<<<< HEAD
-;
-;
-=======
+
 /**
  * PreviewStep - Function description
  */
@@ -886,10 +838,9 @@ function PreviewStep() {
       <Button variant="outline" className="w - full">Edit Job Post</Button>;
     </div>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-export interface CybersecurityQuantumService {
-export interface CybersecurityQuantumService {;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -12,8 +11,7 @@ export interface CybersecurityQuantumService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   {
@@ -330,7 +328,7 @@ export interface CybersecurityQuantumService {;
       'Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'
     ]
     support:
-<<<<<<< HEAD
+
       '24/7 technical support, security consulting, custom development, and dedicated success manager.'
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS']
     link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment'
@@ -342,28 +340,14 @@ export interface CybersecurityQuantumService {;
     rating: 4.8
     reviews: 1900
   }
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
-    compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
-    link: 'https://ziontechgroup.com/ai-powered-vulnerability-assessment',
-    icon: '🔍',
-    color: 'from-green-500 to-emerald-600',
-    popular: true,
-    launchDate: '2024-02-15',
-    customers: 2500,
-    rating: 4.8,
-    reviews: 1900,
-  },;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
 
     ];
     integrations: ['Jira, ServiceNow, Slack, Microsoft Teams, Custom security tools'],
     support: '24/7 technical support, security consulting, custom development, and dedicated success manager.',
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
 
-      '24/7 technical support, security consulting, custom development, and dedicated success manager.',
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     compliance: ['SOC 2 Type II, ISO 27001, GDPR, HIPAA, PCI DSS'],
     link: 'https://ziontechgroup && ziontechgroup.com/ai-powered-vulnerability-assessment',
     id: 'ai - powered - vulnerability - assessment',
@@ -440,33 +424,7 @@ export interface CybersecurityQuantumService {;
     reviews: 1900,
   },
 
-=======
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: string
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number
-}
 
-
-=======
-];      'Application security testing_network vulnerability assessment_cloud security scanning_compliance auditing_penetration testing_security monitoring';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     ];
 
@@ -483,31 +441,8 @@ export interface CybersecurityQuantumService {;
     rating: 4 && 4.8,
 
     reviews: 1900
-<<<<<<< HEAD
-<<<<<<< HEAD
-    rating: 4.8,
-    reviews: 1900;
-  }
 
-=======
 
-export interface CybersecurityQuantumService {;
-
-  }
-
-];
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-;
-=======
-<<<<<<< HEAD
-  }
-];
-=======
-export interface CybersecurityQuantumService {;
-=======
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
   id: string,;
   name: string,;
   tagline: string,;
@@ -769,16 +704,12 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
     customers: 2500,;
     rating: 4.8,;
     reviews: 1900;
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-=======
-    rating: 4.8,
-    reviews: 1900;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
   }
 ];
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035

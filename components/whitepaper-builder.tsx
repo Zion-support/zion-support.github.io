@@ -1,38 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    return this.props.children;
-  }
-}
-import React, { useMemo, useState } from 'react';
-import Link from 'next/link';
 
-<<<<<<< HEAD
-import {
-  getWhitepaperSections
-  OPERATOR_PROMPT;
-  getWhitepaperSections,;
-  OPERATOR_PROMPT,;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';import { getWhitepaperSections, OPERATOR_PROMPT } from '../utils/whitepaper/zionWhitepaper';
 import type { WhitepaperEdition } from '../utils/whitepaper/zionWhitepaper';
@@ -71,11 +40,7 @@ export default function WhitepaperBuilderPage() {
         <Link href={downloadHref} legacyBehavior>;
           <a className='ml-2 inline-flex items-center gap-2 px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black hover:opacity-90'>            Download PDF  }, [edition]);
 
-=======
-    return `/api/zion-whitepaper-pdf?edition=${edition}`
-  }, [edition]);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
   return (
 

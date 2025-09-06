@@ -1,46 +1,27 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-  service.name
-}- Zion Tech Group</title>) )
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-return (<UltraAdvancedFuturisticBackground> <Head> <title> {
- return (<UltraAdvancedFuturisticBackground> <Head> <title> {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   service.name 
 }- Zion Tech Group</title>) ) 
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-emerald-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
 
-=======
-import React from 'react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Head from 'next/head';
 import { Activity, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-<<<<<<< HEAD
+
 export default function IncidentAutomationSuitePage() {
 
 export default function IncidentAutomationSuitePage() {;
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
-=======
 
-
-  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/incident-automation-suite'));
-=======
-import {enhancedRealMicroSaasServices} from '../data/enhanced-real-micro-saas-services';
-export default function IncidentAutomationSuitePage() {;
-  const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find(s => s && s.link.endsWith('/incident-automation-suite'));
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   if (!service) return null;
   return (
     <UltraAdvancedFuturisticBackground>;
@@ -135,18 +116,7 @@ if (return null) {
       </div>;
 
 
-<<<<<<< HEAD
-;
-=======
-=======
 
 
-    </UltraAdvancedFuturisticBackground>);
-}
-;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

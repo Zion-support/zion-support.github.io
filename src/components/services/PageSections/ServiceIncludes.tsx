@@ -11,10 +11,9 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             </div>
@@ -30,10 +29,9 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             </div>
@@ -52,10 +50,9 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             </div>
@@ -71,10 +68,9 @@
           <div className="flex items-start">
             <div className="mt-1 mr-4">
               <Check className="h-5 w-5 text-zion-cyan" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             </div>
@@ -159,10 +155,9 @@ export function ServiceIncludes() {
               <Check className="h-5 w-5 text-zion-cyan" />
             </div>
             <div>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
@@ -170,7 +165,7 @@ export function ServiceIncludes() {
           </div>
         </div>
       </div>
-<<<<<<< HEAD
+
     </div>;
   );
 };
@@ -178,14 +173,7 @@ export function ServiceIncludes() {
     </div>
   )
 }
-=======
 
-
-
-    </div>
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Check } from 'lucide-react';
 export function ServiceIncludes() {;
   return (;
@@ -400,10 +388,9 @@ function ServiceIncludes() {
 
   );
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     </div>);
 }

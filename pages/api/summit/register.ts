@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../../utils/supabase/client";
 export default async function handler(
@@ -9,20 +9,21 @@ export default async function handler(
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { supabase } from '../../../utils/supabase/client';
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
+
   }
   try {
   try {;
     const { name, email, role, country, source } = req.body || {};
 
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   }
   try {
 
@@ -33,6 +34,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
   try {;
     const { name, email, role, country, source } = req.body || {};
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
 
@@ -70,23 +74,15 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       .select('*')
       .single();
     if (error) {
-<<<<<<< HEAD
+
       return res.status(500).json({ error: error.message });
     }
     return res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
     return res.status(500).json({ error: e?.message |"Unknown error" });
-=======
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-      return res.status(500).json({ error: error.message })
-    }
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
     return res && res.status(200).json({ ok: true, registration: data });
   } catch (e: any) {
@@ -96,29 +92,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 
 }
 
-=======
-          source: source || "zion - global - 2025",
-          created_at: new Date ().toISOString (),
-        },
-      ]);
-      .select ("*");
-      .single ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      return res.status (500).json ({ error: error.message });
-    }
-    return res.status (200).json ({ ok: true, registration: data });
-  } catch (e: any) {
-    return res.status (500).json ({ error: e?.message || "Unknown error" });
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
   }
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    return res.status(500).json({ error: e?.message || 'Unknown error' })
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ message: 'API endpoint' });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -158,7 +136,7 @@ export default async function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
+
 ;
     const { data, error } = await supabase;
       .from('summit_registrations');
@@ -215,8 +193,9 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

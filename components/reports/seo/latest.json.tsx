@@ -25,11 +25,11 @@ export default function Placeholder() {
 
 export default function Placeholder() {
   return (
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     <main className="min-h-screen p-8">
       <Head>
         <title>Reports • Seo • Latest.json - Placeholder</title>
@@ -40,16 +40,11 @@ export default function Placeholder() {
         <p className="text-gray-600 mb-6">Auto-generated placeholder for missing route: <code>/reports/seo/latest.json</code>.</p>
         <Link href="/"><a className="text-blue-600 hover:underline">Back to Home</a></a>
       </div>
-<<<<<<< HEAD
+
     </main>
-  );
-}
-    </main>;
   );
 }
 
-}
-    </main>
   )
   } catch (error) {
     console.error("Error:", error);
@@ -57,9 +52,10 @@ export default function Placeholder() {
   }
 }
 ;
-=======
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

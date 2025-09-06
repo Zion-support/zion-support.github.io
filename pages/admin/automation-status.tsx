@@ -1,16 +1,17 @@
-<<<<<<< HEAD
+
 import type { NextPage } from 'next';
 import Head from 'next/head';
+
 
 import type { NextPage } from 'next',;
 import Head from 'next/head',;
 import type { NextPage } from 'next';
 import Head from 'next/head';
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const AutomationStatus: NextPage = () => {
   return (
     <div>
@@ -23,29 +24,17 @@ const AutomationStatus: NextPage = () => {
         <p>This page is under construction.</p>
       </main>
     </div>
-<<<<<<< HEAD
+
   )
 }
 export default AutomationStatus;
 
-export default AutomationStatus,;
-  );
-};
-export default AutomationStatus;
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-export default AutomationStatus,;
-
-=======
-  );
-};
-export default AutomationStatus;
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

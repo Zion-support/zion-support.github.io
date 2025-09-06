@@ -1,38 +1,6 @@
-<<<<<<< HEAD
-import type { NextApiRequest, NextApiResponse } from "next";
-import { readState, filterEventsByScope } from "../../../utils/sync/storage";
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
-;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
-  const state = readState()
-  const events = filterEventsByScope(state.events, state.config.scope)
-  const totalsByToken: Record<string, number> = {}
-  const contributionsBySubject: Record<string, number> = {}
-  let globalVotes = 0
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-=======
 
 
-=======
 
-import type { NextApiRequest, NextApiResponse } from "next",;
-import { readState, filterEventsByScope } from "../../../utils/sync/storage",;
-;
-
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-
-
-  const state = readState(),
-  const events = filterEventsByScope(state.events, state.config.scope),
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({
@@ -47,12 +15,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
   const events = filterEventsByScope(state.events, state.config.scope),
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const totalsByToken: Record<string, number> = {},
   const contributionsBySubject: Record<string, number> = {},
   let globalVotes = 0,
@@ -64,9 +31,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const p = e.payload as any
       contributionsBySubject[p.subjectId] = (contributionsBySubject[p.subjectId] |0) + (p.score |0)
     } else if (e.type === "proposal") {
-<<<<<<< HEAD
-      const p = e.payload as any
-      const p = e.payload as any,
+
+
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0
     }
   }
@@ -75,17 +41,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
   return res.status(200).json({
+
+
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
 
     lastSyncedAt: state.lastSyncedAt})
       const p = e.payload as any,
+
+
     treasuryTotals: totalsByToken,
     topContributors,
     totalVoteCount: globalVotes,
     lastSyncedAt: state.lastSyncedAt});
 };
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       globalVotes += Array.isArray(p.votes) ? p.votes.length : 0;
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
@@ -154,15 +127,14 @@ export default function handler(req, res) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
+
 }
 }
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-      const p = e.payload as any,
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

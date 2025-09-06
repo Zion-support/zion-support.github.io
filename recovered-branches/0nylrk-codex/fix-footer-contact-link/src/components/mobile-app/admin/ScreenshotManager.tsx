@@ -1,17 +1,12 @@
 
-<<<<<<< HEAD
+
 import React, { useState, useRef } from "react",
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Upload, Trash2, Plus } from "lucide-react",
 import { AppPlatform } from "./MetadataManager";
 import { toast } from "sonner";
-import React, { useState, useRef } from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Upload, Trash2, Plus} from "lucide-react";
-import {AppPlatform} from "./MetadataManager";
-import {toast} from "sonner";
+
 interface ScreenshotManagerProps {
   platform: AppPlatform
 }
@@ -20,11 +15,14 @@ type Screenshot = {
   id: string
   url: string
   file: File
+
 }
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
 };
 
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
   const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -32,15 +30,14 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))
     }
+
+
   }
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
     const imageFiles = files.filter(file => file.type.startsWith('image/'));
-  };
-import React, { useState, useRef } from "react",
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
-import { Button } from "@/components/ui/button",
-import { Upload, Trash2, Plus } from "lucide-react",
+
+
 import { AppPlatform } from "./MetadataManager",
 import { toast } from "sonner",
 interface ScreenshotManagerProps {
@@ -69,7 +66,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       addScreenshots(Array.from(e.target.files));
     }
   },
-=======
+
 import React, { useState, useRef } from './react';
 import { Card, CardHeader, CardTitle, CardContent } from '@/components / ui / card';
 import { Button } from '@/components / ui / button';
@@ -84,7 +81,9 @@ type Screenshot = {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   
   const addScreenshots = (files: File[]) => {
     // Filter for image files only
@@ -141,57 +140,8 @@ type Screenshot = {
     const availableSlots = maxScreenshots - screenshots.length,
     
     if (availableSlots <= 0) {
-<<<<<<< HEAD
-      toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return
-    }
-    
-    const filesToAdd = imageFiles.slice(0, availableSlots);
-    
-    const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9);
-      url: URL.createObjectURL(file),
-      file
-    }));
-    
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-    
-    if (filesToAdd.length < imageFiles.length) {
-      toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)
-    }
-  };
-  
-  const removeScreenshot = (id: string) => {
-    setScreenshots(prev => {
-      const filtered = prev.filter(screenshot => screenshot.id !== id);
-      
-      // Revoke object URL to avoid memory leaks
-      const removed = prev.find(screenshot => screenshot.id === id),
-      if (removed) {
-        URL.revokeObjectURL(removed.url)
-      }
-      
-      return filtered
-    })
-  };
-  
-  const handleDragOver = (e: React.DragEvent) => {
-    e.preventDefault(),
-    setIsDragging(true)
-  };
-  
-  const handleDragLeave = () => {
-    setIsDragging(false)
-  };
-  
-  const handleDrop = (e: React.DragEvent) => {
-    e.preventDefault();
-    setIsDragging(false),
-    
-    if (e.dataTransfer.files) {
-      addScreenshots(Array.from(e.dataTransfer.files))
-    }
-  };
+
+
       toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`),
       return
   },;
@@ -248,12 +198,11 @@ type Screenshot = {
       addScreenshots(Array.from(e.dataTransfer.files));
     }
   },
-  
-=======
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <Card className="bg-zion-blue border-zion-purple/30">
@@ -261,106 +210,7 @@ type Screenshot = {
         <CardTitle className="text-lg">App Screenshots</CardTitle>
       </CardHeader>
       <CardContent>
-=======
-import React, { useState, useRef } from "react";
-import {Card, CardHeader, CardTitle, CardContent} from "@/components/ui/card";
-import {Button} from "@/components/ui/button";
-import {Upload, Trash2, Plus} from "lucide-react";
-import {AppPlatform} from "./MetadataManager";
-import {toast} from "sonner";
-interface ScreenshotManagerProps {;
-  platform: AppPlatform;
-}
 
-type Screenshot = {;
-  id: string,;
-  url: string,;
-  file: File;
-};
-
-export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {;
-  const [screenshots, setScreenshots] = useState<Screenshot[]>([]);
-  const [isDragging, setIsDragging] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
-
-  const handleFileSelect = (e: React && React.ChangeEvent<HTMLInputElement>) => {;
-    if (e && e.target.files) {;
-      addScreenshots(Array && Array.from(e && e.target.files));
-    }
-  };
-
-  const addScreenshots = (files: File[]) => {;
-    // Filter for image files only;
-    const imageFiles = files && files.filter(file => file && file.type.startsWith('image/'));
-
-    if (imageFiles && imageFiles.length === 0) {;
-      toast && toast.error("Please select valid image files"),;
-      return;
-    }
-
-    // Limit the number of screenshots;
-    const maxScreenshots = platform === "ios" ? 10 : 8;
-    const availableSlots = maxScreenshots - screenshots && screenshots.length;
-
-    if (availableSlots <= 0) {;
-      toast && toast.error(`Maximum ${maxScreenshots} screenshots allowed for ${platform === "ios" ? "iOS" : "Android"}`);
-      return;
-    }
-
-    const filesToAdd = imageFiles && imageFiles.slice(0, availableSlots);
-
-    const newScreenshots = filesToAdd && filesToAdd.map(file => ({;
-      id: Math && Math.random().toString(36).substring(2, 9);
-      url: URL && URL.createObjectURL(file),;
-      file;
-    }));
-
-    setScreenshots(prev => [...prev, ...newScreenshots]);
-
-    if (filesToAdd && filesToAdd.length < imageFiles && imageFiles.length) {;
-      toast && toast.warning(`Only added ${filesToAdd && filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`);
-    }
-  };
-
-  const removeScreenshot = (id: string) => {;
-    setScreenshots(prev => {;
-      const filtered = prev && prev.filter(screenshot => screenshot && screenshot.id !== id);
-
-      // Revoke object URL to avoid memory leaks;
-      const removed = prev && prev.find(screenshot => screenshot && screenshot.id === id),;
-      if (removed) {;
-        URL && URL.revokeObjectURL(removed && removed.url);
-      }
-
-      return filtered;
-    });
-  };
-
-  const handleDragOver = (e: React && React.DragEvent) => {;
-    e && e.preventDefault(),;
-    setIsDragging(true);
-  };
-
-  const handleDragLeave = () => {;
-    setIsDragging(false);
-  };
-
-  const handleDrop = (e: React && React.DragEvent) => {;
-    e && e.preventDefault();
-    setIsDragging(false),;
-
-    if (e && e.dataTransfer.files) {;
-      addScreenshots(Array && Array.from(e && e.dataTransfer.files));
-    }
-  };
-
-  return (
-    <Card className="bg-zion-blue border-zion-purple/30">;
-      <CardHeader>;
-        <CardTitle className="text-lg">App Screenshots</CardTitle>;
-      </CardHeader>;
-      <CardContent>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div
           className={`border-2 border-dashed rounded-lg p-4 mb-4 text-center transition-colors ${
             isDragging
@@ -417,30 +267,21 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
               </button>;
             </div>;
           ))}
-<<<<<<< HEAD
+
         </div>
       </CardContent>
     </Card>
   )
-}
-
-=======
 
 
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         </div>;
       </CardContent>;
     </Card>;
   );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

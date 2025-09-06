@@ -1,9 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React from "react";
 import Head from "next/head";
 import Layout from "../components/layout/Layout";
@@ -129,28 +126,6 @@ export default function SpaceTechPage() {
 ;
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-            </div>;
-          </section>;
-          <section className="text-center">;
-            <a href="/space-technology" className="inline-flex items-center gap-2 text-cyan-300 hover: text-cyan-200">;
-              <Globe2 className="w-4 h-4" />;
-              <span>Explore detailed Space Technology offerings</span>;
-            </a>;
-          </section>;
-        </div>;
-      </div>;
-    </Layout>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-<<<<<<< HEAD
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

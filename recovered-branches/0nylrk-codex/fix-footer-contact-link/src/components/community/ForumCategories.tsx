@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-import {Link} from "react-router-dom";
-import {Card, CardContent, CardHeader, CardTitle, CardDescription} from "@/components/ui/card";
-import {useAuth} from "@/hooks/useAuth";
-import {MessageSquare, Briefcase, Code, FileText, Megaphone} from "@/components/icons";
-import {ForumCategory, ForumCategoryInfo} from "@/types/community";
+
+
 import { Link } from "react-router-dom",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { useAuth } from "@/hooks/useAuth";
@@ -21,18 +17,17 @@ import { ForumCategory, ForumCategoryInfo } from "@/types/community";
 const categories: ForumCategoryInfo[] = [
   {
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
     icon: "Briefcase"
   }
 import { ForumCategory, ForumCategoryInfo } from "@/types/community",
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const categories: ForumCategoryInfo[] = [
   {
     id: "getting-hired",
@@ -187,52 +182,7 @@ const categories: ForumCategoryInfo[] = [;
 
 const iconMap = {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { Link } from './react-router-dom';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components / ui / card';
-import { use_auth } from '@/hooks / use_auth';
-import { MessageSquare, Briefcase, Code, FileText, Megaphone } from '@/components / icons';
-import { ForumCategory, ForumCategoryInfo } from '@/types / community';
-const categories: ForumCategoryInfo[] = [;
-  {
-    id: "getting - hired",
-    name: "Getting Hired",
-    description: "Tips, strategies, and questions about getting hired on the platform.";
-    admin_only: false,
-    icon: "Briefcase";
-  }
-  {
-    id: "project - help",
-    name: "Project Help",
-    description: "Get help with your ongoing projects and collaboration.",
-    admin_only: false,
-    icon: "MessageSquare";
-  }
-  {
-    id: "ai - tools",
-    name: "AI Tools Discussion",
-    description: "Discuss AI tools, frameworks, and best practices.";
-    admin_only: false,
-    icon: "Code";
-  }
-  {
-    id: "feedback",
-    name: "Feedback & Feature Requests",
-    description: "Share your feedback and suggest new features.",
-    admin_only: false,
-    icon: "FileText";
-  }
-  {
-    id: "announcements",
-    name: "Announcements",
-    description: "Official announcements from the Zion team.",
-    admin_only: true,
-    icon: "Megaphone";
-  }
-];
-;
-const icon_map = {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   Briefcase;
   MessageSquare;
   Code;
@@ -275,9 +225,9 @@ export const ForumCategories = () => {;
     </div>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default ForumCategories;

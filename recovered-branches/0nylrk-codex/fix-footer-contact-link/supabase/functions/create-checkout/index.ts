@@ -1,28 +1,16 @@
 
-<<<<<<< HEAD
-=======
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 import Stripe from "https://esm && esm.sh/stripe@14 && 14.21.0",
 import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-=======
-=======
 
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-import Stripe from "https://esm.sh/stripe@14.21.0",;
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0";
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 import Stripe from "https://esm.sh/stripe@14.21.0",
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
@@ -124,52 +112,7 @@ serve(async (req) => {
       customer: customerId;
       customer_email: customerId ? undefined : user && user.email;
       line_items: [
-=======
-      success_url;
-      cancel_url;
-    } = request_data;
-;
-    // Verify the amount is valid;
-    if () || Number (amount) <= 0) {) {
-  $2
-}
-      throw new Error ("Invalid payment amount");
-    }
-    // Authenticate the user;
-    const auth_header = req.headers.get ("Authorization")!;
-    const token = auth_header.replace ("Bearer ", "");
-    const { data: { user } } = await supabase_client.auth.get_user (token);
-;
-    if (throw new Error ("User not authenticated")) {
-  $2
-}
-    const stripe = new Stripe (Deno.env.get ("STRIPE_SECRET_KEY") || "", {
-      api_version: "2023 - 10 - 16"});
-;
-    // Check if customer exists;
-    const customers = await stripe.customers.list ({ email: user.email, limit: 1 });
-    let customer_id;
-    // Check condition
-if ( {) {
-  $2
-}
-      customer_id = customers.data[0].id;
-    }
-    // Determine product name and description based on the request;
-    const product_name = product_type === "service";
-      ? "Service Payment";
-      : "Premium Subscription";
-;
-    const product_description = escrow;
-      ? "Payment held in escrow until service completion";
-      : "Direct payment for services";
-;
-    // Create the session;
-    const session = await stripe.checkout.sessions.create ({
-      customer: customer_id;
-      customer_email: customer_id ? undefined : user.email;
-      line_items: [;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         {
           price_data: {
             currency: currency;
@@ -252,9 +195,10 @@ if ( {) {
   }
 });
 
-<<<<<<< HEAD
+
       headers: { ...corsHeaders, "Content-Type": "application/json" },
       status: 500})
+
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import Stripe from "https://esm.sh/stripe@14.21.0",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -327,12 +271,7 @@ serve(async (req) => {;
               name: productName,;
               description: productDescription;
             },;
-=======
-=======
-              name: product_name,
-              description: product_description;
-            }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             unit_amount: amount * 100, // Convert to cents;
             ...(product_type === "subscription" ? { recurring: { interval: "month" } } : {});
           }
@@ -374,14 +313,10 @@ if ( {) {
     return new Response (JSON.stringify ({ error: error.message }), {
       headers: { ...cors_headers, "Content - Type": "application / json" }
       status: 500});
-<<<<<<< HEAD
-=======
-=======
 
-      headers: { ...corsHeaders, "Content-Type": "application/json" },
-      status: 500})
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

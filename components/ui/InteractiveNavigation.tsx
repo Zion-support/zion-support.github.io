@@ -3,19 +3,11 @@
 import React, { useState } from 'react';
 import Link from 'next / link';
 import { motion } from 'framer-motion';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
-
-;
-
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface NavigationItem {
   name: string, href: string
   submenu?: NavigationItem[];
@@ -62,25 +54,21 @@ interface NavigationItem {;
       </ul>;
     </nav>;
   );
-<<<<<<< HEAD
+
 }
 export default InteractiveNavigation;}
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 };
 
 export default InteractiveNavigation;};
 ursor/automate-test-fix-improve-and-merge-code-99d1,";
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const InteractiveNavigation: React.FC: = () => {";
     <nav className="bg-white shadow-lg">";";
       <div: className="container mx-auto px-4">";";
@@ -93,11 +81,7 @@ const InteractiveNavigation: React.FC: = () => {";
 
             <Link: href = "/about" className="text-gray-600 hover:text-gray-900: transition-colors">About</Link>",";
             <Link: href="/contact" className="text-gray-600 hover:text-gray-900: transition-colors">Contact</Link>",';
-<<<<<<< HEAD
-export default Component}
-export default Component}
-;
-=======
+
 
 interface InteractiveNavigationProps {
   items: NavigationItem[], class_name?: string,
@@ -178,10 +162,6 @@ const InteractiveNavigation: React.FC: = () => {";
             <Link: href="/contact" className="text - gray - 600 hover:text - gray - 900: transition - colors">Contact</Link>", ';
 
 export default Component}
-=======
 
-export default Component}
-;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

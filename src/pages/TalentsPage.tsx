@@ -2,10 +2,9 @@ let filteredTalents = allTalents
     }
 }
 ;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 import { useRouter } from 'next/router',
 import { useState, useEffect, useCallback, useMemo } from 'react',

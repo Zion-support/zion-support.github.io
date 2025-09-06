@@ -41,9 +41,8 @@ import { Button } from '@/components / ui / button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components / ui / card';
 import { Badge } from '@/components / ui / badge';
 import { logErrorToProduction } from '@/utils / production_logger';
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 import React, { useState } from 'react'
 import { useAuth } from '@/hooks/useAuth'
 import { Button } from '@/components/ui/button'
@@ -51,8 +50,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { logErrorToProduction } from '@/utils/productionLogger'
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {
   Zap,
   Download,
@@ -84,7 +82,7 @@ if ( {) {
 }
     return null;
   }
-<<<<<<< HEAD
+
   const [isVisible, setIsVisible] = useState(false)
   const [isProcessing, setIsProcessing] = useState<string | null>(null)
   const executeAction = async (actionId: string, action: () => void) => {
@@ -94,13 +92,7 @@ if ( {) {
   const executeAction = async (actionId: string, action: () => void) => {;
     setIsProcessing(actionId);    try {
       await action()
-=======
-  const [is_visible, setIsVisible] = useState (false);
-  const [is_processing, setIsProcessing] = useState < string | null>(null);
-  const execute_action = async (action_id: string, action: () => void) => {
-    setIsProcessing (action_id);    try {
-      await action ();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     } catch (error) {
       logErrorToProduction (`Failed to execute action ${action_id}:`, {
         data: error,
@@ -109,10 +101,9 @@ if ( {) {
       setIsProcessing(null)
     }
   }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       id: 'enable - performance - monitor',
 
@@ -155,12 +146,8 @@ export function QuickActions() {;
     }
   },
 
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const actions: QuickAction[] = [
     // Performance Actions
     {
@@ -170,7 +157,7 @@ export function QuickActions() {;
       icon: <Activity className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
+
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
@@ -181,12 +168,7 @@ export function QuickActions() {;
         localStorage.setItem('performance-monitoringtrue'),
         window.location.reload()
       }},
-=======
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: 'enable-bundle-analyzer',
       label: 'Enable Bundle Analyzer',
@@ -194,7 +176,7 @@ export function QuickActions() {;
       icon: <Package className="w-4 h-4" />,
       category: 'performance',
       action: () => {
-<<<<<<< HEAD
+
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
@@ -205,12 +187,7 @@ export function QuickActions() {;
         localStorage.setItem('bundle-analyzertrue'),
         window.location.reload()
       }},
-=======
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: 'clear-cache',
       label: 'Clear Cache',
@@ -224,26 +201,22 @@ export function QuickActions() {;
             names.forEach(name => caches.delete(name))
           })
         }
-<<<<<<< HEAD
+
         localStorage.clear()
         sessionStorage.clear()
         window.location.reload()
       }
     }
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       },
     },
         localStorage.clear(),
         sessionStorage.clear(),
         window.location.reload()
       }},
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     {
@@ -255,7 +228,7 @@ export function QuickActions() {;
       action: () => {
         // Preload critical fonts
         const criticalFonts = [
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
   dangerous?: boolean;
@@ -292,8 +265,7 @@ export function QuickActions() {;
             colorDepth: screen.colorDepth
           }
         },
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
         const blob = new Blob([JSON.stringify(metrics, null, 2)], {
           type: 'application/json'
@@ -396,7 +368,7 @@ export function QuickActions() {;
   if (!isVisible) {;
 
 
-<<<<<<< HEAD
+
         // Preload critical images
         const criticalImages = [
           '/logos/zion-logo.png/images/hero-bg.webp'
@@ -410,8 +382,7 @@ export function QuickActions() {;
           document.head.appendChild(link)
         })
       }},
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     {
       id: 'download-performance-report',
       label: 'Download Performance Report',
@@ -428,7 +399,7 @@ export function QuickActions() {;
           screen: {
             width: screen.width,
             height: screen.height,
-<<<<<<< HEAD
+
             colorDepth: screen.colorDepth,
           },
         }
@@ -462,10 +433,7 @@ export function QuickActions() {;
         document.body.removeChild(a),
         URL.revokeObjectURL(url)
       }},
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: 'test-error-boundary',
       label: 'Test Error Boundary',
@@ -474,7 +442,7 @@ export function QuickActions() {;
       category: 'development',
       dangerous: true,
       action: () => {
-<<<<<<< HEAD
+
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
         throw new Error(
@@ -484,10 +452,7 @@ export function QuickActions() {;
     },
         throw new Error('Test error for Sentry integration - this is intentional!')
       }},
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     {
       id: 'refresh-app',
       label: 'Hard Refresh',
@@ -496,7 +461,7 @@ export function QuickActions() {;
       category: 'maintenance',
       action: () => {
         window.location.reload()
-<<<<<<< HEAD
+
       },
     },
   ]
@@ -523,13 +488,7 @@ export function QuickActions() {;
 
 
 
-=======
 
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (!isVisible) {
     return (
       <div className="fixed bottom-4 left-4 z-50">
@@ -545,10 +504,9 @@ export function QuickActions() {;
           className="bg-background/80 backdrop-blur-sm"
         >
           <Settings className="w-4 h-4 mr-2" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           Quick Actions
@@ -579,19 +537,15 @@ export function QuickActions() {;
               onClick={() => setIsVisible(false)}
               className="h-6 w-6 p-0"
             >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ✕
             </Button>
           </div>
         </CardHeader>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <CardContent className="pt-0 space-y-4">
@@ -638,10 +592,9 @@ export function QuickActions() {;
     </div>;
   );
 } ;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

@@ -1,37 +1,33 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React, { useState, useEffect } from "react";
 import {X, ArrowRight} from "lucide-react";
 import {Link} from "react-router-dom";
 import {useIsMobile} from "@/hooks/use-mobile";
-<<<<<<< HEAD
+
+
 import React, { useState, useEffect } from "react",
 import { X, ArrowRight } from "lucide-react",
 import { Link } from "react-router-dom";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Link } from "react-router-dom",
 import { useIsMobile } from "@/hooks/use-mobile",
-=======
+
 interface SmartAppBannerProps {;
 
+interface SmartAppBannerProps {
+  appName?: string,
+  appIconSrc?: string,
+  appStoreUrl?: string,
+  googlePlayUrl?: string,
+  delay?: number, // Delay in milliseconds before showing the banner
+}
+
+
+
   appName?: string;
-=======
-import React, { useState, useEffect } from './react';
-import { X, ArrowRight } from './lucide-react';
-import { Link } from './react-router-dom';
-import { useIsMobile } from '@/hooks / use - mobile';
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface SmartAppBannerProps {
@@ -42,20 +38,10 @@ interface SmartAppBannerProps {
   googlePlayUrl?: string;
   delay?: number, // Delay in milliseconds before showing the banner;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
-  appName = "Zion Marketplace";
-  appIconSrc;
-  appStoreUrl = "/download";
+
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-=======
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   appName = "Zion Marketplace";
   appIconSrc;
@@ -115,10 +101,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent),
   const bannerLink = isIOS ? appStoreUrl : googlePlayUrl,
   
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="fixed top-0 left-0 right-0 bg-zion-blue-dark border-b border-zion-purple/30 p-3 z-50 animate-fade-in">;
@@ -129,7 +113,7 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           ) : (;
             <div className="text-zion-cyan font-bold text-lg">Z</div>;
           )}
-<<<<<<< HEAD
+
         </div>
         <div className="flex-1">
           <h4 className="font-semibold text-white">{appName}</h4>
@@ -150,17 +134,8 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
       </div>
     </div>
   )
-}
 
-};
-=======
 
-=======
-
-};
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 },
 import React, { useState, useEffect } from "react",;
 import { X, ArrowRight } from "lucide-react",;
@@ -247,10 +222,9 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({;
 };
 
 export default SmartAppBanner;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

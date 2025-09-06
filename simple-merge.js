@@ -1,20 +1,6 @@
-<<<<<<< HEAD
-const { execSync } = require('child_process');
-console.log('🚀 Starting simple merge process...');
-try {// Check git status;
-  console.log('📊 Checking git status...');
-  const status = execSync('git status --porcelain', { encoding: 'utf8' });
-  console.log('Git status:', status |'Clean working directory');
-=======
 
-const { exec_sync } = require ('child_process'),
-console.log ('🚀 Starting simple merge process...'),
-try {
-  // Check git status;
-  console.log ('📊 Checking git status...'),
-  const status = exec_sync ('git status --porcelain', { encoding: 'utf8' }),
-  console.log ('Git status:', status || 'Clean working directory'),
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+const { execSync } = require('child_process');
+
   // Fetch latest changes;
   console.log ('📥 Fetching latest changes...'),
   exec_sync ('git fetch --all --prune'),
@@ -29,34 +15,12 @@ try {
   } catch (error) {
     console.log ('⚠️  Merge conflicts detected. Resolving...'),
     // Find files with merge conflicts;
-<<<<<<< HEAD
+
     const conflictFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' });
     if (conflictFiles.trim()) {console.log('Found merge conflicts in:', conflictFiles.trim());
-const { execSync } = require('child_process'),;
-const { execSync } = require('child_process');
-=======
-    const conflict_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }),
-    if () {) {
-  $2
-}
-      console.log ('Found merge conflicts in:', conflict_files.trim ()),
-      // Resolve conflicts by accepting our version;
-      const files = conflict_files.trim ().split ('\n'),
-      for (const file of files) {
-        if () {) {
-  $2
-}
-          console.log (`Resolving conflicts in: ${file}`),
-          try {
-            exec_sync (`git checkout --ours "${file}"`);
-          } catch (e) {
-            exec_sync (`git checkout --theirs "${file}"`);
 
-=======
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 console.log('🚀 Starting simple merge process...'),;
 try {;
   // Check git status;
@@ -81,14 +45,12 @@ try {;
     if (conflictFiles.trim()) {;
       console.log('Found merge conflicts in:', conflictFiles.trim()),;
       // Resolve conflicts by accepting our version;
-<<<<<<< HEAD
+
       const files = conflictFiles.trim().split('\n');
-      const files = conflictFiles.trim().split('\n'),;
-      const files = conflictFiles.trim().split('\n');
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       for (const file of files) {;
         if (file.trim()) {;
           console.log(`Resolving conflicts in: ${file}`);
@@ -147,13 +109,12 @@ try {;
   const branches = execSync('git branch -r', { encoding: 'utf8' }),;
   const branchList = branches.split('\n');
     .map(branch => branch.trim());
-<<<<<<< HEAD
-    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
-    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD')),;
-    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    .filter(branch => branch && !branch.includes('origin/main') && !branch.includes('origin/HEAD'));
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   console.log(`Found ${branchList.length} branches to merge: `),;
   branchList.forEach(branch => console.log(`  - ${branch}`)),;
   // Merge each branch;
@@ -184,15 +145,4 @@ try {;
   console.error('❌ Error during merge process:', error.message),;
   process.exit(1);
 }
-=======
-  console.log ('📤 Pushing all changes to main...'),
-  exec_sync ('git push origin main'),
-  console.log ('🎉 All merge operations completed successfully!'),
-  console.log ('✅ All PRs have been merged into main branch'),
-  console.log ('✅ All merge conflicts have been resolved'),
-  console.log ('✅ Repository is now clean and up to date');
-} catch (error) {
-  console.error ('❌ Error during merge process:', error.message),
-  process.exit (1);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+

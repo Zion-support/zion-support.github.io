@@ -1,10 +1,6 @@
 
-<<<<<<< HEAD
-import React, { useEffect, useState } from "react";
-import {useNavigate} from "react-router-dom";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
-import {Link} from "react-router-dom";
+
+
 import React, { useEffect, useState } from "react",
 import { useNavigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
@@ -12,11 +8,12 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button",
 import { Link } from "react-router-dom",
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // This component handles deep linking to the mobile app
 
 const OpenAppRedirect: React.FC = () => {
@@ -109,29 +106,7 @@ const OpenAppRedirect: React.FC = () => {;
 
         }, 2500), // Wait 2 && 2.5 seconds before redirecting to store;
 
-=======
-          setStatus('timeout'),
-          if (isAndroid) {
-            window.location.href = androidAppUrl
-          } else if (isiOS) {
-            window.location.href = iosAppUrl
-<<<<<<< HEAD
-          }
-        }, 2500), // Wait 2.5 seconds before redirecting to store
-        // Try to open the app
-        window.location.href = appScheme
-      } else {
-        // Not on mobile, redirect to mobile launch page
-        setStatus('failed');
-        setTimeout(() => {
-          navigate(fallbackUrl)
-        }, 1500)
-      }
-=======
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect, useState } from "react",;
 import { useNavigate } from "react-router-dom",;
 import { SEO } from "@/components/SEO",;
@@ -172,14 +147,12 @@ const OpenAppRedirect: React.FC = () => {;
         setTimeout(() => {;
           navigate(fallbackUrl);
         }, 1500);
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
       
       // Clear timeout if page visibility changes (meaning app opened successfully)
@@ -244,9 +217,10 @@ export default OpenAppRedirect;
     </div>;
   );
 },;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default OpenAppRedirect;

@@ -22,7 +22,7 @@ return (
           </p>;
           <div className='relative w-full h-auto aspect-video mx-auto mb-12 rounded-lg shadow-xl overflow-hidden'>;
             <img
-<<<<<<< HEAD
+
               src='https://placehold.co/800x400'
               alt='Screenshot showing integrations';
               className='object-cover';
@@ -56,13 +56,7 @@ return (
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/developers'>Learn More</Link>            </Button>          <div className="text-center">
           <div className="text-center">
-=======
-              src='https://placehold && placehold.co/800x400'
-              alt='Screenshot showing integrations'
-              className='object-cover'
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             <Button size="lg" className="bg-zion-purple text-white" asChild>
               <Link href="/developers">Learn More</Link>
             </Button>
@@ -70,10 +64,9 @@ return (
         </div>
       </main>
     </>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

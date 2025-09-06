@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 import Layout from './components/Layout';
 origin/automation-improvements-final
 import {
-<<<<<<< HEAD
+
   Mail,
   Lock,
   Eye,
@@ -186,188 +186,9 @@ import {
   TiredFace2,
   SleepyFace2,
   YawningFace2,
-  DizzyFace2,
-  DizzyFace2,;
-=======
 
-import {;
-  Mail,;
-  Lock,;
-  Eye,;
-  EyeOff,;
-  ArrowRight,;
-  CheckCircle,;
-  AlertCircle,;
-  User,;
-  Shield,;
-  Globe,;
-  Smartphone,;
-  Monitor,;
-  Server,;
-  Database,;
-  Cloud,;
-  Brain,;
-  Code,;
-  Settings,;
-  Wrench,;
-  Cog,;
-  Activity,;
-  PieChart,;
-  BarChart,;
-  TrendingUp,;
-  DollarSign,;
-  ShoppingCart,;
-  Home,;
-  Trash2,;
-  Camera,;
-  Heart,;
-  ClipboardList,;
-  TreePine,;
-  Droplets,;
-  Building,;
-  Rocket,;
-  Lightbulb,;
-  Target,;
-  MessageSquare,;
-  HelpCircle,;
-  Info,;
-  XCircle,;
-  Plus,;
-  Minus,;
-  ChevronUp,;
-  ChevronRight,;
-  ChevronLeft,;
-  ChevronDown,;
-  ArrowUp,;
-  ArrowDown,;
-  ArrowLeft,;
-  Pause,;
-  Stop,;
-  SkipForward,;
-  SkipBack,;
-  Volume2,;
-  VolumeX,;
-  Maximize,;
-  Minimize,;
-  RotateCcw,;
-  RotateCw,;
-  RefreshCw,;
-  Upload,;
-  Share,;
-  Copy,;
-  Edit,;
-  Trash,;
-  Save,;
-  Unlock,;
-  Bell,;
-  BellOff,;
-  Star as StarIcon,;
-  Heart as HeartIcon,;
-  ThumbsUp,;
-  ThumbsDown,;
-  MessageCircle,;
-  Send,;
-  Paperclip,;
-  Smile,;
-  Frown,;
-  Meh,;
-  Laugh,;
-  Angry,;
-  Sad,;
-  Surprised,;
-  Wink,;
-  Kiss,;
-  Tongue,;
-  Wink2,;
-  KissWinkHeart,;
-  KissClosedEyes,;
-  StuckOutTongue,;
-  StuckOutTongueWinkingEye,;
-  StuckOutTongueClosedEyes,;
-  Disappointed,;
-  Worried,;
-  Angry2,;
-  Rage,;
-  Cry,;
-  Scream,;
-  Confounded,;
-  Hugging,;
-  Smirk,;
-  NoMouth,;
-  NeutralFace,;
-  Expressionless,;
-  Unamused,;
-  RollingEyes,;
-  Thinking,;
-  LyingFace,;
-  HandOverMouth,;
-  ShushingFace,;
-  ExplodingHead,;
-  CowboyHatFace,;
-  DisguisedFace,;
-  Sunglasses,;
-  NerdFace,;
-  MonocleFace,;
-  Confused,;
-  WorriedFace,;
-  SlightlyFrowningFace,;
-  OpenMouth,;
-  Hushed,;
-  Astonished,;
-  Flushed,;
-  PleadingFace,;
-  FrowningFace,;
-  AnguishedFace,;
-  FearfulFace,;
-  ColdSweat,;
-  DisappointedRelieved,;
-  CryFace,;
-  LoudlyCryingFace,;
-  ScreamFace,;
-  StuckOutTongueFace,;
-  DroolingFace,;
-  UnamusedFace,;
-  SweatSmile,;
-  Sweat,;
-  WearyFace,;
-  TiredFace,;
-  SleepyFace,;
-  YawningFace,;
-  DizzyFace,;
-  ExplodingHeadFace,;
-  CowboyHatFace2,;
-  DisguisedFace2,;
-  SunglassesFace,;
-  NerdFace2,;
-  MonocleFace2,;
-  ConfusedFace,;
-  WorriedFace2,;
-  SlightlyFrowningFace2,;
-  OpenMouthFace,;
-  HushedFace,;
-  AstonishedFace,;
-  FlushedFace,;
-  PleadingFace2,;
-  FrowningFace2,;
-  AnguishedFace2,;
-  FearfulFace2,;
-  ColdSweatFace,;
-  DisappointedRelievedFace,;
-  CryFace2,;
-  LoudlyCryingFace2,;
-  ScreamFace2,;
-  StuckOutTongueFace2,;
-  DroolingFace2,;
-  UnamusedFace2,;
-  SweatSmileFace,;
-  SweatFace,;
-  WearyFace2,;
-  TiredFace2,;
-  SleepyFace2,;
-  YawningFace2,;
-  DizzyFace2,;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "lucide-react";
   DizzyFace2
 } from 'lucide-react';
@@ -549,16 +370,10 @@ origin/automation-improvements-final
   YawningFace2
   DizzyFace2
 } from "lucide-react";
-<<<<<<< HEAD
+
 export default function LoginPage() {
   const [formData, setFormData] = useState({
-    email: ""
-    password: ""
-    email: "",
-    password: "",;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   });
   const [showPassword, setShowPassword] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
@@ -617,9 +432,7 @@ origin/automation-improvements-final
       setError('Login failed. Please try again.');
 origin/automation-improvements-final
     } finally {
-=======
-    } finally {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
       setIsLoading(false);
     }
   }
@@ -692,19 +505,7 @@ origin/automation-improvements-final
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Mail className="h-5 w-5 text-gray-400" />
                   </div>
-=======
 
-              <div>;
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2">;
-                  Email address;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
-                    <Mail className="h-5 w-5 text-gray-400" />;
-                  </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="email"
                     name="email"
@@ -731,22 +532,7 @@ origin/automation-improvements-final
                   <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                     <Lock className="h-5 w-5 text-gray-400" />
                   </div>
-=======
-                  />;
-                </div>;
-              </div>;
 
-              <div>;
-                <label
-                  htmlFor="password"
-                  className="block text-sm font-medium text-gray-700 mb-2">;
-                  Password;
-                </label>;
-                <div className="relative">;
-                  <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">;
-                    <Lock className="h-5 w-5 text-gray-400" />;
-                  </div>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   <input
                     id="password"
                     name="password"
@@ -867,66 +653,5 @@ origin/automation-improvements-final
       </div>;
     </Layout>;
   );
-=======
-              <div>;
-                <button;
-                  type="submit";
-                  disabled={is_loading}
-                  className="group relative w - full flex justify - center py - 3 px - 4 border border - transparent text - sm font - medium rounded - lg text - white bg - blue - 600 hover:bg - blue - 700 focus:outline - none focus:ring - 2 focus:ring - offset - 2 focus:ring - blue - 500 disabled:opacity - 50 disabled:cursor - not - allowed transition - colors";
-                >;
-                  {is_loading ? (
-                    <div className="flex items - center">;
-                      <div className="animate - spin rounded - full h - 4 w - 4 border - b-2 border - white mr - 2"></div>;
-                      Signing in...;
-                    </div>) : (
-                    <div className="flex items - center">;
-                      Sign in;
-                      <ArrowRight className="ml - 2 h - 4 w - 4 group - hover:translate - x-1 transition - transform" />;
-                    </div>)}
-                </button>;
-              </div>;
-            </form>;
-            <div className="mt - 6">;
-              <div className="relative">;
-                <div className="absolute inset - 0 flex items - center">;
-                  <div className="w - full border - t border - gray - 300" />;
-                </div>;
-                <div className="relative flex justify - center text - sm">;
-                  <span className="px - 2 bg - white text - gray - 500">;
-                    Or continue with;
-                  </span>;
-                </div>;
-              </div>;
-              <div className="mt - 6 grid grid - cols - 2 gap - 3">;
-                <button className="w - full inline - flex justify - center py - 2 px - 4 border border - gray - 300 rounded - lg shadow - sm bg - white text - sm font - medium text - gray - 500 hover:bg - gray - 50 transition - colors">;
-                  <Globe className="h - 5 w - 5" />;
-                  <span className="ml - 2">Google</span>;
-                </button>;
-                <button className="w - full inline - flex justify - center py - 2 px - 4 border border - gray - 300 rounded - lg shadow - sm bg - white text - sm font - medium text - gray - 500 hover:bg - gray - 50 transition - colors">;
-                  <User className="h - 5 w - 5" />;
-                  <span className="ml - 2">Microsoft</span>;
-                </button>;
-              </div>;
-            </div>;
-          </motion.div>;
-          <motion.div;
-            className="text - center";
-            initial={{ opacity: 0, coordinate_y: 30 }}
-            animate={{ opacity: 1, coordinate_y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >;
-            <p className="text - sm text - gray - 600">;
-              Don't have an account?{" "}
-              <Link;
-                href="/contact";
-                className="font - medium text - blue - 600 hover:text - blue - 500";
-              >;
-                Contact us to get started;
-              </Link>;
-            </p>;
-          </motion.div>;
-        </div>;
-      </div>;
-    </Layout>);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }

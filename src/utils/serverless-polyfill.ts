@@ -1,8 +1,7 @@
 declare global {
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   var webpackChunk_N_E: any[]
@@ -13,11 +12,8 @@ declare global {
   var __assign: any
   var __rest: any
   var __decorate: any
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   var __awaiter: any
 }
 
@@ -282,10 +278,9 @@ const tsHelpers = {
       for (let i = 0; i < symbols.length; i++) {
         const symbol = symbols[i]
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol))
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -293,7 +288,7 @@ const tsHelpers = {
       }
     }
     return t
-<<<<<<< HEAD
+
   }
   },
 
@@ -304,11 +299,7 @@ const tsHelpers = {
     desc?: any
   ) {
     let c = arguments.length
-=======
 
-    let c = arguments && arguments.length,
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       r =
         c < 3
           ? target
@@ -326,7 +317,7 @@ const tsHelpers = {
     else
       for (let i = decorators.length - 1; i >= 0; i--)
         if ((d = decorators[i]))
-<<<<<<< HEAD
+
           r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) |r
     return (c > 3 && r && key && Object.defineProperty(target, key, r), r)
   }
@@ -337,16 +328,12 @@ const tsHelpers = {
     if (typeof Reflect === "object" && typeof (Reflect as any).decorate === "function") r = (Reflect as any).decorate(decorators, target, key, desc),
     else for (let i = decorators.length - 1, i >= 0, i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r,
     return c > 3 && r && key && Object.defineProperty(target, key, r), r
-=======
 
-          r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return (c > 3 && r && key && Object && Object.defineProperty(target, key, r), r);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
 
 
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-<<<<<<< HEAD
+
   
   __decorate: function (decorators: any[], target: any, key?: string | symbol, desc?: any) {
     let c = arguments.length, r = c < 3 ? target : desc === null ? desc = (key ? Object.getOwnPropertyDescriptor(target, key) : undefined) : desc, d,
@@ -356,8 +343,7 @@ const tsHelpers = {
   },
   
   __awaiter: function (thisArg: any, _arguments: any, P: any, generator: any) {
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     function adopt(value: any) {
       return value instanceof P
         ? value
@@ -379,7 +365,7 @@ const tsHelpers = {
       if (&& e.index_of (p) < 0)) {
   $2
 }
-<<<<<<< HEAD
+
 //CRITICAL: Webpack chunk array polyfill if (typeof b !== "function" && b !== null) throw new TypeError ("Class extends value " + String (b) + "is not a constructor or null")
 }return t
 }
@@ -433,21 +419,7 @@ try {
       for (let i = 0, i < symbols.length, i++) {;
         const symbol = symbols[i],;
         if (symbol && e.indexOf(symbol as any) < 0 && Object.prototype.propertyIsEnumerable.call(s, symbol));
-=======
-        t[p] = s[p];
-    // Check condition
-if ( {) {
-  $2
-}
-      const symbols = Object.getOwnPropertySymbols (s);
-      for (let index = 0; i < symbols.length; i++) {
-        const symbol = symbols[i];
-        // Check condition
-if (< 0 &&) {
-  $2
-}
-          Object.prototype.propertyIsEnumerable.call (s, symbol));
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           t[symbol] = s[symbol];
       }
     }
@@ -472,10 +444,9 @@ if (< 0 &&) {
 if (.decorate === 'function') {
   $2
 }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     );
       r = (Reflect as any).decorate (decorators, target, key, desc);
     else;
@@ -719,10 +690,8 @@ if ( {) {
     }
 
   })
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 // Export a verification function for testing
 export const verifyPolyfills = () => {
   const checks = {
@@ -797,7 +766,7 @@ if (process && process.env.NODE_ENV === 'development') {
 }
 
 export default {}, // Ensure this can be imported as a module
-<<<<<<< HEAD
+
 }
 ;
 // Node.js environment polyfills (for SSR/build time);
@@ -855,21 +824,5 @@ export const verifyPolyfills = () => {;
 if (process.env.NODE_ENV === 'development') {;
   setTimeout(() => verifyPolyfills(), 100);
 }
-=======
 
-//Inject TypeScript helpers into global scope //Error prevention for common webpack issues try {';
-  //Prevent webpack chunk loading errors // Check condition
-if ( {) {
-  $2
-}
-export default {} // Ensure this can be imported as a module;
-}, // Ensure this can be imported as a module'";
-// Auto - verify in development;
-// Check condition
-if ( {) {
-  $2
-}
-  set_timeout ((, ) => verify_polyfills (), 100);
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default {}, // Ensure this can be imported as a module;

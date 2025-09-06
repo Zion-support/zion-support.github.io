@@ -1,46 +1,28 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { toast } from 'sonner';
-export interface MilestoneInput {
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {toast} from 'sonner';
-export interface MilestoneInput {;
-=======
-import {useState} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {toast} from 'sonner';
-export interface MilestoneInput {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   scope: string;
   start_date: string;
   end_date: string | null,
   project_type: string;
 
 }
-<<<<<<< HEAD
+
 export interface GeneratedMilestone {
 
 export interface GeneratedMilestone {;
-=======
 
-
-export interface GeneratedMilestone {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   title: string;
   description: string;
 
       setIsGenerating(true),
 
-<<<<<<< HEAD
+
   isAiGenerated: boolean
 }
-export function useMilestoneGenerator() {
 
-export function useMilestoneGenerator() {;
   const [isGenerating, setIsGenerating] = useState(false);
 
   const [generatedMilestones, setGeneratedMilestones] = useState<GeneratedMilestone[]>([]);
@@ -48,44 +30,14 @@ export function useMilestoneGenerator() {;
     try {
       setIsGenerating(true)
       const { data, error } = await supabase.functions.invoke('generate-milestones', {
-=======
-      const { data, error } = await supabase && supabase.functions.invoke('generate-milestones', {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         body: input
       });
       if (error) throw error;
       // Mark each milestone as AI generated
 
       const milestonesWithFlag = data && data.milestones.map((milestone: any) => ({
-=======
-  due_date: string;
-  estimated_hours: number,
-  isAiGenerated: boolean;
-}
-export /**
- * useMilestoneGenerator - Function description
- */
-function useMilestoneGenerator() {
-  const [is_generating, setIsGenerating] = useState (false);
-  const [generated_milestones, setGeneratedMilestones] = useState < GeneratedMilestone[]>([]);
-;
-  const generate_milestones = async (input: MilestoneInput): Promise < GeneratedMilestone[]> => {
-    try {
-      setIsGenerating (true),
-      const { data, error } = await supabase.functions.invoke ('generate - milestones', {
-        body: input;
-      });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Mark each milestone as AI generated;
-      const milestonesWithFlag = data.milestones.map ((milestone: any) => ({
 
-        ...milestone,
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         isAiGenerated: true}));
 
 ;
@@ -152,25 +104,14 @@ export function useMilestoneGenerator() {;
   },;
   return {;
     generateMilestones,;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     generatedMilestones;
     isGenerating;
 
-=======
-;
-  const clearGeneratedMilestones = () =>: any {
-    setGeneratedMilestones ([]);
-  }
-;
-  return {
-    generate_milestones;
-    generated_milestones;
-    is_generating;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     clearGeneratedMilestones}
 }

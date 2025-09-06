@@ -1,15 +1,6 @@
 
-<<<<<<< HEAD
-import React from "react";
-import {Header} from "@/components/Header";
-import {Footer} from "@/components/Footer";
-import {EnterpriseHero} from "@/components/enterprise/EnterpriseHero";
-import {EnterprisePricingTable} from "@/components/enterprise/EnterprisePricingTable";
-import {EnterpriseFeatures} from "@/components/enterprise/EnterpriseFeatures";
-import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
-import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
-import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
-import {SEO} from "@/components/SEO";
+
+
 import React from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -22,12 +13,13 @@ import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestim
 import { SEO } from "@/components/SEO";
 import { EnterpriseTestimonials } from "@/components/enterprise/EnterpriseTestimonials",
 import { SEO } from "@/components/SEO",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function EnterprisePlans() {
   return (
     <>
@@ -47,9 +39,7 @@ export default function EnterprisePlans() {
       <Footer />
     </>
   )
-<<<<<<< HEAD
-}
-=======
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -84,11 +74,7 @@ import {EnterpriseCTA} from "@/components/enterprise/EnterpriseCTA";
 import {EnterpriseTrustBadges} from "@/components/enterprise/EnterpriseTrustBadges";
 import {EnterpriseTestimonials} from "@/components/enterprise/EnterpriseTestimonials";
 import {SEO} from "@/components/SEO";
-=======
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -109,30 +95,7 @@ export default function EnterprisePlans() {;
       />;
       <Header />;
       <main className="min-h-screen bg-background">;
-=======
-import React from './react';
-import { Header } from '@/components / Header';
-import { Footer } from '@/components / Footer';
-import { EnterpriseHero } from '@/components / enterprise / EnterpriseHero';
-import { EnterprisePricingTable } from '@/components / enterprise / EnterprisePricingTable';
-import { EnterpriseFeatures } from '@/components / enterprise / EnterpriseFeatures';
-import { EnterpriseCTA } from '@/components / enterprise / EnterpriseCTA';
-import { EnterpriseTrustBadges } from '@/components / enterprise / EnterpriseTrustBadges';
-import { EnterpriseTestimonials } from '@/components / enterprise / EnterpriseTestimonials';
-import { SEO } from '@/components / SEO';
-export default /**
- * EnterprisePlans - Function description
- */
-function EnterprisePlans() {
-  return (
-    <>;
-      <SEO;
-        title="Enterprise Plans - Zion AI Marketplace";
-        description="Scale your talent acquisition with Zion's enterprise solutions. Custom branded portals, dedicated talent pools, and powerful admin tools.";
-      />;
-      <Header />;
-      <main className="min - h-screen bg - background">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         <EnterpriseHero />;
         <EnterprisePricingTable />;
         <EnterpriseFeatures />;
@@ -145,9 +108,8 @@ function EnterprisePlans() {
   );
 }
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

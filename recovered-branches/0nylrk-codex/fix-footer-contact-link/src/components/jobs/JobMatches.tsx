@@ -1,38 +1,16 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import React from "react";
-import {
-  Card
-  CardHeader
-  CardTitle
-  CardDescription
-  CardContent
-import React from "react";
-import {
-  Card,
-  CardHeader,
-  CardTitle,
-  CardDescription,
-  CardContent,;
-=======
 
 
-import {;
-  Card,;
-  CardHeader,;
-  CardTitle,;
-  CardDescription,;
-  CardContent,;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "@/components/ui/card";
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard";
 import { JobMatchCard } from "@/components/jobs/JobMatchCard";
 
 import { useJobMatches } from "@/hooks/useJobMatches";
 import { Skeleton } from "@/components/ui/skeleton";
-<<<<<<< HEAD
+
+
+
+
 
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",
@@ -40,34 +18,28 @@ import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",
 import { JobMatchCard } from "@/components/jobs/JobMatchCard",
 import { useJobMatches } from "@/hooks/useJobMatches",
 import { Skeleton } from "@/components/ui/skeleton",
-=======
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface JobMatchesProps {
   jobId: string
 }
 export function JobMatches({ jobId }: JobMatchesProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  const { matches, isLoading, isProcessing, triggerAIMatching } =
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
-=======
 
-  const { matches, isLoading, isProcessing, triggerAIMatching } =;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     useJobMatches(jobId);
 
   const { matches, isLoading, isProcessing, triggerAIMatching } = useJobMatches(jobId),
   
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   if (isLoading) {
     return (
       <Card>
@@ -88,7 +60,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
                 <Skeleton className="h-4 w-32" />
               </div>
             </div>
-<<<<<<< HEAD
+
           ))}
         </CardContent>
       </Card>
@@ -103,12 +75,7 @@ export function JobMatches({ jobId }: JobMatchesProps) {
     );
   }
 
-=======
 
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card",;
 import { EmptyMatchesCard } from "@/components/jobs/EmptyMatchesCard",;
@@ -162,19 +129,9 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
       />;
     );
   }
-=======
-;
-  if (matches.length === 0) {;
-    return <EmptyMatchesCard onRefresh={triggerAIMatching} isProcessing={isProcessing} />;
-  }
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   return (
     <div className="space-y-4">;
       {matches && matches.map((match) => (;
@@ -206,13 +163,15 @@ export function JobMatches(): any ({ jobId }: JobMatchesProps) {;
 
         />
       ))}
-<<<<<<< HEAD
+
     </div>;
+
     </div>
     </div>;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   );
 
 }

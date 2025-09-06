@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React, { useEffect, useState } from "react";
 import {Card, CardContent, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -18,10 +11,11 @@ import {Link} from "react-router-dom";
 import {Calendar, Clock, Video} from "lucide-react";
 import {Avatar} from "@/components/ui/avatar";
 export function UpcomingInterviewsCard() {;
-<<<<<<< HEAD
+
   const { fetchInterviews } = useInterviews();
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]);
   const [isLoading, setIsLoading] = useState(true);
+
 import React, { useEffect, useState } from "react",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -41,23 +35,7 @@ export function UpcomingInterviewsCard() {
   const { fetchInterviews } = useInterviews(),
   const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
   const [isLoading, setIsLoading] = useState(true),
-=======
 
-  const { fetchInterviews } = useInterviews();
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-
-
-  useEffect(() => {;
-    const loadInterviews = async () => {;
-
-      setIsLoading(true);
-      try {;
-        const interviews = await fetchInterviews();
-        const now = new Date();
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   useEffect(() => {
 
@@ -105,69 +83,7 @@ function UpcomingInterviewsCard() {
         const interviews = await fetch_interviews ();
         const now = new Date ();
 ;
-=======
-      } catch (error) {
-        console.error("Error loading upcoming interviews:", error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-    loadInterviews()
-  }, []);
-    },
 
-    loadInterviews()
-  }, []),
-
-  if (isLoading) {
-    return (
-      <Card className="bg-zion-blue-dark/40 border-zion-blue-light">
-        <CardHeader>
-          <CardTitle className="text-lg flex items-center">
-            <Video className="h-5 w-5 mr-2 text-zion-purple" />
-            Upcoming Interviews
-          </CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-4">
-            {[1, 2].map(i => (
-              <div key={i} className="flex items-center gap-3 animate-pulse">
-                <div className="w-10 h-10 bg-zion-blue-light/30 rounded-full"></div>
-                <div className="flex-1">
-                  <div className="h-4 w-3/4 bg-zion-blue-light/30 rounded mb-2"></div>
-                  <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>
-                </div>
-              </div>
-import React, { useEffect, useState } from "react",;
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Button } from "@/components/ui/button",;
-import { useInterviews } from "@/hooks/useInterviews",;
-import { Interview } from "@/types/interview",;
-import { format, isPast, parseISO } from "date-fns",;
-import { Link } from "react-router-dom",;
-import { Calendar, Clock, Video } from "lucide-react",;
-import { Avatar } from "@/components/ui/avatar",;
-export function UpcomingInterviewsCard() {;
-  const { fetchInterviews } = useInterviews(),;
-  const [upcomingInterviews, setUpcomingInterviews] = useState<Interview[]>([]),;
-  const [isLoading, setIsLoading] = useState(true),;
-  useEffect(() => {;
-    const loadInterviews = async () => {;
-      setIsLoading(true),;
-      try {;
-        const interviews = await fetchInterviews(),;
-        const now = new Date(),;
-
-        // Filter for confirmed interviews in the future;
-        const upcoming = interviews;
-          .filter (interview =>;
-            interview.status === 'confirmed' &&;
-            !is_past (parseISO (interview.scheduled_date)));
-          .sort ((a, b) =>;
-            parseISO (a.scheduled_date).get_time () - parseISO (b.scheduled_date).get_time ());
-          .slice (0, 3), // Take only the next 3 interviews;
-        setUpcomingInterviews (upcoming);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
       } catch (error) {
         console.error ("Error loading upcoming interviews:", error);
       } finally {
@@ -218,12 +134,19 @@ export function UpcomingInterviewsCard() {;
                   <div className="h-3 w-1/2 bg-zion-blue-light/30 rounded"></div>;
                 </div>;
               </div>;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+            ))}
+          </div>
+        </CardContent>
+      </Card>
+    )
+  }
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             ))}
           </div>;

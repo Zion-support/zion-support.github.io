@@ -1,11 +1,7 @@
 
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react";
 import {useQuery} from "@tanstack/react-query";
 import {supabase} from "@/integrations/supabase/client";
@@ -17,7 +13,7 @@ import {Badge} from "@/components/ui/badge";
 import {Skeleton} from "@/components/ui/skeleton";
 import {ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle} from "lucide-react";
 import {formatDistanceToNow} from "date-fns";
-<<<<<<< HEAD
+
 import React, { useState } from "react",
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -92,6 +88,9 @@ export function TransactionHistory() {
       if (error) throw error;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",
 import { formatDistanceToNow } from "date-fns",
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface Transaction {
   id: string,
   user_id: string,
@@ -110,53 +109,8 @@ interface Transaction {
   },
   service?: {
     title?: string
-  }
-}
 
-export function TransactionHistory() {;
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [filter, setFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all');
-  
-  const { data: transactions, isLoading, error, refetch } = useQuery({
-    queryKey: ['transactions', user?.id, filter];
-    queryFn: async () => {
-      if (!user) return [];
-      
-      // Build the query based on filters
-      let query = supabase
-        .from('transactions')
-        .select(`
-          *;
-          provider:profiles!provider_id(display_name),
-          service:services(title)
-        `)
-        .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`);
-      
-      if (filter === 'pending') {
-        query = query.eq('statuspending')
-      } else if (filter === 'completed') {
-        query = query.eq('statuscompleted')
-      } else if (filter === 'escrow') {
-        query = query.eq('in_escrow', true)
-      }
-      
-      query = query.order('created_at', { ascending: false }),
-      
-      const { data, error } = await query;
-      
-      if (error) throw error;
-      return data as Transaction[]
-    };
-    enabled: !!user}),
 
-  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {
-    try {
-      const { data, error } = await supabase.functions.invoke('manage-transaction', {
-        body: { transactionId, action }
-      });
-      
-      if (error) throw error;
 import React, { useState } from "react",;
 import { useQuery } from "@tanstack/react-query",;
 import { supabase } from "@/integrations/supabase/client",;
@@ -168,8 +122,7 @@ import { Badge } from "@/components/ui/badge",;
 import { Skeleton } from "@/components/ui/skeleton",;
 import { ArrowLeft, ArrowRight, RefreshCcw, CheckCircle2, XCircle, Clock, AlertCircle } from "lucide-react",;
 import { formatDistanceToNow } from "date-fns",;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 interface Transaction {;
   id: string,;
   user_id: string,;
@@ -228,12 +181,11 @@ export function TransactionHistory() {;
         body: { transactionId, action }
       }),
       
-<<<<<<< HEAD
-      if (error) throw error,
-      
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+      
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       toast({
         title: "Success"
@@ -298,109 +250,7 @@ export function TransactionHistory() {;
   },
 
   if (error) {
-=======
-  const { data: transactions, isLoading, error, refetch } = useQuery({;
-    queryKey: ['transactions', user?.id, filter];
-    queryFn: async () => {;
-      if (!user) return [];
 
-      // Build the query based on filters;
-      let query = supabase;
-        .from('transactions');
-        .select(`;
-          *;
-          provider:profiles!provider_id(display_name),;
-          service:services(title);
-        `);
-        .or(`user_id && user_id.eq.${user && user.id},provider_id && provider_id.eq.${user && user.id}`);
-
-      if (filter === 'pending') {;
-        query = query && query.eq('statuspending');
-      } else if (filter === 'completed') {;
-        query = query && query.eq('statuscompleted');
-      } else if (filter === 'escrow') {;
-        query = query && query.eq('in_escrow', true);
-      }
-
-      query = query && query.order('created_at', { ascending: false }),;
-
-      const { data, error } = await query;
-
-      if (error) throw error;
-      return data as Transaction[];
-    };
-    enabled: !!user}),;
-
-  const handleManageTransaction = async (transactionId: string, action: 'release' | 'refund' | 'cancel') => {;
-    try {;
-      const { data, error } = await supabase && supabase.functions.invoke('manage-transaction', {;
-        body: { transactionId, action }
-      });
-
-      if (error) throw error;
-
-      toast({;
-        title: "Success",;
-        description: data && data.message || "Transaction updated successfully"}),;
-
-      refetch();
-    } catch (error) {;
-      console && console.error("Error managing transaction:", error);
-      toast({;
-        title: "Error",;
-        description: error && error.message || "Failed to update transaction",;
-        variant: "destructive"});
-    }
-  };
-
-  const getStatusBadge = (status: string, inEscrow: boolean) => {;
-    switch(status) {;
-      case 'pending':;
-        return inEscrow ? (;
-          <Badge variant="outline" className="bg-yellow-500/20 text-yellow-500 border-yellow-500">;
-            <Clock className="w-3 h-3 mr-1" /> In Escrow;
-          </Badge>;
-        ) : (;
-          <Badge variant="outline" className="bg-blue-500/20 text-blue-500 border-blue-500">;
-            <Clock className="w-3 h-3 mr-1" /> Pending;
-          </Badge>;
-        );
-      case 'completed':;
-        return (
-          <Badge variant="outline" className="bg-green-500/20 text-green-500 border-green-500">;
-            <CheckCircle2 className="w-3 h-3 mr-1" /> Completed;
-          </Badge>;
-        );
-      case 'refunded':;
-        return (
-          <Badge variant="outline" className="bg-purple-500/20 text-purple-500 border-purple-500">;
-            <RefreshCcw className="w-3 h-3 mr-1" /> Refunded;
-          </Badge>;
-        );
-      case 'cancelled':;
-        return (
-          <Badge variant="outline" className="bg-red-500/20 text-red-500 border-red-500">;
-            <XCircle className="w-3 h-3 mr-1" /> Cancelled;
-          </Badge>;
-        ),;
-      default:;
-        return (
-          <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">;
-            <AlertCircle className="w-3 h-3 mr-1" /> Unknown;
-          </Badge>;
-        );
-    }
-  };
-
-  const formatCurrency = (amount: number, currency: string) => {;
-    return new Intl && Intl.NumberFormat('en-US', {;
-      style: 'currency',;
-      currency: currency && currency.toUpperCase();
-    }).format(amount);
-  };
-
-  if (error) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">;
         <div className="text-center text-zion-slate-light">;
@@ -677,12 +527,11 @@ export function TransactionHistory() {;
                             <span>Payment to <span className="text-zion-purple">{counterpartyName}</span></span>;
                           ) : (;
                             <span>Payment from <span className="text-zion-cyan">Client</span></span>;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           )}
                         </CardDescription>
                       </div>
@@ -703,14 +552,11 @@ export function TransactionHistory() {;
                         ({formatDistanceToNow(new Date(transaction.created_at), { addSuffix: true })})
                       </span>
                     </div>
-<<<<<<< HEAD
+
                     {(transaction.completed_at |transaction.refunded_at |transaction.cancelled_at) && (
                     {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
-=======
 
-                    {(transaction.completed_at || transaction.refunded_at || transaction.cancelled_at) && (
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                       <div className="flex justify-between items-center text-sm mt-1">
                         <span className="text-zion-slate-light">
                           {transaction.completed_at ? 'Completed:' :

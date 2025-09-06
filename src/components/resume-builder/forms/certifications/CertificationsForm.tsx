@@ -16,11 +16,9 @@ return (
         <CertificationsList
           certifications={certifications}
           onEdit={handleEdit}
-<<<<<<< HEAD
+
           onDelete={handleDelete}        />
-=======
-          onDelete={handleDelete}        />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       )}
 
 
@@ -30,12 +28,8 @@ return (
           onEdit={handleEdit} 
           onDelete={handleDelete} 
         />
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       )}
 
       <div className="bg-muted/40 p-6 rounded-lg">
@@ -45,10 +39,9 @@ return (
         <Form {...form}>
           <form onSubmit={form.handleSubmit(handleAddOrUpdate)} className="space-y-4">
             <CertificationFormFields form={form} />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -61,7 +54,7 @@ return (
                 variant="outline"
                 onClick={() => {
                   if (editingId) {
-<<<<<<< HEAD
+
                     setEditingId(null)
                     form.reset({
                       name: ''
@@ -74,21 +67,14 @@ return (
 
                     setEditingId(null),
                     setEditingId(null),
-=======
 
-
-                    setEditingId(null),
-                    setEditingId(null),
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     form.reset({
                       name: '',
                       issuing_organization: '',
                       issue_date: '',
                       expiration_date: '',
                       credential_id: '',
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
 
@@ -101,10 +87,7 @@ return (
                       expiration_date: '',
                       credential_id: '',
                       credential_url: ''})
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   } else {
                     onBack()
 
@@ -164,10 +147,9 @@ return (
                 </Button>
 
                 <Button type="button" onClick={onComplete}>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                   Next

@@ -2,8 +2,10 @@
 import Link from 'next/link';
 
 export const metadata = {
+
   title: 'Services | Zion Tech Group',
   description: 'Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.',
+
 
 };
 
@@ -16,24 +18,31 @@ export default function ServicesOverviewPage() {
           Our Services
         </h1>
         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+
           Product engineering and AI-first consulting to deliver measurable
           outcomes for your business.
 
         </p>
       </div>
+
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
-          title="Micro SaaS"
-          description="End-to-end product development with billing, auth, and analytics"
+          title="Micro SaaS Solutions"
+          description="Complete micro SaaS development from concept to scale with proven revenue models"
           bullets={[
 
+            "AI-powered tools",
+            "Billing & subscriptions", 
+            "Growth analytics",
+            "Market validation"
 
           ]}
           icon="🚀"
         />
         <ServiceCard
           href="/services/ai-services"
+
           title="AI Services"
 
           description="LLM applications, RAG systems, and AI automation"
@@ -43,10 +52,12 @@ export default function ServicesOverviewPage() {
             'AI agents & automation'
           ]}
 
+
           icon="🤖"
         />
         <ServiceCard
           href="/services/it-services"
+
           title="IT Services"
 
           description="Cloud migration, DevOps, and infrastructure management"
@@ -55,10 +66,12 @@ export default function ServicesOverviewPage() {
             'DevOps & CI/CD',
             'Infrastructure management'
           ]}
+
           icon="⚙️"
         />
         <ServiceCard
           href="/services/blockchain"
+
           title="Blockchain Services"
           description="Smart contracts, DeFi protocols, and Web3 solutions"
           bullets={[
@@ -255,6 +268,7 @@ function ServiceCard({
   description: string; 
   bullets: string[]; 
 
+
   icon: string;
 }) {
   return (
@@ -279,17 +293,37 @@ function ServiceCard({
   );
 }
 
+function StatCard({ 
+  number, 
+  label, 
+  description 
+}: { 
+  number: string; 
+  label: string; 
+  description: string; 
+}) {
+  return (
+    <div className="text-center">
+      <div className="text-4xl font-bold text-blue-600 mb-2">{number}</div>
+      <div className="text-lg font-semibold text-gray-900 mb-1">{label}</div>
+      <div className="text-sm text-gray-600">{description}</div>
+    </div>
+  );
+}
+
 
 function CTA() {
   return (
     <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
       <h3 className="text-2xl font-bold text-gray-900 mb-4">
+
         Ready to Get Started?
       </h3>
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         Talk to our experts about your project. We'll help you choose the right
         service and create a custom solution for your business needs.
       </p>
+
       <div className="flex flex-col sm:flex-row gap-4 justify-center">
         <a
           href="tel:+13024640950"

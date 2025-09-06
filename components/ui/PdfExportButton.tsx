@@ -8,8 +8,7 @@
       html2canvas: { scale: 2, useCORS: true },
 
       jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -57,20 +56,12 @@ html2pdf () .set (opt) .from (element) .save ()
 
 export default function PdfExportButton({
   targetRef,
-<<<<<<< HEAD
+
   fileName = 'resume.pdf',
 }: PdfExportButtonProps) {  const onClick = async () => {
 
 
-  fileName = 'resume.pdf',;
-}: PdfExportButtonProps) {  const onClick = async () => {import React from 'react';
-export type PdfExportButtonProps = {
-  targetRef: React.RefObject<HTMLDivElement>,;
-  fileName?: string;
-  theme?: 'light' | 'dark'
-};
 
-export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: PdfExportButtonProps) {;
     if (!targetRef.current) return;
     const element = targetRef.current;
 
@@ -88,70 +79,11 @@ export default function PdfExportButton({ targetRef, fileName = 'resume.pdf' }: 
     html2pdf().set(opt).from(element).save();
   };
 
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       >
       Download as PDF
     </button>
-=======
-  };
-      >;
-      Download as PDF;
-    </button>;
-  );
-}  return (
 
 
-
-    <button
-      onClick={onClick}
-      className="no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover: bg-blue-700 focus:outline-none"
-      aria-label="Download as PDF"
-
-
-=======
-;
-    html2pdf ().set (opt).from (element).save ();
-  }
-;
-      >;
-      Download as PDF;
-    </button>);
-}  return (
-    <button;
-      on_click={on_click}
-      className="no - print fixed right - 4 top - 20 z - 50 inline - flex items - center gap - 2 rounded - md bg - blue - 600 text - white px - 4 py - 2 shadow hover: bg - blue - 700 focus:outline - none";
-      aria - label="Download as PDF";
-      Download as PDF;
-    </button>);
-    html2pdf().set(opt).from(element).save()
-  },
-
-  return (
-    <button
-      onClick={onClick}
-      aria-label="Download as PDF"
-      className=&quot;no-print fixed right-4 top-20 z-50 inline-flex items-center gap-2 rounded-md bg-blue-600 text-white px-4 py-2 shadow hover:bg-blue-700 focus:outline-none&quot;
-      aria-label=&quot;Download as PDF&quot;
-
-    >
-      Download as PDF
-    </button>
-  )
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-      Download as PDF
-    </button>
-);
-}
-  );
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

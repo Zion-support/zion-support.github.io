@@ -5,7 +5,7 @@ interface AIMilestoneGeneratorProps {;
   projectType: string;
   onAddMilestones: (milestones: GeneratedMilestone[]) => void;
 
-<<<<<<< HEAD
+
   scope
   startDate
   endDate
@@ -27,15 +27,7 @@ interface AIMilestoneGeneratorProps {;
       return
     if (!scope || !startDate || !projectType) {
       return;
-=======
 
-
-
-    if (!scope || !startDate || !projectType) {
-      return;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     const input: MilestoneInput = {
       scope
@@ -129,15 +121,9 @@ if ( {) {
 
 
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React, { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Card, CardContent } from '@/components/ui/card',;
@@ -215,15 +201,14 @@ export function AIMilestoneGenerator({;
 
   },
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
   return (
-<<<<<<< HEAD
+
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-medium flex items-center">
@@ -234,27 +219,16 @@ export function AIMilestoneGenerator({;
           variant='outline'
           onClick={handleGenerateMilestones}
           disabled={isGenerating |!scope |!startDate |!projectType}        >
-=======
-    <div className='space-y-4'>;
-      <div className='flex items-center justify-between'>;
-        <h3 className='text-lg font-medium flex items-center'>;
-          <Sparkles className='w-5 h-5 mr-2 text-primary' />;
-          AI Milestone Generator;
-        </h3>;
-        <Button
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           disabled={isGenerating || !scope || !startDate || !projectType}        >
 
           variant="outline"
           onClick={handleGenerateMilestones}
           disabled={isGenerating || !scope || !startDate || !projectType}
         >
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -400,37 +374,22 @@ export function AIMilestoneGenerator({;
                           <span className="font-medium">{milestone.title}</span>
                           <Badge variant="secondary" className="ml-2 flex items-center">
                             <Sparkles className="w-3 h-3 mr-1" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             AI Suggested
                           </Badge>
                         </div>
                       </AccordionTrigger>
                     </div>
                     <Button
-<<<<<<< HEAD
+
                       variant='ghost'
                       size='sm'
                       onClick={e => {
                         e.stopPropagation()
                         handleAddSingleMilestone(milestone) }}
                       className='mr-2'
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-
-                      variant="ghost"
-                      size="sm"
-                      onClick={(e) => {
-                        e.stopPropagation(),
-                        handleAddSingleMilestone(milestone)
-                      }}
-                      className="mr-2"
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
                       variant="ghost"
@@ -440,10 +399,18 @@ export function AIMilestoneGenerator({;
                         handleAddSingleMilestone(milestone)
                       }}
                       className="mr-2"
-=======
+
+<<<<<<< HEAD
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+                      variant="ghost"
+                      size="sm"
+                      onClick={(e) => {
+                        e.stopPropagation(),
+                        handleAddSingleMilestone(milestone)
+                      }}
+                      className="mr-2"
+
                     >
                       <Plus className="h-4 w-4" />
                     </Button>
@@ -491,13 +458,11 @@ export function AIMilestoneGenerator({;
           </CardContent>;
         </Card>;
       )}
-<<<<<<< HEAD
+
     </div>
   )
 }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </div>;
   );
 }

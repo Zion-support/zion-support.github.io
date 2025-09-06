@@ -27,7 +27,7 @@ if ( {) {
 
 import { Sparkles } from 'lucide-react'
 interface ClientBudgetRecommenderProps {
-<<<<<<< HEAD
+
   jobTitle: string
   category: string
   timeline?: string
@@ -97,15 +97,13 @@ export const ClientBudgetRecommender: React.FC<
           suggestionType: 'client'
           suggestedMin: suggestion.minRate
           suggestedMax: suggestion.maxRate
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   jobTitle: string,
   category: string,
   timeline?: string,
   scope?: string,
   experienceLevel?: string,
-<<<<<<< HEAD
+
   onSuggestionApplied: (minValue: number, maxValue: number) => void
 import React, { useState } from "react",;
 import { Button } from "@/components/ui/button",;
@@ -164,9 +162,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     if (suggestion) {
       onSuggestionApplied(suggestion.minRate, suggestion.maxRate),
       
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       // Track this suggestion application
       if (user && user.id) {
         trackPricingSuggestion({
@@ -174,7 +170,7 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
           suggestionType: "client",
           suggestedMin: suggestion.minRate,
           suggestedMax: suggestion.maxRate,
-<<<<<<< HEAD
+
           accepted: true,
         })
       }
@@ -187,38 +183,10 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
   }
   },
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-          accepted: true,
-        })
-      }
-    }
-  }
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-          accepted: true
-        })
-      }
-    }
-<<<<<<< HEAD
-  }
-=======
-  },
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   return (
     <div className="space-y-4">
       <div>
@@ -237,74 +205,14 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             className="w-full"
           >
             <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-          </Button>
-        ) : (
-            disabled={!jobTitle || !category}
-            className='w-full'>;
-            <Sparkles className='h-4 w-4 mr-2' /> Get Budget Recommendation;
-          </Button>;
-        ) : (;
-          <PricingSuggestionBox
-    <div className='space - y-4'>;
-      <div>;
-        {!suggestion && !is_loading ? (
-          <Button;
-            type='button';
-            variant='outline';
-            on_click={generate_suggestion}
-            disabled={!job_title || !category}
-            className='w - full'          >;
-            <Sparkles className='h - 4 w - 4 mr - 2' /> Get Budget Recommendation;
-          </Button>) : (
-          <PricingSuggestionBox;
-            suggestion={suggestion}
-            isLoading={isLoading}
-            onApplySuggestion={handleApplySuggestion}
-            rateType='hourly'          />
-        )}
-      </div>
-    </div>
-  )
+
 }
-if (scope) params.scope = scope
-if (experienceLevel) params.experienceLevel = experienceLevel
-//Track this suggestion application if (user && user.id) {
-  trackPricingSuggestion ({
-=======
-<<<<<<< HEAD
-            rateType='hourly'          />
-        )}
-      </div>
-    </div>
-  )
-}
-if (scope) params.scope = scope
-if (experienceLevel) params.experienceLevel = experienceLevel
-//Track this suggestion application if (user && user.id) {
-  trackPricingSuggestion ({
-}
-<<<<<<< HEAD
-return (<div className="space-y-4" > <div> {"
-  !suggestion && !isLoading ? (<Button type="button" variant="outline" onClick={
-  generateSuggestion "
-}> <Sparkles className="h-4 w-4 mr-2" /> Get Budget Recommendation </Button>) : (<PricingSuggestionBox />)
-}</div> </div>)
-}
-'"  )
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 },
-<<<<<<< HEAD
+
 
             rateType="hourly"
           />
@@ -316,8 +224,7 @@ return (<div className="space-y-4" > <div> {"
 };
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 

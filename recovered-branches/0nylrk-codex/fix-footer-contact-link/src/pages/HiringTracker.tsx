@@ -25,8 +25,9 @@ import { Briefcase } from "lucide-react",
 function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
     <>
@@ -63,26 +64,14 @@ function HiringTrackerContent() {
       <Footer />
     </>
   )
-}
-export default function HiringTracker() {
-  return (
-    <ProtectedRoute>
-      <HiringTrackerContent />
-    </ProtectedRoute>
-  )
-}
-=======
 
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
-=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",;
 import { useParams } from "react-router-dom",;
 import { AppHeader } from "@/layout/AppHeader",;
@@ -135,7 +124,7 @@ function HiringTrackerContent() {;
       <Footer />;
     </>;
   );
-<<<<<<< HEAD
+
 }
 ;
 export default function HiringTracker() {;
@@ -146,28 +135,8 @@ export default function HiringTracker() {;
   );
 }
 ;
-=======
-
-import { useState } from './react';
-import { use_params } from './react-router-dom';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { KanbanBoard } from '@/components / hiring - tracker / KanbanBoard';
-import { HiringAnalytics } from '@/components / hiring - tracker / HiringAnalytics';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { SEO } from '@/components / SEO';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { Briefcase } from './lucide-react';
-/**
- * HiringTrackerContent - Function description
- */
-function HiringTrackerContent() {
-  const { job_id } = use_params () as { job_id?: string }
-  const [active_tab, setActiveTab] = useState < string>("kanban");
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export default function HiringTracker() {
@@ -179,8 +148,7 @@ export default function HiringTracker() {
 }
 
 ;
-<<<<<<< HEAD
-=======
+
   return (
     <>;
       <SEO;
@@ -225,5 +193,7 @@ function HiringTracker() {
       <HiringTrackerContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

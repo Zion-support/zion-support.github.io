@@ -1,28 +1,14 @@
-<<<<<<< HEAD
- 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
  
 
 
-=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Broken = { url: string, page: string, status: number },
-interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
-type Props = { report: Report | null },
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  try {;
-    const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
-    const raw = fs.readFileSync(file, 'utf8');
-    const data = JSON.parse(raw);
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 };
 type Props = { report: Report | null },;
 export const getStaticProps: GetStaticProps<Props> = async () => {;
@@ -32,16 +18,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {;
     const data = JSON && JSON.parse(raw);
 
 
-=======
-;
-}
-type Props = { report: Report | null },
-export const getStaticProps: GetStaticProps < Props> = async () => {
-  try {
-    const file = path.join (process.cwd (), 'publicautomationsite - validator.json');
-    const raw = fs.readFileSync (file, 'utf8');
-    const data = JSON.parse (raw);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     return { props: { report: data }, revalidate: 21600 }
   } catch {;
@@ -49,29 +26,50 @@ export const getStaticProps: GetStaticProps < Props> = async () => {
   }
 }
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export default function SiteValidator(): any ({ report }: Props) {;
 
-=======
-
-};
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 export default function SiteValidator({ report }: Props) {
-=======
-export default function SiteValidator({ report }: Props) {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+  if (!report) return <div>No validation report yet.</div>;
+
+  return (
+    <div className="space-y-6">
+      <header className="space-y-1">
+        <h1 className="text-3xl font-bold">Site Validator</h1>
+        <p className="text-gray-600 dark:text-gray-300">Broken links and Open Graph checks from exported site.</p>
+      </header>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Pages Scanned</div><div className="text-2xl font-semibold">{report.pagesScanned}</div></div>
+        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">Broken Links</div><div className="text-2xl font-semibold">{report.brokenLinks.length}</div></div>
+        <div className="p-4 rounded-lg border border-gray-200 dark:border-gray-800"><div className="text-xs text-gray-500">OG Issues</div><div className="text-2xl font-semibold">{report.pagesWithOgIssues}</div></div>
+      </div>
+      {report.brokenLinks.length > 0 && (
+        <section>
+          <h2 className="font-semibold mb-2">Broken Links</h2>
+          <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+            {report.brokenLinks.slice(0, 500).map((b, i) => (
+              <li key={i} className="flex justify-between gap-4"><span className="truncate">{b.page} → {b.url}</span><span className="text-gray-500">{b.status}</span></li>
+            ))}
+          </ul>
+        </section>
+      )}
+      {report.ogIssues.length > 0 && (
+        <section>
+          <h2 className="font-semibold mb-2">Pages Missing OG Tags</h2>
+          <ul className="text-sm space-y-1 max-h-96 overflow-auto border rounded p-3 border-gray-200 dark:border-gray-800">
+            {report.ogIssues.map((o, i) => (
+              <li key={i} className="flex justify-between gap-4"><span className="truncate">{o.page}</span><span className="text-gray-500 truncate">{o.missing.join(', ')}</span></li>
+            ))}
+          </ul>
+        </section>
+      )}
+    </div>
+
   if (!report) return <div>No validation report yet.</div>;
   return (
     <div className="space-y-6">;
@@ -171,9 +169,7 @@ export default function SiteValidator({ report }: Props) {
             {report.brokenLinks.slice(0, 500).map((b, i) => (
               <li key={i} className=&quot;flex justify-between gap-4&quot;><span className=&quot;truncate&quot;>{b.page} → {b.url}</span><span className=&quot;text-gray-500&quot;>{b.status}</span></li>
 =======
-<<<<<<< HEAD
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 =======
     </div>
 );

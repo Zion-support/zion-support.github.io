@@ -1,19 +1,8 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1"
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
-=======
 
 
-import {serve} from "https: //deno.land/std@0.168.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {Resend} from "npm: resend@1.0.0";
 const resend = new Resend(Deno.env.get("RESEND_API_KEY"));
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
@@ -24,16 +13,12 @@ import { Resend } from "npm: resend@1.0.0",
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 const supabaseUrl = Deno.env.get("SUPABASE_URL")!,
 const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
@@ -179,7 +164,7 @@ serve(async (req: Request) => {
         notification_id: notification});
         message: "Reminder sent successfully",
         notification_id: notification}),
-<<<<<<< HEAD
+
       {
         status: 200
         headers: { "Content-Type": "application/json", ...corsHeaders }}
@@ -192,21 +177,14 @@ serve(async (req: Request) => {
         status: 500
         headers: { "Content-Type": "application/json", ...corsHeaders }}
     )
-  }
-});
 
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {
 
         status: 200,
         headers: { "Content - Type": "application / json", ...cors_headers }}
-=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { serve } from "https: //deno.land/std@0.168.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.7.1",;
 import { Resend } from "npm: resend@1.0.0",;
@@ -334,13 +312,11 @@ serve(async (req: Request) => {;
         status: 500,
         headers: { "Content - Type": "application / json", ...cors_headers }}
     );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

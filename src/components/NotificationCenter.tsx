@@ -22,10 +22,9 @@ import { FilterType } from '@/components/notifications/NotificationFilter',
 export const NotificationCenter: React.FC = () => {
   const { 
     filteredNotifications,
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
     unreadCount, 
@@ -43,7 +42,7 @@ export const NotificationCenter: React.FC = () => {
   const [loadedOnce, setLoadedOnce] = useState(false),
   const enqueueSnackbar = useEnqueueSnackbar(),
 
-<<<<<<< HEAD
+
   const handleFilterChange = (newFilter: FilterType,) => {
     setFilter(newFilter as any)
   }
@@ -119,10 +118,7 @@ export const NotificationCenter: React.FC = () => {;
 
   return (
     <Popover open={open} onOpenChange={(v) => setOpen(v ?? false)}>
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <PopoverTrigger asChild>
         <Button variant="ghost" size="icon" className="relative" aria-label="Open notifications">
           <Bell className="h-5 w-5 text-zion-slate-light" />
@@ -143,26 +139,20 @@ export const NotificationCenter: React.FC = () => {;
   const handleFilterChange = (newFilter: FilterType) => {;
     setFilter(newFilter as any);
   };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   return (
 
 
 
           )}
-<<<<<<< HEAD
+
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">
-=======
 
-        </Button>;
-      </PopoverTrigger>;
-      <PopoverContent className="w-[350px] p-0 bg-zion-blue border-zion-blue-light max-h-[500px] flex flex-col">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <NotificationHeader
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
@@ -175,7 +165,7 @@ export const NotificationCenter: React.FC = () => {;
 
 
         <NotificationList
-<<<<<<< HEAD
+
         <NotificationHeader 
           unreadCount = {unreadCount,}
           onMarkAllAsRead = {handleMarkAllAsRead,}
@@ -185,15 +175,14 @@ export const NotificationCenter: React.FC = () => {;
           onFilterChange = {handleFilterChange,}
         />
         <NotificationList 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           loading = {loading,}
           error = {error,}
           notifications = {filteredNotifications,}
           onMarkAsRead = {markAsRead,}
           onDismiss = {dismissNotification,}
           onRetry = {fetchNotifications,}
-<<<<<<< HEAD
+
         />
         <NotificationFooter onClose={() => setOpen(false)} />
       </PopoverContent>
@@ -219,19 +208,16 @@ export const NotificationCenter: React.FC = () => {;
           onMarkAsRead={markAsRead}
           onDismiss={dismissNotification}
           onRetry={fetchNotifications}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         />;
 
         <NotificationFooter onClose={() => setOpen(false)} />;
       </PopoverContent>;
     </Popover>;
   );
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 },;
 
     <Popover open={open} onOpenChange={(v, ) => set_open (v ?? false)}>;

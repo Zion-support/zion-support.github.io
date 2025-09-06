@@ -1,12 +1,14 @@
 
-<<<<<<< HEAD
+
 import React from "react";
-import { cn } from "@/lib/utils";
-import React from "react",
-import { cn } from "@/lib/utils",
+
 import {cn} from "@/lib/utils";
 import React from "react",
 import { cn } from "@/lib/utils",
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {
   className?: string,
   children?: React.ReactNode
@@ -17,32 +19,12 @@ export function SidebarMenu({
   ...props
 }: SidebarMenuProps) {
   return (
-    <ul className={cn("space-y-1", className)} {...props}>
-      {children}
-    </ul>
-    <ul 
-      className={cn("space-y-1", className)} 
-    <ul 
-      className={cn("space-y-1", className)} 
-      {...props}
-    >
-      {children}
-    </ul>
-  )
+
+
 import React from "react",;
 import { cn } from "@/lib/utils",;
 interface SidebarMenuProps extends React.HTMLAttributes<HTMLUListElement> {;
-=======
 
-
-import React from "react",
-import { cn } from "@/lib/utils",
-
-
-=======
-import {cn} from "@/lib/utils";
-interface SidebarMenuProps extends React && React.HTMLAttributes<HTMLUListElement> {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   className?: string;
   children?: React && React.ReactNode;
@@ -72,28 +54,8 @@ export function SidebarMenu(): any ({ className, children, ...props }: SidebarMe
       {children}
     </ul>;
   );
-<<<<<<< HEAD
-}
-}
-;
-=======
-=======
-  return (
-
-    <ul 
-      className={cn("space-y-1", className)} 
-=======
-    <ul 
-      className={cn("space-y-1", className)} 
-
-  );
 
 
-
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-    </ul>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

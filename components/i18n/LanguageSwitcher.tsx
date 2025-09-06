@@ -22,25 +22,12 @@ import { useTranslation  } from 'react-i18next';
 import i18n from '../../utils/i18n';
 import { supportedLocales, isRtl } from '../../utils/i18n';
 import {supportedLocales, isRtl} from '../../utils/i18n';
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-<<<<<<< HEAD
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 const localeToFlag: Record<string, string> = {
 
   en: 'us',
@@ -48,34 +35,24 @@ const localeToFlag: Record<string, string> = {
   es: 'es',
   ar: 'sa'},
 const localeLabelKey: Record<string, string> = {
-<<<<<<< HEAD
+
   en: 'lang.english'
   pt: 'lang.portuguese'
   es: 'lang.spanish'
   ar: 'lang.arabic'
 };  ar: 'lang.arabic'}
 export default function LanguageSwitcher() {
-=======
-  en: 'lang.english',
-  pt: 'lang.portuguese',
-  es: 'lang.spanish',
-  ar: 'lang.arabic'},
 
-export default function LanguageSwitcher() {
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   en: 'lang.english',
   pt: 'lang.portuguese',
   es: 'lang.spanish',
   ar: 'lang.arabic',
 };  ar: 'lang.arabic'},
 export default function LanguageSwitcher() {;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const current = i18n.resolvedLanguage |i18n.language |'en';
@@ -283,40 +260,16 @@ function LanguageSwitcher() {
               >
                 <span className={_`fi fi-${localeToFlag[lng]}`}></span>
                 <span>{_t(localeLabelKey[lng])}</span>
-=======
-      >
-        <span className={`fi fi-${localeToFlag[current] |'us'}`}></span>
-        <span>{t(localeLabelKey[current] |'lang.english')}</span>
-        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" className="opacity-70"><path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.187l3.71-3.955a.75.75 0 011.08 1.04l-4.24 4.52a.75.75 0 01-1.08 0l-4.24-4.52a.75.75 0 01.02-1.06z" clipRule="evenodd" /></svg>
-      </button>
-      {open && (
-        <ul role="listbox" className="absolute right-0 mt-2 w-48 bg-white dark:bg-black border border-gray-200 dark:border-gray-800 rounded shadow-lg z-50">
-          {supportedLocales.map((lng) => (
-            <li key={lng}>
-              <button
-                role="option"
-                aria-selected={current.startsWith(lng)}
-                className="w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900"
-                onClick={() => changeLanguage(lng)}
-              >
-                <span className={`fi fi-${localeToFlag[lng]}`}></span>
-                <span>{t(localeLabelKey[lng])}</span>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
               </button>
             </li>
           ))}
         </ul>
       )}
     </div>
-<<<<<<< HEAD
+
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    </div>
 
-  );
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662

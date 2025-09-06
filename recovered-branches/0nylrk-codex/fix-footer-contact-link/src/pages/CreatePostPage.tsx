@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {Link, useNavigate, useSearchParams} from "react-router-dom";
-import {AppLayout} from "@/layout/AppLayout";
-import {SEO} from "@/components/SEO";
-import {Button} from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
-import {useToast} from "@/hooks/use-toast";
-import {ForumCategory} from "@/types/community";
+
+
 import { useState, useEffect } from "react",
 import { Link, useNavigate, useSearchParams } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
@@ -18,12 +11,13 @@ import { useToast } from "@/hooks/use-toast";
 import { ForumCategory } from "@/types/community";
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface PostFormValues {
 
   title: string
@@ -32,19 +26,10 @@ interface PostFormValues {
 
   tags: string
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export default function CreatePostPage() {;
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
+
 export default function CreatePostPage() {
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -256,8 +241,7 @@ function CreatePostPage() {
   const { toast } = use_toast ();
   const [search_params] = useSearchParams ();
 ;
-<<<<<<< HEAD
-=======
+
   // Get category from URL query params if available;
   const initial_category = search_params.get ("category") as ForumCategory | null;
 ;
@@ -309,9 +293,6 @@ function CreatePostPage() {
     </AppLayout>);
 }
 
-=======
-;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

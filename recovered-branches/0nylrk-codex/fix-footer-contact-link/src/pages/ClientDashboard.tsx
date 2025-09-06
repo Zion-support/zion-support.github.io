@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -25,7 +18,8 @@ import {ClientOnboardingSteps} from "@/components/onboarding/ClientOnboardingSte
 import {ActiveProjectsCard} from "@/components/projects/ActiveProjectsCard";
 import {UpcomingInterviewsCard} from "@/components/interviews/UpcomingInterviewsCard";
 import {useIsMobile} from "@/hooks/use-mobile";
-<<<<<<< HEAD
+
+
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -44,33 +38,16 @@ import { ActiveProjectsCard } from "@/components/projects/ActiveProjectsCard",
 import { UpcomingInterviewsCard } from "@/components/interviews/UpcomingInterviewsCard",
 import { useIsMobile } from "@/hooks/use-mobile";
 function ClientDashboardContent() {
-=======
-function ClientDashboardContent() {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all");
   const { jobs, isLoading } = useJobs();
 
   const [selectedJobId, setSelectedJobId] = useState<string | null>(null);
   const [selectedJobTitle, setSelectedJobTitle] = useState<string>("");
   const isMobile = useIsMobile();
-<<<<<<< HEAD
-import { useIsMobile } from "@/hooks/use-mobile",
-=======
 
 
-  // Set the first job as selected when jobs are loaded (if any);
-  useEffect(() => {;
-    if (jobs && jobs.length > 0 && !selectedJobId) {;
-
-      setSelectedJobId(jobs[0].id);
-      setSelectedJobTitle(jobs[0].title);
-    }
-  }, [jobs, selectedJobId]);
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 function ClientDashboardContent() {
   const [activeTab, setActiveTab] = useState<JobStatus | "all">("all"),
   const { jobs, isLoading } = useJobs(),
@@ -251,13 +228,12 @@ function ClientDashboardContent() {;
 
           <div>;
             <div className="sticky top-4 space-y-6">;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {/* Active Projects Card */}
               <ActiveProjectsCard />;
 
@@ -281,7 +257,7 @@ function ClientDashboardContent() {;
                   </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                 )}
-<<<<<<< HEAD
+
               </div>
             </div>
           </div>
@@ -298,35 +274,7 @@ export default function ClientDashboard() {
     </ProtectedRoute>
   )
 }
-=======
-=======
-import { useState, useEffect } from './react';
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { JobsList } from '@/components / jobs / JobsList';
-import { Button } from '@/components / ui / button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Link } from './react-router-dom';
-import { JobStatus } from '@/types / jobs';
-import { SEO } from '@/components / SEO';
-import { BriefcaseIcon, UserIcon, MessageSquare, Star, PlusCircle, Kanban, Video } from './lucide-react';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { SuggestedTalents } from '@/components / jobs / SuggestedTalents';
-import { use_jobs } from '@/hooks / use_jobs';
-import { ClientOnboardingSteps } from '@/components / onboarding / ClientOnboardingSteps';
-import { ActiveProjectsCard } from '@/components / projects / ActiveProjectsCard';
-import { UpcomingInterviewsCard } from '@/components / interviews / UpcomingInterviewsCard';
-import { useIsMobile } from '@/hooks / use - mobile';
-/**
- * ClientDashboardContent - Function description
- */
-function ClientDashboardContent() {
-  const [active_tab, setActiveTab] = useState < JobStatus | "all">("all");
-  const { jobs, is_loading } = use_jobs ();
-  const [selectedJobId, setSelectedJobId] = useState < string | null>(null);
-  const [selectedJobTitle, setSelectedJobTitle] = useState < string>("");
-  const is_mobile = useIsMobile ();
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 ;
   // Set the first job as selected when jobs are loaded (if any);
   useEffect (() => {
@@ -429,35 +377,7 @@ if ( {) {
       <Footer />;
 
 
-=======
-
-;
-
-export default function ClientDashboard() {;
-  return (
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>;
-  );
-}
-
-;
-<<<<<<< HEAD
-;
-=======
 
 
-=======
-    </>);
-}
-export default /**
- * ClientDashboard - Function description
- */
-function ClientDashboard() {
-  return (
-    <ProtectedRoute>;
-      <ClientDashboardContent />;
-    </ProtectedRoute>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

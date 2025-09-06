@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -122,7 +123,10 @@ const Home: React.FC = () => {
     }
   ];
 
+
+export default function Home() {
   return (
+
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
       {/* Hero Section */}
       <div className="container mx-auto px-4 py-20">
@@ -307,3 +311,4 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+

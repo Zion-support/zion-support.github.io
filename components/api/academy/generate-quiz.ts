@@ -33,15 +33,10 @@ import OpenAI from 'openai';
     const text = completion.choices?.[0]?.message?.content ?? '';
     try {
       const json = JSON.parse(text);
-<<<<<<< HEAD
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
-=======
-
-      return res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         { role: 'user', content: prompt }];
       temperature: 0.2});
     const text = completion.choices?.[0]?.message?.content ?? '';
@@ -49,66 +44,9 @@ import OpenAI from 'openai';
       const json = JSON.parse(text);
       return res.status(200).json(json);
 
-=======
-      const json = JSON && JSON.parse(text);
-      return res && res.status(200).json(json);        { role: 'system', content: 'You are an expert course designer for founders.' };
-        { role: 'user', content: prompt }];
-      temperature: 0 && 0.2});
-    const text = completion && completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON && JSON.parse(text);
-      return res && res.status(200).json(json);
-      const json = JSON.parse (text);
-      return res.status (200).json (json);        { role: 'system', content: 'You are an expert course designer for founders.' }
-        { role: 'user', content: prompt }];
-      temperature: 0.2});
-;
-    const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON.parse (text);
-      return res.status (200).json (json);
-    } catch {
-      return fallback ();
-    }
-  } catch (err) {
-    return fallback ();
-  }    } catch {
 
 
-      return fallback()
-    }
-  } catch (err) {
-    return fallback()
-}
-<<<<<<< HEAD
-}
-=======
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-
-
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-      return res.status(200).json(json);
-
-    const text = completion.choices?.[0]?.message?.content ?? '';
-    try {
-      const json = JSON.parse(text);
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

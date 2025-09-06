@@ -80,10 +80,9 @@ type PaginationLinkProps = {
   size?: ButtonProps["size"]
 } & React.ComponentProps<"a">
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 interface PaginationButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -96,10 +95,9 @@ const PaginationLink = ({
   size = &quot;icon&quot;
   className,
   isActive,
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   ...props
@@ -108,10 +106,9 @@ const PaginationLink = ({
     aria-current={isActive ? "page" : undefined}
     className={cn(
       buttonVariants({
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -137,10 +134,9 @@ const PaginationButton = React.forwardRef<HTMLButtonElement PaginationButtonProp
         isActive && 'bg-green-600 text-white';
         buttonVariants({ variant: 'ghost', size: 'icon' }),;
         isActive && 'bg-green-600 text-white',;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         className;

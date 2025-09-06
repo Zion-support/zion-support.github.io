@@ -4,6 +4,8 @@ export default function HomePage() {
   return (
 
     <div className="animate-fade-in">
+
+
       <section className="text-center py-12 md:py-20">
         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
           Build and scale with{' '}
@@ -13,19 +15,26 @@ export default function HomePage() {
           <span className="text-purple-600">Enterprise IT</span>
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, automation, cloud infra, and secure micro SaaS products.
+
+          We design, build and operate production-grade platforms: AI copilots, data/ML pipelines, 
+          automation, cloud infrastructure, and secure micro SaaS products. Trusted by 500+ companies worldwide.
+
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link
             href="/services"
+
+
 
             className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors focus-visible:focus"
           >
             Explore Services
           </Link>
 
+
           <a
             href="https://ziontechgroup.com"
+
 
             className="border-2 border-gray-300 text-gray-700 px-8 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors focus-visible:focus"
           >
@@ -34,8 +43,10 @@ export default function HomePage() {
         </div>
       </section>
 
+
       <section className="py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
           <Card
             title="Micro SaaS"
             href="/services/micro-saas"
@@ -54,6 +65,7 @@ export default function HomePage() {
             href="/services/it-services"
             description="Cloud migration, DevOps, SRE, security hardening and cost optimization."
             icon="⚙️"
+
           />
           <Card
             title="Blockchain"
@@ -92,9 +104,12 @@ export default function HomePage() {
             icon="☁️"
 
 
+
           />
         </div>
       </section>
+
+
 
       <section className="py-12 bg-gray-50 rounded-lg">
         <div className="text-center mb-12">
@@ -108,7 +123,6 @@ export default function HomePage() {
           <FeatureCard
             title="Fast Delivery"
             description="Rapid prototyping and deployment with modern tools and practices."
-
           />
           <FeatureCard
             title="Scalable Architecture"
@@ -118,17 +132,47 @@ export default function HomePage() {
             title="24/7 Support"
             description="Round-the-clock monitoring and support for your critical systems."
           />
-
           <FeatureCard
             title="Cost Effective"
             description="Optimized solutions that reduce operational costs and improve efficiency."
-
           />
+        </div>
+      </section>
+
+      {/* Contact CTA */}
+      <section className="py-12">
+        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-8 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-4">
+            Ready to Transform Your Business?
+          </h2>
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Let's discuss your project and create a custom solution that drives real business value. 
+            Our team has delivered 1000+ successful projects across various industries.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:+13024640950"
+              className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            >
+              Call +1 302 464 0950
+            </a>
+            <a
+              href="mailto:kleber@ziontechgroup.com"
+              className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors"
+            >
+              Email Us
+            </a>
+          </div>
+          <div className="mt-6 text-sm text-gray-600">
+            <p>📍 364 E Main St STE 1008, Middletown DE 19709</p>
+          </div>
+
         </div>
       </section>
     </div>
   );
 }
+
 
 
 function Card({ title, description, href, icon }: { 
@@ -145,16 +189,19 @@ function Card({ title, description, href, icon }: {
     >
       <div className="text-4xl mb-4">{icon}</div>
       <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{title}</h3>
+
       <p className="text-gray-600 leading-relaxed">{description}</p>
     </Link>
   );
 }
 
 
+
 function FeatureCard({ title, description }: { 
   title: string; 
   description: string; 
 }) {
+
 
   return (
     <div className="text-center p-6">

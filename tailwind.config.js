@@ -4,8 +4,10 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Added for Next.js app directory compatibility
+
   ],
   theme: {
     extend: {
@@ -19,6 +21,7 @@ module.exports = {
           500: '#3b82f6',
           600: '#2563eb',
           700: '#1d4ed8',
+
 
           800: '#1e40af',
           900: '#1e3a8a',
@@ -94,6 +97,7 @@ module.exports = {
         mono: ['Fira Code', 'monospace'],
       },
 
+
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
@@ -101,6 +105,7 @@ module.exports = {
       },
       borderRadius: {
         '4xl': '2rem',
+
 
       },
       boxShadow: {
@@ -116,12 +121,15 @@ module.exports = {
       },
     },
 
+
   },
   plugins: [
     require('@tailwindcss/forms'),
     require('@tailwindcss/typography'),
 
+
     require('@tailwindcss/aspect-ratio')
   ]
 };
+
 

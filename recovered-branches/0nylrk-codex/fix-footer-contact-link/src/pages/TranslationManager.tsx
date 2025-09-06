@@ -1,30 +1,6 @@
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import React, { useState, useEffect } from 'react';
 import {Header} from "@/components/Header";
 import {Footer} from "@/components/Footer";
@@ -41,11 +17,7 @@ import {useIsMobile} from "@/hooks/use-mobile";
 import {useLanguage, SupportedLanguage} from "@/context/LanguageContext";
 import {useTranslationService} from "@/hooks/useTranslationService";
 export default function TranslationManager() {;
-<<<<<<< HEAD
-  const { t, i18n } = useTranslation();
-  const isMobile = useIsMobile();
-  const { supportedLanguages } = useLanguage();
-  const { translateContent, isTranslating } = useTranslationService();
+
 import React, { useState, useEffect } from 'react',
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -62,9 +34,7 @@ import { useIsMobile } from "@/hooks/use-mobile",
 import { useLanguage, SupportedLanguage } from "@/context/LanguageContext";
 import { useTranslationService } from "@/hooks/useTranslationService";
 export default function TranslationManager() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { t, i18n } = useTranslation();
 
   const isMobile = useIsMobile();
@@ -116,7 +86,7 @@ export default function TranslationManager() {
               Object.assign(acc, flattenObject(obj[key], `${pre}${key}`))
             } else {
               acc[`${pre}${key}`] = obj[key]
-<<<<<<< HEAD
+
             }
             return acc
           }, {} as Record<string, string>)
@@ -178,18 +148,8 @@ export default function TranslationManager() {
       const updatedTranslations = { ...translations }
       supportedLanguages.forEach(lang => {
         if (!updatedTranslations[lang.code]) {
-          updatedTranslations[lang.code] = {}
-        }
-        updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
-      });
-      setTranslations(updatedTranslations);
-      setEditingKey(null);
-      setIsSaving(false);
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState, useEffect } from 'react',;
 import { Header } from "@/components/Header",;
 import { Footer } from "@/components/Footer",;
@@ -313,12 +273,11 @@ export default function TranslationManager() {;
       const updatedTranslations = { ...translations },;
       supportedLanguages.forEach(lang => {;
         if (!updatedTranslations[lang.code]) {;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           updatedTranslations[lang.code] = {}
         }
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code]
@@ -346,74 +305,7 @@ export default function TranslationManager() {;
     
     for (const lang of supportedLanguages.map(l => l.code)) {
       if (translations[lang]?.[key]) {
-=======
 
-    const query = searchQuery && searchQuery.toLowerCase().trim();
-    const filtered: string[] = [],;
-
-    // Search in keys and values;
-    Object && Object.values(translations).forEach(langTranslations => {;
-      Object && Object.entries(langTranslations).forEach(([key, value]) => {;
-        if (;
-          key && key.toLowerCase().includes(query) || ;
-          (typeof value === 'string' && value && value.toLowerCase().includes(query));
-        ) {;
-          filtered && filtered.push(key);
-        }
-      });
-    });
-
-    setFilteredKeys([...new Set(filtered)]);
-  }, [searchQuery, translations]);
-
-  const handleEdit = (key: string) => {;
-    setEditingKey(key),;
-
-    // Initialize edited translations for this key;
-    const initialEdits: Record<SupportedLanguage, string> = {} as Record<SupportedLanguage, string>;
-    supportedLanguages && supportedLanguages.forEach(lang => {;
-      initialEdits[lang && lang.code] = translations[lang && lang.code]?.[key] || '';
-    });
-
-    setEditedTranslations({;
-      ...editedTranslations;
-      [key]: initialEdits;
-    });
-  };
-
-  const handleSave = (key: string) => {;
-    setIsSaving(true),;
-
-    // In a real application, you would save these to your backend;
-    setTimeout(() => {;
-      // Update translations with edited values;
-      const updatedTranslations = { ...translations };
-
-      supportedLanguages && supportedLanguages.forEach(lang => {;
-        if (!updatedTranslations[lang && lang.code]) {;
-          updatedTranslations[lang && lang.code] = {}
-        }
-        updatedTranslations[lang && lang.code][key] = editedTranslations[key][lang && lang.code];
-      });
-
-      setTranslations(updatedTranslations);
-      setEditingKey(null);
-      setIsSaving(false);
-
-      toast({;
-        title: t("translation && translation.saved"),;
-        description: t("translation && translation.changes_saved")});
-    }, 1000);
-  };
-
-  const handleTranslateKey = async (key: string) => {;
-    // Find first non-empty translation to use as source;
-    let sourceLanguage: SupportedLanguage = 'en',;
-    let sourceText = '';
-
-    for (const lang of supportedLanguages && supportedLanguages.map(l => l && l.code)) {;
-      if (translations[lang]?.[key]) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         sourceLanguage = lang;
         sourceText = translations[lang][key];
         break;
@@ -509,20 +401,11 @@ export default function TranslationManager() {;
       .filter(lang => !translations[lang]?.[key])
   }
 
-<<<<<<< HEAD
+
   return (
     <>
-      <SEO
-        title={t('translation.manager_title')}
-      <SEO 
-        title={t('translation.manager_title')} 
-=======
 
-      <SEO 
-        title={t('translation.manager_title')} 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         updatedTranslations[lang.code][key] = editedTranslations[key][lang.code];
       }),;
       setTranslations(updatedTranslations),;
@@ -604,13 +487,12 @@ export default function TranslationManager() {;
     <>;
       <SEO;
         title={t('translation.manager_title')} ;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         description={t('translation.manager_description')}
       />
       <Header />
@@ -621,55 +503,7 @@ export default function TranslationManager() {;
           </CardHeader>
           <CardContent>
             <div className="space-y-6">
-=======
 
-      toast({;
-        title: t('translation && translation.translation_success'),;
-        description: t('translation && translation.content_translated')});
-    } catch (error) {;
-      console && console.error(`Error translating key ${key}:`, error);
-      toast({;
-        title: t('translation && translation.translation_failed'),;
-        description: error instanceof Error ? error && error.message : t('translation && translation.unknown_error'),;
-        variant: "destructive"});
-    }
-  };
-
-  const handleCancel = () => {;
-    setEditingKey(null);
-  };
-
-  const handleChange = (lang: SupportedLanguage, key: string, value: string) => {;
-    setEditedTranslations({;
-      ...editedTranslations;
-      [key]: {;
-        ...editedTranslations[key],;
-        [lang]: value;
-      }
-    });
-  };
-
-  const getMissingLanguages = (key: string): SupportedLanguage[] => {;
-    return supportedLanguages;
-      .map(lang => lang && lang.code);
-      .filter(lang => !translations[lang]?.[key]);
-  };
-
-  return (
-    <>;
-      <SEO
-        title={t('translation && translation.manager_title')} 
-        description={t('translation && translation.manager_description')}
-      />;
-      <Header />;
-      <main className={`container mx-auto px-${isMobile ? '4' : '6'} py-8`}>;
-        <Card>;
-          <CardHeader>;
-            <CardTitle className="text-2xl">{t('translation && translation.manager_title')}</CardTitle>;
-          </CardHeader>;
-          <CardContent>;
-            <div className="space-y-6">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {/* Search and filter */}
               <div className="flex flex-col sm:flex-row gap-4">;
                 <div className="relative flex-1">;
@@ -695,12 +529,12 @@ export default function TranslationManager() {;
                 </Tabs>
               </div>
               
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {/* Translations table */}
               <div className="border rounded-md">
                 <div className="grid grid-cols-[1fr_2fr] sm:grid-cols-[1fr_2fr_auto] border-b">

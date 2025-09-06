@@ -1,6 +1,5 @@
 
-<<<<<<< HEAD
-=======
+
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -23,21 +22,9 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react";
 import {SEO} from "@/components/SEO";
 import {AppLayout} from "@/layout/AppLayout";
@@ -58,12 +45,11 @@ import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
 import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
 import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const MobileLaunchPage: React.FC = () => {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
@@ -88,8 +74,9 @@ const MobileLaunchPage: React.FC = () => {
 }
 export default MobileLaunchPage;
 
-<<<<<<< HEAD
+
 },
+
 
 export default MobileLaunchPage,
 import React from "react",;
@@ -104,21 +91,7 @@ import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",;
 import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",;
 const MobileLaunchPage: React.FC = () => {;
   return (;
-=======
-=======
-import React from './react';
-import { SEO } from '@/components / SEO';
-import { AppLayout } from '@/layout / AppLayout';
-import { MobileLaunchHero } from '@/components / mobile - app / MobileLaunchHero';
-import { MobileFeatureShowcase } from '@/components / mobile - app / MobileFeatureShowcase';
-import { AppTestimonials } from '@/components / mobile - app / AppTestimonials';
-import { MobileEmailCapture } from '@/components / mobile - app / MobileEmailCapture';
-import { AppStoreBanner } from '@/components / mobile - app / AppStoreBanner';
-import { QrCodeDownload } from '@/components / mobile - app / QrCodeDownload';
-import { CommunityTrust } from '@/components / mobile - app / CommunityTrust';
-const MobileLaunchPage: React.FC = () => {
-  return (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     <AppLayout>;
       <SEO;
         title="Get the Zion App - AI Marketplace in Your Pocket";
@@ -133,19 +106,11 @@ const MobileLaunchPage: React.FC = () => {
       <AppTestimonials />;
       <MobileEmailCapture />;
       <AppStoreBanner />;
-<<<<<<< HEAD
+
     </AppLayout>;
   );
 },;
-=======
-    </AppLayout>);
-}
-;
-=======
-
-},
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default MobileLaunchPage;

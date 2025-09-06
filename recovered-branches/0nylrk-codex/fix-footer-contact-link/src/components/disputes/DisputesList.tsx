@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React, { useState } from "react";
 import {Dispute, DisputeStatus} from "@/types/disputes";
 import {Button} from "@/components/ui/button";
@@ -33,12 +26,11 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 type DisputesListProps = {
   disputes: Dispute[]
   isLoading: boolean
@@ -68,120 +60,13 @@ export function DisputesList({ disputes, isLoading }: DisputesListProps) {
         return "outline", // Changed from "success" to "outline"
       case "closed":
 
-=======
-        return "outline",
-      default:
-        return "default"
-    }
-  }
-  },
 
-  if (isLoading) {
-    return (
-      <div className="space-y-4">
-        <div className="flex gap-2 mb-4">
-          {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (
-            <Skeleton key={status} className="h-10 w-24" />
-          ))}
-        </div>
-        <div className="border rounded-md">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Case ID</TableHead>
-                <TableHead>Project</TableHead>
-                <TableHead>Parties</TableHead>
-                <TableHead>Created</TableHead>
-                <TableHead>Status</TableHead>
-                <TableHead className="text-right">Actions</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {[...Array(5)].map((_, i) => (
-                <TableRow key={i}>
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
-                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>
-                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>
-                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
-                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>
-                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
-                </TableRow>
-import React, { useState } from "react",;
-import { Dispute, DisputeStatus } from "@/types/disputes",;
-import { Button } from "@/components/ui/button",;
-import { Badge } from "@/components/ui/badge",;
-import {;
-  Table,;
-  TableBody,;
-  TableCell,;
-  TableHead,;
-  TableHeader,;
-  TableRow} from "@/components/ui/table",;
-import { Skeleton } from "@/components/ui/skeleton",;
-import { formatDistanceToNow } from "date-fns",;
-import { ShieldAlert } from "lucide-react",;
-import { Link } from "react-router-dom",;
 
-type DisputesListProps = {;
-  disputes: Dispute[],;
-  isLoading: boolean;
-};
-
-export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps) {;
-  const [statusFilter, setStatusFilter] = useState<DisputeStatus | "all">("all");
-
-  const filteredDisputes = statusFilter === "all" ;
-    ? disputes ;
-    : disputes && disputes.filter(dispute => dispute && dispute.status === statusFilter);
-
-  const getStatusBadgeVariant = (status: DisputeStatus) => {;
-    switch (status) {;
-      case "open": return "default";
-      case "under_review":;
-        return "secondary",;
-      case "resolved":;
-        return "outline", // Changed from "success" to "outline";
-      case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React, { useState } from './react';
-import { Dispute, DisputeStatus } from '@/types / disputes';
-import { Button } from '@/components / ui / button';
-import { Badge } from '@/components / ui / badge';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Skeleton } from '@/components / ui / skeleton';
-import { formatDistanceToNow } from './date - fns';
-import { ShieldAlert } from './lucide-react';
-import { Link } from './react-router-dom';
-type DisputesListProps = {
-  disputes: Dispute[],
-  is_loading: boolean;
-}
-;
-export /**
- * DisputesList - Function description
- */
-function DisputesList() {
-  const [status_filter, setStatusFilter] = useState < DisputeStatus | "all">("all");
-;
-  const filtered_disputes = status_filter === "all";
-    ? disputes;
-    : disputes.filter (dispute => dispute.status === status_filter);
-;
-  const getStatusBadgeVariant = (status: DisputeStatus) =>: any {
-    switch (status) {
-      case "open": return "default";
-      case "under_review":;
-        return "secondary",
-      case "resolved":;
-        return "outline", // Changed from './success'; to "outline";
-      case "closed":;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
         return "outline";
       default:;
         return "default";
     }
-<<<<<<< HEAD
+
   };
   if (isLoading) {;
     return (;
@@ -213,11 +98,18 @@ function DisputesList() {
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
                 </TableRow>;
-=======
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+              ))}
+            </TableBody>
+          </Table>
+        </div>
+      </div>
+    )
+  }
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               ))}
             </TableBody>;

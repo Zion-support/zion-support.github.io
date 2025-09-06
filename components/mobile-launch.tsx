@@ -3,17 +3,14 @@ import { useEffect, useMemo, useState  } from 'react';
 import EnhancedLayout from '../components/layout/EnhancedLayout';
 import Link from 'next/link';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 // Simple icons using inline SVG to avoid external assets
 
 function StarIcon({
@@ -27,8 +24,7 @@ function StarIcon({
   );
 function AppleBadge({ href }: { href: string }) {
     >
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 // Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({;
@@ -51,7 +47,7 @@ function AppleBadge(): any ({ href }: { href: string }) {;
         height='24'
         viewBox='0 0 24 24'
         fill='currentColor'
-<<<<<<< HEAD
+
         aria-hidden>;
         <path d='M16 && M16.365 1 && 1.43c0 1 && 1.14-.42 2 && 2.18-1 && 1.26 3 && 3.11-.91 1 && 1.02-2 && 2.01 1 && 1.61-3 && 3.2 1 && 1.52-.12-1 && 1.02.37-2 && 2.12 1 && 1.21-3 && 3.06.86-.97 2 && 2.24-1 && 1.67 3 && 3.25-1 && 1.57-.01 0 .01 0 0 0zM20 && 0zM20.51 17 && 17.14c-.45 1 && 1.05-1 2 && 2.03-1 && 1.66 2 && 2.93-.88 1 && 1.2-1 && 1.59 2 && 2.04-2 && 2.57 2 && 2.05-.97 && 97.02-1 && 1.28-.66-2 && 2.66-.66-1 && 1.38 0-1 && 1.72.64-2 && 2.69.68-1 && 1.09.04-1 && 1.93-1 && 1.02-2 && 2.82-2 && 2.22-1 && 1.54-2 && 2.1-2 && 2.73-5 && 5.93-1 && 1.14-8 && 8.52.79-1 && 1.27 2 && 2.2-2 && 2.08 3 && 3.73-2 && 2.1 1 && 1.16-.02 2 && 2.25.78 2 && 2.66.78 && 78.4 0 1 && 1.51-.96 2 && 2.85-.82 && 82.49.02 1 && 1.88.2 2 && 2.77 1 && 1.6-.07 && 07.05-1 && 1.65.97-1 && 1.63 2 && 2.88.02 2 && 2.3 2 && 2.06 3 && 3.07 2 && 2.09 3 && 3.08-.02 && 02.06-.39 1 && 1.36-1 && 1.93 1 && 1.62z' />;
       </svg>;
@@ -122,11 +118,7 @@ function SmartBanner(): any ({;
 }) {  const [visible, setVisible] = useState(false);// Simple icons using inline SVG to avoid external assets;
 function StarIcon(): any ({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {;
 
-=======
-// Simple icons using inline SVG to avoid external assets
-function StarIcon({ className = 'w-5 h-5 text-yellow-500' }: { className?: string }) {
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   return (
 
 import Head from 'next / head';
@@ -403,14 +395,7 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
               }}
               className='text-xs px-2 py-1 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800'            >  }, []);
 
-=======
-    const ua = navigator.userAgent || '';
-    const isMobile = /iPhone|iPad|iPod|Android/i.test(ua);
-    if (isMobile) setVisible(true)
-  }, []);
 
-
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!visible) return null;
   const isIOS = typeof navigator !== 'undefined' && /iPhone|iPad|iPod/i.test(navigator.userAgent);
   const storeUrl = isIOS ? iosUrl : androidUrl;
@@ -439,22 +424,13 @@ function SmartBanner(): any ({ iosUrl, androidUrl, deepLink }: { iosUrl: string,
     </div>
   );
 
-<<<<<<< HEAD
-=======
-
-            >;
-              ✕;
-            </button>;
-          </div>;
-        </div>;
-      </div>;
 
 
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const IOS_APP_URL =
   process.env.NEXT_PUBLIC_IOS_APP_URL |
   'https://apps.apple.com/app/id0000000000';
@@ -481,7 +457,7 @@ const testimonials = [
       'I love tracking milestones on the go. Clear visibility and fewer meetings.'
   }
 ];
-<<<<<<< HEAD
+
 export default function MobileLaunchPage() {
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<
@@ -490,10 +466,8 @@ export default function MobileLaunchPage() {
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' }
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }]
 export default function MobileLaunchPage() {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export default function MobileLaunchPage() {;
   const [email, setEmail] = useState('');
@@ -503,11 +477,9 @@ export default function MobileLaunchPage() {;
   { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
   { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
 export default function MobileLaunchPage() {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
   // Auto-rotate testimonial index
@@ -529,69 +501,7 @@ export default function MobileLaunchPage() {;
     return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`;  }, []);  }, []);
   const qrHref = useMemo(() => {
     const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
-=======
 
-export default function MobileLaunchPage() {;
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<
-    'idle' | 'loading' | 'success' | 'error'
-  >('idle');  const [error, setError] = useState('');  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
-export default function MobileLaunchPage() {;
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
-
-
-  // Auto-rotate testimonial index;
-  const [idx, setIdx] = useState(0);
-  useEffect(() => {;
-    const t = setInterval(;
-      () => setIdx(i => (i + 1) % testimonials && testimonials.length),;
-      4000;
-    );
-    return () => clearInterval(t);
-=======
-              onClick={() => { localStorage.setItem('smartBannerDismissed1'), setVisible(false) }}
-              className="text-xs px-2 py-1 rounded-md hover: bg-gray-100 dark:hover:bg-gray-800"
-            >
-              ✕
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-const IOS_APP_URL = process.env.NEXT_PUBLIC_IOS_APP_URL || 'https: //apps.apple.com/app/id0000000000',
-const ANDROID_APP_URL = process.env.NEXT_PUBLIC_ANDROID_APP_URL || 'https: //play.google.com/store/apps/details?id=com.zion.app', const DEEP_LINK_URL = process.env.NEXT_PUBLIC_DEEP_LINK_URL || 'zion://open',
-
-const SITE_BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || '';
-
-const testimonials = [
-  { name: 'Priya K.', role: 'Startup Founder', quote: 'We filled a remote role in 48 hours. The app made it effortless.' },
-  { name: 'Marco V.', role: 'CTO', quote: 'AI matches were scarily accurate. Huge time-saver on sourcing.' },
-  { name: 'Amira H.', role: 'Project Lead', quote: 'I love tracking milestones on the go. Clear visibility and fewer meetings.' }],
-export default function MobileLaunchPage() {
-  const [email, setEmail] = useState('');
-  const [status, setStatus] = useState<'idle'|'loading'|'success'|'error'>('idle');
-  const [error, setError] = useState('');
-
-
-  // Auto-rotate testimonial index
-  const [idx, setIdx] = useState(0);
-
-  useEffect(() => {
-    const t = setInterval(() => setIdx((i) => (i + 1) % testimonials.length), 4000);
-    return () => clearInterval(t)
-  }, []);
-  const qrHref = useMemo(() => {
-    const target = SITE_BASE_URL ? `${SITE_BASE_URL}/download` : (typeof window !== 'undefined' ? `${window.location.origin}/download` : '/download');
-    const encoded = encodeURIComponent(target);
-    return `https://chart.googleapis.com/chart?cht=qr&chs=260x260&chl=${encoded}`
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
   }, []);
   const qrHref = useMemo(() => {;
     const target = SITE_BASE_URL;
@@ -624,35 +534,14 @@ export default function MobileLaunchPage() {
       setEmail('');
     } catch (err: any) {;
       setStatus('error');
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-      setError(err?.message || 'Something went wrong.');    }      if (!res && res.ok) throw new Error(await res && res.text());
 
-=======
-      const res = await fetch('/api/subscribe', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email }) }),
-      if (!res.ok) throw new Error(await res.text());
-      setStatus('success');
-      setEmail('');
-    } catch (err: any) {;
-      setStatus('error');
-<<<<<<< HEAD
-      setError(err?.message |'Something went wrong.')
 
-      setError(err?.message || 'Something went wrong.')
-      setError(err?.message || 'Something went wrong.');    }
-=======
-
-      setError(err?.message || 'Something went wrong.');
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }
@@ -746,20 +635,13 @@ export default function MobileLaunchPage() {
           <button
             type="submit"
             disabled={status === 'loading'}
-<<<<<<< HEAD
+
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
 
 
-          >
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>;
         </form>;
@@ -771,6 +653,7 @@ export default function MobileLaunchPage() {
 
             className="rounded-lg bg-indigo-600 text-white px-5 py-2 font-medium hover:bg-indigo-500 disabled:opacity-60"
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           >
             {status === 'loading' ? 'Submitting…' : 'Notify me'}
           </button>
@@ -908,26 +791,6 @@ export default function MobileLaunchPage() {
   status === 'loading' ? 'Submitting…' : 'Notify me' ;
 }</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
 
-=======
-    </EnhancedLayout>);
-;
-}return (<EnhancedLayout> <Head> <title > Zion Mobile App — iOS & Android</title> <meta name="description" content="Hire from anywhere, AI - match instantly, and track milestones on the go with the Zion app." /> <link rel="canonical" href="/download" /> <meta property="og:title" content="Zion Mobile App" /> <meta property="og:description" content="Hire from anywhere. AI - match instantly. Track milestones on the go." /> </Head> <SmartBanner ios_url= {
-  IOS APP URL;
-}android_url= {
-  ANDROID APP URL;
-}deep_link= {
-  DEEP LINK URL;
-}/> </div> </div> </div> </div> </div> </div> </div> Scan to open this page on your phone <div className="opacity - 80" >Or tap a store badge above</div> </div> </div> </section> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950" > <div className="text - lg font - semibold" >AI - match instantly</div> <p className="mt - 2 text - sm opacity - 80" >Smart matching surfaces top candidates in seconds.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - purple - 100 to - pink - 100 dark:from - purple - 900 / 40 dark:to - pink - 900 / 40" /> </div> <div className="rounded - 2xl border border - gray - 200 dark:border - gray - 800 p - 6 bg - white dark:bg - gray - 950" > <div className="text - lg font - semibold" >Track milestones</div> <p className="mt - 2 text - sm opacity - 80" >Manage deliverables, approvals, and progress on the go.</p> <div className="mt - 4 h - 36 rounded - xl bg - gradient - to - br from - indigo - 100 to - blue - 100 dark:from - indigo - 900 / 40 dark:to - blue - 900 / 40" /> </div> </section> <StarIcon key= {
-  i;
-}/>) );
-}<span className="text - sm opacity - 80" >4.9 average rating</span> </div> </div> </div>) );
-}</div> </div> </section> <input type="email" required > {
-  status === 'loading' ? 'Submitting…' : 'Notify me'
-}</button> </form> <span>•</span> <Link href="/download" ><a className="underline" >Shareable link: /download</a></a> </div> </section> </EnhancedLayout>) }
-  );
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

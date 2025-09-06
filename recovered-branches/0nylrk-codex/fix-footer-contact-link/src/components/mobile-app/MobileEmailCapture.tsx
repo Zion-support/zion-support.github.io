@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
 
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-=======
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Input } from '@/components / ui / input';
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export const MobileEmailCapture: React.FC = () => {
   const [email, set_email] = useState ("");
   const [is_submitting, setIsSubmitting] = useState (false);
@@ -49,30 +41,9 @@ if (return) {
       await new Promise(resolve => setTimeout(resolve, 1000));
       setIsSuccess(true);
       setEmail("");
-<<<<<<< HEAD
-import React, { useState } from "react";
-import {Button} from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
-export const MobileEmailCapture: React.FC = () => {;
-  const [email, setEmail] = useState("");
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-=======
 
-      setTimeout(() => {;
-        setIsSuccess(false);
-      }, 5000);
-    } catch (error) {;
-      console && console.error("Error subscribing:", error);
-    } finally {;
-      setIsSubmitting(false);
 
-    }
-  }
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -105,7 +76,7 @@ export const MobileEmailCapture: React.FC = () => {
   }
   },
 
-<<<<<<< HEAD
+
   return (
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">
       <div className="container mx-auto px-4">
@@ -140,7 +111,6 @@ export const MobileEmailCapture: React.FC = () => {
       </div>
     </section>
   )
-}
 
 },
 import React, { useState } from "react",;
@@ -170,9 +140,7 @@ export const MobileEmailCapture: React.FC = () => {;
     }
   };
   return (;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -206,56 +174,15 @@ export const MobileEmailCapture: React.FC = () => {;
           </form>;
 
           <p className="text-sm text-gray-400 mt-4">;
-=======
 
-
-
-=======
-      setIsSubmitting (false);
-    }
-  }
-;
-  return (
-    <section className="py - 16 bg - gradient - to - r from - zion - blue - dark to - zion - purple / 30">;
-      <div className="container mx - auto px - 4">;
-        <div className="max - w-3xl mx - auto text - center">;
-          <h2 className="text - 3xl md:text - 4xl font - bold text - white mb - 4">;
-            Get Early Access to New Features;
-          </h2>;
-          <p className="text - lg text - gray - 300 mb - 8 max - w-2xl mx - auto">;
-            Subscribe to our mobile app updates and be the first to try new features before they're released to the public.;
-          </p>;
-          <form on_submit={handle_submit} className="flex flex - col sm:flex - row gap - 4 max - w-md mx - auto">;
-            <Input;
-              type="email";
-              placeholder="Enter your email address";
-              value={email}
-              on_change={(e) => set_email (e.target.value)}
-              className="flex - grow bg - zion - blue - dark / 70 text - white border - zion - purple / 30 placeholder:text - gray - 400";
-              required;
-            />;
-            <Button;
-              type="submit";
-              disabled={is_submitting || is_success}
-              className="bg - zion - cyan hover:bg - zion - cyan / 80 text - zion - blue - dark font - medium";
-            >;
-              {is_submitting ? "Subscribing..." : is_success ? "Subscribed!" : "Subscribe"}
-            </Button>;
-          </form>;
-          <p className="text - sm text - gray - 400 mt - 4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
             We respect your privacy and will never share your information.;
           </p>;
         </div>;
       </div>;
-<<<<<<< HEAD
+
     </section>;
   );
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

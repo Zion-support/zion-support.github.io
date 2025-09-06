@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-import React, { useState } from 'react',
-=======
+
 
 
 class ErrorBoundary extends React.Component {
@@ -25,107 +23,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import React, { useState } from 'react';
 import Head from 'next/head';
 
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
-=======
-import {
-<<<<<<< HEAD
-  Check
-  Star
-  Zap
-  Shield
-  Users
-  Globe
-  ArrowRight
-  ExternalLink
-  TrendingUp
-  Clock
-  Target
-  Building
-  Rocket
-  Award
-  DollarSign
-  ChartBar
-  Lock
-  Cpu
-  Database
-  Cloud
-  Smartphone
-  Palette
-  Search
-  MessageSquare
-  FileText
-  Calendar
-  CreditCard
-  BarChart3
-  Settings
-  Zap as ZapIcon
-  Code
-  BookOpen
-  Activity
-  Database as DatabaseIcon
-  Play
-  Mail
-  Phone
-  MapPin
-  Filter
-  Grid
-  List
-  ChevronDown
-  ChevronUp
-  Sparkles
-  FlaskConical
-  Dna
-  Car
-  Leaf
-  Factory
-  Truck
-  Microscope
-  GraduationCap
-  ShieldCheck
-  Brain
-  Atom
-  Globe2
-  Bot
-  Eye
-  Target as TargetIcon
-  Zap as ZapIcon2
-  Shield as ShieldIcon
-  Globe as GlobeIcon
-  Cpu as CpuIcon
-  Cloud as CloudIcon
-  Bot as BotIcon
-  Lock as LockIcon
-  BarChart3 as BarChart3Icon
-  TrendingUp as TrendingUpIcon
-  Users as UsersIcon
-  Award as AwardIcon
-  Star as StarIcon
-  Check as CheckIcon
-  ArrowRight as ArrowRightIcon
-  ExternalLink as ExternalLinkIcon
-  Phone as PhoneIcon
-  Mail as MailIcon
-  MapPin as MapPinIcon
-  Trophy
-  FlaskConical as FlaskConicalIcon
-  Dna as DnaIcon
-  Car as CarIcon
-  Leaf as LeafIcon
-  Factory as FactoryIcon
-  Truck as TruckIcon
-  Microscope as MicroscopeIcon
-  GraduationCap as GraduationCapIcon
-  ShieldCheck as ShieldCheckIcon;
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
@@ -136,33 +40,10 @@ import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-=======
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 
 export default function InnovativeServicesPage() {;
-=======
-import {
-<<<<<<< HEAD
-  innovativeMicroSaasServices
-  getInnovativeServicesByCategory
-  getPopularInnovativeServices
-  getInnovativeServicesByPriceRange
-  getInnovativeServiceCategories;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
-export default function InnovativeServicesPage() {
-=======
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,;
-  getInnovativeServiceCategories,;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-export default function InnovativeServicesPage() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -266,10 +147,9 @@ export default function InnovativeServicesPage() {;
 
   GraduationCap as GraduationCapIcon,;
   ShieldCheck as ShieldCheckIcon,;
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from 'lucide-react';import Button from '../components/ui/Button';import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
@@ -278,7 +158,7 @@ import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
 import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
 import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
 import {
-<<<<<<< HEAD
+
   innovativeMicroSaasServices
   getInnovativeServicesByCategory
   getPopularInnovativeServices
@@ -287,24 +167,8 @@ import {
 } from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
 
 export default function InnovativeServicesPage() {
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,;
-  getInnovativeServiceCategories,;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-export default function InnovativeServicesPage() {;
-=======
 
-  innovativeMicroSaasServices,
-  getInnovativeServicesByCategory,
-  getPopularInnovativeServices,
-  getInnovativeServicesByPriceRange,;
-  getInnovativeServiceCategories,;
-} from '../data/innovative-micro-saas-services';import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
-export default function InnovativeServicesPage() {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [priceRange, setPriceRange] = useState('All');
@@ -455,10 +319,7 @@ if ( {) {
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  };    website: 'https://ziontechgroup.com'
   }
-=======
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
   // Search filter;
   if (searchQuery) {;
@@ -519,29 +380,7 @@ if ( {) {
             </div>;
           </section>;
 
-=======
-          <section className="px-4 sm:px-6 lg:px-8 mb-12">
-            <div className="max-w-7xl mx-auto">
-              <div className="bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10">
-                <div className="flex flex-col lg:flex-row gap-6">
-                  {/* Search */}
-=======
-          {/* Filters and Search */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-12'>
-            <div className='max-w-7xl mx-auto'>
-              <div className='bg-black/20 backdrop-blur-lg rounded-2xl p-6 border border-white/10'>
-                <div className='flex flex-col lg:flex-row gap-6'>
-                  {/* Search */}
-                  <div className='flex-1'>
-                    <div className='relative'>
-                      <Search className='absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5' />
-                      <input
-                        type='text'
-                        placeholder='Search innovative services...'
-                        value={searchQuery}
-                        onChange={e => setSearchQuery(e.target.value)}
-                        className='w-full pl-10 pr-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'                      />                  {/* Search */}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                   <div className="flex-1">
                     <div className="relative">
                       <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
@@ -555,36 +394,9 @@ if ( {) {
 
                   {/* Category Filter */}
 
-=======
-                  <div className="flex-shrink-0">
-                    <select
-                      value={selectedCategory}
-<<<<<<< HEAD
-=======
-                      onChange={e => setSelectedCategory(e.target.value)}
-                      className='px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent'
-                    >
-                      <option value='All'>All Categories</option>
-<<<<<<< HEAD
-                      {categories.map(category => (                        <option key={category.name} value={category.name}>                    <select
-                      value={selectedCategory}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:border-transparent"
-                    >
-                      <option value="All">All Categories</option>
-                      {categories.map((category) => (
-                        <option key={category.name} value={category.name}>
-                      {categories.map(category => (                        <option key={category.name} value={category.name}>
 
-                        <option key={category.name} value={category.name}>
-
-<<<<<<< HEAD
-=======
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           {category.name} ({category.count})
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -596,7 +408,10 @@ if ( {) {
                   <div className='flex-shrink-0'>
 
 
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <select
                       value={priceRange}
                       onChange={e => setPriceRange(e.target.value)}
@@ -613,10 +428,13 @@ if ( {) {
 
                         <option key={range.value} value={range.value}>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           {range.label}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -628,7 +446,10 @@ if ( {) {
                   <div className='flex-shrink-0'>
 
 
-<<<<<<< HEAD
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <select
                       value={sortBy}
                       onChange={e => setSortBy(e.target.value)}
@@ -645,10 +466,13 @@ if ( {) {
 
                         <option key={option.value} value={option.value}>
 
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           {option.value}
                         </option>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
@@ -662,32 +486,9 @@ if ( {) {
                   {/* View Mode Toggle */}
                   <div className="flex-shrink-0">
                     <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
-=======
-                    </select>
-                  </div>
-<<<<<<< HEAD
-                  {/* View Mode Toggle */}
-                  <div className='flex-shrink-0'>
-                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-=======
 
-                  {/* View Mode Toggle */}
-                  <div className="flex-shrink-0">
-                    <div className="flex bg-white/10 rounded-xl p-1 border border-white/20">
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-
-
-                  {/* View Mode Toggle */}
-                  <div className='flex-shrink-0'>
-                    <div className='flex bg-white/10 rounded-xl p-1 border border-white/20'>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                       <button
                         onClick={() => setViewMode('grid')}
                         className={`px-3 py-2 rounded-lg transition-all ${;
@@ -712,19 +513,21 @@ if ( {) {
                       >
                         <List className="w-5 h-5" />
 
-<<<<<<< HEAD
+
                       </button>
 
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-<<<<<<< HEAD
+
 >;
                         <List className="w-5 h-5" />;
           {/* Filters and Search */}
@@ -854,73 +657,23 @@ if ( {) {
 
 
 
-=======
-                        <div className='flex items-start justify-between mb-4'>
-                          <div className='flex items-center space-x-3'>
-                            <div className='text-3xl'>{service.icon}</div>
-                            <div>
-                              <h3 className='text-xl font-bold text-white group-hover:text-cyan-400 transition-colors'>
-                                {service.name}
-                              </h3>
-                              <p className='text-sm text-gray-400'>
-                                {service.category}
-                              </p>
-                            </div>
-                          </div>
-                          {service.popular && (
-                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR              {filteredServices.length === 0 ? (
-                <div className="text-center py-20">
-                  <div className="text-6xl mb-4">🔍</div>
-                  <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>
-                  <p className="text-gray-400">Try adjusting your search criteria or filters</p>
-                </div>
-              ) : (
-                <div className={viewMode === 'grid' ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8' : 'space-y-6'}>
-                  {filteredServices.map((service) => (
-                    <QuantumHolographicCard key={service.id} className="group">
-                      <div className="p-6">
-                        {/* Service Header */}
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="flex items-center space-x-3">
-                            <div className="text-3xl">{service.icon}</div>
-                            <div>
-                              <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">
-                                {service.name}
-                              </h3>
-                              <p className="text-sm text-gray-400">{service.category}</p>
-                            </div>
-                          </div>
-                          {service.popular && (
-                            <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold">
-                              POPULAR
-                            </div>
-                          )}
-                        </div>
-                            <div className='bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-bold'>                              POPULAR
 
-                              POPULAR
 
-                            </div>
-                          )}
-                        </div>
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                         {/* Tagline */}
                         <p className='text-gray-300 mb-4 font-medium'>
                           {service.tagline}
                         </p>
 
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                         {/* Description */}
                         <p className='text-gray-400 text-sm mb-6 leading-relaxed'>
                           {service.description}
@@ -989,34 +742,23 @@ if ( {) {
                         </div>;
                         {/* Key Features */}
 
-=======
-                        <div className="mb-6">
-                          <h4 className="text-sm font-semibold text-white mb-3">Key Features</h4>
-                          <div className="space-y-2">
-                            {service.features.slice(0, 3).map((feature, index) => (
-                              <div key={index} className="flex items-center space-x-2">
-                                <Check className="w-4 h-4 text-green-400 flex-shrink-0" />
-                                <span className="text-xs text-gray-300">{feature}</span>
-                              </div>
-                            ))}
-                            {service.features.length > 3 && (
-                              <div className="text-xs text-cyan-400 text-center pt-2">
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             )}
                           </div>
                         </div>
                         {/* Market Info */}
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
+
                         <div className='grid grid-cols-2 gap-4 mb-6 text-xs'>
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                           <div>
                             <div className='text-gray-400'>Market Size</div>
                             <div className='text-white font-medium'>
@@ -1066,12 +808,7 @@ if ( {) {
                         {/* Contact Info */}                          <Button
                             href={service && service.link}
 
-=======
-                        <div className="flex space-x-3">
-                          <Button
-                            href={service.link}
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                             variant="primary"
                             className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700">;
                             Learn More;
@@ -1094,30 +831,15 @@ if ( {) {
                       </div>;
                     </QuantumHolographicCard>;
 
-=======
 
-                        {/* Contact Info */}
-                        <div className="mt-4 pt-4 border-t border-white/10 text-xs text-gray-400 text-center">
-                          <div>Contact: {contactInfo.mobile} | {contactInfo.email}</div>
-                          <div className="mt-1">{contactInfo.website}</div>
-                        </div>
-                      </div>
-                    </QuantumHolographicCard>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
 </div>;
               )}
             </div>
           </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
@@ -1125,13 +847,8 @@ if ( {) {
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Ready to Lead the Future?
                 </h2>
@@ -1141,47 +858,16 @@ if ( {) {
                   and cutting-edge technology.
                 </p>
                 <div className='flex flex-col sm:flex-row gap-4 justify-center'>
-=======
-            </div>;
-          </section>;
-          {/* Call to Action */}
-          <section className='px-4 sm:px-6 lg:px-8 mb-20'>;
-            <div className='max-w-4xl mx-auto text-center'>;
-              <EnhancedFuturisticCard className='p-12'>;
-                <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>;
-                  Ready to Lead the Future?;
-                </h2>;
-                <p className='text-xl text-gray-300 mb-8 max-w-3xl mx-auto'>;
-                  Join the revolution with our breakthrough micro SAAS services.;
-                  Transform your business with quantum AI, autonomous systems,;
-                  and cutting-edge technology.;
-                </p>;
-                <div className='flex flex-col sm:flex-row gap-4 justify-center'>;
-                  <Button
-                    href={`tel:${contactInfo && contactInfo.mobile}`}
-=======
-            </div>
-          </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           {/* Call to Action */}
           <section className='px-4 sm:px-6 lg:px-8 mb-20'>
             <div className='max-w-4xl mx-auto text-center'>
               <EnhancedFuturisticCard className='p-12'>
                 <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                   Ready to Lead the Future?
                 </h2>
@@ -1250,13 +936,12 @@ if ( {) {
                   <Button
                     href={`mailto:${contactInfo.email}`}
 
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 </div>
               </EnhancedFuturisticCard>
             </div>
@@ -1264,287 +949,12 @@ if ( {) {
         </div>
       </QuantumHolographicBackground>
     </>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-                    className='px-8 py-4 text-lg'>;
-                    <Mail className='w-5 h-5 mr-2' />;
-                    Email Us;
-                  </Button>;
-                </div>;
-                <div className='mt-8 text-sm text-gray-400'>;
-                  <div>Address: {contactInfo && contactInfo.address}</div>;
-                  <div className='mt-1'>Website: {contactInfo && contactInfo.website}</div>                </div>                  >;
-                    <Mail className="w-5 h-5 mr-2" />;
-                    Email Us;
-                  </Button>;
-                </div>;
-                <div className="mt-8 text-sm text-gray-400">;
-                  <div>Address: {contactInfo && contactInfo.address}</div>;
-                  <div className="mt-1">Website: {contactInfo && contactInfo.website}</div>;
-                        <p className='text - gray - 300 mb - 4 font - medium'>;
-                          {service.tagline}
-                        </p>;
-                        {/* Description */}
-                        <p className='text - gray - 400 text - sm mb - 6 leading - relaxed'>;
-                          {service.description}
-                        </p>;
-                        {/* Innovation Level */}
-                        <div className='mb - 4'>;
-                          <div className='flex items - center space - x-2 mb - 2'>;
-                            <Sparkles className='w - 4 h - 4 text - yellow - 400' />;
-                            <span className='text - sm font - medium text - yellow - 400'>;
-                              Innovation Level;
-                            </span>;
-                          </div>;
-                          <div className='bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center'>                            {service.innovation_level}
-                        {/* Description */}
-                        <p className="text - gray - 400 text - sm mb - 6 leading - relaxed">{service.description}</p>;
-                        {/* Innovation Level */}
-                        <div className="mb - 4">;
-                          <div className="flex items - center space - x-2 mb - 2">;
-                            <Sparkles className="w - 4 h - 4 text - yellow - 400" />;
-                            <span className="text - sm font - medium text - yellow - 400">Innovation Level</span>;
-                          </div>;
-                          <div className="bg - gradient - to - r from - purple - 500 to - pink - 500 text - white px - 3 py - 1 rounded - lg text - xs font - bold text - center">;
-                            {service.innovation_level}
-                          </div>;
-                        </div>;
-                        {/* Price and ROI */}
-                        <div className='grid grid - cols - 2 gap - 4 mb - 6'>;
-                          <div className='text - center'>;
-                            <div className='text - 2xl font - bold text - cyan - 400'>;
-                              ${service.price.monthly.toLocaleString ()}
-                            </div>;
-                            <div className='text - xs text - gray - 400'>;
-                              per month;
-                            </div>;
-                          </div>;
-                          <div className='text - center'>;
-                            <div className='text - lg font - bold text - green - 400'>;
-                              {service.roi.split (' ')[0]}
-                            </div>;
-                            <div className='text - xs text - gray - 400'>;
-                              average ROI;
-                            </div>                          </div>;
-                        </div>;
-                        {/* Key Features */}                        <div className="grid grid - cols - 2 gap - 4 mb - 6">;
-                          <div className="text - center">;
-                            <div className="text - 2xl font - bold text - cyan - 400">${service.price.monthly.toLocaleString ()}</div>;
-                            <div className="text - xs text - gray - 400">per month</div>;
-                          </div>;
-                          <div className="text - center">;
-                            <div className="text - lg font - bold text - green - 400">{service.roi.split (' ')[0]}</div>;
-                            <div className="text - xs text - gray - 400">average ROI</div>;
-                        </div>;
-                        {/* Key Features */}
-                        <div className='mb - 6'>;
-                          <h4 className='text - sm font - semibold text - white mb - 3'>;
-                            Key Features;
-                          </h4>;
-                          <div className='space - y-2'>;
-                            {service.features;
-                              .slice (0, 3);
-                              .map ((feature, index) => (
-                                <div;
-                                  key={index}
-                                  className='flex items - center space - x-2';
-                                >;
-                                  <Check className='w - 4 h - 4 text - green - 400 flex - shrink - 0' />;
-                                  <span className='text - xs text - gray - 300'>;
-                                    {feature}
-                                  </span>;
-                                </div>))}
-                            {service.features.length > 3 && (
-                              <div className='text - xs text - cyan - 400 text - center pt - 2'>                                +{service.features.length - 3} more features                        <div className="mb - 6">;
-                          <h4 className="text - sm font - semibold text - white mb - 3">Key Features</h4>;
-                          <div className="space - y-2">;
-                            {service.features.slice (0, 3).map ((feature, index) => (
-                              <div key={index} className="flex items - center space - x-2">;
-                                <Check className="w - 4 h - 4 text - green - 400 flex - shrink - 0" />;
-                                <span className="text - xs text - gray - 300">{feature}</span>;
-                              </div>))}
-                            {service.features.length > 3 && (
-                              <div className="text - xs text - cyan - 400 text - center pt - 2">;
-                              </div>)}
-                          </div>;
-                        </div>;
-                        {/* Market Info */}
-                        <div className='grid grid - cols - 2 gap - 4 mb - 6 text - xs'>;
-                          <div>;
-                            <div className='text - gray - 400'>Market Size</div>;
-                            <div className='text - white font - medium'>;
-                              {service.market_size}
-                            </div>;
-                          </div>;
-                          <div>;
-                            <div className='text - gray - 400'>Growth Rate</div>;
-                            <div className='text - white font - medium'>;
-                              {service.growth_rate}
-                            </div>                          </div>;
-                        </div>;
-                        {/* CTA Buttons */}
-                        <div className='flex space - x-3'>                          <div>;
-                            <div className="text - gray - 400">Market Size</div>;
-                            <div className="text - white font - medium">{service.market_size}</div>;
-                          </div>;
-                          <div>;
-                            <div className="text - gray - 400">Growth Rate</div>;
-                            <div className="text - white font - medium">{service.growth_rate}</div>;
-                          </div>;
-                        </div>;
-                        {/* CTA Buttons */}
-                        <div className='flex space - x-3'>;
-                          <Button;
-                            href={service.link}
-                            variant='primary';
-                            className='flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700';
-                          >;
-                            Learn More;
-                            <ArrowRight className='w - 4 h - 4 ml - 2' />;
-                          </Button>;
-                          <Button;
-                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
-                            variant='secondary';
-                            className='px - 4';
-                          >;
-                            <Mail className='w - 4 h - 4' />                          </Button>;
-                        </div>;
-                        {/* Contact Info */}                          <Button;
-                            href={service.link}
-                            variant="primary";
-                            className="flex - 1 bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700";
-                          >;
-                            Learn More;
-                            <ArrowRight className="w - 4 h - 4 ml - 2" />;
-                          </Button>;
-                          <Button;
-                            href={`mailto:${contact_info.email}?subject = Inquiry about ${service.name}`}
-                            variant="secondary";
-                            className="px - 4";
-                          >;
-                            <Mail className="w - 4 h - 4" />;
-                          </Button>;
-                        </div>;
-                        {/* Contact Info */}
-                        <div className='mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center'>;
-                          <div>;
-                            Contact: {contact_info.mobile} | {contact_info.email}
-                          </div>;
-                          <div className='mt - 1'>{contact_info.website}</div>                        </div>                        <div className="mt - 4 pt - 4 border - t border - white / 10 text - xs text - gray - 400 text - center">;
-                          <div > Contact: {contact_info.mobile} | {contact_info.email}</div>;
-                          <div className="mt - 1">{contact_info.website}</div>;
-                        </div>;
-                      </div>;
-                    </QuantumHolographicCard>))}
-                </div>)}
-            </div>;
-          </section>;
-          {/* Call to Action */}
-          <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
-            <div className='max - w-4xl mx - auto text - center'>;
-              <EnhancedFuturisticCard className='p - 12'>;
-                <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-                  Ready to Lead the Future?;
-                </h2>;
-                <p className='text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto'>;
-                  Join the revolution with our breakthrough micro SAAS services.;
-                  Transform your business with quantum AI, autonomous systems,
-                  and cutting - edge technology.;
-                </p>;
-                <div className='flex flex - col sm:flex - row gap - 4 justify - center'>;
-                  <Button;
-                    href={`tel:${contact_info.mobile}`}
-                    variant='primary';
-                    className='bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg';
-                  >;
-                    <Phone className='w - 5 h - 5 mr - 2' />                    Call Now: {contact_info.mobile}
-                  </Button>;
-                  <Button;
-                    href={`mailto:${contact_info.email}`}
-                    variant='secondary';
-                    className='px - 8 py - 4 text - lg'                  Ready to Lead the Future?;
-                </h2>;
-                <p className="text - xl text - gray - 300 mb - 8 max - w-3xl mx - auto">;
-                  Join the revolution with our breakthrough micro SAAS services.;
-                  Transform your business with quantum AI, autonomous systems, and cutting - edge technology.;
-                </p>;
-                <div className="flex flex - col sm:flex - row gap - 4 justify - center">;
-                  <Button;
-                    href={`tel:${contact_info.mobile}`}
-                    variant="primary";
-                    className="bg - gradient - to - r from - cyan - 500 to - blue - 600 hover:from - cyan - 600 hover:to - blue - 700 px - 8 py - 4 text - lg";
-                  >;
-                    <Phone className="w - 5 h - 5 mr - 2" />;
-                    Call Now: {contact_info.mobile}
-                  </Button>;
-                  <Button;
-                    href={`mailto:${contact_info.email}`}
-                    variant='secondary';
-                    className='px - 8 py - 4 text - lg';
-                  >;
-                    <Mail className='w - 5 h - 5 mr - 2' />;
-                    Email Us;
-                  </Button>;
-                </div>;
-                <div className='mt - 8 text - sm text - gray - 400'>;
-                  <div > Address: {contact_info.address}</div>;
-                  <div className='mt - 1'>Website: {contact_info.website}</div>                </div>                  >;
-                    <Mail className="w - 5 h - 5 mr - 2" />;
-                    Email Us;
-                  </Button>;
-                </div>;
-                <div className="mt - 8 text - sm text - gray - 400">;
-                  <div > Address: {contact_info.address}</div>;
-                  <div className="mt - 1">Website: {contact_info.website}</div>;
 
-                </div>;
-              </EnhancedFuturisticCard>;
-            </div>;
-          </section>;
-        </div>;
-      </QuantumHolographicBackground>;
-
-  );
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 }
 
-=======
 
-  );
-<<<<<<< HEAD
-=======
-}
 
-=======
-
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-    </>);
-=======
-<<<<<<< HEAD
-);
-<<<<<<< HEAD
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
-<<<<<<< HEAD
-}
-}
-  );
-}
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

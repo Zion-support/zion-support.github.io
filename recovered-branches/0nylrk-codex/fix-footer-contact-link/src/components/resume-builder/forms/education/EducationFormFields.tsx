@@ -1,28 +1,6 @@
 
-<<<<<<< HEAD
-import { useForm  } from 'react-hook-form';
-import { zodResolver  } from '@hookform/resolvers/zod';
-import { z  } from 'zod';
-import { format  } from 'date-fns';
-import { Loader2  } from 'lucide-react';
-import { Button  } from '@/components/ui/button';
-import { Textarea  } from '@/components/ui/textarea';
-import { Input  } from '@/components/ui/input';
-import { Checkbox  } from '@/components/ui/checkbox';
-import { Alert, AlertDescription } from '@/components/ui/alert';
-import { Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage } from '@/components/ui/form';
-import { useState  } from 'react';
-import { EducationFormFieldsProps  } from './types';
-import { Education } from '@/types/resume';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useForm} from 'react-hook-form';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {z} from 'zod';
@@ -37,11 +15,9 @@ import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from '@/
 import {useState} from 'react';
 import {EducationFormFieldsProps} from './types';
 import {Education} from '@/types/resume';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Define schema for form validation
 
 const educationSchema = z.object({
@@ -54,27 +30,23 @@ const educationSchema = z.object({
   description: z.string().optional()
   location: z.string().optional()})
 type EducationFormValues = z.infer<typeof educationSchema>;
-<<<<<<< HEAD
+
 export function EducationFormFields({
   isEditing
   onSubmit
   onCancel
 }: EducationFormFieldsProps) {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function EducationFormFields({ 
   isEditing, 
   onSubmit, 
   onCancel 
 }: EducationFormFieldsProps) {;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const form = useForm<EducationFormValues>({
@@ -97,15 +69,11 @@ export function EducationFormFields({
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
+
   }
   };
-=======
 
-  };
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useForm } from 'react-hook-form',;
 import { zodResolver } from '@hookform/resolvers/zod',;
 import { z } from 'zod',;
@@ -172,14 +140,11 @@ export function EducationFormFields(): any ({ ;
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   return (
     <Form {...form}>;
@@ -246,24 +211,7 @@ export function EducationFormFields(): any ({ ;
             )}
           />
           <div className="space-y-4">
-=======
-            render={({ field }) => (;
-              <FormItem>;
-                <FormLabel>Start Date</FormLabel>;
-                <FormControl>;
-                  <Input
-                    type="date" 
-                    {...field}
-                    value={field && field.value || ''} 
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>;
-            )}
-          />;
 
-          <div className="space-y-4">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FormField
               control={form && form.control}
               name="is_current"
@@ -316,69 +264,7 @@ export function EducationFormFields(): any ({ ;
           render={({ field }) => (;
             <FormItem>;
               <FormLabel>Location (Optional)</FormLabel>;
-=======
-            </FormItem>)}
-        />;
-        <div className="grid grid - cols - 1 md:grid - cols - 2 gap - 4">;
-          <FormField;
-            control={form.control}
-            name="start_date";
-            render={({ field }) => (
-              <FormItem>;
-                <FormLabel > Start Date</FormLabel>;
-                <FormControl>;
-                  <Input;
-                    type="date";
-                    {...field}
-                    value={field.value || ''}
-                  />;
-                </FormControl>;
-                <FormMessage />;
-              </FormItem>)}
-          />;
-          <div className="space - y-4">;
-            <FormField;
-              control={form.control}
-              name="is_current";
-              render={({ field }) => (
-                <FormItem className="flex flex - row items - start space - x-3 space - y-0 py - 2">;
-                  <FormControl>;
-                    <Checkbox;
-                      checked={field.value}
-                      onCheckedChange={field.on_change}
-                    />;
-                  </FormControl>;
-                  <div className="space - y-1 leading - none">;
-                    <FormLabel > I am currently studying here</FormLabel>;
-                  </div>;
-                </FormItem>)}
-            />;
-            {!form.watch ('is_current') && (
-              <FormField;
-                control={form.control}
-                name="end_date";
-                render={({ field }) => (
-                  <FormItem>;
-                    <FormLabel > End Date</FormLabel>;
-                    <FormControl>;
-                      <Input;
-                        type="date";
-                        {...field}
-                        value={field.value || ''}
-                      />;
-                    </FormControl>;
-                    <FormMessage />;
-                  </FormItem>)}
-              />)}
-          </div>;
-        </div>;
-        <FormField;
-          control={form.control}
-          name="location";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Location (Optional)</FormLabel>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               <FormControl>;
                 <Input placeholder="Cambridge, MA" {...field} />;
               </FormControl>;
@@ -397,20 +283,7 @@ export function EducationFormFields(): any ({ ;
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
-=======
-            </FormItem>)}
-        />;
-        <FormField;
-          control={form.control}
-          name="description";
-          render={({ field }) => (
-            <FormItem>;
-              <FormLabel > Description (Optional)</FormLabel>;
-              <FormControl>;
-                <Textarea;
-                  placeholder="Notable achievements, courses, activities...";
-                  className="min - h-[100px]";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                   {...field}
                 />;
               </FormControl>;

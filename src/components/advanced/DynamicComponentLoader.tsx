@@ -65,19 +65,16 @@ const EnhancedLoading: React.FC<{;
         <div className="relative">
           <Loader2 className="h-8 w-8 animate-spin text-primary" />
           {showProgress && (
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             <motion.div
               className="absolute inset-0 rounded-full border-2 border-primary"
               style={{
 
                 background: `conic-gradient(from 0deg, var(--primary) 0%, var(--primary) ${progress}%, transparent ${progress}%, transparent 100%)`
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               }}
@@ -100,10 +97,9 @@ const EnhancedLoading: React.FC<{;
   </Card>
 )
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -127,10 +123,9 @@ const EnhancedError: React.FC<{
         <div className="p-3 rounded-full bg-red-100 dark:bg-red-900/20">
           {isOnline ? (
             <AlertTriangle className="h-6 w-6 text-red-600" />
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
           ) : (
@@ -186,10 +181,9 @@ const EnhancedError: React.FC<{;
             }
           </p>
           {retryCount > 0 && (
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               Retry {retryCount}/{maxRetries}
             </p>;
@@ -210,11 +204,8 @@ const EnhancedError: React.FC<{;
             className="border-red-300 text-red-700 hover:bg-red-100"
           >
             <RefreshCw className="h-4 w-4 mr-2" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             Try Again
           </Button>
         )}
@@ -236,7 +227,7 @@ const useNetworkStatus = () => {
   }, []);
   return is_online;
 }
-<<<<<<< HEAD
+
 // Advanced Dynamic Component Loader
 export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
   importFn
@@ -273,14 +264,7 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({
     }
     };
 ;
-=======
 
-
-    };
-;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     return () => {}; // Return empty cleanup function for other paths
   }, [loadingState.isLoading, loadingState.error])
   // Load component
@@ -509,10 +493,9 @@ export const DynamicComponentLoader: React.FC<DynamicLoaderProps> = ({;
         />;
       </motion.div>;
     );
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -580,11 +563,8 @@ export const createDynamicComponent = <T extends ComponentType<any>>(;
   );
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Predefined dynamic loaders for common heavy components
 // Note: These are examples - uncomment and install types as needed
 // export const DynamicChartComponent = createDynamicComponent(

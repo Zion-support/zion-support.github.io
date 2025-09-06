@@ -1,44 +1,20 @@
 
-<<<<<<< HEAD
-import { useEffect  } from 'react';
-import { supabase  } from '@/integrations/supabase/client';
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { Message, Conversation  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
-=======
-import {useEffect} from 'react';
-import {supabase} from '@/integrations / supabase / client';
-import {UserProfile, UserDetails} from '@/types / auth';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-export function useMessagingRealtime (
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useEffect} from 'react';
 import {supabase} from '@/integrations/supabase/client';
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-<<<<<<< HEAD
+
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
 export function useMessagingRealtime(
 export function useMessagingRealtime(;
-=======
-
-// Allow either UserProfile or UserDetails
 
 
-export function useMessagingRealtime(;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   user: UserWithProfile;
   active_conversation: Conversation | null;
   setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
@@ -120,13 +96,12 @@ if ( {) {
       .subscribe();
     return () => {;
       supabase.removeChannel(subscription);
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }, [user, active_conversation, fetch_conversations, setActiveMessages]);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4

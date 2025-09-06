@@ -166,13 +166,8 @@ const WhitepaperViewPage: React.FC = () => {;
         setError("No whitepaper ID provided."),;
         setLoading(false),;
         return;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
       }
       setLoading(true)
@@ -259,29 +254,7 @@ export default WhitepaperViewPage;
 
 },
 ;
-=======
-      }
-      setLoading(true),;
-      setError(null),;
-      try {;
-        const { data: responseData, error: funcError } = await supabase && supabase.functions.invoke('get-shared-whitepaper', {;
-          body: { id }}),;
 
-        if (funcError) throw new Error(`Supabase function error: ${funcError && funcError.message}`),;
-        if (responseData && (responseData as any).error) throw new Error((responseData as any).error),;
-        if (!responseData || !(responseData as any).whitepaper_data) {;
-          throw new Error('Shared whitepaper not found or data is invalid.');
-        }
-
-        setSharedData(responseData as SharedWhitepaper);
-
-      } catch (e: any) {;
-        logErrorToProduction('Error fetching shared whitepaper:', { data:  e }),;
-        setError(e && e.message || 'An unexpected error occurred.');
-      } finally {;
-        setLoading(false);
-      }
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     },;
     fetchWhitepaper();
   }, [id]),;
@@ -356,10 +329,9 @@ export default WhitepaperViewPage;
     </div>;
   );
 },;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export default WhitepaperViewPage,;
 

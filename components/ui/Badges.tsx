@@ -1,11 +1,14 @@
 import React from 'react';
 
-<<<<<<< HEAD
+
+
+
 export function TrustBadge({
   type
 }: {
   type,
 }: {;
+
   type: 'Verified' | 'Pro' | 'Top Rated';
 }) {
   const colorMap = {
@@ -20,15 +23,15 @@ export function TrustBadge({
     </span>
   );
 export function MicroTestimonial({
+
   quote
   author
 }: {
   quote,
   author,
 }: {;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   quote: string;
   author: string;
 }) {;
@@ -52,11 +55,8 @@ export function MicroTestimonial({
       <span className="leading - none">{type}</span>;
     </span>);
 }
-<<<<<<< HEAD
-=======
 
-      </figcaption>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     </figure>;
   );  const colorMap = {;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',;
@@ -68,25 +68,8 @@ export function MicroTestimonial({
   );
 }
 
-=======
-export /**
- * MicroTestimonial - Function description
- */
-function MicroTestimonial() {
-  return (
-    <figure className="border rounded - md p - 3 text - sm">;
-      <blockquote className="italic opacity - 90">“{quote}”</blockquote>;
-      <figcaption className="mt - 2 font - medium opacity - 80">— {author}</figcaption>;
-    </figure>);
-    </span>
-  )
-}
-    </figure>
-  );
-}
-<<<<<<< HEAD
-=======
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

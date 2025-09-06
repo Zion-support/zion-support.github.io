@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-export interface ComprehensiveService {
-export interface ComprehensiveService {;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -19,8 +18,7 @@ export interface ComprehensiveService {;
   contact: {
     phone: string;
     email: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 ];      phone: '+1 302 464 0950';
@@ -334,30 +332,31 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     integrations: ['SAPOracleSiemensRockwellGE DigitalPTC'], compliance: ['ISO 9001ISO 14001OHSAS 18001SOC2ISO 27001'],
     website: 'https://ziontechgroup.com/ai-manufacturing-optimizer',
     contact: {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-      phone: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
-=======
-<<<<<<< HEAD
-      phone: '+1 302 464 0950'
-      email: 'kleber@ziontechgroup.com'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
       address: '364 E Main St STE 1008 Middletown DE 19709'
-<<<<<<< HEAD
-=======
-    
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+    }
+    trialDays: 60
+    setupTime: '4-6 weeks'
+    competitors: ['PTC', 'Siemens', 'GE Digital', 'Rockwell Automation']
+    roi: 'Average customer sees 600% ROI through operational improvements'
+    launchDate: '2024-01-10'
+    customers: 950
+    rating: 4.9
+    reviews: 520
+  }
+
+
     },
     trialDays: 60, setupTime: '4-6 weeks',
     competitors: ['PTCSiemensGE DigitalRockwell Automation'], roi: 'Average customer sees 600% ROI through operational improvements',
     launchDate: '2024-01-10', customers: 950,
     rating: 4.9,
-<<<<<<< HEAD
+
     reviews: 520,
   },;
+
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup.com';
       address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -373,9 +372,13 @@ export const comprehensiveRealServices: ComprehensiveService[] = [
     rating: 4.9
 
     reviews: 520
+
+
   }
 ];
 export interface ComprehensiveService {;
+
+
   id: string,;
   name: string,;
   tagline: string,;
@@ -766,13 +769,10 @@ export const comprehensiveRealServices: ComprehensiveService[] = [;
     customers: 950,;
     rating: 4.9,;
     reviews: 520;
-=======
+
     reviews: 520;
-=======
 
-export interface ComprehensiveService {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 ];

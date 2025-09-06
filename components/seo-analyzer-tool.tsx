@@ -28,12 +28,10 @@ import {
   Globe,
   Smartphone,;
   Zap,;
-<<<<<<< HEAD
-} from 'lucide-react';import { Search, TrendingUp, CheckCircle, AlertTriangle, ArrowRight, Target, BarChart3, Globe, Smartphone, Zap } from 'lucide-react';
-export default function SEOAnalyzerToolPage() {;
+
+
 } from 'lucide-react';
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export default function SEOAnalyzerToolPage() {
   const [isAnalyzing, setIsAnalyzing] = useState(false);
@@ -335,27 +333,7 @@ export default function SEOAnalyzerToolPage() {
         'Custom integrations',
       ],
       popular: false,
-=======
-    {
-      category: 'Technical SEO'
-      factors: [
-        'Page load speed'
-        'Mobile responsiveness'
-        'XML sitemap'
-        'Robots.txt configuration'
-        'SSL certificate'
-        'Core Web Vitals'
-      ]
-      icon: '⚙️'
-      color: 'text-blue-400'
-    }
-=======
-      ],
-      icon: '📍',
-      color: 'text-orange-400',
 
-    },
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
     {
       category: 'Content SEO'
       factors: [
@@ -521,8 +499,7 @@ export default function SEOAnalyzerToolPage() {
             difficulty: 'high'
           }
         ]
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
   const handleAnalyzeSEO = async () => {;
     if (!url && url.trim()) return;
@@ -587,97 +564,8 @@ export default function SEOAnalyzerToolPage() {
       setIsAnalyzing(false);
     }, 4000);
   };
-=======
 
-  };
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-      setIsAnalyzing(false);
-
-    }, 4000);  };
-
-  };
-
-  return (
-    <>
-      <Head>
-        <title>
-          SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis &
-          Optimization
-        </title>
-        <meta
-          name='description'
-          content="Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve search rankings."
-        />
-        <meta
-          property='og:title'
-          content='SEO Analyzer Tool - Zion Tech Group'
-        />
-        <meta
-          property='og:description'
-          content='Professional SEO analysis tool with comprehensive insights and optimization recommendations.'
-        />
-        <meta name='twitter:card' content='summary_large_image' />
-      </Head>
-      {/* Hero Section */}
-      <section className='relative section-padding bg-gradient-cursor overflow-hidden'>
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]' />
-        <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]' />
-        <div className='absolute inset-0 bg-grid opacity-10' />
-        <div className='relative z-10 container-cursor text-center'>
-          <div className='inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6'>
-            <Search className='w-4 h-4 mr-2' />
-            Professional SEO Analysis
-          </div>
-          <h1 className='text-responsive-xl font-black mb-8 gradient-text text-shadow-lg'>
-            SEO Analyzer Tool
-          </h1>
-          <p className='text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12'>
-            Analyze your website's SEO performance with our comprehensive tool.
-            Get detailed insights, keyword research, and optimization
-            recommendations to improve your search rankings and drive more
-            organic traffic.
-          </p>
-          {/* URL Input */}
-          <div className='max-w-2xl mx-auto mb-8'>
-            <div className='flex flex-col sm:flex-row gap-4'>
-              <input
-                type='url'
-                placeholder='Enter your website URL (e.g., https://example.com)'
-                value={url}
-                onChange={e => setUrl(e.target.value)}
-                className='flex-1 px-6 py-4 bg-gray-800 border border-gray-700 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent'
-              />
-              <Button
-                onClick={handleAnalyzeSEO}
-                size='lg'
-                className='bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white shadow-2xl hover-glow whitespace-nowrap'                disabled={isAnalyzing |!url.trim()}
-              >
-                {isAnalyzing ? (
-                  <>
-                    <div className='animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-2' />                    Analyzing...
-                  </>
-                ) : (
-                  <>
-                    <Search className='w-5 h-5 mr-2' />                    Analyze SEO      </Head>
-      {/* Hero Section */}
-      <section className="relative section-padding bg-gradient-cursor overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(34,197,94,0.08),transparent_50%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(34,197,94,0.06),transparent_50%)]" />
-        <div className="absolute inset-0 bg-grid opacity-10" />
-        <div className="relative z-10 container-cursor text-center">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/10 border border-green-500/20 text-green-400 text-sm font-medium mb-6">
-            <Search className="w-4 h-4 mr-2" />
-            Professional SEO Analysis
-          </div>
-          <h1 className="text-responsive-xl font-black mb-8 gradient-text text-shadow-lg">
-            SEO Analyzer Tool
-          </h1>
-          <p className="text-responsive-md text-gray-300 max-w-5xl mx-auto leading-relaxed mb-12">
-            Analyze your website's SEO performance with our comprehensive tool. Get detailed insights, keyword research, and optimization recommendations to improve your search rankings and drive more organic traffic.
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
 
       setIsAnalyzing (false);
@@ -815,25 +703,7 @@ export default function SEOAnalyzerToolPage() {
             </Button>;
             <Button
 
-=======
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <Button
-              href="#pricing"
-              variant="outline"
-              size="lg"
-              className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white shadow-2xl"
-            >
-              View Pricing
-            </Button>
-            <Button
-href="/contact"
-              variant="outline"
-              size="lg"
-              className="border-gray-500 text-gray-400 hover:bg-gray-500 hover:text-white shadow-2xl"
-            >
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo
 
             </Button>;
@@ -944,13 +814,7 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
-              Schedule Demo
-            </Button>
-          </div>
-        </div>
-      </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Features Section */}
       <section className='section - padding bg - gradient - cursor - accent'>;
         <div className='container - cursor'>;
@@ -1013,17 +877,13 @@ href="/contact"
                       {feature.description}
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     </p>
                   </div>
                 </div>
@@ -1035,13 +895,8 @@ href="/contact"
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
@@ -1049,13 +904,8 @@ href="/contact"
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               Comprehensive SEO Analysis
             </h2>
@@ -1066,55 +916,10 @@ href="/contact"
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>
             {seoFactors.map((category, index) => (
-=======
-          </div>;
-        </div>;
-      </section>;
-      {/* SEO Factors Section */}
-      <section className='section-padding bg-gradient-cursor'>;
-        <div className='container-cursor'>;
-          <div className='text-center mb-20'>;
-            <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>;
-              Comprehensive SEO Analysis;
-            </h2>;
-            <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>;
-                    </p>;
-                  </div>;
-                </div>;
-              </Card>))}
-          </div>;
-        </div>;
-      </section>;
-      {/* SEO Factors Section */}
-      <section className='section - padding bg - gradient - cursor'>;
-        <div className='container - cursor'>;
-          <div className='text - center mb - 20'>;
-            <h2 className='text - responsive - lg font - bold mb - 8 gradient - text text - shadow'>;
-              Comprehensive SEO Analysis;
-            </h2>;
-            <p className='text - responsive - md text - gray - 400 max - w-4xl mx - auto leading - relaxed'>;
-              We analyze every aspect of your website's SEO to provide;
-              actionable insights and recommendations.;
-            </p>;
-          </div>;
 
-      <section className="section-padding bg-gradient-cursor">
-        <div className="container-cursor">
-          <div className="text-center mb-20">
-            <h2 className="text-responsive-lg font-bold mb-8 gradient-text text-shadow">
-=======
-                    </h3>
-                    <p className="text-gray-400 leading-relaxed">
-                      {feature.description}
-=======
 
-                      {feature.description}
-
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
                     </p>
                   </div>
                 </div>
@@ -1123,28 +928,22 @@ href="/contact"
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
       {/* SEO Factors Section */}
       <section className='section-padding bg-gradient-cursor'>
         <div className='container-cursor'>
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
               Comprehensive SEO Analysis
 
             </h2>
@@ -1166,7 +965,7 @@ href="/contact"
               <Card
                 key={index}
                 className="card-hover border-gradient-green"
-<<<<<<< HEAD
+
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex items-center mb-6">
@@ -1177,10 +976,7 @@ href="/contact"
                   {category.factors.map((factor, factorIndex) => (
                     <li key={factorIndex} className="flex items-center text-gray-300">
                       <CheckCircle className="w-4 h-4 text-green-400 mr-3 flex-shrink-0" />
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       {factor}
                     </li>
                   ))}
@@ -1191,13 +987,8 @@ href="/contact"
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       {/* Demo Analysis Results */}
       {analysisResults && (
@@ -1261,19 +1052,11 @@ href="/contact"
           </div>;
         </div>;
       </section>;
-=======
-          </div>
-        </div>
-      </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Demo Analysis Results */}
       {analysis_results && (
         <section className='section - padding bg - gradient - cursor - accent'>;
@@ -1404,7 +1187,7 @@ href="/contact"
                       ) : (;
                         <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />;
                       )}
-<<<<<<< HEAD
+
                       <div>;
                         <span className='text-gray-300'>{issue && issue.message}</span>;
                         <div className='text-xs text-gray-500 mt-1'>;
@@ -1424,21 +1207,7 @@ href="/contact"
                       </div>;
                     </div>;
 
-=======
 
-              {/* Issues */}
-              <Card className="border-gradient-green">
-                <h3 className="text-2xl font-bold mb-6 text-white">Issues Found</h3>
-                <div className="space-y-3">
-                  {analysisResults.issues.map((issue, index) => (
-=======
-                      <div>
-                        <span className='text-gray-300'>{issue.message}</span>
-                        <div className='text-xs text-gray-500 mt-1'>
-                          Priority: {issue.priority}
-<<<<<<< HEAD
-                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
                     <div key={index} className="flex items-start space-x-3">
                       {issue.type === 'error' ? (
                         <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
@@ -1451,49 +1220,10 @@ href="/contact"
                         <span className="text-gray-300">{issue.message}</span>
                         <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
                       </div>
-=======
-              {/* Issues */}
-              <Card className='border-gradient-green'>
-                <h3 className='text-2xl font-bold mb-6 text-white'>
-                  Issues Found
-                </h3>
-                <div className='space-y-3'>
-                  {analysisResults.issues.map((issue, index) => (
-                    <div key={index} className='flex items-start space-x-3'>
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className='w-5 h-5 text-red-400 mt-1 flex-shrink-0' />
-                      ) : issue.type === 'warning' ? (
-                        <AlertTriangle className='w-5 h-5 text-yellow-400 mt-1 flex-shrink-0' />
-                      ) : (
-                        <CheckCircle className='w-5 h-5 text-blue-400 mt-1 flex-shrink-0' />
-                      )}
-                      <div>
-                        <span className='text-gray-300'>{issue.message}</span>
-                        <div className='text-xs text-gray-500 mt-1'>
-                          Priority: {issue.priority}
-                        </div>                      </div>                  {analysisResults.issues.map((issue, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                      {issue.type === 'error' ? (
-                        <AlertTriangle className="w-5 h-5 text-red-400 mt-1 flex-shrink-0" />
-                      ) : issue.type === 'warning' ? (
-                        <AlertTriangle className="w-5 h-5 text-yellow-400 mt-1 flex-shrink-0" />
-                      ) : (
-                        <CheckCircle className="w-5 h-5 text-blue-400 mt-1 flex-shrink-0" />
-                      )}
-                      <div>
-                        <span className="text-gray-300">{issue.message}</span>
-                        <div className="text-xs text-gray-500 mt-1">Priority: {issue.priority}</div>
-                      </div>
-                        </div>                      </div>
-
-                      </div>
-
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -1502,19 +1232,13 @@ href="/contact"
               </Card>
             </div>
 
-<<<<<<< HEAD
-=======
+
                 </div>;
               </Card>;
             </div>;
 
 
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Recommendations and Keywords */}
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>;
@@ -1535,19 +1259,11 @@ href="/contact"
                       <CheckCircle className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />;
                       <span className="text-gray-300">{rec}</span>;
 
-=======
-                </div>
-              </Card>
-            </div>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             {/* Recommendations and Keywords */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <Card className="border-gradient-green">
@@ -1603,37 +1319,15 @@ href="/contact"
                       </div>;
                     </div>;
 
-=======
 
-              <Card className="border-gradient-green">
-                <h3 className="text-2xl font-bold mb-6 text-white">Keyword Opportunities</h3>
-                <div className="space-y-4">
-                  {analysisResults.keywords.map((keyword, index) => (
-                    <div key={index} className="border-b border-gray-700 pb-3 last:border-b-0">
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-semibold text-white">{keyword.keyword}</span>
-                        <span className="text-sm text-gray-400">Volume: {keyword.volume}</span>
-                      </div>
-                      <div className="flex justify-between items-center">
-                        <span className="text-sm text-gray-400">Difficulty: {keyword.difficulty}</span>
-                        <span className={`px-2 py-1 rounded text-xs ${
-                          keyword.difficulty === 'low' ? 'bg-green-500/20 text-green-400' :
-                          keyword.difficulty === 'medium' ? 'bg-yellow-500/20 text-yellow-400' :
-                          'bg-red-500/20 text-red-400'
-                        }`}>
-
-<<<<<<< HEAD
-                          {keyword.difficulty}
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                         </span>
                       </div>
                     </div>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                   ))}
-<<<<<<< HEAD
+
 <div className='grid grid - cols - 1 lg:grid - cols - 3 gap - 8 mb - 8'>;
               {/* Overall Score */}
               <Card className='border - gradient - green text - center'>;
@@ -1837,17 +1531,13 @@ href="/contact"
           <div className='text-center mb-20'>
             <h2 className='text-responsive-lg font-bold mb-8 gradient-text text-shadow'>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
               Simple Pricing
             </h2>
             <p className='text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed'>
@@ -1864,8 +1554,7 @@ href="/contact"
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {pricing.map((plan, index) => (
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
       <section id='pricing' className='section-padding bg-gradient-cursor'>;
         <div className='container-cursor'>;
           <div className='text-center mb-20'>;
@@ -1918,100 +1607,7 @@ href="/contact"
                     <span className='text - 4xl font - bold text - white'>;
                       {plan.price}
 
-=======
 
-                className={`card-hover border-gradient-green ${plan.popular ? 'ring-2 ring-green-500 scale-105' : ''}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                {plan.popular && (
-
-                  <div className='absolute -top-4 left-1/2 transform -translate-x-1/2'>
-                    <span className='bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium'>                      Most Popular
-                    </span>
-                  </div>
-                )}                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-medium">
-                      Most Popular
-                    </span>
-                  </div>
-                )}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-
-                <div className='text-center mb-8'>;
-                  <h3 className='text-2xl font-bold text-white mb-4'>;
-                    {plan && plan.name}
-                  </h3>;
-                  <div className='mb-6'>;
-                    <span className='text-4xl font-bold text-white'>;
-                      {plan && plan.price}
-                    </span>;
-                    <span className='text-gray-400'>{plan && plan.period}</span>;
-                  </div>;
-                  <p className='text-gray-400'>{plan && plan.description}</p>;
-                </div>;
-<<<<<<< HEAD
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-=======
-<<<<<<< HEAD
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
-                <div className='text-center mb-8'>
-                  <h3 className='text-2xl font-bold text-white mb-4'>
-                    {plan.name}
-                  </h3>
-                  <div className='mb-6'>
-                    <span className='text-4xl font-bold text-white'>
-                      {plan.price}
-                    </span>
-                    <span className='text-gray-400'>{plan.period}</span>
-                  </div>
-                  <p className='text-gray-400'>{plan.description}</p>
-                </div>
-                <ul className='space-y-4 mb-8'>
-                  {plan.features.map((feature, featureIndex) => (
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-
-                <ul className='space-y-4 mb-8'>;
-                  {plan && plan.features.map((feature, featureIndex) => (;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    <li
-                      key={featureIndex}
-                      className='flex items-center text-gray-300'>;
-                      <CheckCircle className='w-5 h-5 text-green-400 mr-3 flex-shrink-0' />                      {feature}                  </div>;
-                  <p className="text-gray-400">{plan && plan.description}</p>;
-                </div>;
-                <ul className="space-y-4 mb-8">;
-                  {plan && plan.features.map((feature, featureIndex) => (;
-                    <li key={featureIndex} className="flex items-center text-gray-300">;
-                      <CheckCircle className="w-5 h-5 text-green-400 mr-3 flex-shrink-0" />;
-
-                      {feature}
-<<<<<<< HEAD
-
-
-                      {feature}
-
-=======
-                    </li>;
-=======
-
-
-
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-                    </li>
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                   ))}
 
                 </ul>;
@@ -2021,26 +1617,14 @@ href="/contact"
                   href='/contact'
                   size='lg'
 
-=======
-                      {feature}
-=======
-<<<<<<< HEAD
 
-                      {feature}
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-                      {feature}
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
                     </li>
                   ))}
                 </ul>
-<<<<<<< HEAD
-<Button
-                  href="/contact"
-=======
+
                 <Button
                   href="/contact"
                   size="lg"
@@ -2052,37 +1636,21 @@ href="/contact"
 
                 </Button>
 
-<<<<<<< HEAD
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
               </Card>
             ))}
           </div>
         </div>
       </section>
-<<<<<<< HEAD
-=======
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               </Card>
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
@@ -2097,6 +1665,7 @@ href="/contact"
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       {/* CTA Section */}
       <section className='section-padding bg-gradient-to-r from-green-600 to-emerald-700 relative overflow-hidden'>
         <div className='absolute inset-0 bg-[radial-gradient(circle,rgba(255,255,255,0.1)_1px,transparent_1px)] bg-[size:20px_20px] opacity-10' />
@@ -2104,11 +1673,13 @@ href="/contact"
           <h2 className='text-responsive-lg font-bold text-white mb-8 text-shadow-lg'>
 
             Ready to Improve Your SEO Rankings?
-<<<<<<< HEAD
-=======
+
+
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </h2>
           <p className='text-responsive-md text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed'>
             Join thousands of businesses using our SEO analyzer to improve their
@@ -2127,7 +1698,7 @@ href="/contact"
               href='/contact'
               variant='outline'
               size='lg'
-<<<<<<< HEAD
+
               className='border-white text-white hover:bg-white hover:text-green-600 shadow-2xl'            >              href="/contact"
               variant="outline"
               size="lg"
@@ -2139,15 +1710,7 @@ href="/contact"
       </section>
     </>
 );
-  );
-}
-}
-  );
-}
-=======
 
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               Schedule Demo;
             </Button>;
           </div>;
@@ -2155,12 +1718,9 @@ href="/contact"
       </section>;
 
 
-=======
-  );
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

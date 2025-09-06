@@ -126,7 +126,7 @@ const GuidedTour = dynamic (
   {
     ssr: false
   }
-<<<<<<< HEAD
+
 )
 // Lazy load notification functions
 const loadNotificationFunctions = () => import('@/utils/notifications')
@@ -135,15 +135,7 @@ export default function Dashboard() {
 const loadNotificationFunctions = () => import('@/utils/notifications');
 export default function Dashboard() {;
   const { logout } = useAuth();
-=======
 
-
-const loadNotificationFunctions = () => import('@/utils/notifications');
-export default function Dashboard() {;
-  const { logout } = useAuth();
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const { user, loading } = useRequireAuth(); // This will handle authentication and redirects
   const { toast } = useToast()
   // Add safe checks for user ID to prevent premature API calls
@@ -153,10 +145,9 @@ export default function Dashboard() {;
   const { favorites } = useFavorites()
   // Type assertion to work around Supabase User type limitations
   const userWithExtendedProps = user as any
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   const userType = null;
@@ -199,10 +190,8 @@ const GuidedTour = dynamic(() => import("@/components/onboarding/GuidedTour").th
   ssr: false}),
 
 // Lazy load notification functions
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 const loadNotificationFunctions = () => import("@/utils/notifications"),
 
 export default function Dashboard() {
@@ -220,10 +209,9 @@ export default function Dashboard() {
   const userType = userWithExtendedProps?.userType || user?.user_metadata?.userType || 'talent',
   const roleForTour = userType === 'client' || userType === 'admin' ? 'client' : 'talent',
 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -582,10 +570,9 @@ if ( {) {
                     className="w-full flex items-center gap-2 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white"
                     onClick={() => window.location.href = "/profile"}
                   >
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                     <UserCheck size={16} />
@@ -655,11 +642,8 @@ if ( {) {
 
 
               
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               {/* Stats & Metrics */}
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
                 <h3 className="text-lg font-bold text-white mb-4">Your Activity</h3>
@@ -676,10 +660,9 @@ if ( {) {
                   
                   <div className="flex justify-between items-center">
                     <span className="text-zion-slate-light">Points</span>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                     <PointsBadge />
                   </div>
@@ -689,10 +672,9 @@ if ( {) {
                       <Link href="/wallet" className="hover:underline">View Wallet</Link>
                     </span>
                   </div>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                       style={{ width: '65%' }}></div>;
                   </div>;
@@ -761,7 +743,7 @@ if ( {) {
                       onClick={async () => {
                         try {
                           const { createOnboardingNotification } = await loadNotificationFunctions(),
-<<<<<<< HEAD
+
                           await createOnboardingNotification({
                             userId: user?.id ?? "",
                             missingMilestone: 'profile_completed',
@@ -780,15 +762,7 @@ if ( {) {
                             description: 'Please try again',
                             variant: 'destructive',
                           })
-=======
 
-
-                          await createOnboardingNotification({
-                            userId: user?.id ?? "",
-                            missingMilestone: 'profile_completed',
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                             userRole: roleForTour
                           }),
                           toast({
@@ -800,10 +774,9 @@ if ( {) {
                             title: "Error sending notification",
                             description: "Please try again",
                             variant: "destructive"})
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -962,11 +935,8 @@ if ( {) {
               <div className="bg-zion-blue-dark rounded-xl p-6">
                 <h3 className="text-lg font-bold text-white mb-4 flex items-center">
                   <Bell size={18} className="mr-2 text-zion-cyan" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   Recent Notifications
                 </h3>
                 <div className="space-y-4">
@@ -1009,11 +979,8 @@ if ( {) {
                       <LogOut size={16} className='mr-2' />;
 
             
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {/* Main Content - Dashboard */}
             <div className="lg:col-span-2">
               <div className="bg-zion-blue-dark rounded-xl p-6 mb-6">
@@ -1205,11 +1172,8 @@ if ( {) {
                     <div className="flex flex-col items-center">
                       <div className="w-16 h-16 rounded-full bg-gradient-to-br from-zion-purple to-zion-cyan flex items-center justify-center mb-2">
                         <UserCheck size={24} className="text-white" />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       </div>
                       <span className="text-xs text-center text-zion-slate-light">Newcomer</span>
                     </div>
@@ -1234,10 +1198,9 @@ if ( {) {
                   </div>
                 </div>
                 
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                 {/* Community Section */}
                 <div id="community-section">
@@ -1287,10 +1250,9 @@ if ( {) {
                             <span>#{o.orderId}</span>;
                             <Link href={`/orders/${o.orderId}`} className="text-zion-purple underline">View</Link>;
                           </li>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -1349,10 +1311,9 @@ if ( {) {
                       <ul className="space-y-1">;
                         {favorites.slice(0, 3).map(f => (;
                           <li key={f.item_id}>{f.item_id}</li>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                         ))}
@@ -1406,10 +1367,9 @@ return (<> <Header /> <div className="min-h-screen bg-zion-blue"> <div className
 }className="text-zion-purple" /> async () => {
   try {
   const {
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                         className='text-zion-purple underline'>;
                         View all;

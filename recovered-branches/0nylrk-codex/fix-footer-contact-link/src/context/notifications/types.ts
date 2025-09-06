@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import {Notification, as, BaseNotification} from '@/types/notifications';
 export type NotificationType =
   | 'message'
@@ -14,18 +9,12 @@ export type NotificationType =
   | 'hire_request'
   | 'onboarding'
   | 'system';
-<<<<<<< HEAD
+
 export interface Notification extends BaseNotification {
 
 export interface Notification extends BaseNotification {;
-=======
 
-
-
-export interface Notification extends BaseNotification {;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   type: NotificationType;
   action_url?: string
   action_text?: string
@@ -36,20 +25,13 @@ export type FilterType =
   | 'messages'
   | 'onboarding'
   | 'system';
-<<<<<<< HEAD
+
 export interface NotificationContextType {
 
 
 export interface NotificationContextType {;
-=======
 
-import {Notification, as, BaseNotification} from '@/types / notifications';
-=======
-
-
-export interface NotificationContextType {;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   notifications: Notification[];
   filteredNotifications: Notification[];
   unreadCount: number;
@@ -89,25 +71,6 @@ export type FilterType =;
   fetch_notifications: () => Promise < void>;
 }
 
-=======
-  | 'system',;
-export interface NotificationContextType {;
-  notifications: Notification[],;
-  filteredNotifications: Notification[],;
-  unreadCount: number,;
-  loading: boolean,;
-  filter: FilterType,;
-  markAsRead: (id: string) => Promise<void>,;
-  markAllAsRead: () => Promise<void>,;
-  dismissNotification: (id: string) => Promise<void>;
-  setFilter: (filter: FilterType) => void;
-  fetchNotifications: () => Promise<void>;
-<<<<<<< HEAD
-}
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

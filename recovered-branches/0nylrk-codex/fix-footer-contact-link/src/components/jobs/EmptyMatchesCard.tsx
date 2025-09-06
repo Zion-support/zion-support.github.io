@@ -13,12 +13,9 @@ export function EmptyMatchesCard({
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Sparkles, RefreshCcw } from "lucide-react";
-<<<<<<< HEAD
-export interface EmptyMatchesCardProps {;
-  onRefresh: () => void;
-  isProcessing: boolean;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 import { Card } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -54,17 +51,11 @@ export function EmptyMatchesCard({ onRefresh, isProcessing }: EmptyMatchesCardPr
             <Sparkles className="mr-2 h-4 w-4" />
             Find AI Matches
           </>
-<<<<<<< HEAD
+
         )}
       </Button>
-    </Card>
-  );
-}
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { Card } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
 import { Sparkles, RefreshCcw } from "lucide-react",;
@@ -134,12 +125,7 @@ function EmptyMatchesCard() {
     </Card>);
 
 }
-<<<<<<< HEAD
-;
-=======
-=======
-}
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

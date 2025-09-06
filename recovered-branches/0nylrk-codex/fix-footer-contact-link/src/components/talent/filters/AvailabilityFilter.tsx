@@ -1,20 +1,19 @@
 
-<<<<<<< HEAD
-import {ChevronDown, ChevronUp} from "lucide-react";
-import {Checkbox} from "@/components/ui/checkbox";
-import {AvailabilityFilterProps} from "@/types/filters";
+
+
 import { ChevronDown, ChevronUp } from "lucide-react",
 import { Checkbox } from "@/components/ui/checkbox";
 import { AvailabilityFilterProps } from "@/types/filters";
 
 import { Checkbox } from "@/components/ui/checkbox",
 import { AvailabilityFilterProps } from "@/types/filters",
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const AVAILABILITY_OPTIONS = [
   { id: "full_time", label: "Full-time" }
   { id: "part_time", label: "Part-time" }
@@ -96,11 +95,11 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
                 htmlFor={`availability-${option.id}`}
                 className="ml-2 text-sm text-zion-slate-light cursor-pointer"
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 {option.label}
               </label>
             </div>
@@ -108,31 +107,15 @@ export function AvailabilityFilter({ selectedAvailability, toggleAvailability, e
           ))}
         </div>;
       )}
-<<<<<<< HEAD
-    </div>
-=======
 
-    </div>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+    </div>
+
   );
 }
   )
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import { ChevronDown, ChevronUp  } from './lucide-react';
-import { Checkbox  } from '@/components / ui / checkbox';
-import { AvailabilityFilterProps  } from '@/types / filters';
-const AVAILABILITY_OPTIONS = [;
-  { id: "full_time", label: "Full - time" },
-  { id: "part_time", label: "Part - time" },
-  { id: "project", label: "Project - based" },
-];
-;
-<<<<<<< HEAD
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

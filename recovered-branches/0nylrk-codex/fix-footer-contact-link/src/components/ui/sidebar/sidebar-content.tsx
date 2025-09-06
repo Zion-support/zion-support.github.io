@@ -13,17 +13,7 @@ import type { SafeRef } from "../sidebar.types"
 export const SidebarInput = React.forwardRef<
   React.ElementRef<typeof Input>
   React.ComponentProps<typeof Input>
-=======
-import * as React from &quot;react & quot;
-import { Input } from &quot;@/components / ui / input & quot;
-import { Separator } from &quot;@/components / ui / separator & quot;
-import { cn } from &quot;@/lib / utils & quot;
-import type { SafeRef } from &quot;../sidebar.types & quot;
-;
-export const SidebarInput = React.forward_ref<;
-  React.ElementRef < typeof Input>,
-  React.ComponentProps < typeof Input>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >((props, ref) => {
   return (
 
@@ -48,16 +38,17 @@ export const SidebarHeader = React.forwardRef<
 SidebarInput.displayName = "SidebarInput"
 
 export const SidebarHeader = React.forwardRef<
-<<<<<<< HEAD
+
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >((props, ref) => {
   return (
     <div;
@@ -75,16 +66,17 @@ export const SidebarFooter = React.forwardRef<
 SidebarHeader.displayName = "SidebarHeader"
 
 export const SidebarFooter = React.forwardRef<
-<<<<<<< HEAD
+
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >((props, ref) => {
   return (
     <div;
@@ -101,15 +93,7 @@ SidebarFooter.displayName = "SidebarFooter"
 export const SidebarSeparator = React.forwardRef<
   HTMLDivElement
   React.ComponentProps<typeof Separator>
-=======
-    />);
-});
-SidebarFooter.display_name = &quot;SidebarFooter & quot;
-;
-export const SidebarSeparator = React.forward_ref<;
-  HTMLDivElement,
-  React.ComponentProps < typeof Separator>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >((props, ref) => {
   return (
 
@@ -131,16 +115,17 @@ export const SidebarContent = React.forwardRef<
 SidebarSeparator.displayName = "SidebarSeparator"
 
 export const SidebarContent = React.forwardRef<
-<<<<<<< HEAD
+
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >((props, ref) => {
   return (
     <div;
@@ -163,16 +148,17 @@ export const SidebarGroup = React.forwardRef<
 SidebarContent.displayName = "SidebarContent"
 
 export const SidebarGroup = React.forwardRef<
-<<<<<<< HEAD
+
   HTMLDivElement,;
   React.ComponentProps<&quot;div&quot;>
   HTMLDivElement,
   React.ComponentProps<"div">
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 >((props, ref) => {
   return (
     <div;

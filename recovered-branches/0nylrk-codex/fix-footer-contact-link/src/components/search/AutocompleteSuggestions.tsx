@@ -1,25 +1,13 @@
 
-<<<<<<< HEAD
+
 import React from "react";
-import { SearchSuggestion, SearchHighlight } from "@/types/search";
-import {SearchSuggestion, SearchHighlight} from "@/types/search";
-import React from "react",
-import { SearchSuggestion, SearchHighlight } from "@/types/search",
-
-=======
 
 
-import {SearchSuggestion, SearchHighlight} from "@/types/search";
-
-=======
-import React from "react",
-import { SearchSuggestion, SearchHighlight } from "@/types/search",
-
-
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface AutocompleteSuggestionsProps {
 
   suggestions: SearchSuggestion[]
@@ -34,12 +22,12 @@ interface AutocompleteSuggestionsProps {;
   searchTerm: string,;
   onSelectSuggestion: (suggestion: string) => void,;
   visible: boolean;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 // Helper function to highlight matching text
 
@@ -47,45 +35,15 @@ const highlightMatch = (text: string, searchTerm: string): SearchHighlight => {
   if (!searchTerm |searchTerm.length === 0) {
     return { before: '', match: text, after: '' }
   }
-<<<<<<< HEAD
-  
-=======
 
 
-  
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const lowerText = text.toLowerCase();
   const lowerSearchTerm = searchTerm.toLowerCase();
   const index = lowerText.indexOf(lowerSearchTerm);
   if (index === -1) {
-=======
-import React from './react';
-import { SearchSuggestion, SearchHighlight } from '@/types / search';
-interface AutocompleteSuggestionsProps {
-  suggestions: SearchSuggestion[],
-  search_term: string,
-  onSelectSuggestion: (suggestion: string) => void,
-  visible: boolean;
-}
-// Helper function to highlight matching text;
-const highlight_match = (text: string, search_term: string): SearchHighlight => {
-  // Check condition
-if ( {) {
-  $2
-}
-    return { before: '', match: text, after: '' }
-  }
-  const lower_text = text.toLowerCase ();
-  const lowerSearchTerm = search_term.toLowerCase ();
-  const index = lower_text.index_of (lowerSearchTerm);
-;
-  // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     return { before: '', match: text, after: '' }
   }
   return {
@@ -93,7 +51,7 @@ if ( {) {
     match: text.substring (index, index + search_term.length);
     after: text.substring (index + search_term.length);
   }
-<<<<<<< HEAD
+
 }
 export function AutocompleteSuggestions({
   suggestions
@@ -102,24 +60,8 @@ export function AutocompleteSuggestions({
   visible
 }: AutocompleteSuggestionsProps) {
   if (!visible |suggestions.length === 0) return null;
-};
-
-export function AutocompleteSuggestions({ 
-  suggestions, 
-  searchTerm, ;
-  onSelectSuggestion;
-=======
 
 
-};
-
-export function AutocompleteSuggestions({ 
-  suggestions, 
-  searchTerm, ;
-  onSelectSuggestion;
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   const lowerText = text.toLowerCase(),;
   const lowerSearchTerm = searchTerm.toLowerCase(),;

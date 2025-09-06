@@ -1,17 +1,5 @@
-<<<<<<< HEAD
-import React, { useEffect, useState } from 'react',;
-import type { NextPage } from 'next',;
-import type { Review } from '../../types/reviews',;
-const ADMIN_KEY = typeof window === 'undefined' ? '' : (localStorage.getItem('ADMIN_KEY') || 'dev-admin-key'),
 
 
-  async function refresh() {
-    const res = await fetch('/api/admin/debug/reviews'),
-    const data = await res.json(),
-    if (res.ok) {
-      setAll(data.reviews),
-      setPending(data.reviews.filter((r: Review) => !r.approved && !r.removed))
-    }
 import React, { useEffect, useState } from 'react';
 import type { NextPage } from 'next';
 import type { Review } from '../../types/reviews';
@@ -52,15 +40,13 @@ const AdminReviewsPage: NextPage = () => {;
       } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-=======
+
 
 
     if (res.ok) refresh()
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
     } catch (error) {
@@ -113,42 +99,18 @@ const AdminReviewsPage: NextPage = () => {;
       </section>
     </main>
   )
-<<<<<<< HEAD
+
+
+
 }
 export default AdminReviewsPage;
 
 },
 export default AdminReviewsPage,
 },
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-}
-export default AdminReviewsPage;
-=======
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-},
-export default AdminReviewsPage,
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-},
-export default AdminReviewsPage,
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-},
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-export default AdminReviewsPage,;
-export default AdminReviewsPage,
-=======
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

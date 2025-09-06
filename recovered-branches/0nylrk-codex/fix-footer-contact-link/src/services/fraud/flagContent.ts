@@ -9,39 +9,15 @@ import { FlagResult } from './types',
 /**
  * Flag content for review
  */
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export const flagContent = async (;
-  userId: string;
-  userEmail: string | undefined;
-  contentType: FraudFlag['content_type'];
-  contentId: string;
-  contentExcerpt: string;
-  severity: FraudSeverity;
+
 export const flagContent = async (
   userId: string;
   userEmail: string | undefined;
   contentType: FraudFlag['content_type'];
   contentId: string;
   contentExcerpt: string;
-=======
 
-
-// Content flagging functionality;
-import {supabase} from '@/integrations / supabase / client';
-import {FraudSeverity, FraudFlag} from '@/types / fraud';
-import {FlagResult} from './types';
-/**;
-* Flag content for review;
-*/;
-export const flag_content = async (
-  user_id: string;
-  user_email: string | undefined;
-  content_type: FraudFlag['content_type'];
-  content_id: string;
-  content_excerpt: string;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   severity: FraudSeverity;
   reason: string
   userId: string,
@@ -106,13 +82,8 @@ export const flag_content = async (
     
     if (error) throw error,
     
-<<<<<<< HEAD
-    return { success: true }
-  } catch (error) {
-    console.error('Error flagging content:', error);
-    return { 
-      success: false, 
-      error: error instanceof Error ? error.message : 'Unknown error' 
+
+
 // Content flagging functionality;
 import { supabase } from '@/integrations/supabase/client',;
 import { FraudSeverity, FraudFlag } from '@/types/fraud',;
@@ -157,10 +128,11 @@ export const flagContent = async (;
     return {;
       success: false;
       error: error instanceof Error ? error.message : 'Unknown error';
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
 };

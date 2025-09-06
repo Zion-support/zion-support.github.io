@@ -1,11 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 name: string;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 tagline: string;
 price: string;
 period: string;
@@ -29,8 +25,7 @@ category: 'AI & Machine Learning';
 'Cybersecurity';
 'Cloud Computing';
 'Data Analytics' ];
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
 export interface MicroSaasService {
   id: string,
@@ -72,8 +67,7 @@ export interface MicroSaasService {
   rating: number,
   reviews: number
 }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export const enhancedRealMicroSaasServices: EnhancedRealMicroSaasService[] = [
   // Revolutionary Quantum AI Services
@@ -2269,15 +2263,12 @@ export const serviceCategories = [
   'Robotics & AutomationAgriculture & Food Tech'
 ];
 
-<<<<<<< HEAD
-// Combined all services
-export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
-=======
-=======
+
 // Combined all services
 export const allEnhancedRealMicroSaasServices = enhancedRealMicroSaasServices;
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -1,25 +1,19 @@
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 ;
 
 export interface Dispute {
-<<<<<<< HEAD
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed';
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null;
 
 export interface Dispute {;
-=======
-=======
 
-export interface Dispute {;
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   project_id: string;
   milestone_id?: string;
@@ -47,18 +41,12 @@ export interface Dispute {;
 
   }
 }
-<<<<<<< HEAD
+
 export interface DisputeMessage {
 
 export interface DisputeMessage {;
-=======
 
-
-
-export interface DisputeMessage {;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   dispute_id: string;
   user_id: string;
@@ -72,18 +60,12 @@ export interface DisputeMessage {;
 
   }
 }
-<<<<<<< HEAD
+
 export interface DisputeAttachment {
 
 export interface DisputeAttachment {;
-=======
 
-
-
-export interface DisputeAttachment {;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   dispute_id: string;
   uploaded_by: string;
@@ -103,48 +85,29 @@ export type DisputeReason =;
   | 'payment';
   | 'contract_terms';
   | 'other';
-<<<<<<< HEAD
+
 export const disputeReasonLabels: Record<DisputeReason, string> = {
 
 
 export const disputeReasonLabels: Record<DisputeReason, string> = {;
-=======
-;
-export const disputeReasonLabels: Record < DisputeReason, string> = {
-
-=======
 
 
-export const disputeReasonLabels: Record<DisputeReason, string> = {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   milestone_quality: 'Quality of Deliverable';
   delayed_delivery: 'Delayed Delivery';
   scope_change: 'Scope Change Disagreement';
   communication: 'Communication Issues';
   payment: 'Payment Dispute';
-<<<<<<< HEAD
-  contract_terms: 'Contract Terms Disagreement'
-other: 'Other Issue'}
 
-=======
-<<<<<<< HEAD
-  contract_terms: 'Contract Terms Disagreement'
-other: 'Other Issue'}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
+
   contract_terms: 'Contract Terms Disagreement',
 
 other: 'Other Issue'};
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export type DisputeStatus = 'open' | 'under_review' | 'resolved' | 'closed',;
 export type ResolutionType = 'client_favor' | 'talent_favor' | 'compromise' | 'dismissed' | null,;
 export interface Dispute {;
@@ -215,10 +178,9 @@ export const disputeReasonLabels: Record<DisputeReason string> = {;
   payment: 'Payment Dispute',;
   contract_terms: 'Contract Terms Disagreement',;
   other: 'Other Issue'};
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -55,19 +55,11 @@ import SearchModal from './SearchModal';
 origin/cursor/integrate-build-improve-and-re-verify-c7b5
 ursor/integrate-build-improve-and-re-verify-8f7d
 
-<<<<<<< HEAD
-import React, { useState } from "react";
-import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-origin/automation-improvements-final
-=======
->>>>>>> origin/automation-improvements-final
 
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
   Menu
   X
@@ -94,15 +86,13 @@ origin/automation-improvements-final
 import SearchModal from "./SearchModal";
 origin/main
 export default function Navigation() {
-<<<<<<< HEAD
-export default function Navigation() {;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
-=======
-export default function Navigation() {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isSolutionsOpen, setIsSolutionsOpen] = useState(false);
@@ -777,10 +767,7 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                       </div>;
                     </motion && motion.div>;
                   )}
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
                 </AnimatePresence>
               </div>
               <Link
@@ -790,36 +777,20 @@ const Navigation: React.FC<NavigationProps> = ({ className }) => {
                 Pricing
               </Link>
             </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> cursor/integrate-build-improve-and-re-verify-8f7d
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-                </AnimatePresence>;
-              </div>;
 
-=======
->>>>>>> origin/main
-=======
->>>>>>> origin/automation-improvements-final
 
-=======
->>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
-<<<<<<< HEAD
+
+
+
+
 >>>>>>> ed23a41deefdd5db733dc5d1577e62259b173127
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
             {/* Search and CTA Buttons */}
             <div className="hidden lg:flex items-center space-x-4">;
               <button

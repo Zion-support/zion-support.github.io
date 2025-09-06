@@ -1,12 +1,7 @@
-<<<<<<< HEAD
+
 import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
-=======
 
-import Head from 'next / head',
-import React, { useMemo, useState } from 'react',
-;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 type RoadmapInputs = {
 
@@ -45,51 +40,7 @@ type RoadmapInputs = {
       .map((s) => String(s))
     const metrics: string[] = [
       'Weekly active contributorsVerified engagements (intros, briefs, scopes)On-chain/escrow settlement volumeTime-to-hire and time-to-payRetention and NPS']
-=======
-  priorities: string;
-},
-type Stage = {
-  id: number,
-  name: string,
-  theme: string,
-  objective: string,
-  highlights: string[],
-  metrics: string[];
-},
-function generate_stages ({ milestones, keywords, priorities }: RoadmapInputs): Stage[] {
-  const keyword_list = keywords;
-    .split (/, |\n/);
-    .map ((s) => s.trim ());
-    .filter (Boolean),
-  const priority_list = priorities;
-    .split (/, |\n/);
-    .map ((s) => s.trim ());
-    .filter (Boolean),
-  const base_themes = [;
-    'FoundationsTrust LayerAI - Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
-    'Governance & OwnershipGlobal Scale'],
-  return base_themes.map ((theme, index) => {
-    const id = index + 1,
-    const name = `Zion v${id}`,
-    const objective = `Advance ${theme.toLowerCase ()} informed by: ${keyword_list.join () || 'core principles'}, focus: ${
-      priority_list.join () || 'execution and learning';
-    }.`,
-    const highlights: string[] = [;
-      index === 0 && 'Design system, domain model, and initial data architecture',
-      index === 1 && 'Verifiable credentials, attestations, and dispute primitives',
-      index === 2 && 'AI - assisted scoping, matching, and brief generation',
-      index === 3 && 'Reputation graph, portable profiles, contribution proofs',
-      index === 4 && 'Programmable escrow, milestone releases, stable on / off - ramps',
-      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration',
-      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations',
-      index === 7 && 'Public APIs / SDKs, indexer services, client ecosystem',
-      index === 8 && 'Progressive decentralization, contributor ownership, councils',
-      index === 9 && 'Regionalization, localization, reliability, and performance'];
-      .filter (Boolean);
-      .map ((s) => String (s)),
-    const metrics: string[] = [;
-      'Weekly active contributors_verified engagements (intros, briefs, scopes)On - chain / escrow settlement volume_time - to - hire and time - to - pay_retention and NPS'],
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     return { id, name, theme, objective, highlights, metrics }
   });
 }
@@ -109,20 +60,9 @@ Goals:
 5) Output concise, skimmable, exec-ready text
 Format:
 
-<<<<<<< HEAD
-import Head from 'next/head',;
-import React, { useMemo, useState } from 'react',;
-;
-import Head from 'next/head';
-import React, { useMemo, useState } from 'react';
-=======
-=======
-function defaultOperatorPrompt (): string {
-=======
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 type RoadmapInputs = {
   milestones: string;
   keywords: string;
@@ -268,11 +208,11 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., MVP live, 100 design partners, 1k weekly active contributors"
                 />
@@ -292,11 +232,11 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., AI-native, trustless, talent-first, sovereign tools"
                 />
@@ -316,12 +256,12 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                   className="mt-1 w-full rounded-md border border-gray-300 bg-white p-3 shadow-sm focus:border-black focus:outline-none"
                   placeholder="e.g., governance, scale, regional expansion"
                 />
@@ -340,12 +280,12 @@ Validation:;
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 className="rounded-md bg-black px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-gray-900"
               >
                 {copied ? 'Copied' : 'Copy'}
@@ -393,15 +333,8 @@ Validation:;
                     </ul>
                   </div>
                 </article>
-<<<<<<< HEAD
-              ))}
-            </div>
-          </section>
-        </div>
-      </main>
-    </>
-  );
-};
+
+
   };
   return (;
     <>;
@@ -428,10 +361,7 @@ Validation:;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
                   onChange={(e) => setMilestones(e.target.value)  } catch (error) {
     console.error("Error:", error);
@@ -537,22 +467,17 @@ Validation:;
           </section>;
         </div>;
       </main>;
-<<<<<<< HEAD
+
     </>;
   );
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-}
-}
-=======
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -6,7 +6,7 @@ return (
             <h3 className="text-xl font-bold text-white mb-2">Share Zion with Your Network</h3>
             <p className="text-zion-slate-light">Help others discover the future of AI & tech marketplace</p>
           </div>
-<<<<<<< HEAD
+
           <div className='flex flex-wrap gap-3'>
             {shareLinks.map((link, index) => (              <Button
                 key = {index,}
@@ -35,17 +35,14 @@ return (
 }</div> </div> </div> </section>)
 }'"
 }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 }</div> </div> </div> </section>) ;
 }'";
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           <div className="flex flex-wrap gap-3">
             {shareLinks.map((link, index) => (

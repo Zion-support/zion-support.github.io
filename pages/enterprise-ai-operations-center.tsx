@@ -1,6 +1,6 @@
 
 
-<<<<<<< HEAD
+
 import Head from 'next/head';
 import Layout from '../components/layout/Layout';
 export default function EnterpriseAIOpsPage() {
@@ -17,8 +17,10 @@ export default function EnterpriseAIOpsPage() {
             <h1 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">Enterprise AI Operations Center</h1>
             <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced performance.</p>
             <p className="mt-4 text-slate-300">Monitor, optimize, and manage all AI systems across your organization with quantum-enhanced window.window.window.performance.</p>
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
             <div className="lg:col-span-2 p-6 bg-black/40 border border-gray-700/50 p-6 bg-black/40 border border-gray-700/50 rounded-lg backdrop-blur-sm">
@@ -33,12 +35,12 @@ export default function EnterpriseAIOpsPage() {
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</a>
                 <a href="/contact" className="flex-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white">Contact Sales</Link>
                 <a href="/services" className="flex-1 border border-gray-600 text-gray-200">Explore Services</Link>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               </div>
             </div>
           </div>
@@ -83,12 +85,13 @@ export default function EnterpriseAIOpsPage(req, res) {
       </div>;
     </Layout>);
 }
-<<<<<<< HEAD
-;
 
 ;
-=======
 
 
+;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+;
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

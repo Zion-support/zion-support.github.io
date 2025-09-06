@@ -1,19 +1,13 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React, { useState, useEffect } from 'react';
 
 import Head from 'next / head';
 ;
 
 interface Partner {
-=======
 
-interface Partner {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   id: string;
   code: string;
   name: string;
@@ -69,7 +63,7 @@ const AdminPartnersPage: React.FC = () => {;
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState('all');
-<<<<<<< HEAD
+
   useEffect(() => {
     // Simulate loading partners
     setTimeout(() => {
@@ -90,19 +84,12 @@ const AdminPartnersPage: React.FC = () => {;
     const res = await fetch(
       `/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`
     );
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const json = await res.json();
     setFlags(json.flags |[]);
 
-<<<<<<< HEAD
-  }
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useEffect, useState } from 'react';
 
 export default function AdminPartners() {
@@ -164,22 +151,24 @@ export default function AdminPartners() {
   async function viewFlags(code: string) {;
     setSelected(code);
     const res = await fetch(`/api/admin/partners/fraud-flags?code=${encodeURIComponent(code)}`);
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     const json = await res.json();
     setFlags(json.flags || []);
     } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
 
 }
+
+
+}
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Admin • Partners</h1>
@@ -239,10 +228,8 @@ export default function AdminPartners() {
   }
 }
                     className="w-24 border rounded px-2 py-1"
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className='space-y-6'>;
       <h1 className='text-2xl font-semibold'>Admin • Partners</h1>;
@@ -277,22 +264,7 @@ export default function AdminPartners() {
                     onClick={() =>;
                       updatePartner(p && p.code, { status: 'approved' });
 
-=======
-                    on_blur={e =>;
-                      update_partner (p.code, {
-                        commission_rate: Number (e.target.value),
-                      });
-                    }
-                    className='w - 24 border rounded px - 2 py - 1';
-                  />;
-                </td>;
-                <td className='py - 2 pr - 4 space - x-2'>;
-                  <button;
-                    className='px - 2 py - 1 rounded border';
-                    on_click={() =>;
-                      update_partner (p.code, { status: 'approved' });
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                     }
                   >;
                     Approve;
@@ -306,6 +278,10 @@ export default function AdminPartners() {
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   />
                 </td>
                 <td className="py-2 pr-4 space-x-2">
@@ -649,32 +625,17 @@ export default function AdminPartners() {
       </main>
     </>
   );
-<<<<<<< HEAD
-=======
 
-=======
-                    </tr>))}
-                </tbody>;
-              </table>;
-            </div>)}
-        </div>;
-      </main>;
-    </>);
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 }
 }
 }
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
       )  } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
@@ -687,10 +648,9 @@ export default function AdminPartners() {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

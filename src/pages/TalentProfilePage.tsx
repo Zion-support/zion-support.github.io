@@ -26,7 +26,7 @@ export default function TalentProfilePage() {
   const { userDetails } = useAuthStatus(),
   const { isAuthenticated, user } = useAuth(),
 
-<<<<<<< HEAD
+
   const router = useRouter()
   // Get id from Next.js router query params
   const { id } = router.query as { id?: string }
@@ -35,11 +35,7 @@ export default function TalentProfilePage() {
   const [isMessageModalOpen, setIsMessageModalOpen] = useState(false)
   const { userDetails } = useAuthStatus()
   const { isAuthenticated, user } = useAuth()
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Create a compatible UserProfile from UserDetails or the authenticated user
   const userProfile: UserProfile = user
     ? {
@@ -102,44 +98,24 @@ export default function TalentProfilePage() {
     role: '', // Default empty string since userDetails doesn't have this property
     name: '',
     points: 0
-<<<<<<< HEAD
+
   },
 
   }
   },
 
-=======
-<<<<<<< HEAD
-  },
 
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-  }
-=======
-  },
 
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   // Handle loading error gracefully
   useEffect(() => {
     if (error) {
       toast({
-<<<<<<< HEAD
+
         title: 'Error loading profile'
         title: 'Error loading profile',
-=======
 
-
-        title: 'Error loading profile',
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         description:
           'There was a problem loading this talent profile. Please try again.'
         variant: 'destructive'
@@ -188,10 +164,9 @@ export default function TalentProfilePage() {
     name: '',
     points: 0;
   }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   // Handle loading error gracefully;
   useEffect ((, ) => {
     // Check condition
@@ -537,10 +512,9 @@ return (<> <SEO title= {
         profile = {profile,}
         onRequestHire = {handleRequestHire,}
         onMessageTalent = {handleMessageTalent,}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -612,18 +586,14 @@ export default function TalentProfilePage() {;
 ;
   if (error || !profile) {;
     return <ProfileErrorState error={error} />;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
 
   const handleRequestHire = () => {
     if (!isAuthenticated) {
       toast({
-<<<<<<< HEAD
+
         title: 'Authentication required',
         description: 'Please sign in to hire this talent.',
         variant: 'default',
@@ -758,9 +728,7 @@ return (<> <SEO title= {
     }
     setIsHireModalOpen(true)
   },
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
       {/* Sticky action buttons that appear when scrolling */}
       <StickyAction>
@@ -790,10 +758,9 @@ return (<> <SEO title= {
             size="sm"
             variant="outline"
             className="border-zion-purple text-zion-purple hover:bg-zion-purple/10"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
             onClick = {handleMessageTalent,}>;
             <MessageSquare className="mr-2 h-4 w-4" />;
@@ -852,11 +819,8 @@ return (<> <SEO title= {
 
 
       <HireRequestModal 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         talent = {profile,}
         isOpen = {isHireModalOpen,}
         onClose = {(,) => setIsHireModalOpen(false),}
@@ -869,10 +833,9 @@ return (<> <SEO title= {
       <MessageTalentModal
         talent = {profile,}
         isOpen = {isMessageModalOpen,}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
         onClose = {() => setIsMessageModalOpen(false),}      />;
 

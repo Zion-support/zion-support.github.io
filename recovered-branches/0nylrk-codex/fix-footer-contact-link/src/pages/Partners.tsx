@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {Button} from "@/components/ui/button";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
@@ -21,10 +14,11 @@ import {PartnerResources} from "@/components/partners/PartnerResources";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
 export default function Partners() {;
-<<<<<<< HEAD
+
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
+
 import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
@@ -38,20 +32,21 @@ import { PartnerResources } from "@/components/partners/PartnerResources",
 import { useAuth } from "@/hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 export default function Partners() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState("overview");
   const { user, isAuthenticated } = useAuth();
 
   const navigate = useNavigate();
-<<<<<<< HEAD
+
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
 export default function Partners() {
   const [activeTab, setActiveTab] = useState("overview"),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   // If not authenticated, display partner program info and signup CTA
   if (!isAuthenticated) {
@@ -175,6 +170,8 @@ export default function Partners() {
             size="lg" 
             variant="outline" 
             className="text-zion-cyan border-zion-cyan"
+
+
 import { Button } from "@/components/ui/button",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
@@ -191,11 +188,7 @@ export default function Partners() {;
   const [activeTab, setActiveTab] = useState("overview"),;
   const { user, isAuthenticated } = useAuth();
   const navigate = useNavigate();
-=======
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
@@ -320,11 +313,14 @@ export default function Partners() {;
           >;
             Apply to Join;
           </Button>;
-<<<<<<< HEAD
+
           <Button;
             size="lg";
             variant="outline";
             className="text-zion-cyan border-zion-cyan";
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             onClick={() => navigate('/login')}
           >
             Partner Login
@@ -333,20 +329,7 @@ export default function Partners() {;
       </div>
     )
   }
-=======
-          <Button
-            size="lg" 
-            variant="outline" 
 
-            className="text-zion-cyan border-zion-cyan"
-=======
-
-          <Button 
-            size="lg" 
-            variant="outline" 
-            className="text-zion-cyan border-zion-cyan"
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
             onClick={() => navigate('/login')}
           >;
             Partner Login;

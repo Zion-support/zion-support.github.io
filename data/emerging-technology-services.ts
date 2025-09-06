@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-export interface EmergingTechnologyService {
-export interface EmergingTechnologyService {;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -13,9 +12,12 @@ export interface EmergingTechnologyService {;
   contactInfo: {
     mobile: string;
     email: string;
+
 export interface EmergingTechnologyService {;
     address: string;
   };
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string,;
   name: string,;
   tagline: string,;
@@ -31,41 +33,25 @@ export interface EmergingTechnologyService {;
     address: string;
   }
 }
-=======
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
 ];
-=======
-  id: string, name: string,
-  tagline: string, price: string,
-  description: string, features: string[],
-  link: string, category: string,
-  realImplementation: boolean,
-  contactInfo: {
-    mobile: string, email: string,
-    address: string
-  }
-}
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export const emergingTechnologyServices: EmergingTechnologyService[] = [
   {
-<<<<<<< HEAD
+
     id: "blockchain-platform", name: "Blockchain Development Platform",
     tagline: "Build and deploy blockchain applications", price: "$179/month",
     description: "Comprehensive blockchain development platform for creating decentralized applications.",
-=======
-<<<<<<< HEAD
-    id: 'blockchain-platform'
-    name: 'Blockchain Development Platform'
-    tagline: 'Build and deploy blockchain applications'
-    price: '$179/month'
-    description:
-      'Comprehensive blockchain development platform for creating decentralized applications.'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
     features: [
       "Smart contract development";
       "DApp deployment";
@@ -76,7 +62,7 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
     link: "/services/blockchain-platform", category: "Emerging Tech",
     realImplementation: true,
     contactInfo: {
-<<<<<<< HEAD
+
       mobile: "+1 302 464 0950",
       email: "kleber@ziontechgroup.com",
       mobile: '+1 302 464 0950',
@@ -92,52 +78,11 @@ export const emergingTechnologyServices: EmergingTechnologyService[] = [
     }
   }
 ];
-<<<<<<< HEAD
-      email: "kleber@ziontechgroup.com";
-      address: "364 E Main St STE 1008 Middletown DE 19709";
-    }
-  }
-];
-;
-=======
-=======
-    id: "blockchain-platform",
-    name: "Blockchain Development Platform",
-    tagline: "Build and deploy blockchain applications",
-    price: "$179/month",
-    description: "Comprehensive blockchain development platform for creating decentralized applications.",
-    features: [
-      "Smart contract development",
-      "DApp deployment",
-      "Blockchain integration",
-      "Security auditing",
-      "Performance monitoring"
-    ],
-    link: "/services/blockchain-platform",
-    category: "Emerging Tech",
-    realImplementation: true,
-    contactInfo: {
-<<<<<<< HEAD
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
-=======
-<<<<<<< HEAD
-      mobile: '+1 302 464 0950',
-      email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709',
-    },
-  },;
-];      mobile: "+1 302 464 0950";
-      email: "kleber@ziontechgroup.com";
-=======
-      mobile: "+1 302 464 0950",
-      email: "kleber@ziontechgroup.com",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-      mobile: "+1 302 464 0950", email: "kleber@ziontechgroup.com",
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }

@@ -1,10 +1,4 @@
-<<<<<<< HEAD
-export async function fetchMilestones() {
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {headers: { 'Content-Type': 'application/json' }
-    credentials: 'include'});
-  if (!res.ok) throw new Error('Failed to load milestones');
-  return res.json();
-=======
+
 
 export async /**
  * fetch_milestones - Function description
@@ -47,13 +41,7 @@ function updateMilestoneStatus() {
   return res.json ();
 }
 
-=======
 
-export async function fetchMilestones(projectId: string) {;
-  const res = await fetch(`/api/projects/${projectId}/milestones`, {;
-    headers: { 'Content-Type': 'application/json' },;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export async function createMilestone(projectId: string, payload: any) {;
@@ -64,20 +52,9 @@ export async function createMilestone(projectId: string, payload: any) {;
     body: JSON.stringify(payload)}),;
   if (!res.ok) throw new Error(await res.text()),;
   return res.json();
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 }
 export async function updateMilestoneStatus() {
   const res = await fetch(`/api/projects/${projectId}/milestones/${milestoneId}`, {method: 'PATCH';
@@ -113,10 +90,8 @@ export async function createMilestone(projectId: string, payload: any) {;
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 ;
 export async function updateMilestoneStatus(projectId: string, milestoneId: string, body: any) {;
@@ -127,15 +102,10 @@ export async function updateMilestoneStatus(projectId: string, milestoneId: stri
     body: JSON.stringify(body)}),;
   if (!res.ok) throw new Error(await res.text());
   return res.json();
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,16 +1,6 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { supabase } from "@/integrations/supabase/client",
-import { toast } from "@/hooks/use-toast";
-import { TalentProfile } from "@/types/talent";
-=======
-import {useState} from 'react';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { TalentProfile } from '@/types / talent';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export interface HireRequestData {
   talent: {
     id: string;
@@ -30,13 +20,9 @@ export interface HireRequestData {
     timeline: string;
 
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
 import {useState} from 'react';
 import {supabase} from "@/integrations/supabase/client";
 import {toast} from "@/hooks/use-toast";
@@ -45,11 +31,9 @@ export interface HireRequestData {
   talent: {;
     id: string;
     full_name: string;
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import { useState } from 'react',
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
@@ -73,17 +57,13 @@ export interface HireRequestData {
     budgetMax: number
   }
 }
-<<<<<<< HEAD
+
 export function useHireRequest() {
 
 export function useHireRequest() {;
-=======
 
 
-export function useHireRequest() {;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const [error, setError] = useState<string | null>(null);
@@ -174,24 +154,13 @@ if (throw error) {
     is_submitting;
     error;
 
-=======
-        ? error.message 
-        : "There was a problem submitting your request. Please try again.",
-      
-      setError(errorMessage);
-      toast({
-<<<<<<< HEAD
-        title: "Error";
-        description: errorMessage
-        variant: "destructive"});
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
       
-<<<<<<< HEAD
+
+
       return { success: false, error: errorMessage }
     } finally {
       setIsSubmitting(false)
@@ -202,12 +171,16 @@ if (throw error) {
     isSubmitting;
 
     error
+
+
   }
 }
         title: "Error",
         description: errorMessage,
         variant: "destructive"}),
       
+
+
 import { useState } from 'react',;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -268,12 +241,13 @@ export function useHireRequest() {;
     submitHireRequest;
     isSubmitting;
     error;
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 ;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   }
 }
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

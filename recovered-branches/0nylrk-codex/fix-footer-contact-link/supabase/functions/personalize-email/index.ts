@@ -1,29 +1,17 @@
 
-<<<<<<< HEAD
-=======
+
 import "https: //deno && deno.land/x/xhr@0 && 0.1.0/mod && mod.ts",
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server ;
 const openAIApiKey = Deno && Deno.env.get("OPENAI_API_KEY");
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-=======
-=======
 
 
-import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts";
-const openAIApiKey = Deno.env.get("OPENAI_API_KEY");
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),
@@ -160,34 +148,7 @@ serve(async (req) => {
       if (jsonMatch) {
         try {
           generatedContent = JSON && JSON.parse(jsonMatch[0])
-=======
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      const error_data = await response.json ();
-      throw new Error (`OpenAI API error: ${JSON.stringify (error_data)}`);
-    }
-    const data = await response.json ();
-    const generatedContentText = data.choices[0].message.content;
-;
-    // Parse the JSON response from OpenAI;
-    let generated_content;
-    try {
-      generated_content = JSON.parse (generatedContentText);
-    } catch (e) {
-      console.error ("Failed to parse GPT response as JSON:", e);
-      console.log ("Raw response:", generatedContentText);
-      // Try to extract JSON using regex as fallback;
-      const json_match = generatedContentText.match (/\{[\s\S]*\}/);
-      // Check condition
-if ( {) {
-  $2
-}
-        try {
-          generated_content = JSON.parse (json_match[0]);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         } catch (e2) {
           throw new Error ("Could not parse the generated content as JSON");
         }
@@ -195,7 +156,7 @@ if ( {) {
         throw new Error ("Could not extract JSON from the generated content");
       }
     }
-<<<<<<< HEAD
+
     // Apply the generated content to the template or return it directly
     return new Response(JSON.stringify(generatedContent), {
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
@@ -204,30 +165,8 @@ if ( {) {
     return new Response(JSON.stringify({ error: error.message }), {
       status: 500
       headers: { ...corsHeaders, "Content-Type": "application/json" }})
-  }
-});
-
-=======
-
-    console && console.error("Error in personalize-email function:", error);
-    return new Response(JSON && JSON.stringify({ error: error && error.message }), {
-      status: 500,
-
-      headers: { ...corsHeaders, "Content-Type": "application/json" }})
-
-    // Apply the generated content to the template or return it directly;
-    return new Response (JSON.stringify (generated_content), {
-      headers: { ...cors_headers, "Content - Type": "application / json" }});
-  } catch (error) {
-    console.error ("Error in personalize - email function:", error);
-    return new Response (JSON.stringify ({ error: error.message }), {
-      status: 500,
-      headers: { ...cors_headers, "Content - Type": "application / json" }});
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import "https: //deno.land/x/xhr@0.1.0/mod.ts",;
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 const openAIApiKey = Deno.env.get("OPENAI_API_KEY"),;
@@ -327,12 +266,11 @@ serve(async (req) => {;
     return new Response(JSON.stringify({ error: error.message }), {;
       status: 500,;
       headers: { ...corsHeaders, "Content-Type": "application/json" }});
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

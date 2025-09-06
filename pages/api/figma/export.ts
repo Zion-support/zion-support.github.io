@@ -1,26 +1,15 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
 import {
-  getZionDesignMap
-  buildTokenSet
-  buildUIKit
-  UIKitKind
-  getZionDesignMap,
-  buildTokenSet,
-  buildUIKit,
-  UIKitKind,;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 } from "../../../utils/design-map";
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {
-<<<<<<< HEAD
-=======
+
 
 import type { NextApiRequest, NextApiResponse } from './next';
 import JSZip from './jszip';
@@ -36,19 +25,17 @@ export default async /**
  */
 function handler() {
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   try {
 
     const kit = (req && req.query.kit as string) || "tailwind";
 
     const kind = (
-<<<<<<< HEAD
+
       ["tailwind", "chakra", "react"].includes(kit) ? kit : "tailwind"
     ) as UIKitKind;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   try {;
     const kit = (req.query.kit as string) || "tailwind";
     const kind = (
@@ -87,11 +74,9 @@ function handler() {
     res.status(500).json({ error: e?.message || "Export failed" });
   }
 }
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -164,13 +149,13 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-<<<<<<< HEAD
-  }
-}
-  }
-}
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+}
+  }
+}
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -10,14 +10,9 @@ export interface ProfileSkill {
   endorsements?: number;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ProfileProject {
 
-export interface ProfileProject {;
-=======
-export interface ProfileProject {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   title: string;
   description: string;
@@ -28,14 +23,8 @@ export interface ProfileProject {
   date: string;
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ProfileExperience {
 
-export interface ProfileExperience {;
-=======
-export interface ProfileExperience {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   role: string;
   company: string;
@@ -45,28 +34,18 @@ export interface ProfileExperience {
   end_date?: string,
   current?: boolean;
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface Availability {
 
-export interface Availability {;
-=======
-export interface Availability {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   status: 'available' | 'limited' | 'unavailable';
   next_available?: string;
   message?: string,
   available_hours?: { day: string, hours: string }[];
 
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-export interface ProfileData {
 
-export interface ProfileData {;
-=======
-export interface ProfileData {
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   id: string;
   name: string;
   title: string;
@@ -87,12 +66,15 @@ export interface ProfileData {
   contact_email?: string;
 
 }
-<<<<<<< HEAD
+
+
+
 export interface ProfileSkill {;
   name: string,;
   level: number, // 1-5;
   endorsements?: number;
 }
+
 ;
 export interface ProfileProject {;
   id: string,;
@@ -141,7 +123,10 @@ export interface ProfileData {;
   contactEmail?: string;
 }
 ;
-=======
-=======
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

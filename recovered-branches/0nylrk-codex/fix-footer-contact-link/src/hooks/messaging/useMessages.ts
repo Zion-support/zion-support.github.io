@@ -1,21 +1,13 @@
 
-<<<<<<< HEAD
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { supabase  } from '@/integrations/supabase/client';
-import { Message, Conversation  } from '@/types/messaging';
-import { toast } from '@/hooks/use-toast';
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {UserProfile, UserDetails} from '@/types/auth';
 import {supabase} from '@/integrations/supabase/client';
 import {Message, Conversation} from '@/types/messaging';
 import {toast} from '@/hooks/use-toast';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -23,19 +15,7 @@ type UserWithProfile = UserProfile | UserDetails | null;
  * Hook to handle message operations
  */
 export function useMessages(
-=======
-import {UserProfile, UserDetails} from '@/types / auth';
-import {supabase} from '@/integrations / supabase / client';
-import {Message, Conversation} from '@/types / messaging';
-import {toast} from '@/hooks / use - toast';
-// Allow either UserProfile or UserDetails;
-type UserWithProfile = UserProfile | UserDetails | null;
-;
-/**;
-* Hook to handle message operations;
-*/;
-export function use_messages (
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   user: UserWithProfile;
   active_conversation: Conversation | null;
   active_messages: Message[];
@@ -52,44 +32,7 @@ export function use_messages (
       }
     } catch (error) {
       console && console.error('Error fetching messages:', error)
-=======
-  fetch_conversations: () => Promise < void>) {
-  /**;
-  * Fetch messages for a conversation;
-  */;
-  const load_messages = async (conversation_id: string) => {
-    // Check condition
-if (return) {
-  $2
-}
-    setIsLoading (true),
-    try {
-      const { data, error } = await supabase;
-        .from ('messages');
-        .select ('*');
-        .eq ('conversation_id', conversation_id);
-        .order ('created_at', { ascending: true });
-;
-      // Check condition
-if (throw error) {
-  $2
-}
-      // Use updater function for setActiveMessages;
-      setActiveMessages (() => data as Message[]);
-;
-      // Mark messages as read;
-      const unread_messages = data.filter (
-        msg => !msg.read && msg.recipient_id === user.id);
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        await markAsRead (conversation_id);
-      }
-    } catch (error) {
-      console.error ('Error fetching messages:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     } finally {
       setIsLoading (false);
     }
@@ -138,29 +81,22 @@ export function useMessages(;
       ),;
       if (unreadMessages.length > 0) {;
         await markAsRead(conversationId);
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
     } catch (error) {
       console.error('Error fetching messages:', error)
     } finally {
       setIsLoading(false)
     }
-<<<<<<< HEAD
-  }
-  };
-
-=======
-
-  };
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   /**
    * Send a message to an existing conversation
    */
@@ -192,15 +128,9 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {
         setActiveMessages(prev => [...prev, data as Message])
       }
-<<<<<<< HEAD
-      // Update conversations list
-      await fetchConversations();
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },;
   /**;
    * Send a message to an existing conversation;
@@ -231,12 +161,11 @@ export function useMessages(;
       if (activeConversation && activeConversation.id === conversationId) {;
         setActiveMessages(prev => [...prev, data as Message]);
       }
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       
       // Update conversations list
       await fetchConversations(),
@@ -246,11 +175,12 @@ export function useMessages(;
     } catch (error) {
       console && console.error('Error sending message:', error);
       toast({
-<<<<<<< HEAD
+
         title: "Failed to send message";
         description: "Please try again later"
         variant: "destructive"
       })
+
     }
   }
   /**
@@ -270,13 +200,7 @@ export function useMessages(;
       setActiveMessages(prev =>
         prev.map(msg =>
           msg.recipient_id === user.id ? { ...msg, read: true } : msg
-=======
 
-      setActiveMessages(prev => 
-        prev && prev.map(msg => 
-          msg && msg.recipient_id === user && user.id ? { ...msg, read: true } : msg
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         )
       );
       // Update conversations to reflect read messages
@@ -313,15 +237,16 @@ export function useMessages(;
     sendMessage;
 
     markAsRead
-<<<<<<< HEAD
+
+
+
         title: "Failed to send message",
         description: "Please try again later",
         variant: "destructive"
       })
-=======
-  }
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 ;
   /**;
   * Send a message to an existing conversation;
@@ -376,7 +301,7 @@ if ( {) {
         variant: "destructive";
       });
     }
-<<<<<<< HEAD
+
   },;
   /**;
    * Mark messages as read;
@@ -425,12 +350,11 @@ if ( {) {
     loadMessages;
     sendMessage;
     markAsRead;
-=======
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 ;
   /**;

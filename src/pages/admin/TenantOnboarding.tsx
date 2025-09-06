@@ -10,24 +10,20 @@ const [formData, setFormData] = useState({
     custom_domain: ""
 
     is_co_branded: true
-<<<<<<< HEAD
+
   });
   // Check if user has admin role
   const isAdmin = null;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   })
   // Check if user has admin role
   const isAdmin = user?.role === "admin";
       };
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   }),
   

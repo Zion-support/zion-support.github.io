@@ -11,6 +11,8 @@ export default async function handler(
   if (req.method !== "GET") {
     return res.status(405).json({ error: "Method not allowed" });
 import type { NextApiRequest, NextApiResponse } from 'next';
+
+
 import { readReviews, readProjects } from '../../../utils/dataStore';
 import type { PublicReview, ReviewsSummary } from '../../../types/reviews';
 import { TALENT_PROFILES } from '../../../data/talent';
@@ -19,10 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method not allowed' })
   }
 
-  }
-  try {
-  try {;
-    const { targetType, targetId } = req.query as { targetType?: string, targetId?: string };
+
+
 
     const { targetType, targetId } = req.query as {
       targetType?: string;
@@ -96,6 +96,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
   } catch (error: any) {
     return res.status(500).json({ error: 'Internal server error', details: error?.message })
+
+
+
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.status(200).json({ reviews: [] });
 import type { NextApiRequest, NextApiResponse } from 'next';
@@ -235,6 +238,10 @@ export default async function handler(req, res) {
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 

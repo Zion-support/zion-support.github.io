@@ -1,14 +1,7 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-=======
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React, { useState } from "react";
 import {Button} from "@/components/ui/button";
 import {Card, CardContent} from "@/components/ui/card";
@@ -17,16 +10,9 @@ import {Textarea} from "@/components/ui/textarea";
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select";
 import {Label} from "@/components/ui/label";
 import {ChevronRight, Plus, Zap, Trash2} from "lucide-react";
-<<<<<<< HEAD
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-export function MobileResumeBuilder() {
-  const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
-=======
 
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Button } from "@/components/ui/button",
 import { Card, CardContent } from "@/components/ui/card",
@@ -40,13 +26,9 @@ import {
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 type ResumeStep = "basics" | "experience" | "education" | "skills",
 
@@ -57,7 +39,7 @@ export function MobileResumeBuilder() {
   
   const renderStepContent = () => {
     switch (currentStep) {
-<<<<<<< HEAD
+
       case "basics": return <BasicsStep />,
       case "experience":
         return <ExperienceStep />,
@@ -139,12 +121,7 @@ function BasicsStep() {
         </div>
         <div className="space-y-2">
           <Label htmlFor="summary">Professional Summary</Label>
-          <Textarea
-            id="summary"
-            placeholder="Write a brief summary about yourself"
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
+
             rows={4}
           />
         </div>
@@ -152,54 +129,15 @@ function BasicsStep() {
     </Card>
   )
 }
-          <Textarea 
-            id="summary" 
-            placeholder="Write a brief summary about yourself" 
-import React, { useState } from "react",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Textarea } from "@/components/ui/textarea",;
-import {;
-  Select,;
-  SelectContent,;
-  SelectItem,;
-  SelectTrigger,;
-  SelectValue} from "@/components/ui/select",;
-import { Label } from "@/components/ui/label",;
-import { ChevronRight, Plus, Zap, Trash2 } from "lucide-react",;
-type ResumeStep = "basics" | "experience" | "education" | "skills",;
-=======
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export function MobileResumeBuilder() {;
   const [currentStep, setCurrentStep] = useState<ResumeStep>("basics");
 
   const renderStepContent = () => {;
     switch (currentStep) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
-import React, { useState } from './react';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Textarea } from '@/components / ui / textarea';
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components / ui / select';
-import { Label } from '@/components / ui / label';
-import { ChevronRight, Plus, Zap, Trash2 } from './lucide-react';
-;
-type ResumeStep = "basics" | "experience" | "education" | "skills";
-;
-export /**
- * MobileResumeBuilder - Function description
- */
-function MobileResumeBuilder() {
-  const [current_step, setCurrentStep] = useState < ResumeStep>("basics");
-;
-  const renderStepContent = () =>: any {
-    switch (current_step) {
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       case "basics": return <BasicsStep />;
       case "experience":;
         return <ExperienceStep />;
@@ -214,12 +152,7 @@ function MobileResumeBuilder() {
   };
 
 
-=======
 
-  },
-  
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   return (
     <div className="space-y-6 px-4 pb-24">;
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">;
@@ -304,16 +237,12 @@ function BasicsStep() {;
     </Card>;
   );
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 function ExperienceStep() {
   const [experiences, setExperiences] = useState([{ id: '1' }])
@@ -747,77 +676,11 @@ function SkillsStep() {;
                 <Select
                   value={skill && skill.proficiency}
                   onValueChange={(value) => updateSkill(skill && skill.id, "proficiency", value)}
-=======
-;
-  const add_skill = () =>: any {
-    const new_id = (skills.length + 1).to_string ();
-    set_skills ([...skills, { id: new_id, name: "", proficiency: "beginner" }]);
-  }
-;
-  const remove_skill = (id: string) =>: any {
-    set_skills (skills.filter (skill => skill.id !== id));
-  }
-;
-  const update_skill = (id: string, field: string, value: string) =>: any {
-    set_skills (skills.map (skill =>;
-      skill.id === id ? { ...skill, [field]: value } : skill));
-  }
-;
-  return (
-    <div className="space - y-4">;
-      <Card>;
-        <CardContent className="p - 4">;
-          <div className="space - y-4">;
-            {skills.map ((skill) => (
-              <div key={skill.id} className="flex items - center gap - 2">;
-                <Input;
-                  placeholder="Skill (e.g. JavaScript, Figma)";
-                  value={skill.name}
-                  on_change={(e) => update_skill (skill.id, "name", e.target.value)}
-                  className="flex - 1";
-                />;
-                <Select;
-                  value={skill.proficiency}
-<<<<<<< HEAD
-                  onValueChange={(value) => updateSkill(skill.id, "proficiency", value)}
-                >
-                  <SelectTrigger className="w-[130px]">
-                    <SelectValue placeholder="Level" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="beginner">Beginner</SelectItem>
-                    <SelectItem value="intermediate">Intermediate</SelectItem>
-                    <SelectItem value="advanced">Advanced</SelectItem>
-                    <SelectItem value="expert">Expert</SelectItem>
-                  </SelectContent>
-                </Select>
-                {skills.length > 1 && (
-                  <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => removeSkill(skill.id)}
-                  >;
-                    <Trash2 className="h-4 w-4 text-destructive" />;
-                  </Button>;
-=======
-                  onValueChange={(value) => update_skill (skill.id, "proficiency", value)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-                >;
-                  <SelectTrigger className="w-[130px]">;
-                    <SelectValue placeholder="Level" />;
-                  </SelectTrigger>;
-                  <SelectContent>;
-                    <SelectItem value="beginner">Beginner</SelectItem>;
-                    <SelectItem value="intermediate">Intermediate</SelectItem>;
-                    <SelectItem value="advanced">Advanced</SelectItem>;
-                    <SelectItem value="expert">Expert</SelectItem>;
-                  </SelectContent>;
-                </Select>;
 
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 )}
               </div>;
             ))}
@@ -853,15 +716,13 @@ function SkillsStep() {;
     </div>
   )
 }
-<<<<<<< HEAD
+
 }
 ;
 ;
-=======
 
-=======
-
-}
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

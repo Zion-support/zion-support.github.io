@@ -1,14 +1,12 @@
-<<<<<<< HEAD
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Mail } from "lucide-react";
+
+
 
 import { GradientHeading } from "@/components/GradientHeading",
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
 import { Button } from "@/components/ui/button",
 import { Mail } from "lucide-react",
-=======
+
 
 import { GradientHeading  } from '@/components / GradientHeading';
 import { Button  } from '@/components / ui / button';
@@ -51,7 +49,11 @@ function ContactSection() {
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export function ContactSection() {
   return (
     <section className="py-20 bg-zion-blue" id="contact">
@@ -215,9 +217,8 @@ export function ContactSection() {
         </div>
       </div>
     </section>
-<<<<<<< HEAD
-  );
-}
+
+
   )
 import { GradientHeading } from "@/components/GradientHeading",;
 import { Button } from "@/components/ui/button",;
@@ -304,10 +305,7 @@ export function ContactSection() {;
           </div>;
         </div>;
       </div>;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     </section>;
   );
 }

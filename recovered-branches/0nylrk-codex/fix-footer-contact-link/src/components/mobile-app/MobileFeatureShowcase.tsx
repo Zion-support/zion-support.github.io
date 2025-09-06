@@ -1,9 +1,11 @@
 
-<<<<<<< HEAD
+
 import React from "react";
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
+
 import React from "react",
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
+
+
 
 import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
 export const MobileFeatureShowcase: React.FC = () => {
@@ -11,47 +13,28 @@ export const MobileFeatureShowcase: React.FC = () => {
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />
       title: "Hire from Anywhere"
-=======
-import React from './react';
-import { CheckCircle, Smartphone, Users, Star, Mail } from './lucide-react';
 
-export const MobileFeatureShowcase: React.FC = () => {
-  const features = [;
-    {
-
-
-
-import {CheckCircle, Smartphone, Users, Star, Mail} from "lucide-react";
-
-=======
-import React from "react",
-import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export const MobileFeatureShowcase: React.FC = () => {
   const features = [
     {
       icon: <Users className="h-8 w-8 text-zion-cyan" />,
       title: "Hire from Anywhere",
-<<<<<<< HEAD
+
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface.";
     };
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       description: "Browse and hire top AI talent on the go with a streamlined mobile interface."
     }
     },
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     {
       icon: <Star className="h-8 w-8 text-zion-purple" />
       title: "AI-Match Instantly"
@@ -106,7 +89,7 @@ export const MobileFeatureShowcase: React.FC = () => {;
   ];
   ],
 
-<<<<<<< HEAD
+
   return (
     <section id="features" className="py-16 bg-zion-blue">
       <div className="container mx-auto px-4">
@@ -135,18 +118,8 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>
     </section>
   )
-}
-
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-  return (
-
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { CheckCircle, Smartphone, Users, Star, Mail } from "lucide-react",;
 export const MobileFeatureShowcase: React.FC = () => {;
@@ -206,12 +179,10 @@ export const MobileFeatureShowcase: React.FC = () => {;
       </div>;
     </section>;
   );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

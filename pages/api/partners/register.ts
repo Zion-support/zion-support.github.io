@@ -1,8 +1,9 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getServerSupabase } from '[^']*';
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
+
 function sanitizeCode(input: string): string {
   return input
     .toLowerCase()
@@ -12,12 +13,15 @@ function sanitizeCode(input: string): string {
 }
 
 export default async function handler(
+
   req: NextApiRequest
   res: NextApiResponse
 ) {
   req: NextApiRequest,
   res: NextApiResponse,
 ) {;
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   if (req.method !== "POST") return res.status($1).json({ $2 });
   const { name, niche, socials, payout_method, desired_code } = req.body |{}
   if (!name |!desired_code) return res.status($1).json({ $2 });
@@ -32,10 +36,7 @@ export default async function handler(
       return res
         .status(200)
         .json({ ok: true, code, status: "pending", mock: true });
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     }
     const supabase = getServerSupabase();
     const { data: existing, error: existingErr } = await supabase
@@ -44,35 +45,14 @@ export default async function handler(
       .eq("code", code)
       .maybeSingle();
 
-<<<<<<< HEAD
+
   } catch (e: any) {
     return res.status(500).json({ error: e?.message });
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default async function handler(req, res) {
-  try {
-  if (req.method === 'POST') {
-    res.status(201).json({ message: 'Partner registered' });
-  } else {
-    res.status(405).end('Method Not Allowed');
-import type { NextApiRequest, NextApiResponse } from 'next';
+
 import { getServerSupabase } from '../../../utils/supabase/server';
 function sanitizeCode(input: string): string {
   return input.toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
-=======
 
-    if (existingErr) return res && res.status($1).json({ $2 });
-    if (existing) return res && res.status($1).json({ $2 });
-    const { error } = await supabase && supabase.from("partners").insert({
-=======
-import type { NextApiRequest, NextApiResponse } from './next';
-import { getServerSupabase  } from '../../../utils / supabase / server';
-function sanitize_code (input: string): string {
-  return input;
-    .toLowerCase ();
-    .replace (/[^a - z0 - 9-]/g, "-");
-    .replace (/-+/g, "-");
-    .replace (/^-|-$/g, "");
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export default async /**
  * handler - Function description
@@ -121,28 +101,11 @@ if ( {) {
 
   }
 }
-=======
-      niche: niche || null, socials: socials || null,
-      payout_method: payout_method || null, status: 'pending',
-      commission_rate: 0.15});
 
-    if (error) return res.status(500).json({ error: error.message });
 
-    return res.status(200).json({ ok: true, code, status: 'pending' })
-  } catch (e: any) {
-    return res.status(500).json({ error: e?.message })
-<<<<<<< HEAD
-  }
-<<<<<<< HEAD
-=======
 
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 }
 }
     return res.status (200).json ({ ok: true, code, status: "pending" });
@@ -164,8 +127,6 @@ if ( {) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

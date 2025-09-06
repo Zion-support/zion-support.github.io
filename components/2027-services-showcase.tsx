@@ -6,7 +6,7 @@ import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 
 import {
-<<<<<<< HEAD
+
   Search
   Star
   Users
@@ -43,127 +43,9 @@ import {
  } from 'lucide-react';
 import { cuttingEdge2027Innovations  } from '../data/2027-cutting-edge-innovations';
 import { practicalMicroSaas2027  } from '../data/2027-practical-micro-saas';
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Target,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  Phone,
-<<<<<<< HEAD
-  Mail,
-  MapPin,} from 'lucide-react';import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock,
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
-  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
-
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
-=======
 
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React, { useState } from 'react';
-import Head from 'next / head';
-import Link from 'next / link';
-import { motion, AnimatePresence } from 'framer-motion';
-
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
-import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
-
-
-  const [searchTerm, setSearchTerm] = useState('');
-
-  const [selectedCategory, setSelectedCategory] = useState<string>('all');
-  const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all');
-  const [sortBy, setSortBy] = useState<string>('name');
-
-=======
-import {
-=======
-
-
-  Search,
-  Star,
-  Users,
-  TrendingUp,
-  DollarSign,
-  Clock,
-  CheckCircle,
-  ArrowRight,
-  Rocket,
-  Brain,
-  Atom,
-  Globe,
-  Zap,
-  Sparkles,
-  Shield,
-  Target,
-  Cpu,
-  Database,
-  Cloud,
-  Lock,
-  ShieldCheck,
-  Eye,
-  Heart,
-  Share2,
-  Download,
-  Phone,
-  Mail,
-  MapPin,} from 'lucide-react';import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock,
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
-  Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin;
-
-import { cuttingEdge2027Innovations } from '../data/2027-cutting-edge-innovations';
-import { practicalMicroSaas2027 } from '../data/2027-practical-micro-saas';
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import UltraFuturisticNavigation2027 from '../components/layout/UltraFuturisticNavigation2027';
 import UltraFuturisticMatrixBackground2027 from '../components/ui/UltraFuturisticMatrixBackground2027';
 export default function ServicesShowcase2027() {;
@@ -393,7 +275,7 @@ export default function ServicesShowcase2027() {;
         <meta
           property='og:title'
           content='2027 Services Showcase - Zion Tech Group'
-<<<<<<< HEAD
+
         />;
         <meta
           property='og:description'
@@ -409,24 +291,7 @@ export default function ServicesShowcase2027() {;
           name='twitter:title'
           content='2027 Services Showcase - Zion Tech Group'
         />;
-=======
-        />
-        <meta
-          property='og:description'
-          content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
-        />
-        <meta
-          property='og:url'
-          content='https://ziontechgroup.com/2027-services-showcase'
-        />
-        <meta property='og:type' content='website' />
-        {/* Twitter */}
-        <meta name='twitter:card' content='summary_large_image' />
-        <meta
-          name='twitter:title'
-          content='2027 Services Showcase - Zion Tech Group'
-        />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
         <meta
           name='twitter:description'
           content='Revolutionary 2027 services featuring AI consciousness evolution, quantum computing, and practical micro SAAS solutions.'
@@ -484,7 +349,7 @@ export default function ServicesShowcase2027() {;
                 <div className="text-green-300">Rating</div>
               </div>
             </div>
-<<<<<<< HEAD
+
 transition={{ duration: 0 && 0.8 }}>;
             <h1 className='text-5xl md:text-7xl font-bold mb-6'>;
               <span className='bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent'>;
@@ -539,17 +404,13 @@ transition={{ duration: 0 && 0.8 }}>;
               >
                 <DollarSign className="w-5 h-5" />
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
                 <span>View Pricing</span>
               </Link>
             </div>
@@ -557,38 +418,18 @@ transition={{ duration: 0 && 0.8 }}>;
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
-
-                className="px-8 py-4 border border-cyan-500/50 text-cyan-400 font-semibold rounded-xl hover:bg-cyan-500/10 transition-all duration-300 flex items-center justify-center space-x-2">;
-                <DollarSign className="w-5 h-5" />;
-                <span>View Pricing</span>;
-              </Link>;
-            </div>;
-          </motion && motion.div>;
-        </div>;
-      </section>;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       {/* Search and Filters */}
 
-=======
-      <section className="px-4 sm:px-6 lg:px-8 mb-16">
-        <div className="max-w-7xl mx-auto">
-          <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 shadow-2xl shadow-cyan-500/20">
-            {/* Search Bar */}
-            <div className="mb-6">
-              <div className="relative">
-                <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-cyan-400" />
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
                 <input
                   type="text"
                   placeholder="Search services..."
@@ -597,14 +438,7 @@ transition={{ duration: 0 && 0.8 }}>;
 
             {/* Filters */}
 
-=======
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white placeholder-cyan-300 focus:outline-none focus:border-cyan-400 focus:ring-2 focus:ring-cyan-500/20"
-                />
-              </div>
-            </div>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             {/* Filters */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Category Filter */}
@@ -625,19 +459,16 @@ transition={{ duration: 0 && 0.8 }}>;
                 </select>
               </div>
 
-<<<<<<< HEAD
-=======
+
                 </select>;
               </div>;
 
 
-=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               {/* Price Range Filter */}
 
 
@@ -654,32 +485,13 @@ transition={{ duration: 0 && 0.8 }}>;
                 <label className='block text-cyan-400 font-medium mb-2'>;
                   Sort By;
                 </label>;
-=======
-                </select>
-              </div>
-<<<<<<< HEAD
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-=======
 
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-<<<<<<< HEAD
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+
               {/* Sort By */}
               <div>
                 <label className="block text-cyan-400 font-medium mb-2" htmlFor="input-Sort By">Sort By</label>
@@ -928,20 +740,7 @@ transition={{ duration: 0 && 0.8 }}>;
             <AnimatePresence>
 {sortedServices.map((service, index) => (
                 <motion.div
-=======
-                  onChange={(e) => setSortBy(e.target.value)}
-                  className="w-full px-4 py-3 bg-black/60 border border-cyan-500/30 rounded-xl text-white focus:outline-none focus:border-cyan-400"
-                >
-                  <option value="name">Name</option>
-                  <option value="price">Price</option>
-                  <option value="roi">ROI</option>
-                </select>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Services Grid */}
       <section className='px - 4 sm:px - 6 lg:px - 8 mb - 20'>;
         <div className='max - w-7xl mx - auto'>;
@@ -972,16 +771,11 @@ transition={{ duration: 0 && 0.8 }}>;
                     <p className='text - cyan - 300 text - sm mb - 4 line - clamp - 3'>                      {service.description}
                     </p>;
                     {/* Price */}
-<<<<<<< HEAD
+
                     <div className='mb - 4'>;
                       <div className='text - 2xl font - bold text - white'>                        {service.price}                >;
                   <div className="bg - black / 40 backdrop - blur - xl border border - cyan - 500 / 30 rounded - 2xl p - 6 h - full hover:border - cyan - 400 / 50 transition - all duration - 300 transform hover:shadow - xl hover:shadow - cyan - 500 / 30 shadow - 2xl shadow - cyan - 500 / 20">;
-=======
-                    <div className='mb-4'>
-<<<<<<< HEAD
-                      <div className='text-2xl font-bold text-white'>                        {service.price}                >
-                  <div className="bg-black/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-6 h-full hover:border-cyan-400/50 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-2xl shadow-cyan-500/20">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                     {/* Service Header */}
                     <div className="flex items - start justify - between mb - 4">;
                       <div className="text - 4xl">🚀</div>;
@@ -1007,12 +801,12 @@ transition={{ duration: 0 && 0.8 }}>;
 
                         {service.price}
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                       </div>
                     </div>
                     <div className="flex items-start justify-between mb-4">;
@@ -1034,36 +828,13 @@ transition={{ duration: 0 && 0.8 }}>;
                     </div>;
                     {/* Features */}
 
-=======
-                    <div className="mb-6">
-                      <h4 className="text-cyan-400 font-semibold mb-3">Key Features:</h4>
-                      <div className="space-y-2">
-                        {service.features.slice(0, 3).map((feature, idx) => (
-                          <div key={idx} className="flex items-center space-x-2">
-                            <CheckCircle className="w-4 h-4 text-green-400" />
-                            <span className="text-gray-300 text-sm">{feature}</span>
-                          </div>
-                        ))}
-                        {service.features.length > 3 && (
-                          <div className="text-cyan-400 text-sm">
-                            +{service.features.length - 3} more features
-                          </div>
-<<<<<<< HEAD
-=======
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                         )}
                       </div>
                     </div>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     {/* ROI */}
 
@@ -1075,12 +846,14 @@ transition={{ duration: 0 && 0.8 }}>;
                     </div>
 
 
-<<<<<<< HEAD
+
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
                     {/* ROI */}
                     <div className='mb-6 text-center'>;
                       <div className='text-green-400 font-semibold text-lg'>;
@@ -1114,12 +887,12 @@ transition={{ duration: 0 && 0.8 }}>;
                         className="flex-1 px-4 py-2 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300 text-center text-sm"
                         className='px-4 py-2 border border-cyan-500/50 text-cyan-400 font-semibold rounded-lg hover:bg-cyan-500/10 transition-all duration-300 text-sm'                      >
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                       >
                         Learn More
                       </Link>
@@ -1135,31 +908,17 @@ transition={{ duration: 0 && 0.8 }}>;
                         Contact;
                       </Link>;
                     </div>;
-=======
-<<<<<<< HEAD
-=======
 
 
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
                     {/* Category Badge */}
                     <div className='mt-4'>;
                       <span className='inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30'>                        {service && service.category}                    <div className="mt-4">;
@@ -1170,35 +929,21 @@ transition={{ duration: 0 && 0.8 }}>;
                   </div>;
                 </motion && motion.div>;
 
-=======
 
-                    {/* Category Badge */}
-                    <div className="mt-4">
-                      <span className="inline-block px-3 py-1 bg-cyan-500/20 text-cyan-400 text-xs font-medium rounded-full border border-cyan-500/30">
-                        {service.category}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
               ))}
             </AnimatePresence>
           </div>
 
-<<<<<<< HEAD
-=======
+
             </AnimatePresence>;
           </div>;
 
 
-=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* No Results */}
           {sortedServices && sortedServices.length === 0 && (;
             <motion&& motion.div
@@ -1209,7 +954,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
-<<<<<<< HEAD
+
                   setSelectedPriceRange('all');
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >              className="text-center py-20"
@@ -1220,6 +965,9 @@ transition={{ duration: 0 && 0.8 }}>;
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'              >
 
               <button
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 onClick={() => {
                   setSearchTerm('');
                   setSelectedCategory('all');
@@ -1227,9 +975,7 @@ transition={{ duration: 0 && 0.8 }}>;
                 }}
                 className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300'                  setSelectedPriceRange('all')
 
-=======
-                  setSelectedPriceRange('all')
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 }}
                 className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300"
               >
@@ -1242,28 +988,26 @@ transition={{ duration: 0 && 0.8 }}>;
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Contact Section */}
       <section className='px-4 sm:px-6 lg:px-8 mb-20'>
         <div className='max-w-4xl mx-auto'>
           <div className='bg-gradient-to-r from-cyan-900/40 via-purple-900/40 to-pink-900/40 backdrop-blur-xl border border-cyan-500/30 rounded-2xl p-8 text-center shadow-2xl shadow-cyan-500/20'>
             <h2 className='text-3xl font-bold text-white mb-4'>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               Ready to Transform Your Business?
             </h2>
             <p className='text-cyan-300 mb-8 text-lg'>
@@ -1316,7 +1060,7 @@ transition={{ duration: 0 && 0.8 }}>;
             <div className="flex flex-col sm:flex-row gap-4 justify-center">;
               <Link
                 href="/contact"
-<<<<<<< HEAD
+
                 className="px-8 py-4 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold rounded-xl hover:from-cyan-600 hover:to-purple-700 transition-all duration-300 transform hover:shadow-xl hover:shadow-cyan-500/30 shadow-lg shadow-cyan-500/25"
               >
                 Get Started Today
@@ -1388,18 +1132,14 @@ transition={{ duration: 0 && 0.8 }}>;
     </UltraFuturisticMatrixBackground2027>
 );  )
 }
-    </UltraFuturisticMatrixBackground2027>));
+
 }
   );
-=======
 
 
-=======
-  )
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    </UltraFuturisticMatrixBackground2027>));
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

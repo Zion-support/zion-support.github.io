@@ -2,7 +2,7 @@
   })
   const handleSubmit = async (data: EducationFormValues) => {
     setIsLoading(true)
-<<<<<<< HEAD
+
       institution: '',
       degree: '',
       field_of_study: '',
@@ -14,8 +14,7 @@
   });
   const handleSubmit = async (data: EducationFormValues) => {;
     setIsLoading(true);
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     setError(null);    try {
       await onSubmit(data)
     } catch (err: any) {
@@ -81,10 +80,9 @@ function EducationFormFields() {
       setIsLoading (false);
     }
   }
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -115,11 +113,8 @@ function EducationFormFields() {
             name="institution"
             render={({ field }: { field: any }) => (
               <FormItem>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <FormLabel>Institution</FormLabel>
                 <FormControl>
                   <Input placeholder="University of California, MIT, etc." {...field} />
@@ -146,11 +141,8 @@ function EducationFormFields() {
             name="degree"
             render={({ field }: { field: any }) => (
               <FormItem>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <FormLabel>Degree</FormLabel>
                 <FormControl>
                   <Input placeholder="Bachelor's, Master's, Ph.D, etc." {...field} />
@@ -179,11 +171,8 @@ function EducationFormFields() {
           name="field_of_study"
           render={({ field }: { field: any }) => (
             <FormItem>
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <FormLabel>Field of Study</FormLabel>
               <FormControl>
                 <Input placeholder="Computer Science, Engineering, etc." {...field} />
@@ -200,22 +189,18 @@ function EducationFormFields() {
           <FormField
 
             control={form.control}
-<<<<<<< HEAD
+
             name="start_date"
             name='start_date'
             name="start_date"
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             render={({ field }: { field: any }) => (
               <FormItem>
                 <FormLabel>Start Date</FormLabel>
                 <FormControl>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
             render={({ field }: { field: any }) => (;
               <FormItem>;
@@ -228,7 +213,7 @@ function EducationFormFields() {
                   <Input type='date' {...field} value={field.value || ''} />                </FormControl>
                 <FormMessage />
               </FormItem>
-<<<<<<< HEAD
+
 
                   <Input 
                     type="date" 
@@ -241,8 +226,7 @@ function EducationFormFields() {
 <<<<<<< HEAD
             )}
           />
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -253,7 +237,7 @@ function EducationFormFields() {
             <FormField
 
               control={form.control}
-<<<<<<< HEAD
+
               name='is_current'
               render={({ field }: { field: any }) => (
                 <FormItem className='flex flex-row items-start space-x-3 space-y-0 py-2'>                  <FormControl>
@@ -261,11 +245,7 @@ function EducationFormFields() {
               render={({ field }: { field: any }) => (
                 <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
                   <FormControl>
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                     <Checkbox
                       checked={field.value}
                       onCheckedChange={field.onChange}
@@ -286,22 +266,18 @@ function EducationFormFields() {
               <FormField;
                 control={form.control}
                 name="end_date"
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                 render={({ field }: { field: any }) => (
                   <FormItem>
                     <FormLabel>End Date</FormLabel>
                     <FormControl>
-<<<<<<< HEAD
+
                       <Input type='date' {...field} value={field.value |''} />                    </FormControl>
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                       <Input type='date' {...field} value={field.value || ''} />                    </FormControl>
 
                       <Input 
@@ -310,10 +286,9 @@ function EducationFormFields() {
                         value={field.value || ''} 
                       />
                     </FormControl>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -413,10 +388,9 @@ function EducationFormFields() {
           name="location"
           render={({ field }: { field: any }) => (
             <FormItem>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               <FormLabel>Location (Optional)</FormLabel>
               <FormControl>
@@ -446,7 +420,7 @@ function EducationFormFields() {
                 <Textarea
                   placeholder="Notable achievements, courses, activities..."
                   className="min-h-[100px]"
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
                   {...field}
@@ -473,20 +447,7 @@ function EducationFormFields() {
 
           <Button type="submit" disabled={isLoading}>
             {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
-=======
 
-                  {...field}
-                />;
-              </FormControl>;
-              <FormMessage />;
-
-
-
-
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             {isEditing ? 'Update' : 'Add'} Education
           </Button>
         </div>

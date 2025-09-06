@@ -13,8 +13,8 @@ import {
   Shield,;
   ArrowRight,;
 } from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 
 import {
   Mail
@@ -27,42 +27,8 @@ import {
   Shield
   ArrowRight;
 } from 'lucide-react';
-export default function FuturisticFooter() {;
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 
-import {
-  Mail
-  Phone
-  MapPin
-  Globe
-  Zap
-  Bot
-  Cloud
-  Shield
-  ArrowRight;
-} from 'lucide-react';
-=======
-<<<<<<< HEAD
-export default function FuturisticFooter() {;
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-
-export default function FuturisticFooter() {
-  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-export default function FuturisticFooter() {
-
-export default function FuturisticFooter() {;
-=======
-
-  const currentYear = new Date().getFullYear();import { Mail, Phone, MapPin, Globe, Zap, Bot, Cloud, Shield, ArrowRight } from 'lucide-react';
-
-
-export default function FuturisticFooter() {;
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const currentYear = new Date().getFullYear();
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
@@ -108,113 +74,9 @@ export default function FuturisticFooter() {;
     }
     { name: 'X', href: 'https://x.com/ziontechgroup', icon: '🐦' }
     { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }
-=======
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
-import Link from 'next/link';
-
-
-  ];
-  return (
-    <footer className='relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden'>;
-      {/* Animated background elements */}
-
-      <div className='absolute inset-0'>;
-        <div className='absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5' />;
-        <div className='absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent' />;
-        <div className='absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent' />;
-      </div>;
-
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16'>;
-
-        {/* Main footer content */}
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12'>;
-          {/* Company Info */}
-          <div className='lg:col-span-1'>;
-            <div className='flex items-center space-x-2 mb-6'>;
-              <div className='w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center'>;
-                <Zap className='w-6 h-6 text-white' />;
-              </div>;
-              <span className='text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent'>;
-                Zion Tech Group;
-              </span>;
-            </div>;
-            <p className='text-gray-400 mb-6 leading-relaxed'>;
-              Leading provider of AI-powered micro SaaS solutions, helping;
-              businesses automate, optimize, and scale their operations with;
-              cutting-edge technology.;
-            </p>;
-            <div className='flex space-x-4'>;
-              {socialLinks && socialLinks.map(social => (;
-                <a
-                  key={social && social.name}
-                  href={social && social.href}
-                  target='_blank'
-                  rel='noopener noreferrer'
-
-
-  return (
-    <footer className="relative bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">;
-      {/* Animated background elements */}
-
-      <div className="absolute inset-0">;
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5" />;
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-500/50 to-transparent" />;
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-500/50 to-transparent" />;
-      </div>;
-
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">;
-
-        {/* Main footer content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">;
-          {/* Company Info */}
-          <div className="lg:col-span-1">;
-            <div className="flex items-center space-x-2 mb-6">;
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl flex items-center justify-center">;
-                <Zap className="w-6 h-6 text-white" />;
-              </div>;
-              <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">;
-                Zion Tech Group;
-              </span>;
-            </div>;
-            <p className="text-gray-400 mb-6 leading-relaxed">;
-              Leading provider of AI-powered micro SaaS solutions, helping businesses automate, optimize, and scale their operations with cutting-edge technology.;
-            </p>;
-            <div className="flex space-x-4">;
-              {socialLinks && socialLinks.map((social) => (;
-                <a
-                  key={social && social.name}
-                  href={social && social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-
-
-              ))}
-            </div>
-          </div>
-
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* Quick Links */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -242,6 +104,11 @@ import Link from 'next/link';
             </ul>
           </div>
 
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* Services */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -269,19 +136,13 @@ import Link from 'next/link';
             </ul>
           </div>
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           {/* Quick Links */}
 
@@ -306,6 +167,7 @@ import Link from 'next/link';
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           {/* Contact Info */}
           <div>
             <h3 className='text-lg font-semibold text-white mb-6 flex items-center'>
@@ -448,10 +310,12 @@ import Link from 'next/link';
       <div className="absolute bottom-32 left-32 w-3 h-3 bg-purple-400 rounded-full animate-pulse delay-1000" />
       <div className="absolute top-1/2 left-10 w-1 h-1 bg-green-400 rounded-full animate-pulse delay-500" />
     </footer>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+);
+}
+
+
+
 
                 className='text-gray-400 hover:text-white transition-colors duration-200'>                Cookie Policy              © {currentYear} Zion Tech Group. All rights reserved.;
             </div>;
@@ -481,14 +345,13 @@ import Link from 'next/link';
   );
 }
 
+
+
+
 }
 }
-<<<<<<< HEAD
-=======
 
-=======
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

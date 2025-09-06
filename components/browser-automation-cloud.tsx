@@ -18,30 +18,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
-=======
 
-
-import React from 'react';
-import SEO from '../components / SEO';
-import {Check, ExternalLink} from 'lucide-react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-export default function BrowserAutomationCloudPage() {
-
-export default function BrowserAutomationCloudPage() {
-  const features = [
-    'Parallel Playwright/Puppeteer execution',
-    'Queued jobs with retries and rate limits',
-    'Artifacts: HAR, traces, screenshots, videos',
-    'Rotating proxies and geo targeting',
-    'Webhook callbacks and REST API',;
-  ];
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const features = [
     'Parallel Playwright/Puppeteer execution'

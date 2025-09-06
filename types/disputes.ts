@@ -1,23 +1,8 @@
-<<<<<<< HEAD
+
 export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-export type DisputeReason =
-  | 'Scope Disagreement'
-  | 'Quality Issues'
-  | 'Delivery Delay'
-  | 'Payment Issue'
-  | 'Communication Breakdown'
-  | 'Other';
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',;
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved';
-=======
 
-export type DisputeStatus = 'Open' | 'Under Review' | 'Resolved',
-=======
-
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export type DisputeReason =;
   | 'Scope Disagreement';
   | 'Quality Issues';
@@ -26,7 +11,10 @@ export type DisputeReason =;
   | 'Communication Breakdown';
 
   | 'Other',;
-<<<<<<< HEAD
+
+
+
+
 export type DisputeAttachment = {;
   id: string,;
   fileName: string,;
@@ -73,6 +61,7 @@ export type DisputeListItem = Pick<;
 export type UserSummary = {;
   id: string,;
   name: string,;
+
 export type DisputeAttachment = {
   id: string;
   fileName: string;
@@ -147,10 +136,10 @@ export type DisputeListItem = Pick<;
 export type UserSummary = {
   id: string;
   name: string;
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   role: 'admin' | 'client' | 'talent';
 }
 };

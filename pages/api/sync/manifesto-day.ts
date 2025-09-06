@@ -1,5 +1,6 @@
 
 
+
 import { signPayload } from "../../../utils/sync/signature";
 import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
@@ -9,6 +10,8 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
     return res && res.status(405).json({ error: "Method not allowed" });
 
   const state = readState();
+
+
 
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" });
@@ -24,6 +27,9 @@ import { nextVersionFor } from "../../../utils/sync/versioning";
   if (!milestoneId |!title)
     return res.status(400).json({ error: "milestoneId, title required" });
   const version = nextVersionFor(state, milestoneId);
+
+
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 export default async function handler(req, res) {
   try {
@@ -39,6 +45,8 @@ export default async function handler(req, res) {
   if (req.method !== "POST") return res.status(405).json({ error: "Method not allowed" }),
   const state = readState(),
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   if (!state.config.optIn || state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
@@ -134,7 +142,7 @@ export default async function handler(req, res) {
   return res
     .status(200)
     .json({ status: "created", version, eventId: event.eventId });
-}
+
 
         const url = new URL("/api/sync/publish", peer.baseUrl).toString(),
         try { await axios.post(url, body, { headers, timeout: 5000 }) } catch {  } catch (error) {
@@ -176,6 +184,8 @@ if (headers["x - zion - signature"] = sig) {
     return res.status(500).json({ error: "Internal server error" });
   }
 
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662

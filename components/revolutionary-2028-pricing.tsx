@@ -6,86 +6,11 @@ import Link from 'next/link';
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 import { motion } from 'framer-motion';
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import { 
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
 
-=======
-import {
-<<<<<<< HEAD
-  CheckCircle
-  ArrowRight
-  Star
-  TrendingUp
-  Phone
-  Zap
-  DollarSign
-  Shield
-  Mail
-  MapPin
-  Rocket
-  Brain
-  Sparkles
-  Globe
-  Atom
-  Heart
-  Leaf
-  Car
-  GraduationCap
-  Scale
-  Building
-  Factory
-  Camera
-  Video
-  Music
-  Gamepad2
-  Crown
-  Award
-  Target
-  Users
-  Clock
-  Globe2;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
 
-=======
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Globe,
-  Atom,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Crown,
-  Award,
-  Target,
-  Users,
-  Clock,;
-  Globe2,;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
   Building, Factory, Camera, Video, Music, Gamepad2;
@@ -173,134 +98,7 @@ const pricingTiers = [
     description: 'Perfect for small businesses and startups'
     features: [
 
-=======
 
-  CheckCircle,
-  ArrowRight,
-  Star,
-  TrendingUp,
-  Phone,
-  Zap,
-  DollarSign,
-  Shield,
-  Mail,
-  MapPin,
-  Rocket,
-  Brain,
-  Sparkles,
-  Globe,
-  Atom,
-  Heart,
-  Leaf,
-  Car,
-  GraduationCap,
-  Scale,
-  Building,
-  Factory,
-  Camera,
-  Video,
-  Music,
-  Gamepad2,
-  Crown,
-  Award,
-  Target,
-  Users,
-
-  Clock,;
-  Globe2,;} from 'lucide-react';import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, ;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles;
-  Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2;
-  Crown, Award, Target, Users, Clock, Globe2;
-import UltraFuturisticNavigation2028 from '../components / layout / UltraFuturisticNavigation2028';
-import UltraFuturisticFooter2028 from '../components / layout / UltraFuturisticFooter2028';
-import { futuristic2028Services } from '../data / 2028 - futuristic - innovations';
-import { emergingTech2028Services } from '../data / 2028 - emerging - tech - services';
-const contact_info = {
-  mobile: '+1 302 464 0950',
-  email: 'kleber@ziontechgroup.com',
-  address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com',  website: 'https://ziontechgroup.com';
-}
-;
-const pricing_tiers = [;
-  {
-    name: 'Starter',
-    price: '$299',
-    period: '/month',
-    description: 'Perfect for small businesses and startups',
-    features: [;
-      'Basic AI integration',
-      'Standard support',
-      'Core features access',
-      'Email support',
-      'Basic analytics',
-      'Mobile app access',
-    ],
-    popular: false,
-    color: 'from - blue - 600 to - cyan - 600',
-    cta: 'Get Started',
-    href: '/contact',
-  },  {      'Basic AI integration_standard support_core features access_email support_basic analytics_mobile app access';
-    ];
-    popular: false
-    color: 'from-blue-600 to-cyan-600'
-    cta: 'Get Started'
-    href: '/contact'
-  }
-    name: 'Professional'
-    price: '$999'
-    period: '/month'
-    description: 'Ideal for growing businesses and enterprises'
-    features: [
-      'Advanced AI capabilities'
-      'Priority support'
-      'Full feature access'
-      'Phone & email support'
-      'Advanced analytics'
-      'API access'
-      'Custom integrations'
-      'Training & onboarding'
-    ]
-    popular: true
-    color: 'from-purple-600 to-pink-600'
-    cta: 'Start Free Trial'
-    href: '/contact'
-  },  {      'Advanced AI capabilitiesPriority supportFull feature accessPhone & email supportAdvanced analyticsAPI accessCustom integrationsTraining & onboarding'
-    ];
-    popular: true
-    color: 'from-purple-600 to-pink-600'
-    cta: 'Start Free Trial'
-    href: '/contact'
-  }
-    name: 'Enterprise'
-    price: 'Custom'
-    period: ''
-    description: 'Tailored solutions for large organizations'
-    features: [
-      'Custom AI development'
-      'Dedicated support team'
-      'White-label solutions'
-      '24/7 phone support'
-      'Custom analytics'
-      'Full API access'
-      'Custom integrations'
-      'Dedicated account manager'
-      'SLA guarantees'
-      'On-premise deployment'
-    ]
-    popular: false
-    color: 'from-indigo-600 to-purple-600'
-    cta: 'Contact Sales'
-    href: '/contact'
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 const contactInfo = {;
   mobile: '+1 302 464 0950',;
   email: 'kleber@ziontechgroup && ziontechgroup.com',;
@@ -671,16 +469,11 @@ export default function Revolutionary2028Pricing() {
                           <span className="text-purple-200">{feature}</span>
                         </li>
                       ))}
-<<<<<<< HEAD
-                    </ul>;
 
+                    </ul>
 
-
-<<<<<<< HEAD
-=======
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                     <Link
                       href={tier && tier.href}
                       className={`block w-full text-center px-6 py-3 bg-gradient-to-r ${tier && tier.color} text-white rounded-lg hover:opacity-90 transition-all duration-300 transform hover:scale-105`}>;
@@ -694,20 +487,17 @@ export default function Revolutionary2028Pricing() {
         </div>
       </section>
 
-<<<<<<< HEAD
-=======
+
           </div>;
         </div>;
       </section>;
 
 
-=======
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Service Pricing */}
       <section className='py-20 bg-gradient-to-br from-purple-900/10 to-blue-900/10'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -746,7 +536,7 @@ export default function Revolutionary2028Pricing() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0 && 0.6, delay: serviceIndex * 0 && 0.1 }}
                     viewport={{ once: true }}
-<<<<<<< HEAD
+
                     className="group relative"
                   >
                     <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">
@@ -772,38 +562,7 @@ export default function Revolutionary2028Pricing() {
                           </div>
                         </div>
                         <div className="flex items-center justify-between">
-=======
 
-                    className="group relative">;
-                    <div className="relative p-6 bg-black/40 backdrop-blur-sm border border-purple-500/30 rounded-xl hover:border-purple-500/60 transition-all duration-300 hover:transform hover:scale-105">;
-                      <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-blue-500/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>;
-
-                      <div className="relative z-10">;
-                        <div className="flex items-start justify-between mb-4">;
-                          <div className="text-3xl">{service && service.icon}</div>;
-                          <div className="text-right">;
-                            <div className="text-xl font-bold text-purple-400">{service && service.price}</div>;
-                            <div className="text-sm text-purple-300">{service && service.period}</div>;
-                          </div>;
-                        </div>;
-
-                        <h4 className="text-xl font-bold text-white mb-2">{service && service.name}</h4>;
-                        <p className="text-purple-300 mb-4 text-sm">{service && service.description}</p>;
-
-                        <div className="mb-4">;
-                          <div className="flex items-center space-x-2 mb-2">;
-                            <Star className="w-4 h-4 text-yellow-400" />;
-                            <span className="text-white font-medium">{service && service.rating}</span>;
-                            <span className="text-purple-300 text-sm">({service && service.reviews} reviews)</span>;
-                          </div>;
-                          <div className="text-sm text-purple-300">;
-                            <span className="font-medium">Setup:</span> {service && service.setupTime}
-                          </div>;
-                        </div>;
-
-                        <div className="flex items-center justify-between">;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                           <Link
                             href={service.link}
                             className="px-4 py-2 bg-gradient-to-r from-purple-600 to-blue-600 text-white rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 text-sm"
@@ -814,17 +573,14 @@ export default function Revolutionary2028Pricing() {
                             <div className="text-xs text-purple-300">Trial</div>
                             <div className="text-white font-medium">{service.trialDays} days</div>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
                           </div>
                         </div>
                       </div>
@@ -839,6 +595,11 @@ export default function Revolutionary2028Pricing() {
         </div>
       </section>
 
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Value Proposition */}
       <section className='py-20 bg-black/50'>
         <div className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -849,24 +610,19 @@ export default function Revolutionary2028Pricing() {
                 Our Pricing
               </span>
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       {/* Value Proposition */}
 
 
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             </h2>
             <p className='text-xl text-purple-200 max-w-3xl mx-auto'>
               We offer the best value in the market with transparent pricing and
@@ -983,43 +739,31 @@ export default function Revolutionary2028Pricing() {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
             >
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1042,8 +786,7 @@ export default function Revolutionary2028Pricing() {
               <div className="text-purple-300">Lower than Market</div>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
               className='text-center p-8 bg-gradient-to-br from-purple-900/20 to-blue-900/20 border border-purple-500/30 rounded-2xl'>;
               <Target className='w-16 h-16 text-green-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1071,17 +814,14 @@ export default function Revolutionary2028Pricing() {
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
             >
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1104,8 +844,7 @@ export default function Revolutionary2028Pricing() {
               <div className="text-blue-300">Transparent Pricing</div>
             </motion.div>
             <motion.div
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
               className='text-center p-8 bg-gradient-to-br from-blue-900/20 to-cyan-900/20 border border-blue-500/30 rounded-2xl'>;
               <Shield className='w-16 h-16 text-blue-400 mx-auto mb-6' />;
               <h3 className='text-2xl font-bold text-white mb-4'>;
@@ -1133,17 +872,14 @@ export default function Revolutionary2028Pricing() {
               viewport={{ once: true }}
               className='text-center p-8 bg-gradient-to-br from-pink-900/20 to-rose-900/20 border border-pink-500/30 rounded-2xl'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
             >
               <Award className='w-16 h-16 text-pink-400 mx-auto mb-6' />
               <h3 className='text-2xl font-bold text-white mb-4'>
@@ -1199,46 +935,37 @@ export default function Revolutionary2028Pricing() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">;
           <motion&& motion.div
 
-=======
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-r from-purple-900/30 to-blue-900/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
 
-<<<<<<< HEAD
-=======
-=======
+
 
 
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}
             className='space-y-8'
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
           >
             <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               Ready to{' '}
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
+
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>
                 Get Started
               </span>
@@ -1282,21 +1009,8 @@ export default function Revolutionary2028Pricing() {
         </div>
       </section>
       <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </>;
-);
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
               <span className='bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent'>;
           <div className='grid grid - cols - 1 md:grid - cols - 3 gap - 8'>            <motion.div            </h2>;
@@ -1395,91 +1109,11 @@ export default function Revolutionary2028Pricing() {
             whileInView={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-<<<<<<< HEAD
-            className='space - y-8';
-          >;
-            <h2 className='text - 4xl md:text - 5xl font - bold text - white mb - 6'>;
-              Ready to{' '}
-              <span className='bg - gradient - to - r from - purple - 400 to - blue - 400 bg - clip - text text - transparent'>;
-
-                Get Started;
-              </span>;
-              ?;
-            </h2>;
-
-
-=======
-  );
-    </>;
-);
-}
-            <p className='text - xl text - purple - 200 max - w-3xl mx - auto'>;
-              Join hundreds of companies already leveraging our futuristic;
-              services to gain competitive advantages and drive innovation.;
-            </p>;
-            <div className='flex flex - col sm:flex - row items - center justify - center space - y-4 sm:space - y-0 sm:space - x-6'>;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 bg - gradient - to - r from - purple - 600 to - blue - 600 text - white rounded - xl hover:from - purple - 700 hover:to - blue - 700 transition - all duration - 300 transform hover:scale - 105 shadow - 2xl hover:shadow - purple - 500 / 25 flex items - center space - x-2';
-              >;
-                <span > Start Free Trial</span>;
-                <ArrowRight className='w - 5 h - 5' />;
-              </Link>;
-              <Link;
-                href='/contact';
-                className='px - 8 py - 4 border border - purple - 500 / 30 text - purple - 300 rounded - xl hover:bg - purple - 900 / 30 transition - all duration - 300 flex items - center space - x-2';
-              >;
-                <span > Schedule Demo</span>;
-                <Clock className='w - 5 h - 5' />;
-              </Link>;
-            </div>;
-            <div className='flex items - center justify - center space - x-8 text - purple - 300'>;
-              <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > 30 - Day Free Trial</span>;
-              </div>;
-              <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />;
-                <span > No Credit Card Required</span>;
-              </div>;
-              <div className='flex items - center space - x-2'>;
-                <CheckCircle className='w - 5 h - 5 text - green - 400' />                <span > Cancel Anytime</span>              <div className="flex items - center space - x-2">;
-                <CheckCircle className="w - 5 h - 5 text - green - 400" />;
-                <span > Cancel Anytime</span>;
-              </div>;
-            </div>;
-          </motion.div>;
-        </div>;
-      </section>;
-      <UltraFuturisticFooter2028 />;
-    </>);
-=======
-<<<<<<< HEAD
-      <UltraFuturisticFooter2028 />
-<<<<<<< HEAD
-    </>
-<<<<<<< HEAD
-);
-=======
-  );
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
-<<<<<<< HEAD
-    </>;
-);
-}
-    </>
-  );
-}
-=======
 
   );
 
-=======
-
-    </>
-  );
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

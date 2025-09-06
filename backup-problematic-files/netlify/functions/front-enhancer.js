@@ -105,11 +105,10 @@ exports.handler = async () => {
 exports.config = {
   schedule: '*/20 * * * *', // every 20 minutes
 },
+
 <<<<<<< HEAD
 =======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
 
 
 

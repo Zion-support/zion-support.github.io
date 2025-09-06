@@ -1,9 +1,6 @@
 
-<<<<<<< HEAD
-import {supabase} from "@/integrations/supabase/client";
-import {TalentProfile} from "@/types/talent";
-import {GeneratedMilestone} from "@/hooks/useMilestoneGenerator";
-import {ContractFormValues} from "../components/ContractForm";
+
+
 import { supabase } from "@/integrations/supabase/client",
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator";
@@ -15,12 +12,10 @@ interface Milestone {
 
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "../components/ContractForm",
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface Milestone {
   title: string,
   description: string,
@@ -92,12 +87,8 @@ export async function generateContract(
       paymentTerms: values.paymentTerms,
       paymentAmount: values.paymentAmount,
       additionalClauses: additionalClauses,
-<<<<<<< HEAD
-      milestones: milestoneData}
-  });
-  
-  if (error) {
-    throw error
+
+
 import { supabase } from "@/integrations/supabase/client",;
 import { TalentProfile } from "@/types/talent",;
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",;
@@ -140,24 +131,18 @@ export async function generateContract(;
   });
   if (error) {;
     throw error;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
   
   if (data.success && data.contract) {
     return data.contract
-=======
-  
-  if (data && data.success && data && data.contract) {
-    return data && data.contract
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   } else {
     throw new Error("Failed to generate contract")
-<<<<<<< HEAD
-  }
-}
-=======
+
 
 import { supabase } from '@/integrations / supabase / client';
 import { TalentProfile } from '@/types / talent';
@@ -175,12 +160,7 @@ export async function generate_contract (
   client_name: string;
   generated_milestones: GeneratedMilestone[]): Promise < string> {
   const additional_clauses = values.additional_clauses || [];
-=======
 
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
   // Prepare milestone data if we have AI - generated milestones;
   const milestone_data = generated_milestones.length > 0;
@@ -220,13 +200,12 @@ if ( {) {
 
   } else {;
     throw new Error("Failed to generate contract");
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 ;

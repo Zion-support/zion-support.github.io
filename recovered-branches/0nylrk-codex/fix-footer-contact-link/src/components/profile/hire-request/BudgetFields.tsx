@@ -33,19 +33,14 @@ import { FormValues } from "./useHireRequestForm",;
 interface BudgetFieldsProps {;
   form: UseFormReturn<FormValues>;
   talent?: TalentProfile;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
-=======
-<<<<<<< HEAD
+
+
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
 export function BudgetFields({ form, talent }: BudgetFieldsProps) {
@@ -96,11 +91,7 @@ export function BudgetFields({ form, talent }: BudgetFieldsProps) {
         )}
       />
     </>
-<<<<<<< HEAD
-  );
-}
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
+
 import {UseFormReturn} from "react-hook-form";
 import {FormField, FormItem, FormLabel, FormControl, FormMessage} from "@/components/ui/form";
 import {Input} from "@/components/ui/input";
@@ -112,7 +103,7 @@ interface BudgetFieldsProps {;
 }
 
 export function BudgetFields(): any ({ form, talent }: BudgetFieldsProps) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <>;
       <FormField
@@ -174,15 +165,7 @@ function BudgetFields() {
             <FormMessage className="text-red-400" />;
           </FormItem>;
         )}
-<<<<<<< HEAD
-      />
-    </>
-  );
-}
-  )
-}
-;
-=======
+
       />;
 
 
@@ -234,21 +217,7 @@ function BudgetFields() {
   );
 }
 
-=======
-                />;
-              </div>;
-            </FormControl>;
-            <FormMessage className="text - red - 400" />;
-          </FormItem>)}
-      />;
-    </>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  )
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

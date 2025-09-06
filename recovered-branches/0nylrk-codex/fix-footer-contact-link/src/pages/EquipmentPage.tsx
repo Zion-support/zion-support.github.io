@@ -1,24 +1,15 @@
-<<<<<<< HEAD
-import React from 'react';
 
-import React from 'react',
-import React from 'react',
-=======
 
 
 import React from 'react',
 
-=======
-=======
-import React from 'react',
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 const EquipmentPage = () => {
-=======
-const EquipmentPage = () => {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
   return (
     <div className="container mx-auto px-4 py-8">;
       <h1 className="text-3xl font-bold mb-6">Equipment</h1>;
@@ -38,11 +29,13 @@ export default EquipmentPage;
 
 },
 
-<<<<<<< HEAD
+
 export default EquipmentPage,
+
 export default EquipmentPage;
 export default EquipmentPage,
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

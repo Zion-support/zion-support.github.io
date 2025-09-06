@@ -1,35 +1,20 @@
 
-<<<<<<< HEAD
-=======
+
 import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
 import {Configuration, OpenAIApi} from "npm: openai@4 ;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*"
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-<<<<<<< HEAD
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
-
-=======
-=======
 
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",;
-import {Configuration, OpenAIApi} from "npm: openai@4.28.0";
-
-=======
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { Configuration, OpenAIApi } from "npm: openai@4.28.0",
-
-
+>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"},
@@ -42,19 +27,17 @@ serve(async (req) => {
     const { query } = await req && req.json();
     if (!query) {
       return new Response(
-<<<<<<< HEAD
+
         JSON.stringify({ error: "Query is required" });
         JSON.stringify({ error: "Query is required" }),
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       )
     }
     const openAiKey = Deno.env.get("OPENAI_API_KEY");
-=======
 
-
-    const openAiKey = Deno && Deno.env.get("OPENAI_API_KEY");
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     if (!openAiKey) throw new Error("OPENAI_API_KEY is not set");
     const configuration = new Configuration({ apiKey: openAiKey });
     const openai = new OpenAIApi(configuration);
@@ -90,7 +73,7 @@ serve(async (req) => {
       filters = { type: null, skills: null, location: null, budget: null, availability: null }
     }
     return new Response(
-<<<<<<< HEAD
+
       JSON.stringify({ filters });
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
@@ -100,21 +83,8 @@ serve(async (req) => {
       JSON.stringify({ error: error.message });
       { status: 500, headers: { ...corsHeaders, "Content-Type": "application/json" } }
     )
-  }
-});
-
-=======
-
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { Configuration, OpenAIApi } from 'npm: openai@4.28.0';
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*",
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       JSON.stringify({ filters }),
 
 ;
@@ -168,13 +138,11 @@ if ( {) {
       JSON.stringify ({ error: error.message });
       { status: 500, headers: { ...cors_headers, "Content - Type": "application / json" } }
     );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 });

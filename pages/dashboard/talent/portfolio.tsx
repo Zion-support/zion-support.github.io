@@ -1,55 +1,7 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-<<<<<<< HEAD
-=======
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {GetServerSideProps} from 'next';
-import React, { useRef, useState } from 'react';
-import PdfExportButton from '../../../components/ui/PdfExportButton';
-import ResumePreview, {;
-  ResumeData,;
 
-<<<<<<< HEAD
-import { GetServerSideProps } from 'next',
-import React, { useRef, useState } from 'react',
-import PdfExportButton from '../../../components/ui/PdfExportButton',
-import ResumePreview, { ResumeData } from '../../../components/ui/ResumePreview',
-import { createServerClient } from '../../../utils/supabase/server',
-export default function TalentPortfolio() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('light'),
-  const ref = useRef<HTMLDivElement>(null),
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const data: ResumeData = {
     name: 'Your Name',
     contact: {
@@ -75,7 +27,7 @@ export default function TalentPortfolio() {
           <option value="dark">Dark</option>
         </select>
       </div>
-<<<<<<< HEAD
+
       <PdfExportButton
         targetRef={ref}
         fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
@@ -89,44 +41,15 @@ export const getServerSideProps: GetServerSideProps = async () => {;
   if (!user) {
     return { redirect: { destination: '/auth', permanent: false } } as any;
   }
-return { props: {} }
-}
-
-=======
-<<<<<<< HEAD
-      <PdfExportButton
-        targetRef={ref}
-        fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`}
-      />
-      <ResumePreview ref={ref} data={data} theme={theme} />
-    </div>
-  );
-export const getServerSideProps: GetServerSideProps = async () => {;
-  const supabase = createServerClient();
-  const user = await (supabase as any).auth.getUser?.()
-  if (!user) {
-    return { redirect: { destination: '/auth', permanent: false } } as any;
-  }
-<<<<<<< HEAD
-return { props: {} }
-}
-
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 return { props: {} };
 };
 
 }
-<<<<<<< HEAD
-=======
 
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       <PdfExportButton targetRef={ref} fileName={`resume-${data.name.replace(/\s+/g, '-').toLowerCase()}.pdf`} />
       <ResumePreview ref={ref} data={data} theme={theme} />
     </div>
@@ -142,8 +65,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: {} }
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
 };
-<<<<<<< HEAD
-=======
+
 
 import PdfExportButton from '../../../components / ui / PdfExportButton';
 import ResumePreview, {
@@ -220,9 +142,6 @@ return { props: {} }
 }
 ;
 
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

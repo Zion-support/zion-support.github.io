@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {useState, useEffect} from "react";
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
@@ -19,11 +12,12 @@ import {TalentProfile} from "@/types/talent";
 import {toast} from "@/components/ui/use-toast";
 import {useNavigate} from "react-router-dom";
 export default function SavedTalentsPage() {;
-<<<<<<< HEAD
+
   const { user } = useAuth();
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const navigate = useNavigate();
+
 import { useState, useEffect } from "react",
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
@@ -45,17 +39,14 @@ export default function SavedTalentsPage() {
   const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const navigate = useNavigate(),
-=======
-
-  const { user } = useAuth();
-  const [savedTalents, setSavedTalents] = useState<TalentProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true);
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   useEffect(() => {;
@@ -104,14 +95,7 @@ if ( {) {
             `;
 
             talent_profile (
-=======
 
-        const { data, error } = await supabase;
-          .from("saved_talents");
-          .select(;
-            `;
-            talent_profile (;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               id;
               user_id;
               full_name;
@@ -149,7 +133,7 @@ if ( {) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         if (error) {;
           throw error;
-=======
+
               is_verified);
           `);
           .eq ("user_id", user.id);
@@ -160,6 +144,8 @@ if ( {) {
 }
           throw error;
         }
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       } catch (error) {
 
         console.error ("Error fetching saved talents:", error);
@@ -199,7 +185,7 @@ if ( {) {
       if (!user) {
         console.warn("User not authenticated.")
         return
-<<<<<<< HEAD
+
       }
       if (isCurrentlySaved) {
         // Remove from saved talents
@@ -210,13 +196,8 @@ if ( {) {
           .eq('talent_id', talentId);
         if (error) {
           throw error
-        }
-=======
 
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       } catch (error) {;
         console.error("Error fetching saved talents:", error),;
         toast({;
@@ -254,12 +235,11 @@ if ( {) {
           .eq('talent_id', talentId),;
         if (error) {;
           throw error;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         }
   
         setSavedTalents(prevTalents =>
@@ -607,15 +587,10 @@ if ( {) {
           <div className="grid grid - cols - 1 md:grid - cols - 2 lg:grid - cols - 3 gap - 6 mt - 8">;
             {saved_talents.map ((talent) => (
               <TalentCard;
-=======
-            {savedTalents.map((talent) => (;
-              <TalentCard;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 key={talent.id}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
                 talent={talent}

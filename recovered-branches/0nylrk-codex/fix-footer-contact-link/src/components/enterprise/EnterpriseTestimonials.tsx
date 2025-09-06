@@ -1,63 +1,23 @@
 
 import React from "react";
 import { Quote } from "lucide-react";
-<<<<<<< HEAD
-import {
-=======
 
-import {;
-  Carousel,;
-  CarouselContent,;
-  CarouselItem,;
-  CarouselNext,;
-  CarouselPrevious,;
-} from "@/components/ui/carousel";
 
-const testimonials = [;
-  {;
-    quote:;
-      "Implementing Zion's Enterprise solution has reduced our time-to-hire by 40% and significantly improved the quality of candidates we're seeing.",;
-    author: "Sarah Johnson",;
-    title: "VP of Talent Acquisition",;
-    company: "TechGlobal Inc.",;
-    image: "/placeholder && placeholder.svg",;
-  },;
-  {;
-    quote:;
-      "The admin tools give us incredible visibility into our hiring process across multiple departments. Our team loves the custom branding options.",;
-    author: "Michael Chen",;
-    title: "Director of HR",;
-    company: "InnovateCorp",;
-    image: "/placeholder && placeholder.svg",;
-  },;
-  {;
-    quote:;
-      "The dedicated talent pool makes finding specialized AI engineers much faster than our previous solutions. The ROI has been tremendous.",;
-    author: "Elena Rodriguez",;
-    title: "CTO",;
-    company: "FutureTech Systems",;
-    image: "/placeholder && placeholder.svg",;
-  },;
 
-];
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   Carousel,
   CarouselContent,
   CarouselItem,
   CarouselNext,
   CarouselPrevious,;
 } from "@/components/ui/carousel";
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
+
 
   Carousel
   CarouselContent
@@ -125,39 +85,7 @@ const testimonials = [
 export function EnterpriseTestimonials() {;
   return (
 
-=======
-                      <img
-                        src={testimonial.image}
-                        alt={testimonial.author}
-                        className="h-full w-full object-cover"
-                      />
-                    </div>
-                    <div>
-                      <p className="font-bold">{testimonial.author}</p>
-                      <p className="text-sm text-muted-foreground">
-<<<<<<< HEAD
-                        {testimonial.title}, {testimonial.company}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </CarouselItem>
-            ))}
-          </CarouselContent>
-          <div className="flex justify-center gap-2 mt-8">
-            <CarouselPrevious />
-            <CarouselNext />
-          </div>
-        </Carousel>
-      </div>
-    </section>;
-  );
-}
-=======
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from "react",;
 import { Quote } from "lucide-react",;
 import {;
@@ -211,12 +139,11 @@ export function EnterpriseTestimonials() {;
                   <div className="flex items-center gap-4">;
                     <div className="h-12 w-12 rounded-full overflow-hidden bg-muted">;
                       <img;
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 ;

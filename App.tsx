@@ -10,7 +10,9 @@ import ContactPage from './src/pages/Contact';
 import ServicesPage from './src/pages/Services';
 import PricingPage from './src/pages/Pricing';
 
+
 export default function App() {
+
   return (
     <ErrorBoundary>
       <Router>
@@ -32,5 +34,7 @@ export default function App() {
     </ErrorBoundary>
   );
 
+
 }
+
 

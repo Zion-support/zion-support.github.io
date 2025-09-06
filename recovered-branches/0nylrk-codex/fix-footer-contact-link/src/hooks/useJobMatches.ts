@@ -1,50 +1,24 @@
 
-<<<<<<< HEAD
-import {useState, useEffect} from "react";
-import {supabase} from "@/integrations/supabase/client";
-import {toast} from "@/hooks/use-toast";
-import {JobMatch} from "@/types/jobs";
-export function useJobMatches(jobId: string) {;
-  const [matches, setMatches] = useState<JobMatch[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
+
+
 import { useState, useEffect } from "react",
 import { supabase } from "@/integrations/supabase/client",
 import { toast } from "@/hooks/use-toast",
 import { JobMatch } from "@/types/jobs";
 import { JobMatch } from "@/types/jobs",
+
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export function useJobMatches(jobId: string) {
   const [matches, setMatches] = useState<JobMatch[]>([]),
   const [isLoading, setIsLoading] = useState(true),
   const [isProcessing, setIsProcessing] = useState(false),
-=======
 
-
-
-export function useJobMatches(jobId: string) {
-  const [matches, setMatches] = useState<JobMatch[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [isProcessing, setIsProcessing] = useState(false);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const fetchMatches = async () => {
     setIsLoading(true);
-=======
-import { useState, useEffect } from './react';
-import { supabase } from '@/integrations / supabase / client';
-import { toast } from '@/hooks / use - toast';
-import { JobMatch } from '@/types / jobs';
-export /**
- * useJobMatches - Function description
- */
-function useJobMatches() {
-  const [matches, set_matches] = useState < JobMatch[]>([]);
-  const [is_loading, setIsLoading] = useState (true);
-  const [is_processing, setIsProcessing] = useState (false);
-;
-  const fetch_matches = async () => {
-    setIsLoading (true);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     try {
 
       const { data, error } = await supabase
@@ -143,19 +117,8 @@ function useJobMatches() {
         variant: "destructive"})
     } finally {
       setIsProcessing(false)
-<<<<<<< HEAD
-    }
-  };
 
-  useEffect(() => {
-    fetchMatches()
-  }, [jobId]);
 
-  return {
-    matches;
-    isLoading;
-    isProcessing;
-    triggerAIMatching
 import { useState, useEffect } from "react",;
 import { supabase } from "@/integrations/supabase/client",;
 import { toast } from "@/hooks/use-toast",;
@@ -227,9 +190,10 @@ export function useJobMatches(jobId: string) {;
     isLoading;
     isProcessing;
     triggerAIMatching;
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
 

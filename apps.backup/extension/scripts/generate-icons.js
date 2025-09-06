@@ -20,9 +20,8 @@ for (const size of sizes) {
   const out = resolve(outDir, `icon-${size}.png`),
   await sharp(svgPath).resize(size, size).png().toFile(out),
   // eslint-disable-next-line no-console
-<<<<<<< HEAD
-  console.log('generated', out)
-};
+
+
   // // // console.log('generated', out)
 #!/usr/bin/env node;
 import { mkdirSync, existsSync } from 'node: fs',;
@@ -39,9 +38,13 @@ for (const size of sizes) {;
   await sharp(svgPath).resize(size, size).png().toFile(out);
   // eslint-disable-next-line no-console;
   // // // console.log('generated', out);
-}
-}
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+}
+}
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+}
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,34 +1,16 @@
 
-<<<<<<< HEAD
-import { supabase } from "@/integrations/supabase/client";
-import {supabase} from "@/integrations/supabase/client";
+
+
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 import { supabase } from "@/integrations/supabase/client",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 
-=======
-
-import {supabase} from "@/integrations/supabase/client";
 
 
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
 
 
-import { supabase } from '@/integrations / supabase / client';
-import type { QuoteRequest, QuoteStatus } from "@/types / quotes";
-
-export const quoteRequestService = {
-  // Get all quote requests (for admin);
-  get_all: async () => {
-    const { data, error } = await supabase;
-      .from ('quote_requests');
-      .select (`;
-        *;
-=======
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 export const quoteRequestService = {
   // Get all quote requests (for admin)
   getAll: async () => {
@@ -188,53 +170,8 @@ if (throw error) {
     // If marking as responded, set replied_at
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()
-<<<<<<< HEAD
-    }
-    
-    // If marking as in_review and viewed_at is null, set viewed_at
-    if (status === 'in_review') {
-      const { data } = await supabase
-        .from('quote_requests')
-        .select('viewed_at')
-        .eq('id', id)
-        .single();
-      
-      if (!data.viewed_at) {
-        updates.viewed_at = new Date().toISOString()
-      }
-    }
-    
-    const { data, error } = await supabase
-      .from('quote_requests')
-      .update(updates)
-      .eq('id', id)
-      .select();
-    
-    if (error) throw error;
-    return data[0] as QuoteRequest
-  };
-  
-  // Archive/Unarchive a quote request
-  toggleArchive: async (id: string, isArchived: boolean) => {
-    const { data, error } = await supabase
-      .from('quote_requests')
-      .update({ is_archived: isArchived })
-      .eq('id', id)
-      .select();
-    
-    if (error) throw error;
-    return data[0] as QuoteRequest
-  };
-  
-  // Delete a quote request
-  delete: async (id: string) => {
-    const { error } = await supabase
-      .from('quote_requests')
-      .delete()
-      .eq('id', id);
-    
-    if (error) throw error;
-    return true
+
+
 import { supabase } from "@/integrations/supabase/client",;
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",;
 export const quoteRequestService = {;
@@ -328,9 +265,10 @@ export const quoteRequestService = {;
       .eq('id', id),;
     if (error) throw error;
     return true;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 };

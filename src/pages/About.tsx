@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 import { Header } from '../components/Header';
 import Footer from '../components/Footer';
 import { GradientHeading } from '../components/GradientHeading';
@@ -191,6 +192,7 @@ const About: React.FC = () => {
                 364 E Main St STE 1008<br />
                 Middletown, DE 19709
               </p>
+
             </div>
           </div>
         </div>
@@ -266,6 +268,8 @@ const About: React.FC = () => {
       <Footer />
     </div>
   );
+
 };
 
 export default About;
+

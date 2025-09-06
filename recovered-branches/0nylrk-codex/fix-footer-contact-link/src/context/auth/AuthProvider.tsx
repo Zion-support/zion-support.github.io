@@ -1,11 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 import React, { useEffect } from "react";
 import {supabase, getFromProfiles} from "../../integrations/supabase/client";
 import {useAuthOperations} from "../../hooks/useAuthOperations";
@@ -15,20 +10,13 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {useAuthState} from "./useAuthState";
 import {useAuthEventHandlers} from "./useAuthEventHandlers";
 import {mapProfileToUser} from "./profileMapper";
-<<<<<<< HEAD
+
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const {
     user, setUser
     isLoading, setIsLoading
     onboardingStep, setOnboardingStep
-=======
 
-export const AuthProvider = ({ children }: { children: React && React.ReactNode }) => {;
-  const { ;
-    user, setUser, ;
-    isLoading, setIsLoading, ;
-    onboardingStep, setOnboardingStep ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   } = useAuthState();
 
   const navigate = useNavigate();
@@ -47,7 +35,7 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
     loginWithTwitter;
     loginWithWeb3;
   } = useAuthOperations(setUser, setIsLoading);
-<<<<<<< HEAD
+
   // Wrapper for login to match the AuthContextType interface
   const login = async (email: string, password: string) => {
     return loginImpl({ email, password })
@@ -59,12 +47,9 @@ export const AuthProvider = ({ children }: { children: React && React.ReactNode 
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners
     cleanupAuthState();
-=======
 
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useEffect } from "react",
 import { supabase, getFromProfiles } from "../../integrations/supabase/client",
 import { useAuthOperations } from "../../hooks/useAuthOperations",
@@ -74,12 +59,11 @@ import { useNavigate, useLocation } from 'react-router-dom',
 import { useAuthState } from "./useAuthState",
 import { useAuthEventHandlers } from "./useAuthEventHandlers",
 import { mapProfileToUser } from "./profileMapper",
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const { 
     user, setUser, 
@@ -230,11 +214,12 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
           // Show logout toast when user logs out;
           if (event === 'SIGNED_OUT') {;
             handleSignedOut();
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           }
         }
         setIsLoading(false);
@@ -262,60 +247,14 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {;
     logout;
     resetPassword;
     updateProfile;
-=======
-import React, { useEffect } from './react';
-import { supabase, getFromProfiles } from '../../integrations / supabase / client';
-import { useAuthOperations } from '../../hooks / useAuthOperations';
-import { AuthContext } from './AuthContext';
-import { cleanupAuthState } from '../../utils / auth_utils';
-import {use_navigate, use_location} from 'react-router-dom';
-import { useAuthState } from './useAuthState';
-import { useAuthEventHandlers } from './useAuthEventHandlers';
-import { mapProfileToUser } from './profile_mapper';
-export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: any {
-  const {
-    user, set_user,
-    is_loading, setIsLoading,
-    onboarding_step, setOnboardingStep;
-  } = useAuthState ();
-;
-  const navigate = use_navigate ();
-  const location = use_location ();
-  const { handleSignedIn, handleSignedOut } = useAuthEventHandlers (set_user, setOnboardingStep);
-;
-  const {
-    login: login_impl,
-    signup: signup_impl,
-    logout;
-    reset_password;
-    update_profile;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
     loginWithGoogle;
     loginWithFacebook;
     loginWithTwitter;
     loginWithWeb3;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-
-    onboardingStep;
-  };
 
 
-  return (
-    <AuthContext && AuthContext.Provider value={authContextValue}>;
-      {children}
-    </AuthContext.Provider>
-  )
-}
 
-};
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     ),;
     // Initial session check;
     supabase.auth.getSession().then(({ data: { session } }) => {;
@@ -348,10 +287,9 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) =>: an
     </AuthContext.Provider>;
   );
 };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

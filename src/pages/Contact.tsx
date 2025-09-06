@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 
 import { Header } from '../components/Header';
@@ -165,9 +166,11 @@ const Contact: React.FC = () => {
                     placeholder="+1 (555) 123-4567"
                   />
                 </div>
+
               </div>
 
               <div>
+
                 <label htmlFor="service" className="block text-sm font-medium text-gray-300 mb-2">
                   Service Interest
                 </label>
@@ -298,6 +301,7 @@ const Contact: React.FC = () => {
           </div>
         </div>
       </div>
+
 
     </div>
   );

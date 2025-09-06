@@ -1,14 +1,6 @@
 
-<<<<<<< HEAD
 
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts"
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0"
-import {Resend} from "npm: resend@2.0.0";
-=======
-import {serve} from "https: //deno && deno.land/std@0 && 0.190.0/http/server && server.ts",
-import {createClient} from "https: //esm && esm.sh/@supabase/supabase-js@2 && 2.45.0",
-import {Resend} from "npm: resend@2 ;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 // Initialize Resend with API key
 const resend = new Resend(Deno && Deno.env.get("RESEND_API_KEY"));
 
@@ -20,23 +12,7 @@ const supabase = createClient(supabaseUrl, supabaseServiceKey);
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*";
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type"}
-=======
-import { serve } from 'https: //deno.land / std@0.190.0 / http / server.ts';,
-import { create_client } from 'https: //esm.sh/@supabase / supabase - js@2.45.0';,
-import { Resend } from 'npm: resend@2.0.0';
-// Initialize Resend with API key;
-const resend = new Resend (Deno.env.get ("RESEND_API_KEY"));
-;
-// Initialize Supabase client;
-const supabase_url = Deno.env.get ("SUPABASE_URL")!;
-const supabaseServiceKey = Deno.env.get ("SUPABASE_SERVICE_ROLE_KEY")!,
-const supabase = create_client (supabase_url, supabaseServiceKey);
-;
-const cors_headers = {
-  "Access - Control - Allow - Origin": "*";
-  "Access - Control - Allow - Headers": "authorization, x - client - info, apikey, content - type"}
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 interface EmailData {
   user_id: string;
   email_type: string;
@@ -44,30 +20,10 @@ interface EmailData {
   user_type: string;
   days_inactive?: number;
   onboarding_status?: any;
-<<<<<<< HEAD
+
   job_id?: string
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-import {Resend} from "npm: resend@2.0.0";
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-import { Resend } from "npm: resend@2.0.0",
-=======
 
 
-
-import {serve} from "https: //deno.land/std@0.190.0/http/server.ts",
-import {createClient} from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
-import {Resend} from "npm: resend@2.0.0";
-
-=======
-import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",
-import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",
-import { Resend } from "npm: resend@2.0.0",
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 // Initialize Resend with API key
 const resend = new Resend(Deno.env.get("RESEND_API_KEY")),
 
@@ -154,11 +110,7 @@ serve(async (req) => {
 
     if (emailResponse.error) {
       throw new Error(`Failed to send email: ${emailResponse.error.message}`)
-=======
 
-    if (emailResponse && emailResponse.error) {
-      throw new Error(`Failed to send email: ${emailResponse && emailResponse.error.message}`)
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
     // Update job status
     await supabase
@@ -186,99 +138,7 @@ serve(async (req) => {
         headers: {
           ...corsHeaders
           "Content-Type": "application/json"}
-=======
-  job_id?: string,
-  job_title?: string;
-}
-serve (async (req) => {
-  // Handle CORS preflight requests;
-  // Check condition
-if ( {) {
-  $2
-}
-    return new Response (null, { headers: cors_headers });
-  }
-  try {
-    // Extract job data from request;
-    const job_data = await req.json ();
-    const { id: job_id, payload } = job_data;
-    const email_data = payload as EmailData;
-;
-    // Fetch user's email;
-    const { data: user_data, error: user_error } = await supabase;
-      .from ("profiles");
-      .select ("id, display_name, avatar_url, user_type");
-      .eq ("id", email_data.user_id);
-      .single ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Error fetching user data: ${user_error.message}`);
-    }
-    const { data: auth_user, error: auth_error } = await supabase;
-      .from ("auth.users");
-      .select ("email");
-      .eq ("id", email_data.user_id);
-      .single ();
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Error fetching user email: ${auth_error.message}`);
-    }
-    const user_email = auth_user.email;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error ("User email not found");
-    }
-    // Generate email content based on email type;
-    const { subject, html } = await generate_email (email_data, user_data);
-;
-    // Send email via Resend;
-    const email_response = await resend.emails.send ({
-      from: "Zion AI Marketplace <notifications@zion.ai>";
-      to: user_email;
-      subject: subject,
-      html: html});
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      throw new Error (`Failed to send email: ${email_response.error.message}`);
-    }
-    // Update job status;
-    await supabase;
-      .from ("scheduled_jobs");
-      .update ({
-        status: "completed",
-        completed_at: new Date ().toISOString ()});
-      .eq ("id", job_id);
-;
-    // Update email campaign record;
-    await supabase;
-      .from ("email_campaigns");
-      .update ({
-        status: "sent",
-        sent_at: new Date ().toISOString ()});
-      .eq ("user_id", email_data.user_id);
-      .eq ("campaign_type", email_data.email_type);
-;
-    return new Response (
-      JSON.stringify ({
-        success: true;
-        message: "Email sent successfully",
-        email: email_response});
-      {
-        headers: {
-          ...cors_headers,
-          "Content - Type": "application / json"}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         status: 200}
     );
   } catch (error) {
@@ -290,14 +150,7 @@ if ( {) {
         success: false,
 
         error: error.message});
-=======
-    console && console.error("Error in send-retention-email function:", error);
 
-    return new Response(
-      JSON && JSON.stringify({
-        success: false,
-        error: error && error.message});
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       {
         headers: {
 
@@ -338,12 +191,8 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
       {
         headers: {
           ...corsHeaders,
-<<<<<<< HEAD
-          "Content-Type": "application/json"};
-        status: 500}
-    )
-  }
-});
+
+
           "Content-Type": "application/json"},
 import { serve } from "https: //deno.land/std@0.190.0/http/server.ts",;
 import { createClient } from "https: //esm.sh/@supabase/supabase-js@2.45.0",;
@@ -455,9 +304,10 @@ serve(async (req) => {;
     );
   }
 }),
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {
   const { email_type, display_name, user_type } = emailData,
@@ -471,27 +321,7 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
   if (email_type === "welcome_series") {
     // Customize based on user type
     if (user_type === "jobSeeker" |user_type === "creator") {
-=======
-;
-async function generate_email (email_data: EmailData, user_data: any): Promise<{ subject: string, html: string }> {
-  const { email_type, display_name, user_type } = email_data;
-  const first_name = display_name?.split (" ")[0] || "there";
-;
-  // Get onboarding status for personalized content;
-  let next_action = "";
-  let cta_link = "/dashboard";
-  let cta_text = "Go to Dashboard";
-;
-  // Check condition
-if ( {) {
-  $2
-}
-    // Customize based on user type;
-    // Check condition
-if ( {) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
       return {
         subject: `Welcome to Zion AI Marketplace, ${first_name}!`;
         html: `;
@@ -569,61 +399,7 @@ if ( {) {
           nextAction = "invite talent to speed up your hiring process";
           ctaLink = "/talent";
           ctaText = "Find Talent"
-=======
-  } else // Check condition
-if ( {) {
-  $2
-}
-    // Day 3 incomplete action reminder;
-    // Check condition
-if ( {) {
-  $2
-}
-      const onboarding = email_data.onboarding_status;
-;
-      // Check condition
-if ( {) {
-  $2
-}
-        // Check condition
-if ( {) {
-  $2
-}
-          next_action = "complete your profile";
-          cta_link = "/profile";
-          cta_text = "Complete Your Profile";
-        } else // Check condition
-if ( {) {
-  $2
-}
-          next_action = "add your skills to get matched with the right opportunities";
-          cta_link = "/profile / skills";
-          cta_text = "Add Your Skills";
-        } else // Check condition
-if ( {) {
-  $2
-}
-          next_action = "set your availability to help clients find you";
-          cta_link = "/profile / settings";
-          cta_text = "Set Your Availability";
-        }
-      } else {
-        // For clients;
-        // Check condition
-if ( {) {
-  $2
-}
-          next_action = "post your first job to start finding talent";
-          cta_link = "/post - job";
-          cta_text = "Post a Job";
-        } else // Check condition
-if ( {) {
-  $2
-}
-          next_action = "invite talent to speed up your hiring process";
-          cta_link = "/talent";
-          cta_text = "Find Talent";
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         }
       }
     }
@@ -775,17 +551,10 @@ if ( {) {
         </div>
         <p>The Zion AI Marketplace Team</p>
       </div>
-<<<<<<< HEAD
-    `}
-}
-=======
+
 
       subject: `Tips to find the perfect talent for "${email_data.job_title}"`;
-=======
 
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }),;
 async function generateEmail(emailData: EmailData, userData: any): Promise<{ subject: string, html: string }> {;
   const { email_type, display_name, user_type } = emailData,;
@@ -913,14 +682,12 @@ async function generateEmail(emailData: EmailData, userData: any): Promise<{ sub
         </div>;
         <p > The Zion AI Marketplace Team</p>;
       </div>;
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     `}
 }
 ;

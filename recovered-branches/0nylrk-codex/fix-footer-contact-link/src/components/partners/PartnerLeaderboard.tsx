@@ -1,20 +1,11 @@
 
-<<<<<<< HEAD
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Crown, Medal, Trophy} from "lucide-react";
+
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge";
 import { Crown, Medal, Trophy } from "lucide-react";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar';
-import { Badge } from '@/components / ui / badge';
-import { Crown, Medal, Trophy } from './lucide-react';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LeaderboardEntry {
 
   id: string
@@ -25,16 +16,12 @@ interface LeaderboardEntry {
 import { Badge } from "@/components/ui/badge",
 import { Crown, Medal, Trophy } from "lucide-react",
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
+
+
 interface LeaderboardEntry {
   id: string,
   rank: number,
@@ -53,26 +40,27 @@ export function PartnerLeaderboard() {
       rank: 1
       name: "AI Tech Guru"
       avatar: "", // URL would be here
-<<<<<<< HEAD
+
       referrals: 178
       earnings: 4500
 
-      referrals: 178,
-      earnings: 4500,
-      badges: ["gold", "trending"];
-    };
+
       badges: ["gold", "trending"]
     }
     },
-=======
+
 
 
       referrals: 178,
       earnings: 4500,
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     {
 
       id: "2"
@@ -111,8 +99,9 @@ export function PartnerLeaderboard() {
     {
 
 
-<<<<<<< HEAD
+
       badges: ["newcomer"]
+
     }
   ];
   // Function to render rank badge
@@ -137,29 +126,8 @@ export function PartnerLeaderboard() {
                   className={`flex items-center justify-between p-3 rounded-md ${
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10'
-    },
-    {
-      id: "5",
-      rank: 5,
-      name: "Deep Learning Daily",
-      avatar: "",
-      referrals: 87,
-      earnings: 2175,
-      badges: ["newcomer"]
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",;
-import { Badge } from "@/components/ui/badge",;
-import { Crown, Medal, Trophy } from "lucide-react",;
-=======
 
 
-
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar";
-import {Badge} from "@/components/ui/badge";
-import {Crown, Medal, Trophy} from "lucide-react";
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LeaderboardEntry {;
   id: string,;
   rank: number,;
@@ -312,7 +280,7 @@ function PartnerLeaderboard() {
           <CardDescription > This month's top - performing partners</CardDescription>;
         </CardHeader>;
         <CardContent>;
-<<<<<<< HEAD
+
           <div className="space-y-4">;
             {leaderboard.length > 0 ? (;
               leaderboard.map(entry => (;
@@ -321,12 +289,10 @@ function PartnerLeaderboard() {
                   className={`flex items-center justify-between p-3 rounded-md ${;
                     entry.rank === 1 ? 'bg-yellow-500/10 border border-yellow-500/30' :;
                     entry.rank <= 3 ? 'bg-zion-blue-light/20' : 'bg-zion-blue/10';
-=======
-          <div className="space - y-4">;
-            {leaderboard.length > 0 ? (
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -414,44 +380,10 @@ function PartnerLeaderboard() {
                           Trending;
                         </Badge>;
                       )}
-=======
-                      )}
-                      {entry.badges.includes("trending") && (
-                        <Badge variant="outline" className="bg-blue-500/20 border-blue-500 text-blue-400">
-                          Trending
-                        </Badge>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))
-            ) : (
-              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">
-                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />
-                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>
-                <p className="text-xs text-zion-slate-light">
-                  Start referring to earn your spot on the leaderboard
-                </p>
-              </div>
-                    </div>;
-                  </div>;
-                </div>;
-              ));
-            ) : (;
-              <div className="text-center p-12 border border-dashed border-zion-blue-light rounded-lg">;
-                <Trophy className="h-16 w-16 mx-auto text-zion-slate-light mb-4" />;
-                <p className="text-zion-slate-light mb-2">Leaderboard will appear here</p>;
-                <p className="text-xs text-zion-slate-light">;
-                  Start referring to earn your spot on the leaderboard;
-                </p>;
-              </div>;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
             )}
           </div>
         </CardContent>

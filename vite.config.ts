@@ -1,5 +1,7 @@
 
 
+
+
 import react from '@vitejs/plugin-react';
 import path from 'node:path';
 
@@ -24,8 +26,10 @@ export default defineConfig({
       '@types': path.resolve(__dirname, './src/types'),
       '@styles': path.resolve(__dirname, './src/styles'),
 
-
-
+      '@assets': path.resolve(__dirname, './src/assets'),
+    },
+    extensions: ['.js', '.jsx', '.ts', '.tsx'],
+  },
 
   build: {
     target: 'esnext',
@@ -36,20 +40,48 @@ export default defineConfig({
         manualChunks: {
 
 
+
+
           'react-vendor': ['react', 'react-dom'],
         },
         chunkFileNames: 'js/[name]-[hash].js',
         entryFileNames: 'js/[name]-[hash].js',
 
-
-        }
-      }
+        assetFileNames: (assetInfo) => {
+          if (/\.(css)$/.test(assetInfo.name || '')) return 'css/[name]-[hash].[ext]';
+          if (/\.(png|jpe?g|gif|svg|webp|ico)$/.test(assetInfo.name || '')) return 'images/[name]-[hash].[ext]';
+          if (/\.(woff2?|eot|ttf|otf)$/.test(assetInfo.name || '')) return 'fonts/[name]-[hash].[ext]';
+          return 'assets/[name]-[hash].[ext]';
+        },
+      },
+    },
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+        pure_funcs: ['console.log', 'console.info', 'console.debug', 'console.warn'],
+        passes: 2,
+        unsafe: true,
+        unsafe_comps: true,
+        unsafe_math: true,
+        unsafe_proto: true,
+        unsafe_regexp: true,
+        unsafe_undefined: true,
+      },
+      mangle: {
+        safari10: true,
+        properties: {
+          regex: /^_/,
+        },
+      },
     },
 
     chunkSizeWarningLimit: 1000,
     reportCompressedSize: false,
     emptyOutDir: true,
     assetsInlineLimit: 4096,
+
+
 
   },
   optimizeDeps: {
@@ -59,6 +91,7 @@ export default defineConfig({
       'react-router-dom',
       'framer-motion',
       'lucide-react',
+
       'clsx',
       'tailwind-merge'
 
@@ -113,6 +146,7 @@ export default defineConfig({
 
 
 
+
     ],
     exclude: ['@radix-ui/react-icons'],
     esbuildOptions: {
@@ -161,5 +195,7 @@ export default defineConfig({
     },
   },
 
+
 });
+
 

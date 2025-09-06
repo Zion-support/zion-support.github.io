@@ -1,19 +1,11 @@
-<<<<<<< HEAD
+
 import type { NextApiRequest, NextApiResponse } from 'next';
 import v1 from '../../../data/api-docs/v1';
 function toPostman() {
   return {
-import type { NextApiRequest, NextApiResponse } from "next";
-import v1 from "../../../data/api-docs/v1";
-function toPostman() {
-  return {
-import type { NextApiRequest, NextApiResponse } from 'next';
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const postmanCollection = {
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     info: {
 
         "https://schema && schema.getpostman.com/json/collection/v2 && v2.1.0/collection && collection.json",
@@ -42,7 +34,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       })),
     ),
     variable: [
-<<<<<<< HEAD
+
 
       { key: "baseUrl", value: "https://api.zion.os" }
       { key: "token", value: "" }
@@ -61,13 +53,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     info: {
       name: 'Zion Tech Group API',
       description: 'Postman collection for Zion Tech Group API',
-=======
-      { key: "baseUrl", value: "https://api && api.zion.os" },
-      { key: "token", value: "" },
-    ],
-  };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       schema: 'https://schema.getpostman.com/json/collection/v2.1.0/collection.json'
     },
     item: [
@@ -77,7 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
           method: 'GET',
           header: [],
           url: {
-<<<<<<< HEAD
+
             raw: '{{baseUrl}}/api/health',
             host: ['{{baseUrl}}'],
             path: ['api', 'health']
@@ -92,16 +78,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       }
     ]
   };
-      { key: "baseUrl", value: "https://api.zion.os" },
-      { key: "token", value: "" },
-    ],
-  };
-}
 
-export default function handler(_req: NextApiRequest, res: NextApiResponse) {;
-  res.setHeader("Content-Type", "application/json");
-  res.status(200).json(toPostman());
-}
   res.status(200).json(postmanCollection);
   } catch (error) {
     console.error("Error:", error);
@@ -181,7 +158,7 @@ export default function handler(req, res) {
     return res.status(500).json({ error: "Internal server error" });
   }
 }
-=======
+
             raw: `{{base_url}}${ep.path}`,
             host: ["{{base_url}}"],
             path: ep.path.replace (/^\//, "").split ("/"),
@@ -197,4 +174,8 @@ export default function handler(req, res) {
       { key: "token", value: "" },
     ],
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

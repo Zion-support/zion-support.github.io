@@ -15,36 +15,20 @@ export default function FavoritesPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
+
   return (
     <div>
+
       <h2 className=&quot;text-xl font-semibold mb-4&quot;>Favorites</h2>
       <ul className=&quot;list-disc pl-6&quot;>
         {favorites.map(f => <li key={f}>{f}</li>)}
       </ul>;
     </div>;
   );
-}
-  return (
-    <div>
-      <h2 className="text-xl font-semibold mb-4">Favorites</h2>
-      <ul className="list-disc pl-6">
-        {favorites.map(f => <li key={f}>{f}</li>)  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-      </ul>;
-    </div>;
-  );
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

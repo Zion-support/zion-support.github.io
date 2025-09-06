@@ -1,68 +1,28 @@
 
-<<<<<<< HEAD
+
   path: string; // full URL or relative
   requiresAuth: boolean;
 export default function TryItConsole({
-  method
-  path
-  requiresAuth
-}: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
-=======
 
-interface TryItProps {
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   method,
   path,
   requiresAuth,
 }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
-<<<<<<< HEAD
-<<<<<<< HEAD
 
 
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
-=======
-
-
-
-interface TryItProps {;
-  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
-  path: string; // full URL or relative;
-  requiresAuth: boolean;
-
-export default function TryItConsole(): any ({;
-  method,;
-  path,;
-  requiresAuth,;
-}: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https://api && api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',;
-  path: string, // full URL or relative;
-  requiresAuth: boolean;
-}
-
-export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
@@ -99,38 +59,25 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       setLoading(false);    }
   }
   return (
-<<<<<<< HEAD
-    <div className='space-y-2'>
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
-=======
 
-      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
-      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+    <div className='space-y-2'>
+
+      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+
       const res = await fetch(url, {
 
         method;
         headers;
 
-<<<<<<< HEAD
+
       setResponse(text)
     } catch (e: any) {
       setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
-      <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
-=======
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
-      const text = await res && res.text();
-      setResponse(text);
-    } catch (e: any) {;
-      setResponse(String(e?.message || e));
-    } finally {;
-      setLoading(false);
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   }
   return (
@@ -150,62 +97,16 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />
         </div>
       </div>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
-=======
-      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-        <div>
 
-          />        </div>;
-      </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
-        <div>        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e && e.target.value)} />;
-        </div>;
-        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Auth Token">Auth Token</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={token} onChange={(e) => setToken(e && e.target.value)} placeholder="Optional" />;
-        </div>;
-        <div>;
-          <label className="block text-sm mb-1" htmlFor="input-Method">Method</label>;
-          <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={method} readOnly />;
-        </div>;
-      </div>;
-      {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (;
-        <div>;
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>;
 
-          <textarea
-            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
-            value={body}
-            onChange={e => setBody(e && e.target.value)}
-            placeholder='{ }';
-          />;
-=======
-<<<<<<< HEAD
-      {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
-=======
+
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
-<<<<<<< HEAD
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-        <div>
-          <label className='block text-sm mb-1'>Request Body (JSON)</label>
-          <textarea
-            className='w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm'
-            value={body}
-            onChange={e => setBody(e.target.value)}
-            placeholder='{ }'
-          />
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       )}
       <button
         onClick={onSend}
         className='px-3 py-2 rounded bg-high-contrast-accent text-black'
-<<<<<<< HEAD
+
         disabled={loading}>;
         {loading ? 'Sending…' : 'Send Request'}
 
@@ -220,11 +121,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
   );
 }
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           <label className='block text - sm mb - 1'>Method</label>;
           <input;
             className='w - full px - 2 py - 1 rounded bg - high - contrast - tertiary border border - high - contrast - secondary';
@@ -289,15 +186,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-    <div className='space-y-2'>
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
     }
   }
@@ -306,10 +195,8 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>
 
       {(method === 'POST' || method === 'PUT' || method === 'PATCH') && (
-<<<<<<< HEAD
-        <div>
-        <div>
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

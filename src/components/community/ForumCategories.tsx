@@ -6,10 +6,9 @@
     icon: "FileText"
   }
   },
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   {
@@ -60,10 +59,9 @@ export const ForumCategories = () => {
       {visibleCategories.map((category) => {
         const Icon = iconMap[category.icon as keyof typeof iconMap],
         return (
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           <Link key={category.id} href={`/community/category/${category.id}`}>
             <Card className="h-full transition-all hover:shadow-md hover:border-zion-purple/50 cursor-pointer">
@@ -79,7 +77,7 @@ export const ForumCategories = () => {
             </Card>
           </Link>
         )
-<<<<<<< HEAD
+
       })}
     </div>
   )
@@ -88,8 +86,7 @@ export default ForumCategories
 "
   const isAdmin = user?.userType === 'admin' |user?.role === 'admin'
 export default ForumCategories
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   const isAdmin = user?.userType === 'admin' || user?.role === 'admin'
 export default ForumCategories;
@@ -178,10 +175,9 @@ export const ForumCategories = () => {;
 };
 
 export default ForumCategories;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 export default ForumCategories;
 

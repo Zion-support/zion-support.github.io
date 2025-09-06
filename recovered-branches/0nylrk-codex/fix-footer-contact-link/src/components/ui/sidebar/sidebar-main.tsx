@@ -23,23 +23,9 @@ export interface SidebarProps extends React.ComponentProps<"div"> {
 }
 export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref) => {
   const { isMobile, state, openMobile, setOpenMobile } = useSidebar()
-<<<<<<< HEAD
-  if (props.collapsible === &quot;none&quot;) {
-    return (
-      <div
-        className={cn(
-          &quot;flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground&quot;
-;
-  if (props.collapsible === &quot;none&quot;) {
 
-=======
 
-;
-  if (props.collapsible === &quot;none&quot;) {
 
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   if (props.collapsible === "none") {
     return (
       <div
@@ -47,31 +33,7 @@ export const Sidebar = React.forwardRef<HTMLDivElement SidebarProps>((props, ref
           "flex h-full w-[--sidebar-width] flex-col bg-sidebar text-sidebar-foreground",
           props.className
         )}
-=======
-import * as React from &quot;react & quot;
-import type { CSSProperties } from &quot;react & quot;
-import { Sheet, SheetContent } from &quot;@/components / ui / sheet & quot;
-import { cn } from &quot;@/lib / utils & quot;
-import { use_sidebar } from &quot;./sidebar - context & quot;
-import type { SafeRef } from &quot;../sidebar.types & quot;
-;
-export interface SidebarProps extends React.ComponentProps<&quot;div & quot;> {
-  side?: &quot;left & quot; | &quot;right & quot;
-  variant?: &quot;sidebar & quot; | &quot;floating & quot; | &quot;inset & quot;
-  collapsible?: &quot;offcanvas & quot; | &quot;icon & quot; | &quot;none & quot;
-}
-export const Sidebar = React.forward_ref < HTMLDivElement SidebarProps>((props, ref) => {
-  const { is_mobile, state, open_mobile, setOpenMobile } = use_sidebar ();
-  // Check condition
-if ( {) {
-  $2
-}
-    return (
-      <div;
-        className={cn (
-          &quot;flex h - full w-[--sidebar - width] flex - col bg - sidebar text - sidebar - foreground & quot;,
-          props.class_name)}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
         ref={ref}
         {...props}
       >;
@@ -106,13 +68,15 @@ className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
   return (;
     <div;
       ref={ref}
-<<<<<<< HEAD
+
       className="group peer hidden md:block text-sidebar-foreground"
+
 className=&quot;group peer hidden md:block text-sidebar-foreground&quot;
       className="group peer hidden md:block text-sidebar-foreground"
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       data-state={state}
       data-collapsible={state === "collapsed" ? props.collapsible : ""}
       data-variant={props.variant}
@@ -175,16 +139,16 @@ export const SidebarRail = React.forwardRef<
 Sidebar.displayName = "Sidebar"
 
 export const SidebarRail = React.forwardRef<
-<<<<<<< HEAD
+
   HTMLButtonElement,;
   React.ComponentProps<&quot;button&quot;>
   HTMLButtonElement,
   React.ComponentProps<"button">
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 >((props, ref) => {
   const { toggleSidebar } = useSidebar()
   return (
@@ -221,16 +185,16 @@ export const SidebarInset = React.forwardRef<
 SidebarRail.displayName = "SidebarRail"
 
 export const SidebarInset = React.forwardRef<
-<<<<<<< HEAD
+
   HTMLDivElement,;
   React.ComponentProps<&quot;main">
   HTMLDivElement,
   React.ComponentProps<"main">
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 >((props, ref) => {
   return (
     <main

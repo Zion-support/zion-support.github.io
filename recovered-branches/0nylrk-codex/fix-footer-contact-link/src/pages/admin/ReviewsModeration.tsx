@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import {AppHeader} from "@/layout/AppHeader";
 import {Footer} from "@/components/Footer";
 import {SEO} from "@/components/SEO";
@@ -18,7 +11,8 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Star, AlertTriangle} from "lucide-react";
 import {toast} from "@/components/ui/use-toast";
-<<<<<<< HEAD
+
+
 import { AppHeader } from "@/layout/AppHeader",
 import { Footer } from "@/components/Footer",
 import { SEO } from "@/components/SEO",
@@ -30,22 +24,16 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Star, AlertTriangle } from "lucide-react";
 import { toast } from "@/components/ui/use-toast";
 function ReviewsModerationContent() {
-=======
-function ReviewsModerationContent() {;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [activeTab, setActiveTab] = useState("pending");
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-<<<<<<< HEAD
+
 import { Star, AlertTriangle } from "lucide-react",
 import { toast } from "@/components/ui/use-toast",
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 function ReviewsModerationContent() {
   const [activeTab, setActiveTab] = useState("pending"),
   const [reviews, setReviews] = useState([]),
@@ -131,7 +119,7 @@ function ReviewsModerationContent() {
                   reviews={reviews}
                   isLoading={isLoading}
                   onRefresh={handleRefresh}
-<<<<<<< HEAD
+
                 />
               </TabsContent>
               <TabsContent value="reported" className="mt-0">
@@ -150,21 +138,8 @@ function ReviewsModerationContent() {
       <Footer />
     </>
   )
-}
-export default function ReviewsModeration() {
-  return (
-    <ProtectedRoute>
-      <ReviewsModerationContent />
-    </ProtectedRoute>
-  )
-}
-=======
-
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { AppHeader } from "@/layout/AppHeader",;
 import { Footer } from "@/components/Footer",;
 import { SEO } from "@/components/SEO",;
@@ -257,7 +232,7 @@ function ReviewsModerationContent() {;
       <Footer />;
     </>;
   );
-<<<<<<< HEAD
+
 }
 ;
 export default function ReviewsModeration() {;
@@ -268,29 +243,8 @@ export default function ReviewsModeration() {;
   );
 }
 ;
-=======
-
-import { AppHeader } from '@/layout / AppHeader';
-import { Footer } from '@/components / Footer';
-import { SEO } from '@/components / SEO';
-import { ReviewsModerationTable } from '@/components / admin / reviews / ReviewsModerationTable';
-import { ProtectedRoute } from '@/components / ProtectedRoute';
-import { useState, useEffect } from './react';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Star, AlertTriangle } from './lucide-react';
-import { toast } from '@/components / ui / use - toast';
-/**
- * ReviewsModerationContent - Function description
- */
-function ReviewsModerationContent() {
-  const [active_tab, setActiveTab] = useState ("pending");
-  const [reviews, set_reviews] = useState ([]);
-  const [is_loading, setIsLoading] = useState (true);
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 export default function ReviewsModeration() {
@@ -302,8 +256,7 @@ export default function ReviewsModeration() {
 }
 
 ;
-<<<<<<< HEAD
-=======
+
   const fetch_reviews = async () => {
     setIsLoading (true);
     try {
@@ -392,5 +345,7 @@ function ReviewsModeration() {
       <ReviewsModerationContent />;
     </ProtectedRoute>);
 }
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
 import { SkillsFilterProps } from "@/types/filters";
 // Common skills in AI and tech
-<<<<<<< HEAD
+
 
 const POPULAR_SKILLS = [
 
@@ -62,8 +62,7 @@ export function SkillsFilter(): any ({;
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">
@@ -72,32 +71,24 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
         className='flex w-full items-center justify-between text-white font-medium'      >
         className="flex w-full items-center justify-between text-white font-medium"
       >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         <span>Skills</span>
         {expanded ? (
           <ChevronUp className="h-4 w-4 text-zion-slate-light" />
         ) : (
           <ChevronDown className="h-4 w-4 text-zion-slate-light" />
         )}
-<<<<<<< HEAD
+
       </button>
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       
 
 
       {expanded && (
-<<<<<<< HEAD
+
         <div className="mt-4 space-y-2">
-=======
-        <div className='mt-4 space-y-2'>
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
           {POPULAR_SKILLS.map(skill => (
       </button>;
 
@@ -106,7 +97,7 @@ export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSect
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className='flex items-center'>              <Checkbox
                 id={`skill-${skill}`}
-<<<<<<< HEAD
+
                 checked={selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
             <div key={skill} className="flex items-center">
@@ -132,12 +123,7 @@ const POPULAR_SKILLS = [
   "DevOps"
   "Security"
 ]
-=======
-                checked={selectedSkills && selectedSkills.includes(skill)}
-                onCheckedChange={() => toggleSkill(skill)}
 
-            <div key={skill} className="flex items-center">;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function SkillsFilter({ selectedSkills, toggleSkill, expanded, toggleSection, isMobileFilterOpen }: SkillsFilterProps) {
   return (
@@ -223,10 +209,9 @@ const POPULAR_SKILLS = [;
   "DevOps";
   "Security";
 ];
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
               <Checkbox
@@ -246,7 +231,7 @@ const POPULAR_SKILLS = [;
               </label>
             </div>
           ))}
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
     </div>;
@@ -255,11 +240,7 @@ const POPULAR_SKILLS = [;
 }
 <<<<<<< HEAD
 }
-=======
 
-    </div>;
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
     </div>
@@ -315,10 +296,8 @@ function SkillsFilter() {
         </div>;
       )}
       )};
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     </div>;
   );
 };

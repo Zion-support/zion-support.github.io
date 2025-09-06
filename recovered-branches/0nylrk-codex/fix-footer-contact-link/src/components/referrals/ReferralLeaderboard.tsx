@@ -1,45 +1,12 @@
 
-<<<<<<< HEAD
-import {
-  Card
-  CardContent
-  CardDescription
-  CardHeader
-  CardTitle
-} from "@/components/ui/card";
 
-import { Award } from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Award} from "lucide-react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
-=======
 
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from '@/components / ui / card';
-import { Award  } from './lucide-react';
 
-=======
-
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
-
-=======
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Award} from "lucide-react";
-=======
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
-import { Award } from "lucide-react",
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 interface LeaderboardEntry {
   rank: number;
   name: string;
@@ -75,7 +42,7 @@ function ReferralLeaderboard() {
           {leaderboard_data.map ((entry) => (
             <div;
               key={entry.rank}
-<<<<<<< HEAD
+
               className="flex justify-between items-center p-2 rounded-md hover:bg-muted/50 transition-colors"
             >
               <div className="flex items-center gap-3">
@@ -92,13 +59,10 @@ function ReferralLeaderboard() {
                       : entry.rank === 3
                       ? "bg-amber-200 text-amber-800"
                       : "bg-muted text-muted-foreground"
+
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Award } from "lucide-react",;
-=======
 
-import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
-import {Award} from "lucide-react";
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface LeaderboardEntry {;
   rank: number,;
   name: string,;
@@ -145,31 +109,17 @@ export function ReferralLeaderboard() {;
                     entry.rank === 1;
                       ? "bg - yellow - 200 text - yellow - 800";
                       : entry.rank === 2;
-<<<<<<< HEAD
-                      ? "bg-slate-200 text-slate-800";
-                      : entry.rank === 3;
-                      ? "bg-amber-200 text-amber-800";
-                      : "bg-muted text-muted-foreground";
-=======
+
                         ? "bg - slate - 200 text - slate - 800";
                         : entry.rank === 3;
                           ? "bg - amber - 200 text - amber - 800";
                           : "bg - muted text - muted - foreground";
 
-=======
-                <div
-                  className={`h-6 w-6 rounded-full flex items-center justify-center text-xs font-medium ${
-                    entry.rank === 1
-                      ? "bg-yellow-200 text-yellow-800"
-                      : entry.rank === 2
 
-                      ? "bg-slate-200 text-slate-800"
-                      : entry.rank === 3
-                      ? "bg-amber-200 text-amber-800"
-                      : "bg-muted text-muted-foreground"
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   }`}
                 >;
                   {entry.rank}
@@ -194,35 +144,12 @@ export function ReferralLeaderboard() {;
               </span>;
             </div>;
           ))}
-<<<<<<< HEAD
+
         </div>
       </CardContent>
     </Card>
-  );
-}
-  )
-}
-;
-=======
-        </div>;
-      </CardContent>;
-    </Card>;
-  );
-}
 
-=======
-              </span>;
-            </div>))}
-        </div>;
-      </CardContent>;
-    </Card>);
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-  )
-}
-;
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

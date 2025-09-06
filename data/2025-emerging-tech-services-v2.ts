@@ -1,6 +1,5 @@
-<<<<<<< HEAD
-export interface EmergingTechService {
-export interface EmergingTechService {;
+
+
   id: string;
   name: string;
   tagline: string;
@@ -12,8 +11,7 @@ export interface EmergingTechService {;
     currency: string;
     trialDays: number;
     setupTime: string;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
   {
@@ -363,7 +361,7 @@ export interface EmergingTechService {;
     support:
       '24/7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.'
     compliance: [
-<<<<<<< HEAD
+
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'
     ]
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform'
@@ -377,9 +375,7 @@ export interface EmergingTechService {;
     marketSize: '$35B autonomous vehicle market'
     growthRate: '75% annually'
   }
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       'Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards',
     ],
     link: 'https://ziontechgroup.com/autonomous-vehicle-ai-platform',
@@ -509,107 +505,10 @@ export interface EmergingTechService {;
     growth_rate: '75% annually',
   },
 
-=======
-  id: string, name: string,
-  tagline: string, description: string,
-  category: string,
-  price: {
-    monthly: number, yearly: number,
-    currency: string, trialDays: number,
-    setupTime: string,
-    enterprise: number
-    },
-    features: string[], benefits: string[],
-  targetAudience: string[], marketPosition: string,
-  competitors: string[], techStack: string[],
-  realImplementation: boolean, implementationDetails: string,
-  roi: string, useCases: string[],
-  integrations: string[], support: string,
-  compliance: string[], link: string,
-  icon: string, color: string,
-  popular: boolean, launchDate: string,
-  customers: number, rating: number,
-  reviews: number, marketSize: string,
-  growthRate: string
-}
 
-
-=======
-];      'Autonomous driving_fleet management_safety systems_traffic optimization_transportation logistics_research and development';
-    ];
-
-    integrations: ['Vehicle systems, Fleet management tools, Traffic systems, Safety platforms, Business applications'];
-    support: '24 / 7 AV specialist support, dedicated safety engineer, training programs, and quarterly safety reviews.';
-    compliance: ['Vehicle safety standards, Transportation regulations, AI safety guidelines, Industry standards'];
-
-    icon: '🚗';
-    color: 'from - red - 500 to - pink - 600';
-    popular: true;
-    launch_date: '2024 - 01 - 25';
-    customers: 180;
-    rating: 4 && 4.9;
-    reviews: 65;
-
-    market_size: '$35B autonomous vehicle market',
-    growth_rate: '75% annually';
-
-<<<<<<< HEAD
-    growthRate: '75% annually'
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  }
-
-];
-
-=======
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-  id: string,;
-  name: string,;
-  tagline: string,;
-  description: string,;
-  category: string,;
-  price: {;
-    monthly: number,;
-    yearly: number,;
-    currency: string,;
-    trialDays: number,;
-    setupTime: string,;
-    enterprise: number;
-  },;
-  features: string[],;
-  benefits: string[],;
-  targetAudience: string[],;
-  marketPosition: string,;
-  competitors: string[],;
-  techStack: string[],;
-  realImplementation: boolean,;
-  implementationDetails: string,;
-  roi: string,;
-  useCases: string[],;
-  integrations: string[],;
-  support: string,;
-  compliance: string[],;
-  link: string,;
-  icon: string,;
-  color: string,;
-  popular: boolean,;
-  launchDate: string,;
-  customers: number,;
-  rating: number,;
-  reviews: number,;
-  marketSize: string,;
-  growthRate: string;
-}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-export interface EmergingTechService {;
-<<<<<<< HEAD
   id: string,;
   name: string,;
   tagline: string,;
@@ -883,8 +782,9 @@ export const emergingTechServicesV2: EmergingTechService[] = [;
     reviews: 65,;
     marketSize: '$35B autonomous vehicle market',;
     growthRate: '75% annually';
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 ];

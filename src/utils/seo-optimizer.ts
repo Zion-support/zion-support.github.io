@@ -11,15 +11,13 @@ export const optimize_headings = () =>: any {
 // SEO optimizer utilities
 export const generateMetaTags = () => {;
   console.log('Generating meta tags...');
-<<<<<<< HEAD
+
 }
 export const optimizeHeadings = () => {
   console.log('Optimizing headings...');
 }
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 };
 };
 
@@ -27,11 +25,10 @@ export const optimizeHeadings = () => {;
   console.log('Optimizing headings...');
 };
 
-<<<<<<< HEAD
+
 origin/cursor/fix-lint-push-and-merge-to-main-4fa7
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       telephone: '+1-555-0123',
       contactType: 'customer service'}};
 };

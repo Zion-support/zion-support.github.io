@@ -21,10 +21,9 @@ import {
   TableRow} from "@/components/ui/table",
 
 import { Badge } from "@/components/ui/badge",
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -72,7 +71,7 @@ export function EnterprisePricingTable() {
       users: "Unlimited users",
       popular: false,
       features: [
-<<<<<<< HEAD
+
         { name: 'Private hiring portal', included: true },
         { name: 'Dedicated talent pool', included: true },
         { name: 'Premium SLA (1h)', included: true },
@@ -109,12 +108,7 @@ export function EnterprisePricingTable() {
 
   return (
     <section id="pricing" className="py-20 px-4 md:px-6">
-=======
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Enterprise Plans</h2>
@@ -279,10 +273,9 @@ export function EnterprisePricingTable() {;
                       <div className="flex items-baseline mt-1">;
                         <span className="text-2xl font-bold">{plan.price}</span>;
                         <span className="text-sm text-muted-foreground ml-1">;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
                           {plan.billing}
@@ -313,10 +306,9 @@ export function EnterprisePricingTable() {;
                         variant={plan.popular ? 'default' : 'outline'}
                       >
                         {plan.name === "Enterprise" ? "Request Quote" : "Get Started"}
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -366,10 +358,9 @@ export function EnterprisePricingTable() {;
 
           All plans include SSL security, 99.9% uptime SLA, and dedicated support
         </div>
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       </div>
     </section>
 
@@ -378,10 +369,9 @@ export function EnterprisePricingTable() {;
     </section>;
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
               </TableRow>;
             </TableHeader>;

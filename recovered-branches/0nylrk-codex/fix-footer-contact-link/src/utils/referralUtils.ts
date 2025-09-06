@@ -1,13 +1,7 @@
-<<<<<<< HEAD
-import { format } from 'date-fns';
-import {format} from 'date-fns';
-=======
 
 
-import {format} from 'date-fns';
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 /**
  * Formats a date for display in the referral system
  * @param date Date or string to format
@@ -16,19 +10,7 @@ import {format} from 'date-fns';
 export function formatDate(date: Date | string | undefined): string {
 
   if (!date) return '-'
-=======
-import {format} from 'date - fns';
-/**;
-* Formats a date for display in the referral system;
-* @param date Date or string to format;
-* @returns Formatted date string;
-*/;
-export function format_date (date: Date | string | undefined): string {
-  // Check condition
-if (return '-', ) {
-  $2
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   try {
     // Check condition
 if ( {) {
@@ -101,21 +83,21 @@ export function checkUrlForReferralCode(): string | null {;
     url.searchParams.delete('ref'),;
     window.history.replaceState({}, document.title, url.toString()),;
     return refCode;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   }
   return localStorage.getItem('referral_code')
 }
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+  }
+  return localStorage.getItem('referral_code')
+}
+
+
 /**
  * Track referral when a user signs up
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -169,43 +151,15 @@ export async function trackReferral(userId: string, email: string) {;
     if (response.ok) {;
       // Clear the stored referral code;
       localStorage.removeItem('referral_code');
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     }
   } catch (error) {
     console && console.error('Error tracking referral:', error)
-=======
-    const ref_code = local_storage.get_item ('referral_code');
-    // Check condition
-if (return, ) {
-  $2
-}
-    // Call API to record the referral;
-    const response = await fetch ('/api / track - referral', {
-      method: 'POST',
-      headers: {
-        'Content - Type': 'application / json'}
-      body: JSON.stringify ({
-        ref_code;
-        user_id;
-        email,
-        ip_address: '', // This will be captured by the server;
-      })});
-;
-    // Check condition
-if ( {) {
-  $2
-}
-      // Clear the stored referral code;
-      local_storage.remove_item ('referral_code');
-    }
-  } catch (error) {
-    console.error ('Error tracking referral:', error);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   }
 }

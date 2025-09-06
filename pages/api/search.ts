@@ -1,13 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
       ok: true,
       query: q,
@@ -23,51 +16,16 @@
     });
 
   } catch (e: any) {
-<<<<<<< HEAD
+
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
-
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {;
-export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.status(200).json({ message: 'API endpoint' });
-import type { NextApiRequest, NextApiResponse } from 'next';
-import type { AccessLevel } from '../../utils/search/filter';
-import { parseQueryToFilters } from '../../utils/search/parser';
-import { searchAll, suggestDidYouMean } from '../../utils/search/filter';
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-export default async function handler(req, res) {
-  try {
-=======
 
 
-  }
-}
-=======
-    res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
-  }
-}
->>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
-=======
-    res.status (500).json ({ ok: false, error: e?.message || "Search failed" });
-  }
-}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
 
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     const q = (req.query.q as string) || '';
     const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
     const parsed = await parseQueryToFilters(q);
     const results = searchAll(parsed, access);
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
@@ -85,6 +43,9 @@ import type { NextApiRequest, NextApiResponse } from 'next';
       results})
   } catch (e: any) {
     res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
+
+
+
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])])),;
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
     res.status(200).json({;
@@ -125,12 +86,11 @@ import type { NextApiRequest, NextApiResponse } from 'next';
   } catch (error) {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee

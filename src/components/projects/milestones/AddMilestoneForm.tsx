@@ -1,5 +1,5 @@
 // If there are multiple milestones, submit them one by one
-<<<<<<< HEAD
+
     milestones.forEach(milestone => {
       onSubmit({
         title: milestone.title
@@ -188,8 +188,7 @@ export function AddMilestoneForm({;
     }
 
     // If there are multiple milestones, submit them one by one
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
     milestones.forEach(milestone => {
       onSubmit({
         title: milestone.title
@@ -200,8 +199,7 @@ export function AddMilestoneForm({;
     })
   },
 
-<<<<<<< HEAD
-=======
+
   const handleAddMilestone = (milestone: GeneratedMilestone) => {
 
 
@@ -385,7 +383,7 @@ export function AddMilestoneForm(): any ({;
     });
   };
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   const handleAddMilestone = (milestone: GeneratedMilestone,) => {;
     onSubmit({;
       title: milestone && milestone.title,;
@@ -404,7 +402,7 @@ export function AddMilestoneForm(): any ({;
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
   },
@@ -422,18 +420,14 @@ export function AddMilestoneForm(): any ({;
           onAddMilestone = {handleAddMilestone,}
         />
       )}
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   },
 
   return (
     <div className="space-y-6">
       {/* AI Milestone Generator */}
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       {projectScope && projectStartDate && (;
         <AIMilestoneGenerator;
           scope={projectScope}
@@ -443,10 +437,9 @@ export function AddMilestoneForm(): any ({;
           onAddMilestones={handleAddMilestones}
           onAddMilestone={handleAddMilestone}
         />;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -474,7 +467,7 @@ export function AddMilestoneForm(): any ({;
       <Form {...form}>;
         <form on_submit={form.handle_submit (handle_submit)} className="space - y-4">;
           <FormField;
-<<<<<<< HEAD
+
             control = {form.control, }
             name="title";
             render={({ field }: { field: any }, ) => (
@@ -513,10 +506,7 @@ export function AddMilestoneForm(): any ({;
             control={form.control}
             name="description"
             render={({ field }: { field: any }) => (
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <FormItem>
                 <FormLabel>Description (optional)</FormLabel>
                 <FormControl>
@@ -643,10 +633,9 @@ export function AddMilestoneForm(): any ({;
               control={form.control}
               name="amount"
               render={({ field }: { field: any }) => (
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
                 <FormItem>
                   <FormLabel>Amount ($)</FormLabel>
@@ -694,10 +683,9 @@ export function AddMilestoneForm(): any ({;
               >;
                 Cancel;
               </Button>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
             )}

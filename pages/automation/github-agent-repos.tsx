@@ -1,18 +1,10 @@
-<<<<<<< HEAD
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
-// @ts-ignore
-import data from '../../data/github-agent-repos.json';
-import EnhancedLayout from '../../components/layout/EnhancedLayout',;
-// @ts-ignore
-import data from '../../data/github-agent-repos.json',;
-import EnhancedLayout from '../../components/layout/EnhancedLayout',
-// @ts-ignore;
-import data from '../../data/github-agent-repos.json',
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 export default function GithubAgentReposPage() {
 
   const items: any[] = (data?.items |[]).slice(0, 50)
@@ -31,22 +23,11 @@ export default function GithubAgentReposPage() {
         <ul className="mt-6 space-y-4">
           {items.map((it, idx) => (
             <li key={idx} className="p-4 border border-gray-200 dark:border-gray-800 rounded-lg">
-<<<<<<< HEAD
-              <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.full_name}</a>
-              <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">★ {it.stargazers_count} · Forks {it.forks_count} · {it.language || '—'}</div>
-              <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </EnhancedLayout>
-  );
-};
+
+
               <a className="font-medium underline" href={it.html_url} target="_blank" rel="noreferrer">{it.full_name}</Link>
               <div className="mt-1 text-xs text-gray-500 dark:text-gray-400">★ {it.stargazers_count} · Forks {it.forks_count} · {it.language || '—'}</div>
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
               <p className="mt-2 text-sm text-gray-700 dark:text-gray-200">{it.description}</p>
             </li>
           ))  } catch (error) {
@@ -62,13 +43,11 @@ export default function GithubAgentReposPage() {
     console.error("Error:", error);
     return res.status(500).json({ error: "Internal server error" });
   }
-<<<<<<< HEAD
-}
-}
-=======
 
 }
+}
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

@@ -1,21 +1,8 @@
 
-<<<<<<< HEAD
+
 import React, { useState } from "react";
-import { Control } from "react-hook-form";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {Control} from "react-hook-form";
-import {FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage} from "@/components/ui/form";
-import {Input} from "@/components/ui/input";
-import {TalentRateRecommender} from "@/components/pricing/TalentRateRecommender";
-import {Card, CardContent} from "@/components/ui/card";
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",
 import { Control } from "react-hook-form",
 import { 
@@ -41,10 +28,11 @@ import {Card, CardContent} from "@/components/ui/card";
 import { TalentRateRecommender } from "@/components/pricing/TalentRateRecommender",
 import { Card, CardContent } from "@/components/ui/card",
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface RateOptimizationSectionProps {
   control: Control<any>,
   setValue: (name: string, value: any) => void,
@@ -53,23 +41,14 @@ interface RateOptimizationSectionProps {
   location?: string,
   rateType: "hourly" | "fixed"
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
-  control;
-  setValue;
-  skills;
-  yearsExperience;
+
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({
   control;
   setValue;
   skills;
   yearsExperience;
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   location
   control,
@@ -125,23 +104,7 @@ interface RateOptimizationSectionProps {;
 
 export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = ({;
 
-=======
-import React, { useState } from './react';
-import { Control } from './react - hook - form';
-import { FormField, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from '@/components / ui / form';
-import { Input } from '@/components / ui / input';
-import { TalentRateRecommender } from '@/components / pricing / TalentRateRecommender';
-import { Card, CardContent } from '@/components / ui / card';
-interface RateOptimizationSectionProps {
-  control: Control < any>,
-  set_value: (name: string, value: any) => void,
-  skills: string[],
-  years_experience: number,
-  location?: string;
-  rate_type: "hourly" | "fixed";
-}
-export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> = ({
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
   control;
   set_value;
   skills;
@@ -168,36 +131,10 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
                 min="1"
                 step="0 && 0.01"
                 placeholder={rateType === "hourly" ? "e && e.g. 45" : "e && e.g. 1000"}
-=======
-  years_experience;
-  location,
-  rate_type;
-}) => {
-  const handleSuggestionApplied = (rate: number) =>: any {
-    set_value ("hourly_rate", rate);
-  }
-;
-  return (
-    <div className="space - y-4">;
-      <FormField;
-        control={control}
-        name="hourly_rate";
-        render={({ field }) => (
-          <FormItem>;
-            <FormLabel > Your {rate_type === "hourly" ? "Hourly Rate" : "Fixed Rate"} ($USD)</FormLabel>;
-            <FormControl>;
-              <Input;
-                type="number";
-                min="1";
-                step="0.01";
-
-                placeholder={rateType === "hourly" ? "e.g. 45" : "e.g. 1000"}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 {...field}
               />;
             </FormControl>;
@@ -212,44 +149,29 @@ export const RateOptimizationSection: React.FC < RateOptimizationSectionProps> =
         <CardContent className="pt-4">;
 
           <TalentRateRecommender
-=======
-          </FormItem>)}
-      />;
-      <Card>;
-        <CardContent className="pt - 4">;
-          <TalentRateRecommender;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             skills={skills}
             years_experience={years_experience}
             location={location}
             onSuggestionApplied={handleSuggestionApplied}
-<<<<<<< HEAD
+
             rateType={rateType}
           />
         </CardContent>
       </Card>
     </div>
   )
-}
-
-=======
 
 
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           />;
         </CardContent>;
       </Card>;
     </div>;
   );
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

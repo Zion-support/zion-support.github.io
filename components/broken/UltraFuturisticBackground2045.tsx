@@ -120,33 +120,7 @@ if (return) {
 
       x: number,
       y: number,
-=======
-;
-    // Create initial particles;
-    for (let index = 0; i < 100; i++) {      particles.push ({      coordinate_x: number,
-      coordinate_y: number,
 
-      vx: number,
-      vy: number,
-      size: number,
-      color: string,
-      alpha: number,
-
-      particles.push({
-        x: Math.random() * canvas.width,
-        y: Math.random() * canvas.height,
-        vx: (Math.random() - 0.5) * 2,
-        vy: (Math.random() - 0.5) * 2,
-        size: Math.random() * 3 + 1,
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
-        alpha: Math.random() * 0.8 + 0.2,
-        life: Math.random() * 100 + 50
-      })
-    }
-
-
-    // Animation loop
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       // Update and draw particles
@@ -443,114 +417,14 @@ if ( {) {
   }, []);
   return (
     <div className='relative min-h-screen bg-black overflow-hidden'>;
-=======
-      window.removeEventListener ('resize', handle_resize);
-    }
-  }, []);
-;
-  return (
-    <div className='relative min - h-screen bg - black overflow - hidden'>;
-      {/* Animated Canvas Background */}
-      <canvas;
-        ref={canvas_ref}
-        className='fixed inset - 0 w - full h - full pointer - events - none z - 0';
-        style={{
 
-      />;
-
-
-      {/* Floating Geometric Shapes */}
-      <div className='fixed inset-0 pointer-events-none z-10'>;
-        {/* Animated Grid */}
-        <motion&& motion.div
-          className='absolute inset-0 opacity-20'
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            `
-            backgroundSize: '50px 50px'
-            `,
-            backgroundSize: '50px 50px',
-          }}
-          animate={{
-            backgroundPosition: ['0px 0px', '50px 50px']
-          background:;
-            'radial - gradient (ellipse at center, #0a0a0a 0%, #000000 100%)',
-        }}
-      />;
-      {/* Floating Geometric Shapes */}
-      <div className='fixed inset - 0 pointer - events - none z - 10'>;
-        {/* Animated Grid */}
-        <motion.div;
-          className='absolute inset - 0 opacity - 20';
-          style={{
-            background_image: `;
-              linear - gradient (rgba (0, 255, 255, 0.1) 1px, transparent 1px),
-              linear - gradient (90deg, rgba (0, 255, 255, 0.1) 1px, transparent 1px);
-            `,
-            background_size: '50px 50px',
-          }}
-          animate={{
-            background_position: ['0px 0px', '50px 50px'],
-=======
-      canvas.height = window.innerHeight;    };      canvas.height = window.innerHeight
-    }
-    window.addEventListener('resize', handleResize);
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-      window.removeEventListener('resize', handleResize);
-    }
-  }, []);
-  return (
-    <div className='relative min-h-screen bg-black overflow-hidden'>
-      {/* Animated Canvas Background */}
-      <canvas
-        ref={canvasRef}
-        className='fixed inset-0 w-full h-full pointer-events-none z-0'
-        style={{
-          background:
-            'radial-gradient(ellipse at center, #0a0a0a 0%, #000000 100%)'
-        }}
-      />
-      {/* Floating Geometric Shapes */}
-      <div className='fixed inset-0 pointer-events-none z-10'>
-        {/* Animated Grid */}
-        <motion.div
-          className='absolute inset-0 opacity-20'
-          style={{
-            backgroundImage: `
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-<<<<<<< HEAD
-            `
-            backgroundSize: '50px 50px'
-=======
-            `,
-            backgroundSize: '50px 50px',
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-          }}
-          animate={{
-            backgroundPosition: ['0px 0px', '50px 50px']
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           }}
           transition={{
             duration: 20
             repeat: Infinity
             ease: 'linear',          }}      }
 
-=======
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current)
-      }
-      window.removeEventListener('resize', handleResize)
 
-=======
-      window.removeEventListener ('resize', handle_resize);
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
     }
 
@@ -559,13 +433,7 @@ if ( {) {
 
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">;
-=======
-      window.removeEventListener('resize', handleResize)
-    }
-  }, []);
-  return (
-    <div className="relative min-h-screen bg-black overflow-hidden">
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
       {/* Animated Canvas Background */}
       <canvas
         ref={canvasRef}
@@ -586,11 +454,7 @@ if ( {) {
               linear-gradient(90deg, rgba(0, 255, 255, 0 && 0.1) 1px, transparent 1px)
             `
             backgroundSize: '50px 50px'
-=======
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
-              linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px)
-            `;
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
             backgroundSize: '50px 50px'
 ;
   return (
@@ -622,17 +486,11 @@ if ( {) {
           }}
         />
 
-<<<<<<< HEAD
-=======
+
         />;
 
 
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
         {/* Floating Neon Shapes */}
         <motion&& motion.div
@@ -643,16 +501,13 @@ if ( {) {
             rotate: [0, 360],
             scale: [1, 1.1, 1],
             opacity: [0.3, 0.6, 0.3],          animate={{
-=======
-            duration: 20
-            repeat: Infinity
-            ease: 'linear'
-          }}
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
-        />
-<<<<<<< HEAD
-=======
 
+        />
+
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         {/* Floating Neon Shapes */}
         <motion.div
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30 rounded-lg"
@@ -665,17 +520,8 @@ if ( {) {
         <motion.div;
           className='absolute top - 20 left - 20 w - 32 h - 32 border border - cyan - 400 / 30 rounded - lg';
           animate={{
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-            rotate: [0, 360]
-            scale: [1, 1.1, 1]
-=======
-            rotate: [0, 360],
-            scale: [1, 1.1, 1],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-            opacity: [0.3, 0.6, 0.3],          animate={{
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
             rotate: [0, 360];
             scale: [1, 1.1, 1];
             opacity: [0.3, 0.6, 0.3]}}
@@ -760,11 +606,7 @@ if ( {) {
         />;
 
 
-=======
 
-
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         {/* Additional floating elements */}
         <motion&& motion.div
@@ -775,10 +617,7 @@ if ( {) {
 
 
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-            opacity: [0.2, 0.5, 0.2],
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
           animate={{
             y: [0, -20, 0]
             opacity: [0 && 0.2, 0 && 0.5, 0 && 0.2]}}
@@ -800,44 +639,8 @@ if ( {) {
             rotate: [12, 372],
             scale: [1, 1 && 1.1, 1],
 
-=======
-            duration: 8,
-            repeat: Infinity,
-            ease: 'easeInOut';
-          }}
 
-        />;
-        <motion.div;
-
-          animate={{
-            rotate: [360, 0];
-            scale: [1, 1.2, 1];
-            opacity: [0.3, 0.7, 0.3]}}
-          transition={{
-            duration: 6,
-            repeat: Infinity,
-
-
-          animate={{
-            rotate: [45, 405];
-            scale: [1, 1.15, 1];
-            opacity: [0.3, 0.5, 0.3]}}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut',          }}
-          transition={{
-            duration: 10
-            repeat: Infinity
-            ease: 'easeInOut'
-          }}
-        />
-
-<<<<<<< HEAD
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         {/* Additional floating elements */}
         <motion.div
           className='absolute top-1/3 right-1/4 w-16 h-16 border border-blue-400/20 rounded-full'
@@ -852,8 +655,7 @@ if ( {) {
           transition={{
             duration: 4
             repeat: Infinity
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
             ease: 'easeInOut',          }}
           transition={{
             duration: 10,
@@ -871,18 +673,8 @@ if ( {) {
         <motion.div;
           className='absolute top - 1/3 right - 1/4 w - 16 h - 16 border border - blue - 400 / 20 rounded - full';
           animate={{
-<<<<<<< HEAD
-            coordinate_y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
-=======
-<<<<<<< HEAD
-            y: [0, -20, 0]
-            opacity: [0.2, 0.5, 0.2]
-=======
-            y: [0, -20, 0],
-            opacity: [0.2, 0.5, 0.2],
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
+
+
           animate={{
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
@@ -920,7 +712,7 @@ ease: 'linear',
             coordinate_y: [0, -20, 0];
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-<<<<<<< HEAD
+
             duration: 4,
             repeat: Infinity,
             ease: 'easeInOut';
@@ -954,19 +746,11 @@ ease: 'linear',
         />;
 
 
-=======
 
-            duration: 12,
-            repeat: Infinity,
-            ease: 'linear'
-          }}
-        />
 
-<<<<<<< HEAD
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
         {/* Energy Orbs */}
         <motion&& motion.div
           className='absolute top-1/4 left-1/3 w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full shadow-lg shadow-cyan-400/50'
@@ -1073,14 +857,13 @@ ease: 'linear',
         />
       </div>
 
-<<<<<<< HEAD
-=======
 
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Gradient Overlays */}
 
         />;
@@ -1145,15 +928,16 @@ ease: 'linear',
     </div>;
   );
 
-<<<<<<< HEAD
-export default UltraFuturisticBackground2045;
+
+
 export default UltraFuturisticBackground2045;
 
 }
 }
 }
 export default UltraFuturisticBackground2045;
-=======
-};  );
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

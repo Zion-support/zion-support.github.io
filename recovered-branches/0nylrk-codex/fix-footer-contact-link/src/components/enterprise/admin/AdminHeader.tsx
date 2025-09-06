@@ -1,23 +1,15 @@
 
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/enterprise/admin/AdminHeader.tsx
 
-<<<<<<< HEAD
+
 import React from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {Button} from "@/components/ui/button";
 import {Download, Settings} from "lucide-react";
 import {useCompanyWorkspace} from "@/hooks/useCompanyWorkspace";
 
-export function AdminHeader() {
-export function AdminHeader() {;
-=======
 
-
-export function AdminHeader() {;
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const { user } = useAuth();
   const { company } = useCompanyWorkspace();
 import React from "react",
@@ -109,37 +101,7 @@ export function AdminHeader() {;
           </Button>;
           <Button variant="outline" size="sm" className="gap-2">;
             <Download className="h-4 w-4" />;
-=======
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / enterprise / admin / AdminHeader.tsx;
-import React from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { Button } from '@/components / ui / button';
-import { Download, Settings } from './lucide-react';
-import { useCompanyWorkspace } from '@/hooks / useCompanyWorkspace';
-export /**
- * AdminHeader - Function description
- */
-function AdminHeader() {
-  const { user } = use_auth ();
-  const { company } = useCompanyWorkspace ();
-;
-  return (
-    <div className="space - y-4">;
-      <div className="flex items - center justify - between">;
-        <div>;
-          <h1 className="text - 3xl font - bold tracking - tight">Enterprise Admin Dashboard</h1>;
-          <p className="text - muted - foreground mt - 1">;
-            Manage your company's account, team members, and subscription;
-          </p>;
-        </div>;
-        <div className="flex items - center gap - 2">;
-          <Button variant="outline" size="sm" className="gap - 2">;
-            <Settings className="h - 4 w - 4" />;
-            Settings;
-          </Button>;
-          <Button variant="outline" size="sm" className="gap - 2">;
-            <Download className="h - 4 w - 4" />;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
             Export Data;
           </Button>;
         </div>;
@@ -180,12 +142,6 @@ function AdminHeader() {
     </div>);
 
 }
-=======
-}
-;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

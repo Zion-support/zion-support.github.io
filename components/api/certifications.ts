@@ -11,31 +11,7 @@ const CERTS_FILE = path.join(
   'data'
   'certifications'
   'certifications.json'
-=======
 
-const CERTS_FILE = path && path.join(
-  process && process.cwd(),
-  'data',
-  'certifications',
-  'certifications && certifications.json'
-=======
-<<<<<<< HEAD
-
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-=======
-import type { NextApiRequest, NextApiResponse } from 'next';
-import fs from 'fs-extra';
-import path from 'path';
-
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-const CERTS_FILE = path.join(
-  process.cwd()
-  'data'
-  'certifications'
-  'certifications.json'
->>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
 );
 export default async function handler(
   req: NextApiRequest
@@ -57,42 +33,16 @@ res.setHeader("Allow", "GET");
     return res.status(200).json({ certifications })
   } catch (e) {
     return res.status(500).json({ error: "Failed to load certifications" })
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-};
-  };
-<<<<<<< HEAD
 }
-=======
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+}
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 }
 
 
-=======
-;
-const CERTS_FILE = path.join (
-  process.cwd (),
-  'data',
-  'certifications',
-  'certifications.json');
-;
-export default async /**
- * handler - Function description
- */
-function handler() {
-  // Check condition
-if ( {) {
-  $2
-}
-    res.set_header ('Allow', 'GET');
-    return res.status (405).json ({ error: 'Method Not Allowed' });
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
   }
   try {
     const certifications = (await fs.pathExists(CERTS_FILE)) ? await fs.readJSON(CERTS_FILE) : []

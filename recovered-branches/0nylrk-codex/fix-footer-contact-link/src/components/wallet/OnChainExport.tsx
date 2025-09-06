@@ -1,13 +1,6 @@
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 import React, { useState } from "react";
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card";
 import {Button} from "@/components/ui/button";
@@ -16,12 +9,13 @@ import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger} from "@/compon
 import {useToast} from "@/hooks/use-toast";
 import {useAuth} from "@/hooks/useAuth";
 export function OnChainExport() {;
-<<<<<<< HEAD
+
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle');
   const { toast } = useToast();
   const { user } = useAuth();
+
 import React, { useState } from "react",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button";
@@ -34,9 +28,7 @@ import {
 import { useToast } from "@/hooks/use-toast";
 import { useAuth } from "@/hooks/useAuth";
 export function OnChainExport() {
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   const [isConnected, setIsConnected] = useState(false);
   const [isExporting, setIsExporting] = useState(false);
   const [exportStatus, setExportStatus] = useState<'idle' | 'processing' | 'success' | 'error'>('idle'),
@@ -152,36 +144,7 @@ export function OnChainExport() {
             <Wallet className="h-5 w-5" />;
           )}
 
-=======
-                {isExporting ? "Processing..." : "Export Tokens"}
-                {!isExporting && <ArrowUpRight className="ml-2 h-4 w-4" />}
-              </Button>
-            )}
-          </div>
-        ) : (
-          <div className="space-y-2">
-            <p className="text-sm text-muted-foreground mb-3">
-              Connect your web3 wallet to export tokens to the blockchain.
-            </p>
-            <Button onClick={handleConnectWallet} className="w-full">
-              Connect Wallet
-            </Button>
-          </div>
-<<<<<<< HEAD
-        )}
-      </CardContent>
-    </Card>
-  )
-}
-};
-;
-=======
 
-};
-;
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React, { useState } from "react",;
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
 import { Button } from "@/components/ui/button",;
@@ -272,24 +235,7 @@ export function OnChainExport() {;
               </TooltipTrigger>;
               <TooltipContent>;
                 <p className="max-w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
-=======
-;
-  return (
-    <Card>;
-      <CardHeader>;
-        <CardTitle className="flex items - center gap - 2">;
-          {is_connected ? (
-            <Wallet className="h - 5 w - 5 text - primary" />) : (
-            <Wallet className="h - 5 w - 5" />)}
-          On - chain Export;
-          <TooltipProvider>;
-            <Tooltip>;
-              <TooltipTrigger as_child>;
-                <Info className="h - 4 w - 4 text - muted - foreground cursor - help" />;
-              </TooltipTrigger>;
-              <TooltipContent>;
-                <p className="max - w-xs">Export your ZION$ tokens to an external blockchain wallet</p>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
               </TooltipContent>;
             </Tooltip>;
           </TooltipProvider>;
@@ -300,10 +246,9 @@ export function OnChainExport() {;
   );
 }
 ;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

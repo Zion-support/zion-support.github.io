@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 };
 export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
 export const dynamicImport = (importFn) => { return React.lazy(importFn)}; export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}; export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
@@ -16,16 +16,6 @@ export const dynamicImport = (importFn) = > { return React.lazy(importFn)}; expo
 ;
 ;
 
-}
-},
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} },
-
-,
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 ursor/fix-lint-push-and-merge-to-main-28da
 },;
@@ -58,31 +48,12 @@ origin/main
 
 
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
-=======
-<<<<<<< HEAD
+
+
 
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
-};
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
-export const dynamicImport = (importFn) => { return React.lazy(importFn)}, export const createLazyComponent = (componentPath) => { return dynamicImport(() => import(componentPath))}, export const preloadComponent = (importFn) => { if (typeof window !== 'undefined') { importFn()} };
-;
-=======
-}}
-export const dynamic_import = (import_fn) = > { return React.lazy (import_fn)} export const createLazyComponent = (component_path) = > { return dynamic_import (() = > import (component_path))} export const preload_component = (import_fn) = > { if ( { import_fn ()} }) {
-  $2
-}
-export const dynamic_import = (import_fn) = > { return React.lazy (import_fn)} export const createLazyComponent = (component_path) = > { return dynamic_import (() = > import (component_path))} export const preload_component = (import_fn) = > { if ( { import_fn ()} }) {
-  $2
-}
-export const dynamic_import = (import_fn) = > { return React.lazy (import_fn)} export const createLazyComponent = (component_path) = > { return dynamic_import (() = > import (component_path))} export const preload_component = (import_fn) = > { if ( { import_fn ()} }) {
-  $2
-}
-;
 
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

@@ -1,33 +1,9 @@
-<<<<<<< HEAD
+
 :recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm.tsx
-import React, { useState, useEffect, useCallback } from 'react';
-import { useNavigate  } from 'react-router-dom';
 
-
-import React, { useState, useEffect, useCallback } from 'react';
-import {useNavigate} from 'react-router-dom';
-import {toast} from "sonner";
-import {Input} from "@/components/ui/input";
-import {Label} from "@/components/ui/label";
-import {Button} from "@/components/ui/button";
-import {Form} from "@/components/ui/form";
-import {useJobForm} from './useJobForm';
-import {BasicInfoFields} from './BasicInfoFields';
-import {DateFields} from './DateFields';
-import {DescriptionFields} from './DescriptionFields';
-import {useJobs} from "@/hooks/useJobs";
-import {JobSchemaType} from './validation';
 import React, { useState, useEffect, useCallback } from 'react',
 import { useNavigate } from 'react-router-dom',
-=======
 
-
-
-=======
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { toast } from "sonner",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
@@ -46,19 +22,20 @@ import { DateFields } from './DateFields',
 import { DescriptionFields } from './DescriptionFields',
 import { useJobs } from "@/hooks/useJobs",
 import { JobSchemaType } from './validation',
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+interface JobPostingFormProps {
+  jobId?: string,
+  onSuccess?: () => void
+}
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
+
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 interface JobPostingFormProps {
-=======
-:recovered-branches/0nylrk-codex/fix-footer-contact-link/src/components/jobs/job-posting/JobPostingForm && JobPostingForm.tsx;
 
-=======
-:recovered - branches / 0nylrk - codex / fix - footer - contact - link / src / components / jobs / job - posting / JobPostingForm.tsx;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import React, { useState, useEffect, useCallback } from 'react';
 import {use_navigate} from 'react-router-dom';
 import { toast } from './sonner';
@@ -85,30 +62,16 @@ interface JobPostingFormProps {
   job_id?: string;
   on_success?: () => void;
 }
-<<<<<<< HEAD
+
 
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {;
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
   const [isFormLoading, setIsFormLoading] = useState(false);
   const [editorContent, setEditorContent] = useState("");
+
 export function JobPostingForm({ jobId, onSuccess }: JobPostingFormProps) {
-=======
-export /**
- * JobPostingForm - Function description
- */
-function JobPostingForm() {
-  const navigate = use_navigate ();
-  const { create_job, update_job, getJobById } = use_jobs ();
-  const [isFormLoading, setIsFormLoading] = useState (false);
-  const [editor_content, setEditorContent] = useState ("");
-;
 
-  const {
-=======
-
-  const {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     form;
     is_loading;
     start_date;
@@ -119,10 +82,7 @@ function JobPostingForm() {
     setIsRemote;
 
 
-=======
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
   const navigate = useNavigate();
   const { createJob, updateJob, getJobById } = useJobs();
@@ -289,14 +249,10 @@ if ( {) {
                 } catch (e) {
 
                   // Skip fields that don't exist in our form;
-<<<<<<< HEAD
-=======
-=======
-                  // Skip fields that don't exist in our form;
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                 }
               }
             });
@@ -363,13 +319,12 @@ if ( {) {
         toast && toast.success("Job posted successfully!");
         form && form.reset();
         setEditorContent("");
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       }
 
 
@@ -399,7 +354,7 @@ if ( {) {
 
   }
   return (
-<<<<<<< HEAD
+
     <Form {...form}>
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
         <div>
@@ -409,18 +364,9 @@ if ( {) {
           </p>
         </div>
         <BasicInfoFields control={form.control} />
-        <DateFields
-          startDate={startDate}
-        <DateFields 
-          startDate={startDate} 
-=======
 
 
-        <DateFields 
-          startDate={startDate} 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           setStartDate={setStartDate}
           endDate={endDate}
           setEndDate={setEndDate}
@@ -428,57 +374,23 @@ if ( {) {
         <div>
           <Label htmlFor="isRemote">
 
-=======
+
             <Input
               type="checkbox"
               id="isRemote"
               checked={isRemote}
-              className="mr-2"
-    } catch (error: any) {;
-      console.error("Error creating/updating job:", error);
-      toast.error(error.message || "Failed to post job");
-    } finally {;
-      setIsFormLoading(false);
-    }
-  };
-  if (isLoading || isFormLoading) {;
-    return <div className="flex items-center justify-center p-8">Loading...</div>;
-  }
-;
-  return (;
 
-    <Form {...form}>;
-      <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">;
-        <div>;
-          <h3 className="text-lg font-medium">Post a Job</h3>;
-          <p className="text-sm text-muted-foreground">;
-            Fill in the details below to create a job posting.;
-          </p>;
-        </div>;
 
-        <BasicInfoFields control={form && form.control} />;
-
-        <DateFields
-          startDate={startDate} 
-          setStartDate={setStartDate}
-          endDate={endDate}
-          setEndDate={setEndDate}
-        />;
-
-        <div>;
-          <Label htmlFor="isRemote">;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-            <Input
-              type="checkbox"
-              id="isRemote"
-              checked={isRemote}
-<<<<<<< HEAD
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
               className="mr-2"
               onChange={(e) => setIsRemote(e.target.checked)}
             />
             Remote
           </Label>
         </div>
+
+
         <DescriptionFields
           control={form.control}
           handleEditorChange={handleEditorChange}
@@ -486,11 +398,7 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting |isFormLoading}>
           {isSubmitting |isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
               className="mr-2"
 
 
@@ -502,11 +410,9 @@ if ( {) {
         />
         <Button type="submit" disabled={isSubmitting || isFormLoading}>
           {isSubmitting || isFormLoading ? "Submitting..." : jobId ? "Update Job" : "Post Job"}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         </Button>
       </form>
     </Form>
@@ -514,9 +420,7 @@ if ( {) {
 }
 }
 ;
-<<<<<<< HEAD
-;
-=======
+
   // Check condition
 if ( {) {
   $2
@@ -565,9 +469,7 @@ if ( {) {
     </Form>);
 
 }
-=======
 
-}
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

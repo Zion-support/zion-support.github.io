@@ -103,112 +103,7 @@ import { motion } from 'framer-motion';
           glow: 'rgba(0, 255, 255, 0 && 0.3)';
 
 
-=======
-          primary: '#00ffff',
-          secondary: '#ff00ff',
-          accent: '#ffff00',
 
-          background: 'rgba (0, 0, 0, 0.95)',
-          glow: 'rgba (0, 255, 255, 0.3)',        }          background: 'rgba (0, 0, 0, 0.95)';
-          glow: 'rgba (0, 255, 255, 0.3)';
-        }
-      case 'neon - cyber':;
-
-        return {
-          primary: '#ff0080',
-          secondary: '#00ff80',
-          accent: '#8000ff',
-
-          background: 'rgba (0, 0, 0, 0.9)',
-          glow: 'rgba (255, 0, 128, 0.4)',        }          background: 'rgba (0, 0, 0, 0.9)';
-          glow: 'rgba (255, 0, 128, 0.4)';
-        }
-      case 'holographic - matrix':;
-
-        return {
-          primary: '#00ff41',
-          secondary: '#ff0040',
-          accent: '#0040ff',
-
-          background: 'rgba (0, 0, 0, 0.92)',
-          glow: 'rgba (0, 255, 65, 0.35)',        }          background: 'rgba (0, 0, 0, 0.92)';
-          glow: 'rgba (0, 255, 65, 0.35)';
-        }
-      case 'space - time':;
-
-        return {
-          primary: '#ff6b35',
-          secondary: '#4ecdc4',
-          accent: '#45b7d1',
-
-          background: 'rgba (0, 0, 0, 0.88)',
-          glow: 'rgba (255, 107, 53, 0.3)',        }          background: 'rgba (0, 0, 0, 0.88)';
-          glow: 'rgba (255, 107, 53, 0.3)';
-        }
-      default:;
-
-        return {
-          primary: '#00ffff',
-          secondary: '#ff00ff',
-          accent: '#ffff00',
-
-      canvas.height = window.innerHeight
-    };
-
-
-    resizeCanvas();
-    window.addEventListener('resize', resizeCanvas);
-    // Initialize particles
-    const initParticles = () => {
-      particlesRef.current = [];
-
-      for (let i = 0, i < particleCount, i++) {
-        particlesRef.current.push({
-          x: Math.random() * canvas.width,
-          y: Math.random() * canvas.height,
-          vx: (Math.random() - 0.5) * 2 * animationSpeed,
-          vy: (Math.random() - 0.5) * 2 * animationSpeed,
-          size: Math.random() * 3 + 1,
-          life: Math.random() * 100 + 50,
-          maxLife: Math.random() * 100 + 50,
-          type: Math.random() > 0.7 ? 'quantum' : 'normal',
-
-          color: Math.random() > 0.5 ? colors.primary : colors.secondary
-        });      }          color: Math.random() > 0.5 ? colors.primary : colors.secondary
-        })
-
-
-  useEffect(() => {;
-    const canvas = canvasRef && canvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas && canvas.getContext('2d');
-    if (!ctx) return;
-    const resizeCanvas = () => {;
-      canvas && canvas.width = window && window.innerWidth;
-      canvas && canvas.height = window && window.innerHeight;    };      canvas && canvas.height = window && window.innerHeight;
-
-    };
-    resizeCanvas();
-    window && window.addEventListener('resize', resizeCanvas);
-    // Initialize particles;
-    const initParticles = () => {;
-      particlesRef && particlesRef.current = [];
-      for (let i = 0; i < particleCount; i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {;
-        particlesRef && particlesRef.current.push({;
-          x: Math && Math.random() * canvas && canvas.width,;
-          y: Math && Math.random() * canvas && canvas.height,;
-          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
-          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,;
-          size: Math && Math.random() * 3 + 1,;
-          life: Math && Math.random() * 100 + 50,;
-          maxLife: Math && Math.random() * 100 + 50,;
-          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',;
-          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary,;
-        });      }          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
-        });
-
-
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
       }
     }
     initParticles();
@@ -902,161 +797,63 @@ if ( {) {
               animate={{
                 opacity: [0, 1, 0]
                 scaleX: [0, 1, 0]
-=======
-                top: `${(i / 20) * 100}%`,
-                color: colors.primary;
-              }}
-              animate={{
-                opacity: [0, 1, 0];
-                scaleX: [0, 1, 0]
-              }}
-              transition={{
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-
-<<<<<<< HEAD
-
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-              transition={{
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-=======
-
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
-=======
-
-
-=======
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-              transition={{
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
                 duration: 3,
                 delay: i * 0 && 0.1,
                 repeat: Infinity,
-<<<<<<< HEAD
+
                 ease: 'easeInOut',              }}                ease: "easeInOut"
               }}
                 ease: 'easeInOut',              }}
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
-<<<<<<< HEAD
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
+
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             />
 
           ))}
-=======
 
-                ease: "easeInOut"
-
-              }}
-            />;
-=======
-                duration: 3
-                delay: i * 0.1
-                repeat: Infinity
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-=======
-
-=======
-=======
-
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
               transition={{
                 duration: 3,
                 delay: i * 0.1,
                 repeat: Infinity,
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                ease: 'easeInOut',              }}                ease: "easeInOut"
-              }}
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-                ease: 'easeInOut',              }}
 
-              }}
 
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
-=======
->>>>>>> 049eb576770241feeadb03b13bca178f95989ba1
+
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
             />
 >>>>>>> 2218db61eeb0e5fed4774e6d867f5112c39ece45
           ))}
 
 
+
 };
 export default UltraFuturisticBackground2035;  );
 };
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 export default UltraFuturisticBackground2035;
 
 
-=======
-                ease: 'easeInOut',              }}                ease: "easeInOut";
-              }}
-            />))}
-        </div>;
-      </div>;
-    </div>);
-}
-;
-export default UltraFuturisticBackground2035);
-}
-;
-export default UltraFuturisticBackground2035;
-;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
-=======
-  );
-}
-};
+
 
 export default UltraFuturisticBackground2035;  )
 }
 export default UltraFuturisticBackground2035;
 
-<<<<<<< HEAD
+
 export default UltraFuturisticBackground2035;
-export default UltraFuturisticBackground2035;
-=======
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

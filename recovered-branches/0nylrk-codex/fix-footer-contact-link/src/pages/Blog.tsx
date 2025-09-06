@@ -1,5 +1,7 @@
 
-<<<<<<< HEAD
+
+
+
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import {Header} from "@/components/Header";
@@ -12,6 +14,7 @@ import {Input} from "@/components/ui/input";
 import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select";
 import {BlogPost} from "@/types/blog";
 import {Search} from "lucide-react";
+
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { Header } from "@/components/Header",
@@ -29,10 +32,10 @@ const BLOG_POSTS: BlogPost[] = [
   {
 import { BlogPost } from "@/types/blog",
 import { Search } from "lucide-react",
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Sample blog data - in a real app this would come from an API or CMS
 const BLOG_POSTS: BlogPost[] = [
   {
@@ -41,25 +44,18 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "ai-trends-2025",
     excerpt: "From multimodal AI to neuromorphic computing, discover the technologies that will shape the artificial intelligence landscape in 2025.",
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
+
+
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
 
 
-<<<<<<< HEAD
+
 
 
     content: `<p>As we move further into 2025, artificial intelligence continues to evolve at an unprecedented pace. This article explores the most significant trends that are reshaping the AI landscape this year.</p>
-=======
 
 
-
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 <h2>1. Multimodal AI Systems</h2>
 <p>Unlike traditional AI models that process single data types (text, images, or audio), multimodal systems can handle and interpret multiple data formats simultaneously. This creates more human-like understanding capabilities and enables more sophisticated applications across industries.</p>
 <h2>2. Neuromorphic Computing</h2>
@@ -88,8 +84,8 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "optimize-ai-listings",
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients.",
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
+
+
 
       name: "Dr. Alicia Zhang"
       title: "AI Research Director"
@@ -108,10 +104,9 @@ const BLOG_POSTS: BlogPost[] = [
     slug: "optimize-ai-listings"
     excerpt: "Learn the key strategies for optimizing your AI products and services on Zion marketplace to attract more potential clients."
     content: `<p>In the competitive AI marketplace, standing out is essential. This comprehensive guide shares proven strategies to optimize your AI service listings and attract more qualified leads.</p>
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 <h2>Crafting an Irresistible Service Title</h2>
 <p>Your title is the first element potential clients see. It should be specific, include relevant keywords, and clearly communicate your unique value proposition. Avoid generic terms and focus on the specific problems you solve or results you deliver.</p>
 <h2>Compelling Service Descriptions That Convert</h2>
@@ -154,11 +149,12 @@ const BLOG_POSTS: BlogPost[] = [
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising performance.</p>
     content: `<p>As AI and cloud computing demand grows exponentially, so does the environmental impact of data centers. This article explores practical approaches to make your IT infrastructure more sustainable without compromising window.window.window.performance.</p>
 
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 <h2>Energy-Efficient Hardware Selection</h2>
 <p>The foundation of any green IT strategy begins with your hardware choices. Modern processors, storage solutions, and networking equipment can deliver significant performance improvements while consuming less power. Look for Energy Star ratings and power usage effectiveness (PUE) metrics when evaluating options.</p>
 <h2>Optimizing Cooling Systems</h2>
@@ -584,13 +580,12 @@ export default function Blog() {;
               Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
             </p>;
           </div>;
-<<<<<<< HEAD
-=======
 
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           {/* Featured Post Section - Only show if there are featured posts */}
           {featuredPosts && featuredPosts.length > 0 && (;
             <div className="mb-16">;
@@ -635,88 +630,7 @@ export default function Blog() {;
                     asChild
                     className="bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple w-fit">;
                     <Link to={`/blog/${featuredPosts[0].slug}`}>;
-=======
-;
-export default /**
- * Blog - Function description
- */
-function Blog() {
-  const [search_query, setSearchQuery] = useState ("");
-  const [selected_category, setSelectedCategory] = useState ("All Categories");
-;
-  // Filter blog posts based on search and category;
-  const filtered_posts = BLOG_POSTS.filter (post => {
-    const matches_search =;
-      post.title.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      post.excerpt.toLowerCase ().includes (search_query.toLowerCase ()) ||;
-      post.tags.some (tag => tag.toLowerCase ().includes (search_query.toLowerCase ()));
-;
-    const matches_category = selected_category === "All Categories" || post.category === selected_category;
-;
-    return matches_search && matches_category;
-  });
-;
-  // Get featured posts;
-  const featured_posts = BLOG_POSTS.filter (post => post.is_featured);
-;
-  return (
-    <>;
-      <SEO;
-        title="Blog - AI & Tech Insights";
-        description="Stay updated with the latest trends in AI technology, marketplace strategies, and IT services. Expert articles on innovation, sustainability, and digital transformation.";
-        keywords="AI blog, tech trends, IT services blog, artificial intelligence news, technology innovation, digital transformation, sustainable IT";
-        canonical="https://app.ziontechgroup.com / blog";
-      />;
-      <Header />;
-      <div className="min - h-screen bg - zion - blue pt - 12 pb - 20 px - 4">;
-        <div className="container mx - auto">;
-          <div className="text - center mb - 12">;
-            <GradientHeading > AI & Tech Insights</GradientHeading>;
-            <p className="mt - 4 text - zion - slate - light text - xl max - w-3xl mx - auto">;
-              Expert perspectives on artificial intelligence, tech innovation, and digital transformation;
-            </p>;
-          </div>;
-          {/* Featured Post Section - Only show if there are featured posts */}
-          {featured_posts.length > 0 && (
-            <div className="mb - 16">;
-              <h2 className="text - 2xl font - bold text - white mb - 6">Featured Article</h2>;
-              <div className="grid grid - cols - 1 lg:grid - cols - 2 gap - 8">;
-                <div className="aspect - video overflow - hidden rounded - lg">;
-                  <img;
-                    src={featured_posts[0].featured_image}
-                    alt={featured_posts[0].title}
-                    className="object - cover w - full h - full hover:scale - 105 transition - transform duration - 300";
-                  />;
-                </div>;
-                <div className="flex flex - col justify - center">;
-                  <span className="text - sm text - zion - cyan bg - zion - blue - dark px - 3 py - 1 rounded - full inline - block mb - 2">;
-                    {featured_posts[0].category}
-                  </span>;
-                  <h3 className="text - 3xl font - bold text - white mb - 4">;
-                    {featured_posts[0].title}
-                  </h3>;
-                  <p className="text - zion - slate - light mb - 6">;
-                    {featured_posts[0].excerpt}
-                  </p>;
-                  <div className="flex items - center mb - 6">;
-                    <img;
-                      src={featured_posts[0].author.avatar_url}
-                      alt={featured_posts[0].author.name}
-                      className="w - 10 h - 10 rounded - full mr - 3";
-                    />;
-                    <div>;
-                      <p className="text - white font - medium">{featured_posts[0].author.name}</p>;
-                      <p className="text - sm text - zion - slate - light">;
-                        {featured_posts[0].published_date} • {featured_posts[0].read_time}
-                      </p>;
-                    </div>;
-                  </div>;
-                  <Button;
-                    as_child;
-                    className="bg - gradient - to - r from - zion - purple to - zion - purple - dark hover:from - zion - purple - light hover:to - zion - purple w - fit";
-                  >;
-                    <Link to={`/blog/${featured_posts[0].slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                       Read Article;
                     </Link>;
                   </Button>;
@@ -860,25 +774,7 @@ function Blog() {
                       className="text-zion-cyan p-0 hover:text-zion-purple"
                       asChild>;
                       <Link to={`/blog/${post && post.slug}`}>;
-=======
-                    </p>;
-                    <div className="flex items - center">;
-                      <img;
-                        src={post.author.avatar_url}
-                        alt={post.author.name}
-                        className="w - 8 h - 8 rounded - full mr - 2";
-                      />;
-                      <span className="text - sm text - white">{post.author.name}</span>;
-                    </div>;
-                  </CardContent>;
-                  <CardFooter className="p - 6 pt - 0">;
-                    <Button;
-                      variant="link";
-                      className="text - zion - cyan p - 0 hover:text - zion - purple";
-                      as_child;
-                    >;
-                      <Link to={`/blog/${post.slug}`}>;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                         Read More →;
                       </Link>;
                     </Button>;
@@ -889,18 +785,7 @@ function Blog() {
 
 
                   setSelectedCategory("All Categories")
-=======
-            </div>;
-          ) : (;
-            <div className="text-center py-16">;
-              <h3 className="text-xl font-bold text-white mb-2">No articles found</h3>;
-              <p className="text-zion-slate-light mb-6">Try adjusting your search or filter criteria</p>;
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setSearchQuery("");
-                  setSelectedCategory("All Categories");
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+
                 }}
 
                   setSearchQuery(""),
@@ -911,19 +796,9 @@ function Blog() {
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
-          )}
-        </div>
-      </div>
-      <Footer />
-    </>
-  )
-}
-=======
 
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
                     </p>;
                     <div className="flex items-center">;
                       <img;
@@ -963,12 +838,11 @@ function Blog() {
                 Clear all filters
               </Button>
             </div>
-<<<<<<< HEAD
-=======
 
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
           )}
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
         </div>;

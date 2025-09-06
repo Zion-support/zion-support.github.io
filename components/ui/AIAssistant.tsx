@@ -2,8 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from "react";
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
-=======
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,25 +34,11 @@ export type AIAssistantProps = {;
   systemPrompt?: string;
   onAccept: (markdown: string) => void;
   authorizationToken?: string;
-<<<<<<< HEAD
+
 }
 export default function AIAssistant({
-  buttonLabel = "Generate with AI"
-  title = "AI Writing Assistant"
-  defaultPrompt
-  systemPrompt
-  onAccept
-  authorizationToken
-}: AIAssistantProps) {
-=======
-
-};
 
 
->>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   buttonLabel = "Generate with AI",
   title = "AI Writing Assistant",
   defaultPrompt,
@@ -61,11 +46,10 @@ export default function AIAssistant({
   onAccept,
   authorizationToken,
 }: AIAssistantProps) {;
-<<<<<<< HEAD
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -78,12 +62,7 @@ export default function AIAssistant({
 }, [output]);
   const onOpen = useCallback(() => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
-=======
 
-
-
-  const onOpen = useCallback(() => {
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
@@ -170,103 +149,7 @@ export default function AIAssistant({
                   disabled={!canAccept}
 
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
-=======
-;
-  const on_open = useCallback (() => {
-    setIsOpen (true);
-    set_output ("");
-    setIsEditing (false);
-    set_error (null);
-  }, []);
-;
-  const on_close = useCallback (() => setIsOpen (false), []);
-;
-  const can_accept = useMemo (() => output && output.trim ().length > 0, [output]);
-;
-  return (
-    <>;
-      <button;
-        type="button";
-        on_click={on_open}
-        className="inline - flex items - center gap - 2 rounded - md border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 px - 3 py - 1.5 text - sm hover:bg - gray - 50 dark:hover:bg - gray - 800";
-      >;
-        {button_label}
-      </button>;
-      {is_open && (
-        <div className="fixed inset - 0 z - 50 flex items - center justify - center">;
-          <div className="absolute inset - 0 bg - black / 50" on_click={on_close} />;
-          <div className="relative z - 10 w - full max - w-2xl rounded - lg border border - gray - 200 dark:border - gray - 800 bg - white dark:bg - black shadow - xl">;
-            <div className="flex items - center justify - between px - 4 py - 3 border - b border - gray - 200 dark:border - gray - 800">;
-              <h3 className="text - base font - semibold">{title}</h3>;
-              <button;
-                on_click={on_close}
-                className="text - sm opacity - 70 hover:opacity - 100";
-              >;
-                Close;
-              </button>{" "}
-            </div>;
-            <div className="p - 4 space - y-3">;
-              <div>;
-                <label;
-                  className="block text - xs font - medium mb - 1";
-                  html_for="input - Operator prompt";
-                >;
-                  Operator prompt;
-                </label>;
-                <textarea;
-                  value={prompt}
-                  on_change={(e) => set_prompt (e.target.value)}
-                  rows={4}
-                  className="w - full rounded - md border border - gray - 300 dark:border - gray - 700 bg - white dark:bg - gray - 900 p - 2 text - sm";
-                />;
-              </div>;
-              <div className="flex items - center gap - 2">;
-                <button;
-                  on_click={call_operator}
-                  disabled={loading}
-                  className="rounded - md bg - blue - 600 text - white px - 3 py - 1.5 text - sm disabled:opacity - 60";
-                >;
-                  {loading ? "Generating…" : "Generate"}
-                </button>;
-                <button;
-                  on_click={call_operator}
-                  disabled={loading}
-                  className="rounded - md border px - 3 py - 1.5 text - sm";
-                >;
-                  {loading ? "…" : "Regenerate"}
-                </button>;
-                <button;
-                  on_click={() => setIsEditing ((v) => !v)}
-                  className="rounded - md border px - 3 py - 1.5 text - sm";
-                >;
-                  {is_editing ? "Preview" : "Edit"}
-                </button>;
-                <button;
-                  on_click={on_copy}
-                  disabled={!output}
-                  className="rounded - md border px - 3 py - 1.5 text - sm disabled: opacity - 60";
-                >;
-                  Copy;
-                </button>;
-                <button;
-                  on_click={() => {
-                    (on_accept (output), on_close ());
-                  }}
-                  disabled={!can_accept}
-                  className="ml - auto rounded - md bg - green - 600 text - white px - 3 py - 1.5 text - sm disabled:opacity - 60";
 
-                >;
-                  Accept;
-                </button>;
-              </div>;
-
-
-              {error && (
-                <div className="text-red-600 text-sm">{error}</div>
-              )}
-
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {error && <div className="text-red-600 text-sm">{error}</div>}
               <div>;
                 <label

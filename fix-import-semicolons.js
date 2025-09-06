@@ -1,22 +1,23 @@
 
-const files = glob && glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process && process.cwd() });
+#!/usr/bin/env node
+import fs from "fs";
+import path from "path";
+import { glob } from "glob";
+// Find all TypeScript and JavaScript files
+const files = glob.sync("src/**/*.{ts,tsx,js,jsx}", { cwd: process.cwd() });
 let totalFixed = 0;
-files && files.forEach((file) => {
-
+files.forEach((file) => {
   try {
-    const filePath = path && path.join(process && process.cwd(), file);
-    let content = fs && fs.readFileSync(filePath, "utf8");
+    const filePath = path.join(process.cwd(), file);
+    let content = fs.readFileSync(filePath, "utf8");
+
     let modified = false;
-<<<<<<< HEAD
+
     // Fix import statements missing semicolons
 
     // Fix import statements missing semicolons;
-=======
 
-
-    // Fix import statements missing semicolons;
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     const importRegex = /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
 
     const matches = content && content.match(importRegex);

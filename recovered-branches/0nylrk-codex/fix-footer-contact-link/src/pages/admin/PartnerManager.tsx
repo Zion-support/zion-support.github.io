@@ -1,31 +1,6 @@
 
-<<<<<<< HEAD
-=======
-class ErrorBoundary extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { hasError: false };
-  }
-  
-  static getDerivedStateFromError(error) {
-    return { hasError: true };
-  }
-  
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
-  }
-  
-  render() {
-    if (this.state.hasError) {
-      return <div>Something went wrong.</div>;
-    }
-    
-    return this.props.children;
-  }
-}
-import React from 'react';
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {useState, useEffect} from "react";
 import {useAuth} from "@/hooks/useAuth";
 import {useNavigate} from "react-router-dom";
@@ -40,7 +15,7 @@ import {Alert, AlertDescription, AlertTitle} from "@/components/ui/alert";
 import {toast} from "@/hooks/use-toast";
 import {Check, Flag, Search, Settings, X} from "lucide-react";
 import {supabase} from "@/integrations/supabase/client";
-<<<<<<< HEAD
+
 import { useState, useEffect } from "react",
 import { useAuth } from "@/hooks/useAuth",
 import { useNavigate } from "react-router-dom",
@@ -72,6 +47,9 @@ interface PartnerProfile {
   fraud_flags?: number;
 import { Check, Flag, Search, Settings, X } from "lucide-react",
 import { supabase } from "@/integrations/supabase/client",
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -87,6 +65,8 @@ interface PartnerProfile {
   fraud_flags?: number,
   commission_rate?: number
 }
+
+
 export default function PartnerManager() {
   const [partners, setPartners] = useState<PartnerProfile[]>([]),
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
@@ -95,6 +75,8 @@ export default function PartnerManager() {
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
 
+
+
 export default function PartnerManager() {;
   const [partners, setPartners] = useState<PartnerProfile[]>([]);
   const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]);
@@ -102,24 +84,22 @@ export default function PartnerManager() {;
   const [searchQuery, setSearchQuery] = useState("");
   const [activeTab, setActiveTab] = useState("pending");
   const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null);
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   const [isDetailsOpen, setIsDetailsOpen] = useState(false);
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
-  const navigate = useNavigate();
+
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
   const navigate = useNavigate();
   useEffect(() => {
     if (!isAuthenticated) {
+
+
       navigate("/login");
       return
     }
@@ -218,39 +198,8 @@ export default function PartnerManager() {;
       } else {
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery)
-export default function PartnerManager() {
-  const [partners, setPartners] = useState<PartnerProfile[]>([]),
-  const [filteredPartners, setFilteredPartners] = useState<PartnerProfile[]>([]),
-  const [isLoading, setIsLoading] = useState(true),
-  const [searchQuery, setSearchQuery] = useState(""),
-  const [activeTab, setActiveTab] = useState("pending"),
-  const [selectedPartner, setSelectedPartner] = useState<PartnerProfile | null>(null),
-  const [isDetailsOpen, setIsDetailsOpen] = useState(false),
-  const [isSettingsOpen, setIsSettingsOpen] = useState(false),
-  const [commissionRate, setCommissionRate] = useState(25),
-  const { user, isAuthenticated } = useAuth(),
-  const navigate = useNavigate(),
 
-  useEffect(() => {
-    if (!isAuthenticated) {
-      navigate("/login"),
-      return
-import { useState, useEffect } from "react",;
-import { useAuth } from "@/hooks/useAuth",;
-import { useNavigate } from "react-router-dom",;
-import { Button } from "@/components/ui/button",;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",;
-import { Input } from "@/components/ui/input",;
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",;
-import { Badge } from "@/components/ui/badge",;
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog",;
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",;
-import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert",;
-import { toast } from "@/hooks/use-toast",;
-import { Check, Flag, Search, Settings, X } from "lucide-react",;
-import { supabase } from "@/integrations/supabase/client",;
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 interface PartnerProfile {;
   id: string,;
   user_id: string,;
@@ -262,25 +211,7 @@ interface PartnerProfile {;
 
   social_media?: Record<string, string>;
 
-=======
-import { useState, useEffect } from './react';
-import { use_auth } from '@/hooks / use_auth';
-import { use_navigate } from './react-router-dom';
-import { Button } from '@/components / ui / button';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components / ui / card';
-import { Input } from '@/components / ui / input';
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components / ui / table';
-import { Badge } from '@/components / ui / badge';
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle, DialogTrigger } from '@/components / ui / dialog';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components / ui / tabs';
-import { Alert, AlertDescription, AlertTitle } from '@/components / ui / alert';
-import { toast } from '@/hooks / use - toast';
-import { Check, Flag, Search, Settings, X } from './lucide-react';
-import { supabase } from '@/integrations / supabase / client';
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 interface PartnerProfile {
   id: string,
   user_id: string,
@@ -311,20 +242,13 @@ export default function PartnerManager() {;
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
   const [commissionRate, setCommissionRate] = useState(25);
   const { user, isAuthenticated } = useAuth();
-=======
 
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 
 
   useEffect(() => {;
     if (!isAuthenticated) {;
 
-=======
 
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
       navigate("/login");
       return;
     }
@@ -335,8 +259,7 @@ export default function PartnerManager() {;
       } else {;
         setPartners(data as PartnerProfile[]);
         filterPartners(data as PartnerProfile[], activeTab, searchQuery);
-<<<<<<< HEAD
-=======
+
 
 export default /**
  * PartnerManager - Function description
@@ -466,12 +389,9 @@ if ( {) {
         set_partners (data as PartnerProfile[]);
         filter_partners (data as PartnerProfile[], active_tab, search_query);
 
-=======
 
-
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
       }
 
       console.error ("Error fetching partners:", error);
@@ -496,7 +416,7 @@ if ( {) {
     // Filter by status
     if (status !== "all") {
       filtered = filtered.filter(p => p.status === status)
-<<<<<<< HEAD
+
     }
     // Filter by search query
     if (query) {
@@ -508,15 +428,8 @@ if ( {) {
         p.website?.toLowerCase().includes(lowerQuery)
       )
     }
-    setFilteredPartners(filtered)
-  }
-=======
 
 
-
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     } catch (error) {;
       console && console.error("Error fetching partners:", error);
       toast({;
@@ -546,13 +459,11 @@ if ( {) {
         p && p.website?.toLowerCase().includes(lowerQuery);
       );
     }
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
     
     setFilteredPartners(filtered)
   },
@@ -655,7 +566,7 @@ if ( {) {
         title: "Error"
         description: "Failed to update partner settings"
         variant: "destructive"})
-<<<<<<< HEAD
+
     }
   }
   const getAudienceSizeLabel = (size: string) => {
@@ -667,17 +578,8 @@ if ( {) {
       case 'over100k': return 'Over 100,000';
       default: return size
     }
-  }
-  };
-=======
 
 
-=======
-
-  };
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 ;
     setFilteredPartners(filtered);
   },;
@@ -765,13 +667,9 @@ if ( {) {
     }
 
   },
-<<<<<<< HEAD
-<<<<<<< HEAD
-
-=======
 
 
-
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 
 >>>>>>> 764b47480e661e35f5e89dcf792b08dc56e66035
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -792,18 +690,7 @@ if ( {) {
 
   const getFraudFlagBadge = (flags: number = 0) => {
     if (flags === 0) return null
-=======
-      case 'rejected':;
-        return <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600">Rejected</Badge>,;
-      default:;
-        return <Badge variant="outline">{status}</Badge>;
-    }
-  };
 
-  const getFraudFlagBadge = (flags: number = 0) => {;
-    if (flags === 0) return null,;
-
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
 
       <Badge variant="outline" className="bg-red-900/30 text-red-500 border-red-600 flex items-center gap-1">
@@ -874,12 +761,12 @@ if ( {) {
                   Pending Applications;
                 </CardTitle>;
                 <div className="text-2xl font-bold text-white">;
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                   {partners.filter(p => p.status === 'pending').length}
                 </div>
               </CardHeader>
@@ -969,12 +856,7 @@ if ( {) {
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
-=======
-            <TabsContent value="pending" className="space - y-4">;
-              <PartnerTable;
-                partners={filtered_partners}
-                is_loading={is_loading}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -988,14 +870,7 @@ if ( {) {
               <PartnerTable 
                 partners={filteredPartners} 
                 isLoading={isLoading}
-=======
-              />;
-            </TabsContent>;
-            <TabsContent value="approved" className="space - y-4">;
-              <PartnerTable;
-                partners={filtered_partners}
-                is_loading={is_loading}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1019,19 +894,7 @@ if ( {) {
                 partners={filtered_partners}
                 is_loading={is_loading}
 
-=======
-                onViewDetails={handleViewDetails}
-                onUpdateStatus={handleUpdateStatus} 
-                onOpenSettings={handleOpenSettings}
-                getStatusBadge={getStatusBadge}
-                getFraudFlagBadge={getFraudFlagBadge}
-              />
-            </TabsContent>
-            <TabsContent value="all" className="space-y-4">
-              <PartnerTable 
-                partners={filteredPartners} 
-                isLoading={isLoading}
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
+
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1046,14 +909,7 @@ if ( {) {
                 partners={filteredPartners} 
 
                 isLoading={isLoading}
-=======
-              />;
-            </TabsContent>;
-            <TabsContent value="all" className="space - y-4">;
-              <PartnerTable;
-                partners={filtered_partners}
-                is_loading={is_loading}
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
                 onViewDetails={handleViewDetails}
                 onUpdateStatus={handleUpdateStatus}
                 onOpenSettings={handleOpenSettings}
@@ -1142,10 +998,11 @@ if ( {) {
               )}
               {selectedPartner.status === 'pending' && (
                 <div className="flex justify-end gap-2 mt-4">
-<<<<<<< HEAD
+
                   <Button
                     variant="destructive"
                     onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
+
                   >
                     <X className="h-4 w-4 mr-1" />
                     Reject
@@ -1160,113 +1017,8 @@ if ( {) {
                 </div>
               )}
             </div>
-                  <Button 
-                    variant="destructive" 
-                    onClick={() => handleUpdateStatus(selectedPartner.id, 'rejected')}
-=======
 
 
-              <div className="grid grid-cols-2 gap-2">;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Payout Method</p>;
-                  <p className="text-white capitalize">{selectedPartner && selectedPartner.payout_method || "Not specified"}</p>;
-                </div>;
-                <div>;
-                  <p className="text-xs text-zion-slate-light">Commission Rate</p>;
-                  <p className="text-white">{selectedPartner && selectedPartner.commission_rate || 25}%</p>;
-                </div>;
-              </div>;
-
-              {selectedPartner && selectedPartner.fraud_flags && selectedPartner && selectedPartner.fraud_flags > 0 && (;
-                <Alert className="bg-red-900/20 border-red-900/50 text-red-500">;
-                  <AlertTitle className="flex items-center gap-2">;
-                    <Flag className="h-4 w-4" />;
-                    Potential Fraud Detected ({selectedPartner && selectedPartner.fraud_flags});
-=======
-          {selected_partner && (
-            <div className="space - y-4">;
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Name</p>;
-                  <p className="font - medium text - white">{selected_partner.name}</p>;
-                </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Status</p>;
-                  <div>{getStatusBadge (selected_partner.status)}</div>;
-                </div>;
-              </div>;
-              <div>;
-                <p className="text - xs text - zion - slate - light">Bio</p>;
-                <p className="text - white">{selected_partner.bio || "No bio provided"}</p>;
-              </div>;
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Niche</p>;
-                  <p className="text - white">{selected_partner.niche}</p>;
-                </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Audience Size</p>;
-                  <p className="text - white">{getAudienceSizeLabel (selected_partner.audience_size)}</p>;
-                </div>;
-              </div>;
-              {selected_partner.website && (
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Website</p>;
-                  <p className="text - zion - cyan">{selected_partner.website}</p>;
-                </div>)}
-              {selected_partner.social_media && Object.keys (selected_partner.social_media).length > 0 && (
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Social Media</p>;
-                  <div className="grid grid - cols - 2 gap - 2">;
-                    {Object.entries (selected_partner.social_media).map (([platform, handle]) => (
-                      <p key={platform} className="text - white">;
-                        <span className="font - medium">{platform}: </span>;
-                        {handle}
-                      </p>))}
-                  </div>;
-                </div>)}
-              <div className="grid grid - cols - 2 gap - 2">;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Payout Method</p>;
-                  <p className="text - white capitalize">{selected_partner.payout_method || "Not specified"}</p>;
-                </div>;
-                <div>;
-                  <p className="text - xs text - zion - slate - light">Commission Rate</p>;
-                  <p className="text - white">{selected_partner.commission_rate || 25}%</p>;
-                </div>;
-              </div>;
-              {selected_partner.fraud_flags && selected_partner.fraud_flags > 0 && (
-                <Alert className="bg - red - 900 / 20 border - red - 900 / 50 text - red - 500">;
-                  <AlertTitle className="flex items - center gap - 2">;
-                    <Flag className="h - 4 w - 4" />;
-                    Potential Fraud Detected ({selected_partner.fraud_flags});
-
-                  </AlertTitle>;
-                  <AlertDescription>;
-                    This application has triggered our fraud detection system. Review carefully before approving.;
-                  </AlertDescription>;
-
-
-
-
-          )}
-
-        </DialogContent>;
-      </Dialog>;
-
-      {/* Partner Settings Dialog */}
-      <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
-        <DialogContent className="bg-zion-blue border-zion-blue-light">;
-          <DialogHeader>;
-            <DialogTitle>Partner Settings</DialogTitle>;
-=======
-                </Alert>)}
-              {selected_partner.status === 'pending' && (
-                <div className="flex justify - end gap - 2 mt - 4">;
-                  <Button;
-                    variant="destructive";
-                    on_click={() => handleUpdateStatus (selected_partner.id, 'rejected')}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                   >;
                     <X className="h - 4 w - 4 mr - 1" />;
                     Reject;
@@ -1278,19 +1030,17 @@ if ( {) {
                     <Check className="h - 4 w - 4 mr - 1" />;
                     Approve;
                   </Button>;
-<<<<<<< HEAD
+
                 </div>;
               )}
             </div>;
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
           )}
         </DialogContent>
       </Dialog>
-=======
-                </div>)}
-            </div>)}
-        </DialogContent>;
-      </Dialog>;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
       {/* Partner Settings Dialog */}
       <Dialog open={isSettingsOpen} onOpenChange={setIsSettingsOpen}>;
         <DialogContent className="bg - zion - blue border - zion - blue - light">;
@@ -1325,7 +1075,7 @@ if ( {) {
     </div>;
   );
 }
-<<<<<<< HEAD
+
 interface PartnerTableProps {
   partners: PartnerProfile[]
   isLoading: boolean
@@ -1335,24 +1085,16 @@ interface PartnerTableProps {
   getStatusBadge: (status: string) => JSX.Element
   getFraudFlagBadge: (flags?: number) => JSX.Element | null
 }
-function PartnerTable({
-  partners
-  isLoading
-  onViewDetails
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 function PartnerTable({ 
   partners, 
   isLoading, 
   onViewDetails, 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   onUpdateStatus;
   onOpenSettings;
   getStatusBadge;
@@ -1382,20 +1124,15 @@ function PartnerTable({;
         <p className="text-zion-slate-light">Loading partner data...</p>;
       </div>;
     );
-<<<<<<< HEAD
-=======
 
 
 
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
   if (partners.length === 0) {
-=======
 
-  if (partners && partners.length === 0) {;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
       <div className="text-center py-8">;
         <p className="text-zion-slate-light">No partners found.</p>;
@@ -1564,28 +1301,18 @@ if ( {) {
                   variant="ghost" 
                   size="sm"
                   onClick={() => onOpenSettings(partner)}
-<<<<<<< HEAD
+
                   className="text-zion-slate-light hover:text-white"
                 >
                   <Settings className="h-4 w-4" />
                   <span className="sr-only">Settings</span>
                 </Button>
-=======
-                  className="text-zion-slate-light hover:text-white";
-                >;
-                  <Settings className="h-4 w-4" />;
-                  <span className="sr-only">Settings</span>;
-                </Button>;
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 <Button
                   variant="outline"
                 
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
                 <Button 
 
                   variant="outline" 

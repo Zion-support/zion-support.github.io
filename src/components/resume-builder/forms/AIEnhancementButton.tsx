@@ -6,7 +6,7 @@ export function AIEnhancementButton({
   buttonText = "Enhance with AI",
   className
 }: AIEnhancementButtonProps) {
-<<<<<<< HEAD
+
   const { enhanceContent, isEnhancing } = useResumeEnhancer()
   const [error, setError] = useState<string | null>(null)
   const handleEnhance = async () => {
@@ -31,11 +31,7 @@ export function AIEnhancementButton({
   const handleEnhance = async () => {
     if (!currentContent || currentContent.trim().length < 10) {
       setError('Please enter at least some basic content before enhancing'),
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
       return
     }
     setError(null)
@@ -114,7 +110,7 @@ if ( {) {
 }
       on_enhanced (enhanced_content);
     }
-<<<<<<< HEAD
+
   }
 
 
@@ -125,8 +121,7 @@ if ( {) {
   
 <<<<<<< HEAD
 <<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
   return (
     <Button
@@ -138,16 +133,13 @@ if ( {) {
       disabled = {isEnhancing,}
       onClick={handleEnhance}
       disabled={isEnhancing}
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
     >
       {isEnhancing ? (
         <Loader2 className="h-3 w-3 animate-spin" />
       ) : (
-<<<<<<< HEAD
+
         <Sparkles className="h-3 w-3" />
       )}
       <span className="text-xs">{buttonText}</span>
@@ -167,16 +159,7 @@ if ( {) {
       <span className="text-xs">{buttonText}</span>
     </Button>
   )
-=======
 
-
-        <Sparkles className="h-3 w-3" />
-      )}
-
-      <span className="text-xs">{buttonText}</span>;
-    </Button>;
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
     <Button;

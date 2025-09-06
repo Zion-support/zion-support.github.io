@@ -1,46 +1,18 @@
-<<<<<<< HEAD
+
 import * as Sentry from '@sentry/react';
-if (typeof window !== 'undefined') {Sentry.init({;
-    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN |'';
-    tracesSampleRate: 0.1;
-    integrations: [];
-    enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
-import * as Sentry from '@sentry/react',;
-import * as Sentry from '@sentry/react';
-=======
 
-import * as Sentry from '@sentry / react',
-// Check condition
-if ( {) {
-  $2
-}
-  Sentry.init ({
-    dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',
-    tracesSampleRate: 0.1,
-
-    integrations: [];
-    enabled: Boolean (process.env.NEXT_PUBLIC_SENTRY_DSN)});
-}
-=======
-
-=======
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 if (typeof window !== 'undefined') {;
   Sentry.init({;
     dsn: process.env.NEXT_PUBLIC_SENTRY_DSN || '',;
     tracesSampleRate: 0.1,;
     integrations: [];
     enabled: Boolean(process.env.NEXT_PUBLIC_SENTRY_DSN)});
-<<<<<<< HEAD
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
-=======
 
 
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
 }
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba

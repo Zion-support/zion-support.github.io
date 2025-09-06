@@ -135,7 +135,7 @@ export function AIEnhancementPanel(): any ({;
     field: keyof AIEnhancementOptions
   ) => {
     setOptions({
-<<<<<<< HEAD
+
       ...options
       [field]: e.target.value
       ...options,
@@ -154,10 +154,7 @@ export function AIEnhancementPanel(): any ({;
       ...options,
       [field]: e.target.value})
   },
-=======
 
-      ...options,
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
   const handleCopy = () => {
@@ -210,10 +207,9 @@ export function AIEnhancementPanel(): any ({;
             onChange={(e) => handleInputChange(e, 'context')}
           />;
         </div>;
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
         {/* Instructions input (optional) */}
         {showInstructions && (;
@@ -225,7 +221,7 @@ export function AIEnhancementPanel(): any ({;
 
               placeholder="E.g., 'Make it more conversational' or 'Focus on leadership skills'"
               value={options.instructions}
-<<<<<<< HEAD
+
               onChange={e => handleInputChange(e, 'instructions')}            />
           </div>
         )}
@@ -234,9 +230,7 @@ export function AIEnhancementPanel(): any ({;
           onClick={handleGenerate}
           className='w-full'
           disabled={isEnhancing |(!options.content && !options.context)}        >
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
           disabled={isEnhancing || (!options.content && !options.context)}        >
 
               onChange={(e) => handleInputChange(e, 'instructions')}
@@ -250,10 +244,9 @@ export function AIEnhancementPanel(): any ({;
           className="w-full" 
           disabled={isEnhancing || !options.content && !options.context}
         >
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
 
@@ -302,11 +295,8 @@ export function AIEnhancementPanel(): any ({;
                 onClick={handleCopy}
                 className="h-8"
               >
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {copied ? (
                   <><Check className="h-4 w-4 mr-1" /> Copied</>
                 ) : (
@@ -322,20 +312,16 @@ export function AIEnhancementPanel(): any ({;
                 onChange={(e) => setGeneratedContent(e.target.value)}
                 className="min-h-[200px]"
               />
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             </div>
           </div>
         )}
       </CardContent>
       
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
       {generatedContent && (
@@ -353,17 +339,13 @@ export function AIEnhancementPanel(): any ({;
               Cancel;
             </Button>;
           )}
-<<<<<<< HEAD
+
           <Button onClick={handleApply}>Apply to Form</Button>
         </CardFooter>
       )}
     </Card>
   )
-=======
 
-    </Card>;
-  );
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
     <Card className='w - full max - w-2xl mx - auto'>;
@@ -460,10 +442,9 @@ export function AIEnhancementPanel(): any ({;
     </Card>;
   );
 };
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
           <Button onClick={handleApply}>;
             Apply to Form;

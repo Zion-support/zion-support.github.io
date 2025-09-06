@@ -24,23 +24,14 @@ export function TalentCardHeader(): any ({;
       <div className="flex-1">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold text-white flex items-center gap-1">
-<<<<<<< HEAD
+
 <<<<<<< HEAD
 
             {fullName}
             {/* AI score could be used for verification badge */}
             {yearsExperience > 5 && (
               <BadgeCheck className="h-4 w-4 text-zion-cyan" aria-label="Verified Expert" />
-=======
 
-            {fullName}
-            {/* AI score could be used for verification badge */}
-            {yearsExperience > 5 && (;
-              <BadgeCheck
-                className='h-4 w-4 text-zion-cyan'
-                aria-label='Verified Expert'
-              />;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
             )}
 
           </h3>

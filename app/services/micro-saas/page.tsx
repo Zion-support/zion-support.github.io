@@ -1,12 +1,15 @@
 
+
 export const metadata = { 
   title: 'Micro SaaS Development | Zion Tech Group',
   description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
   keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'
+
 };
 
-export default function MicroSaaSPage() {
+export default function MicroSaasPage() {
   return (
+
     <div className="animate-fade-in">
       <section className="text-center mb-16">
         <h1 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
@@ -286,9 +289,11 @@ export default function MicroSaaSPage() {
             features={["Ticket routing", "Auto-resolution", "Knowledge base", "Sentiment analysis", "Performance metrics", "Customer satisfaction"]}
             price="$1,499/month"
             icon="🎧"
+
           />
         </div>
       </section>
+
 
       <section className="mb-16">
         <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Development Process</h2>
@@ -330,9 +335,11 @@ export default function MicroSaaSPage() {
           <TechStack
             title="AI/ML"
             technologies={["OpenAI GPT-4", "Hugging Face", "LangChain", "Vector DBs", "MLflow"]}
+
           />
         </div>
       </section>
+
 
       <Pricing />
       
@@ -516,6 +523,7 @@ function Plan({ name, price, features, popular }: {
       <a 
         href="tel:+13024640950" 
         className={`w-full block text-center py-3 px-6 rounded-lg font-semibold transition-colors ${
+
           popular 
             ? 'bg-blue-600 text-white hover:bg-blue-700' 
 
@@ -527,6 +535,7 @@ function Plan({ name, price, features, popular }: {
       </a>
     </div>
   );
+
 }
 
 
@@ -565,4 +574,5 @@ function CTASection() {
 }
 
 }
+
 

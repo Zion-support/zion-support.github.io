@@ -1,16 +1,8 @@
 import { useState } from 'react';
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { useState  } from 'react';
-=======
-import { useState } from 'react'
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
 import { Copy, Send } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
 import type { Prompt } from '@/types/prompts';
@@ -44,34 +36,17 @@ export function PromptCard(): any ({ prompt }: PromptCardProps) {;
           variant='outline'
           size='sm'
           onClick={handleCopy}
-<<<<<<< HEAD
+
           aria-label='Copy prompt'
         >
           {copied ? 'Copied' : <Copy className='w-4 h-4' />}
-<<<<<<< HEAD
-=======
-          aria-label='Copy prompt'>;
-          {copied ? 'Copied' : <Copy className='w-4 h-4' />}
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 
-}
-  );
-<<<<<<< HEAD
-};
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 }
 
 import { useState } from 'react';
 import { Copy, Send } from 'lucide-react';
-<<<<<<< HEAD
-import { Button } from '@/components/ui/button',;
-import type { Prompt } from '@/types/prompts',;
-interface PromptCardProps {;
-  prompt: Prompt;
-=======
+
 import type { Prompt } from '@/types / prompts';
 import { Button } from '@/components / ui / button';
 interface PromptCardProps {
@@ -120,7 +95,7 @@ function PromptCard() {
         </Button>;
       </div>;
     </div>);
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 }
 
 ;

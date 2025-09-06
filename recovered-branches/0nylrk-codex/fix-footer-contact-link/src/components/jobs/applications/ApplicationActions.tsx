@@ -1,22 +1,7 @@
 
-<<<<<<< HEAD
-import { useState } from "react";
-import { Link } from "react-router-dom";
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Button} from "@/components/ui/button";
-import {Eye, ChevronDown, Loader2} from "lucide-react";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
-<<<<<<< HEAD
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import { useState } from "react",
 import { Link } from "react-router-dom",
 import { 
@@ -31,12 +16,12 @@ import { JobApplication, ApplicationStatus } from "@/types/jobs";
 import { Eye, ChevronDown, Loader2 } from "lucide-react",
 import { JobApplication, ApplicationStatus } from "@/types/jobs",
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface ApplicationActionsProps {
 
   application: JobApplication
@@ -45,48 +30,20 @@ interface ApplicationActionsProps {
 
   onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>
 }
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
 
-import {useState} from "react";
-import {Link} from "react-router-dom";
-import {DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
-import {Button} from "@/components/ui/button";
-import {Eye, ChevronDown, Loader2} from "lucide-react";
-import {JobApplication, ApplicationStatus} from "@/types/jobs";
 
-interface ApplicationActionsProps {;
-  application: JobApplication,;
-  processingId: string | null,;
-  onViewApplication: (applicationId: string) => Promise<void>,;
-  onStatusChange: (applicationId: string, newStatus: ApplicationStatus) => Promise<void>;
-}
-
-export function ApplicationActions(): any ({;
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 
 export function ApplicationActions({;
   application;
   processingId;
   onViewApplication;
-<<<<<<< HEAD
+
+
 export function ApplicationActions({
   application,
   processingId,
   onViewApplication,
-=======
-  onStatusChange;
-}: ApplicationActionsProps) {;
-=======
 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   onStatusChange
 }: ApplicationActionsProps) {
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
@@ -114,7 +71,7 @@ export function ApplicationActions({
             ) : (;
               <>Status <ChevronDown className="h-4 w-4 ml-1" /></>;
             )}
-<<<<<<< HEAD
+
           </Button>
         </DropdownMenuTrigger>
         <DropdownMenuContent align="end">
@@ -141,18 +98,9 @@ export function ApplicationActions({
           </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
-      <Button
-        variant="default"
-      <Button 
-        variant="default" 
-=======
 
 
-      <Button 
-        variant="default" 
-
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
         size="sm"
         asChild
       >
@@ -245,9 +193,9 @@ function ApplicationActions() {
     </div>);
 }
 ;
-<<<<<<< HEAD
-=======
 
->>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+
+
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+

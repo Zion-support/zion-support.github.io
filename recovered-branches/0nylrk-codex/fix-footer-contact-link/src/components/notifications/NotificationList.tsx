@@ -1,5 +1,5 @@
 
-<<<<<<< HEAD
+
 import React from 'react';
 import { ScrollArea  } from '@/components/ui/scroll-area';
 import { Skeleton  } from '@/components/ui/skeleton';
@@ -7,28 +7,8 @@ import { Button  } from '@/components/ui/button';
 import { NotificationItem  } from './NotificationItem';
 import { Notification } from '@/context/notifications';
 interface NotificationListProps {
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
-  loading: boolean,
-  error: string | null,
-  notifications: Notification[],
-  onMarkAsRead: (id: string) => Promise<void>,
-  onDismiss: (id: string) => Promise<void>,
-  onRetry: () => void
-}
-
-export const NotificationList: React.FC<NotificationListProps> = ({;
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-<<<<<<< HEAD
-=======
-
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import React from 'react',;
 import { ScrollArea } from '@/components/ui/scroll-area',;
 import { Skeleton } from '@/components/ui/skeleton',;
@@ -65,10 +45,7 @@ export const NotificationList: React.FC<NotificationListProps> = ({
   onMarkAsRead,
   onDismiss,
   onRetry
-=======
-  on_dismiss,
-  on_retry;
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
+
 }) => {
   return (
     <ScrollArea className="flex - 1 overflow - y-auto max - h-[350px]">;
@@ -111,28 +88,12 @@ export const NotificationList: React.FC<NotificationListProps> = ({
           />;
         ));
       )}
-<<<<<<< HEAD
+
     </ScrollArea>
   )
-}
 
-    </ScrollArea>;
-  );
-    </ScrollArea>;
-  );
-=======
-
-
-
-    </ScrollArea>;
-  );
-
-=======
-=======
-    </ScrollArea>;
-  );
-
-
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 };

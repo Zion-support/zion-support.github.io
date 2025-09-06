@@ -1,23 +1,14 @@
 
-<<<<<<< HEAD
-import { UserProfile, UserDetails  } from '@/types/auth';
-import { Message, Conversation, ConversationContextData  } from '@/types/messaging';
-import { useConversationState  } from './useConversationState';
-import { useConversations  } from './useConversations';
-import { useMessages } from './useMessages';
-=======
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 import {UserProfile, UserDetails} from '@/types/auth';
 import {Message, Conversation, ConversationContextData} from '@/types/messaging';
 import {useConversationState} from './useConversationState';
 import {useConversations} from './useConversations';
 import {useMessages} from './useMessages';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 // Allow either UserProfile or UserDetails
 
 type UserWithProfile = UserProfile | UserDetails | null;
@@ -167,12 +158,13 @@ function useMessagingOperations() {
     send_message;
     create_conversation;
     markAsRead;
-<<<<<<< HEAD
+
     fetchConversations;
     loadMessages;
-=======
 
->>>>>>> cursor/fix-website-loading-errors-and-merge-6662
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   }
 }

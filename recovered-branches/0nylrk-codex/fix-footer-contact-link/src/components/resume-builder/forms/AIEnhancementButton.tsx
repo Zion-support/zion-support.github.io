@@ -1,22 +1,13 @@
 
-<<<<<<< HEAD
-import { useState  } from 'react';
-import { Button  } from '@/components/ui/button';
-import { Sparkles, Loader2  } from 'lucide-react';
-import { useResumeEnhancer } from '@/hooks/useResumeEnhancer';
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
 import {useState} from 'react';
 import {Button} from '@/components/ui/button';
 import {Sparkles, Loader2} from 'lucide-react';
 import {useResumeEnhancer} from '@/hooks/useResumeEnhancer';
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
 interface AIEnhancementButtonProps {
 
   currentContent: string
@@ -24,17 +15,11 @@ interface AIEnhancementButtonProps {
   context?: string;
   onEnhanced: (enhancedContent: string) => void
 
-<<<<<<< HEAD
+
   buttonText?: string;
   className?: string
 }
-export function AIEnhancementButton({
 
-export function AIEnhancementButton({;
-=======
-=======
-=======
->>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4
 import {useState} from 'react';
 import {Button} from '@/components / ui / button';
 import {Sparkles, Loader2} from 'lucide-react';
@@ -42,18 +27,17 @@ import {Sparkles, Loader2} from 'lucide-react';
 export function AIEnhancementButton({;
 
 
+
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   currentContent;
   enhancementType;
   context;
   onEnhanced;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
->>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
+
 
   buttonText = "Enhance with AI";
 
@@ -74,10 +58,8 @@ export function AIEnhancementButton({;
       context;
     );
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+
 
     if (enhancedContent) {;
       onEnhanced(enhancedContent);
@@ -85,13 +67,10 @@ export function AIEnhancementButton({;
   };
 
 
-<<<<<<< HEAD
-  buttonText = "Enhance with AI";
-=======
-=======
 
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+  buttonText = "Enhance with AI";
+
+
 import { useState } from 'react',;
 import { Button } from '@/components/ui/button',;
 import { Sparkles, Loader2 } from 'lucide-react',;
@@ -121,19 +100,8 @@ export function AIEnhancementButton({
       setError('Please enter at least some basic content before enhancing'),
       return
     }
-<<<<<<< HEAD
-    
-    setError(null);
-    const enhancedContent = await enhanceContent(
-      currentContent;
-      enhancementType;
-      context
-    );
-    
-    if (enhancedContent) {
-      onEnhanced(enhancedContent)
-    }
-  };
+
+
 ;
     setError(null),;
     const enhancedContent = await enhanceContent(;
@@ -145,10 +113,10 @@ export function AIEnhancementButton({
       onEnhanced(enhancedContent);
     }
   },
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
+>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba
   
   return (
     <Button

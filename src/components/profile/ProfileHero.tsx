@@ -16,13 +16,9 @@ avatarUrl?: string;
               alt={`${name} cover`}
               className='w-full h-full object-cover'
               loading='lazy'
-<<<<<<< HEAD
+
 export function ProfileHero({
-=======
 
-export function ProfileHero(): any ({
-
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
   name
   title
   avatarUrl
@@ -130,10 +126,9 @@ export function ProfileHero({
 
         </AspectRatio>
         
+
 <<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
+
 
 
         <div className="container px-4 md:px-6">
@@ -261,11 +256,8 @@ export function ProfileHero({;
               <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
               
               <div className="flex flex-wrap items-center gap-3 mt-2">
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee
                 {location && (
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
