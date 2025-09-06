@@ -339,6 +339,7 @@ export default function ApiDocsPage() {
                 </Link>
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get API Key
+<<<<<<< HEAD
 =======
 >>>>>>> main
     name: 'Predictive Analytics',
@@ -540,6 +541,7 @@ export default function ApiDocsPage() {
 <<<<<<< HEAD:pages/api-docs.tsx
                 <Link href="/contact" className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300 font-semibold">
                   Get API Key
+<<<<<<< HEAD
 =======
 >>>>>>> main
                 <Link
@@ -747,6 +749,8 @@ export default function ApiDocsPage() {
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
+=======
+<<<<<<< HEAD
         {/* Contact Section */}
         <section className="py-20 bg-gray-900">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -766,6 +770,7 @@ export default function ApiDocsPage() {
         </section>
       </div>
     </>
+<<<<<<< HEAD
 =======
 >>>>>>> main
   Code, 
@@ -1150,6 +1155,7 @@ export default function APIDocsPage() {
 <<<<<<< HEAD:pages/api-docs.tsx
                 <Link href="/docs" className="px-8 py-4 border-2 border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-all duration-300 font-semibold">
                   View Documentation
+<<<<<<< HEAD
 =======
 >>>>>>> main
                 <Link

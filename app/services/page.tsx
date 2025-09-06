@@ -2,7 +2,7 @@ import Link from "next/link";
 export const metadata = {
   title: "Services | Zion Tech Group",
   description:
-    "Comprehensive AI,micro SaaS,and IT services to help your business scale and succeed.",
+    "Comprehensive AI, micro SaaS, and IT services to help your business scale and succeed.",
 };
 export default function ServicesOverviewPage() {
   return (
@@ -19,44 +19,64 @@ export default function ServicesOverviewPage() {
           outcomes for your business.{" "}
         </p>{" "}
       </div>{" "}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
-        {" "}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         <ServiceCard
           href="/services/micro-saas"
           title="Micro SaaS"
-          description="End-to-end product development with billing,auth,and analytics"
+          description="End-to-end product development with billing, auth, and analytics"
           bullets={[
             "Foundational architecture",
-            "Billing + subscriptions",
-            "Growth analytics",
+            "Billing + subscriptions", 
+            "Growth analytics"
           ]}
           icon="🚀"
-        />{" "}
+        />
         <ServiceCard
           href="/services/ai-services"
           title="AI Services"
-          description="LLM applications,RAG systems,and MLOps pipelines"
+          description="LLM applications, RAG systems, and MLOps pipelines"
           bullets={["RAG and agents", "Evals + guardrails", "MLOps pipelines"]}
           icon="🤖"
-        />{" "}
+        />
         <ServiceCard
           href="/services/it-services"
           title="IT Services"
-          description="Cloud migration,DevOps,and security solutions"
+          description="Cloud migration, DevOps, and security solutions"
           bullets={["Cloud migration", "DevOps + SRE", "Security"]}
           icon="⚙️"
-        />{" "}
-      </div>{" "}
+        />
+        <ServiceCard
+          href="/services/blockchain-solutions"
+          title="Blockchain Solutions"
+          description="DeFi, NFTs, smart contracts, and Web3 applications"
+          bullets={["Smart contracts", "DeFi protocols", "Web3 apps"]}
+          icon="⛓️"
+        />
+        <ServiceCard
+          href="/services/automation-solutions"
+          title="Automation Solutions"
+          description="RPA, workflow automation, and AI-powered automation"
+          bullets={["Process automation", "Workflow optimization", "AI automation"]}
+          icon="⚡"
+        />
+        <ServiceCard
+          href="/services/data-analytics"
+          title="Data Analytics"
+          description="Business intelligence, predictive analytics, and data engineering"
+          bullets={["BI dashboards", "Predictive analytics", "Data engineering"]}
+          icon="📊"
+        />
+      </div>
       <CTA />{" "}
     </div>
   );
 }
 function ServiceCard({
-  href,
-  title,
-  description,
-  bullets,
-  icon,
+  href
+  title
+  description
+  bullets
+  icon
 }: {
   href: string;
   title: string;
@@ -96,7 +116,7 @@ function CTA() {
       </h3>{" "}
       <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
         {" "}
-        Talk to our experts about your project. We'll help you choose the right
+        Talk to our experts about your project. We&apos;ll help you choose the right
         service and create a custom solution for your business needs.{" "}
       </p>{" "}
       <div className="flex flex-col sm:flex-row gap-4 justify-center">

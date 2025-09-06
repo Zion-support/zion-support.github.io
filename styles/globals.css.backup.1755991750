@@ -179,7 +179,13 @@ h3 {
 <<<<<<< HEAD
   right: 0;
   bottom: 0;
-=======
+  background: 
+  right: 0;
+  bottom: 0;  background: 
+
+  right: 0;
+  bottom: 0;
+
 }
 
 /* Custom scrollbar */

@@ -1,40 +1,8 @@
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { ensureAdmin, parseUserFromRequest } from '../../../../../../utils/auth';
-import { updateFlagStatus } from '../../../../../../utils/moderationDb';
-import type { ModerationStatus } from '../../../../../../types/moderation';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  try {
-    const user = parseUserFromRequest(req);
-    try { 
-      ensureAdmin(user) 
-    } catch (e: any) { 
-      return res.status(e.statusCode || 403).json({ error: 'Forbidden' }) 
-    }
 
-    const { id } = req.query;
-    if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
 
-    if (req.method === 'POST') {
-      const { action, adminNotes } = req.body || {} as { action: string, adminNotes?: string };
-      const actionMap: Record<string, ModerationStatus> = {
-        approve: 'approved',
-        remove: 'removed',
-        warn: 'warned',
-        ban: 'banned'
-      };
 
-      const status = actionMap[action];
-      if (!status) return res.status(400).json({ error: 'Invalid action' });
-
-      await updateFlagStatus(id, status, adminNotes);
-      res.json({ success: true });
-    } else {
-      res.setHeader('Allow', 'POST');
-      res.status(405).end('Method Not Allowed');
-    }
-  } catch (error) {
-    console.error("Error:", error);
-    return res.status(500).json({ error: "Internal server error" });
-  }
-}
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

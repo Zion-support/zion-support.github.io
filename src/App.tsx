@@ -1,38 +1,37 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Header } from './components/Header';
-import { Footer } from './components/Footer';
-import { Sidebar } from './components/layout/Sidebar';
+import Button from './components/Button';
+import Card from './components/Card';
+import ServiceCard from './components/ServiceCard';
+import Header from './components/Header';
+import Footer from './components/Footer';
 import ErrorBoundary from './components/ErrorBoundary';
+import About from './pages/About';
+import Services from './pages/Services';
+import Contact from './pages/Contact';
+import Home from './pages/Home';
+import Pricing from './pages/Pricing';
 
-// Import pages
-import HomePage from './pages/Home';
-import AboutPage from './pages/About';
-import ServicesPage from './pages/ServicesPage';
-import ContactPage from './pages/Contact';
-import NotFoundPage from './pages/NotFound';
-
-export default function App() {
+function App() {
   return (
     <ErrorBoundary>
       <Router>
-        <div className="App">
+        <div className="min-h-screen flex flex-col">
           <Header />
-          <div className="main-content">
-            <Sidebar />
-            <main className="content">
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/about" element={<AboutPage />} />
-                <Route path="/services" element={<ServicesPage />} />
-                <Route path="/contact" element={<ContactPage />} />
-                <Route path="*" element={<NotFoundPage />} />
-              </Routes>
-            </main>
-          </div>
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/pricing" element={<Pricing />} />
+            </Routes>
+          </main>
           <Footer />
         </div>
       </Router>
     </ErrorBoundary>
   );
 }
+
+export default App;

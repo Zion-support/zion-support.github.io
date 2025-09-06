@@ -1,7 +1,5 @@
-import type { NextPage } from 'next',
-import Head from 'next/head',
-import Link from 'next/link',
-import UseTokensButton from '../../components/tokens/UseTokensButton',
+
+
 const PriceIntelligenceService: NextPage = () => {
   return (
     <div>
@@ -17,5 +15,18 @@ const PriceIntelligenceService: NextPage = () => {
       </main>
     </div>
   )
+
+
+>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39
+=======
+
 },
 export default PriceIntelligenceService,
+
+=======
+},
+
+export default PriceIntelligenceService,
+
+>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4
+>>>>>>> cursor/fix-website-loading-errors-and-merge-6662

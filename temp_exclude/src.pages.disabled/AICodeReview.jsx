@@ -1,7 +1,9 @@
 import React from 'react';
+
 interface AICodeReviewProps {
   // Add props here as needed
 }
+
 export default function AICodeReview({ }: AICodeReviewProps) {
   return (
     <div>
@@ -9,9 +11,5 @@ export default function AICodeReview({ }: AICodeReviewProps) {
       <p>This component is currently under development.</p>
     </div>
   );
-:src.pages.disabled/AICodeReview.jsx
-}
-}
-}
-}
-}
+
+

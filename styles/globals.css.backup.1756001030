@@ -123,7 +123,15 @@
 /* Enhanced Selection */
 ::selection {
   background: rgba(0, 255, 255, 0.4);
-=======
+  color: white;
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);  color: white;
+
+/* Enhanced Selection */
+::selection {
+  background: rgba(0, 255, 255, 0.4);
+
 .text-high-contrast-accent {
   color: var(--text-accent);
   text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);

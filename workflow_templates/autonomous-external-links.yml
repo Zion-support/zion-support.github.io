@@ -2,7 +2,6 @@ name: Autonomous External Link Checks
 
 on:
 
-
   schedule: - cron: '0 0 * * *'
   workflow_dispatch: {}
 
@@ -10,12 +9,10 @@ on:
 
 concurrency:
 
-
   group: automation-external-links
   cancel-in-progress: true
 
 jobs:
-
 
   external-links: - name: Checkout
            
@@ -23,25 +20,15 @@ jobs:
 
       - name: Setup Node
 
-
-                
           node-version: '20'
           cache: 'npm'
 
       - name: Install dependencies
 
-
-                
-
       - name: Check external links
-
-
-                
 
       - name: Commit and push report
 
-
-                
           git config user.name "github-actions"
           git config user.email "actions@github.com"
           git add -A

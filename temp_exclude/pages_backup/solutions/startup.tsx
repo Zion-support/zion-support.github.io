@@ -1,12 +1,13 @@
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import Layout from '../../components/Layout';
-import { Zap, DollarSign, TrendingUp, Users } from 'lucide-react';
+
+
 import React from 'react';
 import Link from 'next/link';';
-import {motion} from 'framer-motion';
-import {Rocket,, Zap,, DollarSign,, Users,, ArrowRight,, CheckCircle,, Clock,, Target,, TrendingUp} from 'lucide-react';
+import { motion } from 'framer-motion';
+import { Rocket, Zap, DollarSign, Users, ArrowRight, CheckCircle, Clock, Target, TrendingUp } from 'lucide-react';
 import Layout from "../../components/Layout";";
+
+
+
 
 const features = [;
   {}
@@ -34,6 +35,7 @@ const features = [;
     benefits: ['Technical Mentorship, 'Best Practices', 'Industry Insights', 'Ongoing Support']',
   }
 ;];
+
 const services = [;
   { title: 'MVP Development, description: 'Minimum viable product development in 2-4 weeks' },',
   { title: 'Tech Stack Selection, description: 'Choose the right technologies for your startup' },',
@@ -42,12 +44,14 @@ const services = [;
   { title: 'Cloud Setup, description: 'Scalable cloud infrastructure from day one' },',
   { title: 'Growth Hacking, description: 'Technical solutions to accelerate user acquisition' }',
 ;];
+
 const stats = [;
   { number: '100+, label: 'Startups Helped' },',
   { number: '300+, label: 'Projects Delivered' },',
   { number: '300%, label: 'Average Growth' },',
   { number: '2-4, label: 'Weeks to MVP' }',
 ;];
+
 export default function StartupSolutionsPage() {
   return (;
     <Layout);
@@ -62,6 +66,7 @@ export default function StartupSolutionsPage() {
             <div className="absolute top-20 left-10 w-72 h-72 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse"></div>";
             <div className="absolute top-40 right-10 w-72 h-72 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-pulse animation-delay-2000"></div>";
           </div>;
+
           <div className="container mx-auto px-4 relative z-10">";
             <motion.div;
               initial={{ opacity: 0, y: 30 }}
@@ -91,6 +96,7 @@ export default function StartupSolutionsPage() {
             </motion.div>;
           </div>;
         </section>;
+
         {/* Stats Section */}
         <section className="py-16 bg-white">"
           <div className="container mx-auto px-4">";
@@ -110,6 +116,7 @@ export default function StartupSolutionsPage() {
             </div>,
           </div>;
         </section>;
+
         {/* Features Section */}
         <section className="py-20 bg-gray-50">"
           <div className="container mx-auto px-4">";
@@ -125,7 +132,8 @@ export default function StartupSolutionsPage() {
                 We understand the unique challenges startups face and provide solutions that help you move fast, stay lean, and scale efficiently,
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">";
+
+            <div className="grid grid-cols-1 md: grid-cols-2 gap-8">",
               {features.map((feature, index) => (,
                 <motion.div}),
                   key={feature.title}
@@ -143,6 +151,7 @@ export default function StartupSolutionsPage() {
                       <p className="text-gray-600">{feature.description}</p>"
                     </div>;
                   </div>;
+
                   <ul className="space-y-3">";
                     {feature.benefits.map((benefit, benefitIndex) => (,
                       <li key={benefitIndex} className="flex items-center text-gray-600">"
@@ -156,6 +165,7 @@ export default function StartupSolutionsPage() {
             </div>,
           </div>;
         </section>;
+
         {/* Services Section */}
         <section className="py-20 bg-white">"
           <div className="container mx-auto px-4">";
@@ -171,15 +181,16 @@ export default function StartupSolutionsPage() {
                 Comprehensive startup services designed to help you build, launch, and scale your business,
               </p>;
             </motion.div>;
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">";
+
+            <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">",
               {services.map((service, index) => (,
                 <motion.div}),
                   key={service.title}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: index * 0.1 }}
-                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover: shadow-lg transition-shadow duration-300""
-                >,
+                  className="bg-gradient-to-br from-green-50 to-blue-50 rounded-xl p-6 hover:shadow-lg transition-shadow duration-300""
+                >;
                   <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>"
                   <p className="text-gray-600">{service.description}</p>"
                 </motion.div>;
@@ -187,6 +198,7 @@ export default function StartupSolutionsPage() {
             </div>,
           </div>;
         </section>;
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-green-600 to-blue-600 text-white">"
           <div className="container mx-auto px-4 text-center">";
