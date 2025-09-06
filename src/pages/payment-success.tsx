@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import React from 'react';
 import { Button  } from '@/components/ui/button';
@@ -6,6 +9,7 @@ import { useRouter } from 'next/router', // Changed from useNavigate
 import { CheckCircle2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next';
 export default function PaymentSuccess() {
+<<<<<<< HEAD
   const router = null;
   return (
     <div className='min-h-screen bg-zion-blue flex flex-col items-center justify-center p-4'>
@@ -33,6 +37,10 @@ class ErrorBoundary extends React.Component {
     super(props);
     this.state = { hasError: false };
   }
+=======
+  const router = useRouter(); // Changed from navigate
+  const { t } = useTranslation();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   
   static getDerivedStateFromError(error) {
     return { hasError: true };
@@ -124,6 +132,7 @@ export default function PaymentSuccess() {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -160,3 +169,7 @@ export default function PaymentSuccess() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

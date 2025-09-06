@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useRouter } from 'next/router'
@@ -467,3 +468,6 @@ if (error) {;
 }</Button> </form> <Link href="/login" className="p-0 h-auto text-zion-cyan hover: text-zion-cyan-light cursor-pointer" > Sign In </Link> </p> </div>) ;
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

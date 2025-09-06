@@ -2,6 +2,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '..', '..', relPath);
 =======
@@ -65,6 +66,11 @@ exports.handler = async () => {
   logStep('routes:generate', () => runNode('automation/routes-map-generator.cjs'))
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+  const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 
 =======
@@ -93,4 +99,7 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

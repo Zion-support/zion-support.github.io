@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -209,3 +210,5 @@ export default ServicesPage;
 }
 export default ServicesPage
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

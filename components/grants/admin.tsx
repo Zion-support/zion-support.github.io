@@ -13,6 +13,7 @@ export default function GrantsAdminPage() {;
   const [selected, setSelected] = useState<GrantApplication | null>(null);
   const [milestones, setMilestones] = useState<Milestone[]>([]);
 <<<<<<< HEAD
+<<<<<<< HEAD
   const headers = useMemo(
     () =>
       token
@@ -43,6 +44,11 @@ export default function GrantsAdminPage() {;
     load();  }
   const saveMilestones = async () => {
     if (!selected) return;
+=======
+
+  const headers = useMemo(() => (token ? { Authorization: `Bearer ${token}`, 'Content-Type': 'application/json' } : { 'Content-Type': 'application/json' }), [token]);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const load = () => {
     fetch('/api/grants?status=Submitted').then((r) => r.json()).then((d) => setItems(d.items |[]))
   }
@@ -52,6 +58,7 @@ export default function GrantsAdminPage() {;
   const setStatus = async (id: string, status: 'Under Review' | 'Approved' | 'Rejected') => {
     await fetch(`/api/grants/${id}/status`, { method: 'POST', headers, body: JSON.stringify({ status }) })
     load()
+<<<<<<< HEAD
   }
   const saveMilestones = async () => {
     if (!selected) return;
@@ -95,6 +102,21 @@ export default function GrantsAdminPage() {;
     fetch('/api/grants?status=Submitted');
       .then(r => r && r.json());
       .then(d => setItems(d && d.items || []));
+=======
+  };
+
+  const saveMilestones = async () => {
+    if (!selected) return;
+    await fetch(`/api/grants/${selected.id}/milestones`, { method: 'POST', headers, body: JSON.stringify({ milestones }) }),
+    alert('Milestones saved')
+  };
+
+  const markComplete = async (milestoneId: string) => {
+    if (!selected) return;
+    await fetch(`/api/grants/${selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
+    const r = await fetch(`/api/grants/${selected.id}`).then((x) => x.json());
+    setSelected(r.record)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   useEffect(() => {;
@@ -151,6 +173,7 @@ export default function GrantsAdminPage() {;
     setSelected(r && r.record);  };
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>    await fetch(`/api/grants/${selected && selected.id}/milestones/${milestoneId}/complete`, { method: 'POST', headers });
     const r = await fetch(`/api/grants/${selected && selected.id}`).then((x) => x && x.json());
     setSelected(r && r.record);
@@ -420,6 +443,34 @@ export default function GrantsAdminPage() {;
               <div className='text-sm text-gray-600'>
                 Select a grant to plan milestones.
               </div>            )}          </div>
+=======
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Grants Admin</h1>
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2">
+          <div className="mb-3 flex items-center gap-2">
+            <input className="border rounded p-2" placeholder="Admin Token" value={token} onChange={(e) => setToken(e.target.value)} />
+          </div>
+          <div className="grid gap-3">
+            {items.map((g) => (
+              <div key={g.id} className={`border rounded p-3 ${selected?.id === g.id ? 'ring-2 ring-blue-500' : ''}`}>
+                <div className="flex items-center justify-between">
+                  <div>
+                    <div className="font-medium">{g.projectName}</div>
+                    <div className="text-xs text-gray-600">{g.sector} • {g.region} • {g.program}</div>
+                  </div>
+                  <div className="flex gap-2">
+                    <button className="px-2 py-1 border rounded" onClick={() => setStatus(g.id, 'Under Review')}>Under Review</button>
+                    <button className="px-2 py-1 bg-emerald-600 text-white rounded" onClick={() => setStatus(g.id, 'Approved')}>Approve</button>
+                    <button className="px-2 py-1 bg-red-600 text-white rounded" onClick={() => setStatus(g.id, 'Rejected')}>Reject</button>
+                    <button className="px-2 py-1 border rounded" onClick={() => setSelected(g)}>Milestones</button>
+                  </div>
+                </div>
+              </div>
+            ))}
+            {items.length === 0 && <div className="text-sm text-gray-600">No submitted applications.</div>}
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
         <div>
           <div className="border rounded p-3">
@@ -451,6 +502,7 @@ export default function GrantsAdminPage() {;
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
 =======
@@ -497,3 +549,7 @@ export default function GrantsAdminPage() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

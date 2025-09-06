@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 import type { KycProfile } from '../../utils/kyc';
@@ -15,10 +18,19 @@ export default function AdminKycPage() {
   }, [])
   async function act(userId: string, action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
+<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ userId, action, reason: reason |undefined })})
     const data = await res.json()
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, action, reason: reason || undefined })}),
+    const data = await res.json();
+    if (data.ok) load()
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     if (data.ok) load()
   }
@@ -70,4 +82,8 @@ export default function AdminKycPage() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

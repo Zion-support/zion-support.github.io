@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { Component, ReactNode } from 'react';
 import { QueryClient  } from '@tanstack/react-query';
 import * as Sentry from '@sentry/nextjs';
@@ -415,3 +416,7 @@ export const useApiErrorHandler = () => {;
   return { handleApiError }
 }, ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

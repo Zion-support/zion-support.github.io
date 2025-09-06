@@ -1,4 +1,5 @@
 import useSWR from 'swr';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json());
@@ -50,6 +51,12 @@ export default function UnderDisputeBadge(): any ({;
 export default function UnderDisputeBadge({ projectId }: { projectId: string }) {
 =======
   const hasActiveDispute = !!data?.disputes?.some((d: any) => d && d.projectId === projectId && (d && d.status === 'Open' || d && d.status === 'Under Review')),;
+=======
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+export function useProjectDisputeStatus(projectId: string): { hasActiveDispute: boolean, isLoading: boolean } {
+  const { data, error } = useSWR(projectId ? `/api/disputes` : null, fetcher);
+  const hasActiveDispute = !!data?.disputes?.some((d: any) => d.projectId === projectId && (d.status === 'Open' || d.status === 'Under Review')),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return { hasActiveDispute, isLoading: !data && !error }
 }
 
@@ -71,4 +78,7 @@ export default function UnderDisputeBadge(): any ({ projectId }: { projectId: st
     </span>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

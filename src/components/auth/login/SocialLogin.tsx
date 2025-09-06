@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Facebook, Twitter, Loader2 } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Web3Login } from "./Web3Login",
@@ -119,3 +120,6 @@ export function SocialLogin() {;
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

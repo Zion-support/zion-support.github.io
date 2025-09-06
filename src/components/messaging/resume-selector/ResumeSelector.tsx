@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from 'react',
 import { Button } from "@/components/ui/button",
@@ -74,3 +75,6 @@ export function ResumeSelector(): any ({ onResumeSelected }: ResumeSelectorProps
 
   )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

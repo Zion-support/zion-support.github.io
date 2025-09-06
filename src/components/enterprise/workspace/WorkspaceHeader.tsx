@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Button } from "@/components/ui/button";
@@ -39,6 +40,14 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         </div>
             <h1 className="text-3xl font-bold tracking-tight">{company.name} Workspace</h1>
             <p className="text-muted-foreground">
+=======
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { type Company } from "./CompanyDashboard";
+import { Bell, Users, Settings } from 'lucide-react'
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface WorkspaceHeaderProps {
   company: Company
 }
@@ -86,6 +95,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
             </p>
           </div>
         </div>
+<<<<<<< HEAD
         <div className='flex items-center gap-2'>
           <Button variant='outline' size='icon' aria-label='Notifications'>
             <Bell className='h-4 w-4' />
@@ -120,6 +130,13 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
     </div>
   )
 }          </Button>
+=======
+        
+        <div className="flex items-center gap-2">
+          <Button variant="outline" size="icon" aria-label="Notifications">
+            <Bell className="h-4 w-4" />
+          </Button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <Button variant="outline" size="icon" aria-label="Team members">
             <Users className="h-4 w-4" />
           </Button>
@@ -143,6 +160,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -222,3 +240,7 @@ export function WorkspaceHeader(): any ({ company }: WorkspaceHeaderProps) {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

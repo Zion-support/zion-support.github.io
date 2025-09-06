@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, filterEventsByScope } from "../../../utils/sync/storage";
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 
   if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" })
   const state = readState()
@@ -8,6 +9,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const totalsByToken: Record<string, number> = {}
   const contributionsBySubject: Record<string, number> = {}
   let globalVotes = 0
+=======
+  if (req.method !== "GET") return res.status(405).json({ error: "Method not allowed" });
+
+  const state = readState();
+  const events = filterEventsByScope(state.events, state.config.scope);
+
+  const totalsByToken: Record<string, number> = {};
+  const contributionsBySubject: Record<string, number> = {};
+  let globalVotes = 0;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   for (const e of events) {
     if (e.type === "token_transfer") {
       const p = e.payload as any
@@ -25,9 +37,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .sort((a, b) => b.score - a.score)
     .slice(0, 10)
   return res.status(200).json({
+<<<<<<< HEAD
     treasuryTotals: totalsByToken
     topContributors
     totalVoteCount: globalVotes
 
     lastSyncedAt: state.lastSyncedAt})
 }
+=======
+    treasuryTotals: totalsByToken, topContributors,
+    totalVoteCount: globalVotes,
+    lastSyncedAt: state.lastSyncedAt})
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

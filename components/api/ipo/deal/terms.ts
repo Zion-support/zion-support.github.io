@@ -17,6 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     target: '$10,000,000',
     valuationCap: '$80,000,000',
     discount: '20%',
+<<<<<<< HEAD
     leadInvestor: 'TBD',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
@@ -32,12 +33,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     target: '$10,000,000';
     valuationCap: '$80,000,000';
     discount: '20%'
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     leadInvestor: 'TBD'});
 <<<<<<< HEAD
 
   res.status(200).json(terms)
 }
+<<<<<<< HEAD
 =======
   res && res.status(200).json(terms)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

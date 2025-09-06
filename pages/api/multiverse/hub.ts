@@ -15,4 +15,8 @@ lastSyncedAt: state.lastSyncedAt})
 
   }
   return res.status(405).json({ error: "Method not allowed" })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

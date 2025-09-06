@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React, { useEffect, useState } from 'react';
 import Head from 'next/head';
 export default function AdminWeb3Page() {
@@ -10,6 +13,7 @@ export default function AdminWeb3Page() {
   const save = (list: any) => {
     if (typeof window !== 'undefined') window.localStorage.setItem('zion-web3-users', JSON.stringify(list))
     setUsers(list)
+<<<<<<< HEAD
   }
   const metrics = {
     total: users.length
@@ -18,6 +22,16 @@ export default function AdminWeb3Page() {
     enabled: users.filter(u => u.enabled).length
     disabled: users.filter(u => !u.enabled).length}
 
+=======
+  };
+
+  const metrics = {
+    total: users.length,
+    evm: users.filter(u => u.chain === 'evm').length,
+    sol: users.filter(u => u.chain === 'sol').length,
+    enabled: users.filter(u => u.enabled).length,
+    disabled: users.filter(u => !u.enabled).length},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head><title>Admin — Web3</title></Head>
@@ -47,4 +61,8 @@ export default function AdminWeb3Page() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

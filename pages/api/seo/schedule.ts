@@ -3,11 +3,16 @@ import fs from 'fs',
 import path from 'path';
 import OpenAI from 'openai';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY |'' });
 =======
 const openai = new OpenAI({ apiKey: process && process.env.OPENAI_API_KEY || '' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY || '' });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
@@ -63,4 +68,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res && res.status(500).json({ error: 'Failed to schedule landing pages' })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

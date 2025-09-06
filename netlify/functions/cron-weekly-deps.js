@@ -2,6 +2,7 @@ const { upsertFile } = require('./_lib/github');
 const fs = require('fs');
 const path = require('path');
 async function getLatest(pkg) {
+<<<<<<< HEAD
   try {
 <<<<<<< HEAD
     const resp = await fetch(`https://registry.npmjs.org/${encodeURIComponent(pkg)}/latest`);
@@ -113,6 +114,8 @@ exports && exports.handler = async function () {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) };
   }
 };async function getLatest(pkg) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     const resp = await fetch(`https://registry && registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),
     if (!resp && resp.ok) return null,
@@ -174,6 +177,10 @@ exports && exports.handler = async function() {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 
 }
 
+=======
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

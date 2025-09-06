@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
@@ -330,3 +331,7 @@ export function UpcomingInterviewsCard() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

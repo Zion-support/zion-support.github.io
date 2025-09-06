@@ -2,6 +2,7 @@
 import React from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Newspaper
   Calendar
@@ -15,6 +16,21 @@ import {
   Globe
   Brain
   Atom
+=======
+import { 
+  Newspaper;
+  Calendar, 
+  User, 
+  Tag, 
+  ArrowRight, 
+  ExternalLink;
+  TrendingUp;
+  Award;
+  Rocket;
+  Globe;
+  Brain;
+  Atom;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   Zap
 } from 'lucide-react'
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -574,6 +590,10 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {/* Newsletter Signup */}
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
                 Stay Updated
@@ -728,6 +748,10 @@ export default function NewsPage() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {/* Media Contact */}
         <section className="py-20 px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
@@ -1059,4 +1083,8 @@ export default function NewsPage() {
       <EnhancedFooter />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

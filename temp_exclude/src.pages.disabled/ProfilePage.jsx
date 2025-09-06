@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/ProfilePage && ProfilePage.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/ProfilePage && ProfilePage.jsx import React from \'react\'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import React from \'react\'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {\'';
 <<<<<<< "HEAD": src && src.pages.disabled/ProfilePage && ProfilePage.jsx import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () { import _React from 'react'; import { MapPin,Clock,Link as LinkIcon,Github,Twitter,Linkedin,CheckCircle2 export default function ProfilePage () {'';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

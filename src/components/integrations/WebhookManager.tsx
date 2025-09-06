@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react'
 import {
   Card
@@ -846,3 +847,6 @@ newWebhook.secret |undefined);"
 }</div> </div>)
 }'"}
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react",
 import { Input } from "@/components/ui/input",
@@ -167,3 +168,6 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({;
 
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

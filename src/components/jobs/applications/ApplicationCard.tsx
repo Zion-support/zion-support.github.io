@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { formatDistanceToNow } from 'date-fns'
@@ -41,6 +42,20 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
     toast.info('Resume download functionality will be implemented soon') }
   const renderActionButtons = () => {
     switch (application.status) {interface ApplicationCardProps {
+=======
+
+import { useState } from "react";
+import { formatDistanceToNow } from "date-fns";
+import { JobApplication } from "@/types/jobs";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { FileText, MessageSquare, HelpCircle, Calendar, ExternalLink, Download } from 'lucide-react'
+import Link from "next/link";
+import { StatusBadge } from "./StatusBadge";
+import { ApplicationProgress } from "./ApplicationProgress";
+import { toast } from "sonner";
+interface ApplicationCardProps {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   application: JobApplication
 }
 export function ApplicationCard({ application }: ApplicationCardProps) {
@@ -49,6 +64,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const handleDownloadResume = () => {
     // This would typically download the resume file
     toast.info("Resume download functionality will be implemented soon")
+<<<<<<< HEAD
   }
   const renderActionButtons = () => {
     switch (application.status) {
@@ -90,6 +106,47 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
               {formatDistanceToNow(new Date(application.created_at), {
                 addSuffix: true
               })}            </div>            <CardTitle>{application.job?.title |"Unknown Job"}</CardTitle>
+=======
+  };
+
+  const renderActionButtons = () => {
+    switch (application.status) {
+      case "shortlisted": return (
+          <Button variant="default" size="sm">
+            <Calendar className="h-4 w-4 mr-1" /> Prepare for Interview
+          </Button>
+        );
+      case "interview":
+        return (
+          <Button variant="default" size="sm">
+            <Calendar className="h-4 w-4 mr-1" /> View Interview Details
+          </Button>
+        );
+      case "hired":
+        return (
+          <Button variant="secondary" size="sm" className="bg-green-100 text-green-800 hover: bg-green-200 hover:text-green-900">
+            <FileText className="h-4 w-4 mr-1" /> View Offer
+          </Button>
+        );
+      case "rejected":
+        return (
+          <Button variant="outline" size="sm">
+            <HelpCircle className="h-4 w-4 mr-1" /> View Feedback
+          </Button>
+        );
+      default:
+        return null
+    }
+  };
+
+
+  return (
+    <Card className="overflow-hidden">
+      <CardHeader className="pb-3">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle>{application.job?.title || "Unknown Job"}</CardTitle>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="text-sm text-muted-foreground mt-1">
               Applied {formatDistanceToNow(new Date(application.created_at), { addSuffix: true })}
             </div>
@@ -97,6 +154,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           <StatusBadge status={application.status} />
         </div>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className='pb-3'>
         <ApplicationProgress status={application.status} className='my-4' />
         {expanded && (
@@ -258,6 +316,12 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
               </div>;
             )}
 <<<<<<< HEAD
+=======
+      
+      <CardContent className="pb-3">
+        <ApplicationProgress status={application.status} className="my-4" />
+        
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {expanded && (
           <div className="mt-4 space-y-3">
             {application.cover_letter && (
@@ -279,6 +343,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 </div>
               </div>
             )}
+<<<<<<< HEAD
             {application.match_score && (
               <div>
                 <h4 className='text-sm font-medium mb-1'>Match Score</h4>
@@ -289,6 +354,10 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                   <span className='ml-2 text-xs text-muted-foreground'>
                     Relevance to job requirements
                   </span>                </div>            {application.match_score && (
+=======
+            
+            {application.match_score && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div>
                 <h4 className="text-sm font-medium mb-1">Match Score</h4>
                 <div className="flex items-center">
@@ -307,6 +376,7 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
                 <p className="text-sm text-muted-foreground">{application && application.cover_letter}</p>;
               </div>;
             )}
+<<<<<<< HEAD
 
             {application && application.resume && (;
               <div className="border rounded-md p-3 bg-muted/20">;
@@ -374,6 +444,17 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client          </Link>          </Button>
+=======
+          </div>
+        )}
+      </CardContent>
+      
+      <CardFooter className="flex flex-col gap-3 pt-0">
+        <div className="flex justify-between items-center w-full">
+          <Button variant="ghost" size="sm" onClick={() => setExpanded(!expanded)}>
+            {expanded ? "Show Less" : "Show More"}
+          </Button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex gap-2">
             {renderActionButtons()}
             <Button
@@ -387,17 +468,24 @@ export function ApplicationCard(): any ({ application }: ApplicationCardProps) {
             </Button>
           </div>
         </div>
+<<<<<<< HEAD
         <Button variant='secondary' size='sm' className='w-full' asChild>
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className='h-4 w-4 mr-1' /> Message Client
         <Button
           variant="secondary"
+=======
+        
+        <Button 
+          variant="secondary" 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           size="sm"
           className="w-full"
           asChild
         >
           <Link href={`/messages?jobId=${application.job_id}`}>
             <MessageSquare className="h-4 w-4 mr-1" /> Message Client
+<<<<<<< HEAD
         </Button>
       </CardFooter>
     </Card>
@@ -472,3 +560,11 @@ default: return (<Card className="overflow-hidden" > <CardHeader className="pb-3
 }";
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          </Link>
+        </Button>
+      </CardFooter>
+    </Card>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -58,6 +59,13 @@ export default function FilterBar(): any ({;
   category: string
   level: string
   isFree: string
+=======
+import React from 'react';
+type Props = {
+  category: string,
+  level: string,
+  isFree: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   onChange: (next: { category: string, level: string, isFree: string }) => void
 }
 =======
@@ -77,6 +85,7 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
       <select
         className="border rounded px-3 py-2 bg-white dark:bg-black"
         value={category}
+<<<<<<< HEAD
         onChange={(e) => onChange({ category: e && e.target.value, level, isFree })}
       >;
         <option value="">All Categories</option>;
@@ -118,3 +127,35 @@ export default function FilterBar(): any ({ category, level, isFree, onChange }:
     </div>;
   );
 }
+=======
+        onChange={(e) => onChange({ category: e.target.value, level, isFree })}
+      >
+        <option value="">All Categories</option>
+        <option>AI Development</option>
+        <option>Freelancing</option>
+        <option>Remote Hiring</option>
+        <option>Cloud Architecture</option>
+      </select>
+      <select
+        className="border rounded px-3 py-2 bg-white dark:bg-black"
+        value={level}
+        onChange={(e) => onChange({ category, level: e.target.value, isFree })}
+      >
+        <option value="">All Levels</option>
+        <option>Beginner</option>
+        <option>Intermediate</option>
+        <option>Advanced</option>
+      </select>
+      <select
+        className="border rounded px-3 py-2 bg-white dark:bg-black"
+        value={isFree}
+        onChange={(e) => onChange({ category, level, isFree: e.target.value })}
+      >
+        <option value="">All Pricing</option>
+        <option value="true">Free</option>
+        <option value="false">Paid</option>
+      </select>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

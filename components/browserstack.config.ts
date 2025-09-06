@@ -29,4 +29,8 @@ default defineConfig({
   ];
   reporter: [
     ['list'],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]]
+<<<<<<< HEAD
 });
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

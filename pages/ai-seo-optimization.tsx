@@ -5,8 +5,13 @@ import { Phone, Mail, MapPin, Check, ArrowRight, Star, Rocket } from 'lucide-rea
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function AISEOOptimizationPage() {
+<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'))
   if (!service) return null
+=======
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/ai-seo-optimization'));
+  if (!service) return null;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Layout>
@@ -51,4 +56,8 @@ export default function AISEOOptimizationPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

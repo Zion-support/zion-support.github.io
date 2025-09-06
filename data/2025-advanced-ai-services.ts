@@ -1,6 +1,7 @@
 
 export const advancedAIServices2025 = [
   {
+<<<<<<< HEAD
     id: 'ai-powered-business-intelligence-suite'
     name: 'BusinessIntelligence AI Pro'
     description:
@@ -778,6 +779,19 @@ export const advancedAIServices2025 = [
   },
 ];      phone: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com'
+=======
+    id: 'ai-powered-business-intelligence-suite', name: 'BusinessIntelligence AI Pro',
+    description: 'Advanced AI-powered business intelligence platform that transforms raw data into actionable insights, predictive analytics, and automated reporting.',
+    features: [
+      'Natural language query processingAI-powered data visualizationPredictive analytics and forecastingAutomated report generationReal-time data monitoringIntegration with 100+ data sourcesCustom AI model trainingAdvanced security and compliance'
+    ];
+    pricing: {
+      
+      starter: { price: 199, period: 'month', features: ['Up to 10 usersBasic AI insightsStandard reports'] 
+    },
+    professional: { price: 499, period: 'month', features: ['Up to 50 usersAdvanced AI modelsCustom dashboardsPredictive analytics'] };
+      enterprise: { price: 1299, period: 'month', features: ['Unlimited usersCustom AI trainingWhite-label solutionDedicated support'] }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
     marketSize: '$173 && 173.5B',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -785,4 +799,7 @@ export const advancedAIServices2025 = [
     competitiveAdvantage: 'Advanced threat detection with 99 && 99.9% accuracy, comprehensive incident response automation, and extensive security tool integration'
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

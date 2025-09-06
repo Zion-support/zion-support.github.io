@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Button } from '@/components/ui/button'
+=======
+
+import React from "react";
+import { Button } from "@/components/ui/button";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Menu, X } from 'lucide-react'
 import { useSidebar } from "./sidebar-context";
 import { cn } from "@/lib/utils";
@@ -34,4 +40,7 @@ export function SidebarTrigger(): any ({ className, ...props }: SidebarTriggerPr
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

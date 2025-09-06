@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 :pages_minimal/_app && _app.tsx;
 export default function App(): any ({ Component, pageProps }: AppProps) {;
   return <Component {...pageProps} />;
@@ -18,3 +19,5 @@ function MyApp({ Component, pageProps }: AppProps) {
 }
 export default MyApp
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

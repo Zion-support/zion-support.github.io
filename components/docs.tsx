@@ -5,7 +5,17 @@ import Button from '../components/ui/Button';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription, CardFooter } from '@/components/ui/card';
 import { Star } from 'lucide-react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function DocsPage() {
+=======
+export default function DocsPage() {
+  const contact = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const contact = {
     mobile: '+1 302 464 0950'
@@ -17,24 +27,39 @@ export default function DocsPage() {
     {
       title: 'Getting Started'
       links: [
+<<<<<<< HEAD
         { name: 'Overview', href: '/enhanced-services-showcase' }
         { name: 'Pricing & Market Benchmarks', href: '/market-pricing' }
         { name: 'Contact Sales', href: '/contact' }
       ]
     },    {        { name: 'Contact Sales', href: '/contact' }]
     }
+=======
+        { name: 'Overview', href: '/enhanced-services-showcase' },
+        { name: 'Pricing & Market Benchmarks', href: '/market-pricing' },
+        { name: 'Contact Sales', href: '/contact' }]
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'AI Services Docs'
       links: [
+<<<<<<< HEAD
         { name: 'AI Guardrails', href: '/ai-guardrails' }
         { name: 'AI Evals', href: '/ai-evals' }
         { name: 'Agentic RAG', href: '/agentic-rag' }
       ]
     },    {        { name: 'Agentic RAG', href: '/agentic-rag' }]
     }
+=======
+        { name: 'AI Guardrails', href: '/ai-guardrails' },
+        { name: 'AI Evals', href: '/ai-evals' },
+        { name: 'Agentic RAG', href: '/agentic-rag' }]
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       title: 'IT & Platform Docs'
       links: [
+<<<<<<< HEAD
         { name: 'API Observability', href: '/api-observability' }
         { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' }
         { name: 'Status Pages & SLO', href: '/status-pages-slo' }
@@ -53,6 +78,24 @@ export default function DocsPage() {
       title: 'API Status'
       description: 'Check service availability and performance'
       icon: <CheckCircle className='w-6 h-6' />
+=======
+        { name: 'API Observability', href: '/api-observability' },
+        { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+        { name: 'Status Pages & SLO', href: '/status-pages-slo' }]
+    }];
+
+  const external = [
+    { name: 'OpenAI API pricing', url: 'https://openai.com/api/pricing' },
+    { name: 'Anthropic pricing', url: 'https://www.anthropic.com/pricing' },
+    { name: 'Pinecone pricing', url: 'https://www.pinecone.io/pricing/' },
+    { name: 'Snowflake pricing', url: 'https://www.snowflake.com/pricing/' }],
+  const quickLinks = [
+    {
+      title: 'API Status',
+      description: 'Check service availability and performance',
+      icon: <CheckCircle className="w-6 h-6" />,
+      href: '/status',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: 'text-green-400'
     }
     {
@@ -89,6 +132,7 @@ export default function DocsPage() {
                          doc.description.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' |doc.category === selectedCategory;
     return matchesSearch && matchesCategory
+<<<<<<< HEAD
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'Beginner':
@@ -99,6 +143,17 @@ export default function DocsPage() {;
     email: 'kleber@ziontechgroup && ziontechgroup.com',;
     address: '364 E Main St STE 1008 Middletown DE 19709',;
     website: 'https://ziontechgroup && ziontechgroup.com',  };    website: 'https://ziontechgroup && ziontechgroup.com';
+=======
+  });
+
+  const getDifficultyColor = (difficulty: string) => {
+    switch (difficulty) {
+      case 'Beginner': return 'bg-green-500/20 text-green-400';
+      case 'Intermediate': return 'bg-yellow-500/20 text-yellow-400';
+      case 'Advanced': return 'bg-red-500/20 text-red-400';
+      default: return 'bg-gray-500/20 text-gray-400'
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const sections = [;
@@ -199,15 +254,23 @@ export default function DocsPage() {;
   }
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
+<<<<<<< HEAD
       year: 'numeric'
       month: 'short'
+=======
+      year: 'numeric',
+      month: 'short',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       day: 'numeric'
     });  };      day: 'numeric'
     })
+<<<<<<< HEAD
   }
 =======
       case 'Advanced': return 'bg-red-500/20 text-red-400',;
       default: return 'bg-gray-500/20 text-gray-400';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   const formatDate = (dateString: string) => {;
@@ -221,6 +284,7 @@ export default function DocsPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
+<<<<<<< HEAD
     <UltraAdvancedFuturisticBackground>;
       <Head>;
         <title>Documentation | Zion Tech Group</title>;
@@ -278,6 +342,15 @@ export default function DocsPage() {;
                       >
                         {l.name}
                       </a>                    </li>      </Head>
+=======
+    <UltraAdvancedFuturisticBackground>
+      <Head>
+        <title>Documentation | Zion Tech Group</title>
+        <meta name="description" content="Guides and references for Zion Tech Group AI, platform, and IT services." />
+        <link rel="canonical" href="https://ziontechgroup.com/docs" />
+      </Head>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="text-center">
@@ -299,6 +372,7 @@ export default function DocsPage() {;
                         {l && l.name}
                       </a>                    </li>      </Head>;
 
+<<<<<<< HEAD
       <div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
         <div className="max-w-6xl mx-auto space-y-10">;
           <div className="text-center">;
@@ -351,11 +425,14 @@ export default function DocsPage() {;
 <<<<<<< HEAD
             </ul>
           </Card>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <Card className="p-6 bg-black/40 border border-gray-700/50">
             <h2 className="text-xl font-semibold mb-4 text-white">External References</h2>
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-3 text-slate-300">
               {external.map((e) => (
                 <li key={e.name}><a href={e.url} target="_blank" rel="noopener noreferrer" className="text-cyan-400 hover:underline">{e.name}</a></li>
+<<<<<<< HEAD
             </ul>
           </Card>
           <Card className='p-6 bg-black/40 border border-gray-700/50'>
@@ -411,3 +488,23 @@ export default function DocsPage() {;
     </UltraAdvancedFuturisticBackground>;
   );
 }
+=======
+              ))}
+            </ul>
+          </Card>
+
+          <Card className="p-6 bg-black/40 border border-gray-700/50">
+            <h2 className="text-xl font-semibold mb-4 text-white">Need help?</h2>
+            <div className="flex flex-col sm:flex-row gap-3">
+              <Button href="/contact" className="bg-gradient-to-r from-cyan-600 to-blue-600 text-white">Contact Support</Button>
+              <Button href={contact.website} variant="outline" className="border-gray-600 text-gray-200">Visit Website</Button>
+              <a className="text-cyan-400" href={`tel:${contact.mobile.replace(/[^+\\d]/g, '')}`}>{contact.mobile}</a>
+              <a className="text-purple-400" href={`mailto:${contact.email}`}>{contact.email}</a>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </UltraAdvancedFuturisticBackground>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

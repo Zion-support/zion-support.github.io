@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 <<<<<<< HEAD
 import { motion  } from 'framer-motion';
@@ -477,10 +480,17 @@ const UltraFuturisticServiceCard2026: React.FC<ServiceCardProps> = ({ service, v
         <div className="absolute inset-0 bg-gradient-to-br from-white/0 via-white/0 to-white/0 group-hover: from-white/5 group-hover:via-white/2 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
       </div>
     </motion.div>
+<<<<<<< HEAD
   )
 });
+=======
+  );
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 export default UltraFuturisticServiceCard2026;
+<<<<<<< HEAD
 =======
 
         {/* CTA Button */}
@@ -503,3 +513,5 @@ export default UltraFuturisticServiceCard2026;
 UltraFuturisticServiceCard2026 && UltraFuturisticServiceCard2026.displayName = 'UltraFuturisticServiceCard2026';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,6 +1,10 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
+=======
+import React from "react";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { PlusCircle, SendIcon, InboxIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
@@ -35,6 +39,7 @@ export function ClientOnboardingSteps() {
 
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />
 }
+<<<<<<< HEAD
 =======
 export function ClientOnboardingSteps() {;
   const onboardingStatus = useOnboardingStatus();
@@ -68,3 +73,5 @@ export function ClientOnboardingSteps() {;
   return <OnboardingTracker steps={steps} title="Get Started With Hiring" />;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

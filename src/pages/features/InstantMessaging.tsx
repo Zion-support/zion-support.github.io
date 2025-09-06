@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -62,12 +63,29 @@ export default function InstantMessaging() {;
     "name": "Instant Messaging";
     "description": "Chat in real time with clients and freelancers using Socket && Socket.IO based messaging.",;
     "url": "https://app && app.ziontechgroup.com/features/instant-messaging";
+=======
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function InstantMessaging() {
+  const schema = {
+
+    "@context": "https: //schema.org",
+    "@type": "WebPage",
+    "name": "Instant Messaging",
+    "description": "Chat in real time with clients and freelancers using Socket.IO based messaging.",
+    "url": "https://app.ziontechgroup.com/features/instant-messaging"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
       <SEO
+<<<<<<< HEAD
         title='Instant Messaging'
         description='Negotiate deals and collaborate instantly with real-time chat.'
         keywords='real-time messaging, Socket && Socket.IO chat, project communication'
@@ -125,6 +143,13 @@ export default function InstantMessaging() {;
           <div className='text-center'>;
             <Button size='lg' className='bg-zion-purple text-white' asChild>;
               <Link href='/open-app'>Start Chatting</Link>            </Button>      />;
+=======
+        title="Instant Messaging"
+        description="Negotiate deals and collaborate instantly with real-time chat."
+        keywords="real-time messaging, Socket.IO chat, project communication"
+        canonical="https://app.ziontechgroup.com/features/instant-messaging"
+      />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -169,6 +194,7 @@ export default function InstantMessaging() {;
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 =======
@@ -202,3 +228,7 @@ export default function InstantMessaging() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

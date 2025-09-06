@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 }
 type Props = { report: Report | null }
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Broken = { url: string, page: string, status: number },
+interface Report { generatedAt: string, pagesScanned: number, brokenLinks: Broken[], pagesWithOgIssues: number, ogIssues: { page: string, missing: string[] }[] }
+
+type Props = { report: Report | null },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationsite-validator.json');
@@ -70,4 +80,7 @@ export default function SiteValidator(): any ({ report }: Props) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

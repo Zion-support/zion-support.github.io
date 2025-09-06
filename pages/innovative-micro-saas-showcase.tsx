@@ -3,19 +3,34 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket
   CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target
   Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink
   Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
 } from 'lucide-react'
+=======
+import { 
+  Star, TrendingUp, Users, Award, Zap, Brain, Atom, Shield, Rocket, 
+  CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe, Cpu, Target;
+  Search, Filter, Grid, List, ChevronDown, ChevronUp, ExternalLink;
+  Play, Pause, Eye, Heart, Share2, Download, BookOpen, Code, Palette
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Layout from '../components/layout/Layout';
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services';
 import { emergingTechServicesEnhanced2025 } from '../data/2025-emerging-tech-services-enhanced';
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   website: 'https://ziontechgroup.com'
 }
 const stats = [
@@ -33,7 +48,12 @@ const categories = [
   { name: 'Creativity & Design', value: 'creativity', icon: Palette, color: 'from-pink-500 to-rose-600' }
   { name: 'Healthcare & Biotech', value: 'healthcare', icon: Heart, color: 'from-teal-500 to-cyan-600' }
   { name: 'Finance & Trading', value: 'finance', icon: TrendingUp, color: 'from-yellow-500 to-orange-600' }
+<<<<<<< HEAD
 ]
+=======
+];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function InnovativeMicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchTerm, setSearchTerm] = useState('')
@@ -41,6 +61,7 @@ export default function InnovativeMicroSaasShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   // Combine all services
   const allServices = [
+<<<<<<< HEAD
     ...innovativeRealMicroSaasServices2025
     ...emergingTechServicesEnhanced2025
   ]
@@ -54,12 +75,32 @@ export default function InnovativeMicroSaasShowcase() {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
     return matchesCategory && matchesSearch
   })
+=======
+    ...innovativeRealMicroSaasServices2025;
+    ...emergingTechServicesEnhanced2025
+  ];
+
+  // Filter services based on category and search
+  const filteredServices = allServices.filter(service => {
+    const matchesCategory = selectedCategory === 'all' || 
+      service.category.toLowerCase().includes(selectedCategory) ||
+      service.name.toLowerCase().includes(selectedCategory);
+    
+    const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+
+    return matchesCategory && matchesSearch
+  });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Sort services
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'popularity':
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
       case 'price-low':
+<<<<<<< HEAD
         return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''))
       case 'price-high':
         return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''))
@@ -67,6 +108,15 @@ export default function InnovativeMicroSaasShowcase() {
         return b.rating - a.rating
       case 'newest':
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
+=======
+        return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
+      case 'price-high':
+        return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
+      case 'rating':
+        return b.rating - a.rating;
+      case 'newest':
+        return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       default: return 0
     }
   })
@@ -319,6 +369,10 @@ export default function InnovativeMicroSaasShowcase() {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <p className="text-gray-300 text-sm mb-4 line-clamp-2">{service.description}</p>
                       <div className="flex items-center justify-between">
                         <div className="flex items-center space-x-4 text-xs text-gray-500">
@@ -380,4 +434,8 @@ export default function InnovativeMicroSaasShowcase() {
       </section>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

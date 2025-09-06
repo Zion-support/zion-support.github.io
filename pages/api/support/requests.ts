@@ -1,6 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 import { readJson, writeJson } from '../../../utils/fsDb';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === 'GET') {
     const requests = readJson<any[]>('support/requests.json', [])
@@ -17,4 +20,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ ok: true, id })
   }
   return res.status(405).json({ error: 'Method not allowed' })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

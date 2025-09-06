@@ -5,8 +5,13 @@ import { Mail, Phone, MapPin, Check, ArrowRight, Inbox, Star } from 'lucide-reac
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function EmailDeliverabilityMonitorPage() {
+<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'))
   if (!service) return null
+=======
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/email-deliverability-monitor'));
+  if (!service) return null;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Layout>
@@ -51,4 +56,9 @@ export default function EmailDeliverabilityMonitorPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

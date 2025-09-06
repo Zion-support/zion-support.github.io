@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, Suspense } from 'react'
 import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog'
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs'
@@ -181,3 +182,5 @@ export function ProductGallery(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

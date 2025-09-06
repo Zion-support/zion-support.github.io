@@ -547,6 +547,7 @@ export default function CaseStudiesPage() {;
 =======
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
 import Link from 'next/link';
 import Layout from '../components/Layout';
@@ -582,6 +583,10 @@ export default function CaseStudiesPage() {;
 >>>>>>> origin/automation-improvements-final
   );
  </Head> </section> </Layout>
+=======
+import Layout from '../components/layout/Layout';
+export default function CaseStudiesPage() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	return (
 		<Layout>
 			<Head>
@@ -596,6 +601,7 @@ export default function CaseStudiesPage() {;
 		</Layout>
 	)
 }
+<<<<<<< HEAD
 =======
         />;
       </Head>;
@@ -626,3 +632,5 @@ export default function CaseStudiesPage() {;
 	);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

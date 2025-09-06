@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react'
 import {
@@ -84,6 +85,10 @@ interface MilestoneCardProps {;
   dueDate?: string;
   onApprove?: (id: string) => Promise<void>;
   onReject?: (id: string) => Promise<void>;import React from 'react';
+=======
+
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -117,10 +122,19 @@ export function MilestoneCard(): any ({;
 }: MilestoneCardProps) {;
   const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
 
+<<<<<<< HEAD
   function getStatusBadgeColor() {;
     switch (status) {;
       case 'completed':;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}: MilestoneCardProps) { const { isUnderDispute, disputeStatus  } = useDisputeCheck(projectId, id),
+
+  
+  function getStatusBadgeColor() {
+    switch (status) {
+      case 'completed':
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         return 'bg-green-500';
       case 'in_progress':;
         return 'bg-blue-500';
@@ -128,6 +142,7 @@ export function MilestoneCard(): any ({;
         return 'bg-yellow-500';
       case 'rejected':;
         return 'bg-red-500';
+<<<<<<< HEAD
 <<<<<<< HEAD
       default: return 'bg-gray-500'
 =======
@@ -171,15 +186,39 @@ export function MilestoneCard(): any ({;
             >
               {status.replace('_', ' ')}
             </Badge>
+=======
+      default: return 'bg-gray-500'
+    };
+  }
+  
+  return (
+    <Card>
+      <CardHeader className="pb-2">
+        <div className="flex justify-between items-start">
+          <div>
+            <CardTitle className="text-xl">{title}</CardTitle>
+            {dueDate && (
+              <p className="text-sm text-muted-foreground">
+                Due: {format(new Date(dueDate), 'MMM d, yyyy')}
+              </p>
+            )}
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex gap-2">
             <Badge variant="outline" className={`capitalize ${getStatusBadgeColor()} text-white`}>
               {status.replace('_ ')}
             </Badge>
+<<<<<<< HEAD
+=======
+            
+            {isUnderDispute && disputeStatus && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <DisputeStatusBadge status={disputeStatus} />
             )}
           </div>
         </div>
       </CardHeader>
+<<<<<<< HEAD
       <CardContent className='pb-2'>
         {description && <p className='text-muted-foreground'>{description}</p>}
         <div className='mt-4'>
@@ -239,12 +278,52 @@ export function MilestoneCard(): any ({;
           )}
           {isUnderDispute && (
             <Button variant='outline' size='sm' disabled>              Actions frozen due to dispute            <Button variant="outline" size="sm" disabled>
+=======
+      
+      <CardContent className="pb-2">
+        {description && (
+          <p className="text-muted-foreground">{description}</p>
+        )}
+        <div className="mt-4">
+          <p className="text-xl font-bold">${amount.toFixed(2)}</p>
+        </div>
+      </CardContent>
+      
+      <CardFooter className="pt-2 flex justify-between">
+        <div>
+          {status !== 'completed' && status !== 'rejected' && (
+            <RaiseDisputeButton 
+              projectId={projectId} 
+              milestoneId={id} 
+              variant="ghost"
+              size="sm"
+            />
+          )}
+        </div>
+        
+        <div className="flex gap-2">
+          {status === 'pending' && onReject && !isUnderDispute && (
+            <Button variant="outline" size="sm" onClick={() => onReject(id)}>
+              <X className="h-4 w-4 mr-1" /> Reject
+            </Button>
+          )}
+          
+          {status === 'pending' && onApprove && !isUnderDispute && (
+            <Button variant="default" size="sm" onClick={() => onApprove(id)}>
+              <Check className="h-4 w-4 mr-1" /> Approve
+            </Button>
+          )}
+          
+          {isUnderDispute && (
+            <Button variant="outline" size="sm" disabled>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               Actions frozen due to dispute
             </Button>
           )}
         </div>
       </CardFooter>
     </Card>
+<<<<<<< HEAD
   )
 }
 =======
@@ -272,3 +351,7 @@ export function MilestoneCard(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

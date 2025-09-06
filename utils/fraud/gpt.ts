@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { GptClassification, MonitoredSource } from './types';
 export async function classifyWithGPT(
   text: string
@@ -95,6 +96,12 @@ export async function classifyWithGPT(
 export interface GptResult {
   label: string;
   confidence: number;
+=======
+// GPT-based fraud classification utilities
+export interface GptClassification {
+  label: 'SAFE' | 'SUSPICIOUS' | 'DANGEROUS';
+  confidence: number; // 0-100
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   reasoning: string;
 =======
       label: 'SUSPICIOUS'
@@ -124,7 +131,16 @@ export async function analyzeWithGpt(data: any): Promise<GptResult> {
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'
 <<<<<<< HEAD
   };
+<<<<<<< HEAD
 =======
   }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
+=======
+  return colors[label];
+}
+
+export function formatClassificationSummary(classification: GptClassification): string {
+  return `${classification.label} (${classification.confidence}% confidence) - ${classification.reasoning}`;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

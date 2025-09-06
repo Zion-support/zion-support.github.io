@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -363,3 +364,6 @@ export function ProjectForm(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

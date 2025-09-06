@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from "next/link",
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
 import { useAuth } from "@/hooks/useAuth";
@@ -166,3 +167,6 @@ export default ForumCategories;
 
 export default ForumCategories;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

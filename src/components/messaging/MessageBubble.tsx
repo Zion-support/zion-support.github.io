@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { format  } from 'date-fns';
 import { PaperclipIcon } from 'lucide-react'
 import { cn  } from '@/lib/utils';
@@ -52,6 +53,12 @@ export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleP
     </div>
   )
         <div className="text-xs opacity-70 text-right mt-1">
+=======
+import { format } from 'date-fns';
+import { PaperclipIcon } from 'lucide-react'
+import { cn } from '@/lib/utils';
+import { Message } from '@/types/messaging';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface MessageBubbleProps {
   message: Message
 
@@ -88,6 +95,7 @@ export function MessageBubble({ message, isUserMessage }: MessageBubbleProps) {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );  )
 }
 =======
@@ -144,3 +152,7 @@ export function MessageBubble(): any ({ message, isUserMessage }: MessageBubbleP
   );  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

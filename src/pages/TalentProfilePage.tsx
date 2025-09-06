@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { TalentProfile } from "@/components/profile/TalentProfile",
@@ -154,6 +155,9 @@ import { useAuth } from '@/hooks/useAuth';
 import { UserProfile } from '@/types/auth';
 import { toast } from '@/hooks/use-toast';
 import { SEO } from '@/components/SEO';
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useRouter } from 'next/router';
 import { TalentProfile } from "@/components/profile/TalentProfile";
 import { ProfileLoadingState } from "@/components/profile/ProfileLoadingState";
@@ -225,6 +229,7 @@ export default function TalentProfilePage() {;
     name: '',;
     points: 0;
   };
+<<<<<<< HEAD
   // Handle loading error gracefully;
   useEffect((,) => {;
     if (error) {;
@@ -236,6 +241,16 @@ export default function TalentProfilePage() {;
       });    }        title: "Error loading profile",;
         description: "There was a problem loading this talent profile. Please try again.",;
         variant: "destructive"});
+=======
+
+  // Handle loading error gracefully
+  useEffect(() => {
+    if (error) {
+      toast({
+        title: "Error loading profile",
+        description: "There was a problem loading this talent profile. Please try again.",
+        variant: "destructive"})
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }, [error]);
 
@@ -247,6 +262,7 @@ export default function TalentProfilePage() {;
     return <ProfileErrorState error={error} />;
   }
 
+<<<<<<< HEAD
   const handleRequestHire = () => {;
     if (!isAuthenticated) {;
       toast({;
@@ -272,13 +288,40 @@ export default function TalentProfilePage() {;
       });
       return;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const handleRequestHire = () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to hire this talent.",
+        variant: "default"});
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return
+    }
+    setIsHireModalOpen(true)
+  };
+
+  const handleMessageTalent = () => {
+    if (!isAuthenticated) {
+      toast({
+        title: "Authentication required",
+        description: "Please sign in to message this talent.",
+        variant: "default"});
+      router.push(`/login?returnTo=${encodeURIComponent(`/talent/${id}`)}`);
+      return
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     setIsMessageModalOpen(true)
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>;
       <SEO
+<<<<<<< HEAD
 <<<<<<< HEAD
         title = {profile.full_name,}
         description = {profile.bio |'Talent profile',}
@@ -452,6 +495,13 @@ return (<> <SEOtitle= {
 }/> </div> </>) ;
 }'"      <div className="min-h-screen bg-zion-blue pb-12">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        title={profile.full_name}
+        description={profile.bio || 'Talent profile'}
+        ogImage={profile.profile_picture_url}
+      />
+      <div className="min-h-screen bg-zion-blue pb-12">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <TalentProfile
         profile = {profile,}
         onRequestHire = {handleRequestHire,}
@@ -534,4 +584,7 @@ return (<> <SEOtitle= {
     </>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

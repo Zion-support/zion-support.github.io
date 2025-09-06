@@ -30,6 +30,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
@@ -229,6 +230,9 @@ const ProductsIndex: NextPage = () => {;
 
 =======
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+const Index: NextPage = () => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
 <<<<<<< HEAD
 =======
@@ -547,6 +551,7 @@ const ProductsIndex: NextPage = () => {;
       <Head>
         <title>Index - Zion Tech Solutions</title>
 <<<<<<< HEAD
+<<<<<<< HEAD
         <meta name='description' content='Index page' />
       </Head>
 =======
@@ -564,15 +569,17 @@ const ProductsIndex: NextPage = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <meta name="description" content="Index page" />
       </Head>
       
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
       <main>
         <h1>Index</h1>
         <p>This page is under construction.</p>
       </main>
     </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -589,3 +596,9 @@ export default ProductsIndex;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Index;
 
+=======
+  )
+};
+
+export default Index;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

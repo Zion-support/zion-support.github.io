@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Tooltip
@@ -315,3 +316,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({;
   );
 },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

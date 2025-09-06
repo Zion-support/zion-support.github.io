@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Button } from './ui/button'
 import { Twitter, Facebook, Linkedin, Link } from 'lucide-react'
 import { toast } from "./ui/use-toast";
@@ -212,3 +213,7 @@ export function SocialShareSection() {;
 }</div> </div> </div> </section>)
 }'"
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

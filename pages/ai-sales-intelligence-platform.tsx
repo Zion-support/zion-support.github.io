@@ -23,4 +23,8 @@ export default function AISalesIntelligencePlatform() {
 			canonical="https: //ziontechgroup.com/ai-sales-intelligence-platform"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

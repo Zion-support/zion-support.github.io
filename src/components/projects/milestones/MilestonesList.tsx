@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react';
 import { Milestone, MilestoneStatus, MilestoneActivity  } from '@/hooks/useMilestones';
@@ -203,3 +204,6 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({;
 };
 "
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

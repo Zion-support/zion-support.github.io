@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
@@ -41,3 +42,5 @@ export const UserBadges = ({ badges }: UserBadgesProps) => {;
         const IconComponent = iconMap[badge && badge.icon as keyof typeof iconMap] || Trophy;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

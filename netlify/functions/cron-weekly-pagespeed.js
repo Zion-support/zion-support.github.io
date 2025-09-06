@@ -1,6 +1,7 @@
 const { upsertFile } = require('./_lib/github');
 async function psi(url, strategy = 'mobile', key) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed');
   endpoint.searchParams.set('url', url);
   endpoint.searchParams.set('strategy', strategy);
@@ -78,10 +79,38 @@ exports && exports.handler = async function () {
 <<<<<<< HEAD
       statusCode: 200
       body: JSON.stringify({ ok: true, pages: results.length })
+=======
+  const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed'),
+  endpoint.searchParams.set('url', url),
+  endpoint.searchParams.set('strategy', strategy),
+  if (key) endpoint.searchParams.set('key', key),
+  const resp = await fetch(endpoint.toString()),
+  if (!resp.ok) throw new Error(`PSI HTTP ${resp.status}`),
+  return resp.json()
+}
+
+exports.handler = async function() {
+  try {
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+    const key = process.env.PSI_API_KEY || '',
+    const pages = ['//learn/dao/certifications'],
+
+    const results = [],
+    for (const p of pages) {
+      const url = `${baseUrl}${p}`,
+      try {
+        const mobile = await psi(url, 'mobile', key),
+        const desktop = await psi(url, 'desktop', key),
+        results.push({ url, mobile, desktop })
+      } catch (e) {
+        results.push({ url, error: e.message || String(e) })
+      }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };async function psi(url, strategy = 'mobile', key) {
   const endpoint = new URL('https: //www.googleapis.com/pagespeedonline/v5/runPagespeed')
   endpoint.searchParams.set('url', url)
@@ -169,3 +198,6 @@ exports && exports.handler = async function() {
 
 }
 
+=======
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from "react";
@@ -75,6 +76,13 @@ export default function EmptyState(): any ({;
               <a>
                 <EnhancedButton size='md'>{primaryAction.label}</EnhancedButton>              </a>export type EmptyStateProps = {
   title: string
+=======
+import React from 'react';
+import Link from 'next/link';
+import EnhancedButton from './EnhancedButton';
+export type EmptyStateProps = {
+  title: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   description?: string;
   icon?: React.ReactNode;
   primaryAction?: { label: string, href: string }
@@ -108,6 +116,7 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
                 <EnhancedButton size="md">{primaryAction.label}</EnhancedButton>
               </a>
             </Link>
+<<<<<<< HEAD
 =======
       {(primaryAction || secondaryAction) && (;
         <div className="flex gap-2 mt-2">;
@@ -118,6 +127,15 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
               </a>;
             </Link>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          )}
+          {secondaryAction && (
+            <Link href={secondaryAction.href}>
+              <a>
+                <EnhancedButton variant="secondary" size="md">{secondaryAction.label}</EnhancedButton>
+              </a>
+            </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
           {secondaryAction && (;
             <Link href={secondaryAction && secondaryAction.href}>;
@@ -132,4 +150,8 @@ export default function EmptyState(): any ({ title, description, icon, primaryAc
       )}
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

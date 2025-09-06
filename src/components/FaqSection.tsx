@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { GradientHeading } from './GradientHeading'
   Accordion
@@ -132,6 +133,10 @@ export function FaqSection() {;
                 </AccordionTrigger>
                 <AccordionContent className='text-zion-slate-light'>                  {faq.answer}
                 <AccordionContent className="text-zion-slate-light">
+=======
+
+import { GradientHeading } from "./GradientHeading";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import {
   Accordion
   AccordionContent
@@ -262,6 +267,7 @@ export function FaqSection() {;
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 =======
@@ -298,3 +304,7 @@ export function FaqSection() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

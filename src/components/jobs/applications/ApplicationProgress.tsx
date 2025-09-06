@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { ApplicationStatus } from "@/types/jobs",
 import { Progress } from "@/components/ui/progress";
@@ -159,3 +160,5 @@ function StatusIcon(): any ({ status, current }: { status: ApplicationStatus, cu
   };
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

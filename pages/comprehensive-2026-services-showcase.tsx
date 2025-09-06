@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Search, Filter, Star, TrendingUp, Zap, Brain, Shield
   Globe, Database, Cloud, Lock, Palette, Target, Layers
@@ -10,6 +11,15 @@ import {
   ArrowRight, Phone, Mail, MapPin, Rocket, Users
   BarChart3, Award, Clock, DollarSign
 } from 'lucide-react'
+=======
+import { 
+  Search, Filter, Star, TrendingUp, Zap, Brain, Shield, 
+  Globe, Database, Cloud, Lock, Palette, Target, Layers, 
+  Sparkles, Atom, Microscope, Satellite, CheckCircle, 
+  ArrowRight, Phone, Mail, MapPin, Rocket, Users, 
+  BarChart3, Award, Clock, DollarSign
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 import { nextGenAIServices2026 } from '../data/next-gen-ai-services-2026';
@@ -21,6 +31,7 @@ export default function Comprehensive2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState('popularity')
   const [viewMode, setViewMode] = useState('grid')
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -50,18 +61,62 @@ export default function Comprehensive2026ServicesShowcase() {
                            service.category.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesCategory = selectedCategory === 'all' |
                              service.category.toLowerCase().includes(selectedCategory)
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  // Combine all services
+  const allServices = [
+    ...nextGenAIServices2026;
+    ...revolutionaryITInfrastructure2026;
+    ...innovativeMicroSaas2026
+  ];
+
+  // Categories for filtering
+  const categories = [
+    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices2026.length },
+    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure2026.length },
+    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas2026.length },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length },
+    { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
+  ];
+
+  // Filter and sort services
+  const filteredServices = allServices
+    .filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || 
+                             service.category.toLowerCase().includes(selectedCategory);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return matchesSearch && matchesCategory
     })
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':
+<<<<<<< HEAD
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
         case 'price-high':
           return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''))
+=======
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+        case 'price-high':
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, ''));
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         case 'rating':
           return b.rating - a.rating
         case 'customers':
+<<<<<<< HEAD
           return b.customers - a.customers
+=======
+          return b.customers - a.customers;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         default: return a.popular ? -1 : 1
       }
     })
@@ -73,7 +128,12 @@ export default function Comprehensive2026ServicesShowcase() {
         staggerChildren: 0.1
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { y: 20, opacity: 0 }
     visible: {
@@ -102,6 +162,10 @@ export default function Comprehensive2026ServicesShowcase() {
         <link rel="canonical" href="https://ziontechgroup.com/comprehensive-2026-services-showcase" />
       </Head>
       <UltraAdvancedNavigation />
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="min-h-screen relative z-10">
         {/* Hero Section */}
         <section className="relative py-20 px-4 sm:px-6 lg:px-8">
@@ -270,6 +334,10 @@ export default function Comprehensive2026ServicesShowcase() {
                           </div>
                         )}
                       </div>
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
@@ -409,6 +477,10 @@ export default function Comprehensive2026ServicesShowcase() {
                   Email Us
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="mt-8 text-gray-400">
                 <p>📍 {contactInfo.address}</p>
                 <p>🌐 <a href={contactInfo.website} className="text-cyan-400 hover:text-cyan-300 transition-colors">{contactInfo.website}</a></p>
@@ -419,4 +491,8 @@ export default function Comprehensive2026ServicesShowcase() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

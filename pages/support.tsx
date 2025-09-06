@@ -354,6 +354,10 @@ export default function Support() {
             </div>
           </div>
         </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {/* Search and Filter */}
         <section className="py-12 px-4">
           <div className="max-w-6xl mx-auto">
@@ -737,4 +741,7 @@ export default Support
   )
 }
 export default SupportPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

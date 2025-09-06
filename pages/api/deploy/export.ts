@@ -7,6 +7,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // In a real system, look up persisted deployment by id
   const fake = {
+<<<<<<< HEAD
     id
     exportedAt: new Date().toISOString()
     note: 'This is a stub export. Connect to persistence to return real deployment state.'}
@@ -14,3 +15,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   return res.status(200).json(fake)
 }
+=======
+    id,
+    exportedAt: new Date().toISOString(),
+    note: 'This is a stub export. Connect to persistence to return real deployment state.'};
+  res.setHeader('Content-Typeapplication/json');
+  return res.status(200).json(fake)
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

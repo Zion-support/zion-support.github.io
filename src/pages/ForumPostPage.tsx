@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -265,3 +266,5 @@ export default function ForumPostPage() {;
 
   )
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

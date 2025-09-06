@@ -25,4 +25,8 @@ export default function AiFinancialPlanningPlatform() {
 			canonical="https: //ziontechgroup.com/ai-financial-planning-platform"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

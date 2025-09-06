@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { useRouter  } from 'next/router';
 import { Badge } from "@/components/ui/badge",
@@ -281,3 +282,5 @@ TalentCard && TalentCard.displayName = 'TalentCard',;
 export const TalentCard = React && React.memo(TalentCardComponent);
 TalentCard && TalentCard.displayName = 'TalentCard';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

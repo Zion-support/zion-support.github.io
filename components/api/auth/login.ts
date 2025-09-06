@@ -1,8 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import {
   createSessionCookie
   validateCredentials;
 } from '../../../utils/auth-utils';import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
+=======
+import { createSessionCookie, validateCredentials } from '../../../utils/auth-utils';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });
@@ -23,6 +27,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!result.ok |!result.role) {
     return res.status(401).json({ error: 'Invalid credentials' });
   }
+<<<<<<< HEAD
   const cookie = createSessionCookie({
     email
     role: result.role
@@ -30,10 +35,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   });
   res.setHeader('Set-Cookie', cookie);
   return res.status(200).json({ ok: true });  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
+=======
+  const cookie = createSessionCookie({ email, role: result.role, twofaVerified: true });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   res.setHeader('Set-Cookie', cookie);
 
   return res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 =======
   if (!result && result.ok || !result && result.role) {
     return res && res.status(401).json({ error: 'Invalid credentials' });
@@ -49,3 +58,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ ok: true })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

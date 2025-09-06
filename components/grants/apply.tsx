@@ -2,6 +2,7 @@ import { useState  } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import { useRouter  } from 'next/router';
 import type { GrantCategory } from '../../types/grants';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const categories: GrantCategory[] = [
@@ -10,6 +11,9 @@ const categories: GrantCategory[] = [
   'Regional Expansion'
   'Research Grants'
 ];const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants']
+=======
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ApplyGrantPage() {
 =======
 const categories: GrantCategory[] = [;
@@ -27,9 +31,13 @@ export default function ApplyGrantPage() {;
   const [proposalSummary, setProposalSummary] = useState('');
   const [timeline, setTimeline] = useState('');
   const [budgetAmount, setBudgetAmount] = useState<number>(0);
+<<<<<<< HEAD
   const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>(;
     'USDC';
   );  const [supportingLinks, setSupportingLinks] = useState<string>('');  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+=======
+  const [budgetCurrency, setBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [supportingLinks, setSupportingLinks] = useState<string>('');
   const [pitchDeckUrl, setPitchDeckUrl] = useState('');
   const [region, setRegion] = useState('');
@@ -45,6 +53,7 @@ export default function ApplyGrantPage() {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           program
           projectName
           teamInfo
@@ -104,6 +113,14 @@ export default function ApplyGrantPage() {;
     } finally {;
       setLoading(false);    }          budgetAmount: Number(budgetAmount || 0),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          program;
+          projectName;
+          teamInfo;
+          proposalSummary;
+          timeline;
+          budgetAmount: Number(budgetAmount || 0),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           budgetCurrency;
           supportingLinks: supportingLinks;
             .split('\n');
@@ -121,6 +138,7 @@ export default function ApplyGrantPage() {;
       setError(e.message)
     } finally {
       setLoading(false)
+<<<<<<< HEAD
 =======
           sector: (sector as any) || undefined,;
           submit})});
@@ -132,10 +150,13 @@ export default function ApplyGrantPage() {;
     } finally {;
       setLoading(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
 
   return (
+<<<<<<< HEAD
     <EnhancedLayout>;
       <h1 className='text-2xl font-semibold mb-4'>;
         Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}
@@ -282,6 +303,17 @@ export default function ApplyGrantPage() {;
   );
 <<<<<<< HEAD
 }            </select>
+=======
+    <EnhancedLayout>
+      <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>
+      <div className="grid gap-4 max-w-3xl">
+        <div className="grid md:grid-cols-2 gap-3">
+          <label className="text-sm">Program
+            <select className="mt-1 w-full border rounded p-2" value={program} onChange={(e) => setProgram(e.target.value as any)}>
+              <option value="grant">Grant</option>
+              <option value="incubator">Incubator</option>
+            </select>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </label>
           <label className="text-sm">Sector
             <select className="mt-1 w-full border rounded p-2" value={sector} onChange={(e) => setSector(e.target.value)}>
@@ -329,6 +361,7 @@ export default function ApplyGrantPage() {;
         </div>
       </div>
     </EnhancedLayout>
+<<<<<<< HEAD
 );
 }
 =======
@@ -385,3 +418,7 @@ export default function ApplyGrantPage() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

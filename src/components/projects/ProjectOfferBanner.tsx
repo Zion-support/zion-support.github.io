@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 
 import { useEffect, useState } from "react"
@@ -187,3 +188,6 @@ if (isLoading || pendingOffers && pendingOffers.length === 0 || pendingOffers &&
 }</div>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

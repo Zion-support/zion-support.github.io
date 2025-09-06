@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from 'react';
 import { useAuth } from '@/hooks/useAuth';
 import { ChatWidget } from '@/components/ChatWidget';
@@ -42,11 +43,43 @@ export default function ListingDetail() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   const router = useRouter();
   const id = router && router.query.id as string;  const [selectedImageIndex, setSelectedImageIndex] = useState(0);  const [isLoading, setIsLoading] = useState(false);
+=======
+import { useState } from "react";
+import { useAuth } from "@/hooks/useAuth";
+import { ChatWidget } from "@/components/ChatWidget";
+import { useRouter } from "next/router";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import Skeleton from "@/components/ui/skeleton";
+import ImageWithRetry from '@/components/ui/ImageWithRetry';
+import { Star, MessageSquare, Brain, Shield } from 'lucide-react'
+import { cn } from "@/lib/utils";
+import Link from 'next/link';
+import { MARKETPLACE_LISTINGS } from "@/data/marketplaceData";
+import { toast } from "@/hooks/use-toast";
+import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { ProfileContact } from "@/components/profile/ProfileContact";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { useCurrency } from '@/hooks/useCurrency';
+
+export default function ListingDetail() { // useParams may be untyped in this environment, so avoid passing a
+  // type argument and cast the result instead to prevent TS2347 errors.
+
+  const router = useRouter();
+  const id = router.query.id as string,
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLoading, setIsLoading] = useState(false);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [isContactDialogOpen, setIsContactDialogOpen] = useState(false);
   const [isChatOpen, setIsChatOpen] = useState(false);
   const { user } = useAuth();
   const { formatPrice } = useCurrency();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Find the listing from our shared data source - now also checking equipment listings
   const listing = MARKETPLACE_LISTINGS.find(item => item.id === id);
   if (!listing) {
@@ -58,6 +91,7 @@ export default function ListingDetail() {;
   if (!listing) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     return (
+<<<<<<< HEAD
       <div className='min-h-screen bg-zion-blue py-12 px-4'>;
         <div className='container mx-auto'>;
           <div className='text-center py-20'>;
@@ -82,6 +116,9 @@ export default function ListingDetail() {;
       setIsChatOpen(true);
     } else {
       setIsContactDialogOpen(true);    }      <div className="min-h-screen bg-zion-blue py-12 px-4">
+=======
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="container mx-auto">
           <div className="text-center py-20">
             <h1 className="text-3xl font-bold text-white mb-4">Listing Not Found</h1>
@@ -93,9 +130,21 @@ export default function ListingDetail() {;
           </div>
         </div>
       )
+<<<<<<< HEAD
   const handleContact = () => {
     if (user) {
 =======
+=======
+  }
+
+  const handleContact = () => {
+    if (user) {
+      setIsChatOpen(true)
+    } else {
+      setIsContactDialogOpen(true)
+    }
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const handleContact = () => {;
     if (user) {;
@@ -125,6 +174,7 @@ export default function ListingDetail() {;
     }
   }
   return (
+<<<<<<< HEAD
     <>;
       <div className='min-h-screen bg-zion-blue py-12 px-4'>;
         <div className='container mx-auto'>;
@@ -239,6 +289,58 @@ export default function ListingDetail() {;
                 </p>;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    <>
+      <div className="min-h-screen bg-zion-blue py-12 px-4">
+        <div className="container mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            {/* Left Column - Images */}
+            <div className="lg:col-span-2">
+              <div className="bg-zion-blue-dark rounded-lg overflow-hidden border border-zion-blue-light">
+                <div className="aspect-[16/9] w-full relative">
+                  {listing.images && listing.images.length > 0 ? (
+                    <ImageWithRetry
+                      src={listing.images[selectedImageIndex] || listing.images[0] || "/placeholder.svg"}
+                      alt={listing.title}
+                      className="object-cover"
+                      fallbackSrc="/placeholder.svg"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center bg-zion-blue-light/20">
+                      <span className="text-zion-slate-light">No image available</span>
+                    </div>
+                  )}
+                </div>
+                
+                {listing.images && listing.images.length > 1 && (
+                  <div className="flex p-4 gap-2 overflow-x-auto">
+                    {listing.images.map((image, index) => (
+                      <div 
+                        key = {index}
+                        onClick={() => setSelectedImageIndex(index)}
+                        className = {cn(
+                          "w-20 h-20 flex-shrink-0 cursor-pointer rounded overflow-hidden border-2",
+                          index === selectedImageIndex ? "border-zion-purple" : "border-transparent"
+                        )}
+                      >
+                        <ImageWithRetry
+                          src={image}
+                          alt={`${listing.title} - image ${index + 1}`}
+                          className="object-cover"
+                          fallbackSrc="/placeholder.svg"
+                        />
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Description Section */}
+              <div className="mt-8 bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light">
+                <h2 className="text-2xl font-bold text-white mb-4">Description</h2>
+                <p className="text-zion-slate-light whitespace-pre-line">{listing.description}</p>
+                
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 {/* Features */}
                 <div className='mt-8'>;
                   <h3 className='text-xl font-bold text-white mb-4'>;
@@ -295,6 +397,7 @@ export default function ListingDetail() {;
                     </div>
                   </div>
                 </div>
+<<<<<<< HEAD
 =======
                 <div className="mt-8">;
                   <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>;
@@ -336,6 +439,15 @@ export default function ListingDetail() {;
                   <div className="flex flex-wrap gap-2">;
                     {listing && listing.tags.map((tag, i) => (;
                       <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">;
+=======
+                
+                {/* Tags */}
+                <div className="mt-8">
+                  <h3 className="text-xl font-bold text-white mb-4">Tags</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {listing.tags.map((tag, i) => (
+                      <Badge key={i} variant="outline" className="border-zion-slate-dark text-zion-slate-light py-1 px-3">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         {tag}
                       </Badge>;
                     ))}
@@ -344,6 +456,7 @@ export default function ListingDetail() {;
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
 =======
                   </div>;
                 </div>;
@@ -399,9 +512,33 @@ export default function ListingDetail() {;
                   <div className='flex items-center gap-2 mb-6'>;
                     <div className='flex items-center'>;
                       {[...Array(5)].map((_, i) => (;
+=======
+            
+            {/* Right Column - Details */}
+            <div className="lg:col-span-1">
+              <div className="bg-zion-blue-dark rounded-lg p-6 border border-zion-blue-light sticky top-6">
+                <div className="mb-2">
+                  <Badge variant="secondary" className="bg-zion-purple/20 text-zion-cyan hover:bg-zion-purple/30">
+                    {listing.category}
+                  </Badge>
+                  {listing.featured && (
+                    <Badge className="ml-2 bg-zion-cyan/20 text-zion-cyan">
+                      Featured
+                    </Badge>
+                  )}
+                </div>
+                
+                <h1 className="text-2xl font-bold text-white mb-4">{listing.title}</h1>
+                
+                {listing.rating && (
+                  <div className="flex items-center gap-2 mb-6">
+                    <div className="flex items-center">
+                      {[...Array(5)].map((_, i) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         <Star
                           key={i}
                           className={cn(
+<<<<<<< HEAD
                             'h-5 w-5',
                             i < Math && Math.floor(listing && listing.rating!)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -437,8 +574,21 @@ export default function ListingDetail() {;
                       reviews);
                     </span>;
                   </div>;
+=======
+                            "h-5 w-5",
+                            i < Math.floor(listing.rating!) ? "text-zion-cyan fill-zion-cyan" : "text-zion-slate-light"
+                          )}
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm text-zion-slate-light">
+                      {listing.rating.toFixed(1)} ({listing.reviewCount} reviews)
+                    </span>
+                  </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 )}
                 {/* Price */}
+<<<<<<< HEAD
                 <div className='mb-6'>;
                   {listing && listing.price !== null ? (;
                     <div className='text-3xl font-bold text-white'>;
@@ -616,6 +766,77 @@ export default function ListingDetail() {;
                   <div className='flex justify-between mb-2'>;
                     <span className='text-zion-slate-light'>ID</span>;
                     <span className='text-white'>{listing && listing.id}</span>                  </div>                      </div>;
+=======
+                <div className="mb-6">
+                  {listing.price !== null ? (
+                    <div className="text-3xl font-bold text-white">
+                      {formatPrice(listing.price)}
+                    </div>
+                  ) : (
+                    <div className="text-2xl font-bold text-white">
+                      Custom Pricing
+                    </div>
+                  )}
+                </div>
+                
+                {/* Action Buttons */}
+                <div className="space-y-3 mb-8">
+                  {listing.price !== null ? (
+                    <PaymentButton
+                      amount={listing.price}
+                      serviceId={listing.id}
+                      providerId={listing.author.id}
+                      buttonText="Buy Now"
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white py-6"
+                      onPaymentInitiated={() => {
+                        toast({
+                          title: "Payment Processing",
+                          description: "Redirecting to secure checkout..."
+                        })
+                      }}
+                    />
+                  ) : (
+                    <Button 
+                      onClick = {handleContact}
+                      disabled={isLoading}
+                      className="w-full bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white py-6"
+                    >
+                      {isLoading ? "Processing..." : "Request Quote"}
+                    </Button>
+                  )}
+                  
+                  <Button 
+                    variant="outline" 
+                    onClick={handleContact}
+                    disabled={isLoading}
+                    className="w-full border-zion-purple text-zion-cyan hover:bg-zion-purple/10"
+                  >
+                    <MessageSquare className="h-4 w-4 mr-2" />
+                    Contact Publisher
+                  </Button>
+                </div>
+                
+                {/* Publisher Info */}
+                <div className="border-t border-zion-blue-light pt-6">
+                  <h3 className="text-lg font-bold text-white mb-3">Publisher</h3>
+                  <div className="flex items-center gap-3">
+                    {listing.author.avatarUrl ? (
+                      <div className="relative h-12 w-12 rounded-full overflow-hidden">
+                        <ImageWithRetry
+                          src={listing.author.avatarUrl}
+                          alt={listing.author.name}
+                          className="object-cover"
+                          onError={(e) => {
+                            const target = e.target as HTMLImageElement;
+                            target.src = "https: //ui-avatars.com/api/?name=" + encodeURIComponent(listing.author.name)
+                          }}
+                        />
+                      </div>
+                    ) : (
+                      <div className="h-12 w-12 rounded-full bg-zion-purple/20 flex items-center justify-center">
+                        <span className="text-lg font-medium text-zion-purple">{listing.author.name.charAt(0)}</span>
+                      </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     )}
 <<<<<<< HEAD
                     <div>
@@ -667,6 +888,7 @@ export default function ListingDetail() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       <ChatWidget
+<<<<<<< HEAD
         roomId = {listing && listing.id,}
         recipientId = {listing && listing.author.id,}
         isOpen = {isChatOpen,}
@@ -694,6 +916,21 @@ export default function ListingDetail() {;
             <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
           </DialogHeader>
           <ProfileContact
+=======
+        roomId={listing.id}
+        recipientId={listing.author.id}
+        isOpen={isChatOpen}
+        onClose={() => setIsChatOpen(false)}
+      />
+
+      {/* Contact Dialog */}
+      <Dialog open={isContactDialogOpen} onOpenChange={setIsContactDialogOpen}>
+        <DialogContent className="bg-zion-blue-dark border border-zion-blue-light text-white sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-white">Contact Publisher</DialogTitle>
+          </DialogHeader>
+          <ProfileContact 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             email={listing.author.email} // TypeScript now knows this might be undefined
             profileName={listing.author.name}
             profileType="service"
@@ -728,6 +965,7 @@ export default function ListingDetail() {;
       </Dialog>;
     </>;
   );
+<<<<<<< HEAD
 
 }/>) : (<Button </Button>) ";
 }<Button > <MessageSquare className=" h-4 w-4 mr-2"/> Contact Publisher </Button> </div> ;
@@ -747,3 +985,6 @@ export default function ListingDetail() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }/> <DialogHeader> <DialogTitle className=" text-xl font-bold text-white" >Contact Publisher</DialogTitle> </DialogHeader> <ProfileContact /> </DialogContent> </Dialog> </>) ;
 }'"}
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -30,11 +30,16 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
           aria-describedby='talent-search-help'
           className='pl-10 bg-zion-blue border-zion-blue-light text-white placeholder-zion-slate-light'
         />
+<<<<<<< HEAD
         <p id='talent-search-help' className='sr-only'>          Type a name or skill to filter results        <p id="talent-search-help" className="sr-only">
+=======
+        <p id="talent-search-help" className="sr-only">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           Type a name or skill to filter results
         </p>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -50,3 +55,7 @@ export function SearchFilter({ searchTerm, setSearchTerm }: SearchFilterProps) {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

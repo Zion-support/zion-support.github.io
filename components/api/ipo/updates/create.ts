@@ -3,6 +3,7 @@ import { readJsonFile, writeJsonFile  } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 import { v4 as uuidv4 } from 'uuid';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
 
@@ -50,6 +51,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   updates && updates.unshift(update);
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update);export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
   const { title, date, summary, kpis } = req && req.body || {};
@@ -60,4 +63,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   writeJsonFile('updates && updates.json', updates);
   res && res.status(200).json(update)
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

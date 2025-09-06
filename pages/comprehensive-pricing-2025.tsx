@@ -2,8 +2,13 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom
+=======
+import { 
+  Check, Star, Users, Clock, Shield, Zap, Globe, Rocket, Brain, Atom;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ArrowRight, ExternalLink, TrendingUp, Award, Target, ChevronDown
 } from 'lucide-react'
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion';
@@ -13,6 +18,7 @@ export default function ComprehensivePricingPage() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
   const [expandedService, setExpandedService] = useState<string | null>(null)
   // Combine all services
+<<<<<<< HEAD
   const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices]
   const categories = [
     { id: 'all', name: 'All Services', icon: '🚀' }
@@ -31,6 +37,27 @@ export default function ComprehensivePricingPage() {
     { id: 'Renewable Energy', name: 'Energy', icon: '⚡' }
     { id: 'Edge Computing', name: 'Edge', icon: '🌐' }
     { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' }
+=======
+  const allServices = [...comprehensiveMicroSaasServices, ...specializedEmergingTechServices];
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀' },
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠' },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥' },
+    { id: 'Fintech AI', name: 'Fintech', icon: '💰' },
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️' },
+    { id: 'IoT & Smart Cities', name: 'Smart Cities', icon: '🏙️' },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗' },
+    { id: 'Quantum Computing', name: 'Quantum', icon: '⚛️' },
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀' },
+    { id: 'Autonomous Systems', name: 'Autonomous', icon: '🤖' },
+    { id: 'AR/VR & Metaverse', name: 'AR/VR', icon: '🥽' },
+    { id: '5G/6G Networks', name: '5G/6G', icon: '📡' },
+    { id: 'Biotechnology AI', name: 'Biotech', icon: '🧬' },
+    { id: 'Renewable Energy', name: 'Energy', icon: '⚡' },
+    { id: 'Edge Computing', name: 'Edge', icon: '🌐' },
+    { id: 'Quantum Internet', name: 'Q-Internet', icon: '🌍' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     { id: 'Neuromorphic Computing', name: 'Neuro', icon: '🧠' }
   ]
   const filteredServices = selectedCategory === 'all'
@@ -46,7 +73,11 @@ export default function ComprehensivePricingPage() {
   }
   const toggleServiceExpansion = (serviceId: string) => {
     setExpandedService(expandedService === serviceId ? null : serviceId)
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <>
@@ -173,6 +204,10 @@ export default function ComprehensivePricingPage() {
                           </div>
                         </div>
                       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <h3 className="text-xl font-bold text-white mb-2">{service.name}</h3>
                       <p className="text-white/70 text-sm mb-4">{service.tagline}</p>
                       {/* Key Features */}
@@ -331,4 +366,8 @@ export default function ComprehensivePricingPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

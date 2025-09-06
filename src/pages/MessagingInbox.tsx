@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -264,3 +265,6 @@ return (<ProtectedRoute> <div className="min-h-screen bg-zion-blue" > <div class
 }{/* Conversation Detail */ ;
 }<ConversationDetailView /> </div> </div> </div> </div> </ProtectedRoute>) ;
 }'"}
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

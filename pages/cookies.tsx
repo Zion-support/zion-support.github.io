@@ -1,6 +1,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> origin/automation-improvements-final
@@ -686,6 +687,8 @@ export default function CookiesPage() {;
 >>>>>>> cursor/fix-lint-push-and-merge-to-main-ae4e
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -704,9 +707,12 @@ export default function CookiesPage() {
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <li>Purpose: performance and security</li>
 =======
 <li>Purpose: performance and security</li>
@@ -714,6 +720,7 @@ export default function CookiesPage() {
             <li>Retention: session or short‑term</li>
             <li>Opt‑out: browser settings and extensions</li>
           </ul>
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
 <<<<<<< HEAD
@@ -733,10 +740,15 @@ export default function CookiesPage() {
 >>>>>>> origin/automation-improvements-final
   );
  <li>Purpose: performance and security</li> <li>Retention: session or short‑term</li> <li>Opt‑out: browser settings and extensions</li> </ul> <p className="text-gray-400 text-sm" >Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com" >kleber@ziontechgroup.com</Link></p> </div> </div> </UltraAdvancedFuturisticBackground>
+=======
+          <p className="text-gray-400 text-sm">Questions? <a className="text-cyan-400" href="mailto:kleber@ziontechgroup.com">kleber@ziontechgroup.com</a></p>
+        </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
     </UltraAdvancedFuturisticBackground>
   )
 }
+<<<<<<< HEAD
 =======
         canonical='https://ziontechgroup && ziontechgroup.com/cookies/'
       />;
@@ -776,3 +788,5 @@ export default function CookiesPage() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

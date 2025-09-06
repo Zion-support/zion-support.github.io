@@ -5,9 +5,15 @@ export default function InternationalProposals() {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     (async () => {
+<<<<<<< HEAD
       const res = await fetch('/api/proposals/list')
       const data = await res.json()
       setItems(data.proposals |[])
+=======
+      const res = await fetch('/api/proposals/list');
+      const data = await res.json();
+      setItems(data.proposals || []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setLoading(false)
     })()
   }, [])
@@ -52,4 +58,8 @@ export default function InternationalProposals() {
       )}
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

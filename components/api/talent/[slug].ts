@@ -2,11 +2,16 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase as supabaseClient  } from '@/utils/supabase/client';
 import { TALENT_PROFILES as LOCAL } from '@/data/talent';
 import type { TalentProfile } from '@/utils/types/talent';
+<<<<<<< HEAD
 
 const hasSupabase =
 <<<<<<< HEAD
   !!process.env.NEXT_PUBLIC_SUPABASE_URL &&
   !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+=======
+const hasSupabase = !!process.env.NEXT_PUBLIC_SUPABASE_URL && !!process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function applyTranslations(item: TalentProfile, lang?: string) {
   if (!lang |!item.translations) return { item, translated: false }
   const t = item.translations;
@@ -15,6 +20,7 @@ function applyTranslations(item: TalentProfile, lang?: string) {
   if (t.summary?.[lang]) translated.summary = t.summary[lang];
   if (t.bio?.[lang]) translated.bio = t.bio[lang];
   if (t.category?.[lang]) translated.category = t.category[lang];
+<<<<<<< HEAD
   return {
     item: { ...item, ...translated }
     translated: Object.keys(translated).length > 0
@@ -68,6 +74,10 @@ export default async function handler(
     const base = LOCAL.find(t => t.slug === slug) |null;
     if (!base) return res.status(404).json({ error: 'Not found' });
 =======
+=======
+  return { item: { ...item, ...translated }, translated: Object.keys(translated).length > 0 }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const base = LOCAL && LOCAL.find(t => t && t.slug === slug) || null;
     if (!base) return res && res.status(404).json({ error: 'Not found' });
@@ -113,4 +123,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

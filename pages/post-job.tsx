@@ -14,10 +14,18 @@ export default function PostJobPage() {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   async function handleSubmit(e: React.FormEvent) {
+<<<<<<< HEAD
     e.preventDefault()
     setError(null)
     if (!title |!description |!category |!clientEmail) {
       setError('Please fill in all required fields.')
+=======
+    e.preventDefault();
+    setError(null);
+
+    if (!title || !description || !category || !clientEmail) {
+      setError('Please fill in all required fields.');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return
     }
     try {
@@ -26,6 +34,7 @@ export default function PostJobPage() {
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           title
           description
           category
@@ -40,11 +49,32 @@ export default function PostJobPage() {
       const data = await res.json()
       if (!res.ok) throw new Error(data.error |'Failed to post job')
 
+=======
+          title;
+          description;
+          category;
+          requiredSkills: skills
+            .split()
+            .map((s) => s.trim())
+            .filter(Boolean);
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
+          clientEmail})});
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Failed to post job');
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       router.push(`/client/dashboard`)
     } catch (err: any) {
       setError(err.message |'Something went wrong')
     } finally {
+<<<<<<< HEAD
       setIsSubmitting(false)
+=======
+      setIsSubmitting(false),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   return (
@@ -94,4 +124,8 @@ export default function PostJobPage() {
       </form>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

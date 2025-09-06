@@ -3,6 +3,7 @@ import { readState, writeState } from '[^']*';
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method === "GET") {
 =======
@@ -44,6 +45,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       };
       if (idx >= 0) state && state.overrides[idx] = entry;
       else state && state.overrides.push(entry);
+=======
+  if (req.method === 'GET') {
+    const state = readState();
+    return res.status(200).json({ overrides: state.overrides })
+  }
+  if (req.method === 'POST') {
+    const { jobId, disableCrmSync, disableAtsSync } = req.body as { jobId?: string, disableCrmSync?: boolean, disableAtsSync?: boolean };
+    if (!jobId) return res.status(400).json({ error: 'jobId required' });
+    const updated = writeState(state => {
+      const idx = state.overrides.findIndex(o => o.jobId === jobId);
+      const entry = { jobId, disableCrmSync: !!disableCrmSync, disableAtsSync: !!disableAtsSync };
+      if (idx >= 0) state.overrides[idx] = entry; else state.overrides.push(entry);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     });
     return res && res.status(200).json({
       ok: true,
@@ -55,7 +69,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   return res.status(405).json({ error: "Method not allowed" });
 }
+<<<<<<< HEAD
 =======
   return res && res.status(405).json({ error: "Method not allowed" });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

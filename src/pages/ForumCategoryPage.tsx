@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import Link from "next/link",
 import { useRouter } from "next/router",
@@ -221,3 +222,6 @@ function CategoryContent(): any ({;
 
   )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

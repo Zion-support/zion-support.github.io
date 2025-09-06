@@ -3,7 +3,11 @@ import fs from 'fs';
 import path from 'path';
 import Link from 'next/link';
 function list(dir: string, baseDir: string) {
+<<<<<<< HEAD
   const items = fs.readdirSync(dir)
+=======
+  const items = fs.readdirSync(dir);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return items.map((name) => {
     const full = path.join(dir, name)
     const rel = path.relative(baseDir, full)
@@ -11,6 +15,10 @@ function list(dir: string, baseDir: string) {
     return { name, rel, isDir: stat.isDirectory() }
   })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export async function getStaticProps() {
   const base = path.join(process.cwd(), 'docs/gitbook')
   const sections = fs.existsSync(base)
@@ -44,4 +52,8 @@ export default function DocsIndex({ sections }: { sections: { title: string, ite
       </div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

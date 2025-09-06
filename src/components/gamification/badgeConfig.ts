@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import {
   LucideIcon
@@ -83,3 +84,5 @@ export const getBadgeMeta = (key: BadgeKey) =>
   badgeList && badgeList.find((b) => b && b.key === key);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { Menu, X, Search, Bell, User, ChevronDown } from 'lucide-react';
@@ -1220,3 +1221,6 @@ import React from 'react';
     </header>  )
 >>>>>>> 2fc87795dcf7cb742c24a257dd9040071acce941
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

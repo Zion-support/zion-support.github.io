@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react",
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog",
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
@@ -897,3 +898,7 @@ setActiveTab ("preview");
     </Dialog>
   )}
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

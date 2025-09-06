@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -50,6 +51,27 @@ const BADGES: Badge[] = [;
   { id: 'pro', label: 'Pro', threshold: 500 },;
   { id: 'elite', label: 'Elite', threshold: 1000 },;
 ];
+=======
+import React from "react";
+export type Badge = {
+  id: string,
+  label: string,
+  threshold: number, // token balance threshold
+};
+
+const BADGES: Badge[] = [
+  { id: "starter", label: "Starter", threshold: 50 },
+  { id: "rising", label: "Rising Star", threshold: 200 },
+  { id: "pro", label: "Pro", threshold: 500 },
+  { id: "elite", label: "Elite", threshold: 1000 }],
+export function currentBadge(balance: number): Badge | null {
+  let current: Badge | null = null,
+  for (const b of BADGES) {
+    if (balance >= b.threshold) current = b
+  }
+  return current
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export function currentBadge(): any (balance: number): Badge | null {;
   let current: Badge | null = null;
@@ -59,12 +81,20 @@ export function currentBadge(): any (balance: number): Badge | null {;
 export default function Badges(): any ({ balance }: { balance: number }) {;
   const active = currentBadge(balance);
   return (
+<<<<<<< HEAD
     <div className='flex gap-2 items-center flex-wrap'>;
       {BADGES && BADGES.map(b => (        <span
           key={b && b.id}
+=======
+    <div className="flex gap-2 items-center flex-wrap">
+      {BADGES.map((b) => (
+        <span
+          key={b.id}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           className={`px-3 py-1 rounded-full text-xs border ${
 <<<<<<< HEAD
             balance >= b.threshold
+<<<<<<< HEAD
               ? 'bg-yellow-100 border-yellow-300 text-yellow-800'
               : 'bg-gray-100 border-gray-200 text-gray-500'          }`}  let current: Badge | null = null
   for (const b of BADGES) {
@@ -115,3 +145,19 @@ export default function Badges(): any ({ balance }: { balance: number }) {;
     </div>;
   );
 }
+=======
+              ? "bg-yellow-100 border-yellow-300 text-yellow-800"
+              : "bg-gray-100 border-gray-200 text-gray-500"
+          }`}
+          title={`Requires ${b.threshold} ZION$`}
+        >
+          {b.label}
+        </span>
+      ))}
+      {active && (
+        <span className="ml-2 text-xs text-green-600">Current: {active.label}</span>
+      )}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

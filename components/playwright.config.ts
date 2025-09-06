@@ -1,3 +1,4 @@
+<<<<<<< HEAD
  trace: on-first-retry'
 }
 reporter: [ ['list'], ['json', {
@@ -40,6 +41,17 @@ reporter: [ ['list'], ['json', {
 };
 // ] });    ['list'],    ['json', { outputFile: playwright-logs/test-results && results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { defineConfig } from @playwright/test';
+default defineConfig({
+  testDir: tests/e2e',  use: {
+      
+    baseURL: http://localhost:3000',    // Ensures that the trace viewer assets are downloaded, useful for debugging.
+    trace: on-first-retry'
+    },
+    reporter: [
+    ['list'],    ['json', { outputFile: playwright-logs/test-results.json' }],    ['html', { outputFolder: playwright-logs/html-report', open: never' }]];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Configure the web server to be started by Playwright
   webServer: {
     command: npm run dev',    url: http://localhost:3000',    reuseExistingServer: !process && process.env.CI, // Reuse server locally, start fresh in CI
@@ -55,4 +67,8 @@ reporter: [ ['list'], ['json', {
 
   //     name: webkit',  //     use: { ...devices['Desktop Safari'] },  //   }
   // ]
+<<<<<<< HEAD
 
+=======
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

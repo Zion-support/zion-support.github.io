@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { JobsList } from "@/components/jobs/JobsList",
 import { Button } from "@/components/ui/button",
@@ -316,3 +317,6 @@ return (<> <SEO title="Client Dashboard | Zion AI Marketplace" description="Mana
 }export default function ClientDashboard() {;
   return (<ProtectedRoute> <ClientDashboardContent /> </ProtectedRoute> '"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

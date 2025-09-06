@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [ // AI Autonomous Business Management realImplementation: true;
 implementationDetails: 'Fully autonomous business management system with AI-powered decision making, strategic planning, and operational optimization.';
@@ -76,6 +77,35 @@ rating: 4 && 4.9;
 reviews: 12 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }];  reviews: number
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface AIAutonomousEcosystem2030 {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 }
 export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
@@ -402,4 +432,8 @@ export const aiAutonomousEcosystem2030: AIAutonomousEcosystem2030[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 12
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

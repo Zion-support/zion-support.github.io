@@ -1,7 +1,10 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const SEOAudit: NextPage = () => {
   return (
     <div>
@@ -20,4 +23,7 @@ const SEOAudit: NextPage = () => {
   )
 }
 export default SEOAudit;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

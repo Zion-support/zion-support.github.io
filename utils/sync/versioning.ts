@@ -13,6 +13,7 @@ export interface Version {
   build?: number;
 }
 
+<<<<<<< HEAD
 export function parseVersion(versionString: string): Version {
   const parts = versionString && versionString.split('.').map(Number);
   return {
@@ -63,3 +64,12 @@ export function isVersionEqual(a: string, b: string): boolean {
   return compareVersions(parseVersion(a), parseVersion(b)) === 0;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+export function nextVersionFor(
+  state: MultiverseState,
+  entityKey: string
+): number {
+  const current = state.latestVersionByEntityId[entityKey] || 0;
+  return current + 1;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

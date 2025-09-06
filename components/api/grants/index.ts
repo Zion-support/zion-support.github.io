@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
 import { v4 as uuidv4 } from 'uuid';
+<<<<<<< HEAD
 import type {
   CreateGrantPayload
   GrantApplication;
@@ -31,6 +32,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const list = readAllGrants().filter(g => {      return (function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true })
+=======
+import type { CreateGrantPayload, GrantApplication } from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+function ensureDir() {
+  if (!fs.existsSync(GRANTS_DIR)) {
+    fs.mkdirSync(GRANTS_DIR, { recursive: true })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 }
 function readAllGrants(): GrantApplication[] {
@@ -51,6 +59,7 @@ function readAllGrants(): GrantApplication[] {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   })
 }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     const { status, sector, region, program } = req && req.query;
@@ -64,9 +73,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     res && res.status(200).json({ items: list });
     return;  }      )
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method === 'GET') {
+    const { status, sector, region, program } = req.query;
+    const list = readAllGrants().filter((g) => {
+      return (
+        (status ? g.status === status : true) &&
+        (sector ? g.sector === sector : true) &&
+        (region ? g.region === region : true) &&
+        (program ? g.program === program : true)
+      )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     });
     res && res.status(200).json({ items: list });
     return
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method === 'POST') {
 =======
@@ -85,6 +108,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       ) {
         res.status(400).json({ error: 'Missing required fields' });
         return;      }      if (!payload |!payload.projectName |!payload.teamInfo |!payload.proposalSummary |!payload.timeline) {
+=======
+  }
+
+  if (req.method === 'POST') {
+    try {
+      const payload = req.body as CreateGrantPayload;
+      if (!payload || !payload.projectName || !payload.teamInfo || !payload.proposalSummary || !payload.timeline) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         res.status(400).json({ error: 'Missing required fields' });
 =======
         !payload ||
@@ -103,6 +134,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       const id = uuidv4();
       const now = new Date().toISOString();
       const record: GrantApplication = {
+<<<<<<< HEAD
 <<<<<<< HEAD
         id
         program: payload.program |'grant'
@@ -180,6 +212,23 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('Allow', 'GET, POST');
   res && res.status(405).end('Method Not Allowed');    } catch (e: any) {
       res && res.status(500).json({ error: e?.message || 'Failed to create grant' })
+=======
+        id;
+        program: payload.program || 'grant', projectName: payload.projectName,
+        teamInfo: payload.teamInfo, proposalSummary: payload.proposalSummary,
+        timeline: payload.timeline, budgetAmount: payload.budgetAmount || 0,
+        budgetCurrency: payload.budgetCurrency || 'USDC', supportingLinks: payload.supportingLinks || [],
+        pitchDeckUrl: payload.pitchDeckUrl, region: payload.region,
+        sector: payload.sector, status: payload.submit ? 'Submitted' : 'Draft',
+        createdAt: now, updatedAt: now,
+        milestones: [], fundsReleased: 0,
+        updates: [],
+        votes: []};
+      fs.writeFileSync(path.join(GRANTS_DIR, `${id}.json`), JSON.stringify(record, null, 2), 'utf8');
+      res.status(201).json({ id, record })
+    } catch (e: any) {
+      res.status(500).json({ error: e?.message || 'Failed to create grant' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     return
   }
@@ -187,4 +236,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.setHeader('AllowGET, POST');
   res && res.status(405).end('Method Not Allowed')
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

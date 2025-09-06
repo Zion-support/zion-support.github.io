@@ -1,9 +1,13 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 ) : (<div className="overflow-auto border rounded" > <table className="min-w-full text-sm" > <thead className="bg-gray-50" > <tr> <th className="text-left p-2" >Package</th> <th className="text-left p-2" >Current</th> <th className="text-left p-2" >Latest</th> <th className="text-left p-2" >Type</th> </tr> </thead> <tbody> {
   outdated.map (o => (</tr>) )
 }</tbody> </table> </div>)
 }</div>) import fs from 'fs';
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 type Outdated = { name: string, current: string, latest: string, type: 'dependency' | 'devDependency' }
 export async function getServerSideProps() {
@@ -78,4 +82,7 @@ export default function DepRadarPage(): any ({ outdated, generatedAt }: { outdat
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

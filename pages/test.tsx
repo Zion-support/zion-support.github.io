@@ -31,6 +31,7 @@ import Layout from '../components/Layout';
 =======
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
 =======
@@ -38,6 +39,8 @@ import Head from 'next/head';
 
 <<<<<<< HEAD
 import Layout from '../components/Layout';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function TestPage() {
   return (
 <<<<<<< HEAD
@@ -56,6 +59,7 @@ export default function TestPage() {
       <Head>
         <title>Test Page | Zion Tech Group</title>
       </Head>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <div className='min-h-screen bg-black text-white flex items-center justify-center'>
         <h1 className='text-4xl font-bold text-cyan-400'>Test Page Working</h1>
@@ -87,12 +91,15 @@ export default function TestPage() {;
       </div>
     </>
 );
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="min-h-screen bg-black text-white flex items-center justify-center">
         <h1 className="text-4xl font-bold text-cyan-400">Test Page Working</h1>
       </div>
     </>
   )
 }
+<<<<<<< HEAD
 =======
     <>;
       <Head>;
@@ -110,3 +117,5 @@ export default function TestPage() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

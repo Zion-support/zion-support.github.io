@@ -1,4 +1,5 @@
 import Link from 'next/link';
+<<<<<<< HEAD
 
 const features = [
   { key: 'private_portal', label: 'Private hiring portal' }
@@ -29,6 +30,36 @@ const tiers = [
     highlights: ['Unlimited seatsCustom SLADedicated CSM']
     includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}]
 
+=======
+const features = [
+  { key: 'private_portal', label: 'Private hiring portal' },
+  { key: 'dedicated_talent_pool', label: 'Dedicated talent pool' },
+  { key: 'custom_sla', label: 'Custom SLA' },
+  { key: 'branded_onboarding', label: 'Branded onboarding' },
+  { key: 'admin_dashboards', label: 'Admin dashboards' }],
+const tiers = [
+  {
+    id: 'teams',
+    name: 'Teams',
+    price: '$199/mo',
+    blurb: 'Up to 10 users, core collaboration features',
+    highlights: ['10 seatsPrivate portalAdmin dashboard'],
+    includes: { private_portal: true, dedicated_talent_pool: false, custom_sla: false, branded_onboarding: true, admin_dashboards: true }},
+  {
+    id: 'business',
+    name: 'Business',
+    price: '$499/mo',
+    blurb: 'Up to 50 users, advanced controls and limits',
+    highlights: ['50 seatsDedicated talent poolSLA options'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }},
+  {
+    id: 'enterprise-custom',
+    name: 'Enterprise',
+    price: 'Custom',
+    blurb: 'Unlimited users, custom contracts and SLAs',
+    highlights: ['Unlimited seatsCustom SLADedicated CSM'],
+    includes: { private_portal: true, dedicated_talent_pool: true, custom_sla: true, branded_onboarding: true, admin_dashboards: true }}],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function EnterprisePlans() {
   return (
     <main style={{ padding: '3rem', maxWidth: 1100, margin: '0 auto' }}>
@@ -83,6 +114,10 @@ export default function EnterprisePlans() {
           </table>
         </div>
       </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <section style={{ marginTop: '2rem', display: 'flex', gap: 16, alignItems: 'center' }}>
         <div style={{ display: 'flex', gap: 8 }}>
           <span style={{ border: '1px solid #e5e7eb', borderRadius: 6, padding: '0.25rem 0.5rem' }}>SSL</span>
@@ -95,4 +130,8 @@ export default function EnterprisePlans() {
       </section>
     </main>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

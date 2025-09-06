@@ -56,4 +56,8 @@ const dir = path.join(process.cwd(), 'automation_logs')
 const remote = await fetchFromGitHub()
 
   return res.status(200).json({ logs: remote })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

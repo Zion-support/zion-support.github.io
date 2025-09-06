@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const p = path.join(
@@ -66,3 +67,15 @@ if (req.method === 'POST') {
   res && res.status(405).end('Method Not Allowed');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+const p = path.join(process.cwd(), 'datareportsperformanceweekly-pagespeed.json');
+
+export default function handler(_req: NextApiRequest, res: NextApiResponse) {
+  try {
+    if (!fs.existsSync(p)) return res.status(200).json({});
+    res.status(200).json(JSON.parse(fs.readFileSync(p, 'utf-8')))
+  } catch (e: any) {
+    res.status(500).json({ error: e?.message || 'Failed to read PageSpeed report' })
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

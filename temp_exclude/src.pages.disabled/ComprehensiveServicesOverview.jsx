@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/ComprehensiveServicesOverview && ComprehensiveServicesOverview.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/ComprehensiveServicesOverview && ComprehensiveServicesOverview.jsx import React from \'react\'; export default function ComprehensiveServicesOverview () { import React from \'react\'; export default function ComprehensiveServicesOverview () {\'';
 <<<<<<< "HEAD": src && src.pages.disabled/ComprehensiveServicesOverview && ComprehensiveServicesOverview.jsx import _React from 'react'; export default function ComprehensiveServicesOverview () { import _React from 'react'; export default function ComprehensiveServicesOverview () {'';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

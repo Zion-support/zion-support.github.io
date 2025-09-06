@@ -2,6 +2,7 @@ import { useEffect, useState  } from 'react';
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import type {
   GrantApplication
@@ -56,6 +57,16 @@ const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected']
 export default function GrantsPage() {
   const [items, setItems] = useState<GrantApplication[]>([]);
   const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+=======
+import type { GrantApplication, GrantCategory, GrantStatus } from '../../types/grants';
+
+const categories: GrantCategory[] = ['Ecosystem ToolsTalent DevelopmentRegional ExpansionResearch Grants'],
+const statuses: GrantStatus[] = ['DraftSubmittedUnder ReviewApprovedRejected'],
+export default function GrantsPage() {
+  const [items, setItems] = useState<GrantApplication[]>([]);
+  const [filters, setFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({});
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
 
     const params = new URLSearchParams();
@@ -64,6 +75,7 @@ export default function GrantsPage() {
     if (filters.region) params.set('region', filters.region);
     if (filters.program) params.set('program', filters.program);
     fetch(`/api/grants?${params.toString()}`)
+<<<<<<< HEAD
       .then(r => r.json())
       .then(d => setItems(d.items |[]))
 =======
@@ -88,11 +100,16 @@ export default function GrantsPage() {;
 <<<<<<< HEAD
     <EnhancedLayout>      .then((r) => r.json())
       .then((d) => setItems(d.items |[]))
+=======
+      .then((r) => r.json())
+      .then((d) => setItems(d.items || []))
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       .catch(() => setItems([]))
   }, [filters]);
 
   return (
     <EnhancedLayout>
+<<<<<<< HEAD
       <div className='flex items-center justify-between mb-6'>
         <h1 className='text-2xl font-semibold'>Zion Grants & Incubator</h1>
         <div className='flex gap-2'>
@@ -229,6 +246,15 @@ export default function GrantsPage() {;
           <option value='incubator'>Incubator</option>;
         </select>;
       </div>;
+=======
+      <div className="flex items-center justify-between mb-6">
+        <h1 className="text-2xl font-semibold">Zion Grants & Incubator</h1>
+        <div className="flex gap-2">
+          <Link href="/grants/apply"><a className="px-3 py-2 bg-blue-600 text-white rounded">Apply</a></Link>
+          <Link href="/incubator"><a className="px-3 py-2 bg-purple-600 text-white rounded">Incubator</a></Link>
+        </div>
+      </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       <div className='grid gap-4'>;
         {items && items.map(g => (;
@@ -285,4 +311,7 @@ export default function GrantsPage() {;
     </EnhancedLayout>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

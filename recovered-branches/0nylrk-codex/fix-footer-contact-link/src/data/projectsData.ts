@@ -22,6 +22,7 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
+<<<<<<< HEAD
 }];      title: "AI Dashboard Development";
       description: "Develop dashboards using React and integrate ML models"
     }
@@ -32,3 +33,5 @@ export const PROJECTS: Project[] = [
     }
   }
 ];
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

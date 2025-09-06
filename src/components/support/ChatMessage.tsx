@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo } from "react",
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
 import { cn } from "@/lib/utils";
@@ -174,4 +175,6 @@ function formatMessageWithLinks(): any (message: string): string {;
   return formattedMessage;  return formattedMessage;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 

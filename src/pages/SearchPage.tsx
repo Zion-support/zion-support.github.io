@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useState } from "react";
 import { useRouter  } from 'next/router';
 import { useRouterReady, useRouteChange  } from '@/hooks/useRouterReady';
@@ -668,3 +669,6 @@ router && router.push (`/search?q=$ {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

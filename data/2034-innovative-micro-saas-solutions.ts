@@ -1,5 +1,6 @@
 
 export type InnovativeMicroSaas = {
+<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -151,6 +152,10 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 	name: string;
 	description: string;
 	tagline?: string;
+=======
+	id: string, name: string,
+	description: string, tagline?: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	category:
 		| 'Content Marketing'
 		| 'Business Operations'
@@ -239,4 +244,7 @@ export const innovativeMicroSaasSolutions: InnovativeMicroSaas[] = [
 		realService: true
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

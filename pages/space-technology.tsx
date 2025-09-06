@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import SEO from '../components/SEO';

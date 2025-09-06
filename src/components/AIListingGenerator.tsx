@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { useToast } from '@/hooks/use-toast'
 import { Button } from '@/components/ui/button'
@@ -592,3 +593,7 @@ toast ({
 }
   )
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

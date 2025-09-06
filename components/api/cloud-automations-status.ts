@@ -3,14 +3,20 @@ import fs from 'fs';
 import path from 'path';
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const dir = path.resolve(process.cwd(), "data/cloud-automations");
   const data: Record<string, any> = {}
+=======
+  const dir = path.resolve(process.cwd(), 'data/cloud-automations');
+  const data: Record<string, any> = {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     if (fs.existsSync(dir)) {
       for (const f of fs.readdirSync(dir)) {
         if (f.endsWith(".json")) {
           const fp = path.join(dir, f);
+<<<<<<< HEAD
           data[f.replace(".json", "")] = JSON.parse(
             fs.readFileSync(fp, "utf8")
           );
@@ -32,12 +38,16 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           );
 
+=======
+          data[f.replace('.json', '')] = JSON.parse(fs.readFileSync(fp, 'utf8'))
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
       }
     }
   } catch (e) {
     // ignore
   }
+<<<<<<< HEAD
 <<<<<<< HEAD
   res.status(200).json({ ok: true, data });
   res.status(200).json({ ok: true, data });
@@ -47,3 +57,7 @@ export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true, data });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  res.status(200).json({ ok: true, data })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

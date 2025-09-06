@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import fs from 'fs',
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 import type { GetStaticProps } from 'next';
 interface Report {
@@ -99,4 +103,7 @@ export default function RepoHealth(): any ({ report }: Props) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

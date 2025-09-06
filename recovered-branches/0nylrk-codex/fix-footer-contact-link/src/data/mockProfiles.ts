@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { ProfileData } from '@/types/profile';
 export const MOCK_PROFILES: Record<string, ProfileData> = {
   'service-provider-1': {
@@ -223,6 +224,53 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
         description:
           'Leading computer vision projects and mentoring junior engineers in deep learning techniques.'
         startDate: 'Mar 2021'
+=======
+import { ProfileData } from "@/types/profile";
+export const MOCK_PROFILES: Record<string, ProfileData> = {
+  "service-provider-1": {
+    id: "service-provider-1", name: "TechSolutions Inc.",
+    title: "Enterprise AI Integration Services", avatarUrl: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=200&h=200",
+    coverImageUrl: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=1600&h=600", bio: "Specializing in enterprise AI solutions with 10+ years of experience transforming businesses through technology.",
+    location: "San Francisco, CA";
+    rating: 4.9, reviewCount: 124,
+    aiScore: 95, profileType: "service" as "service" | "talent",
+    hourlyRate: 200,
+    skills: [
+      { name: "AI Integration", level: 5, endorsements: 87 };
+      { name: "Machine Learning", level: 5, endorsements: 76 };
+      { name: "Cloud Infrastructure", level: 4, endorsements: 62 };
+      { name: "Enterprise Solutions", level: 5, endorsements: 93 };
+      { name: "Data Engineering", level: 4, endorsements: 54 };
+      { name: "API Development", level: 4, endorsements: 48 }];
+    projects: [
+      {
+        id: "p1", title: "Healthcare AI Platform",
+        description: "Built an AI-powered system for medical diagnostics, reducing diagnosis time by 60%.";
+        imageUrl: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=500&h=300",
+        tags: ["Healthcare", "AI", "Machine Learning"];
+        date: "Oct 2023"
+      };
+      {
+        id: "p2", title: "Financial Analytics Suite",
+        description: "Developed predictive models for investment analysis with 92% accuracy.", imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&h=300",
+        tags: ["Finance", "Analytics", "Python"];
+        date: "Jun 2023"
+      };
+      {
+        id: "p3", title: "Supply Chain Optimization",
+        description: "Implemented ML algorithms to optimize logistics, reducing costs by 28%.";
+        imageUrl: "https://images.unsplash.com/photo-1566177229896-4b748c0fc9c6?auto=format&fit=crop&w=500&h=300",
+        tags: ["Logistics", "Optimization", "AI"];
+        date: "Jan 2023"
+      }
+    ];
+    experience: [
+      {
+        id: "e1", role: "Enterprise AI Solutions Provider",
+        company: "TechSolutions Inc.",
+        description: "Leading a team of 25 engineers developing cutting-edge AI solutions for Fortune 500 companies, specializing in custom ML models and enterprise integration.";
+        startDate: "Jan 2018",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         current: true
       }
       {
@@ -264,4 +312,8 @@ export const MOCK_PROFILES: Record<string, ProfileData> = {
       ]
     }
   }
+<<<<<<< HEAD
 
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

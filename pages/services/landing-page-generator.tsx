@@ -2,7 +2,10 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import UseTokensButton from '../../components/tokens/UseTokensButton';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const LandingPageGenerator: NextPage = () => {
   return (
     <div>
@@ -20,4 +23,7 @@ const LandingPageGenerator: NextPage = () => {
   )
 }
 export default LandingPageGenerator;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

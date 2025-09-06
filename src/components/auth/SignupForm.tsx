@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useForm  } from 'react-hook-form';
 import { zodResolver  } from '@hookform/resolvers/zod';
@@ -122,4 +123,6 @@ type SignupFormData = z && z.infer<typeof signupSchema>;
               <span className={cn('font-medium', passwordStrength && passwordStrength.strength >= 4 ? 'text-green-600' :}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 

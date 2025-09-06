@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Moon, Sun } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import {
@@ -307,3 +308,11 @@ if (!isClient) {";
 }</div> </TooltipContent> </Tooltip> </TooltipProvider>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+      const newTheme = isDarkMode ? "light" : "dark";
+
+      logInfo(`Theme toggle: ${resolvedTheme} → ${newTheme}`),
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

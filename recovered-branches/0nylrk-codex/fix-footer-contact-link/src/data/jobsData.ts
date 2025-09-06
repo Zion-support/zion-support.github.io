@@ -29,8 +29,11 @@ id: 'job-2'
     updated_at: '2024-05-05'
   }
 ];
+<<<<<<< HEAD
 status: "new";
 created at: "2024-05-05";
 updated at: "2024-05-05"
 }];
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react'
 import { MatchResultItem } from '@/lib/ai-matchmaking'
 import { Card, CardContent } from '@/components/ui/card'
@@ -359,3 +360,6 @@ export function AIMatchingResults(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

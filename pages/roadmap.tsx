@@ -2,8 +2,13 @@ import Head from 'next/head';
 import React, { useMemo, useState } from 'react';
 
 type RoadmapInputs = {
+<<<<<<< HEAD
   milestones: string
   keywords: string
+=======
+  milestones: string,
+  keywords: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   priorities: string
 }
 type Stage = {
@@ -18,12 +23,18 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
   const keywordList = keywords
     .split(/,|\n/)
     .map((s) => s.trim())
+<<<<<<< HEAD
     .filter(Boolean)
+=======
+    .filter(Boolean);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const priorityList = priorities
     .split(/,|\n/)
     .map((s) => s.trim())
     .filter(Boolean)
   const baseThemes = [
+<<<<<<< HEAD
     'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces'
     'Governance & OwnershipGlobal Scale']
   return baseThemes.map((theme, index) => {
@@ -42,6 +53,30 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
       index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations'
       index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem'
       index === 8 && 'Progressive decentralization, contributor ownership, councils'
+=======
+    'FoundationsTrust LayerAI-Native MatchingReputation & IdentityPayments & EscrowMarketplace LiquiditySovereign WorkflowsOpen Protocol Interfaces',
+    'Governance & OwnershipGlobal Scale'
+  ];
+
+  return baseThemes.map((theme, index) => {
+    const id = index + 1;
+    const name = `Zion v${id}`;
+
+    const objective = `Advance ${theme.toLowerCase()} informed by: ${keywordList.join() || 'core principles'}, focus: ${
+      priorityList.join() || 'execution and learning'
+    }.`;
+
+    const highlights: string[] = [
+      index === 0 && 'Design system, domain model, and initial data architecture';
+      index === 1 && 'Verifiable credentials, attestations, and dispute primitives';
+      index === 2 && 'AI-assisted scoping, matching, and brief generation';
+      index === 3 && 'Reputation graph, portable profiles, contribution proofs';
+      index === 4 && 'Programmable escrow, milestone releases, stable on/off-ramps';
+      index === 5 && 'Liquidity flywheel: supply activation, demand orchestration';
+      index === 6 && 'Sovereign workspaces: contracts, IP, revenue share automations';
+      index === 7 && 'Public APIs/SDKs, indexer services, client ecosystem';
+      index === 8 && 'Progressive decentralization, contributor ownership, councils';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       index === 9 && 'Regionalization, localization, reliability, and performance']
       .filter(Boolean)
       .map((s) => String(s))
@@ -50,6 +85,10 @@ function generateStages({ milestones, keywords, priorities }: RoadmapInputs): St
     return { id, name, theme, objective, highlights, metrics }
   })
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function defaultOperatorPrompt(): string {
   return `You are Zion's Product Operator.
 Inputs you will receive:
@@ -81,14 +120,23 @@ export default function RoadmapPage(): JSX.Element {
   const [priorities, setPriorities] = useState('governance, scale, regional expansion')
   const [copied, setCopied] = useState(false)
   const stages = useMemo(
+<<<<<<< HEAD
     () => generateStages({ milestones, keywords, priorities })
+=======
+    () => generateStages({ milestones, keywords, priorities });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     [milestones, keywords, priorities]
   )
   const operatorPrompt = useMemo(() => defaultOperatorPrompt(), [])
   const copyPrompt = async () => {
     try {
+<<<<<<< HEAD
       await navigator.clipboard.writeText(operatorPrompt)
       setCopied(true)
+=======
+      await navigator.clipboard.writeText(operatorPrompt);
+      setCopied(true);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setTimeout(() => setCopied(false), 1500)
     } catch {
       setCopied(false)
@@ -143,6 +191,10 @@ export default function RoadmapPage(): JSX.Element {
               </div>
             </div>
           </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <section className="mb-12">
             <div className="mb-3 flex items-center justify-between gap-3">
               <h2 className="text-xl font-semibold">Operator Prompt</h2>
@@ -202,4 +254,8 @@ export default function RoadmapPage(): JSX.Element {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

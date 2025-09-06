@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -15,12 +18,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
     fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number
+<<<<<<< HEAD
+=======
+  };
+
+  if (!fromDAO || !toDAO || !resolutionId || !decision) {
+    return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   if (!fromDAO |!toDAO |!resolutionId |!decision) {
     return res.status(400).json({ error: "fromDAO, toDAO, resolutionId, decision required" })
   }
   const version = nextVersionFor(state, resolutionId)
   const event = {
+<<<<<<< HEAD
     eventId: uuidv4()
     type: "dao_endorsement" as const
     payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp |Date.now() }
@@ -33,6 +44,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
+=======
+    eventId: uuidv4(), type: "dao_endorsement" as const,
+    payload: {
+       id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() 
+    },
+    originInstanceId: state.config.instanceId, version,
+    timestamp: Date.now()};
+
+  upsertEvent(state, event);
+  writeState(state);
+
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -45,4 +73,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

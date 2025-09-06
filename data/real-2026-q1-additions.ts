@@ -1,4 +1,5 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   mobile: '+1 302 464 0950'
@@ -947,6 +948,26 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		trialDays: 14;
 <<<<<<< HEAD
 		setupTime: '1 day'
+=======
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'affiliate-analytics-starter', name: 'Affiliate Analytics Starter',
+		tagline: 'Attribution, fraud detection and automated payouts for SMBs',
+    price: '$129', period: '/month',
+		description: 'Lightweight affiliate tracking with UTM/coupon support, heuristic fraud signals, and one-click Stripe/PayPal payouts.',
+    features: ['UTM and coupon attributionFraud heuristicsStripe/PayPal payoutsPartner portal and reporting'], popular: false,
+		icon: '🤝', color: 'from-emerald-600 to-teal-700',
+		textColor: 'text-emerald-300', link: 'https://ziontechgroup.com/services/affiliate-analytics-starter',
+		category: 'Developer Tools', realService: true,
+		marketPosition: 'Focused alternative to heavy affiliate platforms', targetAudience: 'SaaS and eCommerce',
+		trialDays: 14, setupTime: '1 day',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		technology: ['Next.js, Stripe, Webhooks'];
 =======
 		setupTime: '1 day',
@@ -1406,4 +1427,7 @@ export const real2026Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

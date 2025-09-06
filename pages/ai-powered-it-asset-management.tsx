@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Monitor, Brain, Cpu, Zap, Shield, Globe
   Rocket, Target, TrendingUp, Users, CheckCircle
@@ -15,6 +16,21 @@ const AIPoweredITAssetManagement = () => {
       icon: Brain
       title: "AI-Powered Asset Discovery"
       description: "Intelligent detection and cataloging of all IT assets across your network"
+=======
+import { 
+  Monitor, Brain, Cpu, Zap, Shield, Globe, 
+  Rocket, Target, TrendingUp, Users, CheckCircle;
+  ArrowRight, Star, Award, Clock, DollarSign;
+  Database, Network, Server, Laptop, Smartphone
+} from 'lucide-react';
+
+const AIPoweredITAssetManagement = () => {
+  const features = [
+    {
+      icon: Brain,
+      title: "AI-Powered Asset Discovery",
+      description: "Intelligent detection and cataloging of all IT assets across your network",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: "from-purple-500 to-pink-500"
     }
     {
@@ -43,12 +59,22 @@ const AIPoweredITAssetManagement = () => {
     "Cloud resources and virtual machines"
     "Security devices and appliances"
     "Peripheral devices and accessories"
+<<<<<<< HEAD
   ]
   const benefits = [
     {
       icon: DollarSign
       title: "Cost Optimization"
       value: "35%"
+=======
+  ];
+
+  const benefits = [
+    {
+      icon: DollarSign,
+      title: "Cost Optimization",
+      value: "35%",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       description: "Reduction in IT asset costs"
     }
     {
@@ -79,7 +105,12 @@ const AIPoweredITAssetManagement = () => {
     "Asset lifecycle optimization"
     "Cost allocation and tracking"
     "Integration with existing IT tools"
+<<<<<<< HEAD
   ]
+=======
+  ];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -182,6 +213,10 @@ const AIPoweredITAssetManagement = () => {
                 Manage every type of IT asset across your entire infrastructure
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {assetTypes.map((assetType, index) => (
                 <motion.div
@@ -303,6 +338,11 @@ const AIPoweredITAssetManagement = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default AIPoweredITAssetManagement;
 

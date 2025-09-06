@@ -1,14 +1,19 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { createServerClient } from '../../../utils/supabase/server';
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     const supabase = createServerClient();
     // Replace with your actual tables/queries
     // Fallback to mock if querying fails
+<<<<<<< HEAD
 <<<<<<< HEAD
     const result = await Promise.allSettled([
       supabase.from('users').select('id, role, country')
@@ -49,6 +54,14 @@ export default async function handler(
 <<<<<<< HEAD
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr.length ? arr : mock)
 =======
+=======
+    const result = await Promise.allSettled([
+      supabase.from('users').select('id, role, country');
+      supabase.from('jobs').select('id, status, category');
+      supabase.from('quotes').select('id, status');
+      supabase.from('projects').select('id, status');
+      supabase.from('referrals').select('id, converted, source')]);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const mockIfEmpty = (arr: any[], mock: any[]) => (arr && arr.length ? arr : mock),
 
@@ -82,12 +95,17 @@ export default async function handler(
       { id: 42, converted: false, source: 'twitter' }
       { id: 43, converted: true, source: 'partner' }]);
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const totalUsers = usersData.length;
     const totalTalents = usersData.filter(u => u.role === 'talent').length;
     const totalClients = usersData.filter(u => u.role === 'client').length;
     const jobsPosted = jobsData.filter(j => j.status === 'posted').length;
     const jobsFilled = jobsData.filter(j => j.status === 'filled').length;
     const quotesSent = quotesData.filter(q => q.status === 'sent').length;
+<<<<<<< HEAD
     const quotesAccepted = quotesData.filter(
       q => q.status === 'accepted'
     ).length;
@@ -100,6 +118,10 @@ export default async function handler(
     });
     const referralConversions = referralsData.filter(r => r.converted).length;
     const geoCounts: Record<string, number> = {}
+=======
+    const quotesAccepted = quotesData.filter(q => q.status === 'accepted').length;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const activeProjects = projectsData.filter(p => p.status === 'active').length;
     const categoryCounts: Record<string, number> = {}
     jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] |0) + 1 });
@@ -131,6 +153,7 @@ export default async function handler(
     ).length;
 
     const categoryCounts: Record<string, number> = {};
+<<<<<<< HEAD
     jobsData && jobsData.forEach(j => {
       categoryCounts[j && j.category] = (categoryCounts[j && j.category] || 0) + 1;
     });
@@ -237,3 +260,29 @@ res.status(200).json({
       ]
     });
   }}
+=======
+    jobsData.forEach(j => { categoryCounts[j.category] = (categoryCounts[j.category] || 0) + 1 });
+
+    const referralConversions = referralsData.filter(r => r.converted).length;
+
+    const geoCounts: Record<string, number> = {};
+    usersData.forEach(u => { geoCounts[u.country || 'Unknown'] = (geoCounts[u.country || 'Unknown'] || 0) + 1 });
+
+    res.status(200).json({
+      totals: {
+       totalUsers, totalTalents, totalClients, jobsPosted, jobsFilled, quotesSent, quotesAccepted, activeProjects 
+    },
+    topCategories: Object.entries(categoryCounts).sort((a, b) => b[1] - a[1]).slice(0, 5).map(([label, value]) => ({ label, value }));
+      referralConversions;
+      geo: Object.entries(geoCounts).map(([country, value]) => ({ label: country, value }))})
+  } catch (e: any) {
+    res.status(200).json({
+      totals: {
+       totalUsers: 4, totalTalents: 2, totalClients: 2, jobsPosted: 1, jobsFilled: 2, quotesSent: 2, quotesAccepted: 1, activeProjects: 2 
+    },
+    topCategories: [{ label: 'AI/ML', value: 2 }, { label: 'Design', value: 1 }];
+      referralConversions: 2,
+      geo: [{ label: 'US', value: 2 }, { label: 'IN', value: 1 }, { label: 'GB', value: 1 }]})
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

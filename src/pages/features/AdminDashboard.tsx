@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -62,12 +63,29 @@ export default function AdminDashboard() {;
     "name": "Admin Dashboard",;
     "description": "Monitor marketplace activity, manage listings and view analytics in one place.";
     "url": "https://app && app.ziontechgroup.com/features/admin-dashboard";
+=======
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function AdminDashboard() {
+  const schema = {
+
+    "@context": "https: //schema.org",
+    "@type": "WebPage",
+    "name": "Admin Dashboard",
+    "description": "Monitor marketplace activity, manage listings and view analytics in one place.",
+    "url": "https://app.ziontechgroup.com/features/admin-dashboard"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
       <SEO
+<<<<<<< HEAD
         title='Admin Dashboard'
         description='Gain insight into your marketplace with powerful administration tools.'
         keywords='admin dashboard, analytics, manage listings'
@@ -99,6 +117,13 @@ export default function AdminDashboard() {;
             <li>Approve or remove listings with a few clicks.</li>;
             <li>Assign roles and permissions to your team.</li>;
           </ul>      />;
+=======
+        title="Admin Dashboard"
+        description="Gain insight into your marketplace with powerful administration tools."
+        keywords="admin dashboard, analytics, manage listings"
+        canonical="https://app.ziontechgroup.com/features/admin-dashboard"
+      />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -124,6 +149,7 @@ export default function AdminDashboard() {;
             <li>Approve or remove listings with a few clicks.</li>
             <li>Assign roles and permissions to your team.</li>
           </ul>
+<<<<<<< HEAD
           <h2 className='text-2xl font-bold mb-4'>
             Frequently Asked Questions
           </h2>
@@ -144,6 +170,11 @@ export default function AdminDashboard() {;
           <div className='text-center'>
             <Button size='lg' className='bg-zion-purple text-white' asChild>
               <Link href='/admin'>View Dashboard</Link>            </Button>            <div>
+=======
+          <h2 className="text-2xl font-bold mb-4">Frequently Asked Questions</h2>
+          <div className="space-y-4 mb-12">
+            <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <p className="font-semibold">Who can access the dashboard?</p>
               <p className="text-zion-slate-light">Only authorized admins and moderators with the proper roles.</p>
             </div>
@@ -160,6 +191,7 @@ export default function AdminDashboard() {;
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 =======
@@ -210,3 +242,7 @@ export default function AdminDashboard() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,7 +1,12 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { useAuth } from "@/hooks/useAuth",
+=======
+import React from "react";
+import { useAuth } from "@/hooks/useAuth";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useOnboardingStatus } from "@/hooks/useOnboardingStatus";
 import { UserCheck, Star, CalendarCheck, BriefcaseIcon } from 'lucide-react'
 import { OnboardingTracker, OnboardingStep } from "./OnboardingTracker";
@@ -77,4 +82,9 @@ export function TalentOnboardingSteps() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return <OnboardingTracker steps={steps} />
+<<<<<<< HEAD
 }
+=======
+
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

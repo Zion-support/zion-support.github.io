@@ -22,9 +22,15 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 interface FilterSidebarProps {;
   className?: string;
   children?: React && React.ReactNode;
+=======
+interface FilterSidebarProps {
+  className?: string;
+  children?: React.ReactNode
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 
 <<<<<<< HEAD
@@ -79,6 +85,7 @@ export const FilterSidebar: React.FC<FilterSidebarProps> = ({ ;
 };
 
 export default FilterSidebar;
+<<<<<<< HEAD
 
 interface FilterOption {;
   value: string;
@@ -167,3 +174,5 @@ export function FilterSidebar(): any ({;
   )}
 '"`
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -195,3 +196,6 @@ export function TalentCardFooter(): any ({ profile, onViewProfile, onRequestHire
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

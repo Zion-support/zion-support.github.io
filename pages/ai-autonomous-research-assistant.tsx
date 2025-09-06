@@ -24,4 +24,8 @@ export default function AIAutonomousResearchAssistant() {
 			canonical="https: //ziontechgroup.com/ai-autonomous-research-assistant"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

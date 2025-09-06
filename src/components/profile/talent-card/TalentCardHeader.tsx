@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import { BadgeCheck } from 'lucide-react'
 import { TalentCardAvatar } from "./TalentCardAvatar";
@@ -59,6 +60,8 @@ export function TalentCardHeader(): any ({;
 }
 =======
           </h3>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
           <TalentCardAvailability availabilityType={availabilityType} />;
         </div>;
@@ -68,4 +71,7 @@ export function TalentCardHeader(): any ({;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

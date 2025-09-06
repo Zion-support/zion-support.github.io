@@ -24,4 +24,8 @@ export default function AIEthicsGovernanceFramework() {
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

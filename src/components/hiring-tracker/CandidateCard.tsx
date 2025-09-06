@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react'
 // Local stub is used in place of the @hello-pangea/dnd package which isn't
 // available in this environment.
@@ -531,3 +532,6 @@ export function CandidateCard(): any ({ application, index }: CandidateCardProps
 }/> </>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

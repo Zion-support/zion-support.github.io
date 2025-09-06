@@ -23,11 +23,15 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function ProductsIndexPage() {
 =======
 
 export default function ProductsIndexPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export default function ProductsIndexPage() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className='container mx-auto px-4 py-10'>;
       <h1 className='text-2xl font-semibold'>Products</h1>;
@@ -42,4 +46,8 @@ export default function ProductsIndexPage() {;
       <p className="mt-2 text-gray-600 dark: text-gray-300">Browse Zion products.</p>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

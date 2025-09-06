@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 ];}</div> </a> </div> </div> <div className="mt-6 flex justify-center" > <Button href="/contact" className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white" >Contact Us</Button> </div> </Card> </div> </section> </UltraFuturisticBackground>)
@@ -38,6 +39,8 @@ class ErrorBoundary extends React.Component {
 }</div> </div> </section> </div>) ) ;
 }</div> </div> </section> Let's work together to build the next generation of autonomous technology and shape the future of innovation. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <Button href="/contact" size="lg" className="bg-white text-cursor-blue hover:bg-gray-100 shadow-2xl hover-glow" >Get in Touch</Button> <Button href="/services" variant="outline" size="lg" className="border-white text-white hover:bg:white hover:text-cursor-blue shadow-2xl" >Explore Services</Button> </div> </div> Get in touch with our experts today for a free consultation and discover how our 500+ revolutionary micro SaaS services can drive unprecedented growth </p> </div> </div> <p className="text-gray-400 text-lg" > Start your 21-day free trial today and experience the future of technology </p> </div> </div> </section> </section> </>) ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import Head from 'next/head';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
@@ -667,4 +670,8 @@ export default function AboutPage() {;
     </>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

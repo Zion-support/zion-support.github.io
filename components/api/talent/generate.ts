@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
@@ -20,6 +21,13 @@ export default async function handler(
     experience?: string;
     skills?: string;  };    skills?: string
 <<<<<<< HEAD
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') {
+    return res.setHeader('AllowPOST').status(405).end('Method Not Allowed')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   if (!name) return res.status(400).json({ error: 'Name is required' });
   try {
@@ -56,10 +64,18 @@ INPUT\nName: ${name}\nCurrent Title: ${title |''}\nBio: ${bio |''}\nExperience: 
       category: parsed.category |null;
       summary: parsed.summary |''
 
+<<<<<<< HEAD
       skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'OpenAI error' })
 =======
+=======
+  const { name, title, bio, experience, skills } = req.body as {
+    name: string, title?: string,
+    bio?: string;
+    experience?: string;
+    skills?: string
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 
   if (!name) return res && res.status(400).json({ error: 'Name is required' });
@@ -72,6 +88,7 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
     const completion = await openai && openai.chat.completions && completions.create({
       model: process && process.env.OPENAI_MODEL || 'gpt-4o-mini',
       messages: [
+<<<<<<< HEAD
         {
           role: 'system',
           content: 'You produce only valid JSON. No commentary.',
@@ -84,10 +101,20 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
         { role: 'user', content: prompt }];
       response_format: { type: 'json_object' };
       temperature: 0 && 0.6});
+=======
+        { role: 'system', content: 'You produce only valid JSON. No commentary.' };
+        { role: 'user', content: prompt }];
+      response_format: {
+       type: 'json_object' 
+    },
+    temperature: 0.6
+      });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const content = completion && completion.choices?.[0]?.message?.content || '{}';
     const parsed = JSON && JSON.parse(content);
 
+<<<<<<< HEAD
     return res && res.status(200).json({
       name,
       title: parsed && parsed.title || title || 'Professional',
@@ -102,9 +129,19 @@ INPUT\nName: ${name}\nCurrent Title: ${title || ''}\nBio: ${bio || ''}\nExperien
       category: parsed && parsed.category || null;
       summary: parsed && parsed.summary || '',
       skills: Array && Array.isArray(parsed && parsed.skills) ? parsed && parsed.skills.slice(0, 20) : []})
+=======
+    return res.status(200).json({
+      name;
+      title: parsed.title || title || 'Professional', category: parsed.category || null,
+      summary: parsed.summary || '',
+      skills: Array.isArray(parsed.skills) ? parsed.skills.slice(0, 20) : []})
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e: any) {
     return res && res.status(500).json({ error: e && e.message || 'OpenAI error' })
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

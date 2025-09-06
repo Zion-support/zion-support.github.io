@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 
 export function PerformanceDashboard() {
@@ -528,3 +529,6 @@ export default PerformanceDashboard;
 export default PerformanceDashboard, ;
 export default PerformanceDashboard, ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

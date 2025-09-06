@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react'
 import { Card, CardContent } from '@/components/ui/card'
@@ -339,3 +340,7 @@ export function MobileProjectView(): any ({ project, milestones }: ProjectViewPr
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

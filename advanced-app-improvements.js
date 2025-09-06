@@ -24,13 +24,21 @@ export class HealthChecker {
     this.results = new Map();  }
 =======
   constructor() {
+<<<<<<< HEAD
     this && this.checks = new Map();
     this && this.results = new Map();  }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    this.checks = new Map(),
+    this.results = new Map()
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   addCheck(name, checkFunction) {
     this && this.checks.set(name, checkFunction);
   }
   async runAllChecks() {
+<<<<<<< HEAD
 <<<<<<< HEAD
     const results = {}
     for (const [name, check] of this.checks) {
@@ -52,6 +60,18 @@ export class HealthChecker {
       }
     }
     this && this.results = results;
+=======
+    const results = {};
+    for (const [name, checkFunction] of this.checks) {
+      try {
+        const result = await checkFunction();
+        results[name] = { status: 'healthy', result };
+      } catch (error) {
+        results[name] = { status: 'unhealthy', error: error.message };
+      }
+    }
+    return results;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 }
 <<<<<<< HEAD
@@ -167,6 +187,7 @@ export const performanceMonitor = new PerformanceMonitor();`,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export class ErrorTracker {
   constructor() {
+<<<<<<< HEAD
     this && this.errors = [];
     this && this.errorCounts = new Map();  }
   trackError(error, context = {}) {
@@ -181,6 +202,22 @@ export class ErrorTracker {
       userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown'
       url: typeof window !== 'undefined' ? window.location.href : 'unknown';
     }
+=======
+    this.errors = [],
+    this.errorCounts = new Map()
+  }
+
+  trackError(error, context = {}) {
+    const errorInfo = {
+      message: error.message,
+      stack: error.stack,
+      timestamp: new Date().toISOString(),
+      context,
+      userAgent: typeof navigator !== 'undefined' ? navigator.userAgent : 'unknown',
+      url: typeof window !== 'undefined' ? window.location.href : 'unknown'
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     this.errors.push(errorInfo);
     // Track error frequency
     const errorKey = error.message;
@@ -253,7 +290,11 @@ export class ErrorTracker {
       topErrors: Array && Array.from(this && this.errorCounts.entries())
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         .sort((a, b) => b[1] - a[1])
+<<<<<<< HEAD
         .slice(0, 10);
+=======
+        .slice(0, 10),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
   }
 }
@@ -467,6 +508,7 @@ export const connectionPool = new ConnectionPool();`
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
 }
+<<<<<<< HEAD
 // Main execution
 async function main() {
   try {
@@ -487,6 +529,183 @@ async function main() {
     createAPIOptimization();
     createDatabaseOptimization();
 <<<<<<< HEAD
+=======
+
+// Create accessibility improvements
+function createAccessibilityImprovements() {
+  console.log('\n♿ Creating accessibility improvements...');
+
+  const accessibilityFiles = {
+    'utils/accessibility.js': `// Accessibility utilities
+export function improveAccessibility() {
+  if (typeof window === 'undefined') return;
+
+  // Add skip links
+  addSkipLinks();
+  
+  // Improve focus management
+  improveFocusManagement();
+  
+  // Add ARIA labels where needed
+  addAriaLabels();
+  
+  // Improve color contrast
+  improveColorContrast();
+}
+
+function addSkipLinks() {
+  const skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.textContent = 'Skip to main content';
+  skipLink.className = 'skip-link';
+  skipLink.style.cssText = \`
+    position: absolute, top: -40px,
+    left: 6px, background: #000,
+    color: #fff, padding: 8px,
+    text-decoration: none, z-index: 1000,
+  \`;
+  
+  skipLink.addEventListener('focus', () => {
+    skipLink.style.top = '6px';
+  });
+  
+  skipLink.addEventListener('blur', () => {
+    skipLink.style.top = '-40px';
+  });
+  
+  document.body.insertBefore(skipLink, document.body.firstChild);
+}
+
+function improveFocusManagement() {
+  // Add focus indicators
+  const style = document.createElement('style');
+  style.textContent = \`
+    *:focus {
+      outline: 2px solid #007acc, outline-offset: 2px,
+    }
+  \`;
+  document.head.appendChild(style);
+}
+
+function addAriaLabels() {
+  // Add ARIA labels to interactive elements without labels
+  const buttons = document.querySelectorAll('button: not([aria-label]):not([aria-labelledby])'),
+  buttons.forEach(button => {
+    if (!button.textContent.trim()) {
+      button.setAttribute('aria-label', 'Button');
+    }
+  });
+}
+
+function improveColorContrast() {
+  // This would typically involve checking color combinations
+  // and suggesting improvements
+  console.log('Color contrast analysis would be implemented here');
+}`,
+
+    'utils/keyboard-navigation.js': `// Keyboard navigation utilities
+export function setupKeyboardNavigation() {
+  if (typeof window === 'undefined') return;
+
+  // Add keyboard event listeners
+  document.addEventListener('keydown', handleKeyboardNavigation);
+}
+
+function handleKeyboardNavigation(event) {
+  // Handle escape key
+  if (event.key === 'Escape') {
+    closeModals();
+  }
+  
+  // Handle tab navigation
+  if (event.key === 'Tab') {
+    handleTabNavigation(event);
+  }
+  
+  // Handle arrow keys for custom components
+  if (['ArrowUp', 'ArrowDown', 'ArrowLeft', 'ArrowRight'].includes(event.key)) {
+    handleArrowNavigation(event);
+  }
+}
+
+function closeModals() {
+  const modals = document.querySelectorAll('[role="dialog"]');
+  modals.forEach(modal => {
+    if (modal.style.display !== 'none') {
+      modal.style.display = 'none';
+
+    }
+  });
+}
+
+function handleTabNavigation(event) {
+  // Ensure tab order is logical
+  const focusableElements = document.querySelectorAll(
+    'a[href], button, input, textarea, select, [tabindex]:not([tabindex="-1"])'
+  );
+  
+  const firstElement = focusableElements[0];
+  const lastElement = focusableElements[focusableElements.length - 1];
+  
+  if (event.shiftKey && document.activeElement === firstElement) {
+    event.preventDefault(),
+    lastElement.focus()
+  } else if (!event.shiftKey && document.activeElement === lastElement) {
+    event.preventDefault(),
+    firstElement.focus()
+  }
+}
+
+function handleArrowNavigation(event) {
+  // Implement arrow key navigation for custom components
+  const currentElement = document.activeElement;
+  const parent = currentElement.closest('[role="menu"], [role="listbox"], [role="grid"]');
+  
+  if (parent) {
+    const items = parent.querySelectorAll('[role="menuitem"], [role="option"], [role="gridcell"]');
+    const currentIndex = Array.from(items).indexOf(currentElement);
+    
+    let nextIndex = currentIndex;
+    switch (event.key) {
+      case 'ArrowUp':
+        nextIndex = Math.max(0, currentIndex - 1);
+        break;
+      case 'ArrowDown':
+        nextIndex = Math.min(items.length - 1, currentIndex + 1);
+        break;
+      case 'ArrowLeft':
+        nextIndex = Math.max(0, currentIndex - 1);
+        break;
+      case 'ArrowRight':
+        nextIndex = Math.min(items.length - 1, currentIndex + 1);
+        break;
+    }
+    
+    if (nextIndex !== currentIndex) {
+    event.preventDefault(),
+    items[nextIndex].focus()
+  }
+  }
+}`
+
+  };
+
+  Object.entries(accessibilityFiles).forEach(([filename, content]) => {
+    const fullPath = path.join('/workspace', filename);
+    fs.mkdirSync(path.dirname(fullPath), { recursive: true });
+    fs.writeFileSync(fullPath, content);
+    console.log(`OK Created ${filename}`);
+  });
+}
+
+// Main execution
+async function main() {
+  try {
+    createAdvancedMonitoring();
+    createPerformanceOptimizations();
+    createAccessibilityImprovements();
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     console.log('\n✅ Advanced app improvements completed successfully!');
     console.log('\n📋 Summary:');
     console.log('  - Advanced monitoring system created');
@@ -516,4 +735,9 @@ if (require.main === module) {
 if (import && import.meta.url === `file://${process ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements }
+=======
+
+export { createAdvancedMonitoring, createPerformanceOptimizations, createAccessibilityImprovements };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

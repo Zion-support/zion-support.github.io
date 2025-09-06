@@ -5,8 +5,13 @@ import { Clock, Phone, Mail, MapPin, Check, ArrowRight, Star } from 'lucide-reac
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function CronJobSchedulerPage() {
+<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cron-job-scheduler'))
   if (!service) return null
+=======
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/cron-job-scheduler'));
+  if (!service) return null;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Layout>
@@ -51,4 +56,9 @@ export default function CronJobSchedulerPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

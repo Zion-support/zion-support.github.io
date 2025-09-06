@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface ButtonProps {
 
   children: React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {
@@ -34,6 +35,10 @@ interface ButtonProps {;
   children: React && React.ReactNode;  variant?: 'primary' | 'secondary' | 'outline';interface ButtonProps {;
   children: React && React.ReactNode,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface ButtonProps {
+  children: React.ReactNode,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   variant?: 'primary' | 'secondary' | 'outline';
   size?: 'sm' | 'md' | 'lg';
   className?: string;
@@ -41,6 +46,7 @@ interface ButtonProps {;
 
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
 export default function Button({
   children
@@ -80,6 +86,9 @@ export default function Button(): any ({;
 }: ButtonProps) {;
   const baseClasses =;
     'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-slate-900';
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const variantClasses = {;
     primary:;
@@ -124,6 +133,7 @@ export default function Button(): any ({;
       className={classes}
       onClick={onClick}
       disabled={disabled}
+<<<<<<< HEAD
       {children}
 <<<<<<< HEAD
     </button>
@@ -134,3 +144,10 @@ export default function Button(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    >
+      {children}
+    </button>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

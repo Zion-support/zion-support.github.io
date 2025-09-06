@@ -2,6 +2,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '..', '..', relPath);
 =======
@@ -84,6 +85,9 @@ exports.handler = async () => {
   };
 };function runNode(relPath, args = []) {
   const abs = path && path.resolve(__dirname, '....', relPath),
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
   return { status: res && res.status || 0, stdout: res && res.stdout || '', stderr: res && res.stderr || '' }
 }
@@ -106,4 +110,7 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, headers: { 'content-type': 'text/plain' }, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

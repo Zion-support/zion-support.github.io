@@ -4,8 +4,13 @@ import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
+<<<<<<< HEAD
   Search, Star, DollarSign, CheckCircle
   ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List
+=======
+  Search, Star, DollarSign, CheckCircle;
+  ArrowRight, Rocket, Phone, Mail, MapPin, Grid, List;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ChevronDown, Sparkles
 } from 'lucide-react'
 import { ultimate2026Services } from '../data/ultimate-2026-services';
@@ -17,6 +22,7 @@ export default function Ultimate2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -25,6 +31,17 @@ export default function Ultimate2026ServicesShowcase() {
   // Combine all services
   const allServices = [
     ...ultimate2026Services
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  // Combine all services
+  const allServices = [
+    ...ultimate2026Services;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ...revolutionary2026Innovations
   ]
   // Dynamic category counts
@@ -38,6 +55,7 @@ export default function Ultimate2026ServicesShowcase() {
     service.category?.includes('Enterprise') |service.category?.includes('IT')
   ).length
   const emergingCount = allServices.filter(service =>
+<<<<<<< HEAD
     service.category?.includes('Emerging') |service.category?.includes('Innovation')
   ).length
   const categories = [
@@ -72,6 +90,49 @@ export default function Ultimate2026ServicesShowcase() {
         (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing')
       return matchesSearch && matchesCategory && matchesPrice
     })
+=======
+    service.category?.includes('Emerging') || service.category?.includes('Innovation')
+  ).length;
+
+  const categories = [
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
+  ];
+
+  // Filter and sort services
+  const filteredServices = useMemo(() => {
+    const filtered = allServices.filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
+
+      const matchesCategory = selectedCategory === 'all' ||
+        (selectedCategory === 'ai' && service.category.includes('AI')) ||
+        (selectedCategory === 'quantum' && (service.category.includes('Quantum') || service.category.includes('Space'))) ||
+        (selectedCategory === 'enterprise' && (service.category.includes('Enterprise') || service.category.includes('IT'))) ||
+        (selectedCategory === 'emerging' && (service.category.includes('Emerging') || service.category.includes('Innovation')));
+
+      const matchesPrice = selectedPriceRange === 'all' ||
+        (selectedPriceRange === 'low' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) < 1000) ||
+        (selectedPriceRange === 'medium' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) >= 1000 && parseInt(service.price.replace(/[^0-9]/g, '')) <= 5000) ||
+        (selectedPriceRange === 'high' && service.price !== 'Custom pricing' && parseInt(service.price.replace(/[^0-9]/g, '')) > 5000) ||
+        (selectedPriceRange === 'enterprise' && service.price === 'Custom pricing');
+
+      return matchesSearch && matchesCategory && matchesPrice
+    });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     // Sort services
     switch (sortBy) {
       case 'name':
@@ -79,22 +140,42 @@ export default function Ultimate2026ServicesShowcase() {
         break
       case 'price':
         filtered.sort((a, b) => {
+<<<<<<< HEAD
           const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''))
           const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''))
           return priceA - priceB
         })
         break
+=======
+          const priceA = a.price === 'Custom pricing' ? 999999 : parseInt(a.price.replace(/[^0-9]/g, ''));
+          const priceB = b.price === 'Custom pricing' ? 999999 : parseInt(b.price.replace(/[^0-9]/g, ''));
+          return priceA - priceB
+        });
+        break;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       case 'popularity':
         filtered.sort((a, b) => (b.popular ? 1 : 0) - (a.popular ? 1 : 0))
         break
       case 'rating':
+<<<<<<< HEAD
         filtered.sort((a, b) => b.rating - a.rating)
         break
+=======
+        filtered.sort((a, b) => b.rating - a.rating);
+        break;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       default: break
     }
     return filtered
+<<<<<<< HEAD
   }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy])
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6)
+=======
+  }, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]);
+
+  const featuredServices = allServices.filter(service => service.popular).slice(0, 6);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -224,6 +305,10 @@ export default function Ultimate2026ServicesShowcase() {
                         </div>
                       )}
                     </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                       {service.name}
                     </h3>
@@ -363,6 +448,10 @@ export default function Ultimate2026ServicesShowcase() {
                           </div>
                         )}
                       </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                         {service.name}
                       </h3>
@@ -466,6 +555,10 @@ export default function Ultimate2026ServicesShowcase() {
                 View Pricing
               </Link>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-white mb-2">500%+</div>
@@ -548,4 +641,8 @@ export default function Ultimate2026ServicesShowcase() {
       </section>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

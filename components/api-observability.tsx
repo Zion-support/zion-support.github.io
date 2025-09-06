@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 return (<UltraAdvancedFuturisticBackground> <Head> <title> {
@@ -32,6 +33,9 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }</ul> </div> <div className="bg-black/30 rounded-2xl border border-cyan-500/30 p-6 h-fit" > <div className="flex items-end justify-between mb-3" > <div> </div> </div> </div> </div> </div> </UltraAdvancedFuturisticBackground>) import React from 'react';
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 import { Shield, Phone, Mail, MapPin, Check, ArrowRight  } from 'lucide-react';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
@@ -92,6 +96,10 @@ export default function ApiObservabilityPage() {;
   );
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

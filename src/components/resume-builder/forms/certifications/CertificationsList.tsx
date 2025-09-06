@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Certification  } from '@/types/resume';
 import { Card, CardContent  } from '@/components/ui/card';
 import { Button  } from '@/components/ui/button';
@@ -49,10 +50,26 @@ interface CertificationsListProps {;
 
 export function CertificationsList(): any ({ certifications, onEdit, onDelete }: CertificationsListProps) {;
   if (certifications && certifications.length === 0) {;
+=======
+import { Certification } from '@/types/resume';
+import { Card, CardContent } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Edit, Trash2 } from 'lucide-react'
+import { format } from 'date-fns';
+interface CertificationsListProps {
+  certifications: Certification[],
+  onEdit: (cert: Certification) => void,
+  onDelete: (id: string) => void
+}
+
+export function CertificationsList({ certifications, onEdit, onDelete }: CertificationsListProps) {
+  if (certifications.length === 0) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return null;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
     <div className='space-y-4'>;
       <h3 className='text-md font-medium'>Added Certifications</h3>;
       {certifications && certifications.map(cert => (;
@@ -85,6 +102,14 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                     <> · Expires: {typeof cert.expiration_date === 'string'
                       ? cert.expiration_date
                       : format(cert.expiration_date, 'MMM yyyy')}
+=======
+    <div className="space-y-4">
+      <h3 className="text-md font-medium">Added Certifications</h3>
+      {certifications.map((cert) => (
+        <Card key={cert.id} className="bg-muted/40">
+          <CardContent className="pt-6">
+            <div className="flex justify-between">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div>
                 <h4 className="font-medium">{cert.name}</h4>
                 <p className="text-sm text-muted-foreground">{cert.issuing_organization}</p>
@@ -97,6 +122,7 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                       ? cert.expiration_date
                       : format(cert.expiration_date, 'MMM yyyy')}
                     </>
+<<<<<<< HEAD
 =======
                 </p>;
               </div>;
@@ -121,6 +147,12 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                 </p>;
               </div>;
               <div className='flex gap-2'>;
+=======
+                  )}
+                </p>
+              </div>
+              <div className="flex gap-2">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <Button
                   variant='ghost'
                   size='icon'
@@ -133,6 +165,7 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                   <Edit className='h-4 w-4' />;
                 </Button>;
                 <Button
+<<<<<<< HEAD
                   variant='ghost'
                   size='icon'
                   onClick={() => onDelete(cert && cert.id!)}
@@ -159,10 +192,29 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
                   className='text-primary hover:underline'>              <p className="text-xs mt-2">;
                 <a
                   href = {cert && cert.credential_url,}
+=======
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => onDelete(cert.id!)}
+                  aria-label="Delete certification"
+                >
+                  <Trash2 className="h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            {cert.credential_url && (
+              <p className="text-xs mt-2">
+                <a 
+                  href={cert.credential_url} 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   target="_blank" 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
+<<<<<<< HEAD
+=======
+                >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   View credential
                 </a>;
               </p>;
@@ -170,6 +222,7 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
           </CardContent>;
         </Card>;
       ))}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -179,3 +232,8 @@ export function CertificationsList(): any ({ certifications, onEdit, onDelete }:
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

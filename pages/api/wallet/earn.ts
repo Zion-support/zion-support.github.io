@@ -14,4 +14,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res.status(400).json({ error: err.message })
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

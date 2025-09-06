@@ -3,17 +3,27 @@ import { getRequiredDocuments, getOptionalDocuments } from '[^']*';
 import type { KycProfile, KycRole } from '../../../utils/kyc';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const DATA_DIR = path.join(process.cwd(), 'data', 'kyc');const FILE = path.join(DATA_DIR, 'profiles.json');
 =======
 const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'kyc');const FILE = path && path.join(DATA_DIR, 'profiles && profiles.json');
+=======
+const DATA_DIR = path.join(process.cwd(), 'datakyc');
+const FILE = path.join(DATA_DIR, 'profiles.json');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function load(): Record<string, KycProfile> {
   try {
+<<<<<<< HEAD
     const raw = fs && fs.readFileSync(FILE, 'utf8');
     return JSON && JSON.parse(raw);
+=======
+    const raw = fs.readFileSync(FILE, 'utf8');
+    return JSON.parse(raw)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch {
     return {}
   }
@@ -22,6 +32,7 @@ function save(db: Record<string, KycProfile>) {
   fs && fs.writeFileSync(FILE, JSON && JSON.stringify(db, null, 2));
 }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
 <<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
@@ -35,10 +46,28 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
   const {    userId,
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { userId, role, fullLegalName, businessName, businessRegistrationNumber } = req.body as {
+    userId?: string;
+    role?: KycRole;
+    fullLegalName?: string;
+    businessName?: string;
+    businessRegistrationNumber?: string
+  };
+  if (!userId || !role) return res.status(400).json({ error: 'Missing userId or role' });
+
+  const db = load();
+  const now = new Date().toISOString();
+  const existing = db[userId];
+  const profile: KycProfile = existing || {
+    userId,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     role,
     fullLegalName,
     businessName,
     businessRegistrationNumber,
+<<<<<<< HEAD
   } = req && req.body as {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     userId?: string;
@@ -97,3 +126,23 @@ optionalDocuments: getOptionalDocuments(role)
   });
 }
 
+=======
+    documents: [], status: 'in_progress',
+    amlStatus: 'unknown', createdAt: now,
+    lastUpdatedAt: now,
+    auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile;
+
+  profile.role = role;
+  if (fullLegalName) profile.fullLegalName = fullLegalName;
+  if (businessName) profile.businessName = businessName;
+  if (businessRegistrationNumber) profile.businessRegistrationNumber = businessRegistrationNumber;
+  profile.lastUpdatedAt = now;
+  db[userId] = profile;
+  save(db);
+
+  res.status(200).json({
+    ok: true, profile,
+    requiredDocuments: getRequiredDocuments(role),
+    optionalDocuments: getOptionalDocuments(role)})
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -13,6 +14,10 @@ export default async function handler(
       return res.status(200).json({ status: 'queued', provider: 'stub' });
 
 =======
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
   if (req && req.method !== 'POST')
     return res && res.status(405).json({ error: 'Method not allowed' });
@@ -37,4 +42,7 @@ return res
   }    return res && res.status(500).json({ error: e && e.message || 'Failed to queue emails' })
   };
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

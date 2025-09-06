@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export type KycRole = 'client' | 'talent' | 'enterprise';
 export type KycStatus = 'not started' | 'in progress' | 'submitted' | 'approved' | 'rejected' | 'needs more info';
 export type AmlStatus = 'clear' | 'match' | 'review' | 'unknown';
@@ -43,6 +44,23 @@ export interface KycProfile {
     details?: any
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
   }>;
+=======
+// KYC (Know Your Customer) utilities
+export interface KycProfile {
+  userId: string;
+  role: 'client' | 'talent' | 'both';
+  fullLegalName: string;
+  businessName?: string;
+  businessRegistrationNumber?: string;
+  documents: KycDocument[];
+  status: 'in_progress' | 'pending_review' | 'approved' | 'rejected' | 'expired';
+  submittedAt?: string;
+  reviewedAt?: string;
+  expiresAt?: string;
+  reviewerId?: string;
+  rejectionReason?: string;
+  notes?: string;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 export function getRequiredDocuments(role: KycRole): string[] {
   if (role === 'client') {
@@ -108,7 +126,26 @@ export function validateKycSubmission(profile: KycProfile): { ok: boolean, missi
     missing
 <<<<<<< HEAD
   };
+<<<<<<< HEAD
 =======
   }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
+=======
+}
+
+export function generateKycDocumentId(): string {
+  return `doc_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+
+export function isKycProfileComplete(profile: KycProfile): boolean {
+  return profile.status === 'approved' && 
+         profile.documents.length > 0 && 
+         profile.fullLegalName.length > 0;
+}
+
+export function isKycProfileExpired(profile: KycProfile): boolean {
+  if (!profile.expiresAt) return false;
+  return new Date(profile.expiresAt) < new Date();
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -9,4 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     title: 'Additional Insight'
     content: 'Add concise, investor-relevant content here (120-150 words). Use metrics, milestones, or strategic plans.'})
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

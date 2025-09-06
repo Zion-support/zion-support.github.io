@@ -1,5 +1,6 @@
 
 export type EnterpriseITSolution = {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline?: string;
@@ -299,6 +300,9 @@ realService: true
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }];	id: string;
 	name: string;
+=======
+	id: string, name: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	tagline?: string;
 	description: string;
 	category: 'Enterprise Security' | 'DevOps & Automation' | 'Data & Analytics' | 'Cloud Services' | 'Cybersecurity'
@@ -452,4 +456,7 @@ export const enterpriseITSolutions: EnterpriseITSolution[] = [
 		realService: true
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

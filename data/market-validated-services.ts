@@ -1,4 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
   id: string;
   name: string;
@@ -888,6 +889,8 @@ export const marketValidatedServices: MarketValidatedService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];import { ServiceVariant  } from "../types/service-variants";
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export interface MarketValidatedService {
 	id: string;
 	name: string;

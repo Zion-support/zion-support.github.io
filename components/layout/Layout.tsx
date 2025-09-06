@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -42,6 +43,8 @@ import Footer from '../Footer';
 =======
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React, { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';

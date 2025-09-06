@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { TUTORIALS } from '@/data/tutorials'
@@ -128,3 +129,6 @@ export default function Tutorial(): any ({ tutorial: initialTutorial }: Tutorial
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { Handshake, MessageSquare, Star } from 'lucide-react'
 import { Button } from "@/components/ui/button",
@@ -263,3 +264,6 @@ export function TalentProfile(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

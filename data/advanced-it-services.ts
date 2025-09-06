@@ -1,4 +1,5 @@
 export interface AdvancedITService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -1058,6 +1059,33 @@ export const advancedITServices: AdvancedITService[] = [
     launchDate: '2024-10-01';
     customers: 89;
 <<<<<<< HEAD
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: string,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     rating: 4.8
 
@@ -1066,4 +1094,8 @@ export const advancedITServices: AdvancedITService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 45
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

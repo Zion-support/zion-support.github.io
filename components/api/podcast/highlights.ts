@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const EPISODES_PATH = path.join(
@@ -31,6 +32,15 @@ function ensureStorage() {
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true });
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
+=======
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+
+function ensureStorage() {
+  const dir = path.dirname(EPISODES_PATH);
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH);
@@ -73,6 +83,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   const episode = episodes[idx];
   const segments = episode?.timeMarkers?.segments || [];
+<<<<<<< HEAD
   const highlights = segments && segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`,
     start: t,
@@ -100,3 +111,16 @@ return res.status(200).json({ episode });  return res.status(200).json({ episode
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+=======
+  const highlights = segments.map((t: string, i: number) => ({
+    label: `Highlight ${i + 1}`;
+    start: t,
+    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
+
+  episode.highlights = highlights;
+  episodes[idx] = episode;
+  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+
+  return res.status(200).json({ episode })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

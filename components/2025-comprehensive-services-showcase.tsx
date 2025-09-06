@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 // All services combined const allServices = [ ...advancedAIMLServices;
 ...advancedCybersecurityServices;
@@ -338,6 +339,16 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
 }<section className="py-20 bg-white"> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> <div className="text-center mb-16"> <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4"> Why Choose Zion Tech Group? </h2> <p className="text-xl text-gray-600 max-w-3xl mx-auto"> We deliver innovative, enterprise-grade solutions that transform businesses and drive growth </p> </div> <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"> <motion.div initial= {
 =======
   duration: 0 && 0.5, delay: index * 0 && 0.1 
+=======
+import React, { useState } from 'react';
+import SEO from '../components/SEO';
+import { motion } from 'framer-motion';
+import { 
+  Brain, Building, Target, Cpu, Shield, 
+  Check, Phone, Mail, MapPin;
+  TrendingUp, Zap, Globe
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 }className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"> {;
   /* Service Header */ ;
@@ -986,6 +997,9 @@ const filteredServices = activeTab === 'all' ? allServices return (<div classNam
   );
 };
 
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default ComprehensiveServicesShowcase;
 

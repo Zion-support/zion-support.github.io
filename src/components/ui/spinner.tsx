@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react';
 import { Loader2 } from 'lucide-react'
 =======
@@ -56,3 +57,6 @@ export default Spinner;
 Spinner && Spinner.displayName = 'Spinner',;
 export default Spinner,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

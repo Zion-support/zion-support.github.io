@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Package, RefreshCw } from 'lucide-react'
 =======
 import React from 'react';
@@ -8,10 +9,16 @@ import { Package, RefreshCw } from 'lucide-react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 import { Button } from './button';
 interface EmptyStateProps {;
+=======
+import { Package, RefreshCw } from 'lucide-react'
+import { Button } from './button';
+interface EmptyStateProps {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   text?: string;
   description?: string;
   onRetry?: () => void;
   showRetry?: boolean;
+<<<<<<< HEAD
 <<<<<<< HEAD
   icon?: React.ReactNode
 
@@ -24,6 +31,17 @@ export function EmptyState({
   description
   onRetry
   showRetry = false
+=======
+  icon?: React.ReactNode
+}
+
+export function EmptyState({ 
+
+  text = "No items available",
+  description;
+  onRetry;
+  showRetry = false,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   icon
 }: EmptyStateProps) {
@@ -36,6 +54,7 @@ export function EmptyState({
         {text}
       </h3>
       {description && (
+<<<<<<< HEAD
         <p className='text-gray-400 mb-6 max-w-md'>{description}</p>
   showRetry = false
   icon
@@ -115,3 +134,22 @@ export function EmptyState(): any ({ ;
   );
 } ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        <p className="text-gray-400 mb-6 max-w-md">
+          {description}
+        </p>
+      )}
+      {showRetry && onRetry && (
+        <Button
+          onClick={onRetry}
+          variant="outline"
+          className="flex items-center gap-2"
+        >
+          <RefreshCw className="h-4 w-4" />
+          Try Again
+        </Button>
+      )}
+    </div>
+  );
+} 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

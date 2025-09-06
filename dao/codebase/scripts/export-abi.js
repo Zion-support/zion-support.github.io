@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
  
 }else {
@@ -9,6 +10,11 @@
 }else {
   console.warn ('Missing artifact for', name)
 }main ();
+=======
+const fs = require('fs'),
+const path = require('path'),
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function main() {
 <<<<<<< HEAD
   const outDir = path.join(__dirname, '../abi')
@@ -54,5 +60,9 @@ function main() {
   }
 }
 
+<<<<<<< HEAD
 }main ();main()
 
+=======
+main(),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

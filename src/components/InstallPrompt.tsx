@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { X } from 'lucide-react', // X is imported but not used, consider removing if not needed.
 
@@ -246,3 +247,6 @@ export default InstallPrompt;
 
 export default InstallPrompt,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

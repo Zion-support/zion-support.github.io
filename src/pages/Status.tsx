@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SEO } from "@/components/SEO",
 import { useState, useEffect } from "react",
 import { AlertCircle, CheckCircle, Clock, ExternalLink } from 'lucide-react'
@@ -58,3 +59,6 @@ import React, { useState, useEffect } from 'react'; import { motion  } from 'fra
 
   )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

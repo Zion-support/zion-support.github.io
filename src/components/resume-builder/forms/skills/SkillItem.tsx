@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge  } from '@/components/ui/badge';
 import { Button  } from '@/components/ui/button';
@@ -16,6 +17,8 @@ import { Button } from '@/components/ui/button';
 import { Trash2 } from 'lucide-react';
 import { SkillItemProps } from './types';
 export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -106,4 +109,8 @@ export const SkillItem = ({ skill, category, onDelete }: SkillItemProps) => {;
 };},;
 
 };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

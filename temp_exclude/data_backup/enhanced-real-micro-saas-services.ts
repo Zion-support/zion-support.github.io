@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -36,3 +37,6 @@ export default function Enhancedrealmicrosaasservices({ }: Enhancedrealmicrosaas
   );
 }
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

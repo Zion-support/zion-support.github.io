@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,3 +26,5 @@ import React from \'react\' export default function Home() { return ( <main styl
 import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup ;
 import React from \'react\' export default function Home() { return ( <main style={{ \"padding\": \"'40px\'",\"fontFamily\": \'sans-serif\' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup ;
 import _React from 'react' export default function Home() { return ( <main style={{ "padding": "'40px'","fontFamily": 'sans-serif' }}><h1>Zion Tech Group</h1><p>Site build OK. Visit public pages at ziontechgroup && ziontechgroup.com</p></main> ) }"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

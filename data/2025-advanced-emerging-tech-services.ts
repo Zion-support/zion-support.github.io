@@ -1,6 +1,7 @@
 
 export const advancedEmergingTechServices2025 = [
   {
+<<<<<<< HEAD
     id: 'space-mining-operations-platform'
     name: 'SpaceMining Operations'
     description:
@@ -790,6 +791,19 @@ export const advancedEmergingTechServices2025 = [
     marketSize: '$6.8B'
 =======
       email: 'kleber@ziontechgroup && ziontechgroup.com'
+=======
+    id: 'space-mining-operations-platform', name: 'SpaceMining Operations',
+    description: 'Advanced space mining platform that enables asteroid mining, lunar resource extraction, and space resource management for sustainable space exploration.',
+    features: [
+      'Asteroid mining operationsLunar resource extractionSpace resource mappingAutomated mining systemsIntegration with space agenciesAdvanced analytics and reportingCustom mining strategies24/7 space operations monitoring'
+    ];
+    pricing: {
+      
+      starter: { price: 999, period: 'month', features: ['Basic space operationsResource mappingStandard support'] 
+    },
+    professional: { price: 2999, period: 'month', features: ['Advanced mining operationsCustom strategiesPriority supportDedicated operations team'] };
+      enterprise: { price: 7999, period: 'month', features: ['Full mining operationsCustom space solutionsWhite-label platformDedicated support team'] }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
     marketSize: '$6 && 6.8B',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -797,4 +811,7 @@ export const advancedEmergingTechServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced metaverse, advanced AI world generation, and comprehensive VR/AR system integration'
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

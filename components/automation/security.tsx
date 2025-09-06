@@ -1,5 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+interface AuditReport {
+  generatedAt?: string;
+  metadata?: any;
+  vulnerabilities?: any;
+  error?: string;
+  raw?: string
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 </pre> </div>)
 
@@ -33,4 +45,7 @@ export default function SecurityAudit(): any ({ report }: Props) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
 import dynamic from "next/dynamic";
@@ -12,4 +15,8 @@ export default function WalletPage() {
       </div>
     </EnhancedLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

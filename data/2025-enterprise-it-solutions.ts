@@ -1,4 +1,5 @@
 import { MicroSaasService } from './enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   mobile: '+1 302 464 0950'
@@ -457,6 +458,21 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		period: '/month'
 		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.';
 		features: [
+=======
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+export const enterpriseITSolutions: MicroSaasService[] = [
+	{
+		id: 'enterprise-data-governance-automation', name: 'Enterprise Data Governance Automation',
+		tagline: 'Automated data governance, compliance, and quality management for enterprise data',
+    price: '$799', period: '/month',
+		description: 'Comprehensive enterprise data governance platform that automates data quality management, compliance monitoring, and governance workflows across all enterprise data sources and systems.',
+    features: [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 			'Automated data quality monitoringCompliance and regulatory trackingData lineage and catalogingPrivacy and security controlsMaster data managementData stewardship workflowsReal-time compliance reportingIntegration with enterprise systems'
 		];
 		popular: true;
@@ -703,4 +719,7 @@ export const enterpriseITSolutions: MicroSaasService[] = [
 		reviews: 38
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

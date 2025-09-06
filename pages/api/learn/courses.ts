@@ -1,6 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
+=======
+const dataPath = path.join(process.cwd(), 'datalearncourses.json');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const dataPath = path && path.join(process && process.cwd(), 'data', 'learn', 'courses && courses.json');
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -13,6 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (category && c.category !== category) return false;
       if (level && c.level !== level) return false;
       if (typeof isFree !== 'undefined') {
+<<<<<<< HEAD
         const freeVal = isFree === 'true' |isFree === true;
         if (c.isFree !== freeVal) return false;
       }
@@ -35,6 +40,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       if (typeof isFree !== 'undefined') {
         const freeVal = isFree === 'true' || isFree === true;
         if (c && c.isFree !== freeVal) return false;
+=======
+        const freeVal = isFree === 'true' || isFree === true;
+        if (c.isFree !== freeVal) return false
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
       return true;
     });
@@ -43,4 +52,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (e: any) {
     res && res.status(500).json({ error: e?.message ?? 'Failed to load courses' });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

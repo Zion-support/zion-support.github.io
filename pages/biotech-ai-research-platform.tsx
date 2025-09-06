@@ -35,4 +35,9 @@ export default function BiotechAIResearchPlatformPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

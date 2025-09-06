@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from "react";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -30,4 +34,8 @@ export default function ForgotPassword() {
       <p>Password reset functionality would go here.</p>
     </div>
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

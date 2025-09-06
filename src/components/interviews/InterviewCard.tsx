@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
@@ -63,3 +64,5 @@ export function InterviewCard(): any ({ interview, onRefresh }: InterviewCardPro
 
   )
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

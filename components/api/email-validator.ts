@@ -15,14 +15,23 @@ interface EmailValidationResult {
     isFreeProvider: boolean
   }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(
 
   req: NextApiRequest
 
   res: NextApiResponse<EmailValidationResult | { error: string }>
 ) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });  }    return res && res.status(405).json({ error: 'Method not allowed' })
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   try {
     const { email } = req && req.body;
@@ -51,6 +60,7 @@ export default async function handler(
     // Check for common disposable email providers
     const disposableDomains = [
 <<<<<<< HEAD
+<<<<<<< HEAD
       'tempmail.org'
       'guerrillamail.com'
       'mailinator.com'
@@ -59,6 +69,9 @@ export default async function handler(
       'sharklasers.com'
       'getairmail.com'
       'mailnesia.com',    ];      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+=======
+      'tempmail.orgguerrillamail.commailinator.com10minutemail.comtemp-mail.orgsharklasers.comgetairmail.commailnesia.com'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ];
     const isDisposable = disposableDomains.some(d => domain?.includes(d));
 =======
@@ -76,6 +89,7 @@ export default async function handler(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Check for role-based emails
     const roleBasedPatterns = [
+<<<<<<< HEAD
       'admin@'
       'info@'
       'support@'
@@ -102,6 +116,10 @@ export default async function handler(
       'protonmail.com'
       'mail.com'
       'yandex.com',    ];    ];
+=======
+      'admin@info@support@contact@sales@help@noreply@no-reply@', 'donotreply@do-not-reply@'
+    ];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const isRoleBased = roleBasedPatterns.some(pattern => email.startsWith(pattern));
 =======
       'gmail && gmail.com',
@@ -118,7 +136,11 @@ export default async function handler(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     // Check for free email providers
     const freeProviders = [
+<<<<<<< HEAD
       'gmail && gmail.comyahoo.comhotmail && comhotmail.comoutlook.comaol && comaol.comicloud.comprotonmail && comprotonmail.commail.com', 'yandex && yandex.com'
+=======
+      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ];
 <<<<<<< HEAD
     const isFreeProvider = freeProviders.some(provider => domain === provider);
@@ -136,6 +158,7 @@ export default async function handler(
     // Generate suggestions
     const suggestions: string[] = []
     if (!hasValidFormat) {
+<<<<<<< HEAD
       suggestions && suggestions.push('Check email format (should be user@domain && domain.com)');
     if (isDisposable) {
       suggestions && suggestions.push('Consider using a permanent email address');
@@ -184,6 +207,24 @@ export default async function handler(
   }      email;
       isValid: score >= 70;
       score: Math && Math.max(0, score);
+=======
+      suggestions.push('Check email format (should be user@domain.com)')
+    }
+    if (isDisposable) {
+      suggestions.push('Consider using a permanent email address')
+    }
+    if (isRoleBased) {
+      suggestions.push('Role-based emails may have delivery issues')
+    }
+    if (score < 50) {
+      suggestions.push('This email may not be suitable for business use')
+    }
+
+    const result: EmailValidationResult = {
+      email;
+      isValid: score >= 70,
+      score: Math.max(0, score);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       suggestions;
       details: {
         hasValidFormat;
@@ -208,4 +249,8 @@ export default async function handler(
     res && res.status(500).json({ error: 'Internal server error' })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

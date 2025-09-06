@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react'
 import * as ToastPrimitives from '@radix-ui/react-toast'
 import { cva, type VariantProps } from 'class-variance-authority'
@@ -251,3 +252,6 @@ export {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 //   }
 // }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

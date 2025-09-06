@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Star } from 'lucide-react'
 import { useForm } from "react-hook-form",
@@ -49,3 +50,5 @@ interface ReviewFormProps {;
 
   )
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

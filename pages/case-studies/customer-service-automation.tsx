@@ -125,7 +125,11 @@ export default function CaseStudyPage() {
                   <div className="bg-white/5 rounded-lg p-6 border border-white/10">
                     <h4 className="text-xl font-semibold text-green-400 mb-3">24/7 Support</h4>
                     <p className="text-white/80">
+<<<<<<< HEAD
                       Round-the-clock automated support with seamless escalation
+=======
+                      Round-the-clock automated support with seamless escalation 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       to human agents when needed.
                     </p>
                   </div>
@@ -260,4 +264,8 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

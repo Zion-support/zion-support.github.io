@@ -23,4 +23,8 @@ export default function AICustomerSuccessPlatform() {
 			canonical="https: //ziontechgroup.com/ai-customer-success-platform"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

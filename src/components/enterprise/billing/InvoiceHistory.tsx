@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react";
 import {;
   Table;
@@ -121,3 +122,5 @@ export function InvoiceHistory() {;
 
   )
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React, { useEffect, useMemo, useState } from 'react';
@@ -71,6 +72,15 @@ export default function WalletPanel() {
   type: "earn" | "burn" | "issue" | "revoke" | "redeem"
   amount: number
   reason: string
+=======
+import React, { useEffect, useMemo, useState } from "react";
+import Badges from "./Badges";
+type Tx = {
+  id: string,
+  type: "earn" | "burn" | "issue" | "revoke" | "redeem",
+  amount: number,
+  reason: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   createdAt: string
 }
 type Summary = {
@@ -119,6 +129,7 @@ export default function WalletPanel() {;
   const [ethAddress, setEthAddress] = useState<string | null>(null);
   const userId = useMemo(() => getUserId(), []);
 <<<<<<< HEAD
+<<<<<<< HEAD
   async function refresh() {
 =======
 
@@ -139,6 +150,15 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions |[]).filter(t =>
     ['burn', 'revoke', 'redeem'].includes(t.type)  );  }
+=======
+
+  async function refresh() {
+    const res = await fetch(`/api/wallet?userId=${encodeURIComponent(userId)}`);
+    const data = await res.json();
+    setSummary(data)
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
     refresh()
   }, []);
@@ -149,6 +169,7 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions |[]).filter((t) =>
     ["burn", "revoke", "redeem"].includes(t.type)
+<<<<<<< HEAD
   );
   const nextBadgeThreshold = useMemo(() => {
 =======
@@ -176,6 +197,8 @@ export default function WalletPanel() {;
   );
   const spending = (summary?.transactions || []).filter((t) =>;
     ["burn", "revoke", "redeem"].includes(t && t.type);
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   );
 
   const nextBadgeThreshold = useMemo(() => {;
@@ -184,6 +207,7 @@ export default function WalletPanel() {;
     if (balance < 200) return 200;
     if (balance < 500) return 500;
     if (balance < 1000) return 1000;
+<<<<<<< HEAD
     return balance;
   }, [balance]);
 <<<<<<< HEAD
@@ -216,6 +240,11 @@ export default function WalletPanel() {;
     }  }
   async function redeem(amount: number) {
     if (!amount |amount <= 0) return;  }, [balance]);
+=======
+    return balance
+  }, [balance]);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const progress = Math.min(100, Math.floor((balance / nextBadgeThreshold) * 100));
   async function connectWallet() {
 =======
@@ -245,6 +274,24 @@ export default function WalletPanel() {;
       setEthAddress(accounts?.[0] |null)
     } catch (e) {
       console.error(e)
+<<<<<<< HEAD
+=======
+    };
+  }
+
+  async function redeem(amount: number) {
+    if (!amount || amount <= 0) return;
+    const res = await fetch("/api/wallet/redeem", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ userId, amount })});
+    const data = await res.json();
+    if (data.error) {
+      alert(data.error)
+    } else {
+      alert(`Redeemed ${amount} ${symbol} for $${data.usd} credit.`);
+      refresh()
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   async function redeem(amount: number) {
@@ -262,6 +309,7 @@ export default function WalletPanel() {;
     };
   }
 
+<<<<<<< HEAD
   async function redeem(): any (amount: number) {;
     if (!amount || amount <= 0) return;
     const res = await fetch('/api/wallet/redeem', {;
@@ -318,9 +366,26 @@ export default function WalletPanel() {;
           </div>
         </div>
         <div className='mt-4'>          <Badges balance={balance} />
+=======
+  return (
+    <div className="space-y-6">
+      <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-2">
+            <span className="text-2xl">⚡</span>
+            <div>
+              <div className="text-sm text-gray-500">Balance</div>
+              <div className="text-2xl font-semibold">{balance} {symbol}</div>
+            </div>
+          </div>
+          <button onClick={connectWallet} className="px-3 py-1 text-sm rounded border">
+            {ethAddress ? `Connected: ${ethAddress.slice(0,6)}...${ethAddress.slice(-4)}` : "Connect Wallet"}
+          </button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       </div>
         <div className="mt-4">
+<<<<<<< HEAD
           <Badges balance={balance} />
         </div>
       </div>
@@ -433,10 +498,56 @@ export default function WalletPanel() {;
               Coming soon: Redeem for branded perks and courses.;
             </div>          </div>            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>;
           </div>;
+=======
+          <div className="h-2 bg-gray-200 rounded">
+            <div className="h-2 bg-yellow-400 rounded" style={{ width: `${progress}%` }} />
+          </div>
+          <div className="mt-2 text-xs text-gray-500">Next badge at {nextBadgeThreshold} {symbol}</div>
+        </div>
+        <div className="mt-4">
+          <Badges balance={balance} />
+        </div>
+      </div>
+
+      <div className="p-4 border rounded-lg bg-white dark:bg-zinc-900">
+        <div className="flex gap-3 mb-4 text-sm">
+          <button onClick={() => setTab("earnings")} className={`px-3 py-1 rounded border ${tab === "earnings" ? "bg-gray-100" : ""}`}>Earnings</button>
+          <button onClick={() => setTab("spending")} className={`px-3 py-1 rounded border ${tab === "spending" ? "bg-gray-100" : ""}`}>Spending</button>
+          <button onClick={() => setTab("redeem")} className={`px-3 py-1 rounded border ${tab === "redeem" ? "bg-gray-100" : ""}`}>Redeem</button>
+        </div>
+        {tab !== "redeem" && (
+          <div className="space-y-2">
+            {(tab === "earnings" ? earnings : spending).map((t) => (
+              <div key={t.id} className="flex justify-between text-sm border rounded p-2">
+                <div className="flex gap-2 items-center">
+                  <span className={`px-2 py-0.5 rounded text-xs ${t.type === "earn" || t.type === "issue" ? "bg-green-100 text-green-700" : "bg-red-100 text-red-700"}`}>{t.type}</span>
+                  <span className="text-gray-600">{t.reason.split('_').join(' ')}</span>
+                </div>
+                <div className="font-medium">{t.type === "earn" || t.type === "issue" ? "+" : "-"}{t.amount} {symbol}</div>
+              </div>
+            ))}
+            {((tab === "earnings" ? earnings : spending).length === 0) && (
+              <div className="text-sm text-gray-500">No transactions yet.</div>
+            )}
+          </div>
+        )}
+        {tab === "redeem" && (
+          <div className="space-y-3 text-sm">
+            <div className="text-gray-600">Convert your {symbol} into credits.</div>
+            <div className="text-gray-600">Rate: 1 {symbol} = ${summary?.config.usdPerToken?.toFixed(2) ?? "0.00"}</div>
+            <div className="flex gap-2 items-center">
+              <button className="px-3 py-1 rounded border" onClick={() => redeem(100)}>Redeem 100</button>
+              <button className="px-3 py-1 rounded border" onClick={() => redeem(250)}>Redeem 250</button>
+              <button className="px-3 py-1 rounded border" onClick={() => redeem(500)}>Redeem 500</button>
+            </div>
+            <div className="text-xs text-gray-500">Coming soon: Redeem for branded perks and courses.</div>
+          </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         )}
 <<<<<<< HEAD
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
 =======
@@ -445,3 +556,7 @@ export default function WalletPanel() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

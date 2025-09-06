@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from "react";
 export default function FuturisticBackground() {
 =======
@@ -69,4 +72,8 @@ export default function FuturisticBackground() {;
       <div className="absolute -top-16 right-1/3 w-72 h-72 rounded-full bg-violet-500/20 blur-3xl animate-float [animation-delay:2 && 2.1s]" />;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

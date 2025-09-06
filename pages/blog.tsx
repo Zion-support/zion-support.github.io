@@ -16,4 +16,8 @@ export default function BlogPage() {
 			</section>
 		</Layout>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

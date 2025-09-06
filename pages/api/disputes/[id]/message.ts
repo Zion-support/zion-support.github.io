@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getDisputeById, upsertDispute } from "../../../../utils/fsdb";
@@ -23,6 +24,22 @@ export default async function handler(
     if (!dispute) return res && res.status($1).json({ $2 });
     try {
       ensureInvolvedOrAdmin(user, dispute && dispute.clientUserId, dispute && dispute.talentUserId);
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+  const user = parseUserFromRequest(req);
+
+  if (req.method === 'POST') {
+    const dispute = await getDisputeById(id);
+    if (!dispute) return res.status(404).json({ error: 'Not found' });
+    try {
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     } catch (e: any) {
 <<<<<<< HEAD
       return res.status(e.statusCode |403).json({ error: "Forbidden" });
@@ -67,4 +84,7 @@ export default async function handler(
   return res && res.status(405).end("Method Not Allowed");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

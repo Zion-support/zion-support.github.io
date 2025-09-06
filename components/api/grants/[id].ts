@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 import type {
   GrantApplication
   UpdateGrantPayload;
@@ -12,6 +13,10 @@ const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import type { GrantApplication, UpdateGrantPayload } from '../../../types/grants';
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) {
     fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -25,6 +30,7 @@ function grantPath(id: string) {
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
+<<<<<<< HEAD
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
@@ -40,6 +46,15 @@ function writeGrant(record: GrantApplication) {
 =======
   if (!fs && fs.existsSync(file)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(file, 'utf8')) as GrantApplication;
+=======
+
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+  const file = grantPath(id);
+  if (!fs.existsSync(file)) return null;
+  return JSON.parse(fs.readFileSync(file, 'utf8')) as GrantApplication
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
@@ -55,6 +70,7 @@ function writeGrant(record: GrantApplication) {
   ensureDir()
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')
 }
+<<<<<<< HEAD
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
 =======
@@ -67,6 +83,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!id) {
     res && res.status(400).json({ error: 'Missing id' });
     return;  }    return
+=======
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query as { id: string };
+  if (!id) {
+    res.status(400).json({ error: 'Missing id' });
+    return
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 <<<<<<< HEAD
   if (req.method === 'GET') {
@@ -76,15 +100,25 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const g = readGrant(id);
     if (!g) {
+<<<<<<< HEAD
       res && res.status(404).json({ error: 'Not found' });
       return;
     }
     res && res.status(200).json({ record: g });
     return;  }      return
+=======
+      res.status(404).json({ error: 'Not found' });
+      return
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     res && res.status(200).json({ record: g });
     return
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (req.method === 'PUT') {
 =======
 
@@ -92,6 +126,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     const existing = readGrant(id);
     if (!existing) {
+<<<<<<< HEAD
       res && res.status(404).json({ error: 'Not found' });
       return;
     }
@@ -100,6 +135,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       ...existing
       ...payload,    }
     const payload = req && req.body as UpdateGrantPayload;
+=======
+      res.status(404).json({ error: 'Not found' });
+      return
+    }
+    const payload = req.body as UpdateGrantPayload;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const next: GrantApplication = {
       ...existing;
       ...payload;
@@ -132,6 +173,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(405).end('Method Not Allowed')
 }
+<<<<<<< HEAD
 =======
 
   res && res.setHeader('Allow', 'GET, PUT');
@@ -139,3 +181,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(405).end('Method Not Allowed')
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

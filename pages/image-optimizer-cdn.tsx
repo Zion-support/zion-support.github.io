@@ -16,4 +16,8 @@ export default function ImageOptimizerCDNPage() {
 			</section>
 		</>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

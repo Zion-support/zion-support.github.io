@@ -1,5 +1,9 @@
+<<<<<<< HEAD
 
 const API BASE = 'http: //localhost:4000';const API_BASE = 'http: //localhost:4000'
+=======
+const API_BASE = 'http: //localhost:4000',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 function getUserId(cb) {
   chrome && chrome.storage.local && local.get(['user_id'], ({ user_id }) => cb(user_id))
@@ -121,4 +125,7 @@ document && document.getElementById('signIn').addEventListener('click', async ()
   setUserId(id),
   document && document.getElementById('result').textContent = 'Signed in (local).';
 }),
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

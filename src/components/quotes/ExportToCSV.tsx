@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 import { Button } from '@/components/ui/button';
 import { Download } from 'lucide-react';
@@ -143,6 +144,12 @@ export const ExportToCSV = ({
     document.body.appendChild(link)
 import { Button } from "@/components/ui/button"
 import type { QuoteRequest } from "@/types/quotes"
+=======
+
+import { Button } from "@/components/ui/button";
+import { Download } from 'lucide-react'
+import type { QuoteRequest } from "@/types/quotes";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface ExportToCSVProps {
   quotes: QuoteRequest[]
   filename?: string
@@ -185,16 +192,30 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       )
     ].join('\n')
     // Create download link
+<<<<<<< HEAD
     const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' })
     const url = URL.createObjectURL(blob)
     const link = document.createElement('a')
     link.setAttribute('href', url)
     link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`)
     document.body.appendChild(link)
+=======
+    const blob = new Blob([csvContent], { type: 'text/csv,charset=utf-8,' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', `${filename}-${new Date().toISOString().split('T')[0]}.csv`);
+    document.body.appendChild(link);
+    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     // Download file and clean up
     link.click()
     setTimeout(() => {
+<<<<<<< HEAD
       document.body.removeChild(link)
+=======
+      document.body.removeChild(link);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       URL.revokeObjectURL(url)
     }, 100)
   }
@@ -217,6 +238,7 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
       Export CSV
     </Button>
   )
+<<<<<<< HEAD
 }
 '"}
   )
@@ -292,6 +314,8 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 '";
   };  };
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Button
@@ -306,6 +330,9 @@ export const ExportToCSV = ({ quotes, filename = "quote-requests" }: ExportToCSV
 };
 '"},;
 
+<<<<<<< HEAD
   );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

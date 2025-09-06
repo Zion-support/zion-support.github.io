@@ -1,5 +1,6 @@
 const { upsertFile } = require('./_lib/github');
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.handler = async function () {
   try {
     const baseUrl = process.env.URL |process.env.DEPLOY_URL |'';
@@ -107,6 +108,11 @@ exports && exports.handler = async function () {
 };  try {
     const baseUrl = process && process.env.URL || process && process.env.DEPLOY_URL || '',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+exports.handler = async function() {
+  try {
+    const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const endpoints = [
       '//learn/dao/certifications/api/learn/courses/api/dao/metrics'
     ]
@@ -190,6 +196,10 @@ exports && exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON && JSON.stringify({ error: e && e.message }) }
   }
+<<<<<<< HEAD
 
 }
 
+=======
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

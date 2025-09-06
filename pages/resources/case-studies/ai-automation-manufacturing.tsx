@@ -4,6 +4,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 export default function ResourceCaseStudyPage() {
   const caseStudy = {
+<<<<<<< HEAD
     id: 'ai-automation-manufacturing'
     title: 'AI-Powered Manufacturing Automation'
     company: 'Global Manufacturing Corp'
@@ -11,6 +12,16 @@ export default function ResourceCaseStudyPage() {
     results: '40% increase in production efficiency, 60% reduction in downtime'
     description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
   }
+=======
+    id: 'ai-automation-manufacturing',
+    title: 'AI-Powered Manufacturing Automation',
+    company: 'Global Manufacturing Corp',
+    industry: 'Manufacturing',
+    results: '40% increase in production efficiency, 60% reduction in downtime',
+    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -23,7 +34,11 @@ export default function ResourceCaseStudyPage() {
           <div className="max-w-4xl mx-auto">
             {/* Breadcrumb */}
             <nav className="mb-8">
+<<<<<<< HEAD
               <Link href="/resources" className="text-cyan-400 hover:text-cyan-300 transition-colors">
+=======
+              <Link href="/resources" className="text-cyan-400 hover: text-cyan-300 transition-colors">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ← Back to Resources
               </Link>
             </nav>
@@ -125,4 +140,8 @@ export default function ResourceCaseStudyPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

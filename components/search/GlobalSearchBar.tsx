@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect, useMemo, useRef, useState  } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {
@@ -32,6 +33,11 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import { useRouter } from 'next/router';
 export default function GlobalSearchBar() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { useRouter } from 'next/router';
+export default function GlobalSearchBar() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const router = useRouter();
   const [query, setQuery] = useState('');
   const [suggestions, setSuggestions] = useState<string[]>([]);
@@ -40,6 +46,7 @@ export default function GlobalSearchBar() {;
 <<<<<<< HEAD
   useEffect(() => {
     if (!query) {
+<<<<<<< HEAD
 =======
 
   useEffect(() => {;
@@ -47,12 +54,17 @@ export default function GlobalSearchBar() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       setSuggestions([]);
       return;      return;
+=======
+      setSuggestions([]);
+      return
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 <<<<<<< HEAD
     controller.current?.abort();
     controller.current = new AbortController();
     const run = async () => {
       try {
+<<<<<<< HEAD
         const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, {
           signal: controller.current!.signal
         });
@@ -86,11 +98,22 @@ export default function GlobalSearchBar() {;
     }
     const id = setTimeout(run, 150);
     return () => clearTimeout(id);
+=======
+        const r = await fetch(`/api/suggest?q=${encodeURIComponent(query)}`, { signal: controller.current!.signal }),
+        const j = await r.json();
+        setSuggestions(j.suggestions || []);
+        setOpen(true)
+      } catch {}
+    };
+    const id = setTimeout(run, 150);
+    return () => clearTimeout(id)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [query]);
 <<<<<<< HEAD
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault();
     if (!query.trim()) return;
+<<<<<<< HEAD
     fetch('/api/telemetry/search', {
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
@@ -111,10 +134,21 @@ export default function GlobalSearchBar() {;
     const Speech: any =
       (window as any).SpeechRecognition |
       (window as any).webkitSpeechRecognition;    const Speech: any = (window as any).SpeechRecognition |(window as any).webkitSpeechRecognition
+=======
+    fetch('/api/telemetry/search', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ q: query }) }).catch(() => {}),
+    router.push(`/search?q=${encodeURIComponent(query)}`);
+    setOpen(false)
+  };
+
+  const startVoice = () => {
+    if (typeof window === 'undefined') return;
+    const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (!Speech) return;
     const rec = new Speech();
     rec.lang = 'en-US';
     rec.onresult = (e: any) => {
+<<<<<<< HEAD
       const transcript = e.results?.[0]?.[0]?.transcript |'';
       if (transcript) setQuery(q => (q ? q + ' ' + transcript : transcript));
     }
@@ -197,6 +231,11 @@ export default function GlobalSearchBar() {;
                   }}
 <<<<<<< HEAD
                   className='w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800'                >    }
+=======
+      const transcript = e.results?.[0]?.[0]?.transcript || '';
+      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     rec.start()
   }
 =======
@@ -230,6 +269,7 @@ export default function GlobalSearchBar() {;
                     setQuery(s);
                     setOpen(false);
 <<<<<<< HEAD
+<<<<<<< HEAD
 
                     router.push(`/search?q=${encodeURIComponent(s)}`)
 =======
@@ -254,3 +294,19 @@ export default function GlobalSearchBar() {;
   );  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+                    router.push(`/search?q=${encodeURIComponent(s)}`)
+                  }}
+                  className="w-full text-left px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-800"
+                >
+                  {s}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </form>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

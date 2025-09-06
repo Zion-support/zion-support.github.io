@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
 import { GradientHeading } from "@/components/GradientHeading",
@@ -1021,3 +1022,6 @@ setSelectedRating (null)
 }</div> </div> </div> </div>)
 }'"  )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

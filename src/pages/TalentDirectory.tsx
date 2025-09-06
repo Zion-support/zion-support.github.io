@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react',
 import { useRouter } from 'next/router', // Changed from useNavigate
 import Link from 'next/link';
@@ -89,3 +90,6 @@ export default function TalentDirectory() {
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

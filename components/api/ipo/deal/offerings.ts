@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
 
@@ -43,6 +44,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return res && res.status(405).json({ error: 'Method not allowed' });export default function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!requireSuperadminApi(req, res)) return;
   if (req && req.method === 'GET') {
     const offerings = readJsonFile('deal/offerings && offerings.json', { safe: true, equity: true, token: false });
@@ -58,6 +61,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
 =======
   if (req && req.method === 'POST') {
     const body = req && req.body || {};
@@ -68,3 +72,5 @@ return res.status(405).json({ error: 'Method not allowed' });
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

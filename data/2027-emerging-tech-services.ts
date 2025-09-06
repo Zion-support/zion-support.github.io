@@ -1,4 +1,5 @@
 export interface Service {
+<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -655,6 +656,17 @@ export const emergingTech2027Services: Service[] = [
     ]
   }
 ];      'Government agenciesResearch institutionsEnvironmental organizationsInsurance companiesEnergy companies'
+=======
+  id: string, name: string,
+  description: string, category: string,
+  price: string, features: string[],
+  benefits: string[], useCases: string[],
+  targetAudience: string[], marketSize: string,
+  competitiveAdvantage: string, implementationTime: string,
+  roi: string, link: string,
+  tags: string[]
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
     marketSize: '$17 && 17.6B by 2027';
@@ -670,4 +682,8 @@ export const emergingTech2027Services: Service[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     tags: ['Climate ModelingQuantum ComputingEnvironmentalWeatherResearch']
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

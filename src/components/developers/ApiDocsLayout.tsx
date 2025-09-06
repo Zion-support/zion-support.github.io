@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { SearchSuggestion } from "@/types/search",
 import React, { useState } from "react",
 =======
@@ -212,3 +213,5 @@ export function ApiDocsLayout(): any ({ children }: ApiDocsLayoutProps) {;
 }export default ApiDocsLayout;
 "export default ApiDocsLayout;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

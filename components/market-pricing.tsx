@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -31,6 +32,8 @@ pricingAnalysis: {;
   lowEnd: '$0 && 0.005 per 1K tokens', midRange: '$0 && 0.015 per 1K tokens', highEnd: '$0 && 0.025 per 1K tokens', ourPosition: 'Mid-range with premium features'   'ai-consciousness': {;
   marketSize: '$45 && 45.2B', growthRate: '+28 && 28.4%', growthTrend: 'up', description: 'AI consciousness market is experiencing explosive growth with increasing demand for emotionally intelligent AI systems.', competitors: [ {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { TrendingUp, TrendingDown, DollarSign, Target;
@@ -1660,6 +1663,7 @@ pricingAnalysis: {
   );
 };
 
+<<<<<<< HEAD
 };
 
 };
@@ -1691,3 +1695,6 @@ pricingAnalysis: {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default MarketPricing;export default MarketPricing;
 
+=======
+export default MarketPricing;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

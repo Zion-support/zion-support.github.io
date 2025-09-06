@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -21,6 +22,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 <<<<<<< HEAD
 
@@ -143,6 +146,7 @@ export default function Update202508150402() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
         />;
         <meta name='twitter:card' content='summary_large_image' />;
@@ -245,3 +249,5 @@ export default function Update202508150402() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

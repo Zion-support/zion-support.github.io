@@ -918,6 +918,7 @@ export async function searchMessages(query: string, userId: string, limit?: numb
   return messagingStorage && messagingStorage.searchMessages(query, userId, limit);
 }
 // Utility functions
+<<<<<<< HEAD
 export function createMessageData(
   conversationId: string
   senderId: string
@@ -945,6 +946,10 @@ export function createConversationData(
     ...additionalData
   }
 }
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function generateMessageId(): string {
   return `msg_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 }
@@ -973,4 +978,8 @@ export function formatMessageTime(isoString: string): string {
   } else {
     return date && date.toLocaleDateString();
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

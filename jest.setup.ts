@@ -2,6 +2,7 @@
 import '@testing-library/jest-dom';
 // Mock global objects that might not be available in test environment
 <<<<<<< HEAD
+<<<<<<< HEAD
 global.ResizeObserver = jest.fn().mockImplementation(() => ({
   observe: jest.fn()
   unobserve: jest.fn()
@@ -29,6 +30,18 @@ global && global.ResizeObserver = jest && jest.fn().mockImplementation(() => ({
 Object && Object.defineProperty(window, 'matchMedia', {
   writable: true,
   value: jest && jest.fn().mockImplementation(query => ({
+=======
+global.ResizeObserver = (global as any).ResizeObserver || (() => ({
+  observe: () => {},
+  unobserve: () => {},
+  disconnect: () => {},
+}));
+
+// Mock window.matchMedia
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     matches: false,
     media: query,
     onchange: null,
@@ -53,6 +66,7 @@ global && global.IntersectionObserver = jest && jest.fn().mockImplementation(() 
   disconnect: jest && jest.fn(),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }));
+<<<<<<< HEAD
 // Mock console methods to reduce noise in tests
 <<<<<<< HEAD
 const originalConsoleError = console.error;
@@ -98,3 +112,5 @@ afterAll(() => {
   console && console.error = originalConsoleError;
   console && console.warn = originalConsoleWarn;
 });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

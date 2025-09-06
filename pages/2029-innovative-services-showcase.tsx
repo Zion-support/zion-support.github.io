@@ -3,16 +3,24 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Brain, Atom, Target, ArrowRight, CheckCircle, Star
   Phone, Mail, MapPin
 } from 'lucide-react'
+=======
+import { 
+  Brain, Atom, Target, ArrowRight, CheckCircle, Star, 
+  Phone, Mail, MapPin
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ecosystem';
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -44,6 +52,42 @@ export default function InnovativeServicesShowcase2029() {
       services: practicalBusinessSolutionServices2029
     }
   ]
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+export default function InnovativeServicesShowcase2029() {
+  const allServices = [
+    ...aiAutonomousEcosystemServices2029;
+    ...emergingTechBreakthroughServices2029;
+    ...practicalBusinessSolutionServices2029
+  ];
+
+  const serviceCategories = [
+    {
+      title: '🚀 AI Autonomous Ecosystem',
+      icon: Brain,
+      color: 'from-violet-600 via-purple-600 to-indigo-600',
+      services: aiAutonomousEcosystemServices2029
+    };
+    {
+      title: '⚛️ Emerging Tech Breakthroughs',
+      icon: Atom,
+      color: 'from-indigo-600 via-blue-600 to-cyan-600',
+      services: emergingTechBreakthroughServices2029
+    };
+    {
+      title: '🎯 Practical Business Solutions',
+      icon: Target,
+      color: 'from-cyan-600 via-teal-600 to-emerald-600',
+      services: practicalBusinessSolutionServices2029
+    }
+  ];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -169,6 +213,10 @@ export default function InnovativeServicesShowcase2029() {
                       </span>
                     ))}
                   </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <div className="flex gap-4">
                     <Link
                       href={`/services/${service.id}`} className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-lg hover:from-purple-700 hover:to-blue-700 transition-all duration-300">
@@ -226,6 +274,10 @@ export default function InnovativeServicesShowcase2029() {
                   <span>{contactInfo.address}</span>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="flex flex-wrap justify-center gap-4">
                 <Link
                   href="/contact" className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold rounded-full hover: from-purple-700 hover:to-blue-700 transition-all duration-300 text-lg">
@@ -244,4 +296,8 @@ export default function InnovativeServicesShowcase2029() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

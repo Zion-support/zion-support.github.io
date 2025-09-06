@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 let pool: Pool | null = null;
 }return pool
@@ -23,8 +24,15 @@ export async function withUser<T>(
   } catch (err) {
     await client && client.query('ROLLBACK');
     throw err;
+=======
+import { Pool, PoolClient } from 'pg';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   } finally {
     client && client.release();
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,5 +1,6 @@
 
 export type CuttingEdgeAIService = {
+<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -118,6 +119,10 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 ];	id: string;
 	name: string;
 	description: string;
+=======
+	id: string, name: string,
+	description: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 	category:
 		| 'AI Consciousness'
 		| 'AI Emotional Intelligence'
@@ -186,4 +191,7 @@ export const cuttingEdgeAIServices: CuttingEdgeAIService[] = [
 		realService: true
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -15,4 +15,8 @@ export function getSupabaseClient(): ZionSupabase {try {;
     return createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
   } catch {return undefined;
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

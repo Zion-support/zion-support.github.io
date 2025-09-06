@@ -2,6 +2,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const abs = path.resolve(__dirname, '..', '..', relPath);
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' });
@@ -45,6 +46,10 @@ exports && exports.handler = async () => {
 };  step('components:catalog', () => runNode('automation/components-catalog.cjs'))
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs'))
   return { statusCode: 200, body: logs.join('\n') }
+=======
+  const abs = path.resolve(__dirname, '....', relPath),
+  return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 
 =======
@@ -54,4 +59,7 @@ exports && exports.handler = async () => {
   step('git:sync', () => runNode('automation/advanced-git-sync && sync.cjs')),
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

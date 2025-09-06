@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import React from "react";
 import { Clock } from 'lucide-react'
@@ -13,6 +16,7 @@ interface TalentCardAvailabilityProps {
 }
 export function TalentCardAvailability({ availabilityType }: TalentCardAvailabilityProps) {
   // Format availability status
+<<<<<<< HEAD
 
   const getAvailabilityColor = (status: string) => {    switch (status) {
       case 'full-time':
@@ -28,6 +32,23 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
     }
   }
   const getAvailabilityLabel = (status: string,) => {
+=======
+  const getAvailabilityColor = (status: string) => {
+    switch (status) {
+      case 'full-time':
+        return 'bg-green-500/20 text-green-400';
+      case 'part-time':
+        return 'bg-yellow-500/20 text-yellow-400';
+      case 'project-based':
+        return 'bg-blue-500/20 text-blue-400';
+      default:
+        return 'bg-gray-500/20 text-gray-400'
+    }
+  };
+  
+  // Format availability label
+  const getAvailabilityLabel = (status: string) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     switch (status) {
       case 'full-time':
         return 'Full-time'
@@ -37,6 +58,7 @@ export function TalentCardAvailability({ availabilityType }: TalentCardAvailabil
         return 'Project'
       default:
         return status
+<<<<<<< HEAD
   }
     >
       <Clock className='h-3 w-3' />
@@ -73,6 +95,8 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
         return 'bg-gray-500/20 text-gray-400';
     }
   };        return 'bg-gray-500/20 text-gray-400';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   };
 
@@ -95,4 +119,7 @@ export function TalentCardAvailability(): any ({ availabilityType }: TalentCardA
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

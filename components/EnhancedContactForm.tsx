@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -87,6 +88,27 @@ const handleInputBlur = (name: keyof FormData) => {;
 export default EnhancedContactForm;
   const services = [;
     'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther';
+=======
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+import { FormData, FormErrors } from '../types';
+import { useToast } from './ui/Toast';
+const EnhancedContactForm: React.FC = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    service: '',
+    message: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const { showSuccess, showError } = useToast();
+
+  const services = [
+    'AI & Machine LearningQuantum ComputingCybersecurityCloud InfrastructureData AnalyticsDigital TransformationOther'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   ];
 <<<<<<< HEAD
   const validateForm = (): boolean => {
@@ -555,4 +577,7 @@ export default EnhancedContactForm;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedContactForm;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

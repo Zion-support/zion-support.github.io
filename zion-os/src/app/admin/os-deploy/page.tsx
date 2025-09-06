@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -57,6 +58,9 @@ ai: 'Advanced AI capabilities and automation'
     return descriptions[key] |'Feature description';
   }
 =======
+=======
+'use client';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function OSDeployPage() {;
   const [loading, setLoading] = useState(false);
@@ -100,8 +104,13 @@ export default function OSDeployPage() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
     <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">;
       <div className="max-w-6xl mx-auto">;
+=======
+    <div className="min-h-screen py-8 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         {/* Header */}
 <<<<<<< HEAD
         <div className="text-center mb-12">
@@ -256,7 +265,12 @@ export default function OSDeployPage() {;
               </div>
             </div>
           </div>
+<<<<<<< HEAD
           {/* Economic Configuration */}
+=======
+
+          {/* Economy Settings */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="glass-effect rounded-2xl p-8">
             <h2 className="text-2xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white text-sm">💰</span>
@@ -581,9 +595,18 @@ export default function OSDeployPage() {;
                 {message}
               </div>;
             )}
+<<<<<<< HEAD
           </div>;
         </form>;
       </div>;
     </div>;
   );
 }
+=======
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

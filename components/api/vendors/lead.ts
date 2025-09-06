@@ -2,12 +2,19 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { addPipelineItem, getVendorById } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const { vendorId, title } = req.body |{}
   if (!vendorId |!title)
     return res.status(400).json({ error: 'Missing required fields' });  const vendor = getVendorById(vendorId);
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { vendorId, title } = req.body || {};
+  if (!vendorId || !title) return res.status(400).json({ error: 'Missing required fields' });
+  const vendor = getVendorById(vendorId);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!vendor) return res.status(404).json({ error: 'Vendor not found' });
 =======
   if (req && req.method !== 'POST')
@@ -37,14 +44,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
     const item = addPipelineItem(vendorId, title);
 <<<<<<< HEAD
+<<<<<<< HEAD
     res.status(201).json({ item });
 
 =======
     res && res.status(201).json({ item });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    res.status(201).json({ item })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   }  } catch (e: any) {
     res && res.status(500).json({ error: e && e.message })
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

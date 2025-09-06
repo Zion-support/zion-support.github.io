@@ -1,4 +1,5 @@
 export interface InnovativeAIService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -973,6 +974,30 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Medical imaging analysisDisease diagnosisTreatment planningPatient monitoringDrug discoveryClinical research'
+=======
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+      
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string
+  
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
 <<<<<<< HEAD
@@ -1411,4 +1436,8 @@ export const innovativeAIServices2025: InnovativeAIService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 189
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

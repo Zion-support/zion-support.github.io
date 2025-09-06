@@ -296,8 +296,14 @@
     "@radix-ui/react-toggle": "^1.0.3",
     "@radix-ui/react-toggle-group": "^1.0.4",
     "@radix-ui/react-tooltip": "^1.0.7",
+<<<<<<< HEAD
     "@reduxjs/toolkit": "^2.8.2",
     "@stripe/stripe-js": "^2.3.0",
+=======
+    "@reduxjs/toolkit": "^2.9.0",
+    "@sendgrid/mail": "^8.1.5",
+    "@stripe/stripe-js": "^7.9.0",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     "@supabase/ssr": "^0.6.1",
     "@supabase/supabase-js": "^2.57.0",
     "@tailwindcss/aspect-ratio": "^0.4.2",
@@ -309,6 +315,7 @@
     "@types/react": "17.0.88",
     "@types/react-datepicker": "^6.2.0",
     "autoprefixer": "^10.4.21",
+    "aws-sdk": "^2.1692.0",
     "axios": "^1.11.0",
     "cheerio": "^1.1.2",
     "child_process": "^1.0.2",

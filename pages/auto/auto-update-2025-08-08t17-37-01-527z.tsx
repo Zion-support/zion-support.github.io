@@ -1,6 +1,9 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const Page: NextPage = () => {
   return (
     <>
@@ -16,4 +19,7 @@ const Page: NextPage = () => {
   )
 }
 export default Page;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

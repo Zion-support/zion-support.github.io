@@ -38,8 +38,13 @@ export default function CoachWidget() {;
     try {
 
       const resp = await fetch('/api/learn/coach', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         body: JSON.stringify({ prompt: input })
       });
       const data = await resp.json();
@@ -69,15 +74,19 @@ export default function CoachWidget() {;
 
     } finally {
       setLoading(false)
+<<<<<<< HEAD
 =======
       const data = await resp && resp.json();
       setReply(data && data.text || '');
     } finally {;
       setLoading(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   return (
+<<<<<<< HEAD
     <div className='border rounded p-3'>;
       <div className='font-medium mb-2'>ZionGPT Coach</div>;
       <div className='flex gap-2'>;
@@ -107,3 +116,15 @@ export default function CoachWidget() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    <div className="border rounded p-3">
+      <div className="font-medium mb-2">ZionGPT Coach</div>
+      <div className="flex gap-2">
+        <input className="flex-1 border rounded px-3 py-2 bg-white dark:bg-black" placeholder="Ask for help..." value={input} onChange={(e) => setInput(e.target.value)} />
+        <button onClick={ask} className="px-3 py-2 bg-blue-600 text-white rounded" disabled={loading}>{loading ? '...' : 'Ask'}</button>
+      </div>
+      {reply && <div className="mt-2 text-sm text-gray-800 dark:text-gray-200">{reply}</div>}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -15,7 +15,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const resp = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
+<<<<<<< HEAD
           { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' }
+=======
+          { role: 'system', content: 'You are ZionGPT Coach, a helpful and concise AI tutor for Zion Academy courses. Provide short, actionable guidance.' },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           { role: 'user', content: String(prompt) }
         ]
       })
@@ -28,4 +32,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {
     return res.status(500).json({ error: e?.message ?? 'Coach error' })
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

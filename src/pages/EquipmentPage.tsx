@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useRouter  } from 'next/router';
 import { useState, useEffect, useCallback, useMemo  } from 'react';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -64,3 +65,6 @@ export default function EquipmentPage() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

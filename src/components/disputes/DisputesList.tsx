@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from 'react'
 import { Dispute, DisputeStatus } from '@/types/disputes'
@@ -116,6 +117,21 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
         return 'outline';
       default:;
         return 'default';
+=======
+
+import React, { useState } from "react";
+import { Dispute, DisputeStatus } from "@/types/disputes";
+import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import React, { useState } from "react";
 import { Dispute, DisputeStatus } from "@/types/disputes";
@@ -173,6 +189,7 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
           {["All", "Open", "Under Review", "Resolved", "Closed"].map((status) => (;
             <Skeleton key={status} className="h-10 w-24" />;
           ))}
+<<<<<<< HEAD
         </div>;
         <div className="border rounded-md">;
           <Table>;
@@ -212,12 +229,38 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
                   <TableCell><Skeleton className="h-4 w-24" /></TableCell>;
                   <TableCell><Skeleton className="h-6 w-20" /></TableCell>;
                   <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>;
+=======
+        </div>
+        <div className="border rounded-md">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead>Case ID</TableHead>
+                <TableHead>Project</TableHead>
+                <TableHead>Parties</TableHead>
+                <TableHead>Created</TableHead>
+                <TableHead>Status</TableHead>
+                <TableHead className="text-right">Actions</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {[...Array(5)].map((_, i) => (
+                <TableRow key={i}>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-40" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-32" /></TableCell>
+                  <TableCell><Skeleton className="h-4 w-24" /></TableCell>
+                  <TableCell><Skeleton className="h-6 w-20" /></TableCell>
+                  <TableCell className="text-right"><Skeleton className="h-9 w-20 ml-auto" /></TableCell>
+                </TableRow>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
 <<<<<<< HEAD
             </TableBody>
           </Table>
         </div>
       </div>
+<<<<<<< HEAD
     ) }
   if (disputes.length === 0) {
 =======
@@ -226,6 +269,10 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
         </div>;
       </div>;
     );  }
+=======
+    )
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (disputes && disputes.length === 0) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -238,6 +285,7 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
 <<<<<<< HEAD
   if (disputes.length === 0) {
     return (
+<<<<<<< HEAD
       <div className='text-center py-12 border rounded-md bg-muted/20'>
         <ShieldAlert className='mx-auto h-12 w-12 text-muted-foreground mb-4' />
         <h3 className='text-xl font-medium'>No disputes found</h3>
@@ -245,6 +293,13 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
         <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
         <h3 className="text-xl font-medium">No disputes found</h3>
         <p className="text-muted-foreground mt-2">
+=======
+      <div className="text-center py-12 border rounded-md bg-muted/20">
+        <ShieldAlert className="mx-auto h-12 w-12 text-muted-foreground mb-4" />
+        <h3 className="text-xl font-medium">No disputes found</h3>
+        <p className="text-muted-foreground mt-2">
+          No active disputes match the selected filter
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </p>
       </div>
     )
@@ -265,6 +320,7 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
   return (
+<<<<<<< HEAD
     <div className='space-y-4'>;
       <div className='flex gap-2 mb-4 overflow-x-auto pb-2'>;
         <Button
@@ -327,6 +383,38 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
         >;
           Resolved;
         </Button>;
+=======
+    <div className="space-y-4">
+      <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+        <Button
+          variant={statusFilter === "all" ? "default" : "outline"}
+          onClick={() => setStatusFilter("all")}
+          size="sm"
+        >
+          All
+        </Button>
+        <Button
+          variant={statusFilter === "open" ? "default" : "outline"}
+          onClick={() => setStatusFilter("open")}
+          size="sm"
+        >
+          Open
+        </Button>
+        <Button
+          variant={statusFilter === "under_review" ? "default" : "outline"}
+          onClick={() => setStatusFilter("under_review")}
+          size="sm"
+        >
+          Under Review
+        </Button>
+        <Button
+          variant={statusFilter === "resolved" ? "default" : "outline"}
+          onClick={() => setStatusFilter("resolved")}
+          size="sm"
+        >
+          Resolved
+        </Button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Button
           variant={statusFilter === "closed" ? "default" : "outline"}
           onClick={() => setStatusFilter("closed")}
@@ -337,7 +425,12 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
           Closed
         </Button>
       </div>
+<<<<<<< HEAD
       <div className='border rounded-md overflow-hidden'>        <Table>      <div className="border rounded-md overflow-hidden">
+=======
+
+      <div className="border rounded-md overflow-hidden">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <Table>
           <TableHeader>
             <TableRow>
@@ -346,6 +439,7 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
               <TableHead>Parties</TableHead>
               <TableHead>Created</TableHead>
               <TableHead>Status</TableHead>
+<<<<<<< HEAD
               <TableHead className='text-right'>Actions</TableHead>
             </TableRow>
           </TableHeader>
@@ -376,10 +470,32 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
                   {formatDistanceToNow(new Date(dispute.created_at), {
                     addSuffix: true
                   })}                      Talent: {dispute.talent_profile?.display_name |"Unknown Talent"}
+=======
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            {filteredDisputes.map((dispute) => (
+              <TableRow key={dispute.id}>
+                <TableCell className="font-mono text-xs">
+                  {dispute.id.split('-')[0]}
+                </TableCell>
+                <TableCell>
+                  {dispute.project?.title || "Unknown Project"}
+                </TableCell>
+                <TableCell>
+                  <div className="flex flex-col text-sm">
+                    <span>
+                      Client: {dispute.client_profile?.display_name || "Unknown Client"}
+                    </span>
+                    <span>
+                      Talent: {dispute.talent_profile?.display_name || "Unknown Talent"}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     </span>
                   </div>
                 </TableCell>
                 <TableCell>
+<<<<<<< HEAD
                   {formatDistanceToNow(new Date(dispute.created_at), {
                     addSuffix: true
 =======
@@ -459,6 +575,21 @@ export function DisputesList(): any ({ disputes, isLoading }: DisputesListProps)
                   </Button>;
                 </TableCell>;
               </TableRow>;
+=======
+                  {formatDistanceToNow(new Date(dispute.created_at), { addSuffix: true })}
+                </TableCell>
+                <TableCell>
+                  <Badge variant={getStatusBadgeVariant(dispute.status)}>
+                    {dispute.status.replace('_ ')}
+                  </Badge>
+                </TableCell>
+                <TableCell className="text-right">
+                  <Button asChild size="sm">
+                    <Link href={`/dashboard/disputes/${dispute.id}`}>View Details</Link>
+                  </Button>
+                </TableCell>
+              </TableRow>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             ))}
 <<<<<<< HEAD
           </TableBody>
@@ -493,6 +624,7 @@ if (isLoading) {"
       </div>;
     </div>;
   );
+<<<<<<< HEAD
 
 };
 if (isLoading) {";
@@ -516,3 +648,6 @@ if (isLoading) {";
 }</TableBody> </Table> </div> </div>) ;
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

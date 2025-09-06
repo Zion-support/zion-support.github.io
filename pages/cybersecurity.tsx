@@ -5,6 +5,7 @@ import Layout from '../components/layout/Layout';
 import { Shield, CheckCircle, Lock, Activity } from 'lucide-react';
 export default function CybersecurityPage() {
   const features = [
+<<<<<<< HEAD
     'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR']
   const solutions = [
     { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' }
@@ -12,6 +13,15 @@ export default function CybersecurityPage() {
     { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' }
     { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }]
 
+=======
+    'Zero Trust architectures and identity-first segmentationCloud posture hardening, secrets management, and key rotationThreat detection, incident response playbooks, and tabletop exercisesCompliance readiness: SOC 2, ISO 27001, HIPAA, GDPR'];
+
+  const solutions = [
+    { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture' },
+    { name: 'Domain & TLS Monitoring', href: '/domain-dns-monitor' },
+    { name: 'Email Security (DMARC)', href: '/email-dmarc-analyzer' },
+    { name: 'Vendor Risk Automation', href: '/vendor-risk-automation' }],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <Layout>
       <Head>
@@ -67,4 +77,8 @@ export default function CybersecurityPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -35,10 +36,15 @@ export default function TryItConsole({
 }: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https://api.zion.os');  const [token, setToken] = useState('');  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE'
 
+=======
+interface TryItProps {
+  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   path: string, // full URL or relative
   requiresAuth: boolean
 }
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
+<<<<<<< HEAD
 
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os')
 
@@ -62,19 +68,30 @@ export default function TryItConsole(): any ({;
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {;
   const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),
+  const [token, setToken] = useState('');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [body, setBody] = useState('');
   const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false);
 
+<<<<<<< HEAD
   const url = useMemo(() => {;
     if (path && path.startsWith('http')) return path;
     return baseUrl && baseUrl.replace(/\/$/, '') + path;  }, [baseUrl, path]);    return baseUrl && baseUrl.replace(/\/$/, '') + path;
+=======
+  const url = useMemo(() => {
+    if (path.startsWith('http')) return path;
+    return baseUrl.replace(/\/$/, '') + path
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [baseUrl, path]);
 <<<<<<< HEAD
   async function onSend() {
     setLoading(true);
     setResponse('');
     try {
+<<<<<<< HEAD
       const headers: Record<string, string> = {
         'Content-Type': 'application/json'
       }
@@ -122,6 +139,11 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
     <div className='space-y-2'>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
       const res = await fetch(url, {;
+=======
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`;
+      const res = await fetch(url, {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         method;
         headers;
 <<<<<<< HEAD
@@ -133,6 +155,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       setResponse(String(e?.message |e))
     } finally {
       setLoading(false)
+<<<<<<< HEAD
 =======
         body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),;
       const text = await res && res.text();
@@ -142,9 +165,12 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
     } finally {;
       setLoading(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   return (
+<<<<<<< HEAD
     <div className='space-y-2'>;
       <div className='grid grid-cols-1 md:grid-cols-3 gap-2'>;
         <div>;
@@ -175,6 +201,11 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>        <div>
+=======
+    <div className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-2">
+        <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <label className="block text-sm mb-1" htmlFor="input-Base URL">Base URL</label>
           <input className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary" value={baseUrl} onChange={(e) => setBaseUrl(e.target.value)} />
         </div>
@@ -189,6 +220,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       </div>
       {(method === 'POST' |method === 'PUT' |method === 'PATCH') && (
         <div>
+<<<<<<< HEAD
           <label className='block text-sm mb-1'>Request Body (JSON)</label>
 =======
           />        </div>;
@@ -246,3 +278,19 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          <label className="block text-sm mb-1" htmlFor="input-Request Body (JSON)">Request Body (JSON)</label>
+          <textarea className="w-full h-32 px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary font-mono text-sm" value={body} onChange={(e) => setBody(e.target.value)} placeholder="{ }" />
+        </div>
+      )}
+      <button onClick={onSend} className="px-3 py-2 rounded bg-high-contrast-accent text-black" disabled={loading}>
+        {loading ? 'Sending…' : 'Send Request'}
+      </button>
+      <div>
+        <label className="block text-sm mb-1" htmlFor="input-Response">Response</label>
+        <pre className="p-3 rounded bg-high-contrast-tertiary overflow-auto text-sm max-h-80"><code>{response}</code></pre>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

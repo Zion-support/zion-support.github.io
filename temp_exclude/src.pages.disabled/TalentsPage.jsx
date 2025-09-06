@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/TalentsPage && TalentsPage.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/TalentsPage && TalentsPage.jsx import React from \'react\'; \"export default function TalentsPage () {\" import React from \'react\'; \"export default function TalentsPage () {\"";
 <<<<<<< "HEAD": src && src.pages.disabled/TalentsPage && TalentsPage.jsx import _React from 'react'; "export default function TalentsPage () {" import _React from 'react'; "export default function TalentsPage () {"";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

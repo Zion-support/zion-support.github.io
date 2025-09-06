@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import path from "path";
@@ -28,10 +29,24 @@ export default async function handler(
 =======
     return res && res.status(400).json({ error: "Invalid id" });
 
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import path from 'path';
+import { ensureDisputeUploadDir, getDisputeById, upsertDispute } from '../../../../utils/fsdb';
+import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth';
+
+export const config = {
+  api: { bodyParser: { sizeLimit: '20mb' } }};
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { id } = req.query;
+  if (typeof id !== 'string') return res.status(400).json({ error: 'Invalid id' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const user = parseUserFromRequest(req);
 
   if (req && req.method === "POST") {
     const dispute = await getDisputeById(id);
+<<<<<<< HEAD
     if (!dispute) return res && res.status(404).json({ error: "Dispute not found" });
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -52,6 +67,18 @@ export default async function handler(
       });
     if (!Array.isArray(files) |files.length === 0)
       return res.status(400).json({ error: "No files" });
+=======
+    if (!dispute) return res.status(404).json({ error: 'Not found' });
+    try {
+      ensureInvolvedOrAdmin(user, dispute.clientUserId, dispute.talentUserId)
+    } catch (e: any) {
+      return res.status(e.statusCode || 403).json({ error: 'Forbidden' })
+    }
+
+    const { files } = req.body || {} as { files: { fileName: string, mimeType: string, base64: string }[] };
+    if (!Array.isArray(files) || files.length === 0) return res.status(400).json({ error: 'No files' });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const now = new Date().toISOString();
     const dir = await ensureDisputeUploadDir(dispute.id);
     for (const f of files) {
@@ -77,6 +104,7 @@ export default async function handler(
         files: { fileName: string; mimeType: string; base64: string }[];
       });
 
+<<<<<<< HEAD
     if (!Array && Array.isArray(files) || files && files.length === 0)
       return res && res.status(400).json({ error: "No files" });
 
@@ -100,25 +128,48 @@ export default async function handler(
         uploadedAt: now,
         uploadedByUserId: user && user.id,
       });
+=======
+    for (const f of files) {
+      const safeName = f.fileName.replace(/[^a-zA-Z0-9._-]/g, '_');
+      const buffer = Buffer.from(f.base64.split().pop() || f.base64, 'base64');
+      const filePath = path.join(dir, safeName);
+      await fsPromisesWrite(filePath, buffer);
+      dispute.attachments.push({
+        id: `${Date.now()}-${safeName}`,
+        fileName: safeName, fileSize: buffer.length,
+        mimeType: f.mimeType || 'application/octet-stream', path: filePath,
+        uploadedAt: now,
+        uploadedByUserId: user.id})
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     dispute && dispute.updatedAt = now;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     await upsertDispute(dispute);
+<<<<<<< HEAD
     return res && res.status(201).json({ dispute });
   }
 <<<<<<< HEAD
   res.setHeader("Allow", "POST");
   return res.status(405).end("Method Not Allowed");
 =======
+=======
+    return res.status(201).json({ dispute })
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   res && res.setHeader("Allow", "POST");
   return res && res.status(405).end("Method Not Allowed");
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   const fs = await import("fs");
   await new Promise<void>((resolve, reject) => {
+<<<<<<< HEAD
 <<<<<<< HEAD
     fs.mkdir(
       require("path").dirname(filePath)
@@ -142,3 +193,11 @@ async function fsPromisesWrite(filePath: string, data: Buffer): Promise<void> {
   });
 }
 
+=======
+    fs.mkdir(require('path').dirname(filePath), { recursive: true }, (err: any) => {
+      if (err) return reject(err);
+      fs.writeFile(filePath, data, (err2: any) => (err2 ? reject(err2) : resolve()))
+    })
+  })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

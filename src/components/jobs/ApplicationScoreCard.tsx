@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -371,3 +372,5 @@ export function ApplicationScoreCard(): any ({ application, onScoreUpdated }: Ap
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

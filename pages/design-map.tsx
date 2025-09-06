@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useMemo, useState } from "react";
 import Head from "next/head";
 import { getZionDesignMap } from "../utils/design-map";
@@ -25,6 +26,34 @@ export default function DesignMapPage() {
       setSuggestion(e?.message |"Failed to fetch suggestion");
     } finally {
       setIsLoading(false);
+=======
+import React, { useMemo, useState } from 'react'
+import Head from 'next/head'
+import { getZionDesignMap } from '../utils/design-map'
+
+export default function DesignMapPage() {
+  const designMap = useMemo(() => getZionDesignMap(), [])
+  const [screenName, setScreenName] = useState('')
+  const [role, setRole] = useState('Talent')
+  const [suggestion, setSuggestion] = useState<string | null>(null)
+  const [isLoading, setIsLoading] = useState(false)
+
+  async function requestWireframe() {
+    if (!screenName) return
+    setIsLoading(true)
+    setSuggestion(null)
+    try {
+      const res = await fetch('/api/figma/wireframe-suggest', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ screenName, role })})
+      const json = await res.json()
+      setSuggestion(json?.suggestion || 'No suggestion received')
+    } catch (e: any) {
+      setSuggestion(e?.message || 'Failed to fetch suggestion')
+    } finally {
+      setIsLoading(false)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   return (
@@ -36,6 +65,7 @@ export default function DesignMapPage() {
         <div className="flex items-center justify-between">
           <h1 className="text-2xl font-semibold">Zion OS Design Map</h1>
           <div className="flex gap-2">
+<<<<<<< HEAD
             <a
               href="/api/design-map"
               className="px-3 py-2 rounded bg-gray-900 text-white text-sm"
@@ -83,6 +113,25 @@ export default function DesignMapPage() {
             sections={designMap.products.mobile}
           />
         </div>
+=======
+            <a href="/api/design-map" className="px-3 py-2 rounded bg-gray-900 text-white text-sm">JSON</a>
+            <a href="/api/figma/export?kit=tailwind" className="px-3 py-2 rounded bg-neon-blue text-black text-sm">Export Tailwind</a>
+            <a href="/api/figma/export?kit=chakra" className="px-3 py-2 rounded bg-neon-purple text-white text-sm">Export Chakra</a>
+            <a href="/api/figma/export?kit=react" className="px-3 py-2 rounded bg-neon-green text-black text-sm">Export React</a>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          <MapColumn title="Foundations" sections={designMap.products.foundations} />
+          <MapColumn title="Talent UI" sections={designMap.products.talent} />
+          <MapColumn title="Client UI" sections={designMap.products.client} />
+          <MapColumn title="AI Tools UI" sections={designMap.products.aiTools} />
+          <MapColumn title="DAO & Token UI" sections={designMap.products.dao} />
+          <MapColumn title="Admin Console" sections={designMap.products.admin} />
+          <MapColumn title="Mobile Layouts" sections={designMap.products.mobile} />
+        </div>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="rounded-lg border border-gray-200 dark:border-gray-800 p-4 bg-white/60 dark:bg-black/40">
           <h2 className="font-medium mb-3">Create New Screen</h2>
           <div className="flex flex-col md:flex-row gap-3 items-start md:items-end">
@@ -99,11 +148,15 @@ export default function DesignMapPage() {
             </div>
             <div>
               <label className="block text-xs text-gray-500 mb-1">Role</label>
+<<<<<<< HEAD
               <select
                 value={role}
                 onChange={(e) => setRole(e.target.value)}
                 className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40"
               >
+=======
+              <select value={role} onChange={e => setRole(e.target.value)} className="px-3 py-2 rounded border border-gray-300 dark:border-gray-700 bg-white/80 dark:bg-black/40">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <option>Talent</option>
                 <option>Client</option>
                 <option>Admin</option>
@@ -112,6 +165,7 @@ export default function DesignMapPage() {
                 <option>Mobile</option>
               </select>
             </div>
+<<<<<<< HEAD
             <button
               onClick={requestWireframe}
               className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60"
@@ -124,10 +178,19 @@ export default function DesignMapPage() {
             <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">
               {suggestion}
             </pre>
+=======
+            <button onClick={requestWireframe} className="px-3 py-2 rounded bg-gray-900 text-white text-sm disabled:opacity-60" disabled={isLoading || !screenName}>
+              {isLoading ? 'Generating…' : 'GPT Wireframe Suggestion'}
+            </button>
+          </div>
+          {suggestion && (
+            <pre className="mt-4 text-xs whitespace-pre-wrap p-3 rounded bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-800">{suggestion}</pre>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
         </div>
       </section>
     </>
+<<<<<<< HEAD
   );
 }
 function MapColumn({
@@ -141,6 +204,12 @@ function MapColumn({
     items: { id: string; title: string }[];
   }[];
 }) {
+=======
+  )
+}
+
+function MapColumn({ title, sections }: { title: string, sections: { id: string, title: string, items: { id: string, title: string }[] }[] }) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <div className="space-y-3">
       <h3 className="text-lg font-semibold">{title}</h3>
@@ -153,10 +222,14 @@ function MapColumn({
             <div className="font-medium mb-2">{s.title}</div>
             <div className="flex flex-wrap gap-2">
               {s.items.map((i) => (
+<<<<<<< HEAD
                 <span
                   key={i.id}
                   className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800"
                 >
+=======
+                <span key={i.id} className="text-xs px-2 py-1 rounded border border-gray-200 dark:border-gray-800">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   {i.title}
                 </span>
               ))}
@@ -165,5 +238,10 @@ function MapColumn({
         ))}
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

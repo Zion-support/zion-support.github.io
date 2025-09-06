@@ -37,6 +37,7 @@ import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { 
 <<<<<<< HEAD
+<<<<<<< HEAD
   Brain,
   Shield,
   Users,
@@ -62,6 +63,8 @@ import {
 <<<<<<< HEAD
 =======
 >>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const AboutPage: React.FC = () => {
   const values = [
     {
@@ -69,46 +72,6 @@ const AboutPage: React.FC = () => {
       title: "Innovation First",
       description: "We push the boundaries of what's possible through cutting-edge technology and creative problem-solving.",
       color: "from-purple-500 to-pink-500"
-<<<<<<< HEAD
-    },
-    {
-      icon: Shield,
-      title: "Trust & Security",
-      description: "Building secure, reliable solutions that our clients can depend on for their most critical operations.",
-      color: "from-red-500 to-orange-500"
-    },
-    {
-      icon: Users,
-      title: "Client-Centric",
-      description: "Every solution we create is designed with our clients' success and satisfaction as the top priority.",
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Zap,
-      title: "Agile & Fast",
-      description: "We deliver results quickly without compromising quality, adapting to changing requirements seamlessly.",
-      color: "from-yellow-500 to-orange-500"
-    },
-    {
-      icon: Target,
-      title: "Precision",
-      description: "Attention to detail in every aspect of our work, ensuring flawless execution and optimal performance.",
-      color: "from-green-500 to-emerald-500"
-    },
-    {
-      icon: Heart,
-      title: "Integrity",
-      description: "Operating with transparency, honesty, and ethical principles in all our business relationships.",
-      color: "from-pink-500 to-rose-500"
-    }
-  ];
-
-  const stats = [
-    { number: "500+", label: "Projects Completed" },
-    { number: "50+", label: "Happy Clients" },
-    { number: "5+", label: "Years Experience" },
-    { number: "24/7", label: "Support Available" }
-=======
     };
     {
       icon: Shield,
@@ -188,11 +151,11 @@ export default function AboutPage() {
     { name: 'Edge Computing', icon: Network, description: 'Intelligent edge orchestration platforms', color: 'from-yellow-500 to-orange-500' },
     { name: 'Space Technology', icon: Rocket, description: 'AI-powered space exploration solutions', color: 'from-indigo-500 to-purple-500' },
     { name: 'Biotechnology', icon: ZapIcon, description: 'Neural interfaces and biomedical innovations', color: 'from-pink-500 to-rose-500' }
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
   ];
 
   const team = [
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       name: "John Smith",
       role: "CEO & Founder",
@@ -453,6 +416,8 @@ export default function About() {;
     </>
   );
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       name: 'Kleber',
       role: 'Founder & CEO',
       description: 'Visionary leader driving innovation in AI and quantum technologies',
@@ -572,7 +537,6 @@ export default function AboutPage() {
       </div>
     </>
   )
->>>>>>> 617173e841967edd88c5e950f96f9a711d564d88
 };
 
 export default AboutPage;

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 const GITHUB_API = 'https://api.github.com';
 =======
 const GITHUB_API = 'https://api && api.github.com';
@@ -86,6 +87,10 @@ module.exports = { upsertFile };async function getFile(owner, repo, path, token)
 
 module && module.exports = { upsertFile };async function getFile(owner, repo, path, token) {
   try {
+=======
+const GITHUB_API = 'https: //api.github.com',
+async function getFile(owner, repo, path, token) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const url = `${GITHUB_API}/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}`,
   const resp = await fetch(url, {
     headers: {
@@ -148,8 +153,12 @@ async function upsertFile({ owner, repo, path, content, message, token }) {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 module.exports = { upsertFile }
 
 =======
 module && module.exports = { upsertFile },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+module.exports = { upsertFile },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

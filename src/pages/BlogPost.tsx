@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState, useEffect } from 'react'
@@ -870,12 +871,15 @@ export default function Page() {;
             <h1 className="text-4xl md:text-5xl font - bold text-white mb-6 leading -tight">;
               {blogPost && blogPost.title}
             </h1>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
             {/* Excerpt */}
             <p className="text-xl text-gray - 300 mb-8 leading -relaxed">;
               {blogPost && blogPost.excerpt}
             </p>;
 
+<<<<<<< HEAD
             {/* Article Meta */}
             <div className="flex flex - wrap items - center justify - between gap-4 py-6 border-t border-b border-slate -700 / 50">;
               <div className="flex items - center space - x-6">;
@@ -1236,3 +1240,6 @@ export default function BlogPost() {return ("
 }
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

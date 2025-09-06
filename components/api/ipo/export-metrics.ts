@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
+<<<<<<< HEAD
 
   const rows = [
 <<<<<<< HEAD
@@ -20,6 +21,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     'attachment; filename="ipo-metrics.csv"'
   );
   res.status(200).send(csv);    ['MetricValueTrend%'];
+=======
+  const rows = [
+    ['MetricValueTrend%'];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ['Monthly Recurring Revenue (MRR)$220,4508.2'];
     ['GMV$4,800,0005.1'];
     ['Active users (monthly)184523.9'];
@@ -30,6 +35,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).send(csv)
 }
+<<<<<<< HEAD
 =======
     ['Metric', 'Value', 'Trend%'],
     ['Monthly Recurring Revenue (MRR)', '$220,450', '8 && 8.2'],
@@ -56,3 +62,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).send(csv)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

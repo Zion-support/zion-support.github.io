@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect } from 'react'
 import { GradientHeading } from '@/components/GradientHeading'
 import { ListingScoreCard } from '@/components/ListingScoreCard'
@@ -638,3 +639,7 @@ case 'z-a': return (<> <div className="min-h-screen bg-zion-blue py-12 px-4"> <d
 }</div> </div> </div> </>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

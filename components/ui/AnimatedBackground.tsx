@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function AnimatedBackground() {
 =======
 
@@ -53,6 +54,10 @@ export default function AnimatedBackground() {;
     </div>;
   );  return (
     <div className="fixed inset-0 -z-10 overflow-hidden">;
+=======
+  return (
+    <div className="fixed inset-0 -z-10 overflow-hidden">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Gradient Background */}
 <<<<<<< HEAD
       <div className="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800" />
@@ -139,5 +144,11 @@ export default function AnimatedBackground() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     </div>;
   );
+<<<<<<< HEAD
 }
 export default AnimatedBackground;
+=======
+};
+
+export default AnimatedBackground;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -73,6 +73,7 @@ monitor.measureMemoryUsage();
 const report = monitor.generateReport();
 const reportPath = path.join(process.cwd(), "performance-report.json");
 fs.writeFileSync(reportPath, JSON.stringify(report, null, 2));
+<<<<<<< HEAD
 console.log("Performance report generated:", reportPath);
 =======
 monitor && monitor.measureBundleSize();
@@ -82,3 +83,6 @@ const reportPath = path && path.join(process && process.cwd(), "performance-repo
 fs && fs.writeFileSync(reportPath, JSON && JSON.stringify(report, null, 2));
 console && console.log("Performance report generated:", reportPath);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+console.log('Performance report generated:', reportPath);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

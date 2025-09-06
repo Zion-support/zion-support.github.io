@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -39,6 +40,10 @@ export function securityMiddleware(request) {
     );
   }
   return response;// Security headers middleware
+=======
+
+// Security headers middleware
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function securityHeaders(req, res, next) {
 <<<<<<< HEAD
   Object.entries({
@@ -63,6 +68,7 @@ export function securityHeaders(req, res, next) {
 <<<<<<< HEAD
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -76,3 +82,5 @@ export function securityHeaders(req, res, next) {
 =======
 }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

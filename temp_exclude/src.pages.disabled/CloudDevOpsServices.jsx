@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/CloudDevOpsServices && CloudDevOpsServices.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/CloudDevOpsServices && CloudDevOpsServices.jsx import React from \'react\'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedPricing,setSelectedPricing] = useState (\"all\") ; import React from \'react\'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (\") ; const [selectedCategory,setSelectedCategory] = useState (\"all\") ; const [selectedPricing,setSelectedPricing] = useState (\"all\") ;\"";
 <<<<<<< "HEAD": src && src.pages.disabled/CloudDevOpsServices && CloudDevOpsServices.jsx import _React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPricing,setSelectedPricing] = useState ("all") ; import _React from 'react'; export default CloudDevOpsServices; const CloudDevOpsServices = () => { const [searchTerm,setSearchTerm] = useState (") ; const [selectedCategory,setSelectedCategory] = useState ("all") ; const [selectedPricing,setSelectedPricing] = useState ("all") ;"";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

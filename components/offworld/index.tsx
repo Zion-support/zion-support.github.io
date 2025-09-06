@@ -1,6 +1,10 @@
 import { useState  } from 'react';
 import Head from 'next/head';
+<<<<<<< HEAD
 export default function OffworldConsole() {;
+=======
+export default function OffworldConsole() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [chat, setChat] = useState('');
   const [voteChoice, setVoteChoice] = useState('yes');
   const [proposalId, setProposalId] = useState('prop-1');
@@ -10,6 +14,12 @@ export default function OffworldConsole() {;
 <<<<<<< HEAD
   async function sendChat() {
     setStatus('Sending chat...');
+<<<<<<< HEAD
+=======
+    const res = await fetch('/api/offworld/orbit?action=chat', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ from: 'anon', text: chat }) }),
+    setStatus(res.ok ? 'Chat sent' : 'Chat failed')
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const res = await fetch('/api/offworld/orbit?action=chat', {
       method: 'POST'
@@ -21,6 +31,7 @@ export default function OffworldConsole() {;
   }
   async function castVote() {
     setStatus('Recording vote...');
+<<<<<<< HEAD
     const res = await fetch('/api/offworld/orbit?action=vote', {
       method: 'POST'
       headers: { 'content-type': 'application/json' }
@@ -29,10 +40,14 @@ export default function OffworldConsole() {;
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed');  }
   async function syncProfile() {
     setStatus('Pinning profile...');    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) })
+=======
+    const res = await fetch('/api/offworld/orbit?action=vote', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ proposalId, voter: 'anon', choice: voteChoice }) }),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setStatus(res.ok ? 'Vote recorded' : 'Vote failed')
   }
   async function syncProfile() {
     setStatus('Pinning profile...');
+<<<<<<< HEAD
     const res = await fetch('/api/offworld/ipfs?action=json', {
       method: 'POST'
       headers: { 'content-type': 'application/json' }
@@ -44,11 +59,15 @@ export default function OffworldConsole() {;
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed');  }
   async function broadcast() {
     setStatus('Broadcasting manifesto...');    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) })
+=======
+    const res = await fetch('/api/offworld/ipfs?action=json', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ profile: { name, skills: skills.split().map(s => s.trim()) } }) }),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const data = await res.json();
     setStatus(res.ok ? `Profile CID: ${data.cid}` : 'Profile pin failed')
   }
   async function broadcast() {
     setStatus('Broadcasting manifesto...');
+<<<<<<< HEAD
     const res = await fetch('/api/offworld/ipfs?action=broadcast', {
       method: 'POST'
       headers: { 'content-type': 'application/json' }
@@ -224,6 +243,11 @@ export default function OffworldConsole() {;
           Pin Profile to IPFS;
         </button>;
       </section>;
+=======
+    const res = await fetch('/api/offworld/ipfs?action=broadcast', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ message: 'We build beyond platforms.' }) }),
+    setStatus(res.ok ? 'Broadcast sent' : 'Broadcast failed')
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       <section className='space-y-2'>;
         <h2 className='font-semibold'>Broadcast Manifesto</h2>;
@@ -238,4 +262,7 @@ export default function OffworldConsole() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

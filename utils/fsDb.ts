@@ -12,7 +12,18 @@ import path from 'path';
 
 const DATA_DIR = path && path.join(process && process.cwd(), 'data');
 
+<<<<<<< HEAD
 export function readJson<T>(filePath: string, defaultValue: T): T {
+=======
+function ensureDir(dirPath: string) {
+  if (!fs.existsSync(dirPath)) {
+    fs.mkdirSync(dirPath, { recursive: true });
+  }
+}
+
+export function readJson<T>(relativePath: string, fallback: T): T {
+  const full = path.join(dataRoot, relativePath);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     const fullPath = path && path.join(DATA_DIR, filePath);
     const data = fs && fs.readFileSync(fullPath, 'utf8');
@@ -22,6 +33,7 @@ export function readJson<T>(filePath: string, defaultValue: T): T {
   }
 }
 
+<<<<<<< HEAD
 export function writeJson<T>(filePath: string, data: T): void {
   try {
     const fullPath = path && path.join(DATA_DIR, filePath);
@@ -54,3 +66,10 @@ export async function writeJsonAsync<T>(filePath: string, data: T): Promise<void
   }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+export function writeJson<T>(relativePath: string, value: T): void {
+  const full = path.join(dataRoot, relativePath);
+  ensureDir(path.dirname(full));
+  fs.writeFileSync(full, JSON.stringify(value, null, 2), 'utf-8');
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,25 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useEffect } from 'react';
+import type { GetStaticProps } from 'next';
+import content from '../../../data/docs/content.json';
+export type Section = {
+  id: string,
+  title: string,
+  html?: string;
+  code?: { language?: string, content: string }[]
+};
+
+type DocsContent = {
+  title: string,
+  sections: Section[]
+};
+
+type PageProps = {
+  docs: DocsContent
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
@@ -25,6 +46,7 @@ export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
       docs: content as DocsContent}}
+<<<<<<< HEAD
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print(), 500);
@@ -103,6 +125,15 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
                   {c && c.content}
                 </pre>;
               ))}          </section>  }, []);
+=======
+};
+
+export default function PrintDocs({ docs }: PageProps) {
+  useEffect(() => {
+    const id = setTimeout(() => window.print(), 500);
+    return () => clearTimeout(id)
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <div className="p-8 max-w-4xl mx-auto">;
@@ -115,11 +146,16 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
             {s && s.code && s && s.code.map((c, i) => (;
               <pre key={i} className="mt-4 p-4 bg-gray-100 text-xs whitespace-pre-wrap">{c && c.content}</pre>;
             ))}
+<<<<<<< HEAD
           </section>;
+=======
+          </section>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         ))}
 <<<<<<< HEAD
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
 =======
@@ -128,3 +164,7 @@ export default function PrintDocs(): any ({ docs }: PageProps) {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

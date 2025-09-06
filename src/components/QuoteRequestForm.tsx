@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {useState} from "react"
 import {logDebug, logErrorToProduction} from '@/utils/productionLogger'
@@ -114,3 +115,5 @@ export function QuoteRequestForm() {;
 
   )
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

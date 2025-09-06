@@ -1,6 +1,7 @@
 
 export const real2027Q3Additions = [
   {
+<<<<<<< HEAD
     id: 'it-asset-discovery-agent'
     name: 'IT Asset Discovery Agent'
     tagline: 'Agentless network-wide discovery and enrichment'
@@ -16,6 +17,17 @@ export const real2027Q3Additions = [
     category: 'Enterprise IT'
     link: '/it-asset-discovery-agent'
     realService: true
+=======
+    id: 'it-asset-discovery-agent', name: 'IT Asset Discovery Agent',
+    tagline: 'Agentless network-wide discovery and enrichment', price: '$149',
+    period: '/month',
+    description: 'Continuously discover devices, services, and SaaS apps across your environment with CMDB export and change tracking.',
+    features: [
+      'Agentless subnet scanning and SaaS discoveryOS, version, and CVE enrichmentCMDB, ServiceNow, and Jira exportChange detection and drift alerts'
+    ];
+    category: 'Enterprise IT', link: '/it-asset-discovery-agent',
+    realService: true,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     roi: 'Reduce manual inventory work by 80% and avoid surprise shadow IT risks.'
   }
   {
@@ -330,4 +342,7 @@ export const real2027Q3Additions = [
     roi: 'Prevent high-severity API incidents and cut MTTR.'
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

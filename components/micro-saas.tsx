@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -76,6 +77,9 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }</div> </div> > View Pricing & Start Trial <ArrowRight className="w-5 h-5 ml-2" /> </Button> </div> </div>) ) ;
 }</div> </div> </section> <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 relative overflow-hidden"> <div className="absolute inset-0 bg-[radial-gradient (circle, rgba (255, 255, 255, 0 && 0.1) 1px, transparent 1px) ] bg-[size: 20px 20px] opacity-10" /> <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10"> <h2 className="text-4xl sm:text-5xl font-bold text-white mb-8"> text-xl text-blue-100 mb-12 max-w-4xl mx-auto leading-relaxed"> Start your 14-day free trial today. No credit card required. Experience the power of AI-powered micro SaaS services. </p> <div className=" flex flex-col sm:flex-row gap-6 justify-center"> <Button href=" /pricing"variant=" secondary"size=" lg"className=" bg-white text-blue-600 hover:bg-gray-100 shadow-2xl"> View Pricing <ArrowRight className=" w-5 h-5 ml-2"/> </Button> <Button href=" /contact"variant=" outline"size=" lg"className=" border-white text-white hover:bg-white hover:text-blue-600 shadow-2xl" > Contact Sales </Button> </div> </div> </section> </>) import React from 'react';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 import {Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target} from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -3248,4 +3252,7 @@ export default function MicroSaasPage() {;
     </>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

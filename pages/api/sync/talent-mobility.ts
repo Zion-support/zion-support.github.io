@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import type { NextApiRequest, NextApiResponse } from "next";
 import { readState, writeState, upsertEvent } from "../../../utils/sync/storage";
 
@@ -15,6 +18,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
   const { personId, fromNation, toNation, role, startDate, endDate } = req.body as {
     personId: string, fromNation: string, toNation: string, role: string, startDate: string, endDate?: string
+<<<<<<< HEAD
+=======
+  };
+
+  if (!personId || !fromNation || !toNation || !role || !startDate) {
+    return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   if (!personId |!fromNation |!toNation |!role |!startDate) {
     return res.status(400).json({ error: "personId, fromNation, toNation, role, startDate required" })
@@ -22,6 +32,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const entityKey = `${personId}:${startDate}`
   const version = nextVersionFor(state, entityKey)
   const event = {
+<<<<<<< HEAD
     eventId: uuidv4()
     type: "talent_mobility" as const
     payload: { id: entityKey, personId, fromNation, toNation, role, startDate, endDate }
@@ -34,6 +45,23 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const headers: Record<string, string> = {}
   const sig = signPayload(body)
   if (sig) headers["x-zion-signature"] = sig
+=======
+    eventId: uuidv4(), type: "talent_mobility" as const,
+    payload: {
+       id: entityKey, personId, fromNation, toNation, role, startDate, endDate 
+    },
+    originInstanceId: state.config.instanceId, version,
+    timestamp: Date.now()};
+
+  upsertEvent(state, event);
+  writeState(state);
+
+  const body = { ...event, propagate: false };
+  const headers: Record<string, string> = {};
+  const sig = signPayload(body);
+  if (sig) headers["x-zion-signature"] = sig;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   await Promise.all(
     state.config.peers
       .filter((p) => !p.paused)
@@ -46,4 +74,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   )
 
   return res.status(200).json({ status: "created", version, eventId: event.eventId })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

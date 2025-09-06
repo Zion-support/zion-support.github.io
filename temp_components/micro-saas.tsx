@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const microSaasServices = [ {
@@ -84,6 +85,9 @@ dedicated support, enterprise-grade reliability, and 14-day free trials. Start w
 }</>) import React from 'react';
 
 <<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target  } from 'lucide-react';
 import Button from '../components/ui/Button';
@@ -3490,6 +3494,7 @@ export default function MicroSaasPage() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
                       className="border-green-500 text-green-400 hover:bg-green-500 hover:text-white">;
                       View Pricing;
@@ -3507,3 +3512,5 @@ export default function MicroSaasPage() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

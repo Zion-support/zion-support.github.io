@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react',
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -45,3 +46,5 @@ interface JobMatchProps {
 
 }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

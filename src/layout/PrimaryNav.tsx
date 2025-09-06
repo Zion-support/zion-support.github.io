@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 =======
@@ -610,3 +611,6 @@ setLoginOpen (true)
   )}
 '"`
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

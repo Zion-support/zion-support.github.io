@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Link from 'next/link';
 const EnhancedFooter = () => {
+<<<<<<< HEAD
   const currentYear = new Date().getFullYear();
 
   return (
@@ -44,6 +45,9 @@ const EnhancedFooter = () => {
               their digital presence with cutting-edge AI, cloud architecture
               and innovative development services.            </p>const EnhancedFooter = () => {
   const currentYear = new Date().getFullYear()
+=======
+  const currentYear = new Date().getFullYear(),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -65,6 +69,7 @@ const EnhancedFooter = () => {
           </div>
           {/* Services */}
           <div>
+<<<<<<< HEAD
             <h3 className='text-lg font-semibold mb-4'>Services</h3>
             <ul className='space-y-2'>
               <li>
@@ -99,14 +104,22 @@ const EnhancedFooter = () => {
                   Data Analytics
                 </Link>
               </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Services</h3>
+=======
+            <h3 className="text-lg font-semibold mb-4">Services</h3>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <ul className="space-y-2">
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">AI Development</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Cloud Services</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Blockchain Solutions</Link></li>
               <li><Link href="/services" className="text-gray-300 hover:text-white transition-colors">Data Analytics</Link></li>
+<<<<<<< HEAD
+=======
+            </ul>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
           {/* Company */}
           <div>
+<<<<<<< HEAD
             <h3 className='text-lg font-semibold mb-4'>Company</h3>
             <ul className='space-y-2'>
               <li>
@@ -141,15 +154,23 @@ const EnhancedFooter = () => {
                   Blog
                 </Link>
               </li>            </ul>            <h3 className="text-lg font-semibold mb-4">Company</h3>
+=======
+            <h3 className="text-lg font-semibold mb-4">Company</h3>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <ul className="space-y-2">
               <li><Link href="/about" className="text-gray-300 hover:text-white transition-colors">About Us</Link></li>
               <li><Link href="/talent" className="text-gray-300 hover:text-white transition-colors">Careers</Link></li>
               <li><Link href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link></li>
               <li><Link href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</Link></li>
+<<<<<<< HEAD
+=======
+            </ul>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </div>
         </div>
       </div>
       {/* Bottom Footer */}
+<<<<<<< HEAD
       <div className='border-t border-gray-700 py-6'>
         <div className='container mx-auto px-4'>
           <div className='text-center text-gray-300 text-sm'>
@@ -166,3 +187,17 @@ const EnhancedFooter = () => {
 export default EnhancedFooter;}
 export default EnhancedFooter;
 
+=======
+      <div className="border-t border-gray-700 py-6">
+        <div className="container mx-auto px-4">
+          <div className="text-center text-gray-300 text-sm">
+            <p>&copy, {currentYear} Zion Tech Group. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+},
+
+export default EnhancedFooter;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

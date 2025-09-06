@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 <<<<<<< HEAD
@@ -125,3 +126,5 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats },) => {
 };
 "
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

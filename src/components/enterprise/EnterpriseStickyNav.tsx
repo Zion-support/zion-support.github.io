@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { Menu } from 'lucide-react'
 =======
@@ -55,6 +56,11 @@ import Link from 'next/link'
               </Link>            </li>
               <Link href="#contact" className="text-sm font-medium hover:text-primary">Contact Us</Link>
 
+=======
+import { useState } from "react";
+import { Menu } from 'lucide-react'
+import Link from "next/link";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function EnterpriseStickyNav() {
 =======
                 className='text-sm font-medium hover:text-primary'>;
@@ -94,6 +100,7 @@ export function EnterpriseStickyNav() {;
         </div>
       </div>
     </nav>
+<<<<<<< HEAD
   )
 }
 =======
@@ -120,3 +127,7 @@ export function EnterpriseStickyNav() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

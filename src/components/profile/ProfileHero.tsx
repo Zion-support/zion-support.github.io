@@ -1,11 +1,17 @@
 
+<<<<<<< HEAD
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar",
 import { AspectRatio } from "@/components/ui/aspect-ratio",
+=======
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Badge } from "@/components/ui/badge";
 import { Star } from 'lucide-react'
 import { cn } from "@/lib/utils";
 <<<<<<< HEAD
 interface ProfileHeroProps {
+<<<<<<< HEAD
 
   name: string
   title: string;  avatarUrl?: string;  name: string
@@ -33,12 +39,17 @@ interface ProfileHeroProps {;
   name: string;
   title: string;  avatarUrl?: string;  name: string,;
   title: string,;
+=======
+  name: string,
+  title: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   avatarUrl?: string;
   coverImageUrl?: string;
   location?: string;
   rating?: number;
   reviewCount?: number;
   aiScore?: number;
+<<<<<<< HEAD
   profileType: 'service' | 'talent';
 
 export function ProfileHero(): any ({;
@@ -117,6 +128,35 @@ export function ProfileHero(): any ({
             </Avatar>            />;
           ) : (;
             <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />;
+=======
+  profileType: 'service' | 'talent'
+}
+
+export function ProfileHero({
+  name;
+  title;
+  avatarUrl;
+  coverImageUrl;
+  location;
+  rating;
+  reviewCount;
+  aiScore;
+  profileType
+}: ProfileHeroProps) {
+  return (
+    <div className="w-full overflow-hidden">
+      <div className="relative">
+        <AspectRatio ratio={3/1} className="bg-zion-blue-light">
+          {coverImageUrl ? (
+            <img
+              src={coverImageUrl}
+              alt={`${name} cover`}
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-r from-zion-blue via-zion-blue-light to-zion-blue-dark" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
 <<<<<<< HEAD
         </AspectRatio>
@@ -131,6 +171,7 @@ export function ProfileHero(): any ({
                 </AvatarFallback>
               )}
             </Avatar>
+<<<<<<< HEAD
             <div className='mt-4 md:mt-0 md:ml-6 md:mb-1'>
               <div className='flex flex-wrap items-center gap-2 mb-1'>
                 <h1 className='text-2xl md:text-3xl font-bold text-white'>
@@ -164,6 +205,10 @@ export function ProfileHero(): any ({
 <<<<<<< HEAD
                       : 'bg-zion-cyan/10'                  )}
             <div className="mt-4 md: mt-0 md:ml-6 md:mb-1">
+=======
+            
+            <div className = "mt-4 md: mt-0 md:ml-6 md:mb-1">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="flex flex-wrap items-center gap-2 mb-1">
                 <h1 className="text-2xl md:text-3xl font-bold text-white">{name}</h1>
                 <Badge
@@ -176,6 +221,7 @@ export function ProfileHero(): any ({
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}
                 </Badge>
               </div>
+<<<<<<< HEAD
               <h2 className='text-lg md:text-xl text-zion-slate-light mb-1'>
                 {title}
               </h2>
@@ -238,6 +284,13 @@ export function ProfileHero(): any ({
 <<<<<<< HEAD
                 {aiScore && (
                   <div className='px-2 py-0.5 rounded bg-zion-purple/20 text-xs font-medium text-zion-cyan'>                    AI Match: {aiScore}%                {location && (
+=======
+              
+              <h2 className="text-lg md:text-xl text-zion-slate-light mb-1">{title}</h2>
+              
+              <div className="flex flex-wrap items-center gap-3 mt-2">
+                {location && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <span className="text-sm text-zion-slate-light">{location}</span>
                 )}
                 {rating && (
@@ -275,6 +328,7 @@ export function ProfileHero(): any ({
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }}
 }
@@ -296,3 +350,7 @@ export function ProfileHero(): any ({
 
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

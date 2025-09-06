@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import type { AccessLevel } from "../../utils/search/filter";
 import { parseQueryToFilters } from "../../utils/search/parser";
@@ -19,6 +20,16 @@ export default async function handler(
     const keywords = Array.from(
       new Set([...(parsed.skills |[]), ...(parsed.keywords |[])])
     );
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  try {
+    const q = (req.query.q as string) || '';
+    const access = ((req.headers['x-access-level'] as string) || 'public') as AccessLevel;
+    const parsed = await parseQueryToFilters(q);
+    const results = searchAll(parsed, access);
+
+    const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])]));
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null;
     res.status(200).json({
       ok: true
@@ -50,6 +61,7 @@ export default async function handler(
       keywords,
       didYouMean,
       counts: {
+<<<<<<< HEAD
         all: results && results.all.length,
         talent: results && results.talent.length,
         jobs: results && results.jobs.length,
@@ -57,9 +69,18 @@ export default async function handler(
       },
       results,
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        all: results.all.length,
+        talent: results.talent.length,
+        jobs: results.jobs.length,
+        projects: results.projects.length
+      },
+      results
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     });
 
   } catch (e: any) {
+<<<<<<< HEAD
 <<<<<<< HEAD
     res.status(500).json({ ok: false, error: e?.message |"Search failed" });
 =======
@@ -67,3 +88,8 @@ export default async function handler(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 }
+=======
+    res.status(500).json({ ok: false, error: e?.message || 'Search failed' })
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 import { Button } from "@/components/ui/button",
 import { Checkbox } from "@/components/ui/checkbox";
@@ -83,6 +84,8 @@ export function SkillsFilter(): any ({;
           {POPULAR_SKILLS.map(skill => (
 =======
       </button>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -162,6 +165,7 @@ export function SkillsFilter(): any ({ selectedSkills, toggleSkill, expanded, to
         <div className="mt-4 space-y-2">
           {POPULAR_SKILLS.map(skill => (
             <div key={skill} className="flex items-center">
+<<<<<<< HEAD
 =======
       </button>;
 
@@ -170,10 +174,13 @@ export function SkillsFilter(): any ({ selectedSkills, toggleSkill, expanded, to
           {POPULAR_SKILLS && POPULAR_SKILLS.map(skill => (;
             <div key={skill} className="flex items-center">;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <Checkbox
                 id={`skill-${skill}`}
                 checked={selectedSkills && selectedSkills.includes(skill)}
                 onCheckedChange={() => toggleSkill(skill)}
+<<<<<<< HEAD
                 className='border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple'              />;
               <label
                 htmlFor={`skill-${skill}`}
@@ -183,9 +190,23 @@ export function SkillsFilter(): any ({ selectedSkills, toggleSkill, expanded, to
               ">;
               </label>;
             </div>;
+=======
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`skill-${skill}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+               htmlFor="input-
+                {skill}
+              ">
+                {skill}
+              </label>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -195,3 +216,8 @@ export function SkillsFilter(): any ({ selectedSkills, toggleSkill, expanded, to
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 import FeedbackModal from "../../components/ui/FeedbackModal";
@@ -148,4 +151,8 @@ export default function ProjectPage() {
       />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

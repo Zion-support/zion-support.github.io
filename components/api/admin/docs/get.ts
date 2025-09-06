@@ -1,9 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const CONTENT_PATH = path.join(process.cwd(), 'data', 'docs', 'content.json');const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
+=======
+const CONTENT_PATH = path.join(process.cwd(), 'datadocscontent.json');
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const token = req.headers['x-admin-token'] as string | undefined
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
@@ -24,9 +29,19 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(500).json({ error: 'Failed to read content' });
   }
 
+<<<<<<< HEAD
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' })
   }  } catch (e) {
     res && res.status(500).json({ error: 'Failed to read content' })
   }
 }
+=======
+  try {
+    const data = fs.readFileSync(CONTENT_PATH, 'utf8');
+    res.status(200).json(JSON.parse(data))
+  } catch (e) {
+    res.status(500).json({ error: 'Failed to read content' })
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

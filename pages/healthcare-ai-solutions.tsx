@@ -24,4 +24,8 @@ export default function HealthcareAISolutions() {
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

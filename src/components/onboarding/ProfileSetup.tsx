@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import {
   Form
@@ -229,3 +230,6 @@ getTypeLabel () ";
 }/> <Button > Complete Profile </Button> </form> </Form> </div>) ;
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

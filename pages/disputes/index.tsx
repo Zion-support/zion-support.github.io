@@ -2,7 +2,11 @@
 import useSWR from 'swr';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
 import Link from 'next/link';
+<<<<<<< HEAD
 const fetcher = (url: string) => fetch(url).then(r => r.json())
+=======
+const fetcher = (url: string) => fetch(url).then(r => r.json()),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function DisputesIndexPage() {
   const { data } = useSWR('/api/disputes', fetcher)
   const disputes = data?.disputes |[]
@@ -44,4 +48,8 @@ export default function DisputesIndexPage() {
       </div>
     </EnhancedLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

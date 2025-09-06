@@ -1,9 +1,13 @@
 import type { GetServerSideProps } from 'next';
 import { FormEvent, useEffect, useState } from 'react';
 import type { Vendor } from '../utils/vendor-types';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null }
+=======
+type Props = { vendor: Vendor | null },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function AgencyDashboardPage({ vendor }: Props) {
 =======
 type Props = { vendor: Vendor | null };type Props = { vendor: Vendor | null },;
@@ -14,8 +18,13 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
   const [pkgDesc, setPkgDesc] = useState('');
   const [pkgPrice, setPkgPrice] = useState<number | ''>('');
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (!activeVendor)
 =======
+=======
+
+  if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (!activeVendor);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -27,6 +36,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const updated = {
+<<<<<<< HEAD
       ...activeVendor
       name: String(formData.get('name') |activeVendor.name)
       about: String(formData.get('about') |activeVendor.about |'')
@@ -185,6 +195,27 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
         <h2 className='text-lg font-medium'>Publish Packages</h2>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>    setActiveVendor({ ...activeVendor, packages });
+=======
+      ...activeVendor;
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ''),
+      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || '')
+        .split()
+        .map(s => s.trim())
+        .filter(Boolean)} as Vendor;
+    // For MVP, update via direct API not implemented, keep local preview only
+    setActiveVendor(updated)
+  }
+
+  function addPackage() {
+    if (!pkgTitle || !pkgPrice || !activeVendor) return;
+    const packages = [...(activeVendor.packages || []), {
+      id: `pkg_${Date.now()}`,
+      title: pkgTitle,
+      description: pkgDesc,
+      priceUsd: Number(pkgPrice)}],
+    setActiveVendor({ ...activeVendor, packages });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setPkgTitle('');
     setPkgDesc('');
     setPkgPrice('');
@@ -216,6 +247,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
           </div>
         </form>
       </section>
+<<<<<<< HEAD
       <section className='space-y-3'>
         <h2 className='text-lg font-medium'>Publish Packages</h2>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-4'>
@@ -288,6 +320,19 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
             >
               Add
             </button>          </div>
+=======
+
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium">Publish Packages</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {(activeVendor.packages || []).map(p => (
+            <div key={p.id} className="border border-gray-200 dark:border-gray-800 rounded p-4">
+              <div className="font-medium">{p.title}</div>
+              <div className="text-sm text-gray-500">{p.description}</div>
+              <div className="mt-2 text-sm">${p.priceUsd}</div>
+            </div>
+          ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       </section>
       <section className='space-y-3'>
@@ -297,6 +342,7 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
           <div className="flex gap-2">
             <input placeholder="Price (USD)" type="number" value={pkgPrice} onChange={e => setPkgPrice(Number(e.target.value))} className="border rounded px-3 py-2 bg-transparent w-full" />
             <button onClick={addPackage} className="px-4 py-2 rounded bg-black text-white dark:bg-white dark:text-black">Add</button>
+<<<<<<< HEAD
         </div>
       </section>
       <section className='space-y-3'>
@@ -306,14 +352,28 @@ export default function AgencyDashboardPage(): any ({ vendor }: Props) {;
       <div className='text-center text-xs text-gray-500'>Powered by Zion</div>
     </div>
   );        <Pipeline vendorId={activeVendor.id} />
+=======
+          </div>
+        </div>
+      </section>
+
+      <section className="space-y-3">
+        <h2 className="text-lg font-medium">Project Pipeline</h2>
+        <Pipeline vendorId={activeVendor.id} />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </section>
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>
     </div>
   );
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function Pipeline({ vendorId }: { vendorId: string }) {
   const [items, setItems] = useState<any[]>([]);
   async function fetchItems() {
+<<<<<<< HEAD
     const res = await fetch(
       `/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`
     );
@@ -321,9 +381,15 @@ function Pipeline({ vendorId }: { vendorId: string }) {
     setItems(data.items |[]);  }    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
     const data = await res.json();
     setItems(data.items |[])
+=======
+    const res = await fetch(`/api/vendors/pipeline?vendorId=${encodeURIComponent(vendorId)}`);
+    const data = await res.json();
+    setItems(data.items || [])
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
+<<<<<<< HEAD
       method: 'POST'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ itemId, status })
@@ -336,6 +402,13 @@ function Pipeline({ vendorId }: { vendorId: string }) {
             </button>          </div>;
         </div>;
       </section>;
+=======
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ itemId, status })});
+    fetchItems()
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 items-end">;
@@ -347,6 +420,7 @@ function Pipeline({ vendorId }: { vendorId: string }) {
         </div>;
       </section>;
 
+<<<<<<< HEAD
       <section className='space-y-3'>;
         <h2 className='text-lg font-medium'>Project Pipeline</h2>;
         <Pipeline vendorId={activeVendor && activeVendor.id} />;
@@ -360,6 +434,29 @@ function Pipeline({ vendorId }: { vendorId: string }) {
       <div className="text-center text-xs text-gray-500">Powered by Zion</div>;
     </div>;
   );
+=======
+  return (
+    <div className="space-y-2">
+      {items.length === 0 && <div className="text-sm text-gray-500">No leads yet.</div>}
+      {items.map(item => (
+        <div key={item.id} className="border border-gray-200 dark:border-gray-800 rounded p-3 flex items-center justify-between">
+          <div>
+            <div className="font-medium">{item.title}</div>
+            <div className="text-xs text-gray-500">{new Date(item.createdAt).toLocaleString()} • {item.status}</div>
+          </div>
+          <select defaultValue={item.status} onChange={e => changeStatus(item.id, e.target.value)} className="border rounded px-2 py-1 bg-transparent text-sm">
+            <option value="lead">Lead</option>
+            <option value="qualified">Qualified</option>
+            <option value="proposal">Proposal</option>
+            <option value="in_progress">In Progress</option>
+            <option value="complete">Complete</option>
+            <option value="lost">Lost</option>
+          </select>
+        </div>
+      ))}
+    </div>
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 
 function Pipeline(): any ({ vendorId }: { vendorId: string }) {;
@@ -431,6 +528,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store');
   const vendor = listVendors()[0] |null; // tie to auth later
   return { props: { vendor } }
+<<<<<<< HEAD
 };  )
 }
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
@@ -452,3 +550,6 @@ export const getServerSideProps: GetServerSideProps<Props> = async () => {;
   return { props: { vendor } }
 }
 
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

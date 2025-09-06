@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { AlertTriangle, AlertCircle, CheckCircle } from 'lucide-react'
 interface FraudTabContentProps {
@@ -88,3 +89,5 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({;
   }
 }
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 export interface SpaceMetaverseService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -528,6 +529,31 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Employee trainingVirtual meetingsProduct design reviewSafety trainingRemote collaborationCustomer presentations'
+=======
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+      
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string,
+    enterprise: string
+  
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
 <<<<<<< HEAD
@@ -555,4 +581,8 @@ export const spaceMetaverseServices2025: SpaceMetaverseService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 1400
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

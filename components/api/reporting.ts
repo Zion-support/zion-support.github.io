@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { authenticateRequest  } from '@/utils/auth';
 import { readJsonFile, updateJsonFile } from '@/utils/fileDb';
 interface ReportingData {
+<<<<<<< HEAD
 
   byTenant: Record<
     string
@@ -13,12 +14,19 @@ interface ReportingData {
     }
   >;  byTenant: Record<string, {
 <<<<<<< HEAD
+=======
+  byTenant: Record<string, {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     funnel: { stage: string, count: number }[];
     timeToHireDays: number;
     costPerHireUsd?: number
     updatedAt: string
   }>
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const FILE = 'reporting.json';
 const FALLBACK: ReportingData = { byTenant: {} }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -56,6 +64,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   if (method === 'GET') {
     const data = readJsonFile<ReportingData>(FILE, FALLBACK);
+<<<<<<< HEAD
     const entry = data && data.byTenant[tenantId] || {
       funnel: [],
       timeToHireDays: 0,
@@ -108,6 +117,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(405).json({ error: 'Method not allowed' });    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
       const next = curr && curr.byTenant || {};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    const entry = data.byTenant[tenantId] || { funnel: [], timeToHireDays: 0, updatedAt: new Date().toISOString() };
+    return res.status(200).json(entry)
+  }
+
+  if (method === 'POST') {
+    const { funnel, timeToHireDays, costPerHireUsd } = req.body || {};
+    const updated = updateJsonFile<ReportingData>(FILE, (curr) => {
+      const next = curr.byTenant || {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       next[tenantId] = {
         funnel: funnel |next[tenantId]?.funnel |[];
         timeToHireDays: typeof timeToHireDays === 'number' ? timeToHireDays : (next[tenantId]?.timeToHireDays |0);
@@ -121,6 +140,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
 return res.status(405).json({ error: 'Method not allowed' });
 }
+<<<<<<< HEAD
 =======
     return res && res.status(200).json(updated && updated.byTenant[tenantId])
   }
@@ -128,3 +148,5 @@ return res.status(405).json({ error: 'Method not allowed' });
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

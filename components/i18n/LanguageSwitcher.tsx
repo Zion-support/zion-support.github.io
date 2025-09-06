@@ -27,6 +27,7 @@ import i18n from '../../utils/i18n';
 <<<<<<< HEAD
 import { supportedLocales, isRtl } from '../../utils/i18n';
 const localeToFlag: Record<string, string> = {
+<<<<<<< HEAD
 
   en: 'us'
   pt: 'br'
@@ -39,6 +40,17 @@ const localeLabelKey: Record<string, string> = {
   es: 'lang.spanish'
   ar: 'lang.arabic'
 };  ar: 'lang.arabic'}
+=======
+  en: 'us',
+  pt: 'br',
+  es: 'es',
+  ar: 'sa'},
+const localeLabelKey: Record<string, string> = {
+  en: 'lang.english',
+  pt: 'lang.portuguese',
+  es: 'lang.spanish',
+  ar: 'lang.arabic'},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function LanguageSwitcher() {
   const { t } = useTranslation();
   const [open, setOpen] = useState(false);
@@ -48,6 +60,7 @@ export default function LanguageSwitcher() {
     localStorage.setItem('preferredLanguage', lng);
     document.documentElement.setAttribute('dir', isRtl(lng) ? 'rtl' : 'ltr');
     document.documentElement.setAttribute('lang', lng);
+<<<<<<< HEAD
 =======
 import {supportedLocales, isRtl} from '../../utils/i18n';
 
@@ -120,6 +133,10 @@ export default function LanguageSwitcher() {;
                 aria-selected={current && current.startsWith(lng)}
                 className='w-full flex items-center gap-2 px-3 py-2 hover:bg-gray-50 dark:hover:bg-gray-900'                onClick={() => changeLanguage(lng)}  };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    setOpen(false)
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <div className="relative">;
@@ -163,6 +180,7 @@ export default function LanguageSwitcher() {;
         </ul>;
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
     </div>
 );
 }
@@ -171,3 +189,8 @@ export default function LanguageSwitcher() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

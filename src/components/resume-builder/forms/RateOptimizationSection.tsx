@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useState } from "react";
 import { Control, UseFormSetValue } from "react-hook-form";
@@ -127,3 +128,6 @@ export const RateOptimizationSection: React.FC<RateOptimizationSectionProps> = (
 
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 export default function CertificatePreview({
@@ -57,6 +58,10 @@ export default function CertificatePreview(): any ({;
       </a>;
     </div>;
   );
+=======
+import React from 'react';
+export default function CertificatePreview({ courseId, userId = 'demo-user' }: { courseId: string, userId?: string }) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const url = `/api/learn/certificates/${courseId}?userId=${encodeURIComponent(userId)}`;
   return (
     <div className="border rounded p-4">;
@@ -74,4 +79,8 @@ export default function CertificatePreview(): any ({;
       </a>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

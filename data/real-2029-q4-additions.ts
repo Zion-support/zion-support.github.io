@@ -1,4 +1,5 @@
 import { RealMarketService } from './real-market-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   mobile: '+1 302 464 0950'
@@ -944,6 +945,21 @@ export const real2029Q4Additions: RealMarketService[] = [
 		period: '/month'
 		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.';
 		features: [
+=======
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+export const real2029Q4Additions: RealMarketService[] = [
+	{
+		id: 'ai-email-triage-copilot', name: 'AI Email Triage Copilot',
+		tagline: 'Auto-categorize, summarize, and draft replies for inbound email',
+    price: '$99', period: '/month',
+		description: 'An AI-driven inbox assistant that classifies, prioritizes, and drafts responses for customer and internal emails. Supports shared inboxes and integrates with major CRMs and helpdesks.',
+    features: [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 			'Intent classification and priority scoringOne-click reply drafts with tone controlsAuto-tagging and routing to teamsPII redaction and allowlist domainsSLA-aware escalations and summariesAnalytics: response time, CSAT impact, volume by topic'
 		];
 		popular: true;
@@ -1440,4 +1456,7 @@ export const real2029Q4Additions: RealMarketService[] = [
 		reviews: 16
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

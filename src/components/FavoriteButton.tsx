@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react';
 <<<<<<< HEAD
 import { Heart } from 'lucide-react'
@@ -156,3 +157,6 @@ className: {`w-4 h-4 transition-all duration-300 ${
     </button>;) }
 '`
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

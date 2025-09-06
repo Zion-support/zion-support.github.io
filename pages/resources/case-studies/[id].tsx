@@ -9,6 +9,7 @@ export default function CaseStudyResourcePage() {
   // Case studies data - this should match the data in resources.tsx
   const caseStudies = [
     {
+<<<<<<< HEAD
       id: 'ai-automation-manufacturing'
       title: 'AI-Powered Manufacturing Automation'
       company: 'Global Manufacturing Corp'
@@ -18,17 +19,37 @@ export default function CaseStudyResourcePage() {
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations
+=======
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      results: '40% increase in production efficiency, 60% reduction in downtime',
+    description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+      fullContent: `
+        <h2>Executive Summary</h2>
+        <p>This case study demonstrates how autonomous AI systems can transform traditional manufacturing operations,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         delivering significant improvements in efficiency, quality, and cost reduction.</p>
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
         High downtime, inefficient production scheduling, and quality control issues were impacting their bottom line
         and preventing them from meeting growing customer demands.</p>
         <h2>Challenge</h2>
+<<<<<<< HEAD
         <p>The company needed to modernize their manufacturing operations while maintaining high quality standards
         and reducing operational costs. They required a solution that could adapt to changing production demands
         minimize human intervention, and provide real-time insights into their operations.</p>
         <h2>Solution</h2>
         <p>We implemented a comprehensive AI automation system that included:</p>
+=======
+        <p>The company needed to modernize their manufacturing operations while maintaining high quality standards 
+        and reducing operational costs. They required a solution that could adapt to changing production demands;
+        minimize human intervention, and provide real-time insights into their operations.</p>
+        
+        <h2>Solution</h2>
+        <p>We implemented a comprehensive AI automation system that included: </p>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <ul>
           <li><strong>Predictive Maintenance:</strong> AI algorithms that predict equipment failures before they occur</li>
           <li><strong>Real-time Production Optimization:</strong> Dynamic scheduling and resource allocation</li>
@@ -64,6 +85,7 @@ export default function CaseStudyResourcePage() {
         of autonomous systems in traditional industries. The results exceeded expectations and positioned the company
         as a leader in smart manufacturing.</p>
       `
+<<<<<<< HEAD
     }
     {
       id: 'content-generation-scale'
@@ -72,6 +94,16 @@ export default function CaseStudyResourcePage() {
       industry: 'Marketing'
       results: '10x increase in content output, 85% improvement in engagement'
       description: 'Transforming content creation through autonomous AI systems.'
+=======
+    };
+    {
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      results: '10x increase in content output, 85% improvement in engagement',
+    description: 'Transforming content creation through autonomous AI systems.',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>Executive Summary</h2>
         <p>This case study explores how autonomous AI systems can revolutionize content creation, enabling
@@ -121,6 +153,7 @@ export default function CaseStudyResourcePage() {
         while maintaining creative excellence. The system continues to learn and improve, positioning the agency
         for continued growth and success.</p>
       `
+<<<<<<< HEAD
     }
     {
       id: 'cloud-infrastructure-optimization'
@@ -130,6 +163,17 @@ export default function CaseStudyResourcePage() {
       results: '50% reduction in cloud costs, 99.9% uptime achieved'
       description: 'Building self-healing, auto-scaling cloud infrastructure.'
       fullContent: `
+=======
+    };
+    {
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+      results: '50% reduction in cloud costs, 99.9% uptime achieved',
+    description: 'Building self-healing, auto-scaling cloud infrastructure.',
+    fullContent: `
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <h2>Executive Summary</h2>
         <p>This case study demonstrates how intelligent cloud infrastructure optimization can dramatically
         reduce costs while improving performance and reliability for high-traffic applications.</p>
@@ -179,8 +223,14 @@ export default function CaseStudyResourcePage() {
         optimal performance and cost efficiency.</p>
       `
     }
+<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
+=======
+  ];
+
+  const caseStudy = caseStudies.find(study => study.id === id);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (!caseStudy) {
     return (
@@ -256,4 +306,8 @@ export default function CaseStudyResourcePage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

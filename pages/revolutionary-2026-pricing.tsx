@@ -3,12 +3,21 @@ import React, { useState, useMemo } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+<<<<<<< HEAD
 import {
   CheckCircle, Star, TrendingUp, DollarSign, Clock, Users
   ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles
   Target, Satellite, Globe, Cpu, Lock, Palette, Layers
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
 } from 'lucide-react'
+=======
+import { 
+  CheckCircle, Star, TrendingUp, DollarSign, Clock, Users, 
+  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles, 
+  Target, Satellite, Globe, Cpu, Lock, Palette, Layers;
+  Phone, Mail, MapPin, ExternalLink, Filter, Grid, List
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { innovative2026MicroSaasServicesV2 } from '../data/innovative-2026-micro-saas-v2';
 import { emergingTech2026ServicesV2 } from '../data/emerging-tech-2026-v2';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
@@ -19,9 +28,16 @@ export default function Revolutionary2026Pricing() {
   const [sortBy, setSortBy] = useState<string>('price-low')
   // Combine all 2026 services
   const all2026Services = [
+<<<<<<< HEAD
     ...innovative2026MicroSaasServicesV2
     ...emergingTech2026ServicesV2
   ]
+=======
+    ...innovative2026MicroSaasServicesV2;
+    ...emergingTech2026ServicesV2
+  ];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Filter services based on category and price
   const filteredServices = useMemo(() => {
     let filtered = all2026Services
@@ -29,6 +45,7 @@ export default function Revolutionary2026Pricing() {
     if (selectedCategory !== 'all') {
       filtered = filtered.filter(service => {
         if (selectedCategory === 'ai') {
+<<<<<<< HEAD
           return service.category.includes('AI') |service.category.includes('Machine Learning')
         } else if (selectedCategory === 'quantum') {
           return service.category.includes('Quantum') |service.category.includes('Space')
@@ -36,6 +53,15 @@ export default function Revolutionary2026Pricing() {
           return service.category.includes('Emerging') |service.category.includes('Technology')
         } else if (selectedCategory === 'enterprise') {
           return service.category.includes('Enterprise') |service.category.includes('Business')
+=======
+          return service.category.includes('AI') || service.category.includes('Machine Learning')
+        } else if (selectedCategory === 'quantum') {
+          return service.category.includes('Quantum') || service.category.includes('Space')
+        } else if (selectedCategory === 'emerging') {
+          return service.category.includes('Emerging') || service.category.includes('Technology')
+        } else if (selectedCategory === 'enterprise') {
+          return service.category.includes('Enterprise') || service.category.includes('Business')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
         return true
       })
@@ -43,17 +69,26 @@ export default function Revolutionary2026Pricing() {
     // Price filter
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
+<<<<<<< HEAD
         const price = parseFloat(service.price.replace(/[^0-9.]/g, ''))
         if (selectedPriceRange === 'low') return price < 1000
         if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000
         if (selectedPriceRange === 'high') return price >= 5000 && price < 20000
         if (selectedPriceRange === 'premium') return price >= 20000
+=======
+        const price = parseFloat(service.price.replace(/[^0-9.]/g, ''));
+        if (selectedPriceRange === 'low') return price < 1000;
+        if (selectedPriceRange === 'medium') return price >= 1000 && price < 5000;
+        if (selectedPriceRange === 'high') return price >= 5000 && price < 20000;
+        if (selectedPriceRange === 'premium') return price >= 20000;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         return true
       })
     }
     // Sort services
     filtered.sort((a, b) => {
       if (sortBy === 'price-low') {
+<<<<<<< HEAD
         const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) |0
         const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) |0
         return priceA - priceB
@@ -66,11 +101,26 @@ export default function Revolutionary2026Pricing() {
       if (sortBy === 'rating') return b.rating - a.rating
       if (sortBy === 'popularity') return b.customers - a.customers
       if (sortBy === 'name') return a.name.localeCompare(b.name)
+=======
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
+        return priceA - priceB
+      }
+      if (sortBy === 'price-high') {
+        const priceA = parseFloat(a.price.replace(/[^0-9.]/g, '')) || 0;
+        const priceB = parseFloat(b.price.replace(/[^0-9.]/g, '')) || 0;
+        return priceB - priceA
+      }
+      if (sortBy === 'rating') return b.rating - a.rating;
+      if (sortBy === 'popularity') return b.customers - a.customers;
+      if (sortBy === 'name') return a.name.localeCompare(b.name);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return 0
     })
     return filtered
   }, [selectedCategory, selectedPriceRange, sortBy, all2026Services])
   const categories = [
+<<<<<<< HEAD
     { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length }
     { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length }
     { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') |s.category.includes('Space')).length }
@@ -100,6 +150,41 @@ export default function Revolutionary2026Pricing() {
   // Calculate pricing statistics
   const pricingStats = {
     totalServices: all2026Services.length
+=======
+    { id: 'all', name: 'All Services', icon: '🚀', count: all2026Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all2026Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all2026Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all2026Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all2026Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
+  ];
+
+  const priceRanges = [
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
+    { id: 'premium', name: '$20K+/month', range: '$20K+' }
+  ];
+
+  const sortOptions = [
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Highest Rated' },
+    { id: 'popularity', name: 'Most Popular' },
+    { id: 'name', name: 'Name A-Z' }
+  ];
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+
+  // Calculate pricing statistics
+  const pricingStats = {
+    totalServices: all2026Services.length,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     averagePrice: all2026Services.reduce((acc, service) => {
       const price = parseFloat(service.price.replace(/[^0-9.]/g, '')) |0
       return acc + price
@@ -515,4 +600,8 @@ export default function Revolutionary2026Pricing() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

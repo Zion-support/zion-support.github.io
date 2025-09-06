@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
@@ -32,12 +33,16 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
     <div className='enhanced-card flex items-center justify-between'>import React from 'react';
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import type { ReviewsSummary } from '../../types/reviews';
 import StarRating from './StarRating';
 import {Star} from 'lucide-react';
 <<<<<<< HEAD
 type Props = {
   summary: ReviewsSummary
+<<<<<<< HEAD
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
 =======
 type Props = {;
@@ -67,6 +72,14 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {;
 <<<<<<< HEAD
 }
 export default ReviewSummary;      <div>
+=======
+};
+
+const ReviewSummary: React.FC<Props> = ({ summary }) => {
+  return (
+    <div className="enhanced-card flex items-center justify-between">
+      <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="flex items-center gap-3">
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />
@@ -77,6 +90,7 @@ export default ReviewSummary;      <div>
         </div>
       </div>
     </div>
+<<<<<<< HEAD
 );
 }
 export default ReviewSummary;  )
@@ -99,8 +113,14 @@ export default ReviewSummary;      <div>;
 };
 
 export default ReviewSummary;  );
+=======
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReviewSummary;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

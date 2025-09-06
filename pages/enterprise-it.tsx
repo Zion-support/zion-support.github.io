@@ -5,6 +5,7 @@ import Layout from '../components/layout/Layout';
 import { Server, CheckCircle, Database, Cloud } from 'lucide-react';
 export default function EnterpriseITPage() {
   const features = [
+<<<<<<< HEAD
     'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation']
   const solutions = [
     { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' }
@@ -12,6 +13,15 @@ export default function EnterpriseITPage() {
     { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' }
     { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }]
 
+=======
+    'Cloud migration and landing zones with cost governanceDevOps automation, CI/CD, and platform engineeringData platforms, lineage, and quality monitoringObservability, SLOs, and incident automation'];
+
+  const solutions = [
+    { name: 'Cloud Landing Zone', href: '/cloud-landing-zone' },
+    { name: 'Cloud Cost Optimizer', href: '/cloud-cost-optimizer' },
+    { name: 'Data Pipeline Observability', href: '/data-pipeline-observability' },
+    { name: 'Uptime & SLO Monitor', href: '/uptime-slo-monitor' }],
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <Layout>
       <Head>
@@ -58,4 +68,8 @@ export default function EnterpriseITPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

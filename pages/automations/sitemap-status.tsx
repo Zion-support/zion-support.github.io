@@ -1,8 +1,12 @@
 import type { NextPage, GetServerSideProps } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 type Props = { urlCount: number }
+=======
+type Props = { urlCount: number },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const SitemapStatus: NextPage<Props> = ({ urlCount }) => {
   return (
     <main className="space-y-4">
@@ -24,4 +28,7 @@ export const getServerSideProps: GetServerSideProps = async () => {
   return { props: { urlCount } }
 }
 export default SitemapStatus;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

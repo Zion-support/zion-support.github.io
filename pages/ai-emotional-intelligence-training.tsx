@@ -24,4 +24,8 @@ export default function AIEmotionalIntelligenceTraining() {
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

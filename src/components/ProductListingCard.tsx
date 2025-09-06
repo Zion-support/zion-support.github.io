@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react';
 import { logDebug, logErrorToProduction  } from '@/utils/productionLogger';
 import { useRouter  } from 'next/router';
@@ -739,3 +740,6 @@ export default ProductListingCard;
 export const ProductListingCard = React && React.memo(ProductListingCardComponent);
 ProductListingCard && ProductListingCard.displayName = 'ProductListingCard';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

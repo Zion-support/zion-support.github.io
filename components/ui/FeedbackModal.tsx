@@ -1,4 +1,5 @@
 import { useState } from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export type FeedbackContext = { actionType?: string; metadata?: any }
@@ -25,6 +26,11 @@ export default function FeedbackModal(): any ({;
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
   userHeaders?: Record<string, string>;}) {export default function FeedbackModal(): any ({;
+=======
+export type FeedbackContext = { actionType?: string, metadata?: any };
+
+export default function FeedbackModal({
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   isOpen;
   onClose;
   defaultContext;
@@ -40,8 +46,13 @@ export default function FeedbackModal(): any ({;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   defaultContext?: FeedbackContext;
   defaultKind?: 'general' | 'bug' | 'feature';
+<<<<<<< HEAD
   userHeaders?: Record<string, string>;
 }) {;
+=======
+  userHeaders?: Record<string, string>
+}) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [rating, setRating] = useState<number>(0);
   const [hover, setHover] = useState<number>(0);
   const [kind, setKind] = useState<'general' | 'bug' | 'feature'>(defaultKind);
@@ -54,6 +65,7 @@ export default function FeedbackModal(): any ({;
     setLoading(true);
     try {
       await fetch('/api/feedback', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json', ...(userHeaders |{}) }
         body: JSON.stringify({
@@ -82,8 +94,17 @@ export default function FeedbackModal(): any ({;
     setLoading(false);
     onClose(true);
 
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', ...(userHeaders || {}) };
+        body: JSON.stringify({ rating, comment, kind, context: defaultContext || {} })})
+    } catch {}
+    setLoading(false);
+    onClose(true)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   return (
+<<<<<<< HEAD
     <div className='fixed inset-0 z-50 flex items-center justify-center bg-black/40'>;
       <div className='bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4'>;
         <div className='text-lg font-medium'>Was this helpful?</div>;
@@ -93,10 +114,19 @@ export default function FeedbackModal(): any ({;
         <div className="text-lg font-medium">Was this helpful?</div>;
         <div className="flex gap-2">;
           {[1,2,3,4,5].map(n => (;
+=======
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40">
+      <div className="bg-white w-full max-w-md rounded shadow-lg p-5 space-y-4">
+        <div className="text-lg font-medium">Was this helpful?</div>
+        <div className="flex gap-2">
+          {[1,2,3,4,5].map(n => (
+            <button
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               key={n}
               onMouseEnter={() => setHover(n)}
               onMouseLeave={() => setHover(0)}
               onClick={() => setRating(n)}
+<<<<<<< HEAD
 <<<<<<< HEAD
               className={
                 hover >= n |rating >= n ? 'text-yellow-500' : 'text-gray-300'
@@ -173,6 +203,11 @@ export default function FeedbackModal(): any ({;
   );
 }              aria-label={`${n} stars`}
             >★</button>;
+=======
+              className={(hover >= n || rating >= n) ? 'text-yellow-500' : 'text-gray-300'}
+              aria-label={`${n} stars`}
+            >★</button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
 <<<<<<< HEAD
         </div>
@@ -190,6 +225,7 @@ export default function FeedbackModal(): any ({;
         </div>
         <div className="flex justify-end gap-2">
           <button onClick={()=>onClose(false)} className="px-3 py-2 rounded border">Later</button>
+<<<<<<< HEAD
           <button onClick={submit} disabled={loading |rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
         </div>
       </div>
@@ -219,3 +255,11 @@ export default function FeedbackModal(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          <button onClick={submit} disabled={loading || rating<1} className="px-3 py-2 rounded bg-gray-900 text-white">{loading? 'Submitting…' : 'Submit'}</button>
+        </div>
+      </div>
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

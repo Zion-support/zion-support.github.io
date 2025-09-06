@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx import React from \'react\'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState (\"all\") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (\") ; const isMobile = useIsMobile () ; import React from \'react\'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState (\"all\") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (\") ; const isMobile = useIsMobile () ;\"";
 <<<<<<< "HEAD": src && src.pages.disabled/ClientDashboard && ClientDashboard.jsx import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ; import _React from 'react'; export default function ClientDashboard () { function ClientDashboardContent () { const [activeTab,setActiveTab] = useState ("all") ; const { jobs,isLoading } = useJobs () ; const [selectedJobId,setSelectedJobId] = useState (null) ; const [selectedJobTitle,setSelectedJobTitle] = useState (") ; const isMobile = useIsMobile () ;"";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

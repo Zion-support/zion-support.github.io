@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import { motion  } from 'framer-motion';
 import { Cloud, Shield, Lock, Zap, Users, Target, ArrowRight, Check, Star, Globe, Cpu, Network  } from 'lucide-react';
@@ -14,6 +17,7 @@ export default function QuantumSecureCloudInfrastructure() {
 		/>
 	)
 }
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -64,3 +68,5 @@ export default function QuantumSecureCloudInfrastructure() {;
 	);
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

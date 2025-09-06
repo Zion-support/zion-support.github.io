@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function NewPost() {
   return (
     <div>
@@ -5,4 +9,8 @@ export default function NewPost() {
       <p>Component placeholder - needs implementation</p>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

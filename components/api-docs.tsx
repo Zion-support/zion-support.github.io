@@ -1,5 +1,6 @@
 import { GetServerSideProps } from 'next';
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 export const getServerSideProps: GetServerSideProps = async () => {
   return {
@@ -21,3 +22,15 @@ export const getServerSideProps: GetServerSideProps = async () => {;
 export default function ApiDocsRedirect() {;
   return null;
 }
+=======
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    redirect: {
+      destination: '/developers/docs',
+      permanent: true}}
+};
+
+export default function ApiDocsRedirect() {
+  return null;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

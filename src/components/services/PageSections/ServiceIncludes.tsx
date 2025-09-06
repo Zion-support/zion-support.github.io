@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Check } from 'lucide-react'
 export function ServiceIncludes() {
   return (
@@ -79,6 +80,11 @@ export function ServiceIncludes() {
               </p>            </div>
               <h3 className="text-white font-medium">Service Documentation</h3>
               <p className="text-zion-slate-light">Detailed report of work performed and recommendations.</p>
+=======
+
+import { Check } from 'lucide-react'
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function ServiceIncludes() {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-8 my-20">
@@ -144,6 +150,7 @@ export function ServiceIncludes() {
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -308,3 +315,7 @@ export function ServiceIncludes() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

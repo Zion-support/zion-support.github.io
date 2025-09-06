@@ -3,16 +3,26 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone
   Zap, DollarSign, Shield, Mail, MapPin, Brain
   Sparkles, Users, Clock, Award, Eye, Heart
   MessageCircle, BarChart3, Globe, Smartphone
 } from 'lucide-react'
+=======
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, 
+  Zap, DollarSign, Shield, Mail, MapPin, Brain;
+  Sparkles, Users, Clock, Award, Eye, Heart;
+  MessageCircle, BarChart3, Globe, Smartphone
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030';
 import UltraFuturisticBackground2030 from '../components/ui/UltraFuturisticBackground2030';
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030';
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
@@ -22,6 +32,18 @@ const features = [
   {
     icon: Eye
     title: 'Real-time Emotion Detection'
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const features = [
+  {
+    icon: Eye,
+    title: 'Real-time Emotion Detection',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     description: 'Analyze 27 different emotions across voice, video, and text interactions in real-time'
   }
   {
@@ -49,11 +71,20 @@ const features = [
     title: 'Real-time Alerts'
     description: 'Get instant notifications for negative emotions requiring immediate attention'
   }
+<<<<<<< HEAD
 ]
 const useCases = [
   {
     title: 'Customer Service Optimization'
     description: 'Improve customer satisfaction by understanding emotional states and responding appropriately'
+=======
+];
+
+const useCases = [
+  {
+    title: 'Customer Service Optimization',
+    description: 'Improve customer satisfaction by understanding emotional states and responding appropriately',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     icon: Users
   }
   {
@@ -71,7 +102,12 @@ const useCases = [
     description: 'Monitor employee emotional states to support mental health and productivity'
     icon: Heart
   }
+<<<<<<< HEAD
 ]
+=======
+];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const pricing = [
   {
     name: 'Starter'
@@ -83,7 +119,11 @@ const pricing = [
     ]
     popular: false
     cta: 'Get Started'
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   {
     name: 'Professional'
     price: '$1,299'
@@ -94,7 +134,11 @@ const pricing = [
     ]
     popular: true
     cta: 'Start Free Trial'
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   {
     name: 'Enterprise'
     price: 'Custom'
@@ -106,7 +150,11 @@ const pricing = [
     popular: false
     cta: 'Contact Sales'
   }
+<<<<<<< HEAD
 ]
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function AIEmotionIntelligencePlatform() {
   return (
@@ -281,6 +329,10 @@ export default function AIEmotionIntelligencePlatform() {
                 Start with our professional plan and scale as you grow
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {pricing.map((plan, index) => (
                 <motion.div
@@ -302,6 +354,10 @@ export default function AIEmotionIntelligencePlatform() {
                       </span>
                     </div>
                   )}
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <div className="text-center mb-8">
                     <h3 className="text-2xl font-bold text-white mb-2">{plan.name}</h3>
                     <div className="mb-4">
@@ -365,6 +421,10 @@ export default function AIEmotionIntelligencePlatform() {
                   </span>
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div className="flex flex-col items-center">
                   <Phone className="w-8 h-8 text-pink-400 mb-4" />
@@ -395,4 +455,8 @@ export default function AIEmotionIntelligencePlatform() {
       </UltraFuturisticBackground2030>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

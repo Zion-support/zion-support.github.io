@@ -30,6 +30,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 
 export default function BlogPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -52,6 +53,9 @@ export default function BlogPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );export default function BlogPage() {;
+=======
+export default function BlogPage() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Blog | Zion Tech Group" description="Insights and updates on AI, cloud, and automation." canonical="https://ziontechgroup && ziontechgroup.com/blog/" />;
@@ -61,4 +65,8 @@ export default function BlogPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

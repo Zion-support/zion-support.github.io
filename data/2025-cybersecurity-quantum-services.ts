@@ -1,4 +1,5 @@
 export interface CybersecurityQuantumService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -527,6 +528,31 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Application security testingNetwork vulnerability assessmentCloud security scanningCompliance auditingPenetration testingSecurity monitoring'
+=======
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+      
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string,
+    enterprise: string
+  
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
 <<<<<<< HEAD
@@ -554,4 +580,8 @@ export const cybersecurityQuantumServices2025: CybersecurityQuantumService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 1900
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import ReactMarkdown from 'react-markdown';
 import { useRouter } from 'next/router';
@@ -25,12 +28,20 @@ function parseMarkdown(filePath: string): BlogPost | null {
   const slug = path.basename(filePath).replace(/\.md$/, '')
   return { ...meta, id: slug, slug, content } as BlogPost
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface BlogPostPageProps {
   /**
    * Preloaded blog post for static generation. Can be null if not found.
    */
   initialPost: BlogPost | null
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const router = useRouter()
   const { slug } = router.query
@@ -38,7 +49,11 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
   const [error, setError] = React.useState<string | null>(null)
   React.useEffect(() => {
     if (initialPost && initialPost.slug === slug) {
+<<<<<<< HEAD
       setPost(initialPost)
+=======
+      setPost(initialPost);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       setError(null), // Clear any previous error
     } else if (slug) {
       // This case handles if the slug changes and initialPost is not for the current slug
@@ -46,9 +61,15 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
       // For now, we will rely on getStaticProps to provide the correct post or a 404.
       // If initialPost is null and getStaticProps didn't return notFound, that's an inconsistent state.
       // The previous logic tried a fallback here, but we aim to make getStaticProps authoritative.
+<<<<<<< HEAD
       const directFallback = BLOG_POSTS.find((p) => p.slug === slug) |null
       if (directFallback) {
         setPost(directFallback)
+=======
+      const directFallback = BLOG_POSTS.find((p) => p.slug === slug) || null;
+      if (directFallback) {
+        setPost(directFallback);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         setError(null)
       } else {
         // If getStaticProps is working correctly, this path (slug exists, no initialPost, no fallback)
@@ -65,10 +86,17 @@ const BlogPostPage: React.FC<BlogPostPageProps> = ({ initialPost }) => {
     return <div>Article not found</div>
   }
   const articleLd = {
+<<<<<<< HEAD
     author: post.author.name
     publishedTime: post.publishedDate
     tags: post.tags |[]}
   const body = (post as any).body |post.content
+=======
+    author: post.author.name,
+    publishedTime: post.publishedDate,
+    tags: post.tags || []},
+  const body = (post as any).body || post.content;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <AdvancedSEO
@@ -145,5 +173,9 @@ export const getStaticProps: GetStaticProps<BlogPostPageProps> = async ({
     return { notFound: true }
   }
   return { props: { initialPost: post }, revalidate: 60 }
+<<<<<<< HEAD
 }
 
+=======
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

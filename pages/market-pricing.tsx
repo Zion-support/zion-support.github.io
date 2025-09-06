@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 
 import Head from 'next/head';
@@ -123,4 +126,9 @@ export default function MarketPricingPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

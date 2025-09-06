@@ -11,10 +11,17 @@ export default function IdentitySettingsPage() {
   const [error, setError] = useState('')
   async function load() {
     try {
+<<<<<<< HEAD
       const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`)
       const data = await res.json()
       if (data.ok) setProfile(data.profile)
       else setError(data.error |'Not found')
+=======
+      const res = await fetch(`/api/kyc/status?userId=${encodeURIComponent(userId)}`);
+      const data = await res.json();
+      if (data.ok) setProfile(data.profile);
+      else setError(data.error || 'Not found')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     } catch (e) {
       setError('Failed to fetch')
     }
@@ -43,4 +50,8 @@ export default function IdentitySettingsPage() {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

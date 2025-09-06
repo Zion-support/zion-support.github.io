@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import React from 'react'
@@ -29,6 +30,8 @@ export function BillingHeader() {
 import React from "react"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export function BillingHeader() {
   return (
@@ -52,12 +55,16 @@ export function BillingHeader() {
           </Button>
         </div>
       </div>
+<<<<<<< HEAD
       <p className='text-muted-foreground'>
         Manage your subscription, view invoice history, and update payment
         methods.
       </p>
     </div>
   ) <p className="text-muted-foreground">
+=======
+      <p className="text-muted-foreground">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         Manage your subscription, view invoice history, and update payment methods.
       </p>
     </div>
@@ -124,4 +131,7 @@ export function BillingHeader() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

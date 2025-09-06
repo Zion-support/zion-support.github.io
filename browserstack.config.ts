@@ -42,6 +42,7 @@ export default defineConfig({;
   ];
   reporter:[;
     ['list'];
+<<<<<<< HEAD
     ['html', { outputFolder:'playwright-logs/html-report', open:'never' }]];
 });import { defineConfig, devices } from "@playwright/test";
 import { defineConfig, devices } from '@playwright/test';
@@ -98,3 +99,7 @@ import { defineConfig, devices } from '@playwright/test';
     ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]
 ]
 
+=======
+    ['html', { outputFolder: 'playwright-logs/html-report', open: 'never' }]]
+});
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

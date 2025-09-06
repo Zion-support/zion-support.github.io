@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React, { useState, useEffect, useRef } from 'react';
 import { format  } from 'date-fns';
 import { MessageSquare } from 'lucide-react'
@@ -194,3 +195,5 @@ export function ConversationDetailView() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

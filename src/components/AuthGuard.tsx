@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
       const redirectTo = options?.redirectTo |'/login'
       const returnUrl = options?.returnUrl |router.asPath
@@ -25,3 +26,6 @@
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     isLoading}
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 import { useState  } from 'react';
@@ -79,6 +80,8 @@ export function AIEnhancementButton(): any ({;
 
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
@@ -114,4 +117,7 @@ export function AIEnhancementButton(): any ({;
     </Button>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

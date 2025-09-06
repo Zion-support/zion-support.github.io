@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import useSWR from 'swr',
 import { CategoryCard } from "@/components/CategoryCard",
 import { GradientHeading } from "@/components/GradientHeading";
@@ -299,3 +300,6 @@ export default Categories," ];
 export default Categories"")))))))));
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

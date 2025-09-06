@@ -27,6 +27,7 @@ class ErrorBoundary extends React.Component {
 import type { NextApiRequest, NextApiResponse } from "next";
 const SAMPLE_QUERIES = [
 <<<<<<< HEAD
+<<<<<<< HEAD
   "React developers under $50/hr"
   "Part-time DevOps jobs in LATAM"
   "AI/ML engineers for startup"
@@ -62,6 +63,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
     return res && res.status(405).json({ error: "Method not allowed" });
+=======
+  'React developers under $50/hrPart-time DevOps jobs in LATAMLLM engineers with RAG experienceSecurity projects with Zero TrustNext.js freelancers in Berlin'
+];
+
+const SKILLS = [
+  'ReactNext.jsTypeScriptNodePythonAWSKubernetesDevOps', 'DockerTerraformOpenAILangChainRAGNLPPostgreSQLRust'
+];
+
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const q = ((req.query.q as string) || '').toLowerCase();
+  const suggestions = new Set<string>();
+
+  for (const s of SAMPLE_QUERIES) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+  }
+  for (const s of SKILLS) {
+    if (!q || s.toLowerCase().includes(q)) suggestions.add(s)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   const { q = "" } = req && req.query;
@@ -76,6 +95,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ).slice(0, 5);
   return res.status(200).json({ suggestions });
 }
+<<<<<<< HEAD
 =======
 
   const suggestions = SAMPLE_QUERIES && SAMPLE_QUERIES.filter((s) =>
@@ -85,3 +105,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res && res.status(200).json({ suggestions });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

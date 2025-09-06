@@ -18,12 +18,22 @@ import { innovative2026AIServicesV3 } from '../data/innovative-2026-ai-services-
 import { emergingTech2026ServicesV3 } from '../data/emerging-tech-2026-services-v3';
 import { enterpriseIT2026ServicesV3 } from '../data/enterprise-it-2026-services-v3';
 export default function PricingEnhanced2026Page() {
+<<<<<<< HEAD
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly')
   const [selectedPlan, setSelectedPlan] = useState<string | null>(null)
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+  const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly');
+  const [selectedPlan, setSelectedPlan] = useState<string | null>(null);
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     website: 'https://ziontechgroup.com'
   }
   const popularServices = getPopularServices()
@@ -39,6 +49,7 @@ export default function PricingEnhanced2026Page() {
     ...innovative2026AIServicesV3
     ...emergingTech2026ServicesV3
     ...enterpriseIT2026ServicesV3
+<<<<<<< HEAD
   ]
   // Enhanced service categories with pricing for 2026
   const serviceCategories = [
@@ -49,6 +60,19 @@ export default function PricingEnhanced2026Page() {
       avgPrice: '$2,499/month'
       savings: 'Save 60-80% vs. competitors'
       icon: Brain
+=======
+  ];
+
+  // Enhanced service categories with pricing for 2026
+  const serviceCategories = [
+    {
+      name: 'ArrowRight-Generation AI 2026',
+      description: 'Revolutionary AI platforms with quantum integration',
+      services: ['AI Quantum Financial TradingAI Healthcare DiagnosticsAI Autonomous ManufacturingAI Cybersecurity Threat Intelligence'],
+      avgPrice: '$2,499/month',
+    savings: 'Save 60-80% vs. competitors',
+      icon: Brain,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: 'from-purple-500 to-indigo-600'
     }
     {
@@ -78,6 +102,7 @@ export default function PricingEnhanced2026Page() {
       icon: Rocket
       color: 'from-green-500 to-emerald-600'
     }
+<<<<<<< HEAD
     {
       name: 'Healthcare & Biotech 2026'
       description: 'AI-powered healthcare and biotechnology solutions'
@@ -97,6 +122,10 @@ export default function PricingEnhanced2026Page() {
       color: 'from-green-500 to-emerald-600'
     }
   ]
+=======
+  ];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Enhanced pricing tiers with more realistic and comprehensive offerings
   const pricingTiers = [
     {
@@ -106,7 +135,11 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
         'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features'
+=======
+        'Access to 100+ Core ServicesBasic AI IntegrationStandard Support (24/7)30-Day Free TrialBasic Analytics DashboardEmail Support99.5% Uptime GuaranteeStandard Security Features';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         'Mobile App AccessAPI Access (1000 calls/month)'
       ]
       icon: <Sparkles className="w-8 h-8" />
@@ -114,7 +147,11 @@ export default function PricingEnhanced2026Page() {
       popular: false
       cta: 'Start Free Trial'
       color: 'from-blue-500 to-indigo-600'
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       name: 'Professional'
       description: 'Ideal for growing businesses and teams'
@@ -122,7 +159,11 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
         'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features'
+=======
+        'Access to 500+ ServicesAdvanced AI & Quantum FeaturesPriority Support (24/7)60-Day Free TrialAdvanced Analytics & ReportingPhone & Email Support99.9% Uptime GuaranteeEnhanced Security Features';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         'Custom IntegrationsAPI Access (10,000 calls/month)Users Collaboration ToolsAdvanced Workflow Automation'
       ]
       icon: <Star className="w-8 h-8" />
@@ -130,7 +171,11 @@ export default function PricingEnhanced2026Page() {
       popular: true
       cta: 'Start Free Trial'
       color: 'from-purple-500 to-pink-600'
+<<<<<<< HEAD
     }
+=======
+    };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {
       name: 'Enterprise'
       description: 'For large organizations and enterprises'
@@ -138,7 +183,11 @@ export default function PricingEnhanced2026Page() {
       period: billingCycle === 'monthly' ? '/month' : '/month'
       savings: billingCycle === 'yearly' ? 'Save 20%' : ''
       features: [
+<<<<<<< HEAD
         'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance'
+=======
+        'Access to ALL Services (1000+)Full AI & Quantum SuiteDedicated Support Users90-Day Free TrialEnterprise Analytics & BI24/7 Dedicated Support99.99% Uptime GuaranteeEnterprise Security & Compliance';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         'Custom DevelopmentUnlimited API AccessAdvanced Users ManagementWhite-label SolutionsCustom SLA AgreementsOn-site Implementation'
       ]
       icon: <Crown className="w-8 h-8" />
@@ -147,6 +196,7 @@ export default function PricingEnhanced2026Page() {
       cta: 'Contact Sales'
       color: 'from-yellow-500 to-orange-600'
     }
+<<<<<<< HEAD
   ]
   // Featured services showcase
   const featuredServices = [
@@ -157,6 +207,19 @@ export default function PricingEnhanced2026Page() {
       features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies']
       link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading'
       icon: '📈'
+=======
+  ];
+
+  // Featured services showcase
+  const featuredServices = [
+    {
+      name: 'AI Quantum Financial Trading',
+      price: '$2,999/month',
+    description: 'Revolutionary AI-powered quantum trading with 99.9% accuracy',
+      features: ['Quantum-inspired AI algorithmsReal-time market analysisAutomated trading strategies'],
+      link: 'https://ziontechgroup.com/services/ai-quantum-financial-trading',
+      icon: '📈',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: 'from-green-500 to-emerald-600'
     }
     {
@@ -220,7 +283,11 @@ export default function PricingEnhanced2026Page() {
               Enhanced 2026 Pricing
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">
+<<<<<<< HEAD
               Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services.
+=======
+              Transform your business with our comprehensive collection of innovative AI, quantum computing, and enterprise IT services. 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               Achieve remarkable ROI with transparent, competitive pricing.
             </p>
             {/* Billing Cycle Toggle */}
@@ -285,6 +352,10 @@ export default function PricingEnhanced2026Page() {
                         </div>
                       </div>
                     )}
+<<<<<<< HEAD
+=======
+                    
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     <div className="p-8 text-center">
                       <div className="flex justify-center mb-4">
                         <div className={`p-3 rounded-full bg-gradient-to-r ${tier.color}`}>
@@ -376,6 +447,10 @@ export default function PricingEnhanced2026Page() {
                           </li>
                         ))}
                       </ul>
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <Button
                         variant="primary"
                         size="sm"
@@ -437,6 +512,10 @@ export default function PricingEnhanced2026Page() {
                           </li>
                         ))}
                       </ul>
+<<<<<<< HEAD
+=======
+                      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                       <div className="flex space-x-2">
                         <Button
                           variant="primary"
@@ -506,4 +585,8 @@ export default function PricingEnhanced2026Page() {
       </div>
     </UltraFuturisticBackground>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

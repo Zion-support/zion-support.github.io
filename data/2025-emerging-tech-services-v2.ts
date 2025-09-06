@@ -1,4 +1,5 @@
 export interface EmergingTechService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -555,6 +556,32 @@ export const emergingTechServicesV2: EmergingTechService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Autonomous drivingFleet managementSafety systemsTraffic optimizationTransportation logisticsResearch and development'
+=======
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+      
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string,
+    enterprise: number
+  
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number, marketSize: string,
+  growthRate: string
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
 <<<<<<< HEAD
@@ -783,4 +810,8 @@ export const emergingTechServicesV2: EmergingTechService[] = [
 
     growthRate: '75% annually'
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

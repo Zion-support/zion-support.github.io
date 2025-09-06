@@ -16,4 +16,7 @@ const AutomationStatus: NextPage = () => {
   )
 }
 export default AutomationStatus;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

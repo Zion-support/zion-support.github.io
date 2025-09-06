@@ -4,4 +4,8 @@ export async function getStaticProps() {
 }
 export default function AutomatedFinancialAnalyticsPlatform(props: any) {
 	return <ServicePage {...props} />
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

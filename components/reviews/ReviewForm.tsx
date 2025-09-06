@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {
   submitting ? 'Submitting...' : 'Submit Review'
@@ -6,6 +7,9 @@
 }
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>;};import React, { useState } from 'react';
+=======
+import React, { useState } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import StarRating from './StarRating';
 export type ReviewFormValues = {
   projectId: string
@@ -23,6 +27,7 @@ export type ReviewFormValues = {
 }
 type Props = {
   initial: Pick<ReviewFormValues, 'projectId' | 'fromRole' | 'fromId'>
+<<<<<<< HEAD
 const ReviewForm: React.FC<Props> = ({ initial }) => {
 =======
 
@@ -51,6 +56,8 @@ class ErrorBoundary extends React.Component {
  </div> <div> <label className="block text-sm font-medium mb-2" >Your Review</label> <textarea required /> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <span className="pill" >Optional</span> </div> </div> <button > {;
   submitting ? 'Submitting...' : 'Submit Review' ;
 }</button> </form>) ;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 type Props = {;
@@ -95,6 +102,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({
+<<<<<<< HEAD
           projectId: initial.projectId
           fromRole: initial.fromRole
           fromId: initial.fromId
@@ -162,6 +170,15 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       <div>;
         <label className='block text-sm font-medium mb-2'>Your Review</label>          categories: {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+          projectId: initial.projectId,
+          fromRole: initial.fromRole,
+          fromId: initial.fromId,
+          rating;
+          text;
+          anonymous;
+          categories: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             communication;
             qualityOfWork;
             timeliness;
@@ -174,6 +191,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
       setMessage(err.message)
     } finally {
       setSubmitting(false)
+<<<<<<< HEAD
 =======
       const data = await res && res.json();
       if (!res && res.ok) throw new Error(data && data.error || 'Failed to submit');
@@ -183,18 +201,25 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
     } finally {;
       setSubmitting(false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   return (
 <<<<<<< HEAD
+<<<<<<< HEAD
     <form onSubmit={handleSubmit} className='space-y-6'>
       <div>
         <label className='block text-sm font-medium mb-2'>Overall Rating</label>    <form onSubmit={handleSubmit} className="space-y-6">
+=======
+    <form onSubmit={handleSubmit} className="space-y-6">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div>
         <label className="block text-sm font-medium mb-2" htmlFor="input-Overall Rating">Overall Rating</label>
         <StarRating value={rating} onChange={setRating} />
       </div>
       <div>
+<<<<<<< HEAD
         <label className='block text-sm font-medium mb-2'>Your Review</label>
 =======
     <form onSubmit={handleSubmit} className='space-y-6'>;
@@ -215,6 +240,9 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           onChange={e => setText(e && e.target.value)}          required;
         />;
       </div>;
+=======
+        <label className="block text-sm font-medium mb-2" htmlFor="input-Your Review">Your Review</label>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <textarea
           className="w-full rounded-md border border-gray-300 p-3 focus: outline-none focus:ring-2 focus:ring-blue-500"
           rows={5}
@@ -224,6 +252,7 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {;
           required
         />
       </div>
+<<<<<<< HEAD
       <div className='flex items-center gap-3'>
 =======
           onChange={(e) => setText(e && e.target.value)}
@@ -343,3 +372,56 @@ export default ReviewForm;    </form>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReviewForm;
 
+=======
+
+      <div className="flex items-center gap-3">
+        <input id="anonymous" type="checkbox" checked={anonymous} onChange={(e) => setAnonymous(e.target.checked)} />
+        <label htmlFor="anonymous" htmlFor="input-Submit anonymously">Submit anonymously</label>
+      </div>
+
+      <div className="grid md:grid-cols-2 gap-4">
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Communication</span>
+            <StarRating value={communication || 0} onChange={(v) => setCommunication(v)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Quality of Work</span>
+            <StarRating value={qualityOfWork || 0} onChange={(v) => setQualityOfWork(v)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Timeliness</span>
+            <StarRating value={timeliness || 0} onChange={(v) => setTimeliness(v)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+        <div className="enhanced-card">
+          <div className="flex items-center justify-between mb-2">
+            <span className="text-sm">Would Work With Again</span>
+            <input type="checkbox" checked={wouldWorkWithAgain} onChange={(e) => setWouldWorkWithAgain(e.target.checked)} />
+          </div>
+          <span className="pill">Optional</span>
+        </div>
+      </div>
+
+      <button
+        type="submit"
+        className="enhanced-button enhanced-button-primary"
+        disabled={submitting}
+      >
+        {submitting ? 'Submitting...' : 'Submit Review'}
+      </button>
+
+      {message && <p className="text-sm">{message}</p>}
+    </form>
+  )
+};
+
+export default ReviewForm;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

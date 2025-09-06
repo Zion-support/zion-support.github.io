@@ -93,6 +93,7 @@ const apiEndpoints = [;
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Layout from '../components/Layout';
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -325,13 +326,20 @@ export default function APIDocsPage() {;
 import Layout from '../components/Layout';
 export default function APIDocsPage() {
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ApiDocsPage() {
   return (
     <>
       <Head>
         <title>API Docs | Zion Tech Group</title>
+<<<<<<< HEAD
         <meta name='description' content='API reference and guides.' />
 <link rel='canonical' href='https://ziontechgroup.com/api-docs' />
+=======
+        <meta name="description" content="API reference and guides." />
+        <link rel="canonical" href="https: //ziontechgroup.com/api-docs" />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </Head>
       <div className="container mx-auto px-4 py-16 text-gray-200">
         <h1 className="text-4xl md:text-6xl font-bold mb-4">API Docs</h1>
@@ -342,6 +350,7 @@ export default function ApiDocsPage() {
     </>
   )
 }
+<<<<<<< HEAD
 =======
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>;
@@ -379,3 +388,5 @@ export default function ApiDocsPage() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -3,6 +3,7 @@ import React from 'react',
 import SEO from '../components/SEO';
 import { Check, ExternalLink } from 'lucide-react';
 export default function BrowserAutomationCloudPage() {
+<<<<<<< HEAD
 =======
 
 class ErrorBoundary extends React.Component {
@@ -104,6 +105,11 @@ export default function BrowserAutomationCloudPage() {;
     </>;
   );	return (
 <<<<<<< HEAD
+=======
+	const features = [
+		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limitsArtifacts: HAR, traces, screenshots, videosRotating proxies and geo targetingWebhook callbacks and REST API'
+	];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 		<>
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />
@@ -134,6 +140,7 @@ export default function BrowserAutomationCloudPage() {;
 		</>
 	)
 }
+<<<<<<< HEAD
 =======
 		<>;
 			<SEO title="Browser Automation Cloud" description="Parallel Playwright/Puppeteer automation at scale with queues, storage, and proxies." />;
@@ -165,3 +172,5 @@ export default function BrowserAutomationCloudPage() {;
 	),;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

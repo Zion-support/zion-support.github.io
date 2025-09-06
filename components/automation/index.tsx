@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 export default function AutomationPage() {
   return (
@@ -8,6 +11,7 @@ export default function AutomationPage() {
     </div>
   )
 }
+<<<<<<< HEAD
 =======
 export default function AutomationPage() {;
   return (
@@ -18,3 +22,5 @@ export default function AutomationPage() {;
   ),;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

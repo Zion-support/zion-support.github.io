@@ -2,8 +2,12 @@ import { useRouter  } from 'next/router';
 import useSWR from 'swr';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {useEffect, useState} from 'react';
 const fetcher = (url: string) => fetch(url).then(r => r.json());
+=======
+const fetcher = (url: string) => fetch(url).then((r) => r.json()),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function EditJobPage() {
 =======
 const fetcher = (url: string) => fetch(url).then(r => r && r.json());
@@ -19,18 +23,33 @@ export default function EditJobPage() {;
 <<<<<<< HEAD
   useEffect(() => {
     if (job) {
+<<<<<<< HEAD
       setTitle(job.title |'');
       setDescription(job.description |'');
       setCategory(job.category |'');    }
+=======
+      setTitle(job.title || '');
+      setDescription(job.description || '');
+      setCategory(job.category || '')
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [job]);
   async function save() {
     await fetch(`/api/jobs/${id}`, {
+<<<<<<< HEAD
       method: 'PATCH'
       headers: { 'Content-Type': 'application/json' }
       body: JSON.stringify({ title, description, category })
     });
     router.push('/client/dashboard');  }
 =======
+=======
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, description, category })});
+    router.push('/client/dashboard')
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   useEffect(() => {;
     if (job) {;
@@ -51,6 +70,7 @@ export default function EditJobPage() {;
   if (!job) return <div>Loading…</div>;
 
   return (
+<<<<<<< HEAD
     <div className='max-w-2xl mx-auto space-y-4'>;
       <h1 className='text-2xl font-semibold'>Edit Job</h1>;
       <div>;
@@ -97,3 +117,25 @@ export default function EditJobPage() {;
     </div>;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    <div className="max-w-2xl mx-auto space-y-4">
+      <h1 className="text-2xl font-semibold">Edit Job</h1>
+      <div>
+        <label className="block text-sm font-medium">Title</label>
+        <input className="mt-1 w-full border rounded p-2" value={title} onChange={(e) => setTitle(e.target.value)} />
+      </div>
+      <div>
+        <label className="block text-sm font-medium">Description</label>
+        <textarea className="mt-1 w-full border rounded p-2" rows={6} value={description} onChange={(e) => setDescription(e.target.value)} />
+      </div>
+      <div>
+        <label className="block text-sm font-medium">Category</label>
+        <input className="mt-1 w-full border rounded p-2" value={category} onChange={(e) => setCategory(e.target.value)} />
+      </div>
+      <div className="pt-2">
+        <button className="px-4 py-2 rounded bg-black text-white" onClick={save}>Save</button>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

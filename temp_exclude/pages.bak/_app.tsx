@@ -33,6 +33,9 @@ export default function _app(): any ({ }: _appProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 }

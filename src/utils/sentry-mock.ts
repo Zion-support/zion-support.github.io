@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 // Mock implementation for Sentry to prevent Node.js module import issues during build
 // This mock provides all the necessary Sentry APIs without importing any Node.js modules
 
@@ -243,3 +244,10 @@ export const Severity = mockSentry && mockSentry.Severity;
 export { mockSentry as Sentry }
 // All exports are already defined above
 
+=======
+
+  // Browser-specific methods
+
+  onLoad: noop, wrap: (fn: (...args: any[]) => any) => fn,
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

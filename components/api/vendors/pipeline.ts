@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { listPipelineForVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const vendorId = String(req.query.vendorId |"");
   if (!vendorId) return res.status(400).json({ error: "vendorId required" });
@@ -14,3 +15,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ items });
 }
 
+=======
+  const vendorId = String(req.query.vendorId || '');
+  if (!vendorId) return res.status(400).json({ error: 'vendorId required' });
+  const items = listPipelineForVendor(vendorId);
+  res.status(200).json({ items })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

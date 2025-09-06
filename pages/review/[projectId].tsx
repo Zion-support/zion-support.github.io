@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
@@ -48,6 +49,21 @@ const ReviewSubmitPage: NextPage<Props> = ({
   valid
   reason
 }) => {
+=======
+import React from 'react';
+import type { NextPage, GetServerSideProps } from 'next';
+import ReviewForm from '../../components/reviews/ReviewForm';
+import { findProjectById } from '../../utils/dataStore';
+type Props = {
+  projectId: string,
+  fromRole: 'client' | 'talent',
+  fromId: string,
+  valid: boolean,
+  reason?: string
+};
+
+const ReviewSubmitPage: NextPage<Props> = ({ projectId, fromRole, fromId, valid, reason }) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!valid) {
     return (
       <main className="max-w-2xl mx-auto p-6">
@@ -59,6 +75,7 @@ const ReviewSubmitPage: NextPage<Props> = ({
 =======
 };
 
+<<<<<<< HEAD
 const ReviewSubmitPage: NextPage<Props> = ({;
   projectId,;
   fromRole,;
@@ -169,6 +186,19 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
         reason: "Project not found",;
       },;
     } as any;
+=======
+export const getServerSideProps: GetServerSideProps = async (ctx) => {
+  const { projectId } = ctx.query as { projectId: string },
+  const { role, fromId } = ctx.query as { role?: 'client' | 'talent', fromId?: string };
+
+  if (!projectId || !role || !fromId) {
+    return { props: { projectId: projectId || '', fromRole: role || 'client', fromId: fromId || '', valid: false, reason: 'Missing parameters' } }
+  }
+
+  const project = await findProjectById(projectId);
+  if (!project) {
+    return { props: { projectId, fromRole: role, fromId, valid: false, reason: 'Project not found' } } as any
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   if (project && project.status !== "Completed") {;
     return {;
@@ -198,4 +228,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   } as any;
 }
 export default ReviewSubmitPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

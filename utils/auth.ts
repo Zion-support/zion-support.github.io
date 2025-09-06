@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 
+=======
+// Authentication utilities
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export interface User {
   id: string;
   email: string;
@@ -93,12 +97,20 @@ export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
 
 export function isAuthenticated(session: AuthSession | null): boolean {
     if (!session) return false;
+<<<<<<< HEAD
     return Date && Date.now() < session && session.expiresAt;
+=======
+    return Date.now() < session.expiresAt;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
 export function hasRole(session: AuthSession | null, role: string): boolean {
     if (!session || !isAuthenticated(session)) return false;
+<<<<<<< HEAD
     return session && session.user.role === role;
+=======
+    return session.user.role === role;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
 export function isAdmin(session: AuthSession | null): boolean {
@@ -108,4 +120,7 @@ export function isAdmin(session: AuthSession | null): boolean {
 export function isModerator(session: AuthSession | null): boolean {
   return hasRole(session, 'moderator') || isAdmin(session);
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

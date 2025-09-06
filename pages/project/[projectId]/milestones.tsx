@@ -29,6 +29,7 @@ import MilestoneCard from '../../../components/monetization/MilestoneCard';
 
 import { Milestone } from '../../../utils/types/milestones';
 <<<<<<< HEAD
+<<<<<<< HEAD
 import {
   createMilestone
   fetchMilestones
@@ -41,10 +42,16 @@ import {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 } from '../../../utils/api/milestones-client';
 function getRoleFromEnvOrQuery(): any (): 'client' | 'talent' | 'admin' {;
+=======
+import { createMilestone, fetchMilestones, updateMilestoneStatus } from '../../../utils/api/milestones-client';
+
+function getRoleFromEnvOrQuery(): 'client' | 'talent' | 'admin' {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (typeof window === 'undefined') return 'client';
 <<<<<<< HEAD
   const url = new URL(window.location.href);
   const r = url.searchParams.get('role');
+<<<<<<< HEAD
   if (r === 'talent' |r === 'admin') return r;
 =======
   const url = new URL(window && window.location.href);
@@ -76,11 +83,30 @@ export default function ProjectMilestonesPage() {;
 
   useEffect(() => {;
     setRole(getRoleFromEnvOrQuery());  }, []);
+=======
+  if (r === 'talent' || r === 'admin') return r;
+  return 'client'
+}
+
+export default function ProjectMilestonesPage() {
+  const router = useRouter();
+  const { 'project-id': projectId } = router.query as any;
+
+  const [role, setRole] = useState<'client' | 'talent' | 'admin'>(() => getRoleFromEnvOrQuery());
+  const [milestones, setMilestones] = useState<Milestone[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setRole(getRoleFromEnvOrQuery())
+  }, []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   // Demo cookie-based auth to hit API successfully;
   useEffect(() => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     if (!role) return;
+<<<<<<< HEAD
     try {;
       const userId =;
         role === 'talent';
@@ -90,6 +116,13 @@ export default function ProjectMilestonesPage() {;
             : 'client-1';
       document && document.cookie = `x-user-id=${userId}; path=/`;
       document && document.cookie = `x-user-role=${role}; path=/`;    } catch {}
+=======
+    try {
+      const userId = role === 'talent' ? 'talent-1' : role === 'client' ? 'client-1' : 'client-1';
+      document.cookie = `x-user-id=${userId}, path=/`;
+      document.cookie = `x-user-role=${role}, path=/`
+    } catch {}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [role]);
 <<<<<<< HEAD
   useEffect(() => {
@@ -104,6 +137,7 @@ export default function ProjectMilestonesPage() {;
       setError(null);
       try {;
         const data = await fetchMilestones(projectId as string);
+<<<<<<< HEAD
 <<<<<<< HEAD
         if (!cancelled) setMilestones(data.milestones |[]);
       } catch (e: any) {
@@ -137,12 +171,33 @@ export default function ProjectMilestonesPage() {;
     const res = await createMilestone(projectId as string, payload);
 <<<<<<< HEAD
     setMilestones(prev => [res.milestone, ...prev]);  }
+=======
+        if (!cancelled) setMilestones(data.milestones || [])
+      } catch (e: any) {
+        if (!cancelled) setError(e?.message || 'Failed to load milestones')
+      } finally {
+        if (!cancelled) setLoading(false)
+      }
+    })();
+    return () => {
+      cancelled = true
+    }
+  }, [projectId]);
+
+  const handleCreate = async (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => {
+    if (!projectId) return;
+    const res = await createMilestone(projectId as string, payload);
+    setMilestones((prev) => [res.milestone, ...prev])
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const handleAction = async (
     action: 'in_progress' | 'submitted' | 'approved' | 'paid'
     milestoneId: string
   ) => {
     if (!projectId) return
     const map: Record<string, string> = {
+<<<<<<< HEAD
       in_progress: 'In Progress'
       submitted: 'Submitted'
       approved: 'Approved'
@@ -200,6 +255,36 @@ export default function ProjectMilestonesPage() {;
             <div className='flex items-center justify-between mb-3'>
               <h2 className='text-lg font-semibold'>Add Milestone</h2>
               <span className='text-xs text-gray-500'>Role: {role}</span>            </div>
+=======
+      in_progress: 'In Progress',
+      submitted: 'Submitted',
+      approved: 'Approved',
+      paid: 'Paid'},
+    const status = map[action];
+    const res = await updateMilestoneStatus(projectId as string, milestoneId, { status });
+    setMilestones((prev) => prev.map((m) => (m.id === milestoneId ? res.milestone : m)))
+  };
+
+  return (
+    <div>
+      <Head>
+        <title>Project Milestones</title>
+        <meta name="description" content="Track project deliverables and milestone payments" />
+      </Head>
+
+      <div className="max-w-5xl mx-auto px-4 py-8">
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold">Milestones</h1>
+          <p className="text-sm text-gray-600">Project: {projectId as string}</p>
+        </div>
+
+        {role !== 'talent' && (
+          <div className="mb-8 p-4 rounded bg-gray-50 border">
+            <div className="flex items-center justify-between mb-3">
+              <h2 className="text-lg font-semibold">Add Milestone</h2>
+              <span className="text-xs text-gray-500">Role: {role}</span>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <MilestoneForm onSubmit={handleCreate} />
           </div>
 =======
@@ -224,6 +309,7 @@ export default function ProjectMilestonesPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         )}
         {loading && <div>Loading milestones...</div>}
+<<<<<<< HEAD
         {error && <div className='text-red-600'>{error}</div>}
 <<<<<<< HEAD
         {!loading && !error && (
@@ -269,3 +355,25 @@ export default function ProjectMilestonesPage() {;
     </div>;
   );
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        {error && <div className="text-red-600">{error}</div>}
+
+        {!loading && !error && (
+          <div className="space-y-4">
+            {milestones.length === 0 && (
+              <div className="text-gray-600">No milestones yet. {role !== 'talent' ? 'Create the first one.' : ''}</div>
+            )}
+            {milestones.map((m) => (
+              <MilestoneCard key={m.id} milestone={m} projectId={String(projectId)} role={role} onAction={handleAction} />
+            ))}
+          </div>
+        )}
+
+        <div className="mt-12 text-xs text-gray-500">
+          Integration hooks ready: on Approved &rarr, trigger payout intent, on Paid &rarr, capture via Stripe/PayPal/Escrow.
+        </div>
+      </div>
+    </div>
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

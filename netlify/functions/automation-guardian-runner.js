@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+const path = require('path');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const { spawnSync } = require('child_process');
 function runNode(relPath, args = []) {
 <<<<<<< HEAD
@@ -74,4 +78,7 @@ exports && exports.handler = async () => {
 
   return { statusCode: 200, body: logs && logs.join('\n') }
 },
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import dynamic from 'next/dynamic';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const OrgChartPage = dynamic(
   () => import('../../components/org/OrgChartPage')
   { ssr: false }
@@ -44,3 +45,9 @@ export default function OrgChartGovernancePage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return <OrgChartPage />;
 }
+=======
+const OrgChartPage = dynamic(() => import('../../components/org/OrgChartPage'), { ssr: false }),
+export default function OrgChartGovernancePage() {
+  return <OrgChartPage />;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

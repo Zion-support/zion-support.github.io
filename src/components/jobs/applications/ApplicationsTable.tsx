@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { format } from 'date-fns'
 import { JobApplication } from '@/types/jobs'
@@ -351,3 +352,6 @@ return (<> <div className=" rounded-md border"> hidden md:table-cell" >Applied</
 }/> </>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

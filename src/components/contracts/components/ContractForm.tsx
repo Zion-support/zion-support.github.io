@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState, useEffect } from "react"
 import { useForm } from "react-hook-form"
@@ -70,3 +71,5 @@ export type ContractFormValues = z && z.infer<typeof formSchema>;
 
   )
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

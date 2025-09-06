@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Environment Polyfill for Browser
  *
@@ -163,3 +164,6 @@ console && console.log('✅ Environment polyfill loaded successfully');
 export default safeEnv;
 =======
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

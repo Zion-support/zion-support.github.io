@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef, useEffect } from 'react',
 import Image from 'next/image';
 import { motion, AnimatePresence  } from 'framer-motion';
@@ -748,3 +749,6 @@ export const OptimizedAvatar: React.FC<OptimizedAvatarProps> = ({;
 },;
 },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -4,6 +4,7 @@ import { requireSuperadminApi } from '../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const data = null;
   res.status(200).send(JSON.stringify(data, null, 2))
 }
@@ -19,3 +20,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).send(JSON && JSON.stringify(data, null, 2))
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const data = readJsonFile('audit-log.json', [] as unknown[]);
+  res.setHeader('Content-Typeapplication/json');
+  res.setHeader('Content-Dispositionattachment, filename="audit-log.json"');
+  res.status(200).send(JSON.stringify(data, null, 2))
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 export interface InnovativeAIService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -549,6 +550,32 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'AI bias detectionEthical complianceGovernance automationRisk assessmentAudit preparationPolicy enforcement'
+=======
+  id: string, name: string,
+  tagline: string, description: string,
+  category: string,
+  price: {
+      
+    monthly: number, yearly: number,
+    currency: string, trialDays: number,
+    setupTime: string,
+    enterprise: number
+  
+    },
+    features: string[], benefits: string[],
+  targetAudience: string[], marketPosition: string,
+  competitors: string[], techStack: string[],
+  realImplementation: boolean, implementationDetails: string,
+  roi: string, useCases: string[],
+  integrations: string[], support: string,
+  compliance: string[], link: string,
+  icon: string, color: string,
+  popular: boolean, launchDate: string,
+  customers: number, rating: number,
+  reviews: number, marketSize: string,
+  growthRate: string
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
 <<<<<<< HEAD
@@ -777,4 +804,8 @@ export const innovativeAIServicesV2: InnovativeAIService[] = [
 
     growthRate: '28% annually'
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

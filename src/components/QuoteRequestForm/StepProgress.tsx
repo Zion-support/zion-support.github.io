@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { QuoteRequestSteps } from '../QuoteRequestForm'
 import { CheckIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -121,6 +122,33 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
 <<<<<<< HEAD
                   status === "complete" ? "text-zion-cyan" :
                   status === "current" ? "text-white" :
+=======
+
+import { QuoteRequestSteps } from "../QuoteRequestForm";
+import { CheckIcon } from 'lucide-react'
+import { cn } from "@/lib/utils";
+interface StepProgressProps {
+  currentStep: QuoteRequestSteps
+}
+
+export function StepProgress({ currentStep }: StepProgressProps) {
+  const steps: { id: QuoteRequestSteps, label: string }[] = [
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" },
+    { id: "summary", label: "Summary" }
+  ];
+
+  const getStepStatus = (stepId: QuoteRequestSteps) => {
+    const stepOrder = steps.findIndex(s => s.id === stepId);
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
+    
+    if (stepOrder < currentStepOrder) return "complete";
+    if (stepOrder === currentStepOrder) return "current";
+    return "upcoming"
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 =======
                   status === "complete" ? "text-zion-cyan" : 
@@ -163,6 +191,7 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
     </div>
   )
 }
+<<<<<<< HEAD
 =======
                 ),}>;
                 {step && step.label}
@@ -193,3 +222,5 @@ export function StepProgress(): any ({ currentStep }: StepProgressProps) {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

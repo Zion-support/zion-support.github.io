@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
         description: "Please sign in to make a purchase."})
 import { useRouter } from 'next/router'
@@ -218,3 +219,6 @@ toast ({;
 }</Button>)
 }'"  )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

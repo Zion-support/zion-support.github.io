@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
 
@@ -10,10 +11,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
   const { amount } = req.body |{}
+=======
+  if (!requireSuperadminApi(req, res)) return;
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { amount } = req.body || {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const commits = readJsonFile('deal/soft-commits.json', [] as any[]);
   const record = { amount, timestamp: new Date().toISOString() }
   commits.push(record);
   writeJsonFile('deal/soft-commits.json', commits);
+<<<<<<< HEAD
   res.status(200).json(record);  res.status(200).json(record)
 =======
   if (req && req.method !== 'POST')
@@ -29,3 +36,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+=======
+  res.status(200).json(record)
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

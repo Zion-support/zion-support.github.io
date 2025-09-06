@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { FileText, CheckCircle2, Clock, ShieldAlert } from 'lucide-react';
 <<<<<<< HEAD
 import Link from 'next/link';
@@ -244,3 +245,5 @@ export default function OrdersPage() {;
     </div>;
   );
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

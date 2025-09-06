@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 // In-memory simple rate limiter (per IP)
@@ -10,8 +14,13 @@ function isRateLimited(ip: string): boolean {
   const now = Date.now()
   const bucket = ipToRequests[ip] |{ timestamps: [] }
   // Drop old timestamps
+<<<<<<< HEAD
   bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS)
   const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS
+=======
+  bucket.timestamps = bucket.timestamps.filter(ts => now - ts < RATE_LIMIT_WINDOW_MS);
+  const limited = bucket.timestamps.length >= RATE_LIMIT_MAX_REQUESTS;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!limited) {
     bucket.timestamps.push(now)
   }
@@ -23,9 +32,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ error: 'Method Not Allowed' })
   }
   // Auth via Bearer token
+<<<<<<< HEAD
 const authHeader = req.headers.authorization |''
   const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined
   if (!token |token !== process.env.OPERATOR_API_TOKEN) {
+=======
+  const authHeader = req.headers.authorization || '';
+  const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : undefined;
+  if (!token || token !== process.env.OPERATOR_API_TOKEN) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(401).json({ error: 'Unauthorized' })
   }
   // Rate limit
@@ -56,4 +71,8 @@ const sys = system |'You are a professional writing assistant. Write clear, conc
     return res.status(500).json({ error: 'Internal Server Error' })
 
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

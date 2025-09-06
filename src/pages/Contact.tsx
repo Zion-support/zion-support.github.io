@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from 'react';
 import Header from '../components/Header';
 import { SEO } from '../components/SEO';
@@ -297,3 +298,6 @@ const Contact: React.FC = () => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   );
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

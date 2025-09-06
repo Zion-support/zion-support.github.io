@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { createClient } from "@supabase/supabase-js";
@@ -35,6 +36,12 @@ export default async function handler(
   } catch (e) {
     console.error(e);
     return res.status(500).json({ ok: false, error: "Failed to send invite" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { createClient } from '@supabase/supabase-js';
+const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const key = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 =======
     const { projectId, roomName, inviterName } = req && req.body || {};
@@ -56,4 +63,8 @@ export default async function handler(
     return res && res.status(500).json({ ok: false, error: "Failed to send invite" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

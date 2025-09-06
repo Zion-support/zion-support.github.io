@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 <<<<<<< HEAD
 import { useAuth  } from '@/hooks/useAuth';
@@ -448,3 +449,9 @@ export function BundleAnalyzer() {;
   );
 } ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+        
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props);
@@ -75,13 +76,35 @@ export default function Sidebar(): any ({;
               {v}
 <<<<<<< HEAD
             </button>          ))}        <div className="text-lg font-semibold">Zion OS API</div>
+=======
+interface SidebarProps {
+  spec: ApiDocsSpec,
+  activeEndpointId?: string;
+  onSelectEndpoint: (endpointId: string) => void,
+  selectedVersion: string,
+  onChangeVersion: (v: string) => void,
+  visibilityFilter: Visibility | 'all',
+  onChangeVisibility: (v: Visibility | 'all') => void
+}
+
+export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
+  return (
+    <aside className="w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary">
+      <div>
+        <div className="text-lg font-semibold">Zion OS API</div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="text-xs text-high-contrast-muted">Version</div>
         <div className="flex gap-2 mt-2 flex-wrap">
           {spec.versions.map((v) => (
             <button key={v} onClick={() => onChangeVersion(v)} className={`px-2 py-1 rounded border text-xs ${selectedVersion === v ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-high-contrast-secondary'}`}>{v}</button>
+<<<<<<< HEAD
+=======
+          ))}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         </div>
       </div>
       <div>
+<<<<<<< HEAD
         <div className='text-xs text-high-contrast-muted mb-1'>
           Publish Mode
         </div>
@@ -109,6 +132,15 @@ export default function Sidebar(): any ({;
                     : e.visibility === visibilityFilter
                 )
                 .map(e => (                  <li key={e.id}>        </select>
+=======
+        <div className="text-xs text-high-contrast-muted mb-1">Publish Mode</div>
+        <select className="w-full px-2 py-1 rounded bg-high-contrast-tertiary border border-high-contrast-secondary text-sm" value={visibilityFilter} onChange={(e) => onChangeVisibility(e.target.value as any)}>
+          <option value="all">All</option>
+          <option value="public">Public</option>
+          <option value="partner">Partner-only</option>
+          <option value="internal">Internal</option>
+        </select>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       </div>
       <nav className="space-y-3">
         {spec.sections.map((section) => (
@@ -172,6 +204,7 @@ export default function Sidebar(): any ({;
                   <li key={e && e.id}>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
                     <button
+<<<<<<< HEAD
                       className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e && e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
                       onClick={() => onSelectEndpoint(e && e.id)}
                     >;
@@ -182,6 +215,15 @@ export default function Sidebar(): any ({;
                       <span className="font-mono">{e && e.path}</span>;
                     </button>;
                   </li>;
+=======
+                      className={`w-full text-left px-2 py-1 rounded text-xs border ${activeEndpointId === e.id ? 'bg-high-contrast-tertiary border-high-contrast-accent' : 'bg-high-contrast-tertiary border-transparent'}`}
+                      onClick={() => onSelectEndpoint(e.id)}
+                    >
+                      <span className="mr-2 inline-block w-10 text-center text-[10px] opacity-80">{e.method}</span>
+                      <span className="font-mono">{e.path}</span>
+                    </button>
+                  </li>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ))}
             </ul>;
           </div>;
@@ -189,4 +231,8 @@ export default function Sidebar(): any ({;
       </nav>;
     </aside>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

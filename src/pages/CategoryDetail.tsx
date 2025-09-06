@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useRouter } from 'next/router'
 import Link from 'next/link'
@@ -257,3 +258,6 @@ function generateInnovationListing(): any (index: number): ProductListing {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

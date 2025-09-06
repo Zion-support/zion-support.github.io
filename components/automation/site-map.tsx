@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 <tr> <th className="text-left p-2" >Route</th> <th className="text-left p-2" >Last Modified</th> </tr> </thead> <tbody> </tr>) )
 }</tbody> </table> </div> </div>) import fs from 'fs';
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 type RouteInfo = { path: string, lastModified: string }
 export async function getServerSideProps() {
@@ -69,4 +73,7 @@ export default function SiteMapIntelPage(): any ({ routes, generatedAt }: { rout
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

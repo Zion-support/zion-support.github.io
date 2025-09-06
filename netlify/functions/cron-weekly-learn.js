@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const { upsertFile } = require('./_lib/github');
 <<<<<<< HEAD
+<<<<<<< HEAD
 exports.handler = async function () {
   try {
     const usersPath = path.join(process.cwd(), 'data', 'learn', 'users.json');
@@ -12,6 +13,14 @@ exports.handler = async function () {
       'courses.json'
     );
     const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8'));
+=======
+exports.handler = async function() {
+  try {
+    const usersPath = path.join(process.cwd(), 'datalearnusers.json'),
+    const coursesPath = path.join(process.cwd(), 'datalearncourses.json'),
+    const users = JSON.parse(fs.readFileSync(usersPath, 'utf-8')),
+    const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8')),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const courses = JSON.parse(fs.readFileSync(coursesPath, 'utf-8'));    const usersPath = path.join(process.cwd(), 'datalearnusers.json')
     const coursesPath = path.join(process.cwd(), 'datalearncourses.json')
@@ -21,6 +30,7 @@ exports.handler = async function () {
       updatedAt: Date.now()
 
       totals: {
+<<<<<<< HEAD
         users: Object.keys(users).length
         courses: courses.length
         completions: Object.values(users).reduce(
@@ -108,6 +118,14 @@ exports && exports.handler = async function () {
 };      },
       topBadges: Object && Object.values(users).reduce((map, u) => {
         (u && u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+=======
+        users: Object.keys(users).length,
+        courses: courses.length,
+        completions: Object.values(users).reduce((acc, u) => acc + (u.certifications?.length || 0), 0)
+      },
+      topBadges: Object.values(users).reduce((map, u) => {
+        (u.badges || []).forEach((b) => { map[b] = (map[b] || 0) + 1 }),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         return map
       }, {})
     },
@@ -145,5 +163,9 @@ exports && exports.handler = async function () {
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 }
 
+=======
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

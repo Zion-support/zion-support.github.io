@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import EnhancedLayout from '../../components/layout/EnhancedLayout';
+<<<<<<< HEAD
 
 type ProposalListItem = {
   id: string
@@ -10,6 +11,18 @@ type ProposalListItem = {
   status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted'
   createdAt: string
 }
+=======
+type ProposalListItem = {
+  id: string,
+  title: string,
+  targetInstitution: string,
+  regionalScope: string,
+  type: string,
+  status: 'Draft' | 'Submitted' | 'Under Review' | 'Accepted',
+  createdAt: string
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function InternationalProposalsPage() {
   const [items, setItems] = useState<ProposalListItem[]>([])
   const [filter, setFilter] = useState('All')
@@ -58,4 +71,8 @@ export default function InternationalProposalsPage() {
       </div>
     </EnhancedLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
@@ -67,6 +68,8 @@ export function ProfileContact(): any ({;
   const [message, setMessage] = useState('');
   const [subject, setSubject] = useState('');
   const [isSending, setIsSending] = useState(false);
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const handleSendMessage = (e: React && React.FormEvent) => {;
     e && e.preventDefault();
@@ -101,10 +104,15 @@ export function ProfileContact(): any ({;
             href={`mailto:${email}`} 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             className="text-zion-cyan hover:underline truncate block"
+<<<<<<< HEAD
+=======
+          >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             {email}
           </a>;
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
       <form onSubmit={handleSendMessage}>
         <div className='space-y-4'>
@@ -145,6 +153,27 @@ export function ProfileContact(): any ({;
             className='w-full bg-zion-cyan hover:bg-zion-cyan/90'
             disabled={isSending}              required
 <<<<<<< HEAD
+=======
+      
+      <form onSubmit={handleSendMessage}>
+        <div className="space-y-4">
+          <div>
+            <Input
+              placeholder="Subject"
+              value={subject}
+              onChange={(e) => setSubject(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white"
+              required
+            />
+          </div>
+          <div>
+            <Textarea
+              placeholder={`Message to ${profileName}...`}
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              className="bg-zion-blue border-zion-blue-light text-white min-h-[120px]"
+              required
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             />
           </div>
           <Button
@@ -163,6 +192,9 @@ export function ProfileContact(): any ({;
             <Send className="mr-2 h-4 w-4" />;
             {isSending ? "Sending..." : "Send Message"}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </Button>
         </div>
       </form>
@@ -179,6 +211,7 @@ export function ProfileContact(): any ({;
       </form>;
     </div>;
   );
+<<<<<<< HEAD
 
   `mailto:$ {;
   email ;
@@ -186,3 +219,6 @@ export function ProfileContact(): any ({;
 }className="text-zion-cyan hover:underline truncate block" > required /> </div> <div> <Textarea required /> </div> <Button </Button> </div> </form> </div>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

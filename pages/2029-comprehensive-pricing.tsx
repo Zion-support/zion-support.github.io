@@ -3,11 +3,19 @@ import React, { useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain
   Atom, Rocket, Target, Microscope, DollarSign, Phone
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
 } from 'lucide-react'
+=======
+import { 
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain, 
+  Atom, Rocket, Target, Microscope, DollarSign, Phone, 
+  Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
 import FuturisticAnimatedBackground2029 from '../components/ui/FuturisticAnimatedBackground2029';
@@ -15,17 +23,31 @@ import { aiAutonomousEcosystemServices2029 } from '../data/2029-ai-autonomous-ec
 import { emergingTechBreakthroughServices2029 } from '../data/2029-emerging-tech-breakthroughs';
 import { practicalBusinessSolutionServices2029 } from '../data/2029-practical-business-solutions';
 const contactInfo = {
+<<<<<<< HEAD
   mobile: '+1 302 464 0950'
   email: 'kleber@ziontechgroup.com'
   address: '364 E Main St STE 1008 Middletown DE 19709'
   website: 'https://ziontechgroup.com'
 }
+=======
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ComprehensivePricing2029() {
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [billingCycle, setBillingCycle] = useState('monthly')
   const allServices = [
+<<<<<<< HEAD
     ...aiAutonomousEcosystemServices2029
     ...emergingTechBreakthroughServices2029
+=======
+    ...aiAutonomousEcosystemServices2029;
+    ...emergingTechBreakthroughServices2029;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ...practicalBusinessSolutionServices2029
   ]
   const categories = [
@@ -49,7 +71,12 @@ export default function ComprehensivePricing2029() {
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, ''))
     if (billingCycle === 'monthly') {
@@ -267,6 +294,10 @@ export default function ComprehensivePricing2029() {
                   Contact Sales
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Shield className="w-8 h-8 text-white" />
@@ -281,6 +312,10 @@ export default function ComprehensivePricing2029() {
                   Contact Sales
                 </Link>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="bg-gray-900/50 backdrop-blur-sm border border-gray-700 rounded-2xl p-8">
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl mx-auto mb-6 flex items-center justify-center">
                   <Globe className="w-8 h-8 text-white" />
@@ -329,6 +364,10 @@ export default function ComprehensivePricing2029() {
                 <span>{contactInfo.address}</span>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="flex flex-wrap justify-center gap-4">
               <motion.div
                 whileHover={{ scale: 1.05 }}
@@ -356,4 +395,8 @@ export default function ComprehensivePricing2029() {
       <UltraFuturisticFooter2029 />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

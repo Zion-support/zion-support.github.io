@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -472,3 +473,6 @@ const isOwnJob = user?.id === job && job.client id;
 }'";
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

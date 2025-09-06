@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -23,6 +24,10 @@ class ErrorBoundary extends React.Component {
 }
 import type { AppProps } from \'next/app\' import \'../styles/globals && globals.css\' export default function App(): any ({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
 const type { AppProps } from "next/app" import "./styles/globals ;
+=======
+import type { AppProps } from \'next/app\' import \'../styles/globals.css\' export default function App({ Component,pageProps }: AppProps) { return <Component {...pageProps} /> }
+const type { AppProps } from "next/app" import "./styles/globals.css" export default function App({ Component,pageProps }: AppProps) { return <Component {.pageProps} /> }''"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 interface _appProps {;
   // Add props here as needed;
@@ -34,4 +39,8 @@ export default function _app(): any ({ }: _appProps) {;
       <p>This component is currently under development.</p>;
     </div>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

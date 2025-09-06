@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/usr/bin/env node //Netlify Function Fallback: content-optimizer //This is a local fallback when the main function is unavailable try {
   // Basic fallback logic const result = {
   statusCode: 200;
@@ -40,6 +41,15 @@ message: error && error.message
 
 };exports && exports.handler = async (_event, _context) => {
     console && console.log('content-optimizer fallback executed locally'),
+=======
+#!/usr/bin/env node
+
+// Netlify Function Fallback: content-optimizer
+// This is a local fallback when the main function is unavailable
+
+exports.handler = async (_event, _context) => {
+    console.log('content-optimizer fallback executed locally'),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     
     try {
         // Basic fallback logic
@@ -74,6 +84,10 @@ message: error && error.message
             })
         }
     }
+<<<<<<< HEAD
 
 }
 
+=======
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

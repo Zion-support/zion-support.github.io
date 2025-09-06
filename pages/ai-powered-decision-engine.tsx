@@ -25,4 +25,8 @@ export default function AiPoweredDecisionEngine() {
 			canonical="https: //ziontechgroup.com/ai-powered-decision-engine"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { Button  } from '@/components/ui/button';
 import {logErrorToProduction} from '@/utils/productionLogger';
@@ -21,4 +22,7 @@ interface PdfExportButtonProps {
 }
 
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 <<<<<<< HEAD
@@ -58,6 +59,8 @@ const AVAILABILITY_OPTIONS = [
   { id: "part_time", label: "Part-time" }
 =======
       </button>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -96,6 +99,7 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
         <div className="mt-4 space-y-2">
           {AVAILABILITY_OPTIONS.map(option => (
             <div key={option.id} className="flex items-center">
+<<<<<<< HEAD
 =======
       </button>;
 
@@ -117,9 +121,27 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
               ">;
               </label>;
             </div>;
+=======
+              <Checkbox
+                id={`availability-${option.id}`}
+                checked={selectedAvailability.includes(option.id)}
+                onCheckedChange={() => toggleAvailability(option.id)}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`availability-${option.id}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+               htmlFor="input-
+                {option.label}
+              ">
+                {option.label}
+              </label>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -150,3 +172,8 @@ export function AvailabilityFilter(): any ({ selectedAvailability, toggleAvailab
 }</div>) ;
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

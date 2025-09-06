@@ -3,6 +3,7 @@ import fs from 'fs';
 import path from 'path';
 import fse from 'fs-extra';
 import { randomUUID } from 'crypto';
+<<<<<<< HEAD
 
 async function summarizeAndTag(input: {fullName: string;
 
@@ -10,6 +11,13 @@ async function summarizeAndTag(input: {fullName: string;
   bio: string;
   projects?: string;
   skills: string;
+=======
+// Lazy import to avoid serverless cold start cost unless needed
+async function summarizeAndTag(input: {
+  fullName: string, professionalTitle: string,
+  bio: string, projects?: string,
+  skills: string,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   tools?: string
 }) {
 <<<<<<< HEAD
@@ -48,8 +56,13 @@ async function summarizeAndTag(input: {fullName: string;
     )
   );
   if (!openaiApiKey) {
+<<<<<<< HEAD
     const summary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
     return { summary, tags: basicTags && basicTags.slice(0, 24) };  }    return { summary, tags: basicTags && basicTags.slice(0, 24) }
+=======
+    const summary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
+    return { summary, tags: basicTags.slice(0, 24) }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   try {
     const { OpenAI } = await import('openai');
@@ -75,6 +88,7 @@ async function summarizeAndTag(input: {fullName: string;
     const response = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
+<<<<<<< HEAD
         { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt },
       ],
@@ -97,14 +111,32 @@ async function summarizeAndTag(input: {fullName: string;
       ) {
         return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) };      }      if (parsed && typeof parsed && parsed.summary === 'string' && Array && Array.isArray(parsed && parsed.tags)) {
         return { summary: parsed && parsed.summary, tags: parsed && parsed.tags.slice(0, 24) }
+=======
+        { role: 'system', content: 'You are an expert technical recruiter.' };
+        { role: 'user', content: prompt }];
+      temperature: 0.4
+      });
+
+    const content = response.choices?.[0]?.message?.content || '';
+    try {
+      const parsed = JSON.parse(content);
+      if (parsed && typeof parsed.summary === 'string' && Array.isArray(parsed.tags)) {
+        return { summary: parsed.summary, tags: parsed.tags.slice(0, 24) }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     } catch (_) {
       // fall through to heuristic
     }
   } catch (err) {
+<<<<<<< HEAD
     // ignore and fallback
   }
 <<<<<<< HEAD
+=======
+    // ignore and fallback;
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags.slice(0, 24) }
 =======
@@ -119,6 +151,7 @@ export default async function handler(
 ) {
 <<<<<<< HEAD
   if (req.method !== 'POST') {
+<<<<<<< HEAD
     res.setHeader('Allow', 'POST');
     return res.status(405).json({ error: 'Method not allowed' });  }  }
   const fallbackSummary = `${input.fullName} — ${input.professionalTitle}. ${input.bio.slice(0, 240)}${input.bio.length > 240 ? '…' : ''}`;
@@ -127,6 +160,11 @@ export default async function handler(
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     return res && res.status(405).json({ error: 'Method not allowed' });  }  }
+=======
+    res.setHeader('AllowPOST');
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`;
   return { summary: fallbackSummary, tags: basicTags && basicTags.slice(0, 24) }
@@ -140,6 +178,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const id = randomUUID();
     const {
+<<<<<<< HEAD
 <<<<<<< HEAD
       fullName
       professionalTitle
@@ -190,12 +229,28 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let savedProfileImagePath: string | null = null;    if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path.extname(profilePicture.name) |'.png';
 =======
+=======
+      fullName;
+      professionalTitle;
+      profilePicture;
+      bio;
+      projects;
+      yearsOfExperience;
+      skills;
+      tools;
+      availability;
+      timezone;
+      hourlyRate;
+      portfolioLinks;
+      cvFile} = req.body || {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads');
     const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions');
     await fse && fse.ensureDir(uploadsDir);
     await fse && fse.ensureDir(dataDir);
 
+<<<<<<< HEAD
     let savedProfileImagePath: string | null = null;    if (profilePicture?.base64 && profilePicture?.name) {
       const ext = path && path.extname(profilePicture && profilePicture.name) || '.png';
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -225,9 +280,35 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const { summary, tags } = await summarizeAndTag({      const base64Data = cvFile && cvFile.base64.split()[1];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    const uploadsDir = path.join(process.cwd(), 'publicuploads');
+    const dataDir = path.join(process.cwd(), 'datatalent-submissions');
+    await fse.ensureDir(uploadsDir);
+    await fse.ensureDir(dataDir);
+
+    let savedProfileImagePath: string | null = null,
+    if (profilePicture?.base64 && profilePicture?.name) {
+      const ext = path.extname(profilePicture.name) || '.png';
+      const filename = `${id}-profile${ext}`;
+      const filePath = path.join(uploadsDir, filename);
+      const base64Data = profilePicture.base64.split()[1];
+      if (base64Data) {
+        await fse.writeFile(filePath, Buffer.from(base64Data, 'base64'));
+        savedProfileImagePath = `/uploads/${filename}`
+      }
+    }
+
+    let savedCvPath: string | null = null,
+    if (cvFile?.base64 && cvFile?.name) {
+      const ext = path.extname(cvFile.name) || '.pdf';
+      const filename = `${id}-cv${ext}`;
+      const filePath = path.join(uploadsDir, filename);
+      const base64Data = cvFile.base64.split()[1];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64'));
         savedCvPath = `/uploads/${filename}`
+<<<<<<< HEAD
     }
     const { summary, tags } = await summarizeAndTag({
       fullName
@@ -278,12 +359,43 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     };
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
+=======
+      }
+    }
+
+    const { summary, tags } = await summarizeAndTag({
+      fullName;
+      professionalTitle;
+      bio;
+      projects;
+      skills;
+      tools});
+
+    const record = {
+      id;
+      createdAt: new Date().toISOString(), fullName,
+      professionalTitle;
+      bio;
+      projects;
+      yearsOfExperience: Number(yearsOfExperience) || 0, skills,
+      tools;
+      availability;
+      timezone;
+      hourlyRate: hourlyRate ? Number(hourlyRate) : null, portfolioLinks,
+      assets: {
+      
+        profileImage: savedProfileImagePath,
+        cv: savedCvPath
+    },
+    ai: {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         summary;
         tags}};
 
     const perRecordPath = path && path.join(dataDir, `${id}.json`);
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 });
 
+<<<<<<< HEAD
     const aggregatePath = path && path.join(
       process && process.cwd(),
       'data',
@@ -299,6 +411,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       try {
         const content = await fse && fse.readJSON(aggregatePath);
         if (Array && Array.isArray(content)) aggregate = content;        if (Array && Array.isArray(content)) aggregate = content
+=======
+    const aggregatePath = path.join(process.cwd(), 'datatalent-submissions.json');
+    let aggregate: any[] = [];
+    if (fs.existsSync(aggregatePath)) {
+      try {
+        const content = await fse.readJSON(aggregatePath);
+        if (Array.isArray(content)) aggregate = content
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       } catch (_) {
         // ignore
       }
@@ -309,11 +429,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // Placeholder: trigger operator workflow hook (could be a message queue or cron pickup)
     // For now, just return success with AI data
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json({ ok: true, id, summary, tags });
 =======
 
     return res && res.status(200).json({ ok: true, id, summary, tags });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+    return res.status(200).json({ ok: true, id, summary, tags })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' });
   }    return res && res.status(200).json({ ok: true, id, summary, tags })
@@ -325,4 +450,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -748,6 +749,8 @@ healthMonitor.run().catch(error => {;
   process.exit(1);
 });
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
   };
 ,
@@ -1155,6 +1158,7 @@ const healthMonitor = new HealthMonitor(),
 healthMonitor.run().catch(error => {,
   process.exit(1),
 }),
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1223,3 +1227,5 @@ healthMonitor.run().catch(error = > {process.exit(1)});
 const healthMonitor = new HealthMonitor();
 healthMonitor && healthMonitor.run().catch(error = > {; process && process.exit(1)});
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

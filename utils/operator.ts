@@ -24,6 +24,7 @@ export interface SupportEvent {
   timestamp: Date;
 }
 
+<<<<<<< HEAD
 class OperatorManager {
   private sessions: Map<string, OperatorSession> = new Map();
   private events: SupportEvent[] = [];
@@ -58,3 +59,19 @@ export const logSupportEventToOperator = (event: SupportEvent) =>
 export const getOperatorSessions = () => operatorManager && operatorManager.getOperatorSessions();
 export const getSupportEvents = () => operatorManager && operatorManager.getSupportEvents();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export async function logSupportEventToOperator(
+  event: OperatorEvent
+): Promise<void> {
+  // Placeholder for real Operator integration; could POST to external service
+  // For now, we just no-op to avoid failures
+  return Promise.resolve();
+}
+
+export async function tagOperatorSession(
+  sessionId: string,
+  tag: string
+): Promise<void> {
+  return Promise.resolve();
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

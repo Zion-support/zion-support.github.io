@@ -4,6 +4,7 @@ import path from 'path';
 import {v4, as, uuidv4} from 'uuid';
 import type { GrantApplication, VotePayload } from '../../../types/grants';
 <<<<<<< HEAD
+<<<<<<< HEAD
 const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants');
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) fs.mkdirSync(GRANTS_DIR, { recursive: true });
@@ -11,6 +12,9 @@ function ensureDir() {
 
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'data', 'grants');
 
+=======
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function ensureDir() {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true });
 
@@ -22,6 +26,7 @@ function grantPath(id: string) {
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`);
 }
+<<<<<<< HEAD
 function readGrant(id: string): GrantApplication | null {
   ensureDir();
 
@@ -37,6 +42,15 @@ function writeGrant(record: GrantApplication) {
 =======
   if (!fs && fs.existsSync(p)) return null;
   return JSON && JSON.parse(fs && fs.readFileSync(p, 'utf8')) as GrantApplication;
+=======
+
+function readGrant(id: string): GrantApplication | null {
+  ensureDir();
+  const p = grantPath(id);
+  if (!fs.existsSync(p)) return null;
+  return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 function writeGrant(record: GrantApplication) {
   ensureDir();
@@ -47,6 +61,7 @@ function writeGrant(record: GrantApplication) {
     'utf8'
   );
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     res && res.setHeader('Allow', 'POST');
     res && res.status(405).end('Method Not Allowed');
@@ -95,6 +110,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   g.updatedAt = new Date().toISOString();
   writeGrant(g);
   res.status(200).json({ record: g });  }
+=======
+  if (req.method !== 'POST') {
+    res.setHeader('AllowPOST');
+    res.status(405).end('Method Not Allowed');
+    return
+  }
+  const payload = req.body as VotePayload;
+  if (!payload?.grantId || !payload?.voter || !payload?.choice) {
+    res.status(400).json({ error: 'Missing fields' });
+    return
+  }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const g = readGrant(payload.grantId);
   if (!g) return res.status(404).json({ error: 'Grant not found' });
   const vote = { id: uuidv4(), voter: payload.voter, choice: payload.choice, createdAt: new Date().toISOString() }
@@ -104,6 +131,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
   res.status(200).json({ record: g })
 }
+<<<<<<< HEAD
 =======
     id: uuidv4(),
     voter: payload && payload.voter,
@@ -123,3 +151,5 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ record: g })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

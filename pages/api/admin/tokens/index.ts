@@ -7,4 +7,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const filtered = typeof userId === "string" ? txs.filter((t) => t.userId === userId) : txs
 
   res.status(200).json({ transactions: filtered })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

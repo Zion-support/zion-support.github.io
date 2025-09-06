@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Head from 'next/head',
 import Link from 'next/link';
 
@@ -29,6 +30,8 @@ class ErrorBoundary extends React.Component {
     return this.props.children;
   }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 import Link from 'next/link';
 import React from 'react',;
@@ -495,6 +498,7 @@ export default function AIEthicsAutomation() {;
     </>
   )
 }
+<<<<<<< HEAD
 =======
                     className='px-6 py-3 border border-white/20 text-white rounded-lg hover:border-cyan-400/50 transition-all duration-300'>;
                     Our Services;
@@ -509,3 +513,5 @@ export default function AIEthicsAutomation() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

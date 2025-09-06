@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 }
 type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } }
+=======
+import fs from 'fs';
+import path from 'path';
+import type { GetStaticProps } from 'next';
+type Item = { source: string, name: string, url: string, description?: string, downloads?: number };
+
+type Props = { pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd(), 'publicautomationtech-radar.json');
@@ -135,4 +144,7 @@ export default function TechRadar(): any ({ pypi, crates, github }: Props) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

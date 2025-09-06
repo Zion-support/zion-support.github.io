@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -62,6 +63,8 @@ class CodeQualityMonitor {; constructor() {; this.metrics = {; complexity: 0, ma
 <<<<<<< HEAD
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -277,7 +280,6 @@ module.exports = CodeQualityMonitor;
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR");
       return null;
 };
-=======
 #!/usr/bin/env node,
 const fs = require("fs"),
 const path = require("path"),
@@ -319,6 +321,7 @@ class CodeQualityMonitor {,
       this.log(`Code quality analysis failed: ${error.message}`, "ERROR"),
       return null,
     };
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -334,3 +337,5 @@ class CodeQualityMonitor {; constructor() {; this && this.metrics = {; complexit
 ; this && this.metrics.complexity = this && this.calculateComplexity(); this && this.metrics.maintainability = this && this.calculateMaintainability(); this && this.metrics.testCoverage = this && this.calculateTestCoverage(); this && this.metrics.performance = this && this.calculatePerformance(); this && this.metrics.lastUpdated = new Date().toISOString();
 ; this && this.saveMetrics(); this && this.log("Code quality analysis completed successfully"); return this && this.metrics} catch (error) {; this && this.log(`Code quality analysis failed: ${error && error.message}`, "ERROR"); return null};
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

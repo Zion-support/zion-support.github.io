@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { PROVIDERS } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
@@ -13,3 +14,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+=======
+import { PROVIDERS } from '../../../lib/integrations/registry';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
+  res.status(200).json({ providers: PROVIDERS })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

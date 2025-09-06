@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../../utils/supabase/server";
@@ -14,6 +15,16 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../../utils/supabase/server';
+
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = 
+    (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') ||
+    (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
@@ -50,15 +61,23 @@ export default async function handler(
     }
     const supabase = getServerSupabase();
     const { data, error } = await supabase
+<<<<<<< HEAD
       .from("partners")
       .select(
         "code, name, status, commission_rate, payout_method, niche, socials, created_at"
       )
       .order("created_at", { ascending: false });
 <<<<<<< HEAD
+=======
+      .from('partners')
+      .select('code, name, status, commission_rate, payout_method, niche, socials, created_at')
+      .order('created_at', { ascending: false });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (error) return res.status(500).json({ error: error.message });
 
     return res.status(200).json({ partners: data });
+<<<<<<< HEAD
 =======
 
     if (error) return res && res.status(500).json({ error: error && error.message });
@@ -68,3 +87,9 @@ export default async function handler(
     return res && res.status(500).json({ error: e?.message });
   }
 }
+=======
+  } catch (e: any) {
+    return res.status(500).json({ error: e?.message });
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

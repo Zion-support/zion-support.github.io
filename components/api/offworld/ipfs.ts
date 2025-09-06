@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 import {
   addJSON
@@ -26,6 +27,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { cid, provider } = await addJSON(body);
       if (!cid) return res && res.status(503).json({ error: 'IPFS unavailable' });
       return res && res.status(200).json({ cid, provider });
+=======
+import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs';
+
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { action } = req.query;
+  const body = typeof req.body === 'string' ? JSON.parse(req.body) : req.body;
+
+  try {
+    if (req.method === 'POST' && action === 'json') {
+      const { cid, provider } = await addJSON(body);
+      if (!cid) return res.status(503).json({ error: 'IPFS unavailable' });
+      return res.status(200).json({ cid, provider })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(
@@ -63,4 +77,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

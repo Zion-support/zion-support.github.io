@@ -2,16 +2,25 @@
 import React, { useState } from 'react';
 import Head from 'next/head';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   ArrowRight, CheckCircle, Globe
   Search, Grid, List, Star as StarIcon
   Phone, Mail, MapPin
 } from 'lucide-react'
+=======
+import { 
+  ArrowRight, CheckCircle, Globe;
+  Search, Grid, List, Star as StarIcon;
+  Phone, Mail, MapPin
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import EnhancedNavigation from '../components/EnhancedNavigation';
 import EnhancedFooter from '../components/EnhancedFooter';
 import { comprehensiveInnovativeServices } from '../data/comprehensive-2025-innovative-services-expansion';
 import { specializedEnterpriseServices } from '../data/specialized-2025-enterprise-services';
 export default function Comprehensive2025InnovativeServicesShowcase() {
+<<<<<<< HEAD
   const [searchTerm, setSearchTerm] = useState('')
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
@@ -35,6 +44,33 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length }
     { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length }
     { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length }
+=======
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+  const [sortBy, setSortBy] = useState<'popularity' | 'price' | 'rating' | 'newest'>('popularity');
+  const [priceRange, setPriceRange] = useState<'all' | 'budget' | 'mid' | 'enterprise'>('all');
+
+  // Combine all services
+  const allServices = [...comprehensiveInnovativeServices, ...specializedEnterpriseServices];
+
+  const categories = [
+    { id: 'all', name: 'All Services', count: allServices.length },
+    { id: 'AI & Machine Learning', name: 'AI & ML', count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
+    { id: 'Cybersecurity', name: 'Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },
+    { id: 'DevOps & Infrastructure', name: 'DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
+    { id: 'Edge Computing', name: 'Edge Computing', count: allServices.filter(s => s.category.includes('Edge')).length },
+    { id: 'Healthcare AI', name: 'Healthcare', count: allServices.filter(s => s.category.includes('Healthcare')).length },
+    { id: 'Financial Technology', name: 'FinTech', count: allServices.filter(s => s.category.includes('Financial')).length },
+    { id: 'Education Technology', name: 'EdTech', count: allServices.filter(s => s.category.includes('Education')).length },
+    { id: 'Supply Chain & Logistics', name: 'Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },
+    { id: 'Energy & Sustainability', name: 'Energy', count: allServices.filter(s => s.category.includes('Energy')).length },
+    { id: 'Advanced AI & Consciousness', name: 'AI Consciousness', count: allServices.filter(s => s.category.includes('Consciousness')).length },
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'Space Technology', name: 'Space Tech', count: allServices.filter(s => s.category.includes('Space')).length },
+    { id: 'Neural Technology & BCI', name: 'Neural Tech', count: allServices.filter(s => s.category.includes('Neural')).length },
+    { id: 'Advanced IoT & Edge Computing', name: 'Advanced IoT', count: allServices.filter(s => s.category.includes('Advanced IoT')).length },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     { id: 'Advanced Analytics & AI', name: 'Advanced Analytics', count: allServices.filter(s => s.category.includes('Advanced Analytics')).length }
   ]
   const getPriceRange = (price: string) => {
@@ -42,6 +78,7 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
     if (numPrice < 1000) return 'budget'
     if (numPrice < 5000) return 'mid'
     return 'enterprise'
+<<<<<<< HEAD
   }
   const filteredServices = allServices
     .filter(service => {
@@ -50,6 +87,17 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                            service.tagline.toLowerCase().includes(searchTerm.toLowerCase())
       const matchesCategory = selectedCategory === 'all' |service.category.includes(selectedCategory)
       const matchesPrice = priceRange === 'all' |getPriceRange(service.price) === priceRange
+=======
+  };
+
+  const filteredServices = allServices
+    .filter(service => {
+      const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                           service.tagline.toLowerCase().includes(searchTerm.toLowerCase());
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+      const matchesPrice = priceRange === 'all' || getPriceRange(service.price) === priceRange;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return matchesSearch && matchesCategory && matchesPrice
     })
     .sort((a, b) => {
@@ -57,11 +105,19 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         case 'popularity':
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)
         case 'price':
+<<<<<<< HEAD
           return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''))
         case 'rating':
           return b.rating - a.rating
         case 'newest':
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime()
+=======
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, ''));
+        case 'rating':
+          return b.rating - a.rating;
+        case 'newest':
+          return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         default: return 0
       }
     })
@@ -73,7 +129,12 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         staggerChildren: 0.1
       }
     }
+<<<<<<< HEAD
   }
+=======
+  };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -83,11 +144,20 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
         duration: 0.5
       }
     }
+<<<<<<< HEAD
   }
   const contactInfo = {
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+  };
+
+  const contactInfo = {
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     website: 'https://ziontechgroup.com'
   }
   return (
@@ -227,8 +297,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <button
                     onClick={() => setViewMode('grid')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
+<<<<<<< HEAD
                       viewMode === 'grid'
                         ? 'bg-cyan-500 text-white'
+=======
+                      viewMode === 'grid' 
+                        ? 'bg-cyan-500 text-white' 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
@@ -237,8 +312,13 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                   <button
                     onClick={() => setViewMode('list')}
                     className={`px-3 py-2 rounded-lg transition-all duration-300 ${
+<<<<<<< HEAD
                       viewMode === 'list'
                         ? 'bg-cyan-500 text-white'
+=======
+                      viewMode === 'list' 
+                        ? 'bg-cyan-500 text-white' 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                         : 'bg-white/10 text-white/70 hover:bg-white/20'
                     }`}
                   >
@@ -264,7 +344,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 {filteredServices.length} Services Found
               </h2>
               <p className="text-white/60">
+<<<<<<< HEAD
                 Showing results for &quot,{searchTerm |'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+=======
+                Showing results for &quot,{searchTerm || 'all services'}&quot, in {selectedCategory === 'all' ? 'all categories' : selectedCategory}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </p>
             </div>
             {filteredServices.length === 0 ? (
@@ -274,9 +358,14 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 <p className="text-white/60 mb-6">Try adjusting your search criteria or filters</p>
                 <button
                   onClick={() => {
+<<<<<<< HEAD
                     setSearchTerm('')
                     setSelectedCategory('all')
 
+=======
+                    setSearchTerm('');
+                    setSelectedCategory('all');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     setPriceRange('all')
                   }}
                   className="px-6 py-3 bg-cyan-500 hover:bg-cyan-600 rounded-lg transition-colors duration-300"
@@ -285,7 +374,11 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
                 </button>
               </div>
             ) : (
+<<<<<<< HEAD
               <div className={viewMode === 'grid'
+=======
+              <div className={viewMode === 'grid' 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'
                 : 'space-y-6'
               }>
@@ -444,4 +537,8 @@ export default function Comprehensive2025InnovativeServicesShowcase() {
       <EnhancedFooter />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

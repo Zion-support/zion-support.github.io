@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useMemo } from 'react';
 import { User } from 'lucide-react'
 import { Conversation  } from '@/types/messaging';
@@ -120,3 +121,6 @@ export function ConversationsList(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

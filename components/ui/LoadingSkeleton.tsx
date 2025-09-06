@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 interface SkeletonProps {;
   className?: string;
   height?: string;
@@ -44,6 +45,21 @@ const Skeleton: React.FC<SkeletonProps> = ({ ;
   rounded = 'rounded' ;
 }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+interface SkeletonProps {
+  className?: string;
+  height?: string;
+  width?: string;
+  rounded?: string
+}
+
+const Skeleton: React.FC<SkeletonProps> = ({ 
+  className = '';
+  height = 'h-4', 
+  width = 'w-full', 
+  rounded = 'rounded' 
+}) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <motion&& motion.div
       className={`bg-white/10 animate-pulse ${height} ${width} ${rounded} ${className}`}
@@ -110,10 +126,15 @@ export const StatsSkeleton: React.FC<StatsSkeletonProps> = ({ className = '' }) 
               <Skeleton className="w-16 h-16 rounded-full mx-auto mb-4" />
               <Skeleton className="h-10 w-20 mx-auto mb-2" />
               <Skeleton className="h-5 w-24 mx-auto" />
+<<<<<<< HEAD
+=======
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
         </div>
       </div>
     </div>
+<<<<<<< HEAD
   );
 }
 export default Skeleton;  )
@@ -145,6 +166,9 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />;
     </div>;
   );
+=======
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 interface HeroSkeletonProps {;
@@ -196,4 +220,7 @@ export default Skeleton;  );
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default Skeleton;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

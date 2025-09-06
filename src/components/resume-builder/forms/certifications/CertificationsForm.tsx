@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState  } from 'react';
 import { useForm  } from 'react-hook-form';
 import { Button  } from '@/components/ui/button';
@@ -342,3 +343,12 @@ export function CertificationsForm(): any ({;
 }</Button> Next </Button> </div> </div> </form> </Form> </div> </div>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      ...cert;
+      issue_date: formatDateValue(cert.issue_date),
+      expiration_date: formatDateValue(cert.expiration_date)})
+  };
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

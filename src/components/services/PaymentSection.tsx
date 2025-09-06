@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { MapPin } from 'lucide-react'
 import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { CountryPricing } from "@/data/onsiteServicePricing";
@@ -71,3 +72,6 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
 
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

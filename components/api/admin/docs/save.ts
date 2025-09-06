@@ -1,8 +1,12 @@
+<<<<<<< HEAD
 
 const ts = new Date () .toISOString ()
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method Not Allowed' });  }import type { NextApiRequest, NextApiResponse } from 'next';
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
@@ -24,6 +28,11 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' })
+<<<<<<< HEAD
+=======
+  }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const token = req.headers['x-admin-token'] as string | undefined;
   if (process.env.DOCS_ADMIN_TOKEN && token !== process.env.DOCS_ADMIN_TOKEN) {
     return res.status(403).json({ error: 'Forbidden' });
@@ -40,10 +49,17 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     ensureDir(DOCS_DIR);
     ensureDir(VERSIONS_DIR);
 <<<<<<< HEAD
+<<<<<<< HEAD
     const body = req.body;
     const jsonString =
       typeof body === 'string' ? body : JSON.stringify(body, null, 2);    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
 =======
+=======
+
+    const body = req.body;
+
+    const jsonString = typeof body === 'string' ? body : JSON.stringify(body, null, 2);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const body = req && req.body;
 
@@ -58,6 +74,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
     fs.writeFileSync(CONTENT_PATH, jsonString, 'utf8');
     fs.writeFileSync(path.join(VERSIONS_DIR, `${ts}.json`), jsonString, 'utf8');
+<<<<<<< HEAD
     res.status(200).json({ ok: true, version: ts });
 =======
 
@@ -66,9 +83,14 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 
     res && res.status(200).json({ ok: true, version: ts });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+    res.status(200).json({ ok: true, version: ts })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' });
   }
+<<<<<<< HEAD
 
   } catch (e) {
     res && res.status(500).json({ error: 'Failed to save content' })
@@ -76,3 +98,6 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(500).json({ error: 'Failed to save content' })
   }
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

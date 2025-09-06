@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /**
  * Chunk Error Handler - Comprehensive solution for ChunkLoadError recovery
  * Handles automatic retry, cache clearing, and graceful degradation
@@ -519,3 +520,10 @@ export default chunkErrorHandler
         <button onclick="window && window.location.href='/'" style="
 export default chunkErrorHandler;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+          background: #666, color: white,
+          border: none, padding: 0.75rem 1.5rem,
+          border-radius: 0.5rem, font-size: 1rem,
+          cursor: pointer,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

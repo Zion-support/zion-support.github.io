@@ -1,4 +1,5 @@
 export interface EnterpriseService2034 {
+<<<<<<< HEAD
   id: string;
   name: string;
   description: string;
@@ -599,6 +600,22 @@ export const enterprise2034Services: EnterpriseService2034[] = [
   },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Advanced AI algorithmsIoT sensorsMachine learning systemsAutomation frameworksPredictive analyticsReal-time monitoring'
+=======
+  id: string, name: string,
+  description: string, category: string,
+  price: string, features: string[],
+  benefits: string[], useCases: string[],
+  technology: string[], marketSize: string,
+  competitors: string[], competitiveAdvantage: string,
+  implementationTime: string, roi: string,
+  support: string, documentation: string,
+  api: boolean, sdk: boolean,
+  integrations: string[], compliance: string[],
+  security: string[], scalability: string,
+  uptime: string, contact: string,
+  website: string
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     ];
     marketSize: '$38 && 38.9B by 2035';
@@ -626,4 +643,8 @@ export const enterprise2034Services: EnterpriseService2034[] = [
     website: 'https://ziontechgroup && ziontechgroup.com/ai-autonomous-data-center'
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

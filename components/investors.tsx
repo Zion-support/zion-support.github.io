@@ -24,6 +24,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Head from 'next/head';
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function InvestorsPage() {
 =======
 
@@ -71,6 +72,10 @@ export default function InvestorsPage() {;
     </div>;
   );	return (
 <<<<<<< HEAD
+=======
+export default function InvestorsPage() {
+	return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">
 			<Head>
 				<title>Investors | Zion Tech Group</title>
@@ -90,6 +95,7 @@ export default function InvestorsPage() {;
 		</div>
 	)
 }
+<<<<<<< HEAD
 =======
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">;
 			<Head>;
@@ -111,3 +117,5 @@ export default function InvestorsPage() {;
 	),;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

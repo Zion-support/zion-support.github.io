@@ -6,6 +6,7 @@ import { useRouter } from 'next/router';
 // Mock whitepaper data - in a real app, this would come from an API or database
 const whitepapers = {
   'autonomous-systems-guide': {
+<<<<<<< HEAD
     id: 'autonomous-systems-guide'
     title: 'The Complete Guide to Autonomous Systems'
     description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.'
@@ -16,12 +17,25 @@ const whitepapers = {
     content: {
       executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.'
       keyTopics: [
+=======
+    id: 'autonomous-systems-guide',
+    title: 'The Complete Guide to Autonomous Systems',
+    description: 'A comprehensive overview of autonomous technology, implementation strategies, and best practices.',
+    category: 'Technology',
+    pages: '45',
+    author: 'Zion Tech Group Research Team',
+    publishDate: 'January 2025',
+    content: {
+      executiveSummary: 'This comprehensive guide explores the fundamentals of autonomous systems, from basic concepts to advanced implementation strategies. Learn how organizations can leverage autonomous technology to drive innovation and competitive advantage.',
+    keyTopics: [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         'Understanding Autonomous SystemsImplementation StrategiesBest Practices & Case StudiesFuture Trends & Predictions'
       ]
       targetAudience: 'Technology leaders, engineers, and business professionals interested in implementing autonomous systems.'
     }
   }
   'ai-ethics-framework': {
+<<<<<<< HEAD
     id: 'ai-ethics-framework'
     title: 'AI Ethics Framework for Business'
     description: 'Establishing ethical guidelines for AI implementation in enterprise environments.'
@@ -31,6 +45,17 @@ const whitepapers = {
     publishDate: 'January 2025'
     content: {
       executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.'
+=======
+    id: 'ai-ethics-framework',
+    title: 'AI Ethics Framework for Business',
+    description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
+    category: 'Ethics',
+    pages: '32',
+    author: 'Zion Tech Group Ethics Committee',
+    publishDate: 'January 2025',
+    content: {
+      executiveSummary: 'This framework provides organizations with a structured approach to implementing AI systems ethically and responsibly. Learn how to balance innovation with ethical considerations.',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       keyTopics: [
         'Ethical AI PrinciplesImplementation GuidelinesRisk Assessment & MitigationCompliance & Governance'
       ]
@@ -38,6 +63,7 @@ const whitepapers = {
     }
   }
   'automation-roi-calculator': {
+<<<<<<< HEAD
     id: 'automation-roi-calculator'
     title: 'Automation ROI Calculator Guide'
     description: 'How to calculate and maximize return on investment for automation initiatives.'
@@ -47,17 +73,38 @@ const whitepapers = {
     publishDate: 'January 2025'
     content: {
       executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.'
+=======
+    id: 'automation-roi-calculator',
+    title: 'Automation ROI Calculator Guide',
+    description: 'How to calculate and maximize return on investment for automation initiatives.',
+    category: 'Business',
+    pages: '28',
+    author: 'Zion Tech Group Business Analytics Team',
+    publishDate: 'January 2025',
+    content: {
+      executiveSummary: 'This practical guide helps organizations calculate and maximize ROI for automation initiatives. Learn how to measure success and justify automation investments.',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       keyTopics: [
         'ROI Calculation MethodsCost-Benefit AnalysisSuccess Metrics & KPIsInvestment Justification Strategies'
       ]
       targetAudience: 'Business analysts, project managers, and executives evaluating automation investments.'
     }
   }
+<<<<<<< HEAD
 }
 export default function WhitepaperPage() {
   const router = useRouter()
   const { id } = router.query
   const whitepaper = whitepapers[id as keyof typeof whitepapers]
+=======
+};
+
+export default function WhitepaperPage() {
+  const router = useRouter();
+  const { id } = router.query;
+  
+  const whitepaper = whitepapers[id as keyof typeof whitepapers];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (!whitepaper) {
     return (
@@ -130,6 +177,10 @@ export default function WhitepaperPage() {
                 ))}
               </div>
             </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <section className="mb-12">
               <h2 className="text-3xl font-bold mb-6 text-green-400">Target Audience</h2>
               <p className="text-lg text-white/80">{whitepaper.content.targetAudience}</p>
@@ -195,4 +246,8 @@ export default function WhitepaperPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

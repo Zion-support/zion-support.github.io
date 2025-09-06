@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs';
 import path from 'path';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 const EPISODES_PATH = path.join(
@@ -17,10 +18,16 @@ const EPISODES_PATH = path && path.join(
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 );
 const RSS_PATH = path && path.join(process && process.cwd(), 'public', 'podcast && podcast.xml');
+=======
+const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
+const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function ensureStorage() {
 <<<<<<< HEAD
   const dir = path.dirname(EPISODES_PATH);
   if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
+<<<<<<< HEAD
   if (!fs.existsSync(EPISODES_PATH))
     fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path.join(process.cwd(), 'datapodcastepisodes.json');
 const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
@@ -30,6 +37,10 @@ const RSS_PATH = path.join(process.cwd(), 'publicpodcast.xml');
   if (!fs && fs.existsSync(EPISODES_PATH))
     fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8');const EPISODES_PATH = path && path.join(process && process.cwd(), 'datapodcastepisodes && datapodcastepisodes.json');
 const RSS_PATH = path && path.join(process && process.cwd(), 'publicpodcast && publicpodcast.xml');
+=======
+  if (!fs.existsSync(EPISODES_PATH)) fs.writeFileSync(EPISODES_PATH, '[]utf8')
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 function ensureStorage() {
@@ -54,8 +65,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     .filter(e => e && e.audio?.mp3Url)
     .map(e => {      const pubDate = new Date(e && e.createdAt).toUTCString();    .filter((e) => e && e.audio?.mp3Url)
     .map((e) => {
+<<<<<<< HEAD
       const pubDate = new Date(e && e.createdAt).toUTCString();
       const audioUrl = `${siteUrl}${e && e.audio.mp3Url}`;
+=======
+      const pubDate = new Date(e.createdAt).toUTCString();
+      const audioUrl = `${siteUrl}${e.audio.mp3Url}`;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return `
     <item>
 <<<<<<< HEAD
@@ -92,6 +108,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   </channel>
 </rss>`;
 <<<<<<< HEAD
+<<<<<<< HEAD
 fs.writeFileSync(RSS_PATH, xml, 'utf8');
   return res.status(200).json({ ok: true, path: '/podcast.xml' });
 =======
@@ -113,3 +130,9 @@ fs.writeFileSync(RSS_PATH, xml, 'utf8');
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+=======
+
+  fs.writeFileSync(RSS_PATH, xml, 'utf8');
+  return res.status(200).json({ ok: true, path: '/podcast.xml' })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

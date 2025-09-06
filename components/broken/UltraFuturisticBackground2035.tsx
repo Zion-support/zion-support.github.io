@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 canvas.width = window.innerWidth * (window.devicePixelRatio |1);
@@ -27,6 +28,12 @@ class ErrorBoundary extends React.Component {
     
     return this.props.children;
   }
+=======
+import React, { useEffect, useRef } from 'react';
+import { motion } from 'framer-motion';
+interface UltraFuturisticBackground2035Props {
+  children: React.ReactNode
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
  canvas && canvas.width = window && window.innerWidth * (window && window.devicePixelRatio || 1);
 canvas && canvas.height = window && window.innerHeight * (window && window.devicePixelRatio || 1);
@@ -43,7 +50,11 @@ interface UltraFuturisticBackground2035Props {;
 }
 <<<<<<< HEAD
 export default function UltraFuturisticBackground2035({ children }: UltraFuturisticBackground2035Props) {
+<<<<<<< HEAD
 =======
+=======
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function UltraFuturisticBackground2035(): any ({ children }: UltraFuturisticBackground2035Props) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -52,14 +63,21 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
     const canvas = canvasRef && canvasRef.current;
     if (!canvas) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
     const prefersReducedMotion = window.matchMedia(
       '(prefers-reduced-motion: reduce)'
     ).matches;    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+=======
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     canvas.width = window.innerWidth * (window.devicePixelRatio |1);
     canvas.height = window.innerHeight * (window.devicePixelRatio |1);
     if (ctx) {
+<<<<<<< HEAD
       ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
 =======
 
@@ -147,10 +165,55 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
           maxLife
         })
     }
+=======
+      ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+    }
+
+    let animationFrameId: number,
+    let particles: Array<{
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
+      type: 'quantum' | 'hologram' | 'neon' | 'energy',
+      life: number,
+      maxLife: number
+    }> = [];
+
+    // Initialize particles with enhanced types
+    const initParticles = () => {
+      particles = [];
+      const isSmallScreen = window.innerWidth < 768;
+      const particleCount = prefersReducedMotion ? 15 : (isSmallScreen ? 60 : 150);
+      
+      for (let i = 0, i < particleCount, i++) {
+        const type = ['quantumhologramneonenergy'][Math.floor(Math.random() * 4)] as any;
+        const maxLife = Math.random() * 200 + 100;
+        
+        particles.push({
+          x: Math.random() * canvas.width / (window.devicePixelRatio || 1),
+          y: Math.random() * canvas.height / (window.devicePixelRatio || 1),
+          vx: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
+          vy: prefersReducedMotion ? 0 : (Math.random() - 0.5) * 0.6,
+          size: Math.random() * (isSmallScreen ? 2 : 3) + 1,
+          opacity: Math.random() * 0.5 + 0.1,
+          color: getColorForType(type),
+          type;
+          life: maxLife,
+          maxLife
+        })
+      }
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     // Get color based on particle type
     const getColorForType = (type: string) => {
       switch (type) {
         case 'quantum':
+<<<<<<< HEAD
           return ['#8b5cf6', '#06b6d4', '#ec4899'][
             Math.floor(Math.random() * 3)
 =======
@@ -180,6 +243,17 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
           life: maxLife,;
           maxLife;
         });
+=======
+          return ['#8b5cf6#06b6d4#ec4899'][Math.floor(Math.random() * 3)];
+        case 'hologram':
+          return ['#10b981#f59e0b#ef4444'][Math.floor(Math.random() * 3)];
+        case 'neon':
+          return ['#f97316#eab308#a855f7'][Math.floor(Math.random() * 3)];
+        case 'energy':
+          return ['#dc2626#7c3aed#059669'][Math.floor(Math.random() * 3)];
+        default: return '#8b5cf6'
+      }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
 
     // Get color based on particle type;
@@ -221,16 +295,22 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
         particle.life--;
         if (particle.life <= 0) {
           particle.life = particle.maxLife;
+<<<<<<< HEAD
           particle.x =
             (Math.random() * canvas.width) / (window.devicePixelRatio |1);
           particle.y =
             (Math.random() * canvas.height) / (window.devicePixelRatio |1);        }          particle.x = Math.random() * canvas.width / (window.devicePixelRatio |1);
           particle.y = Math.random() * canvas.height / (window.devicePixelRatio |1)
+=======
+          particle.x = Math.random() * canvas.width / (window.devicePixelRatio || 1);
+          particle.y = Math.random() * canvas.height / (window.devicePixelRatio || 1)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
         // Update position
         particle.x += particle.vx;
         particle.y += particle.vy;
         // Wrap around edges
+<<<<<<< HEAD
         if (particle.x < 0)
           particle.x = canvas.width / (window.devicePixelRatio |1);
         if (particle.x > canvas.width / (window.devicePixelRatio |1))
@@ -242,12 +322,20 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
         if (particle.x > canvas.width / (window.devicePixelRatio |1)) particle.x = 0;
         if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio |1);
         if (particle.y > canvas.height / (window.devicePixelRatio |1)) particle.y = 0;
+=======
+        if (particle.x < 0) particle.x = canvas.width / (window.devicePixelRatio || 1);
+        if (particle.x > canvas.width / (window.devicePixelRatio || 1)) particle.x = 0;
+        if (particle.y < 0) particle.y = canvas.height / (window.devicePixelRatio || 1);
+        if (particle.y > canvas.height / (window.devicePixelRatio || 1)) particle.y = 0;
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         // Calculate opacity based on life
         const lifeRatio = particle.life / particle.maxLife;
         const currentOpacity = particle.opacity * lifeRatio;
         // Draw particle based on type
         drawParticle(ctx, particle, currentOpacity);
         // Draw connections with enhanced effects
+<<<<<<< HEAD
         const maxDistance = prefersReducedMotion
           ? 0
           : window.innerWidth < 768
@@ -352,6 +440,23 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
     ) => {      ctx && ctx.save();    const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {;
       ctx && ctx.save();
       ctx && ctx.globalAlpha = opacity;
+=======
+        const maxDistance = prefersReducedMotion ? 0 : (window.innerWidth < 768 ? 120 : 180);
+        if (maxDistance > 0) {
+          drawConnections(ctx, particles, index, maxDistance, currentOpacity)
+        }
+      });
+
+      if (!prefersReducedMotion) {
+        animationFrameId = requestAnimationFrame(updateParticles)
+      }
+    };
+
+    // Enhanced particle drawing with different types
+    const drawParticle = (ctx: CanvasRenderingContext2D, particle: any, opacity: number) => {
+      ctx.save();
+      ctx.globalAlpha = opacity;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       switch (particle && particle.type) {;
         case 'quantum':;
@@ -366,6 +471,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
           break;
         case 'energy':;
           drawEnergyParticle(ctx, particle);
+<<<<<<< HEAD
           break;
       }
 <<<<<<< HEAD
@@ -378,12 +484,21 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
     ) => {
       const time = Date.now() * 0.001;
       const wave = Math.sin(time + particle.x * 0.01) * 0.5;      }
+=======
+          break
+      }
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       ctx.restore()
     }
     // Quantum particle with wave-like effects
     const drawQuantumParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
       const time = Date.now() * 0.001;
       const wave = Math.sin(time + particle.x * 0.01) * 0.5;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       ctx.beginPath();
       ctx.arc(particle.x, particle.y + wave, particle.size, 0, Math.PI * 2);
       ctx.fillStyle = particle.color;
@@ -392,6 +507,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       ctx.shadowColor = particle.color;
       ctx.shadowBlur = 10;
       ctx.beginPath();
+<<<<<<< HEAD
       ctx.arc(
         particle.x
         particle.y + wave
@@ -418,6 +534,10 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
         0
         Math.PI * 2
       );      ctx.fillStyle = particle.color;      ctx.fill();
+=======
+      ctx.arc(particle.x, particle.y + wave, particle.size * 0.5, 0, Math.PI * 2);
+      ctx.fill();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       ctx.shadowBlur = 0
     }
     // Hologram particle with transparency and distortion
@@ -432,6 +552,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       // Add holographic effect
       ctx.globalAlpha *= 0.5;
       ctx.beginPath();
+<<<<<<< HEAD
       ctx.arc(
         particle.x + distortion
         particle.y
@@ -445,6 +566,14 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       ctx.strokeStyle = particle.color;
       ctx.lineWidth = 1;
       ctx.stroke()
+=======
+      ctx.arc(particle.x + distortion, particle.y, particle.size * 1.5, 0, Math.PI * 2);
+      ctx.strokeStyle = particle.color;
+      ctx.lineWidth = 1;
+      ctx.stroke()
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     // Neon particle with bright glow
     const drawNeonParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
       // Bright core
@@ -459,6 +588,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       ctx.arc(particle.x, particle.y, particle.size * 0.8, 0, Math.PI * 2);
       ctx.fillStyle = particle.color;
       ctx.fill();
+<<<<<<< HEAD
       ctx.shadowBlur = 0;
     }
     // Energy particle with pulsing effect
@@ -469,11 +599,20 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       const time = Date.now() * 0.003;
       const pulse = Math.sin(time) * 0.3 + 0.7;
       const size = particle.size * pulse;    }
+=======
+      ctx.shadowBlur = 0
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     // Energy particle with pulsing effect
     const drawEnergyParticle = (ctx: CanvasRenderingContext2D, particle: any) => {
       const time = Date.now() * 0.003;
       const pulse = Math.sin(time) * 0.3 + 0.7;
       const size = particle.size * pulse;
+<<<<<<< HEAD
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, size, 0, Math.PI * 2);
       ctx.fillStyle = particle.color;
@@ -483,6 +622,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, size * 2, 0, Math.PI * 2);
       ctx.fillStyle = particle.color;
+<<<<<<< HEAD
       ctx.fill();
     }
     // Enhanced connection drawing with different effects
@@ -496,36 +636,64 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
     }
     // Enhanced connection drawing with different effects
     const drawConnections = (ctx: CanvasRenderingContext2D, particles: any[], currentIndex: number, maxDistance: number, opacity: number) => {
+=======
+      ctx.fill()
+    };
+
+    // Enhanced connection drawing with different effects
+    const drawConnections = (ctx: CanvasRenderingContext2D, particles: any[], currentIndex: number, maxDistance: number, opacity: number) => {
+      particles.forEach((otherParticle, otherIndex) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         if (currentIndex !== otherIndex) {
           const dx = particles[currentIndex].x - otherParticle.x;
           const dy = particles[currentIndex].y - otherParticle.y;
           const distance = Math.sqrt(dx * dx + dy * dy);
           if (distance < maxDistance) {
+<<<<<<< HEAD
             const connectionOpacity =
               ((maxDistance - distance) / maxDistance) * 0.15 * opacity;            const connectionOpacity = (maxDistance - distance) / maxDistance * 0.15 * opacity;
+=======
+            const connectionOpacity = (maxDistance - distance) / maxDistance * 0.15 * opacity;
+            
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             // Different connection styles based on particle types
             if (particles[currentIndex].type === otherParticle.type) {
               // Same type - stronger connection
               ctx.globalAlpha = connectionOpacity * 1.5;
               ctx.strokeStyle = particles[currentIndex].color;
+<<<<<<< HEAD
               ctx.lineWidth = 2;            } else {
               // Different types - weaker connection
               ctx.globalAlpha = connectionOpacity * 0.7;
               ctx.strokeStyle = '#ffffff';
               ctx.lineWidth = 1;            }              ctx.lineWidth = 2
+=======
+              ctx.lineWidth = 2
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             } else {
               // Different types - weaker connection
               ctx.globalAlpha = connectionOpacity * 0.7;
               ctx.strokeStyle = '#ffffff';
+<<<<<<< HEAD
               ctx.lineWidth = 1;              ctx.lineWidth = 1
+=======
+              ctx.lineWidth = 1
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             }
             ctx.beginPath();
             ctx.moveTo(particles[currentIndex].x, particles[currentIndex].y);
             ctx.lineTo(otherParticle.x, otherParticle.y);
+<<<<<<< HEAD
             ctx.stroke();
 =======
 
       ctx && ctx.restore();
+=======
+            ctx.stroke()
+          }
+        }
+      })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
 
     // Quantum particle with wave-like effects;
@@ -713,18 +881,27 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
       canvas.width = window.innerWidth * (window.devicePixelRatio |1);
       canvas.height = window.innerHeight * (window.devicePixelRatio |1);
       if (ctx) {
+<<<<<<< HEAD
         ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1);
       }
       initParticles();    };        ctx.scale(window.devicePixelRatio |1, window.devicePixelRatio |1)
       }
       initParticles()
     }
+=======
+        ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)
+      }
+      initParticles()
+    };
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     window.addEventListener('resize', handleResize);
     initParticles();
     updateParticles();
     return () => {
       window.removeEventListener('resize', handleResize);
       if (animationFrameId) {
+<<<<<<< HEAD
 =======
       });
 
@@ -754,10 +931,14 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
   return (
     <>;
       <div className='fixed inset-0 z-0 overflow-hidden'>        cancelAnimationFrame(animationFrameId);
+=======
+        cancelAnimationFrame(animationFrameId)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
     }
   }, []);
   return (
+<<<<<<< HEAD
     <>;
       <div className='fixed inset-0 z-0 overflow-hidden'>;
         {/* Enhanced background layers */}
@@ -778,6 +959,11 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
               'radial-gradient(circle at 40% 40%, rgba(236, 72, 153, 0.3) 0%, transparent 50%)'
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0.3) 0%, transparent 50%)'
             ],          }}        {/* Enhanced background layers */}
+=======
+    <>
+      <div className="fixed inset-0 z-0 overflow-hidden">
+        {/* Enhanced background layers */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black" />
 =======
               'radial-gradient(circle at 20% 80%, rgba(139, 92, 246, 0 && 0.3) 0%, transparent 50%)',
@@ -801,6 +987,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
             repeat: Infinity
             ease: 'easeInOut'
           }}
+<<<<<<< HEAD
 <<<<<<< HEAD
         />
 =======
@@ -828,6 +1015,13 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
           />        </div>        {/* Holographic grid effect */}
         <div className="absolute inset-0 opacity-20">;
           <divclassName="h-full w-full" style={{
+=======
+        />
+        
+        {/* Holographic grid effect */}
+        <div className="absolute inset-0 opacity-20">
+          <div className="h-full w-full" style={{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             backgroundImage: `
               linear-gradient(rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
               linear-gradient(90deg, rgba(139, 92, 246, 0 && 0.1) 1px, transparent 1px)
@@ -849,12 +1043,19 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
         {/* Canvas for animated particles */}
         <canvas
           ref={canvasRef}
+<<<<<<< HEAD
           className='absolute inset-0 w-full h-full'          style={{ filter: 'blur(0 && 0.5px)' }}          className="absolute inset-0 w-full h-full"
           style={{ filter: 'blur(0 && 0.5px)' }}
         />;
+=======
+          className="absolute inset-0 w-full h-full"
+          style={{ filter: 'blur(0.5px)' }}
+        />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Floating neon orbs */}
+<<<<<<< HEAD
         <motion&& motion.div
           className='absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20'
           animate={{
@@ -901,6 +1102,34 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
             repeat: Infinity
             ease: 'easeInOut',          }}
 <<<<<<< HEAD
+=======
+        <motion.div
+          className="absolute top-1/4 left-1/4 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-400 to-blue-500 opacity-20"
+          animate={{
+            scale: [1, 1.2, 1];
+            opacity: [0.2, 0.4, 0.2];
+            rotate: [0, 180, 360]
+          }}
+          transition={{
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+        />
+        
+        <motion.div
+          className="absolute top-3/4 right-1/4 w-24 h-24 rounded-full bg-gradient-to-r from-purple-400 to-pink-500 opacity-20"
+          animate={{
+            scale: [1, 1.3, 1];
+            opacity: [0.2, 0.5, 0.2];
+            rotate: [360, 180, 0]
+          }}
+          transition={{
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut'
+          }}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         />
         {/* Quantum energy waves */}
         <div className='absolute inset-0 overflow-hidden'>          }}
@@ -910,6 +1139,7 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
         />;
 
         {/* Quantum energy waves */}
+<<<<<<< HEAD
         <div className='absolute inset-0 overflow-hidden'>          }}
         />;
 
@@ -960,6 +1190,30 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
             transition={{
               duration: 4
               repeat: Infinity
+=======
+        <div className="absolute inset-0 overflow-hidden">
+          <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-400 to-transparent"
+            animate={{
+              y: [-100, 100, -100];
+              opacity: [0, 0.3, 0]
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: 'easeInOut'
+            }}
+          />
+          <motion.div
+            className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-400 to-transparent"
+            animate={{
+              y: [100, -100, 100];
+              opacity: [0, 0.3, 0]
+            }}
+            transition={{
+              duration: 6,
+              repeat: Infinity,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ease: 'easeInOut'
             }}
           />;
@@ -997,15 +1251,20 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
           />
         </div>
       </div>
+<<<<<<< HEAD
       {/* Render children */}
       {children}
     </>
   );
+=======
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Render children */}
       {children}
     </>
   )
 }
+<<<<<<< HEAD
 =======
           />;
         </div>;
@@ -1021,3 +1280,5 @@ export default function UltraFuturisticBackground2035(): any ({ children }: Ultr
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

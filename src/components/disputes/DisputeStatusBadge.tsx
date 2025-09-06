@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { Badge } from "@/components/ui/badge";
 import { ShieldAlert } from 'lucide-react'
@@ -80,3 +81,7 @@ export function DisputeStatusBadge(): any ({ status }: DisputeStatusBadgeProps) 
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

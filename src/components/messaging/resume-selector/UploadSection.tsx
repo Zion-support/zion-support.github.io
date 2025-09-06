@@ -1,5 +1,8 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Upload, FileText } from 'lucide-react'
@@ -31,6 +34,7 @@ export function UploadSection(): any ({;
         <Button variant='outline' className='relative'>;
           Browse Files;
           <input
+<<<<<<< HEAD
             type='file'
             className='absolute inset-0 w-full h-full opacity-0 cursor-pointer'
             accept='.pdf'            onChange={onFileUpload}
@@ -55,6 +59,17 @@ export function UploadSection(): any ({;
             <span className='text-xs text-zion-slate'>
               {Math.round(customFile.size / 1024)} KB
             </span>          </div>      {customFile && (
+=======
+            type="file"
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
+            accept=".pdf"
+            onChange={onFileUpload}
+          />
+        </Button>
+      </div>
+      
+      {customFile && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="p-3 bg-zion-blue-dark/30 rounded-md">
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -66,6 +81,7 @@ export function UploadSection(): any ({;
         </div>
       )}
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -105,3 +121,7 @@ export function UploadSection(): any ({;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

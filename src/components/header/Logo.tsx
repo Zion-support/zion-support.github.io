@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 import { useWhitelabel } from '@/context/WhitelabelContext';
@@ -7,11 +8,30 @@ interface LogoProps {
   customLogo?: string
 export function Logo({ customLogo }: LogoProps) {
   const { isWhitelabel, logoUrl, brandName } = useWhitelabel();
+=======
+import React from 'react';
+import Link from 'next/link';
+import { useWhitelabel } from '@/context/WhitelabelContext';
+interface LogoProps {
+  customLogo?: string
+  
+}
+
+
+export function Logo({ customLogo }: LogoProps) { const { isWhitelabel, logoUrl, brandName  } = useWhitelabel(),
+
+  
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   // Use the white-label logo if available and no specific customLogo is provided
 
   const logoToUse = customLogo |(isWhitelabel ? logoUrl : null)
   // Use the white-label color if available and no specific _customColor is provided
+<<<<<<< HEAD
   // const colorToUse = _customColor |(isWhitelabel ? primaryColor : undefined)
+=======
+  // const colorToUse = _customColor || (isWhitelabel ? primaryColor : undefined);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (logoToUse) {
     return (
@@ -89,4 +109,7 @@ export function Logo(): any ({ customLogo }: LogoProps) {;
     </Link>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

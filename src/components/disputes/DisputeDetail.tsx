@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useState, useEffect } from "react";
 import { useRouter  } from 'next/router';
@@ -1474,3 +1475,6 @@ container mx-auto p-4 space-y-6" > <div className="flex flex-wrap items-center j
 }</span> </div> <div className="flex justify-between"> </div> </CardContent> </Card> </div> </div> </div>)
 }'"  )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

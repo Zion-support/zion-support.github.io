@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -13,6 +14,19 @@ const TechnicalDocumentationChat: NextPage = () => {;
         />{" "}
 <<<<<<< HEAD
       </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const TechnicalDocumentationChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>TechnicalDocumentationChat - Zion Tech Solutions</title>
+        <meta name="description" content="TechnicalDocumentationChat service" />
+      </Head>
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>TechnicalDocumentationChat</h1>
         <p>Service details coming soon...</p>
@@ -32,4 +46,7 @@ const TechnicalDocumentationChat: NextPage = () => {;
   );
 }
 export default TechnicalDocumentationChat;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

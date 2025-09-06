@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/EquipmentDetail && EquipmentDetail.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/EquipmentDetail && EquipmentDetail.jsx import React from \'react\'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) ; import React from \'react\'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) \';\';
 <<<<<<< "HEAD": src && src.pages.disabled/EquipmentDetail && EquipmentDetail.jsx import _React from 'react'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) ; import _React from 'react'; export default function EquipmentDetail () { const { equipmentId } = useParams () ; const navigate = useNavigate () ; const { isAuthenticated } = useAuth () ; const [selectedImageIndex,setSelectedImageIndex] = useState (0) ; const [quantity,setQuantity] = useState (1) ; const [isAdding,setIsAdding] = useState (false) ';';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

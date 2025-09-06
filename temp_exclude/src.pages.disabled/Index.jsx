@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/Index && Index.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/Index && Index.jsx import React from \'react\'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () ; import React from \'react\'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () \';\';
 <<<<<<< "HEAD": src && src.pages.disabled/Index && Index.jsx import _React from 'react'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () ; import _React from 'react'; import { ArrowRight,Users,Zap,Settings,Sparkles,BarChart3,Smartphone export default function Index () { const { t } = useTranslation () ; const { isRTL } = useLanguage () ';';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

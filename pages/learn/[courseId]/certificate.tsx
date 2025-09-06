@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { useRouter } from 'next/router';
 import CertificatePreview from '../../../components/learn/CertificatePreview';
 export default function CertificatePage() {
@@ -12,4 +15,8 @@ export default function CertificatePage() {
       <CertificatePreview courseId={courseId} />
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

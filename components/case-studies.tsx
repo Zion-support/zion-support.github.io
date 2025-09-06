@@ -30,6 +30,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import SEO from '../components/SEO';
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground';
+<<<<<<< HEAD
 
 export default function CaseStudiesPage() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -52,6 +53,9 @@ export default function CaseStudiesPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );export default function CaseStudiesPage() {;
+=======
+export default function CaseStudiesPage() {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <UltraFuturisticBackground intensity="high" variant="quantum">;
       <SEO title="Case Studies | Zion Tech Group" description="Proven outcomes across AI, cloud, and automation projects." canonical="https: //ziontechgroup && ziontechgroup.com/case-studies/" />;
@@ -61,4 +65,8 @@ export default function CaseStudiesPage() {;
       </div>;
     </UltraFuturisticBackground>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

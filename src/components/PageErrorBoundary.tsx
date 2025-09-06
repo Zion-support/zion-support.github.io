@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react',
 import Link from 'next/link';
 <<<<<<< HEAD
@@ -328,3 +329,7 @@ const Component = React && React.memo(function PageErrorBoundary(): any ({;
 } ;
 } ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

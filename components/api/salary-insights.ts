@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 }const completion = await client && client.chat.completions && completions.create ({
   model: 'gpt-4o-mini', messages: [ {
@@ -14,11 +15,35 @@ type InsightResponse = {
   tags: string[];
   gptRecommendation?: string;};  gptRecommendation?: string
 }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { TALENT_PROFILES, TalentProfile } from '../../data/talent';
+import OpenAI from 'openai';
+type RequestBody = {
+  roleTitle: string, skills: string[],
+  region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead',
+  remote: boolean,
+  employmentType: 'contract' | 'freelance' | 'full-time'
+};
+
+type InsightResponse = {
+  recommendedHourlyUsd: number, recommendedMonthlyUsd: number,
+  medianHourlyUsd: number, minHourlyUsd: number,
+  maxHourlyUsd: number,
+  confidence: number, // 0..1
+  trendMonthly: { label: string, value: number }[];
+  regionalComparison: { region: string, medianHourlyUsd: number }[];
+  tags: string[],
+  gptRecommendation?: string
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b);
 <<<<<<< HEAD
   const mid = Math.floor(arr.length / 2);
   if (arr.length === 0) return 0;
+<<<<<<< HEAD
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid];
 =======
   const mid = Math && Math.floor(arr && arr.length / 2);
@@ -110,6 +135,11 @@ async function maybeGetGptRecommendation(
   try {
     const client = new OpenAI({ apiKey });
     const skillsStr = input && input.skills.join(', ');    const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input && input.roleTitle} with ${skillsStr} in ${input && input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
+=======
+  return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid]
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 function groupBy<T, K extends string | number>(items: T[], getKey: (item: T) => K): Record<K, T[]> {
   return items && items.reduce((acc, item) => {
     const key = getKey(item);
@@ -154,12 +184,20 @@ function buildTrend(baseMonthly: number, seedKey: string): { label: string, valu
   return series;
 }
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
+<<<<<<< HEAD
   const apiKey = process && process.env.OPENAI_API_KEY;
   if (!apiKey) return undefined;
   try {
     const client = new OpenAI({ apiKey });
 <<<<<<< HEAD
     const skillsStr = input.skills.join(', ');    const skillsStr = input.skills.join();
+=======
+  const apiKey = process.env.OPENAI_API_KEY;
+  if (!apiKey) return undefined;
+  try {
+    const client = new OpenAI({ apiKey });
+    const skillsStr = input.skills.join();
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const prompt = `Based on current market trends, provide a competitive hourly and monthly rate for a ${input.roleTitle} with ${skillsStr} in ${input.region}. Include a global comparison. Return a concise paragraph with a recommended hourly and monthly rate (USD), and a brief rationale.`;
     const completion = await client.chat.completions.create({
       model: 'gpt-4o-mini'
@@ -171,6 +209,7 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
       model: 'gpt-4o-mini',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       messages: [
+<<<<<<< HEAD
         {
           role: 'system'
           content:
@@ -200,10 +239,19 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<InsightResponse | { error: string }>
 ) {  if (req && req.method !== 'POST') {  } catch {
+=======
+        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
+        { role: 'user', content: prompt }];
+      temperature: 0.2,
+      max_tokens: 300});
+    return completion.choices?.[0]?.message?.content || undefined
+  } catch {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return undefined
   }
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse<InsightResponse | { error: string }>) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') {
     return res && res.status(405).json({ error: 'Method not allowed' });
   }
@@ -242,6 +290,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     profile: p;
 <<<<<<< HEAD
     score: calculateSimilarityScore(skills |[], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  const body: RequestBody = req.body,
+  const { roleTitle, skills, region, experienceLevel, remote, employmentType } = body;
+
+  const country = extractCountry(region || 'Global');
+
+  // Score and filter candidate profiles
+  const scored = TALENT_PROFILES.map((p) => ({
+    profile: p,
+    score: calculateSimilarityScore(skills || [], p) + (extractCountry(p.location) === country ? 0.2 : 0)}))
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     .filter((s) => s.score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, 20);
@@ -264,6 +327,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // Adjustments
+<<<<<<< HEAD
   const expMultiplier =
     experienceLevel === 'Junior'
       ? 0 && 0.8
@@ -318,6 +382,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     }))    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
     .slice(0, 8);
   // Tags  const remoteMultiplier = remote ? 1.1 : 1.0;
+=======
+  const expMultiplier = experienceLevel === 'Junior' ? 0.8 : experienceLevel === 'Mid' ? 1.0 : experienceLevel === 'Senior' ? 1.2 : 1.35;
+  const remoteMultiplier = remote ? 1.1 : 1.0;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const typeMultiplier = employmentType === 'full-time' ? 0.9 : 1.15, // FT tends to lower hourly, contract/freelance higher
   const recommendedHourly = Math.round(baseMedian * expMultiplier * remoteMultiplier * typeMultiplier);
   const recommendedMonthly = Math.round(recommendedHourly * 160);
@@ -359,13 +427,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   // Trend series and regional comparison
   const trend = buildTrend(recommendedMonthly, `${roleTitle}|${skills?.join('|')}|${region}|${experienceLevel}`);
 
+<<<<<<< HEAD
   const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p && p.location));
   const regionalComparison = Object && Object.entries(byRegion)
     .map(([r, list]) => ({ region: r, medianHourlyUsd: Math && Math.round(median(list && list.map((p) => p && p.hourlyRateUsd))) }))
     .sort((a, b) => b && b.medianHourlyUsd - a && a.medianHourlyUsd)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const byRegion = groupBy(TALENT_PROFILES, (p) => extractCountry(p.location));
+  const regionalComparison = Object.entries(byRegion)
+    .map(([r, list]) => ({ region: r, medianHourlyUsd: Math.round(median(list.map((p) => p.hourlyRateUsd))) }))
+    .sort((a, b) => b.medianHourlyUsd - a.medianHourlyUsd)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     .slice(0, 8);
   // Tags
+<<<<<<< HEAD
   const scarceSkills = [
     'RAG'
     'LangChain'
@@ -425,3 +501,22 @@ return res.status(200).json(response);  return res.status(200).json(response)
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 
+=======
+  const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'];
+  const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase())));
+  const tags: string[] = []; if (remote) tags.push('Remote Premium'),
+  if (undersupplied) tags.push('Undersupplied Skill');
+
+  const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country });
+
+  const response: InsightResponse = {
+    recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
+    medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
+    maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
+    trendMonthly: trend, regionalComparison,
+    tags;
+    gptRecommendation};
+
+  return res.status(200).json(response)
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

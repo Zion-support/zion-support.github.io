@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 <<<<<<< HEAD
@@ -67,6 +68,8 @@ const REGION_OPTIONS = [
   { id: "Australia", label: "Australia" }
 =======
       </button>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       {expanded && (;
         <div className='mt-4 space-y-2'>;
@@ -108,6 +111,7 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
         <div className="mt-4 space-y-2">
           {REGION_OPTIONS.map(region => (
             <div key={region.id} className="flex items-center">
+<<<<<<< HEAD
 =======
       </button>;
 
@@ -129,9 +133,27 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
               ">;
               </label>;
             </div>;
+=======
+              <Checkbox
+                id={`region-${region.id}`}
+                checked={selectedRegions.includes(region.id)}
+                onCheckedChange={() => toggleRegion(region.id)}
+                className="border-zion-slate-light data-[state=checked]:bg-zion-purple data-[state=checked]:border-zion-purple"
+              />
+              <label
+                htmlFor={`region-${region.id}`}
+                className="ml-2 text-sm text-zion-slate-light cursor-pointer"
+               htmlFor="input-
+                {region.label}
+              ">
+                {region.label}
+              </label>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
         </div>;
       )}
+<<<<<<< HEAD
 <<<<<<< HEAD
     </div>
   )
@@ -162,3 +184,8 @@ export function RegionFilter(): any ({ selectedRegions, toggleRegion, expanded, 
 }</div>) ;
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

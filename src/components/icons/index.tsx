@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { SVGProps } from 'react'
 import { logWarn } from '@/utils/productionLogger'
@@ -1871,3 +1872,7 @@ export const Icons = iconMap, // Export the map if you need to refer to availabl
 export default Icon, // Default export the Icon component;
 export const Icons = iconMap, // Export the map if you need to refer to available icons;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

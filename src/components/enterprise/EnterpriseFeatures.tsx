@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from "react";
 import { Users, Shield, Briefcase, Award, Settings, Globe } from 'lucide-react'
@@ -110,11 +111,14 @@ export function EnterpriseFeatures() {;
             teams and complex hiring needs;
           </p>;
         </div>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
         <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>;
           {features && features.map(feature => (;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <div
+<<<<<<< HEAD
               key={feature && feature.title}
               className='bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md'>;
               <div className='h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5'>;
@@ -135,11 +139,23 @@ export function EnterpriseFeatures() {;
               <h3 className="font-bold text-xl mb-3">{feature && feature.title}</h3>;
               <p className="text-muted-foreground">{feature && feature.description}</p>;
             </div>;
+=======
+              key={feature.title}
+              className="bg-card rounded-lg p-6 shadow-sm border border-border transition-all hover:shadow-md"
+            >
+              <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                <feature.icon className="h-6 w-6 text-primary" />
+              </div>
+              <h3 className="font-bold text-xl mb-3">{feature.title}</h3>
+              <p className="text-muted-foreground">{feature.description}</p>
+            </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
 <<<<<<< HEAD
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 =======
@@ -149,3 +165,7 @@ export function EnterpriseFeatures() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

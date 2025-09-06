@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
  > Report abuse </button> </div>)
 }</div> </div>) }
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
@@ -34,6 +35,16 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
   return (import React from 'react';
 import StarRating from './StarRating';
 import type { PublicReview } from '../../types/reviews';
+=======
+import React from 'react';
+import StarRating from './StarRating';
+import type { PublicReview } from '../../types/reviews';
+import { Star } from 'lucide-react';
+type Props = {
+  review: PublicReview,
+  onReport?: (id: string) => void
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import {Star} from 'lucide-react';
 <<<<<<< HEAD
@@ -41,6 +52,7 @@ type Props = {
   review: PublicReview
   onReport?: (id: string) => void
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
+<<<<<<< HEAD
 =======
 type Props = {;
   review: PublicReview,;
@@ -114,6 +126,25 @@ const ReviewCard: React.FC<Props> = ({ review, onReport }) => {;
 <<<<<<< HEAD
 }
 export default ReviewCard;        {review.categories?.wouldWorkWithAgain && (
+=======
+  return (
+    <div className="enhanced-card hover: shadow-lg transition-shadow">
+      <div className="flex items-center justify-between mb-2">
+        <div className="flex items-center gap-2">
+          <StarRating value={review.rating} onChange={() => {}} readOnly size={18} />
+          <span className="text-sm text-gray-500">{new Date(review.createdAt).toLocaleDateString()}</span>
+        </div>
+        <button
+          className="text-xs text-red-500 hover:underline"
+          onClick={() => onReport && onReport(review.id)}
+        >
+          Report abuse
+        </button>
+      </div>
+      <div className="flex items-center gap-2 mb-3">
+        <span className="text-sm font-medium">{review.authorName}</span>
+        {review.categories?.wouldWorkWithAgain && (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <span className="pill pill-success">Would work again</span>
         )}
       </div>
@@ -154,4 +185,7 @@ export default ReviewCard;        {review && review.categories?.wouldWorkWithAga
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReviewCard;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -3,20 +3,35 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap
   DollarSign, Shield, Mail, MapPin, Rocket, BarChart3
   Brain, Database, TrendingUp as TrendingUpIcon, Users
   Target, BarChart, PieChart, Activity, Eye, Lock
 } from 'lucide-react'
+=======
+import { 
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, 
+  DollarSign, Shield, Mail, MapPin, Rocket, BarChart3;
+  Brain, Database, TrendingUp as TrendingUpIcon, Users;
+  Target, BarChart, PieChart, Activity, Eye, Lock
+} from 'lucide-react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Button from '../components/ui/Button';
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     website: 'https://ziontechgroup.com'
   }
   const features = [
@@ -85,7 +100,12 @@ export default function AIBusinessIntelligenceSuite() {
               >
                 AI Business Intelligence Suite
               </motion.h1>
+<<<<<<< HEAD
               <motion.p
+=======
+
+              <motion.p 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
@@ -134,8 +154,13 @@ export default function AIBusinessIntelligenceSuite() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
+<<<<<<< HEAD
                   <Button
                     href="/contact"
+=======
+                  <Button 
+                    href="/contact" 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -334,6 +359,10 @@ export default function AIBusinessIntelligenceSuite() {
                 </span>
               </h2>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -413,8 +442,13 @@ export default function AIBusinessIntelligenceSuite() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2 }}
                 >
+<<<<<<< HEAD
                   <Button
                     href="/contact"
+=======
+                  <Button 
+                    href="/contact" 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     variant="primary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 shadow-2xl hover:shadow-blue-500/25"
                   >
@@ -430,8 +464,13 @@ export default function AIBusinessIntelligenceSuite() {
                   whileTap={{ scale: 0.95 }}
                   transition={{ duration: 0.2, delay: 0.1 }}
                 >
+<<<<<<< HEAD
                   <Button
                     href="/contact"
+=======
+                  <Button 
+                    href="/contact" 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     variant="secondary"
                     className="text-lg px-8 py-4 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 shadow-2xl hover:shadow-green-500/25"
                   >
@@ -442,6 +481,10 @@ export default function AIBusinessIntelligenceSuite() {
                   </Button>
                 </motion.div>
               </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="mt-8 text-gray-400">
                 <p>Contact us: <a href={`tel:${contactInfo.mobile}`} className="text-blue-400 hover:text-blue-300">{contactInfo.mobile}</a> | <a href={`mailto:${contactInfo.email}`} className="text-blue-400 hover:text-blue-300">{contactInfo.email}</a></p>
                 <p className="mt-2">{contactInfo.address}</p>
@@ -452,4 +495,8 @@ export default function AIBusinessIntelligenceSuite() {
       </div>
     </UltraAdvancedFuturisticBackground>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

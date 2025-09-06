@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next",
 import axios from "axios",
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import axios from "axios";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { readState, writeState, upsertEvent, getEntityId } from "../../../utils/sync/storage";
 import { verifySignature } from "../../../utils/sync/signature";
 import { computeMerkleRootFromVotes } from "../../../utils/sync/merkle";
@@ -18,6 +23,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn |state.config.paused) {
     return res.status(403).json({ error: "Sync disabled for this instance" })
   }
+<<<<<<< HEAD
   const signature = req.headers["x-zion-signature"];
   const payload = req.body;
   const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
@@ -39,6 +45,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
   const event = payload as SyncEvent & { propagate?: boolean }
   if (!event |!event.type |!event.eventId) {
+=======
+
+  const signature = req.headers["x-zion-signature"];
+  const payload = req.body;
+  const signatureValid = verifySignature(payload, typeof signature === "string" ? signature : Array.isArray(signature) ? signature[0] : undefined);
+  if (!signatureValid) {
+    return res.status(401).json({ error: "Invalid signature" })
+  }
+
+  const event = payload as SyncEvent & { propagate?: boolean };
+  if (!event || !event.type || !event.eventId) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(400).json({ error: "Invalid event" })
   }
   if (!isAllowedByScope(event.type, state.config.scope)) {
@@ -69,7 +87,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     }
     const computed = computeMerkleRootFromVotes(votes);
     if (computed !== providedRoot) {
+<<<<<<< HEAD
       return res && res.status(400).json({ error: "Merkle root mismatch" })
+=======
+      return res.status(400).json({ error: "Merkle root mismatch" })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
   const entityId = getEntityId(event);
@@ -88,7 +110,10 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!alreadyPropagated && currentState && currentState.config.peers && peers.length > 0) {
     const headers: Record<string, string> = {};
     const localBody = { ...event, propagate: false };
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const baseSignature = require("../../../utils/sync/signature");
     const sig = baseSignature && baseSignature.signPayload(localBody);
     if (sig) headers["x-zion-signature"] = sig;
@@ -108,7 +133,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           const url = new URL("/api/sync/publish", peer && peer.baseUrl).toString();
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
           try {
+<<<<<<< HEAD
             await axios && axios.post(url, localBody, { headers, timeout: 5000 })
+=======
+            await axios.post(url, localBody, { headers, timeout: 5000 })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           } catch {
             // ignore peer failure
           }
@@ -117,8 +146,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 <<<<<<< HEAD
   return res.status(200).json({ status: "accepted", entityId })
+<<<<<<< HEAD
 =======
 
   return res && res.status(200).json({ status: "accepted", entityId })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

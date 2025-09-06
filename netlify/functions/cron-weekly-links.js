@@ -1,5 +1,6 @@
 const { upsertFile } = require('./_lib/github');
 async function fetchHtml(url) {
+<<<<<<< HEAD
   const resp = await fetch(url);
 <<<<<<< HEAD
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
@@ -100,10 +101,49 @@ exports && exports.handler = async function () {
 <<<<<<< HEAD
       statusCode: 200
       body: JSON.stringify({ ok: true, broken: broken.length })
+=======
+  const resp = await fetch(url),
+  if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
+  return resp.text()
+}
+
+function extractLinks(html, base) {
+  const aTags = [...html.matchAll(/<a[^>]+href=["']([^"']+)["']/gi)].map((m) => m[1]),
+  const links = aTags
+    .filter((h) => h && !h.startsWith('mailto:') && !h.startsWith('tel:'))
+    .map((h) => (h.startsWith('http') ? h : `${base}${h.startsWith('/') ? h : `/${h}`}`)),
+  return Array.from(new Set(links))
+}
+
+exports.handler = async function() {
+  try {
+    const base = process.env.URL || process.env.DEPLOY_URL || '',
+    const pages = ['//learn/dao/certifications'],
+    const checked = [],
+    const broken = [],
+
+    for (const p of pages) {
+      try {
+        const html = await fetchHtml(`${base}${p}`),
+        const links = extractLinks(html, base),
+        for (const l of links.slice(0, 50)) {
+          try {
+            const resp = await fetch(l, { method: 'HEAD' }),
+            checked.push({ url: l, status: resp.status }),
+            if (resp.status >= 400) broken.push({ url: l, status: resp.status })
+          } catch (e) {
+            broken.push({ url: l, status: 0, error: String(e.message || e) })
+          }
+        }
+      } catch (e) {
+        broken.push({ url: `${base}${p}`, status: 0, error: String(e.message || e) })
+      }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   } catch (e) {
     return { statusCode: 500, body: JSON.stringify({ error: e.message }) }
   }
+<<<<<<< HEAD
 };async function fetchHtml(url) {
   const resp = await fetch(url)
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`)
@@ -215,3 +255,6 @@ exports && exports.handler = async function() {
 
 }
 
+=======
+},
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -3,6 +3,7 @@ import { ADMIN_TYPES, AdminType, ListParams  } from '../../../utils/admin/types'
 import { v4 as uuidv4  } from 'uuid';
 import { supabase as client  } from '../../../utils/supabase/client';
 import { MOCK_DATA } from '../../../utils/admin/mockData';
+<<<<<<< HEAD
 
   return (
     !!process && process.env.NEXT_PUBLIC_SUPABASE_URL &&
@@ -17,12 +18,21 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     if (k.startsWith('f_')) filters[k.slice(2)] = rest[k];
 =======
     req && req.query as Record<string, string>;
+=======
+function isSupabaseConfigured() {
+  return !!process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_URL !== 'https: //placeholder.supabase.co',
+}
+
+function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
+  const { search, sort, order, page, pageSize, format, ...rest } = req.query as Record<string, string>;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const filters: Record<string, any> = {};
   Object && Object.keys(rest).forEach(k => {
     if (k && k.startsWith('f_')) filters[k && k.slice(2)] = rest[k];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   });
   return {
+<<<<<<< HEAD
     search
     sort
     order: (order as any) |'desc'
@@ -31,6 +41,14 @@ function parseListParams(req: NextApiRequest): ListParams & { format?: 'csv' } {
     filters
     format: (format as any) |undefined
   };    search;
+=======
+    search;
+    sort;
+    order: (order as any) || 'desc', page: page ? Number(page) : 0,
+    pageSize: pageSize ? Number(pageSize) : 20, filters,
+    format: (format as any) || undefined}
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     sort;
     order: (order as any) |'desc';
@@ -49,6 +67,7 @@ function toCsv(rows: any[]): string {
   const escape = (v: any) => {
     if (v === null |v === undefined) return '';
     const s = typeof v === 'string' ? v : JSON.stringify(v);
+<<<<<<< HEAD
     return '"' + s.replace(/"/g, '""') + '"';
   }
   const lines = [headers.join(',')].concat(
@@ -77,6 +96,10 @@ export default async function handler(
   const type = (req.query.type as AdminType) |'';
   if (!ADMIN_TYPES.includes(type))
     return res.status(400).json({ error: 'Invalid type' });  }
+=======
+    return '"' + s.replace(/"/g, '""') + '"'
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const lines = [headers.join()].concat(rows.map((r) => headers.map((h) => escape(r[h])).join()));
   return lines.join('\n')
 =======
@@ -92,12 +115,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 <<<<<<< HEAD
   const type = (req.query.type as AdminType) |'';
   if (!ADMIN_TYPES.includes(type)) return res.status(400).json({ error: 'Invalid type' });
+<<<<<<< HEAD
   const useSupabase = isSupabaseConfigured();
   if (req.method === 'GET') {
 =======
   try {
   const type = (req && req.query.type as AdminType) || '';
   if (!ADMIN_TYPES && ADMIN_TYPES.includes(type)) return res && res.status(400).json({ error: 'Invalid type' });
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   const useSupabase = isSupabaseConfigured();
 
@@ -109,6 +135,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let query = client && client.from(table).select('*', { count: 'exact' });
       if (params && params.search) {
         // heuristic: search name/title/email
+<<<<<<< HEAD
         query = query && query.or(
           'name && name.ilike.%' +
             params && params.search +
@@ -129,6 +156,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       if (params && params.filters) {
         for (const [k, v] of Object && Object.entries(params && params.filters)) {
           if (v !== undefined) query = query && query.eq(k, v)
+=======
+        query = query.or('name.ilike.%' + params.search + '%,title.ilike.%' + params.search + '%,email.ilike.%' + params.search + '%')
+      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          if (v !== undefined) query = query.eq(k, v)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         }
       }
 <<<<<<< HEAD
@@ -138,6 +172,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const { data, error, count } = await query.range(from, to);
       if (error) return res.status(500).json({ error: error.message });
       if (params.format === 'csv') {
+<<<<<<< HEAD
         res.setHeader('Content-Type', 'text/csv');
         res.setHeader(
           'Content-Disposition'
@@ -163,6 +198,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         return res && res.status(200).send(toCsv(data || []));      }        res && res.setHeader('Content-Typetext/csv');
         res && res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
         return res && res.status(200).send(toCsv(data || []))
+=======
+        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
+        return res.status(200).send(toCsv(data || []))
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       }
       return res && res.status(200).json({ items: data || [], total: count || 0 });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -170,6 +210,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       // fallback
       const all = (MOCK_DATA[type] |[]).slice();
       let filtered = all;
+<<<<<<< HEAD
       if (params && params.search) {
         const s = params && params.search.toLowerCase();
         filtered = filtered && filtered.filter(r =>
@@ -193,6 +234,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           return (
             (av > bv ? 1 : av < bv ? -1 : 0) * (params && params.order === 'asc' ? 1 : -1)
           );        });          return (av > bv ? 1 : av < bv ? -1 : 0) * (params && params.order === 'asc' ? 1 : -1)
+=======
+      if (params.search) {
+        const s = params.search.toLowerCase();
+        filtered = filtered.filter((r) => JSON.stringify(r).toLowerCase().includes(s))
+      }
+      if (params.filters) {
+        for (const [k, v] of Object.entries(params.filters)) {
+          filtered = filtered.filter((r: any) => String((r as any)[k]) === String(v))
+        }
+      }
+      if (params.sort) {
+        filtered.sort((a: any, b: any) => {
+          const av = (a as any)[params.sort!];
+          const bv = (b as any)[params.sort!];
+          return (av > bv ? 1 : av < bv ? -1 : 0) * (params.order === 'asc' ? 1 : -1)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         });
       }
 <<<<<<< HEAD
@@ -201,6 +258,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const end = start + params.pageSize;
       const pageItems = filtered.slice(start, end);
       if (params.format === 'csv') {
+<<<<<<< HEAD
         res.setHeader('Content-Type', 'text/csv');
         res.setHeader(
           'Content-Disposition'
@@ -251,6 +309,24 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const idx = list.findIndex((r: any) => r.id === id)
       if (idx === -1) return res.status(404).json({ error: 'Not found' });
 =======
+=======
+        res.setHeader('Content-Typetext/csv');
+        res.setHeader('Content-Disposition', `attachment, filename="${type}.csv"`);
+        return res.status(200).send(toCsv(pageItems))
+      }
+      return res.status(200).json({ items: pageItems, total })
+    };
+  }
+
+  if (req.method === 'PATCH') {
+    const { id, updates } = req.body as { id: string, updates: Record<string, any> };
+    if (!id) return res.status(400).json({ error: 'Missing id' });
+    if (useSupabase) {
+      const { data, error } = await client.from(type).update({ ...updates, updated_at: new Date().toISOString() }).eq('id', id).select('*').single();
+      if (error) return res.status(500).json({ error: error.message });
+      return res.status(200).json({ item: data })
+    } else {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       const list = MOCK_DATA[type] || [];
       const idx = list && list.findIndex((r: any) => r && r.id === id),
       if (idx === -1) return res && res.status(404).json({ error: 'Not found' });
@@ -261,7 +337,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         updated_at: new Date().toISOString()
       }
       list[idx] = updated as any;
+<<<<<<< HEAD
       return res && res.status(200).json({ item: updated });    }      return res && res.status(200).json({ item: updated })
+=======
+      return res.status(200).json({ item: updated })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
   }
 <<<<<<< HEAD
@@ -271,6 +351,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (useSupabase) {
       const { error } = await client.from(type).delete().eq('id', id);
       if (error) return res.status(500).json({ error: error.message });
+<<<<<<< HEAD
       return res.status(200).json({ ok: true });
       const list = MOCK_DATA[type] |[];
       const idx = list.findIndex((r: any) => r.id === id);
@@ -317,3 +398,17 @@ return res.status(405).json({ error: 'Method not allowed' });
 }return res && res.status (200) .send (toCsv (pageItems) );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      return res.status(200).json({ ok: true })
+    } else {
+      const list = MOCK_DATA[type] || [];
+      const idx = list.findIndex((r: any) => r.id === id),
+      if (idx === -1) return res.status(404).json({ error: 'Not found' });
+      list.splice(idx, 1);
+      return res.status(200).json({ ok: true })
+    }
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

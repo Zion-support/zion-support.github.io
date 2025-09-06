@@ -1,6 +1,7 @@
 
 export const real2036ITServices = [
   {
+<<<<<<< HEAD
     id: 'quantum-cloud-infrastructure-platform'
     name: 'Quantum Cloud Infrastructure Platform'
     tagline: 'Next-generation quantum cloud computing'
@@ -14,6 +15,24 @@ export const real2036ITServices = [
       'Quantum networking'
       'Quantum security protocols'
       'Scalable quantum infrastructure'
+=======
+    id: 'quantum-cloud-infrastructure-platform', name: 'Quantum Cloud Infrastructure Platform',
+    tagline: 'Next-generation quantum cloud computing',
+    description: 'Revolutionary quantum cloud infrastructure platform providing quantum computing resources, quantum-classical hybrid computing, and quantum cloud services. Features quantum resource management, quantum networking, and quantum security.',
+    price: '$6,999',
+    period: 'month',
+    features: [
+      'Quantum computing resourcesQuantum-classical hybrid computingQuantum resource managementQuantum networkingQuantum security protocolsScalable quantum infrastructure'
+    ];
+    popular: true, category: 'Quantum Cloud',
+    icon: '☁️⚛️',
+    marketPrice: '$8,000-15,000/month',
+    benefits: [
+      'Access to quantum computing powerHybrid classical-quantum processingFuture-proof cloud infrastructureQuantum advantage in the cloud'
+    ];
+    useCases: [
+      'Scientific research computingFinancial modelingDrug discoveryClimate simulation'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
     popular: true
     category: 'Quantum Cloud'
@@ -333,4 +352,7 @@ export const real2036ITServices = [
     ]
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

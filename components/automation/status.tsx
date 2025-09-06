@@ -1,10 +1,14 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>)
 =======
  </div>) : (<div className="text-sm text-gray-500" >No status available yet.</div>) ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }</div>) import { useEffect, useState } from 'react';
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default function AutomationStatusPage() {;
   const [status, setStatus] = useState<{ runAt?: string, ok?: boolean } | null>(null);
@@ -54,4 +58,7 @@ export default function AutomationStatusPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

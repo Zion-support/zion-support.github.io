@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState, useRef } from 'react';
 import { Input } from './ui/input';
 import { Button } from './ui/button';
@@ -210,3 +211,6 @@ export function FooterNewsletter(): any (): React && React.ReactElement {;
 } ;
 } ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import {
 
@@ -19,6 +22,7 @@ import {
   // SidebarMenuButton, // Removed
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
+<<<<<<< HEAD
 } from '@/components/ui/sidebar'
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
@@ -31,10 +35,15 @@ import {
   // SidebarGroupLabel, // Not needed
   // SidebarGroupContent, // Not needed
 } from "@/components/ui/sidebar"
+=======
+} from "@/components/ui/sidebar";
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export function AppSidebar() {
   return (
     <Sidebar>
       <SidebarContent>
+<<<<<<< HEAD
         <SidebarGroup title='Dashboard'>
           <SidebarMenuItem href='/creator-dashboard' icon={<Home size={16} />}>
             <span>Home</span>
@@ -59,6 +68,11 @@ export function AppSidebar() {
             <span>Profile</span>
           </SidebarMenuItem>
           <SidebarMenuItem href='/settings' icon={<Settings size={16} />}>            <span>Settings</span>            <span>Home</span>
+=======
+        <SidebarGroup title="Dashboard">
+          <SidebarMenuItem href="/creator-dashboard" icon={<Home size={16} />}>
+            <span>Home</span>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </SidebarMenuItem>
           <SidebarMenuItem href="/messaging" icon={<Mail size={16} />}>
             <span>Messages</span>
@@ -85,6 +99,7 @@ export function AppSidebar() {
         </SidebarGroup>
       </SidebarContent>
     </Sidebar>
+<<<<<<< HEAD
   )
 }
 =======
@@ -180,3 +195,7 @@ export function AppSidebar() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

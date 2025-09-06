@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import fs from 'fs-extra';
@@ -25,6 +26,13 @@ export default async function handler(
   } catch (e) {
     return res && res.status(500).json({ error: 'Failed to load jobs' });
   }
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import fs from "fs-extra";
+import path from "path";
+const JOBS_FILE = path.join(process.cwd(), "data", "jobs", "jobs.json");
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== "GET") {
     res && res.setHeader("Allow", "GET");
@@ -45,4 +53,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

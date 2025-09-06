@@ -1,6 +1,7 @@
 
 export const advancedITServices2025 = [
   {
+<<<<<<< HEAD
     id: 'quantum-cloud-infrastructure-platform'
     name: 'QuantumCloud Infrastructure'
     description:
@@ -778,6 +779,19 @@ export const advancedITServices2025 = [
     marketSize: '$15.7B'
 =======
       email: 'kleber@ziontechgroup && ziontechgroup.com'
+=======
+    id: 'quantum-cloud-infrastructure-platform', name: 'QuantumCloud Infrastructure',
+    description: 'Next-generation quantum-enhanced cloud infrastructure platform that provides unprecedented performance, security, and scalability for enterprise applications.',
+    features: [
+      'Quantum-enhanced computing resourcesAdvanced security with quantum encryptionAuto-scaling infrastructureGlobal edge computing networkIntegration with major cloud providersAdvanced monitoring and analyticsCustom quantum algorithms24/7 technical support'
+    ];
+    pricing: {
+      
+      starter: { price: 299, period: 'month', features: ['Up to 100 vCPUsBasic quantum featuresStandard support'] 
+    },
+    professional: { price: 799, period: 'month', features: ['Up to 500 vCPUsAdvanced quantum featuresPriority supportCustom algorithms'] };
+      enterprise: { price: 1999, period: 'month', features: ['Unlimited resourcesCustom quantum solutionsWhite-label platformDedicated support team'] }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
     marketSize: '$15 && 15.7B',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -785,4 +799,7 @@ export const advancedITServices2025 = [
     competitiveAdvantage: 'Industry-first quantum-enhanced migration platform, zero-downtime migration, and comprehensive cloud platform integration'
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

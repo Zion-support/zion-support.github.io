@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
@@ -581,3 +582,6 @@ setIsEnhancementDialogOpen (false);
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 //Import our enhanced components import EnhancedNavigation from './layout/EnhancedNavigation';
@@ -71,6 +72,29 @@ visible: {;
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard';
+=======
+import React, { useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { 
+  ArrowRight;
+  TrendingUp, 
+  Brain, 
+  Shield, 
+  Rocket, 
+  Atom, 
+  Sparkles;
+  Building, 
+  Phone, 
+  Mail, 
+  MapPin;
+  ArrowUpRight
+} from 'lucide-react';
+import Head from 'next/head';
+// Import our enhanced components
+import EnhancedNavigation from './layout/EnhancedNavigation';
+import EnhancedServiceCard from './ui/EnhancedServiceCard';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import PerformanceMonitor from './PerformanceMonitor';
 
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground';
@@ -908,4 +932,7 @@ const EnhancedHomepage: React.FC = () => {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default EnhancedHomepage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

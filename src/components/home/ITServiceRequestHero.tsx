@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import Image from 'next/image'
 import { GradientHeading } from '@/components/GradientHeading'
@@ -480,3 +481,6 @@ py-16 md:py-24 border-b border-zion-purple/20 bg-[radial-gradient (#0f172a, #020
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -5,15 +5,20 @@ import { BlogPost  } from '@/utils/types/blog';
 import PageShareButtons from '@/components/blog/PageShareButtons';
 import { listPublishedPosts } from '@/utils/data/blogStore';
 import BlogCard from '@/components/blog/BlogCard';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] }
+=======
+type Props = { topic: string, posts: BlogPost[] },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {
 =======
 type Props = { topic: string; posts: BlogPost[] };type Props = { topic: string, posts: BlogPost[] },;
 const TopicPage: NextPage<Props> = ({ topic, posts }) => {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   return (
+<<<<<<< HEAD
     <div>;
       <Head>;
         <title>{topic} - Zion Blog</title>;
@@ -93,6 +98,21 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   return { props: { topic, posts } }
 }
 export default TopicPage;      </Head>
+=======
+    <div>
+      <Head>
+        <title>{topic} - Zion Blog</title>
+        <meta name="description" content={`Articles about ${topic}`} />
+        <meta property="og:title" content={`${topic} - Zion Blog`} />
+        <meta property="og:description" content={`Articles about ${topic}`} />
+        <meta property="og:image" content="/images/og/topic-default.jpg" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${topic} - Zion Blog`} />
+        <meta name="twitter:description" content={`Articles about ${topic}`} />
+        <meta name="twitter:image" content="/images/og/topic-default.jpg" />
+      </Head>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="mx-auto max-w-6xl">
         <h1 className="text-4xl font-bold mb-3">{topic}</h1>
         <div className="mb-6">
@@ -146,4 +166,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {;
   return { props: { topic, posts } }
 }
 export default TopicPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -4,9 +4,14 @@ import { useRouter } from 'next/router';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+<<<<<<< HEAD
 import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react';
 import { AuthLayout } from '@/layout';
 
+=======
+import { Mail, AlertCircle, CheckCircle, Clock, RefreshCw, ArrowLeft, Eye } from 'lucide-react'
+import { AuthLayout } from '@/layout';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { supabase } from '@/integrations/supabase/client', // Import Supabase client
 import { useAuth } from '@/hooks/useAuth', // Import useAuth to access user state
 import { logWarn, logErrorToProduction } from '@/utils/productionLogger';
@@ -14,6 +19,7 @@ export default function VerifyStatus() {
 
   const router = useRouter()
   const { user: authUser, isLoading: authLoading } = useAuth(), // Get user from AuthContext
+<<<<<<< HEAD
   const { email: emailParam } = router.query
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
@@ -22,6 +28,17 @@ export default function VerifyStatus() {
   const [isCheckingStatus, setIsCheckingStatus] = useState(false)
   const [lastSentTime, setLastSentTime] = useState<Date | null>(null)
   const [countdown, setCountdown] = useState(0)
+=======
+  const { email: emailParam } = router.query,
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState('');
+  const [isResending, setIsResending] = useState(false);
+  const [isCheckingStatus, setIsCheckingStatus] = useState(false);
+  const [lastSentTime, setLastSentTime] = useState<Date | null>(null);
+  const [countdown, setCountdown] = useState(0);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   useEffect(() => {
     if (typeof emailParam === 'string') {
       setEmail(emailParam)
@@ -29,17 +46,29 @@ export default function VerifyStatus() {
   }, [emailParam])
   // Countdown timer for resend button
   useEffect(() => {
+<<<<<<< HEAD
     let interval: NodeJS.Timeout
+=======
+    let interval: NodeJS.Timeout,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     if (countdown > 0) {
       interval = setInterval(() => {
         setCountdown(prev => prev - 1)
       }, 1000)
     }
     return () => clearInterval(interval)
+<<<<<<< HEAD
   }, [countdown])
   const handleResendEmail = async () => {
     if (!email) {
       setError('Please enter your email address')
+=======
+  }, [countdown]);
+
+  const handleResendEmail = async () => {
+    if (!email) {
+      setError('Please enter your email address');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return
     }
     setIsResending(true)
@@ -47,6 +76,7 @@ export default function VerifyStatus() {
     setMessage('')
     try {
       const response = await fetch('/api/resend-verification-email', {
+<<<<<<< HEAD
         method: 'POST'
         headers: { 'Content-Type': 'application/json' }
         body: JSON.stringify({ email })
@@ -55,6 +85,18 @@ export default function VerifyStatus() {
       if (response.ok) {
         setMessage('Verification email sent successfully! Please check your inbox.')
         setLastSentTime(new Date())
+=======
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        setMessage('Verification email sent successfully! Please check your inbox.');
+        setLastSentTime(new Date());
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         setCountdown(60), // 60 second cooldown
       } else {
         setError(data.message |'Failed to resend verification email')
@@ -67,7 +109,11 @@ export default function VerifyStatus() {
   }
   const handleCheckStatus = async () => {
     if (!email) {
+<<<<<<< HEAD
       setError('Please enter your email address')
+=======
+      setError('Please enter your email address');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       return
     }
     setIsCheckingStatus(true)
@@ -75,9 +121,15 @@ export default function VerifyStatus() {
     setMessage('')
     try {
       // Attempt to refresh the session to get the latest user status
+<<<<<<< HEAD
       const { error: refreshError } = await supabase.auth.refreshSession()
       if (refreshError) {
         // Don't treat all refresh errors as critical for this check
+=======
+      const { error: refreshError } = await supabase.auth.refreshSession(),
+      if (refreshError) {
+        // Don't treat all refresh errors as critical for this check;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         // as user might not have a session yet or it might be invalid.
         logWarn('Error during session refresh:', { data: refreshError.message })
       }
@@ -117,7 +169,11 @@ export default function VerifyStatus() {
   }
   const handleGoBack = () => {
     router.back()
+<<<<<<< HEAD
   }
+=======
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <AuthLayout>
@@ -188,7 +244,11 @@ export default function VerifyStatus() {
             {/* Check Status Button */}
             <Button
               onClick={handleCheckStatus}
+<<<<<<< HEAD
               disabled={!email |isCheckingStatus}
+=======
+              disabled={!email || isCheckingStatus}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               className="w-full"
               variant="outline"
             >
@@ -207,7 +267,11 @@ export default function VerifyStatus() {
             {/* Resend Email Button */}
             <Button
               onClick={handleResendEmail}
+<<<<<<< HEAD
               disabled={!email |isResending |countdown > 0}
+=======
+              disabled={!email || isResending || countdown > 0}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               className="w-full"
               variant="secondary"
             >
@@ -273,4 +337,8 @@ export default function VerifyStatus() {
       </div>
     </AuthLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

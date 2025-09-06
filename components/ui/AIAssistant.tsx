@@ -1,4 +1,8 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import React, { useCallback, useEffect, useMemo, useState } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 export type AIAssistantProps = {
@@ -49,6 +53,7 @@ export default function AIAssistant({
 =======
 };
 
+<<<<<<< HEAD
 export default function AIAssistant(): any ({;
   buttonLabel = "Generate with AI",;
   title = "AI Writing Assistant",;
@@ -58,6 +63,16 @@ export default function AIAssistant(): any ({;
   authorizationToken,;
 }: AIAssistantProps) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+export default function AIAssistant({
+  buttonLabel = 'Generate with AI',
+  title = 'AI Writing Assistant',
+  defaultPrompt,
+  systemPrompt,
+  onAccept,
+  authorizationToken
+}: AIAssistantProps) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [isOpen, setIsOpen] = useState(false);
   const [prompt, setPrompt] = useState(defaultPrompt);
   const [output, setOutput] = useState("");
@@ -65,8 +80,14 @@ export default function AIAssistant(): any ({;
   const [isEditing, setIsEditing] = useState(false);
   const [error, setError] = useState<string | null>(null);
 <<<<<<< HEAD
+<<<<<<< HEAD
   useEffect(() => {
     setPrompt(defaultPrompt);
+=======
+
+  useEffect(() => {
+    setPrompt(defaultPrompt)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, [defaultPrompt]);
   const callOperator = useCallback(async () => {
     setLoading(true);
@@ -75,6 +96,7 @@ export default function AIAssistant(): any ({;
       const res = await fetch("/api/ai/operator", {
         method: "POST"
         headers: {
+<<<<<<< HEAD
           "Content-Type": "application/json"
           ...(authorizationToken
             ? { Authorization: `Bearer ${authorizationToken}` }
@@ -84,6 +106,15 @@ export default function AIAssistant(): any ({;
                 }
               : {})
         }
+=======
+          'Content-Type': 'application/json',
+          ...(authorizationToken
+            ? { Authorization: `Bearer ${authorizationToken}` }
+            : process.env.NEXT_PUBLIC_OPERATOR_TOKEN
+            ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
+            : {})
+        },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         body: JSON.stringify({ prompt, system: systemPrompt })
       });
       const data = await res.json();
@@ -95,6 +126,7 @@ export default function AIAssistant(): any ({;
     } catch (e: any) {
       setError(e.message |"Request failed");
     } finally {
+<<<<<<< HEAD
       setLoading(false);
     }
   }, [authorizationToken, prompt, systemPrompt]);
@@ -144,6 +176,15 @@ export default function AIAssistant(): any ({;
   const onCopy = useCallback(async () => {;
     try {;
       await navigator && navigator.clipboard.writeText(output);
+=======
+      setLoading(false)
+    }
+  }, [authorizationToken, prompt, systemPrompt]);
+
+  const onCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(output)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     } catch {}
   }, [output]);
 
@@ -152,20 +193,37 @@ export default function AIAssistant(): any ({;
     setIsOpen(true);
     setOutput("");
     setIsEditing(false);
+<<<<<<< HEAD
     setError(null);
+=======
+    setError(null)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }, []);
   const onClose = useCallback(() => setIsOpen(false), []);
+<<<<<<< HEAD
   const canAccept = useMemo(() => output && output.trim().length > 0, [output]);
+=======
+
+  const canAccept = useMemo(() => (output && output.trim().length > 0), [output]);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <>;
       <button
         type="button"
         onClick={onOpen}
+<<<<<<< HEAD
         className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1 && 1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800">;
         {buttonLabel}
 <<<<<<< HEAD
       </button>
+=======
+        className="inline-flex items-center gap-2 rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 px-3 py-1.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800"
+      >
+        {buttonLabel}
+      </button>
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {isOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center">
           <div className="absolute inset-0 bg-black/50" onClick={onClose} />
@@ -253,12 +311,19 @@ export default function AIAssistant(): any ({;
                   Accept
                 </button>
               </div>
+<<<<<<< HEAD
 =======
                   className="ml-auto rounded-md bg-green-600 text-white px-3 py-1 && 1.5 text-sm disabled:opacity-60";
                 >;
                   Accept;
                 </button>;
               </div>;
+=======
+
+              {error && (
+                <div className="text-red-600 text-sm">{error}</div>
+              )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
               {error && <div className="text-red-600 text-sm">{error}</div>}
@@ -277,6 +342,7 @@ export default function AIAssistant(): any ({;
                     className="w-full rounded-md border border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-900 p-2 text-sm"
                   />
                 ) : (
+<<<<<<< HEAD
                   <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">
                     {output |"No content yet. Click Generate."}
                   </pre>
@@ -297,3 +363,15 @@ export default function AIAssistant(): any ({;
     </>;
   );
 }
+=======
+                  <pre className="w-full rounded-md border border-gray-200 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 p-3 text-sm whitespace-pre-wrap">{output || 'No content yet. Click Generate.'}</pre>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

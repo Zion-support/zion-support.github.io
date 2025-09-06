@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -86,12 +87,48 @@ const contact = {
   email: 'kleber@ziontechgroup && ziontechgroup.com';
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com'
+=======
+import { ServiceVariant } from '../types/service-variants';
+export interface SpecializedEnterpriseService {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number, reviews: number,
+  benefits: string[], capabilities: string[],
+  marketAdvantage: string
+}
+
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 };
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const specializedEnterpriseServices: SpecializedEnterpriseService[] = [
   // Advanced AI & Consciousness Services
   {
+<<<<<<< HEAD
     id: 'ai-consciousness-research-platform'
     name: 'AI Consciousness Research Platform'
     tagline: 'Advanced AI consciousness simulation and research'
@@ -804,6 +841,48 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
     price: '$4,499';
     period: '/month';
     description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.';
+=======
+    id: 'ai-consciousness-research-platform', name: 'AI Consciousness Research Platform',
+    tagline: 'Advanced AI consciousness simulation and research',
+    price: '$5,999',
+    period: '/month',
+    description: 'Cutting-edge platform for AI consciousness research, enabling scientists to study artificial general intelligence, consciousness emergence, and cognitive modeling.',
+    features: [
+      'Consciousness simulation engineCognitive architecture modelingEmotional intelligence algorithmsSelf-awareness developmentMemory and learning systemsSocial interaction modelingResearch analytics toolsCollaborative research platform';
+      'API for research integrationExpert consultation services'
+    ];
+    popular: true, icon: '🧠',
+    color: 'from-purple-600 to-pink-600', textColor: 'text-purple-400',
+    link: 'https://ziontechgroup.com/ai-consciousness-research', marketPosition: 'Leading AI consciousness research platform for scientific institutions',
+    targetAudience: 'Research institutions, Universities, AI labs, Government agencies, Tech companies',
+    trialDays: 14, setupTime: '6-8 weeks',
+    category: 'Advanced AI & Consciousness', realService: true,
+    technology: ['Advanced AI/ML, Neural networks, Cognitive science, Python, TensorFlow, PyTorch'];
+    integrations: ['Research platforms, Academic databases, AI frameworks, Collaboration tools'];
+    useCases: ['Consciousness research, AGI development, Psychology studies, AI ethics research, Cognitive modeling'];
+    roi: 'Strategic investment in cutting-edge AI research with long-term scientific and commercial benefits', competitors: ['No direct competitors in consciousness simulation'],
+    marketSize: 'Emerging research market', growthRate: 'Projected 500% annual growth',
+    variant: 'ai-futuristic', contactInfo: contact,
+    realImplementation: true, implementationDetails: 'Advanced research platform with custom AI models and collaborative research tools',
+    launchDate: '2024-11-01', customers: 23,
+    rating: 5.0, reviews: 18,
+    benefits: [
+      'Breakthrough consciousness researchAGI development capabilitiesScientific collaborationPatent-pending algorithmsExclusive research access'
+    ];
+    capabilities: [
+      'Consciousness simulationCognitive modelingEmotional intelligenceResearch collaborationAdvanced analytics'
+    ];
+    marketAdvantage: 'Only comprehensive AI consciousness research platform available'
+  };
+
+  // Quantum Computing Services
+  {
+    id: 'quantum-machine-learning-platform', name: 'Quantum Machine Learning Platform',
+    tagline: 'Quantum-enhanced machine learning and optimization',
+    price: '$4,499',
+    period: '/month',
+    description: 'Revolutionary platform that combines quantum computing with machine learning, enabling unprecedented computational power for complex optimization problems.',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     features: [
       'Quantum-enhanced ML algorithmsQuantum optimization solversHybrid quantum-classical computingQuantum feature selectionQuantum neural networksQuantum data encodingPerformance benchmarkingQuantum error correction';
       'Research and development toolsExpert quantum consulting'
@@ -1074,4 +1153,7 @@ export default specializedEnterpriseServices;    id: 'quantum-machine-learning-p
   }
 ];
 export default specializedEnterpriseServices;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

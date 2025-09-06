@@ -24,4 +24,8 @@ export default function AiHrAnalyticsPlatform() {
 			canonical="https: //ziontechgroup.com/ai-hr-analytics-platform"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

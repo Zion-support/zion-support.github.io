@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import React from "react",
 import { Apple, GithubIcon } from 'lucide-react'
 import { cn } from "@/lib/utils";
@@ -136,3 +137,5 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({ ;
   );
 },;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

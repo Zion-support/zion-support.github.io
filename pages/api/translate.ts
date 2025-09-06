@@ -1,5 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
+=======
+const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY })
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
@@ -21,10 +25,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const completion = await openai.chat.completions.create({
         model: 'gpt-4o-mini'
         messages: [
+<<<<<<< HEAD
           { role: 'system', content: system }
           { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }]
         temperature: 0.2})
       const translated = completion.choices?.[0]?.message?.content?.trim() |''
+=======
+          { role: 'system', content: system },
+          { role: 'user', content: `Translate this into ${langName} in a business-appropriate tone.\n\n${text}` }
+        ],
+        temperature: 0.2
+      });
+      const translated = completion.choices?.[0]?.message?.content?.trim() || '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       results[lng] = translated
     }
     return res.status(200).json(results)
@@ -33,4 +46,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     return res.status(500).json({ error: 'Translation failed' })
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

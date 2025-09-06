@@ -1,5 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import OpenAI from 'openai';
+<<<<<<< HEAD
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
@@ -8,6 +9,12 @@ export default async function handler(
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
   const { moduleTitle, moduleContent } = req.body |{}
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+  const { moduleTitle, moduleContent } = req.body || {};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const apiKey = process.env.OPENAI_API_KEY;
 =======
   if (req && req.method !== 'POST')
@@ -18,6 +25,7 @@ export default async function handler(
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   const { moduleTitle, moduleContent } = req.body |{}
   const apiKey = process.env.OPENAI_API_KEY;
@@ -35,6 +43,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     });
   const fallback = () => res && res.status(200).json({
     summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+=======
+  const fallback = () => res.status(200).json({
+    summary: `Summary for ${moduleTitle}: Focus on practical setup, governance (DAO), token basics, and community operations to launch your Zion instance. Ensure legal readiness with KYC/AML and publish your whitepaper/governance docs.`});
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   if (!apiKey) return fallback();
   try {
     const client = new OpenAI({ apiKey });
@@ -64,6 +77,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const completion = await client && client.chat.completions && completions.create({
       model: 'gpt-4o-mini',
       messages: [
+<<<<<<< HEAD
         {
           role: 'system',
           content: 'You are a concise, practical course assistant.',
@@ -81,7 +95,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const text = completion && completion.choices?.[0]?.message?.content ?? '';
     return res && res.status(200).json({ summary: text && text.trim() })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+        { role: 'system', content: 'You are a concise, practical course assistant.' };
+        { role: 'user', content: prompt }];
+      temperature: 0.3
+      });
+
+    const text = completion.choices?.[0]?.message?.content ?? '';
+    return res.status(200).json({ summary: text.trim() })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (err) {
     return fallback()
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

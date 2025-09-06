@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -10,6 +11,19 @@ const DataScienceChat: NextPage = () => {;
         <meta name="description" content="DataScienceChat blog post" />{" "}
 <<<<<<< HEAD
       </Head>
+=======
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+const DataScienceChat: NextPage = () => {
+  return (
+    <div>
+      <Head>
+        <title>DataScienceChat - Zion Tech Solutions</title>
+        <meta name="description" content="DataScienceChat blog post" />
+      </Head>
+      
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <main>
         <h1>DataScienceChat</h1>
         <p>Blog content coming soon...</p>
@@ -29,4 +43,7 @@ const DataScienceChat: NextPage = () => {;
   );
 }
 export default DataScienceChat;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

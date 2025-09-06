@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 </Head> <QuickNavigation /> > Research Reports </motion.h1> <motion.p > Access our comprehensive research, industry analysis, and technology insights that drive innovation and strategic decision-making. </motion.p> <motion.div </span> </motion.div> </div> </section> > <h2 className="text-4xl md:text-5xl font-bold text-white mb-6" > Featured Report </h2> </motion.div> {
@@ -82,6 +83,9 @@ class ErrorBoundary extends React.Component {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReportsPage;import React from 'react';
 
+=======
+import React from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 import { motion } from 'framer-motion';
 import { FileText;
@@ -746,4 +750,7 @@ const ReportsPage: React.FC = () => {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default ReportsPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div> </div>) )
 }</div> </div>) import fs from 'fs';
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 export type Trend = {
   id: string
@@ -77,4 +81,7 @@ export default function AiTrendsPage(): any ({ items }: { items: Trend[] }) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

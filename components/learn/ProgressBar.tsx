@@ -22,6 +22,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 import React from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 type ProgressBarProps = { value: number }
@@ -32,6 +33,10 @@ export default function ProgressBar({ value }: ProgressBarProps) {
       <div className='h-3 bg-blue-600 rounded' style={{ width: `${pct}%` }} />
     </div>
   );export default function ProgressBar({ value }: ProgressBarProps) {
+=======
+type ProgressBarProps = { value: number },
+export default function ProgressBar({ value }: ProgressBarProps) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const pct = Math.max(0, Math.min(100, value));
 
   return (
@@ -57,4 +62,7 @@ export default function ProgressBar(): any ({ value }: ProgressBarProps) {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

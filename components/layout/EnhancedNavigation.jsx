@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react';
 import Link from 'next/link';
+<<<<<<< HEAD
 const EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -82,6 +83,11 @@ const EnhancedNavigation = () => {
               className='bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors'
             >              Get Startedconst EnhancedNavigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+=======
+import { Star } from 'lucide-react';
+const EnhancedNavigation = () => {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <nav className="bg-white shadow-lg sticky top-0 z-50">
@@ -120,6 +126,7 @@ const EnhancedNavigation = () => {
           </div>
           {/* Mobile menu button */}
           <button
+<<<<<<< HEAD
             className='lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100'
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
@@ -135,14 +142,22 @@ const EnhancedNavigation = () => {
                 strokeWidth={2}
                 d='M4 6h16M4 12h16M4 18h16'
               />            </svg>            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+=======
+            className="lg:hidden p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+<<<<<<< HEAD
+=======
+            </svg>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           </button>
         </div>
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
+<<<<<<< HEAD
           <div className='lg:hidden border-t border-gray-200 py-4'>
             <div className='space-y-2'>
               <Link
@@ -185,6 +200,12 @@ const EnhancedNavigation = () => {
                 href='/contact'
                 className='block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md'
               >                Contact                Home
+=======
+          <div className="lg:hidden border-t border-gray-200 py-4">
+            <div className="space-y-2">
+              <Link href="/" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
+                Home
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </Link>
               <Link href="/services" className="block px-4 py-2 text-gray-600 hover:bg-gray-50 rounded-md">
                 Services
@@ -209,9 +230,16 @@ const EnhancedNavigation = () => {
         )}
       </div>
     </nav>
+<<<<<<< HEAD
 
 );
 }
 export default EnhancedNavigation;}
 export default EnhancedNavigation;
 
+=======
+  );
+},
+
+export default EnhancedNavigation;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

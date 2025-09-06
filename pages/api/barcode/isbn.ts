@@ -9,6 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
   try {
     const png = await bwipjs.toBuffer({
+<<<<<<< HEAD
       bcid: 'ean13'
       text: code.replace(/[^0-9]/g, '')
       scale: 3
@@ -16,8 +17,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 includetext: false})
     res.setHeader('Content-Typeimage/png')
 
+=======
+      bcid: 'ean13',
+      text: code.replace(/[^0-9]/g, ''),
+      scale: 3, height: 10,
+      includetext: false});
+    res.setHeader('Content-Typeimage/png');
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     res.status(200).send(png)
   } catch (e: any) {
     res.status(500).json({ error: e?.message |'Failed to render barcode' })
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

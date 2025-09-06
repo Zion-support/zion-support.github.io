@@ -1,5 +1,6 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
 import UseTokensModal, { RedemptionType } from "./UseTokensModal";
 export default function UseTokensButton({
@@ -61,6 +62,9 @@ export default function UseTokensButton(): any ({;
       />;
     </>;
   );
+=======
+export default function UseTokensButton({ serviceId, defaultType }: { serviceId?: string, defaultType?: RedemptionType }) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const [open, setOpen] = useState(false);
   return (
     <>;
@@ -78,4 +82,8 @@ export default function UseTokensButton(): any ({;
       />;
     </>;
   );
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

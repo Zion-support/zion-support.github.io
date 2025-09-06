@@ -6,17 +6,30 @@ import ReviewSummary from '../../components/reviews/ReviewSummary';
 import ReviewCard from '../../components/reviews/ReviewCard';
 import type { PublicReview, ReviewsSummary } from '../../types/reviews';
 
+<<<<<<< HEAD
 type Props = { clientId: string }
+=======
+type Props = { clientId: string },
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const ClientPage: NextPage<Props> = ({ clientId }) => {
   const [summary, setSummary] = useState<ReviewsSummary | null>(null)
   const [reviews, setReviews] = useState<PublicReview[]>([])
   useEffect(() => {
     (async () => {
+<<<<<<< HEAD
       const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`)
       const data = await res.json()
       if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
     })()
   }, [clientId])
+=======
+      const res = await fetch(`/api/reviews/list?targetType=client&targetId=${clientId}`);
+      const data = await res.json();
+      if (res.ok) { setSummary(data.summary), setReviews(data.reviews) }
+    })()
+  }, [clientId]);
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   async function handleReport(id: string) {
     await fetch('/api/reviews/report', {
       method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ reviewId: id, reason: 'Inappropriate content' })})
@@ -39,4 +52,7 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   return { props: { clientId: slug } }
 }
 export default ClientPage;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

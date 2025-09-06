@@ -32,13 +32,24 @@ import UltraAdvancedNavigation2026 from '../components/layout/UltraAdvancedNavig
 import Enhanced2026ServicesShowcaseV3 from '../components/sections/Enhanced2026ServicesShowcaseV3';
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground';
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function ServicesShowcase2026V3() {
 
   const contactInfo = {
+<<<<<<< HEAD
     mobile: '+1 302 464 0950'
     email: 'kleber@ziontechgroup.com'
     address: '364 E Main St STE 1008 Middletown DE 19709'
     website: 'https://ziontechgroup.com',  }
+=======
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <UltraQuantumHolographicBackground
@@ -63,6 +74,7 @@ export default function ServicesShowcase2026V3() {
         <meta name="twitter:image" content="https://ziontechgroup.com/og-image-2026-services.jpg" />
         <link rel="canonical" href="https://ziontechgroup.com/2026-services-showcase-v3" />
       </Head>
+<<<<<<< HEAD
       <div className='min-h-screen'>      <div className="min-h-screen">
         {/* Navigation */}
         <UltraAdvancedNavigation2026 />
@@ -125,6 +137,23 @@ export default function ServicesShowcase2026V3() {;
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'                >                Revolutionary 2026 Services
+=======
+
+      <div className="min-h-screen">
+        {/* Navigation */}
+        <UltraAdvancedNavigation2026 />
+
+        {/* Hero Section */}
+        <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-7xl mx-auto text-center">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 bg-gradient-to-r from-purple-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
+                Revolutionary 2026 Services
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </h1>
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8">
                 Experience the future of technology with our cutting-edge micro SAAS, AI, and emerging technology solutions.
@@ -143,7 +172,11 @@ export default function ServicesShowcase2026V3() {;
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'                >                  className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
+=======
+                  className="px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 >
                   Get Started
                 </motion.a>
@@ -152,11 +185,15 @@ export default function ServicesShowcase2026V3() {;
           </div>
         </section>
         {/* Services Showcase */}
+<<<<<<< HEAD
         <div id='services'>          <Enhanced2026ServicesShowcaseV3 />
         </div>
         {/* Contact Section */}
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>
           <div className='max-w-4xl mx-auto text-center'>            <motion.div        <div id="services">
+=======
+        <div id="services">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <Enhanced2026ServicesShowcaseV3 />
         </div>
 =======
@@ -194,6 +231,7 @@ export default function ServicesShowcase2026V3() {;
         </div>;
 
         {/* Contact Section */}
+<<<<<<< HEAD
         <section className='py-20 px-4 sm:px-6 lg:px-8 relative'>;
           <div className='max-w-4xl mx-auto text-center'>            <motion && motion.div        <div id="services">;
           <Enhanced2026ServicesShowcaseV3 />;
@@ -205,12 +243,18 @@ export default function ServicesShowcase2026V3() {;
           <div className='max-w-4xl mx-auto text-center'>        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">;
           <div className="max-w-4xl mx-auto text-center">;
             <motion&& motion.div
+=======
+        <section className="py-20 px-4 sm:px-6 lg:px-8 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
+<<<<<<< HEAD
               <h2 className='text-4xl md:text-5xl font-bold text-white mb-6'>
                 <span className='bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent'>
                   Ready to Transform Your Business?
@@ -225,6 +269,11 @@ export default function ServicesShowcase2026V3() {;
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}                  Ready to Transform Your Business?
+=======
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
+                  Ready to Transform Your Business?
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 </span>
               </h2>
               <p className="text-gray-300 text-xl mb-8 max-w-2xl mx-auto">
@@ -235,22 +284,35 @@ export default function ServicesShowcase2026V3() {;
                   href={`tel:${contactInfo.mobile}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+<<<<<<< HEAD
                   className='flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200'
                 >
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   className="flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold rounded-xl shadow-lg shadow-purple-500/25 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-200"
                 >
                   <span>Call {contactInfo.mobile}</span>
                 </motion.a>
+<<<<<<< HEAD
                   href={`mailto:${contactInfo.email}`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   className='flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200'                >                  className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
+=======
+                
+                <motion.a
+                  href={`mailto:${contactInfo.email}`}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="flex items-center space-x-2 px-8 py-4 border-2 border-purple-500/50 text-purple-400 font-semibold rounded-xl hover:bg-purple-500/10 transition-all duration-200"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 >
                   <span>Email Us</span>
                 </motion.a>
               </div>
+<<<<<<< HEAD
               <div className='mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20'>
                 <div className='grid grid-cols-1 md:grid-cols-3 gap-6 text-center'>
                   <div>
@@ -270,6 +332,12 @@ export default function ServicesShowcase2026V3() {;
                       {contactInfo.address}
                     </div>
                     <div className='text-gray-400 text-sm'>Address</div>                  </div>                  <div>
+=======
+
+              <div className="mt-12 p-6 bg-gradient-to-r from-purple-900/20 via-pink-900/20 to-cyan-900/20 rounded-2xl border border-purple-500/20">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                  <div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                     <div className="text-white font-medium">{contactInfo.mobile}</div>
                     <div className="text-gray-400 text-sm">Mobile</div>
                   </div>
@@ -288,6 +356,7 @@ export default function ServicesShowcase2026V3() {;
         </section>
       </div>
     </UltraQuantumHolographicBackground>
+<<<<<<< HEAD
 );
 }
 =======
@@ -376,3 +445,7 @@ export default function ServicesShowcase2026V3() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

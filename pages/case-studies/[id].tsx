@@ -9,6 +9,7 @@ export default function CaseStudyPage() {
   // Case studies data - this should match the data in case-studies.tsx
   const caseStudies = [
     {
+<<<<<<< HEAD
       id: 'ai-automation-manufacturing'
       title: 'AI-Powered Manufacturing Automation'
       company: 'Global Manufacturing Corp'
@@ -18,6 +19,17 @@ export default function CaseStudyPage() {
       results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control']
       duration: '6 months'
       description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.'
+=======
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Traditional manufacturing processes were inefficient with high downtime and low production rates.',
+      solution: 'Implemented autonomous AI systems with predictive maintenance and real-time optimization.',
+      results: ['40% increase in production efficiency60% reduction in downtime25% improvement in quality control'],
+      duration: '6 months',
+      description: 'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>Background</h2>
         <p>Global Manufacturing Corp was facing significant challenges with their traditional manufacturing processes.
@@ -45,6 +57,7 @@ export default function CaseStudyPage() {
         <p>The project was completed in 6 months with minimal disruption to ongoing operations.
         The system was deployed in phases, allowing for gradual adoption and optimization.</p>
       `
+<<<<<<< HEAD
     }
     {
       id: 'content-generation-scale'
@@ -56,6 +69,19 @@ export default function CaseStudyPage() {
       results: ['10x increase in content output85% improvement in engagement70% reduction in production time']
       duration: '4 months'
       description: 'Transforming content creation through autonomous AI systems.'
+=======
+    };
+    {
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      challenge: 'Manual content creation was limiting growth and unable to meet client demands.',
+      solution: 'Deployed autonomous AI content generation systems with human oversight.',
+      results: ['10x increase in content output85% improvement in engagement70% reduction in production time'],
+      duration: '4 months',
+      description: 'Transforming content creation through autonomous AI systems.',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       fullContent: `
         <h2>Background</h2>
         <p>A leading digital marketing agency was struggling to scale their content creation capabilities.
@@ -83,6 +109,7 @@ export default function CaseStudyPage() {
         <p>The system was deployed in 4 months with comprehensive training for the creative team.
         The AI systems learned from human feedback and continuously improved over time.</p>
       `
+<<<<<<< HEAD
     }
     {
       id: 'cloud-infrastructure-optimization'
@@ -95,6 +122,20 @@ export default function CaseStudyPage() {
       duration: '8 months'
       description: 'Building self-healing, auto-scaling cloud infrastructure.'
       fullContent: `
+=======
+    };
+    {
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+      challenge: 'Cloud costs were spiraling out of control with poor resource utilization.',
+      solution: 'Built self-healing, auto-scaling cloud infrastructure with intelligent cost optimization.',
+    results: ['50% reduction in cloud costs99.9% uptime achieved3x improvement in performance'],
+      duration: '8 months',
+      description: 'Building self-healing, auto-scaling cloud infrastructure.',
+    fullContent: `
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <h2>Background</h2>
         <p>A growing e-commerce platform was experiencing skyrocketing cloud costs and frequent outages.
         Their infrastructure was not scaling efficiently with their business growth.</p>
@@ -102,7 +143,11 @@ export default function CaseStudyPage() {
         <p>The platform needed to optimize their cloud infrastructure for cost, performance, and reliability.
         They required a solution that could automatically adapt to traffic patterns and prevent outages.</p>
         <h2>Solution</h2>
+<<<<<<< HEAD
         <p>We designed and implemented a comprehensive cloud optimization system:</p>
+=======
+        <p>We designed and implemented a comprehensive cloud optimization system: </p>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <ul>
           <li>Auto-scaling infrastructure with intelligent resource allocation</li>
           <li>Self-healing systems with automatic failure recovery</li>
@@ -121,8 +166,14 @@ export default function CaseStudyPage() {
         The new infrastructure was deployed alongside the existing system and gradually migrated traffic.</p>
       `
     }
+<<<<<<< HEAD
   ]
   const caseStudy = caseStudies.find(study => study.id === id)
+=======
+  ];
+
+  const caseStudy = caseStudies.find(study => study.id === id);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   if (!caseStudy) {
     return (
@@ -191,6 +242,10 @@ export default function CaseStudyPage() {
                   </div>
                 </div>
               </div>
+<<<<<<< HEAD
+=======
+              
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               <div className="space-y-6">
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-green-400 text-lg mb-4">Key Results</h3>
@@ -203,6 +258,10 @@ export default function CaseStudyPage() {
                     ))}
                   </ul>
                 </div>
+<<<<<<< HEAD
+=======
+                
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                 <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-6 border border-white/20">
                   <h3 className="font-semibold text-blue-400 text-lg mb-4">Project Details</h3>
                   <div className="space-y-3">
@@ -218,6 +277,10 @@ export default function CaseStudyPage() {
                 </div>
               </div>
             </div>
+<<<<<<< HEAD
+=======
+            
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="bg-white/10 backdrop-blur-xl rounded-2xl p-8 border border-white/20 mb-12">
               <div
                 className="prose prose-invert max-w-none"
@@ -237,4 +300,8 @@ export default function CaseStudyPage() {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

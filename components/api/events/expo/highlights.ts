@@ -1,18 +1,28 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { agendaItems } from '../../../../data/expo/agenda';
+<<<<<<< HEAD
 
 export default async function handler(
   req: NextApiRequest
   res: NextApiResponse
 ) {  try {export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+=======
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
 <<<<<<< HEAD
     const top = agendaItems.slice(0, 3);
     const baseSummary = `Highlights:\n- ${top.map(i => `${i.title} (${i.track})`).join('\n- ')}`;
     const apiKey = process.env.OPENAI_API_KEY;
+<<<<<<< HEAD
 =======
     const top = agendaItems && agendaItems.slice(0, 3);
     const baseSummary = `Highlights:\n- ${top && top.map(i => `${i && i.title} (${i && i.track})`).join('\n- ')}`;
+=======
+    if (!apiKey) {
+      return res.status(200).json({ summary: baseSummary, provider: 'local' })
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const apiKey = process && process.env.OPENAI_API_KEY;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -21,6 +31,7 @@ export default async function handler(
     }
     const { OpenAI } = await import('openai');
     const client = new OpenAI({ apiKey });
+<<<<<<< HEAD
 <<<<<<< HEAD
     const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify(top)}`;
     const chat = await client.chat.completions.create({
@@ -36,6 +47,11 @@ export default async function handler(
       .json({ error: e.message |'Failed to generate highlights' });
   }    const content = chat.choices?.[0]?.message?.content |baseSummary;
 
+=======
+    const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify(top)}`;
+    const chat = await client.chat.completions.create({ model: 'gpt-4o-mini', messages: [{ role: 'user', content: prompt }], temperature: 0.3 });
+    const content = chat.choices?.[0]?.message?.content || baseSummary;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return res.status(200).json({ summary: content, provider: 'openai' })
   } catch (e: any) {
     return res.status(500).json({ error: e.message |'Failed to generate highlights' })
@@ -59,4 +75,7 @@ export default async function handler(
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

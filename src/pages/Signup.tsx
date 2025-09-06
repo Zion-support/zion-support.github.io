@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState, useEffect  } from 'react';
 import { useRouter } from 'next/router', // Changed from react-router-dom
 import { useFormik  } from 'formik';
@@ -1391,3 +1392,6 @@ const Signup = () => {;
 }
 }}
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -5,7 +5,10 @@ export default function ManifestoPage(): JSX.Element {
     <>
       <Head>
         <title>Zion Manifesto</title>
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <meta name="description" content="Zion Manifesto: Our purpose, philosophy, and decentralized future." />
       </Head>
       <main className="min-h-screen bg-gray-50 text-gray-900">
@@ -54,4 +57,8 @@ export default function ManifestoPage(): JSX.Element {
       </main>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 export function TrustBadge({
@@ -60,6 +61,12 @@ export function MicroTestimonial(): any ({;
     Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200'
     Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const
 
+=======
+export function TrustBadge({ type }: { type: 'Verified' | 'Pro' | 'Top Rated' }) {
+  const colorMap = {
+    Verified: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200',
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated': 'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200'} as const,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-1 text-xs font-medium rounded ${colorMap[type]}`}>
       <span className="leading-none">{type}</span>
@@ -86,6 +93,7 @@ export function MicroTestimonial({ quote, author }: { quote: string, author: str
     </span>;
   );
 }
+<<<<<<< HEAD
 
 export function MicroTestimonial(): any ({ quote, author }: { quote: string, author: string }) {;
   return (
@@ -96,3 +104,5 @@ export function MicroTestimonial(): any ({ quote, author }: { quote: string, aut
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react";
 import EnhancedLayout from "../../components/layout/EnhancedLayout";
@@ -13,6 +14,22 @@ export default function AdminTokens() {
       fetch("/api/admin/tokens/config").then((r) => r.json())])
     setTransactions(txRes.transactions |[])
 
+=======
+import React, { useEffect, useState } from "react";
+import EnhancedLayout from "../../components/layout/EnhancedLayout";
+export default function AdminTokens() {
+  const [transactions, setTransactions] = useState<any[]>([]);
+  const [userId, setUserId] = useState("");
+  const [amount, setAmount] = useState(100);
+  const [reason, setReason] = useState("admin_action");
+  const [config, setConfig] = useState<any>(null);
+
+  async function load() {
+    const [txRes, cfgRes] = await Promise.all([
+      fetch("/api/admin/tokens").then((r) => r.json());
+      fetch("/api/admin/tokens/config").then((r) => r.json())]);
+    setTransactions(txRes.transactions || []);
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     setConfig(cfgRes)
   }
   useEffect(() => {
@@ -61,6 +78,10 @@ export default function AdminTokens() {
             </div>
           </div>
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Conversion & Rules</h2>
           {config && (
@@ -74,6 +95,10 @@ export default function AdminTokens() {
             </div>
           )}
         </div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
         <div className="p-4 border rounded bg-white dark:bg-zinc-900">
           <h2 className="font-medium mb-3">Transactions</h2>
           <div className="space-y-2 text-sm max-h-96 overflow-auto">
@@ -93,4 +118,8 @@ export default function AdminTokens() {
       </div>
     </EnhancedLayout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

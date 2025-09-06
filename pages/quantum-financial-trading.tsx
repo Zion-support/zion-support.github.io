@@ -5,8 +5,13 @@ import { Phone, Mail, MapPin, Check, ArrowRight, TrendingUp, Star } from 'lucide
 import Layout from '../components/layout/Layout';
 import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
 export default function QuantumFinancialTradingPage() {
+<<<<<<< HEAD
   const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'))
   if (!service) return null
+=======
+  const service = enhancedRealMicroSaasServices.find(s => s.link.endsWith('/quantum-financial-trading'));
+  if (!service) return null;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <Layout>
@@ -51,4 +56,9 @@ export default function QuantumFinancialTradingPage() {
       </div>
     </Layout>
   )
+<<<<<<< HEAD
 }
+=======
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

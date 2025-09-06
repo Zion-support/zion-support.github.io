@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useState } from "react";
 import { useRouter  } from 'next/router';
 import { useJobApplications } from "@/hooks/useJobApplications",
@@ -375,3 +376,6 @@ handleSubmit ;
 }</Button> </div> </form>) ;
 }"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import React from 'react';
 import { completeSitemap, dynamicPaths  } from '@/config/sitemap';
@@ -458,3 +459,7 @@ export const SitemapPage: React.FC = () => {;
 '"
 }
 
+=======
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

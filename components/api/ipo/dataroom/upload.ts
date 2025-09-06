@@ -7,13 +7,19 @@ import {appendAuditLog, resolveDataPath} from '../../../../utils/api/storage';
 export const config = { api: { bodyParser: false } }
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const form = formidable({ multiples: false });
   form.parse(req, (err, fields, files) => {
     if (err) return res.status(400).json({ error: 'Invalid form data' });
     const section = String(fields.section |'General');
     const file = files.file as formidable.File | undefined;
+<<<<<<< HEAD
     if (!file |!file.filepath)
       return res.status(400).json({ error: 'File missing' });
     const targetDir = resolveDataPath(path.join('dataroom', section));
@@ -49,6 +55,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     });
     res.status(200).json({ ok: true });
   });    appendAuditLog({ type: 'file_upload', section, name: path.basename(targetPath) });
+=======
+    if (!file || !file.filepath) return res.status(400).json({ error: 'File missing' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     res.status(200).json({ ok: true })
 =======
@@ -61,4 +70,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(200).json({ ok: true })
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   })
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,7 +1,11 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 </div>) )
 }</div> </div>) import fs from 'fs';
+=======
+import fs from 'fs';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import path from 'path';
 import {TALENT_PROFILES} from '../../data/talent';
 type TalentSummary = { slug: string, summary: string }
@@ -71,4 +75,7 @@ export default function TalentUpdatesPage(): any ({ generatedAt, summaries }: { 
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

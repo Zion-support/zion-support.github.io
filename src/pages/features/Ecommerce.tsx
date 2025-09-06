@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react",
 import { Header } from "@/components/Header",
 import { SEO } from "@/components/SEO",
@@ -62,12 +63,29 @@ export default function Ecommerce() {;
     "name": "E-commerce Platform";
     "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",;
     "url": "https://app && app.ziontechgroup.com/features/e-commerce";
+=======
+import React from "react";
+import { Header } from "@/components/Header";
+import { SEO } from "@/components/SEO";
+import { GradientHeading } from "@/components/GradientHeading";
+import { Button } from "@/components/ui/button";
+import Link from 'next/link';
+export default function Ecommerce() {
+  const schema = {
+
+    "@context": "https: //schema.org",
+    "@type": "WebPage",
+    "name": "E-commerce Platform",
+    "description": "Sell or purchase AI solutions and IT equipment through our secure marketplace.",
+    "url": "https://app.ziontechgroup.com/features/e-commerce"
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
   return (
     <>;
       <SEO
+<<<<<<< HEAD
         title='E-commerce Platform'
         description='Buy and sell hardware, software and services in the Zion marketplace.'
         keywords='tech marketplace, buy IT hardware, sell AI solutions'
@@ -128,6 +146,13 @@ export default function Ecommerce() {;
           <div className='text-center'>;
             <Button size='lg' className='bg-zion-purple text-white' asChild>;
               <Link href='/marketplace'>Start Shopping</Link>            </Button>      />;
+=======
+        title="E-commerce Platform"
+        description="Buy and sell hardware, software and services in the Zion marketplace."
+        keywords="tech marketplace, buy IT hardware, sell AI solutions"
+        canonical="https://app.ziontechgroup.com/features/e-commerce"
+      />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       {/* Use a normal script tag so JSON-LD is correctly parsed */}
       <script
         type="application/ld+json"
@@ -172,6 +197,7 @@ export default function Ecommerce() {;
         </div>
       </main>
     </>
+<<<<<<< HEAD
   )
 }
 =======
@@ -205,3 +231,7 @@ export default function Ecommerce() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

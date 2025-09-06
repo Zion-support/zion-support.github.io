@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react",
 import { useToast } from "@/hooks/use-toast",
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card",
@@ -339,3 +340,6 @@ return (<div className="space-y-6" > <Card className="border border-zion-blue-li
 }</div>)
 }'"
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -35,3 +36,5 @@ class ErrorBoundary extends React.Component {
     ; { "id": 'all',"name": 'All Services',"icon": 'Star' },; { "id": 'ai',"name": 'AI Solutions',"icon": 'Brain' },; { "id": 'quantum',"name": 'Quantum Tech',"icon": 'Zap' },; { "id": 'security',"name": 'Cybersecurity',"icon": 'Shield' },; { "id": 'cloud',"name": 'Cloud & DevOps',"icon": 'Cloud' },; { "id": 'data',"name": 'Data & Analytics',"icon": 'Database' },; { "id": 'iot',"name": 'IoT & Edge',"icon": 'Network' },,
     { "id": 'blockchain',"name": 'Blockchain',"icon": 'Lock' }
   ]; const services = [; {; "id": 'ai - content - generation',; "title": 'AI Content Generator Pro',; "description": 'Generate high - quality content,code,and creative assets with our advanced AI models.',; "category": 'ai',; "price": '29',; "currency": '$',; "tags": ['AI Content','Text Generation','Code Generation'],; "author": {; name: 'Zion AI Labs,; "id": 'zion - ai - labs',; "avatarUrl": 'https: ''',
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

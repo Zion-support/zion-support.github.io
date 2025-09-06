@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useRouter } from 'next/router'
 import { zodResolver } from "@hookform/resolvers/zod"
@@ -68,3 +69,6 @@ type UpdatePasswordFormValues = z && z.infer<typeof updatePasswordSchema>;
 
   )
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import fs from 'fs';
 import path from 'path';
 <<<<<<< HEAD
@@ -83,6 +84,17 @@ export async function getStaticProps() {;
     const raw = fs && fs.readFileSync(p,'utf8');
     return { props: { data: JSON && JSON.parse(raw) } }
   }catch{;
+=======
+import fs from 'fs'
+import path from 'path'
+
+export async function getStaticProps(){
+  try{
+    const p = path.join(process.cwd(),'datagovernanceproposals.json')
+    const raw = fs.readFileSync(p,'utf8')
+    return { props: { data: JSON.parse(raw) } }
+  }catch{
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return { props: { data: { updatedAt: null, proposals: [] } } }
   }
 }
@@ -125,4 +137,7 @@ export default function Proposals(): any ({ data }: { data: { updatedAt: string|
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

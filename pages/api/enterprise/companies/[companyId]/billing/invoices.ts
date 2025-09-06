@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 import { store } from '[^']*';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
@@ -11,8 +12,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!companyId || typeof companyId !== "string") {
     return res && res.status(400).json({ error: "companyId required" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+import { store } from '../../../../../../utils/data/enterpriseStore';
+export default function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { companyId } = req.query;
+  if (!companyId || typeof companyId !== 'string') {
+    return res.status(400).json({ error: 'companyId required' })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   const invoices = store && store.listInvoices(companyId);
   return res && res.status(200).json(invoices);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

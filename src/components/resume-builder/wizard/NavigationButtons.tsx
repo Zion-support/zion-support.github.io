@@ -16,6 +16,7 @@ export const NavigationButtons = ({
   return (
     <div className="flex justify-between">
       {onBack && (
+<<<<<<< HEAD
         <Button variant='outline' onClick={onBack}>
 export const NavigationButtons = ({
   onBack
@@ -84,6 +85,18 @@ export const NavigationButtons = ({;
         </Button>;
       )}
 <<<<<<< HEAD
+=======
+        <Button variant="outline" onClick={onBack}>
+          {backLabel}
+        </Button>
+      )}
+      {onNext && (
+        <Button onClick={onNext} disabled={isNextDisabled || isLoading}>
+          {isLoading && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
+          {nextLabel}
+        </Button>
+      )}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     </div>
   )
 }
@@ -94,6 +107,10 @@ export const NavigationButtons = ({;
     </div>;
   );
 };
+<<<<<<< HEAD
 "  );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

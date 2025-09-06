@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import { formatDistanceToNow } from "date-fns",
 import { ThumbsUp, ThumbsDown, CheckCircle } from 'lucide-react'
@@ -135,3 +136,8 @@ export default ReplyCard
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 
+=======
+
+      "transition-shadow";
+      reply.isAnswer && "border-green-500/50 bg-green-50 dark: bg-green-950/20",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

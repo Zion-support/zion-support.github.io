@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useEffect } from "react",
 import { SEO } from "@/components/SEO",
 import { TalentCard } from "@/components/talent/TalentCard",
@@ -514,3 +515,6 @@ return (<> <SEO title="Saved Talents | Zion AI Marketplace" description="View an
 }</div> </>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

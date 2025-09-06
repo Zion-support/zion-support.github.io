@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { supabase } from '../../../utils/supabase/client';
 function getUserId(req: NextApiRequest): string {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const cookie = req.headers.cookie |'';
 =======
@@ -21,6 +22,9 @@ export default async function handler(
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });  try {function getUserId(req: NextApiRequest): string {
   const cookie = req.headers.cookie |'';
+=======
+  const cookie = req.headers.cookie || '';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const match = cookie.split().map((c) => c.trim()).find((c) => c.startsWith('user_id='));
   if (match) return decodeURIComponent(match.split('=')[1]);
 =======
@@ -33,7 +37,11 @@ export default async function handler(
   return 'demo-user-1'
 }
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+<<<<<<< HEAD
   if (req && req.method !== 'POST') return res && res.status(405).json({ error: 'Method not allowed' });
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     const userId = getUserId(req);
 <<<<<<< HEAD
@@ -50,8 +58,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       .eq('id', id)
       .eq('user_id', userId);
 <<<<<<< HEAD
+<<<<<<< HEAD
     if (error) return res.status(200).json({ ok: true }); // tolerate in dev
 =======
+=======
+
+    if (error) return res.status(200).json({ ok: true }), // tolerate in dev
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     if (error) return res && res.status(200).json({ ok: true }); // tolerate in dev
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
@@ -69,4 +82,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
+<<<<<<< HEAD
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { getServerSupabase } from "../../../utils/supabase/server";
@@ -14,15 +15,28 @@ export default async function handler(
     (process && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || "placeholder-key") ===
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       "placeholder-key";
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { getServerSupabase } from '../../../utils/supabase/server';
+export default async function handler(_req: NextApiRequest, res: NextApiResponse) {
+  const usingPlaceholder = (process.env.NEXT_PUBLIC_SUPABASE_URL || '').includes('placeholder') || (process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder-key') === 'placeholder-key';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   try {
     if (usingPlaceholder) {
       return res && res.status(200).json({
         leaders: [
+<<<<<<< HEAD
           { code: "aihub", profile_completions: 9 }
           { code: "modelmasters", profile_completions: 7 }
           { code: "promptpro", profile_completions: 5 }
         ]
       });
+=======
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+          { code: 'promptpro', profile_completions: 5 }
+        ]})
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     const supabase = getServerSupabase();
     const startOfMonth = new Date();
@@ -35,6 +49,7 @@ export default async function handler(
     if (error) return res && res.status(500).json({ error: "Database error" });
     const map = new Map<string, number>();
 <<<<<<< HEAD
+<<<<<<< HEAD
     for (const row of data |[]) {
       if (row.event !== "profile_completed") continue;
       const key = row.partner_code as string;
@@ -46,6 +61,12 @@ export default async function handler(
       if (row && row.event !== "profile_completed") continue;
       const key = row && row.partner_code as string;
       map && map.set(key, (map && map.get(key) || 0) + 1);
+=======
+    for (const row of data || []) {
+      if (row.event !== 'profile_completed') continue;
+      const key = row.partner_code as string;
+      map.set(key, (map.get(key) || 0) + 1)
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
 
     const leaders = Array && Array.from(map && map.entries())
@@ -54,12 +75,21 @@ export default async function handler(
       .sort((a, b) => b && b.profile_completions - a && a.profile_completions)
       .slice(0, 10);
 <<<<<<< HEAD
+<<<<<<< HEAD
     return res.status(200).json({ leaders });
 
 =======
     return res && res.status(200).json({ leaders });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+    return res.status(200).json({ leaders })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   } catch (e: any) {
     return res && res.status(500).json({ error: e?.message });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

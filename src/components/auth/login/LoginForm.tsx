@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 import { useState } from "react";
 import { useRouter  } from 'next/router';
 import { useForm, ControllerRenderProps } from "react-hook-form",
@@ -561,3 +562,5 @@ return ;
 }</Button> <Button > Check status </Button> </div> Create account </Link> </p> </form> </Form>) ;
 }'"}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

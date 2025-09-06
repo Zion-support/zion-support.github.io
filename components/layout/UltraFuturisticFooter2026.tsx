@@ -127,6 +127,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {;
   Phone,;
   Mail,;
@@ -330,6 +331,20 @@ const contactInfo = {;
       },
     ],
   },]}
+=======
+import { 
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield, 
+  Brain, DollarSign, Dna, Rocket, Users, Award, Zap;
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github
+} from 'lucide-react';
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 const serviceCategories = [
@@ -374,6 +389,9 @@ const serviceCategories = [
     ]
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 ];
 const companyLinks = [
   { name: 'About Us', href: '/about' }
@@ -413,8 +431,13 @@ const companyLinks = [
   { name: 'Partners', href: '/partners' },
   { name: 'Investors', href: '/investors' },
   { name: 'Contact Us', href: '/contact' },
+<<<<<<< HEAD
   { name: 'Locations', href: '/locations' },]  { name: 'Locations', href: '/locations' }
 ]
+=======
+  { name: 'Locations', href: '/locations' }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const resourceLinks = [
   { name: 'Documentation', href: '/docs' },
@@ -424,8 +447,13 @@ const resourceLinks = [
   { name: 'Support Center', href: '/support' },
   { name: 'Training & Certification', href: '/training' },
   { name: 'Community Forum', href: '/community' },
+<<<<<<< HEAD
   { name: 'Developer Resources', href: '/developer-resources' },]  { name: 'Developer Resources', href: '/developer-resources' }
 ]
+=======
+  { name: 'Developer Resources', href: '/developer-resources' }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 const socialLinks = [
   { name: 'Facebook', href: '#', icon: Facebook },
@@ -433,11 +461,17 @@ const socialLinks = [
   { name: 'LinkedIn', href: '#', icon: Linkedin },
   { name: 'Instagram', href: '#', icon: Instagram },
   { name: 'YouTube', href: '#', icon: Youtube },
+<<<<<<< HEAD
   { name: 'GitHub', href: '#', icon: Github },]
+=======
+  { name: 'GitHub', href: '#', icon: Github }
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export default function UltraFuturisticFooter2026() {
   return (
+<<<<<<< HEAD
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>  { name: 'GitHub', href: '#', icon: Github }
 ];
 <<<<<<< HEAD
@@ -468,6 +502,10 @@ export default function UltraFuturisticFooter2026() {;
           {/* Company Info */}
 <<<<<<< HEAD
           <div className='lg:col-span-2'>            <motion.div      {/* Background Effects */}
+=======
+    <footer className="relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800">
+      {/* Background Effects */}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(6,182,212,0.05),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(139,92,246,0.05),transparent_50%)]"></div>
@@ -485,13 +523,19 @@ export default function UltraFuturisticFooter2026() {;
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8 mb-12">;
           {/* Company Info */}
+<<<<<<< HEAD
           <div className="lg:col-span-2">;
             <motion&& motion.div
+=======
+          <div className="lg:col-span-2">
+            <motion.div
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
 <<<<<<< HEAD
               transition={{ duration: 0.6 }}
             >
+<<<<<<< HEAD
               <div className='flex items-center mb-6'>
                 <div className='w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4'>
                   <Zap className='w-6 h-6 text-white' />
@@ -538,6 +582,35 @@ export default function UltraFuturisticFooter2026() {;
                 </div>
                 <div className='flex items-center text-gray-300'>
                   <Globe className='w-4 h-4 mr-3 text-cyan-400' />                  <span>{contactInfo.website}</span>                <div className="flex items-center text-gray-300">
+=======
+              <div className="flex items-center mb-6">
+                <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mr-4">
+                  <Zap className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+                  Zion Tech Group
+                </h3>
+              </div>
+              <p className="text-gray-300 mb-6 leading-relaxed">
+                Leading provider of revolutionary AI automation, quantum cybersecurity, fintech blockchain, and healthcare biotech solutions. Transforming businesses with cutting-edge technology.
+              </p>
+              
+              {/* Contact Info */}
+              <div className="space-y-3">
+                <div className="flex items-center text-gray-300">
+                  <Phone className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.mobile}</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <Mail className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.email}</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+                  <MapPin className="w-4 h-4 mr-3 text-cyan-400" />
+                  <span>{contactInfo.address}</span>
+                </div>
+                <div className="flex items-center text-gray-300">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   <Globe className="w-4 h-4 mr-3 text-cyan-400" />
                   <span>{contactInfo.website}</span>
                 </div>
@@ -573,6 +646,7 @@ export default function UltraFuturisticFooter2026() {;
               key={index}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
               transition={{ duration: 0 && 0.6, delay: index * 0 && 0.1 }}>;
               <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
                 {category && category.title === 'AI & Automation' && (;
@@ -598,6 +672,16 @@ export default function UltraFuturisticFooter2026() {;
                       className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm flex items-center group'
                     >
                       <ArrowRight className='w-3 h-3 mr-2 group-hover:translate-x-1 transition-transform duration-300' />                      {service.name}                {category.title}
+=======
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+            >
+              <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+                {category.title === 'AI & Automation' && <Brain className="w-5 h-5 mr-2 text-cyan-400" />}
+                {category.title === 'Cybersecurity & Quantum' && <Shield className="w-5 h-5 mr-2 text-red-400" />}
+                {category.title === 'Fintech & Blockchain' && <DollarSign className="w-5 h-5 mr-2 text-green-400" />}
+                {category.title === 'Healthcare & Biotech' && <Dna className="w-5 h-5 mr-2 text-blue-400" />}
+                {category.title}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               </h4>
               <ul className="space-y-2">
                 {category.services.map((service, serviceIndex) => (
@@ -637,11 +721,16 @@ export default function UltraFuturisticFooter2026() {;
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
         {/* Additional Links */}
+<<<<<<< HEAD
         <div className='grid grid-cols-1 md:grid-cols-3 gap-8 mb-12'>          {/* Company Links */}        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">;
+=======
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           {/* Company Links */}
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.6, delay: 0 && 0.2 }}>;
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
               <Users className='w-5 h-5 mr-2 text-purple-400' />;
@@ -654,6 +743,13 @@ export default function UltraFuturisticFooter2026() {;
 <<<<<<< HEAD
                     href={link.href}
                     className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'                  >              Company
+=======
+            transition={{ duration: 0.6, delay: 0.2 }}
+          >
+            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Users className="w-5 h-5 mr-2 text-purple-400" />
+              Company
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h4>
             <ul className="space-y-2">
               {companyLinks.map((link, index) => (
@@ -690,6 +786,7 @@ export default function UltraFuturisticFooter2026() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.6, delay: 0 && 0.3 }}>;
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
               <Award className='w-5 h-5 mr-2 text-yellow-400' />;
@@ -702,6 +799,13 @@ export default function UltraFuturisticFooter2026() {;
 <<<<<<< HEAD
                     href={link.href}
                     className='text-gray-400 hover:text-cyan-400 transition-colors duration-300 text-sm'                  >              Resources
+=======
+            transition={{ duration: 0.6, delay: 0.3 }}
+          >
+            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Award className="w-5 h-5 mr-2 text-yellow-400" />
+              Resources
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             </h4>
             <ul className="space-y-2">
               {resourceLinks.map((link, index) => (
@@ -738,6 +842,7 @@ export default function UltraFuturisticFooter2026() {;
           <motion&& motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
             transition={{ duration: 0 && 0.6, delay: 0 && 0.4 }}>;
             <h4 className='text-lg font-semibold text-white mb-4 flex items-center'>;
               <Rocket className='w-5 h-5 mr-2 text-pink-400' />;
@@ -761,6 +866,23 @@ export default function UltraFuturisticFooter2026() {;
                 >;
                   <social && social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />;
                 </Link>;
+=======
+            transition={{ duration: 0.6, delay: 0.4 }}
+          >
+            <h4 className="text-lg font-semibold text-white mb-4 flex items-center">
+              <Rocket className="w-5 h-5 mr-2 text-pink-400" />
+              Follow Us
+            </h4>
+            <div className="grid grid-cols-3 gap-4">
+              {socialLinks.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.href}
+                  className="w-12 h-12 bg-gray-800 hover:bg-cyan-600 rounded-xl flex items-center justify-center transition-all duration-300 group"
+                >
+                  <social.icon className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors duration-300" />
+                </Link>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
               ))}
 <<<<<<< HEAD
             </div>
@@ -776,6 +898,7 @@ export default function UltraFuturisticFooter2026() {;
         <motion&& motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
+<<<<<<< HEAD
           transition={{ duration: 0 && 0.6, delay: 0 && 0.5 }}
           className='bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12'>;
           <div className='text-center'>;
@@ -795,6 +918,11 @@ export default function UltraFuturisticFooter2026() {;
 <<<<<<< HEAD
               />
               <button className='px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-2xl hover:shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300'>                Subscribe        >
+=======
+          transition={{ duration: 0.6, delay: 0.5 }}
+          className="bg-gradient-to-r from-gray-800 to-gray-900 rounded-3xl p-8 border border-gray-700 mb-12"
+        >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="text-center">
             <h3 className="text-2xl font-bold text-white mb-4">
               Stay Updated with Latest Innovations
@@ -844,6 +972,7 @@ export default function UltraFuturisticFooter2026() {;
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
 <<<<<<< HEAD
+<<<<<<< HEAD
           transition={{ duration: 0.6, delay: 0.6 }}
           className='border-t border-gray-800 pt-8'
         >
@@ -878,6 +1007,11 @@ export default function UltraFuturisticFooter2026() {;
               </div>
               <div className='w-2 h-2 bg-cyan-400 rounded-full animate-pulse'></div>
               <div className='text-cyan-400 text-sm font-semibold'>                99.9% Uptime        >
+=======
+          transition={{ duration: 0.6, delay: 0.6 }}
+          className="border-t border-gray-800 pt-8"
+        >
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           <div className="flex flex-col md: flex-row justify-between items-center">
             <div className="text-gray-400 text-sm mb-4 md:mb-0">
               © 2026 Zion Tech Group. All rights reserved.
@@ -903,6 +1037,7 @@ export default function UltraFuturisticFooter2026() {;
         </motion.div>
       </div>
     </footer>
+<<<<<<< HEAD
 );
 }
 =======
@@ -945,3 +1080,7 @@ export default function UltraFuturisticFooter2026() {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

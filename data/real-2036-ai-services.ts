@@ -1,6 +1,7 @@
 
 export const real2036AIServices = [
   {
+<<<<<<< HEAD
     id: 'ai-emotion-intelligence-platform'
     name: 'AI Emotion Intelligence Platform'
     tagline: 'Advanced emotional AI understanding'
@@ -14,6 +15,24 @@ export const real2036AIServices = [
       'Emotional intelligence training'
       'Multi-modal emotion detection'
       'Emotional pattern analysis'
+=======
+    id: 'ai-emotion-intelligence-platform', name: 'AI Emotion Intelligence Platform',
+    tagline: 'Advanced emotional AI understanding',
+    description: 'Revolutionary AI platform for understanding, analyzing, and responding to human emotions. Features emotion recognition, sentiment analysis, emotional response generation, and emotional intelligence training.',
+    price: '$3,999',
+    period: 'month',
+    features: [
+      'Emotion recognitionSentiment analysisEmotional response generationEmotional intelligence trainingMulti-modal emotion detectionEmotional pattern analysis'
+    ];
+    popular: true, category: 'Emotional AI',
+    icon: '😊🤖',
+    marketPrice: '$5,000-8,000/month',
+    benefits: [
+      'Enhanced customer experienceBetter emotional understandingImproved human-AI interactionEmotional intelligence development'
+    ];
+    useCases: [
+      'Customer serviceMental health supportEducation technologyHuman resources'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ]
     popular: true
     category: 'Emotional AI'
@@ -333,4 +352,7 @@ export const real2036AIServices = [
     ]
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from "react";
 export default function EnhancedCard({
@@ -50,3 +51,13 @@ export default function EnhancedCard(): any ({;
     <div className={["card-base p-4", className].join(" ")}>{children}</div>;
   );
 }
+=======
+import React from 'react';
+export default function EnhancedCard({ children, className = '' }: { children: React.ReactNode, className?: string }) {
+  return (
+    <div className={["card-base p-4", className].join(' ')}>
+      {children}
+    </div>
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/ProjectDetails && ProjectDetails.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/ProjectDetails && ProjectDetails.jsx import React from \'react\'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ; import React from \'react\'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () \';\';
 <<<<<<< "HEAD": src && src.pages.disabled/ProjectDetails && ProjectDetails.jsx import _React from 'react'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ; import _React from 'react'; export default function ProjectDetails () { function ProjectDetailsContent () { const router = useNavigate () ';';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   mobile: '+1 302 464 0950'
@@ -435,6 +436,21 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		period: '/month'
 		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.';
 		features: [
+=======
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'ai-email-responder-pro', name: 'AI Email Responder Pro',
+		tagline: 'Autonomous replies, triage, and sentiment insights for Gmail/O365',
+    price: '$129', period: '/month',
+		description: 'LLM-powered email assistant that drafts context-aware replies, routes by intent, summarizes threads, and syncs with your CRM. SOC 2-ready with redaction.',
+    features: [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 			'LLM reply drafts with tone controlsIntent routing and SLA predictionSmart summaries and action extractionCRM and ticket sync (Salesforce, HubSpot, Zendesk)PII redaction and governanceDashboard with analytics and coaching'
 		];
 		popular: true;
@@ -655,4 +671,7 @@ export const realServicesQ42025: EnhancedRealMicroSaasService[] = [
 		reviews: 6
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

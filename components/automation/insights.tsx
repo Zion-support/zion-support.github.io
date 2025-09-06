@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
 }</ul> </div> </div>)
@@ -6,6 +7,9 @@ return (<div> <Head><title>Automation Insights — Zion</title></Head>) )
   talentMd
 }</pre>)
 }</section> </div>) import { useEffect, useState } from 'react';
+=======
+import { useEffect, useState } from 'react';
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import Head from 'next/head';
 
 export default function AutomationInsightsPage() {
@@ -87,4 +91,7 @@ export default function AutomationInsightsPage() {;
     </div>;
   );
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,5 +1,6 @@
 import { ServiceVariant } from '../types/service-variants';
 export interface RealMarketService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -58,6 +59,39 @@ export const realMarketServices: RealMarketService[] = [
   email: 'kleber@ziontechgroup && ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup && ziontechgroup.com',};
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+
+const contact = {
+  mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export const realMarketServices: RealMarketService[] = [
   {  mobile: '+1 302 464 0950';
@@ -69,6 +103,7 @@ export const realMarketServices: RealMarketService[] = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 export const realMarketServices: RealMarketService[] = [
   {
+<<<<<<< HEAD
     id: 'llm-gateway-cost-control'
     name: 'LLM Gateway & Cost Control'
     tagline:
@@ -4510,6 +4545,89 @@ export const realMarketServices: RealMarketService[] = [
   },
 ];      mobile: '+1 302 464 0950';
       email: 'kleber@ziontechgroup && ziontechgroup.com';
+=======
+    id: 'llm-gateway-cost-control', name: 'LLM Gateway & Cost Control',
+    tagline: 'Centralize model access, control spend, add observability and guardrails',
+    price: '$299', period: '/month',
+    description: 'A production-ready gateway that unifies access to OpenAI, Anthropic, Google, and open-source models with usage-based routing, rate limits, prompt/response logging, redaction, and cost controls.',
+    features: [
+      'Unified API for multiple LLM providersSpend caps, rate limits, and usage alertsPII redaction and secrets filteringPrompt templates and versioningLatency and cost-aware routingBatch and streaming inferenceAudit logs and RBACLangChain/LlamaIndex SDK support';
+      'Export to data warehouse'
+    ];
+    popular: true, icon: '🧠',
+    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/llm-gateway',
+    marketPosition: 'Comparable to OpenRouter (usage-based) and EdenAI, adds enterprise guardrails and governance.',
+    targetAudience: 'Product teams, platform engineering, data/AI teams',
+    trialDays: 14, setupTime: '1 day',
+    category: 'AI & Data', realService: true,
+    technology: ['Node.js, TypeScript, PostgreSQL, Redis, OpenAI, Anthropic'];
+    integrations: ['OpenAI, Anthropic, Google AI Studio, Bedrock, Azure OpenAI'];
+    useCases: ['Centralized LLM access, Governance and compliance, Cost optimization'];
+    roi: 'Reduce AI spend by 20–40% with routing and caps.',
+    competitors: ['OpenRouter, EdenAI, Helicone, PromptLayer'];
+    marketSize: '$40B+ GenAI platform market', growthRate: '100% YoY',
+    variant: 'ai-futuristic', contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Multi-tenant gateway with policy engine, provider adapters, and per-project metering.',
+    launchDate: '2024-12-01', customers: 85,
+    rating: 4.8,
+    reviews: 61
+  };
+  {
+    id: 'api-observability-starter', name: 'API Observability Starter',
+    tagline: 'Trace, log, and profile your APIs in hours, not weeks',
+    price: '$149', period: '/month',
+    description: 'Turn-key instrumentation templates, dashboards, and SLOs for Node/Next.js, with error budgets, golden signals, and alerts integrated out of the box.',
+    features: [
+      'OpenTelemetry auto-instrumentationGolden signals dashboardsError budgets and SLO templatesJaeger/Tempo tracing readyGrafana dashboards and alertsLatency heatmaps and p95/p99Service map and dependency view'
+    ];
+    popular: true, icon: '📈',
+    color: 'from-emerald-600 to-teal-700', textColor: 'text-emerald-400',
+    link: 'https://ziontechgroup.com/api-observability-starter',
+    marketPosition: 'Alternative to building in-house, complements Datadog and Grafana Cloud.',
+    targetAudience: 'Backend engineers, SREs, platform teams',
+    trialDays: 7, setupTime: '1 day',
+    category: 'Observability', realService: true,
+    technology: ['OpenTelemetry, Grafana, Prometheus, Tempo, Loki'];
+    integrations: ['Datadog, Grafana Cloud, New Relic'];
+    useCases: ['Reduce MTTR, Reliability baselines, Capacity planning'];
+    roi: 'Cut incident time by 30–60%.',
+    competitors: ['Datadog APM, New Relic APM, Grafana Cloud Traces'];
+    marketSize: '$18B observability', growthRate: '25% YoY',
+    variant: 'monitoring-futuristic', contactInfo: contact,
+    realImplementation: true,
+    implementationDetails: 'Ready-made Terraform/Grafana dashboards, alerts, and OpenTelemetry setup.',
+    launchDate: '2024-11-10', customers: 120,
+    rating: 4.7,
+    reviews: 73
+  };
+  {
+    id: 'email-deliverability-warmup', name: 'Email Deliverability & Warmup Monitor',
+    tagline: 'Inbox placement, warmup, and sender reputation monitoring',
+    price: '$79', period: '/month',
+    description: 'Improve inbox placement with domain alignment checks (SPF/DKIM/DMARC), seed-list tests, warmup automation, and blacklist monitoring with alerts and remediation playbooks.',
+    features: [
+      'SPF/DKIM/DMARC configuration checksSeed-list deliverability testsAutomated sending warmup schedulesBlocklist and reputation monitoringBIMI and TLS validationAlerts to Slack/Email with remediation steps'
+    ];
+    popular: true, icon: '📧',
+    color: 'from-cyan-600 to-blue-700', textColor: 'text-cyan-400',
+    link: 'https://ziontechgroup.com/email-deliverability-monitor',
+    marketPosition: 'Complements ESPs with vendor-agnostic monitoring and playbooks, alternatives include Mailgun, SendGrid add-ons.',
+    targetAudience: 'Growth, marketing ops, and platform teams',
+    trialDays: 7, setupTime: '30 minutes',
+    category: 'Quality & Monitoring', realService: true,
+    technology: ['Next.js, DNS, TLS'];
+    integrations: ['SendGrid, Mailgun, Postmark'];
+    useCases: ['Improve inbox placement, Maintain domain reputation, Accelerate pre-launch warmup'];
+    roi: 'Lift email open rate by 10–30% and reduce spam placement.',
+    competitors: ['SendForensics, Mailgun Deliverability, Folderly'];
+    marketSize: '$1B+ deliverability tooling', growthRate: '15% YoY',
+    variant: 'monitoring-futuristic' as any,
+    contactInfo: {
+      
+      mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       address: '364 E Main St STE 1008 Middletown DE 19709',
       website: 'https://ziontechgroup && ziontechgroup.com'
     };
@@ -4522,4 +4640,7 @@ export const realMarketServices: RealMarketService[] = [
     reviews: 36
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/AdminDashboard && AdminDashboard.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/AdminDashboard && AdminDashboard.jsx import React from \'react\'';\'; import AdminLayout from \'@/components/admin/AdminLayout\'; export default function AdminDashboard() {}; return (); <AdminLayout>; <div className=\"space-y-4\">\";\" <h1 className=\"text-2xl font-bold\">Admin Dashboard</h1>; <p>Select a section from the sidebar.</p>; </div>; </AdminLayout>;\" );\";\" }\'";\" \'"\'";\" import React from \'react\'';\'; import AdminLayout from \'@/components / admin / AdminLayout\'; export default function AdminDashboard () {}; return () ; <AdminLayout>; <div className=\"space - y-4\">\";\" <h1 className=\"text - 2xl font - bold\">Admin Dashboard</h1>; <p > Select a section from the sidebar.</p>; </div>; </AdminLayout>;\") ;\";\" }\'";\" \'"\'";\"";
 <<<<<<< "HEAD": src && src.pages.disabled/AdminDashboard && AdminDashboard.jsx import _React from 'react'';'; import AdminLayout from '@/components/admin/AdminLayout'; export default function AdminDashboard() {}; return (); <AdminLayout>; <div className="space-y-4">";" <h1 className="text-2xl font-bold">Admin Dashboard</h1>; <p>Select a section from the sidebar.</p>; </div>; </AdminLayout>;" );";" }'";" '"'";" import _React from 'react'';'; import AdminLayout from '@/components / admin / AdminLayout'; export default function AdminDashboard () {}; return () ; <AdminLayout>; <div className="space - y-4">";" <h1 className="text - 2xl font - bold">Admin Dashboard</h1>; <p > Select a section from the sidebar.</p>; </div>; </AdminLayout>;") ;";" }'";" '"'";"";
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

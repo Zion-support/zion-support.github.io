@@ -30,4 +30,8 @@ function Metric({ label, value }: { label: string, value: any }) {
       <div className="text-lg font-semibold">{value ?? '—'}</div>
     </div>
   )
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

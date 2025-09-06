@@ -1,8 +1,17 @@
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 interface EmptyFraudStateProps {
   hasFilters: boolean
+=======
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { ShieldAlert } from 'lucide-react'
+
+interface EmptyFraudStateProps {
+  hasFilters: boolean,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   onResetFilters: () => void
 =======
 interface EmptyFraudStateProps {;
@@ -57,6 +66,7 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
 };
 '";
 
+<<<<<<< HEAD
 import React from "react";
 import {Button} from "@/components/ui/button";
 import {ShieldAlert} from 'lucide-react';
@@ -93,3 +103,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({ ;
   );
 };
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

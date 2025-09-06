@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import {formatDistanceToNow} from "date-fns"
 import Link from "next/link"
@@ -82,3 +83,7 @@ PostCard && PostCard.displayName = 'PostCard';
 
 export default PostCard;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+      "transition-shadow hover: shadow-md",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

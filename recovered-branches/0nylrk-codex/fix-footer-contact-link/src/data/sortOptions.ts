@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 // Sort options for talent directory
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export const SORT_OPTIONS = [
   { value: 'relevance', label: 'Relevance' }
@@ -10,4 +13,8 @@ export const SORT_OPTIONS = [
   { value: 'experience', label: 'Most Experienced' }
   { value: 'price-low', label: 'Price: Low to High' }
   { value: 'price-high', label: 'Price: High to Low' }
+<<<<<<< HEAD
 
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

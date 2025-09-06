@@ -4,6 +4,7 @@ import { ChevronLeft, Bell, Settings } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 <<<<<<< HEAD
+<<<<<<< HEAD
 interface MobileHeaderProps {
 
   title: string;  showBack?: boolean;  title: string
@@ -12,6 +13,15 @@ interface MobileHeaderProps {
   showSettings?: boolean
   className?: string
   onNotificationsClick?: () => void
+=======
+interface MobileHeaderProps {
+  title: string,
+  showBack?: boolean;
+  showNotifications?: boolean;
+  showSettings?: boolean;
+  className?: string;
+  onNotificationsClick?: () => void;
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   onSettingsClick?: () => void
 export function MobileHeader({
   title
@@ -108,6 +118,7 @@ export function MobileHeader(): any ({;
           )}
 <<<<<<< HEAD
           {showSettings && (
+<<<<<<< HEAD
             <Button variant='ghost' size='icon' onClick={onSettingsClick}>
               <Settings className='h-5 w-5' />
               <span className='sr-only'>Settings</span>
@@ -152,6 +163,16 @@ export function MobileHeader(): any ({;
               <ChevronLeft className='h-5 w-5' />;
               <span className='sr-only'>Back</span>;
             </Button>;
+=======
+            <Button 
+              variant="ghost" 
+              size="icon"
+              onClick={onSettingsClick}
+            >
+              <Settings className="h-5 w-5" />
+              <span className="sr-only">Settings</span>
+            </Button>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           )}
           <h1 className='text-lg font-medium leading-none truncate'>{title}</h1>;
         </div>;
@@ -184,6 +205,7 @@ export function MobileHeader(): any ({;
         </div>
       </div>
     </header>
+<<<<<<< HEAD
   );  )
 }
 =======
@@ -193,3 +215,7 @@ export function MobileHeader(): any ({;
   );  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  )
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

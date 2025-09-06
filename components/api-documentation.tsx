@@ -43,6 +43,7 @@ class ErrorBoundary extends React.Component {
 import React from 'react';
 import Layout from '../components/layout/Layout';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {;
   Code,;
   Database,;
@@ -98,6 +99,15 @@ export default function APIDocumentation() {;
     </div>;
   );	return (
 <<<<<<< HEAD
+=======
+import { 
+  Code, Database, Shield, Zap, Globe, Cpu, 
+  BookOpen, CheckCircle, ArrowRight, BarChart3, Lock, Brain
+} from 'lucide-react';
+
+export default function APIDocumentation() {
+	return (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">
 			<Head>
 				<title>API Documentation | Zion Tech Group</title>
@@ -115,6 +125,7 @@ export default function APIDocumentation() {;
 		</div>
 	)
 }
+<<<<<<< HEAD
 =======
 		<div className="min-h-screen pt-24 pb-20 px-4 sm:px-6 lg:px-8">;
 			<Head>;
@@ -134,3 +145,5 @@ export default function APIDocumentation() {;
 	),;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

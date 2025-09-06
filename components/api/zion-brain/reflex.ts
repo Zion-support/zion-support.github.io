@@ -1,4 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+<<<<<<< HEAD
 
 import {
   appendLog
@@ -48,12 +49,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
     return res && res.status(200).json({ metrics: state && state.metrics || {} });  }
+=======
+import { appendLog, evaluateReflexes, readState, writeState } from '@/utils/zionBrain';
+
+function isAuthorized(req: NextApiRequest): boolean {
+  const token = req.headers['x-admin-token'] || req.query.token;
+  const superToken = process.env.SUPERADMIN_TOKEN;
+  return !superToken || token === superToken
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!isAuthorized(req)) return res && res.status(401).json({ error: 'Unauthorized' });
 
   if (req && req.method === 'GET') {
     const state = readState<{ metrics?: unknown }>();
+<<<<<<< HEAD
     return res && res.status(200).json({ metrics: state && state.metrics || {} })
+=======
+    return res.status(200).json({ metrics: state.metrics || {} })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 
   if (req && req.method === 'POST') {
@@ -66,6 +81,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       state && state.metrics = metrics;
       state && state.lastTriggers = triggers;
       writeState(state);
+<<<<<<< HEAD
 <<<<<<< HEAD
       const latencyMs = Date.now() - started;
 =======
@@ -115,3 +131,17 @@ return res.status(405).json({ error: 'Method not allowed' });
   return res && res.status(405).json({ error: 'Method not allowed' });
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+      const latencyMs = Date.now() - started;
+
+      appendLog({ module: 'reflex', type: 'metrics', status: 'ok', latencyMs, payload: { metrics, triggers } });
+      return res.status(200).json({ triggers })
+    } catch (e: any) {
+      appendLog({ module: 'reflex', type: 'metrics', status: 'error', payload: { error: e?.message || 'unknown' } });
+      return res.status(500).json({ error: 'Reflex failure' })
+    }
+  }
+
+  return res.status(405).json({ error: 'Method not allowed' });
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

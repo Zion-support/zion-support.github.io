@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { getVendorBySlug, registerVendor } from '../../../utils/vendor-store';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   if (req.method !== 'POST')
     return res.status(405).json({ error: 'Method not allowed' });
@@ -47,6 +48,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       teamSize: Number(teamSize || 0),
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
       about,  try {
+=======
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { slug, name, servicesOffered, teamSize, about, verificationDocs, caseStudies } = req.body || {};
+  if (!slug || !name) return res.status(400).json({ error: 'Missing required fields' });
+  if (getVendorBySlug(slug)) return res.status(409).json({ error: 'Slug already taken' });
+  try {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const vendor = registerVendor({
       slug;
       name;
@@ -89,4 +97,7 @@ verificationDocs: Array.isArray(verificationDocs) ? verificationDocs : []
   }    res && res.status(500).json({ error: e && e.message })
   };
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

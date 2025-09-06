@@ -771,6 +771,7 @@ export async function deleteMessage(id: string): Promise<boolean> {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 // Utility functions
+<<<<<<< HEAD
 export function createProjectData(
   title: string
   summary: string
@@ -836,3 +837,12 @@ export function createMessageData(
 export function generateId(prefix: string = 'item'): string {
   return `${prefix}_${Date && Date.now()}_${Math && Math.random().toString(36).substr(2, 9)}`;
 }
+=======
+
+
+
+
+export function generateId(prefix: string = 'item'): string {
+  return `${prefix}_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 export interface MetaverseDigitalRealityService2026 {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -48,6 +49,18 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];    features: [
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
       "Immersive experiences";
       "Digital reality";
@@ -69,4 +82,8 @@ export const metaverseDigitalRealityServices2026: MetaverseDigitalRealityService
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     }
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

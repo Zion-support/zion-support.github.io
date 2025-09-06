@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,3 +26,5 @@ import React from \'react\'; import type { AppProps } from \'next/app\'; import 
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import React from \'react\'; import type { AppProps } from \'next/app\'; import Layout from \'../components/Layout\'; import \'../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
 import _React from 'react'; import type { AppProps } from 'next/app'; import Layout from '../components/Layout'; import '../styles/globals ; export default function App(): any ({ Component,pageProps }: AppProps) {}; return null} <Component {...pageProps} /> </Layout> )}
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

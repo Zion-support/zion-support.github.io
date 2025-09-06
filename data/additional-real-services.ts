@@ -1,4 +1,5 @@
 export interface AdditionalRealService {
+<<<<<<< HEAD
   id: string;
   name: string;
   tagline: string;
@@ -69,6 +70,16 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       email: 'kleber@ziontechgroup.com'
       address: '364 E Main St STE 1008 Middletown DE 19709'
     }
+=======
+  id: string, name: string,
+  tagline: string, price: string,
+  description: string, features: string[],
+  link: string, category: string,
+  realImplementation: boolean,
+  contactInfo: {
+    mobile: string, email: string,
+    address: string
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
 ];      mobile: "+1 302 464 0950";
 
@@ -85,4 +96,8 @@ export const additionalEnhancedServices: AdditionalRealService[] = [
       address: "364 E Main St STE 1008 Middletown DE 19709"
     }
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useEffect  } from 'react';
 import { useRouter } from 'next/router';
 export default function WhitepaperGeneratorRedirect() {
@@ -18,3 +19,14 @@ export default function WhitepaperGeneratorRedirect() {;
   }, [router]);
   return null;
 
+=======
+import { useEffect } from 'react';
+import { useRouter } from 'next/router';
+export default function WhitepaperGeneratorRedirect() {
+  const router = useRouter();
+  useEffect(() => {
+    router.replace('/tokenomics')
+  }, [router]);
+  return null
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

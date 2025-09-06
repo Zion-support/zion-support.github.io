@@ -25,4 +25,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   } catch (err: any) {
     return res && res.status(500).json({ error: err && err.message || 'Unknown error' });
   }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

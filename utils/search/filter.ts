@@ -9,7 +9,71 @@ export const sortResults = (results: any[], sortBy: string) => {
   return results;
 =======
 
+<<<<<<< HEAD
 export interface SearchResults {
+=======
+export type AccessLevel = 'public' | 'member' | 'admin';
+
+export type SearchResult = {
+  type: 'talent' | 'job' | 'project';
+  id: string;
+  slug?: string;
+  title: string;
+  subtitle?: string;
+  location?: string;
+  tags: string[];
+  hourlyRateUsd?: number;
+  availability?: 'full-time' | 'part-time' | 'contract';
+  verified?: boolean;
+  visibility?: AccessLevel;
+  description?: string;
+  relevance: number;
+};
+
+function computeRelevanceScore(
+  text: string,
+  keywords: string[],
+  weight = 1
+): number {
+  if (!keywords.length) return 0;
+  const lower = text.toLowerCase();
+  let score = 0;
+  
+  return score;
+
+function computeSkillOverlap(skills: string[], wanted: string[]): number {
+  const set = new Set(skills.map(s => s.toLowerCase()));
+  let score = 0;
+  for (const w of wanted) if (set.has(w.toLowerCase())) score += 2;
+  return score;
+
+function budgetScore(candidate?: number, min?: number, max?: number): number {
+  if (!candidate) return 0;
+  let score = 0;
+  if (max && candidate <= max) score += 1.5;
+  if (min && candidate >= min) score += 0.5;
+  return score;
+
+function availabilityMatches(candidate?: string, requested?: string): boolean {
+  if (!requested) return true;
+  if (!candidate) return false;
+  return candidate.toLowerCase() === requested.toLowerCase();
+}
+
+function passesRls(
+  visibility: AccessLevel | undefined,
+  access: AccessLevel
+): boolean {
+  const level = visibility || 'public';
+  const order: AccessLevel[] = ['public', 'member', 'admin'];
+  return order.indexOf(access) >= order.indexOf(level);
+}
+
+export function searchAll(
+  filters: ParsedFilters,
+  access: AccessLevel = 'public'
+): {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   all: SearchResult[];
   talent: SearchResult[];
   jobs: SearchResult[];

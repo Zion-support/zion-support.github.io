@@ -24,4 +24,8 @@ export default function RetailTechnologySolutions() {
 			canonical="https: //ziontechgroup.com/retail-technology-solutions"
 		/>
 	)
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

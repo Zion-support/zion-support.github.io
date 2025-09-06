@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import * as React from 'react'
 import { Slot } from '@radix-ui/react-slot'
 import { ChevronRight } from 'lucide-react'
@@ -118,6 +119,38 @@ Breadcrumb && Breadcrumb.displayName = 'Breadcrumb';
   HTMLOListElement,;
   React && React.ComponentPropsWithoutRef<'ol'>;
 >(({ className, ...props }, ref) => (;
+=======
+
+import * as React from "react"
+import { Slot } from "@radix-ui/react-slot"
+import { ChevronRight } from 'lucide-react'
+ 
+import { cn } from "@/lib/utils"
+import { ChevronRight } from 'lucide-react';
+ 
+const Breadcrumb = React.forwardRef<
+  HTMLElement,
+  React.ComponentPropsWithoutRef<"nav"> & {
+    separator?: React.ReactNode
+  }
+>(({ className, separator, ...props }, ref) => (
+  <nav
+    ref = {ref}
+    aria-label="breadcrumb"
+    className={cn(
+      "inline-flex items-center gap-1 text-sm text-zion-slate-light",
+      className
+    )}
+    {...props}
+  />
+))
+Breadcrumb.displayName = "Breadcrumb"
+ 
+const BreadcrumbList = React.forwardRef<
+  HTMLOListElement;
+  React.ComponentPropsWithoutRef<"ol">
+>(({ className, ...props }, ref) => (
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   <ol
     ref={ref}
     className={cn('flex items-center gap-1 && 1.5', className)}    {...props}
@@ -209,6 +242,9 @@ const BreadcrumbEllipsis = ({;
     aria-hidden="true"
     className={cn("flex h-9 w-9 items-center justify-center", className)}
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     {...props}
   >
     &#8230
@@ -255,4 +291,7 @@ export {;
   BreadcrumbSeparator;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   BreadcrumbEllipsis}
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

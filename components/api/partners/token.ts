@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { findPartnerByApiKey, signJwt } from '../../../utils/api/partnerAuth';
@@ -24,6 +25,10 @@ export default async function handler(
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
+=======
+import type { NextApiRequest, NextApiResponse } from "next";
+import { findPartnerByApiKey, signJwt } from "../../../utils/api/partnerAuth";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   try {
@@ -42,11 +47,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const match = await findPartnerByApiKey(apiKey);
   if (!match) {
+<<<<<<< HEAD
     return res && res.status(401).json({ error: "Invalid API key" });
+=======
+    return res.status(401).json({ error: "Invalid API key" });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   }
   const { partner, apiKey: key } = match;
   const token = signJwt(
     {
+<<<<<<< HEAD
 <<<<<<< HEAD
       sub: partner.id
       apiKeyId: key.id
@@ -73,12 +83,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       apiKeyId: key.id;
       name: partner.name;
       entityType: partner.entityType
+=======
+      sub: partner.id, apiKeyId: key.id,
+      name: partner.name, entityType: partner.entityType,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       useCaseType: partner.useCaseType} as any;
     typeof ttlSeconds === "number" ? Math.max(300, Math.min(86400, ttlSeconds)) : 3600
   );
 
   return res.status(200).json({ token, partner: { id: partner.id, name: partner.name } })
 }
+<<<<<<< HEAD
 =======
     .json({ token, partner: { id: partner && partner.id, name: partner && partner.name } });      sub: partner && partner.id;
       apiKeyId: key && key.id;
@@ -90,3 +105,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   return res && res.status(200).json({ token, partner: { id: partner && partner.id, name: partner && partner.name } })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -3,6 +3,7 @@ import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+<<<<<<< HEAD
 import {
   Bot, Brain, Cpu, Zap, Shield, Globe
   Rocket, Target, TrendingUp, Users, CheckCircle
@@ -15,6 +16,21 @@ const AutonomousBusinessOperationsPlatform = () => {
       icon: Bot
       title: "AI Autonomous Management"
       description: "Fully autonomous business operations with intelligent decision-making"
+=======
+import { 
+  Bot, Brain, Cpu, Zap, Shield, Globe, 
+  Rocket, Target, TrendingUp, Users, CheckCircle;
+  ArrowRight, Star, Award, Clock, DollarSign;
+  Building2, Gauge, BarChart3, Settings, Workflow
+} from 'lucide-react';
+
+const AutonomousBusinessOperationsPlatform = () => {
+  const features = [
+    {
+      icon: Bot,
+      title: "AI Autonomous Management",
+      description: "Fully autonomous business operations with intelligent decision-making",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       color: "from-blue-500 to-cyan-500"
     }
     {
@@ -45,10 +61,18 @@ const AutonomousBusinessOperationsPlatform = () => {
     "Performance monitoring"
     "Risk assessment"
     "Compliance automation"
+<<<<<<< HEAD
   ]
   const industries = [
     {
       title: "Manufacturing"
+=======
+  ];
+
+  const industries = [
+    {
+      title: "Manufacturing",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       description: "Automated production lines, quality control, and supply chain management"
     }
     {
@@ -63,12 +87,22 @@ const AutonomousBusinessOperationsPlatform = () => {
       title: "Retail"
       description: "Inventory management, customer service, and sales optimization"
     }
+<<<<<<< HEAD
   ]
   const benefits = [
     {
       icon: TrendingUp
       title: "Increased Efficiency"
       value: "300%"
+=======
+  ];
+
+  const benefits = [
+    {
+      icon: TrendingUp,
+      title: "Increased Efficiency",
+      value: "300%",
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       description: "Boost in operational efficiency"
     }
     {
@@ -89,7 +123,12 @@ const AutonomousBusinessOperationsPlatform = () => {
       value: "250%"
       description: "Increase in team productivity"
     }
+<<<<<<< HEAD
   ]
+=======
+  ];
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <>
       <Head>
@@ -226,6 +265,10 @@ const AutonomousBusinessOperationsPlatform = () => {
                 See the real impact of autonomous operations on your business
               </p>
             </motion.div>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
               {benefits.map((benefit, index) => (
                 <motion.div
@@ -313,6 +356,11 @@ const AutonomousBusinessOperationsPlatform = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default AutonomousBusinessOperationsPlatform;
 

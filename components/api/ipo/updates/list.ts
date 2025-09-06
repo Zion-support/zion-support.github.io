@@ -4,6 +4,7 @@ import { requireSuperadminApi } from '../../../../utils/api/auth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (!requireSuperadminApi(req, res)) return;
 <<<<<<< HEAD
+<<<<<<< HEAD
   const data = null;
   res.status(200).json(data)
 }
@@ -15,3 +16,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json(data)
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  const data = readJsonFile('updates.json', [] as any[]);
+  res.status(200).json(data)
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -960,6 +961,8 @@ if (import.meta.url === `file: //${process.argv[1]}`) {;
 ;
 export default SecurityScanner;
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
   };
 ,
@@ -1089,6 +1092,7 @@ if (import.meta.url === `file: //${process.argv[1]}`) {,
 };
 ,
 export default SecurityScanner,
+<<<<<<< HEAD
 >>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
@@ -1101,3 +1105,5 @@ scanner.start().catch(error => {})
 if (import.meta.url = = = `file: //${process.argv[1]}`) {const scanner = new SecurityScanner(); scanner.run().catch(console.error)}
 export default SecurityScanner;
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

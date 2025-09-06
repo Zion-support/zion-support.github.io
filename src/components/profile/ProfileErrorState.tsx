@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React from 'react',
 import { Button } from "@/components/ui/button";
@@ -22,6 +23,14 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
           <ArrowLeft className="mr-2 h-4 w-4" />
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
+=======
+
+import React from 'react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { ArrowLeft } from 'lucide-react'
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface ProfileErrorStateProps {
   error: string | null
 }
@@ -36,6 +45,7 @@ export function ProfileErrorState({ error }: ProfileErrorStateProps) {
         </Link>
       </Button>
     </div>
+<<<<<<< HEAD
   )
 }
 =======
@@ -82,3 +92,7 @@ export function ProfileErrorState(): any ({ error }: ProfileErrorStateProps) {;
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

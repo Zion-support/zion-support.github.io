@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import OpenAI from "openai";
@@ -12,6 +13,20 @@ export type GenerateServiceDescriptionResponse = {
   description: string;
 <<<<<<< HEAD
 }
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import OpenAI from 'openai';
+export type GenerateServiceDescriptionRequest = {
+  title: string, keyFeatures: string[],
+  targetAudience: string, additionalNotes?: string,
+  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'
+};
+
+export type GenerateServiceDescriptionResponse = {
+  description: string
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 =======
 };
@@ -22,6 +37,7 @@ export default async function handler(
   req: NextApiRequest
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>
 ) {
+<<<<<<< HEAD
   if (req && req.method !== "POST") {
     return res && res.status(405).json({ error: "Method not allowed" });
   }
@@ -61,6 +77,25 @@ export default async function handler(
     const toneInstruction = tone
       ? `Write in a ${tone} tone.`
       : "Write in a professional, clear tone.";
+=======
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' })
+  }
+
+  const { title, keyFeatures, targetAudience, additionalNotes, tone } = req.body as GenerateServiceDescriptionRequest;
+
+  if (!process.env.OPENAI_API_KEY) {
+    return res.status(500).json({ error: 'OpenAI API key not configured' })
+  }
+
+  if (!title || !Array.isArray(keyFeatures) || keyFeatures.length === 0 || !targetAudience) {
+    return res.status(400).json({ error: 'Missing required fields: title, keyFeatures, targetAudience' })
+  }
+
+  try {
+    const toneInstruction = tone ? `Write in a ${tone} tone.` : 'Write in a professional, clear tone.';
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     const prompt = `You are a marketing copy expert. Given the following service inputs, write a polished, compelling, and detailed service description suitable for a website service page.
 Service Title: ${title}
 Target Audience: ${targetAudience}
@@ -76,6 +111,7 @@ Requirements:
     // Using Responses API for modern SDK
 <<<<<<< HEAD
     const response = await openai.responses.create({
+<<<<<<< HEAD
       model: "gpt-4o-mini"
       input: prompt
       temperature: 0.7
@@ -94,10 +130,25 @@ Requirements:
         .filter((c) => c && c.type === "output_text")
         .map((c: any) => c && c.text)
         .join("\n");
+=======
+      model: 'gpt-4o-mini', input: prompt,
+      temperature: 0.7
+      });
+
+    let description = '';
+    const output = response.output?.[0];
+    if (output && output.type === 'message') {
+      // Aggregate all text parts from the first message
+      description = output.content
+        .filter((c) => c.type === 'output_text')
+        .map((c: any) => c.text)
+        .join('\n')
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     }
     if (!description) {
       // Fallback to top-level text if available
       // @ts-ignore
+<<<<<<< HEAD
       description =
         (response as any).content?.[0]?.text |
         "Unable to generate description at this time.";
@@ -107,6 +158,10 @@ Requirements:
   } catch (error: any) {
     console.error("OpenAI generation error:", error);
     return res.status(500).json({ error: "Failed to generate description" });
+=======
+      description = (response as any).content?.[0]?.text || 'Unable to generate description at this time.'
+    }
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 =======
 
@@ -116,4 +171,8 @@ Requirements:
     return res && res.status(500).json({ error: "Failed to generate description" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

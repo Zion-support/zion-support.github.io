@@ -4,6 +4,7 @@ import path from 'path';
 import { isInternalAgentRequest } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
   if (req.method !== 'POST') {
     res.status(405).json({ error: 'Method Not Allowed' });
 
@@ -54,6 +55,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
     res && res.status(405).json({ error: 'Method Not Allowed' });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  if (req.method !== 'POST') {
+    res.status(405).json({ error: 'Method Not Allowed' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     return
   }
   if (!isInternalAgentRequest(req)) {
@@ -89,4 +94,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2));
   res && res.status(200).json({ ok: true })
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -110,6 +111,8 @@ const { execSync } = require("child_process");
 =======
 ; generatePerformanceOptimizer() {; const script = `#!/usr/bin/env node;
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 class CodeQualityMonitor {;
   constructor() {;
     this.metrics = {;
@@ -237,11 +240,11 @@ monitor.analyzeCodeQuality().then(metrics => {;
 ;
   generatePerformanceOptimizer() {;
     const script = `#!/usr/bin/env node;
->>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 const fs = require("fs");
 >>>>>>> origin/automation-improvements-final
 const path = require("path");
 const { execSync } = require("child_process");
+<<<<<<< HEAD
 
 class PerformanceOptimizer {; constructor() {; this && this.optimizations = []; this && this.logFile = path && path.join(__dirname, "logs", "performance-optimizer && optimizer.log")};
 ; log(message) {; const timestamp = new Date().toISOString(); const logMessage = \`[\${timestamp}] \${message}\\n\`; console && console.log(message); fs && fs.appendFileSync(this && this.logFile, logMessage)};
@@ -306,6 +309,56 @@ optimizer && optimizer.optimizePerformance().then(report = > {; if (report) {; c
 ; async runAllScripts() {; this && this.log("Running all available scripts..."); const results = [];
 ; for (const [name, script] of this && this.scripts) {; if (script && script.status = = = "available") {; const success = await this && this.runScript(name); results && results.push({ name, success })};
 ;      };
+=======
+;
+class PerformanceOptimizer {;
+  constructor() {;
+    this.optimizations = [];
+    this.logFile = path.join(__dirname, "logs", "performance-optimizer.log");
+};
+;
+  log(message) {;
+    const timestamp = new Date().toISOString();
+    const logMessage = \`[\${timestamp}] \${message}\\n\`;
+    console.log(message);
+    fs.appendFileSync(this.logFile, logMessage);
+};
+;
+  async optimizePerformance() {;
+    try {;
+      this.log("Starting performance optimization...");
+;
+      // Analyze bundle size;
+      const bundleAnalysis = this.analyzeBundleSize();
+;
+      // Optimize images;
+      const imageOptimization = this.optimizeImages();
+;
+      // Check for unused dependencies;
+      const dependencyAnalysis = this.analyzeDependencies();
+;
+      // Generate optimization report;
+      const report = {;
+        timestamp: new Date().toISOString(), bundleSize: bundleAnalysis,
+        imageOptimization: imageOptimization, dependencies: dependencyAnalysis,
+        recommendations: this.generateRecommendations(), ,
+;
+      this.saveReport(report);
+      this.log("Performance optimization completed");
+      return report;
+    } catch (error) {;
+      this.log(\`Performance optimization failed: \${error.message}\`, "ERROR");
+      return null;
+};
+};
+;
+  analyzeBundleSize() {;
+    try {;
+      // Placeholder for bundle analysis;
+      return {;
+        totalSize: "2.1MB", gzippedSize: "650KB",
+        recommendations: ["Consider code splitting", "Remove unused dependencies"];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       };
 <<<<<<< HEAD
       };
@@ -446,6 +499,7 @@ optimizer.optimizePerformance().then(report => {;
         const success = await this.runScript(name);
         results.push({ name, success });
 <<<<<<< HEAD
+<<<<<<< HEAD
       }
     }
     this.log(`Completed running ${results.length} scripts`);
@@ -541,6 +595,8 @@ module.exports = AutomationFactory;
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 =======
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     };
   };
 ,
@@ -891,8 +947,8 @@ optimizer.optimizePerformance().then(report => {,
       if (script.status === "available") {,
         const success = await this.runScript(name),
         results.push({ name, success }),
->>>>>>> cursor/automate-test-improve-and-merge-code-8ee2
       };
+<<<<<<< HEAD
 >>>>>>> 03f1818a747ef77bbf37ae59cfaf28d591236f31
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
@@ -902,3 +958,5 @@ optimizer.optimizePerformance().then(report = > {if (report) {; console.log("Per
       }
       }
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

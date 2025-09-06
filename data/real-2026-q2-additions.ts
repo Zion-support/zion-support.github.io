@@ -1,6 +1,7 @@
 
 export const real2026Q2Additions = [
   {
+<<<<<<< HEAD
     id: 'ai-governance-compliance-hub'
     name: 'AI Governance & Compliance Hub'
     category: 'AI & Data'
@@ -491,6 +492,14 @@ export const real2026Q2Additions = [
     link: 'https://ziontechgroup ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 ];      'Windows/macOS/Linux agent and lightweight modePatch automation and health policiesRemote scripts and secure sessionsInventory, software metering, and alertsTicketing and customer portals'
+=======
+    id: 'ai-governance-compliance-hub', name: 'AI Governance & Compliance Hub',
+    category: 'AI & Data',
+    tagline: 'Policy, risk, and model governance with automated evidence and audit trails.',
+    description: 'Centralize AI model governance with policy mapping, automated risk assessments, lineage, PII scanning, red-teaming evidence, and auditor-ready reports. Integrates with Jira, ServiceNow, Slack, GitHub, and leading MLOps platforms.',
+    features: [
+      'Policy mapping to ISO/IEC 23894, NIST AI RMF, EU AI ActAutomated risk and impact assessments with mitigationsDataset lineage, consent tracking, and PII classificationPrompt and output red-teaming with evidence loggingHuman-in-the-loop approvals and audit workflowsRealtime controls dashboard and drift alertsExport auditor-ready reports (SOC2, ISO, HIPAA add-ons)'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ];
     useCases: ['MSPs and IT providersInternal IT for SMBsBYOD governance'];
     integrations: ['Azure ADOktaSlackServiceNow'];
@@ -509,4 +518,7 @@ export const real2026Q2Additions = [
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

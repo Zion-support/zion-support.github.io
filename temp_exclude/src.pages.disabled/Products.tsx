@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -25,3 +26,5 @@ import React from \'react\' export default Products const \"Products\": React.FC
 import _React from 'react' export default Products const "Products": _React && _React.FC = () : JSX ;
 import React from \'react\' export default Products const \"Products\": React.FC = () : JSX ;
 import _React from 'react' export default Products const "Products": _React && _React.FC = () : JSX ;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

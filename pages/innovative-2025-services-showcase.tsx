@@ -377,6 +377,11 @@ const Innovative2025ServicesShowcase: React.FC = () => {
       </div>
     </>
   )
+<<<<<<< HEAD
 }
+=======
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default Innovative2025ServicesShowcase;
 

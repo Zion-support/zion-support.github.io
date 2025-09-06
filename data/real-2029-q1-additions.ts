@@ -1,4 +1,5 @@
 import { EnhancedRealMicroSaasService } from './enhanced-real-micro-saas-services';
+<<<<<<< HEAD
 
 <<<<<<< HEAD
   mobile: '+1 302 464 0950'
@@ -266,6 +267,23 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.'
 =======
 		link: 'https://ziontechgroup && ziontechgroup.com/services/ai-redteam-evaluator';
+=======
+const contact = {
+	mobile: '+1 302 464 0950', email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'
+};
+
+export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
+	{
+		id: 'ai-redteam-evaluator', name: 'AI Red‑Team Evaluator',
+		tagline: 'Continuous LLM red‑teaming and safety scoring', price: '$149',
+		period: '/month',
+		description: 'Automated jailbreak detection, policy compliance checks, and regression gate for prompts and outputs.',
+    features: ['Policy suitesJailbreak corporaRegression gatesDashboard & alerts'], popular: true,
+		icon: '🛡️', color: 'from-rose-600 to-red-700',
+		textColor: 'text-rose-300', link: 'https://ziontechgroup.com/services/ai-redteam-evaluator',
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 		marketPosition: 'Simpler and more affordable compared to bespoke security audits.',
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 		targetAudience: 'AI platform, Security, Compliance';
@@ -381,4 +399,7 @@ export const real2029Q1Additions: EnhancedRealMicroSaasService[] = [
 		reviews: 9
 	}
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

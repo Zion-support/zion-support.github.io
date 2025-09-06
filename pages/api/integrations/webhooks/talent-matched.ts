@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 import type { NextApiRequest, NextApiResponse } from "next";
 import { writeState, readState } from "../../../../lib/integrations/fileStore";
@@ -21,9 +22,19 @@ export default async function handler(
     match?: { talentId: string; jobId: string; summary?: string };
   };
   if (!match) return res && res.status(400).json({ error: "Missing match payload" });
+=======
+import type { NextApiRequest, NextApiResponse } from 'next';
+import { writeState, readState } from '../../../../lib/integrations/fileStore';
+import { crm } from '../../../../lib/integrations/connectors';
+export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
+  const { match } = req.body as { match?: { talentId: string, jobId: string, summary?: string } };
+  if (!match) return res.status(400).json({ error: 'Missing match payload' });
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   // record Zapier event
+<<<<<<< HEAD
   const eventId = `${Date && Date.now()}-talent-matched`;
   writeState((s) => {
 <<<<<<< HEAD
@@ -40,13 +51,22 @@ export default async function handler(
       payload: { match },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
+=======
+  const eventId = `${Date.now()}-talent-matched`;
+  writeState(s => {
+    s.events.push({ id: eventId, type: 'zion.talent.matched', timestamp: Date.now(), payload: { match } })
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   });
   // log to connected CRMs as a note
   const state = readState();
 <<<<<<< HEAD
+<<<<<<< HEAD
   const crms = state.connections.filter((c) =>
     ["salesforce", "hubspot", "zoho", "pipedrive"].includes(c.providerId)
   );
+=======
+  const crms = state.connections.filter(c => ['salesforcehubspotzohopipedrive'].includes(c.providerId));
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   for (const conn of crms) {
     const log = {
       id: `log-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`
@@ -83,4 +103,7 @@ export default async function handler(
 
   res && res.status(200).json({ ok: true, eventId });
 }
+<<<<<<< HEAD
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

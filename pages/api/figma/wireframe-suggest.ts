@@ -21,4 +21,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   } catch (e: any) {const message = process.env.OPENAI_API_KEY ? (e?.message |'Failed to generate') : 'Set OPENAI_API_KEY to enable suggestions.';
     res.status(500).json({ error: message });
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

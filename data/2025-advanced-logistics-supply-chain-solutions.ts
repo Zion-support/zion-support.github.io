@@ -1,4 +1,5 @@
 import { ServiceVariant } from '../types/service-variants';
+<<<<<<< HEAD
 
 
   id: string;
@@ -533,6 +534,43 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
     },
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   ];    features: [
+=======
+export interface AdvancedLogisticsSupplyChainSolution2025 {
+  id: string, name: string,
+  tagline: string, price: string,
+  period: string, description: string,
+  features: string[], popular: boolean,
+  icon: string, color: string,
+  textColor: string, link: string,
+  marketPosition: string, targetAudience: string,
+  trialDays: number, setupTime: string,
+  category: string, realService: boolean,
+  technology: string[], integrations: string[],
+  useCases: string[], roi: string,
+  competitors: string[], marketSize: string,
+  growthRate: string, variant: ServiceVariant,
+  contactInfo: {
+      
+    mobile: string, email: string,
+    address: string,
+    website: string
+  
+    },
+    realImplementation: boolean, implementationDetails: string,
+  launchDate: string, customers: number,
+  rating: number,
+  reviews: number
+}
+
+export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyChainSolution2025[] = [
+  {
+    id: 'ai-powered-supply-chain-optimization', name: 'AI-Powered Supply Chain Optimization',
+    tagline: 'Intelligent supply chain planning and optimization',
+    price: '$1,299',
+    period: '/month',
+    description: 'Advanced AI-powered supply chain optimization platform that uses machine learning to optimize inventory, demand forecasting, and logistics operations.',
+    features: [
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       'Demand forecastingInventory optimizationRoute optimizationSupplier managementRisk assessmentPerformance analyticsReal-time monitoringAPI integration';
       'Custom algorithmsCompliance tools'
     ];
@@ -799,4 +837,8 @@ export const advancedLogisticsSupplyChainSolutions2025: AdvancedLogisticsSupplyC
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     reviews: 112
   }
+<<<<<<< HEAD
 ];
+=======
+];
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

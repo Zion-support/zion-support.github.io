@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
@@ -655,3 +656,13 @@ export function WorkExperienceForm(): any ({;
 }'"  );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+      ...work;
+      start_date: formatDateValue(work.start_date),
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})
+  };
+
+
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

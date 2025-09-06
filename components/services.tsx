@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 ...realMicroSaasServices2025;
 ...innovativeAIServices2025;
@@ -125,6 +126,252 @@ and micro SAAS services designed to transform your business and drive innovation
 }</motion.div> {
   /* Enhanced CTA Section */
 }<motion.div <div className="relative z-10" > <motion.div > <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-cyan-500/30 text-cyan-300 text-sm font-medium mb-6" > <span className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-pulse" ></span> Transform Your Business Today </div> </motion.div> <h2 className="text-5xl md:text-6xl font-bold text-white mb-8" > <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent" > Ready to Get Started? </span> </h2> <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto leading-relaxed" > Choose from our comprehensive suite of revolutionary services and start transforming your business today with cutting-edge AI, quantum computing, and emerging technologies. </p> <div className="flex flex-col sm:flex-row gap-6 justify-center" > <motion.a > 🚀 Get Started Today </motion.a> <motion.a mt-10 text-sm text-gray-400"> <p>Need help choosing? <a href=" /contact"className=" text-cyan-400 hover:text-cyan-300 underline" >Contact our experts</a> for personalized guidance.</p> </div> </div> </div> </motion.div> </div> </section> </main> <UltraFuturisticFooter2029 /> </UltraFuturisticBackground2029>)   // Combine all services
+=======
+import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { 
+  Search, Filter, Star, Users, TrendingUp, 
+  DollarSign, Clock, CheckCircle, ArrowRight;
+  Brain, Rocket, Dna, Globe, Shield, Wifi, 
+  Package, Bot, Car, Building2, Monitor, Cpu, 
+  Zap, Atom, Database, Cloud, Lock, Code
+} from 'lucide-react';
+import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground';
+import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard';
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { additionalEnhancedServices } from '../data/additional-real-services';
+import { newRealServices } from '../data/new-real-services';
+import { industryRealServices } from '../data/industry-real-services';
+import { professionalServices } from '../data/professional-services';
+import { nextGenerationAIServices } from '../data/next-generation-ai-services';
+import { cuttingEdgeITServices } from '../data/cutting-edge-it-services';
+import { innovativeMicroSaasV2Services } from '../data/innovative-micro-saas-v2';
+import { marketValidatedServices } from '../data/market-validated-services';
+import { emergingTechnologyServices } from '../data/emerging-technology-services';
+import { comprehensiveITSolutions } from '../data/comprehensive-it-solutions';
+import { curatedMarketServices } from '../data/curated-market-services';
+import { realMarketServices } from '../data/real-market-services';
+import { new2025Services } from '../data/new-2025-services';
+import { newRealInnovations } from '../data/new-real-innovations';
+import { serviceExpansions2025 } from '../data/service-expansions-2025';
+import React, { useState } from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { 
+  Search, Grid, List;
+  Brain, Atom, Shield, Target, Rocket;
+  ArrowRight, Check, Palette, Heart, Truck, GraduationCap;
+  Users, DollarSign, Settings, TrendingUp, BarChart3, ChevronDown
+} from 'lucide-react';
+import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029';
+import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029';
+import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029';
+// Import all the new 2025 service data
+import { realMicroSaasServices2025 } from '../data/2025-real-micro-saas-services';
+import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services';
+import { innovativeITServices2025 } from '../data/2025-innovative-it-services';
+import { emergingTechServices2025 } from '../data/2025-emerging-tech-services';
+import { additionalRealServices2025 } from '../data/2025-additional-real-services';
+import { innovativeAIServices2025 as newInnovativeAIServices } from '../data/2025-innovative-ai-it-services';
+// Import new innovative services
+import { innovativeFinancialServices2025 } from '../data/2025-innovative-financial-services';
+import { innovativeHealthcareServices2025 } from '../data/2025-innovative-healthcare-services';
+import { innovativeEducationServices2025 } from '../data/2025-innovative-education-services';
+import { innovativeSustainabilityServices2025 } from '../data/2025-innovative-sustainability-services';
+import { innovativeLogisticsServices2025 } from '../data/2025-innovative-logistics-services';
+// Import existing services for comprehensive coverage
+import { enhancedRealMicroSaasServices } from '../data/enhanced-real-micro-saas-services';
+import { innovativeMicroSaasServices } from '../data/innovative-micro-saas-services';
+import { quantumSpaceServices } from '../data/quantum-space-services';
+import { enterpriseITServices } from '../data/enterprise-it-services';
+const allServices = [
+  ...realMicroSaasServices2025;
+  ...innovativeAIServices2025;
+  ...innovativeITServices2025;
+  ...emergingTechServices2025;
+  ...additionalRealServices2025;
+  ...newInnovativeAIServices
+];
+
+const contactInfo = {
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+};
+
+const serviceCategories: Array<{
+  id: string,
+  title: string,
+  description: string,
+  icon: React.ComponentType<{ className?: string }>,
+  color: string,
+  services: ServiceUnion[],
+  gradient: string
+}> = [
+  {
+    id: 'ai-consciousness',
+    title: '🧠 AI & Consciousness',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: [...innovativeAIServices2025],
+    gradient: 'from-violet-500/20 to-indigo-500/20'
+  };
+  {
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing, DNA computing, and beyond',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-500',
+    services: [...emergingTechServices2025],
+    gradient: 'from-indigo-500/20 to-cyan-500/20'
+  };
+  {
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-500',
+    services: [...innovativeITServices2025],
+    gradient: 'from-blue-500/20 to-teal-500/20'
+  };
+  {
+    id: 'space-metaverse',
+    title: '🌌 Space & Metaverse',
+    description: 'Space mining, metaverse development, and more',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-500',
+    services: [...quantumSpaceServices],
+    gradient: 'from-teal-500/20 to-green-500/20'
+  };
+  {
+    id: 'micro-saas',
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from-green-500 to-yellow-500',
+    services: [...realMicroSaasServices2025, ...enhancedRealMicroSaasServices];
+    gradient: 'from-green-500/20 to-orange-500/20'
+  };
+  {
+    id: 'financial-technology',
+    title: '💰 Financial Technology',
+    description: 'Innovative fintech, DeFi, and financial services',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+    services: [...innovativeFinancialServices2025],
+    gradient: 'from-green-500/20 to-emerald-500/20'
+  };
+  {
+    id: 'healthcare-biotech',
+    title: '🏥 Healthcare & Biotech',
+    description: 'AI-powered healthcare and biotechnology solutions',
+    icon: Shield,
+    color: 'from-blue-500 to-indigo-500',
+    services: [...innovativeHealthcareServices2025],
+    gradient: 'from-blue-500/20 to-indigo-500/20'
+  };
+  {
+    id: 'education-technology',
+    title: '🎓 Education Technology',
+    description: 'AI-powered learning and educational innovation',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    services: [...innovativeEducationServices2025],
+    gradient: 'from-purple-500/20 to-pink-500/20'
+  };
+  {
+    id: 'sustainability-green-tech',
+    title: '🌱 Sustainability & Green Tech',
+    description: 'Environmental technology and sustainability solutions',
+    icon: Globe,
+    color: 'from-emerald-500 to-teal-500',
+    services: [...innovativeSustainabilityServices2025],
+    gradient: 'from-emerald-500/20 to-teal-500/20'
+  };
+  {
+    id: 'logistics-supply-chain',
+    title: '🚚 Logistics & Supply Chain',
+    description: 'Autonomous logistics and supply chain optimization',
+    icon: Rocket,
+    color: 'from-orange-500 to-red-500',
+    services: [...innovativeLogisticsServices2025],
+    gradient: 'from-orange-500/20 to-red-500/20'
+  };
+  {
+    id: 'research-development',
+    title: '🔬 Research & Development',
+    description: 'Breakthrough technologies and innovations',
+    icon: Microscope,
+    color: 'from-red-500 to-pink-500',
+    description: 'Advanced healthcare solutions'
+  };
+  {
+    id: 'transportation-logistics',
+    name: 'Transportation & Logistics',
+    icon: <Truck className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Smart transportation solutions'
+  };
+  {
+    id: 'education-research',
+    name: 'Education & Research',
+    icon: <GraduationCap className="w-6 h-6" />,
+    color: 'from-yellow-500 to-orange-500',
+    description: 'Learning and research platforms'
+  };
+  {
+    id: 'customer-success',
+    name: 'Customer Success',
+    icon: <Users className="w-6 h-6" />,
+    color: 'from-blue-500 to-indigo-600',
+    description: 'AI-powered customer success and retention'
+  };
+  {
+    id: 'financial-technology',
+    name: 'Financial Technology',
+    icon: <DollarSign className="w-6 h-6" />,
+    color: 'from-green-500 to-emerald-600',
+    description: 'Quantum and AI-powered financial solutions'
+  };
+  {
+    id: 'devops-infrastructure',
+    name: 'DevOps & Infrastructure',
+    icon: <Settings className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-600',
+    description: 'AI-powered DevOps and infrastructure automation'
+  };
+  {
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className="w-6 h-6" />,
+    color: 'from-red-500 to-pink-600',
+    description: 'Quantum-resistant security solutions'
+  };
+  {
+    id: 'sales-marketing',
+    name: 'Sales & Marketing',
+    icon: <TrendingUp className="w-6 h-6" />,
+    color: 'from-orange-500 to-red-600',
+    description: 'AI-powered sales and marketing automation'
+  };
+  {
+    id: 'data-analytics',
+    name: 'Data & Analytics',
+    icon: <BarChart3 className="w-6 h-6" />,
+    color: 'from-indigo-500 to-purple-600',
+    description: 'Quantum-powered data analytics and insights'
+  }
+];
+import { realVerifiedServices } from '../data/real-verified-services';
+export default function ServicesPage() {
+  const [searchTerm, setSearchTerm] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [sortBy, setSortBy] = useState('name');
+
+  // Combine all services
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   const allServices = [
 =======
   duration: 0 && 0.8, delay: 0 && 0.8 
@@ -1023,6 +1270,7 @@ and micro SAAS services designed to transform your business and drive innovation
     </UltraFuturisticBackground2029>
   )
 }
+<<<<<<< HEAD
 =======
                 <div className="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-cyan-500/20 to-transparent rounded-full blur-3xl"></div>;
                 <div className="absolute bottom-0 right-0 w-64 h-64 bg-gradient-to-br from-purple-500/20 to-transparent rounded-full blur-3xl"></div>;
@@ -1081,3 +1329,5 @@ and micro SAAS services designed to transform your business and drive innovation
   ),;
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

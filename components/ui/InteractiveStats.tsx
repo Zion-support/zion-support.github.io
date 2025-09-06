@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 function useCounter(target: number, durationMs: number) {
   const [value, setValue] = useState(0);
   useEffect(() => {
+<<<<<<< HEAD
 
 =======
 import {useEffect, useState} from 'react';
@@ -13,10 +14,16 @@ function useCounter(): any (target: number, durationMs: number) {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     let start: number | null = null;
     let raf: number;    const step = (ts: number) => {;
+=======
+    let start: number | null = null,
+    let raf: number,
+    const step = (ts: number) => {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       if (start === null) start = ts;
 <<<<<<< HEAD
       const progress = Math.min(1, (ts - start) / durationMs);
       setValue(Math.floor(progress * target));
+<<<<<<< HEAD
       if (progress < 1) raf = requestAnimationFrame(step);    let start: number | null = null
     let raf: number
     const step = (ts: number) => {
@@ -46,6 +53,16 @@ function useCounter(): any (target: number, durationMs: number) {;
   return value;
 }
 <<<<<<< HEAD
+=======
+      if (progress < 1) raf = requestAnimationFrame(step)
+    };
+    raf = requestAnimationFrame(step);
+    return () => cancelAnimationFrame(raf)
+  }, [target, durationMs]);
+  return value
+}
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export default function InteractiveStats() {
 =======
 
@@ -55,6 +72,7 @@ export default function InteractiveStats() {;
   const experts = useCounter(450, 1200);
   const partners = useCounter(85, 1200);
   const satisfaction = useCounter(98, 1200);
+<<<<<<< HEAD
 
   return (
     <div className='grid sm:grid-cols-2 lg:grid-cols-4 gap-4'>;
@@ -66,6 +84,16 @@ export default function InteractiveStats() {;
   );
     </div>;
   );
+=======
+  return (
+    <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <Stat label="Successful Hires" value={hires} suffix="+" />
+      <Stat label="AI Experts" value={experts} suffix="+" />
+      <Stat label="Partners" value={partners} suffix="+" />
+      <Stat label="Satisfaction" value={satisfaction} suffix="%" />
+    </div>
+  )
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }
 <<<<<<< HEAD
 function Stat({ label, value, suffix = '' }: { label: string, value: number, suffix?: string }) {
@@ -89,6 +117,7 @@ function Stat(): any ({ label, value, suffix = '' }: { label: string, value: num
       <div className="text-sm text-gray-600 dark:text-gray-300">{label}</div>;
     </div>;
   );
+<<<<<<< HEAD
 function Stat(): any ({;
   label,;
   value,;
@@ -109,3 +138,6 @@ function Stat(): any ({;
     </div>;
   );
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

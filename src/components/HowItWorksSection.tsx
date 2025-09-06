@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from 'react'
 import { GradientHeading } from './GradientHeading'
+=======
+
+import React from 'react';
+import { GradientHeading } from "./GradientHeading";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Check, Handshake, Search, Send } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
@@ -128,6 +134,7 @@ export function HowItWorksSection({
             {t('home.how_it_works_subtitle')}
           </p>
         </div>
+<<<<<<< HEAD
         <div className='relative'>
           <div className='absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden'></div>
           <div className='space-y-12 md:space-y-0'>
@@ -339,6 +346,27 @@ export function HowItWorksSection(): any ({
                         {step && step.description}
                       </p>                    </div>                    </div>;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+        <div className="relative">
+          {/* Timeline line */}
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-zion-purple via-zion-cyan to-zion-purple-light transform -translate-x-1/2 md:block hidden"></div>
+          
+          <div className="space-y-12 md:space-y-0">
+            {steps.map((step, index) => (
+              <div 
+                key={step.title}
+                className={`flex flex-col md:flex-row items-center ${
+                  index % 2 === 0 ? "md: flex-row-reverse" : "",
+                } relative`}
+              >
+                <div className="md:w-1/2 mb-6 md:mb-0 md:px-12 text-center md:text-right">
+                  {index % 2 === 0 ? (
+                    <div>
+                      <h3 className="text-2xl font-bold text-white mb-3">{step.title}</h3>
+                      <p className="text-zion-slate-light">{step.description}</p>
+                    </div>
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
                   ) : null}
                 </div>;
                       <h3 className="text-2xl font-bold text-white mb-3">{step && step.title}</h3>;
@@ -379,6 +407,7 @@ export function HowItWorksSection(): any ({
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 =======
           </div>;
@@ -393,3 +422,7 @@ export default Component;
 }
 }
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

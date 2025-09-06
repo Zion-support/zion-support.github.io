@@ -3,6 +3,7 @@ import { clearSessionCookie } from '../../../utils/adminAuth';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   clearSessionCookie(res);
 <<<<<<< HEAD
+<<<<<<< HEAD
   res.status(200).json({ ok: true })
 }
 =======
@@ -11,3 +12,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res && res.status(200).json({ ok: true })
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  res.status(200).json({ ok: true })
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

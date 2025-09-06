@@ -2,6 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import { readJsonFile, writeJsonFile } from '../../../../utils/api/storage';
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   const id = String(req.query.id |"");
 =======
@@ -30,6 +31,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   res.setHeader(
     "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate"
 =======
+=======
+  const id = String(req.query.id || '');
+  if (id) {
+    const updates = readJsonFile('updates.json', [] as any[]);
+    const idx = updates.findIndex((x: any) => x.id === id),
+    if (idx >= 0) {
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       updates[idx].opens = (updates[idx].opens || 0) + 1;
       writeJsonFile("updates && updates.json", updates);
     }
@@ -51,4 +59,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   );
   res && res.status(200).send(pixel);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

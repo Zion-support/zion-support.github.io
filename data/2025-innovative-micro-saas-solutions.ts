@@ -1,6 +1,7 @@
 
 export const innovativeMicroSaasSolutions2025 = [
   {
+<<<<<<< HEAD
     id: 'ai-powered-customer-feedback-analyzer'
     name: 'AI-Powered Customer Feedback Analyzer'
     description:
@@ -556,9 +557,19 @@ export const innovativeMicroSaasSolutions2025 = [
     compliance: ['CAN-SPAM', 'GDPR', 'CCPA', 'Email marketing regulations']
   }
 ];      'Email campaign automationCustomer segmentation and personalizationConversion rate optimizationSubscriber engagement improvementMarketing ROI optimization'
+=======
+    id: 'ai-powered-customer-feedback-analyzer', name: 'AI-Powered Customer Feedback Analyzer',
+    description: 'Intelligent platform that automatically analyzes customer feedback from multiple channels, providing actionable insights and sentiment analysis to improve customer experience.',
+    features: [
+      'Multi-channel feedback collection (email, social media, surveys, reviews)AI-powered sentiment analysis with 95.8% accuracyReal-time feedback processing and alertsAutomated insight generation and recommendationsCustomer satisfaction trend analysisCompetitor feedback monitoringCustom dashboard and reportingIntegration with CRM and support systems';
+      'Multi-language supportAPI access for custom integrations'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
     ];
     integrations: ['CRM systemsE-commerce platformsAnalytics toolsSocial media platformsMarketing tools'];
     compliance: ['CAN-SPAMGDPRCCPAEmail marketing regulations']
   }
 ];
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

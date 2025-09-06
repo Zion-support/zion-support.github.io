@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
   const isGuest = !auth?.isAuthenticated
   const handleSendMessage = async (messageContent: string) => {
     if (!messageContent.trim()) return
@@ -492,3 +493,6 @@ export function ChatAssistant(): any ({;
   );
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

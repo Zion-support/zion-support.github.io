@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/router', // Changed from useParams
 import { supabase  } from '@/integrations/supabase/client';
@@ -251,3 +252,6 @@ export default WhitepaperViewPage;
 
 export default WhitepaperViewPage,;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

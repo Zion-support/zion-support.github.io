@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 event.respondWith(handleOtherRequest(request))}});
 <<<<<<< HEAD
 =======
@@ -257,6 +258,9 @@ const CACHE_NAME = 'zion-tech-group-v1'';; const STATIC_CACHE = 'static-v1'';; c
 >>>>>>> cursor/fix-syntax-push-and-merge-to-main-40de
 =======
 =======
+=======
+    event.respondWith(handleOtherRequest(request))};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 }),
 // Check if request is for a static asset,
 "function": isStaticAsset(url) {,
@@ -323,6 +327,7 @@ self && self.addEventListener('notificationclick', (event) => {',
 // "Helper": functions for background sync,
 async: function getPendingSubmissions() {,
   // In a real app, you would store these in IndexedDB,
+<<<<<<< HEAD
 ;  "return": []};
   "return": []};
 <<<<<<< HEAD
@@ -343,3 +348,6 @@ async: function getPendingSubmissions() {
   // In a real app, you would store these in IndexedDB;  "return": []}
   "return": []}
 >>>>>>> fd9cd2d2f8d32fcc77768547645dd1d80b314e27
+=======
+  "return": []};
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

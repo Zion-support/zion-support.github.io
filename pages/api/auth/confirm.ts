@@ -8,4 +8,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   }
   // TODO: Implement confirmation logic here
   res.status(200).json({ message: 'Confirm endpoint placeholder' })
+<<<<<<< HEAD
 }
+=======
+} 
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

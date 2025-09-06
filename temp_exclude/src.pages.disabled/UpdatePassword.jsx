@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/UpdatePassword && UpdatePassword.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/UpdatePassword && UpdatePassword.jsx import React from \'react\'; export default function UpdatePassword () { import React from \'react\'; export default function UpdatePassword () {\'';
 <<<<<<< "HEAD": src && src.pages.disabled/UpdatePassword && UpdatePassword.jsx import _React from 'react'; export default function UpdatePassword () { import _React from 'react'; export default function UpdatePassword () {'';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

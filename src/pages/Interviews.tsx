@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 import React, { useEffect, useState } from "react",
 import { useInterviews } from "@/hooks/useInterviews",
@@ -341,6 +342,8 @@ export default function Interviews() {
             </TabsTrigger>;
             <TabsTrigger value='past'>Past</TabsTrigger>;
           </TabsList>;
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
           <TabsContent value='upcoming' className='space-y-6'>;
             {isLoading ? (;
@@ -362,6 +365,7 @@ export default function Interviews() {
             )}
           </TabsContent>;
 
+<<<<<<< HEAD
           <TabsContent value='pending' className='space-y-6'>;
             {isLoading ? (;
               <div className='flex justify-center py-12'>;
@@ -415,3 +419,5 @@ export default function Interviews() {;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

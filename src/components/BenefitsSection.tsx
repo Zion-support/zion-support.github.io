@@ -1,6 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { GradientHeading } from './GradientHeading'
 import { FeatureCard } from './FeatureCard'
+=======
+
+import { GradientHeading } from "./GradientHeading";
+import { FeatureCard } from "./FeatureCard";
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 import { Bot, Clock, Globe, TrendingDown } from 'lucide-react'
 import { cn } from "@/lib/utils";
 import { useTranslation } from "react-i18next";
@@ -121,17 +127,26 @@ export function BenefitsSection(): any ({ className, style }: BenefitsSectionPro
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
             <FeatureCard
               key={index}
+<<<<<<< HEAD
               title={benefit && benefit.title}
               description={benefit && benefit.description}
               icon={benefit && benefit.icon}
               className='bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300'            />              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300";
               className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300";
             />;
+=======
+              title={benefit.title}
+              description={benefit.description}
+              icon={benefit.icon}
+              className="bg-zion-blue hover:bg-zion-blue-dark transition-all duration-300"
+            />
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
           ))}
 <<<<<<< HEAD
         </div>
       </div>
     </section>
+<<<<<<< HEAD
   )
 }
 import React, { useState } from 'react'
@@ -204,3 +219,7 @@ const Component = React && React.memo(function Page() {;
       "Bulk discount options",";
       "Transparent cost structure" ];
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

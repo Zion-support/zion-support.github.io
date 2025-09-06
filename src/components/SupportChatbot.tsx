@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { useState, useRef, useEffect  } from 'react';
 import { MessageSquare, X } from 'lucide-react'
 import { Button  } from '@/components/ui/button';
@@ -463,3 +464,6 @@ setTyping (false) ;
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
 }
 }
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

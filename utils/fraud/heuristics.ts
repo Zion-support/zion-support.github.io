@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
 const suspiciousLinkHosts = [
 <<<<<<< HEAD
@@ -193,6 +194,9 @@ export function runHeuristics(data: any): HeuristicResult {
   };
 }
 
+=======
+// Fraud detection heuristics utilities
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 export interface HeuristicResult {
   flagged: boolean;
   reasons: string[];
@@ -214,6 +218,7 @@ export function runHeuristics(data: any): HeuristicResult {
     reasons: Array.from(flags),
     severity: flags.size > 0 ? 'medium' : 'low',
   };
+<<<<<<< HEAD
 =======
     flagged: reasons.length > 0
     reasons
@@ -221,3 +226,14 @@ export function runHeuristics(data: any): HeuristicResult {
   }
 >>>>>>> 6e144defc977c0ff385b5a01bd9a6867b3b2d30a
 }
+=======
+}
+
+export function isHighRiskEvent(result: HeuristicResult): boolean {
+  return result.severity === 'high' || result.severity === 'critical';
+}
+
+export function shouldBlockEvent(result: HeuristicResult): boolean {
+  return result.severity === 'critical' && result.confidence > 80;
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

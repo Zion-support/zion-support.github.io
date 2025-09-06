@@ -16,6 +16,7 @@ export const trackPageView = (url: string) => {
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
     });
   }
+<<<<<<< HEAD
 }
 // Track events
 export const trackEvent = (
@@ -59,11 +60,47 @@ export const measurePerformance = () => {
   }
   return null;
 }
+=======
+};
+
+// Track events
+export const trackEvent = (
+  eventName: string,
+  properties?: Record<string, string | number | boolean>
+) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, properties);
+  }
+};
+
+export const trackPageView = (url: string) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('config', GA_TRACKING_ID, {
+      page_path: url,
+    });
+  }
+};
+
+export const measurePerformance = () => {
+  if (typeof window !== 'undefined' && 'performance' in window) {
+    const navigation = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming;
+    return {
+      loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+      domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+      firstPaint: performance.getEntriesByName('first-paint')[0]?.startTime || 0,
+      firstContentfulPaint: performance.getEntriesByName('first-contentful-paint')[0]?.startTime || 0,
+    };
+  }
+  return null;
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface WebVitalMetric {
   name: string;
   value: number;
   id: string;
 }
+<<<<<<< HEAD
 export const trackWebVitals = (metric: WebVitalMetric) => {
 <<<<<<< HEAD
   if (typeof window !== 'undefined' && window.gtag) {
@@ -83,6 +120,20 @@ export const trackWebVitals = (metric: WebVitalMetric) => {
     });
   }
 }
+=======
+
+export const trackWebVitals = (metric: WebVitalMetric) => {
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', metric.name, {
+      value: Math.round(metric.value),
+      event_category: 'Web Vitals',
+      event_label: metric.id,
+      non_interaction: true,
+    });
+  }
+};
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 // Track events
 export const event = ({
   action
@@ -176,6 +227,7 @@ export const trackWebVitals = (metric: WebVitalMetric) => {;
 // Declare global types
 declare global {
   interface Window {
+<<<<<<< HEAD
     gtag: (...args: any[]) => void;
     dataLayer: any[];
   }
@@ -195,3 +247,9 @@ export const trackEvent = ( eventName: 'string',properties?: Record<string,strin
 =======
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+    gtag: (...args: unknown[]) => void;
+    dataLayer: unknown[];
+  }
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,13 +1,20 @@
 import type { NextPage } from 'next';
 import Head from 'next/head';
 import EmptyState from '../../components/ui/EmptyState';
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 const Dashboard: NextPage = () => {
   return (
     <div className="space-y-6 pb-16">
       <Head>
         <title>Dashboard - Zion</title>
       </Head>
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
       <h1 className="text-2xl font-semibold">Dashboard</h1>
       <section>
         <h2 className="text-lg font-semibold mb-2">My Jobs</h2>
@@ -32,4 +39,7 @@ const Dashboard: NextPage = () => {
   )
 }
 export default Dashboard;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import type { NextApiRequest, NextApiResponse } from "next";
 import JSZip from "jszip";
 import {
@@ -58,6 +59,11 @@ export default async function handler(
       "README && README.md",
       `# Zion OS Design Export\n\n- kit: ${kind}\n- Import tokens via Token Studio in Figma.\n- Components included under /uikit.`,
     );
+=======
+import type { NextApiRequest, NextApiResponse } from 'next'
+import JSZip from 'jszip'
+import { getZionDesignMap, buildTokenSet, buildUIKit, UIKitKind } from '../../../utils/design-map'
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
     const buffer = await zip && zip.generateAsync({ type: "nodebuffer" });
     res && res.setHeader("Content-Type", "application/zip");
@@ -74,4 +80,8 @@ export default async function handler(
     res && res.status(500).json({ error: e?.message || "Export failed" });
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

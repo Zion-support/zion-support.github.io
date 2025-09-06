@@ -23,6 +23,7 @@ class ErrorBoundary extends React.Component {
 }
 import React from 'react';
 import EnhancedButton from './EnhancedButton';
+<<<<<<< HEAD
 
 export type PaginationProps = {;
   page: number;
@@ -40,6 +41,12 @@ export default function Pagination({
   page: number
   pageSize: number
   total: number
+=======
+export type PaginationProps = {
+  page: number,
+  pageSize: number,
+  total: number,
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   onChange: (nextPage: number) => void
 }
 export default function Pagination({ page, pageSize, total, onChange }: PaginationProps) {
@@ -47,6 +54,7 @@ export default function Pagination({ page, pageSize, total, onChange }: Paginati
   const canPrev = page > 1;
   const canNext = page < totalPages;
   const goTo = (p: number) => {
+<<<<<<< HEAD
 =======
 };
 
@@ -94,6 +102,10 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
     </div>;
   );
 }  }
+=======
+    if (p >= 1 && p <= totalPages) onChange(p)
+  };
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
   return (
     <div className="flex items-center justify-between gap-2 mt-4">;
@@ -108,6 +120,7 @@ export default function Pagination(): any ({ page, pageSize, total, onChange }: 
         Next
       </EnhancedButton>
     </div>
+<<<<<<< HEAD
 );
 =======
       </div>;
@@ -258,3 +271,7 @@ const Pagination: React.FC<PaginationProps> = ({ ;
 }
 export default Pagination;
 }
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

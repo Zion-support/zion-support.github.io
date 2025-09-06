@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 
 import React from 'react';
 import { CheckCircle } from 'lucide-react'
@@ -40,11 +43,19 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
     lg: 'h-5 w-5'
   }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
   return (
     <TooltipProvider>
       <Tooltip>
         <TooltipTrigger asChild>
+<<<<<<< HEAD
           <span className='inline-flex text-blue-500'>            <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />          <span className="inline-flex text-blue-500">
+=======
+          <span className="inline-flex text-blue-500">
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
             <CheckCircle className={`${sizeClasses[size]} fill-blue-100`} />
           </span>
         </TooltipTrigger>
@@ -53,6 +64,7 @@ export function VerifiedBadge({ verified, size = 'sm', label = 'Verified talent'
         </TooltipContent>
       </Tooltip>
     </TooltipProvider>
+<<<<<<< HEAD
   )
 }
 =======
@@ -119,3 +131,7 @@ export function VerifiedBadge(): any ({ verified, size = 'sm', label = 'Verified
   );
 }
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-382a
+=======
+  );
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

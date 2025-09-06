@@ -1,5 +1,11 @@
+<<<<<<< HEAD
 import { useEffect, useCallback } from "react";
 // Define MessageEvent if not available
+=======
+import { useEffect, useCallback } from 'react';
+
+// Define MessageEvent type if not available
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
 interface Event {
   type: string;
   target: EventTarget | null;
@@ -74,6 +80,7 @@ export function useMessageChannelHandler({
   }, [handleMessage]);
 <<<<<<< HEAD
 }
+<<<<<<< HEAD
 =======
 }
 <<<<<<< HEAD
@@ -86,3 +93,5 @@ import { useEffect,useCallback } from 'react'; interface MessageEvent { data: un
 >>>>>>> 7a79ab46aa7794ec396c2388b3c38de69cb877ae
 >>>>>>> origin/cursor/integrate-build-improve-and-re-verify-c7b5
 >>>>>>> origin/automation-improvements-final
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

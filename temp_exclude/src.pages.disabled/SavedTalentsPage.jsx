@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -26,3 +27,5 @@ class ErrorBoundary extends React.Component {
 <<<<<<< HEAD:src && src.pages.disabled/SavedTalentsPage && SavedTalentsPage.jsx
 <<<<<<< \"HEAD\": src && src.pages.disabled/SavedTalentsPage && SavedTalentsPage.jsx import React from \'react\'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) { import React from \'react\'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) {\'';
 <<<<<<< "HEAD": src && src.pages.disabled/SavedTalentsPage && SavedTalentsPage.jsx import _React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) { import _React from 'react'; export default function SavedTalentsPage () { const { user } = useAuth () ; const [savedTalents,setSavedTalents] = useState ([]) ; const [isLoading,setIsLoading] = useState (true) ; const navigate = useNavigate () ; useEffect ( () => { const fetchSavedTalents = async () => { setIsLoading (true) ; try { if (!user) {'';
+=======
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156

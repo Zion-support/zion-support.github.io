@@ -16,4 +16,8 @@ function escapeHtml(str: string) {
     .replace(/&/g, '&amp,')
     .replace(/</g, '&lt,')
     .replace(/>/g, '&gt,')
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/cursor/integrate-build-improve-and-re-verify-2156
